@@ -1,0 +1,18 @@
+<odoo>
+	<record id="view_helpdesk_ticket_search" model="ir.ui.view">
+		<field name="name">report.helpdesk.ticket.search</field>
+		<field name="inherit_id" ref="viin_helpdesk.view_helpdesk_ticket_search"/>
+		<field name="model">report.helpdesk.ticket</field>
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='team_id']" position="after">
+				<field name="sale_order_id" />
+			</xpath>			
+			<xpath expr="//filter[@name='ftr_unassigned']" position="after">
+				<filter name="ftr_sale_order_id" string="Sale Order" domain="[('sale_order_id', '!=', False)]"/>
+			</xpath>
+			<xpath expr="//filter[@name='grp_company_id']" position="before">
+				<filter name="grp_sale_order_id" string="Sale Order" context="{'group_by': 'sale_order_id'}"/>
+			</xpath>
+		</field>
+	</record>
+</odoo>

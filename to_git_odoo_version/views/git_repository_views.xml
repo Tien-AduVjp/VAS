@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="git_repository_view_form" model="ir.ui.view">
+			<field name="name">git.repository.form</field>
+			<field name="model">git.repository</field>
+			<field name="inherit_id" ref="to_git.git_repository_view_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//button[@name='action_reinitialize']"
+					position="after">
+					<button string="Assign Odoo Versions"
+						help="This action will map Odoo versions with branches of this repository based on the branch name. For example, branch 13.0 will be assigned with Odoo version 13.0."
+						type="object" name="action_assign_odoo_versions" />
+				</xpath>
+				<xpath expr="//field[@name='vendor_id']" position="before">
+					<field name="is_odoo_enterprise_source_code" />
+					<field name="default_license_version_id" />
+				</xpath>
+			</field>
+		</record>
+
+		<record id="action_server_repository_assign_odoo_versions"
+			model="ir.actions.server">
+			<field name="name">Assign Odoo Versions</field>
+			<field name="type">ir.actions.server</field>
+			<field name="model_id" ref="model_git_repository" />
+			<field name="binding_model_id" ref="model_git_repository" />
+			<field name="state">code</field>
+			<field name="code">records.action_assign_odoo_versions()</field>
+		</record>
+	</data>
+</odoo>

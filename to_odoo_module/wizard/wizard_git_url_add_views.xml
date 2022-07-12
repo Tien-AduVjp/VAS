@@ -1,0 +1,18 @@
+<odoo>
+	<record id="wizard_git_url_add_form_view" model="ir.ui.view">
+		<field name="name">wizard.git.url.add.form</field>
+		<field name="model">wizard.git.url.add</field>
+		<field name="inherit_id"
+			ref="to_git.wizard_git_url_add_form_view" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='checkout']" position="after">
+				<field name="auto_module_discovery"
+					groups="to_odoo_module.odoo_module_user"
+					attrs="{'invisible': [('checkout','=',False)]}" />
+				<field name="generate_app_products"
+					groups="to_odoo_module.odoo_module_user"
+					attrs="{'invisible': [('auto_module_discovery','=',False)]}" />
+			</xpath>
+		</field>
+	</record>
+</odoo>

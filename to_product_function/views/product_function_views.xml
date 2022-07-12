@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="product_function_form_view" model="ir.ui.view">
+			<field name="name">product.function.form</field>
+			<field name="model">product.function</field>
+			<field name="arch" type="xml">
+				<form string="Product Function">
+					<sheet>
+						<div class="oe_button_box" name="button_box" groups="base.group_user">
+							<field name="active" invisible="1" />
+							<button name="action_view_product_templates" type="object" class="oe_stat_button"
+								icon="fa-filter" context="{'default_function_id': active_id}">
+								<field name="product_tmpls_count" string="Product Templates" widget="statinfo"/>
+							</button>
+							<button name="action_view_products" type="object" class="oe_stat_button" icon="fa-filter"
+								groups="product.group_product_variant" context="{'default_function_id': active_id}">
+								<field name="products_count" string="Products" widget="statinfo" />
+							</button>
+						</div>
+						<widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+						<div class="oe_title">
+							<label for="name" class="oe_edit_only" />
+							<h1>
+								<field name="name" placeholder="Function Title" />
+							</h1>
+						</div>
+						<notebook>
+							<page name="desc" string="Descriptions">
+								<field name="description" />
+							</page>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers"
+							groups="base.group_user" />
+						<field name="message_ids" widget="mail_thread" />
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record id="product_function_tree_view" model="ir.ui.view">
+			<field name="name">product.function.tree</field>
+			<field name="model">product.function</field>
+			<field name="arch" type="xml">
+				<tree string="Product Function">
+					<field name="name" />
+					<field name="description" />
+				</tree>
+			</field>
+		</record>
+		
+		<record id="product_function_view_search" model="ir.ui.view">
+			<field name="name">product.function.view.search</field>
+			<field name="model">product.function</field>
+			<field name="arch" type="xml">
+				<search string="Search Archived">
+					<filter name="archived" string="Archived" domain="[('active','=',False)]"/>
+				</search>
+			</field>
+		</record>
+		
+		<record id="product_function_action" model="ir.actions.act_window">
+			<field name="name">Product Function</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">product.function</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+	</data>
+</odoo>

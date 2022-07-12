@@ -1,0 +1,51 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_promotion_voucher_sale
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-21 03:25+0000\n"
+"PO-Revision-Date: 2021-08-21 03:25+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_promotion_voucher_sale
+#: model:ir.model.fields,field_description:to_promotion_voucher_sale.field_voucher_voucher__partner_id
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: to_promotion_voucher_sale
+#: model:ir.model,name:to_promotion_voucher_sale.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "Chuyển sản phẩm (Chi tiết phiếu kho)"
+
+#. module: to_promotion_voucher_sale
+#: model:ir.model,name:to_promotion_voucher_sale.model_voucher_voucher
+msgid "Promotion Voucher"
+msgstr "Phiếu khuyến mãi "
+
+#. module: to_promotion_voucher_sale
+#: model:ir.model.fields,field_description:to_promotion_voucher_sale.field_voucher_voucher__sale_order_id
+msgid "Sale Order"
+msgstr "Đơn bán"
+
+#. module: to_promotion_voucher_sale
+#: model:ir.model.fields,field_description:to_promotion_voucher_sale.field_voucher_voucher__sale_order_line_id
+msgid "Sale Order Line"
+msgstr ""
+
+#. module: to_promotion_voucher_sale
+#: model:ir.model.fields,field_description:to_promotion_voucher_sale.field_voucher_voucher__price
+msgid "Sold Price"
+msgstr "Giá được bán"
+
+#. module: to_promotion_voucher_sale
+#: model:ir.model.fields,help:to_promotion_voucher_sale.field_voucher_voucher__price
+msgid "The actual price when selling this promotion voucher"
+msgstr "Giá thực tế khi bán phiếu khuyến mãi này "

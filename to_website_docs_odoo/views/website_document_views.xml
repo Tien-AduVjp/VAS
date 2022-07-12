@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="document_tree" model="ir.ui.view">
+			<field name="name">website.document.tree</field>
+			<field name="model">website.document</field>
+			<field name="inherit_id"
+				ref="to_website_docs.document_tree" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='category_id']" position="after">
+					<field name="odoo_version_ids" widget="many2many_tags"/>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

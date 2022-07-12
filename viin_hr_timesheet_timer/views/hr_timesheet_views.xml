@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<!-- Timesheet line Views -->
+		<record id="hr_timesheet_line_tree" model="ir.ui.view">
+			<field name="name">account.analytic.line.tree.hr_timesheet</field>
+			<field name="model">account.analytic.line</field>
+			<field name="inherit_id"
+				ref="hr_timesheet.hr_timesheet_line_tree" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='date']" position="after">
+					<field name="time_start" widget="float_time" required="1" />
+					<field name="date_start" groups="base.group_no_one"  />
+					<field name="date_end" groups="base.group_no_one"  />
+				</xpath>
+			</field>
+		</record>
+
+		<record id="hr_timesheet_line_form" model="ir.ui.view">
+			<field name="name">account.analytic.line.form</field>
+			<field name="model">account.analytic.line</field>
+			<field name="inherit_id"
+				ref="hr_timesheet.hr_timesheet_line_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='date']" position="after">
+					<field name="time_start" required="1" />
+					<field name="date_start" groups="base.group_no_one"  />
+					<field name="date_end" groups="base.group_no_one"  />
+				</xpath>
+			</field>
+		</record>
+
+		<record id="hr_timesheet_line_search" model="ir.ui.view">
+			<field name="name">account.analytic.line.search</field>
+			<field name="model">account.analytic.line</field>
+			<field name="inherit_id"
+				ref="hr_timesheet.hr_timesheet_line_search" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='date']" position="after">
+					<field name="time_start" />
+					<field name="date_start" />
+					<field name="date_end" />
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

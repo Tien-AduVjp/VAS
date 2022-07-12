@@ -1,0 +1,323 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_hr_overtime_timesheet
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-13 09:08+0000\n"
+"PO-Revision-Date: 2021-08-17 09:07+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,help:viin_hr_overtime_timesheet.field_overtime_plan_line_timesheet_match__unmatched_hours
+msgid "Actual worked hours that did NOT match the planned."
+msgstr "Số giờ làm việc thực tế mà KHÔNG khớp với kế hoạch."
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,help:viin_hr_overtime_timesheet.field_overtime_plan_line_timesheet_match__matched_hours
+msgid "Actual worked hours that match the planned."
+msgstr "Số giờ làm việc thực tế mà khớp với kế hoạch."
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model,name:viin_hr_overtime_timesheet.model_account_analytic_line
+msgid "Analytic Line"
+msgstr "Phát sinh KT Quản trị"
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model,name:viin_hr_overtime_timesheet.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model,name:viin_hr_overtime_timesheet.model_hr_contract
+msgid "Contract"
+msgstr "Hợp đồng"
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_overtime_plan_line_timesheet_match__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_overtime_plan_line_timesheet_match__create_date
+msgid "Created on"
+msgstr "Được tạo vào"
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_overtime_plan_line_timesheet_match__display_name
+msgid "Display Name"
+msgstr "Tên Hiển thị"
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model,name:viin_hr_overtime_timesheet.model_hr_employee_overtime
+msgid "Employee Overtime"
+msgstr "Tăng ca Nhân viên"
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_overtime_plan_line_timesheet_match__date_end
+msgid "End Date"
+msgstr "Ngày Kết thúc"
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_overtime_plan__recognition_mode
+msgid "Force Recognition Mode"
+msgstr "Cưỡng bức chế độ nhận diện"
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model,name:viin_hr_overtime_timesheet.model_hr_overtime_request_mass_line
+msgid "HR Overtime Request Mass Line"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_overtime_plan_line_timesheet_match__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,help:viin_hr_overtime_timesheet.field_hr_overtime_plan__project_required
+#: model:ir.model.fields,help:viin_hr_overtime_timesheet.field_hr_overtime_reason__project_required
+#: model:ir.model.fields,help:viin_hr_overtime_timesheet.field_hr_overtime_request_mass__project_required
+msgid ""
+"If enabled, all the overtime plans of this reason require a project "
+"specified."
+msgstr ""
+"Nếu kích hoạt, tất cả các kế hoạch tăng ca với lý do này yêu cầu phải khai "
+"báo dự án."
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_overtime_plan_line_timesheet_match____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_overtime_plan_line_timesheet_match__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_overtime_plan_line_timesheet_match__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối"
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model,name:viin_hr_overtime_timesheet.model_hr_overtime_request_mass
+msgid "Mass Overtime Request Wizard"
+msgstr "Đồ thuật Lập kế hoạch tăng ca hàng loạt"
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_overtime_plan_line_timesheet_match__matched_hours
+msgid "Match Hours"
+msgstr "Số giờ khớp"
+
+#. module: viin_hr_overtime_timesheet
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_timesheet.view_hr_overtime_plan_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_timesheet.view_hr_overtime_plan_line_form
+msgid "Match Timesheet"
+msgstr "Khớp chấm công"
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_employee_overtime__matched_timesheet_hours
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_timesheet.view_hr_overtime_plan_form
+msgid "Matched Timesheet"
+msgstr "Chấm công khớp"
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_overtime_plan__matched_timesheet_hours
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_overtime_plan_line__matched_timesheet_hours
+msgid "Matched Timesheet Hours"
+msgstr "Số giờ chấm công khớp"
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model,name:viin_hr_overtime_timesheet.model_hr_overtime_plan
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_overtime_plan_line_timesheet_match__overtime_plan_id
+msgid "Overtime Plan"
+msgstr "Kế hoạch Tăng ca"
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model,name:viin_hr_overtime_timesheet.model_hr_overtime_plan_line
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_overtime_plan_line_timesheet_match__overtime_plan_line_id
+msgid "Overtime Plan Line"
+msgstr "Dòng Kế hoạch Tăng ca"
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model,name:viin_hr_overtime_timesheet.model_overtime_plan_line_timesheet_match
+msgid "Overtime Plan Line Timesheet Match"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_account_analytic_line__overtime_plan_line_ids
+msgid "Overtime Plan Lines"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.actions.act_window,name:viin_hr_overtime_timesheet.action_overtime_plan_line_timesheet_match
+msgid "Overtime Planning Timesheet Match"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_account_analytic_line__overtime_plan_ids
+msgid "Overtime Plans"
+msgstr "Kế hoạch tăng ca"
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model,name:viin_hr_overtime_timesheet.model_hr_overtime_reason
+msgid "Overtime Reason"
+msgstr "Lý do Tăng ca"
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_contract__overtime_recognition_mode
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_res_company__overtime_recognition_mode
+msgid "Overtime Recognition Mode"
+msgstr "Chế độ Nhân diện Giờ tăng ca"
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_overtime_plan__for_project_id
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_overtime_request_mass__for_project_id
+msgid "Project"
+msgstr "Dự án"
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_overtime_plan__project_required
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_overtime_reason__project_required
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_overtime_request_mass__project_required
+msgid "Project Required"
+msgstr "Yêu cầu khai báo dự án"
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_overtime_plan__project_ids
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_overtime_plan_line__project_ids
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_timesheet.view_hr_overtime_plan_line_form
+msgid "Projects"
+msgstr "Dự án"
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_overtime_plan_line__recognition_mode
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_overtime_reason__recognition_mode
+msgid "Recognition Mode"
+msgstr "Chế độ Nhận diện"
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_overtime_plan__timesheet_ids
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_overtime_plan_line__timesheet_ids
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_timesheet.view_hr_overtime_plan_line_form
+msgid "Related Timesheet Entries"
+msgstr "Bản ghi chấm công liên quan"
+
+#. module: viin_hr_overtime_timesheet
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_timesheet.view_hr_overtime_plan_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_timesheet.view_hr_overtime_plan_line_form
+msgid "Rematch Timesheet"
+msgstr "Khớp lại chấm công"
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_overtime_plan_line_timesheet_match__date_start
+msgid "Start Date"
+msgstr "Ngày bắt đầu"
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_overtime_plan__project_task_ids
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_overtime_plan_line__project_task_ids
+msgid "Tasks"
+msgstr "Nhiệm vụ"
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,help:viin_hr_overtime_timesheet.field_account_analytic_line__timesheet_match_ids
+msgid ""
+"Technical field to store matching records which map the current timesheet "
+"entry with the related matched overtime plan lines"
+msgstr ""
+"Trường kỹ thuật để lưu trữ các bản khớp mà khớp giữa bản ghi chấm công hiện "
+"hành và các dòng kế hoạch tăng ca liên quan."
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,help:viin_hr_overtime_timesheet.field_account_analytic_line__overtime_plan_line_ids
+msgid ""
+"Technical field to store the overtime plan lines that match / cross this "
+"timesheet."
+msgstr ""
+"Trường kỹ thuật để lưu trữ các dòng kế hoạch tăng ca mà khớp với bản ghi "
+"chấm công."
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,help:viin_hr_overtime_timesheet.field_hr_overtime_plan__for_project_id
+#: model:ir.model.fields,help:viin_hr_overtime_timesheet.field_hr_overtime_request_mass__for_project_id
+msgid "The project for which this overtime plan is"
+msgstr "Dự án mà kế hoạch tăng ca này liên quan đến"
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,help:viin_hr_overtime_timesheet.field_res_company__overtime_recognition_mode
+msgid ""
+"This indicates mode to recognize actual overtime against the plan which "
+"could be either By Plan or Attendance or Timesheet. Bridging modules will be"
+" required to have full options accordingly."
+msgstr ""
+"Trường này chỉ báo chế độ nhận diện giờ tăng ca thực tế so với kế hoạch. Giá"
+" trị của nó có thể là Theo Kế hoạch hoặc Vào/Ra hoặc Chấm công. Các module "
+"cầu nối được yêu cầu để có đầy đủ các tùy chọn này."
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,help:viin_hr_overtime_timesheet.field_hr_contract__overtime_recognition_mode
+msgid ""
+"This indicates mode to recognize actual overtime against the plan which could be either By Plan or Attendance or Timesheet. Bridging modules will be required to have full options accordingly.\n"
+"If this field is left empty, the value will be taken from the corresponding company's settings."
+msgstr ""
+"Trường này chỉ báo chế độ nhận diện giờ tăng ca thực tế so với kế hoạch. Giá trị của nó có thể là Theo Kế hoạch hoặc Vào/Ra hoặc Chấm công. Các module cầu nối được yêu cầu để có đầy đủ các tùy chọn này.\n"
+"Nếu để trống, giá trị sẽ được lấy từ cấu hình của công ty tương ứng."
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,help:viin_hr_overtime_timesheet.field_hr_overtime_plan__recognition_mode
+msgid ""
+"This indicates mode to recognize actual overtime against the plan which could be either By Plan or Attendance or Timesheet. Bridging modules will be required to have full options accordingly.\n"
+"Note: If not specified, the setting from the corresponding contract or company will be taken into account."
+msgstr ""
+"Trường này chỉ báo chế độ nhận diện giờ tăng ca thực tế so với kế hoạch. Giá trị của nó có thể là Theo Kế hoạch hoặc Vào/Ra hoặc Chấm công. Các module cầu nối được yêu cầu để có đầy đủ các tùy chọn này.\n"
+"Lưu ý: nếu không được thiết lập ở đây, thiết lập ở hợp đồng hoặc thiết lập chung cho công ty sẽ được áp dụng."
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields.selection,name:viin_hr_overtime_timesheet.selection__hr_contract__overtime_recognition_mode__timesheet
+#: model:ir.model.fields.selection,name:viin_hr_overtime_timesheet.selection__hr_overtime_plan__recognition_mode__timesheet
+#: model:ir.model.fields.selection,name:viin_hr_overtime_timesheet.selection__hr_overtime_plan_line__recognition_mode__timesheet
+#: model:ir.model.fields.selection,name:viin_hr_overtime_timesheet.selection__hr_overtime_reason__recognition_mode__timesheet
+#: model:ir.model.fields.selection,name:viin_hr_overtime_timesheet.selection__res_company__overtime_recognition_mode__timesheet
+msgid "Timesheet"
+msgstr "Chấm công"
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_overtime_plan_line_timesheet_match__timesheet_id
+msgid "Timesheet Entry"
+msgstr "Bản ghi Chấm công"
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_account_analytic_line__timesheet_match_ids
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_overtime_plan__timesheet_match_ids
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_overtime_plan_line__timesheet_match_ids
+msgid "Timesheet Match"
+msgstr "Khớp Chấm công"
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_overtime_plan_line_timesheet_match__unmatched_hours
+msgid "Unmatched Hours"
+msgstr "Số giờ không khớp"
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_employee_overtime__unmatched_timesheet_hours
+msgid "Unmatched Timesheet"
+msgstr "Chấm công không khớp"
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_overtime_plan_line__unmatched_timesheet_hours
+msgid "Unmatched Timesheet Hours"
+msgstr "Số giờ chấm công không khớp"
+
+#. module: viin_hr_overtime_timesheet
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_timesheet.view_hr_overtime_plan_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_timesheet.view_hr_overtime_plan_line_form
+msgid "hours"
+msgstr "giờ"

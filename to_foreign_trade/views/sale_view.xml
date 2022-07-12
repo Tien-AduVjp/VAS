@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+
+		<!-- Inherit Sale Order -->
+		<record id="custom_dec_so_create_action"
+			model="ir.actions.act_window">
+			<field name="name">Create Export Custom Clearance Request</field>
+			<field name="res_model">custom.declaration.export</field>
+			<field name="view_mode">tree,form</field>
+			<field name="view_id" eval="custom_declaration_export_form" />
+			<field name="context">{'default_sale_order_id': active_id}</field>
+		</record>
+
+		<record id="sale_order_inherit_form" model="ir.ui.view">
+			<field name="name">sale.order.inherit.form</field>
+			<field name="model">sale.order</field>
+			<field name="inherit_id" ref="sale.view_order_form" />
+			<field name="arch" type="xml">
+				<field name="partner_id" position="after">
+					<!-- <field name="custom_dec_count" invisible="1"/> -->
+					<field name="foreign_trade" />
+				</field>
+				<button name="action_quotation_send" position="before">
+					<button name="%(custom_dec_so_create_action)d"
+						string="Create Custom Clearance Request" type="action"
+						class="oe_highlight"
+						groups="to_foreign_trade.group_foreign_trade_user"
+						attrs="{'invisible': ['|','|',('custom_dec_count', '>', 0),('foreign_trade', '=', False),('state', 'not in', ['sale','done'])]}" />
+				</button>
+				<div name="button_box" position="inside">
+					<button name="action_view_custom_declarations" type="object"
+						class="oe_stat_button" icon="fa-file-o"
+						attrs="{'invisible': [('custom_dec_count', '=', 0)]}"
+						groups="to_foreign_trade.group_foreign_trade_user">
+						<field name="custom_dec_count" widget="statinfo"
+							string="Custom Declaration" />
+					</button>
+				</div>
+			</field>
+		</record>
+
+		<record id="sale_order_view_search_inherit_sale"
+			model="ir.ui.view">
+			<field name="name">sale.order.search.inherit.sale</field>
+			<field name="model">sale.order</field>
+			<field name="inherit_id"
+				ref="sale.sale_order_view_search_inherit_sale" />
+			<field name="arch" type="xml">
+				<filter name="my_sale_orders_filter" position="after">
+					<filter name="export" string="Export Orders"
+						domain="[('foreign_trade','=',True)]" />
+				</filter>
+			</field>
+		</record>
+
+	</data>
+</odoo>

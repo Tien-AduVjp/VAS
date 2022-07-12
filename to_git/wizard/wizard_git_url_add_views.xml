@@ -1,0 +1,33 @@
+<odoo>
+	<record id="wizard_git_url_add_form_view" model="ir.ui.view">
+		<field name="name">wizard.git.url.add.form</field>
+		<field name="model">wizard.git.url.add</field>
+		<field name="arch" type="xml">
+			<form>
+				<group>
+					<field name="url"
+						placeholder="ssh://git@github.com/odoo/odoo.git#12.0" />
+					<field name="vendor_id" />
+					<field name="checkout" />
+				</group>
+				<footer>
+					<button name="add" type="object" string="Add"
+						class="oe_highlight" />
+					<button string="Cancel" special="cancel" />
+				</footer>
+			</form>
+		</field>
+	</record>
+
+	<record id="action_wizard_git_url_add"
+		model="ir.actions.act_window">
+		<field name="name">Add Custom Git Branch URL</field>
+		<field name="res_model">wizard.git.url.add</field>
+		<field name="view_mode">form</field>
+		<field name="target">new</field>
+	</record>
+
+	<menuitem id="git_url_add_menu" name="Add Custom Branch URL"
+		sequence="20" parent="git_root_menu" groups="base.group_no_one"
+		action="action_wizard_git_url_add" />
+</odoo>

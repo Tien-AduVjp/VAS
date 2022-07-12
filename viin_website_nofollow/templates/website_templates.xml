@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="website_robots_meta_tag" name="Website Robots Meta Tag" inherit_id="website.layout">
+		<xpath expr="//head/meta[1]" position="after">
+			<meta t-if="website and website.noindex_nofollow" name="robots" 
+				content="noindex, nofollow" />
+		</xpath>
+	</template>
+</odoo>

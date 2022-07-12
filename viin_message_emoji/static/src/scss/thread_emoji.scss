@@ -1,0 +1,74 @@
+.emoji_hover {
+    opacity: 0;
+    height: 0;
+    line-height: 0;
+    &:hover {
+        opacity: 1;
+        height: 15px;
+        line-height: 1.5;
+    }
+}
+.emoji_row {
+    margin: 0 !important;
+    display: inline-flex !important;
+}
+.emoji_item {
+    margin-right: 5px;
+}
+.emoji_icon {
+    color: white;
+    height: 15px;
+    width: 15px;
+    margin-right: -2px;
+}
+.emoji_dropdown {
+    border-radius: 100px;
+    background-color: $o-brand-odoo;
+    padding-left: 10px;
+}
+.emoji_item_btn {
+    height: 15px;
+    width: 15px !important;
+    padding: 0px !important;
+    margin-right: 10px;
+    top: -10px;
+    &:hover {
+        background: transparent;
+    }
+	span{
+		&:hover {
+			font-size: 1.1em;
+		}
+	}
+}
+.emoji_message_class {
+    cursor: pointer;
+    display: table;
+	margin-top: 2px;
+}
+.emoji_message {
+    position: relative;
+    top: -3px;
+}
+.emoji_message_have_emoji {
+    line-height: 1.5;
+    display: table;
+}
+.emoji_dropdown_row {
+    margin: 0 !important;
+    padding-top: 12px !important;
+    min-width: 150px;
+}
+.emoji_dropdown_show {
+    display: block;
+}
+.dropdown-toggle::after {
+    display: none;
+}
+.o_mail_thread {
+	.o_thread_message_content {
+		p {
+			margin-bottom: 0px !important;
+		}
+	}	
+}

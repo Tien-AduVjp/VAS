@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view"
+			id="odoo_module_version_image_form_views">
+			<field name="name">odoo.module.version.image.form</field>
+			<field name="model">odoo.module.version.image</field>
+			<field name="arch" type="xml">
+				<form string="Odoo Module Version Image">
+					<sheet>
+						<field name="image" widget="image" class="oe_avatar"
+							options="{'size': [90, 90]}" />
+						<div class="oe_title">
+							<label class="oe_edit_only" for="name" string="Image Name" />
+							<h1>
+								<field name="name" placeholder="Image Name"
+									required="True" />
+							</h1>
+							<field name="module_version_id" invisible="1" />
+						</div>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+	</data>
+</odoo>

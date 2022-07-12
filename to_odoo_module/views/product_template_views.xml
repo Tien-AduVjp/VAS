@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="product_template_form_view">
+			<field name="name">product.template.common.form</field>
+			<field name="model">product.template</field>
+			<field name="inherit_id"
+				ref="product.product_template_form_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//div[@name='button_box']"
+					position="inside">
+					<button name="action_view_odoo_module_versions"
+						type="object"
+						attrs="{'invisible': [('odoo_module_versions_count','&lt;=',0)]}"
+						groups="to_odoo_module.odoo_module_user" class="oe_stat_button"
+						icon="fa-cubes">
+						<field name="odoo_module_versions_count"
+							string="Odoo App Versions" widget="statinfo" />
+					</button>
+				</xpath>
+				<xpath expr="//notebook[last()]" position="inside">
+					<page string="Odoo Module Images"
+						attrs="{'invisible': [('odoo_module_version_image_ids','=',[])]}"
+						groups="to_odoo_module.odoo_module_user">
+						<field name="odoo_module_version_image_ids" mode="kanban">
+							<kanban string="Odoo Module Images">
+								<field name="name" />
+								<field name="image" />
+								<templates>
+									<t t-name="kanban-box">
+										<div class="oe_kanban_global_click">
+											<a t-if="!read_only_mode" type="delete"
+												class="fa fa-times pull-right" />
+											<div class="o_kanban_image">
+												<img t-if="record.image.raw_value"
+													t-att-src="'data:image/png;base64,'+record.image.raw_value"
+													alt="Image" />
+											</div>
+											<div class="oe_kanban_details">
+												<field name="name" />
+											</div>
+										</div>
+									</t>
+								</templates>
+							</kanban>
+						</field>
+					</page>
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="product_template_only_form_view">
+			<field name="name">product.template.common.form</field>
+			<field name="model">product.template</field>
+			<field name="inherit_id"
+				ref="product.product_template_only_form_view" />
+			<field name="arch" type="xml">
+				<xpath
+					expr="//button[@name='action_view_odoo_module_versions']"
+					position="before">
+					<button name="action_view_odoo_modules" type="object"
+						attrs="{'invisible': [('odoo_modules_count','&lt;=',0)]}"
+						groups="to_odoo_module.odoo_module_user" class="oe_stat_button"
+						icon="fa-cube">
+						<field name="odoo_modules_count" string="Odoo Apps"
+							widget="statinfo" />
+					</button>
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="product_template_search_view">
+			<field name="name">product.template.search</field>
+			<field name="model">product.template</field>
+			<field name="inherit_id"
+				ref="product.product_template_search_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//filter[@name='consumable']" position="after">
+					<separator />
+					<filter string="Odoo Apps" name="ftr_odoo_apps"
+						domain="[('is_odoo_app','=',True)]" />
+					<filter string="Not Odoo Apps" name="ftr_not_odoo_apps"
+						domain="[('is_odoo_app','=',False)]" />
+				</xpath>
+			</field>
+		</record>
+
+	</data>
+</odoo>

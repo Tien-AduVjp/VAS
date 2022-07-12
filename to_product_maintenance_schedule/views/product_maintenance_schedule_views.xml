@@ -1,0 +1,108 @@
+<odoo>
+  	<data>  				
+        
+		<record model="ir.ui.view" id="maintenance_action_list">
+	   		<field name="name">maintenance_action_list</field>
+	    	<field name="model">maintenance.action</field>
+	      	<field name="type">tree</field>
+	      	<field name="arch" type="xml">
+	        	<tree name="Maintenance Actions">
+	          		<field name="name"/>   
+	          		<field name="service_id" />   
+	          		<field name="part_replacement" />          
+	        	</tree>
+	      	</field>
+    	</record>
+    	<record id="maintenance_action_form_view" model="ir.ui.view">
+			<field name="name">maintenance_action_form</field>
+			<field name="model">maintenance.action</field>
+			<field name="arch" type="xml">
+				<form string="Maintenance Action">
+					<sheet>
+						<div>
+							<h1>
+								<field name="name" />
+							</h1>
+						</div>
+						<group>
+							<group>
+								<field name="service_id" />		
+								<field name="part_replacement" />								
+							</group>							
+						</group>						
+					</sheet>			
+				</form>
+			</field>
+		</record>
+		
+	    <record model="ir.ui.view" id="maintenance_schedule_list">
+			<field name="name">maintenance_schedule_list</field>
+	      	<field name="model">maintenance.schedule</field>
+	      	<field name="type">tree</field>
+	      	<field name="arch" type="xml">
+	        	<tree name="Maintenance Schedule">  
+	          		<field name="part"/> 
+	          		<field name="product_milestone_id"/> 
+	          		<field name="maintenance_action_id"/>   
+	          		<field name="product_id" /> 	          		 
+	        	</tree>
+	      	</field>
+	    </record>
+		<record id="maintenance_schedule_form_view" model="ir.ui.view">
+			<field name="name">maintenance.schedule.form</field>
+			<field name="model">maintenance.schedule</field>
+			<field name="arch" type="xml">
+				<form string="Maintenance Schedule">
+					<sheet>						
+						<group>
+							<group>
+				          		<field name="part"/> 
+				          		<field name="product_milestone_id"/> 
+				          		<field name="maintenance_action_id"/>  
+				          		<field name="product_id" attrs="{'required': [('part_replacement','=',True)]}"/>  
+				          		<field name="part_replacement" invisible="1" />				          		
+							</group>							
+						</group>							                     			
+					</sheet>					
+				</form>
+			</field>
+		</record>    	
+		<record model="ir.actions.act_window" id="maintenance_action_list_view">
+			<field name="name">Maintenance Actions</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">maintenance.action</field>
+			<field name="view_mode">tree,form</field>
+			<field name="context">{}</field>
+		</record>
+		<record model="ir.actions.act_window" id="maintenance_schedule_list_view">
+			<field name="name">Maintenance Schedule</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">maintenance.schedule</field>
+			<field name="view_mode">tree,form</field>
+			<field name="context">{}</field>
+		</record>
+	
+		
+		<record id="product_template_form_view" model="ir.ui.view">
+			<field name="name">product_maintenance_schedule</field>
+			<field name="model">product.template</field>
+			<field name="inherit_id" ref="product.product_template_form_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//page[@name='general_information']" position="after">
+					<page name="maintenance_schedule" string="Maintenance">
+						<field name="maintenance_schedule_ids">
+							<tree>
+								<field name="part" />
+								<field name="product_milestone_id" />
+								<field name="maintenance_action_id" />
+								<field name="product_id" />								
+							</tree>
+						</field>
+					</page>
+				</xpath>
+			</field>
+		</record>
+						
+												
+  </data>
+</odoo>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_employee_form" model="ir.ui.view">
+        <field name="name">hr.employee.form.relative.inherit</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="to_hr_employee_relative.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='relative_vat']" position="after">
+                <field name="is_dependant"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

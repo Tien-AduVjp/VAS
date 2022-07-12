@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="view_order_form">
+			<field name="name">sale.order.form</field>
+			<field name="model">sale.order</field>
+			<field name="inherit_id" ref="sale.view_order_form" />
+			<field name="arch" type="xml">
+				<xpath
+					expr="//field[@name='order_line']/form/group/group[2]/field[@name='analytic_tag_ids']"
+					position="after">
+						<field name="date_expected" class="oe_inline" />
+				</xpath>
+				<xpath
+					expr="//field[@name='order_line']/tree/field[@name='name']"
+					position="after">
+						<field name="date_expected" class="oe_inline" />
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

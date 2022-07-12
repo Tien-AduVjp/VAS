@@ -1,0 +1,26 @@
+<odoo>
+	<data>
+		<record id="helpdesk_team_form_view" model="ir.ui.view">
+			<field name="name">helpdesk.team.form</field>
+			<field name="model">helpdesk.team</field>
+			<field name="inherit_id"
+				ref="viin_helpdesk.helpdesk_team_form_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//page[@name='emails']" position="after">
+					<page name="project" string="Project &amp; Timesheets">
+						<div class="alert alert-info" role="alert">Specify a project to make
+							it the default project for the tickets of this team so that the
+							members will be able to link a ticket with a project task and log
+							timesheet (if timesheet is enabled on the project accordingly).
+						</div>
+						<group>
+							<group>
+								<field name="project_id" />
+							</group>
+						</group>
+					</page>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

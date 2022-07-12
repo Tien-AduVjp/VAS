@@ -1,0 +1,556 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_l10n_vn_invoice_declaration
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-13 14:34+0000\n"
+"PO-Revision-Date: 2021-09-23 04:39+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_02_gtgt.py:0
+#, python-format
+msgid ""
+"%s. Goods & Services for Investment Projects be eligible for VAT deduction"
+msgstr ""
+"%s. Hàng hóa, dịch vụ dùng cho dự án đầu tư đủ điều kiện được khấu trừ thuế"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_01_gtgt.py:0
+#, python-format
+msgid "%s. VAT Exemption Goods & Services"
+msgstr "%s. Hàng hóa, dịch vụ không chịu thuế GTGT"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_02_gtgt.py:0
+#, python-format
+msgid "%s. VAT Exemption Goods & Services for Production and Business"
+msgstr "%s. Hàng hóa, dịch vụ dùng riêng cho SXKD không chịu thuế GTGT"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_01_gtgt.py:0
+#, python-format
+msgid "%s. VAT Taxable Goods & Services %s%s"
+msgstr "%s. Hàng hóa & Dịch vụ chịu thuế GTGT %s%s"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_02_gtgt.py:0
+#, python-format
+msgid ""
+"%s. VAT Taxable Goods & Services for Production and Business be eligible for"
+" VAT deduction"
+msgstr ""
+"%s. Hàng hóa, dịch vụ dùng cho SXKD chịu thuế được khấu trừ"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_02_gtgt.py:0
+#, python-format
+msgid ""
+"%s. VAT Taxable and Exemption Goods & Services for Production and Business "
+"be eligible for VAT deduction"
+msgstr ""
+"%s. Hàng hóa, dịch vụ dùng chung cho SXKD chịu thuế và không chịu thuế được khấu"
+" trừ thuế"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_01_gtgt.py:0
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_01_gtgt.py:0
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_02_gtgt.py:0
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_02_gtgt.py:0
+#, python-format
+msgid "(Signature, Full Name)"
+msgstr "(Chữ ký, Họ và Tên)"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_01_gtgt.py:0
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_02_gtgt.py:0
+#, python-format
+msgid "(Signature, Full Name, Job Title)"
+msgstr "(Chữ ký, Họ và Tên, Dấu chức danh)"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__abstract_l10n_vn_c119_gtgt_wizard__month__4
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__wizard_l10n_vn_c119_01gtgt__month__4
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__wizard_l10n_vn_c119_02gtgt__month__4
+msgid "April"
+msgstr "Tháng 4"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__abstract_l10n_vn_c119_gtgt_wizard__month__8
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__wizard_l10n_vn_c119_01gtgt__month__8
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__wizard_l10n_vn_c119_02gtgt__month__8
+msgid "August"
+msgstr "Tháng 8"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_invoice_declaration.wizard_l10n_vn_c119_01gtgt_form
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_invoice_declaration.wizard_l10n_vn_c119_02gtgt_form
+msgid "Cancel"
+msgstr ""
+
+#. module: viin_l10n_vn_invoice_declaration
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_01_gtgt.py:0
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_02_gtgt.py:0
+#, python-format
+msgid "Chief Accountant"
+msgstr "Kế toán trưởng"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: model:ir.model.fields,field_description:viin_l10n_vn_invoice_declaration.field_abstract_l10n_vn_c119_gtgt_wizard__company_id
+#: model:ir.model.fields,field_description:viin_l10n_vn_invoice_declaration.field_wizard_l10n_vn_c119_01gtgt__company_id
+#: model:ir.model.fields,field_description:viin_l10n_vn_invoice_declaration.field_wizard_l10n_vn_c119_02gtgt__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: model:ir.model.fields,field_description:viin_l10n_vn_invoice_declaration.field_wizard_l10n_vn_c119_01gtgt__create_uid
+#: model:ir.model.fields,field_description:viin_l10n_vn_invoice_declaration.field_wizard_l10n_vn_c119_02gtgt__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: viin_l10n_vn_invoice_declaration
+#: model:ir.model.fields,field_description:viin_l10n_vn_invoice_declaration.field_wizard_l10n_vn_c119_01gtgt__create_date
+#: model:ir.model.fields,field_description:viin_l10n_vn_invoice_declaration.field_wizard_l10n_vn_c119_02gtgt__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: viin_l10n_vn_invoice_declaration
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_01_gtgt.py:0
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_02_gtgt.py:0
+#, python-format
+msgid "Currency:"
+msgstr "Đơn vị tiền tệ:"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_01_gtgt.py:0
+#, python-format
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_01_gtgt.py:0
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_02_gtgt.py:0
+#, python-format
+msgid "Date"
+msgstr "Ngày"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: model:ir.model.fields,field_description:viin_l10n_vn_invoice_declaration.field_abstract_l10n_vn_c119_gtgt_wizard__date_from
+#: model:ir.model.fields,field_description:viin_l10n_vn_invoice_declaration.field_wizard_l10n_vn_c119_01gtgt__date_from
+#: model:ir.model.fields,field_description:viin_l10n_vn_invoice_declaration.field_wizard_l10n_vn_c119_02gtgt__date_from
+msgid "Date from"
+msgstr "Từ ngày"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_01_gtgt.py:0
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_02_gtgt.py:0
+#, python-format
+msgid "Date from: %s - Date to: %s"
+msgstr "Từ ngày: %s - Đến ngày: %s"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: model:ir.model.fields,field_description:viin_l10n_vn_invoice_declaration.field_abstract_l10n_vn_c119_gtgt_wizard__date_to
+#: model:ir.model.fields,field_description:viin_l10n_vn_invoice_declaration.field_wizard_l10n_vn_c119_01gtgt__date_to
+#: model:ir.model.fields,field_description:viin_l10n_vn_invoice_declaration.field_wizard_l10n_vn_c119_02gtgt__date_to
+msgid "Date to"
+msgstr "Đến ngày"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__abstract_l10n_vn_c119_gtgt_wizard__month__12
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__wizard_l10n_vn_c119_01gtgt__month__12
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__wizard_l10n_vn_c119_02gtgt__month__12
+msgid "December"
+msgstr "Tháng 12"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_01_gtgt.py:0
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_02_gtgt.py:0
+#, python-format
+msgid "Director/CEO"
+msgstr "Giám đốc"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: model:ir.model.fields,field_description:viin_l10n_vn_invoice_declaration.field_abstract_l10n_vn_c119_gtgt_wizard__display_name
+#: model:ir.model.fields,field_description:viin_l10n_vn_invoice_declaration.field_wizard_l10n_vn_c119_01gtgt__display_name
+#: model:ir.model.fields,field_description:viin_l10n_vn_invoice_declaration.field_wizard_l10n_vn_c119_02gtgt__display_name
+msgid "Display Name"
+msgstr "Màn hình hiển thị"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__abstract_l10n_vn_c119_gtgt_wizard__month__2
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__wizard_l10n_vn_c119_01gtgt__month__2
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__wizard_l10n_vn_c119_02gtgt__month__2
+msgid "February"
+msgstr "Tháng 2"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: model:ir.model.fields,field_description:viin_l10n_vn_invoice_declaration.field_abstract_l10n_vn_c119_gtgt_wizard__id
+#: model:ir.model.fields,field_description:viin_l10n_vn_invoice_declaration.field_wizard_l10n_vn_c119_01gtgt__id
+#: model:ir.model.fields,field_description:viin_l10n_vn_invoice_declaration.field_wizard_l10n_vn_c119_02gtgt__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_l10n_vn_invoice_declaration
+#: model:ir.ui.menu,name:viin_l10n_vn_invoice_declaration.invoice_declaration_vn_statements_menu
+msgid "Invoice Declaration"
+msgstr "Bảng kê hóa đơn"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: code:addons/viin_l10n_vn_invoice_declaration/controllers/main.py:0
+#, python-format
+msgid "Invoice Declaration Puchases.xlsx"
+msgstr "Bảng kê hóa đơn mua vào.xlsx"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: code:addons/viin_l10n_vn_invoice_declaration/controllers/main.py:0
+#, python-format
+msgid "Invoice Declaration Sales.xlsx"
+msgstr "Bảng kê hóa đơn bán ra.xlsx"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: model:ir.model,name:viin_l10n_vn_invoice_declaration.model_abstract_l10n_vn_c119_gtgt_wizard
+msgid "Invoice Declaration Wizard Abstract"
+msgstr "Bảng kê hóa đơn Abstract Winzard"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_01_gtgt.py:0
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_02_gtgt.py:0
+#, python-format
+msgid "Invoice No"
+msgstr "Số hóa đơn"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_01_gtgt.py:0
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_02_gtgt.py:0
+#, python-format
+msgid "Invoice, Bill"
+msgstr "Hóa đơn, chứng từ"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__abstract_l10n_vn_c119_gtgt_wizard__month__1
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__wizard_l10n_vn_c119_01gtgt__month__1
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__wizard_l10n_vn_c119_02gtgt__month__1
+msgid "January"
+msgstr "Tháng 1"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__abstract_l10n_vn_c119_gtgt_wizard__month__7
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__wizard_l10n_vn_c119_01gtgt__month__7
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__wizard_l10n_vn_c119_02gtgt__month__7
+msgid "July"
+msgstr "Tháng 7"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__abstract_l10n_vn_c119_gtgt_wizard__month__6
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__wizard_l10n_vn_c119_01gtgt__month__6
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__wizard_l10n_vn_c119_02gtgt__month__6
+msgid "June"
+msgstr "Tháng 6"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_02_gtgt.py:0
+#, python-format
+msgid "LIST OF INVOICES, FINANCIAL PAPERS OF PURCHASED GOODS AND SERVICES"
+msgstr "BẢNG KÊ HÓA ĐƠN, CHỨNG TỪ CỦA HÀNG HÓA, DỊCH VỤ MUA VÀO"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: model:ir.actions.act_window,name:viin_l10n_vn_invoice_declaration.action_wizard_l10n_vn_c119_02gtgt
+msgid ""
+"LIST OF INVOICES, FINANCIAL PAPERS OF PURCHASED GOODS AND SERVICES (01 -2/GTGT)\n"
+"\t\t\t"
+msgstr ""
+"BẢNG KÊ HÓA ĐƠN, CHỨNG TỪ CỦA HÀNG HÓA, DỊCH VỤ MUA VÀO (01 -2/GTGT)\n"
+"\t\t\t"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_01_gtgt.py:0
+#, python-format
+msgid "LIST OF INVOICES, FINANCIAL PAPERS OF SOLD GOODS"
+msgstr "BẢNG KÊ HÓA ĐƠN, CHỨNG TỪ CỦA HÀNG HÓA, DỊCH VỤ BÁN RA"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: model:ir.actions.act_window,name:viin_l10n_vn_invoice_declaration.action_wizard_l10n_vn_c119_01gtgt
+msgid "LIST OF INVOICES, FINANCIAL PAPERS OF SOLD GOODS (01 -1/GTGT)"
+msgstr "BẢNG KÊ HÓA ĐƠN, CHỨNG TỪ CỦA HÀNG HÓA, DỊCH VỤ BÁN RA (01 -1/GTGT)"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: model:ir.model.fields,field_description:viin_l10n_vn_invoice_declaration.field_abstract_l10n_vn_c119_gtgt_wizard____last_update
+#: model:ir.model.fields,field_description:viin_l10n_vn_invoice_declaration.field_wizard_l10n_vn_c119_01gtgt____last_update
+#: model:ir.model.fields,field_description:viin_l10n_vn_invoice_declaration.field_wizard_l10n_vn_c119_02gtgt____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: viin_l10n_vn_invoice_declaration
+#: model:ir.model.fields,field_description:viin_l10n_vn_invoice_declaration.field_wizard_l10n_vn_c119_01gtgt__write_uid
+#: model:ir.model.fields,field_description:viin_l10n_vn_invoice_declaration.field_wizard_l10n_vn_c119_02gtgt__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: viin_l10n_vn_invoice_declaration
+#: model:ir.model.fields,field_description:viin_l10n_vn_invoice_declaration.field_wizard_l10n_vn_c119_01gtgt__write_date
+#: model:ir.model.fields,field_description:viin_l10n_vn_invoice_declaration.field_wizard_l10n_vn_c119_02gtgt__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: viin_l10n_vn_invoice_declaration
+#: model:ir.ui.menu,name:viin_l10n_vn_invoice_declaration.viin_l10n_vn_invoice_declaration_purchase
+msgid ""
+"List of Invoice, Financial paper of Purchased and Services (01 -2/GTGT)"
+msgstr "Bảng kê hóa đơn, chứng từ mua vào (01 - 2/GTGT)"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: model:ir.ui.menu,name:viin_l10n_vn_invoice_declaration.viin_l10n_vn_invoice_declaration_sales
+msgid "List of Invoice, Financial paper of Sold Goods (01 -1/GTGT)"
+msgstr "Bảng kê hóa đơn, chứng từ bán ra (01 -1/GTGT)"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__abstract_l10n_vn_c119_gtgt_wizard__month__3
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__wizard_l10n_vn_c119_01gtgt__month__3
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__wizard_l10n_vn_c119_02gtgt__month__3
+msgid "March"
+msgstr "Tháng 3"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__abstract_l10n_vn_c119_gtgt_wizard__month__5
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__wizard_l10n_vn_c119_01gtgt__month__5
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__wizard_l10n_vn_c119_02gtgt__month__5
+msgid "May"
+msgstr "Tháng 5"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: model:ir.model.fields,field_description:viin_l10n_vn_invoice_declaration.field_abstract_l10n_vn_c119_gtgt_wizard__month
+#: model:ir.model.fields,field_description:viin_l10n_vn_invoice_declaration.field_wizard_l10n_vn_c119_01gtgt__month
+#: model:ir.model.fields,field_description:viin_l10n_vn_invoice_declaration.field_wizard_l10n_vn_c119_02gtgt__month
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__abstract_l10n_vn_c119_gtgt_wizard__type__month
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__wizard_l10n_vn_c119_01gtgt__type__month
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__wizard_l10n_vn_c119_02gtgt__type__month
+msgid "Month"
+msgstr "Tháng"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_01_gtgt.py:0
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_02_gtgt.py:0
+#, python-format
+msgid "Month ..... Day ..... Year ....."
+msgstr "Tháng ..... Ngày ..... Năm ....."
+
+#. module: viin_l10n_vn_invoice_declaration
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_01_gtgt.py:0
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_02_gtgt.py:0
+#, python-format
+msgid "No"
+msgstr "STT"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_01_gtgt.py:0
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_02_gtgt.py:0
+#, python-format
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__abstract_l10n_vn_c119_gtgt_wizard__month__11
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__wizard_l10n_vn_c119_01gtgt__month__11
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__wizard_l10n_vn_c119_02gtgt__month__11
+msgid "November"
+msgstr "Tháng 11"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__abstract_l10n_vn_c119_gtgt_wizard__month__10
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__wizard_l10n_vn_c119_01gtgt__month__10
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__wizard_l10n_vn_c119_02gtgt__month__10
+msgid "October"
+msgstr "Tháng 10"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_01_gtgt.py:0
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_02_gtgt.py:0
+#, python-format
+msgid "Prepared By"
+msgstr "Người ghi sổ"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_invoice_declaration.wizard_l10n_vn_c119_01gtgt_form
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_invoice_declaration.wizard_l10n_vn_c119_02gtgt_form
+msgid "Print Excel"
+msgstr "In Excel"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: model:ir.model.fields,field_description:viin_l10n_vn_invoice_declaration.field_abstract_l10n_vn_c119_gtgt_wizard__quarter
+#: model:ir.model.fields,field_description:viin_l10n_vn_invoice_declaration.field_wizard_l10n_vn_c119_01gtgt__quarter
+#: model:ir.model.fields,field_description:viin_l10n_vn_invoice_declaration.field_wizard_l10n_vn_c119_02gtgt__quarter
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__abstract_l10n_vn_c119_gtgt_wizard__type__quarter
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__wizard_l10n_vn_c119_01gtgt__type__quarter
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__wizard_l10n_vn_c119_02gtgt__type__quarter
+msgid "Quarter"
+msgstr "Quý"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__abstract_l10n_vn_c119_gtgt_wizard__quarter__i
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__wizard_l10n_vn_c119_01gtgt__quarter__i
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__wizard_l10n_vn_c119_02gtgt__quarter__i
+msgid "Quarter I"
+msgstr "Quý I"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__abstract_l10n_vn_c119_gtgt_wizard__quarter__ii
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__wizard_l10n_vn_c119_01gtgt__quarter__ii
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__wizard_l10n_vn_c119_02gtgt__quarter__ii
+msgid "Quarter II"
+msgstr "Quý II"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__abstract_l10n_vn_c119_gtgt_wizard__quarter__iii
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__wizard_l10n_vn_c119_01gtgt__quarter__iii
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__wizard_l10n_vn_c119_02gtgt__quarter__iii
+msgid "Quarter III"
+msgstr "Quý III"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__abstract_l10n_vn_c119_gtgt_wizard__quarter__iv
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__wizard_l10n_vn_c119_01gtgt__quarter__iv
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__wizard_l10n_vn_c119_02gtgt__quarter__iv
+msgid "Quarter IV"
+msgstr "Quý IV"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: code:addons/viin_l10n_vn_invoice_declaration/controllers/main.py:0
+#: code:addons/viin_l10n_vn_invoice_declaration/controllers/main.py:0
+#, python-format
+msgid "Record not found: id: %s, uid: %s"
+msgstr "Bản ghi không được tìm thấy: id: %s, uid: %s"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__abstract_l10n_vn_c119_gtgt_wizard__month__9
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__wizard_l10n_vn_c119_01gtgt__month__9
+#: model:ir.model.fields.selection,name:viin_l10n_vn_invoice_declaration.selection__wizard_l10n_vn_c119_02gtgt__month__9
+msgid "September"
+msgstr "Tháng 9"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_01_gtgt.py:0
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_02_gtgt.py:0
+#, python-format
+msgid "Tax Id"
+msgstr "Mã số thuế"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_01_gtgt.py:0
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_02_gtgt.py:0
+#, python-format
+msgid "Taxes"
+msgstr "Thuế GTGT"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_02_gtgt.py:0
+#, python-format
+msgid "Taxes Total (Purchase)"
+msgstr "Tổng số thuế GTGT của hàng hóa, dịch vụ mua vào"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_01_gtgt.py:0
+#, python-format
+msgid "Taxes Total (Sales)"
+msgstr "Tổng số thuế GTGT của hàng hóa, dịch vụ bán ra"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_01_gtgt.py:0
+#, python-format
+msgid ""
+"Template: 01 -1/GTGT (Released Under the Circular No. 119/2014/TT-BTC Dated "
+"22/12/2014 by the Ministry of Finance)"
+msgstr ""
+"Mẫu số 01: 01 -1/GTGT(Ban hành kèm theo thông tư số 119/2014/TT-BTC ngày "
+"25/8/2014 của Bộ tài chính)"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_02_gtgt.py:0
+#, python-format
+msgid ""
+"Template: 01 -2/GTGT (Released Under the Circular No. 119/2014/TT-BTC Dated "
+"22/12/2014 by the Ministry of Finance)"
+msgstr ""
+"Mẫu số 01: 01 -2/GTGT(Ban hành kèm theo thông tư số 119/2014/TT-BTC ngày "
+"25/8/2014 của Bộ tài chính)"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_01_gtgt.py:0
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_02_gtgt.py:0
+#, python-format
+msgid "The Date From must be less than the Date To."
+msgstr "Ngày bắt đầu phải nhỏ hơn ngày kết thúc"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/abstract_l10n_vn_c119_gtgt.py:0
+#, python-format
+msgid "The method '_add_content_body' has NOT been implemented."
+msgstr "Phương thức '_add_content_body' chưa được triển khai."
+
+#. module: viin_l10n_vn_invoice_declaration
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/abstract_l10n_vn_c119_gtgt.py:0
+#, python-format
+msgid "The method '_get_domain' has NOT been implemented."
+msgstr "Phương thức '_get_domain' chưa được triển khai."
+
+#. module: viin_l10n_vn_invoice_declaration
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_01_gtgt.py:0
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_02_gtgt.py:0
+#, python-format
+msgid "Total"
+msgstr "Tổng"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: model:ir.model.fields,field_description:viin_l10n_vn_invoice_declaration.field_abstract_l10n_vn_c119_gtgt_wizard__type
+#: model:ir.model.fields,field_description:viin_l10n_vn_invoice_declaration.field_wizard_l10n_vn_c119_01gtgt__type
+#: model:ir.model.fields,field_description:viin_l10n_vn_invoice_declaration.field_wizard_l10n_vn_c119_02gtgt__type
+msgid "Types"
+msgstr "Loại"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_01_gtgt.py:0
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_02_gtgt.py:0
+#, python-format
+msgid "Untaxed Amount"
+msgstr "Doanh thu chưa có thuế GTGT"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_02_gtgt.py:0
+#, python-format
+msgid "Untaxed Amount Total (Purchase)"
+msgstr "Tổng giá trị HHDV mua vào phục vụ SXKD được khấu trừ thuế GTGT"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_01_gtgt.py:0
+#, python-format
+msgid "Untaxed Amount Total (Sales)"
+msgstr "Tổng doanh thu hàng hóa, dịch vụ bán ra chịu thuế GTGT"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_02_gtgt.py:0
+#, python-format
+msgid "Vendor"
+msgstr "Tên người bán"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: model:ir.model,name:viin_l10n_vn_invoice_declaration.model_wizard_l10n_vn_c119_02gtgt
+msgid "Vietnam Invoice Declaration purchase 01 -2/GTGT Wizard"
+msgstr "Bảng kê hóa đơn mua vào 01 -2/GTGT Winzard"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: model:ir.model,name:viin_l10n_vn_invoice_declaration.model_wizard_l10n_vn_c119_01gtgt
+msgid "Vietnam Invoice Declaration sale 01 -1/GTGT Wizard"
+msgstr "Bảng kê hóa đơn bán ra 01 -1/GTGT Wizard"
+
+#. module: viin_l10n_vn_invoice_declaration
+#: code:addons/viin_l10n_vn_invoice_declaration/wizards/l10n_vn_c119_02_gtgt.py:0
+#, python-format
+msgid "is a summary of non-deductible tax"
+msgstr "Là tập hợp tiền thuế không được khấu trừ"

@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_replenishment_request_line_employee,replenishment.request.line.employee,model_replenishment_request_line,base.group_user,1,0,0,0
+access_replenishment_request_user,replenishment.request.request_user,model_replenishment_request,to_procurement_requests.group_user,1,1,1,0
+access_replenishment_request_line_user,replenishment.request.line.request_user,model_replenishment_request_line,to_procurement_requests.group_user,1,1,1,1
+access_stock_picking_request_user,stock.picking.request_user,stock.model_stock_picking,to_procurement_requests.group_user,1,0,0,0
+access_stock_move_request_user,stock.move.request_user,stock.model_stock_move,to_procurement_requests.group_user,1,0,0,0
+access_replenishment_request_stock_user,replenishment.request.stock_user,model_replenishment_request,stock.group_stock_user,1,1,0,0
+access_replenishment_request_line_stock_user,replenishment.request.line.stock_user,model_replenishment_request_line,stock.group_stock_user,1,1,0,0
+access_replenishment_request_manager,replenishment.request.request_manager,model_replenishment_request,to_procurement_requests.group_manager,1,1,1,1

@@ -1,0 +1,902 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_fleet_accounting
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-21 09:04+0000\n"
+"PO-Revision-Date: 2021-10-21 09:04+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,help:to_fleet_accounting.field_fleet_vehicle_cost__created_from_invoice_line_id
+#: model:ir.model.fields,help:to_fleet_accounting.field_fleet_vehicle_log_contract__created_from_invoice_line_id
+#: model:ir.model.fields,help:to_fleet_accounting.field_fleet_vehicle_log_fuel__created_from_invoice_line_id
+#: model:ir.model.fields,help:to_fleet_accounting.field_fleet_vehicle_log_services__created_from_invoice_line_id
+msgid ""
+"A technical field to indicate that this cost was created from an invoice "
+"line"
+msgstr ""
+"Một trường kỹ thuật để chi ra rằng chi phí này được tạo từ một dòng hoá đơn "
+"(tạo từ hoá đơn)"
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,help:to_fleet_accounting.field_abstract_vehicle_cost_revenue__created_from_invoice_line_id
+msgid ""
+"A technical field to indicate that this record was created from an invoice "
+"line"
+msgstr ""
+"Một trường kỹ thuật để chỉ ra rằng bản ghi này được tạo từ một dòng hoá đơn"
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_abstract_vehicle_cost_revenue__amount
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_cost__amount
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_contract__amount
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_fuel__amount
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_services__amount
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_vehicle_cost_distribution_line__amount
+msgid "Amount"
+msgstr "Tổng tiền"
+
+#. module: to_fleet_accounting
+#: model:ir.model,name:to_fleet_accounting.model_account_analytic_account
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle__analytic_account_id
+msgid "Analytic Account"
+msgstr "Tài khoản KT Quản trị"
+
+#. module: to_fleet_accounting
+#: model:ir.model,name:to_fleet_accounting.model_account_analytic_group
+msgid "Analytic Categories"
+msgstr "Nhóm Tài khoản Quản trị"
+
+#. module: to_fleet_accounting
+#: model:ir.model,name:to_fleet_accounting.model_account_analytic_line
+msgid "Analytic Line"
+msgstr "Phát sinh KT Quản trị"
+
+#. module: to_fleet_accounting
+#: model:ir.model,name:to_fleet_accounting.model_fleet_vehicle_model_brand
+msgid "Brand of the vehicle"
+msgstr "Nhãn hiệu của phương tiện"
+
+#. module: to_fleet_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.view_fleet_vehicle_cost_invoicing_wizard
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.view_fleet_vehicle_log_fuel_invoicing_wizard
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.view_fleet_vehicle_log_services_invoicing_wizard
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.view_vehicle_cost_allocation_wizard
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: to_fleet_accounting
+#: code:addons/to_fleet_accounting/models/fleet_vehicle_cost.py:0
+#, python-format
+msgid "Child Costs must have the same currency as its parent's"
+msgstr ""
+"Chi phí phát sinh (con) phải có cùng tiền tệ với chi phí gốc thực tế (cha)"
+
+#. module: to_fleet_accounting
+#: model:ir.actions.server,name:to_fleet_accounting.ir_cron_fleet_vehicle_cost_garbage_ir_actions_server
+#: model:ir.cron,cron_name:to_fleet_accounting.ir_cron_fleet_vehicle_cost_garbage
+#: model:ir.cron,name:to_fleet_accounting.ir_cron_fleet_vehicle_cost_garbage
+msgid "Clean Orphan Vehicle Costs"
+msgstr "Xoá Chi phí phương tiện mồ côi"
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_abstract_vehicle_cost_revenue__company_id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_cost__company_id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_cost_report__company_id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_contract__company_id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_fuel__company_id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_services__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_cost_report__contract_id
+#: model:ir.model.fields.selection,name:to_fleet_accounting.selection__fleet_vehicle_cost_report__cost_type__contract
+msgid "Contract"
+msgstr "Hợp đồng"
+
+#. module: to_fleet_accounting
+#: model:ir.model,name:to_fleet_accounting.model_fleet_vehicle_log_contract
+msgid "Contract information on a vehicle"
+msgstr "Thông tin hợp đồng về phương tiện"
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_cost_report__amount
+msgid "Cost"
+msgstr "Chi phí"
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_vehicle_cost_distribution__vehicle_cost_allocation_line_ids
+msgid "Cost Allocation Lines"
+msgstr "Dòng phân bổ chi phí"
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_contract__cost_amount
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_fuel__cost_amount
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_services__cost_amount
+msgid "Cost Amount"
+msgstr "Tổng Chi phí"
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_contract__cost_generated
+msgid "Cost Generated"
+msgstr "Chi phí Được tạo"
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_cost_report__cost_subtype_id
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.fleet_vehicle_costs_report_view_search
+msgid "Cost Subtype"
+msgstr "Kiểu phụ của Chi phí"
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_cost_report__cost_type
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.fleet_vehicle_costs_report_view_search
+msgid "Cost Type"
+msgstr "Kiểu Chi phí"
+
+#. module: to_fleet_accounting
+#: model:ir.model,name:to_fleet_accounting.model_fleet_vehicle_cost
+msgid "Cost related to a vehicle"
+msgstr "Chi phí liên quan đến phương tiện"
+
+#. module: to_fleet_accounting
+#: model:ir.actions.act_window,name:to_fleet_accounting.fleet_costs_reporting_action
+msgid "Costs Analysis"
+msgstr "Phân tích Chi phí"
+
+#. module: to_fleet_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.view_fleet_vehicle_cost_invoicing_wizard
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.view_fleet_vehicle_log_fuel_invoicing_wizard
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.view_fleet_vehicle_log_services_invoicing_wizard
+msgid "Create Invoices"
+msgstr "Tạo Hoá đơn"
+
+#. module: to_fleet_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.view_fleet_vehicle_cost_invoicing_wizard
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.view_fleet_vehicle_log_fuel_invoicing_wizard
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.view_fleet_vehicle_log_services_invoicing_wizard
+msgid "Create and View Invoices"
+msgstr "Tạo và Xem Hoá đơn"
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_abstract_vehicle_cost_revenue__created_from_invoice_line_id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_cost__created_from_invoice_line_id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_contract__created_from_invoice_line_id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_fuel__created_from_invoice_line_id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_services__created_from_invoice_line_id
+msgid "Created From Invoice Line"
+msgstr "Được tạo từ Dòng Hoá đơn"
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_cost_invoicing_wizard__create_uid
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_fuel_invoicing_wizard__create_uid
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_services_invoicing_wizard__create_uid
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_vehicle_cost_distribution__create_uid
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_vehicle_cost_distribution_line__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_cost_invoicing_wizard__create_date
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_fuel_invoicing_wizard__create_date
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_services_invoicing_wizard__create_date
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_vehicle_cost_distribution__create_date
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_vehicle_cost_distribution_line__create_date
+msgid "Created on"
+msgstr "Được tạo vào"
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_abstract_vehicle_cost_revenue__currency_id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_cost__currency_id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_contract__currency_id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_fuel__currency_id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_services__currency_id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_vehicle_cost_distribution_line__currency_id
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.fleet_vehicle_costs_view_search
+msgid "Currency"
+msgstr "Tiền tệ"
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_cost_report__date
+msgid "Date"
+msgstr "Ngày"
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_abstract_fleet_vehicle_cost_invoicing_wizard__display_name
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_abstract_fleet_vehicle_log__display_name
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_abstract_vehicle_cost_revenue__display_name
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_cost_invoicing_wizard__display_name
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_cost_report__display_name
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_fuel_invoicing_wizard__display_name
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_services_invoicing_wizard__display_name
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_vehicle_cost_distribution__display_name
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_vehicle_cost_distribution_line__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_fleet_accounting
+#. openerp-web
+#: code:addons/to_fleet_accounting/static/src/js/to_fleet_accounting.js:0
+#, python-format
+msgid "Distributed into Vehicle Costs"
+msgstr "Đã phân bổ thành các Chi phí Phương tiện"
+
+#. module: to_fleet_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.fleet_vehicle_costs_report_view_search
+msgid "Effective Costs"
+msgstr "Phí tổn Thực tế"
+
+#. module: to_fleet_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.fleet_vehicle_costs_view_search
+msgid "Filter costs that can be invoiceable but have not been invoiced yet."
+msgstr "Lọc các chi phí mà có thể xuất hoá đơn nhưng chưa được xuất hoá đơn."
+
+#. module: to_fleet_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.view_move_line_form
+msgid "Fleet"
+msgstr "Đội Phương tiện"
+
+#. module: to_fleet_accounting
+#: model:ir.model,name:to_fleet_accounting.model_fleet_service_type
+msgid "Fleet Service Type"
+msgstr "Loại hình dịch vụ phương tiện"
+
+#. module: to_fleet_accounting
+#: model:ir.model,name:to_fleet_accounting.model_fleet_vehicle_cost_report
+msgid "Fleet Vehicle Cost Analysis"
+msgstr "Phân tích Chi phí Phương tiện"
+
+#. module: to_fleet_accounting
+#: model:ir.model,name:to_fleet_accounting.model_fleet_vehicle_cost_invoicing_wizard
+msgid "Fleet Vehicle Cost Invoicing Wizard"
+msgstr "Đồ thuật Xuất hoá đơn Chi phí Phương tiện"
+
+#. module: to_fleet_accounting
+#: model:ir.model,name:to_fleet_accounting.model_abstract_fleet_vehicle_log
+msgid "Fleet Vehicle Log Abstract"
+msgstr ""
+
+#. module: to_fleet_accounting
+#: model:ir.model,name:to_fleet_accounting.model_fleet_vehicle_log_fuel_invoicing_wizard
+msgid "Fleet Vehicle Log Fuel Invoicing Wizard"
+msgstr ""
+
+#. module: to_fleet_accounting
+#: model:ir.model,name:to_fleet_accounting.model_fleet_vehicle_log_services_invoicing_wizard
+msgid "Fleet Vehicle Log Services Invoicing Wizard"
+msgstr ""
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields.selection,name:to_fleet_accounting.selection__fleet_vehicle_cost_report__cost_type__fuel
+msgid "Fuel"
+msgstr "Nhiên liệu"
+
+#. module: to_fleet_accounting
+#: model:ir.model,name:to_fleet_accounting.model_fleet_vehicle_log_fuel
+msgid "Fuel log for vehicles"
+msgstr "Nhật ký nhiên liệu cho các phương tiện"
+
+#. module: to_fleet_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.fleet_vehicle_costs_view_search
+msgid "Garbage"
+msgstr "Rác rưởi"
+
+#. module: to_fleet_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.fleet_vehicle_costs_report_view_search
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_account_move_line__has_vehicle_cost
+msgid "Has Vehicle Cost"
+msgstr "Có Chi phí Phương tiện"
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_abstract_fleet_vehicle_cost_invoicing_wizard__id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_abstract_fleet_vehicle_log__id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_abstract_vehicle_cost_revenue__id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_cost_invoicing_wizard__id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_cost_report__id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_fuel_invoicing_wizard__id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_services_invoicing_wizard__id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_vehicle_cost_distribution__id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_vehicle_cost_distribution_line__id
+msgid "ID"
+msgstr ""
+
+#. module: to_fleet_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.fleet_vehicle_costs_report_view_search
+msgid "Indicative Costs"
+msgstr "Chi phí Phát sinh"
+
+#. module: to_fleet_accounting
+#: model:ir.actions.act_window,name:to_fleet_accounting.fleet_costs_reporting_non_effective_action
+msgid "Indicative Costs Analysis"
+msgstr "Phân tích các Chi phí Phát sinh"
+
+#. module: to_fleet_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.view_fleet_vehicle_cost_invoicing_wizard
+msgid "Invoice Fleet Cost"
+msgstr "Xuất hoá đơn Chi phí Phương tiện"
+
+#. module: to_fleet_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.view_fleet_vehicle_log_fuel_invoicing_wizard
+msgid "Invoice Fuel Logs"
+msgstr "Nhật ký Nhiên liệu Phương tiện"
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_abstract_vehicle_cost_revenue__invoice_line_id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_cost__invoice_line_id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_contract__invoice_line_id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_fuel__invoice_line_id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_services__invoice_line_id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_vehicle_cost_distribution_line__invoice_line_id
+msgid "Invoice Line"
+msgstr "Chi tiết hoá đơn"
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_vehicle_cost_distribution__invoice_line_ids
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.view_vehicle_cost_allocation_wizard
+msgid "Invoice Lines"
+msgstr "Chi tiết hoá đơn"
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_abstract_vehicle_cost_revenue__invoice_id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_cost__invoice_id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_cost_report__invoice_id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_contract__invoice_id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_fuel__invoice_id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_services__invoice_id
+msgid "Invoice Ref."
+msgstr "Số Hoá đơn"
+
+#. module: to_fleet_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.view_fleet_vehicle_log_services_invoicing_wizard
+msgid "Invoice Services"
+msgstr "Xuất hoá đơn Dịch vụ"
+
+#. module: to_fleet_accounting
+#: model:ir.actions.act_window,name:to_fleet_accounting.action_view_fleet_vehicle_cost_invoicing_wizard
+msgid "Invoice Vehicle Costs"
+msgstr "Xuất hoá đơn Chi phí Phương tiện"
+
+#. module: to_fleet_accounting
+#: model:ir.actions.act_window,name:to_fleet_accounting.action_view_fleet_vehicle_log_fuel_invoicing_wizard
+msgid "Invoice Vehicle Fuel"
+msgstr "Xuất hoá đơn Nhiên liệu"
+
+#. module: to_fleet_accounting
+#: model:ir.actions.act_window,name:to_fleet_accounting.action_view_fleet_vehicle_log_services_invoicing_wizard
+msgid "Invoice Vehicle Log Services"
+msgstr "Xuất hoá đơn Nhật ký Dịch vụ"
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_cost__invoiceable
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_contract__invoiceable
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_fuel__invoiceable
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_services__invoiceable
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.fleet_vehicle_costs_view_search
+msgid "Invoiceable"
+msgstr "Có thể Xuất hoá đơn"
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_abstract_vehicle_cost_revenue__product_id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_service_type__product_id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_cost__product_id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_cost_report__product_id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_contract__product_id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_fuel__product_id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_services__product_id
+msgid "Invoiceable Product"
+msgstr "Sản phẩm Xuất hoá đơn"
+
+#. module: to_fleet_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.fleet_vehicle_costs_view_search
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.fleet_vehicle_log_fuel_view_search
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.fleet_vehicle_log_services_view_search
+msgid "Invoiced"
+msgstr "Đã xuất Hoá đơn"
+
+#. module: to_fleet_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.view_fleet_vehicle_cost_invoicing_wizard
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.view_fleet_vehicle_log_fuel_invoicing_wizard
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.view_fleet_vehicle_log_services_invoicing_wizard
+msgid ""
+"Invoices will be created in draft so that you can review\n"
+"\t\t\t\t\t\tthem before validation."
+msgstr ""
+"Hoá đơn sẽ được tạo ở trạng thái dự thảo để bản có thể xem\n"
+"                       xét trước khi xác nhận."
+
+#. module: to_fleet_accounting
+#: model:ir.model,name:to_fleet_accounting.model_account_move
+msgid "Journal Entries"
+msgstr "Bút toán Sổ nhật ký"
+
+#. module: to_fleet_accounting
+#: model:ir.model,name:to_fleet_accounting.model_account_move_line
+msgid "Journal Item"
+msgstr "Phát sinh KT"
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_abstract_fleet_vehicle_cost_invoicing_wizard____last_update
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_abstract_fleet_vehicle_log____last_update
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_abstract_vehicle_cost_revenue____last_update
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_cost_invoicing_wizard____last_update
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_cost_report____last_update
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_fuel_invoicing_wizard____last_update
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_services_invoicing_wizard____last_update
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_vehicle_cost_distribution____last_update
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_vehicle_cost_distribution_line____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_cost_invoicing_wizard__write_uid
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_fuel_invoicing_wizard__write_uid
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_services_invoicing_wizard__write_uid
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_vehicle_cost_distribution__write_uid
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_vehicle_cost_distribution_line__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_cost_invoicing_wizard__write_date
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_fuel_invoicing_wizard__write_date
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_services_invoicing_wizard__write_date
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_vehicle_cost_distribution__write_date
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_vehicle_cost_distribution_line__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối"
+
+#. module: to_fleet_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.fleet_vehicle_costs_report_view_search
+msgid "Last Year"
+msgstr "Năm ngoái"
+
+#. module: to_fleet_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.view_move_form
+msgid "Linked Fleet Vehicle Costs"
+msgstr ""
+
+#. module: to_fleet_accounting
+#: model:ir.model,name:to_fleet_accounting.model_fleet_vehicle_model
+msgid "Model of a vehicle"
+msgstr "Model của phương tiện"
+
+#. module: to_fleet_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.fleet_vehicle_costs_report_view_search
+msgid "Month"
+msgstr "Tháng"
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_cost_report__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: to_fleet_accounting
+#: code:addons/to_fleet_accounting/wizard/abstract_fleet_vehicle_cost_invoicing_wizard.py:0
+#, python-format
+msgid "No Purchase Journal found for the currency %s"
+msgstr "Không tìm thấy sổ nhật ký mua hàng cho tiền tệ %s"
+
+#. module: to_fleet_accounting
+#: code:addons/to_fleet_accounting/wizard/abstract_fleet_vehicle_cost_invoicing_wizard.py:0
+#, python-format
+msgid ""
+"No invoiceable costs for invoicing! Please select at least one that has not "
+"been invoiced. Please note that a vehicle cost is considered as "
+"'Invoiceable' when it has a vendor specified AND has not been invoiced yet."
+msgstr ""
+"Không có chi phí nào có thể xuất hoá đơn! Vui lòng chọn ít nhất một chi phí "
+"có thể xuất hoá đơn mà chưa được xuất hoá đơn. Lưu ý rằng, một chi phí "
+"phương tiện được coi là 'Có thể xuất hoá đơn' chỉ khi nó có tham chiếu đến "
+"một nhà cung cấp VÀ chưa được xuất hoá đơn."
+
+#. module: to_fleet_accounting
+#. openerp-web
+#: code:addons/to_fleet_accounting/static/src/js/to_fleet_accounting.js:0
+#, python-format
+msgid "Not distributed into vehicle costs yet"
+msgstr "Chưa phân bổ thành các Chi phí Phương tiện"
+
+#. module: to_fleet_accounting
+#: model:res.groups,name:to_fleet_accounting.fleet_vehicle_cost_group_read
+msgid "Only View Fleet Vehicle Cost"
+msgstr "Chi xem Chi phí Phương tiện"
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields.selection,name:to_fleet_accounting.selection__fleet_vehicle_cost_report__cost_type__other
+msgid "Other"
+msgstr "Khác"
+
+#. module: to_fleet_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.fleet_vehicle_costs_report_view_search
+msgid "Parent"
+msgstr "Cấp cha"
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_cost_report__parent_id
+msgid "Parent Cost"
+msgstr "Chi phí Gốc"
+
+#. module: to_fleet_accounting
+#: code:addons/to_fleet_accounting/models/account_move_line.py:0
+#, python-format
+msgid "Please hit Save button first!"
+msgstr "Vui lòng bấm nút Lưu trước!"
+
+#. module: to_fleet_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.view_vehicle_cost_allocation_wizard
+msgid "Process"
+msgstr ""
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,help:to_fleet_accounting.field_vehicle_cost_distribution__vehicle_ids
+msgid "Select vehicles to allocate the cost"
+msgstr "Chọn phương tiện để phân bổ chi phí"
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_cost__vendor_id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_log_contract__vendor_id
+msgid "Service Vendor"
+msgstr "Nhà cung cấp Dịch vụ"
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields.selection,name:to_fleet_accounting.selection__fleet_vehicle_cost_report__cost_type__services
+msgid "Services"
+msgstr "Dịch vụ"
+
+#. module: to_fleet_accounting
+#: model:ir.model,name:to_fleet_accounting.model_fleet_vehicle_log_services
+msgid "Services for vehicles"
+msgstr "Các dịch vụ cho phương tiện"
+
+#. module: to_fleet_accounting
+#: model:ir.model,name:to_fleet_accounting.model_abstract_fleet_vehicle_cost_invoicing_wizard
+msgid "Share business Logics between Fleet Vehicle Cost Invoicing Wizards"
+msgstr ""
+"Chia sẻ logics về nghiệp vụ giữa các đồ thuật xuất hoá đơn cho phương tiện"
+
+#. module: to_fleet_accounting
+#: model:ir.model,name:to_fleet_accounting.model_abstract_vehicle_cost_revenue
+msgid "Share business logics between vehicle's cost and revenue models"
+msgstr ""
+"Chia sẻ logics về nghiệp vụ giữa các model chi phí (cost) và doanh thu "
+"(revenue) của phương tiện."
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,help:to_fleet_accounting.field_fleet_vehicle__analytic_account_id
+msgid "The analytic account that represents this vehicle"
+msgstr "Tài khoản kế toán quản trị cho phương tiện này"
+
+#. module: to_fleet_accounting
+#: code:addons/to_fleet_accounting/models/fleet_vehicle_cost.py:0
+#, python-format
+msgid "The cost %s has parent, hence, cannot change currency."
+msgstr "Chi phí %s có chi phí gốc (cha) nên không thể thay đổi tiền tệ được."
+
+#. module: to_fleet_accounting
+#: code:addons/to_fleet_accounting/models/fleet_vehicle_cost.py:0
+#, python-format
+msgid "The cost %s has parent, hence, cannot change its vendor."
+msgstr ""
+"Chi phí %s có chi phí gốc (cha) nên không thể thay đổi nhà cung cấp được."
+
+#. module: to_fleet_accounting
+#: code:addons/to_fleet_accounting/wizard/abstract_fleet_vehicle_cost_invoicing_wizard.py:0
+#, python-format
+msgid ""
+"The cost id: %d has no currency set. Hence, cannot create invoice for it."
+msgstr ""
+"Chi phí có id: %d không có tiền tệ được xác định nên không thể tạo hoá đơn "
+"cho nó."
+
+#. module: to_fleet_accounting
+#: code:addons/to_fleet_accounting/wizard/abstract_fleet_vehicle_cost_invoicing_wizard.py:0
+#, python-format
+msgid ""
+"The cost id: %d has no vendor set. Hence, cannot create invoice for it."
+msgstr ""
+"Chi phí có id: %d không có nhà cung cấp được xác định nên không thể tạo hoá "
+"đơn cho nó."
+
+#. module: to_fleet_accounting
+#: code:addons/to_fleet_accounting/models/fleet_vehicle_cost.py:0
+#, python-format
+msgid ""
+"The cost must have the same product as its Type's product. Otherwise, you "
+"must leave its Product field empty so that the Type's Product will be used."
+msgstr ""
+"Chi phí phải có cùng sản phẩm với sản phẩm của kiểu chi phí tương ứng. Nếu "
+"không, bạn phải để trống trường sản phẩm để sử dụng sản phẩm được thiết lập "
+"ở Kiểu tưởng ứng."
+
+#. module: to_fleet_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.fleet_vehicle_costs_view_search
+msgid ""
+"The costs that were created from invoices but does not link to any invoice "
+"currently which should be removed"
+msgstr ""
+"Chi phí mà được tạo tự hoá đơn nhưng hiện không dẫn chiếu đến hoá đơn. Nhưng"
+" chi phí này sẽ bị xoá tự động định kỳ"
+
+#. module: to_fleet_accounting
+#: code:addons/to_fleet_accounting/models/abstract_vehicle_cost_revenue.py:0
+#, python-format
+msgid "The method _get_account_id has not been implemented for the model %s"
+msgstr "Phương thức _get_account_id chưa được triển khai cho model %s"
+
+#. module: to_fleet_accounting
+#: code:addons/to_fleet_accounting/models/abstract_vehicle_cost_revenue.py:0
+#, python-format
+msgid ""
+"The method _get_invoice_line_name has not been implemented for the model %s"
+msgstr "Phương thức _get_invoice_line_name chưa được triển khai cho model %s"
+
+#. module: to_fleet_accounting
+#: code:addons/to_fleet_accounting/models/abstract_vehicle_cost_revenue.py:0
+#, python-format
+msgid "The method _get_tax_ids has not been implemented for the model %s"
+msgstr "Phương thức _get_tax_ids chưa được triển khai cho model %s"
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,help:to_fleet_accounting.field_abstract_vehicle_cost_revenue__invoice_id
+#: model:ir.model.fields,help:to_fleet_accounting.field_fleet_vehicle_cost__invoice_id
+#: model:ir.model.fields,help:to_fleet_accounting.field_fleet_vehicle_log_contract__invoice_id
+#: model:ir.model.fields,help:to_fleet_accounting.field_fleet_vehicle_log_fuel__invoice_id
+#: model:ir.model.fields,help:to_fleet_accounting.field_fleet_vehicle_log_services__invoice_id
+msgid "The move of this entry line."
+msgstr ""
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,help:to_fleet_accounting.field_abstract_vehicle_cost_revenue__product_id
+#: model:ir.model.fields,help:to_fleet_accounting.field_fleet_vehicle_cost__product_id
+#: model:ir.model.fields,help:to_fleet_accounting.field_fleet_vehicle_cost_report__product_id
+#: model:ir.model.fields,help:to_fleet_accounting.field_fleet_vehicle_log_contract__product_id
+#: model:ir.model.fields,help:to_fleet_accounting.field_fleet_vehicle_log_fuel__product_id
+#: model:ir.model.fields,help:to_fleet_accounting.field_fleet_vehicle_log_services__product_id
+msgid "The product to be used when invoicing the vehicle cost"
+msgstr "Sản phẩm mà được sử dụng khi xuất hoá đơn cho chi phí phương tiện"
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,help:to_fleet_accounting.field_fleet_service_type__product_id
+msgid ""
+"The product to be used when invoicing vehicle costs of this service type"
+msgstr ""
+"Sản phẩm mà được sử dụng khi xuất hoá đơn cho chi phí phương tiện với kiểu "
+"dịch vụ này"
+
+#. module: to_fleet_accounting
+#: code:addons/to_fleet_accounting/models/account_move_line.py:0
+#, python-format
+msgid ""
+"The sum of the vehicle cost of the invoice line (%d) is not equal to the "
+"Amount of the invoice line (%d). Please adjust the unit price to make the "
+"Amount equal."
+msgstr ""
+"Tổng chi phí phương tiện trên dòng hoá đơn (%d) không bằng tổng giá trị dòng"
+" hoá đơn (%d). Vui lòng điều chỉnh đơn giá để thoả mãn yêu cầu này."
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,help:to_fleet_accounting.field_account_analytic_line__vehicle_id
+#: model:ir.model.fields,help:to_fleet_accounting.field_account_move_line__vehicle_ids
+msgid "The vehicle to which this move line refers"
+msgstr "Phương tiện mà phát sinh này dẫn chiếu đến"
+
+#. module: to_fleet_accounting
+#: code:addons/to_fleet_accounting/models/account_analytic_line.py:0
+#, python-format
+msgid ""
+"There is discrepancy between the Vehicle Cost and the Vehicle. The Vehicle "
+"Cost is registered for the vehicle %s while the Vehicle on the move line is "
+"%s"
+msgstr ""
+"Có sự bất đồng giữa Chi phí Phương tiện và Phương tiện. Chi phí thì được ghi"
+" nhận cho phương tiện %s trong khi phương tiện ở phát sinh kế toán lại là %s"
+
+#. module: to_fleet_accounting
+#: code:addons/to_fleet_accounting/models/fleet_vehicle_cost.py:0
+#, python-format
+msgid ""
+"There is neither product defined for the cost id: %d nor expense account in "
+"product category property."
+msgstr ""
+"Không tìm thấy sản phẩm được định nghĩa cho chi phí có id %d hay tài khoản "
+"chi phí trong thuộc tính nhóm sản phẩm."
+
+#. module: to_fleet_accounting
+#: code:addons/to_fleet_accounting/models/fleet_vehicle_cost.py:0
+#, python-format
+msgid "There is no analytic account specified for the vehicle %s"
+msgstr "Không có tài khoản quản trị cho phương tiện %s"
+
+#. module: to_fleet_accounting
+#: code:addons/to_fleet_accounting/models/fleet_vehicle_cost.py:0
+#, python-format
+msgid ""
+"There is no expense account defined for this product: \"%s\". You may have "
+"to install a chart of account from Accounting app, Settings menu."
+msgstr ""
+"Không tìm thấy tài khoản chi phí được xác định cho sản phẩm này: \"%s\". Bạn"
+" có thể cần phải cài đặt Hệ thống tài khoản kế toán từ ứng dụng Kế toán, "
+"menu Ứng dụng."
+
+#. module: to_fleet_accounting
+#: code:addons/to_fleet_accounting/models/abstract_vehicle_cost_revenue.py:0
+#, python-format
+msgid "There is no required account defined for this operation."
+msgstr "Không tìm thấy tài khoản kế toán được yêu cầu cho hoạt động này."
+
+#. module: to_fleet_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.fleet_vehicle_costs_report_view_search
+msgid "This Year"
+msgstr "Năm nay"
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,help:to_fleet_accounting.field_account_analytic_line__vehicle_cost_id
+msgid ""
+"This field is to indicate that the analytic line relates to a vehicle cost "
+"registered in the Fleet Management application"
+msgstr ""
+"Trường này để chi ra rằng dòng kế toán quản trị ứng với một chi phí phương "
+"tiện được ghi nhận ở ứng dụng Quản lý Đội phương tiện"
+
+#. module: to_fleet_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.fleet_vehicle_log_fuel_view_search
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.fleet_vehicle_log_services_view_search
+msgid "To Invoice"
+msgstr "Chờ hoá đơn"
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_vehicle_cost_distribution_line__cost_subtype_id
+msgid "Type"
+msgstr ""
+
+#. module: to_fleet_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.fleet_vehicle_costs_view_search
+msgid "Uninvoiced"
+msgstr "Chưa Xuất Hoá đơn"
+
+#. module: to_fleet_accounting
+#: model:ir.model,name:to_fleet_accounting.model_fleet_vehicle
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_account_analytic_line__vehicle_id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_account_move_line__vehicle_ids
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_cost_report__vehicle_id
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_vehicle_cost_distribution__vehicle_ids
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_vehicle_cost_distribution_line__vehicle_id
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.fleet_vehicle_costs_report_view_search
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.view_account_analytic_line_filter
+msgid "Vehicle"
+msgstr "Phương tiện"
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_account_analytic_line__vehicle_cost_id
+msgid "Vehicle Cost"
+msgstr "Chi phí Phương tiện"
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_vehicle_cost_distribution_line__vehicle_cost_allocation_wizard_id
+msgid "Vehicle Cost Allocation Wizard"
+msgstr ""
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_account_move_line__fleet_vehicle_costs_count
+msgid "Vehicle Cost Count"
+msgstr ""
+
+#. module: to_fleet_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.view_vehicle_cost_allocation_wizard
+msgid "Vehicle Cost Distribution Board"
+msgstr ""
+
+#. module: to_fleet_accounting
+#: model:ir.model,name:to_fleet_accounting.model_vehicle_cost_distribution_line
+msgid "Vehicle Cost Distribution Line"
+msgstr ""
+
+#. module: to_fleet_accounting
+#: model:ir.actions.act_window,name:to_fleet_accounting.action_vehicle_cost_allocation_wizard
+#: model:ir.model,name:to_fleet_accounting.model_vehicle_cost_distribution
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.view_vehicle_cost_allocation_wizard
+msgid "Vehicle Cost Distribution Wizard"
+msgstr "Đồ thuật Phân bổ Chi phí Phương tiện"
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_account_move__fleet_vehicle_cost_ids
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_account_move_line__fleet_vehicle_cost_ids
+msgid "Vehicle Costs"
+msgstr "Chi phí Phương tiện"
+
+#. module: to_fleet_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.fleet_vehicle_costs_report_view_search
+msgid "Vehicle Costs by Month"
+msgstr "Chi phí Phương tiện theo Tháng"
+
+#. module: to_fleet_accounting
+#: code:addons/to_fleet_accounting/models/account_move_line.py:0
+#, python-format
+msgid ""
+"Vehicle cost %s's currency (%s) must be the same as the invoice's one (%s)"
+msgstr ""
+"Chi phí Phương tiện %s có tiền tệ (%s) khác với tiền tệ trên hóa đơn (%s)"
+
+#. module: to_fleet_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.fleet_vehicle_cost_indicative_report_view_graph
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.fleet_vehicle_cost_indicative_report_view_pivot
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.fleet_vehicle_cost_report_view_tree
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.fleet_vehicle_costs_report_view_search
+msgid "Vehicles costs"
+msgstr "Chi phí phương tiện"
+
+#. module: to_fleet_accounting
+#: model:ir.model.fields,field_description:to_fleet_accounting.field_fleet_vehicle_cost_report__vendor_id
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.fleet_vehicle_costs_view_search
+msgid "Vendor"
+msgstr "Nhà cung cấp"
+
+#. module: to_fleet_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting.fleet_vehicle_costs_report_view_search
+msgid "Year"
+msgstr "Năm"
+
+#. module: to_fleet_accounting
+#: code:addons/to_fleet_accounting/models/abstract_vehicle_cost_revenue.py:0
+#, python-format
+msgid ""
+"You are about create the cost of the vehicle '%s' for the company '%s' which"
+" is not the same as the vehicle's which is %s"
+msgstr ""
+"Bạn đang định tạo chi phí cho phương tiện '%s' và cho công ty '%s' nhưng lại"
+" không cùng công ty của phương tiện (công ty %s)"
+
+#. module: to_fleet_accounting
+#: code:addons/to_fleet_accounting/wizard/vehicle_cost_allocation_wizard.py:0
+#, python-format
+msgid ""
+"You can allocate invoice line's amount to vehicles (as vehicle costs) ONLY "
+"when the invoice state is neither 'Paid' nor 'Cancelled'. You may need to "
+"set the invoice back to draft state then do allocation again."
+msgstr ""
+"Bạn CHỈ CÓ THỂ phân bổ giá trị một dòng hoá đơn vào các phương tiện khi mà "
+"hoá đơn KHÔNG ở trạng thái 'Đã thanh toán' hoặc 'Huỷ'. Bạn có thể cần phải "
+"đặt hoá đơn về trạng thái Dự thảo rồi mới thực hiện phân bổ."
+
+#. module: to_fleet_accounting
+#: code:addons/to_fleet_accounting/models/account_analytic_account.py:0
+#, python-format
+msgid ""
+"You could not rename the analytic account '%s' into '%s' while it is till "
+"referred by the vehicle '%s'. Instead, please change the name of the vehicle"
+" which will also change the account name accordingly."
+msgstr ""
+"Bạn không thể đổi tên tài khoản kế toán quản trị '%s' thành '%s' khi chúng còn "
+"liên kết với Phương tiện '%s'. Thay vào đó, vui lòng thay đổi tên của Phương tiện"
+" để tên tài khoản kế toán quản trị thay đổi theo."
+#. module: to_fleet_accounting
+#: code:addons/to_fleet_accounting/models/account_analytic_group.py:0
+#, python-format
+msgid ""
+"You may not be able to delete the analytic group '%s' as it is required for "
+"generating analytic account upon creating a vehicle."
+msgstr ""
+"Bạn không thể xóa nhóm tài khoản quản trị '%s' vì có cần thiết để sinh tài khoản kế toán quản trị"
+"khi tạo phương tiện."
+#. module: to_fleet_accounting
+#: code:addons/to_fleet_accounting/wizard/abstract_fleet_vehicle_cost_invoicing_wizard.py:0
+#, python-format
+msgid ""
+"You were trying to generate invoices for the company %s while you are on the"
+" %s. Please switch to the company %s then retry."
+msgstr ""
+"Bạn đang cố tạo hóa đơn cho công ty %s khi đang ở công ty %s. Hãy chuyển sang "
+"công ty %s và thử lại"

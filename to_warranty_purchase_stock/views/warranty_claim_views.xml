@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record model="ir.ui.view" id="warranty_claim_form_view">
+		<field name="name">warranty.claim.form</field>
+		<field name="inherit_id"
+			ref="to_warranty_management.warranty_claim_form_view" />
+		<field name="model">warranty.claim</field>
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='partner_id']" position="after">
+				<field name="purchase_order_id"
+					attrs="{'invisible': [('type', '=', 'customer')]}" />
+			</xpath>
+		</field>
+	</record>
+</odoo>

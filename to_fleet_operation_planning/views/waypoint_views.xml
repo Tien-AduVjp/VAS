@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="route_waypoint_form_view" model="ir.ui.view">
+			<field name="name">route.waypoint.form.view</field>
+			<field name="model">route.waypoint</field>
+			<field name="inherit_id" ref="to_geo_routes.route_waypoint_form_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='waypoint_area_id']" position="after">
+					<label for="stop_duration" />
+					<div class="o_row">
+						<field name="stop_duration" widget="float_time" />
+						<span>hours</span>
+					</div>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

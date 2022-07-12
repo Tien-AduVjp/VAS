@@ -1,0 +1,1 @@
+from . import l10n_vn_c200_s38dn

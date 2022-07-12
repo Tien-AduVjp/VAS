@@ -1,0 +1,18 @@
+<odoo>
+	<record id="view_helpdesk_ticket_search" model="ir.ui.view">
+		<field name="name">report.helpdesk.ticket.search</field>
+		<field name="inherit_id" ref="viin_helpdesk.view_helpdesk_ticket_search"/>
+		<field name="model">report.helpdesk.ticket</field>
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='team_id']" position="after">
+				<field name="lead_id" string="Lead/Opportunity"/>
+			</xpath>
+			
+			<xpath expr="//filter[@name='ftr_unassigned']" position="after">
+				<separator/>
+                <filter name="ftr_lead_id" string="Lead/Opportunity" domain="[('lead_id', '!=', False)]"/>
+                <separator/>
+			</xpath>
+		</field>
+	</record>
+</odoo>

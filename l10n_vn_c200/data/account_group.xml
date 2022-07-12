@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<!-- level 1 -->
+		<record id="acc_group_1" model="account.group">
+			<field name="name">Current Assets</field>
+			<field name="code_prefix">1</field>
+		</record>
+		<record id="acc_group_2" model="account.group">
+			<field name="name">None Current Assets</field>
+			<field name="code_prefix">2</field>
+		</record>
+		<record id="acc_group_3" model="account.group">
+			<field name="name">Liabilities</field>
+			<field name="code_prefix">3</field>
+		</record>
+		<record id="acc_group_4" model="account.group">
+			<field name="name">Owner’s Equity</field>
+			<field name="code_prefix">4</field>
+		</record>
+		<record id="acc_group_5" model="account.group">
+			<field name="name">Revenue</field>
+			<field name="code_prefix">5</field>
+		</record>
+		<record id="acc_group_6" model="account.group">
+			<field name="name">Costs of Production &amp; Business</field>
+			<field name="code_prefix">6</field>
+		</record>
+		<record id="acc_group_7" model="account.group">
+			<field name="name">Other Income</field>
+			<field name="code_prefix">7</field>
+		</record>
+		<record id="acc_group_8" model="account.group">
+			<field name="name">Other Expenses</field>
+			<field name="code_prefix">8</field>
+		</record>
+		<record id="acc_group_9" model="account.group">
+			<field name="name">Income Summary</field>
+			<field name="code_prefix">9</field>
+		</record>
+	</data>
+</odoo>

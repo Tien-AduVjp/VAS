@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<odoo>
+        <record id="task2ticket_wizard_view_form" model="ir.ui.view">
+            <field name="name">tash2ticket.wizard.form</field>
+            <field name="model">task2ticket.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Convert Task to Ticket">
+                    <group>
+                    	<field name="partner_id" options="{'no_create': True, 'no_open': True}"/>
+                    	<field name="send_notification_email"/>
+                        <field name="ticket_type_id" options="{'no_create': True, 'no_open': True}"/>
+                        <field name="team_id" options="{'no_create': True, 'no_open': True}"/>
+                        <field name="is_team_member" invisible="1" />
+                        <field name="assign_to_me" attrs="{'invisible': [('is_team_member', '=', False)]}" />
+                        <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color', 'no_create': True, 'no_open': True}"/>
+                        <field name="task_ids" invisible="1"/>
+                    </group>
+                    <footer>
+                        <button name="action_create_ticket" string="Create Ticket" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_task2ticket" model="ir.actions.act_window">
+            <field name="name">Convert to Ticket</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">task2ticket.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="task2ticket_wizard_view_form"/>
+            <field name="target">new</field>
+        </record>
+        
+        <record id="action_task2tickets" model="ir.actions.act_window">
+            <field name="name">Convert to Tickets</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">task2ticket.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="task2ticket_wizard_view_form"/>
+            <field name="binding_model_id" ref="model_project_task"></field>
+            <field name="target">new</field>
+        </record>
+</odoo>

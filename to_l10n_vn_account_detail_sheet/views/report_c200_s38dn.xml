@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<template id="report_c200_s38dn">
+			<t t-call="web.html_container">
+				<t t-call="to_l10n_vn_qweb_layout.accounting_external_layout_c200">
+					<div class="page">
+						<div class="text-center">
+							<h3>
+								Account Detail Sheet								
+							</h3>
+							<div class="small">
+								Date From:
+								<span t-field="doc.date_from" />
+								- Date To:
+								<span t-field="doc.date_to" />																																		
+								<br />								
+								<t t-if="account_ids" >Accounts: <span t-esc="account_ids" /></t>
+								<t t-if="journal_ids" >Journals: <span t-esc="journal_ids" /></t>	
+								<br />	
+								<t t-if="partner_ids" >Partners: <span t-esc="partner_ids" /></t>								
+								<br />																
+								Currency: <span t-field="res_company.currency_id" />
+							</div>
+						</div>						
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th rowspan="2" class="text-center">Date</th>									
+									<th colspan="2" class="text-center" style="vertical-align: middle;">Origin</th>
+									<th rowspan="2" class="text-center" style="vertical-align: middle;">Description</th>									
+									<th rowspan="2" class="text-center" style="vertical-align: middle;">Counterpart Accounts</th>
+									<th colspan="2" class="text-center" style="vertical-align: middle;">Incurred</th>
+									<th colspan="2" class="text-center" style="vertical-align: middle;">Balance</th>																									
+								</tr>	
+								<tr>																		
+									<th class="text-center">Reference</th>
+									<th class="text-center">Ref Date</th>																								
+									<th class="text-center">Debit</th>
+									<th class="text-center">Credit</th>									
+									<th class="text-center">Debit</th>
+									<th class="text-center">Credit</th>
+								</tr>				
+								<tr>																		
+									<th class="text-center">A</th>
+									<th class="text-center">B</th>
+									<th class="text-center">C</th>
+									<th class="text-center">D</th>
+									<th class="text-center">E</th>
+									<th class="text-center">1</th>
+									<th class="text-center">2</th>																								
+									<th class="text-center">3</th>
+									<th class="text-center">4</th>
+								</tr>															
+							</thead>
+							<tbody>
+								<t t-set="line_no" t-value="0" />
+								<t t-foreach="lines" t-as="line">																	 		                         
+		                            <tr>
+		                            	<td colspan="9" t-if="line['type'] == 'account_title'">
+		                            		<b t-if="line['type'] == 'account_title'" t-esc="line['account_name']" />
+		                            	</td>
+		                            
+		                            	<td colspan="3" t-if="line['type'] not in ('move_line','account_title')">
+		                            		<b t-if="line['type'] == 'account_title'" t-esc="line['account_name']" />
+		                            	</td>
+		                            	
+		                                <td t-if="line['type'] == 'move_line'">
+		                                	<span t-esc="format_date(line['date'])" />
+		                                </td>
+		                                <td t-if="line['type'] == 'move_line'">
+		                                	<span t-esc="line['ref_name']" />
+		                                </td>
+		                                <td t-if="line['type'] == 'move_line'">
+		                                	<span t-esc="format_date(line['ref_date'])" />
+		                                </td>		                                
+		                                <td t-if="line['type'] != 'account_title'"><span t-esc="line['name']"/></td>		                                		                                
+		                                <td t-if="line['type'] != 'account_title'"><span t-if="line['account_id']" t-esc="line['account_id']"/></td>
+		                                <td class="text-right" t-if="line['type'] != 'account_title'">		                                
+		                                    <span t-if="line['type'] not in ('account_end', 'account_init')" t-esc="formatLang(line['debit'], digits=line['decimal_places'])"/>
+		                                </td>
+		                                <td class="text-right" t-if="line['type'] != 'account_title'">		                                    
+		                                    <span t-if="line['type'] not in ('account_end', 'account_init')" t-esc="formatLang(line['credit'], digits=line['decimal_places'])"/>
+		                                </td>		                                
+		                                <td class="text-right" t-if="line['type'] != 'account_title'">		
+		                                	<t t-if="line['type'] != 'account_total'">
+		                                		<span t-if="line['progress'] >= 0" t-esc="formatLang(line['progress'], digits=line['decimal_places'])"/>
+		                                		<span t-else="" t-esc="formatLang(0, digits=line['decimal_places'])"/>
+		                                	</t>                                		                                    
+		                                </td>
+		                                <td class="text-right" t-if="line['type'] != 'account_title'">	
+		                                	<t t-if="line['type'] != 'account_total'">	                           
+		                                		<span t-if="line['progress'] >= 0" t-esc="formatLang(0, digits=line['decimal_places'])"/>         
+			                                    <span t-else="" t-esc="formatLang(-line['progress'], digits=line['decimal_places'])"/>
+		                                    </t>    
+		                                </td>
+		                            </tr>
+		                        </t>
+							</tbody>
+						</table>	
+						<div class="row">
+							<div class="col-12">
+								<p>- This report has ... pages, from page 01 to page ...</p>
+								<p>- Issue Date: <t t-esc="format_date(today)" /></p>
+							</div>
+						</div>
+						<t t-call="to_l10n_vn_qweb_layout.signature_block" />						
+					</div>
+				</t>
+			</t>
+		</template>
+
+	</data>
+</odoo>

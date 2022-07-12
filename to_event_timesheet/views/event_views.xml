@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="view_event_form" model="ir.ui.view">
+            <field name="name">event.event.view.form.inherit.timesheet</field>
+            <field name="model">event.event</field>
+            <field name="inherit_id" ref="event.view_event_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="action_timesheet_view" icon="fa-calendar" class="oe_stat_button" type="object" 
+                            groups="event.group_event_user">
+                        <field name="total_hour" widget="statinfo" string="Timesheets"  />
+                    </button>
+                </xpath>
+            </field>
+        </record>
+    
+        <record id="event_event_view_pivot" model="ir.ui.view" >
+            <field name="name">event.event.view.pivot.inherit.timesheet</field>
+            <field name="model">event.event</field>
+            <field name="inherit_id" ref="event.event_event_view_pivot"/>
+            <field name="arch" type="xml">
+                <xpath expr="//pivot" position="inside">
+                	<field name="total_hour" type="measure" widget="timesheet_uom"/>
+                </xpath>
+            </field>
+        </record>
+    
+        <record id="view_event_tree" model="ir.ui.view" >
+            <field name="name">event.event.tree</field>
+            <field name="model">event.event</field>
+            <field name="inherit_id" ref="event.view_event_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='seats_min']" position="after">
+                    <field name="total_hour" widget="timesheet_uom" />
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

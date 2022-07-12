@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="acquirer_form_vnpay" model="ir.ui.view">
+			<field name="name">acquirer.form.vnpay</field>
+			<field name="model">payment.acquirer</field>
+			<field name="inherit_id" ref="payment.acquirer_form" />
+			<field name="arch" type="xml">
+				<xpath expr='//group[@name="acquirer"]' position='after'>
+					<group attrs="{'invisible': [('provider', '!=', 'vnpay')]}">
+						<field name="vnpay_tmn_code" attrs="{'required':[ ('provider', '=', 'vnpay'), ('state', '=', 'prod')]}"/>
+						<field name="vnpay_hash_secret" password="True" attrs="{'required':[ ('provider', '=', 'vnpay'), ('state', '=', 'prod')]}"/>
+						<field name="vnpay_payment_url" attrs="{'required':[ ('provider', '=', 'vnpay'), ('state', '=', 'prod')]}"/>
+						<a colspan="2" href="https://sandbox.vnpayment.vn/apis/" target="_blank">How to configure your VNPay account?</a>
+					</group>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

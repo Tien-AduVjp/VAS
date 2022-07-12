@@ -1,0 +1,906 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_approvals
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-09 04:09+0000\n"
+"PO-Revision-Date: 2021-09-01 03:08+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_view_form
+msgid ""
+"<b attrs=\"{'invisible': ['|',('state', 'in', ['draft', 'confirm', 'cancel', 'refuse']), ('validation_type', 'in', ['both', 'no_validation'])]}\">Approval By</b>\n"
+"\t\t\t\t\t\t\t\t\t<b attrs=\"{'invisible': ['|',('state', 'in', ['draft', 'confirm', 'cancel', 'refuse']), ('validation_type', 'in', ['hr', 'leader', 'no_validation'])]}\">First Approval By</b>"
+msgstr ""
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_type_view_kanban
+msgid "<span>Create Request</span>"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__message_needaction
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__activity_ids
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__activity_exception_decoration
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__activity_state
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: to_approvals
+#: model:res.groups,name:to_approvals.group_approval_manager
+msgid "Administrator"
+msgstr ""
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_type_view_kanban
+msgid "All"
+msgstr ""
+
+#. module: base
+#: model:ir.module.category,name:base.module_category_human_resources_approvals
+msgid "Approvals"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.ui.menu,name:to_approvals.approval_root_menu
+#: model:mail.activity.type,name:to_approvals.mail_act_approval
+msgid "Approval"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields.selection,name:to_approvals.selection__approval_request_type__validation_type__hr
+msgid "Approval Officer"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.actions.act_window,name:to_approvals.approval_request_type_kanban
+msgid "Approval Overview"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.actions.act_window,name:to_approvals.approval_request_action
+#: model:ir.model,name:to_approvals.model_approval_request
+#: model:ir.model.fields,field_description:to_approvals.field_abstract_approval_request_line__approval_id
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__request_ids
+#: model:ir.ui.menu,name:to_approvals.request_root_menu
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_search_view
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_type_search_view
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_view_form
+msgid "Approval Request"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model,name:to_approvals.model_abstract_approval_request_line
+msgid "Approval Request Line Abstract"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model,name:to_approvals.model_approval_request_type
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_type_form_view
+msgid "Approval Request Type"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.actions.act_window,name:to_approvals.approval_request_type_action
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_type_tree_view
+msgid "Approval Request Types"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__approval_type_id
+msgid "Approval Type"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.ui.menu,name:to_approvals.approval_request_type_menu_configuration
+msgid "Approval Types"
+msgstr ""
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_view_form
+msgid "Approve"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields.selection,name:to_approvals.selection__approval_request__state__validate
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_search_view
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_type_view_kanban
+msgid "Approved"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__approved_requests_count
+msgid "Approved Requests"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__message_attachment_count
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_abstract_approval_request_line__can_approve
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__can_approve
+msgid "Can Approve"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_abstract_approval_request_line__can_confirm
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__can_confirm
+msgid "Can Confirm"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__can_done
+msgid "Can Done"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_abstract_approval_request_line__can_refuse
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__can_refuse
+msgid "Can Refuse"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_abstract_approval_request_line__can_validate
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__can_validate
+msgid "Can Validate"
+msgstr ""
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_view_form
+msgid "Cancel"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields.selection,name:to_approvals.selection__approval_request__state__cancel
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_search_view
+msgid "Cancelled"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model,name:to_approvals.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__company_id
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__company_id
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_search_view
+msgid "Company"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.ui.menu,name:to_approvals.approval_config_menu
+msgid "Configuration"
+msgstr ""
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_view_form
+msgid "Confirm"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields.selection,name:to_approvals.selection__approval_request__state__confirm
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_search_view
+msgid "Confirmed"
+msgstr ""
+
+#. module: to_approvals
+#: model_terms:ir.actions.act_window,help:to_approvals.approval_request_type_kanban
+msgid "Create a new approval request type"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__create_uid
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__create_date
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__department_id
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_search_view
+msgid "Department"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__description
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__description
+msgid "Description"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_abstract_approval_request_line__display_name
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__display_name
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: to_approvals
+#: model_terms:ir.actions.act_window,help:to_approvals.action_approval_request_tree_waiting
+msgid ""
+"Display information about the number of pending requests for this type. \n"
+"\t\t\t\t\tWhen clicked, go to the list containing the corresponding requests"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields.selection,name:to_approvals.selection__approval_request__state__done
+msgid "Done"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields.selection,name:to_approvals.selection__approval_request__state__draft
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_search_view
+msgid "Draft"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__employee_id
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_search_view
+msgid "Employee"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__first_approver_id
+msgid "First Approval By"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields.selection,name:to_approvals.selection__approval_request__state__validate1
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_search_view
+msgid "First Approved"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__message_follower_ids
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__message_channel_ids
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__message_partner_ids
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/res_company.py:0
+#, python-format
+msgid "General Approval"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields.selection,name:to_approvals.selection__approval_request_type__type__generic
+msgid "Generic"
+msgstr ""
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_search_view
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_type_search_view
+msgid "Group By"
+msgstr ""
+
+#. module: base
+#: model:ir.module.category,description:base.module_category_human_resources_approvals
+msgid "Helps you manage your employee approval requests."
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_approval_request__validation_type
+#: model:ir.model.fields,help:to_approvals.field_approval_request_type__validation_type
+msgid ""
+"How the requests of this type is approved.\n"
+"* No Validation: all the requests of this type will be approved automatically upon confirmation;\n"
+"* Approval Officer: all the requests of this type will be required to get approved by a user specified in the field 'Responsible' below;\n"
+"* Manager: all the requests of this type will be required to get approved by a superior of the employee's (including all the superior and the manager of the employee's department, excluding himself);\n"
+"* Manager and Approval Officer: this will trigger 2-step approval process for all the requests of this type. The first approval will be done by a manager or any superior of the employee's and the second approval will be done by the one specified in the field 'Responsible' below."
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_abstract_approval_request_line__id
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__id
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__id
+msgid "ID"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__activity_exception_icon
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_approval_request__activity_exception_icon
+#: model:ir.model.fields,help:to_approvals.field_approval_request_type__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_approval_request__message_needaction
+#: model:ir.model.fields,help:to_approvals.field_approval_request__message_unread
+#: model:ir.model.fields,help:to_approvals.field_approval_request_type__message_needaction
+#: model:ir.model.fields,help:to_approvals.field_approval_request_type__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_approval_request__message_has_error
+#: model:ir.model.fields,help:to_approvals.field_approval_request__message_has_sms_error
+#: model:ir.model.fields,help:to_approvals.field_approval_request_type__message_has_error
+#: model:ir.model.fields,help:to_approvals.field_approval_request_type__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__involve_employee_ids
+msgid "Involving Employees"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__message_is_follower
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_abstract_approval_request_line____last_update
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request____last_update
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__write_uid
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__write_date
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__message_main_attachment_id
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields.selection,name:to_approvals.selection__approval_request_type__validation_type__leader
+msgid "Manager"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields.selection,name:to_approvals.selection__approval_request_type__validation_type__both
+msgid "Manager and Approval Officer"
+msgstr ""
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_view_form
+msgid "Mark as Done"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__message_has_error
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__message_ids
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__name
+msgid "Name"
+msgstr ""
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid "New"
+msgstr ""
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid "New %s Request created by %s"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__activity_date_deadline
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__activity_summary
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__activity_type_id
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields.selection,name:to_approvals.selection__approval_request_type__validation_type__no_validation
+msgid "No Validation"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__message_needaction_counter
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__message_has_error_counter
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_approval_request__message_needaction_counter
+#: model:ir.model.fields,help:to_approvals.field_approval_request_type__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_approval_request__message_has_error_counter
+#: model:ir.model.fields,help:to_approvals.field_approval_request_type__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_approval_request__message_unread_counter
+#: model:ir.model.fields,help:to_approvals.field_approval_request_type__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: to_approvals
+#: model:res.groups,name:to_approvals.group_approval_officer
+msgid "Officer"
+msgstr ""
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_tree_view
+msgid "Approval Requests"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.ui.menu,name:to_approvals.approval_request_type_menu
+msgid "Overview"
+msgstr ""
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_view_form
+msgid "Refuse"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields.selection,name:to_approvals.selection__approval_request__state__refuse
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_search_view
+msgid "Refused"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.ui.menu,name:to_approvals.approval_request_menu
+msgid "Request"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__date
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_search_view
+msgid "Request Date"
+msgstr ""
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_view_kanban
+msgid "Request Date:"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__requests_count
+msgid "Requests Count"
+msgstr ""
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_view_form
+msgid "Reset to Draft"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__responsible_id
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_type_search_view
+msgid "Responsible"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__activity_user_id
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__message_has_sms_error
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__second_approver_id
+msgid "Second Approval By"
+msgstr ""
+
+#. module: to_approvals
+#: model:mail.activity.type,name:to_approvals.mail_act_second_approval
+msgid "Second Approve"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_approval_request__department_id
+msgid "Select a department of employee"
+msgstr ""
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_search_view
+msgid "State"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__state
+msgid "Status"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_approval_request__activity_state
+#: model:ir.model.fields,help:to_approvals.field_approval_request_type__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_approval_request__involve_employee_ids
+msgid "Store employees that involve the approval request."
+msgstr ""
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid "The approval request '%s' must be confirmed  in order to get approved."
+msgstr ""
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid ""
+"The approval request '%s' must be in Draft state in order to get confirmed."
+msgstr ""
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid ""
+"The approval request '%s' must be validated in order to mark as done it."
+msgstr ""
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid ""
+"The approval request '%s' state must be 'Confirm' or 'First Approved' in "
+"order to get validated."
+msgstr ""
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid ""
+"The approval request '%s' state must be 'Confirmed', 'First Approved', "
+"'Approved', 'Done' in order to refuse it."
+msgstr ""
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid ""
+"The approval request '%s' state must be 'Draft' or 'Confirmed' in order to "
+"cancel it."
+msgstr ""
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid ""
+"The approval request '%s' state must be 'Refused' or 'Cancel' in order to be"
+" reset to draft."
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_abstract_approval_request_line__approval_id
+msgid "The related approval request of this record."
+msgstr ""
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid "The request has been automatically approved"
+msgstr ""
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/abstract_approval_request_line.py:0
+#, python-format
+msgid ""
+"The state field has not been implemented for the model '%s' yet. Please "
+"define one"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_approval_request__first_approver_id
+msgid ""
+"This field is automatically filled by the user who validate the approval "
+"request"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_approval_request__second_approver_id
+msgid ""
+"This field is automatically filled by the user who validate the approval "
+"request with second level (When approval request type requires second "
+"validation)"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_approval_request_type__responsible_id
+msgid ""
+"This user will be responsible for approving or validating this type of "
+"approval"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__title
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__name
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_search_view
+msgid "Title"
+msgstr ""
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_search_view
+msgid "Today Request"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__type
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__type
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_search_view
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_type_search_view
+msgid "Type"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_approval_request__activity_exception_decoration
+#: model:ir.model.fields,help:to_approvals.field_approval_request_type__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__message_unread
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__message_unread_counter
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: to_approvals
+#: model:res.groups,comment:to_approvals.group_approval_officer
+msgid "Users belong to this group can approve employee approval request"
+msgstr ""
+
+#. module: to_approvals
+#: model:res.groups,comment:to_approvals.group_approval_manager
+msgid "Users belong to this group have total control on this application"
+msgstr ""
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_view_form
+msgid "Validate"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__validation_type
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__validation_type
+msgid "Validation"
+msgstr ""
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_type_search_view
+msgid "Validation Type"
+msgstr ""
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_type_view_kanban
+msgid "Waiting"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.actions.act_window,name:to_approvals.action_approval_request_tree_waiting
+msgid "Waiting Request"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__waiting_requests_count
+msgid "Waiting Requests"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__website_message_ids
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_approval_request__website_message_ids
+#: model:ir.model.fields,help:to_approvals.field_approval_request_type__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/abstract_approval_request_line.py:0
+#, python-format
+msgid ""
+"You can not change state of the record '%s' which is not referred by any "
+"Approval Request."
+msgstr ""
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid "You can only delete records which are in draft status."
+msgstr ""
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid "You do not have access right to approve the request '%s'"
+msgstr ""
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid "You do not have access right to cancel the request '%s'"
+msgstr ""
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid "You do not have access right to confirm the request '%s'"
+msgstr ""
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid "You do not have access right to mark as done the request '%s'"
+msgstr ""
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid "You do not have access right to refuse the request '%s'"
+msgstr ""
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid "You do not have access right to reset the request '%s'"
+msgstr ""
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid "You do not have access right to validate the request '%s'"
+msgstr ""
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/abstract_approval_request_line.py:0
+#, python-format
+msgid "You don't have appropriate permission to approve the '%s'"
+msgstr ""
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/abstract_approval_request_line.py:0
+#, python-format
+msgid "You don't have appropriate permission to confirm the '%s'"
+msgstr ""
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/abstract_approval_request_line.py:0
+#, python-format
+msgid "You don't have appropriate permission to refuse the '%s'"
+msgstr ""
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/abstract_approval_request_line.py:0
+#, python-format
+msgid "You don't have appropriate permission to validate the '%s'"
+msgstr ""
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid "Your request '%s' has been accepted"
+msgstr ""
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid "Your request '%s' has been done"
+msgstr ""
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid "Your request '%s' has been refused"
+msgstr ""
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid "Your request '%s' has been validated"
+msgstr ""
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_view_form
+msgid "e.g. Purchase new computer"
+msgstr ""

@@ -1,0 +1,544 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_l10n_vn_account_cash_book
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-11 12:26+0000\n"
+"PO-Revision-Date: 2020-10-11 12:26+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#, python-format
+msgid "(Signature, Full Name)"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#, python-format
+msgid "(Signature, Full Name, Job Title)"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s07dn
+msgid "- Date To:"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#, python-format
+msgid "- Date To: "
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s08dn
+msgid "- Date to:"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s07dn
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s08dn
+msgid "- Issue Date:"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#, python-format
+msgid "- Issue Date: "
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s07dn
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s08dn
+msgid ""
+"<br/>\n"
+"\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\tCurrency:"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.actions.act_window,name:viin_l10n_vn_account_cash_book.action_wizard_c200_s08dn
+msgid "ACCOUNT BANK DEPOSIT BOOK (S08-DN)"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.actions.act_window,name:viin_l10n_vn_account_cash_book.action_wizard_c200_s07dn
+msgid "ACCOUNT CASH BOOK (S07-DN)"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/controllers/main.py:0
+#, python-format
+msgid "Account Bank Book.xlsx"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.actions.report,name:viin_l10n_vn_account_cash_book.act_report_c200_s08dn
+#: model:ir.ui.menu,name:viin_l10n_vn_account_cash_book.to_menu_account_bank_book
+msgid "Account Bank Deposit Book (S08-DN)"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.actions.report,name:viin_l10n_vn_account_cash_book.act_report_c200_s07dn
+#: model:ir.ui.menu,name:viin_l10n_vn_account_cash_book.to_menu_account_cash_book
+msgid "Account Cash Book (S07-DN)"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/controllers/main.py:0
+#, python-format
+msgid "Account Cash Book.xlsx"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s07dn__account_ids
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s08dn__account_ids
+msgid "Accounts"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s07dn
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s08dn
+msgid "Accounts:"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#, python-format
+msgid "Accounts: "
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s07dn
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s08dn
+#, python-format
+msgid "Amount"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s07dn
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s08dn
+#, python-format
+msgid "Balance"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s07dn
+#, python-format
+msgid "CASH BOOK"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s08dn
+#, python-format
+msgid "CASH IN BANK DEPOSIT BOOK"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#, python-format
+msgid "Chief Accountant"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s07dn__company_id
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s08dn__company_id
+msgid "Company"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s08dn
+msgid ""
+"Counterpart\n"
+"\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\tAccounts"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#, python-format
+msgid ""
+"Counterpart \n"
+" Accounts"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s07dn__create_uid
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s08dn__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s07dn__create_date
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s08dn__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#, python-format
+msgid "Currency:"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s08dn
+#, python-format
+msgid "Date"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s07dn
+msgid "Date From:"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#, python-format
+msgid "Date From: "
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s07dn__date_from
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s08dn__date_from
+msgid "Date from"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s08dn
+msgid "Date from:"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s07dn__date_to
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s08dn__date_to
+msgid "Date to"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s07dn
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s08dn
+#, python-format
+msgid "Description"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#, python-format
+msgid "Director/CEO"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_report_viin_l10n_vn_account_cash_book_report_c200_s07dn__display_name
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_report_viin_l10n_vn_account_cash_book_report_c200_s08dn__display_name
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s07dn__display_name
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s08dn__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/reports/report_c200_s07dn.py:0
+#, python-format
+msgid "Ending Balance"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_report_viin_l10n_vn_account_cash_book_report_c200_s07dn__id
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_report_viin_l10n_vn_account_cash_book_report_c200_s08dn__id
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s07dn__id
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s08dn__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s07dn__journal_ids
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s08dn__journal_ids
+msgid "Journals"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_report_viin_l10n_vn_account_cash_book_report_c200_s07dn____last_update
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_report_viin_l10n_vn_account_cash_book_report_c200_s08dn____last_update
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s07dn____last_update
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s08dn____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s07dn__write_uid
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s08dn__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s07dn__write_date
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s08dn__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#, python-format
+msgid "Month ..... Day ..... Year ....."
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s08dn
+#, python-format
+msgid "No."
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s07dn
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s08dn
+#, python-format
+msgid "Note"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/reports/report_c200_s07dn.py:0
+#, python-format
+msgid "Opening Balance"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s07dn
+#, python-format
+msgid "Payment"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s08dn
+msgid ""
+"Payment\n"
+"\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t(WithDraw)"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s07dn
+msgid ""
+"Payment\n"
+"\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\tT"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#, python-format
+msgid ""
+"Payment \n"
+" (WithDraw)"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#, python-format
+msgid ""
+"Payment \n"
+" T"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/reports/report_c200_s07dn.py:0
+#, python-format
+msgid "Period Total"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#, python-format
+msgid ""
+"Posting \n"
+" Date"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s07dn
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s08dn
+msgid "Posting Date"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#, python-format
+msgid "Prepared By"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.viin_c200_s07dn_form
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.viin_c200_s08dn_form
+msgid "Print Excel"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.viin_c200_s07dn_form
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.viin_c200_s08dn_form
+msgid "Print Pdf"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s07dn
+#, python-format
+msgid "Receipt"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s08dn
+msgid ""
+"Receipt\n"
+"\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t(Deposit)"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s07dn
+msgid ""
+"Receipt\n"
+"\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\tT"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#, python-format
+msgid ""
+"Receipt \n"
+" (Deposit)"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#, python-format
+msgid ""
+"Receipt \n"
+" T"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/controllers/main.py:0
+#, python-format
+msgid "Record not found: id: %s, uid: %s"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s07dn__target_move
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s08dn__target_move
+msgid "Target Moves"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.actions.report,legal_name:viin_l10n_vn_account_cash_book.act_report_c200_s07dn
+msgid "Template S07-DN"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.actions.report,legal_name:viin_l10n_vn_account_cash_book.act_report_c200_s08dn
+msgid "Template S08-DN"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#, python-format
+msgid ""
+"Template: S07DN \n"
+" (Released Under the Circular No. 200/2014/TT-BTC Dated 22/12/2014 by the Ministry of Finance)"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#, python-format
+msgid ""
+"Template: S08DN \n"
+" (Released Under the Circular No. 200/2014/TT-BTC Dated 22/12/2014 by the Ministry of Finance)"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#, python-format
+msgid "The Date From must be less than the Date To."
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.model,name:viin_l10n_vn_account_cash_book.model_report_viin_l10n_vn_account_cash_book_report_c200_s07dn
+msgid "VietNam C200 S07dn Report"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.model,name:viin_l10n_vn_account_cash_book.model_wizard_l10n_vn_c200_s07dn
+msgid "VietNam C200 S07dn Report Winzard"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.model,name:viin_l10n_vn_account_cash_book.model_report_viin_l10n_vn_account_cash_book_report_c200_s08dn
+msgid "VietNam C200 S08dn Report"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.model,name:viin_l10n_vn_account_cash_book.model_wizard_l10n_vn_c200_s08dn
+msgid "VietNam C200 S08dn Report Winzard"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s08dn
+#, python-format
+msgid "Voucher"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#, python-format
+msgid ""
+"Voucher \n"
+" Date"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s07dn
+msgid "Voucher Date"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s07dn
+#, python-format
+msgid "Voucher No."
+msgstr ""

@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<template id="accounting_external_header_layout_general" inherit_id="to_l10n_vn_qweb_layout.accounting_external_header_left_layout" primary="True">
+		<xpath expr="//div[hasclass('col-7')]" position="attributes">
+			<attribute name="class">col-12</attribute>
+		</xpath>
+	</template>
+
+	<template id="accounting_external_layout_general" inherit_id="to_l10n_vn_qweb_layout.accounting_external_layout_c200" primary="True">
+		<xpath expr="//div[hasclass('header')]" position="replace">
+			<div class="header">
+				<div class="row small">
+					<t t-call="to_print_payment_vi.accounting_external_header_layout_general">
+						<t t-raw="0" />
+					</t>
+				</div>
+			</div>
+		</xpath>
+	</template>
+
+	<template id="report_account_general_voucher_document">
+		<t t-call="to_print_payment_vi.accounting_external_layout_general">
+			<div class="page">
+				<div class="mb32 text-center">
+					<h3>
+						<span>GENERAL VOUCHER </span>
+					</h3>
+				</div>
+				<div class='row'>
+					<div class='col-8' t-if='o.name'>
+						No:
+						<span t-field="o.name" />
+					</div>
+					<div class='col-4' t-if='o.invoice_date'>
+						Date No:
+						<span t-field="o.invoice_date" />
+					</div>
+				</div>
+				<div class='row'>
+					<div class='col-8' t-if='o.partner_id'>
+						<p t-if="o.type in ['out_invoice', 'out_refund', 'out_receipt']">
+							Customer:
+							<span t-field="o.partner_id.commercial_partner_id.name" />
+						</p>
+						<p t-elif="o.type in ['in_invoice', 'in_refund', 'in_receipt']">
+							Vendor:
+							<span t-field="o.partner_id.commercial_partner_id.name" />
+						</p>
+					</div>
+					<div class='col-4' t-if='o.date'>
+						Account Date:
+						<span t-field="o.date" />
+					</div>
+				</div>
+				<div class='row'>
+					<div class='col-12' t-if='o.ref'>
+						Content:
+						<span t-field="o.ref" />
+					</div>
+				</div>
+
+				<div class="text-right">
+					Currency:
+					<span t-field="o.company_id.currency_id" />
+				</div>
+				<table class="table table-bordered">
+					<thead class='bg-light'>
+						<tr>
+							<th class="text-center align-middle" style="width: 15%">Account</th>
+							<th class="text-center align-middle" style="width: 55%">Description</th>
+							<th class="text-center align-middle" style="width: 15%">Debit</th>
+							<th class="text-center align-middle" style="width: 15%">Credit</th>
+						</tr>
+					</thead>
+					<tbody>
+						<t t-foreach="o.line_ids" t-as='line'>
+							<tr>
+								<td>
+									<span t-esc='line.account_id.code' />
+								</td>
+								<td>
+									<t t-if="line.name">
+										<span t-field='line.name' />
+									</t>
+									<t t-else="">
+										<span t-field='line.account_id.name' />
+									</t>
+								</td>
+								<td class="text-right">
+									<span t-field='line.debit' t-options='{"widget": "float", "precision": 0}' />
+								</td>
+								<td class="text-right">
+									<span t-field='line.credit' t-options='{"widget": "float", "precision": 0}' />
+								</td>
+							</tr>
+						</t>
+						<tr t-if='o.amount_total_signed' class="text-right">
+							<td colspan="2" class="text-center">
+								<b>Total</b>
+							</td>
+							<td>
+								<b>
+									<span t-esc="abs(o.amount_total_signed)" t-options='{"widget": "float", "precision": 0}' />
+								</b>
+							</td>
+							<td>
+								<b>
+									<span t-esc="abs(o.amount_total_signed)" t-options='{"widget": "float", "precision": 0}' />
+								</b>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div t-if='o.total_in_word'>
+					<i>
+						In Words:
+						<t t-if="lang == 'vi_VN'">
+							<span t-field="o.total_in_word" />
+							<t t-if="not o.company_id.currency_id.currency_unit_label">
+								[
+								<span class="fa fa-warning" style="color: red;" />
+								You have not specified currency unit (e.g. Dollars, Vietnam
+											Dong, etc) for the corresponding currency
+								<span t-esc="o.company_id.currency_id.name" />
+								!]
+							</t>
+							<t t-else="">
+								<span t-field="o.company_id.currency_id.currency_unit_label" />
+							</t>
+						</t>
+						<t t-else="">
+							<span t-esc="o.company_id.currency_id.amount_to_text(abs(o.amount_total_signed))" />
+						</t>
+					</i>
+				</div>
+				<t t-call="to_l10n_vn_qweb_layout.signature_block" />
+			</div>
+		</t>
+	</template>
+
+	<template id="payment_receipt_external_layout">
+		<!-- Multicompany -->
+		<t t-if="not o and doc">
+			<t t-set="o" t-value="doc" />
+		</t>
+
+		<t t-if="o and 'company_id' in o">
+			<t t-set="company" t-value="o.company_id.sudo()" />
+		</t>
+		<t t-if="not o or not 'company_id' in o">
+			<t t-set="company" t-value="res_company" />
+		</t>
+
+		<div class="header">
+			<div class="row small">
+				<t t-call="to_l10n_vn_qweb_layout.accounting_external_header_left_layout">
+					<t t-raw="0" />
+				</t>
+				<div class="col-5 text-center">
+					<strong>
+						<span t-if="o.in_out_payment == 'in'">Template 01-TT</span>
+						<span t-else="">Template 02-TT</span>
+					</strong>
+					<br />
+					(Released Under the Circular 200/2014/TT-BTC
+					<br />
+					Dated 22/12/2014 by the Ministry of Finance)
+				</div>
+			</div>
+			<div class="text-center">
+				<h3>
+					<t t-if="o.journal_id.type == 'bank'">
+						<span t-if="o.in_out_payment == 'in'">CREDIT NOTE</span>
+						<span t-else="">DEBIT NOTE</span>
+					</t>
+					<t t-elif="o.journal_id.type == 'cash'">
+						<span t-if="o.in_out_payment == 'in'">PAYMENT RECEIPT</span>
+						<span t-else="">PAYMENT VOUCHER</span>
+					</t>
+				</h3>
+				<div class="small">
+					Date:
+					<span t-field="o.date" />
+				</div>
+			</div>
+		</div>
+		<div class="article o_report_layout_standard">
+			<t t-raw="0" />
+		</div>
+
+		<div class="footer">
+			<t t-call="to_l10n_vn_qweb_layout.accounting_external_footer_layout">
+				<t t-raw="0" />
+			</t>
+		</div>
+	</template>
+
+	<template id="report_account_receipt_voucher">
+		<t t-call="to_print_payment_vi.payment_receipt_external_layout">
+			<div class="page">
+				<div class="small">
+					<div class="row">
+						<div class="col-4 offset-8">
+							Log #:..............
+							<br />
+							Number:
+							<span t-if="o.name" t-field="o.name" />
+							<br />
+							<t t-value="o.line_ids.filtered(lambda l: l.debit > 0)" t-set="debit_lines" />
+							<t t-foreach="debit_lines.read_group([('id', 'in', debit_lines.ids)],['account_id', 'debit'],['account_id'])" t-as="debit_line">
+								Debit:
+								<span t-esc="o.line_ids.account_id.browse(debit_line['account_id'][0]).code" />
+								<span class="pull-right" t-esc="debit_line['debit']" t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}" />
+								<br />
+							</t>
+							<t t-value="o.line_ids.filtered(lambda l: l.credit > 0)" t-set="credit_lines" />
+							<t t-foreach="credit_lines.read_group([('id', 'in', credit_lines.ids)],['account_id', 'credit'],['account_id'])" t-as="credit_line">
+								Credit:
+								<span t-esc="o.line_ids.account_id.browse(credit_line['account_id'][0]).code" />
+								<span class="pull-right" t-esc="credit_line['credit']" t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}" />
+								<br />
+							</t>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<span t-if="o.in_out_payment == 'in'">Name of Payment Applicant:</span>
+							<span t-else="">Name of Payment Receiver:</span>
+							<t t-set="payments" t-value="o.line_ids.mapped('payment_id')" />
+							<t t-if="payments">
+								<span t-esc="payments[0].recipient_payer or payments[0].partner_id.name" />
+							</t>
+							<br />
+							<t t-if="o.line_ids.mapped('partner_id')">
+								<t t-set='partner' t-value="o.line_ids.mapped('partner_id')[0]" />
+								<t t-if="partner.is_company==True">
+									Company:
+									<span t-esc="partner.name" />
+									<br />
+								</t>
+								<t t-else="">
+									Company:
+									<br />
+								</t>
+								<t t-if="partner.street">
+									Address:
+									<span t-esc="partner.street" />
+								</t>
+								<t t-else="">
+									Address:
+								</t>
+								<t t-if="partner.street2">
+									,
+									<span t-field="partner.street2" />
+								</t>
+								<t t-if="partner.city">
+									,
+									<span t-field="partner.city" />
+								</t>
+								<t t-if="partner.state_id.name">
+									,
+									<span t-field="partner.state_id" />
+								</t>
+								<t t-if="partner.country_id.name">
+									,
+									<span t-field="partner.country_id" />
+								</t>
+							</t>
+							<t t-else="">
+								Company:
+								<br />
+								Address:
+							</t>
+							<br />
+							<span t-if="o.in_out_payment == 'in'">Receipt Reason:</span>
+							<span t-if="o.in_out_payment == 'out'">Payment Reason:</span>
+							<span t-if="o.line_ids.mapped('payment_id')" t-field="o.line_ids.mapped('payment_id')[0].communication" />
+							<span t-else="" t-field="o.ref" />
+							<br />
+							Total Amount:
+							<strong>
+								<span t-esc="abs(o.amount_total_signed)" t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/>
+							</strong>
+							(In Words):
+							<t t-if="lang != 'vi_VN'">
+								<span t-esc="o.company_id.currency_id.amount_to_text(abs(o.amount_total_signed))" />
+							</t>
+							<t t-if="lang == 'vi_VN'">
+								<span t-field="o.total_in_word" />
+								<t t-if="not o.company_id.currency_id.currency_unit_label">
+									[
+									<span class="fa fa-warning" style="color: red;" />
+									You have not specified currency unit (e.g. Dollars, Vietnam
+											Dong, etc) for the corresponding currency
+									<span t-esc="o.company_id.currency_id.name" />
+									!]
+								</t>
+								<t t-if="o.company_id.currency_id.currency_unit_label">
+									<span t-field="o.company_id.currency_id.currency_unit_label" />
+									.
+								</t>
+							</t>
+							<br />
+							<t t-if="o.line_ids.mapped('payment_id').mapped('no_of_origin')">
+								Attached:
+								<span t-esc="o.line_ids.mapped('payment_id').mapped('no_of_origin')[0]" />
+								source document(s).
+							</t>
+							<t t-else="">
+									Attached: ... source document(s).
+								</t>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<p class="pull-right">On........Month.......Year........</p>
+						</div>
+					</div>
+					<div class="row text-center">
+						<div class="col-2">
+							<strong>Director</strong>
+							<br />
+							(Sign, Full Name, Stamp)
+						</div>
+						<div class="col-2" style="margin-left:3.3%;">
+							<strong>Chief Accountant</strong>
+							<br />
+							(Sign, Full Name)
+						</div>
+						<div class="col-2" style="margin-left:3.3%;">
+							<strong>
+								<span t-if="o.in_out_payment == 'in'">Payment Applicant</span>
+								<span t-else="">Payment Receiver</span>
+							</strong>
+							<br />
+							(Sign, Full Name)
+						</div>
+						<div class="col-2" style="margin-left:3.3%;">
+							<strong>Prepared By</strong>
+							<br />
+							(Sign, Full Name)
+						</div>
+						<div class="col-2" style="margin-left:3.3%;">
+							<strong>Cashier</strong>
+							<br />
+							(Sign, Full Name)
+						</div>
+					</div>
+					<div class="row" style="margin-top:50px;">
+						<div class="col-12">
+							Received Amount (in words):
+									.......................................................................................................
+							<br />
+							+ Foreign Exchange Rate (or Gold Currency):
+									...........................................................................
+							<br />
+							+ Conversion Amount:
+									.................................................................................................................
+						</div>
+					</div>
+				</div>
+			</div>
+		</t>
+	</template>
+
+	<template id="report_account_general_voucher">
+		<t t-call="web.html_container">
+			<t t-foreach="docs" t-as="o">
+				<t t-set='lang' t-value='o.env.user.lang' />
+				<t t-if="o.journal_id.type in ('bank', 'cash')">
+					<t t-call="to_print_payment_vi.report_account_receipt_voucher" t-lang="lang" />
+				</t>
+				<t t-else="">
+					<t t-call="to_print_payment_vi.report_account_general_voucher_document" t-lang='lang' />
+				</t>
+			</t>
+		</t>
+	</template>
+</odoo>

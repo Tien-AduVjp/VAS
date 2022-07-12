@@ -1,0 +1,441 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_hr_employee_resign
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-25 01:38+0000\n"
+"PO-Revision-Date: 2021-05-25 01:38+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_employee_resignation__message_needaction
+msgid "Action Needed"
+msgstr "Cần có Hành động"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_employee_resignation__activity_ids
+msgid "Activities"
+msgstr "Các hoạt động"
+
+#. module: to_hr_employee_resign
+#: model:ir.model,name:to_hr_employee_resign.model_mail_activity
+msgid "Activity"
+msgstr "Hoạt động"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_employee_resignation__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_employee_resignation__activity_state
+msgid "Activity State"
+msgstr "Trạng thái Hoạt động"
+
+#. module: to_hr_employee_resign
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_resign.hr_employee_resignation_form
+msgid "Approve"
+msgstr "Duyệt"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields.selection,name:to_hr_employee_resign.selection__hr_employee_resignation__state__approved
+msgid "Approved"
+msgstr "Đã duyệt"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_employee_resignation__message_attachment_count
+msgid "Attachment Count"
+msgstr "Số lượng đính kèm"
+
+#. module: to_hr_employee_resign
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_resign.hr_employee_resignation_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields.selection,name:to_hr_employee_resign.selection__hr_employee_resignation__state__cancelled
+msgid "Cancelled"
+msgstr "Đã hủy"
+
+#. module: to_hr_employee_resign
+#: model_terms:ir.actions.act_window,help:to_hr_employee_resign.hr_employee_resignation_action
+msgid "Create the first Employee Resignation"
+msgstr "Tạo đơn xin thôi việc đầu tiên của nhân viên"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_employee_resignation__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_employee_resignation__create_date
+msgid "Created on"
+msgstr "Được tạo vào"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_employee_resignation__date_approved
+msgid "Date Approved"
+msgstr "Ngày duyệt"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_employee_resignation__date_resign
+msgid "Date Resign"
+msgstr "Ngày thôi việc"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_plan__department_id
+msgid "Department"
+msgstr "Phòng ban"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_employee_resignation__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields.selection,name:to_hr_employee_resign.selection__hr_employee_resignation__state__done
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_resign.hr_employee_resignation_form
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields.selection,name:to_hr_employee_resign.selection__hr_employee_resignation__state__draft
+msgid "Draft"
+msgstr "Dự thảo"
+
+#. module: to_hr_employee_resign
+#: model:ir.model,name:to_hr_employee_resign.model_hr_employee
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_employee_resignation__employee_id
+msgid "Employee"
+msgstr "Nhân viên"
+
+#. module: to_hr_employee_resign
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_resign.hr_employee_resignation_tree
+msgid "Employee Advance"
+msgstr "Nhân viên nâng cao"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_mail_activity__employee_resign_id
+msgid "Employee Resign"
+msgstr "Nhân viên nghỉ việc"
+
+#. module: to_hr_employee_resign
+#: model:ir.model,name:to_hr_employee_resign.model_hr_employee_resignation
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_resign.hr_employee_resignation_form
+msgid "Employee Resignation"
+msgstr "Đơn xin thôi việc của nhân viên"
+
+#. module: to_hr_employee_resign
+#: model:ir.actions.act_window,name:to_hr_employee_resign.hr_employee_resignation_action
+msgid "Employee Resignations"
+msgstr "Đơn xin thôi việc của nhân viên"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_employee_resignation__message_follower_ids
+msgid "Followers"
+msgstr "Theo dõi"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_employee_resignation__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Người theo dõi (Các kênh)"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_employee_resignation__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Người theo dõi (Các đối tác)"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_employee_resignation__id
+msgid "ID"
+msgstr ""
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_employee_resignation__activity_exception_icon
+msgid "Icon"
+msgstr "Biểu tượng"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,help:to_hr_employee_resign.field_hr_employee_resignation__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Biểu tượng để chỉ ra một hoạt động ngoại lệ"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,help:to_hr_employee_resign.field_hr_employee_resignation__message_needaction
+#: model:ir.model.fields,help:to_hr_employee_resign.field_hr_employee_resignation__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Nếu đánh dấu chọn, các thông điệp mới yêu cầu sự có mặt của bạn."
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,help:to_hr_employee_resign.field_hr_employee_resignation__message_has_error
+#: model:ir.model.fields,help:to_hr_employee_resign.field_hr_employee_resignation__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Nếu được đánh dấu, thông điệp có lỗi về gửi tin."
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_employee_resignation__message_is_follower
+msgid "Is Follower"
+msgstr "Là người theo dõi"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_plan__is_offboarding
+msgid "Is OffBoarding"
+msgstr "Là kiểu nghỉ"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_employee_resignation____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_employee_resignation__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_employee_resignation__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_employee_resignation__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Đính kèm chính"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_employee_resignation__message_has_error
+msgid "Message Delivery error"
+msgstr "Có Lỗi Gửi Thông điệp"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_employee_resignation__message_ids
+msgid "Messages"
+msgstr "Thông điệp"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_employee_resignation__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Hạn chót lần hành động kế tiếp"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_employee_resignation__activity_summary
+msgid "Next Activity Summary"
+msgstr "Tóm tắt hoạt động tiếp theo"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_employee_resignation__activity_type_id
+msgid "Next Activity Type"
+msgstr "Kiểu hành động kế tiếp"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_employee_resignation__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Số lượng Hành động"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_employee_resignation__message_has_error_counter
+msgid "Number of errors"
+msgstr "Số lượng lỗi"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,help:to_hr_employee_resign.field_hr_employee_resignation__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Số thông điệp cần có hành động"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,help:to_hr_employee_resign.field_hr_employee_resignation__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Số lượng các thông điệp có lỗi về gửi tin"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,help:to_hr_employee_resign.field_hr_employee_resignation__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Số thông điệp chưa đọc"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_employee_resignation__plan_id
+msgid "Plan"
+msgstr "Kế hoạch"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_employee_resignation__reason
+msgid "Reason"
+msgstr "Lý do"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_employee_resignation__name
+msgid "Ref."
+msgstr "Tham chiếu"
+
+#. module: to_hr_employee_resign
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_resign.hr_employee_resignation_form
+msgid "Refuse"
+msgstr "Từ chối"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields.selection,name:to_hr_employee_resign.selection__hr_employee_resignation__state__refused
+msgid "Refused"
+msgstr "Đã từ chối"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_employee__hr_employee_resignation_ids
+#: model:ir.ui.menu,name:to_hr_employee_resign.hr_employee_resignation_menu
+#: model:ir.ui.menu,name:to_hr_employee_resign.resignations_root_menu
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_resign.view_employee_form
+msgid "Resignations"
+msgstr "Đơn xin thôi việc"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_employee__hr_employee_resignations_count
+msgid "Resignations Count"
+msgstr "SL Đơn xin thôi việc"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_employee__resigned
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_resign.view_employee_filter
+msgid "Resigned"
+msgstr "Đã thôi việc"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_employee_resignation__activity_user_id
+msgid "Responsible User"
+msgstr "Người chịu trách nhiệm"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_employee_resignation__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "SMS gửi lỗi"
+
+#. module: to_hr_employee_resign
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_resign.hr_employee_resignation_form
+msgid "Set to Draft"
+msgstr "Đặt về dự thảo"
+
+#. module: to_hr_employee_resign
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_resign.view_employee_form
+msgid "Show resignation documents of this employee"
+msgstr "Hiển thị các đơn xin thôi việc của nhân viên này"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_employee_resignation__state
+msgid "Status"
+msgstr "Tình trạng"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,help:to_hr_employee_resign.field_hr_employee_resignation__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Trạng thái dựa trên hoạt động\n"
+"Quá hạn: Ngày đến hạn đã trôi qua\n"
+"Hôm nay: Hôm nay là ngày phải thực hiện\n"
+"Đã hoạch định: Các hoạt động trong tương lai."
+
+#. module: to_hr_employee_resign
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_resign.hr_employee_resignation_form
+msgid "Submit"
+msgstr "Nộp"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields.selection,name:to_hr_employee_resign.selection__hr_employee_resignation__state__submitted
+msgid "Submitted"
+msgstr "Đã nộp"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,help:to_hr_employee_resign.field_hr_employee_resignation__date_resign
+msgid "The date on which all the contracts of the employee will be terminated"
+msgstr "Ngày trên tất cả hợp đồng của nhân viên sẽ bị chấm dứt"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,help:to_hr_employee_resign.field_hr_employee_resignation__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Loại hoạt động ngoại lệ trong hồ sơ."
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_employee_resignation__message_unread
+msgid "Unread Messages"
+msgstr "Thông điệp chưa đọc"
+
+#. module: to_hr_employee_resign
+#: model:ir.model.fields,field_description:to_hr_employee_resign.field_hr_employee_resignation__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Bộ đếm Thông điệp chưa đọc"
+
+#. module: to_hr_employee_resign
+#: code:addons/to_hr_employee_resign/models/hr_employee_resignation.py:0
+#, python-format
+msgid ""
+"You can only approve the resignations that are in either Refused state or "
+"Submitted state!"
+msgstr ""
+"Ban chỉ có thể phê duyệt những đơn xin thôi việc ở trạng thái Đã từ chối "
+"hoặc trạng thái Đã nộp!"
+
+#. module: to_hr_employee_resign
+#: code:addons/to_hr_employee_resign/models/hr_employee_resignation.py:0
+#, python-format
+msgid ""
+"You can only cancel the resignations that are in either Approved state or "
+"Submitted state!"
+msgstr ""
+"Bạn chỉ có thể hủy những đơn xin thôi việc ở trạng thái Đã phê duyệt hoặc "
+"trạng thái đã nộp!"
+
+#. module: to_hr_employee_resign
+#: code:addons/to_hr_employee_resign/models/hr_employee_resignation.py:0
+#, python-format
+msgid "You can only set done the resignations that are Approved state!"
+msgstr ""
+"Bạn chỉ có thể hoàn thành những đơn xin thôi việc ở trạng thái Đã duyệt!"
+
+#. module: to_hr_employee_resign
+#: code:addons/to_hr_employee_resign/models/hr_employee_resignation.py:0
+#, python-format
+msgid ""
+"You can only set draft the resignations that are in Cancelled or Refused "
+"state!"
+msgstr ""
+"Bạn chỉ có thể thiết lập về Dự thảo những đơn xin thôi việc ở trạng thái Đã "
+"hủy hoặc trạng thái Đã từ chối!"
+
+#. module: to_hr_employee_resign
+#: code:addons/to_hr_employee_resign/models/hr_employee_resignation.py:0
+#, python-format
+msgid ""
+"You can revert Done resignations to Approved state only if the resignations "
+"are in Done state!"
+msgstr ""
+"Bạn có thể khôi phục những đơn xin thôi việc Đã hoàn thành về trạng thái Đã "
+"duyệt nếu những đơn xin thôi việc ở trạng thái Hoàn thành!"
+
+#. module: to_hr_employee_resign
+#: code:addons/to_hr_employee_resign/models/hr_employee_resignation.py:0
+#, python-format
+msgid "You can submit draft resignations only!"
+msgstr "Bạn có thể nộp những đơn xin thôi việc ở trạng thái Dự thảo!"
+
+#. module: to_hr_employee_resign
+#: code:addons/to_hr_employee_resign/models/hr_employee_resignation.py:0
+#, python-format
+msgid ""
+"You may not be able to delete the employee resignation '%s' which is not in "
+"Draft state. You may need to set it to Draft first"
+msgstr ""
+"Bạn không được xóa đơn thôi việc '%s' khi trạng thái khác Dự thảo. Có thể "
+"bạn cần đặt về Dự thảo trước "
+
+#. module: to_hr_employee_resign
+#: model:ir.model,name:to_hr_employee_resign.model_hr_plan
+msgid "plan"
+msgstr "kế hoạch"

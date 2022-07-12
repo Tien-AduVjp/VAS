@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		
+
+		<record id="to_c200_s38dn_form" model="ir.ui.view">
+			<field name="name">C200 S38-DN Form</field>
+			<field name="model">wizard.l10n_vn.c200_s38dn</field>
+			<field name="inherit_id" ref="account.account_common_report_view"/>	        
+			<field name="arch" type="xml">
+				<data>	                
+					<xpath expr="//field[@name='journal_ids']" position="before">	                   
+	                    <field name="target_type" widget="radio"/>
+	                    <field name="account_type_ids" widget="many2many_tags" attrs="{'no_create': True, 'invisible': [('target_type', '!=', 'account')]}" />
+	                    <field name="account_ids" widget="many2many_tags" attrs="{'no_create': True, 'invisible': [('target_type', '!=', 'account')], 'required': [('target_type', '=', 'account')]}" />
+	                    <field name="partner_ids" widget="many2many_tags" attrs="{'no_create': True}" />
+	                    <newline/>
+	                </xpath>
+	                <xpath expr="//field[@name='journal_ids']" position="attributes">
+	                	 <attribute name="attrs">{'no_create': True, 'invisible': [('target_type', '!=', 'journal')], 'required': [('target_type', '=', 'journal')]}</attribute>	                
+	                </xpath>
+	                <xpath expr="//button[@name='check_report']" position="after">
+	                	<button name="check_report_excel" string="Export Excel" type="object" class="oe_highlight"/>
+	                </xpath>
+	                <xpath expr="//field[@name='target_move']" position="attributes">
+	                	<attribute name="readonly">1</attribute>
+	                </xpath>
+				</data>
+			</field>
+		</record>
+
+		<record id="action_wizard_c200_s38dn"
+			model="ir.actions.act_window">
+			<field name="name">ACCOUNT DETAIL SHEET (S38-DN)</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">wizard.l10n_vn.c200_s38dn</field>
+			<field name="view_mode">form</field>
+			<field name="view_id" ref="to_c200_s38dn_form" />
+			<field name="target">new</field>
+		</record>
+
+	</data>
+</odoo>

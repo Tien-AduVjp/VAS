@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		
+		<record id="create_maintenance_request_action" model="ir.actions.act_window">
+			<field name="name">Create Maintenance Request</field>
+			<field name="res_model">maintenance.request</field>
+			<field name="view_mode">form</field>
+			<field name="target">new</field>
+		</record>
+		
+		<record id="approval_request_view_inherit_form" model="ir.ui.view">
+			<field name="name">approval.request.inherit.form</field>
+			<field name="model">approval.request</field>
+			<field name="inherit_id" ref="to_approvals.approval_request_view_form" />
+			<field name="arch" type="xml">
+				<field name="department_id" position="after">
+					<field name="equipment_id" attrs="{'readonly': [('state', 'in', ('validate','done','refuse', 'cancel'))], 'invisible': [('type', '!=', 'maintenance_type')]}"/>
+				</field>
+				<button name="action_validate" position="after">
+					<button string="Create Maintenance Request"
+							name="%(create_maintenance_request_action)d"
+							type="action"
+							context="{'default_approval_id': id, 'default_equipment_id': equipment_id, 'default_employee_id': employee_id, 'default_description': description}"					 
+							class="oe_highlight"
+							attrs="{'invisible': ['|', ('state', '!=', 'validate'), ('type', '!=', 'maintenance_type')]}"
+							groups="maintenance.group_equipment_manager"
+							/>					
+				</button>
+				<div name="button_box" position="inside">
+					<button name="action_view_maintenance_request" class="oe_stat_button" type="object" icon="fa-bars"
+							groups="maintenance.group_equipment_manager"
+							attrs="{'invisible': ['|', ('type', '!=', 'maintenance_type'),('maintenance_request_count', '=', 0)]}">
+                    	<field name="maintenance_request_count" widget="statinfo" string="Maintenance Request"/>	
+                    </button> 
+				</div>
+				<field name="description" position="attributes">
+					<attribute name="attrs">{'required': [('type', '=', 'maintenance_type')]}</attribute>
+				</field>
+			</field>
+		</record>
+		
+	</data>
+</odoo>

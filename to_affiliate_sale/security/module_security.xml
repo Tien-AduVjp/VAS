@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data noupdate="0">
+		<!-- Portal Access Rules -->
+		<record id="sale_order_affiliate_rule_portal" model="ir.rule">
+			<field name="name">Portal Access Affiliate/Client Quotations/Sales Orders</field>
+			<field name="model_id" ref="sale.model_sale_order" />
+			<field name="domain_force">[('affcode_id.partner_id.id','=',user.commercial_partner_id.id)]</field>
+			<field name="groups" eval="[(4, ref('base.group_portal'))]" />
+			<field name="perm_unlink" eval="False" />
+			<field name="perm_write" eval="False" />
+			<field name="perm_read" eval="True" />
+			<field name="perm_create" eval="False" />
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="product_license_version_view_form"
+			model="ir.ui.view">
+			<field name="name">product.license.version.form</field>
+			<field name="model">product.license.version</field>
+			<field name="arch" type="xml">
+				<form string="License Form">
+					<sheet>
+						<div class="oe_button_box" name="button_box">
+							<button name="action_view_products" type="object"
+								class="oe_stat_button" icon="fa-cube">
+								<field name="products_count" string="Product(s)"
+									widget="statinfo" />
+							</button>
+						</div>
+						<field name="active" invisible="1" />
+						<widget name="web_ribbon" title="Archived"
+							bg_color="bg-danger"
+							attrs="{'invisible': [('active', '=', True)]}" />
+						<field name="image" widget="image" class="oe_avatar" />
+						<div class="oe_title">
+							<label for="name" class="oe_edit_only" />
+							<h1>
+								<field name="name" placeholder="1.0" />
+							</h1>
+						</div>
+						<div>
+							<field name="ref_url" widget="url"
+								placeholder="Reference URL" />
+						</div>
+						<group>
+							<group>
+								<field name="date_released" />
+								<field name="license_id" />
+							</group>
+							<group>
+								<field name="short_name" />
+							</group>
+						</group>
+						<notebook>
+							<page name="page_content" string="Content">
+								<field name="content" />
+							</page>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers" />
+						<field name="activity_ids" widget="mail_activity" />
+						<field name="message_ids" widget="mail_thread" />
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record id="product_license_version_tree_view"
+			model="ir.ui.view">
+			<field name="name">product.license.version.tree</field>
+			<field name="model">product.license.version</field>
+			<field name="arch" type="xml">
+				<tree string="License Versions">
+					<field name="license_id" />
+					<field name="name" />
+					<field name="short_name" />
+					<field name="date_released" />
+					<field name="ref_url" />
+					<field name="active" widget="boolean_toggle" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="product_license_version_search_view"
+			model="ir.ui.view">
+			<field name="name">product.license.version.search</field>
+			<field name="model">product.license.version</field>
+			<field name="arch" type="xml">
+				<search string="License Version">
+					<field name="name" />
+					<separator />
+					<field name="license_id" />
+					<separator />
+					<field name="date_released" />
+					<separator />
+					<filter name="ftr_active" string="Active"
+						domain="[('active','=',True)]" />
+					<filter name="ftr_inactive" string="Inactive"
+						domain="[('active','=',False)]" />
+					<group expand="0" string="Group By">
+						<filter name="grp_license_id" string="License"
+							context="{'group_by':'license_id'}" />
+						<filter name="grp_date_released" string="Release Date"
+							context="{'group_by':'date_released'}" />
+					</group>
+				</search>
+			</field>
+		</record>
+
+		<record id="product_license_version_action"
+			model="ir.actions.act_window">
+			<field name="name">License Versions</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">product.license.version</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem id="product_license_version_menu"
+			name="License Version" parent="license_root_menu"
+			action="product_license_version_action" />
+	</data>
+</odoo>

@@ -1,0 +1,86 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_stock_specific_identification_landed_costs
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-23 07:49+0000\n"
+"PO-Revision-Date: 2021-06-23 07:49+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_stock_specific_identification_landed_costs
+#: code:addons/viin_stock_specific_identification_landed_costs/models/stock_valuation_adjustment_lines.py:0
+#: code:addons/viin_stock_specific_identification_landed_costs/models/stock_valuation_adjustment_lines.py:0
+#: code:addons/viin_stock_specific_identification_landed_costs/models/stock_valuation_adjustment_lines.py:0
+#: code:addons/viin_stock_specific_identification_landed_costs/models/stock_valuation_adjustment_lines.py:0
+#, python-format
+msgid " already out"
+msgstr "đã xuất"
+
+#. module: viin_stock_specific_identification_landed_costs
+#: model:ir.model.fields,field_description:viin_stock_specific_identification_landed_costs.field_stock_valuation_adjustment_lines__spec_move_id
+msgid "Specific Identification Stock Move"
+msgstr "Dịch chuyển kho sử dụng Thực tế Đích danh"
+
+#. module: viin_stock_specific_identification_landed_costs
+#: model:ir.model,name:viin_stock_specific_identification_landed_costs.model_stock_landed_cost
+msgid "Stock Landed Cost"
+msgstr "Phí nhập kho"
+
+#. module: viin_stock_specific_identification_landed_costs
+#: model:ir.model.fields,field_description:viin_stock_specific_identification_landed_costs.field_stock_valuation_adjustment_lines__stock_valuation_layer_id
+msgid "Stock Valuation Layer"
+msgstr "Lớp giá trị kho"
+
+#. module: viin_stock_specific_identification_landed_costs
+#: model:ir.model.fields,help:viin_stock_specific_identification_landed_costs.field_stock_valuation_adjustment_lines__spec_move_id
+msgid ""
+"This technical field that stores the specific identification stock move"
+msgstr ""
+"Trường kỹ thuật để lưu trữ dịch chuyển kho sử dụng phương pháp thực tế đích danh"
+
+#. module: viin_stock_specific_identification_landed_costs
+#: model:ir.model.fields,help:viin_stock_specific_identification_landed_costs.field_stock_valuation_adjustment_lines__stock_valuation_layer_id
+msgid ""
+"This technical field that stores the stock valuation layer of specific "
+"identification stock move"
+msgstr ""
+"Trường kỹ thuật để lưu trữ lớp giá trị kho của dịch chuyển kho sử dụng "
+"phương pháp thực tế đích danh"
+
+#. module: viin_stock_specific_identification_landed_costs
+#: model:ir.model,name:viin_stock_specific_identification_landed_costs.model_stock_valuation_adjustment_lines
+msgid "Valuation Adjustment Lines"
+msgstr "Chi tiết Điều chỉnh Giá trị Kho"
+
+#. module: viin_stock_specific_identification_landed_costs
+#: code:addons/viin_stock_specific_identification_landed_costs/models/stock_landed_cost.py:0
+#, python-format
+msgid ""
+"You cannot apply landed costs on the chosen transfer(s). Landed costs can "
+"only be applied for products with automated inventory valuation and FIFO or "
+"average costing method."
+msgstr ""
+"Bạn không thể áp dụng chi phí về kho cho (các) dịch chuyển được chọn. Chi phí "
+"về kho chỉ có thể được áp dụng cho các sản phẩm có phương pháp định giá tồn kho "
+"là FIFO hoặc trung bình."
+
+#. module: viin_stock_specific_identification_landed_costs
+#: code:addons/viin_stock_specific_identification_landed_costs/models/stock_landed_cost.py:0
+#, python-format
+msgid ""
+"You cannot apply landed costs on the chosen transfer(s). Landed costs can "
+"only be applied for products with automated inventory valuation and FIFO or "
+"average or specific identification costing method."
+msgstr ""
+"Bạn không thể áp dụng chi phí về kho cho (các) dịch chuyển được chọn. Chi phí "
+"về kho chỉ có thể được áp dụng cho các sản phẩm có phương pháp định giá tồn kho "
+"là FIFO hoặc trung bình hoặc thực tế đích danh."
+

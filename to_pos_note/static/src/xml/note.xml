@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    
+    <t t-extend="PaymentScreenWidget">
+        <t t-jquery='.payment-buttons' t-operation='after'>
+	        <div class='payment-note'>
+	        	<textarea placeholder="note..." name="note" class="pay-note"></textarea>
+	        </div>
+   		</t>
+    </t>
+    <t t-extend="OrderReceipt">
+    	<t t-jquery='.before-footer' t-operation='before'>
+    		<div class="receipt-payment-note">
+    			<br/>
+    			<span>Note: </span>
+    			<span><t t-esc='receipt.note.note' /></span>
+    		</div>
+    	</t>
+    </t>
+
+</templates>

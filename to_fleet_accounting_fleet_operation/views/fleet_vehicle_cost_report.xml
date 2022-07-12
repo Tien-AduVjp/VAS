@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="fleet_vehicle_cost_report_view_tree"
+		model="ir.ui.view">
+		<field name="name">fleet.vehicle.cost.report.tree</field>
+		<field name="model">fleet.vehicle.cost.report</field>
+		<field name="inherit_id"
+			ref="to_fleet_accounting.fleet_vehicle_cost_report_view_tree" />
+
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='vehicle_id']" position="after">
+				<field name="trip_id" />
+			</xpath>
+		</field>
+	</record>
+
+	<record id="fleet_vehicle_costs_report_view_search"
+		model="ir.ui.view">
+		<field name="name">fleet.vehicle.cost.report.search</field>
+		<field name="model">fleet.vehicle.cost.report</field>
+		<field name="inherit_id"
+			ref="to_fleet_accounting.fleet_vehicle_costs_report_view_search" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='parent_id']" position="after">
+				<field name="route_section_id" />
+				<field name="address_id" />
+				<field name="route_id" />
+				<field name="trip_id" />
+			</xpath>
+			<xpath expr="//filter[@name='parent_true']" position="after">
+				<separator />
+				<filter name="ftr_trip_id" domain="[('trip_id','!=',False)]"
+					string="Trip Only" />
+				<filter name="route_id" domain="[('route_id','!=',False)]"
+					string="Route Related" />
+				<filter name="route_section_id"
+					domain="[('route_section_id','!=',False)]"
+					string="Route Section Only" />
+				<filter name="address_id"
+					domain="[('address_id','!=',False)]" string="Route Waypoint Only" />
+			</xpath>
+			<xpath
+				expr="//group[@name='group_by']/filter[@name='groupby_cost_subtype_id']"
+				position="after">
+				<filter name="groupby_trip_id"
+					context="{'group_by': 'trip_id'}" string="Trip" />
+				<filter name="groupby_route_id"
+					context="{'group_by': 'route_id'}" string="Route" />
+				<filter name="groupby_route_section_id"
+					context="{'group_by': 'route_section_id'}" string="Route Section" />
+				<filter name="groupby_address_id"
+					context="{'group_by': 'address_id'}" string="Route Waypoint" />
+			</xpath>
+		</field>
+	</record>
+	
+	<record id="fleet_costs_reporting_action"
+		model="ir.actions.act_window">
+		<field name="name">Costs Analysis</field>
+		<field name="res_model">fleet.vehicle.cost.report</field>
+		<field name="view_mode">pivot,graph,tree</field>
+		<field name="view_id"></field>  <!-- force empty -->
+		<field name="context">{'search_default_parent_false': 1, 'search_default_thisyear':1, 'search_default_ftr_trip_id':1}</field>
+	</record>
+
+	<record id="fleet_costs_reporting_non_effective_action"
+		model="ir.actions.act_window">
+		<field name="name">Indicative Costs Analysis</field>
+		<field name="res_model">fleet.vehicle.cost.report</field>
+		<field name="view_mode">pivot,graph,tree</field>
+		<field name="context">{'search_default_parent_true': 1, 'search_default_thisyear':1, 'search_default_ftr_trip_id':1}</field>
+	</record>
+
+	<menuitem id="menu_main_fleet_reporting_costs"
+		name="Cost Analysis"
+		parent="to_fleet_operation_planning.menu_fleet_trip_reporting"
+		sequence="20" />
+
+	<menuitem id="menu_fleet_reporting_costs" name="Costs"
+		parent="menu_main_fleet_reporting_costs"
+		action="fleet_costs_reporting_action" sequence="1" />
+
+	<menuitem id="menu_fleet_reporting_indicative_costs"
+		name="Indicative Costs" parent="menu_main_fleet_reporting_costs"
+		action="fleet_costs_reporting_non_effective_action"
+		sequence="2" groups="fleet.fleet_group_manager" />
+</odoo>

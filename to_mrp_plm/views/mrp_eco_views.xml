@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<!-- 7 actions called from views -->
+    <record id="mrp_eco_action_form" model="ir.actions.act_window">
+        <field name="name">Engineering Change Orders</field>
+        <field name="res_model">mrp.eco</field>
+        <field name="view_mode">form</field>
+        <field name="context">{'default_type_id': active_id}</field>
+        <field name="help" type="html">
+            <p>
+              Create a ECOs
+            </p>
+        </field>
+    </record>
+
+    <record id="mrp_eco_action" model="ir.actions.act_window">
+        <field name="name">Engineering Change Orders</field>
+        <field name="res_model">mrp.eco</field>
+        <field name="view_mode">kanban,tree,calendar,pivot,graph,form</field>
+        <field name="domain">[('type_id', '=',active_id),('state','!=','done')]</field>
+        <field name="context">{'search_default_type_id': [active_id], 'default_type_id': active_id}</field>
+        <field name="help" type="html">
+            <p>
+              Create a ECOs
+            </p>
+        </field>
+    </record>
+
+    <record id="mrp_eco_action_approval_my" model="ir.actions.act_window">
+        <field name="name">Engineering Change Orders</field>
+        <field name="res_model">mrp.eco</field>
+        <field name="view_mode">kanban,tree,calendar,pivot,graph,form</field>
+        <field name="context">{'search_default_type_id': [active_id], 'default_type_id': active_id, 'search_default_ftr_waiting_my_validation': True}</field>
+        <field name="domain">[]</field>
+        <field name="help" type="html">
+            <p>
+              Create a ECOs
+            </p>
+        </field>
+    </record>
+
+    <record id="mrp_eco_action_approval" model="ir.actions.act_window">
+        <field name="name">Engineering Change Orders</field>
+        <field name="res_model">mrp.eco</field>
+        <field name="view_mode">kanban,tree,calendar,pivot,graph,form</field>
+        <field name="context">{'search_default_type_id': [active_id], 'default_type_id': active_id, 'search_default_ftr_waiting_any_validation': True}</field>
+        <field name="domain">[]</field>
+        <field name="help" type="html">
+            <p>
+              Create a ECOs
+            </p>
+        </field>
+    </record>
+
+    <record id="mrp_eco_action_late" model="ir.actions.act_window">
+        <field name="name">Engineering Change Orders</field>
+        <field name="res_model">mrp.eco</field>
+        <field name="view_mode">kanban,tree,calendar,pivot,graph,form</field>
+        <field name="context">{'search_default_type_id': [active_id], 'default_type_id': active_id, 'search_default_ftr_to_apply': True}</field>
+        <field name="domain">[]</field>
+        <field name="help" type="html">
+            <p>
+              Create a ECOs
+            </p>
+        </field>
+    </record>
+
+    <record id="mrp_eco_action_product_tmpl" model="ir.actions.act_window">
+        <field name="name">Engineering Change Orders</field>
+        <field name="res_model">mrp.eco</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('product_tmpl_id', '=', active_id)]</field>
+        <field name="help" type="html">
+            <p>
+              Create a ECOs
+            </p>
+        </field>
+    </record> 
+
+    <record id="mrp_eco_action_routing" model="ir.actions.act_window">
+        <field name="name">Engineering Change Orders</field>
+        <field name="res_model">mrp.eco</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('new_routing_id', '=', active_id)]</field>
+        <field name="help" type="html">
+            <p>
+              Create a ECOs
+            </p>
+        </field>
+    </record>
+    
+    <record id="mrp_eco_view_tree" model="ir.ui.view">
+        <field name="name">mrp.eco.view.tree</field>
+        <field name="model">mrp.eco</field>
+        <field name="arch" type="xml">
+            <tree decoration-info="state=='progress'" decoration-danger="state=='confirmed'">
+                <field name="name"/>
+                <field name="bom_id"/>
+                <field name="effectivity_date"/>
+                <field name="stage_id"/>
+                <field name="user_id"/>
+                <field name="state" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="mrp_eco_view_search" model="ir.ui.view">
+        <field name="name">mrp.eco.search</field>
+        <field name="model">mrp.eco</field>
+        <field name="arch" type="xml">
+            <search string="ECOs">
+            	<field name="name"/>
+                <field name="product_tmpl_id"/>
+                <field name="state"/>
+                <field name="stage_id"/>
+                <field name="bom_id"/>
+                <field name="company_id"/>
+                <field name="tag_ids"/>
+                <field name="type_id"/>
+                <group expand="0" string="Filters">
+                    <filter name="ftr_my_change_order" string="My Change Orders" domain="[('user_id','=',uid)]"/>
+                    <field name="stage_id" string="Stage" filter_domain="[('stage_id','ilike', self)]"/>
+                    <separator/>
+                    <filter name="ftr_waiting_my_validation" string="Waiting For My Validation" domain="[('approval_ids.status','=','none')]"/>
+                    <filter name="ftr_waiting_any_validation" string="Waiting For Any Validation" domain="[('approval_ids.status','=','none')]"/>
+                    <filter name="ftr_to_apply" string="To Apply" domain="[('stage_id.is_final_stage','=',True), ('state', '=', 'progress')]"/>
+                    <separator/>
+                    <filter name="ftr_confirmed" string="To Do" domain="[('state', '=', 'confirmed')]"/>
+                    <filter name="ftr_progress" string="In Progress" domain="[('state', '=', 'progress')]"/>
+                    <filter name="ftr_done" string="Done" domain="[('state', '=', 'done')]"/>
+                    <separator/>
+                    <filter name="ftr_bom" string="BoM" domain="[('type', '!=', 'routing')]"/>
+                    <filter name="ftr_routing" string="Routing" domain="[('type', '!=', 'bom')]"/>
+                </group>
+                <group expand='0' string='Group by...'>
+                    <filter string='Product' name="grp_product_tmpl_id" context="{'group_by': 'product_tmpl_id'}"/>
+                    <filter string="State" name="grp_state" context="{'group_by': 'state'}"/>
+                    <filter string="Stage" name="grp_stage_id" context="{'group_by': 'stage_id'}"/>
+                    <filter string='Company' name="grp_company_id" context="{'group_by': 'company_id'}" groups="base.group_multi_company"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="mrp_eco_view_kanban" model="ir.ui.view">
+        <field name="name">mrp.eco.kanban</field>
+        <field name="model">mrp.eco</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="stage_id" class="o_kanban_small_column" quick_create="false">
+                <field name="name"/>
+                <field name="bom_id"/>
+                <field name="effectivity_date"/>
+                <field name="displayed_image_id"/>
+                <field name="stage_id"/>
+                <field name="color"/>
+                <field name="message_needaction_counter"/>
+                <field name="kanban_state"/>
+                <field name="user_id"/>
+                <field name="product_tmpl_id"/>
+                <field name="tag_ids"/>
+                <field name="priority"/>
+                <field name="type"/>
+                <field name="routing_id"/>
+                <progressbar field="activity_state" colors="{&quot;planned&quot;: &quot;success&quot;, &quot;today&quot;: &quot;warning&quot;, &quot;overdue&quot;: &quot;danger&quot;}" help="This bar allows to filter the ECOs based on scheduled activities."/>
+                <templates>
+                    <t t-name="kanban-box">
+                         <div t-attf-class="oe_kanban_color_#{kanban_getcolor(record.color.raw_value)} oe_kanban_card oe_kanban_global_click">
+                            <div class="o_dropdown_kanban dropdown" groups="base.group_user">
+                                <a class="dropdown-toggle btn" data-toggle="dropdown" href="#" role="button">
+                                    <span class="fa fa-bars fa-lg"/>
+                                </a>
+                                <div class="dropdown-menu" role="menu">
+                                        <t t-if="widget.editable"><a role="menuitem" type="set_cover" data-field="displayed_image_id" class="dropdown-item">Set Cover Image</a></t>
+                                        <t t-if="widget.editable"><a role="menuitem" type="edit" class="dropdown-item">Edit</a></t>
+                                        <t t-if="widget.deletable"><a role="menuitem" type="delete" class="dropdown-item">Delete</a></t>
+                                        <ul class="oe_kanban_colorpicker" data-field="color"/>
+                                </div>
+                            </div>
+                            <div class="oe_kanban_content">
+                                <div>
+                                    <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                                </div>
+                                <div>
+                                    <strong><field name="name"/></strong>
+                                </div>
+                                <div t-if="record.product_tmpl_id.raw_value">
+                                    <field name="product_tmpl_id"/>
+                                </div>
+                                <div t-if="record.type.raw_value == 'bom' or record.type.raw_value == 'both'">
+                                    <span>BoM: <field name="bom_id"/></span>
+                                </div>
+                                <div t-if="record.type.raw_value == 'routing' or record.type.raw_value == 'both'">
+                                    <span>Routing: <field name="routing_id"/></span>
+                                </div>
+                                <div class="text-muted">
+                                    <t t-if="record.effectivity_date.raw_value and record.effectivity_date.raw_value lt (new Date())" t-set="red">oe_kanban_text_red</t>
+                                    <span t-attf-class="#{red || ''}"><i><field name="effectivity_date"/></i></span>
+                                </div>
+                                <div t-if="record.displayed_image_id.value" class="py-2">
+                                    <field name="displayed_image_id" widget="attachment_image"/>
+                                </div>
+                                <div class="o_kanban_record_bottom">
+                                    <div class="oe_kanban_bottom_left">
+                                        <field name="priority" widget="priority"/>
+	                                    <t t-if="record.message_needaction_counter.raw_value">
+	                                        <span class='oe_kanban_mail_new' title='Important Messages'><i class='fa fa-comments'/><t t-raw="record.message_needaction_counter.raw_value"/></span>
+	                                    </t>
+	                                    <field name="activity_ids" widget="kanban_activity"/>
+                                    </div>
+                                    <div class="oe_kanban_bottom_right">
+                                        <img t-att-src="kanban_image('res.users', 'image_small', record.user_id.raw_value)"
+	                                    	 t-att-title="record.user_id.value" width="24" height="24"
+	                                    	 class="oe_kanban_avatar pull-right"
+	                                    	 t-att-alt="record.user_id.value"/>
+	                                    <div class="pull-left" groups="base.group_user">
+	                                        <span t-if="record.kanban_state.raw_value == 'normal'" class="oe_kanban_status oe_kanban_status_grey" title="Waiting for Approvals"/>
+	                                        <span t-if="record.kanban_state.raw_value == 'done'" class="oe_kanban_status oe_kanban_status_green" title="All Approvals have be done"/>
+	                                        <span t-if="record.kanban_state.raw_value == 'blocked'" class="oe_kanban_status oe_kanban_status_red" title="Someone rejected this change"/>
+	                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="oe_clear"></div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="mrp_eco_view_form" model="ir.ui.view">
+        <field name="name">mrp.eco.view.form</field>
+        <field name="model">mrp.eco</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="stage_id" widget="statusbar" clickable="True"/>
+                    <button string="Start New Revision" name="action_new_revision" type="object"
+                            class="oe_highlight" attrs="{'invisible': [('state', '!=', 'confirmed')]}"/>
+                    <button string="Approve" name="action_approve" type="object"
+                            class="oe_highlight" attrs="{'invisible': [('user_can_approve', '=', False)]}"/>
+                    <button string="Reject" name="action_reject" type="object"
+                            class="oe_highlight" attrs="{'invisible': [('user_can_reject', '=', False)]}"/>
+                    <button string="Apply Changes" name="action_apply" type="object"
+                            class="oe_highlight" attrs="{'invisible': [('allow_apply_change', '=', False)]}"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="open_new_bom" icon="fa-flask" type="object" attrs="{'invisible': [('new_bom_id', '=', False)]}" class="oe_stat_button">
+                        <div class="o_form_field o_stat_info mr4">
+                            <div>
+                                <span>Bill of Material</span><br/>
+                                <span>Rev :<field name="new_bom_revision" readonly="True"/> </span>
+                            </div>
+                        </div>
+                        </button>
+                        <button name="open_new_routing" icon="fa-cogs" type="object" attrs="{'invisible': [('new_routing_id', '=', False)]}" class="oe_stat_button">
+                        <div class="o_form_field o_stat_info mr4">
+                            <div>
+                                <span>Routing</span><br/>
+                                <span>Rev :<field name="new_routing_revision" readonly="True"/> </span>
+                            </div>
+                        </div>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <label for="name" string="Short Summary" class="oe_edit_only"/>
+                        <h2><field name="name"/></h2>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="type_id" widget="selection"/>
+                            <field name="type" widget="radio"/>
+                            <field name="product_tmpl_id" attrs="{'invisible': [('type', '=', 'routing')]}" domain="[('bom_ids', '!=', False)]"/>
+                            <field name="bom_id" attrs="{'invisible': [('type', '=', 'routing')], 'required': [('type', 'in', ('bom', 'both'))]}"/>
+                            <field name="new_bom_id" invisible="1"/>
+                            <field name="new_routing_id" invisible="1"/>
+                            <field name="routing_id" attrs="{'invisible': [('type', '=', 'bom')], 'required': [('type', 'in', ('routing', 'both'))]}" groups="mrp.group_mrp_routings"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                        <group>
+                            <field name="user_id"/>
+                            <field name="effectivity" widget="radio"/>
+                            <field name="effectivity_date" attrs="{'invisible': [('effectivity', '=', 'asap')]}"/>
+                            <field name="state" invisible="1"/>
+                            <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                        </group>
+                        <field name="user_can_approve" invisible="1"/>
+		                <field name="user_can_reject" invisible="1"/>
+		                <field name="kanban_state" invisible="1"/>
+		                <field name="allow_apply_change" invisible="1"/>
+                    </group>
+                    <notebook>
+                        <page string="Note">
+                            <field name="note" placeholder="Description of the change and its reason ..."/>
+                        </page>
+                        <page string="BoM Changes" attrs="{'invisible': [('type', '=', 'routing')]}">
+                            <field name="bom_change_ids">
+                                <tree decoration-danger="change_type=='remove'" decoration-info="change_type=='add'">
+                                    <field name="change_type"/>
+                                    <field name="product_id"/>
+                                    <field name="upd_product_qty"/>
+                                    <field name="product_uom_id" groups="uom.group_uom"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Routing Changes" attrs="{'invisible': [('type','=','bom')]}">
+                            <field name="routing_change_ids" context="{'default_routing_id': routing_id}">
+                                <tree decoration-danger="change_type=='remove'" decoration-info="change_type=='add'">
+                                    <field name="change_type"/>
+                                    <field name="workcenter_id"/>
+                                    <field name="upd_time_cycle_manual"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Approvals">
+                            <field name="approval_ids" nolabel="1" readonly="1">
+                                <tree decoration-info="template_stage_id==eco_stage_id">
+                                    <field name="name"/>
+                                    <field name="user_id"/>
+                                    <field name="template_stage_id"/>
+                                    <field name="required_user_ids" widget="many2many_tags"/>
+                                    <field name="status"/>
+                                    <field name="eco_stage_id" invisible="1"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity" />
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="mrp_eco_view_calendar" model="ir.ui.view">
+        <field name="name">mrp.eco.view.calendar</field>
+        <field name="model">mrp.eco</field>
+        <field name="arch" type="xml">
+            <calendar string="ECOs" date_start="create_date" date_stop="effectivity_date" color="stage_id">
+                <field name="name"/>
+                <field name="product_tmpl_id"/>
+                <field name="type"/>
+            </calendar>
+        </field>
+    </record>
+
+    <record id="mrp_eco_view_pivot" model="ir.ui.view">
+        <field name="name">mrp.eco.view.pivot</field>
+        <field name="model">mrp.eco</field>
+        <field name="arch" type="xml">
+            <pivot string="ECO Analysis">
+                <field name="stage_id" type="col"/>
+                <field name="product_tmpl_id" type="row"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="mrp_eco_view_graph" model="ir.ui.view">
+        <field name="name">mrp.eco.view.graph</field>
+        <field name="model">mrp.eco</field>
+        <field name="arch" type="xml">
+            <graph string="ECO Analysis">
+                <field name="stage_id" type="row"/>
+                <field name="product_tmpl_id" type="col"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="mrp_eco_action_main" model="ir.actions.act_window">
+        <field name="name">Engineering Change Orders</field>
+        <field name="res_model">mrp.eco</field>
+        <field name="view_mode">kanban,tree,calendar,pivot,graph,form</field>
+        <field name="help" type="html">
+            <p>
+              Create Engineering Change Orders
+            </p>
+        </field>
+    </record>
+
+    <record id="mrp_eco_action_report" model="ir.actions.act_window">
+        <field name="name">Engineering Change Orders</field>
+        <field name="res_model">mrp.eco</field>
+        <field name="view_mode">pivot,graph,form</field>
+        <field name="help" type="html">
+            <p>
+              Create Engineering Change Orders
+            </p>
+        </field>
+    </record>
+    
+    <menuitem id="mrp_eco_menu_change" name="Engineering Change Orders" parent="mrp_eco_menu_root"
+        action="mrp_eco_action_main" sequence="5"/>
+
+    <menuitem id="mrp_eco_menu_report" name="ECOs" parent="reporting_menu_root"
+        action="mrp_eco_action_report" sequence="1"/>
+
+</odoo>

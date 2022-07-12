@@ -1,0 +1,45 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_enterprice_marks_inter_company
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-17 04:43+0000\n"
+"PO-Revision-Date: 2020-03-17 04:43+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_enterprice_marks_inter_company
+#: model_terms:ir.ui.view,arch_db:to_enterprice_marks_inter_company.res_config_settings_view_form
+msgid "Automate inter-company transactions"
+msgstr "Giao dịch liên công ty tự động"
+
+#. module: to_enterprice_marks_inter_company
+#: model:ir.model,name:to_enterprice_marks_inter_company.model_res_config_settings
+msgid "Config Settings"
+msgstr "Thiết lập Cấu hình"
+
+#. module: to_enterprice_marks_inter_company
+#: model_terms:ir.ui.view,arch_db:to_enterprice_marks_inter_company.res_config_settings_view_form
+msgid ""
+"Configure company rules to automatically create SO/PO when one of your "
+"company sells/buys to another of your company."
+msgstr ""
+"Cấu hình để tự động tạo SO/PO khi giữa các công ty của bạn phát sinh giao "
+"dịch mua bán với nhau."
+
+#. module: to_enterprice_marks_inter_company
+#: model_terms:ir.ui.view,arch_db:to_enterprice_marks_inter_company.res_config_settings_view_form
+msgid "Inter-Company Transactions"
+msgstr "Giao dịch liên công ty"
+
+#. module: to_enterprice_marks_inter_company
+#: model:ir.model.fields,field_description:to_enterprice_marks_inter_company.field_res_config_settings__module_to_inter_company_base
+msgid "Setup Inter-Company Base"
+msgstr "Thiết lập cơ sở liên công ty"

@@ -1,0 +1,230 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_loyalty_sales
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-05 09:39+0000\n"
+"PO-Revision-Date: 2021-04-05 09:39+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields.selection,name:to_loyalty_sales.selection__res_company__loyalty_points_reward_policy__order
+msgid "By Ordered quantities"
+msgstr ""
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,help:to_loyalty_sales.field_res_company__loyalty_points_reward_policy
+#: model:ir.model.fields,help:to_loyalty_sales.field_res_config_settings__loyalty_points_reward_policy
+msgid ""
+"By Ordered quantities: customers are rewarded with loyalty points as soon as"
+" their orders are validated\n"
+msgstr ""
+
+#. module: to_loyalty_sales
+#: model_terms:ir.ui.view,arch_db:to_loyalty_sales.reward_wizard_form
+msgid "Cancel"
+msgstr ""
+
+#. module: to_loyalty_sales
+#: model_terms:ir.ui.view,arch_db:to_loyalty_sales.reward_wizard_form
+msgid "Choose"
+msgstr ""
+
+#. module: to_loyalty_sales
+#: model:ir.model,name:to_loyalty_sales.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: to_loyalty_sales
+#: model:ir.model,name:to_loyalty_sales.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_reward_wizard__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_reward_wizard__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_sale_order__customer_level_id
+msgid "Customer Level"
+msgstr ""
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_reward_wizard__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: to_loyalty_sales
+#: model_terms:ir.ui.view,arch_db:to_loyalty_sales.res_config_settings_view_form
+msgid "How you reward your customers with loyalty points"
+msgstr ""
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_reward_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_reward_wizard____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_reward_wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_reward_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: to_loyalty_sales
+#: model:ir.model,name:to_loyalty_sales.model_loyalty_point
+msgid "Loyalty Point"
+msgstr ""
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_sale_order__loyalty_point_ids
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_sale_order__loyalty_points
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_sale_order_line__loyalty_points
+msgid "Loyalty Points"
+msgstr ""
+
+#. module: to_loyalty_sales
+#: model:ir.actions.act_window,name:to_loyalty_sales.action_sale_loyalty_points
+msgid "Loyalty Points Analysis"
+msgstr ""
+
+#. module: to_loyalty_sales
+#: model:ir.model,name:to_loyalty_sales.model_loyalty_points_report
+#: model:ir.ui.menu,name:to_loyalty_sales.menu_sale_loyalty_point_report
+msgid "Loyalty Points Report"
+msgstr ""
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_res_company__loyalty_points_reward_policy
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_res_config_settings__loyalty_points_reward_policy
+msgid "Loyalty Points Reward Policy"
+msgstr ""
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_sale_order__loyalty_id
+msgid "Loyalty Program"
+msgstr ""
+
+#. module: to_loyalty_sales
+#: model_terms:ir.ui.view,arch_db:to_loyalty_sales.view_sale_order_form
+msgid "Loyalty Programs"
+msgstr ""
+
+#. module: to_loyalty_sales
+#: code:addons/to_loyalty_sales/models/sale_order.py:0
+#, python-format
+msgid "Loyalty points of customer not enough for these rewards."
+msgstr ""
+
+#. module: to_loyalty_sales
+#: code:addons/to_loyalty_sales/wizard/reward_wizard.py:0
+#, python-format
+msgid "Max. {0}% Discount"
+msgstr ""
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_sale_order__reward_count
+msgid "Number of Rewards"
+msgstr ""
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_sale_order_line__reward_id
+msgid "Reward"
+msgstr ""
+
+#. module: to_loyalty_sales
+#: model:ir.actions.act_window,name:to_loyalty_sales.action_reward_popup
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_reward_wizard__reward_id
+#: model_terms:ir.ui.view,arch_db:to_loyalty_sales.reward_wizard_form
+#: model_terms:ir.ui.view,arch_db:to_loyalty_sales.view_sale_order_form
+#: model_terms:ir.ui.view,arch_db:to_loyalty_sales.view_sales_order_auto_done_setting
+msgid "Rewards"
+msgstr ""
+
+#. module: to_loyalty_sales
+#: model:ir.model,name:to_loyalty_sales.model_reward_wizard
+msgid "Rewards Wizard"
+msgstr ""
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_loyalty_points_report__sale_order_line_id
+msgid "Sale Line"
+msgstr ""
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_loyalty_point__sale_order_id
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_loyalty_points_report__sale_order_id
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_reward_wizard__sale_order_id
+msgid "Sale Order"
+msgstr ""
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_loyalty_point__sale_order_line_id
+msgid "Sale Order Line"
+msgstr ""
+
+#. module: to_loyalty_sales
+#: model:ir.model,name:to_loyalty_sales.model_sale_order
+msgid "Sales Order"
+msgstr ""
+
+#. module: to_loyalty_sales
+#: model:ir.model,name:to_loyalty_sales.model_sale_order_line
+msgid "Sales Order Line"
+msgstr ""
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_sale_order__spendable_points
+msgid "Spendable Points"
+msgstr ""
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,help:to_loyalty_sales.field_sale_order__loyalty_id
+msgid ""
+"The loyalty program used by this sales order. A program could be "
+"automatically selected here when there is one specified either for the "
+"corresponding customer or the sales team."
+msgstr ""
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,help:to_loyalty_sales.field_sale_order__loyalty_points
+msgid "The number of Loyalty points the customer won or lost with this order"
+msgstr ""
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,help:to_loyalty_sales.field_sale_order_line__loyalty_points
+msgid ""
+"The number of Loyalty points the customer won or lost with this order line"
+msgstr ""
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,help:to_loyalty_sales.field_sale_order_line__reward_id
+msgid "This field is to indicate that the line is a reward line"
+msgstr ""
+
+#. module: to_loyalty_sales
+#: model_terms:ir.ui.view,arch_db:to_loyalty_sales.reward_wizard_form
+msgid "or"
+msgstr ""

@@ -1,0 +1,58 @@
+# -*- coding: utf-8 -*-
+{
+    'name': "Multi-Warehouse Access Control - Sales",
+    'name_vi_VN': "Kiểm Soát Truy Cập Đa Kho - Bán hàng",
+
+    'summary': """
+Integrate Multi-Warehouse Access Control with Sales""",
+    'summary_vi_VN': """
+Tích hợp Kiểm soát truy cập Đa Kho với Bán hàng
+        """,
+
+    'description': """
+Grant 'Inventory / Users: Own Documents' read access to sales orders and sales order lines
+
+Editions Supported
+==================
+1. Community Edition
+2. Enterprise Edition
+
+    """,
+
+    'description_vi_VN': """
+Phân quyền bổ sung cho nhóm người dùng 'Kho / Chỉ tài liệu của mình' để có thể đọc đơn bán và các dòng đơn bán
+
+Ấn bản được Hỗ trợ
+==================
+1. Ấn bản Community
+2. Ấn bản Enterprise
+
+    """,
+
+    'author': "T.V.T Marine Automation (aka TVTMA),Viindoo",
+    'website': "https://viindoo.com",
+    'live_test_url': "https://v13demo-int.erponline.vn",
+    'live_test_url_vi_VN': "https://v13demo-vn.erponline.vn",
+    'support': "apps.support@viindoo.com",
+
+    # Categories can be used to filter modules in modules listing
+    # Check https://github.com/odoo/odoo/blob/10.0/odoo/addons/base/module/module_data.xml
+    # for the full list
+    'category': 'Warehouse',
+    'version': '0.1',
+
+    # any module necessary for this one to work correctly
+    'depends': ['to_multi_warehouse_access_control', 'sale'],
+
+    # always loaded
+    'data': [
+        'security/ir.model.access.csv',
+    ],
+    'images' : ['static/description/main_screenshot.png'],
+    'installable': True,
+    'application': False,
+    'auto_install': True,
+    'price': 9.9,
+    'currency': 'EUR',
+    'license': 'OPL-1',
+}

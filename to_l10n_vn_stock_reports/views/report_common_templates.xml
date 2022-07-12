@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+
+		<template id="warehouse_info">
+			<strong>Warehouse:</strong>
+			<t t-if="doc.warehouse_id">
+				<span t-field="doc.warehouse_id" />
+				<br />
+				<strong>Stock Location:</strong>
+				<t
+					t-if="doc.location_id.id == doc.warehouse_id.view_location_id.id">
+					All
+				</t>
+				<t
+					t-if="doc.location_id.id != doc.warehouse_id.view_location_id.id">
+					<span t-field="doc.location_id" />
+				</t>
+			</t>
+			<t t-if="not doc.warehouse_id">
+				All
+			</t>
+		</template>
+
+	</data>
+</odoo>

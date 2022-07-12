@@ -1,0 +1,26 @@
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="view_model_form">
+			<field name="name">ir.model.form</field>
+			<field name="model">ir.model</field>
+			<field name="inherit_id" ref="base.view_model_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='state']" position="after">
+					<field name="track_user_assignment" widget="boolean_toggle" />
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="view_model_tree">
+			<field name="name">ir.model.tree</field>
+			<field name="model">ir.model</field>
+			<field name="inherit_id" ref="base.view_model_tree" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='state']" position="after">
+					<field name="track_user_assignment" widget="boolean_toggle" />
+				</xpath>
+			</field>
+		</record>
+
+	</data>
+</odoo>

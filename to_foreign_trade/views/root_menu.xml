@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<!-- Root Menus -->
+
+		<menuitem id="menu_foreign_trade_root" name="Foreign Trade"
+			web_icon="to_foreign_trade,static/description/icon.png" 
+			groups="to_foreign_trade.group_foreign_trade_user" sequence="30" />
+		<menuitem id="menu_custom_declaration_main" parent="menu_foreign_trade_root"
+			name="Custom Clearance Document" groups="to_foreign_trade.group_foreign_trade_user"
+			sequence="2" />
+		<menuitem id="menu_foreign_trade_config_root" name="Configuration"
+			parent="menu_foreign_trade_root" groups="to_foreign_trade.group_foreign_trade_user"
+			sequence="100" />
+
+		<!-- Tax -->
+
+		<menuitem id="menu_foreign_trade_tax" action="account.action_tax_form"
+			parent="menu_foreign_trade_config_root" groups="to_foreign_trade.group_foreign_trade_user"
+			sequence="1" />
+										
+	</data>
+</odoo>

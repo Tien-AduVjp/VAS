@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<report id="to_account_payment" model="account.payment"
+			string="Payment Receipt (Template 01-TT/02-TT)" report_type="qweb-pdf"
+			name="to_print_payment_vi.report_accountpayment"
+			file="to_print_payment_vi.report_accountpayment" />
+
+		<record id="to_account_payment" model="ir.actions.report">
+			<field name="paperformat_id" ref="to_l10n_vn_qweb_layout.to_qwl_template_paperformat_landscape_a5" />
+		</record>
+		
+		<!--	Action print Accounting Voucher-->
+		<report id="report_general_voucher" model="account.move"
+			string="General voucher" report_type="qweb-pdf"
+			name="to_print_payment_vi.report_account_general_voucher"
+			file="to_print_payment_vi.report_account_general_voucher" />
+
+		<record id="report_general_voucher" model="ir.actions.report">
+			<field name="paperformat_id" ref="to_l10n_vn_qweb_layout.to_qwl_template_paperformat_portrait" />
+		</record>
+	</data>
+</odoo>

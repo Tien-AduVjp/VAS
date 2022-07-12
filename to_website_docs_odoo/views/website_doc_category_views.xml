@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<!-- Document Category -->
+		<record id="category_form" model="ir.ui.view">
+			<field name="name">website.doc.category.form</field>
+			<field name="model">website.doc.category</field>
+			<field name="inherit_id" ref="to_website_docs.category_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='tag_ids']" position="before">
+					<field name="odoo_version_ids" widget="many2many_tags"
+						options="{'no_create': True, 'no_quick_edit': True, 'no_create_edit': True, 'no_open': True}" />
+				</xpath>
+			</field>
+		</record>
+
+	</data>
+</odoo>

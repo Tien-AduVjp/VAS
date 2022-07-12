@@ -1,0 +1,30 @@
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="res_config_settings_view_form">
+			<field name="name">res.config.settings.view.form.inherit.account
+			</field>
+			<field name="model">res.config.settings</field>
+			<field name="inherit_id"
+				ref="account.res_config_settings_view_form" />
+			<field name="arch" type="xml">
+				<xpath
+					expr="//t[@groups='account.group_account_user']"
+					position="after">
+					<h2>Foreign Trade Landed Cost</h2>
+                    <div class="row mt16 o_settings_container" id="landed_cost">
+                        <div class="col-xs-12 col-md-6 o_setting_box">
+                            <div class="o_setting_left_pane"/>
+                            <div class="o_setting_right_pane">
+                                <label for="landed_cost_journal_id"/>      
+                                <div class="text-muted">
+                                    Default journal for account entries related to import landed cost taxes
+                                </div>                          
+                                <field name="landed_cost_journal_id"/>
+                            </div>
+                        </div>
+                    </div>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,98 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_hr_account
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-08 10:12+0000\n"
+"PO-Revision-Date: 2020-12-08 10:12+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_hr_account
+#: model_terms:ir.ui.view,arch_db:viin_hr_account.view_department_form
+msgid "Accounting"
+msgstr "Kế toán"
+
+#. module: viin_hr_account
+#: model:ir.model,name:viin_hr_account.model_account_analytic_account
+#: model:ir.model.fields,field_description:viin_hr_account.field_hr_department__analytic_account_id
+msgid "Analytic Account"
+msgstr "Tài khoản KT Quản trị"
+
+#. module: viin_hr_account
+#: model:ir.model,name:viin_hr_account.model_account_analytic_tag
+#: model:ir.model.fields,field_description:viin_hr_account.field_hr_department__analytic_tag_ids
+msgid "Analytic Tags"
+msgstr "Thẻ TK Quản trị"
+
+#. module: viin_hr_account
+#: model:ir.model.fields,help:viin_hr_account.field_hr_department__account_expense_id
+msgid ""
+"Default Expense Account that will be used for encoding the department "
+"expenses into general accounting system (e.g. employee payroll expenses)."
+msgstr ""
+"Tài khoản chi phí mặc định mà sẽ được sử dụng để hạch toán các chi phí "
+"liên quan đến phòng ban này vào hệ thống kế toán (vd: các chi phí lương)"
+
+#. module: viin_hr_account
+#: model:ir.model.fields,help:viin_hr_account.field_hr_department__analytic_account_id
+msgid ""
+"Default analytic account to be used for encoding analytic items related to "
+"payslips of this contract when no analytic account defined on the salary "
+"rules that concern."
+msgstr ""
+
+#. module: viin_hr_account
+#: model:ir.model.fields,field_description:viin_hr_account.field_hr_department__account_expense_id
+msgid "Expense Account"
+msgstr "Tài khoản Chi phí"
+
+#. module: viin_hr_account
+#: model_terms:ir.ui.view,arch_db:viin_hr_account.account_analytic_tag_form_view
+#: model_terms:ir.ui.view,arch_db:viin_hr_account.view_account_analytic_account_form
+msgid "HR"
+msgstr ""
+
+#. module: viin_hr_account
+#: model:ir.model,name:viin_hr_account.model_hr_department
+#: model:ir.model.fields,field_description:viin_hr_account.field_account_analytic_account__department_id
+msgid "HR Department"
+msgstr "Phòng/Ban (NS)"
+
+#. module: viin_hr_account
+#: model:ir.model.fields,field_description:viin_hr_account.field_account_analytic_tag__department_ids
+#: model:ir.model.fields,field_description:viin_hr_account.field_account_analytic_account__department_ids
+msgid "HR Departments"
+msgstr "Phòng ban (NS)"
+
+#. module: viin_hr_account
+#: model:ir.model.fields,help:viin_hr_account.field_account_analytic_account__department_ids
+msgid "Technical field to link analytic account to HR departments."
+msgstr "Trường kỹ thuật để liên kết tài khoản quản trị với Phòng ban (HR)"
+
+#. module: viin_hr_account
+#: code:addons/viin_hr_account/models/account_analytic_account.py:0
+#, python-format
+msgid ""
+"You may not be able to change the name of the account '%s' while it links to"
+" the HR department '%s'"
+msgstr ""
+"Bạn không thể đổi tên tài khoản '%s' khi nó đang liên kết đến phòng ban"
+" '%s'"
+
+#. module: viin_hr_account
+#: code:addons/viin_hr_account/models/account_analytic_account.py:0
+#, python-format
+msgid ""
+"You may not have a single analytic account that links to multiple HR "
+"departments."
+msgstr ""
+"Bạn không thể có một tài khoản quản trị liên kết đồng thời đến nhiều "
+"phòng ban."

@@ -1,0 +1,18 @@
+<odoo>
+	<record id="mrp_workorder_form_view_inherit1" model="ir.ui.view">
+		<field name="name">mrp.workorder.form.view1</field>
+		<field name="model">mrp.workorder</field>
+		<field name="inherit_id" ref="to_mrp_barcode.mrp_workorder_form_view_inherit1" />
+		<field name="arch" type="xml">
+			<xpath expr="//button[@name='button_start1']" position="attributes">
+				<attribute name="context">{'open_mrp_workorder_backdate_wizard': True}</attribute>
+			</xpath>
+			<xpath expr="//button[@name='button_start2']" position="attributes">
+				<attribute name="context">{'open_mrp_workorder_backdate_wizard': True}</attribute>
+			</xpath>
+			<xpath expr="//button[@name='button_start3']" position="attributes">
+				<attribute name="context">{'open_mrp_workorder_backdate_wizard': True}</attribute>
+			</xpath>
+		</field>
+	</record>
+</odoo>

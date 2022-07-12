@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Work from home with Proof of Work timesheet required -->
+        <record id="time_off_type_wfh" model="hr.leave.type">
+            <field name="name">Work From Home</field>
+            <field name="allocation_type">no</field>
+            <field name="validation_type">both</field>
+            <field name="color_name">red</field>
+            <field name="code">WORKFROMHOME</field>
+            <field name="leave_notif_subtype_id" eval="ref('hr_holidays.mt_leave_home_working')"/>
+            <field name="responsible_id" ref="base.user_admin"/>
+            <field name="unpaid" eval="False"/>
+            <field name="pow_timesheet_required" eval="True"/>
+            <field name="timesheet_generate" eval="True"/>
+        </record>
+        <record id="hr.employee_qdp" model="hr.employee">
+            <field name="pow_timesheet_required" eval="True"/>
+        </record>
+    </data>
+</odoo>

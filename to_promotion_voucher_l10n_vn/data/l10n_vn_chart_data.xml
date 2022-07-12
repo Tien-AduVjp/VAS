@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="1">
+		<!-- Chart template -->
+		<record id="l10n_vn.vn_template" model="account.chart.template">
+			<field name="property_promotion_voucher_profit_account_id" ref="l10n_vn.chart711" />
+			<field name="property_promotion_voucher_loss_account_id" ref="l10n_vn.chart5211" />
+			<field name="property_unearn_revenue_account_id" ref="l10n_vn.chart3387"/>
+		</record>
+	</data>
+</odoo>

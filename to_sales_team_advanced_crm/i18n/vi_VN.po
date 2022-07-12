@@ -1,0 +1,64 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_sales_team_advanced_crm
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-04 01:32+0000\n"
+"PO-Revision-Date: 2020-04-04 01:32+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_sales_team_advanced_crm
+#: model:ir.model,name:to_sales_team_advanced_crm.model_crm_activity_report
+msgid "CRM Activity Analysis"
+msgstr "Phân tích hoạt động CRM"
+
+#. module: to_sales_team_advanced_crm
+#: model:ir.model,name:to_sales_team_advanced_crm.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Tiềm năng/Cơ hội"
+
+#. module: to_sales_team_advanced_crm
+#: model:ir.model.fields,field_description:to_sales_team_advanced_crm.field_crm_activity_report__regional_manager_id
+#: model:ir.model.fields,field_description:to_sales_team_advanced_crm.field_crm_lead__regional_manager_id
+msgid "Regional Manager"
+msgstr "Giám đốc Khu vực"
+
+#. module: to_sales_team_advanced_crm
+#: model:ir.model.fields,field_description:to_sales_team_advanced_crm.field_crm_activity_report__crm_team_region_id
+#: model:ir.model.fields,field_description:to_sales_team_advanced_crm.field_crm_lead__crm_team_region_id
+#: model_terms:ir.ui.view,arch_db:to_sales_team_advanced_crm.crm_activity_report_view_search
+#: model_terms:ir.ui.view,arch_db:to_sales_team_advanced_crm.crm_opportunity_report_view_search
+msgid "Sales Region"
+msgstr "Khu vực Bán hàng"
+
+#. module: to_sales_team_advanced_crm
+#: model:ir.ui.menu,name:to_sales_team_advanced_crm.sales_team_region_config
+msgid "Sales Regions"
+msgstr "Khu vực Bán hàng"
+
+#. module: to_sales_team_advanced_crm
+#: model:ir.model.fields,field_description:to_sales_team_advanced_crm.field_crm_activity_report__team_leader_id
+#: model:ir.model.fields,field_description:to_sales_team_advanced_crm.field_crm_lead__team_leader_id
+msgid "Team Leader"
+msgstr "Đội trưởng"
+
+#. module: to_sales_team_advanced_crm
+#: model:ir.model.fields,help:to_sales_team_advanced_crm.field_crm_lead__regional_manager_id
+msgid ""
+"The one who has the rights to approve sales targets for the team and the "
+"team members"
+msgstr "Người có quyền phê duyệt mục tiêu doanh số cho nhóm và"
+"thành viên trong nhóm"
+
+#. module: to_sales_team_advanced_crm
+#: model:ir.model.fields,help:to_sales_team_advanced_crm.field_crm_lead__crm_team_region_id
+msgid "The region to which this sales team belongs"
+msgstr "Khu vực mà nhóm bán hàng thuộc về"

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    	<record id="view_stock_landed_cost_search" model="ir.ui.view">
+			<field name="name">stock.landed.cost.search</field>
+			<field name="model">stock.landed.cost</field>
+			<field name="inherit_id" ref="stock_landed_costs.view_stock_landed_cost_search" />
+			<field name="arch" type="xml">
+				<field name="name" position="after">
+					<field name="custom_declaration_import_id"/> 
+					<field name="custom_declaration_export_id"/> 
+				</field>
+			</field>
+		</record>
+    </data>
+</odoo>

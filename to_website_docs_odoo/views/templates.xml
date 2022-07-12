@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="0">
+		<template id="document_security"
+			name="Document - Security Description">
+			<t t-set="perms" t-value="category.get_perms()" />
+			<div id="docsSecurity" t-if="not perms.write"
+				class="alert badge-warning docs-security" contentEditable="false">
+				<p t-field="category.description_private"></p>
+			</div>
+			<div id="docsSecurity" t-if="perms.write"
+				class="alert badge-warning docs-security">
+				<p t-field="category.description_private"></p>
+			</div>
+		</template>
+
+		<template id="document_content"
+			name="Document - Action Button">
+			<t t-set="perms"
+				t-value="perms or document.get_perms(category=category)" />
+			<!-- <t t-if="document_content"> -->
+			<ul class="docs-versions">
+				<t t-set="other_versions"
+					t-value="document_content.get_other_odoo_versions()" />
+				<t t-set="other_versions_published"
+					t-value="document_content.get_other_odoo_versions(True)" />	
+				<div class="dropdown">
+					<a t-attf-id="docsItemVersion-#{document_content.id}"
+						t-if="(len(document.odoo_version_ids) &gt; 0 and document_content.odoo_version_id.id) or len(other_versions) &gt; 0"
+						class="badge badge-primary dropdown-toggle"
+						t-att-data-publish="document_content.get_published()"
+						data-toggle="dropdown" aria-expanded="false" href="#">
+						<span t-esc="document_content.odoo_version_id.name" />
+					</a>
+					<div class="dropdown-menu"
+						role="menu">
+						<t t-if="perms and perms.write">
+							<t t-if="item != document_content" t-foreach="other_versions"
+								t-as="item">
+								<a t-attf-class="dropdown-item #{not document.with_context(odoo_version_str=item.name).get_content().website_published and 'btn-text-danger' or ''}"
+									t-att-href="document.with_context(odoo_version_str=item.name).get_website_url()"
+									t-esc="item.name"></a>
+							</t>
+						</t>
+						<t t-else="">
+							<t t-if="item != document_content" t-foreach="other_versions_published"
+								t-as="item">
+								<a t-attf-class="dropdown-item"
+									t-att-href="document.with_context(odoo_version_str=item.name).get_website_url()"
+									t-esc="item.name"></a>
+							</t>
+						</t>
+					</div>
+				</div>
+			</ul>
+			<t t-if="perms and perms.write">
+				<t t-set="unassigned_odoo_version_ids"
+					t-value="document.unassigned_odoo_version_ids" />
+				<ul t-if="len(unassigned_odoo_version_ids) &gt; 0"
+					class="docs-versions version-editable">
+					<div class="dropdown">
+						<a class="badge badge-light dropdown-toggle"
+							data-toggle="dropdown" aria-expanded="false"
+							href="">
+							<i class="fa fa-plus"></i>
+						</a>
+						<div class="dropdown-menu" role="menu">
+							<t t-foreach="unassigned_odoo_version_ids"
+								t-as="odoo_version_id">
+								<a class="dropdown-item" t-att-data-id="document.id" t-att-data-cid="document_content.id" 
+									t-att-data-version="odoo_version_id.id" t-att-data-current_version="document_content.odoo_version_id.id" href="">
+									<span t-esc="odoo_version_id.name" />
+								</a>
+							</t>
+						</div>
+					</div>
+				</ul>
+			</t>
+			<!-- </t> -->
+		</template>
+
+		<template id="nav" inherit_id="to_website_docs.nav">
+			<xpath expr="//form[hasclass('search-box')]" position="before">
+				<div class="nav-item dropdown">
+					<t t-if="odoo_version_ids">
+						<a class="nav-link dropdown-toggle" href="#"
+							id="navbarOdooVersion" role="button" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false">
+							<span t-if="version" t-esc="version.name" />
+						</a>
+						<div t-if="len(odoo_version_ids) &gt; 1" class="dropdown-menu"
+							aria-labelledby="navbarOdooVersion">
+							<t t-if="item != version" t-foreach="odoo_version_ids" t-as="item">
+								<a t-if="category and not document"
+									t-att-href="category.with_context(odoo_version_str=item.name).get_website_url()"
+									t-esc="item.name" class="dropdown-item"></a>
+								<a t-elif="not document"
+									t-attf-href="/docs/#{item.name}"
+								   t-esc="item.name" class="dropdown-item"></a>
+								<a t-elif="document"
+									t-att-href="document.with_context(odoo_version_str=item.name).get_website_url()"
+									t-esc="item.name" class="dropdown-item"></a>
+							</t>
+						</div>
+						<div t-else="" class="dropdown-menu"
+							aria-labelledby="navbarOdooVersion">
+							<t t-foreach="odoo_version_ids" t-as="item">
+								<a t-if="category and not document"
+									t-att-href="category.with_context(odoo_version_str=item.name).get_website_url()"
+									t-esc="item.name" class="dropdown-item"></a>
+								<a t-elif="not document"
+									t-attf-href="/docs/#{item.name}"
+								   t-esc="item.name" class="dropdown-item"></a>
+								<a t-elif="document"
+									t-att-href="document.with_context(odoo_version_str=item.name).get_website_url()"
+									t-esc="item.name" class="dropdown-item"></a>
+							</t>
+						</div>
+						<!-- <t t-if="version">
+							<input id="docsVersion" type="hidden"
+								t-att-value="version.id" />
+						</t> -->
+					</t>
+				</div>
+			</xpath>
+			<xpath expr="//form[hasclass('search-box')]" position="inside">
+				<t t-if="version">
+					<input name="version" id="docsVersion" type="hidden"
+						t-att-value="version.id or version[0].id" />
+				</t>
+			</xpath>
+		</template>
+
+		<template id="anchor_detail"
+			inherit_id="to_website_docs.anchor_detail">
+			<xpath expr="//t[@t-set='document_content']"
+				position="attributes">
+				<attribute name="t-value">document.with_context(odoo_version_str=version).get_content()</attribute>
+			</xpath>
+
+		</template>
+
+		<template id="document_detail"
+			inherit_id="to_website_docs.document_detail">
+			<xpath expr="//div[hasclass('clearfix')]" position="before">
+				<t t-call="to_website_docs_odoo.document_content">
+					<t t-set="is_anchor" t-value="True" />
+				</t>
+			</xpath>
+		</template>
+
+<!--		<template id="search"
+			inherit_id="to_website_docs.search">
+			<xpath expr="//h3[hasclass('docs-body-title')]/a" position="attributes">
+				<attribute name="t-attf-href">doc.with_context(odoo_version_str=odoo_version_str).get_website_url()</attribute>
+			</xpath>
+			<xpath expr="//div[hasclass('docs-body-desc')]/a" position="attributes">
+				<attribute name="t-attf-href">doc.with_context(odoo_version_str=odoo_version_str).get_website_url()</attribute>
+			</xpath>
+		</template>-->
+
+		<template id="document_readmore"
+			inherit_id="to_website_docs.anchor_detail">
+			<xpath expr="//t[@t-set='document_content']"
+				position="attributes">
+				<attribute name="t-value">document.with_context(odoo_version_str=version.name).get_content()</attribute>
+			</xpath>
+		</template>
+
+		<template id="anchor_detail"
+			inherit_id="to_website_docs.anchor_detail">
+			<xpath expr="//t[@t-set='document_content']"
+				position="attributes">
+				<attribute name="t-value">document.with_context(odoo_version_str=version.name).get_content()</attribute>
+			</xpath>
+		</template>
+
+		<template id="categories"
+			inherit_id="to_website_docs.categories">
+			<xpath expr="//div[@id='subject-id']/t/t"
+				position="attributes">
+				<attribute name="t-value">item.with_context(odoo_version_str=version.name)</attribute>
+			</xpath>
+		</template>
+
+		<template id="document" name="Document - Content"
+			inherit_id="to_website_docs.document">
+			<xpath expr="//t[@t-set='documents']" position="attributes">
+				<attribute name="t-value">version and category.with_context(odoo_version_str=version.name,website_id=request.website.id).search_document() or category.with_context(website_id=request.website.id).search_document() or document</attribute>
+			</xpath>
+		</template>
+
+	</data>
+</odoo>

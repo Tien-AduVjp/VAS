@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record id="website_menu_apps" model="website.menu">
+			<field name="name">Apps</field>
+			<field name="url">/apps</field>
+			<field name="parent_id" ref="website.main_menu" />
+			<field name="sequence" type="int">19</field>
+		</record>
+		
+		<template id="custom_layout" inherit_id="website.layout" name="custom layout">
+			<xpath expr="//ul[@id='top_menu']/t/t" position="attributes">
+				<attribute name="t-if">submenu.name != 'Apps' or website.dedicate_apps_store</attribute>
+			</xpath>
+		</template>
+		
+	</data>
+</odoo>

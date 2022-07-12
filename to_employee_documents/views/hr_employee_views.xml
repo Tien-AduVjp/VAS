@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="view_employee_form" model="ir.ui.view">
+			<field name="name">hr.employee.form</field>
+			<field name="model">hr.employee</field>
+			<field name="inherit_id" ref="hr.view_employee_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//div[@name='button_box']" position="inside">
+					<button name="%(action_employee_document_context)d"
+						type="action" class="oe_stat_button" icon="fa-file"
+						help="Show documents of this employee">
+						<field name="document_count" widget="statinfo"
+							string="HR Document" />
+					</button>
+				</xpath>
+			</field>
+		</record>
+
+		<record id="view_employee_filter" model="ir.ui.view">
+			<field name="name">hr.employee.search</field>
+			<field name="model">hr.employee</field>
+			<field name="inherit_id" ref="hr.view_employee_filter" />
+			<field name="arch" type="xml">
+				<xpath expr="//filter[@name='inactive']" position="after">
+					<separator />
+					<filter string="With HR Docs" name="inactive"
+						domain="[('document_ids','!=',False)]"
+						help="Show employees that have an Employee Document attached" />
+					<filter string="Without HR Docs" name="inactive"
+						domain="[('document_ids','=',False)]"
+						help="Show employees that have no Employee Documents attached yet" />
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="0">
+		<!-- HELP DESK LIST PAGE -->
+		<template id="website_helpdesk_team_index" name="Helpdesk Team Index Page">
+			<t t-call="website.layout">
+				<div id="wrap" class="">
+					<div class="oe_structure oe_empty" />
+					<div class="container mt-5 mb-5">
+						<div class="row">
+							<div t-attf-class="col-12 #{'col-lg-8' if not request.session.uid else ''}">
+								<h1 class="text-center font-weight-bold">Support Ticket</h1>
+								<h5 class="lead alert alert-primary alert-dismissible fade show">
+									<p class="lead">
+										Please let us know your issue in detail. Viindoo Support Team will send you the response as soon as possible.
+									</p>
+									<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+										<span class="fa fa-times"/>
+									</button>
+									<p class="text-right"><em>~The Viindoo Support teams</em></p>
+								</h5>
+								<div class="text-center">
+									<a class="btn btn-primary" t-attf-href="#{'/my/tickets/create' if request.session.uid else '/ticket/create'}">Create Ticket Now!</a>
+								</div>
+							</div>
+							<div t-if="not request.session.uid" class="col-12 col-lg-3">
+								<div class="card o_login_panel shadow my-5">
+									<div class="card-header">
+										<h5 class="mb0 mt0">Already have an account?</h5>
+									</div>
+									<div class="card-body" style="padding-top:2">
+										<a href="/web/login" class="btn btn-success btn-block" style="position: relative; overflow: hidden;">LOGIN</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div t-if="teams" class="row mt-5 mb-2">
+							<div class="col-12">
+								<h4 class="">Teams Available</h4>
+							</div>
+							<div t-foreach="teams" t-as="team" class="col-12 col-md-3">
+								<div class="card">
+									<div class="card-header">
+										<t t-esc="team.name" />
+										<a t-if="not team.website_published" href="#" class="badge badge-danger float-right">unpublished</a>
+									</div>
+									<div class="card-body">
+										<h5 class="card-title">
+											<a t-attf-href="/ticket/team/#{team.id}/"><t t-esc="team.name" /></a>
+										</h5>
+										<p class="card-text ws-helpdesk-team-des"><t t-esc="team.description" /></p>
+										<a class="btn btn-primary" t-attf-href="/ticket/team/#{team.id}/">View details</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="oe_structure oe_empty" />
+			</t>
+		</template>
+		
+		<!-- HELP DESK DETAILS PAGE -->
+		<template id="website_helpdesk_team_details" name="Helpdesk Team Details Page">
+			<t t-call="website.layout">
+				<div id="wrap" class="">
+					<div class="container mt-5 mb-5">
+						<div class="bread-crumb gray-bg p-3">
+							<a href="/ticket">Ticket </a>/ Team/ <t t-esc="team.name" />
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<t t-if="team">
+									<h4 class="text-center">Create ticket for <span class="font-weight-bold" t-esc="team.name" /></h4>
+									<div class="text-center mt-2 mb-2"><t t-esc="team.description" /></div>
+									<a class="btn btn-primary" t-attf-href="/ticket/create/#{team.id}"><i class="fa fa-plus mr-2"/>Create new ticket</a>
+				 				</t>
+							</div>
+						</div>
+					</div>
+				</div>
+			</t>
+		</template>
+		
+		<!-- HELP DESK CREATE PAGE -->
+		<template id="website_helpdesk_create_form" name="Helpdesk Create Form">
+			<t t-call="website.layout">
+				<div id="wrap" class="">
+					<div class="oe_structure oe_empty" />
+					<div class="container mt-5 mb-5">
+						<div class="bread-crumb gray-bg p-3">
+							<a href="/ticket">Ticket </a>/ Create
+						</div>
+						<div class="oe_structure oe_empty" />
+						<div class="row">
+							<div class="col-12 text-center">
+								<h1>Create a new Ticket</h1>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12" t-if="error">
+								<div class="alert-danger alert" role="alert"><t t-esc="error" /></div>
+							</div>
+							<div class="col-12">
+								<form id="website_helpdesk_form" name="website_helpdesk_form" t-attf-action="/ticket/create" method="POST">
+									<input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
+									<legend class="border-bottom mb-4">
+										<span class="h5 text-muted">
+											<b>Your information</b>
+										</span>
+									</legend>
+									<div class="form-group">
+										<label for="ws_helpdesk_username">Your Name</label>
+										<input type="text" class="form-control" id="ws_helpdesk_username" t-attf-value="{{user.partner_id.name if user else ''}}" name="contact_name" placeholder="Enter your name" required="1"/>
+									</div>
+									<div class="form-group">
+										<label for="ws_helpdesk_email">Your Email</label>
+										<input type="email" class="form-control" id="ws_helpdesk_email" t-attf-value="{{user.partner_id.email if user else ''}}" name="email_from" placeholder="Enter your email" required="1"/>
+									</div>
+									<input type="hidden" name="team_id" t-att-value="tid or request.env.company.default_helpdesk_team_id.id"/>
+									<legend class="border-bottom mb-4">
+										<span class="h5 text-muted">
+											<b>Ticket Description</b>
+										</span>
+									</legend>
+									<div class="form-group">
+										<label for="ws_helpdesk_title">Title</label>
+										<input type="text" class="form-control" id="ws_helpdesk_title" name="name" placeholder="Title for Ticket" required="1" maxlength="150"/> 
+									</div>
+									<div class="form-group">
+										<label for="ws_helpdesk_description">Description</label>
+										<textarea id="ws_helpdesk_description" class="form-control" name="description"
+											placeholder="Description for Ticket" cols="74" rows="5" required="1"></textarea>
+									</div>
+									<div class="form-group">
+										<span class="o_website_recaptcha"/>
+									</div>
+									<div class="form-group">
+										<button type="submit" class="btn btn-primary mt-2">Submit</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="oe_structure oe_empty" />
+				</div>
+			</t>
+		</template>
+		
+		<!-- HELP DESK CREATE PAGE -->
+		<template id="website_helpdesk_create_success" name="Helpdesk Create Success">
+			<t t-call="website.layout">
+				<div id="wrap" class="">
+					<div class="container mt-5 mb-5">
+						<div class="row">
+							<div class="col-12 text-center">
+								<h1 class="display-1"><i class="fa fa-check-circle-o text-success"></i></h1>
+								<h4 class="text-center">
+									<b t-if="team"><t t-esc="team.name"/>:</b> Your ticket create success, please check your email to validate your ticket!
+								</h4>
+								<a class="btn btn-primary font-weight-bold" href="/"><i class="fa fa-long-arrow-left mr-1"></i>Home Page</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</t>
+		</template>
+	</data>
+</odoo>

@@ -1,0 +1,25 @@
+<odoo>
+	<data noupdate="1">
+		<record id="helpdesk_stage_new" model="helpdesk.stage">
+			<field name="name">New</field>
+			<field name="sequence">0</field>
+			<field name="mail_template_id" ref="viin_helpdesk.email_template_helpdesk_ticket_new" />
+		</record>
+		
+		<record id="helpdesk_stage_assigned" model="helpdesk.stage">
+			<field name="name">Assigned</field>
+			<field name="mail_template_id" ref="viin_helpdesk.email_template_helpdesk_ticket_assigned" />
+		</record>
+		
+		<record id="helpdesk_stage_resolved" model="helpdesk.stage">
+			<field name="name">Resolved</field>
+			<field name="mail_template_id" ref="viin_helpdesk.email_template_helpdesk_ticket_resolved" />
+			<field name="rating_template_id" ref="viin_helpdesk.rating_ticket_email_template" />
+			<field name="is_final_stage">True</field>
+		</record>
+		<record id="helpdesk_stage_cancelled" model="helpdesk.stage">
+			<field name="name">Cancelled</field>
+			<field name="mail_template_id" ref="viin_helpdesk.email_template_helpdesk_ticket_cancelled" />
+		</record>
+	</data>
+</odoo>

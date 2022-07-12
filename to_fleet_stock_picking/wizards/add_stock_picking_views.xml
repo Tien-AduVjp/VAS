@@ -1,0 +1,27 @@
+<odoo>
+	<record id="add_stock_picking_view_form" model="ir.ui.view">
+		<field name="name">add.stock.picking.form</field>
+		<field name="model">add.stock.picking</field>
+		<field name="arch" type="xml">
+			<form string="Add Stock Picking">
+				<group>
+					<separator string="Stock Pickings" colspan="4" />
+					<newline />
+					<field name="stock_picking_ids" nolabel="1"></field>
+				</group>
+				<footer>
+					<button name="add_stock_picking" string="Add" type="object" class="btn-primary" />
+					<button string="Cancel" class="btn-secondary" special="cancel" />
+				</footer>
+			</form>
+		</field>
+	</record>
+	
+	<record id="add_stock_picking_action" model="ir.actions.act_window">
+		<field name="name">Add Stock Pickings</field>
+		<field name="res_model">add.stock.picking</field>
+		<field name="view_mode">tree,form</field>
+		<field name="view_id" ref="add_stock_picking_view_form" />
+		<field name="target">new</field>
+	</record>
+</odoo>

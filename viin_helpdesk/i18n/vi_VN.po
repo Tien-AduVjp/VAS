@@ -1,0 +1,3043 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_helpdesk
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-07 09:39+0000\n"
+"PO-Revision-Date: 2022-01-07 09:39+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_helpdesk
+#: model:mail.template,subject:viin_helpdesk.rating_ticket_email_template
+msgid "${object.company_id.name}: Satisfaction Survey"
+msgstr "${object.company_id.name}: Khảo sát Sự hài lòng "
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_team_form_view
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_form_view
+msgid "% On"
+msgstr "% trên"
+
+#. module: viin_helpdesk
+#: code:addons/viin_helpdesk/models/helpdesk_ticket.py:0
+#, python-format
+msgid "%s (copy)"
+msgstr "%s (bản sao)"
+
+#. module: viin_helpdesk
+#: code:addons/viin_helpdesk/models/helpdesk_ticket.py:0
+#, python-format
+msgid "%s: %s have been created for the %s Team"
+msgstr "%s: %s đã được tạo cho nhóm %s"
+
+#. module: viin_helpdesk
+#: model:mail.template,body_html:viin_helpdesk.email_template_helpdesk_ticket_new
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\t\t<p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"\t\t\t\t\t\tDear${' ' + object.partner_id.name if object.partner_id.name else ' Madam/Sir'},\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\tYour Ticket\n"
+"\t\t\t\t\t\t<strong>${object.name or 'n/a' } (#${object.id})</strong> have been created.\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\tIf you have any questions, please do not hesitate to contact us.\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\tBest regards,\n"
+"\t\t\t\t\t</p>\n"
+"\t\t\t\t</div>\n"
+"\t\t\t"
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\t\t<p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"\t\t\t\t\t\tXin chào${' ' + object.partner_id.name if object.partner_id.name else ' Ông/Bà'},\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\tTicket của bạn\n"
+"\t\t\t\t\t\t<strong>${object.name or 'n/a' } (#${object.id})</strong> đã được tạo.\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\tNếu bạn có bất cứ thắc mắc gì, đừng ngại ngần liên hệ với chúng tôi.\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\tTrân trọng,\n"
+"\t\t\t\t\t</p>\n"
+"\t\t\t\t</div>\n"
+"\t\t\t"
+
+#. module: viin_helpdesk
+#: model:mail.template,body_html:viin_helpdesk.email_template_helpdesk_ticket_resolved
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\t\t<p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"\t\t\t\t\t\tDear${' '+ object.partner_id.name if object.partner_id.name else ''},\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\tYour Ticket\n"
+"\t\t\t\t\t\t<strong>${object.name or 'n/a' } (#${object.id})</strong> has been processed successfully.\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\tIf you have any questions, please do not hesitate to contact us.\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\tBest regards,\n"
+"\t\t\t\t\t</p>\n"
+"\t\t\t\t</div>\n"
+"\t\t\t"
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\t\t<p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"\t\t\t\t\t\tXin chào${' '+ object.partner_id.name if object.partner_id.name else ''},\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\tTicket của bạn\n"
+"\t\t\t\t\t\t<strong>${object.name or 'n/a' } (#${object.id})</strong> đã được xử lý thành công.\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\tNếu bạn có bất cứ thắc mắc gì, đừng ngại ngần liên hệ với chúng tôi.\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\tTrân trọng,\n"
+"\t\t\t\t\t</p>\n"
+"\t\t\t\t</div>\n"
+"\t\t\t"
+
+#. module: viin_helpdesk
+#: model:mail.template,body_html:viin_helpdesk.email_template_helpdesk_ticket_assigned
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\t\t<p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"\t\t\t\t\t\tDear${' '+ object.partner_id.name if object.partner_id.name else ''},\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\tYour Ticket\n"
+"\t\t\t\t\t\t<strong>${object.name or 'n/a' } (#${object.id})</strong> have been assigned. We will try to complete it as quickly as possible.\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\tIf you have any questions, please do not hesitate to contact us.\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\tBest regards,\n"
+"\t\t\t\t\t</p>\n"
+"\t\t\t\t</div>\n"
+"\t\t\t"
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\t\t<p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"\t\t\t\t\t\tXin chào${' '+ object.partner_id.name if object.partner_id.name else ''},\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\tTicket của bạn\n"
+"\t\t\t\t\t\t<strong>${object.name or 'n/a' } (#${object.id})</strong> đã được phân công. Chúng tôi sẽ cố gắng hoàn thành sớm nhất có thể.\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\tNếu bạn có bất cứ thắc mắc gì, đừng ngại ngần liên hệ với chúng tôi.\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\tTrân trọng,\n"
+"\t\t\t\t\t</p>\n"
+"\t\t\t\t</div>\n"
+"\t\t\t"
+
+#. module: viin_helpdesk
+#: model:mail.template,body_html:viin_helpdesk.email_template_helpdesk_ticket_cancelled
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\t\t<p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"\t\t\t\t\t\tDear${' '+ object.partner_id.name if object.partner_id.name else ''},\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\tYour Ticket\n"
+"\t\t\t\t\t\t<strong>${object.name or 'n/a' } (#${object.id})</strong> have been cancelled.\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\tIf you have any questions, please do not hesitate to contact us.\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\tBest regards,\n"
+"\t\t\t\t\t</p>\n"
+"\t\t\t\t</div>\n"
+"\t\t\t"
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\t\t<p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"\t\t\t\t\t\tXin chào${' '+ object.partner_id.name if object.partner_id.name else ''},\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\tTicket của bạn\n"
+"\t\t\t\t\t\t<strong>${object.name or 'n/a' } (#${object.id})</strong> đã bị hủy.\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\tNếu bạn có bất cứ thắc mắc gì, đừng ngại ngần liên hệ với chúng tôi.\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\tTrân trọng,\n"
+"\t\t\t\t\t</p>\n"
+"\t\t\t\t</div>\n"
+"\t\t\t"
+
+#. module: viin_helpdesk
+#: model:mail.template,body_html:viin_helpdesk.rating_ticket_email_template
+msgid ""
+"<div>\n"
+"\t\t\t\t\t% set access_token = object.rating_get_access_token()\n"
+"\t\t\t\t\t% set partner = object.rating_get_partner_id()\n"
+"\t\t\t\t\t<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"width:100%; margin:0px auto;\">\n"
+"\t\t\t\t\t\t<tbody>\n"
+"\t\t\t\t\t\t\t<tr>\n"
+"\t\t\t\t\t\t\t\t<td valign=\"top\" style=\"font-size: 13px;\">\n"
+"\t\t\t\t\t\t\t\t\t% if partner.name:\n"
+"\t\t\t\t\t\t\t\t\tHello ${partner.name},\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t% else:\n"
+"\t\t\t\t\t\t\t\t\tHello,\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t\tPlease take a moment to rate our services related to the ticket \"\n"
+"\t\t\t\t\t\t\t\t\t<strong>${object.name or 'n/a' } (#${object.id})</strong>\n"
+"\t\t\t\t\t\t\t\t\t\"\n"
+"\t\t\t\t\t\t\t\t\t% if object.rating_get_rated_partner_id().name:\n"
+"\t\t\t\t\t\t\t\t\tassigned to\n"
+"\t\t\t\t\t\t\t\t\t<strong>${object.rating_get_rated_partner_id().name}</strong>\n"
+"\t\t\t\t\t\t\t\t\t.\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t% else:\n"
+"\t\t\t\t\t\t\t\t\t.\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t\t</tr>\n"
+"\t\t\t\t\t\t\t<tr>\n"
+"\t\t\t\t\t\t\t\t<td style=\"text-align: center;\">\n"
+"\t\t\t\t\t\t\t\t\t<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" summary=\"o_mail_notification\" style=\"width:100%; margin: 32px 0px 32px 0px;\">\n"
+"\t\t\t\t\t\t\t\t\t\t<tr>\n"
+"\t\t\t\t\t\t\t\t\t\t\t<td style=\"font-size: 13px;\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<strong>Tell us how you feel about our service</strong>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<span style=\"text-color: #888888\">(click on one of these smileys)</span>\n"
+"\t\t\t\t\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t\t\t\t\t</tr>\n"
+"\t\t\t\t\t\t\t\t\t\t<tr>\n"
+"\t\t\t\t\t\t\t\t\t\t\t<td style=\"font-size: 13px;\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<table style=\"width:100%;text-align:center;\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t<tr>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"/rating/${access_token}/10\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img alt=\"Satisfied\" src=\"/rating/static/src/img/rating_10.png\" title=\"Satisfied\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"/rating/${access_token}/5\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img alt=\"Not satisfied\" src=\"/rating/static/src/img/rating_5.png\" title=\"Not satisfied\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"/rating/${access_token}/1\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img alt=\"Highly Dissatisfied\" src=\"/rating/static/src/img/rating_1.png\" title=\"Highly Dissatisfied\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t</tr>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t</table>\n"
+"\t\t\t\t\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t\t\t\t\t</tr>\n"
+"\t\t\t\t\t\t\t\t\t</table>\n"
+"\t\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t\t</tr>\n"
+"\t\t\t\t\t\t\t<tr>\n"
+"\t\t\t\t\t\t\t\t<td valign=\"top\" style=\"font-size: 13px;\">\n"
+"\t\t\t\t\t\t\t\t\tWe appreciate your feedback. It helps us to improve continuously. \n"
+"\t\t\t\t\t\t\t\t\t% if object.rating_status == 'stage':\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<span style=\"margin: 0px 0px 0px 0px; font-size: 12px; opacity: 0.5; color: #454748;\">\n"
+"\t\t\t\t\t\t\t\t\t\tThis customer survey has been sent because your ticket has been moved to the stage <b>${object.stage_id.name}</b>\n"
+"\t\t\t\t\t\t\t\t\t</span>\n"
+"\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t\t% if object.rating_status == 'periodic':\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<span style=\"margin: 0px 0px 0px 0px; font-size: 12px; opacity: 0.5; color: #454748;\">\n"
+"\t\t\t\t\t\t\t\t\t\tThis customer survey is sent <b>${object.rating_status_period}</b> as long as the ticket is in the <b>${object.stage_id.name}</b> stage.\n"
+"\t\t\t\t\t\t\t\t\t</span>\n"
+"\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t\t</tr>\n"
+"\t\t\t\t\t\t</tbody>\n"
+"\t\t\t\t\t</table>\n"
+"\t\t\t\t</div>\n"
+"\t\t\t"
+msgstr ""
+"<div>\n"
+"\t\t\t\t\t% set access_token = object.rating_get_access_token()\n"
+"\t\t\t\t\t% set partner = object.rating_get_partner_id()\n"
+"\t\t\t\t\t<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"width:100%; margin:0px auto;\">\n"
+"\t\t\t\t\t\t<tbody>\n"
+"\t\t\t\t\t\t\t<tr>\n"
+"\t\t\t\t\t\t\t\t<td valign=\"top\" style=\"font-size: 13px;\">\n"
+"\t\t\t\t\t\t\t\t\t% if partner.name:\n"
+"\t\t\t\t\t\t\t\t\tXin chào ${partner.name},\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t% else:\n"
+"\t\t\t\t\t\t\t\t\tXin chào,\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t\tVui lòng dành thời gian để đánh giá về dịch vụ của chúng tôi liên quan đến ticket \"\n"
+"\t\t\t\t\t\t\t\t\t<strong>${object.name or 'n/a' } (#${object.id})</strong>\n"
+"\t\t\t\t\t\t\t\t\t\"\n"
+"\t\t\t\t\t\t\t\t\t% if object.rating_get_rated_partner_id().name:\n"
+"\t\t\t\t\t\t\t\t\tđược Phân công cho\n"
+"\t\t\t\t\t\t\t\t\t<strong>${object.rating_get_rated_partner_id().name}</strong>\n"
+"\t\t\t\t\t\t\t\t\t.\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t% else:\n"
+"\t\t\t\t\t\t\t\t\t.\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t\t</tr>\n"
+"\t\t\t\t\t\t\t<tr>\n"
+"\t\t\t\t\t\t\t\t<td style=\"text-align: center;\">\n"
+"\t\t\t\t\t\t\t\t\t<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" summary=\"o_mail_notification\" style=\"width:100%; margin: 32px 0px 32px 0px;\">\n"
+"\t\t\t\t\t\t\t\t\t\t<tr>\n"
+"\t\t\t\t\t\t\t\t\t\t\t<td style=\"font-size: 13px;\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<strong>Hãy cho chúng tôi biết cảm nhận của bạn về dịch vụ của chúng tôi</strong>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<span style=\"text-color: #888888\">(click on one of these smileys)</span>\n"
+"\t\t\t\t\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t\t\t\t\t</tr>\n"
+"\t\t\t\t\t\t\t\t\t\t<tr>\n"
+"\t\t\t\t\t\t\t\t\t\t\t<td style=\"font-size: 13px;\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<table style=\"width:100%;text-align:center;\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t<tr>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"/rating/${access_token}/10\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img alt=\"Rất hài lòng\" src=\"/rating/static/src/img/rating_10.png\" title=\"Rất hài lòng\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"/rating/${access_token}/5\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img alt=\"Không hài lòng\" src=\"/rating/static/src/img/rating_5.png\" title=\"Không hài lòng\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"/rating/${access_token}/1\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img alt=\"Rất thất vọng\" src=\"/rating/static/src/img/rating_1.png\" title=\"Rất thất vọng\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t</tr>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t</table>\n"
+"\t\t\t\t\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t\t\t\t\t</tr>\n"
+"\t\t\t\t\t\t\t\t\t</table>\n"
+"\t\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t\t</tr>\n"
+"\t\t\t\t\t\t\t<tr>\n"
+"\t\t\t\t\t\t\t\t<td valign=\"top\" style=\"font-size: 13px;\">\n"
+"\t\t\t\t\t\t\t\t\tChúng tôi hoan nghênh đánh giá của bạn. Điều đó giúp chúng tôi tiếp tục nâng cao chất lượng. \n"
+"\t\t\t\t\t\t\t\t\t% if object.rating_status == 'stage':\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<span style=\"margin: 0px 0px 0px 0px; font-size: 12px; opacity: 0.5; color: #454748;\">\n"
+"\t\t\t\t\t\t\t\t\t\tKhảo sát khách hàng này được gửi cho bạn vì ticket của bạn đã được chuyển sang giai đoạn <b>${object.stage_id.name}</b>\n"
+"\t\t\t\t\t\t\t\t\t</span>\n"
+"\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t\t% if object.rating_status == 'periodic':\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<span style=\"margin: 0px 0px 0px 0px; font-size: 12px; opacity: 0.5; color: #454748;\">\n"
+"\t\t\t\t\t\t\t\t\t\tBản khảo sát khách hàng này được gửi <b>${object.rating_status_period}</b> miễn là ticket đó nằm trong Giai đoạn <b>${object.stage_id.name}</b> stage.\n"
+"\t\t\t\t\t\t\t\t\t</span>\n"
+"\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t\t</tr>\n"
+"\t\t\t\t\t\t</tbody>\n"
+"\t\t\t\t\t</table>\n"
+"\t\t\t\t</div>\n"
+"\t\t\t"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_my_tickets
+msgid ""
+"<em class=\"font-weight-normal text-muted\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\tTickets for partner:\n"
+"\t\t\t\t\t\t\t\t\t\t\t</em>"
+msgstr ""
+"<em class=\"font-weight-normal text-muted\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\tTicket của đối tác:\n"
+"\t\t\t\t\t\t\t\t\t\t\t</em>"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_my_tickets
+msgid ""
+"<em class=\"font-weight-normal text-muted\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\tTickets for team:\n"
+"\t\t\t\t\t\t\t\t\t\t\t</em>"
+msgstr ""
+"<em class=\"font-weight-normal text-muted\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\tTicket thuộc nhóm:\n"
+"\t\t\t\t\t\t\t\t\t\t\t</em>"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_my_tickets
+msgid ""
+"<em class=\"font-weight-normal text-muted\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\tTickets in stage:\n"
+"\t\t\t\t\t\t\t\t\t\t\t</em>"
+msgstr ""
+"<em class=\"font-weight-normal text-muted\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\tTicket trong giai đoạn:\n"
+"\t\t\t\t\t\t\t\t\t\t\t</em>"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_team_kanban_view
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_kanban_view
+msgid ""
+"<i class=\"fa fa-smile-o\" role=\"img\" aria-label=\"Percentage of "
+"satisfaction\" title=\"Percentage of satisfaction\"/>"
+msgstr ""
+"<i class=\"fa fa-smile-o\" role=\"img\" aria-label=\"Phần trăm của sự hài "
+"lòng\" title=\"Phần trăm của sự hài lòng\"/>"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_kanban_view
+msgid ""
+"<i class=\"fa fa-smile-o\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tNo rating yet"
+msgstr ""
+"<i class=\"fa fa-smile-o\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tKhông đánh giá"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_team_kanban_view
+msgid ""
+"<i class=\"fa fa-smile-o\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\tNo rating yet"
+msgstr ""
+"<i class=\"fa fa-smile-o\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\tKhông đánh giá"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_my_ticket
+msgid "<small class=\"text-right\">Status:</small>"
+msgstr "<small class=\"text-right\">Giai đoạn:</small>"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.res_config_settings_view_form
+msgid "<span class=\"o_form_label\">Helpdesk Team</span>"
+msgstr "Nhóm Helpdesk"
+
+#. module: viin_helpdesk
+#: model_terms:digest.tip,tip_description:viin_helpdesk.digest_tip_helpdesk_0
+msgid "<strong style=\"font-size: 16px;\">Try the mail gateway</strong>"
+msgstr ""
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.create_ticket_from_portal
+msgid "<strong>About our team</strong>"
+msgstr "Về nhóm của chúng tôi"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_my_ticket
+msgid "<strong>Assign to:</strong>"
+msgstr "Phân công cho"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_my_ticket
+msgid "<strong>Create Date:</strong>"
+msgstr "Ngày tạo:"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_my_ticket
+msgid "<strong>Done Date:</strong>"
+msgstr "Ngày hoàn thành:"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_my_ticket
+msgid "<strong>Message and Communication history</strong>"
+msgstr "<strong>Lịch sử tin nhắn và truyền thông</strong>"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_my_ticket
+msgid "<strong>Partner:</strong>"
+msgstr "Đối tác"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_helpdesk_team_rating_popover
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_helpdesk_ticket_rating_popover
+msgid "<strong>Rated by: </strong>"
+msgstr "<strong>Đánh giá bởi: </strong>"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_team__alias_defaults
+msgid ""
+"A Python dictionary that will be evaluated to provide default values when "
+"creating new records for this alias."
+msgstr ""
+"Một Python dictionary mà sẽ được biểu thị/đánh giá để cung cấp các giá trị "
+"mặc định khi tạo mới các bản ghi cho bí danh này."
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_team_form_view
+msgid "Accept Emails From"
+msgstr "Chấp nhận email đến từ"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__access_warning
+msgid "Access warning"
+msgstr "Cảnh báo quyền truy cập"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__message_needaction
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__message_needaction
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__message_needaction
+msgid "Action Needed"
+msgstr "Cần có Hành động"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_sla__active
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__active
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__active
+msgid "Active"
+msgstr "Hiệu lực"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__activity_ids
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__activity_ids
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__activity_ids
+msgid "Activities"
+msgstr "Hoạt động"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__activity_exception_decoration
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__activity_exception_decoration
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__activity_state
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__activity_state
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__activity_state
+msgid "Activity State"
+msgstr "Trạng thái Hoạt động"
+
+#. module: viin_helpdesk
+#: model:res.groups,name:viin_helpdesk.group_helpdesk_manager
+msgid "Administrator"
+msgstr "Quản trị viên"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__alias_id
+msgid "Alias"
+msgstr "Bí danh"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__alias_contact
+msgid "Alias Contact Security"
+msgstr "An ninh về Bí danh liên hệ"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__alias_name
+msgid "Alias Name"
+msgstr "Tên bí danh"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__alias_domain
+msgid "Alias domain"
+msgstr "Miền bí danh"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__alias_model_id
+msgid "Aliased Model"
+msgstr "Bí danh Model"
+
+#. module: viin_helpdesk
+#: code:addons/viin_helpdesk/controllers/portal.py:0
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__helpdesk_sla__minimum_priority__0
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__helpdesk_ticket__priority_level__0
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__report_helpdesk_ticket__priority_level__0
+#, python-format
+msgid "All"
+msgstr "Tất cả"
+
+#. module: viin_helpdesk
+#: model:ir.actions.act_window,name:viin_helpdesk.all_tickets_action
+#: model:ir.ui.menu,name:viin_helpdesk.all_tickets_menu
+msgid "All Tickets"
+msgstr "Tất cả Ticket"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__helpdesk_team__privacy_visibility__employees
+msgid "All internal users"
+msgstr "Toàn bộ người dùng nội bộ"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_form_view
+msgid "Analysis"
+msgstr "Phân tích"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__apply_sla
+msgid "Apply SLA Policies"
+msgstr "Áp dụng chính sách SLA"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_sla_form_view
+msgid "Apply on"
+msgstr "Áp dụng trên"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_sla_form_view
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_sla_search_view
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_team_search_view
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_search_view
+msgid "Archived"
+msgstr "Lưu trữ"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__assign_date
+#: model:ir.model.fields,field_description:viin_helpdesk.field_report_helpdesk_ticket__assign_date
+msgid "Assign Date"
+msgstr "Phân công vào lúc"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_form_view
+msgid "Assign Duration"
+msgstr "Thời lượng chờ Phân công"
+
+#. module: viin_helpdesk
+#: model:helpdesk.stage,name:viin_helpdesk.helpdesk_stage_assigned
+msgid "Assigned"
+msgstr "Đã phân công"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__user_id
+msgid "Assigned To"
+msgstr "Phân công cho"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.view_helpdesk_ticket_search
+msgid "Assigned to"
+msgstr "Phân công cho"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_search_view
+msgid "Assigned to me"
+msgstr "Phân công cho tôi"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__assign_duration
+msgid "Assigning Duration"
+msgstr "Thời gian chờ Phân công"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_report_helpdesk_ticket__assign_duration
+msgid "Assigning Duration (hours)"
+msgstr "Thời gian chờ Phân công (giờ)"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__assign_type
+msgid "Assignment Type"
+msgstr "Kiểu phân công"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_stage_form_view
+msgid ""
+"At each stage employees can block or make ticket ready for next stage.\n"
+"                                You can define here labels that will be displayed for the state instead\n"
+"                                of the default labels."
+msgstr ""
+"Tại mỗi giai đoạn, nhân viên có thể phong tỏa hoặc làm cho Ticket sẵn sàng cho giai đoạn kế tiếp.\n"
+"                                Bạn có thể định nghĩa các nhãn ở đây để mà sẽ được hiển thị làm trạng thái\n"
+"                                thay cho nhãn mặc định."
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__message_attachment_count
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__message_attachment_count
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__message_attachment_count
+msgid "Attachment Count"
+msgstr "SL Đính kèm"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__attachment_ids
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.create_ticket_from_portal
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_form_view
+msgid "Attachments"
+msgstr "Đính kèm"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_team__assign_type
+msgid ""
+"Automatic assignment type for new tickets:\n"
+"- Random: The members of the team will be assigned the same number of tickets.\n"
+"- Balanced: The new ticket will be assigned to the member with the smallest number of open tickets.\n"
+"- Manually: The new ticket will be assigned manually by the leader."
+msgstr ""
+"Kiểu phân công tự động cho ticket mới:\n"
+"- Ngẫu nhiên: Các thành viên trong nhóm sẽ được phân công số ticket như nhau.\n"
+"- Cân bằng: Ticket mới sẽ được phân công cho thành viên có số ticket mở là ít nhất.\n"
+"- Thủ công: Ticket mới sẽ được phân công thủ công bởi trưởng nhóm."
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__auto_validation_kanban_state
+msgid "Automatic kanban status"
+msgstr "Trạng thái Kanban tự động"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_stage__auto_validation_kanban_state
+msgid ""
+"Automatically modify the kanban state when the customer replies to the feedback for this stage.\n"
+" * A good feedback from the customer will update the kanban state to 'ready for the new stage' (green bullet).\n"
+" * A medium or a bad feedback will set the kanban state to 'blocked' (red bullet).\n"
+msgstr ""
+"Tự động thay dổi trạng thái Kanban khi khách hàng phúc đáp cho phản hồi đối với Giai đoạn này.\n"
+" * Một phản hồi tốt từ Khách hàng sẽ cập nhật trạng thái thành 'sẵn sàng cho giai đoạn kế tiếp' (Biểu tượng màu Xanh).\n"
+" * Một phản hồi tồi tệ từ Khách hàng sẽ cập nhật trạng thái thành 'Chặn' (Biểu tượng màu Đỏ).\n"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_team_form_view
+msgid "Avatar"
+msgstr ""
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_helpdesk_team_rating_progressbar
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_helpdesk_ticket_rating_progressbar
+msgid "Average"
+msgstr "Trung bình"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_helpdesk_team_rating_progressbar
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_helpdesk_ticket_rating_progressbar
+msgid "Bad"
+msgstr "Tồi tệ"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__helpdesk_team__assign_type__balanced
+msgid "Balanced"
+msgstr "Cân Bằng"
+
+#. module: viin_helpdesk
+#: code:addons/viin_helpdesk/models/helpdesk_stage.py:0
+#: model:helpdesk.stage,legend_blocked:viin_helpdesk.helpdesk_stage_assigned
+#: model:helpdesk.stage,legend_blocked:viin_helpdesk.helpdesk_stage_cancelled
+#: model:helpdesk.stage,legend_blocked:viin_helpdesk.helpdesk_stage_new
+#: model:helpdesk.stage,legend_blocked:viin_helpdesk.helpdesk_stage_resolved
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__report_helpdesk_ticket__state__blocked
+#, python-format
+msgid "Blocked"
+msgstr "Đã chặn"
+
+#. module: viin_helpdesk
+#: model:ir.filters,name:viin_helpdesk.filter_ticket_report_by_responsible
+msgid "By Responsible"
+msgstr "Bởi người xử lý"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.create_ticket_from_portal
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: viin_helpdesk
+#: model:helpdesk.stage,name:viin_helpdesk.helpdesk_stage_cancelled
+msgid "Cancelled"
+msgstr "Đã hủy"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_team_view_form_simplified
+msgid "Choose a Team Email"
+msgstr "Chọn một Email cho nhóm"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_digest_digest__kpi_helpdesk_ticket_closed
+msgid "Close Tickets"
+msgstr "Các Ticket đã Đóng"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_tag__color
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__color
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__color
+msgid "Color Index"
+msgstr "Mã màu"
+
+#. module: viin_helpdesk
+#: model:ir.model,name:viin_helpdesk.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__company_id
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__company_id
+#: model:ir.model.fields,field_description:viin_helpdesk.field_report_helpdesk_sla__company_id
+#: model:ir.model.fields,field_description:viin_helpdesk.field_report_helpdesk_ticket__company_id
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_team_search_view
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_search_view
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.report_helpdesk_sla_view_search
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.view_helpdesk_ticket_search
+msgid "Company"
+msgstr "Công ty"
+
+#. module: viin_helpdesk
+#: code:addons/viin_helpdesk/models/helpdesk_sla.py:0
+#, python-format
+msgid "Conditions must not overlap with other SLAs"
+msgstr "Điều kiện không được trùng lặp với SLA khác"
+
+#. module: viin_helpdesk
+#: model:ir.model,name:viin_helpdesk.model_res_config_settings
+msgid "Config Settings"
+msgstr "Thiết lập Cấu hình"
+
+#. module: viin_helpdesk
+#: model:ir.ui.menu,name:viin_helpdesk.configuration_menu
+msgid "Configuration"
+msgstr "Cấu hình"
+
+#. module: viin_helpdesk
+#: model:ir.model,name:viin_helpdesk.model_res_partner
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_my_ticket
+msgid "Contact"
+msgstr "Danh bạ"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__contact_name
+msgid "Contact Name"
+msgstr "Tên đối tác"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_team_view_form_simplified_footer
+msgid "Create"
+msgstr "Tạo"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_report_helpdesk_sla__create_date
+#: model:ir.model.fields,field_description:viin_helpdesk.field_report_helpdesk_ticket__create_date
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_my_tickets
+msgid "Create Date"
+msgstr "Ngày tạo"
+
+#. module: viin_helpdesk
+#: code:addons/viin_helpdesk/models/helpdesk_team.py:0
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_team_kanban_view
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_my_tickets
+#, python-format
+msgid "Create Ticket"
+msgstr "Tạo Ticket"
+
+#. module: viin_helpdesk
+#: model:ir.actions.act_window,name:viin_helpdesk.open_create_helpdesk_team
+msgid "Create a Helpdesk Team"
+msgstr "Tạo nhóm Helpdesk"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_sla__create_uid
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_sla_line__create_uid
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__create_uid
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_tag__create_uid
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__create_uid
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__create_uid
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket_type__create_uid
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_form_view
+msgid "Created by"
+msgstr "Tạo bởi"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_sla__create_date
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_sla_line__create_date
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__create_date
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_tag__create_date
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__create_date
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__create_date
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket_type__create_date
+msgid "Created on"
+msgstr "Ngày tạo"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_search_view
+msgid "Creation Date"
+msgstr "Ngày tạo"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_my_tickets
+msgid "Current stage of the ticket"
+msgstr "Giai đoạn hiện tại của ticket"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_my_ticket
+msgid "Current stage of this ticket"
+msgstr "Giai đoạn hiện tại của ticket"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_ticket__access_url
+msgid "Customer Portal URL"
+msgstr "URL cổng thông tin khách hàng"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__rating_status
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__rating_status
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_team_form_view
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_team_kanban_view
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_form_view
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_kanban_view
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.rating_helpdesk_team_rating_page
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.rating_helpdesk_ticket_rating_page
+msgid "Customer Ratings"
+msgstr "Đánh giá bởi khách hàng"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__helpdesk_team__rating_status_period__daily
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__helpdesk_ticket__rating_status_period__daily
+msgid "Daily"
+msgstr "Hàng ngày"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_sla_line__reached_datetime
+msgid "Date and time at which the SLA stage was reached"
+msgstr "Thời gian chạm đến được giai đoạn SLA"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_sla_line__deadline_datetime
+msgid "Deadline"
+msgstr "Hạn chót"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_res_company__default_helpdesk_team_id
+#: model:ir.model.fields,field_description:viin_helpdesk.field_res_config_settings__helpdesk_team_id
+msgid "Default Helpdesk Team"
+msgstr "Nhóm Helpdesk mặc định"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__alias_defaults
+msgid "Default Values"
+msgstr "Giá trị mặc định"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_team__privacy_visibility
+msgid ""
+"Defines the visibility of the Tickets of the Team:\n"
+"- Invited internal users: Internal users may only see the followed Team and Tickets.\n"
+"- All internal users: Internal users may see All team and tickets.\n"
+"- Portal users and all internal users: Internal users may see everything.\n"
+"- Portal users may see the Team and its Tickets that followed by them or by someone in their company."
+msgstr ""
+"Xác lập tính riêng tư của các Yêu cầu hỗ trợ của đội:\n"
+"- Chỉ người dùng nội bộ được mời: Người dùng nội bộ chỉ thấy đội và các Yêu cầu hỗ trợ mà họ theo dõi.\n"
+"- Tất cả người dùng nội bộ: Tất cả người dùng nội bộ có thể nhìn thấy đội hỗ trợ và các Yêu cầu hỗ trợ.\n"
+"- Người dùng Portal và Người dùng nội bộ: Người dùng nội bộ có thể thấy tất cả.\n"
+"- Người dùng Portal có thể thấy Đội hộ trợ này và các Yêu cầu hỗ trợ của đội mà họ theo dõi hoặc đồng nghiệp của họ theo dõi."
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_team_kanban_view
+msgid "Delete Team"
+msgstr "Xóa Nhóm"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_kanban_view
+msgid "Delete Ticket"
+msgstr "Xóa Ticket"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_sla__description
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__description
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__description
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__description
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket_type__description
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.create_ticket_from_portal
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_stage_form_view
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_team_form_view
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_form_view
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_type_form_view
+msgid "Description"
+msgstr "Mô tả"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_ticket__description
+msgid "Description detail of the request support by partner"
+msgstr "Mô tả chi tiết Yêu cầu hỗ trợ của Khách hàng"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.create_ticket_from_portal
+msgid "Description for Ticket"
+msgstr "Mô tả chi tiết cho Ticket"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_sla_form_view
+msgid "Description of the policy..."
+msgstr "Mô tả cho chính sách..."
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_my_ticket
+msgid "Description:"
+msgstr "Mô tả:"
+
+#. module: viin_helpdesk
+#: model:ir.model,name:viin_helpdesk.model_digest_digest
+msgid "Digest"
+msgstr "Tổng hợp"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_team_view_form_simplified_footer
+msgid "Discard"
+msgstr "Hủy"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_sla__display_name
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_sla_line__display_name
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__display_name
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_tag__display_name
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__display_name
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__display_name
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket_type__display_name
+#: model:ir.model.fields,field_description:viin_helpdesk.field_report_helpdesk_sla__display_name
+#: model:ir.model.fields,field_description:viin_helpdesk.field_report_helpdesk_ticket__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_ticket__priority_level
+msgid "Display priority level for ticket"
+msgstr "Hiển thị cấp độ ưu tiên cho ticket"
+
+#. module: viin_helpdesk
+#: code:addons/viin_helpdesk/models/digest_digest.py:0
+#, python-format
+msgid "Do not have access, skip this data for user's digest email"
+msgstr ""
+"Không có quyền truy cập, bỏ qua dữ liệu này cho Email thông báo của người "
+"dùng"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_form_view
+msgid "Document"
+msgstr "Tài liệu"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_report_helpdesk_ticket__done
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_team_kanban_view
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_kanban_view
+msgid "Dropdown menu"
+msgstr ""
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_team_kanban_view
+msgid "Edit Team"
+msgstr "Sửa nhóm"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_kanban_view
+msgid "Edit Ticket"
+msgstr "Sửa Ticket"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__email_from
+msgid "Email"
+msgstr "Thư điện tử"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_team_form_view
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_team_view_form_simplified
+msgid "Email Alias"
+msgstr ""
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__mail_template_id
+msgid "Email Template"
+msgstr "Thư điện tử"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_ticket__email_from
+msgid "Email address of the contact"
+msgstr "Email của đối tác"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_team_form_view
+msgid "Emails"
+msgstr ""
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__end_date
+#: model:ir.model.fields,field_description:viin_helpdesk.field_report_helpdesk_ticket__end_date
+msgid "End Date"
+msgstr "Kết thúc vào lúc"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_sla_line__exceeded_days
+msgid "Excedeed Working Days"
+msgstr "Ngày làm việc vượt quá"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.report_helpdesk_sla_view_search
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.view_helpdesk_ticket_search
+msgid "Extended Filters"
+msgstr "Bộ lọc mở rộng"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__helpdesk_sla_line__status__failed
+msgid "Failed"
+msgstr "Thất bại"
+
+#. module: viin_helpdesk
+#: model:helpdesk.ticket.type,name:viin_helpdesk.helpdesk_ticket_type_feature_request
+msgid "Feature Request"
+msgstr "Yêu cầu tính năng"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_form_view
+msgid "Feedbacks"
+msgstr "Phản hồi"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__fold
+msgid "Folded in Kanban"
+msgstr "Đóng trong Kanban"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_team_form_view
+msgid ""
+"Follow this salesteam to automatically track the events associated to users "
+"of this team."
+msgstr ""
+"Theo dõi Nhóm này để tự động theo dõi các sự kiện liên quan đến người dùng "
+"của nhóm này."
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__message_follower_ids
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__message_follower_ids
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__message_follower_ids
+msgid "Followers"
+msgstr "Người theo dõi"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__message_channel_ids
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__message_channel_ids
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Người theo dõi (Các kênh)"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__message_partner_ids
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__message_partner_ids
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Người theo dõi (Các đối tác)"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_ticket__email_formatted
+msgid "Format email address 'Name <email@domain>'"
+msgstr ""
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__email_formatted
+msgid "Formatted Email"
+msgstr ""
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_stage__sequence
+msgid "Gives the sequence order when displaying a list of Stages."
+msgstr "Đưa ra trình tự hiển thị danh sách các Giai đoạn."
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_ticket__sequence
+msgid "Gives the sequence order when displaying a list of Tickets."
+msgstr "Đưa ra trình tự hiển thị danh sách các ticket"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__helpdesk_ticket__kanban_state__done
+msgid "Green"
+msgstr "Xanh"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__legend_done
+msgid "Green Kanban Label"
+msgstr "Kanban màu xanh lá"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__helpdesk_ticket__kanban_state__normal
+msgid "Grey"
+msgstr "Xám"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__legend_normal
+msgid "Grey Kanban Label"
+msgstr "Kanban màu xám"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_sla_search_view
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_team_search_view
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_search_view
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.report_helpdesk_sla_view_search
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.view_helpdesk_ticket_search
+msgid "Group By"
+msgstr "Nhóm Theo"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_helpdesk_team_rating_progressbar
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_helpdesk_ticket_rating_progressbar
+msgid "Happy"
+msgstr "Vui vẻ"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_helpdesk_team_rating_partner_stat
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_helpdesk_ticket_rating_partner_stat
+msgid "Happy face"
+msgstr "Vui vẻ"
+
+#. module: viin_helpdesk
+#: code:addons/viin_helpdesk/models/helpdesk_ticket.py:0
+#, python-format
+msgid ""
+"Hello, <a href='/mail/view?%s' data-oe-model='%s' data-oe-id='%d'>%s: %s</a>"
+" have been created for the %s Team. You can assign a user to process it."
+msgstr ""
+"Xin chào, <a href='/mail/view?%s' data-oe-model='%s' data-oe-id='%d'>%s: "
+"%s</a> đã được tạo cho nhóm %s. Bạn có thể phân công người để xử lý nó."
+
+#. module: viin_helpdesk
+#: model:ir.ui.menu,name:viin_helpdesk.helpdesk_menu
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.digest_digest_view_form
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.res_config_settings_view_form
+msgid "Helpdesk"
+msgstr ""
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.res_config_settings_view_form
+msgid "Helpdesk Management"
+msgstr "Quản lý Helpdesk"
+
+#. module: viin_helpdesk
+#: model:ir.actions.act_window,name:viin_helpdesk.helpdesk_team_overview_action
+msgid "Helpdesk Overview"
+msgstr "Tổng quát"
+
+#. module: viin_helpdesk
+#: model:ir.model,name:viin_helpdesk.model_helpdesk_sla
+#, python-format
+msgid "Helpdesk SLA"
+msgstr "Helpdesk SLA"
+
+#. module: viin_helpdesk
+#: code:addons/viin_helpdesk/models/helpdesk_team.py:0
+#: model:ir.actions.act_window,name:viin_helpdesk.helpdesk_sla_action
+#: model:ir.ui.menu,name:viin_helpdesk.helpdesk_sla_menu
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_sla_tree_view
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_sla_form_view
+#, python-format
+msgid "SLA Policy"
+msgstr "Chính sách SLA"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_sla_search_view
+msgid "Helpdesk SLA Search"
+msgstr ""
+
+#. module: viin_helpdesk
+#: model:ir.model,name:viin_helpdesk.model_helpdesk_stage
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_stage_form_view
+msgid "Helpdesk Stage"
+msgstr "Giai đoạn"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_stage_form_view
+msgid "Helpdesk Stage Form"
+msgstr ""
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_stage_tree_view
+msgid "Helpdesk Stage Tree"
+msgstr ""
+
+#. module: viin_helpdesk
+#: model:ir.model,name:viin_helpdesk.model_helpdesk_tag
+msgid "Helpdesk Tag"
+msgstr "Thẻ"
+
+#. module: viin_helpdesk
+#: model:ir.model,name:viin_helpdesk.model_helpdesk_team
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_sla__team_id
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__name
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__team_id
+#: model:ir.model.fields,field_description:viin_helpdesk.field_report_helpdesk_sla__team_id
+#: model:ir.model.fields,field_description:viin_helpdesk.field_report_helpdesk_ticket__team_id
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.create_ticket_from_portal
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_team_form_view
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_team_view_form_simplified
+msgid "Helpdesk Team"
+msgstr "Nhóm Helpdesk"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_team_form_view
+msgid "Helpdesk Team Form"
+msgstr ""
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_team_tree_view
+msgid "Helpdesk Team Tree"
+msgstr ""
+
+#. module: viin_helpdesk
+#: model:ir.actions.act_window,name:viin_helpdesk.helpdesk_team_action
+#: model:ir.model.fields,field_description:viin_helpdesk.field_res_users__helpdesk_team_ids
+#: model:ir.ui.menu,name:viin_helpdesk.helpdesk_team_menu
+msgid "Helpdesk Teams"
+msgstr "Nhóm Helpdesk"
+
+#. module: viin_helpdesk
+#: model:ir.model,name:viin_helpdesk.model_helpdesk_ticket
+msgid "Helpdesk Ticket"
+msgstr ""
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_calendar_view
+msgid "Helpdesk Ticket Calendar"
+msgstr ""
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_form_view
+msgid "Helpdesk Ticket Form"
+msgstr ""
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_graph_view
+msgid "Helpdesk Ticket Graph"
+msgstr ""
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_pivot_view
+msgid "Helpdesk Ticket Pivot"
+msgstr ""
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_search_view
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_tree_view
+msgid "Helpdesk Ticket Tree"
+msgstr ""
+
+#. module: viin_helpdesk
+#: model:ir.model,name:viin_helpdesk.model_helpdesk_ticket_type
+msgid "Helpdesk Ticket Type"
+msgstr "Loại Helpdesk Ticket"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_type_form_view
+msgid "Helpdesk Ticket Type Form"
+msgstr ""
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_type_tree_view
+msgid "Helpdesk Ticket Type Tree"
+msgstr ""
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_team_search_view
+msgid "Helpdesk team Tree"
+msgstr ""
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_team_kanban_view
+msgid "High Priorities"
+msgstr "Ưu tiên Cao"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__helpdesk_sla__minimum_priority__2
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__helpdesk_ticket__priority_level__2
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__report_helpdesk_ticket__priority_level__2
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_search_view
+msgid "High Priority"
+msgstr "Ưu tiên Cao"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_sla__time_hours
+msgid "Hours"
+msgstr "Giờ"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_sla__time_hours
+msgid "Hours to reach given stage based on ticket creation date"
+msgstr "Số giờ để đạt được giai đoạn nhất định dựa trên ngày tạo ticket"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_team__rating_status
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_ticket__rating_status
+msgid ""
+"How to get customer feedback?\n"
+"- Rating when changing stage: an email will be sent when a ticket is pulled in another stage.\n"
+"- Periodical Rating: email will be sent periodically.\n"
+"\n"
+"Don't forget to set up the mail templates on the stages for which you want to get the customer's feedbacks."
+msgstr ""
+"Làm thế nào để tiếp nhận phàn hồi từ Khách hàng?\n"
+"- Đánh giá khi thay đổi Giai đoạn: Một Email sẽ được gửi khi một Ticket được chuyển sang một Giai đoạn khác.\n"
+"- Đánh giá định kỳ: Email sẽ được gửi theo định kỳ.\n"
+"\n"
+"Đừng quên thiết lập một mẫu Email ứng với các Giai đoạn mà bạn muốn nhận được phản hồi của Khách hàng."
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_sla__id
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_sla_line__id
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__id
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_tag__id
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__id
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__id
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket_type__id
+#: model:ir.model.fields,field_description:viin_helpdesk.field_report_helpdesk_sla__id
+#: model:ir.model.fields,field_description:viin_helpdesk.field_report_helpdesk_ticket__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_team__alias_parent_thread_id
+msgid ""
+"ID of the parent record holding the alias (example: project holding the task"
+" creation alias)"
+msgstr ""
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__activity_exception_icon
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__activity_exception_icon
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_stage__activity_exception_icon
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_team__activity_exception_icon
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_ticket__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Biểu tượng để chỉ ra một hành động ngoại lệ."
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_ticket__portal_show_rating
+msgid "If True, display Customer Rating in Portal"
+msgstr "Nếu được chọn, hiển thị Đánh giá của khách hàng trên Portal"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_team__portal_show_rating
+msgid "If True, display customer rating in Portal"
+msgstr "Nếu được chọn, hiển thị Đánh giá của khách hàng trên Portal"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_stage__message_needaction
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_stage__message_unread
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_team__message_needaction
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_team__message_unread
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_ticket__message_needaction
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_ticket__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Nếu được chọn, các tin nhắn mới cần bạn chú ý"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_stage__message_has_error
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_stage__message_has_sms_error
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_team__message_has_error
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_team__message_has_sms_error
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_ticket__message_has_error
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_ticket__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Nếu được chọn, một số tin nhắn có lỗi gửi đi."
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_team__team_leader_excluded
+msgid ""
+"If checked, team leader will be excluded when using automatic assignment for"
+" new tickets"
+msgstr ""
+"Nếu được chọn, trưởng nhóm sẽ bị loại khi sử dụng phân công tự động cho các "
+"ticket mới"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_stage__mail_template_id
+msgid ""
+"If set an email will be sent to the customer when the ticket reaches this "
+"step"
+msgstr ""
+"Nếu thiết lập, một email sẽ được gửi đến khách hàng khi ticket chuyển sang "
+"giai đoạn này."
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_stage__rating_template_id
+msgid ""
+"If set and if the ticket's rating configuration is 'Rating when changing "
+"stage',then an email will be sent to the customer when the ticket reaches "
+"this step."
+msgstr ""
+"Nếu thiết lập và nếu cấu hình đánh giá ticket là 'Đánh giá khi thay đổi giai"
+" đoạn', thì một email sẽ được gửi đến khách hàng khi ticket chuyển sang giai"
+" đoạn này."
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_ticket__send_notification_email
+msgid ""
+"If set, then an email will be sent to the partner when the ticket changes "
+"stage."
+msgstr ""
+"Nếu thiết lập, thì một email sẽ được gửi đến đối tác khi giai đoạn của "
+"ticket thay đổi."
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_team__active
+msgid ""
+"If the active field is set to False, it will allow you to hide the team "
+"without removing it."
+msgstr ""
+"Nếu trường active được thiết lập là Sai, hệ thống sẽ cho phép bạn ẩn nhóm "
+"thay vì xóa nó."
+
+#. module: viin_helpdesk
+#: code:addons/viin_helpdesk/models/helpdesk_stage.py:0
+#: model:helpdesk.stage,legend_normal:viin_helpdesk.helpdesk_stage_assigned
+#: model:helpdesk.stage,legend_normal:viin_helpdesk.helpdesk_stage_cancelled
+#: model:helpdesk.stage,legend_normal:viin_helpdesk.helpdesk_stage_new
+#: model:helpdesk.stage,legend_normal:viin_helpdesk.helpdesk_stage_resolved
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__report_helpdesk_ticket__state__normal
+#, python-format
+msgid "In Progress"
+msgstr "Đang xử lý"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_team_kanban_view
+msgid "Info"
+msgstr "Thông tin"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_team__alias_id
+msgid ""
+"Internal email associated with this team. Incoming emails are automatically "
+"synchronized with Tickets."
+msgstr ""
+"Email nội bộ sẽ được liên kết với Nhóm này. Email nhận được sẽ tự động đồng "
+"bộ với Ticket."
+
+#. module: viin_helpdesk
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__helpdesk_team__privacy_visibility__followers
+msgid "Invited internal users"
+msgstr "Chỉ người dùng nội bộ được mời"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__is_final_stage
+msgid "Is Final Stage"
+msgstr "Là giai đoạn cuối cùng"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__message_is_follower
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__message_is_follower
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__message_is_follower
+msgid "Is Follower"
+msgstr "Là người theo dõi"
+
+#. module: viin_helpdesk
+#: model:helpdesk.ticket.type,name:viin_helpdesk.helpdesk_ticket_type_issue
+msgid "Issue"
+msgstr "Phát sinh"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__legend_blocked
+msgid "Kanban Blocked Explanation"
+msgstr "Giải thích về bị chặn Kanban"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__legend_normal
+msgid "Kanban Ongoing Explanation"
+msgstr "Kanban Đang thực hiện Giải thích"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__kanban_state
+#: model:ir.model.fields,field_description:viin_helpdesk.field_report_helpdesk_ticket__state
+msgid "Kanban State"
+msgstr "Giai đoạn Kanban"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__kanban_state_label
+msgid "Kanban State Label"
+msgstr "Nhãn giai đoạn Kanban"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__legend_done
+msgid "Kanban Valid Explanation"
+msgstr "Giải thích hợp lệ của Kanban"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_digest_digest__kpi_helpdesk_ticket_closed_value
+msgid "Kpi Helpdesk Ticket Closed Value"
+msgstr ""
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_digest_digest__kpi_helpdesk_ticket_opened_value
+msgid "Kpi Helpdesk Ticket Opened Value"
+msgstr ""
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_team__label_tickets
+msgid "Label used for the tickets of the team."
+msgstr "Nhãn được sử dụng cho Ticket của nhóm."
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.rating_helpdesk_team_rating_page
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.rating_helpdesk_ticket_rating_page
+msgid "Last 3 months"
+msgstr "3 tháng gần nhất"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.rating_rating_view_search_team
+msgid "Last 30 Days"
+msgstr "30 ngày gần nhất"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.rating_helpdesk_team_rating_page
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.rating_helpdesk_ticket_rating_page
+msgid "Last 30 days"
+msgstr "30 ngày gần nhất"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.rating_helpdesk_team_rating_page
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.rating_helpdesk_ticket_rating_page
+msgid "Last 7 days"
+msgstr "7 ngày gần nhất"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_sla____last_update
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_sla_line____last_update
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage____last_update
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_tag____last_update
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team____last_update
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket____last_update
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket_type____last_update
+#: model:ir.model.fields,field_description:viin_helpdesk.field_report_helpdesk_sla____last_update
+#: model:ir.model.fields,field_description:viin_helpdesk.field_report_helpdesk_ticket____last_update
+msgid "Last Modified on"
+msgstr "Sửa đổi lần cuối vào"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_sla__write_uid
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_sla_line__write_uid
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__write_uid
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_tag__write_uid
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__write_uid
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__write_uid
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket_type__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_sla__write_date
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_sla_line__write_date
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__write_date
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_tag__write_date
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__write_date
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__write_date
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket_type__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__team_leader_id
+msgid "Leader"
+msgstr "Trưởng nhóm"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_team_kanban_view
+msgid "Low Priorities"
+msgstr "Mức độ Thấp"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__helpdesk_sla__minimum_priority__1
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__helpdesk_ticket__priority_level__1
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__report_helpdesk_ticket__priority_level__1
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_search_view
+msgid "Low Priority"
+msgstr "Mức độ Thấp"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__message_main_attachment_id
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__message_main_attachment_id
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Đính kèm chính"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__helpdesk_team__assign_type__manually
+msgid "Manually"
+msgstr "Thủ công"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__message_has_error
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__message_has_error
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__message_has_error
+msgid "Message Delivery error"
+msgstr "Thông báo gửi đi gặp lỗi"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__message_ids
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__message_ids
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__message_ids
+msgid "Messages"
+msgstr "Thông điệp"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_sla__minimum_priority
+msgid "Minimum Priority"
+msgstr "Mức độ ưu tiên tối thiểu"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_sla__stage_id
+msgid ""
+"Minimum stage a ticket needs to reach in order to satisfy this SLA policy."
+msgstr ""
+"Giai đoạn tối thiểu mà ticket cần đạt được để đáp ứng chính sách SLA này."
+
+#. module: viin_helpdesk
+#: model:ir.model,name:viin_helpdesk.model_ir_module_module
+msgid "Module"
+msgstr "Mô đun"
+
+#. module: viin_helpdesk
+#: model:ir.actions.act_window,name:viin_helpdesk.my_tickets_action
+#: model:ir.ui.menu,name:viin_helpdesk.my_tickets_menu
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_search_view
+msgid "My Tickets"
+msgstr "Ticket của tôi"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_sla__name
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__name
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_tag__name
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket_type__name
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_team_view_form_simplified
+msgid "Name"
+msgstr "Tên"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_helpdesk_team_rating_partner_stat
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_helpdesk_ticket_rating_partner_stat
+msgid "Neutral face"
+msgstr "Mặt trung tính"
+
+#. module: viin_helpdesk
+#: model:helpdesk.stage,name:viin_helpdesk.helpdesk_stage_new
+msgid "New"
+msgstr "Mới"
+
+#. module: viin_helpdesk
+#: model_terms:digest.tip,tip_description:viin_helpdesk.digest_tip_helpdesk_0
+msgid ""
+"New tickets can be generated from incoming emails. You just need to\n"
+"\t\t\t\t\t\tset email aliases on your helpdesk team.\n"
+"\t\t\t\t\t\t<br>"
+msgstr ""
+"Ticket mới có thể được tạo từ thông điệp email. Bạn cần\n"
+"\t\t\t\t\t\tthiết lập bí danh email trên nhóm Helpdesk của bạn.\t\t\t\t\t\t<br>"
+
+#. module: viin_helpdesk
+#: code:addons/viin_helpdesk/controllers/portal.py:0
+#, python-format
+msgid "Newest"
+msgstr "Mới nhất"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__activity_date_deadline
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__activity_date_deadline
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Hạn chót lần hành động kế tiếp"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__activity_summary
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__activity_summary
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__activity_summary
+msgid "Next Activity Summary"
+msgstr "Tóm tắt hoạt động tiếp theo"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__activity_type_id
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__activity_type_id
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__activity_type_id
+msgid "Next Activity Type"
+msgstr "Kiểu hành động kế tiếp"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__helpdesk_team__rating_status__no
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__helpdesk_ticket__rating_status__no
+msgid "No rating"
+msgstr "Không có Đánh giá"
+
+#. module: viin_helpdesk
+#: code:addons/viin_helpdesk/controllers/portal.py:0
+#, python-format
+msgid "None"
+msgstr "Không dùng"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_search_view
+msgid "None Priority"
+msgstr "Không đặt Mức độ"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_report_helpdesk_ticket__not_assign
+msgid "Not Assign"
+msgstr "Chưa phân công"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_report_helpdesk_ticket__not_done
+msgid "Not Done"
+msgstr "Chưa hoàn thành"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__message_needaction_counter
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__message_needaction_counter
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Số lượng Hành động"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__high_priority_tickets_count
+msgid "Number of Ticket in High Priority"
+msgstr "SL Ticket có ưu tiên cao"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__low_priority_tickets_count
+msgid "Number of Ticket in Low Priority"
+msgstr "SL Ticket có ưu tiên thấp"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__urge_priority_tickets_count
+msgid "Number of Ticket in Urgent Priority"
+msgstr "SL Ticket có ưu tiên khẩn cấp"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__message_has_error_counter
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__message_has_error_counter
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__message_has_error_counter
+msgid "Number of errors"
+msgstr "Số lượng lỗi"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_stage__message_needaction_counter
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_team__message_needaction_counter
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_ticket__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Số thông điệp cần có hành động"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_stage__message_has_error_counter
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_team__message_has_error_counter
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_ticket__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Số tin gửi đi bị lỗi"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_stage__message_unread_counter
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_team__message_unread_counter
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_ticket__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Số thông điệp chưa đọc"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__helpdesk_team__rating_status_period__monthly
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__helpdesk_ticket__rating_status_period__monthly
+msgid "Once a Month"
+msgstr "Một lần một tháng"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__helpdesk_sla_line__status__ongoing
+msgid "Ongoing"
+msgstr "Đang diễn ra"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_team__stage_ids
+msgid "Only contains the Stages that belong to this Team"
+msgstr "Chỉ chứa những Giai đoạn thuộc trong Nhóm đó"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_digest_digest__kpi_helpdesk_ticket_opened
+msgid "Open Tickets"
+msgstr "Các Ticket được Mở"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_team__alias_force_thread_id
+msgid ""
+"Optional ID of a thread (record) to which all incoming messages will be "
+"attached, even if they did not reply to it. If set, this will disable the "
+"creation of new records completely."
+msgstr ""
+"ID tuỳ chọn của một chủ đề/bản ghi (thread) mà tất cả các thông điệp đến sẽ "
+"được gắn/đính vào, thâm chí nếu người ta không reply nó. Nếu được thiết lập,"
+" điều này sẽ vô hiệu hoàn toàn việc tạo mới bản ghi."
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_stage__legend_blocked
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_ticket__legend_blocked
+msgid ""
+"Override the default value displayed for the blocked state for kanban "
+"selection, when the ticket is in that stage."
+msgstr ""
+"Ghi đè giá mặc định của tình trạng chặn cho lựa chọn kanban, khi ticket "
+"trong giai đoạn đó."
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_stage__legend_done
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_ticket__legend_done
+msgid ""
+"Override the default value displayed for the done state for kanban "
+"selection, when the ticket is in that stage."
+msgstr ""
+"Ghi đè giá mặc định của tình trạng hoàn thành cho lựa chọn kanban, khi "
+"ticket trong giai đoạn đó."
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_stage__legend_normal
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_ticket__legend_normal
+msgid ""
+"Override the default value displayed for the normal state for kanban "
+"selection, when the ticket is in that stage."
+msgstr ""
+"Ghi đè giá mặc định của tình trạng bình thường cho lựa chọn kanban, khi "
+"ticket trong giai đoạn đó."
+
+#. module: viin_helpdesk
+#: model:ir.ui.menu,name:viin_helpdesk.helpdesk_team_overview_menu
+msgid "Overview"
+msgstr "Tổng quát"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__alias_user_id
+#: model:ir.model.fields,field_description:viin_helpdesk.field_report_helpdesk_ticket__user_id
+msgid "Owner"
+msgstr "Người sở hữu"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__alias_parent_model_id
+msgid "Parent Model"
+msgstr "Model cha"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__alias_parent_thread_id
+msgid "Parent Record Thread ID"
+msgstr ""
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_team__alias_parent_model_id
+msgid ""
+"Parent model holding the alias. The model holding the alias reference is not"
+" necessarily the model given by alias_model_id (example: project "
+"(parent_model) and task (model))"
+msgstr ""
+
+#. module: viin_helpdesk
+#: code:addons/viin_helpdesk/controllers/portal.py:0
+#: code:addons/viin_helpdesk/controllers/portal.py:0
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__partner_id
+#: model:ir.model.fields,field_description:viin_helpdesk.field_report_helpdesk_ticket__partner_id
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_search_view
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_my_tickets
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.view_helpdesk_ticket_search
+#, python-format
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_team__rating_percentage_satisfaction
+msgid "Percentage of happy ratings"
+msgstr "Phần trăm của đánh giá hạnh phúc"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_team_kanban_view
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_kanban_view
+msgid ""
+"Percentage of happy ratings over the past 30 days. Get rating details from "
+"the More menu."
+msgstr ""
+"Phần trăm của đánh giá hạnh phúc trong 30 ngày qua. Xem chi tiết đánh giá từ"
+" menu More."
+
+#. module: viin_helpdesk
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__helpdesk_team__rating_status__periodic
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__helpdesk_ticket__rating_status__periodic
+msgid "Periodical Rating"
+msgstr "Đánh giá Định kỳ"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_helpdesk_team_rating_partner_stat
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_helpdesk_team_rating_popover
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_helpdesk_ticket_rating_partner_stat
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_helpdesk_ticket_rating_popover
+msgid "Placeholder"
+msgstr ""
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_team__alias_contact
+msgid ""
+"Policy to post a message on the document using the mailgateway.\n"
+"- everyone: everyone can post\n"
+"- partners: only authenticated partners\n"
+"- followers: only followers of the related document or members of following channels\n"
+msgstr ""
+"Chính sách cho phép post các thông điệp lên tài liệu sử dụng.\n"
+"- mọi người: Mọi người có thể post\n"
+"- đối tác: Chỉ các đối tác đã xác thực\n"
+"- người theo dõi: Chỉ những người ở trong danh sách dõi theo của tài liệu hoặc thành viên của các kênh sau đây\n"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__access_url
+msgid "Portal Access URL"
+msgstr "URL truy cập cổng thông tin"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__helpdesk_team__privacy_visibility__portal
+msgid "Portal users and all internal users"
+msgstr "Người dùng cổng thông tin và toàn bộ người dùng nội bộ"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__priority_level
+#: model:ir.model.fields,field_description:viin_helpdesk.field_report_helpdesk_ticket__priority_level
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_search_view
+msgid "Priority"
+msgstr "Ưu tiên"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__helpdesk_team__rating_status_period__quarterly
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__helpdesk_ticket__rating_status_period__quarterly
+msgid "Quarterly"
+msgstr "Hàng quý"
+
+#. module: viin_helpdesk
+#: model:helpdesk.ticket.type,name:viin_helpdesk.helpdesk_ticket_type_question
+msgid "Question"
+msgstr "Câu hỏi"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__helpdesk_team__assign_type__random
+msgid "Random"
+msgstr "Ngẫu nhiên"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_helpdesk_team_rating_partner_stat
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_helpdesk_team_rating_popover
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_helpdesk_ticket_rating_partner_stat
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_helpdesk_ticket_rating_popover
+msgid "Rated partner"
+msgstr "Đối tác đã đánh giá"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__rating_ids
+msgid "Rating"
+msgstr "Đánh giá"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__rating_avg
+msgid "Rating Average"
+msgstr "Đánh giá trung bình"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__rating_template_id
+msgid "Rating Email Template"
+msgstr "Mẫu Email đánh giá từ Khách hàng"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__rating_status_period
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__rating_status_period
+msgid "Rating Frequency"
+msgstr "Tần suất đánh giá"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__rating_last_feedback
+msgid "Rating Last Feedback"
+msgstr "Phản hồi Đánh giá gần nhất"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__rating_last_image
+msgid "Rating Last Image"
+msgstr "Ảnh đánh giá gần nhất"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__rating_last_value
+msgid "Rating Last Value"
+msgstr "Giá trị đánh giá gần nhất"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__rating_percentage_satisfaction
+msgid "Rating Satisfaction"
+msgstr "Đánh giá sự hài lòng"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__rating_count
+msgid "Rating count"
+msgstr "SL đánh giá"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__portal_show_rating
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__portal_show_rating
+msgid "Rating visible publicly"
+msgstr "Đánh giá hiển thị công khai"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__helpdesk_team__rating_status__stage
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__helpdesk_ticket__rating_status__stage
+msgid "Rating when changing stage"
+msgstr "Đánh giá khi thay đổi Giai đoạn"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__rating_ids
+#: model:mail.message.subtype,description:viin_helpdesk.mt_ticket_rating
+msgid "Ratings"
+msgstr "Đánh giá"
+
+#. module: viin_helpdesk
+#: model:ir.actions.act_window,name:viin_helpdesk.rating_rating_action_view_team
+msgid "Ratings Team"
+msgstr "Đánh giá Nhóm"
+
+#. module: viin_helpdesk
+#: model:ir.actions.act_window,name:viin_helpdesk.rating_rating_action_view_ticket
+msgid "Ratings Ticket"
+msgstr "Đánh giá Ticket"
+
+#. module: viin_helpdesk
+#: code:addons/viin_helpdesk/models/helpdesk_team.py:0
+#: code:addons/viin_helpdesk/models/helpdesk_ticket.py:0
+#, python-format
+msgid "Ratings of %s"
+msgstr "Đánh giá của %s"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_sla_form_view
+msgid "Reach In"
+msgstr "Đạt được trong"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_sla__stage_id
+msgid "Reach Stage"
+msgstr "Đạt được giai đoạn"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__helpdesk_sla_line__status__reached
+msgid "Reached"
+msgstr "Đã đạt được"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_sla_line__reached_datetime
+msgid "Reached Date"
+msgstr "Ngày đạt được"
+
+#. module: viin_helpdesk
+#: code:addons/viin_helpdesk/models/helpdesk_stage.py:0
+#: model:helpdesk.stage,legend_done:viin_helpdesk.helpdesk_stage_assigned
+#: model:helpdesk.stage,legend_done:viin_helpdesk.helpdesk_stage_cancelled
+#: model:helpdesk.stage,legend_done:viin_helpdesk.helpdesk_stage_new
+#: model:helpdesk.stage,legend_done:viin_helpdesk.helpdesk_stage_resolved
+#, python-format
+msgid "Ready for Next Stage"
+msgstr "Sẵn sàng cho giai đoạn kế tiếp"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__report_helpdesk_ticket__state__done
+msgid "Ready for next stage"
+msgstr "Sẵn sàng cho giai đoạn kế tiếp"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_ticket__rating_last_feedback
+msgid "Reason of the rating"
+msgstr "Lý do của đánh giá"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__alias_force_thread_id
+msgid "Record Thread ID"
+msgstr ""
+
+#. module: viin_helpdesk
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__helpdesk_ticket__kanban_state__blocked
+msgid "Red"
+msgstr "Đỏ"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__legend_blocked
+msgid "Red Kanban Label"
+msgstr "Kanban màu đỏ"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_my_tickets
+msgid "Ref"
+msgstr "Tham chiếu"
+
+#. module: viin_helpdesk
+#: model:ir.actions.act_window,name:viin_helpdesk.action_helpdesk_ticket_report
+#: model:ir.ui.menu,name:viin_helpdesk.menu_helpdesk_analysis
+msgid "Report Tickets"
+msgstr ""
+
+#. module: viin_helpdesk
+#: model:ir.ui.menu,name:viin_helpdesk.reporting_menu
+msgid "Reporting"
+msgstr "Báo cáo"
+
+#. module: viin_helpdesk
+#: model:helpdesk.stage,name:viin_helpdesk.helpdesk_stage_resolved
+msgid "Resolved"
+msgstr "Đã xử lý"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_form_view
+msgid "Resolved Duration"
+msgstr "Thời lượng đã Xử lý"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__resolved_duration
+msgid "Resolving Duration"
+msgstr "Thời gian Xử lý"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_report_helpdesk_ticket__resolved_duration
+msgid "Resolving Duration (hours)"
+msgstr "Thời gian Xử lý (giờ)"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_search_view
+msgid "Responsible"
+msgstr "Người xử lý"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__activity_user_id
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__activity_user_id
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__activity_user_id
+msgid "Responsible User"
+msgstr "Người xử lý"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.create_ticket_from_portal
+msgid "Return URL: /my/tickets/"
+msgstr "URL trở về: /my/tickets/"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_sla_line__sla_id
+msgid "SLA"
+msgstr ""
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.report_helpdesk_sla_view_graph
+msgid "SLA Alalysis"
+msgstr "Phân tích SLA"
+
+#. module: viin_helpdesk
+#: model:ir.actions.act_window,name:viin_helpdesk.report_helpdesk_sla_action
+#: model:ir.ui.menu,name:viin_helpdesk.menu_helpdesk_sla_report
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.report_helpdesk_sla_view_pivot
+msgid "SLA Analysis"
+msgstr "Phân tích SLA"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__sla_count
+msgid "SLA Count"
+msgstr "Số SLA"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_report_helpdesk_sla__sla_failed
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_search_view
+msgid "SLA Failed"
+msgstr "Thất bại SLA"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_report_helpdesk_sla__sla_ongoing
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_search_view
+msgid "SLA Ongoing"
+msgstr "Đang diễn ra SLA"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__sla_ids
+#: model:ir.model.fields,field_description:viin_helpdesk.field_report_helpdesk_sla__sla_id
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_team_form_view
+msgid "SLA Policies"
+msgstr "Chính sách SLA"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_sla_form_view
+msgid "SLA Policy Name"
+msgstr "Tên chính sách SLA"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_report_helpdesk_sla__sla_reached
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_search_view
+msgid "SLA Reached"
+msgstr "Đạt được SLA"
+
+#. module: viin_helpdesk
+#: model:ir.model,name:viin_helpdesk.model_report_helpdesk_sla
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.report_helpdesk_sla_view_search
+msgid "SLA Report"
+msgstr "Báo cáo SLA"
+
+#. module: viin_helpdesk
+#: model:ir.model,name:viin_helpdesk.model_helpdesk_sla_line
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__sla_line_ids
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_form_view
+msgid "SLA Status"
+msgstr "Trạng thái SLA"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__sla_ids
+msgid "SLAs"
+msgstr ""
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__message_has_sms_error
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__message_has_sms_error
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "SMS gửi đi gặp lỗi"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_helpdesk_team_rating_partner_stat
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_helpdesk_ticket_rating_partner_stat
+msgid "Sad face"
+msgstr "Mặt buồn"
+
+#. module: viin_helpdesk
+#: code:addons/viin_helpdesk/controllers/portal.py:0
+#, python-format
+msgid "Search <span class=\"nolabel\"> in (Title or Name)</span>"
+msgstr "Tìm <span class=\"nolabel\"> theo (Tiêu đề hoặc Tên)</span>"
+
+#. module: viin_helpdesk
+#: code:addons/viin_helpdesk/controllers/portal.py:0
+#, python-format
+msgid "Search in All"
+msgstr "Tìm tất cả"
+
+#. module: viin_helpdesk
+#: code:addons/viin_helpdesk/controllers/portal.py:0
+#, python-format
+msgid "Search in Customer"
+msgstr "Tìm theo Đối tác"
+
+#. module: viin_helpdesk
+#: code:addons/viin_helpdesk/controllers/portal.py:0
+#, python-format
+msgid "Search in Stages"
+msgstr "Tìm theo Giai đoạn"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__access_token
+msgid "Security Token"
+msgstr "Mã bảo mật"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__send_notification_email
+msgid "Send Notification Email"
+msgstr "Gửi Email Thông báo"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__sequence
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__sequence
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__sequence
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket_type__sequence
+msgid "Sequence"
+msgstr "Trình tự"
+
+#. module: viin_helpdesk
+#: model_terms:digest.tip,tip_description:viin_helpdesk.digest_tip_helpdesk_0
+msgid "Set Email Aliases"
+msgstr "Đặt bí danh Email"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.res_config_settings_view_form
+msgid "Set Rating Email Template to Stages"
+msgstr "Thiết lập mẫu Email theo Giai đoạn"
+
+#. module: viin_helpdesk
+#: model:ir.actions.act_window,name:viin_helpdesk.helpdesk_config_settings_action
+#: model:ir.ui.menu,name:viin_helpdesk.helpdesk_config_settings_menu_action
+msgid "Settings"
+msgstr "Cấu hình"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_stage__team_ids
+msgid ""
+"Specific team that ticket in stage. Other team will not be able to see or "
+"use this stage"
+msgstr ""
+"Một Nhóm mà có Ticket ở trong Giai đoạn này. Nhóm khác sẽ không thể nhìn "
+"hoặc dùng Giai đoạn này"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_stage__is_final_stage
+msgid ""
+"Specific whenever this stage is final stage or not. Any ticket moved into "
+"this stage will be considering as resolved."
+msgstr ""
+"Cụ thể bất cứ khi nào Giai đoạn này là Giai đoạn cuối cùng hay không. Bất kỳ"
+" Ticket nào được chuyển vào Giai đoạn này được coi là Đã giải quyết."
+
+#. module: viin_helpdesk
+#: code:addons/viin_helpdesk/controllers/portal.py:0
+#: code:addons/viin_helpdesk/controllers/portal.py:0
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__stage_id
+#: model:ir.model.fields,field_description:viin_helpdesk.field_report_helpdesk_ticket__stage_id
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_search_view
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_my_tickets
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.view_helpdesk_ticket_search
+#, python-format
+msgid "Stage"
+msgstr "Giai đoạn"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_stage_form_view
+msgid "Stage Description and Tooltips"
+msgstr "Tooltip và Mô tả cho các Giai đoạn"
+
+#. module: viin_helpdesk
+#: model:mail.message.subtype,description:viin_helpdesk.mt_ticket_stage
+msgid "Stage changed"
+msgstr "Giai đoạn đã thay đổi"
+
+#. module: viin_helpdesk
+#: model:ir.actions.act_window,name:viin_helpdesk.helpdesk_stage_action
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__stage_ids
+#: model:ir.ui.menu,name:viin_helpdesk.helpdesk_stage_menu
+msgid "Stages"
+msgstr "Giai đoạn"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_sla_line__status
+msgid "Status"
+msgstr "Trạng thái"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_stage__activity_state
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_team__activity_state
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_ticket__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Trạng thái dựa trên hoạt động\n"
+"Quá hạn: Ngày đến hạn đã trôi qua\n"
+"Hôm nay: Hôm nay là ngày phải thực hiện\n"
+"Đã hoạch định: Các hoạt động trong tương lai."
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__name
+msgid "Subject"
+msgstr "Chủ đề"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.create_ticket_from_portal
+msgid "Submit"
+msgstr "Gửi"
+
+#. module: viin_helpdesk
+#: model:ir.model.constraint,message:viin_helpdesk.constraint_helpdesk_tag_name_uniq
+msgid "Tag name must be unique !"
+msgstr "Thẻ phải là duy nhất !"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__tag_ids
+msgid "Tags"
+msgstr "Thẻ"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_sla_form_view
+msgid "Target"
+msgstr "Mục tiêu"
+
+#. module: viin_helpdesk
+#: code:addons/viin_helpdesk/controllers/portal.py:0
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_sla_search_view
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_search_view
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.report_helpdesk_sla_view_search
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.view_helpdesk_ticket_search
+#, python-format
+msgid "Team"
+msgstr "Nhóm"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_team_search_view
+msgid "Team Leader"
+msgstr "Trưởng nhóm"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__team_leader_excluded
+msgid "Team Leader Excluded"
+msgstr "Loại trừ trưởng nhóm"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__team_member_ids
+msgid "Team Member"
+msgstr "Các thành viên"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_team_form_view
+msgid "Team Members"
+msgstr "Các thành viên"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_my_ticket
+msgid "Team:"
+msgstr "Nhóm:"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__team_ids
+msgid "Teams"
+msgstr "Nhóm"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_report_helpdesk_sla__team_id
+#: model:ir.model.fields,help:viin_helpdesk.field_report_helpdesk_ticket__team_id
+msgid "The Team which direct handling this ticket"
+msgstr "Nhóm mà trực tiếp xử lý ticket này"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_res_company__default_helpdesk_team_id
+#: model:ir.model.fields,help:viin_helpdesk.field_res_config_settings__helpdesk_team_id
+msgid ""
+"The default helpdesk team that will be assigned to the helpdesk ticket of "
+"this company once none is given."
+msgstr ""
+"Nhóm Helpdesk mặc định sẽ được chỉ định cho ticket của công ty này khi không"
+" có nhóm Helpdesk nào được đưa ra."
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.res_config_settings_view_form
+msgid "The default helpdesk team that will be assigned to the ticket."
+msgstr "Nhóm Helpdesk mặc định sẽ được chỉ định cho ticket này."
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_ticket__resolved_duration
+msgid ""
+"The duration in hours counted from the date and time the ticket is assigned "
+"to the date and time it is marked as resolved."
+msgstr ""
+"Thời lượng tính bằng giờ kể từ ngày và giờ gian vé được Phân công đến ngày "
+"và giờ được đánh dấu là đã giải quyết xong."
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_ticket__assign_duration
+msgid ""
+"The duration in hours counted from the date and time the ticket is created "
+"to the date and time it is assigned to a team member."
+msgstr ""
+"Thời lượng tính bằng giờ kể từ ngày và giờ vé được tạo cho đến ngày và giờ "
+"nó được Phân công cho một thành viên trong nhóm."
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_report_helpdesk_ticket__user_id
+msgid "The employee which direct handling this ticket"
+msgstr "Nhân viên trực tiếp xử lý Ticket này"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_team__alias_model_id
+msgid ""
+"The model (Odoo Document Kind) to which this alias corresponds. Any incoming"
+" email that does not reply to an existing record will cause the creation of "
+"a new record of this model (e.g. a Project Task)"
+msgstr ""
+
+#. module: viin_helpdesk
+#: model:ir.model.constraint,message:viin_helpdesk.constraint_helpdesk_ticket_type_ticket_type_name_uniq
+msgid "The name of Ticket type must be unique!"
+msgstr "Tên của Loại Ticket phải là duy nhất!"
+
+#. module: viin_helpdesk
+#: model:ir.model.constraint,message:viin_helpdesk.constraint_helpdesk_team_team_name_uniq
+msgid "The name of team must be unique per company"
+msgstr "Tên của Nhóm phải là duy nhất"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_team__alias_name
+msgid ""
+"The name of the email alias, e.g. 'jobs' if you want to catch emails for "
+"<jobs@example.viindoo.com>"
+msgstr ""
+"Tên của bí danh email, vd 'vieclam' nếu bạn muốn bắt thông điệp gửi đến địa "
+"chỉ email <vieclam@vidu.viindoo.com>"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_team__alias_user_id
+msgid ""
+"The owner of records created upon receiving emails on this alias. If this "
+"field is not set the system will attempt to find the right owner based on "
+"the sender (From) address, or will use the Administrator account if no "
+"system user is found for that address."
+msgstr ""
+"Chủ sở hữu của các bản ghi được tạo khi nhận email về bí danh này. Nếu "
+"trường này không được đặt, hệ thống sẽ cố gắng tìm đúng chủ sở hữu dựa trên "
+"địa chỉ người gửi (Từ) hoặc sẽ sử dụng tài khoản Quản trị viên nếu không tìm"
+" thấy người dùng trên hệ thống cho địa chỉ đó."
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_ticket__user_id
+msgid "The responsible this ticket"
+msgstr "Người xử lý Ticket này"
+
+#. module: viin_helpdesk
+#: code:addons/viin_helpdesk/models/helpdesk_team.py:0
+#, python-format
+msgid "The stage which have type 'Is final stage' must be unique in a team !"
+msgstr ""
+"Giai đoạn mà được chọn 'Là giai đoạn cuối cùng' phải là duy nhất trong một "
+"Nhóm !"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_my_tickets
+msgid "There are no tickets."
+msgstr "Không có ticket nào"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_stage__fold
+msgid ""
+"This stage is folded in the kanban view when there are no records in that "
+"stage to display."
+msgstr ""
+"Giai đoạn này sẽ hiển thị Đóng ở giao diện Kanban khi không có bản ghi nào "
+"thuộc Giai đoạn này để hiển thị."
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_stage_form_view
+msgid "This step is done. Click to block or set in progress."
+msgstr "Bước này đã hoàn thành. Nhấn để thiết lập là chặn hoặc đang xử lý."
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_sla_line__ticket_id
+#: model:ir.model.fields,field_description:viin_helpdesk.field_report_helpdesk_sla__ticket_id
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_search_view
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.report_helpdesk_sla_view_search
+msgid "Ticket"
+msgstr ""
+
+#. module: viin_helpdesk
+#: model:mail.template,subject:viin_helpdesk.email_template_helpdesk_ticket_assigned
+#: model:mail.template,subject:viin_helpdesk.email_template_helpdesk_ticket_new
+#: model:mail.template,subject:viin_helpdesk.email_template_helpdesk_ticket_resolved
+msgid "Ticket ${object.name or 'n/a' } (#${object.id})"
+msgstr ""
+
+#. module: viin_helpdesk
+#: model:mail.template,subject:viin_helpdesk.email_template_helpdesk_ticket_cancelled
+msgid "Ticket (Ref ${object.name or 'n/a' })"
+msgstr "Ticket (số ${object.name or 'n/a' })"
+
+#. module: viin_helpdesk
+#: model:mail.message.subtype,name:viin_helpdesk.mt_ticket_blocked
+msgid "Ticket Blocked"
+msgstr "Ticket đã Khóa"
+
+#. module: viin_helpdesk
+#: model:mail.message.subtype,description:viin_helpdesk.mt_ticket_new
+#: model:mail.message.subtype,name:viin_helpdesk.mt_ticket_new
+msgid "Ticket Created"
+msgstr "Ticket được tạo"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__ticket_life
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_form_view
+msgid "Ticket Life"
+msgstr "Vòng đời của Ticket"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_report_helpdesk_ticket__ticket_life
+msgid "Ticket Life (hours)"
+msgstr "Vòng đời của Ticket (giờ)"
+
+#. module: viin_helpdesk
+#: model:mail.message.subtype,name:viin_helpdesk.mt_ticket_rating
+msgid "Ticket Rating"
+msgstr "Đánh giá Ticket"
+
+#. module: viin_helpdesk
+#: model:mail.message.subtype,name:viin_helpdesk.mt_ticket_ready
+msgid "Ticket Ready"
+msgstr "Ticket đã sẵn sàng"
+
+#. module: viin_helpdesk
+#: model:ir.model,name:viin_helpdesk.model_report_helpdesk_ticket
+msgid "Ticket Report"
+msgstr "Báo cáo Ticket"
+
+#. module: viin_helpdesk
+#: model:mail.message.subtype,name:viin_helpdesk.mt_ticket_stage
+msgid "Ticket Stage Changed"
+msgstr "Giai đoạn của Ticket đã được thay đổi"
+
+#. module: viin_helpdesk
+#: model:ir.actions.act_window,name:viin_helpdesk.helpdesk_tag_action
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_sla__tag_ids
+#: model:ir.ui.menu,name:viin_helpdesk.helpdesk_tag_menu
+msgid "Ticket Tags"
+msgstr "Thẻ"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__ticket_type_id
+#: model:ir.model.fields,field_description:viin_helpdesk.field_report_helpdesk_ticket__ticket_type_id
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_search_view
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.view_helpdesk_ticket_search
+msgid "Ticket Type"
+msgstr "Loại Ticket"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_my_ticket
+msgid "Ticket Type:"
+msgstr "Loại Ticket:"
+
+#. module: viin_helpdesk
+#: model:ir.actions.act_window,name:viin_helpdesk.helpdesk_ticket_type_action
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_sla__ticket_type_ids
+#: model:ir.ui.menu,name:viin_helpdesk.helpdesk_ticket_type_menu
+msgid "Ticket Types"
+msgstr "Loại Ticket"
+
+#. module: viin_helpdesk
+#: model:mail.message.subtype,description:viin_helpdesk.mt_ticket_blocked
+msgid "Ticket blocked"
+msgstr "Ticket đã chặn"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_sla__tickets_count
+msgid "Ticket count"
+msgstr "Số lượng Ticket"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_stage_form_view
+msgid "Ticket in progress. Click to block or set as done."
+msgstr ""
+"Ticket đang được Xử lý. Click chuột để Chặn hoặc thiết lập đã Hoàn thành."
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_stage_form_view
+msgid "Ticket is blocked. Click to unblock or set as done."
+msgstr "Ticket bị chặn. Nhấn để thiết lập bỏ chặn hoặc đã hoàn thành."
+
+#. module: viin_helpdesk
+#: model:mail.message.subtype,description:viin_helpdesk.mt_ticket_ready
+msgid "Ticket ready for Next Stage"
+msgstr "Ticket đã sẵn sàng cho Giai đoạn kế tiếp"
+
+#. module: viin_helpdesk
+#: model:ir.actions.server,name:viin_helpdesk.ir_cron_rating_ticket_ir_actions_server
+#: model:ir.cron,cron_name:viin_helpdesk.ir_cron_rating_ticket
+#: model:ir.cron,name:viin_helpdesk.ir_cron_rating_ticket
+msgid "Ticket: Send rating"
+msgstr "Ticket: Gửi đánh giá"
+
+#. module: viin_helpdesk
+#: code:addons/viin_helpdesk/models/helpdesk_sla.py:0
+#: code:addons/viin_helpdesk/models/helpdesk_team.py:0
+#: code:addons/viin_helpdesk/models/res_partner.py:0
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_sla__ticket_ids
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__ticket_ids
+#: model:ir.model.fields,field_description:viin_helpdesk.field_res_partner__ticket_ids
+#: model:ir.model.fields,field_description:viin_helpdesk.field_res_users__ticket_ids
+#: model:ir.ui.menu,name:viin_helpdesk.ticket_menu
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_sla_form_view
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_team_form_view
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_breadcrumbs
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_my_home
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_my_tickets
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.view_partner_form
+#, python-format
+msgid "Tickets"
+msgstr "Ticket"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__tickets_count
+#: model:ir.model.fields,field_description:viin_helpdesk.field_res_partner__tickets_count
+#: model:ir.model.fields,field_description:viin_helpdesk.field_res_users__tickets_count
+msgid "Tickets Count"
+msgstr "SL Ticket"
+
+#. module: viin_helpdesk
+#: model:ir.actions.act_window,name:viin_helpdesk.ticket_priority_kanban_view_from_team_kanban_action
+msgid "Tickets Priority"
+msgstr "Ưu tiên của Ticket"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.view_helpdesk_ticket_pivot
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.view_helpdesk_ticket_search
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.view_helpdesk_ticket_user_graph
+msgid "Tickets Report"
+msgstr "Báo cáo Ticket"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_search_view
+msgid "Tickets that are assigned to me"
+msgstr "Ticket mà được phân công cho tôi"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_search_view
+msgid "Tickets that are created by me"
+msgstr "Ticket mà được tạo bởi tôi"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_search_view
+msgid "Tickets that are not assigned"
+msgstr "Ticket mà không được phân công cho tôi"
+
+#. module: viin_helpdesk
+#: code:addons/viin_helpdesk/controllers/portal.py:0
+#: model:ir.model.fields,field_description:viin_helpdesk.field_report_helpdesk_ticket__name
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.create_ticket_from_portal
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_form_view
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_my_tickets
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.quick_create_helpdesk_ticket_form
+#, python-format
+msgid "Title"
+msgstr "Tiêu đề"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.create_ticket_from_portal
+msgid "Title for Ticket"
+msgstr "Tiêu đề cho Ticket"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_helpdesk_team_rating_partner_stat
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_helpdesk_ticket_rating_partner_stat
+msgid "Top 5 partner ratings of last 15 days."
+msgstr "5 Khách hàng được xếp hạng đánh giá hàng đầu trong 15 ngày qua."
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.res_config_settings_view_form
+msgid "Track customer satisfaction on Helpdesk"
+msgstr "Theo dõi mức độ Hài lòng của Khách hàng trên Helpdesk"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__helpdesk_team__rating_status_period__bimonthly
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__helpdesk_ticket__rating_status_period__bimonthly
+msgid "Twice a Month"
+msgstr "Hai lần một tháng"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_stage__activity_exception_decoration
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_team__activity_exception_decoration
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_ticket__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Loại hoạt động ngoại lệ trên hồ sơ."
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_search_view
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.view_helpdesk_ticket_search
+msgid "Unassigned"
+msgstr "Chưa được phân công"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__message_unread
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__message_unread
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__message_unread
+msgid "Unread Messages"
+msgstr "Thông điệp chưa đọc"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__message_unread_counter
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__message_unread_counter
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Bộ đếm Thông điệp chưa đọc"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__helpdesk_sla__minimum_priority__3
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__helpdesk_ticket__priority_level__3
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__report_helpdesk_ticket__priority_level__3
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_team_kanban_view
+msgid "Urgent"
+msgstr "Khẩn cấp"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_search_view
+msgid "Urgent Priority"
+msgstr "Ưu tiên Khẩn cấp"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_res_config_settings__group_helpdesk_rating
+#: model:res.groups,name:viin_helpdesk.group_helpdesk_rating
+msgid "Use Rating on Helpdesk"
+msgstr "Sử dụng đánh giá cho Helpdesk Ticket"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__label_tickets
+msgid "Use Tickets as"
+msgstr "Sử dụng Ticket như"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_ticket__ticket_type_id
+#: model:ir.model.fields,help:viin_helpdesk.field_report_helpdesk_ticket__ticket_type_id
+msgid "Used to classify question type for customer"
+msgstr "Dùng để phân biệt Loại câu hỏi của khách hàng"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_ticket__team_id
+msgid "Used to classify support group for customer"
+msgstr "Dùng để phân biệt Nhóm hỗ trợ cho khách hàng"
+
+#. module: viin_helpdesk
+#: model:res.groups,name:viin_helpdesk.group_helpdesk_user
+msgid "User"
+msgstr "Người dùng"
+
+#. module: viin_helpdesk
+#: model:ir.model,name:viin_helpdesk.model_res_users
+msgid "Users"
+msgstr "Người dùng"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__privacy_visibility
+msgid "Visibility"
+msgstr "Tính riêng tư"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_stage__website_message_ids
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__website_message_ids
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_ticket__website_message_ids
+msgid "Website Messages"
+msgstr "Thông điệp Website"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_stage__website_message_ids
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_team__website_message_ids
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_ticket__website_message_ids
+msgid "Website communication history"
+msgstr "Lịch sử thông tin liên lạc website"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__helpdesk_team__rating_status_period__weekly
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__helpdesk_ticket__rating_status_period__weekly
+msgid "Weekly"
+msgstr "Hàng tuần"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_ticket__assign_date
+msgid ""
+"When employee has Assigned, this field will automatically set the current "
+"time"
+msgstr ""
+"Khi được phân công cho nhân viên, trường này tự động thiết lập thời gian "
+"hiện hành"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,field_description:viin_helpdesk.field_helpdesk_team__resource_calendar_id
+msgid "Working Hours"
+msgstr "Giờ làm việc"
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_sla_line__exceeded_days
+msgid "Working days exceeded for reached SLAs compared with deadline."
+msgstr "Đã vượt quá số ngày làm việc đối với SLA đạt được so với thời hạn. "
+
+#. module: viin_helpdesk
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__helpdesk_team__rating_status_period__yearly
+#: model:ir.model.fields.selection,name:viin_helpdesk.selection__helpdesk_ticket__rating_status_period__yearly
+msgid "Yearly"
+msgstr "Hàng năm"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_stage_form_view
+msgid ""
+"You can also add a description to help your coworkers understand the meaning"
+" and purpose of the stage."
+msgstr ""
+"Bạn cũng có thể thêm một mô tả để giúp cộng sự của bạn hiểu về ý nghĩa và "
+"mục đích của giai đoạn."
+
+#. module: viin_helpdesk
+#: model:ir.model.fields,help:viin_helpdesk.field_helpdesk_ticket__partner_id
+msgid "You can choose a partner if you want them to follow this ticket."
+msgstr "Bạn có thể chọn một đối tác nếu bạn muốn họ theo dõi ticket này."
+
+#. module: viin_helpdesk
+#: code:addons/viin_helpdesk/models/helpdesk_stage.py:0
+#, python-format
+msgid ""
+"You cannot delete a Stage containing Teams or first you can delete all of "
+"its Teams."
+msgstr ""
+"Bạn không thể xóa một Giai đoạn mà có chứa các Nhóm hoặc trước tiên bạn cần "
+"xóa tất cả các Nhóm trong đó."
+
+#. module: viin_helpdesk
+#: code:addons/viin_helpdesk/models/helpdesk_team.py:0
+#, python-format
+msgid ""
+"You cannot delete a Team containing Tickets or first you can delete all of "
+"its Tickets."
+msgstr ""
+"Bạn không thể xóa một Nhóm mà có chứa các Ticket hoặc trước tiên bạn cần xóa"
+" hết các Ticket trong Nhóm đó ."
+
+#. module: viin_helpdesk
+#: code:addons/viin_helpdesk/models/helpdesk_ticket.py:0
+#, python-format
+msgid ""
+"You do not have the right set to Cancelled for Ticket '%s', only the Team "
+"Leader can do this."
+msgstr ""
+"Bạn không có quyền thiết lập Ticket này về giai đoạn Hủy, chỉ có Trưởng Nhóm"
+" mới có thể làm điều này."
+
+#. module: viin_helpdesk
+#: code:addons/viin_helpdesk/__init__.py:0
+#, python-format
+msgid ""
+"You must uninstall the module %s (%s) before you could install the module %s"
+" (%s)."
+msgstr ""
+"Bạn phải gỡ module %s (%s) trước khi có thể cài đặt module %s (%s)."
+
+#. module: viin_helpdesk
+#: code:addons/viin_helpdesk/models/ir_module_module.py:0
+#, python-format
+msgid ""
+"You must uninstall the module `viin_helpdesk` before you could install the "
+"module `helpdesk`."
+msgstr ""
+"Bạn phải gỡ module `viin_helpdesk` trước khi có thể cài đặt module"
+" `helpdesk`."
+
+#. module: viin_helpdesk
+#: code:addons/viin_helpdesk/models/helpdesk_ticket.py:0
+#, python-format
+msgid "You only write / delete the ticket '%s' which is in '%s' stage."
+msgstr "Bạn chỉ sửa / xóa ticket '%s' khi nó ở giai đoạn '%s'."
+
+#. module: viin_helpdesk
+#: code:addons/viin_helpdesk/models/helpdesk_ticket.py:0
+#, python-format
+msgid "You only write the ticket '%s' which is assigned to you."
+msgstr "Bạn chỉ sửa ticket '%s' mà được gán đến bạn."
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_helpdesk_team_rating_partner_stat
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_helpdesk_ticket_rating_partner_stat
+msgid "average"
+msgstr "trung bình"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_helpdesk_team_rating_partner_stat
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_helpdesk_ticket_rating_partner_stat
+msgid "bad"
+msgstr "tồi tệ"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_sla_form_view
+msgid "e.g. Close urgent ticket within 24 hours"
+msgstr "vd: Đóng ticket khẩn cấp trong 24 giờ"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_team_view_form_simplified
+msgid "e.g. General"
+msgstr "Chung chung"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_helpdesk_team_rating_partner_stat
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.portal_helpdesk_ticket_rating_partner_stat
+msgid "happy"
+msgstr "vui vẻ"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_ticket_form_view
+msgid "hours"
+msgstr "giờ"
+
+#. module: viin_helpdesk
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk.helpdesk_sla_form_view
+msgid "hours<br/>"
+msgstr "giờ"

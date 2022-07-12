@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record model="ir.ui.view" id="claim_list_form_view">
+		<field name="name">warranty.claim.form</field>
+		<field name="model">warranty.claim</field>
+		<field name="inherit_id" ref="to_warranty_management.warranty_claim_form_view" />
+		<field name="arch" type="xml">
+			<xpath expr="//button[@name='action_done']" position="after">
+				<button name="action_repair_request" type="object"
+					string="Create Repair Order" class="oe_highlight" states="confirmed,disclaimed" />
+			</xpath>
+			<xpath expr="//div[@name='button_box']" position="inside">
+
+				<button type="object" name="action_view_repair_history"
+					class="oe_stat_button" icon="fa-wrench"
+					attrs="{'invisible':[('repair_count','=',0)]}">
+					<field name="repair_count" widget="statinfo" string="Repair History"
+						help="View repair history" />
+					<field name="repair_ids" invisible="1" />
+				</button>
+			</xpath>
+		</field>
+	</record>
+
+	
+</odoo>
+
+
+
+
+

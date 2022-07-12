@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<menuitem id="overtime_root_menu" name="Overtime"
+		sequence="91" groups="base.group_user"
+		web_icon="viin_hr_overtime,static/description/icon.png" />
+
+	<menuitem id="hr_overtime_planning"
+		name="Planning" parent="overtime_root_menu" sequence="10" />
+
+	<menuitem id="menu_hr_overtime_report_main" name="Reports"
+		parent="overtime_root_menu" sequence="50"
+		groups="viin_hr_overtime.group_overtime_officer" />
+
+	<menuitem id="hr_overtime_config_menu" name="Configuration"
+		parent="overtime_root_menu" sequence="100"
+		groups="viin_hr_overtime.group_overtime_admin" />
+</odoo>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="view_voucher_give_order_tree" model="ir.ui.view">
+		<field name="name">voucher.give.order.tree</field>
+		<field name="model">voucher.give.order</field>
+		<field name="arch" type="xml">
+			<tree string="Voucher Give Orders" decoration-info="state=='draft'" decoration-warning="state=='confirmed'"
+					decoration-success="state=='done'" decoration-danger="state=='cancel'">
+				<field name="name" />
+				<field name="partner_id" />
+				<field name="give_date" />
+				<field name="state" />
+			</tree>
+		</field>
+	</record>
+	
+	<record id="view_voucher_give_order_form" model="ir.ui.view">
+            <field name="name">voucher.give.order.form</field>
+            <field name="model">voucher.give.order</field>
+            <field name="arch" type="xml">
+                <form string="Voucher Give Orders">
+	                <header>
+	                	<button name="action_confirm" string="Confirm" type="object" states="draft" class="oe_highlight"/>
+	                	<button name="action_give" string="Give" type="object" states="confirmed" class="oe_highlight" groups="to_promotion_voucher.group_promotion_voucher_manager"/>
+	                	<button name="action_draft" type="object" states="cancel" string="Set to Draft" class="oe_highlight"/>
+	                	<button name="action_cancel" type="object" states="confirmed" string="Cancel" class="oe_highlight" />
+	                    <field name="state" widget="statusbar" statusbar_visible="draft,confirmed,done"/>
+	                </header>
+	                <sheet>
+	                    <div class="oe_title">
+	                        <h1><field name="name" nolabel="1"/></h1>
+	                    </div>
+	                    <group>
+	                        <group>
+	                            <field name="origin"/>
+	                            <field name="give_date" attrs="{'invisible': [('state', '!=', 'done')]}"/>
+	                        </group>
+	                        <group>
+	                            <field name="partner_id"/>
+	                            <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+	                        </group>
+	                    </group>
+	                    <notebook>
+	                    	<page string="Vouchers">
+	                    		<field name="voucher_ids" domain="[('state', '=', 'new')]">
+	                    			<tree name="voucher_ids">
+										<field name="name" />
+										<field name="product_id"/>
+										<field name="lot_id" />
+										<field name="issue_date"/>
+									</tree>
+	                    		</field>
+	                    	</page>
+	                        <page string="Moves">
+	                        	<field name="move_finished_ids"/>
+	                        </page>
+	                    </notebook>
+	                </sheet>
+	                <div class="oe_chatter">
+	                    <field name="message_follower_ids" widget="mail_followers"/>
+	                    <field name="activity_ids" widget="mail_activity" />
+	                    <field name="message_ids" widget="mail_thread"/>
+	                </div>
+                </form>
+            </field>
+        </record>
+	
+	<record id="voucher_give_order_filter" model="ir.ui.view">
+		<field name="name">voucher.give.order.filter</field>
+		<field name="model">voucher.give.order</field>
+		<field name="arch" type="xml">
+			<search string="Voucher Give Orders">
+				<field name="name" string="Give Order" filter_domain="['|',('name','ilike',self),('origin','ilike',self)]"/>
+                <separator/>
+                <filter string="Draft" name="draft" domain="[('state','=','draft')]"/>
+                <filter string="Confirmed" name="confirmed" domain="[('state','=','confirmed')]"/>
+                <filter string="Done" name="done" domain="[('state', '=', 'done')]"/>
+                <separator/>
+                <field name="partner_id"/>
+                <group expand="0" string="Group By...">
+                    <filter string="Customer" name="grp_customer" domain="[]" context="{'group_by':'partner_id'}"/>
+                    <filter string="Status" name="grp_status" domain="[]" context="{'group_by':'state'}"/>
+                </group>
+			</search>
+		</field>
+	</record>
+
+	<record id="voucher_give_order_action" model="ir.actions.act_window">
+		<field name="name">Voucher Give Orders</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">voucher.give.order</field>
+		<field name="view_mode">tree,form</field>
+		<field name="search_view_id" ref="voucher_give_order_filter" />
+		<field name="help" type="html">
+        	<p class="oe_view_nocontent_create">
+        		Click to start a new voucher give order.
+       		</p>
+     	</field>
+	</record>
+	
+	<menuitem id="menu_give_voucher" action="voucher_give_order_action" name="Give Vouchers"
+			parent="menu_operation_issue" sequence="20" />
+	
+</odoo>

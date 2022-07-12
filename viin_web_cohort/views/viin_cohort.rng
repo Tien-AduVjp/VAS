@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+             xmlns:a="http://relaxng.org/ns/annotation/1.0"
+             datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+
+    <start>
+        <ref name="viin_cohort" />
+    </start>
+
+    <define name="viin_cohort">
+        <element name="viin_cohort">
+            <attribute name="string"/>
+            <attribute name="start_date"/>
+            <attribute name="stop_date"/>
+            <optional><attribute name="mode"/></optional>
+            <optional><attribute name="timeline"/></optional>
+            <optional><attribute name="interval"/></optional>
+            <optional><attribute name="measure"/></optional>
+        </element>
+    </define>
+</grammar>

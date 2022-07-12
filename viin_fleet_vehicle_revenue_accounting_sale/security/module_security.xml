@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="sales_team.group_sale_salesman" model="res.groups">
+        <field name="implied_ids" eval="[(4, ref('to_fleet_vehicle_revenue.fleet_vehicle_revenue_group_read'))]" />
+    </record>
+
+</odoo>

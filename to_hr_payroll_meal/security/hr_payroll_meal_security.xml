@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="hr_meal_order_comp_rule" model="ir.rule">
+			<field name="name">HR Meal Order Rule multi-company</field>
+			<field name="model_id" ref="model_hr_meal_order" />
+			<field eval="True" name="global" />
+			<field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+		</record>
+
+		<record id="hr_meal_order_line_comp_rule" model="ir.rule">
+			<field name="name">HR Meal Order Line Rule multi-company</field>
+			<field name="model_id" ref="model_hr_meal_order_line" />
+			<field eval="True" name="global" />
+			<field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+		</record>
+	</data>
+</odoo>

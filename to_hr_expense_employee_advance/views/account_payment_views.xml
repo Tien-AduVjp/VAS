@@ -1,0 +1,17 @@
+<odoo>
+	<record id="account_payment_view_form" model="ir.ui.view">
+		<field name="name">account.payment.inherit.expense.form</field>
+		<field name="model">account.payment</field>
+		<field name="inherit_id" ref="to_hr_employee_advance.view_account_payment_form" />
+		<field name="arch" type="xml">
+			<field name="employee_id" position="after">
+				<field name="expense_payment_mode" invisible="1"/>
+			</field>
+			<field name="employee_id" position="attributes">
+				<attribute name="attrs">{'invisible':[('is_advance_journal','=',False)],
+										'required':[('is_advance_journal','=',True), ('expense_payment_mode', '=', 'own_account')]}
+				</attribute>
+			</field>
+		</field>
+	</record>
+</odoo>

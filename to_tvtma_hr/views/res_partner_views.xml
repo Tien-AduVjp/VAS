@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="view_partner_form">
+			<field name="name">res.partner.form</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.view_partner_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//sheet" position="inside">
+					<field name="employee_ids" groups="hr.group_hr_user" invisible="1"/>
+				</xpath>
+				<xpath expr="//div[@name='button_box']" position="inside">
+					<button class="oe_stat_button" type="object"
+						attrs="{'invisible': [('hr_applicants_count', '=', 0)]}"
+						name="action_view_applicants" icon="fa-user"
+						groups="hr_recruitment.group_hr_recruitment_user"
+						context="{'default_partner_id': active_id}">
+						<field string="Applicants" name="hr_applicants_count"
+							widget="statinfo" />
+					</button>
+				</xpath>
+				<xpath expr="//div[@name='button_box']" position="after">
+					<div class="badge-pill badge-success float-right"
+						groups="hr_recruitment.group_hr_recruitment_user"
+						attrs="{'invisible': ['|',('hr_applicants_count', '=', 0),('employee_ids','!=',[])]}">Applicant</div>
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="res_partner_view_form_private">
+			<field name="name">res.partner.form</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.res_partner_view_form_private" />
+			<field name="arch" type="xml">
+				<xpath expr="//sheet" position="inside">
+					<field name="employee_ids" groups="hr.group_hr_user" invisible="1"/>
+				</xpath>
+				<xpath expr="//div[./div[@name='div_address']]" position="after">
+					<field name="vat" />
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="view_res_partner_filter">
+			<field name="name">res.partner.form</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id"
+				ref="base.view_res_partner_filter" />
+			<field name="arch" type="xml">
+				<xpath expr="//filter[@name='type_company']"
+					position="after">
+					<separator/>
+					<filter string="Applicant" name="ftr_applicant"
+						domain="[('hr_applicant_ids', '!=', False),('employee', '=', False)]"
+						groups="hr_recruitment.group_hr_recruitment_user" />
+					<filter string="Employee" name="ftr_employee"
+						domain="[('employee', '=', True)]"
+						groups="hr.group_hr_user" />
+				</xpath>
+			</field>
+		</record>
+
+	</data>
+</odoo>

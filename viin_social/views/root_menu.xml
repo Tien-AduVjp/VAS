@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+	<data>
+		<menuitem id="social_marketing_menu" name="Social Marketing" web_icon="viin_social,static/description/icon.png" groups="viin_social.viin_social_group_editor"/>
+		
+		<menuitem id="social_configuration_menu" name="Configuration" parent="social_marketing_menu" sequence="20" groups="viin_social.viin_social_group_admin"/>
+	
+		<menuitem id="social_page_menu" name="Page" parent="social_marketing_menu" sequence="19"/>
+	</data>
+</odoo>
+

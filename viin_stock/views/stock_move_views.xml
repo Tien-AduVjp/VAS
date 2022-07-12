@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="viin_stock_move_view_tree" model="ir.ui.view">
+        <field name="name">stock.move.tree</field>
+        <field name="model">stock.move</field>
+        <field name="priority" eval="999"/>
+        <field name="arch" type="xml">
+            <tree delete="0" create="0">
+				<field name="reference"/>
+                <field name="product_id"/>
+				<field name="product_uom_qty" string="Quantity"/>
+                <field name="product_uom" groups="uom.group_uom"/>
+                <field name="date_expected"/>
+                <field name="date"/>
+                <field name="state" optional="hide"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

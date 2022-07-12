@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="tax_repartition_line_tree" model="ir.ui.view">
+			<field name="name">account.tax.repartition.line.tree</field>
+			<field name="model">account.tax.repartition.line</field>
+			<field name="inherit_id" ref="account.tax_repartition_line_tree" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='account_id']" position="after">
+					<field name="id" attrs="{'invisible':True}" />
+					<field name="vat_ctp_account_id" />
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

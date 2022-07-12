@@ -1,0 +1,192 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_inter_company_sale_purchase
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-01 15:06+0000\n"
+"PO-Revision-Date: 2022-03-23 05:32+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_inter_company_sale_purchase
+#: model_terms:ir.ui.view,arch_db:to_inter_company_sale_purchase.res_config_settings_view_form
+msgid ", generate a"
+msgstr ""
+
+#. module: to_inter_company_sale_purchase
+#: model_terms:ir.ui.view,arch_db:to_inter_company_sale_purchase.res_config_settings_view_form
+msgid ""
+"<strong id=\"counter_doc\">\n"
+"\t\t\t\t\t\t\t<span attrs=\"{'invisible': [('applicable_on','!=', 'purchase')]}\" class=\"ml8\">Sale Order </span>\n"
+"\t\t\t\t\t\t\t<span attrs=\"{'invisible': [('applicable_on','!=', 'sale')]}\" class=\"ml8\">Purchase Order </span>\n"
+"\t\t\t\t\t\t\t<span attrs=\"{'invisible': [('applicable_on','!=', 'sale_purchase')]}\" class=\"ml8\"> Sale and Purchase Order </span>\n"
+"\t\t\t\t\t\t</strong>"
+msgstr ""
+
+#. module: to_inter_company_sale_purchase
+#: model:ir.model.fields,field_description:to_inter_company_sale_purchase.field_res_company__applicable_on
+#: model:ir.model.fields,field_description:to_inter_company_sale_purchase.field_res_config_settings__applicable_on
+msgid "Applicable On"
+msgstr ""
+
+#. module: to_inter_company_sale_purchase
+#: model:ir.model.fields,field_description:to_inter_company_sale_purchase.field_purchase_order__auto_generated
+msgid "Auto Generated Purchase Order"
+msgstr ""
+
+#. module: to_inter_company_sale_purchase
+#: model:ir.model.fields,field_description:to_inter_company_sale_purchase.field_sale_order__auto_generated
+msgid "Auto Generated Sales Order"
+msgstr ""
+
+#. module: to_inter_company_sale_purchase
+#: model:ir.model,name:to_inter_company_sale_purchase.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: to_inter_company_sale_purchase
+#: model:ir.model,name:to_inter_company_sale_purchase.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: to_inter_company_sale_purchase
+#: code:addons/to_inter_company_sale_purchase/models/purchase_order.py:0
+#, python-format
+msgid ""
+"Could not generate sales order for the company of the vendor while the "
+"currency of vendor's sales pricelist differs from the purchase order's "
+"currency. You should change the currency of the purchase order to %s."
+msgstr ""
+
+#. module: to_inter_company_sale_purchase
+#: code:addons/to_inter_company_sale_purchase/models/purchase_order.py:0
+#: code:addons/to_inter_company_sale_purchase/models/sale_order.py:0
+#, python-format
+msgid "Inter company user of company %s doesn't have enough access rights"
+msgstr ""
+
+#. module: to_inter_company_sale_purchase
+#: model:ir.model.fields,field_description:to_inter_company_sale_purchase.field_sale_order__inter_comp_purchase_order_id
+msgid "Inter-Company Purchase Order"
+msgstr ""
+
+#. module: to_inter_company_sale_purchase
+#: model:ir.model.fields,field_description:to_inter_company_sale_purchase.field_sale_order_line__inter_comp_purchase_order_line_id
+msgid "Inter-Company Purchase Order Line"
+msgstr ""
+
+#. module: to_inter_company_sale_purchase
+#: model:ir.model.fields,field_description:to_inter_company_sale_purchase.field_purchase_order__inter_comp_sale_order_id
+msgid "Inter-Company Sale Order"
+msgstr ""
+
+#. module: to_inter_company_sale_purchase
+#: model:ir.model.fields,field_description:to_inter_company_sale_purchase.field_purchase_order_line__inter_comp_sale_order_line_id
+msgid "Inter-Company Sale Order Line"
+msgstr ""
+
+#. module: to_inter_company_sale_purchase
+#: model:ir.model,name:to_inter_company_sale_purchase.model_account_move
+msgid "Journal Entries"
+msgstr ""
+
+#. module: to_inter_company_sale_purchase
+#: model:ir.model,name:to_inter_company_sale_purchase.model_purchase_order
+#: model:ir.model.fields.selection,name:to_inter_company_sale_purchase.selection__res_company__applicable_on__purchase
+msgid "Purchase Order"
+msgstr ""
+
+#. module: to_inter_company_sale_purchase
+#: model:ir.model,name:to_inter_company_sale_purchase.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr ""
+
+#. module: to_inter_company_sale_purchase
+#: model:ir.model.fields.selection,name:to_inter_company_sale_purchase.selection__res_company__applicable_on__sale
+msgid "Sale Order"
+msgstr ""
+
+#. module: to_inter_company_sale_purchase
+#: model:ir.model.fields.selection,name:to_inter_company_sale_purchase.selection__res_company__applicable_on__sale_purchase
+msgid "Sale and Purchase Order"
+msgstr ""
+
+#. module: to_inter_company_sale_purchase
+#: model:ir.model,name:to_inter_company_sale_purchase.model_sale_order
+msgid "Sales Order"
+msgstr ""
+
+#. module: to_inter_company_sale_purchase
+#: model:ir.model,name:to_inter_company_sale_purchase.model_sale_order_line
+msgid "Sales Order Line"
+msgstr ""
+
+#. module: to_inter_company_sale_purchase
+#: model:ir.model.fields,field_description:to_inter_company_sale_purchase.field_res_config_settings__rules_company_id
+msgid "Select Company"
+msgstr ""
+
+#. module: to_inter_company_sale_purchase
+#: model:ir.model.fields,help:to_inter_company_sale_purchase.field_res_config_settings__rules_company_id
+msgid "Select company to setup Inter company rules."
+msgstr ""
+
+#. module: to_inter_company_sale_purchase
+#: model:ir.model.fields,field_description:to_inter_company_sale_purchase.field_res_company__so_po_auto_validation
+#: model:ir.model.fields,field_description:to_inter_company_sale_purchase.field_res_config_settings__so_po_auto_validation
+msgid "So Po Auto Validation"
+msgstr ""
+
+#. module: to_inter_company_sale_purchase
+#: code:addons/to_inter_company_sale_purchase/models/purchase_order.py:0
+#: code:addons/to_inter_company_sale_purchase/tests/test_inter_company_sale_purchase.py:0
+#, python-format
+msgid ""
+"The inter-company invoice %s of the company %s was cancelled. Please contact"
+" that company to solve the issue."
+msgstr ""
+
+#. module: to_inter_company_sale_purchase
+#: code:addons/to_inter_company_sale_purchase/models/purchase_order.py:0
+#, python-format
+msgid ""
+"These purchase order(s): '%s' were auto generated by inter company "
+"transactions, so you can't create bills for them.These bills will be auto "
+"generated when the supplier invoices were validated."
+msgstr ""
+
+#. module: to_inter_company_sale_purchase
+#: code:addons/to_inter_company_sale_purchase/models/sale_order.py:0
+#, python-format
+msgid ""
+"These sale order(s): '%s' were auto generated by inter company transactions,"
+" so you can't create invoices for them.These invoices will be auto generated"
+" when the source invoices were validated."
+msgstr ""
+
+#. module: to_inter_company_sale_purchase
+#: model_terms:ir.ui.view,arch_db:to_inter_company_sale_purchase.res_config_settings_view_form
+msgid "When a company validates a"
+msgstr ""
+
+#. module: to_inter_company_sale_purchase
+#: model:ir.model.fields.selection,name:to_inter_company_sale_purchase.selection__res_company__so_po_auto_validation__draft
+msgid "Draft"
+msgstr ""
+
+#. module: to_inter_company_sale_purchase
+#: model_terms:ir.ui.view,arch_db:to_inter_company_sale_purchase.res_config_settings_view_form
+msgid "to"
+msgstr ""
+
+#. module: to_inter_company_sale_purchase
+#: model:ir.model.fields.selection,name:to_inter_company_sale_purchase.selection__res_company__so_po_auto_validation__validated
+msgid "Validated"
+msgstr ""

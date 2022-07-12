@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="approval_request_type_form_view" model="ir.ui.view">
+			<field name="name">approval.request.type.form</field>
+			<field name="model">approval.request.type</field>
+			<field name="arch" type="xml">
+				<form string="Approval Request Type">
+					<sheet>
+						<h1>
+							<field name="name" />
+						</h1>
+						<group>
+							<group>
+								<field name="type" />
+								<field name="company_id" groups="base.group_multi_company" />
+							</group>
+							<group>
+								<field name="validation_type" widget="radio" />
+								<field name="responsible_id" 
+								attrs="{'invisible': [('validation_type', 'in', ['no_validation', 'leader'])], 'required': [('validation_type', 'in', ['hr', 'both'])]}"/>
+							</group>
+						</group>
+						<label for="description" />
+						<field name="description" />
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers" />
+						<field name="activity_ids" widget="mail_activity" />
+						<field name="message_ids" widget="mail_thread" />
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record id="approval_request_type_search_view"
+			model="ir.ui.view">
+			<field name="name">approval.request.type.search</field>
+			<field name="model">approval.request.type</field>
+			<field name="arch" type="xml">
+				<search string="Approval Request">
+					<field name="name" />
+					<field name="type" />
+					<field name="validation_type" />
+					<field name="responsible_id" />
+					<group expand="0" string="Group By">
+						<filter name="group_type" string="Type" context="{'group_by':'type'}" />
+						<filter name="group_valadation_type" string="Validation Type" context="{'group_by':'validation_type'}" />
+						<filter name="group_responsible" string="Responsible" context="{'group_by':'responsible_id'}" />
+					</group>
+				</search>
+			</field>
+		</record>
+
+	<record id="approval_request_type_view_kanban"
+		model="ir.ui.view">
+		<field name="name">approval.request.type.kanban</field>
+		<field name="model">approval.request.type</field>
+		<field name="arch" type="xml">
+			<kanban class="oe_background_grey o_kanban_dashboard o_emphasize_colors o_approval_request_kanban" create="0">
+				<templates>
+					<t t-name="kanban-box">
+					<div>
+						<div t-attf-class="o_kanban_card_header">
+							<div class="o_kanban_card_header_title">
+								<div class="o_primary" t-if="!selection_mode">
+									<a type="object" name="get_action_approval_request_type">
+										<field name="name"/>
+									</a>
+								</div>
+								<div class="o_primary" t-if="selection_mode">
+									<field name="name"/>
+								</div>
+								<div>
+									<field name="company_id" groups="base.group_multi_company"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="container o_kanban_card_content" t-if="!selection_mode">
+							<div class="row">
+								<div class="col-6 o_kanban_primary_left">
+									<button class="btn btn-primary" name="get_approval_request_form_views" type="object">
+										<span>Create Request</span>
+									</button>
+								</div>
+								
+								<div class="col-6 o_kanban_primary_right">
+									<div t-if="record.waiting_requests_count.raw_value > 0" class="row">
+										<div class="col-9">
+											<a name="action_view_waiting_requests" type="object">
+												Waiting
+											</a>
+										</div>
+										<div class="col-3">
+											<field name="waiting_requests_count"/>
+										</div>
+									</div>
+									<div t-if="record.approved_requests_count.raw_value > 0" class="row">
+										<div class="col-9">
+											<a name="action_view_approved_requests" type="object">
+												Approved
+											</a>
+										</div>
+										<div class="col-3">
+											<field name="approved_requests_count"/>
+										</div>
+									</div>
+									<div t-if="record.requests_count.raw_value > 0" class="row">
+										<div class="col-9">
+											<a name="action_view_requests" type="object">
+												All
+											</a>
+										</div>
+										<div class="col-3">
+											<field name="requests_count"/>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						</div>
+					</t>
+				</templates>
+			</kanban>
+		</field>
+	</record>
+		<record id="approval_request_type_tree_view" model="ir.ui.view">
+			<field name="name">approval.request.type.tree</field>
+			<field name="model">approval.request.type</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Approval Request Types">
+					<field name="name" />
+					<field name="type" />
+					<field name="requests_count" />
+					<field name="approved_requests_count" />
+					<field name="waiting_requests_count" />
+					<field name="validation_type" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="approval_request_type_action" model="ir.actions.act_window">
+			<field name="name">Approval Request Types</field>
+			<field name="res_model">approval.request.type</field>
+			<field name="view_mode">tree,form</field>
+			<field name="context">{}</field>
+		</record>
+
+		<record id="approval_request_type_kanban" model="ir.actions.act_window">
+            <field name="name">Approval Overview</field>
+            <field name="res_model">approval.request.type</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">kanban,form</field>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Create a new approval request type
+              </p>
+            </field>
+        </record>
+
+		<menuitem id="approval_request_type_menu" name="Overview" 
+			action="approval_request_type_kanban"
+			parent="approval_root_menu" sequence="0"/>
+
+		<menuitem
+		id="approval_request_type_menu_configuration"
+		name="Approval Types"
+		parent="approval_config_menu"
+		action="approval_request_type_action"
+		groups="group_approval_manager"
+		sequence="1"/>
+	</data>
+</odoo>

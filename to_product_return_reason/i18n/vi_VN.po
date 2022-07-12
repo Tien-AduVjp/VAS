@@ -1,0 +1,249 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_product_return_reason
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20200318\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-10 08:17+0000\n"
+"PO-Revision-Date: 2020-04-10 08:17+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_product_return_reason
+#: model:ir.model.fields,field_description:to_product_return_reason.field_product_return_reason__message_needaction
+msgid "Action Needed"
+msgstr "Cần có Hành động"
+
+#. module: to_product_return_reason
+#: model:ir.model.fields,field_description:to_product_return_reason.field_product_return_reason__active
+msgid "Active"
+msgstr "Hiệu lực"
+
+#. module: to_product_return_reason
+#: model:ir.model.fields,field_description:to_product_return_reason.field_product_return_reason__message_attachment_count
+msgid "Attachment Count"
+msgstr "Số Lượng Đính Kèm"
+
+#. module: to_product_return_reason
+#: model_terms:ir.actions.act_window,help:to_product_return_reason.action_product_return_reason
+msgid "Click to create a product return reason."
+msgstr "Click để tạo một lý do trả lại sản phẩm"
+
+#. module: to_product_return_reason
+#: model:ir.model.fields,field_description:to_product_return_reason.field_product_return_reason__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: to_product_return_reason
+#: model:ir.model.fields,field_description:to_product_return_reason.field_product_return_reason__create_date
+msgid "Created on"
+msgstr "Được tạo vào"
+
+#. module: to_product_return_reason
+#: model:ir.model.fields,field_description:to_product_return_reason.field_product_return_reason__description
+msgid "Description"
+msgstr "Mô Tả"
+
+#. module: to_product_return_reason
+#: model_terms:ir.ui.view,arch_db:to_product_return_reason.view_product_return_reason_form
+msgid "Descriptions"
+msgstr "Mô Tả"
+
+#. module: to_product_return_reason
+#: model:ir.model.fields,field_description:to_product_return_reason.field_product_return_reason__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_product_return_reason
+#: model:ir.model.fields,field_description:to_product_return_reason.field_product_return_reason__message_follower_ids
+msgid "Followers"
+msgstr "Người dõi theo"
+
+#. module: to_product_return_reason
+#: model:ir.model.fields,field_description:to_product_return_reason.field_product_return_reason__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Người theo dõi (Các kênh)"
+
+#. module: to_product_return_reason
+#: model:ir.model.fields,field_description:to_product_return_reason.field_product_return_reason__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Người theo dõi (Các đối tác)"
+
+#. module: to_product_return_reason
+#: model:ir.model.fields,field_description:to_product_return_reason.field_product_return_reason__id
+msgid "ID"
+msgstr "ID"
+
+#. module: to_product_return_reason
+#: model:ir.model.fields,help:to_product_return_reason.field_product_return_reason__message_needaction
+#: model:ir.model.fields,help:to_product_return_reason.field_product_return_reason__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Nếu đánh dấu kiểm, các thông điệp mới yêu cầu sự có mặt của bạn."
+
+#. module: to_product_return_reason
+#: model:ir.model.fields,help:to_product_return_reason.field_product_return_reason__message_has_error
+#: model:ir.model.fields,help:to_product_return_reason.field_product_return_reason__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Nếu đánh dấu kiểm, sẽ hiển thị thông báo lỗi."
+
+#. module: to_product_return_reason
+#: model:ir.model.fields,help:to_product_return_reason.field_product_return_reason__active
+msgid ""
+"If unchecked, it will allow you to hide the reason without removing it."
+msgstr "Nếu không đánh dấu kiểm, cho phép ẩn lý do mà không cần xóa"
+
+#. module: to_product_return_reason
+#: model:ir.model.fields,field_description:to_product_return_reason.field_product_return_reason__message_is_follower
+msgid "Is Follower"
+msgstr "Là người theo dõi"
+
+#. module: to_product_return_reason
+#: model:ir.model.fields,field_description:to_product_return_reason.field_product_return_reason____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: to_product_return_reason
+#: model:ir.model.fields,field_description:to_product_return_reason.field_product_return_reason__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: to_product_return_reason
+#: model:ir.model.fields,field_description:to_product_return_reason.field_product_return_reason__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: to_product_return_reason
+#: model:ir.model.fields,field_description:to_product_return_reason.field_product_return_reason__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Tệp đính kèm chính"
+
+#. module: to_product_return_reason
+#: model:ir.model.fields,field_description:to_product_return_reason.field_product_return_reason__message_has_error
+msgid "Message Delivery error"
+msgstr "Thông điệp gửi đi gặp lỗi"
+
+#. module: to_product_return_reason
+#: model:ir.model.fields,field_description:to_product_return_reason.field_product_return_reason__message_ids
+msgid "Messages"
+msgstr "Thông điệp"
+
+#. module: to_product_return_reason
+#: model:ir.model.fields,field_description:to_product_return_reason.field_product_return_reason__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Số lượng Hành động"
+
+#. module: to_product_return_reason
+#: model:ir.model.fields,field_description:to_product_return_reason.field_product_return_reason__message_has_error_counter
+msgid "Number of errors"
+msgstr "Số lượng lỗi"
+
+#. module: to_product_return_reason
+#: model:ir.model.fields,help:to_product_return_reason.field_product_return_reason__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Số thông điệp cần có hành động"
+
+#. module: to_product_return_reason
+#: model:ir.model.fields,help:to_product_return_reason.field_product_return_reason__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Số lượng các thông điệp có lỗi về gửi tin"
+
+#. module: to_product_return_reason
+#: model:ir.model.fields,help:to_product_return_reason.field_product_return_reason__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Số thông điệp chưa đọc"
+
+#. module: to_product_return_reason
+#: model:ir.actions.act_window,name:to_product_return_reason.action_product_return_reason
+#: model_terms:ir.ui.view,arch_db:to_product_return_reason.view_product_return_reason_form
+#: model_terms:ir.ui.view,arch_db:to_product_return_reason.view_product_return_reason_tree
+msgid "Product Return Reason"
+msgstr "Lý Do Trả Lại Sản Phẩm"
+
+#. module: to_product_return_reason
+#: model:ir.model.fields,field_description:to_product_return_reason.field_product_return_reason__products_count
+msgid "Products Count"
+msgstr "Số lượng Sản phẩm"
+
+#. module: to_product_return_reason
+#: model:ir.model,name:to_product_return_reason.model_product_return_reason
+msgid "Products Return Reason"
+msgstr "Lý do Trả lại các Sản phẩm"
+
+#. module: to_product_return_reason
+#: model_terms:ir.ui.view,arch_db:to_product_return_reason.view_product_return_reason_form
+msgid "Reason Title"
+msgstr "Tiêu đề Lý do"
+
+#. module: to_product_return_reason
+#: model:res.groups,name:to_product_return_reason.group_return_reason_manager
+msgid "Return Reasons Manager"
+msgstr "Quản lý Lý do Trả lại"
+
+#. module: to_product_return_reason
+#: model:ir.model.fields,field_description:to_product_return_reason.field_product_return_reason__product_ids
+msgid "Returned Products"
+msgstr "Các Sản phẩm đã trả lại"
+
+#. module: to_product_return_reason
+#: model:ir.model.fields,field_description:to_product_return_reason.field_product_return_reason__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Lỗi gửi SMS"
+
+#. module: to_product_return_reason
+#: model:ir.model.constraint,message:to_product_return_reason.constraint_product_return_reason_name_unique
+msgid "The Title of the reason must be unique"
+msgstr "Tiêu đề lý do trả lại phải là duy nhất"
+
+#. module: to_product_return_reason
+#: model:ir.model.fields,help:to_product_return_reason.field_product_return_reason__product_ids
+msgid "The products that have been returned with this reason"
+msgstr "Các Sản phẩm đã được trả lại với lý do này"
+
+#. module: to_product_return_reason
+#: model:ir.model.constraint,message:to_product_return_reason.constraint_product_return_reason_name_description_check
+msgid "The title of the reason should not be the description"
+msgstr "Tiêu đề của lý do không nên giống mô tả"
+
+#. module: to_product_return_reason
+#: model:ir.model.fields,help:to_product_return_reason.field_product_return_reason__name
+msgid "The title of the reason, e.g. Bad quality, Customer changed mind, etc"
+msgstr "Tiêu đề của lý do, vd. Chất lượng kém, khách hàng đổi ý, v.v"
+
+#. module: to_product_return_reason
+#: model:res.groups,comment:to_product_return_reason.group_return_reason_manager
+msgid ""
+"The users of this group will have all access rights to manipulate all Return"
+" Reason records (Read, Update, Delete, Create)."
+msgstr "Người dùng của nhóm này sẽ có tất cả quyền truy cập để quản lý tất cả"
+" bản ghi Lý do Trả lại (Đọc, Cập nhật, Xóa, Tạo)."
+
+#. module: to_product_return_reason
+#: model:ir.model.fields,field_description:to_product_return_reason.field_product_return_reason__name
+msgid "Title"
+msgstr "Tiêu đề"
+
+#. module: to_product_return_reason
+#: model:ir.model.fields,field_description:to_product_return_reason.field_product_return_reason__message_unread
+msgid "Unread Messages"
+msgstr "Thông điệp chưa đọc"
+
+#. module: to_product_return_reason
+#: model:ir.model.fields,field_description:to_product_return_reason.field_product_return_reason__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Bộ đếm Thông điệp chưa đọc"
+
+#. module: to_product_return_reason
+#: model:ir.model.fields,field_description:to_product_return_reason.field_product_return_reason__website_message_ids
+msgid "Website Messages"
+msgstr "Website Thông điệp"
+
+#. module: to_product_return_reason
+#: model:ir.model.fields,help:to_product_return_reason.field_product_return_reason__website_message_ids
+msgid "Website communication history"
+msgstr "Website Lịch sử thông tin liên lạc"

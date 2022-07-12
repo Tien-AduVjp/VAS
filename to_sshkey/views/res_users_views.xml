@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="view_users_form_simple_modif">
+			<field name="name">res.users.preferences.form.inherit</field>
+			<field name="model">res.users</field>
+			<field name="inherit_id"
+				ref="base.view_users_form_simple_modif" />
+			<field name="arch" type="xml">
+				<xpath expr="//group[@name='preferences']" position="after">
+					<separator string="SSH Keys"
+						groups="to_sshkey.group_sshkey_user" />
+					<field name="sshkey_pair_ids"
+						groups="to_sshkey.group_sshkey_user" readonly="0"/>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>
+
+
+
+		

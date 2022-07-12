@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="git_repository_view_form" model="ir.ui.view">
+			<field name="name">git.repository.form</field>
+			<field name="model">git.repository</field>
+			<field name="arch" type="xml">
+				<form string="Git Repository Form">
+					<header>
+						<button name="scan_for_branches" type="object"
+							string="Scan for Branches" class="oe_read_only oe_highlight"
+							attrs="{'invisible':[('branch_ids','!=',[])]}" />
+						<button name="scan_for_branches" type="object"
+							string="Scan for Branches" class="oe_read_only"
+							attrs="{'invisible':[('branch_ids','=',[])]}" />
+						<button name="scan_for_branches_and_checkout" type="object"
+							string="Scan for Branches and Checkout" class="oe_read_only"
+							groups="base.group_no_one" />
+						<button string="Pull" class="oe_read_only oe_highlight"
+							type="object" name="action_pull"
+							attrs="{'invisible':[('branch_ids','=',[])]}"
+							help="Update all the already checked out branches of this repository" />
+						<button string="Reset to HEAD" class="oe_read_only"
+							type="object" name="action_reset_to_head"
+							help="Reset all the checked out branches to their HEADs" />
+						<button string="Reinitialize"
+							class="btn btn-danger oe_read_only" type="object"
+							name="action_reinitialize" groups="to_git.group_to_git_manager"
+							confirm="This will delete all the git content from disk and reinitialize the git repository. Although this does not touch to any record in your Odoo database, it may affect some git operations (e.g. zip and download files from git repository). Are you sure to preceed anyway?"
+							help="This will delete all the git content from disk and re-Initialize the git repository" />
+					</header>
+					<div
+						class="alert alert-info alert-dismissible border-0 rounded-0 fade show"
+						role="alert" groups="base.group_no_one">
+						<h5>System Requirements</h5>
+						<div>
+							Please make sure that you set enough memory when fetching a large
+							git repository. For example, Odoo's git repo may require the
+							following memory settings in your Odoo startup configuration.
+							<pre>
+								limit_memory_soft = 4294967296
+								limit_memory_hard = 5368709120
+							</pre>
+						</div>
+						<button type="button" class="close" data-dismiss="alert"
+							aria-label="Close">
+							<span aria-hidden="false">x</span>
+						</button>
+					</div>
+					<sheet>
+						<div class="oe_button_box" name="button_box">
+							<button name="action_view_forks" type="object"
+								class="oe_stat_button" icon="fa-code-fork">
+								<field name="forks_count" string="Forks" widget="statinfo" />
+							</button>
+						</div>
+						<div class="oe_title">
+							<h1>
+								<field name="name" readonly="1" class="oe_read_only" />
+							</h1>
+
+							<div>
+								<label class="o_form_label oe_edit_only" for="remote_url" />
+								<field name="remote_url" widget="url"
+									placeholder="ssh://git@github.com/odoo/odoo.git"
+									groups="to_git.group_to_git_user" />
+							</div>
+							<div class="oe_edit_only">
+								<label class="o_form_label oe_edit_only" for="name" />
+								<field name="name" />
+							</div>
+						</div>
+						<group>
+							<group>
+								<field name="ssh_key_id" groups='to_sshkey.group_sshkey_manager' />
+								<field name="parent_id" />
+							</group>
+							<group>
+								<field name="vendor_id" />
+								<field name="company_id" groups="base.group_multi_company" />
+							</group>
+						</group>
+						<notebook>
+							<page name="branch_ids" string="Branches">
+								<field name="branch_ids"
+									context="{'default_repository_id': active_id}">
+									<tree name="branch_ids">
+										<field name="name" readonly="1" force_save="1" />
+										<field name="is_default" readonly="1" force_save="1" />
+										<field name="checked_out" invisible="1" />
+										<button name="action_checkout"
+											attrs="{'invisible':[('checked_out','=',True)]}"
+											string="Checkout" type="object"
+											class="btn btn-primary btn-sm" />
+										<field name="recent_pull_time" readonly="1"
+											force_save="1" />
+										<field name="auto_scan" widget="boolean_toggle" />
+										<field name="company_id" invisible="1" force_save="1" />
+									</tree>
+								</field>
+							</page>
+							<page name="page_info" string="Other Info">
+								<group>
+									<field name="path" groups="base.group_system"
+										readonly="1" />
+									<field name="scheme" groups="base.group_no_one" />
+									<field name="domain_name" groups="base.group_no_one" />
+									<field name="netloc" groups="base.group_no_one" />
+									<field name="netpath" groups="base.group_no_one" />
+								</group>
+							</page>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers" />
+						<field name="message_ids" widget="mail_thread" />
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record id="git_repository_tree_view" model="ir.ui.view">
+			<field name="name">git.repository.tree</field>
+			<field name="model">git.repository</field>
+			<field name="arch" type="xml">
+				<tree string="Git Repository">
+					<field name="sequence" widget="handle"/>
+					<field name="name" />
+					<field name="remote_url" />
+					<field name="vendor_id" />
+					<field name="branches_count" string="# of Branches" />
+					<field name="forks_count" string="Forks" />
+					<field name="company_id" groups="base.group_multi_company" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="git_repository_search_view" model="ir.ui.view">
+			<field name="name">git.repository.search</field>
+			<field name="model">git.repository</field>
+			<field name="arch" type="xml">
+				<search string="Search Git Repository">
+					<field name="name"
+						filter_domain="['|',('name','ilike',self),('remote_url','ilike',self)]" />
+					<field name="remote_url" />
+					<field name="vendor_id" />
+					<separator />
+					<field name="company_id" groups="base.group_multi_company" />
+					<group expand="0" name="group_by" string="Group By">
+						<filter name="grp_vendor" string="Vendor" domain="[]"
+							context="{'group_by' : 'vendor_id'}" />
+						<filter name="grp_company_id" string="Company" domain="[]"
+							context="{'group_by' : 'company_id'}"
+							groups="base.group_multi_company" />
+					</group>
+				</search>
+			</field>
+		</record>
+
+		<record id="git_repository_action"
+			model="ir.actions.act_window">
+			<field name="name">Git Repository</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">git.repository</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem id="git_root_menu" name="Git"
+			groups="group_to_git_user" sequence="49"
+			web_icon="to_git,static/description/icon.png" />
+
+		<menuitem id="git_main_menu" name="Git" sequence="10"
+			parent="git_root_menu" />
+		<menuitem id="git_repo_menu" name="Repository" sequence="10"
+			parent="git_main_menu" action="git_repository_action" />
+	</data>
+</odoo>

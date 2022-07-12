@@ -1,0 +1,54 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_partner_check_unique_vat
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-20 02:33+0000\n"
+"PO-Revision-Date: 2021-08-20 02:33+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_partner_check_unique_vat
+#: model:ir.model.fields,field_description:to_partner_check_unique_vat.field_res_company__check_unique_vat
+#: model:ir.model.fields,field_description:to_partner_check_unique_vat.field_res_config_settings__check_unique_vat
+msgid "Checking unique VAT of partner"
+msgstr "Kiểm tra VAT đối tác là duy nhất"
+
+#. module: to_partner_check_unique_vat
+#: model:ir.model,name:to_partner_check_unique_vat.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: to_partner_check_unique_vat
+#: model:ir.model,name:to_partner_check_unique_vat.model_res_config_settings
+msgid "Config Settings"
+msgstr "Thiết lập Cấu hình"
+
+#. module: to_partner_check_unique_vat
+#: model:ir.model,name:to_partner_check_unique_vat.model_res_partner
+msgid "Contact"
+msgstr "Danh bạ"
+
+#. module: to_partner_check_unique_vat
+#: model:ir.model.fields,help:to_partner_check_unique_vat.field_res_company__check_unique_vat
+#: model:ir.model.fields,help:to_partner_check_unique_vat.field_res_config_settings__check_unique_vat
+#: model_terms:ir.ui.view,arch_db:to_partner_check_unique_vat.res_config_settings_view_form
+msgid "The creation of duplicated tax code contacts are not allowed"
+msgstr "Không cho phép tạo Liên hệ có mã số thuế trùng nhau"
+
+#. module: to_partner_check_unique_vat
+#: code:addons/to_partner_check_unique_vat/models/res_partner.py:0
+#, python-format
+msgid ""
+"This Tax ID already exists and is being used by Partner '%s'. Please use "
+"another VAT code, which is unique!"
+msgstr ""
+"Mã số thuế đã tồn tại và được sử dụng cho đối tác '%s'. Vui lòng "
+"sử dụng mã số thuế là duy nhất khác!"

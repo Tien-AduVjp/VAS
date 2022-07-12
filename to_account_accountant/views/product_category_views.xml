@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+	<menuitem id="menu_product_product_categories" parent="account.account_management_menu" action="product.product_category_action_form" sequence="3"
+		groups="account.group_account_manager"/>
+
+</odoo>

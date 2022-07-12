@@ -1,0 +1,82 @@
+<odoo>
+	<data>
+		<record id="helpdesk_stage_form_view" model="ir.ui.view">
+			<field name="name">helpdesk.stage.form</field>
+			<field name="model">helpdesk.stage</field>
+			<field name="arch" type="xml">
+				<form string="Helpdesk Stage Form">
+					<sheet>						
+						<div class="oe_title">
+							<separator string="Helpdesk Stage" class="oe_edit_only" />
+							<h1>
+								<field name="name" class="field_name" />
+							</h1>
+						</div>
+						<group>
+							<group>
+								<field name="team_ids" widget="many2many_tags" groups="base.group_no_one" />
+								<field name="mail_template_id" />
+								<field name="rating_template_id" groups="viin_helpdesk.group_helpdesk_rating"/>
+							</group>
+							<group>
+								<field name="fold" />
+								<field name="is_final_stage" groups="viin_helpdesk.group_helpdesk_user"/>
+								<field name="auto_validation_kanban_state" attrs="{'invisible': [('rating_template_id','=', False)]}" groups="viin_helpdesk.group_helpdesk_rating" />
+							</group>
+						</group>
+						<group name="stage_description" string="Stage Description and Tooltips">
+                            <p class="text-muted" colspan="2">
+                                At each stage employees can block or make ticket ready for next stage.
+                                You can define here labels that will be displayed for the state instead
+                                of the default labels.
+                            </p>
+                            <label for="legend_normal" string=" " class="o_status oe_project_kanban_legend" title="Ticket in progress. Click to block or set as done."
+                                aria-label="Ticket in progress. Click to block or set as done." role="img"/>
+                            <field name="legend_normal" nolabel="1"/>
+                            <label for="legend_blocked" string=" " class="o_status o_status_red oe_project_kanban_legend" title="Ticket is blocked. Click to unblock or set as done."
+                                aria-label="Ticket is blocked. Click to unblock or set as done." role="img"/>
+                            <field name="legend_blocked" nolabel="1"/>
+                            <label for="legend_done" string=" " class="o_status o_status_green oe_project_kanban_legend" title="This step is done. Click to block or set in progress."
+                                aria-label="This step is done. Click to block or set in progress." role="img"/>
+                            <field name="legend_done" nolabel="1"/>
+                        </group>
+						<separator string="Description" class="oe_edit_only" />
+						<p class="text-muted" colspan="2">
+                            You can also add a description to help your coworkers understand the meaning and purpose of the stage.
+                        </p>
+						<field name="description" class="field_description" />
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers" />
+						<field name="activity_ids" widget="mail_activity" />
+						<field name="message_ids" widget="mail_thread" />
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record id="helpdesk_stage_tree_view" model="ir.ui.view">
+			<field name="name">helpdesk.stage.tree</field>
+			<field name="model">helpdesk.stage</field>
+			<field name="arch" type="xml">
+				<tree string="Helpdesk Stage Tree">
+					<field name="sequence" widget="handle"/>
+					<field name="name" />
+					<field name="fold" />
+					<field name="is_final_stage" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="helpdesk_stage_action" model="ir.actions.act_window">
+			<field name="name">Stages</field>
+			<field name="res_model">helpdesk.stage</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="view_mode">tree,form</field>
+			<field name="view_id" ref="helpdesk_stage_tree_view" />
+		</record>
+		
+		<menuitem id="helpdesk_stage_menu" parent="configuration_menu" action="helpdesk_stage_action" sequence="14" />
+		
+	</data>
+</odoo>

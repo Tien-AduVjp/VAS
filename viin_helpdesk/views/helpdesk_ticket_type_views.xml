@@ -1,0 +1,42 @@
+<odoo>
+	<data>
+		<record id="helpdesk_ticket_type_form_view" model="ir.ui.view">
+			<field name="name">helpdesk.ticket.type.form</field>
+			<field name="model">helpdesk.ticket.type</field>
+			<field name="arch" type="xml">
+				<form string="Helpdesk Ticket Type Form">
+					<sheet>
+						<group>
+							<group>
+								<field name="name" />
+							</group>
+						</group>
+						<separator string="Description" />
+						<field name="description" />
+					</sheet>
+				</form>
+			</field>
+		</record>
+		
+		<record id="helpdesk_ticket_type_tree_view" model="ir.ui.view">
+			<field name="name">helpdesk.ticket.type.tree</field>
+			<field name="model">helpdesk.ticket.type</field>
+			<field name="arch" type="xml">
+				<tree string="Helpdesk Ticket Type Tree">
+					<field name="sequence" widget="handle"/>
+					<field name="name" />
+				</tree>
+			</field>
+		</record>
+		
+		<record id="helpdesk_ticket_type_action" model="ir.actions.act_window">
+			<field name="name">Ticket Types</field>
+			<field name="res_model">helpdesk.ticket.type</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+		
+		<menuitem id="helpdesk_ticket_type_menu" parent="configuration_menu" action="helpdesk_ticket_type_action" sequence="16" />
+			
+	</data>
+</odoo>

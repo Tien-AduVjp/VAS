@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+	<data>
+		<record id="social_article_action" model="ir.actions.act_window">
+			<field name="name">Article</field>
+			<field name="res_model">social.article</field>
+			<field name="view_mode">kanban,tree,form,search</field>
+		</record>
+
+		<record id="social_article_view_kanban" model="ir.ui.view">
+			<field name="name">Article</field>
+			<field name="model">social.article</field>
+			<field name="arch" type="xml">
+				<kanban>
+					<field name="id"/>
+						<field name="page_ids"/>
+						<field name="message"/>
+						<field name="message_view_more"/>
+						<field name="attachment_type"/>
+						<field name="attachment_ids"/>
+						<field name="attachment_link"/>
+						<field name="media_ids"/>
+						<field name="assign_id"/>
+						<field name="author_id"/>
+					<templates>
+						<t t-name="kanban-box">
+							<div class="oe_kanban_global_click mb-3">
+								<div class="kanban_social_article_header d-flex justify-content-between border-bottom p-2">
+									<div>
+										<t t-foreach="record.media_ids.raw_value" t-as="media">
+											<t t-if="media">
+												<img width="18" t-att-src="kanban_image('social.media', 'image', media)" alt="Social Media"/>
+											</t>
+										</t>
+									</div>
+									<div>
+										<field name="state" widget="label_selection" options="{'class':{'draft':'info', 'confirmed':'success', 'cancelled':'danger'}}"/>
+									</div>
+								</div>
+								
+								<div class="kanban_social_post_footer d-flex justify-content-between p-2">
+									<div>
+										<img t-att-src="kanban_image('res.users', 'image_1920', record.author_id.raw_value)"
+										t-att-title="record.author_id.value" t-att-value="record.author_id.value" alt="Author" width="20"/>
+									</div>
+									<div>
+										<i class="fa fa-calendar" title="Create on"/>
+										<field name="create_date"/>
+									</div>
+								</div>
+								<hr class="mt-2 mb-2"></hr>
+								<div class="kanban_social_articlse_content">
+									<t t-if="record.message_view_more.raw_value">
+										<field name="message_view_more"/>
+										<b>... See More</b>
+									</t>
+									<t t-else="">
+										<field name="message"/>
+									</t>
+								</div>
+								<br/>
+								<t t-if="record.attachment_type.raw_value=='file'">
+									<div class="kanban_social_post_attachments">
+										<div class="social_page_avatar mr-4">
+											<t t-set="i" t-value="1"/>
+											<t t-foreach="record.attachment_ids.raw_value" t-as="attachment">
+														<t t-if="i&lt;4">
+															<img t-attf-src="/web/image/#{attachment}" width="27%" height="27%" alt="Attachment"/>
+														</t>
+														<t t-if="i==4">
+															<span>More+</span>
+														</t>
+												<t t-set="i" t-value="i+1"/>
+											</t>
+										</div>
+									</div>
+								</t>
+							</div>
+						</t>
+					</templates>
+				</kanban>
+			</field>
+		</record>
+
+		<record id="social_article_view_tree" model="ir.ui.view">
+			<field name="name">Article</field>
+			<field name="model">social.article</field>
+			<field name="arch" type="xml">
+				<tree string="Article">
+					<field name="create_date"/>
+					<field name="page_ids" widget="many2many_tags"/>
+					<field name="message"/>
+					<field name="author_id"/>
+					<field name="state"/>
+				</tree>
+			</field>
+		</record>
+	
+		<record id="social_article_view_form" model="ir.ui.view">
+			<field name="name">Article</field>
+			<field name="model">social.article</field>
+			<field name="arch" type="xml">
+				<form string="Article" class="viin_social_article_view_form">
+					<header>
+						<field name="state" widget="statusbar"/>
+						<button name="action_draft" string="Set to Draft" class="oe_highlight" type="object" attrs="{'invisible': [('state', '!=', 'cancelled')]}"/>
+						<button name="action_confirm" string="Confirm" class="oe_highlight" type="object" attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+						<button name="action_cancel" string="Cancel" type="object"
+								confirm="Are you sure you want to cancel this post? If canceled, all posts on odoo and social networks will be deleted" 
+								help="When set to Cancel, All Posts will be deleted" 
+								attrs="{'invisible': [('can_cancel', '=', False)]}" />
+					</header>
+					<sheet>
+                        <div name="button_box" class="oe_button_box"> 
+                        	<button name="action_view_posts"
+                        		class="oe_stat_button"
+                        		icon="fa-calendar"
+                        		type="object">
+                        		<field name="post_count" widget="statinfo" string="Post"/>
+                        	</button>
+                        </div>
+						<group>
+							<group name="post_content" string="Post's Content">
+								<field name="name"/>
+								<field name="page_ids" string="Post on" widget="many2many_checkboxes"/>
+								<field name="message" widget="viin_social_text_emojis" class="viin_social_article_message_wrapper"/>
+								<field name="attachment_type" widget='radio'/>
+								<field name="attachment_ids" class="viin_social_article_form_attachments" widget='many2many_binary' attrs="{'invisible': [('attachment_type', '!=', 'file')]}"/>
+								<field name="attachment_link" widget="url" attrs="{'invisible': [('attachment_type', '=', 'file')]}"/>
+								<field name="attachment_link_title" attrs="{'invisible': [('attachment_type', '=', 'file')]}"/>
+								<field name="create_date" attrs="{'invisible': [('create_date', '=', False)]}"/>
+								<field name="author_id"/>
+								<field name="assign_id"/>
+								<field name="can_cancel" attrs="{'invisible':True}" />
+							</group>
+							
+							<group name="previews_placeholder" class="viin_social_article_preview_group m-0">
+	                            <div class="viin_social_article_empty_preview o_view_nocontent bg-100"
+	                                attrs="{'invisible': [('page_ids', '!=', []), ('message', '!=', False), ('message', '!=', '')]}">
+	                                <div class="o_nocontent_help">
+	                                    <p class="o_view_nocontent_smiling_face">
+	                                        Preview your article
+	                                    </p>
+	                                    <p>
+	                                        Write a message to see the preview.
+	                                    </p>
+	                                </div>
+	                            </div>
+	                        </group>
+							
+							<group string="Posts" colspan="2">
+								<field name="post_ids" colspan="2" nolabel="1">
+									<kanban create="false">
+										<field name="page_id"/>
+										<templates>
+											<t t-name="kanban-box">
+												<div class="oe_kanban_global_click">
+													<div class="row">
+														<div class="col-md-9 pl-4 pr-4" style="font-weight:bold;">
+															<field name="page_id"/>
+														</div>
+														<div class="col-md-3 pl-4 text-right">
+															<field name="state" widget="label_selection" options="{'classes': {'ready': 'info','scheduled': 'warning', 'posted': 'success', 'cancel': 'danger'}}"/>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-md-6">
+															<field name="user_posted"/>
+														</div>
+														<div class="col-md-6 text-right">
+															<field name="date_posted"/>
+														</div>
+													</div>
+													
+													<hr></hr>
+													<div class="kanban_post_on_article_button mt-3 text-right">
+														<button name='action_post_article' type="object" class="btn btn-primary confirm-post" 
+															attrs="{'invisible': [('state', '!=', 'ready')]}">Confirm / Post</button>
+														<button name='action_cancel_post' type="object" class="btn btn-light"
+															attrs="{'invisible': [('state', '!=', 'ready')]}">Cancel</button>
+														<button name='action_set_ready_post' type="object" class="btn btn-primary"
+															attrs="{'invisible': [('state', '!=', 'cancelled')]}">Set To Ready</button>
+														<button name='action_delete_post' type="object" class="btn btn-light delete-post"
+															confirm="Posts on system and social networks will be deleted. Are you sure to Delete this post?"
+															attrs="{'invisible': [('state', 'not in', ['posted', 'cancelled', 'scheduled'])]}">Delete Post</button>
+														<button name='action_view_post' type="object" class="btn btn-primary"
+															attrs="{'invisible': [('state', 'not in', ('posted', 'scheduled'))]}">View on Social</button>
+													</div>
+												</div>
+											</t>
+										</templates>
+									</kanban>
+								</field>
+							</group>
+						</group>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers"/>
+						<field name="activity_ids" widget="mail_activity"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record id="social_article_view_search" model="ir.ui.view">
+			<field name="name">Article</field>
+			<field name="model">social.article</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name"/>
+				    <field name="message"/>
+				    <field name="assign_id"/>
+				    <field name="author_id"/>
+				    <filter name="ftr_user_assigned" string="Assigned"
+				            domain="[('assign_id','=',uid)]"/>
+				    <separator string="State"/>
+ 				    <filter name="ftr_state_draft" string="Draft"
+				            domain="[('state', '=', 'draft')]"/>
+ 				    <filter name="ftr_state_confirmed" string="Confirmed"
+				            domain="[('state', '=', 'confirmed')]"/>
+ 				    <filter name="ftr_state_cancelled" string="Cancel"
+				            domain="[('state', '=', 'cancelled')]"/>
+				    <separator />
+				    <filter name="ftr_create_date" string="Date" date="create_date"/>
+				    <separator />
+					
+				    <group string="Group By">
+				        <filter name="grp_by_state" string="State"
+				                context="{'group_by': 'state'}"/>
+				        <filter name="grp_by_author" string="Author"
+				                context="{'group_by': 'author_id'}"/>
+				        <filter name="grp_by_assign" string="Assigned"
+				                context="{'group_by': 'assign_id'}"/>
+				    </group>
+				</search>
+			</field>
+		</record>
+
+		<menuitem id="social_article_menu" name="Article" parent="social_marketing_menu" 
+					action="social_article_action" sequence="10"/>
+	</data>
+</odoo>

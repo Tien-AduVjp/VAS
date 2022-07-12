@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="fleet_trip_form" model="ir.ui.view">
+			<field name="name">fleet.vehicle.trip.form</field>
+			<field name="model">fleet.vehicle.trip</field>
+			<field name="inherit_id" ref="to_fleet_operation_planning.fleet_trip_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//page[@name='other_info']/group[1]/group[last()]"
+					position="after">
+					<group>
+						<field name="fuel_based_job_wage" />
+						<field name="job_allowance" />
+					</group>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

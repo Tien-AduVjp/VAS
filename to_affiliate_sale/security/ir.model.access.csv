@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_affiliate_code_sales_man,affiliate.code.sale_man,to_affiliate.model_affiliate_code,sales_team.group_sale_salesman,1,0,0,0
+access_affiliate_commission_saleman,affiliate.commission.sale_man,to_affiliate.model_affiliate_commission,sales_team.group_sale_salesman,1,0,0,0
+access_affiliate_commission_rule_salesman,affiliate.commission.rule.salesman,to_affiliate.model_affiliate_commission_rule,sales_team.group_sale_salesman,1,0,0,0
+access_affiliate_commission_rule_line_salesman,affiliate.commission.rule.line.salesman,to_affiliate.model_affiliate_commission_rule_line,sales_team.group_sale_salesman,1,0,0,0

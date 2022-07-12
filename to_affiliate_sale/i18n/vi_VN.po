@@ -1,0 +1,125 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_affiliate_sale
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-15 08:17+0000\n"
+"PO-Revision-Date: 2022-02-15 08:17+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_affiliate_sale
+#: model:ir.model.fields,field_description:to_affiliate_sale.field_report_affiliate_referrer_analysis__number_so
+msgid "# Sales Orders"
+msgstr "# Đơn bán"
+
+#. module: to_affiliate_sale
+#: model:ir.model.fields,field_description:to_affiliate_sale.field_sale_report__affcode_id
+msgid "Aff. Code"
+msgstr "Mã Cộng tác viên"
+
+#. module: to_affiliate_sale
+#: model:ir.model.fields,field_description:to_affiliate_sale.field_sale_order__affcode_id
+#: model:ir.model.fields,field_description:to_affiliate_sale.field_sale_order_line__affcode_id
+msgid "AffCode"
+msgstr "Mã Cộng tác viên"
+
+#. module: to_affiliate_sale
+#: model:ir.model.fields,field_description:to_affiliate_sale.field_sale_report__affiliate_id
+#: model_terms:ir.ui.view,arch_db:to_affiliate_sale.to_affiliate_sale_report_inherit_search
+msgid "Affiliate"
+msgstr "Cộng tác viên"
+
+#. module: to_affiliate_sale
+#: model:ir.model,name:to_affiliate_sale.model_affiliate_code
+msgid "Affiliate Code"
+msgstr "Mã Cộng tác viên"
+
+#. module: to_affiliate_sale
+#: model:ir.model,name:to_affiliate_sale.model_affiliate_commission
+msgid "Affiliate Commission"
+msgstr "Hoa hồng Cộng tác viên"
+
+#. module: to_affiliate_sale
+#: model:ir.model,name:to_affiliate_sale.model_affiliate_commission_line
+msgid "Affiliate Commission Line"
+msgstr "Chi tiết Hoa hồng Cộng tác viên"
+
+#. module: to_affiliate_sale
+#: model:ir.model,name:to_affiliate_sale.model_report_affiliate_referrer_analysis
+msgid "Affiliate Referrer Analysis"
+msgstr "Phân tích Cộng tác viên"
+
+#. module: to_affiliate_sale
+#: model:ir.model.fields,field_description:to_affiliate_sale.field_report_affiliate_referrer_analysis__amount_so
+msgid "Amount"
+msgstr "Số tiền"
+
+#. module: to_affiliate_sale
+#: model:ir.model.fields,field_description:to_affiliate_sale.field_affiliate_code__sale_line_ids
+msgid "Client Sales Order Lines"
+msgstr "Chi tiết đơn bán của khách hàng"
+
+#. module: to_affiliate_sale
+#: model:ir.model.fields,field_description:to_affiliate_sale.field_affiliate_code__sale_order_ids
+msgid "Client Sales Orders"
+msgstr "Đơn bán của khách hàng"
+
+#. module: to_affiliate_sale
+#: model_terms:ir.ui.view,arch_db:to_affiliate_sale.affiliate_code_form_view
+msgid "Client Sales Orders that were referred by affiliate code."
+msgstr "Đơn bán của khách hàng đã được giới thiệu bởi mã cộng tác viên"
+
+#. module: to_affiliate_sale
+#: model_terms:ir.ui.view,arch_db:to_affiliate_sale.view_order_form
+msgid "Commission"
+msgstr "Hoa hồng"
+
+#. module: to_affiliate_sale
+#: model:ir.model.fields,field_description:to_affiliate_sale.field_sale_order__commission_ids_count
+msgid "Commission Count"
+msgstr "SL Hoa hồng"
+
+#. module: to_affiliate_sale
+#: model:ir.model.fields,field_description:to_affiliate_sale.field_sale_order_line__commission_line_ids
+msgid "Commission Lines"
+msgstr "Chi tiết Hoa hồng"
+
+#. module: to_affiliate_sale
+#: model:ir.model.fields,field_description:to_affiliate_sale.field_sale_order__commission_ids
+msgid "Commissions"
+msgstr "Hoa hồng"
+
+#. module: to_affiliate_sale
+#: model:ir.model.fields,field_description:to_affiliate_sale.field_sale_order__referrer_analysis_id
+msgid "Referrer"
+msgstr "Người giới thiệu"
+
+#. module: to_affiliate_sale
+#: model:ir.model,name:to_affiliate_sale.model_sale_report
+msgid "Sales Analysis Report"
+msgstr "Báo cáo Phân tích Bán hàng"
+
+#. module: to_affiliate_sale
+#: model:ir.model,name:to_affiliate_sale.model_sale_order
+#: model:ir.model.fields,field_description:to_affiliate_sale.field_affiliate_commission__order_id
+msgid "Sales Order"
+msgstr "Đơn bán"
+
+#. module: to_affiliate_sale
+#: model:ir.model,name:to_affiliate_sale.model_sale_order_line
+#: model:ir.model.fields,field_description:to_affiliate_sale.field_affiliate_commission_line__sale_order_line_id
+msgid "Sales Order Line"
+msgstr "Chi tiết Đơn Bán"
+
+#. module: to_affiliate_sale
+#: model:ir.model.fields,field_description:to_affiliate_sale.field_affiliate_code__sale_orders_count
+msgid "Sales Orders Count"
+msgstr "SL Đơn bán"

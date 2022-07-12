@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="view_voucher_type_form" model="ir.ui.view">
+		<field name="name">voucher.type.form</field>
+		<field name="model">voucher.type</field>
+		<field name="arch" type="xml">
+			<form string="Voucher Type">
+				<sheet>
+					<group>
+						<group>
+							<field name="name" />
+							<field name="value" />
+							<label for="valid_duration" />
+							<div>
+								<field name="valid_duration" class="oe_inline" />
+								days
+							</div>
+						</group>
+						<group>
+							<field name="payable_once" />
+							<field name="description" />
+						</group>
+						<group>
+							<field name="property_promotion_voucher_profit_account_id"
+								groups="account.group_account_user" />
+							<field name="property_promotion_voucher_loss_account_id"
+								groups="account.group_account_user" />
+							<field name="property_promotion_voucher_journal" groups="account.group_account_user" />
+						</group>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<record id="view_voucher_type_tree" model="ir.ui.view">
+		<field name="name">voucher.type.tree</field>
+		<field name="model">voucher.type</field>
+		<field name="arch" type="xml">
+			<tree string="Voucher Type">
+				<field name="name" />
+				<field name="value" />
+			</tree>
+		</field>
+	</record>
+
+	<record id="view_voucher_type_action" model="ir.actions.act_window">
+		<field name="name">Voucher Type</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">voucher.type</field>
+		<field name="view_mode">tree,form</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">
+				Click to create a voucher type.
+			</p>
+		</field>
+	</record>
+
+	<menuitem id="menu_voucher_type" name="Voucher Types" parent="menu_config"
+		action="view_voucher_type_action" sequence="2" />
+
+</odoo>

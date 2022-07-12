@@ -1,0 +1,458 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_registration_email_blacklist
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-04 03:27+0000\n"
+"PO-Revision-Date: 2020-12-04 03:27+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_registration_email_blacklist
+#: code:addons/to_registration_email_blacklist/models/res_users.py:0
+#, python-format
+msgid ""
+"%s Here is a solution for you to consider:\n"
+"%s"
+msgstr ""
+"%s Đây là giải pháp để bạn xem xét:\n"
+"%s"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_block_reason__message_needaction
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_email_blacklist_rule__message_needaction
+msgid "Action Needed"
+msgstr "Cần có Hành động"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_email_blacklist_rule__active
+msgid "Active"
+msgstr "Hiệu lực"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_email_blacklist_rule__activity_ids
+msgid "Activities"
+msgstr "Các hoạt động"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_email_blacklist_rule__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_email_blacklist_rule__activity_state
+msgid "Activity State"
+msgstr "Trạng thái Hoạt động"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_block_reason__message_attachment_count
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_email_blacklist_rule__message_attachment_count
+msgid "Attachment Count"
+msgstr "Số lượng đính kèm"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model,name:to_registration_email_blacklist.model_email_blacklist_rule
+#: model_terms:ir.ui.view,arch_db:to_registration_email_blacklist.res_config_settings_view_form
+msgid "Blacklisted Email Rules"
+msgstr "Quy tắc Danh sách đen email"
+
+#. module: to_registration_email_blacklist
+#: model_terms:ir.ui.view,arch_db:to_registration_email_blacklist.res_config_settings_view_form
+msgid "Block Blacklisted Email Registration"
+msgstr "Chặn Đăng ký tài khoản bằng Email Danh sách đen"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_res_company__block_blacklisted_registration_emails
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_res_config_settings__block_blacklisted_registration_emails
+msgid "Block Blacklisted Registration Emails"
+msgstr "Chặn Email đăng ký nằm trong danh sách đen"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model,name:to_registration_email_blacklist.model_block_reason
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_email_blacklist_rule__reason_id
+msgid "Block Reason"
+msgstr "Lý do chặn"
+
+#. module: to_registration_email_blacklist
+#: model_terms:ir.ui.view,arch_db:to_registration_email_blacklist.res_config_settings_view_form
+msgid "Block Registration Reasons"
+msgstr "Lý do chặn đăng ký"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_email_blacklist_rule__name
+msgid "Blocked Email Rule"
+msgstr "Quy tắc chặn email"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model,name:to_registration_email_blacklist.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model,name:to_registration_email_blacklist.model_res_config_settings
+msgid "Config Settings"
+msgstr "Thiết lập Cấu hình"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_block_reason__create_uid
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_email_blacklist_rule__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_block_reason__create_date
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_email_blacklist_rule__create_date
+msgid "Created on"
+msgstr "Được tạo vào"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_block_reason__display_name
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_email_blacklist_rule__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_registration_email_blacklist
+#: model:ir.actions.act_window,name:to_registration_email_blacklist.action_email_blacklist_rule
+msgid "Email Registration Blocking Rules"
+msgstr "Quy tắc chặn email đăng ký tài khoản"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_block_reason__message_follower_ids
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_email_blacklist_rule__message_follower_ids
+msgid "Followers"
+msgstr "Người dõi theo"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_block_reason__message_channel_ids
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_email_blacklist_rule__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Người theo dõi (Các kênh)"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_block_reason__message_partner_ids
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_email_blacklist_rule__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Người theo dõi (Các đối tác)"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_block_reason__id
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_email_blacklist_rule__id
+msgid "ID"
+msgstr ""
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_email_blacklist_rule__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,help:to_registration_email_blacklist.field_email_blacklist_rule__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,help:to_registration_email_blacklist.field_block_reason__message_needaction
+#: model:ir.model.fields,help:to_registration_email_blacklist.field_block_reason__message_unread
+#: model:ir.model.fields,help:to_registration_email_blacklist.field_email_blacklist_rule__message_needaction
+#: model:ir.model.fields,help:to_registration_email_blacklist.field_email_blacklist_rule__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Nếu đánh dấu chọn, các thông điệp mới yêu cầu sự có mặt của bạn."
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,help:to_registration_email_blacklist.field_block_reason__message_has_error
+#: model:ir.model.fields,help:to_registration_email_blacklist.field_block_reason__message_has_sms_error
+#: model:ir.model.fields,help:to_registration_email_blacklist.field_email_blacklist_rule__message_has_error
+#: model:ir.model.fields,help:to_registration_email_blacklist.field_email_blacklist_rule__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Nếu được đánh dấu, thông điệp có lỗi về gửi tin."
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,help:to_registration_email_blacklist.field_res_company__block_blacklisted_registration_emails
+#: model:ir.model.fields,help:to_registration_email_blacklist.field_res_config_settings__block_blacklisted_registration_emails
+msgid ""
+"If enabled, user registration will be constrained by our blacklisted email "
+"rules."
+msgstr ""
+"Nếu đánh dấu, đăng ký tài khoản người dùng mới sẽ bị ràng buộc bởi các quy "
+"tắc danh sách đen email."
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_block_reason__message_is_follower
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_email_blacklist_rule__message_is_follower
+msgid "Is Follower"
+msgstr "Là người theo dõi"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_block_reason____last_update
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_email_blacklist_rule____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_block_reason__write_uid
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_email_blacklist_rule__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_block_reason__write_date
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_email_blacklist_rule__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_block_reason__message_main_attachment_id
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_email_blacklist_rule__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Đính kèm chính"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_block_reason__message_has_error
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_email_blacklist_rule__message_has_error
+msgid "Message Delivery error"
+msgstr "Có Lỗi Gửi Thông điệp"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_block_reason__message_ids
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_email_blacklist_rule__message_ids
+msgid "Messages"
+msgstr "Thông điệp"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_email_blacklist_rule__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Hạn chót lần hành động kế tiếp"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_email_blacklist_rule__activity_summary
+msgid "Next Activity Summary"
+msgstr "Tóm tắt hoạt động tiếp theo"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_email_blacklist_rule__activity_type_id
+msgid "Next Activity Type"
+msgstr "Kiểu hành động kế tiếp"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_block_reason__message_needaction_counter
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_email_blacklist_rule__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Số lượng Hành động"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_block_reason__message_has_error_counter
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_email_blacklist_rule__message_has_error_counter
+msgid "Number of errors"
+msgstr "Số lượng Lỗi"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,help:to_registration_email_blacklist.field_block_reason__message_needaction_counter
+#: model:ir.model.fields,help:to_registration_email_blacklist.field_email_blacklist_rule__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Số thông điệp cần có hành động"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,help:to_registration_email_blacklist.field_block_reason__message_has_error_counter
+#: model:ir.model.fields,help:to_registration_email_blacklist.field_email_blacklist_rule__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Số lượng các thông điệp có lỗi về gửi tin"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,help:to_registration_email_blacklist.field_block_reason__message_unread_counter
+#: model:ir.model.fields,help:to_registration_email_blacklist.field_email_blacklist_rule__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Số thông điệp chưa đọc"
+
+#. module: to_registration_email_blacklist
+#: model:block.reason,solution:to_registration_email_blacklist.block_reason_common
+msgid ""
+"Please use another email address or contact us for manual registration "
+"activation."
+msgstr ""
+"Vui lòng sử dụng một địa chỉ email khác hoặc liên hệ với chúng tôi để kích "
+"hoạt tài khoản thủ công."
+
+#. module: to_registration_email_blacklist
+#: model_terms:ir.ui.view,arch_db:to_registration_email_blacklist.res_config_settings_view_form
+msgid ""
+"Prevent user account registration with a\n"
+"\t\t\t\t\t\t\tblacklisted email."
+msgstr ""
+"Chặn người dùng đăng ký tài khoản bằng email\n"
+"\t\t\t\t\t\t\ttrong danh sách đen."
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_block_reason__name
+msgid "Reason"
+msgstr "Lý do"
+
+#. module: to_registration_email_blacklist
+#: model:res.groups,name:to_registration_email_blacklist.group_email_reg_blacklist
+msgid "Registration Email Blacklist"
+msgstr "Danh sách đen email đăng ký tài khoản"
+
+#. module: to_registration_email_blacklist
+#: model:ir.actions.act_window,name:to_registration_email_blacklist.action_block_reason
+msgid "Registration Emails Block Reasons"
+msgstr "Lý do chặn email đăng ký"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_email_blacklist_rule__activity_user_id
+msgid "Responsible User"
+msgstr "Người chịu trách nhiệm"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_block_reason__message_has_sms_error
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_email_blacklist_rule__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "SMS gửi đi gặp lỗi"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_block_reason__solution
+msgid "Solution"
+msgstr "Giải pháp"
+
+#. module: to_registration_email_blacklist
+#: model:block.reason,name:to_registration_email_blacklist.block_reason_common
+msgid "Spamming"
+msgstr "Gửi thư rác"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,help:to_registration_email_blacklist.field_email_blacklist_rule__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Trạng thái dựa trên hoạt động\n"
+"Quá hạn: Ngày đến hạn đã trôi qua\n"
+"Hôm nay: Hôm nay là ngày phải thực hiện\n"
+"Đã hoạch định: Các hoạt động trong tương lai."
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.constraint,message:to_registration_email_blacklist.constraint_email_blacklist_rule_name_unique
+msgid "The Blocked Email Rule must be unique!"
+msgstr "Quy tắc chặn email phải là duy nhất!"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,help:to_registration_email_blacklist.field_email_blacklist_rule__name
+msgid ""
+"The email address that will be blocked during user registration. You could also use asterisk (*) for wildcard. Here are some examples for your reference,\n"
+"- company.com: this will block all the registration emails having the domain as 'company.com';\n"
+"- *.company.com: this will block all the registration emails having the domain as a subdomain of the 'company.com';\n"
+"- user@company.com: this will block the registration email that exactly matches 'user@company.com';\n"
+"- *user*@*.company.com: this will block all the registration emails that contain 'user' in their local partner and having the domain as a subdomain of the 'company.com';\n"
+"- company.*: this will block all the registration emails that have the domain prefixed with 'company.' and ended with any letters;\n"
+"- *.company.*: this will block all the registration emails that have '.company.' as a part of their domain name.\n"
+msgstr ""
+"Địa chỉ email mà sẽ bị chặn không cho đăng ký tài khoản người dùng. Bạn có thể sử dụng dấu sao (*) làm ký tự thay thế. Đây là một số ví dụ để bạn tham khảo,\n"
+"- company.com: sẽ chặn việc đăng ký bằng các email mà có tên miền là company.com;\n"
+"- *.company.com: sẽ chặn việc đăng ký bằng các email mà có tên miền là tên miền con của *company.com;\n"
+"- user@company.com: sẽ chặn việc đăng ký bằng các email mà khớp chính xác với user@company.com;\n"
+"- *user*@*.company.com: sẽ chặn việc đăng ký bằng các email mà chứa *user* ở phần trước @ và có tên miền là tên miền con của *company.com;\n"
+"- company.*: sẽ chặn việc đăng ký bằng các email mà có tên miền có tiên tố là company. và có hậu tố là bất kỳ ký tự nào;\n"
+"- *.company.*: sẽ chặn việc đăng ký bằng các email mà có tên miền có chứa *.company.*;\n"
+
+#. module: to_registration_email_blacklist
+#: code:addons/to_registration_email_blacklist/models/email_blacklist_rule.py:0
+#, python-format
+msgid ""
+"The email blacklist rule '%s' is invalid during regular expression matching. Here is details:\n"
+"%s"
+msgstr ""
+"Quy tắc danh sách đen email '%s' không hợp lệ trong quá trình khớp biểu thức regular. Thông tin chi tiết:\n"
+"%s"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,help:to_registration_email_blacklist.field_block_reason__solution
+msgid ""
+"The message that will explain to the users how to solve the registration "
+"blocking."
+msgstr ""
+"Thông điệp dùng để giải thích với người dùng các giải quyết việc bị chặn "
+"đăng ký."
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,help:to_registration_email_blacklist.field_email_blacklist_rule__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_block_reason__message_unread
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_email_blacklist_rule__message_unread
+msgid "Unread Messages"
+msgstr "Thông điệp chưa đọc"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_block_reason__message_unread_counter
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_email_blacklist_rule__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Bộ đếm Thông điệp chưa đọc"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model,name:to_registration_email_blacklist.model_res_users
+msgid "Users"
+msgstr "Người dùng"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_block_reason__website_message_ids
+#: model:ir.model.fields,field_description:to_registration_email_blacklist.field_email_blacklist_rule__website_message_ids
+msgid "Website Messages"
+msgstr "Thông điệp Website"
+
+#. module: to_registration_email_blacklist
+#: model:ir.model.fields,help:to_registration_email_blacklist.field_block_reason__website_message_ids
+#: model:ir.model.fields,help:to_registration_email_blacklist.field_email_blacklist_rule__website_message_ids
+msgid "Website communication history"
+msgstr "Lịch sử thông tin liên lạc website"
+
+#. module: to_registration_email_blacklist
+#: code:addons/to_registration_email_blacklist/models/email_blacklist_rule.py:0
+#, python-format
+msgid ""
+"You must input the domain name of the email to block. The domain must include at least one dot (.).\n"
+"You could also use asterisk (*) for wildcard. Here are some examples for your reference,\n"
+"- company.com: this will block all the registration emails having the domain as 'company.com';\n"
+"- *.company.com: this will block all the registration emails having the domain as a subdomain of the 'company.com';\n"
+"- user@company.com: this will block the registration email that exactly matches 'user@company.com';\n"
+"- *user*@*.company.com: this will block all the registration emails that contain 'user' in their local partner and having the domain as a subdomain of the 'company.com';\n"
+"- company.*: this will block all the registration emails that have the domain prefixed with 'company.' and ended with any letters;\n"
+"- *.company.*: this will block all the registration emails that have '.company.' as a part of their domain name.\n"
+msgstr ""
+"Bạn phải nhập tên miền của email mà bạn muốn chặn. Tên miền phải bao gồm ít nhất một dấu chấm (.).\n"
+"Bạn có thể sử dụng dấu sao (*) làm ký tự thay thế. Đây là một số ví dụ để bạn tham khảo,\n"
+"- company.com: sẽ chặn việc đăng ký bằng các email mà có tên miền là company.com;\n"
+"- *.company.com: sẽ chặn việc đăng ký bằng các email mà có tên miền là tên miền con của *company.com;\n"
+"- user@company.com: sẽ chặn việc đăng ký bằng các email mà khớp chính xác với user@company.com;\n"
+"- *user*@*.company.com: sẽ chặn việc đăng ký bằng các email mà chứa *user* ở phần trước @ và có tên miền là tên miền con của *company.com;\n"
+"- company.*: sẽ chặn việc đăng ký bằng các email mà có tên miền có tiên tố là company. và có hậu tố là bất kỳ ký tự nào;\n"
+"- *.company.*: sẽ chặn việc đăng ký bằng các email mà có tên miền có chứa *.company.*;\n"
+
+#. module: to_registration_email_blacklist
+#: code:addons/to_registration_email_blacklist/models/email_blacklist_rule.py:0
+#, python-format
+msgid ""
+"You seemed to want to block any registration. If you really want to do that,"
+" just disable the customer account Free sign up function instead."
+msgstr ""
+"Dường như bạn muốn chặn tất cả việc đăng ký tự do. Nếu bạn thực sự muốn làm "
+"vậy, hãy vô hiệu tính năng đăng ký tự do thay vì thiết lập quy tắc chặn như "
+"này."
+
+#. module: to_registration_email_blacklist
+#: code:addons/to_registration_email_blacklist/models/res_users.py:0
+#, python-format
+msgid ""
+"Your registration email was blacklisted and blocked by our administrations. "
+"The violated rule was `%s` and the reason was '%s'."
+msgstr ""
+"Email đăng ký của bạn nằm ở trong danh sách đen và bị chặn bởi các quản trị "
+"viên của chúng tôi. Quy tắc vi phạm là `%s` và lý do chặn là '%s'."

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="hr_contract_form_inherit" model="ir.ui.view">
+		<field name="name">hr.contract.view.form.inherit</field>
+		<field name="model">hr.contract</field>
+		<field name="inherit_id" ref="hr_contract.hr_contract_view_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//group[@name='duration_group']" position="after">
+				<group string="Accounting" groups="account.group_account_user">
+					<field name="account_expense_id"
+						groups="account.group_account_user" />
+					<field name="analytic_account_id"
+						groups="analytic.group_analytic_accounting" />
+					<field name="analytic_tag_ids" widget="many2many_tags"
+						groups="analytic.group_analytic_tags" />
+					<field name="journal_id" />
+				</group>
+			</xpath>
+		</field>
+	</record>
+
+	<record id="hr_contract_view_tree" model="ir.ui.view">
+		<field name="name">hr.contract.view.tree.inherit</field>
+		<field name="model">hr.contract</field>
+		<field name="inherit_id" ref="to_hr_payroll.hr_contract_view_tree" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='personal_tax_rule_id']" position="after">
+				<field name="account_expense_id" optional="hide" />
+				<field name="analytic_account_id" optional="hide" />
+				<field name="analytic_tag_ids" optional="hide" />
+			</xpath>
+		</field>
+	</record>
+</odoo>

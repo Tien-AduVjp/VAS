@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<report id="act_report_c200_s03adn" menu="False"
+			model="wizard.l10n_vn.c200_s03adn"
+			name="to_l10n_vn_general_ledger.report_c200_s03adn"
+			file="to_l10n_vn_general_ledger.report_c200_s03adn"
+			report_type="qweb-pdf" string="General Ledger (S03a-DN)" />
+
+		<record id="act_report_c200_s03adn" model="ir.actions.report">
+			<field name="paperformat_id"
+				ref="to_l10n_vn_qweb_layout.to_qwl_template_paperformat_portrait" />
+			<field name="legal_name">Template S03a-DN</field>
+		</record>
+	</data>
+</odoo>

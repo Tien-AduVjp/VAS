@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<template id="report_simple_label">
+			<div class="col-xs-3" style="padding:0;">
+				<table style="border-spacing:0;margin-bottom:0;height:122px;"
+					class="table">
+					<thead>
+						<tr style="width: 3in;">
+							<td style="border: 2px solid black;width: 2.63in;"
+								class="col-xs-8 danger">
+								<strong t-field="voucher.name" />
+							</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr style="width: 1in;">
+							<td
+								style="border: 2px solid black;text-align: center; vertical-align: middle;"
+								class="col-xs-12">
+								<img t-if="voucher.serial"
+									t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('EAN13', voucher.serial, 600, 150)"
+									style="width:100%;height:20%;" alt="Image" />
+								<span t-field="voucher.serial" />
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</template>
+
+		<template id="report_voucherlabel">
+			<t t-call="web.basic_layout">
+				<div class="page">
+					<t t-foreach="docs" t-as="voucher">
+						<t t-call="to_promotion_voucher.report_simple_label">
+							<t t-set="voucher" t-value="voucher" />
+						</t>
+					</t>
+				</div>
+			</t>
+		</template>
+	</data>
+</odoo>

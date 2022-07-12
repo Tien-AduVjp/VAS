@@ -1,0 +1,389 @@
+<odoo>
+	<data>
+		<template id="picking_operation_external_layout">
+			<!-- Multicompany -->
+			<t t-if="not o and doc">
+				<t t-set="o" t-value="doc" />
+			</t>
+
+			<t t-if="o and 'company_id' in o">
+				<t t-set="company" t-value="o.company_id.sudo()" />
+			</t>
+			<t t-if="not o or not 'company_id' in o">
+				<t t-set="company" t-value="res_company" />
+			</t>
+			<div class="header">
+				<div class="row small">
+					<t
+						t-call="to_l10n_vn_qweb_layout.accounting_external_header_left_layout">
+						<t t-raw="0" />
+					</t>
+					<div class="col-5 text-center">
+						<strong>
+							<t t-if="o.picking_type_code=='incoming'">Template 01-VT</t>
+							<t t-if="o.picking_type_code=='outgoing'">Template 02-VT</t>
+						</strong>
+						<br />
+						<i>
+							(Released Under the Circular No. 200/2014/TT-BTC
+							<br />
+							Dated 22/12/2014 by the Ministry of Finance)
+						</i>
+					</div>
+				</div>
+			</div>
+			<div class="article o_report_layout_standard">
+				<t t-raw="0" />
+			</div>
+			<div class="footer">
+				<t
+					t-call="to_l10n_vn_qweb_layout.accounting_external_footer_layout">
+					<t t-raw="0" />
+				</t>
+			</div>
+		</template>
+
+		<template id="report_picking_operation_template">
+			<t t-call="web.html_container">
+				<t
+					t-call="to_l10n_vn_picking_operation.picking_operation_external_layout">
+					<div class="page" style="font-size: 15px;">
+						<style>
+							.w5{width: 5%;}
+							.w10{width: 10%;}
+							.w15{width: 15%;}
+							.w20{width: 20%;}
+							.w17{width: 17%;}
+							.w28{width: 28%;}
+							table, th, td {padding: 2px; padding-left: 5px; border: 1px solid black;}
+						</style>
+						<div class="row">
+							<div class="col-4 offset-4 text-center">
+								<h3>
+									<strong>
+										<span t-if="o.picking_type_code=='incoming'">GOODS RECEIPT</span>
+										<span t-if="o.picking_type_code=='outgoing'">DELIVERY ORDER</span>
+									</strong>
+								</h3>
+							</div>
+
+							<div class="col-4 text-left">
+								<img
+									t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.name, 600, 100)"
+									style="width:300px;height:50px;" alt="Barcode" />
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-4 offset-4 text-center">
+								<i>
+									<span t-field="o.footer_date" />
+								</i>
+								<br />
+								Number:
+								<t t-if="o.name">
+									<span t-field="o.name" />
+								</t>
+								<t t-else="">....................</t>
+							</div>
+							<div class="col-3 offset-1">
+								Debit:
+								<t t-if="o.debit_code">
+									<span t-field="o.debit_code" />
+								</t>
+								<t t-else="">....................</t>
+								<br />
+								Credit:
+								<t t-if="o.credit_code">
+									<span t-field="o.credit_code" />
+								</t>
+								<t t-else="">...................</t>
+							</div>
+						</div>
+						<t t-if="o.picking_type_code=='outgoing'">
+							<div class="row">
+								<div class="col-6">
+									- Receiver (Full Name):
+									<t t-if="o.partner_id.name">
+										<span t-field="o.partner_id.name" />
+									</t>
+								</div>
+								<div class="col-6">
+									Address:
+									<t t-if="o.partner_id.street and o.partner_id.street != ''">
+										<span t-esc="o.partner_id.street" />,
+									</t>
+									<t t-if="o.partner_id.street2 and o.partner_id.street2 != ''">
+										<span t-esc="o.partner_id.street2" />,
+									</t>
+									<t t-if="o.partner_id.city and o.partner_id.city != ''">
+										<span t-esc="o.partner_id.city" />,
+									</t>																					
+									<t t-if="o.partner_id.state_id and o.partner_id.state_id != ''">
+										<span t-esc="o.partner_id.state_id.name" />
+									</t>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12">
+									- Reason:
+									<t t-if="o.reason">
+										<span t-field="o.reason" />
+									</t>
+									<t t-else="">...................................................................................................................................................</t>
+									<br />
+								</div>
+							</div>
+							<div class="row" style="margin-bottom: 16px;">
+								<div class="col-6">
+									- Picked from:
+									<span t-field="o.location_id.name" />
+								</div>
+								<div class="col-6">
+									Location:
+									<span t-field="o.location_id.warehouse_id.name" />
+								</div>
+							</div>
+						</t>
+						<t t-if="o.picking_type_code=='incoming'">
+							<div class="row">
+								<div class="col-12">
+									- Delivered by (Full Name):
+									<t t-if="o.partner_id.name">
+										<span t-field="o.partner_id.name" />
+									</t>
+									<br />
+									<t t-if="o.reason">
+										-
+										<span t-field="o.reason" />
+										of
+										<span t-esc="o.partner_id.commercial_partner_id.name" />
+									</t>
+									<t t-else="">- ..................................................................................................................................................................</t>
+									<br />
+								</div>
+							</div>
+							<div class="row" style="margin-bottom: 16px;">
+								<div class="col-6">
+									- Received from:
+									<span t-field="o.location_dest_id.name" />
+								</div>
+								<div class="col-6">
+									Location:
+									<span t-field="o.location_dest_id.warehouse_id.name" />
+								</div>
+							</div>
+						</t>
+						<table>
+							<thead>
+								<tr>
+									<td style="border-bottom: none;"></td>
+									<td style="border-bottom: none;"></td>
+									<td style="border-bottom: none;"></td>
+									<td style="border-bottom: none;"></td>
+									<td colspan="2"
+										style="border-bottom: none; text-align: center;">Quantity</td>
+									<td style="border-bottom: none;"></td>
+									<td style="border-bottom: none;"></td>
+								</tr>
+								<tr>
+									<td class="w5 text-center" rowspan="2"
+										style="border-top: none;">No.</td>
+									<td class="w28 text-center" rowspan="2"
+										style="border-top: none;">Product</td>
+									<td class="w17 text-center" rowspan="2"
+										style="border-top: none;">Default Code</td>
+									<td class="w10 text-center" rowspan="2"
+										style="border-top: none;">Unit of Measure</td>
+									<td class="w5 text-center" rowspan="2"
+										style="vertical-align: middle;">
+										<t t-if="o.picking_type_code=='outgoing'">Request</t>
+										<t t-if="o.picking_type_code=='incoming'">Initial Demand</t>
+									</td>
+									<td class="w5 text-center" rowspan="2"
+										style="vertical-align: middle;">
+										<t t-if="o.picking_type_code=='outgoing'">Q'ty Done</t>
+										<t t-if="o.picking_type_code=='incoming'">Quantity Done</t>
+									</td>
+									<td class="w15 text-center" rowspan="2"
+										style="border-top: none;">Price Unit</td>
+									<td class="w15 text-center" rowspan="2"
+										style="border-top: none;">Subtotal</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="text-center">A</td>
+									<td class="text-center">B</td>
+									<td class="text-center">C</td>
+									<td class="text-center">D</td>
+									<td class="text-center">1</td>
+									<td class="text-center">2</td>
+									<td class="text-center">3</td>
+									<td class="text-center">4</td>
+								</tr>
+								<t t-set="i" t-value="1" />
+								<tr t-foreach="o.mapped('move_lines')" t-as="move">
+									<t t-set="price_unit" t-value="move._get_price_unit_currency_conversion()"/>
+									<td class="text-center">
+										<span t-esc="i" />
+									</td>
+									<td class="text-left">
+										<span t-field="move.product_id.name" />
+									</td>
+									<td class="text-left">
+										<span t-field="move.product_id.default_code" />
+									</td>
+
+									<td class="text-left">
+										<span t-field="move.product_uom" />
+									</td>
+									<td class="text-right">
+										<span t-field="move.product_uom_qty" />
+									</td>
+									<t t-if="o.state == 'done'">
+										<td class="text-right">
+											<span t-field="move.quantity_done" />
+										</td>
+										<td class="text-right">
+											<span t-esc="abs(price_unit)"
+												t-options='{"widget": "monetary", "display_currency": o.currency_id}' />
+										</td>
+										<td class="text-right">
+											<span t-esc="abs(price_unit) * move.quantity_done"
+												t-options='{"widget": "monetary", "display_currency": o.currency_id}' />
+										</td>
+									</t>
+									<t t-else="">
+										<td class="text-right">0</td>
+										<td class="text-right">
+											<span t-esc="abs(price_unit)"
+												t-options='{"widget": "monetary", "display_currency": o.currency_id}' />
+										</td>
+										<td class="text-right">
+											<span
+												t-esc="abs(price_unit) * move.product_uom_qty"
+												t-options='{"widget": "monetary", "display_currency": o.currency_id}' />
+										</td>
+									</t>
+									<t t-set="i" t-value="i+1" />
+								</tr>
+								
+								<tr>
+									<td></td>
+									<td class="text-center" style="vertical-align: middle;">
+										<strong>Total</strong>
+									</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="text-right" style="vertical-align: middle;">
+										<strong>
+											<span t-field="o.total_amount_untaxed" />
+										</strong>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="row" style="margin-top: 16px; margin-bottom: 16px;">
+							<div class="col-12">
+								- Total Amount (in words):
+								<span t-field="o.total_amount_untaxed_in_words" />
+								<span t-field="o.currency_id.currency_unit_label" />.
+								<br />
+								- Attached Docs:
+								<t t-if="o.attached_docs">
+									<span t-field="o.attached_docs" />
+								</t>
+								<t t-else="">........................................................................................................................................
+								</t>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-4 offset-8">
+								<i>
+									<span t-field="o.footer_date" />
+								</i>
+							</div>
+						</div>
+						<div class="row">
+							<t t-if="o.picking_type_code=='outgoing'">
+								<div class="w20 text-center">
+									<strong>Prepared By</strong>
+									<br />
+									<i>(Signature, Full Name)</i>
+								</div>
+								<div class="w20 text-center">
+									<strong>Receiver</strong>
+									<br />
+									<i>(Signature, Full Name)</i>
+								</div>
+								<div class="w20 text-center">
+									<strong>Stockkeeper</strong>
+									<br />
+									<i>(Signature, Full Name)</i>
+								</div>
+								<div class="w20 text-center">
+									<strong>Chief Accountant</strong>
+									<br />
+									<i>(Signature, Full Name)</i>
+								</div>
+								<div class="w20 text-center">
+									<strong>Director/CEO</strong>
+									<br />
+									<i>(Signature, Full Name)</i>
+								</div>
+							</t>
+							<t t-if="o.picking_type_code=='incoming'">
+								<div class="col-3 text-center">
+									<strong>Prepared By</strong>
+									<br />
+									<i>(Signature, Full Name)</i>
+								</div>
+								<div class="col-3 text-center">
+									<strong>Delivered By</strong>
+									<br />
+									<i>(Signature, Full Name)</i>
+								</div>
+								<div class="col-3 text-center">
+									<strong>Stockkeeper</strong>
+									<br />
+									<i>(Signature, Full Name)</i>
+								</div>
+								<div class="col-3 text-center">
+									<strong>Chief Accountant</strong>
+									<br />
+									<i>
+										(Request by department)
+										<br />
+										(Signature, Full Name)
+									</i>
+								</div>
+							</t>
+						</div>
+					</div>
+				</t>
+			</t>
+		</template>
+
+		<template id="report_picking_operation">
+			<t t-foreach="docs" t-as="o">
+				<t t-if="o.company_id.country_id == o.env.ref('base.vn')">
+					<t
+						t-call="to_l10n_vn_picking_operation.report_picking_operation_template" />
+				</t>
+				<t t-else="">
+					<t t-call="stock.report_picking" />
+				</t>
+			</t>
+		</template>
+
+		<report string="Picking Operations"
+			id="stock.action_report_picking" model="stock.picking"
+			report_type="qweb-pdf"
+			name="to_l10n_vn_picking_operation.report_picking_operation"
+			file="to_l10n_vn_picking_operation.report_picking_operation"
+			print_report_name="'Picking Operations - %s - %s' % (object.partner_id.name or '', object.name)" />
+	</data>
+</odoo>

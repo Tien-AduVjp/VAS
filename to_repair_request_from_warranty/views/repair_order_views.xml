@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record model="ir.ui.view" id="warranty_view_repair_history_list_tree_view">
+			<field name="name">warranty.repair.history.list.tree</field>
+			<field name="model">repair.order</field>
+			<field name="arch" type="xml">
+				<tree string="Repair History Tree">
+					<field name="name" />
+					<field name="lot_id" />
+					<field name="product_id" />
+					<field name="partner_id" />
+					<field name="address_id" />
+					<field name="company_id" groups="base.group_multi_company"
+						invisible="1" />
+					<field name="guarantee_limit" />
+					<field name="repair_date" />
+					<field name="user_id" />
+					<field name="state" invisible="1" />
+				</tree>
+			</field>
+		</record>
+
+
+		<record model="ir.actions.act_window" id="action_from_warranty_repair_history">
+			<field name="name">Repair History</field>
+			<field name="res_model">repair.order</field>
+			<field name="view_mode">tree,form</field>
+			<field name="view_id" ref="warranty_view_repair_history_list_tree_view" />
+		</record>
+		
+		<record id="view_repair_order_form_filter" model="ir.ui.view">
+			<field name="name">warranty.repair.order.select</field>
+			<field name="model">repair.order</field>
+			<field name="inherit_id" ref="repair.view_repair_order_form_filter" />
+			<field name="arch" type="xml">
+				<xpath expr="//search/field[@name='partner_id']" position="after">
+					<field name="warranty_claim_id" string = "Warranty Claim" />
+					<filter string="Warranty Claim" name="warranty_claim_id" domain="[]" context="{'group_by':'warranty_claim_id'}" />
+				</xpath>
+			</field>
+		</record>
+		
+		
+		<record id="view_repair_order_form" model="ir.ui.view">
+			<field name="name">repair.order.form</field>
+			<field name="model">repair.order</field>
+			<field name="inherit_id" ref="repair.view_repair_order_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//group/field[@name='lot_id']" position="after">
+					<field name ="warranty_claim_id" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+				</xpath>
+			</field>
+		</record>
+		
+	</data>
+</odoo>

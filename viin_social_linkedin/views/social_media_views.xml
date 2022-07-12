@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+	<data>
+		<record id="social_media_view_form" model="ir.ui.view">
+			<field name="name">Social Media</field>
+			<field name="model">social.media</field>
+			<field name="inherit_id" ref="viin_social.social_media_view_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//sheet/group" position="inside">
+					<group attrs="{'invisible': [('social_provider','!=','linkedin')]}" groups="viin_social.viin_social_group_admin">
+						<field name="linkedin_access_token" class="text-truncate" style="width:50%"/>
+						<field name="linkedin_date_expired"/>
+						<field name="linkedin_refresh_token" class="text-truncate" style="width:50%"/>
+						<field name="linkedin_refresh_date_expired"/>					
+					</group>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

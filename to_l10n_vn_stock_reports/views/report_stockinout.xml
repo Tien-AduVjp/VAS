@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<template id="report_stockinout">
+			<t t-call="web.html_container">
+				<t t-call="web.internal_layout">
+					<div class="page">
+						<div class="text-center">
+							<h2 t-if="data['form']['type'] == 'in'">STOCK-IN REPORT</h2>
+							<h2 t-if="data['form']['type'] == 'out'">STOCK-OUT REPORT</h2>
+							<t t-call="to_l10n_vn_stock_reports.warehouse_info" />
+							<p>
+								Date From:
+								<span t-field="doc.date_from" />
+								- Date To:
+								<span t-field="doc.date_to" />
+							</p>
+						</div>
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th colspan="2" class="text-center">
+										<div>Documents</div>
+									</th>
+									<th rowspan="2"
+										style="vertical-align: middle; text-align: center;">
+										<div t-if="data['form']['type'] == 'in'">Receipt</div>
+										<div t-if="data['form']['type'] == 'out'">Delivery Order</div>
+									</th>
+									<th rowspan="2"
+										style="vertical-align: middle; text-align: center;">
+										<div>Description</div>
+									</th>
+									<th rowspan="2"
+										style="vertical-align: middle; text-align: center;">
+										<div>Product Code</div>
+									</th>
+									<th rowspan="2"
+										style="vertical-align: middle; text-align: center;">
+										<div>Product Name</div>
+									</th>
+									<th rowspan="2"
+										style="vertical-align: middle; text-align: center;">
+										<div>UoM</div>
+									</th>
+									<th rowspan="2"
+										style="vertical-align: middle; text-align: center;">
+										<div>Quantity</div>
+									</th>
+									<th rowspan="2"
+										style="vertical-align: middle; text-align: center;">
+										<div t-if="data['form']['type'] == 'in'">Stock-Input Unit Cost</div>
+										<div t-if="data['form']['type'] == 'out'">Stock-Output Unit Cost</div>
+									</th>
+									<th rowspan="2"
+										style="vertical-align: middle; text-align: center;">
+										<div>Value</div>
+									</th>
+								</tr>
+								<tr>
+									<th class="text-center">
+										<div>Ref.</div>
+									</th>
+									<th class="text-center">
+										<div>Date</div>
+									</th>
+								</tr>
+								<tr>
+									<th class="text-center">
+										<div>A</div>
+									</th>
+									<th class="text-center">
+										<div>B</div>
+									</th>
+									<th class="text-center">
+										<div>C</div>
+									</th>
+									<th class="text-center">
+										<div>D</div>
+									</th>
+									<th class="text-center">
+										<div>E</div>
+									</th>
+									<th class="text-center">
+										<div>F</div>
+									</th>
+									<th class="text-center">
+										<div>G</div>
+									</th>
+									<th class="text-center">
+										<div>(1)</div>
+									</th>
+									<th class="text-center">
+										<div>(2)</div>
+									</th>
+									<th class="text-center">
+										<div>(3)</div>
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<t t-foreach="lines" t-as="line">
+									<t t-if="not line['is_last_line']">
+										<tr>
+											<td>
+												<span t-esc="line['origin']" />
+											</td>
+											<td class="text-center">
+												<span t-esc="line['date']" />
+											</td>
+											<td>
+												<span t-esc="line['reference']" />
+												<br />
+											</td>
+											<td>
+												<span t-esc="line['description']" />
+												(
+												<span t-esc="line['src_loc_name']" />
+												->
+												<span t-esc="line['dest_loc_name']" />
+												)
+												<t t-if="line['note']">
+													<br />
+													<span t-esc="line['note']" />
+												</t>
+											</td>
+											<td class="text-nowrap">
+												<span t-esc="line['product_code']" />
+											</td>
+											<td class="text-nowrap">
+												<span t-esc="line['product_name']" />
+											</td>
+											<td class="text-center text-nowrap">
+												<span t-esc="line['product_uom']" />
+											</td>
+											<td class="text-right">
+												<span t-esc="formatLang(line['qty'], dp=line['dp'])" />
+											</td>
+											<td class="text-right">
+												<span
+													t-esc="formatLang(line['unit_price'], digits=line['decimal_places'])" />
+											</td>
+											<td class="text-right">
+												<span
+													t-esc="formatLang(line['total_price'], digits=line['decimal_places'])" />
+											</td>
+										</tr>
+									</t>
+									<t t-elif="line['is_last_line']">
+										<tr t-if="lines" style="font-weight: bold;">
+											<td colspan="7" class="text-right">Sum</td>
+											<td>
+												<span t-esc="formatLang(line['qty'], dp=line['dp'])" />
+											</td>
+											<td></td>
+											<td class="text-right">
+												<span
+													t-esc="formatLang(line['total_price'], digits=line['decimal_places'])" />
+											</td>
+										</tr>
+									</t>
+								</t>
+
+							</tbody>
+						</table>
+						<t t-call="to_l10n_vn_qweb_layout.signature_block" />
+					</div>
+				</t>
+			</t>
+		</template>
+
+	</data>
+</odoo>

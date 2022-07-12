@@ -1,0 +1,16 @@
+<odoo>
+	<data>
+		<template id="payment_tokens_list"
+			inherit_id="payment.payment_tokens_list">
+			<xpath expr="//div[hasclass('card-body')]" position="after">
+				<t t-if="acq.provider == 'nganluong' and acq.fees_active == True">
+					<div id="nganluong_fees_active" class="row">
+						<div class="offset-1">
+							<p class="alert alert-warning">Extra charge as transaction fee might be added to the payment.</p>
+						</div>
+					</div>
+				</t>
+			</xpath>
+		</template>
+	</data>
+</odoo>

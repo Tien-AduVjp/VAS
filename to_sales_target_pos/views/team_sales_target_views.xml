@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="team_sales_target_form" model="ir.ui.view">
+			<field name="name">team.sales.target.form</field>
+			<field name="model">team.sales.target</field>
+			<field name="inherit_id"
+				ref="to_sales_target_sale.team_sales_target_form" />
+			<field name="arch" type="xml">
+				<xpath
+					expr="//div[@name='button_box']/button[@name='action_view_sale_orders']"
+					position="after">
+					<button name="action_view_non_invoiced_pos_orders"
+						type="object" class="oe_stat_button" icon="fa-desktop"
+						help="PoS Orders that match this target and are not invoiced">
+						<field name="non_invoiced_pos_orders_count"
+							widget="statinfo" />
+					</button>
+					<button name="action_view_invoiced_pos_orders" type="object"
+						class="oe_stat_button" icon="fa-desktop"
+						help="PoS Orders that match this target and are invoiced">
+						<field name="invoiced_pos_orders_count" widget="statinfo" />
+					</button>
+				</xpath>
+				<xpath expr="//page[@name='kpi']/group/group[@name='sales']"
+					position="after">
+					<group name="pos" string="PoS">
+						<field name="non_invoiced_pos_sales_total" />
+						<field name="invoiced_pos_sales_total" />
+						<field name="pos_sales_total" />
+						<field name="pos_sales_target_reached" widget="progressbar"
+							string="Target Reached" />
+					</group>
+				</xpath>
+			</field>
+		</record>
+
+	</data>
+</odoo>

@@ -1,0 +1,16 @@
+<odoo>
+	<record id="digest_digest_view_form" model="ir.ui.view">
+		<field name="name">digest.digest.view.form</field>
+		<field name="model">digest.digest</field>
+		<field name="inherit_id" ref="digest.digest_digest_view_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//group[@name='kpi_general']" position="after">
+				<group name="kpi_subscription" string="Subscription"
+					groups="to_sale_subscription.group_sale_subscription_view">
+					<field name="kpi_subscription_in_progress" />
+					<field name="kpi_subscription_closed" />
+				</group>
+			</xpath>
+		</field>
+	</record>
+</odoo>

@@ -1,0 +1,22 @@
+<odoo>
+	<record id="project_task_employee_read_all_okr_task" model="ir.rule">
+	    <field name="name">Employees Read All OKR Tasks</field>
+	    <field name="model_id" ref="model_project_task" />
+	    <field name="domain_force">[('okr_node_id', '!=', False)]</field>
+	    <field name="groups" eval="[(4, ref('base.group_user'))]" />
+	    <field name="perm_read" eval="True" />
+	    <field name="perm_write" eval="False" />
+	    <field name="perm_create" eval="False" />
+	    <field name="perm_unlink" eval="False" />
+	</record>
+	<record id="project_task_employee_read_all_okr_project" model="ir.rule">
+		<field name="name">Employees Read All OKR Projects</field>
+		<field name="model_id" ref="model_project_project" />
+		<field name="domain_force">[('okr_node_ids', '!=', False)]</field>
+		<field name="groups" eval="[(4, ref('base.group_user'))]" />
+		<field name="perm_read" eval="True" />
+		<field name="perm_write" eval="False" />
+		<field name="perm_create" eval="False" />
+		<field name="perm_unlink" eval="False" />
+	</record>
+</odoo>

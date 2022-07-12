@@ -1,0 +1,7 @@
+<odoo>
+       <menuitem id="sale_quotation_template_menu"
+          name="Quotation Templates"
+          parent="sale.sale_order_menu"
+          action="sale_management.sale_order_template_action"
+          sequence="99" groups="group_sale_quotation_template_all"/>               
+</odoo>

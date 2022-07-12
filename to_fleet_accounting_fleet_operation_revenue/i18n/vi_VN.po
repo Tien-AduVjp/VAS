@@ -1,0 +1,529 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_fleet_accounting_fleet_operation_revenue
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-22 04:24+0000\n"
+"PO-Revision-Date: 2021-04-22 04:24+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_fleet_vehicle_revenue__address_id
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation_revenue.fleet_vehicle_revenues_view_search
+msgid "Address/Location"
+msgstr "Địa điểm"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_vehicle_trip_register_revenue_wizard__amount
+msgid "Amount"
+msgstr "Tổng tiền"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model,name:to_fleet_accounting_fleet_operation_revenue.model_account_analytic_line
+msgid "Analytic Line"
+msgstr "Phát sinh KT Quản trị"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation_revenue.vehicle_trip_register_revenue_wizard_view
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation_revenue.view_trip_fleet_vehicle_revenue_invoicing_wizard
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_vehicle_trip_register_revenue_wizard__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation_revenue.view_trip_fleet_vehicle_revenue_invoicing_wizard
+msgid "Create Invoices"
+msgstr "Tạo Hoá đơn"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation_revenue.view_trip_fleet_vehicle_revenue_invoicing_wizard
+msgid "Create and View Invoices"
+msgstr "Tạo và Xem Hoá đơn"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_trip_invoicing_revenue_wizard__create_uid
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_vehicle_trip_register_revenue_wizard__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_trip_invoicing_revenue_wizard__create_date
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_vehicle_trip_register_revenue_wizard__create_date
+msgid "Created on"
+msgstr "Được tạo vào"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.constraint,message:to_fleet_accounting_fleet_operation_revenue.constraint_vehicle_trip_register_revenue_wizard_zero_amount_check
+msgid "Creating revenue of zero amount does not make sense!"
+msgstr "Tạo doanh thu giá trị không (0) không có nghĩa lý gì!"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_vehicle_trip_register_revenue_wizard__currency_id
+msgid "Currency"
+msgstr "Tiền tệ"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_vehicle_trip_register_revenue_wizard__customer_id
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_fleet_vehicle_trip__customer_invoice_ids
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation_revenue.fleet_trip_form
+msgid "Customer Invoices"
+msgstr "Hoá đơn Khách hàng"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_fleet_vehicle_trip__customer_invoices_count
+msgid "Customer Invoices Count"
+msgstr "SL Hoá đơn Khách hàng"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_vehicle_trip_register_revenue_wizard__date
+msgid "Date"
+msgstr "Ngày"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_trip_invoicing_revenue_wizard__display_name
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_vehicle_trip_register_revenue_wizard__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model,name:to_fleet_accounting_fleet_operation_revenue.model_fleet_vehicle_trip
+msgid "Fleet Trip"
+msgstr "Chuyến"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model,name:to_fleet_accounting_fleet_operation_revenue.model_fleet_trips_analysis
+msgid "Fleet Trips Analysis"
+msgstr "Phân tích các Chuyến"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model,name:to_fleet_accounting_fleet_operation_revenue.model_fleet_vehicle_revenue_report
+msgid "Fleet Vehicle Revenue Analysis"
+msgstr "Phân tích Doanh thu Phương tiện"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_trip_invoicing_revenue_wizard__id
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_vehicle_trip_register_revenue_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.actions.act_window,name:to_fleet_accounting_fleet_operation_revenue.action_trip_fleet_vehicle_revenue_invoicing_wizard
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation_revenue.view_trip_fleet_vehicle_revenue_invoicing_wizard
+msgid "Invoice Trips' Revenues"
+msgstr "Xuất hoá đơn Doanh thu Chuyến"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_vehicle_trip_register_revenue_wizard__product_id
+msgid "Invoiceable Product"
+msgstr "Sản phẩm Xuất hoá đơn"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation_revenue.view_trip_fleet_vehicle_revenue_invoicing_wizard
+msgid ""
+"Invoices will be created in draft so that you can review\n"
+"\t\t\t\t\t\tthem before validation."
+msgstr ""
+"Hoá đơn sẽ được tạo ở trạng thái dự thảo để bản có thể xem\n"
+"                       xét trước khi xác nhận."
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model,name:to_fleet_accounting_fleet_operation_revenue.model_trip_invoicing_revenue_wizard
+msgid "Invoicing Trip's Revenues Wizard"
+msgstr "Đồ thuật Xuất Hoá đơn Doanh thu Chuyến"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model,name:to_fleet_accounting_fleet_operation_revenue.model_account_move_line
+msgid "Journal Item"
+msgstr "Phát sinh bút toán"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_trip_invoicing_revenue_wizard____last_update
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_vehicle_trip_register_revenue_wizard____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_trip_invoicing_revenue_wizard__write_uid
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_vehicle_trip_register_revenue_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_trip_invoicing_revenue_wizard__write_date
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_vehicle_trip_register_revenue_wizard__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_vehicle_trip_register_revenue_wizard__odometer
+msgid "Odometer Value"
+msgstr "Chỉ số Công tơ mét"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,help:to_fleet_accounting_fleet_operation_revenue.field_vehicle_trip_register_revenue_wizard__odometer
+msgid "Odometer measure of the vehicle at the moment of this log"
+msgstr "Chỉ số củacông tơ mét của phương tiện tại thời điểm ghi nhật ký này"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: code:addons/to_fleet_accounting_fleet_operation_revenue/wizard/vehicle_trip_register_revenue_wizard.py:0
+#, python-format
+msgid ""
+"Only Fleet Managers can create negative revenues (amount < 0). If you really"
+" want to create a nagative revenue (to correct your previous mistake), "
+"please ask the managers for help"
+msgstr ""
+"Chỉ có người được phân quyền Quản lý Đội phương tiện mới có thể nhập doanh "
+"thu âm (giá tổng < 0). Nếu bạn thực sự muốn tạo doanh thu âm (để hiệu chỉnh "
+"lỗi của bạn), vui lòng liên hệ với người quản lý."
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_fleet_trips_analysis__profit_loss
+msgid "P&L"
+msgstr "Lãi & Lỗ"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation_revenue.fleet_trip_form
+msgid "Record Revenue"
+msgstr "Ghi Doanh thu"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation_revenue.vehicle_trip_register_revenue_wizard_view
+msgid "Register"
+msgstr "Đăng ký"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_fleet_trips_analysis__sum_revenue
+msgid "Revenue"
+msgstr "Doanh thu"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model,name:to_fleet_accounting_fleet_operation_revenue.model_fleet_vehicle_revenue
+msgid "Revenue related to a vehicle"
+msgstr "Doanh thu liên quan đến một phương tiện"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.ui.menu,name:to_fleet_accounting_fleet_operation_revenue.menu_fleet_reporting_revenues
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation_revenue.fleet_trip_form
+msgid "Revenues"
+msgstr "Doanh thu"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.ui.menu,name:to_fleet_accounting_fleet_operation_revenue.menu_main_fleet_reporting_revenues
+msgid "Revenues Analysis"
+msgstr "Phân tích Doanh thu"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_fleet_vehicle_trip__revenues_invoiced
+msgid "Revenues Invoiced"
+msgstr "Doanh thu đã Xuất hoá đơn"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_trip_invoicing_revenue_wizard__vehicle_revenue_ids
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation_revenue.view_trip_fleet_vehicle_revenue_invoicing_wizard
+msgid "Revenues to Invoice"
+msgstr "Doanh thu chờ Xuất hoá đơn"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_fleet_vehicle_revenue__route_id
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_fleet_vehicle_revenue_report__route_id
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation_revenue.fleet_vehicle_revenues_report_view_search
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation_revenue.fleet_vehicle_revenues_view_search
+msgid "Route"
+msgstr "Tuyến đường"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_fleet_vehicle_revenue_report__route_section_id
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation_revenue.fleet_vehicle_revenues_view_search
+msgid "Route Section"
+msgstr "Chặng đường"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_fleet_vehicle_revenue__route_section_id
+msgid "Section"
+msgstr "Chặng"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation_revenue.fleet_trip_form
+msgid "Show all customer invoices that have been issued for this trip"
+msgstr "Hiển thị tất cả các hoá đơn khách hàng mà đã được xuất cho chuyến này"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation_revenue.fleet_trip_form
+msgid "Show all the revenues for this trip"
+msgstr "Hiển thị tất cả các doanh thu liên quan đến chuyến này"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: code:addons/to_fleet_accounting_fleet_operation_revenue/wizard/vehicle_trip_register_revenue_wizard.py:0
+#, python-format
+msgid ""
+"The Trip Section '%s' you've selected does not belong to this trip '%s'"
+msgstr "Chặng '%s' mà bạn chọn không thuộc về chuyến '%s'"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: code:addons/to_fleet_accounting_fleet_operation_revenue/wizard/vehicle_trip_register_revenue_wizard.py:0
+#, python-format
+msgid ""
+"The Trip Waypoint '%s' you've selected does not belong to this trip '%s'"
+msgstr "Địa điểm '%s' mà bạn chọn không thuộc về chuyến '%s'"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,help:to_fleet_accounting_fleet_operation_revenue.field_vehicle_trip_register_revenue_wizard__product_id
+msgid "The product that will be used when invoicing this revenue"
+msgstr "Sản phẩm mà sẽ được sử dụng để xuất hoá đơn cho doanh thu này"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,help:to_fleet_accounting_fleet_operation_revenue.field_trip_invoicing_revenue_wizard__vehicle_revenue_ids
+msgid ""
+"The revenues having a customer defined but have not been invoiced will be "
+"loaded here upon you change the trip(s)"
+msgstr ""
+"Các ghi nhận doanh thu mà có xác định khách hàng nhưng chưa được xuất hoá "
+"đơn sẽ tự động được nạp vào ngay khi bạn thay đổi (các) chuyến"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation_revenue.fleet_vehicle_revenues_view_search
+msgid "The revenues that concern addresses during the trips"
+msgstr "Doanh thu mà liên quản đến các địa điểm trong chuyến"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation_revenue.fleet_vehicle_revenues_view_search
+msgid "The revenues that concern route sections during the trips"
+msgstr "Doanh thu mà liên quản đến các chặng trong chuyến"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation_revenue.fleet_vehicle_revenues_view_search
+msgid "The revenues that concern routes during the trips."
+msgstr "Doanh thu mà liên quản đến các tuyến trong các chuyến"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation_revenue.fleet_vehicle_revenues_view_search
+msgid "The revenues that have been registered for trips."
+msgstr "Doanh thu mà được ghi nhận cho các chuyến."
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,help:to_fleet_accounting_fleet_operation_revenue.field_fleet_vehicle_revenue__route_id
+msgid ""
+"The route on which the revenue concerns which is computed based on the route"
+" of the corresponding trip"
+msgstr ""
+"Tuyến đường mà tại đó doanh thu liên quan được ghi nhận. Doanh thu được tính"
+" tự động dựa chuyến tuyến tương ứng với chuyến"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,help:to_fleet_accounting_fleet_operation_revenue.field_vehicle_trip_register_revenue_wizard__trip_section_id
+msgid "The section of the trip for which the revenue is registered"
+msgstr "Chặng trong chuyến mà doanh thu này được ghi nhận cho"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,help:to_fleet_accounting_fleet_operation_revenue.field_fleet_vehicle_revenue__trip_section_id
+msgid "The section of the trip's route for which the revenue has been raised"
+msgstr "Chặng trong tuyến đường của chuyến mà có doanh thu này"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,help:to_fleet_accounting_fleet_operation_revenue.field_fleet_vehicle_revenue__trip_id
+msgid ""
+"The trip on which the revenue concerns. This field is automatically computed"
+" base on the Trip Section and the Trip Waypoint"
+msgstr ""
+"Chuyến mà có doanh thu này. Trường này được tính tự động dựa trên chặng hoặc"
+" địa điểm mà chi phí được ghi nhận cho"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,help:to_fleet_accounting_fleet_operation_revenue.field_vehicle_revenue_allocation_line__trip_id
+msgid "The trip on which this amount is registered"
+msgstr "Chuyến mà ở đó giá trị này được ghi nhận"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,help:to_fleet_accounting_fleet_operation_revenue.field_fleet_vehicle_revenue_report__trip_operator_id
+msgid ""
+"The user who takes the responsibility for the related trip as the operator"
+msgstr "Người dùng mà chịu trách nhiệm khai thác chuyến liên quan"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,help:to_fleet_accounting_fleet_operation_revenue.field_vehicle_trip_register_revenue_wizard__trip_waypoint_id
+msgid "The waypoint of the trip for where the revenue is registered"
+msgstr "Địa điểm trong chuyến mà doanh thu được ghi nhận"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,help:to_fleet_accounting_fleet_operation_revenue.field_fleet_vehicle_revenue__trip_waypoint_id
+msgid "The waypoint of the trip's route for where the revenue has been raised"
+msgstr "Địa điểm trong tuyến được chọn cho chuyến mà doanh thu được ghi nhận"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: code:addons/to_fleet_accounting_fleet_operation_revenue/wizard/vehicle_trip_register_revenue_wizard.py:0
+#, python-format
+msgid ""
+"There is a discrepancy between the product (%s) you selected and the product"
+" (%s) predefined for the service type %s"
+msgstr ""
+"Có sự bất đồng giữa sản phẩm (%s) mà bạn chọn với sản phẩm được xác định "
+"trước cho kiểu dịch vụ %s"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: code:addons/to_fleet_accounting_fleet_operation_revenue/models/fleet_vehicle_revenue.py:0
+#, python-format
+msgid ""
+"There is discrepancy between the selected trip and the trip section! The "
+"trip section %s belong to the trip %s"
+msgstr ""
+"Có sự bất đồng giữa chuyến và chặng được chọn. Chặng được chọn (%s) thuộc về"
+" chuyến %s"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: code:addons/to_fleet_accounting_fleet_operation_revenue/models/fleet_vehicle_revenue.py:0
+#, python-format
+msgid ""
+"There is discrepancy between the selected trip and the trip waypoint! The "
+"trip waypoint %s belong to the trip %s"
+msgstr ""
+"Có sự bất đồng giữa chuyến và địa điểm được chọn! Địa điểm được chọn (%s) "
+"thuộc về chuyến %s"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,help:to_fleet_accounting_fleet_operation_revenue.field_fleet_vehicle_trip__revenues_invoiced
+msgid ""
+"This technical field is to indicate if all the trip's revenues have been "
+"fully invoiced. Note: this field takes True value when no revenue is "
+"registered for the trip"
+msgstr ""
+"Trường kỹ thuật để chỉ báo xem các doanh thu của chuyến đã được xuất hoá đơn"
+" đầy đủ hay chưa. Lưu ý: Trường này trả về giá trị True khi không có doanh "
+"thu nào được ghi nhận cho chuyến"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_fleet_vehicle_revenue__trip_id
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_fleet_vehicle_revenue_report__trip_id
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_vehicle_revenue_allocation_line__trip_id
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_vehicle_trip_register_revenue_wizard__trip_id
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation_revenue.fleet_vehicle_revenues_report_view_search
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation_revenue.fleet_vehicle_revenues_view_search
+msgid "Trip"
+msgstr "Chuyến"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: code:addons/to_fleet_accounting_fleet_operation_revenue/models/fleet_vehicle_revenue.py:0
+#, python-format
+msgid ""
+"Trip #: %s\n"
+"%s"
+msgstr ""
+"Chuyến #: %s\n"
+"%s"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_fleet_vehicle_revenue_report__trip_operator_id
+msgid "Trip Operator"
+msgstr "Người Khai thác"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.actions.act_window,name:to_fleet_accounting_fleet_operation_revenue.action_trip_fleet_vehicle_revenue_stat
+msgid "Trip Revenue"
+msgstr "Doanh thu Chuyến"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.actions.act_window,name:to_fleet_accounting_fleet_operation_revenue.launch_vehicle_trip_register_revenue_wizard
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation_revenue.vehicle_trip_register_revenue_wizard_view
+msgid "Trip Revenue Registration Wizard"
+msgstr "Đồ thuật Ghi nhận Doanh thu Chuyến"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_fleet_vehicle_revenue__trip_section_id
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_vehicle_revenue_allocation_line__trip_section_id
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_vehicle_trip_register_revenue_wizard__trip_section_id
+msgid "Trip Section"
+msgstr "Chặng"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_fleet_vehicle_revenue__trip_waypoint_id
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_vehicle_revenue_allocation_line__trip_waypoint_id
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_vehicle_trip_register_revenue_wizard__trip_waypoint_id
+msgid "Trip Waypoint"
+msgstr "Địa điểm"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_trip_invoicing_revenue_wizard__trip_ids
+msgid "Trips to Invoice"
+msgstr "Chuyến chờ Hoá đơn"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_vehicle_trip_register_revenue_wizard__revenue_subtype_id
+msgid "Type"
+msgstr "Kiểu"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model,name:to_fleet_accounting_fleet_operation_revenue.model_vehicle_revenue_allocation_line
+msgid "Vehicle Revenue Allocation Line"
+msgstr "Chi tiết Phân bổ Doanh thu Phương tiện"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model,name:to_fleet_accounting_fleet_operation_revenue.model_vehicle_revenue_allocation_wizard
+msgid "Vehicle Revenue Allocation Wizard"
+msgstr "Đồ thuật Phân bổ Doanh thu Phương tiện"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_fleet_vehicle_trip__fleet_vehicle_revenue_ids
+msgid "Vehicle Revenues"
+msgstr "Doanh thu Phương tiện"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_fleet_vehicle_trip__fleet_vehicle_revenues_count
+msgid "Vehicle Revenues Count"
+msgstr "SL Doanh thu Phương tiện"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation_revenue.field_fleet_vehicle_revenue_report__address_id
+msgid "Waypoint"
+msgstr "Điểm"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: code:addons/to_fleet_accounting_fleet_operation_revenue/models/fleet_vehicle_revenue.py:0
+#, python-format
+msgid ""
+"You may register a revenue for either a Trip Section or a Trip Waypoint. Not"
+" for both!"
+msgstr ""
+"Bạn chỉ có thể ghi nhận một doanh thu hoặc cho chặng hoặc cho địa điểm trong"
+" chuyến. Không phải cho cả hai!"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: code:addons/to_fleet_accounting_fleet_operation_revenue/wizard/vehicle_trip_register_revenue_wizard.py:0
+#, python-format
+msgid ""
+"You must assign the revenue either for a trip section or trip waypoint. You "
+"cannot leave both empty!"
+msgstr ""
+"Bạn phải gán doanh thu hoặc cho chặng trong chuyến hoặc cho địa điểm trong "
+"chuyến. Bạn không được để trống cả hai!"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: code:addons/to_fleet_accounting_fleet_operation_revenue/wizard/vehicle_trip_register_revenue_wizard.py:0
+#, python-format
+msgid "You must select a trip to register a revenue for it."
+msgstr "Bạn phải chọn một chuyến để ghi nhận doanh thu cho nó."
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation_revenue.vehicle_trip_register_revenue_wizard_view
+msgid "or"
+msgstr "hoặc"
+
+#. module: to_fleet_accounting_fleet_operation_revenue
+#: model:ir.model,name:to_fleet_accounting_fleet_operation_revenue.model_vehicle_trip_register_revenue_wizard
+msgid "vehicle.trip.register.revenue.wizard"
+msgstr ""
+

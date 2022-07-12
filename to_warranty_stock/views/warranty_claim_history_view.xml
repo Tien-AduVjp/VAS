@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+	<record model="ir.ui.view" id="warranty_claim_history_tree_view">
+		<field name="name">warranty.claim.history.tree</field>
+		<field name="model">warranty.claim</field>
+		<field name="arch" type="xml">
+			<tree string="Claim Tree"
+				decoration-muted="state in ('cancelled')"
+				decoration-info="state=='done'">
+				<field name="name" />
+				<field name="product_id" />
+				<field name="partner_id" />
+				<field name="state" string="Status" />
+			</tree>
+		</field>
+	</record>
+
+	<record model="ir.actions.act_window"
+		id="action_warranty_claim_history">
+		<field name="name">Warranty History</field>
+		<field name="res_model">warranty.claim</field>
+		<field name="view_mode">tree,form</field>
+		<field name="view_id" ref="warranty_claim_history_tree_view" />
+	</record>
+</odoo>
+
+
+
+
+

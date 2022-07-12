@@ -1,0 +1,179 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* to_git_odoo_version
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-10 15:00+0000\n"
+"PO-Revision-Date: 2019-11-10 15:00+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_git_odoo_version
+#: model_terms:ir.ui.view,arch_db:to_git_odoo_version.git_branch_form_view
+msgid "Assign Odoo Version"
+msgstr "Gán Phiên bản Odoo"
+
+#. module: to_git_odoo_version
+#: model:ir.actions.server,name:to_git_odoo_version.action_server_branches_assign_odoo_version
+#: model:ir.actions.server,name:to_git_odoo_version.action_server_repository_assign_odoo_versions
+#: model_terms:ir.ui.view,arch_db:to_git_odoo_version.git_repository_view_form
+msgid "Assign Odoo Versions"
+msgstr "Gán Phiên bản Odoo"
+
+#. module: to_git_odoo_version
+#: model:ir.model.fields,field_description:to_git_odoo_version.field_git_branch__default_license_version_id
+#: model:ir.model.fields,field_description:to_git_odoo_version.field_git_repository__default_license_version_id
+msgid "Default License Version"
+msgstr "Phiên bản Chứng nhận mặc định"
+
+#. module: to_git_odoo_version
+#: model:ir.model.fields,field_description:to_git_odoo_version.field_git_branch__depended_git_branch_ids
+msgid "Depended Branches"
+msgstr ""
+
+#. module: to_git_odoo_version
+#: model:ir.model.fields,field_description:to_git_odoo_version.field_git_branch__depending_git_branch_ids
+msgid "Depending Branches"
+msgstr ""
+
+#. module: to_git_odoo_version
+#: model:ir.model,name:to_git_odoo_version.model_git_branch
+msgid "Git Branch"
+msgstr "Nhánh Git"
+
+#. module: to_git_odoo_version
+#: model:ir.model.fields,field_description:to_git_odoo_version.field_odoo_version__git_branch_ids
+#: model_terms:ir.ui.view,arch_db:to_git_odoo_version.odoo_version_form_view
+msgid "Git Branches"
+msgstr "Nhánh Git"
+
+#. module: to_git_odoo_version
+#: model:ir.model.fields,field_description:to_git_odoo_version.field_odoo_version__git_branches_count
+msgid "Git Branches Count"
+msgstr "SL Nhánh Git"
+
+#. module: to_git_odoo_version
+#: model:ir.model,name:to_git_odoo_version.model_git_repository
+msgid "Git Repository"
+msgstr "Kho Git"
+
+#. module: to_git_odoo_version
+#: model:ir.model.fields,field_description:to_git_odoo_version.field_git_branch__is_odoo_enterprise_source_code
+msgid "Is Odoo Enterprise"
+msgstr "Là Odoo Enterprise"
+
+#. module: to_git_odoo_version
+#: model:ir.model.fields,field_description:to_git_odoo_version.field_git_repository__is_odoo_enterprise_source_code
+msgid "Is Odoo Enterprise Repo"
+msgstr "Là Kho Odoo Enterprise"
+
+#. module: to_git_odoo_version
+#: model:ir.model.fields,field_description:to_git_odoo_version.field_git_branch__is_odoo_source_code
+#: model:ir.model.fields,field_description:to_git_odoo_version.field_git_repository__is_odoo_source_code
+msgid "Is Odoo Source Code"
+msgstr "Là Mã nguồn Odoo"
+
+#. module: to_git_odoo_version
+#: model:ir.model.fields,field_description:to_git_odoo_version.field_git_branch__contain_odoo_module
+msgid "Odoo Addons Inside"
+msgstr "Chứa module Odoo"
+
+#. module: to_git_odoo_version
+#: model:ir.model,name:to_git_odoo_version.model_odoo_version
+#: model:ir.model.fields,field_description:to_git_odoo_version.field_git_branch__odoo_version_id
+#: model_terms:ir.ui.view,arch_db:to_git_odoo_version.git_branch_search_view
+msgid "Odoo Version"
+msgstr "Phiên bản Odoo"
+
+#. module: to_git_odoo_version
+#: code:addons/to_git_odoo_version/models/git_branch.py:43
+#, python-format
+msgid "Odoo Version Discrepancy between the branch %s and the depended branch %s"
+msgstr ""
+
+#. module: to_git_odoo_version
+#: code:addons/to_git_odoo_version/models/git_branch.py:35
+#, python-format
+msgid "Odoo Version Discrepancy between the branch %s and the depending branch %s"
+msgstr ""
+
+#. module: to_git_odoo_version
+#: model_terms:ir.ui.view,arch_db:to_git_odoo_version.git_branch_search_view
+msgid "Odoo Versions Matched"
+msgstr "Khớp với Phiên bản Odoo"
+
+#. module: to_git_odoo_version
+#: model:ir.model.fields,help:to_git_odoo_version.field_odoo_version__git_branch_ids
+msgid "Related Git Branches that have the same name as this Odoo version's"
+msgstr "Các Nhánh Git liên quan mà có cùng tên với phiên bản Odoo này"
+
+#. module: to_git_odoo_version
+#: model_terms:ir.ui.view,arch_db:to_git_odoo_version.git_branch_search_view
+msgid "Show git branches that match an Odoo version"
+msgstr "Hiển thị các nhánh Git mà có khớp với một phiên bản Odoo"
+
+#. module: to_git_odoo_version
+#: code:addons/to_git_odoo_version/models/git_branch.py:74
+#, python-format
+msgid "The branch %s cannot be both Odoo Source Code and Odoo Enterprise Source Code."
+msgstr ""
+
+#. module: to_git_odoo_version
+#: model:ir.model.fields,help:to_git_odoo_version.field_git_branch__depending_git_branch_ids
+msgid "The external git branches on which this branch depends."
+msgstr ""
+
+#. module: to_git_odoo_version
+#: model:ir.model.fields,help:to_git_odoo_version.field_git_branch__depended_git_branch_ids
+msgid "The external git branches that depend on this branch."
+msgstr ""
+
+#. module: to_git_odoo_version
+#: model_terms:ir.ui.view,arch_db:to_git_odoo_version.git_branch_form_view
+msgid "This action will map Odoo versions with branch based on the branch name. For example, branch 13.0 will be assigned with Odoo version 13.0."
+msgstr ""
+
+#. module: to_git_odoo_version
+#: model_terms:ir.ui.view,arch_db:to_git_odoo_version.git_repository_view_form
+msgid "This action will map Odoo versions with branches of this repository based on the branch name. For example, branch 13.0 will be assigned with Odoo version 13.0."
+msgstr ""
+
+#. module: to_git_odoo_version
+#: model:ir.model.fields,help:to_git_odoo_version.field_git_branch__is_odoo_source_code
+msgid "This field indicates if the branch stores Odoo's source code base, which is also known as Odoo CE.\n"
+"Note: The value of this field will be updated automatically when the branch will be updated from remote git."
+msgstr ""
+
+#. module: to_git_odoo_version
+#: model:ir.model.fields,help:to_git_odoo_version.field_git_repository__is_odoo_source_code
+msgid "This field indicates if the repository contains a branch that stores Odoo's source code base, which is also known as Odoo CE.\n"
+"Note: The value of this field will be updated automatically when the branch will be updated from remote git."
+msgstr ""
+
+#. module: to_git_odoo_version
+#: model:ir.model.fields,help:to_git_odoo_version.field_git_branch__is_odoo_enterprise_source_code
+msgid "This field indicates if this branch is Odoo Enterprise source base that contains Odoo Enterprise modules built on top of Odoo CE"
+msgstr ""
+
+#. module: to_git_odoo_version
+#: model:ir.model.fields,help:to_git_odoo_version.field_git_repository__is_odoo_enterprise_source_code
+msgid "This field indicates if this repository is the Odoo Enterprise source base that contains Enterprise Modules built on top of Odoo CE"
+msgstr ""
+
+#. module: to_git_odoo_version
+#: model:ir.model.fields,help:to_git_odoo_version.field_git_branch__default_license_version_id
+msgid "Unless otherwise specified (e.g. in the module's manifest), all the source code of this branch will be considered as being released under this license."
+msgstr ""
+
+#. module: to_git_odoo_version
+#: model:ir.model.fields,help:to_git_odoo_version.field_git_repository__default_license_version_id
+msgid "Unless otherwise specified (e.g. in the module's manifest), all the source code of this repository will be considered as being released under this license."
+msgstr ""
+

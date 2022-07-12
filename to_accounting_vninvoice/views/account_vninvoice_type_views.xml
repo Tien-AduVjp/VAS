@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="account_vninvoice_type_form" model="ir.ui.view">
+			<field name="name">account.vninvoice.type.form</field>
+			<field name="model">account.vninvoice.type</field>
+			<field name="arch" type="xml">
+				<form string="VN-invoice Type">
+					<sheet>
+						<group>
+							<group>
+								<field name="name" />
+								<field name="description" />
+							</group>
+						</group>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers"
+							groups="base.group_user" />
+						<field name="activity_ids" widget="mail_activity" />
+						<field name="message_ids" widget="mail_thread" />
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record id="account_vninvoice_type_tree" model="ir.ui.view">
+			<field name="name">account.vninvoice.type.tree</field>
+			<field name="model">account.vninvoice.type</field>
+			<field name="arch" type="xml">
+				<tree string="VN-invoice Type">
+					<field name="name" />
+					<field name="description" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="action_vninvoice_type" model="ir.actions.act_window">
+			<field name="name">VN-invoice Type</field>
+			<field name="res_model">account.vninvoice.type</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem id="menu_vninvoice" name="VN-invoice"
+			parent="account.menu_finance_configuration" sequence="15"
+			groups="account.group_account_manager" />
+
+		<menuitem action="action_vninvoice_type"
+			id="menu_action_vninvoice_type" parent="menu_vninvoice" sequence="5"
+			groups="account.group_account_manager" />
+	</data>
+</odoo>

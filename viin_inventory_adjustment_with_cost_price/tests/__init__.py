@@ -1,0 +1,1 @@
+from . import test_inventory_adjustment_with_cost_price

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="git_branch_form_view" model="ir.ui.view">
+			<field name="name">git.branch.form</field>
+			<field name="model">git.branch</field>
+			<field name="inherit_id" ref="to_git.git_branch_form_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//button[@name='un_checkout']" position="after">
+					<button string="Assign Odoo Version"
+						help="This action will map Odoo versions with branch based on the branch name. For example, branch 13.0 will be assigned with Odoo version 13.0."
+						type="object" name="action_assign_odoo_version" />
+				</xpath>
+				<xpath expr="//field[@name='vendor_id']" position="before">
+					<field name="odoo_version_id"
+						groups="to_odoo_version.group_manager" />
+					<field name="is_odoo_source_code" />
+					<field name="contain_odoo_module" />
+					<field name="is_odoo_enterprise_source_code" force_save="1" />
+					<field name="default_license_version_id" />
+					<field name="depending_git_branch_ids"
+						widget="many2many_tags" />
+				</xpath>
+			</field>
+		</record>
+
+		<record id="git_branch_tree_view" model="ir.ui.view">
+			<field name="name">git.branch.tree</field>
+			<field name="model">git.branch</field>
+			<field name="inherit_id" ref="to_git.git_branch_tree_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='vendor_id']" position="before">
+					<field name="odoo_version_id"
+						groups="to_odoo_version.group_manager" />
+					<field name="is_odoo_source_code" />
+				</xpath>
+			</field>
+		</record>
+
+		<record id="git_branch_search_view" model="ir.ui.view">
+			<field name="name">git.branch.search</field>
+			<field name="model">git.branch</field>
+			<field name="inherit_id" ref="to_git.git_branch_search_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='vendor_id']" position="before">
+					<field name="odoo_version_id"
+						groups="to_odoo_version.group_manager" />
+					<separator groups="to_odoo_version.group_manager" />
+				</xpath>
+				<xpath expr="//field[@name='auto_scan']" position="after">
+					<separator groups="to_odoo_version.group_manager" />
+					<filter name="ftr_with_odoo_version"
+						domain="[('odoo_version_id','!=',False)]"
+						string="Odoo Versions Matched"
+						help="Show git branches that match an Odoo version"
+						groups="to_odoo_version.group_manager" />
+					<separator />
+					<filter name="ftr_odoo_source_code"
+						string="Odoo Source Code"
+						domain="[('is_odoo_source_code','=',True)]" />
+					<filter name="ftr_none_odoo_source_code"
+						string="Non-Odoo Source Code"
+						domain="[('is_odoo_source_code','=',False)]" />
+				</xpath>
+				<xpath expr="//filter[@name='grp_vendor']" position="before">
+					<filter name="grp_odoo_version" string="Odoo Version"
+						domain="[]" context="{'group_by' : 'odoo_version_id'}"
+						groups="to_odoo_version.group_manager" />
+				</xpath>
+			</field>
+		</record>
+
+		<record id="action_server_branches_assign_odoo_version"
+			model="ir.actions.server">
+			<field name="name">Assign Odoo Versions</field>
+			<field name="type">ir.actions.server</field>
+			<field name="model_id" ref="model_git_branch" />
+			<field name="binding_model_id" ref="model_git_branch" />
+			<field name="state">code</field>
+			<field name="code">records.action_assign_odoo_version()</field>
+		</record>
+
+	</data>
+</odoo>

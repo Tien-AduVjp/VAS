@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="view_hr_employee_seniority_form" model="ir.ui.view">
+		<field name="name">hr.employee.seniority.form</field>
+		<field name="model">hr.employee.seniority</field>
+		<field name="arch" type="xml">
+			<form string="Employee Seniority">
+				<header>
+					<field name="state" widget="statusbar"
+						options="{'clickable': '0'}" />
+				</header>
+				<sheet>
+					<group>
+						<group>
+							<field name="employee_id" />
+							<field name="contract_id" />
+							<field name="job_id" />
+							<field name="department_id" />
+							<field name="company_id" groups="base.group_multi_company" />
+						</group>
+						<group>
+							<field name="date_start" />
+							<field name="date_end" />
+							<field name="resource_calendar_id" />
+							<field name="is_trial" />
+							<field name="service_years" />
+						</group>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<record id="view_hr_employee_seniority_tree" model="ir.ui.view">
+		<field name="name">hr.employee.seniority.tree</field>
+		<field name="model">hr.employee.seniority</field>
+		<field name="arch" type="xml">
+			<tree string="Employee Seniority">
+				<field name="employee_id" />
+				<field name="contract_id" />
+				<field name="date_start" />
+				<field name="date_end" />
+				<field name="service_years" />
+				<field name="job_id" />
+				<field name="department_id" />
+				<field name="resource_calendar_id" />
+				<field name="company_id" groups="base.group_multi_company" />
+				<field name="is_trial" />
+				<field name="state" />
+			</tree>
+		</field>
+	</record>
+
+	<record id="view_hr_employee_seniority_pivot" model="ir.ui.view">
+		<field name="name">hr.employee.seniority.pivot</field>
+		<field name="model">hr.employee.seniority</field>
+		<field name="arch" type="xml">
+			<pivot string="Employee Seniority Analysis"
+				disable_linking="True">
+				<field name="department_id" type="col" />
+				<field name="date_start" interval="month" type="row" />
+				<field name="service_years" type="measure" />
+				<field name="contracts_count" type="measure" />
+			</pivot>
+		</field>
+	</record>
+
+	<record id="view_hr_employee_seniority_graph" model="ir.ui.view">
+		<field name="name">hr.employee.seniority.graph</field>
+		<field name="model">hr.employee.seniority</field>
+		<field name="arch" type="xml">
+			<graph string="Employee Seniority Analysis" type="line">
+				<field name="date_start" type="row" interval="day" />
+				<field name="service_years" type="measure" />
+				<field name="contracts_count" type="measure" />
+			</graph>
+		</field>
+	</record>
+
+	<record id="view_hr_employee_seniority_search"
+		model="ir.ui.view">
+		<field name="name">hr.employee.seniority.search</field>
+		<field name="model">hr.employee.seniority</field>
+		<field name="arch" type="xml">
+			<search string="Employee Seniority Analysis">
+				<field name="name" />
+				<field name="date_start" string="Start Date" />
+				<field name="date_end" string="End Date" />
+				<filter name="ftr_past" string="Past"
+					domain="[('state','=', 'close')]" />
+				<filter name="ftr_current" string="Current"
+					domain="[('state','=', 'open')]" />
+				<filter name="ftr_incoming" string="Incoming"
+					domain="[('state','=', 'draft')]" />
+				<separator />
+				<field name="employee_id" />
+				<field name="contract_id" />
+				<field name="department_id" />
+				<field name="job_id" />
+				<field name="resource_calendar_id" />
+				<field name="company_id" groups="base.group_multi_company" />
+				<separator />
+				<field name="service_years" />
+				<group expand="0" string="Extended Filters">
+					<field name="company_id" groups="base.group_multi_company" />
+				</group>
+				<group expand="1" string="Group By">
+					<filter string="Employee" name="grp_employee"
+						context="{'group_by':'employee_id'}" />
+					<filter string="Department" name="grp_department]"
+						context="{'group_by':'department_id'}" />
+					<filter string="Job Position" name="grp_job"
+						context="{'group_by':'job_id'}" />
+					<filter name="status" string="Status"
+						context="{'group_by':'state'}" />
+					<filter string="Company" name="company"
+						groups="base.group_multi_company"
+						context="{'group_by':'company_id'}" />
+					<separator />
+					<filter string="Start Date" name="grp_date_start"
+						context="{'group_by':'date_start'}" />
+					<filter string="End Date" name="grp_date_end"
+						context="{'group_by':'date_end'}" />
+				</group>
+			</search>
+		</field>
+	</record>
+
+	<record id="action_hr_employee_seniority_report"
+		model="ir.actions.act_window">
+		<field name="name">Employee Seniority Analysis</field>
+		<field name="res_model">hr.employee.seniority</field>
+		<field name="view_mode">list,form,graph,pivot</field>
+		<field name="view_id"></field>  <!-- force empty -->
+		<field name="search_view_id"
+			ref="view_hr_employee_seniority_search" />
+		<field name="context">{'search_default_grp_employee':1,'search_default_ftr_past':1,'search_default_ftr_current':1}</field>
+	</record>
+
+	<menuitem name="Seniority" id="menu_hr_employee_seniority"
+		parent="hr.menu_hr_root" sequence="7"
+		action="action_hr_employee_seniority_report" />
+</odoo>

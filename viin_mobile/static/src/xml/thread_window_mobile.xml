@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-extend="mail.AbstractThreadWindow.HeaderContent">
+        <t t-jquery=".o_thread_window_buttons" t-operation="after">
+            <span t-if="widget.isMobile() &amp;&amp; widget._isDocumentThread!==undefined &amp;&amp; widget._isDocumentThread()">
+                <a href="#" class="o_thread_window_expand_mobile fa fa-expand" t-att-title="expandTitle" t-att-aria-label="expandTitle" />
+            </span>
+        </t>
+    </t>
+</templates>

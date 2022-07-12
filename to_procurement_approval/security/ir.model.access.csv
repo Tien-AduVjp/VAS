@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_procurement_request_line_employee,procurement.request.line.employee,model_procurement_request_line,base.group_user,1,1,1,1
+access_stock_picking_request_user,stock.picking.request_user,stock.model_stock_picking,to_approvals.group_approval_officer,1,0,0,0
+access_stock_move_request_user,stock.move.request_user,stock.model_stock_move,to_approvals.group_approval_officer,1,0,0,0

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates id="template" xml:space="preserve">
+	<t t-name="DialogDocument" t-extend="DialogDocument">
+		<t t-jquery='input.form-control' t-operation='after'>
+			<input id="document-version" type="hidden"/>
+		</t>
+	</t>
+</templates>

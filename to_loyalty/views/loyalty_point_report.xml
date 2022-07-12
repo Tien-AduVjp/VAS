@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="view_loyalty_point_report_graph" model="ir.ui.view">
+			<field name="name">loyalty.points.report.graph</field>
+			<field name="model">loyalty.points.report</field>
+			<field name="arch" type="xml">
+				<graph string="Loyalty points">
+					<field name="partner_id" />
+					<field name="loyalty_program_id" />
+					<field name="points" type="measure" />
+				</graph>
+			</field>
+		</record>
+
+		<record id="view_loyalty_point_report_pivot" model="ir.ui.view">
+			<field name="name">loyalty.points.report.pivot</field>
+			<field name="model">loyalty.points.report</field>
+			<field name="arch" type="xml">
+				<pivot string="Loyalty points">
+					<field name="partner_id" type="row" />
+					<field name="loyalty_program_id" type="col" />
+					<field name="points" type="measure" />
+				</pivot>
+			</field>
+		</record>
+
+		<record model="ir.ui.view"
+			id="loyalty_points_report_search_view">
+			<field name="name">loyalty.points.report.search</field>
+			<field name="model">loyalty.points.report</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="partner_id" />
+					<field name="loyalty_program_id" />
+					<field name="reward_id" />
+					<field name="product_id" />
+					<separator />
+					<filter name="ftr_won" string="Won Points"
+						domain="[('point_type','=','won')]"
+						help="Show points that your customers gain" />
+					<filter name="ftr_spent" string="Spent Points"
+						domain="[('point_type','=','spent')]"
+						help="Show points that your customers spent to get rewarded" />
+					<separator />
+				</search>
+			</field>
+		</record>
+
+		<record id="action_loyalty_points_report"
+			model="ir.actions.act_window">
+			<field name="name">Loyalty Points Analysis</field>
+			<field name="res_model">loyalty.points.report</field>
+			<field name="view_mode">pivot,graph</field>
+			<field name="view_id"></field>  <!-- force empty -->
+		</record>
+
+		<menuitem id="menu_loyalty_point_report" name="Points"
+			parent="menu_loyalty_report" sequence="10"
+			action="action_loyalty_points_report"
+			groups="to_loyalty.group_loyalty_manager" />
+	</data>
+</odoo>

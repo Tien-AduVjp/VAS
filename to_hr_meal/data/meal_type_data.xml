@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data noupdate="1">
+		<record id="lunch_alert" model="hr.meal.type.alert">
+			<field name="name">Lunch</field>
+			<field name="scheduled_hour" eval="12" />
+			<field name="message">Lunch must be ordered before 10:30 AM</field>
+		</record>
+		<record id="dinner_alert" model="hr.meal.type.alert">
+			<field name="name">Dinner</field>
+			<field name="scheduled_hour" eval="19" />
+			<field name="message">Dinner must be ordered before 16:30 PM</field>
+		</record>
+		<record id="night_meal_alert" model="hr.meal.type.alert">
+			<field name="name">Night Meal</field>
+			<field name="scheduled_hour" eval="22" />
+			<field name="message">Night Meal must be ordered before 16:30 PM</field>
+		</record>
+	</data>
+
+	<data noupdate="1">
+		<record id="lunch_for_everyone" model="hr.meal.type">
+			<field name="name">Lunch for Everyone</field>
+			<field name="alert_id" ref="lunch_alert" />
+		</record>
+		<record id="lunch_workers" model="hr.meal.type">
+			<field name="name">Lunch for Workers</field>
+			<field name="alert_id" ref="lunch_alert" />
+		</record>
+		<record id="lunch_office" model="hr.meal.type">
+			<field name="name">Lunch for Office</field>
+			<field name="alert_id" ref="lunch_alert" />
+		</record>
+
+		<record id="dinner_workers" model="hr.meal.type">
+			<field name="name">Dinner for Workers</field>
+			<field name="alert_id" ref="dinner_alert" />
+		</record>
+		
+		<record id="night_meal" model="hr.meal.type">
+			<field name="name">Nigh Meal</field>
+			<field name="alert_id" ref="night_meal_alert" />
+		</record>
+
+	</data>
+</odoo>

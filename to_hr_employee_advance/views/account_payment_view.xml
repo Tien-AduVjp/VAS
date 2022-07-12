@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<!-- Account Payment -->
+
+		<record model="ir.ui.view" id="view_account_payment_form">
+			<field name="name">to.advance.account.payment.inherit.form</field>
+			<field name="model">account.payment</field>
+			<field name="type">form</field>
+			<field name="inherit_id" ref="account.view_account_payment_form" />
+			<field name="arch" type="xml">
+				<field name="journal_id" position="after">
+					<field name="is_advance_journal" invisible="1" />
+					<field name="employee_id" groups="account.group_account_user"
+						attrs="{'invisible':[('is_advance_journal','=',False)],'required':[('is_advance_journal','=',True)]}" />
+				</field>
+				<field name="destination_journal_id" position="after">
+					<field name="require_dest_employee" invisible="1" />
+					<field name="destination_employee_id" groups="account.group_account_user"
+						attrs="{'invisible':[('require_dest_employee','=',False)],'required':[('require_dest_employee','=',True)]}" />
+				</field>
+			</field>
+		</record>
+
+
+		<!-- Register payment from several invoices -->
+
+		<record model="ir.ui.view" id="view_account_payment_form_multi">
+			<field name="name">to.advance.account.payment.form.multi.inherit.form
+			</field>
+			<field name="model">account.payment.register</field>
+			<field name="type">form</field>
+			<field name="inherit_id" ref="account.view_account_payment_form_multi" />
+			<field name="arch" type="xml">
+				<field name="journal_id" position="after">
+					<field name="is_advance_journal" invisible="1" />
+					<field name="employee_id" groups="account.group_account_user"
+						attrs="{'invisible':[('is_advance_journal','=',False)],'required':[('is_advance_journal','=',True)]}" />
+				</field>
+			</field>
+		</record>
+
+	</data>
+</odoo>

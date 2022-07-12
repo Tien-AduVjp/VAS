@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Recurrent payment emails -->
+    <record id="email_payment_close" model="mail.template">
+        <field name="name">Subscription: Payment failure</field>
+        <field name="model_id" ref="to_sale_subscription.model_sale_subscription"/>
+        <field name="subject">Termination of subscription ${object.code}</field>
+        <field name="email_from">${(object.user_id.email_formatted or object.company_id.email and '"%s" &lt;%s&gt;' % (object.company_id.name or '', object.company_id.email or ''))|safe}</field>
+        <field name="email_to">${ctx['email_to'] or ''}</field>
+        <field name="body_html" type="html">
+<div>
+Dear ${object.partner_id.name},<br/>
+After many failures to process a payment for your subscription ${ctx.get('code')}, your subscription has been terminated because your payment is overdue.<br />
+If you want to resolve this issue, do not hesitate to contact us.<br/>
+Thank you for choosing ${object.company_id.name}!
+</div>
+        </field>
+        <field name="auto_delete" eval="True"/>
+        <field name="user_signature" eval="False"/>
+</record>
+
+    <record id="email_payment_reminder" model="mail.template">
+        <field name="name">Subscription: Payment reminder</field>
+        <field name="model_id" ref="to_sale_subscription.model_sale_subscription"/>
+        <field name="subject">Payment reminder for subscription ${object.code}</field>
+        <field name="email_from">${(object.user_id.email_formatted or object.company_id.email and '"%s" &lt;%s&gt;' % (object.company_id.name or '', object.company_id.email or ''))|safe}</field>
+        <field name="email_to">${ctx['email_to'] or ''}</field>
+        <field name="body_html" type="html">
+<div>
+Dear ${object.partner_id.name},<br/>
+We failed to process a payment for your subscription<br/>.
+Your subscription ${ctx.get('code')} is still valid but will be terminated
+on ${ctx.get('date_close')} unless the payment succeeds in the mean time (we will retry many times).
+If you have any question, do not hesitate to contact us.<br/>
+Thank you for choosing ${object.company_id.name}!
+</div>
+        </field>
+        <field name="auto_delete" eval="True"/>
+        <field name="user_signature" eval="False"/>
+</record>
+
+    <record id="email_payment_success" model="mail.template">
+        <field name="name">Subscription: Payment success</field>
+        <field name="model_id" ref="account.model_account_move"/>
+        <field name="subject">Invoice for subscription ${ctx.get('code')}</field>
+        <field name="email_from">${(object.user_id.email_formatted or object.company_id.email and '"%s" &lt;%s&gt;' % (object.company_id.name or '', object.company_id.email or ''))|safe}</field>
+        <field name="email_to">${ctx['email_to'] or ''}</field>
+        <field name="body_html" type="html">
+<div>
+Dear ${object.partner_id.name},<br/>
+Your subscription (${ctx.get('code')}) has just been renewed.<br/>
+If you have any question, do not hesitate to contact us.<br/>
+Thank you for choosing ${object.company_id.name}!
+</div>
+        </field>
+        <field name="report_template" ref="account.account_invoices" />
+        <field name="report_name">Invoice_${ctx.get('code')}_${ctx.get('previous_date')}</field>
+        <field name="auto_delete" eval="True"/>
+        <field name="user_signature" eval="False"/>
+    </record>
+
+    <!-- Mail sent to request a rating for a subscription -->
+    <record id="mail_template_subscription_rating" model="mail.template">
+        <field name="name">Sale Subscription: Rating Request</field>
+        <field name="email_from">${(object.partner_id.email_formatted if object.partner_id else user.email_formatted) | safe}</field>
+        <field name="subject">${object.company_id.name}: Service Rating Request</field>
+        <field name="model_id" ref="to_sale_subscription.model_sale_subscription"/>
+        <field name="partner_to" >${object.partner_id.id}</field>
+        <field name="auto_delete" eval="True"/>
+        <field name="body_html" type="html">
+<div>
+% set access_token = object.rating_get_access_token()
+Dear ${object.partner_id.name},<br/>
+Please take a moment to rate our services related to your subscription ${object.display_name}.<br/>
+We appreciate your feedback. It helps us to improve our services.<br/>
+<table summary="o_mail_notification" style="width:100%;border-top:1px solid #e1e1e1;">
+    <tr>
+        <td style="text-align:center;">
+            <h2 style="font-weight:300;font-size:18px;">
+                Tell us how you feel about our services:
+            </h2>
+            <div style="text-color: #888888">(click on one of these smileys)</div>
+        </td>
+    </tr>
+    <tr>
+        <td style="padding:10px 10px;">
+            <table style="width:100%;text-align:center;">
+                <tr>
+                    <td>
+                        <a href="/rating/${access_token}/10">
+                            <img alt="Satisfied" src="/rating/static/src/img/rating_10.png" title="Satisfied"/>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="/rating/${access_token}/5">
+                            <img alt="Not satisfied" src="/rating/static/src/img/rating_5.png" title="Not satisfied"/>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="/rating/${access_token}/1">
+                            <img alt="Highly Dissatisfied" src="/rating/static/src/img/rating_1.png" title="Highly Dissatisfied"/>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</div>
+        </field>
+    </record>
+
+    <!-- Mail sent to request a rating for a subscription -->
+    <record id="mail_template_subscription_alert" model="mail.template">
+        <field name="name">Sale Subscription: Default Email Alert</field>
+        <field name="email_from">${object.user_id.email_formatted | safe}</field>
+        <field name="subject">${object.company_id.name}: Please check the subscription ${object.name}</field>
+        <field name="model_id" ref="to_sale_subscription.model_sale_subscription"/>
+        <field name="partner_to" >${object.partner_id.id}</field>
+        <field name="auto_delete" eval="True"/>
+        <field name="body_html" type="html">
+<div>
+Dear ${object.partner_id.name},<br/>
+Your subscription ${object.name} needs your attention.<br/>
+If you have any question, do not hesitate to contact us.<br/>
+</div>
+        </field>
+    </record>
+
+    <!--Email template -->
+    <record id="mail_template_subscription_invoice" model="mail.template">
+        <field name="name">Subscription Invoice: Send by email</field>
+        <field name="model_id" ref="account.model_account_move"/>
+        <field name="email_from">${object.user_id.email_formatted |safe}</field>
+        <field name="partner_to">${object.partner_id.id}</field>
+        <field name="subject">${object.company_id.name} Invoice (Ref ${object.number or 'n/a'})</field>
+        <field name="report_template" ref="account.account_invoices"/>
+        <field name="report_name">Invoice_${(object.number or '').replace('/','_')}${object.state == 'draft' and '_draft' or ''}</field>
+        <field name="lang">${object.partner_id.lang}</field>
+        <field name="auto_delete" eval="True"/>
+        <field name="body_html" type="html">
+<div>
+Dear ${object.partner_id.name},<br/>
+We attach your invoice here.<br/>
+If you have any question, do not hesitate to contact us.<br/>
+</div>
+        </field>
+    </record>
+</odoo>

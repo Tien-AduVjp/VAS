@@ -1,0 +1,102 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_sale_backdate
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-13 02:23+0000\n"
+"PO-Revision-Date: 2020-01-13 02:23+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_sale_backdate
+#: model_terms:ir.ui.view,arch_db:to_sale_backdate.wizard_confirm_sale_form_view
+msgid "Cancel"
+msgstr ""
+
+#. module: to_sale_backdate
+#: model_terms:ir.ui.view,arch_db:to_sale_backdate.wizard_confirm_sale_form_view
+msgid "Confirm"
+msgstr ""
+
+#. module: to_sale_backdate
+#: model:ir.model.fields,field_description:to_sale_backdate.field_wizard_confirm_sale__confirmation_date
+msgid "Confirmation Date"
+msgstr ""
+
+#. module: to_sale_backdate
+#: model:ir.model.fields,field_description:to_sale_backdate.field_wizard_confirm_sale__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: to_sale_backdate
+#: model:ir.model.fields,field_description:to_sale_backdate.field_wizard_confirm_sale__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: to_sale_backdate
+#: model:ir.model.fields,help:to_sale_backdate.field_wizard_confirm_sale__confirmation_date
+msgid "Date on which the sales order is confirmed. Backdate is supported"
+msgstr ""
+
+#. module: to_sale_backdate
+#: model:ir.model.fields,field_description:to_sale_backdate.field_wizard_confirm_sale__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: to_sale_backdate
+#: model:ir.model.fields,field_description:to_sale_backdate.field_wizard_confirm_sale__id
+msgid "ID"
+msgstr ""
+
+#. module: to_sale_backdate
+#: model:ir.model.fields,field_description:to_sale_backdate.field_wizard_confirm_sale____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: to_sale_backdate
+#: model:ir.model.fields,field_description:to_sale_backdate.field_wizard_confirm_sale__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: to_sale_backdate
+#: model:ir.model.fields,field_description:to_sale_backdate.field_wizard_confirm_sale__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: to_sale_backdate
+#: model:ir.model,name:to_sale_backdate.model_sale_order
+#: model:ir.model.fields,field_description:to_sale_backdate.field_wizard_confirm_sale__sale_order_id
+msgid "Sales Order"
+msgstr ""
+
+#. module: to_sale_backdate
+#: model:ir.actions.act_window,name:to_sale_backdate.action_wizard_confirm_sale
+msgid "Sales Order Confirmation"
+msgstr ""
+
+#. module: to_sale_backdate
+#: model:ir.model,name:to_sale_backdate.model_wizard_confirm_sale
+#: model_terms:ir.ui.view,arch_db:to_sale_backdate.wizard_confirm_sale_form_view
+msgid "Sales Order Confirmation Wizard"
+msgstr ""
+
+#. module: to_sale_backdate
+#: code:addons/to_sale_backdate/wizard/wizard_confirm_sale.py:0
+#, python-format
+msgid ""
+"You must not use a future date as the Confirmation Date. You can either "
+"leave the field Confirmation Date empty for the current date or enter a date"
+" in the past in case you want to do backdate."
+msgstr ""
+
+#. module: to_sale_backdate
+#: model_terms:ir.ui.view,arch_db:to_sale_backdate.wizard_confirm_sale_form_view
+msgid "or"
+msgstr ""

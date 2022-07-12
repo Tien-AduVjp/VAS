@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Sequences for warranty.claim -->
+        <record id="seq_warranty_claim" model="ir.sequence">
+            <field name="name">Warranty</field>
+            <field name="code">warranty.claim</field>
+            <field name="prefix">WA</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+    </data>
+</odoo>

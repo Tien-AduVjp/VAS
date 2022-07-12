@@ -1,0 +1,56 @@
+ul.versions, ul.docs-versions {
+	float: right;
+	list-style: none;
+	padding: 5px 0 0 0;
+	margin: 0;
+}
+
+ul.versions>li>a {
+	margin-left: 5px;
+	display: inline-block;
+	min-width: 30px;
+	padding: 0 5px;
+	height: 36px;
+	line-height: 36px;
+	vertical-align: initial;
+	text-align: center;
+	text-decoration: none;
+	background: #e5e5e5;
+	background: rgba(225, 225, 225, 0.5);
+}
+
+ul.versions>li>a:hover {
+	background: #d5d5d5;
+	background: rgba(205, 205, 205, 0.5);
+}
+
+ul.versions .dropdown-menu {
+	right: 0px;
+	left: auto;
+	min-width: 100px;
+}
+
+.docs-anchors .docs-versions {
+	margin-top: 8px;
+}
+
+.docs-versions, .docs-body .oe_social>.docs-versions {
+	float: right !important;
+	margin-right: 0px !important;
+}
+
+.docs-versions .dropdown-menu {
+	max-width: 50px;
+	min-width: 50px;
+}
+
+.docs-versions .dropdown-menu a {
+	padding: 3px 10px;
+	font-size: 12px;
+}
+.docs-details ul.docs-nav .docs-item>i.fa{
+	color:#333333 !important;
+}
+.docs-details ul.docs-nav .docs-item.active>i.fa{
+	color:#fff !important;
+}

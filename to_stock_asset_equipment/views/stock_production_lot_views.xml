@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="stock_production_lot_view_form_inherited" model="ir.ui.view">
+		<field name="name">stock.production.lot.form.inherited</field>
+		<field name="model">stock.production.lot</field>
+		<field name="inherit_id" ref="to_stock_asset.stock_production_lot_view_form_inherited" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='asset_status']" position="before">
+				<field name="asset_assign_to" widget="radio"/>
+               	<field name="employee_id" string="Employee" 
+               		   attrs="{'invisible': [('asset_assign_to', 'not in', ['employee', 'other'])], 'required': [('asset_assign_to', '=', 'employee')]}"/>
+               	<field name="department_id" string="Department" 
+               		   attrs="{'invisible': [('asset_assign_to', 'not in', ['department', 'other'])], 'required': [('asset_assign_to', '=', 'department')]}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

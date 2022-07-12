@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_to_git_branch_employee,git.branch.user,model_git_branch,base.group_user,1,0,0,0
+access_to_git_repository_employee,git.repository.user,model_git_repository,base.group_user,1,0,0,0
+access_to_git_branch_user,git.branch.user,model_git_branch,group_to_git_user,1,1,1,1
+access_to_git_repository_user,git.repository.user,model_git_repository,group_to_git_user,1,1,1,1

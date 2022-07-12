@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data noupdate="1">
+		<record id="license_class_a1" model="driver.license.class">
+			<field name="name">A1</field>
+		</record>
+		<record id="license_class_a2" model="driver.license.class">
+			<field name="name">A2</field>
+		</record>
+		<record id="license_class_a3" model="driver.license.class">
+			<field name="name">A3</field>
+		</record>
+		<record id="license_class_a4" model="driver.license.class">
+			<field name="name">A4</field>
+		</record>
+		<record id="license_class_b1" model="driver.license.class">
+			<field name="name">B1</field>
+		</record>
+		<record id="license_class_b2" model="driver.license.class">
+			<field name="name">B2</field>
+		</record>
+		<record id="license_class_c" model="driver.license.class">
+			<field name="name">C</field>
+		</record>
+		<record id="license_class_d" model="driver.license.class">
+			<field name="name">D</field>
+		</record>
+		<record id="license_class_e" model="driver.license.class">
+			<field name="name">E</field>
+		</record>
+		<record id="license_class_f" model="driver.license.class">
+			<field name="name">F</field>
+		</record>
+		<record id="license_class_fb2" model="driver.license.class">
+			<field name="name">FB2</field>
+		</record>
+		<record id="license_class_fc" model="driver.license.class">
+			<field name="name">FC</field>
+		</record>
+		<record id="license_class_fd" model="driver.license.class">
+			<field name="name">FD</field>
+		</record>
+		<record id="license_class_fe" model="driver.license.class">
+			<field name="name">FE</field>
+		</record>
+	</data>
+</odoo>

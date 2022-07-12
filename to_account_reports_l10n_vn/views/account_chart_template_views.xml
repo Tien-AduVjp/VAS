@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="view_account_chart_template_form" model="ir.ui.view">
+		<field name="name">account.chart.template.form</field>
+		<field name="model">account.chart.template</field>
+		<field name="inherit_id" ref="account.view_account_chart_template_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='complete_tax_set']"
+				position="after">
+				<field name="af_report_render_print_template" />
+				<field name="af_report_header_layout" />
+				<field name="af_report_footer_layout" />
+			</xpath>
+		</field>
+	</record>
+</odoo>

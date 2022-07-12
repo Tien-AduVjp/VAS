@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record id="crm_lead_view_form" model="ir.ui.view">
+			<field name="name">crm.lead.form.inherit.employee.size</field>
+			<field name="model">crm.lead</field>
+			<field name="inherit_id" ref="crm.crm_lead_view_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='partner_name']" position="after">
+					<field name="employee_size_id"/>
+				</xpath>
+				<xpath expr="//page[@name='lead']/group/group/field[@name='partner_name']" position="after">
+					<field name="employee_size_id"/>
+				</xpath>
+			</field>
+		</record>
+		
+		<record id="view_crm_case_opportunities_filter" model="ir.ui.view">
+			<field name="name">crm.opportunities.filter.inherit.employee.size</field>
+			<field name="model">crm.lead</field>
+			<field name="inherit_id" ref="crm.view_crm_case_opportunities_filter" />
+			<field name="arch" type="xml">
+				<xpath expr="//group/filter[@name='city']" position="before">
+					<filter name="grp_employee_size" string="Employee Size" context="{'group_by': 'employee_size_id'}"/>
+				</xpath>
+			</field>
+		</record>
+		
+		<record id="view_crm_case_leads_filter" model="ir.ui.view">
+			<field name="name">crm.leads.filter.inherit.employee.size</field>
+			<field name="model">crm.lead</field>
+			<field name="inherit_id" ref="crm.view_crm_case_leads_filter" />
+			<field name="arch" type="xml">
+				<xpath expr="//group/filter[@name='city']" position="before">
+					<filter name="grp_employee_size_id" string="Employee Size" context="{'group_by': 'employee_size_id'}"/>
+				</xpath>
+			</field>
+		</record>
+
+	</data>
+</odoo>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="view_move_form" model="ir.ui.view">
+		<field name="name">account.move.form.inherit</field>
+		<field name="model">account.move</field>
+		<field name="inherit_id" ref="account.view_move_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='date']" position="after">
+				<field name="post_date" force_save="1"
+					attrs="{'invisible': [('post_date','=',False)]}" />
+			</xpath>
+			<xpath expr="//field[@name='to_check']" position="after">
+				<field name="manual_entry" force_save="1" />
+			</xpath>
+			<xpath expr="//group[@id='header_right_group']/field[@name='currency_id']" position="attributes">
+				<attribute name="attrs">{}</attribute>
+			</xpath>
+		</field>
+	</record>
+
+	<record id="view_move_tree" model="ir.ui.view">
+		<field name="name">account.move.tree</field>
+		<field name="model">account.move</field>
+		<field name="inherit_id" ref="account.view_move_tree" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='date']" position="after">
+				<field name="post_date" optional="hide" />
+			</xpath>
+		</field>
+	</record>
+	
+	<record id="view_invoice_tree" model="ir.ui.view">
+		<field name="name">account.invoice.tree</field>
+		<field name="model">account.move</field>
+		<field name="inherit_id" ref="account.view_invoice_tree" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='invoice_date']" position="after">
+				<field name="date" string="Accounting Date" optional="hide" />
+				<field name="post_date" optional="hide" />
+			</xpath>
+		</field>
+	</record>
+
+	<record id="view_account_move_filter" model="ir.ui.view">
+		<field name="name">account.move.select.inherit</field>
+		<field name="model">account.move</field>
+		<field name="inherit_id" ref="account.view_account_move_filter" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='journal_id']" position="after">
+				<separator />
+				<field name="line_ids" string="Account" filter_domain="[('line_ids.account_id', 'ilike', self)]"/>
+				<separator />
+				<field name="line_ids" string="Product" filter_domain="[('line_ids.product_id', 'ilike', self)]"/>
+			</xpath>
+			<xpath expr="//filter[@name='to_check']" position="after">
+				<separator />
+				<filter string="Manual Entries" name="manual_entry"
+					domain="[('manual_entry', '=', True)]" />
+			</xpath>
+		</field>
+	</record>
+
+	<record id="account.action_move_journal_line"
+		model="ir.actions.act_window">
+		<field name="context">{'default_type': 'entry','search_default_misc_filter':1, 'view_no_maturity': True,'search_default_manual_entry': True,'default_manual_entry': True}</field>
+	</record>
+</odoo>

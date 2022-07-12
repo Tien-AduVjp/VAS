@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<!-- Top menu item -->
+		<menuitem name="Zoom" id="zoom_menu_root" sequence="40" web_icon="to_zoom_calendar,static/description/icon.png" />
+
+		<record model="ir.actions.act_window" id="action_list_user">
+			<field name="name">Zoom Users</field>
+			<field name="res_model">zoom.user</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+		<menuitem id="zoom_user_menu" parent="zoom_menu_root" name="Users"
+			sequence="10" action="action_list_user" groups="to_zoom_calendar.group_user"/>
+		
+		<record model="ir.actions.act_window" id="act_open_user_report_view">
+            <field name="name">Generate Zoom Users Report</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">zoom.user.report</field>
+            <field name="binding_view_types">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+		<menuitem id="zoom_user_report_menu" parent="zoom_menu_root" name="Reports"
+			sequence="40" groups="to_zoom_calendar.group_admin" action="act_open_user_report_view"/>
+	</data>
+</odoo>

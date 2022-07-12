@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="view_department_form" model="ir.ui.view">
+		<field name="name">hr.department.form</field>
+		<field name="model">hr.department</field>
+		<field name="inherit_id" ref="hr.view_department_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//group[last()]" position="after">
+				<group col="4" string="Accounting"
+					groups="account.group_account_user">
+					<field name="account_expense_id"
+						options="{'no_create': True}" groups="account.group_account_user" />
+					<field name="analytic_account_id"
+						groups="analytic.group_analytic_accounting" />
+					<field name="analytic_tag_ids" widget="many2many_tags"
+						groups="analytic.group_analytic_tags" />
+				</group>
+			</xpath>
+		</field>
+	</record>
+
+	<record id="view_department_tree" model="ir.ui.view">
+		<field name="name">hr.department.tree</field>
+		<field name="model">hr.department</field>
+		<field name="inherit_id" ref="hr.view_department_tree" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='parent_id']" position="after">
+				<field name="account_expense_id" options="{'no_create': True}"
+					groups="account.group_account_user" optional="hide" />
+				<field name="analytic_account_id"
+					groups="analytic.group_analytic_accounting" optional="hide" />
+				<field name="analytic_tag_ids" widget="many2many_tags"
+					groups="analytic.group_analytic_tags" optional="hide" />
+			</xpath>
+		</field>
+	</record>
+</odoo>

@@ -1,0 +1,42 @@
+<odoo>
+	<data>
+		<record id="view_product_to_stock_equipment_form"
+			model="ir.ui.view">
+			<field name="name">product.template.equipment.form</field>
+			<field name="model">product.template</field>
+			<field name="inherit_id"
+				ref="product.product_template_form_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//group[@name='equipment_info']" position="after">
+					<group name="equipment_info">
+						<field name="working_frequency_template_ids"
+							widget="many2many_tags" />
+					</group>
+				</xpath>
+			</field>
+		</record>
+		<record id="equipment_form_view" model="ir.ui.view">
+			<field name="name">equipment_maintenance_schedule</field>
+			<field name="model">maintenance.equipment</field>
+			<field name="inherit_id"
+				ref="maintenance.hr_equipment_view_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//group[@name='maintenance']" position="after">
+					<group string="Working Frequency" name="working_freq">
+						<field name="equipment_working_frequency_ids" nolabel="1">
+							<tree editable="bottom">
+								<field name="start_amount" />
+								<field name="working_amount" />
+								<field name="working_uom_id" />
+								<field name="period_time" />
+								<field name="period_time_uom_id" />
+								<field name="total_working_amount" />
+							</tree>
+						</field>
+					</group>
+				</xpath>
+
+			</field>
+		</record>
+	</data>
+</odoo>

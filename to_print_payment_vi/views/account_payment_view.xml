@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="to_print_payment_inherit_account_payment_form">
+			<field name="name">to.print.payment.account.payment.form</field>
+			<field name="model">account.payment</field>
+			<field name="type">form</field>
+			<field name="inherit_id" ref="viin_payment_mediate.view_account_payment_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//notebook" position="inside">
+					<group name="receipt_print" colspan="4" string="For Receipt Printing">
+						<div>
+							<label for="recipient_payer" string='Payer'
+								attrs="{'invisible': [('payment_type','!=','inbound')]}" />
+							<label for="recipient_payer" string="Recipient"
+								attrs="{'invisible': [('payment_type','!=','outbound')]}" />
+							<field name="recipient_payer" nolabel="1" />
+						</div>
+						<div>
+							<label for="no_of_origin" />
+							<field name="no_of_origin" />
+						</div>
+					</group>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

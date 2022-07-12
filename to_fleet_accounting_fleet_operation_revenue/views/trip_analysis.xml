@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="fleet_trip_analysis_pivot_view">
+			<field name="name">fleet.trips.analysis pivot</field>
+			<field name="model">fleet.trips.analysis</field>
+			<field name="inherit_id" ref="to_fleet_operation_planning.fleet_trip_analysis_pivot_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='sum_cost']" position="before">
+					<field name="sum_revenue" type="measure" />
+				</xpath>
+				<xpath expr="//field[@name='sum_cost']" position="after">
+					<field name="profit_loss" type="measure" />
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

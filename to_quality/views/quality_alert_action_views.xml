@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="quality_alert_action_view_tree" model="ir.ui.view">
+		<field name="name">quality.alert.action.tree</field>
+		<field name="model">quality.alert.action</field>
+		<field name="arch" type="xml">
+			<tree string="All Alert Actions" create="false" edit="false" delete="false">
+				<field name="sequence" invisible="1" />
+				<field name="quality_action_id" />
+				<field name="user_id" />
+				<field name="deadline" />
+				<field name="quality_alert_id" />
+				<field name="product_tmpl_id" />
+				<field name="type" />
+			</tree>
+		</field>
+	</record>
+	
+	<record id="quality_alert_action_view_search" model="ir.ui.view">
+		<field name="name">quality.alert.action.search</field>
+		<field name="model">quality.alert.action</field>
+		<field name="arch" type="xml">
+			<search string="Search Quality Alert Action">
+				<field name="quality_action_id" />
+				<field name="product_id" />
+				<field name="user_id" />
+				<field name="action_done" />
+				<field name="type" />
+				<group expand="0" string="Group By">
+					<filter string="Product" name="grp_product_id" domain="[]" context="{'group_by':'product_id'}" />
+					<filter string="Action" name="grp_quality_action_id" domain="[]" context="{'group_by':'quality_action_id'}" />
+					<filter string="Responsible" name="grp_user_id" domain="[]" context="{'group_by':'user_id'}" />
+					<filter string="Action Type" name="grp_type" domain="[]" context="{'group_by':'type'}" />
+					<filter string="Action Done" name="grp_action_done" domain="[]" context="{'group_by':'action_done'}" />
+				</group>
+			</search>
+		</field>
+	</record>
+
+	<record id="quality_alert_action_view_pivot" model="ir.ui.view">
+		<field name="name">quality.alert.action.pivot</field>
+		<field name="model">quality.alert.action</field>
+		<field name="arch" type="xml">
+			<pivot string="All Alert Actions">
+				<field name="product_id" type="row" />
+				<field name="action_done" type="col" />
+			</pivot>
+		</field>
+	</record>
+
+	<record id="quality_alert_action_action" model="ir.actions.act_window">
+		<field name="name">Alert Actions</field>
+		<field name="res_model">quality.alert.action</field>
+		<field name="view_mode">pivot,tree</field>
+		<field name="context">{'search_default_grp_product_id':1}</field>
+	</record>
+
+	<menuitem id="quality_alert_action_menu" name="Alert Actions Analysis" parent="quality_reporting_menu" action="quality_alert_action_action"
+		 	  groups="to_quality.group_quality_manager"
+		 	  sequence="10"/>
+
+
+</odoo>

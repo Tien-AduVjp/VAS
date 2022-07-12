@@ -1,0 +1,81 @@
+<odoo>
+	<record id="account_payment_action_view_tree_wallet"
+		model="ir.actions.act_window">
+		<field name="name">Wallet Payments</field>
+		<field name="res_model">account.payment</field>
+		<field name="view_mode">tree,form</field>
+		<field name="domain">[('wallet_id', '=', active_id)]</field>
+	</record>
+
+	<record id="wallet_form" model="ir.ui.view">
+		<field name="name">wallet.form</field>
+		<field name="model">wallet</field>
+		<field name="arch" type="xml">
+			<form>
+				<header></header>
+				<sheet>
+					<div class="oe_button_box wallet_button_box oe_read_only"
+						name="button_box">
+						<button icon="fa-money"
+							name="%(account_payment_action_view_tree_wallet)d" type="action"
+							groups="account.group_account_invoice">
+							<field name="payments_count" widget="statinfo"
+								string="Payments" />
+						</button>
+						<button type="object"
+							name="action_view_account_move_lines" class="oe_stat_button"
+							icon="fa-pencil">
+							<field name="move_lines_count" widget="statinfo"
+								string="Journal Items" />
+						</button>
+					</div>
+					<group>
+						<group>
+							<field name="partner_id" />
+							<field name="amount" />
+							<field name="currency_id" />
+							<field name="empty_date" />
+						</group>
+					</group>
+				</sheet>
+				<div class="oe_chatter">
+					<field name="message_follower_ids" widget="mail_followers" />
+					<field name="message_ids" widget="mail_thread" />
+				</div>
+			</form>
+		</field>
+	</record>
+
+	<record id="wallet_tree" model="ir.ui.view">
+		<field name="name">wallet.tree</field>
+		<field name="model">wallet</field>
+		<field name="arch" type="xml">
+			<tree default_order="currency_id, amount desc">
+				<field name="partner_id" />
+				<field name="amount" />
+				<field name="currency_id" />
+				<field name="empty_date" />
+			</tree>
+		</field>
+	</record>
+
+	<record id="wallet_search" model="ir.ui.view">
+		<field name="name">wallet.search</field>
+		<field name="model">wallet</field>
+		<field name="arch" type="xml">
+			<search>
+				<field name="partner_id" />
+			</search>
+		</field>
+	</record>
+
+	<record id="action_view_wallets" model="ir.actions.act_window">
+		<field name="name">Wallets</field>
+		<field name="res_model">wallet</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+	<menuitem id="menu_wallets" name="Wallets"
+		parent="account.menu_finance_receivables" sequence="20"
+		action="action_view_wallets" />
+</odoo>

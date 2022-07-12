@@ -1,0 +1,273 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_currency_conversion_diff
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-23 02:44+0000\n"
+"PO-Revision-Date: 2020-09-23 02:44+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_currency_conversion_diff
+#: model:ir.model,name:to_currency_conversion_diff.model_account_chart_template
+msgid "Account Chart Template"
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: model:ir.model.fields,field_description:to_currency_conversion_diff.field_payment_acquirer_supported_currency_map__acquirer_id
+msgid "Acquirer"
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: model:ir.model,name:to_currency_conversion_diff.model_payment_acquirer_supported_currency_map
+msgid "Acquirer Supported Currency Map"
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: model:ir.model,name:to_currency_conversion_diff.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: model:ir.model,name:to_currency_conversion_diff.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: model:ir.model.fields,field_description:to_currency_conversion_diff.field_payment_transaction__converted_amount
+msgid "Converted Amount"
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: model:ir.model.fields,field_description:to_currency_conversion_diff.field_payment_transaction__converted_currency_id
+msgid "Converted Currency"
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: model:ir.model.fields,field_description:to_currency_conversion_diff.field_payment_transaction__converted_fee
+msgid "Converted Fee"
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: model:ir.model.fields,field_description:to_currency_conversion_diff.field_payment_acquirer_supported_currency_map__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: model:ir.model.fields,field_description:to_currency_conversion_diff.field_payment_acquirer_supported_currency_map__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: code:addons/to_currency_conversion_diff/models/account_chart_template.py:0
+#: code:addons/to_currency_conversion_diff/models/company.py:0
+#, python-format
+msgid "Currency Conversion Difference"
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: model:ir.model.fields,field_description:to_currency_conversion_diff.field_res_company__currency_conversion_diff_journal_id
+#: model:ir.model.fields,field_description:to_currency_conversion_diff.field_res_config_settings__currency_conversion_diff_journal_id
+msgid "Currency Conversion Difference Journal"
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: code:addons/to_currency_conversion_diff/models/account_payment.py:0
+#: code:addons/to_currency_conversion_diff/models/account_payment.py:0
+#, python-format
+msgid "Currency conversion difference"
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: model:ir.model.constraint,message:to_currency_conversion_diff.constraint_payment_acquirer_supported_currency_map_acquirer_currency_unique
+msgid "Currency must be Unique per acquirer! Please specify another currency."
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: model:ir.model.fields,field_description:to_currency_conversion_diff.field_payment_acquirer__default_converted_currency_id
+msgid "Default Converted Currency"
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: model:ir.model.fields,field_description:to_currency_conversion_diff.field_payment_acquirer_supported_currency_map__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: model:ir.model.fields,field_description:to_currency_conversion_diff.field_account_chart_template__expense_currency_conversion_diff_account_id
+msgid "Expense Currency Conversion Account"
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: model:ir.model.fields,field_description:to_currency_conversion_diff.field_res_company__income_currency_conversion_diff_account_id
+msgid "Gain Currency Conversion Account"
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: model:ir.model.fields,field_description:to_currency_conversion_diff.field_payment_acquirer_supported_currency_map__id
+msgid "ID"
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: model:ir.model.fields,field_description:to_currency_conversion_diff.field_account_chart_template__income_currency_conversion_diff_account_id
+msgid "Income Currency Conversion Account"
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: model:ir.model.fields,help:to_currency_conversion_diff.field_res_company__income_currency_conversion_diff_account_id
+msgid "It acts as a default account for credit amount"
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: model:ir.model.fields,help:to_currency_conversion_diff.field_res_company__expense_currency_conversion_diff_account_id
+msgid "It acts as a default account for debit amount"
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: model:ir.model,name:to_currency_conversion_diff.model_account_move_line
+msgid "Journal Item"
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: model:ir.model.fields,field_description:to_currency_conversion_diff.field_payment_acquirer_supported_currency_map____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: model:ir.model.fields,field_description:to_currency_conversion_diff.field_payment_acquirer_supported_currency_map__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: model:ir.model.fields,field_description:to_currency_conversion_diff.field_payment_acquirer_supported_currency_map__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: model:ir.model.fields,field_description:to_currency_conversion_diff.field_res_company__expense_currency_conversion_diff_account_id
+msgid "Loss Currency Conversion Account"
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: model:ir.model,name:to_currency_conversion_diff.model_payment_acquirer
+msgid "Payment Acquirer"
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: model:ir.model,name:to_currency_conversion_diff.model_payment_transaction
+msgid "Payment Transaction"
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: model:ir.model,name:to_currency_conversion_diff.model_account_payment
+msgid "Payments"
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: code:addons/to_currency_conversion_diff/models/payment_acquirer.py:0
+#, python-format
+msgid ""
+"Programming error! There were more than one transactions of the same "
+"reference '%s' found in the database which are %s. Please let our "
+"administrator know about this for fixing this issue as soon as possible."
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: model:ir.model.fields,field_description:to_currency_conversion_diff.field_payment_acquirer__supported_currency_ids
+msgid "Supported Currencies"
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: model:ir.model.fields,field_description:to_currency_conversion_diff.field_payment_acquirer_supported_currency_map__currency_id
+msgid "Supported Currency"
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: model:ir.model.fields,field_description:to_currency_conversion_diff.field_payment_acquirer__supported_currency_map_ids
+msgid "Supported Currency Map"
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: model:ir.model.fields,help:to_currency_conversion_diff.field_res_config_settings__currency_conversion_diff_journal_id
+msgid ""
+"The accounting journal where automatic currency conversion differences will "
+"be registered"
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: model:ir.model.fields,help:to_currency_conversion_diff.field_payment_transaction__converted_amount
+msgid ""
+"The amount in the converted currency to be used for online payment instead "
+"of the amount in the original currency that is not supported by the payment "
+"acquirer."
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: model:ir.model.fields,help:to_currency_conversion_diff.field_payment_acquirer__default_converted_currency_id
+msgid ""
+"The currency supported by the acquirer that will be used for payment conversion for currencies that are not supported by the acquirer.\n"
+"For example, your invoice is in VND (Vietnam Dong) which is not supported by the acquirer. During online payment, Odoo will convert the amount in VND to the amount in the currency specified here before processing payment."
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: model:ir.model.fields,help:to_currency_conversion_diff.field_payment_transaction__converted_currency_id
+msgid ""
+"The currency to be used for online payment instead of the original currency "
+"that is not supported by the payment acquirer."
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: code:addons/to_currency_conversion_diff/models/payment_acquirer.py:0
+#, python-format
+msgid ""
+"The default currency '%s' does not in the list of supported currencies of "
+"the acquirer '%s'. Please consult the payment acquirer to have its full list"
+" of the supported currencies."
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: model:ir.model.fields,help:to_currency_conversion_diff.field_payment_transaction__converted_fee
+msgid ""
+"The fee in the converted currency to be used for online payment instead of "
+"the fee in the original currency that is not supported by the payment "
+"acquirer."
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: model_terms:ir.ui.view,arch_db:to_currency_conversion_diff.acquirer_form
+msgid "Unsupported Currency Conversion"
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: code:addons/to_currency_conversion_diff/models/account_payment.py:0
+#, python-format
+msgid ""
+"You should configure the 'Currency Conversion Difference Journal' in the "
+"accounting settings, to manage automatically the booking of accounting "
+"entries related to differences between currency conversions."
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: code:addons/to_currency_conversion_diff/models/account_payment.py:0
+#, python-format
+msgid ""
+"You should configure the 'Gain Currency Conversion Account' in the "
+"accounting settings, to manage automatically the booking of accounting "
+"entries related to differences between exchange rates."
+msgstr ""
+
+#. module: to_currency_conversion_diff
+#: code:addons/to_currency_conversion_diff/models/account_payment.py:0
+#, python-format
+msgid ""
+"You should configure the 'Loss Currency Conversion Account' in the "
+"accounting settings, to manage automatically the booking of accounting "
+"entries related to differences between exchange rates."
+msgstr ""

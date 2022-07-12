@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+	<data>
+		<record id="res_state_group_from_view" model="ir.ui.view">
+			<field name="name">res.state.group.form</field>
+			<field name="model">res.state.group</field>
+			<field name="arch" type="xml">
+				<form string="State Group">
+					<sheet>
+						<group>
+							<field name="name" />
+							<field name="code" />
+							<field name="parent_id" />
+							<field name="country_id" />
+							<field name="state_ids" widget="many2many_tags"
+								domain="[('country_id', '=', country_id)]"
+								context="{'default_state_group_id': active_id}" />
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record id="res_state_group_tree_view" model="ir.ui.view">
+			<field name="name">res.state.group.tree</field>
+			<field name="model">res.state.group</field>
+			<field name="field_parent" eval="False" />
+			<field name="arch" type="xml">
+				<tree string="State Groups">
+					<field name="name" />
+					<field name="code" />
+					<field name="country_id" />
+				</tree>
+			</field>
+		</record>
+
+        <record id="res_state_group_search_view" model="ir.ui.view">
+            <field name="name">res.state.group.search</field>
+            <field name="model">res.state.group</field>
+            <field name="arch" type="xml">
+                <search string="State Groups Search">
+                    <field name="name" />
+                    <field name="code" />
+                    <field name="country_id" />
+                    <group expand="1" string="Group By">
+                        <filter string="Country" name='country' context="{'group_by':'country_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+		<record id="res_state_group_action"
+			model="ir.actions.act_window">
+			<field name="name">State Groups</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">res.state.group</field>
+			<field name="view_mode">tree,form</field>
+			<field name="view_id" eval="False" />
+		</record>
+
+		<menuitem id="menu_res_state_group"
+			action="res_state_group_action" parent="contacts.menu_localisation"
+			sequence="2" />
+
+	</data>
+</odoo>

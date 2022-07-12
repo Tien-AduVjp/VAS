@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- Extend info for genneral_voucher with Employee Advance Journal -->
+	<template id="report_account_general_voucher_document" inherit_id="to_print_payment_vi.report_account_general_voucher_document">
+		<xpath expr="//div[div[@t-if='o.partner_id']]" position="after">
+			<t t-if="o.line_ids.mapped('payment_id')">
+				<t t-foreach="o.line_ids.mapped('payment_id')" t-as="doc">
+					<div class="row">
+						<div class="col-8" t-if="doc.partner_id">
+							<span t-if="doc.partner_type == 'customer'">Customer:</span>
+							<span t-else="">Vendor:</span>
+							<span t-field="doc.partner_id.name" />
+						</div>
+						<div class="col-4" t-if="doc.employee_id or doc.destination_employee_id">
+							Employee:
+							<span t-if="doc.employee_id" t-field="doc.employee_id.name" />
+							<span t-else="" t-field="doc.destination_employee_id.name" />
+						</div>
+					</div>
+				</t>
+			</t>
+			<t t-else="">
+				<t t-if="o.line_ids.mapped('partner_id') and o.journal_id.code == 'EAJ'">
+					<div class="row">
+						<div class="col-8">
+							Employee:
+							<span t-field="o.line_ids.mapped('partner_id')[0].name" />
+						</div>
+					</div>
+				</t>
+			</t>
+		</xpath>
+	</template>
+	<!-- Add check report type for Employee Advance Journal -->
+	
+	<template id="report_account_general_voucher" inherit_id="to_print_payment_vi.report_account_general_voucher">
+		<xpath expr="//t[t[@t-call='to_print_payment_vi.report_account_receipt_voucher']]" position="attributes">
+			<attribute name="t-if">o.journal_id.type in ('bank', 'cash') and not o.journal_id.is_advance_journal</attribute>
+		</xpath>
+	</template>
+	
+	<template id="report_accountpayment" inherit_id="to_print_payment_vi.report_accountpayment">
+		<xpath expr="//t[t[@t-call='to_print_payment_vi.report_account_receipt_voucher']]" position="attributes">
+			<attribute name="t-if">o.journal_id.type in ('bank', 'cash') and not o.journal_id.is_advance_journal</attribute>
+		</xpath>
+	</template>
+	
+	<!-- Print general voucher on Payment  -->
+	<template id="report_account_general_voucher_on_payment">
+		<t t-call="web.html_container">
+			<t t-foreach="docs" t-as="doc">
+				<t t-set="lang" t-value="doc.env.user.lang" />
+				<t t-if="doc.move_line_ids" t-foreach="doc.move_line_ids.mapped('move_id')" t-as="o">
+					<t t-if="o.journal_id.type in ('bank', 'cash') and not o.journal_id.is_advance_journal">
+						<t t-call="to_print_payment_vi.report_account_receipt_voucher" t-lang="lang" />
+					</t>
+					<t t-else="">
+						<t t-call="to_print_payment_vi.report_account_general_voucher_document" t-lang="lang" />
+					</t>
+				</t>
+			</t>
+		</t>
+	</template>
+</odoo>

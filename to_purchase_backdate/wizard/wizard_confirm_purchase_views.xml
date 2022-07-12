@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="wizard_confirm_purchase_form_view">
+			<field name="name">wizard.confirm.purchase.form</field>
+			<field name="model">wizard.confirm.purchase</field>
+			<field name="arch" type="xml">
+				<form string="Purchase Order Confirmation Wizard">
+					<group>
+						<group>
+							<field name="purchase_order_id" invisible="1" force_save="1" />
+							<field name="confirmation_date" />
+						</group>
+					</group>
+					<footer>
+						<button name="action_confirm" string="Confirm"
+							type="object" class="oe_highlight" />
+						or
+						<button string="Cancel" class="oe_link" special="cancel" />
+					</footer>
+				</form>
+			</field>
+
+		</record>
+
+		<record model="ir.actions.act_window"
+			id="action_wizard_confirm_purchase">
+			<field name="name">Purchase Order Confirmation</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">wizard.confirm.purchase</field>
+			<field name="view_mode">form</field>
+			<field name="target">new</field>
+			<field name="context">{}</field>
+		</record>
+
+	</data>
+</odoo>

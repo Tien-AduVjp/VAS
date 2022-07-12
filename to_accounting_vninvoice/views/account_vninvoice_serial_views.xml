@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="account_vninvoice_serial_form" model="ir.ui.view">
+			<field name="name">account.vninvoice.serial.form</field>
+			<field name="model">account.vninvoice.serial</field>
+			<field name="arch" type="xml">
+				<form string="VN-invoice Serial">
+					<sheet>
+						<group>
+							<group>
+								<field name="name" />
+								<field name="template_id" />
+								<field name="type_id"
+									attrs="{'invisible':[('type_id','=',False)]}" />
+								<field name="description" />
+							</group>
+						</group>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers"
+							groups="base.group_user" />
+						<field name="activity_ids" widget="mail_activity" />
+						<field name="message_ids" widget="mail_thread" />
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record id="account_vninvoice_template_tree" model="ir.ui.view">
+			<field name="name">account.vninvoice.serial.tree</field>
+			<field name="model">account.vninvoice.serial</field>
+			<field name="arch" type="xml">
+				<tree string="VN-invoice Serial">
+					<field name="name" />
+					<field name="template_id" />
+					<field name="type_id" />
+					<field name="description" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="action_vninvoice_serial"
+			model="ir.actions.act_window">
+			<field name="name">VN-invoice Serial</field>
+			<field name="res_model">account.vninvoice.serial</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem action="action_vninvoice_serial"
+			id="menu_action_vninvoice_serial" parent="menu_vninvoice"
+			groups="account.group_account_manager" sequence="10" />
+	</data>
+</odoo>

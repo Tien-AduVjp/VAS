@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+	<data>
+		<record id="social_page_view_kanban" model="ir.ui.view">
+			<field name="name">Social Page</field>
+			<field name="model">social.page</field>
+			<field name="inherit_id" ref="viin_social.social_page_view_kanban"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='engagement_count']" position='after'>
+					<field name='engaged_current'/>
+					<field name='views_current'/>
+					<field name='engaged_rate'/>
+					<field name='views_rate'/>
+					<field name='engaged_pre'/>
+					<field name='views_pre'/>
+				</xpath>
+				
+				<xpath expr="//div[hasclass('total-followers')]" position="after">
+					<t t-if="record.engaged_current.raw_value">
+						<div class="ml-4">
+							<i class="fa fa-bullseye" title="The number of engagements within 30 days"/>
+	                        <b t-esc="record.engaged_current.raw_value"/>
+	                        <t t-if="record.engaged_rate.raw_value &lt; 0">
+		                        <i class="fa fa-arrow-down" style="color:red" title="Rates"/>
+		                        <b t-esc="record.engaged_rate.value" style="color:red"/>
+		                        <b style="color:red">%</b>
+	                        </t>
+	                        <t t-if="record.engaged_rate.raw_value > 0">
+		                        <i class="fa fa-arrow-up" style="color:green" title="Rates"/>
+		                        <b t-esc="record.engaged_rate.value" style="color:green"/>
+		                        <b style="color:green">%</b>
+	                        </t>
+						</div>
+					</t>
+					<t t-if="record.views_current.raw_value">
+						<div class="ml-4">
+							<i class="fa fa-eye" title="The number of views within 30 days"/>
+	                        <b t-esc="record.views_current.raw_value"/>
+	                        <t t-if="record.views_rate.raw_value &lt; 0">
+		                        <i class="fa fa-arrow-down" style="color:red" title="Rates"/>
+		                        <b t-esc="record.views_rate.value" style="color:red"/>
+		                        <b style="color:red">%</b>
+	                        </t>
+	                        <t t-if="record.views_rate.raw_value > 0">
+		                        <i class="fa fa-arrow-up" style="color:green" title="Rates"/>
+		                        <b t-esc="record.views_rate.value" style="color:green"/>
+		                        <b style="color:green">%</b>
+	                        </t>
+						</div>
+					</t>
+				</xpath>
+			</field>
+		</record>
+
+		<record id="social_page_view_form" model="ir.ui.view">
+			<field name="name">Social Page</field>
+			<field name="model">social.page</field>
+			<field name="inherit_id" ref="viin_social.social_page_view_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='description']" position="after">
+					<field name="facebook_page_about" attrs="{'invisible': [('social_provider','!=','facebook')]}"/>
+				</xpath>
+				<xpath expr="//field[@name='social_page_id']" position="after">
+					<field name="facebook_page_access_token" class="text-truncate" style="width:50%" attrs="{'invisible': [('social_provider','!=','facebook')]}" groups="viin_social.viin_social_group_admin"/>
+				</xpath>
+				<xpath expr="//notebook" position="inside">
+					<page string="Reviews">
+						<div>
+							<button name='action_refresh_reviews' string='Refesh' type='object' class='btn btn-primary'/>
+							<button name='action_view_all_reviews' string='View on Page' type='object' class='btn btn-primary ml-2'/>
+							<button name='action_cacncel_subscrib_appp' string='Cancel Webhooks' type='object' invisible ="1"/>
+						</div>
+						<br/>
+						<field name='review_ids'>
+							<tree>
+								<field name='review_date'/>
+								<field name='message'/>
+							</tree>
+						</field>
+					</page>
+					
+					<page string="Settings">
+						<group attrs="{'invisible': [('social_provider','!=','facebook')]}" groups="viin_social.viin_social_group_admin">
+							<div class='row col-md-12'>
+								<div class='col-md-6'>
+									<group>
+											<field name="is_published" widget='boolean_toggle'/>
+											<field name="users_can_message" widget='boolean_toggle'/>
+											<field name="users_can_post" widget='boolean_toggle'/>
+											<field name="review_posts_by_other" widget='boolean_toggle'/>
+									</group>
+								</div>
+								<div>
+									<group>
+										<field name="users_can_post_photos" widget='boolean_toggle'/>
+										<field name="users_can_tag_photos" widget='boolean_toggle'/>
+										<field name="profanity_filter"/>
+									</group>
+								</div>
+							</div>
+						</group>
+					</page>
+				</xpath>
+				
+				<xpath expr="//notebook/page[1]" position="inside">
+					<group attrs="{'invisible': [('social_provider','!=','facebook')]}" >
+						<group>
+							<field name="engaged_current"/>
+							<field name="engaged_pre"/>
+							<field name="engaged_rate"/>
+						</group>
+						<group>
+							<field name="views_current"/>
+							<field name='views_pre'/>
+							<field name="views_rate"/>
+						</group>
+					</group>
+				</xpath>
+			</field>
+		</record>
+	
+		<record id="social_page_view_pivot" model="ir.ui.view">
+			<field name="name">Social Page</field>
+			<field name="model">social.page</field>
+			<field name="inherit_id" ref="viin_social.social_page_view_pivot"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='view_count']" position="after">
+					<field name="views_current" type="measure"/>
+					<field name="views_pre" invisible="1"/>
+				</xpath>
+				<xpath expr="//field[@name='engagement_count']" position="after">
+					<field name="engaged_current" type="measure"/>
+					<field name="engaged_pre" invisible="1"/>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

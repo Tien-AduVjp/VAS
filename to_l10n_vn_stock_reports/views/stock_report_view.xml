@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<!-- Product Journal s10-DN -->
+
+		<report id="act_report_c200_s10dn" menu="False"
+			model="wizard.l10n_vn.c200_s10dn"
+			name="to_l10n_vn_stock_reports.report_c200_s10dn"
+			file="to_l10n_vn_stock_reports.report_c200_s10dn"
+			report_type="qweb-pdf" string="Product Journal (S10-DN)" />
+
+		<record id="act_report_c200_s10dn" model="ir.actions.report">
+			<field name="paperformat_id"
+				ref="to_wh_vn_report_paperformat_euro_landscape" />
+			<field name="legal_name">Template S10-DN</field>
+
+		</record>
+
+		<!-- General Inventory Journal S11-DN -->
+
+		<report id="act_report_c200_s11dn" menu="False"
+			model="wizard.l10n_vn.c200_s11dn"
+			name="to_l10n_vn_stock_reports.report_c200_s11dn"
+			file="to_l10n_vn_stock_reports.report_c200_s11dn"
+			report_type="qweb-pdf" string="General Inventory Journal" />
+
+		<record id="act_report_c200_s11dn" model="ir.actions.report">
+			<field name="paperformat_id"
+				ref="to_wh_vn_report_paperformat_euro_landscape" />
+			<field name="legal_name">Template S11-DN</field>
+		</record>
+
+		<!-- Stock Picking In Out -->
+
+		<report id="act_report_stock_inout" menu="False"
+			model="wizard.l10n_vn.stock_inout"
+			name="to_l10n_vn_stock_reports.report_stockinout"
+			file="to_l10n_vn_stock_reports.report_stockinout"
+			report_type="qweb-pdf" string="Stock In/Out" />
+
+		<record id="act_report_stock_inout" model="ir.actions.report">
+			<field name="paperformat_id"
+				ref="to_wh_vn_report_paperformat_euro_landscape" />
+		</record>
+
+		<!-- Stock Card S12-DN -->
+
+		<report id="act_report_c200_s12dn" menu="False"
+			model="wizard.l10n_vn.c200_s12dn"
+			name="to_l10n_vn_stock_reports.report_c200_s12dn"
+			file="to_l10n_vn_stock_reports.report_c200_s12dn"
+			report_type="qweb-pdf" string="Stock Card" />
+
+		<record id="act_report_c200_s12dn" model="ir.actions.report">
+			<field name="paperformat_id"
+				ref="to_wh_vn_report_s12dn_thekho_portrait" />
+			<field name="legal_name">Template S12-DN</field>
+		</record>
+
+	</data>
+</odoo>

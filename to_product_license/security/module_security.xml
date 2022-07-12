@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<!-- Groups Data -->
+		<record id="group_license_manager" model="res.groups">
+			<field name="name">License Manager</field>
+			<field name="users" eval="[(4, ref('base.user_root')),(4, ref('base.user_admin'))]" />
+			<field name="category_id" ref="base.module_category_usability" />
+			<field name="comment">The user will have full access to all records of
+				license management application.
+			</field>
+		</record>
+	</data>
+</odoo>

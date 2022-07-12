@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">    
+        <record id="equipment_working_time_uom_hour" model="uom.uom">
+            <field name="name">Equipment Working Hour(s)</field>
+            <field ref="uom.uom_categ_wtime" name="category_id"/>
+            <field name="factor" eval="24.0"/>
+            <field name="uom_type">smaller</field>
+        </record>
+        
+    </data>
+</odoo>

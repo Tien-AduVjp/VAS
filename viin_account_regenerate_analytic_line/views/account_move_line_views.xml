@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="view_account_move_line_filter" model="ir.ui.view">
+		<field name="name">account.move.line.search</field>
+		<field name="model">account.move.line</field>
+		<field name="inherit_id" ref="account.view_account_move_line_filter" />
+		<field name="arch" type="xml">
+			<xpath expr="//filter[@name='date']" position="after">
+				<separator />
+				<filter string="Have Analytic Lines"
+					name="ftr_have_analytic_lines"
+					domain="[('analytic_line_ids', '!=', False)]"/>
+				<filter string="Don't Have any Analytic Lines"
+					name="ftr_have_not_analytic_lines"
+					domain="[('analytic_line_ids', '=', False)]" />
+			</xpath>
+		</field>
+	</record>
+</odoo>

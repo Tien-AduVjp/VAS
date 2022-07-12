@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="view_voucher_graph" model="ir.ui.view">
+			<field name="name">voucher.graph</field>
+			<field name="model">voucher.report</field>
+			<field name="arch" type="xml">
+				<graph string="Vouchers Analysis">
+					<field name="issue_order_id" type="row"/>
+					<field name="issue_date" type="col" />
+					<field name="value" type="measure" />
+				</graph>
+			</field>
+		</record>
+
+		<record id="view_voucher_pivot" model="ir.ui.view">
+			<field name="name">voucher.pivot</field>
+			<field name="model">voucher.report</field>
+			<field name="arch" type="xml">
+				<pivot string="Vouchers Analysis">
+					<field name="issue_order_id" type="row" />
+					<field name="issue_date" type="col" />
+					<field name="value" type="measure" />
+				</pivot>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="voucher_report_search_view">
+			<field name="name">voucher.report.search</field>
+			<field name="model">voucher.report</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="product_id" />
+					<field name="issue_date" />
+					<field name="expiry_date" />
+					<field name="state" />
+				</search>
+			</field>
+		</record>
+		
+		<record id="action_voucher_report" model="ir.actions.act_window">
+			<field name="name">Vouchers Analysis</field>
+			<field name="res_model">voucher.report</field>
+			<field name="view_mode">pivot,graph</field>
+			<field name="view_id"></field>  <!-- force empty -->
+		</record>
+		
+		<menuitem name="Vouchers Report" parent="menu_voucher_report_root"
+			sequence="1" id="menu_voucher_report" action="action_voucher_report" groups="group_promotion_voucher_manager"/>
+
+	</data>
+</odoo>

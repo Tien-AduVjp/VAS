@@ -1,0 +1,105 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_hr_overtime_timesheet_attendance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-31 05:00+0000\n"
+"PO-Revision-Date: 2021-07-31 05:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_hr_overtime_timesheet_attendance
+#: model:ir.model.fields.selection,name:viin_hr_overtime_timesheet_attendance.selection__hr_contract__overtime_recognition_mode__attendance_and_timesheet
+#: model:ir.model.fields.selection,name:viin_hr_overtime_timesheet_attendance.selection__hr_overtime_plan__recognition_mode__attendance_and_timesheet
+#: model:ir.model.fields.selection,name:viin_hr_overtime_timesheet_attendance.selection__hr_overtime_plan_line__recognition_mode__attendance_and_timesheet
+#: model:ir.model.fields.selection,name:viin_hr_overtime_timesheet_attendance.selection__res_company__overtime_recognition_mode__attendance_and_timesheet
+msgid "Attendance and Timesheet"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet_attendance
+#: model:ir.model.fields.selection,name:viin_hr_overtime_timesheet_attendance.selection__hr_contract__overtime_recognition_mode__attendance_or_timesheet
+#: model:ir.model.fields.selection,name:viin_hr_overtime_timesheet_attendance.selection__hr_overtime_plan__recognition_mode__attendance_or_timesheet
+#: model:ir.model.fields.selection,name:viin_hr_overtime_timesheet_attendance.selection__hr_overtime_plan_line__recognition_mode__attendance_or_timesheet
+#: model:ir.model.fields.selection,name:viin_hr_overtime_timesheet_attendance.selection__res_company__overtime_recognition_mode__attendance_or_timesheet
+msgid "Attendance or Timesheet"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet_attendance
+#: model:ir.model,name:viin_hr_overtime_timesheet_attendance.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet_attendance
+#: model:ir.model,name:viin_hr_overtime_timesheet_attendance.model_hr_contract
+msgid "Employee Contract"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet_attendance
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet_attendance.field_hr_overtime_plan__recognition_mode
+msgid "Force Recognition Mode"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet_attendance
+#: model:ir.model,name:viin_hr_overtime_timesheet_attendance.model_hr_overtime_plan
+msgid "Overtime Plan"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet_attendance
+#: model:ir.model,name:viin_hr_overtime_timesheet_attendance.model_hr_overtime_plan_line
+msgid "Overtime Plan Line"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet_attendance
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet_attendance.field_hr_contract__overtime_recognition_mode
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet_attendance.field_res_company__overtime_recognition_mode
+msgid "Overtime Recognition Mode"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet_attendance
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet_attendance.field_hr_overtime_plan_line__recognition_mode
+msgid "Recognition Mode"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet_attendance
+#: model:ir.model.fields,help:viin_hr_overtime_timesheet_attendance.field_hr_overtime_plan_line__recognition_mode
+#: model:ir.model.fields,help:viin_hr_overtime_timesheet_attendance.field_res_company__overtime_recognition_mode
+#: model:ir.model.fields,help:viin_hr_overtime_timesheet_attendance.field_hr_overtime_reason__overtime_recognition_mode
+msgid ""
+"This indicates mode to recognize actual overtime against the plan:\n"
+"* By Plan: No recognition will be required. All the planned overtime duration will be considered as actual;\n"
+"* Attendance: Actual overtime will be calculated based on attendance entries that match the planned overtime;\n"
+"* Timesheet: Actual overtime will be calculated based on recorded timesheet entries that match the planned overtime;\n"
+"* Attendance or Timesheet: Actual overtime will be calculated based on EITHER attendance entries OR recorded timesheet entries that match the planned overtime. Attendance takes the priority;\n"
+"* Attendance and Timesheet: Actual overtime will be calculated based on BOTH attendance entries AND recorded timesheet entries that match the planned overtime."
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet_attendance
+#: model:ir.model.fields,help:viin_hr_overtime_timesheet_attendance.field_hr_overtime_plan__recognition_mode
+msgid ""
+"This indicates mode to recognize actual overtime against the plan:\n"
+"* By Plan: No recognition will be required. All the planned overtime duration will be considered as actual;\n"
+"* Attendance: Actual overtime will be calculated based on attendance entries that match the planned overtime;\n"
+"* Timesheet: Actual overtime will be calculated based on recorded timesheet entries that match the planned overtime;\n"
+"* Attendance or Timesheet: Actual overtime will be calculated based on EITHER attendance entries OR recorded timesheet entries that match the planned overtime. Attendance takes the priority;\n"
+"* Attendance and Timesheet: Actual overtime will be calculated based on BOTH attendance entries AND recorded timesheet entries that match the planned overtime.\n"
+"Note: If not specified, the setting from the corresponding contract or company will be taken into account."
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet_attendance
+#: model:ir.model.fields,help:viin_hr_overtime_timesheet_attendance.field_hr_contract__overtime_recognition_mode
+msgid ""
+"This indicates mode to recognize actual overtime against the plan:\n"
+"* By Plan: No recognition will be required. All the planned overtime duration will be considered as actual;\n"
+"* Attendance: Actual overtime will be calculated based on attendance entries that match the planned overtime;\n"
+"* Timesheet: Actual overtime will be calculated based on recorded timesheet entries that match the planned overtime;\n"
+"* Attendance or Timesheet: Actual overtime will be calculated based on EITHER attendance entries OR recorded timesheet entries that match the planned overtime. Attendance takes the priority;\n"
+"* Attendance and Timesheet: Actual overtime will be calculated based on BOTH attendance entries AND recorded timesheet entries that match the planned overtime.\n"
+"NOTE: If this field is left empty, the value will be taken from the corresponding company's settings."
+msgstr ""

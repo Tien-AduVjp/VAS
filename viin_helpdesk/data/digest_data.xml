@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+	<data noupdate="1">
+		<record id="digest.digest_digest_default" model="digest.digest">
+			<field name="kpi_helpdesk_ticket_opened">True</field>
+			<field name="kpi_helpdesk_ticket_closed">True</field>
+		</record>
+	</data>
+
+	<data>
+		<record id="digest_tip_helpdesk_0" model="digest.tip">
+			<field name="sequence">7</field>
+			<field name="group_id" ref="viin_helpdesk.group_helpdesk_manager" />
+			<field name="tip_description" type="html">
+				<div>
+					<strong style="font-size: 16px;">Try the mail gateway</strong>
+					<div style="font-size: 14px;">
+						New tickets can be generated from incoming emails. You just need to
+						set email aliases on your helpdesk team.
+						<br />
+						<div
+							style="text-align:center;margin-top:5px;margin-bottom:2px;">
+							<a href="/web#action=viin_helpdesk.helpdesk_config_settings_menu_action"
+								style="background-color:#56b3b5;padding:2px;color:#FFFFFF;font-weight:bold;text-decoration:none;">Set Email Aliases</a>
+						</div>
+					</div>
+				</div>
+			</field>
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+	<record id="survey_form" model="ir.ui.view">
+	    <field name="name">survey.survey.form.inherit</field>
+	    <field name="model">survey.survey</field>
+	    <field name="inherit_id" ref="survey.survey_form"/>
+	    <field name="arch" type="xml">
+	    	<button name="action_result_survey" position="after">
+	    		<button name="action_recompute_answer_score" string="Recompute Answers Score" type="object" class="oe_highlight"
+	    			groups="survey.group_survey_manager"
+                	attrs="{'invisible': ['|', ('state', '=', 'draft'), ('answer_done_count', '&lt;=', 0)]}"/>
+	    	</button>
+	    </field>
+	</record>
+
+</odoo>

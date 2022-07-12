@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-extend="OrderSelectorWidget">
+        <t t-jquery='.order-selector' t-operation='append'>
+        	<span class="order-button manageorder-button highlight">
+                Manage Orders
+            </span>
+   		</t>
+    </t>
+    
+    <t t-name="OrderLine">
+        <tr class='order-line' t-att-data-id='order.id'>
+            <td><t t-esc='order.name' /></td>
+            <td><t t-esc='order.refund_original_order_id[1]'/></td>
+            <td><t t-esc='order.partner_id[1]' /></td>
+            <td><t t-esc='order.date_order' /></td>
+            <td><t t-esc='order.user_id[1]' /></td>
+            <td><t t-esc='order.amount_total' /></td>
+            <td><t t-esc='order.state' /></td>
+        </tr>
+    </t>
+    
+    <t t-name="OrderLineList">
+    	<tr class='order-line-list' t-att-data-id='line.id'>
+            <td><t t-esc='line.product_id[1]' /></td>
+            <td><t t-esc='line.qty' /></td>
+            <td><t t-esc='line.price_unit' /></td>
+            <td><t t-esc='line.discount' /></td>
+            <td><t t-esc='line.tax_ids_name' /></td>
+            <td><t t-esc='line.price_subtotal' /></td>
+            <td><t t-esc='line.price_subtotal_incl' /></td>
+        </tr>
+    </t>
+    
+    <t t-name="OrderLineReturnList">
+    	<tr class='order-line-list return-list' t-att-data-id='line.id' t-att-data-product-id='line.product_id[0]'>
+            <td><t t-esc='line.product_id[1]' /><input class='return-detail' type='hidden' name='product_id' t-att-value='line.product_id[0]'/></td>
+            <td><input class='return-detail qty' name='qty' t-att-value='-line.qty'/></td>
+            <td><t t-esc='line.price_unit' /><input class='return-detail' type='hidden' name='price_unit' t-att-value='line.price_unit'/></td>
+            <td><t t-esc='line.discount' /><input class='return-detail' type='hidden' name='discount' t-att-value='line.discount'/></td>
+            <td><t t-esc='line.tax_ids_name' /><input class='return-detail' type='hidden' name='tax_ids' t-att-value='line.tax_ids'/></td>
+            <td><input class='return-detail price_subtotal' name='price_subtotal' t-att-value='-line.price_subtotal'/></td>
+            <td><input class='return-detail price_subtotal_incl' name='price_subtotal_incl' t-att-value='-line.price_subtotal_incl'/></td>
+            <td><span class='button delete fa fa-trash-o'></span><input type='hidden' name='order_id' class='return-detail' t-att-value='line.order_id[0]'/></td>
+        </tr>
+    </t>
+    
+    <t t-name="OrderDetails">
+        <section class='order-details'>
+            <div class='order-name'><t t-esc='order.name' /></div>
+            <t t-if='order.state == "paid" or order.state == "done"'>
+            <div class='return-buttons'>
+                <div class='button return'>Return Products</div>
+            </div>
+            </t>
+            <t t-if='order.state == "draft"'>
+            <div class='xpayment-buttons'>
+                <div class='button xpayment'>Payment</div>
+            </div>
+            </t>
+            <div class='order-details-box clearfix'>
+                <div class='order-details-left'>
+                    <div class='order-detail'>
+                        <span class='label'>Customer</span>
+                        <t t-if='order.partner_id'>
+                            <span class='detail order-customer'><t t-esc='order.partner_id[1]' /></span>
+                        </t>
+                        <t t-if='!order.partner_id'>
+                            <span class='detail order-customer empty'>N/A</span>
+                        </t>
+                    </div>
+                    <div class='order-detail'>
+                        <span class='label'>Salesman</span>
+                        <t t-if='order.user_id'>
+                            <span class='detail order-salesman'><t t-esc='order.user_id[1]' /></span>
+                        </t>
+                        <t t-if='!order.user_id'>
+                            <span class='detail order-salesman empty'>N/A</span>
+                        </t>
+                    </div>
+                </div>
+                <div class='client-details-right'>
+                    <div class='order-detail'>
+                        <span class='label'>Date Order</span>
+                        <t t-if='order.date_order'>
+                            <span class='detail order-date-order'><t t-esc='order.date_order' /></span>
+                        </t>
+                        <t t-if='!order.date_order'>
+                            <span class='detail order-date-order empty'>N/A</span>
+                        </t>
+                    </div>
+                    <div class='order-detail'>
+                       <span class='label'>Status</span>
+                       <t t-if='order.state'>
+                           <span class='detail order-status'><t t-esc='order.state' /></span>
+                       </t>
+                       <t t-if='!order.state'>
+                           <span class='detail order-status empty'>N/A</span>
+                       </t>
+                   </div>
+                </div>
+            </div>
+            <div class='order-lines'>
+            	<table class='order-line-list'>
+	               <thead>
+	                   <tr>
+	                       <th>Product</th>
+	                       <th>Quantity</th>
+	                       <th>Unit Price</th>
+	                       <th>Discount(%)</th>
+	                       <th>Taxes</th>
+	                       <th>Subtotal w/o Tax</th>
+	                       <th>Subtotal</th>
+	                   </tr>
+	               </thead>
+	               <tbody class='order-line-list-contents'>
+	               </tbody>
+	           </table>
+            </div>
+        </section>
+    </t>
+    
+    <t t-name="OrderDetailsReturn">
+        <section class='order-details return'>
+            <div class='order-name'><t t-esc='order.name' /></div>
+            <div class='edit-buttons'>
+                <div class='button undo'><i class='fa fa-undo' /></div>
+                <div class='button save'><i class='fa fa-floppy-o' /></div>
+            </div>
+            <div class='order-details-box clearfix'>
+                <div class='order-details-left'>
+                    <div class='order-detail order-detail-partner-id'>
+                        <span class='label'>Customer</span>
+                        <t t-if='order.partner_id'>
+                            <span class='detail order-customer'><t t-esc='order.partner_id[1]' /></span>
+                        </t>
+                        <t t-if='!order.partner_id'>
+                            <span class='detail order-customer empty'>N/A</span>
+                        </t>
+                    </div>
+                    <div class='order-detail order-detail-salesman'>
+                        <span class='label'>Salesman</span>
+                        <t t-if='order.user_id'>
+                            <span class='detail order-salesman'><t t-esc='order.user_id[1]' /></span>
+                        </t>
+                        <t t-if='!order.user_id'>
+                            <span class='detail order-salesman empty'>N/A</span>
+                        </t>
+                    </div>
+                </div>
+                <div class='client-details-right'>
+                    <div class='order-detail order-detail-date-order'>
+                        <span class='label'>Date Order</span>
+                        <t t-if='order.date_order'>
+                            <span class='detail order-date-order'><t t-esc='order.date_order' /></span>
+                        </t>
+                        <t t-if='!order.date_order'>
+                            <span class='detail order-date-order empty'>N/A</span>
+                        </t>
+                    </div>
+                    <div class='order-detail order-detail-status'>
+                       <span class='label'>Status</span>
+                       <t t-if='order.state'>
+                           <span class='detail order-status'><t t-esc='order.state' /></span>
+                       </t>
+                       <t t-if='!order.state'>
+                           <span class='detail order-status empty'>N/A</span>
+                       </t>
+                   </div>
+                </div>
+            </div>
+            <div class='order-lines'>
+            	<table class='order-line-list'>
+	               <thead>
+	                   <tr>
+	                       <th>Product</th>
+	                       <th>Quantity</th>
+	                       <th>Unit Price</th>
+	                       <th>Discount(%)</th>
+	                       <th>Taxes</th>
+	                       <th>Subtotal w/o Tax</th>
+	                       <th>Subtotal</th>
+	                       <th></th>
+	                   </tr>
+	               </thead>
+	               <tbody class='order-line-return-list-contents'>
+	               </tbody>
+	           </table>
+            </div>
+        </section>
+    </t>
+    
+    <t t-name="OrderDetailsPayment">
+        <section class='order-details payment'>
+            <div class='order-name'><t t-esc='order.name' /> / Payment</div>
+            <div class='edit-buttons'>
+                <div class='button undo-payment'><i class='fa fa-undo' /></div>
+                <div class='button save-payment'><i class='fa fa-floppy-o' /></div>
+            </div>
+            <div class='order-details-box clearfix'>
+                <div class='order-details-left'>
+                    <div class='order-payment'>
+                        <span class='label'>Payment Method</span>
+                        <select class='paymentx journal_id needsclick' name='journal_id'>
+                            <option value=''>None</option>     					 
+           					  <t t-foreach='widget.pos.payment_methods' t-as='payment_method'>
+                                <option t-att-value='payment_method.id'> 
+                                    <t t-esc='payment_method.name'/>
+                                </option>
+                              </t>
+            
+                        </select>
+                    </div>
+                    <div class='order-payment'>
+                        <span class='label'>Payment Reference </span>
+                        <input class='paymentx payment_name' name='payment_name'/>
+                    </div>
+                </div>
+                <div class='client-details-right'>
+                    <div class='order-payment'>
+                        <span class='label'>Amount</span>
+                        <input class='paymentx amount' name='amount' t-att-value='order.amount_total'/>
+                        <input type='hidden' class='paymentx order_id' name='order_id' t-att-value='order.id' />
+                        <input type='hidden' class='paymentx amount_total' name='amount_total' t-att-value='order.amount_total' />
+                    </div>
+                </div>
+            </div>
+        </section>
+    </t>
+    
+    <t t-name="OrderListScreenWidget">
+        <div class="orderlist-screen screen">
+            <div class="screen-content">
+                <section class="top-content">
+                    <span class='button back'>
+                        <i class='fa fa-angle-double-left'></i>
+                        Cancel
+                    </span>
+                    <span class='searchbox'>
+                        <input placeholder='Search Orders' />
+                        <span class='search-clear'></span>
+                    </span>
+                    <span class='searchbox'></span>
+                </section>
+                <section class="full-content">
+                    <div class='window'>
+                        <section class='subwindow collapsed'>
+                            <div class='subwindow-container collapsed'>
+                                <div class='subwindow-container-fix order-details-contents'>
+                                </div>
+                            </div>
+                        </section>
+                        <section class='subwindow'>
+                            <div class='subwindow-container'>
+                                <div class='subwindow-container-fix touch-scrollable scrollable-y'>
+                                    <table class='order-list'>
+                                        <thead>
+                                            <tr>
+                                                <th>Order Ref</th>
+                                                <th>Original Order</th>
+                                                <th>Customer</th>
+                                                <th>Date Order</th>
+                                                <th>Salesman</th>
+                                                <th>Total</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class='order-list-contents'>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </t>
+    
+</templates>

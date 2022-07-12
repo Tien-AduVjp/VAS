@@ -1,0 +1,1136 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_hr_employee_advance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-24 01:16+0000\n"
+"PO-Revision-Date: 2021-12-24 01:16+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile_line__account_id
+msgid "Account"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model,name:to_hr_employee_advance.model_account_chart_template
+msgid "Account Chart Template"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.ui.menu,name:to_hr_employee_advance.employee_advance_accounting_menu
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_form
+msgid "Accounting"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__message_needaction
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__activity_ids
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__activity_exception_decoration
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__activity_state
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:res.groups,name:to_hr_employee_advance.group_employee_advance_manager
+msgid "Administrator"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__date
+msgid "Advance Date"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__lines
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_form
+msgid "Advance Lines"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_reconcile_search
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_search
+msgid "Advance Month"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: code:addons/to_hr_employee_advance/models/employee_advance.py:0
+#, python-format
+msgid "Advance request must be confirmed (\"To Approve\") in order to approve it."
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: code:addons/to_hr_employee_advance/models/employee_advance.py:0
+#, python-format
+msgid "Advance request must be confirmed in order to approve it."
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: code:addons/to_hr_employee_advance/models/employee_advance.py:0
+#, python-format
+msgid "Advance request must be confirmed or validated in order to refuse it."
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_line__amount
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_payment__amount
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile_line__amount
+msgid "Amount"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_form
+msgid "Approve"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields.selection,name:to_hr_employee_advance.selection__employee_advance__state__validate
+#: model:ir.ui.menu,name:to_hr_employee_advance.employee_advance_request_approved_menu
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_search
+msgid "Approved"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.actions.act_window,name:to_hr_employee_advance.action_to_hr_employee_advance_approved
+msgid "Approved Requests"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:res.groups,name:to_hr_employee_advance.group_employee_advance_approver
+msgid "Approver"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__message_attachment_count
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__balance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__balance
+msgid "Balance"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model,name:to_hr_employee_advance.model_account_bank_statement_line
+msgid "Bank Statement Line"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_employee_advance_payment_form
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_employee_advance_reconcile_batch_form
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_reconcile_form
+msgid "Cancel"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields.selection,name:to_hr_employee_advance.selection__employee_advance_reconcile__state__cancel
+msgid "Cancelled"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,help:to_hr_employee_advance.field_account_bank_statement_import_journal_creation__is_advance_journal
+#: model:ir.model.fields,help:to_hr_employee_advance.field_account_journal__is_advance_journal
+#: model:ir.model.fields,help:to_hr_employee_advance.field_account_payment__is_advance_journal
+#: model:ir.model.fields,help:to_hr_employee_advance.field_account_payment_register__is_advance_journal
+msgid "Check this to enable this journal for employee advance."
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model,name:to_hr_employee_advance.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__company_id
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_payment__company_id
+msgid "Company"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,help:to_hr_employee_advance.field_employee_advance_payment__company_id
+msgid "Company related to this journal"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_reconcile_form
+msgid "Compute"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model,name:to_hr_employee_advance.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.actions.act_window,name:to_hr_employee_advance.action_res_configuration
+#: model:ir.ui.menu,name:to_hr_employee_advance.employee_advance_configuration_menu
+msgid "Configuration"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_form
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_reconcile_form
+msgid "Confirm"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields.selection,name:to_hr_employee_advance.selection__employee_advance_reconcile__state__confirm
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_reconcile_search
+msgid "Confirmed"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__create_uid
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_line__create_uid
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_payment__create_uid
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__create_uid
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile_batch__create_uid
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__create_date
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_line__create_date
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_payment__create_date
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__create_date
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile_batch__create_date
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields.selection,name:to_hr_employee_advance.selection__employee_advance_reconcile_line__type__cr
+msgid "Credit"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__line_cr_ids
+msgid "Credits"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__currency_id
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_line__currency_id
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_payment__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile_batch__date
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile_line__date
+msgid "Date"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields.selection,name:to_hr_employee_advance.selection__employee_advance_reconcile_line__type__db
+msgid "Debit"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__line_db_ids
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_reconcile_form
+msgid "Debits"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__department_id
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__department_id
+msgid "Department"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_line__name
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile_line__name
+msgid "Description"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__difference_amount
+msgid "Difference Amount"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__display_name
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_line__display_name
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_payment__display_name
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__display_name
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile_batch__display_name
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile_line__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields.selection,name:to_hr_employee_advance.selection__employee_advance__state__spent
+#: model:ir.model.fields.selection,name:to_hr_employee_advance.selection__employee_advance_reconcile__state__done
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_reconcile_search
+msgid "Done"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields.selection,name:to_hr_employee_advance.selection__employee_advance__state__draft
+#: model:ir.model.fields.selection,name:to_hr_employee_advance.selection__employee_advance_reconcile__state__draft
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_reconcile_search
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_search
+msgid "Draft"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_account_payment__employee_id
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_account_payment_register__employee_id
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__employee_id
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__employee_id
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_reconcile_search
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_search
+msgid "Employee"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_account_payment__employee_advance_id
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_line__advance_id
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_payment__emp_advance_id
+#: model:ir.ui.menu,name:to_hr_employee_advance.employee_advance_root_menu
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_form
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_tree
+msgid "Employee Advance"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.actions.act_window,name:to_hr_employee_advance.action_hr_employee_advance_pivot_graph
+msgid "Employee Advance Analysis"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_res_company__amount_double_validation
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_res_config_settings__amount_double_validation
+msgid "Employee Advance Double Validation"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: code:addons/to_hr_employee_advance/models/res_company.py:0
+#, python-format
+msgid ""
+"Employee Advance Double Validation must be greater than or equal to zero."
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.view_hr_employee_advance_graph
+msgid "Employee Advance Graph"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: code:addons/to_hr_employee_advance/models/res_company.py:0
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__journal_id
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__journal_id
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile_batch__journal_id
+#, python-format
+msgid "Employee Advance Journal"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_account_bank_statement_import_journal_creation__is_advance_journal
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_account_journal__is_advance_journal
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_account_payment__is_advance_journal
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_account_payment_register__is_advance_journal
+msgid "Employee Advance Journal?"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model,name:to_hr_employee_advance.model_employee_advance_payment
+msgid "Employee Advance Payment"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.view_hr_employee_advance_pivot
+msgid "Employee Advance Pivot"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.actions.act_window,name:to_hr_employee_advance.action_employee_advance_reconcile
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_account_payment__employee_advance_reconcile_id
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_payment__employee_advance_reconcile_id
+#: model:ir.ui.menu,name:to_hr_employee_advance.employee_advance_reconcile_menu
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_reconcile_form
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_reconcile_tree
+msgid "Employee Advance Reconcile"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model,name:to_hr_employee_advance.model_employee_advance_reconcile_batch
+msgid "Employee Advance Reconcile Batch"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_employee_advance_reconcile_batch_form
+msgid "Employee Advance Reconcile Batches"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.actions.act_window,name:to_hr_employee_advance.action_to_hr_employee_advance
+msgid "Employee Advance Requests"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_reconcile_form
+msgid "Employee Refund"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile_batch__employee_ids
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_employee_advance_reconcile_batch_form
+msgid "Employees"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.res_config_settings_view_form
+msgid ""
+"Enable Pass-Through Account In Employee Advance to get an accounting entry generated upon confirmation \n"
+"\t\t\t\t\t\t\t\t\t\tof an advance request that counters the employee payable/receivable account."
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.res_config_settings_view_form
+msgid ""
+"Enter a positive amount here to activate double\n"
+"\t\t\t\t\t\t\t\t\t\tvalidation."
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__manager_id
+msgid "First Approval"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__message_follower_ids
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__message_channel_ids
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__message_partner_ids
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_employee_advance_reconcile_batch_form
+msgid "Generate"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_reconcile_search
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_search
+msgid "Group By"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model,name:to_hr_employee_advance.model_employee_advance
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.res_config_settings_view_form
+msgid "HR Employee Advance"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model,name:to_hr_employee_advance.model_employee_advance_line
+msgid "HR Employee Advance Line"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model,name:to_hr_employee_advance.model_employee_advance_reconcile
+msgid "HR Employee Advance Reconcile"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model,name:to_hr_employee_advance.model_employee_advance_reconcile_line
+msgid "HR Employee Advance Reconcile Line"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_payment__hide_payment_method
+msgid "Hide Payment Method"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__id
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_line__id
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_payment__id
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__id
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile_batch__id
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile_line__id
+msgid "ID"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__activity_exception_icon
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,help:to_hr_employee_advance.field_employee_advance__activity_exception_icon
+#: model:ir.model.fields,help:to_hr_employee_advance.field_employee_advance_reconcile__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,help:to_hr_employee_advance.field_employee_advance__message_needaction
+#: model:ir.model.fields,help:to_hr_employee_advance.field_employee_advance__message_unread
+#: model:ir.model.fields,help:to_hr_employee_advance.field_employee_advance_reconcile__message_needaction
+#: model:ir.model.fields,help:to_hr_employee_advance.field_employee_advance_reconcile__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,help:to_hr_employee_advance.field_employee_advance__message_has_error
+#: model:ir.model.fields,help:to_hr_employee_advance.field_employee_advance__message_has_sms_error
+#: model:ir.model.fields,help:to_hr_employee_advance.field_employee_advance_reconcile__message_has_error
+#: model:ir.model.fields,help:to_hr_employee_advance.field_employee_advance_reconcile__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,help:to_hr_employee_advance.field_res_company__amount_double_validation
+#: model:ir.model.fields,help:to_hr_employee_advance.field_res_config_settings__amount_double_validation
+msgid ""
+"If the mount is greater than zero, any employee advance request for the "
+"amount that is greater than or equal to this will require double validation"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__message_is_follower
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__job_id
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__job_id
+msgid "Job Position"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model,name:to_hr_employee_advance.model_account_journal
+msgid "Journal"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__move_id
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__move_id
+msgid "Journal Entry"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile_line__move_line_id
+msgid "Journal Item"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__move_lines
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__move_lines
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_reconcile_form
+msgid "Journal Items"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance____last_update
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_line____last_update
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_payment____last_update
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile____last_update
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile_batch____last_update
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile_line____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__write_uid
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_line__write_uid
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_payment__write_uid
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__write_uid
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile_batch__write_uid
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__write_date
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_line__write_date
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_payment__write_date
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__write_date
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile_batch__write_date
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__message_main_attachment_id
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_payment__communication
+msgid "Memo"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__message_has_error
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__message_ids
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_search
+msgid "My Request"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__activity_date_deadline
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__activity_summary
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__activity_type_id
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__message_needaction_counter
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__message_has_error_counter
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,help:to_hr_employee_advance.field_employee_advance__message_needaction_counter
+#: model:ir.model.fields,help:to_hr_employee_advance.field_employee_advance_reconcile__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,help:to_hr_employee_advance.field_employee_advance__message_has_error_counter
+#: model:ir.model.fields,help:to_hr_employee_advance.field_employee_advance_reconcile__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,help:to_hr_employee_advance.field_employee_advance__message_unread_counter
+#: model:ir.model.fields,help:to_hr_employee_advance.field_employee_advance_reconcile__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: code:addons/to_hr_employee_advance/models/employee_advance.py:0
+#, python-format
+msgid "Only an Administrator can apply the second approval on leave requests."
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.ui.menu,name:to_hr_employee_advance.employee_advance_request_paid_menu
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_search
+msgid "Paid"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.actions.act_window,name:to_hr_employee_advance.action_to_hr_employee_advance_paid
+msgid "Paid Resquests"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_employee_advance_payment_form
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_form
+msgid "Pay"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_reconcile_form
+msgid "Pay Employee"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.actions.act_window,name:to_hr_employee_advance.action_to_employee_advance_payment
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__payment_ids
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__payment_ids
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_employee_advance_payment_form
+msgid "Payment"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_payment__payment_date
+msgid "Payment Date"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_payment__journal_id
+msgid "Payment Method"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_payment__payment_method_id
+msgid "Payment Type"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model,name:to_hr_employee_advance.model_account_payment
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_form
+msgid "Payments"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_reconcile_form
+msgid "Payments / Refunds"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile_line__reconcile_id
+msgid "Reconcile"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.actions.act_window,name:to_hr_employee_advance.action_to_employee_advance_reconcile_batch
+#: model:ir.ui.menu,name:to_hr_employee_advance.employee_advance_reconcile_batch_menu
+msgid "Reconcile Batches"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_reconcile_form
+msgid "Reconcile Information"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields.selection,name:to_hr_employee_advance.selection__employee_advance__state__done
+#: model:ir.ui.menu,name:to_hr_employee_advance.employee_advance_request_reconciled_menu
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_search
+msgid "Reconciled"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_reconcile_form
+msgid "Reconciled Credits"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__date
+msgid "Reconciled Date"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_reconcile_form
+msgid "Reconciled Debits"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.actions.act_window,name:to_hr_employee_advance.action_to_hr_employee_advance_reconciled
+msgid "Reconciled Requests"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__name
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__name
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_reconcile_search
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_search
+msgid "Reference"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_form
+msgid "Refuse"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields.selection,name:to_hr_employee_advance.selection__employee_advance__state__refuse
+msgid "Refused"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model,name:to_hr_employee_advance.model_account_payment_register
+msgid "Register Payment"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.ui.menu,name:to_hr_employee_advance.hr_employee_advance_report_menu
+msgid "Reports"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.ui.menu,name:to_hr_employee_advance.employee_advance_menu
+#: model:ir.ui.menu,name:to_hr_employee_advance.employee_advance_request_menu
+msgid "Requests/Declarations"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__activity_user_id
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__message_has_sms_error
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_search
+msgid "Search Employee Advance"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_reconcile_search
+msgid "Search Employee Advance Reconcile"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__manager_id2
+#: model:ir.model.fields.selection,name:to_hr_employee_advance.selection__employee_advance__state__validate1
+msgid "Second Approval"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_form
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_reconcile_form
+msgid "Set to Draft"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.ui.menu,name:to_hr_employee_advance.employee_advance_general_settings_menu
+msgid "Settings"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__state
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__state
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile_line__type
+msgid "Status"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,help:to_hr_employee_advance.field_employee_advance__activity_state
+#: model:ir.model.fields,help:to_hr_employee_advance.field_employee_advance_reconcile__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_account_payment__destination_employee_id
+msgid "Targeted Employee"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_account_payment__require_dest_employee
+msgid "Targeted Employee Required"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,help:to_hr_employee_advance.field_account_payment__require_dest_employee
+msgid ""
+"Technical field to indicate if the targeted employee should be required."
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,help:to_hr_employee_advance.field_employee_advance_payment__hide_payment_method
+msgid ""
+"Technical field used to hide the payment method if the selected journal has "
+"only one available which is 'manual'"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: code:addons/to_hr_employee_advance/wizard/employee_advance_payment.py:0
+#, python-format
+msgid "The amount exceeds the allowable limit of the advance request."
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: code:addons/to_hr_employee_advance/wizard/employee_advance_payment.py:0
+#, python-format
+msgid "The amount exceeds the allowable limit."
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: code:addons/to_hr_employee_advance/models/employee_advance.py:0
+#, python-format
+msgid ""
+"The employee '%s' you've selected has no Private Address specified. Please "
+"specify one for this employee first."
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: code:addons/to_hr_employee_advance/models/employee_advance.py:0
+#, python-format
+msgid "The journal %s does not belong to the company %s."
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: code:addons/to_hr_employee_advance/models/account_payment.py:0
+#: code:addons/to_hr_employee_advance/models/account_payment.py:0
+#, python-format
+msgid ""
+"The selected employee %s does not have a Private Address yet. As usually, "
+"only employees with Private Address declared can participate accounting "
+"transactions."
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: code:addons/to_hr_employee_advance/models/res_company.py:0
+#, python-format
+msgid ""
+"There are still some employee advances (as listed below) being in progress. Please get them done or cancelled before you could be able to change \"Use Pass-Through Account In Employee Advance\".\n"
+"%s"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,help:to_hr_employee_advance.field_employee_advance__manager_id
+msgid "This area is automatically filled by the user who validate the request"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,help:to_hr_employee_advance.field_employee_advance__manager_id2
+msgid ""
+"This area is automaticly filled by the user who validate the request with "
+"second level (If it need second validation)"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.ui.menu,name:to_hr_employee_advance.employee_advance_request_to_approve_menu
+msgid "To Approve"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.actions.act_window,name:to_hr_employee_advance.action_to_hr_employee_advance_to_approve
+msgid "To Approve Requests"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__amount
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_reconcile_form
+msgid "Total Amount"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: code:addons/to_hr_employee_advance/models/employee_advance.py:0
+#, python-format
+msgid "Total Amount must not be zero (0)!"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_reconcile_form
+msgid "Total Credit"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_reconcile_form
+msgid "Total Debit"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,help:to_hr_employee_advance.field_employee_advance__activity_exception_decoration
+#: model:ir.model.fields,help:to_hr_employee_advance.field_employee_advance_reconcile__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__message_unread
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__message_unread_counter
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_res_company__use_employee_advance_pass_through_account
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_res_config_settings__use_employee_advance_pass_through_account
+msgid "Use Pass-Through Account In Employee Advance"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:res.groups,name:to_hr_employee_advance.group_employee_advance_user
+msgid "User"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:res.groups,comment:to_hr_employee_advance.group_employee_advance_approver
+msgid "Users belong to this group can approve employee advance request"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:res.groups,comment:to_hr_employee_advance.group_employee_advance_user
+msgid ""
+"Users belong to this group have all permissions with their records excepts "
+"accounting objects"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:res.groups,comment:to_hr_employee_advance.group_employee_advance_manager
+msgid "Users belong to this group have total control on this application"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_form
+msgid "Validate"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields.selection,name:to_hr_employee_advance.selection__employee_advance__state__confirm
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_hr_employee_advance_search
+msgid "Waiting Approved"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance__website_message_ids
+#: model:ir.model.fields,field_description:to_hr_employee_advance.field_employee_advance_reconcile__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model:ir.model.fields,help:to_hr_employee_advance.field_employee_advance__website_message_ids
+#: model:ir.model.fields,help:to_hr_employee_advance.field_employee_advance_reconcile__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: code:addons/to_hr_employee_advance/models/account_payment.py:0
+#, python-format
+msgid ""
+"You can not set to draft a payment of employee advance reconcile in 'Done' "
+"state."
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: code:addons/to_hr_employee_advance/models/account_payment.py:0
+#, python-format
+msgid ""
+"You can not set to draft a payment of reconciled employee advance request."
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: code:addons/to_hr_employee_advance/models/employee_advance.py:0
+#: code:addons/to_hr_employee_advance/models/employee_advance_reconcile.py:0
+#, python-format
+msgid "You can only delete records whose state is draft."
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: code:addons/to_hr_employee_advance/models/employee_advance_reconcile.py:0
+#, python-format
+msgid "You cannot confirm a reconcile without any debits."
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: code:addons/to_hr_employee_advance/models/employee_advance.py:0
+#, python-format
+msgid "You cannot confirm an employee advance without any details."
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: code:addons/to_hr_employee_advance/models/account_bank_statement.py:0
+#, python-format
+msgid ""
+"You cannot revert reconciliation '%s' already contains journal items which "
+"has been link to a advance reconcile. Please delete journal items '%s' from "
+"the advance reconcile '%s' before."
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: code:addons/to_hr_employee_advance/models/account_payment.py:0
+#, python-format
+msgid ""
+"You cannot set to draft the payment '%s' that has been link to a advance "
+"reconcile. Please delete it from the advance reconcile '%s' before."
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: code:addons/to_hr_employee_advance/models/employee_advance.py:0
+#: code:addons/to_hr_employee_advance/models/employee_advance.py:0
+#: code:addons/to_hr_employee_advance/models/employee_advance.py:0
+#, python-format
+msgid "You must be an Employee Advance Approver and manager of employee %s."
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: code:addons/to_hr_employee_advance/wizard/employee_advance_payment.py:0
+#: code:addons/to_hr_employee_advance/wizard/employee_advance_payment.py:0
+#, python-format
+msgid "You must configure Private Address for employee %s."
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: code:addons/to_hr_employee_advance/models/account_payment.py:0
+#, python-format
+msgid "You must select an Employee for Destination Payment Method %s."
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: code:addons/to_hr_employee_advance/models/account_payment.py:0
+#, python-format
+msgid "You must select an Employee for Payment Method %s."
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: code:addons/to_hr_employee_advance/models/employee_advance.py:0
+#: code:addons/to_hr_employee_advance/models/employee_advance_reconcile.py:0
+#, python-format
+msgid "Your must specify the Private Address for the employee %s."
+msgstr ""
+
+#. module: to_hr_employee_advance
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_employee_advance_payment_form
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_advance.to_employee_advance_reconcile_batch_form
+msgid "or"
+msgstr ""

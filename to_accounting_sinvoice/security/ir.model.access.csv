@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_account_sinvoice_type_employee,account.sinvoice.type.employee,model_account_sinvoice_type,base.group_user,1,0,0,0
+access_account_sinvoice_type_account_advisor,account.sinvoice.type.account_advisor,model_account_sinvoice_type,account.group_account_manager,1,1,1,1
+access_account_sinvoice_type_admin,account.sinvoice.type.admin,model_account_sinvoice_type,base.group_system,1,1,1,1
+access_account_sinvoice_serial_employee,account.sinvoice.serial.employee,model_account_sinvoice_serial,base.group_user,1,0,0,0
+access_account_sinvoice_serial_account_advisor,account.sinvoice.serial.account_advisor,model_account_sinvoice_serial,account.group_account_manager,1,1,1,1
+access_account_sinvoice_serial_admin,account.sinvoice.serial.admin,model_account_sinvoice_serial,base.group_system,1,1,1,1
+access_account_sinvoice_template_employee,account.sinvoice.template.employee,model_account_sinvoice_template,base.group_user,1,0,0,0
+access_account_sinvoice_template_account_advisor,account.sinvoice.template.account_advisor,model_account_sinvoice_template,account.group_account_manager,1,1,1,1
+access_account_sinvoice_template_admin,account.sinvoice.template.admin,model_account_sinvoice_template,base.group_system,1,1,1,1

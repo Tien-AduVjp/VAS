@@ -1,0 +1,346 @@
+<odoo>
+	<data>
+		<record id="helpdesk_team_form_view" model="ir.ui.view">
+			<field name="name">helpdesk.team.form</field>
+			<field name="model">helpdesk.team</field>
+			<field name="arch" type="xml">
+				<form string="Helpdesk Team Form">
+					<sheet>
+						<div class="oe_button_box" name="button_box" position="inside">
+							<button name="action_open_tickets" class="o_stat_button" type="object" icon="fa-ticket">
+								<field name="tickets_count" string="Tickets" widget="statinfo" />
+							</button>
+							<button name="action_open_sla" class="o_stat_button" type="object" icon="fa-hourglass">
+								<field name="sla_count" string="SLA Policies" widget="statinfo" />
+							</button>
+							<button name="action_view_all_rating" type="object" attrs="{'invisible': ['|', '|', ('rating_status', '=', 'no'), ('rating_percentage_satisfaction', '=', -1)]}"
+								class="oe_stat_button oe_percent" icon="fa-smile-o" groups="viin_helpdesk.group_helpdesk_rating">
+								<div class="o_field_widget o_stat_info">
+									<span class="o_stat_value">
+										<field name="rating_percentage_satisfaction" nolabel="1" />
+									</span>
+									<span class="o_stat_text">
+										% On
+										<field readonly="1" name="label_tickets" options="{'label_field': 'label_tickets'}" />
+									</span>
+								</div>
+							</button>
+						</div>
+						<div class="oe_title">
+							<separator string="Helpdesk Team" class="oe_edit_only" />
+							<h1>
+								<field name="name" class="field_name" />
+							</h1>
+						</div>						
+						<group>
+							<group>
+								<field name="team_leader_id" />
+								<field name="assign_type"/>
+								<field name="team_leader_excluded" attrs="{'invisible': [('assign_type', '=', 'manually')]}"/>
+								<field name="company_id" groups="base.group_multi_company" options="{'no_create': True}" />
+								<field name="active" invisible="1" />
+							</group>
+							<group>
+								<field name="stage_ids" widget="many2many_tags" context="{'default_team_id': id}"/>
+								<field name="privacy_visibility" widget="radio" />
+							</group>
+						</group>
+						<notebook>
+							<page name="members" string="Team Members">
+								<field name="team_member_ids" widget="many2many" options="{'no_create': True}">
+									<kanban quick_create="false" create="true" delete="true">
+										<field name="id" />
+										<field name="name" />
+										<templates>
+											<t t-name="kanban-box">
+												<div class="oe_kanban_global_click" style="max-width: 200px">
+													<div class="o_kanban_record_top">
+														<img
+															t-att-src="kanban_image('res.users', 'image_128', record.id.raw_value)"
+															class="oe_avatar oe_kanban_avatar_smallbox o_image_40_cover mb0"
+															alt="Avatar" />
+														<div class="o_kanban_record_headings ml8">
+															<strong class="o_kanban_record_title">
+																<field name="name" />
+															</strong>
+														</div>
+													</div>
+												</div>
+											</t>
+										</templates>
+									</kanban>
+								</field>
+							</page>
+							<page name="customer_ratings_page" string="Customer Ratings" groups="viin_helpdesk.group_helpdesk_rating">
+								<group>
+									<field name="rating_status" widget="radio" />
+									<field name="rating_status_period" class="oe_inline"
+									attrs="{'required': [('rating_status','=','periodic')], 'invisible': [('rating_status','!=','periodic')]}" />
+									<field name="portal_show_rating" attrs="{'invisible': [('rating_status','==','no')]}" />
+								</group>
+							</page>
+							<page name="description" string="Description">
+								<field name="description"/>
+							</page>
+							<page name="emails" string="Emails" attrs="{'invisible': [('alias_domain', '=', False)]}">
+	                            <group name="group_alias">
+	                                <label for="alias_name" string="Email Alias"/>
+	                                <div name="alias_def">
+	                                    <field name="alias_id" class="oe_read_only oe_inline" string="Email Alias" required="0"/>
+	                                    <div class="oe_edit_only oe_inline" name="edit_alias" style="display: inline;" >
+	                                        <field name="alias_name" class="oe_inline"/>@<field name="alias_domain" class="oe_inline" readonly="1"/>
+	                                    </div>
+	                                </div>
+	                                <field name="alias_contact" class="oe_inline oe_edit_only" string="Accept Emails From"/>
+	                            </group>
+                        	</page>
+                        	<page name="sla_policies" string="SLA Policies">
+                        		<group>
+	                        		<field name="apply_sla"/>
+	                        		<field name="resource_calendar_id" attrs="{'invisible': [('apply_sla', '=', False)], 'required': [('apply_sla', '=', True)]}"/>
+                        		</group>
+                        	</page>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers"
+						help="Follow this salesteam to automatically track the events associated to users of this team." />
+						<field name="message_ids" widget="mail_thread" />
+						<field name="activity_ids" widget="mail_activity" />
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record id="helpdesk_team_tree_view" model="ir.ui.view">
+			<field name="name">helpdesk.team.tree</field>
+			<field name="model">helpdesk.team</field>
+			<field name="arch" type="xml">
+				<tree string="Helpdesk Team Tree">
+					<field name="sequence" widget="handle" groups="base.group_no_one" />
+					<field name="name" />
+					<field name="team_leader_id" />
+					<field name="company_id" optional="hide" groups="base.group_multi_company" />
+					<field name="active" invisible="1" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="helpdesk_team_search_view" model="ir.ui.view">
+			<field name="name">helpdesk.team.search</field>
+			<field name="model">helpdesk.team</field>
+			<field name="arch" type="xml">
+				<search string="Helpdesk team Tree">
+					<field name="name" />
+					<field name="team_leader_id" />
+					<separator />
+					<filter string="Archived" name="ftr_inactive" domain="[('active', '=', False)]" />
+					<group expand="0" string="Group By">
+						<filter string="Team Leader" name="grp_team_leader_id" context="{'group_by':'team_leader_id'}" />
+						<filter string="Company" name="grp_company_id" context="{'group_by':'company_id'}" groups="base.group_multi_company" />
+					</group>
+				</search>
+			</field>
+		</record>
+		
+		<record id="helpdesk_team_view_form_simplified" model="ir.ui.view">
+            <field name="name">helpdesk.team.view.form.simplified</field>
+            <field name="model">helpdesk.team</field>
+            <field name="arch" type="xml">
+                <form string="Helpdesk Team">
+                    <group>
+                        <group>
+                            <field name="company_id" invisible="1"/>
+                            <field name="name" class="oe_inline" string="Name" placeholder="e.g. General"/>
+                            <field name="team_leader_id"/>
+                            <label for="alias_name" string="Choose a Team Email"/>
+                            <div name="alias_def">
+                                <field name="alias_id" class="oe_read_only oe_inline" string="Email Alias" required="0"/>
+                                <field name="alias_name" class="oe_inline"/>@<field name="alias_domain" class="oe_inline" readonly="1"/>
+                            </div>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="helpdesk_team_view_form_simplified_footer" model="ir.ui.view">
+            <field name="name">helpdesk.team.view.form.simplified</field>
+            <field name="model">helpdesk.team</field>
+            <field name="inherit_id" ref="viin_helpdesk.helpdesk_team_view_form_simplified"/>
+            <field name="mode">primary</field>
+            <field name="arch" type="xml">
+                <xpath expr="//group" position="after">
+                    <footer>
+                        <button string="Create" name="action_open_tickets" type="object" class="btn-primary"/>
+                        <button string="Discard" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </xpath>
+            </field>
+        </record>
+		
+		<record id="open_create_helpdesk_team" model="ir.actions.act_window">
+            <field name="name">Create a Helpdesk Team</field>
+            <field name="res_model">helpdesk.team</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="helpdesk_team_view_form_simplified_footer"/>
+            <field name="target">new</field>
+        </record>
+
+		<record id="helpdesk_team_kanban_view" model="ir.ui.view">
+			<field name="name">helpdesk.team.kanban</field>
+			<field name="model">helpdesk.team</field>
+			<field name="arch" type="xml">
+				<kanban class="oe_background_grey o_kanban_dashboard o_emphasize_colors o_helpdesk_team_kanban_main" on_create="viin_helpdesk.open_create_helpdesk_team">
+					<field name="color" />
+					<field name="name" />
+					<field name="description" />
+					<field name="team_leader_id" />
+					<field name="team_member_ids" />
+					<field name="stage_ids" />
+					<field name="ticket_ids" />
+					<field name="label_tickets" />
+					<field name="tickets_count" />
+					<field name="rating_percentage_satisfaction" />
+					<field name="rating_status" />
+					<field name="high_priority_tickets_count" />
+					<field name="urge_priority_tickets_count" />
+					<field name="low_priority_tickets_count" />
+					<field name="company_id" groups="base.group_multi_company" />
+					<templates>
+						<t t-name="kanban-box">
+							<div t-attf-class="#{kanban_color(record.color.raw_value)} oe_kanban_global_click">
+								<div class="o_helpdesk_team_kanban_main">
+									<div class="o_kanban_card_content">
+										<div class="o_kanban_primary_left">
+											<div class="o_primary">
+												<span class="o_wrap_text">
+													<t t-esc="record.name.value"/>
+													<a type="button" class="fa fa-info-circle" data-toggle="tooltip" data-html="true" aria-label="Info" t-att-title="record.description.value"></a>
+												</span>
+                                                <span t-if="record.company_id.value" groups="base.group_multi_company">
+                                                    <strong><t t-esc="record.company_id.value"/></strong>
+                                                </span>
+											</div>
+											<div class="o_kanban_record_bottom">
+												<div class="oe_kanban_bottom_left col-5" rowspan="3">
+													<button type="object" name="action_create_new" class="btn btn-primary">Create Ticket</button>
+												</div>
+												<div class="oe_kanban_bottom_right col-7">
+													<div class="row">
+														<div class="col-9">
+		                                                    <a name="%(ticket_priority_kanban_view_from_team_kanban_action)d" type="action" context="{'search_default_ftr_urgent_priority_level': '3'}">
+		                                                    	Urgent
+		                                                    </a>
+			                                            </div>
+			                                            <div class="col-3">
+			                                                <t t-esc="record.urge_priority_tickets_count.value"/>
+			                                            </div>
+			                                            <div class="col-9">
+			                                            	<a name="%(ticket_priority_kanban_view_from_team_kanban_action)d" type="action" context="{'search_default_ftr_high_priority_level': '2'}">
+		                                                    	High Priorities
+		                                                    </a>
+			                                            </div>
+			                                            <div class="col-3">
+			                                                <t t-esc="record.high_priority_tickets_count.value"/>
+			                                            </div>
+			                                            <div class="col-9">
+			                                            	<a name="%(ticket_priority_kanban_view_from_team_kanban_action)d" type="action" context="{'search_default_ftr_low_priority_level': '1'}">
+		                                                    	Low Priorities
+		                                                    </a>
+			                                            </div>
+			                                            <div class="col-3">
+			                                                <t t-esc="record.low_priority_tickets_count.value"/>
+			                                            </div>
+													</div>
+												</div>
+											</div>
+											<div t-if="record.rating_status.raw_value != 'no'" class="mt8 text-primary"
+												title="Percentage of happy ratings over the past 30 days. Get rating details from the More menu." groups="viin_helpdesk.group_helpdesk_rating">
+												<b>
+													<t t-if="record.rating_percentage_satisfaction.value == -1">
+														<i class="fa fa-smile-o" />
+														No rating yet
+													</t>
+													<t t-if="record.rating_percentage_satisfaction.value != -1">
+														<a name="action_view_all_rating" type="object" context="{'search_default_ftr_rating_last_30_days':1}">
+															<i class="fa fa-smile-o" role="img" aria-label="Percentage of satisfaction" title="Percentage of satisfaction" />
+															<t t-esc="record.rating_percentage_satisfaction.value" />
+															%
+														</a>
+													</t>
+												</b>
+											</div>
+										</div>
+
+										
+										
+										<div class="o_dropdown_kanban dropdown" t-if="!selection_mode" groups="viin_helpdesk.group_helpdesk_user">
+											<a role="button" class="dropdown-toggle o-no-caret btn" data-toggle="dropdown" data-display="static" href="#"
+												aria-label="Dropdown menu" title="Dropdown menu">
+												<span class="fa fa-ellipsis-v" />
+											</a>
+											<div class="dropdown-menu" role="menu">
+												<a t-if="widget.editable" role="menuitem" type="edit"
+													class="dropdown-item">Edit Team</a>
+												<a t-if="widget.deletable" role="menuitem" type="delete"
+													class="dropdown-item">Delete Team</a>
+												<t t-if="record.rating_status.raw_value != 'no'">
+		                                            <a name="action_view_all_rating" type="object" class="dropdown-item">Customer Ratings</a>
+		                                        </t>
+												<div role="separator" class="dropdown-divider"></div>
+												<ul class="oe_kanban_colorpicker" data-field="color" />
+											</div>
+										</div>
+									</div>
+									<div class="o_kanban_record_bottom" t-if="!selection_mode">
+										<div class="oe_kanban_bottom_left">
+											<a class="team_kanban_box" name="action_open_tickets" type="object">
+												<div>
+													<span class="o_value">
+														<t t-esc="record.tickets_count.value" />
+													</span>
+													<span class="o_label">
+														<t t-esc="record.label_tickets.value" />
+													</span>
+												</div>
+											</a>
+										</div>
+										<div class="oe_kanban_bottom_right" t-if="!selection_mode">
+											<img
+												t-att-src="kanban_image('res.users', 'image_128', record.team_leader_id.raw_value)"
+												t-att-title="record.team_leader_id.value"
+												t-att-alt="record.team_leader_id.value"
+												class="oe_kanban_avatar" />
+										</div>
+									</div>
+									<div class="oe_clear"></div>
+								</div>
+							</div>
+						</t>
+					</templates>
+				</kanban>
+			</field>
+		</record>
+
+		<record id="helpdesk_team_overview_action" model="ir.actions.act_window">
+			<field name="name">Helpdesk Overview</field>
+			<field name="res_model">helpdesk.team</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="view_id" ref="viin_helpdesk.helpdesk_team_kanban_view"/>
+			<field name="view_mode">kanban,form</field>
+		</record>
+		
+		<record id="helpdesk_team_action" model="ir.actions.act_window">
+			<field name="name">Helpdesk Teams</field>
+			<field name="res_model">helpdesk.team</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="view_mode">tree,form,kanban</field>
+		</record>
+		
+		<menuitem id="helpdesk_team_overview_menu" name="Overview" parent="helpdesk_menu" action="helpdesk_team_overview_action" sequence="1" />
+		
+		<menuitem id="helpdesk_team_menu" parent="configuration_menu" action="helpdesk_team_action" sequence="20" />
+			
+	</data>
+</odoo>

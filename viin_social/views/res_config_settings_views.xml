@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+	<data>
+        <record id="res_config_settings_view_form" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.inherit.social</field>
+            <field name="model">res.config.settings</field>
+            <field name="priority" eval="50"/>
+            <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[hasclass('settings')]" position="inside">
+                    <div class="config_social_app app_settings_block" data-string="Social Media" string="Social Media" data-key="viin_social">
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="social_config_action" model="ir.actions.act_window">
+            <field name="name">Settings</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.config.settings</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+            <field name="context">{'module' : 'viin_social'}</field>
+        </record>
+
+		<menuitem id="social_settings_menu" name="Settings" parent="social_configuration_menu" 
+		action="social_config_action" sequence="0" groups="base.group_system"/>
+	</data>
+</odoo>

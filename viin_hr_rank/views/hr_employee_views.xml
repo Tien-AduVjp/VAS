@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+
+		<record id="view_employee_form" model="ir.ui.view">
+			<field name="name">hr.employee.form</field>
+			<field name="model">hr.employee</field>
+			<field name="inherit_id"
+				ref="to_hr_employee_grade.view_employee_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='grade_id']" position="after">
+					<field name="rank_id" />
+					<field name="next_rank_id" />
+				</xpath>
+			</field>
+		</record>
+
+		<record id="view_employee_tree" model="ir.ui.view">
+			<field name="name">hr.employee.tree</field>
+			<field name="model">hr.employee</field>
+			<field name="inherit_id" ref="hr.view_employee_tree" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='grade_id']" position="after">
+					<field name="rank_id" />
+				</xpath>
+			</field>
+		</record>
+
+		<record id="view_employee_filter" model="ir.ui.view">
+			<field name="name">hr.employee.search</field>
+			<field name="model">hr.employee</field>
+			<field name="inherit_id" ref="hr.view_employee_filter" />
+			<field name="arch" type="xml">
+				<xpath expr="//group" position="inside">
+					<filter string="Rank" name="grp_rank_id" domain="[]"
+						context="{'group_by': 'rank_id'}" />
+				</xpath>
+			</field>
+		</record>
+
+	</data>
+</odoo>

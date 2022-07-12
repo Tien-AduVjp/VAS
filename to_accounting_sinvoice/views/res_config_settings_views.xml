@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="res_config_settings_view_form" model="ir.ui.view">
+		<field name="name">res.config.settings.view.form.inherit.accounting.sinvoice
+		</field>
+		<field name="model">res.config.settings</field>
+		<field name="inherit_id"
+			ref="to_einvoice_common.res_config_settings_view_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//div[@id='einvoice_settings']" position="after">
+				<h2 groups="account.group_account_manager" attrs="{'invisible':[('einvoice_provider','!=','sinvoice')]}">S-Invoice Settings</h2>
+				<div class="row mt16 o_settings_container"
+					id="sinvoice_settings" groups="account.group_account_manager" attrs="{'invisible':[('einvoice_provider','!=','sinvoice')]}">
+					<div class="col-lg-6 col-12 o_setting_box">
+						<div class="o_setting_right_pane">
+							<div class="text-muted"
+								attrs="{'invisible':[('einvoice_provider','!=','sinvoice')]}">
+								Using sandbox to test your S-Invoice integration
+								first.
+							</div>
+							<div class="content-group"
+								attrs="{'invisible':[('einvoice_provider','!=','sinvoice')]}">
+								<div class="mt16">
+									<field name="sinvoice_mode" widget="radio"
+										class="o_light_label" />
+								</div>
+							</div>
+							<!-- this service is disabled by Viettel. <button name="button_get_sinvoice_status" 
+								string="Test Service" type="object" class="oe_highlight" /> -->
+						</div>
+					</div>
+					<div class="col-lg-6 col-12 o_setting_box"
+						attrs="{'invisible':[('einvoice_provider','!=','sinvoice')]}">
+						<div class="o_setting_right_pane">
+							<span class="o_form_label">API URL</span>
+							<div class="text-muted">
+								The URL to connect to S-Invoice's API service
+							</div>
+							<div class="mt16" id="sinvoice_api_url">
+								<field name="sinvoice_api_url" class="oe_inline"
+									attrs="{'invisible': [('sinvoice_mode','!=','production')], 'required': [('einvoice_provider','=','sinvoice')]}" />
+								<field name="sandbox_sinvoice_api_url" class="oe_inline"
+									attrs="{'invisible': [('sinvoice_mode','=','production')], 'required': [('einvoice_provider','=','sinvoice')]}" />
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-12 o_setting_box"
+						attrs="{'invisible':[('einvoice_provider','!=','sinvoice')]}">
+						<div class="o_setting_right_pane">
+							<label for="sinvoice_api_username" />
+							<div class="text-muted">
+								The username for Sinvoice API authentication
+							</div>
+							<div class="mt16" id="sinvoice_api_username">
+								<field name="sinvoice_api_username"
+									attrs="{'required': [('einvoice_provider','=','sinvoice')]}" />
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-12 o_setting_box"
+						attrs="{'invisible':[('einvoice_provider','!=','sinvoice')]}">
+						<div class="o_setting_right_pane">
+							<label for="sinvoice_api_password" />
+							<div class="text-muted">
+								The password for Sinvoice API authentication
+							</div>
+							<div class="mt16" id="sinvoice_api_password">
+								<field name="sinvoice_api_password" password="True"
+									attrs="{'required': [('einvoice_provider','=','sinvoice')]}" />
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-6 col-12 o_setting_box"
+						attrs="{'invisible':[('einvoice_provider','!=','sinvoice')]}">
+						<div class="o_setting_right_pane">
+							<label for="sinvoice_start" />
+							<div class="text-muted">
+								Start date of S-Invoice
+							</div>
+							<div class="mt16" id="sinvoice_start">
+								<field name="sinvoice_start"
+									attrs="{'required': [('einvoice_provider','=','sinvoice'),('einvoice_issue_earliest_invoice_first','=',True)]}" />
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-12 o_setting_box"
+						attrs="{'invisible':[('einvoice_provider','!=','sinvoice')]}">
+						<div class="o_setting_right_pane">
+							<label for="account_sinvoice_serial_id" />
+							<div class="text-muted">
+								The Serial that you have registered with S-Invoice
+							</div>
+							<div class="mt16" id="account_sinvoice_serial_id">
+								<field name="account_sinvoice_serial_id"
+									attrs="{'required': [('einvoice_provider','=','sinvoice')]}" />
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-12 o_setting_box"
+						attrs="{'invisible':[('einvoice_provider','!=','sinvoice')]}">
+						<div class="o_setting_right_pane">
+							<label for="account_sinvoice_template_id" />
+							<div class="text-muted">
+								The Template that you have registered with
+								S-Invoice
+							</div>
+							<div class="mt16" id="account_sinvoice_template_id">
+								<field name="account_sinvoice_template_id"
+									attrs="{'required': [('einvoice_provider','=','sinvoice')]}" readonly="1" force_save="1"/>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-12 o_setting_box"
+						attrs="{'invisible':[('einvoice_provider','!=','sinvoice')]}">
+						<div class="o_setting_right_pane">
+							<label for="account_sinvoice_type_id" />
+							<div class="text-muted">
+								The Invoice Type that you have registered with
+								S-Invoice
+							</div>
+							<div class="mt16" id="account_sinvoice_type_id">
+								<field name="account_sinvoice_type_id"
+									attrs="{'required': [('einvoice_provider','=','sinvoice')]}" readonly="1" force_save="1"/>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-12 o_setting_box"
+						attrs="{'invisible':[('einvoice_provider','!=','sinvoice')]}">
+						<div class="o_setting_left_pane">
+							<field name="sinvoice_synch_payment_status" />
+						</div>
+						<div class="o_setting_right_pane">
+							<label for="sinvoice_synch_payment_status" />
+							<div class="text-muted">
+								If checked, having invoice paid in Odoo will also
+								get the sinvoice paid. Having a paid invoice reopened in Odoo
+								will also get the sinvoice reopened accordingly. Otherwise, you
+								will need to do it manually.
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-12 o_setting_box"
+						attrs="{'invisible':[('einvoice_provider','!=','sinvoice')]}">
+						<div class="o_setting_left_pane">
+						</div>
+						<div class="o_setting_right_pane">
+							<label for="sinvoice_conversion_user_id" />
+							<div class="text-muted">
+								If specified, during conversion, Odoo will use
+								this user as the conversion user instead the one who actually
+								converts the invoice.
+							</div>
+							<div class="mt16" id="sinvoice_conversion_user_id">
+								<field name="sinvoice_conversion_user_id" />
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-12 o_setting_box"
+						attrs="{'invisible':[('einvoice_provider','!=','sinvoice')]}">
+						<div class="o_setting_right_pane">
+							<div class ="row">
+								<div class="col-lg-8 col-12 o_setting_box">
+									<label for="sinvoice_max_len_bank_name" />
+								</div>	
+								<div class="col-lg-4 col-12 o_setting_box ">
+									<field name="sinvoice_max_len_bank_name" class="float-right"
+											attrs="{'required': [('einvoice_provider','=','sinvoice')]}" />
+								</div>
+							</div>
+							<div class ="row">
+								<div class="col-lg-8 col-12 o_setting_box">
+									<label for="sinvoice_max_len_bank_account" />
+								</div>	
+								<div class="col-lg-4 col-12 o_setting_box">
+									<field name="sinvoice_max_len_bank_account" class="float-right"
+											attrs="{'required': [('einvoice_provider','=','sinvoice')]}" />
+								</div>
+							</div>
+						</div>
+					</div>	
+				</div>
+			</xpath>
+		</field>
+	</record>
+</odoo>
+

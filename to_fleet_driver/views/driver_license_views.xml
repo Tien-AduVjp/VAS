@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="fleet_driver_license_view_tree">
+			<field name="name">fleet.driver.license.tree</field>
+			<field name="model">fleet.driver.license</field>
+			<field name="arch" type="xml">
+				<tree string="Driver Licenses" decoration-warning="days_left&gt;=3 and days_left&lt;15"
+					decoration-danger="days_left&gt;=0 and days_left&lt;3"
+					decoration-muted="state=='expired'">
+					<field name="legal_number" />
+					<field name="class_id" />
+					<field name="driver_id" />
+					<field name="issued_date" />
+					<field name="issued_by" />
+					<field name="expired_date" />
+					<field name="state" />
+					<field name="days_left" invisible="1" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="fleet_driver_license_view_search">
+			<field name="name">fleet.driver.license.tree</field>
+			<field name="model">fleet.driver.license</field>
+			<field name="arch" type="xml">
+				<search string="Search Driver Licenses">
+					<field name="legal_number" />
+					<field name="class_id" />
+					<field name="driver_id" />
+					<field name="issued_by" />
+					<filter string="Expired in 30 days" name="expired_next_thirty_days"
+						domain="[('state','=','confirmed'), ('expired_date','&gt;=',((context_today().strftime('%Y-%m-%d')))), ('expired_date','&lt;=', ((context_today()+datetime.timedelta(days=30)).strftime('%Y-%m-%d')))]" />
+					<filter string="Expired in 7 days" name="expired_next_seven_days"
+						domain="[('state','=','confirmed'), ('expired_date','&gt;=',((context_today().strftime('%Y-%m-%d')))), ('expired_date','&lt;=', ((context_today()+datetime.timedelta(days=7)).strftime('%Y-%m-%d')))]" />
+					<filter string="Expired" name="expired" domain="[('state','=','expired')]" />
+					<group string="Group By">
+						<filter string="Driver" name="driver" domain="[]" context="{'group_by':'driver_id'}" />
+						<filter string="Class" name="class" domain="[]" context="{'group_by':'class_id'}" />
+						<filter string="Issued by" name="issued_by" domain="[]" context="{'group_by':'issued_by'}" />
+					</group>
+				</search>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="fleet_driver_license_fiew_form">
+			<field name="name">fleet.driver.license.form</field>
+			<field name="model">fleet.driver.license</field>
+			<field name="arch" type="xml">
+				<form string="Driver">
+					<header>
+						<button name="action_confirm" states="draft" string="Confirm"
+							type="object" class="oe_highlight" />
+						<button name="action_set_expired" states="confirmed" string="Set to Expired"
+							type="object" groups="fleet.fleet_group_manager" />
+						<button name="action_draft" states="confirmed,expired" string="Set to Draft"
+							type="object" />
+						<field name="state" widget="statusbar" />
+					</header>
+					<sheet>
+						<div class="oe_title">
+							<label for="legal_number" class="oe_edit_only" />
+							<h1>
+								<field name="legal_number" />
+							</h1>
+							<label for="class_id" />
+							<h2>
+								<field name="class_id" />
+							</h2>
+						</div>
+
+						<group>
+							<group>
+								<field name="driver_id" context="{'from_license_view': True, 'default_is_driver': True,
+								'default_type':'contact', 'form_view_ref':'base.res_partner_view_form_private'}"
+									   domain="[('is_driver','=',True)]" />
+								<field name="issued_date" />
+								<field name="expired_date" />
+							</group>
+							<group>
+								<field name="issued_by" />
+							</group>
+						</group>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers" />
+						<field name="activity_ids" widget="mail_activity"/>
+						<field name="message_ids" widget="mail_thread" />
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record id="fleet_driver_license_action" model="ir.actions.act_window">
+			<field name="name">Driver License</field>
+			<field name="res_model">fleet.driver.license</field>
+			<field name="view_mode">tree,form</field>
+			<field name="context">{'default_is_driver':True }</field>
+		</record>
+
+		<menuitem id="fleet_driver_licenses_menu" parent="fleet_drivers_root_menu"
+			name="Licenses" sequence="10" action="fleet_driver_license_action" />
+	</data>
+</odoo>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+
+		<record id="to_affiliate_sale_report_inherit_search" model="ir.ui.view">
+			<field name="name">to.affiliate.sale.report.inherit.search</field>
+			<field name="model">sale.report</field>
+			<field name="inherit_id" ref="sale.view_order_product_search" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='date']" position="after">
+					<field name="affiliate_id" groups="to_affiliate.group_to_affiliate_user" />
+				</xpath>
+				<xpath expr="//group[1]" position="inside">
+					<filter string="Affiliate" name="group_affiliate" context="{'group_by':'affiliate_id'}" groups="to_affiliate.group_to_affiliate_user" />					
+				</xpath>
+			</field>
+		</record>
+
+	</data>
+</odoo>

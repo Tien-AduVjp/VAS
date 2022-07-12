@@ -1,0 +1,357 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_hr_seniority
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-25 08:23+0000\n"
+"PO-Revision-Date: 2021-06-29 06:03+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_hr_seniority
+#: code:addons/viin_hr_seniority/models/hr_employee.py:0
+#: code:addons/viin_hr_seniority/models/hr_employee.py:0
+#, python-format
+msgid "%s %s"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: code:addons/viin_hr_seniority/report/hr_employee_seniority.py:0
+#, python-format
+msgid "%s from %s"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: code:addons/viin_hr_seniority/report/hr_employee_seniority.py:0
+#, python-format
+msgid "%s from %s to %s"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model_terms:ir.ui.view,arch_db:viin_hr_seniority.hr_contract_view_kanban
+msgid "<span>Service Years:</span>"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model_terms:ir.ui.view,arch_db:viin_hr_seniority.view_employee_filter
+#: model_terms:ir.ui.view,arch_db:viin_hr_seniority.view_employee_form
+msgid "Boarding Date"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.model.fields,field_description:viin_hr_seniority.field_hr_employee_seniority__company_id
+#: model_terms:ir.ui.view,arch_db:viin_hr_seniority.view_hr_employee_seniority_search
+msgid "Company"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.model.fields,field_description:viin_hr_seniority.field_hr_employee_seniority__contract_id
+msgid "Contract"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.model.fields,field_description:viin_hr_seniority.field_hr_contract__months
+msgid "Contract Age in months"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.model.fields,field_description:viin_hr_seniority.field_hr_contract__years
+msgid "Contract Age in years"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.model.fields,field_description:viin_hr_seniority.field_hr_employee_seniority__name
+msgid "Contract Reference"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.model.fields,field_description:viin_hr_seniority.field_hr_employee_seniority__contracts_count
+msgid "Contracts Count"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.model.fields.selection,name:viin_hr_seniority.selection__hr_employee_seniority__state__open
+#: model_terms:ir.ui.view,arch_db:viin_hr_seniority.view_hr_employee_seniority_search
+msgid "Current"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.model.fields,field_description:viin_hr_seniority.field_hr_employee_seniority__department_id
+#: model_terms:ir.ui.view,arch_db:viin_hr_seniority.view_hr_employee_seniority_search
+msgid "Department"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.model.fields,field_description:viin_hr_seniority.field_hr_employee_seniority__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.model,name:viin_hr_seniority.model_hr_employee
+#: model:ir.model.fields,field_description:viin_hr_seniority.field_hr_employee_seniority__employee_id
+#: model_terms:ir.ui.view,arch_db:viin_hr_seniority.view_hr_employee_seniority_search
+msgid "Employee"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.model,name:viin_hr_seniority.model_hr_contract
+msgid "Employee Contract"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.model,name:viin_hr_seniority.model_hr_employee_seniority
+#: model_terms:ir.ui.view,arch_db:viin_hr_seniority.view_hr_employee_seniority_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_seniority.view_hr_employee_seniority_tree
+msgid "Employee Seniority"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.actions.act_window,name:viin_hr_seniority.action_hr_employee_seniority_report
+#: model_terms:ir.ui.view,arch_db:viin_hr_seniority.view_hr_employee_seniority_graph
+#: model_terms:ir.ui.view,arch_db:viin_hr_seniority.view_hr_employee_seniority_pivot
+#: model_terms:ir.ui.view,arch_db:viin_hr_seniority.view_hr_employee_seniority_search
+msgid "Employee Seniority Analysis"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.model.fields,field_description:viin_hr_seniority.field_hr_employee_seniority__employees_count
+msgid "Employees Count"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.model.fields,field_description:viin_hr_seniority.field_hr_employee_seniority__date_end
+#: model_terms:ir.ui.view,arch_db:viin_hr_seniority.view_hr_employee_seniority_search
+msgid "End Date"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model_terms:ir.ui.view,arch_db:viin_hr_seniority.view_hr_employee_seniority_search
+msgid "Extended Filters"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.model.fields,field_description:viin_hr_seniority.field_hr_employee__first_contract_date
+msgid "First Contract Date"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.model.fields,field_description:viin_hr_seniority.field_hr_employee__first_non_trial_contract_date
+#: model_terms:ir.ui.view,arch_db:viin_hr_seniority.view_employee_form
+msgid "First Non-Trial Contract Date"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model_terms:ir.ui.view,arch_db:viin_hr_seniority.view_hr_employee_seniority_search
+msgid "Group By"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model_terms:ir.ui.view,arch_db:viin_hr_seniority.hr_employee_view_search
+msgid "Hired Last 30 Days"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model_terms:ir.ui.view,arch_db:viin_hr_seniority.hr_employee_view_search
+msgid "Hired Last Year"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model_terms:ir.ui.view,arch_db:viin_hr_seniority.hr_employee_view_search
+msgid "Hired This Year"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.model.fields,field_description:viin_hr_seniority.field_hr_employee_seniority__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.model.fields.selection,name:viin_hr_seniority.selection__hr_employee_seniority__state__draft
+#: model_terms:ir.ui.view,arch_db:viin_hr_seniority.view_hr_employee_seniority_search
+msgid "Incoming"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.model.fields,field_description:viin_hr_seniority.field_hr_employee_seniority__job_id
+#: model_terms:ir.ui.view,arch_db:viin_hr_seniority.view_hr_employee_seniority_search
+msgid "Job Position"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.model.fields,field_description:viin_hr_seniority.field_hr_employee_seniority____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.model.fields,field_description:viin_hr_seniority.field_hr_employee__non_trial_seniority_months
+msgid "Non-Trial Seniority in months"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.model.fields,field_description:viin_hr_seniority.field_hr_employee__non_trial_seniority_years
+msgid "Non-Trial Seniority in years"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.model.fields.selection,name:viin_hr_seniority.selection__hr_employee_seniority__state__close
+#: model_terms:ir.ui.view,arch_db:viin_hr_seniority.view_hr_employee_seniority_search
+msgid "Past"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.model.fields,field_description:viin_hr_seniority.field_hr_employee__employee_seniority_ids
+#: model:ir.ui.menu,name:viin_hr_seniority.menu_hr_employee_seniority
+#: model_terms:ir.ui.view,arch_db:viin_hr_seniority.view_employee_form
+msgid "Seniority"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.model.fields,field_description:viin_hr_seniority.field_hr_employee__seniority_message
+msgid "Seniority Message"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.model.fields,field_description:viin_hr_seniority.field_hr_employee__seniority_months
+msgid "Seniority in months"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.model.fields,field_description:viin_hr_seniority.field_hr_employee__seniority_years
+msgid "Seniority in years"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.model.fields,field_description:viin_hr_seniority.field_hr_employee_seniority__service_years
+msgid "Service Years"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.model.fields,field_description:viin_hr_seniority.field_hr_employee_seniority__date_start
+#: model_terms:ir.ui.view,arch_db:viin_hr_seniority.view_hr_employee_seniority_search
+msgid "Start Date"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.model.fields,field_description:viin_hr_seniority.field_hr_employee_seniority__state
+#: model_terms:ir.ui.view,arch_db:viin_hr_seniority.view_hr_employee_seniority_search
+msgid "Status"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model_terms:ir.ui.view,arch_db:viin_hr_seniority.hr_employee_view_search
+msgid "Terminated Last 30 Days"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model_terms:ir.ui.view,arch_db:viin_hr_seniority.hr_employee_view_search
+msgid "Terminated Last Year"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model_terms:ir.ui.view,arch_db:viin_hr_seniority.hr_employee_view_search
+msgid "Terminated This Year"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.model.fields,field_description:viin_hr_seniority.field_hr_employee__termination_date
+msgid "Termination Date"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.model.fields,help:viin_hr_seniority.field_hr_employee__first_contract_date
+msgid ""
+"The boarding date of the employee, which is automatically computed using the"
+" start date of the first contract (including trial contracts) of this "
+"employee."
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.model.fields,help:viin_hr_seniority.field_hr_employee__termination_date
+msgid ""
+"The date on which the employee stop working for the company. It is computed "
+"using the end date of the last contract."
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.model.fields,help:viin_hr_seniority.field_hr_employee__seniority_years
+msgid ""
+"The employee's length of service in months which is calculated automatically"
+" by summarizing the related contracts periods"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.model.fields,help:viin_hr_seniority.field_hr_employee__non_trial_seniority_years
+msgid ""
+"The employee's length of service in months which is calculated automatically"
+" by summarizing the related non-trial contracts periods"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.model.fields,help:viin_hr_seniority.field_hr_employee__seniority_months
+msgid ""
+"The employee's length of service in years which is calculated automatically "
+"by summarizing the related contracts periods"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.model.fields,help:viin_hr_seniority.field_hr_employee__non_trial_seniority_months
+msgid ""
+"The employee's length of service in years which is calculated automatically "
+"by summarizing the related non-trial contracts periods"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.model.fields,help:viin_hr_seniority.field_hr_employee__first_non_trial_contract_date
+msgid "The start date of the first non-trial contract of this employee."
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model_terms:ir.ui.view,arch_db:viin_hr_seniority.view_employee_form
+msgid "This will show employee's service history"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.model.fields,field_description:viin_hr_seniority.field_hr_employee_seniority__is_trial
+msgid "Trial"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model_terms:ir.ui.view,arch_db:viin_hr_seniority.view_employee_form
+msgid "View Seniority"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: model:ir.model.fields,field_description:viin_hr_seniority.field_hr_employee_seniority__resource_calendar_id
+msgid "Working Schedule"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: code:addons/viin_hr_seniority/models/hr_employee.py:0
+#, python-format
+msgid "month"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: code:addons/viin_hr_seniority/models/hr_employee.py:0
+#, python-format
+msgid "months"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: code:addons/viin_hr_seniority/models/hr_employee.py:0
+#, python-format
+msgid "year"
+msgstr ""
+
+#. module: viin_hr_seniority
+#: code:addons/viin_hr_seniority/models/hr_employee.py:0
+#, python-format
+msgid "years"
+msgstr ""

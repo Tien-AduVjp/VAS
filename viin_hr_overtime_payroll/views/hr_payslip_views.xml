@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="view_hr_payslip_form" model="ir.ui.view">
+		<field name="name">hr.payslip.form</field>
+		<field name="model">hr.payslip</field>
+		<field name="inherit_id"
+			ref="to_hr_payroll.view_hr_payslip_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//div[@name='button_box']" position="inside">
+				<button name="action_view_overtime_plan_lines"
+					class="oe_stat_button" icon="fa-clock-o" type="object"
+					attrs="{'invisible': [('overtime_plan_lines_count','=',0)]}">
+					<field name="overtime_plan_lines_count" widget="statinfo"
+						string="Overtime Entries"
+						help="Overtime Entries that are included in this payslip for paying overtime work calculation." />
+				</button>
+			</xpath>
+			<xpath expr="//div[@name='working_month_calendar_ids_help']"
+				position="after">
+				<separator name="overtime" string="Overtime Details" />
+				<field name="overtime_plan_line_ids" nolabel="1">
+					<tree>
+						<field name="date_start" />
+						<field name="date_end" />
+						<field name="planned_hours" string="Planned Hours"
+							sum="Total Planned Hours" optional="hide" />
+						<field name="actual_hours" string="Overtime Hours"
+							sum="Total Overtime Hours" />
+						<field name="standard_pay" sum="Standard Pay" />
+						<field name="pay_rate" string="Pay Rate (%s)" />
+						<field name="actual_overtime_pay"
+							string="Total Overtime Pay" sum="Total Overtime Pay" />
+						<field name="hr_overtime_rule_id" />
+						<field name="currency_id" invisible="1" />
+					</tree>
+				</field>
+				<div class="text-right">
+					<button name="action_compute_overtime_plan_line_ids"
+						type="object" string="Get Overtime Data"
+						attrs="{'invisible':[('state', '!=', 'draft')]}" />
+				</div>
+				<div name="overtime_plan_line_ids_help"
+					class="alert alert-info border-0 rounded-0" role="alert"
+					groups="base.group_no_one">
+					You can access these values of the overtime entries in salary
+					rule's Python code as:
+					<ul>
+						<li>
+							either
+							<code>payslip.overtime_plan_line_ids</code>
+						</li>
+					</ul>
+					Below are some examples
+					<ol>
+						<li>
+							For total overtime pay amount based on standard contract rate *
+							overtime pay rate:
+							<br />
+							<code>
+								result=sum(payslip.overtime_plan_line_ids.mapped('actual_overtime_pay')))
+							</code>
+						</li>
+						<li>
+							For total overtime pay amount based on standard contract rate:
+							<br />
+							<code>
+								result=sum(payslip.overtime_plan_line_ids.mapped('standard_pay')))
+							</code>
+						</li>
+						<li>
+							For overtime extra pay (as non taxed):
+							<br />
+							<code>
+								actual_overtime_pay =
+								sum(payslip.overtime_plan_line_ids.mapped('actual_overtime_pay')))
+								<br />
+								standard_pay =
+								sum(payslip.overtime_plan_line_ids.mapped('standard_pay')))
+								<br />
+								result = actual_overtime_pay - standard_pay
+							</code>
+						</li>
+					</ol>
+				</div>
+			</xpath>
+		</field>
+	</record>
+</odoo>

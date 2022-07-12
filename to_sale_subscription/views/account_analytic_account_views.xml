@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="account_analytic_account_view_form" model="ir.ui.view">
+		<field name="name">account.analytic.account.form</field>
+		<field name="model">account.analytic.account</field>
+		<field name="inherit_id" ref="analytic.view_account_analytic_account_form" />
+		<field name="priority" eval="30" />
+		<field name="groups_id" eval="[(4, ref('to_sale_subscription.group_sale_subscription_view'))]" />
+		<field name="arch" type="xml">
+			<div name="button_box" position="inside">
+				<button class="oe_stat_button" type="object"
+					name="action_view_subscriptions" icon="fa-book"
+					attrs="{'invisible': [('subscription_count', '=', 0)]}">
+					<field string="Subscriptions" name="subscription_count" widget="statinfo" />
+				</button>
+			</div>
+		</field>
+	</record>
+
+	<record id="account_move_view_form" model="ir.ui.view">
+		<field name="name">account.move.form</field>
+		<field name="model">account.move</field>
+		<field name="inherit_id" ref="account.view_move_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='invoice_line_ids']/form//field[@name='account_id']" position="after">
+				<field name="subscription_id" />
+			</xpath>
+		</field>
+	</record>
+
+	<menuitem id="menu_account_asset_asset_list_normal_sale" name="Revenue Types"
+		parent="to_sale_subscription.menu_sale_subscription_config"
+		action="to_cost_revenue_deferred.revenue_deferral_action"
+		sequence="10" />
+
+</odoo>

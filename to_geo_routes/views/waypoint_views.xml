@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="route_waypoint_tree_view" model="ir.ui.view">
+			<field name="name">route.waypoint.tree.view</field>
+			<field name="model">route.waypoint</field>
+			<field name="arch" type="xml">
+				<tree string="Waypoints" create="false" edit="false">
+					<field name="sequence" widget="handle" />
+					<field name="address_id" />
+					<field name="route_id" />
+					<field name="street" />
+					<field name="street2" />
+					<field name="city" />
+					<field name="state_id" />
+					<field name="country_id" />
+					<field name="waypoint_area_id" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="route_waypoint_form_view" model="ir.ui.view">
+			<field name="name">route.waypoint.form.view</field>
+			<field name="model">route.waypoint</field>
+			<field name="arch" type="xml">
+				<form string="Waypoint" create="false" edit="false">
+					<sheet>
+						<group>
+							<group>
+								<field name="sequence" invisible="1" />
+								<field name="address_id" />
+								<field name="street" />
+								<field name="street2" />
+								<field name="city" />
+								<field name="state_id" />
+								<field name="country_id" />
+								<field name="waypoint_area_id" />
+							</group>
+							<group>
+								<field name="route_id" />
+							</group>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record id="route_waypoint_action" model="ir.actions.act_window">
+			<field name="name">Waypoints</field>
+			<field name="res_model">route.waypoint</field>
+			<field name="view_mode">tree,form</field>
+			<field name="context">{}</field>
+		</record>
+
+		<menuitem id="route_waypoint_menu" parent="geo_route_root_menu"
+			name="Waypoints" action="route_waypoint_action" sequence="7"
+			groups="base.group_no_one" />
+	</data>
+</odoo>

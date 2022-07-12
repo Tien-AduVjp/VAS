@@ -1,0 +1,106 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_event_project
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-17 03:34+0000\n"
+"PO-Revision-Date: 2020-08-17 03:34+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_event_project
+#: model_terms:ir.ui.view,arch_db:to_event_project.event_project_view
+msgid "Create Project"
+msgstr "Tạo dự án"
+
+#. module: to_event_project
+#: code:addons/to_event_project/wizard/event_make_project_advance.py:0
+#, python-format
+msgid "Down Payment"
+msgstr "Tiền đặt cọc"
+
+#. module: to_event_project
+#: code:addons/to_event_project/wizard/event_make_project_advance.py:0
+#, python-format
+msgid "Down Payment: %s"
+msgstr "Đặt cọc: %s"
+
+#. module: to_event_project
+#: code:addons/to_event_project/wizard/event_make_project_advance.py:0
+#, python-format
+msgid "Down payment of %s%%"
+msgstr "Tiền đặt cọc cho %s%%"
+
+#. module: to_event_project
+#: model:ir.model,name:to_event_project.model_event_event
+#: model:ir.model.fields,field_description:to_event_project.field_project_project__event_id
+#: model_terms:ir.ui.view,arch_db:to_event_project.view_project_project_filter
+msgid "Event"
+msgstr "Sự kiện"
+
+#. module: to_event_project
+#: model:ir.model.fields,field_description:to_event_project.field_event_event__total_hour
+msgid "Hour"
+msgstr "Giờ"
+
+#. module: to_event_project
+#: model:ir.model,name:to_event_project.model_project_project
+msgid "Project"
+msgstr "Dự án"
+
+#. module: to_event_project
+#: model:ir.model.fields,field_description:to_event_project.field_event_event__project_ids
+#: model_terms:ir.ui.view,arch_db:to_event_project.event_project_view
+msgid "Projects"
+msgstr "Dự án"
+
+#. module: to_event_project
+#: model:ir.model.fields,field_description:to_event_project.field_event_event__project_count
+msgid "Projects Count"
+msgstr "Số dự án"
+
+#. module: to_event_project
+#: code:addons/to_event_project/wizard/event_make_project_advance.py:0
+#, python-format
+msgid ""
+"The product used to invoice a down payment should be of type 'Service'. "
+"Please use another product or update this product."
+msgstr ""
+"Sản phẩm được sử dụng để xuất hoá đơn cho một khoản tiền đặt cọc/ứng trước "
+"phải có kiểu là kiểu 'Dịch vụ'. Vui lòng chọn một sản phẩm khác hoặc cập "
+"nhật lại sản phẩm này."
+
+#. module: to_event_project
+#: code:addons/to_event_project/wizard/event_make_project_advance.py:0
+#, python-format
+msgid ""
+"The product used to invoice a down payment should have an invoice policy set"
+" to \"Ordered quantities\". Please update your deposit product to be able to"
+" create a deposit invoice."
+msgstr ""
+"Sản phẩm được sử dụng để xuất hoá đơn cho một khoản tiền đặt cọc/ứng trước "
+"phải có chính sách xuất hoá đơn \"Theo số lượng đặt hàng\". Vui lòng cập "
+"nhật lại sản phẩm để có thể xuất hoá đơn đặt cọc."
+
+#. module: to_event_project
+#: code:addons/to_event_project/wizard/event_make_project_advance.py:0
+#, python-format
+msgid "The value of the down payment amount must be positive."
+msgstr "Giá trị của khoản đặt cọc phải dương."
+
+#. module: to_event_project
+#: model:ir.model.fields,field_description:to_event_project.field_project_project__timesheet_ids
+msgid "Timesheet"
+msgstr "Chấm công"
+
+#. module: to_event_project
+#: model:ir.model.fields,help:to_event_project.field_event_event__project_count
+msgid "Total number of projects linked to this event"
+msgstr "Tổng số dự án liên kết đến sự kiện này"

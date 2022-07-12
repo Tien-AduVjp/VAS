@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<!-- Root Menus -->
+
+		<menuitem id="menu_promotion_voucher_root" name="Vouchers"
+			groups="group_promotion_voucher_user" sequence="5" web_icon="to_promotion_voucher,static/description/icon.png"/>
+		<menuitem id="menu_voucher_root" parent="menu_promotion_voucher_root"
+			name="Vouchers" groups="group_promotion_voucher_user" sequence="2" />
+		<menuitem id="menu_operation_issue" name="Operations" parent="menu_promotion_voucher_root" sequence="4" groups="group_promotion_voucher_user"/>
+		<menuitem id="menu_voucher_report_root" name="Reports" parent="menu_promotion_voucher_root" sequence="5" groups="group_promotion_voucher_manager"/>
+		<menuitem id="menu_config" name="Configuration " parent="menu_promotion_voucher_root" sequence="6" groups="group_promotion_voucher_manager"/>
+
+	</data>
+</odoo>

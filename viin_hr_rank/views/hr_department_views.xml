@@ -1,0 +1,17 @@
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="view_department_form">
+			<field name="name">hr.department.form</field>
+			<field name="model">hr.department</field>
+			<field name="inherit_id" ref="to_tvtma_hr.view_department_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//div[@name='button_box']" position="inside">
+					<button name="action_view_ranks" class="oe_stat_button"
+						icon="fa-book" type="object">
+						<field name="ranks_count" widget="statinfo" string="Ranks" />
+					</button>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

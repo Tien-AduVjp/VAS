@@ -1,0 +1,101 @@
+<odoo>
+	<data>
+
+		<record id="hr_attendance_view_form" model="ir.ui.view">
+			<field name="name">hr.attendance.tree</field>
+			<field name="model">hr.attendance</field>
+			<field name="inherit_id"
+				ref="hr_attendance.hr_attendance_view_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='check_in']" position="after">
+					<field name="valid_check_in" optional="hide" />
+					<field name="late_attendance_hours" widget="float_time"
+						sum="Total Late Coming Hours" />
+				</xpath>
+				<xpath expr="//field[@name='check_out']" position="after">
+					<field name="valid_check_out" optional="hide" />
+					<field name="early_leave_hours" widget="float_time"
+						sum="Total Early Leave Hours" />
+					<field name="auto_checkout" />
+					<field name="manual_checkout_by_user_id" />
+					<field name="valid_worked_hours" widget="float_time"
+						sum="Total Valid Attendance Hours" />
+					<field name="resource_calendar_id" optional="hide" />
+				</xpath>
+			</field>
+		</record>
+
+		<record id="view_attendance_tree" model="ir.ui.view">
+			<field name="name">hr.attendance.tree</field>
+			<field name="model">hr.attendance</field>
+			<field name="inherit_id"
+				ref="hr_attendance.view_attendance_tree" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='check_in']" position="after">
+					<field name="valid_check_in" optional="hide" />
+					<field name="late_attendance_hours" widget="float_time"
+						sum="Total Late Coming Hours" />
+				</xpath>
+				<xpath expr="//field[@name='check_out']" position="after">
+					<field name="valid_check_out" optional="hide" />
+					<field name="early_leave_hours" widget="float_time"
+						sum="Total Early Leave Hours" />
+					<field name="valid_worked_hours" widget="float_time"
+						sum="Total Valid Attendance Hours" />
+					<field name="resource_calendar_id" optional="hide" />
+					<field name="auto_checkout" optional="hide" />
+					<field name="manual_checkout_by_user_id" optional="hide" />
+					<field name="days_crossing" optional="hide" />
+				</xpath>
+			</field>
+		</record>
+
+		<record id="hr_attendance_view_filter" model="ir.ui.view">
+			<field name="name">hr.attendance.tree</field>
+			<field name="model">hr.attendance</field>
+			<field name="inherit_id"
+				ref="hr_attendance.hr_attendance_view_filter" />
+			<field name="arch" type="xml">
+				<xpath expr="//filter[@name='nocheckout']" position="after">
+					<separator />
+					<filter string="Late Attendance" name="ftr_late_attendance"
+						domain="[('late_attendance_hours', '>', 0)]" />
+					<filter string="Early Leave" name="ftr_late_attendance"
+						domain="[('early_leave_hours', '>', 0)]" />
+					<separator />
+					<filter string="Days Crossing" name="ftr_days_crossing"
+						domain="[('days_crossing', '=', True)]" />
+					<separator />
+					<filter string="Auto Check-out" name="ftr_auto_checkout"
+						domain="[('auto_checkout', '=', True)]"
+						help="Show attendance entries that have been checked out automatically" />
+					<filter string="Manual Check-out Modification"
+						name="ftr_manual_checkout"
+						domain="[('manual_checkout_by_user_id', '!=', False)]"
+						help="Show attendance entries that have been manual checkout/modified by an Attendance Officer." />
+				</xpath>
+			</field>
+		</record>
+
+		<record id="action_server_compute_valid_check_in_check_out"
+			model="ir.actions.server">
+			<field name="name">Revalidation</field>
+			<field name="type">ir.actions.server</field>
+			<field name="model_id" ref="model_hr_attendance" />
+			<field name="binding_model_id" ref="model_hr_attendance" />
+			<field name="state">code</field>
+			<field name="code">records.action_compute_valid_check_in_check_out()
+			</field>
+		</record>
+
+		<record id="action_server_auto_checkout"
+			model="ir.actions.server">
+			<field name="name">Auto Check-out</field>
+			<field name="type">ir.actions.server</field>
+			<field name="model_id" ref="model_hr_attendance" />
+			<field name="binding_model_id" ref="model_hr_attendance" />
+			<field name="state">code</field>
+			<field name="code">records.action_auto_checkout()</field>
+		</record>
+	</data>
+</odoo>

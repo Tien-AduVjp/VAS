@@ -1,0 +1,23 @@
+<odoo>
+	<record id="res_config_settings_view_form" model="ir.ui.view">
+		<field name="name">res.config.settings.view.form.inherit.hr.payroll</field>
+		<field name="model">res.config.settings</field>
+		<field name="priority" eval="45" />
+		<field name="inherit_id"
+			ref="to_hr_payroll.res_config_settings_view_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//div[@name='payroll_administrative_region']" position="inside">
+				<div class="mt16" id="admin_region">
+					<button name="%(viin_administrative_region.administrative_region_action)d"
+						icon="fa-arrow-right" type="action"
+						string="Open Administrative Regions" class="btn-link" />
+				</div>
+				<div class="mt16" id="admin_region_payroll_contrib">
+					<button name="%(viin_hr_payroll_administrative_region.admin_region_payroll_contrib_action)d"
+						icon="fa-arrow-right" type="action"
+						string="Open Payroll Contribution by Administrative Regions" class="btn-link" />
+				</div>
+			</xpath>
+		</field>
+	</record>
+</odoo>

@@ -1,0 +1,920 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_cost_revenue_deferred
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-20 08:00+0000\n"
+"PO-Revision-Date: 2022-02-20 08:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__move_line_count
+msgid "# Deferral Entries"
+msgstr "SL Bút toán Phân bổ"
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_deferral_category_form
+msgid "A prepaid expense account"
+msgstr "Một tài khoản chi phí trả trước"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_deferral_confirm__date
+msgid "Account Date"
+msgstr "Ngày Kế toán"
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_deferral_category_form
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.revenue_deferral_category_form
+msgid "Accounting"
+msgstr "Kế toán"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__message_needaction
+msgid "Action Needed"
+msgstr "Cần có Hành động"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__activity_ids
+msgid "Activities"
+msgstr "Các hoạt động"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__activity_state
+msgid "Activity State"
+msgstr "Trạng thái Hoạt động"
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_revenue_deferral_form
+msgid "Add an internal note here..."
+msgstr "Thêm một ghi chú nội bộ vào đây..."
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_deferral_category_form
+msgid "Additional Options"
+msgstr "Tuỳ chọn Bổ sung"
+
+#. module: to_cost_revenue_deferred
+#: code:addons/to_cost_revenue_deferred/models/deferral_line.py:0
+#, python-format
+msgid "Amount"
+msgstr "Tổng"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_line__distributed_value
+msgid "Amount Already Distributed"
+msgstr "Số tiền đã được phân bổ"
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_deferral_category_form
+msgid "An account to store recognition moves. It is usually a cost account"
+msgstr "Tài khoản chi phí để hạch toán phát sinh phân bổ chi phí."
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.revenue_deferral_category_form
+msgid "An account to store recognition moves. It is usually an income account"
+msgstr "Tài khoản doanh thu để hạch toán phát sinh phân bổ doanh thu."
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.revenue_deferral_category_form
+msgid "An unearn revenue account"
+msgstr "Một tài khoản doanh thu chưa thực hiện"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__analytic_tag_ids
+msgid "Analytic Tags"
+msgstr "Thẻ TK Quản trị"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__account_analytic_id
+msgid "Analytic account"
+msgstr "Tài khoản KT quản trị"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__message_attachment_count
+msgid "Attachment Count"
+msgstr "Số đính kèm"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__auto_create_move
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__auto_create_move
+msgid "Auto-Posted Deferral"
+msgstr "Tự động Vào sổ Phân bổ"
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.deferral_confirm_form
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.deferral_disposal_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,help:to_cost_revenue_deferred.field_cost_revenue_deferral_category__auto_create_move
+msgid ""
+"Check this if you want to automatically generate the deferral lines of "
+"running deferral and posted this category."
+msgstr ""
+"Đánh dấu nếu bạn muốn tự động tạo và vào sổ các dòng phân bổ của các hoạt "
+"động phân bổ đang hiệu lực theo nhóm phân bổ."
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,help:to_cost_revenue_deferred.field_cost_revenue_deferral__auto_create_move
+msgid ""
+"Check this if you want to automatically generate the deferral lines of "
+"running deferral and posted this deferral."
+msgstr ""
+"Đánh dấu nếu bạn muốn tự động tạo và vào sổ các dòng phân bổ của các hoạt "
+"động phân bổ đang hiệu lực cho hoạt động phân bổ này."
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,help:to_cost_revenue_deferred.field_deferral_confirm__date
+msgid ""
+"Choose the period for which you want to automatically post the deferral "
+"lines of running deferral"
+msgstr ""
+"Chọn chu kỳ mà bạn muốn tự động vào sổ các dòng phân bổ của các hoạt động "
+"phân bổ đang hiệu lực"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields.selection,name:to_cost_revenue_deferred.selection__cost_revenue_deferral__state__close
+msgid "Close"
+msgstr "Đóng"
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_revenue_deferral_search
+msgid "Closed"
+msgstr "Đã đóng"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__company_id
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__method
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__method
+msgid "Computation Method"
+msgstr "Phương pháp tính toán"
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_revenue_deferral_form
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.deferral_confirm_form
+msgid "Compute"
+msgstr "Tính toán"
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.deferral_confirm_form
+msgid "Compute Cost / Revenue Deferral"
+msgstr "Tính toán phân bổ Doanh thu / Chi phí"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.actions.act_window,name:to_cost_revenue_deferred.deferral_confirm_action
+#: model:ir.ui.menu,name:to_cost_revenue_deferred.menu_deferral_confirm
+msgid "Compute Cost/Revenue Deferral"
+msgstr "Tính toán phân bổ Doanh thu / Chi phí"
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_revenue_deferral_form
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields.selection,name:to_cost_revenue_deferred.selection__cost_revenue_deferral__type__cost
+#: model:ir.model.fields.selection,name:to_cost_revenue_deferred.selection__cost_revenue_deferral_category__type__cost
+msgid "Cost"
+msgstr "Chi Phí"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model,name:to_cost_revenue_deferred.model_deferral_confirm
+msgid "Cost / Revenue Deferral Confirm"
+msgstr "Xác nhận Phân bổ Doanh thu / Chi phí"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.actions.act_window,name:to_cost_revenue_deferred.cost_deferral_category_action
+#: model:ir.ui.menu,name:to_cost_revenue_deferred.cost_deferral_category_menu
+msgid "Cost Deferral Categories"
+msgstr "Nhóm Phân bổ Chi phí"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_product_product__cost_deferral_category_id
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_product_template__cost_deferral_category_id
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_deferral_category_form
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_deferral_category_tree
+msgid "Cost Deferral Category"
+msgstr "Nhóm Phân bổ Chi phí"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.actions.act_window,name:to_cost_revenue_deferred.cost_deferral_action
+#: model:ir.ui.menu,name:to_cost_revenue_deferred.cost_deferral_menu
+msgid "Cost Deferrals"
+msgstr "Phân bổ Chi phí"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model,name:to_cost_revenue_deferred.model_cost_revenue_deferral
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_revenue_deferral_form
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_revenue_deferral_search
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_revenue_deferral_tree
+msgid "Cost Revenue Deferral"
+msgstr "Phân bổ Doanh thu Chi phí"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model,name:to_cost_revenue_deferred.model_cost_revenue_deferral_category
+msgid "Cost Revenue Deferral Category"
+msgstr "Mẫu phân bổ Doanh thu Chi phí"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model,name:to_cost_revenue_deferred.model_cost_revenue_deferral_line
+msgid "Cost Revenue Deferral Lines"
+msgstr "Các Dòng phân bổ Chi phí"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.actions.server,name:to_cost_revenue_deferred.ir_cron_create_move_deferral_ir_actions_server
+#: model:ir.cron,cron_name:to_cost_revenue_deferred.ir_cron_create_move_deferral
+#: model:ir.cron,name:to_cost_revenue_deferred.ir_cron_create_move_deferral
+msgid ""
+"Cost Revenue Deferred: Auto-posted the deferral lines of running deferral"
+msgstr ""
+"Phân bổ Chi phí Doanh thu: Tự động vào sổ các dòng phân bổ của các hoạt động"
+" phân bổ đang hiệu lực"
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_revenue_deferral_form
+msgid "Create Move"
+msgstr "Tạo Bút toán"
+
+#. module: to_cost_revenue_deferred
+#: code:addons/to_cost_revenue_deferred/wizard/deferral_confirm.py:0
+#, python-format
+msgid "Created Cost / Revenue Deferral Moves"
+msgstr "Bút toán Phân bổ Doanh thu / Chi phí được tạo"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__create_uid
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__create_uid
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_line__create_uid
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_deferral_confirm__create_uid
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_deferral_disposal__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__create_date
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__create_date
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_line__create_date
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_deferral_confirm__create_date
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_deferral_disposal__create_date
+msgid "Created on"
+msgstr "Được tạo vào"
+
+#. module: to_cost_revenue_deferred
+#: code:addons/to_cost_revenue_deferred/models/deferral_line.py:0
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__currency_id
+#, python-format
+msgid "Currency"
+msgstr "Tiền tệ"
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_revenue_deferral_search
+msgid "Current"
+msgstr "Hiện tại"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_line__amount
+msgid "Current Deferral"
+msgstr "Phân bổ Hiện hành"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_deferral_disposal__date
+msgid "Date"
+msgstr "Ngày"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_account_move_line__deferral_id
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_line__deferral_id
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_deferral_disposal__deferral_id
+msgid "Deferral"
+msgstr "Phân Bổ"
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_revenue_deferral_form
+msgid "Deferral Board"
+msgstr "Bảng Phân bổ"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__deferral_category_id
+msgid "Deferral Category"
+msgstr "Nhóm Phân bổ"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_line__deferral_date
+msgid "Deferral Date"
+msgstr "Ngày Phân bổ"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model,name:to_cost_revenue_deferred.model_deferral_disposal
+msgid "Deferral Disposal"
+msgstr "Thanh lý Phân bổ"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_line__move_id
+msgid "Deferral Entry"
+msgstr "Bút toán Phân bổ"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_account_move__asset_deferral_line_ids
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__deferral_line_ids
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_revenue_deferral_form
+msgid "Deferral Lines"
+msgstr "Chi tiết Phân bổ"
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_deferral_category_form
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.revenue_deferral_category_form
+msgid "Deferral Method"
+msgstr "Phương thức Phân bổ"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__type
+msgid "Deferral Type"
+msgstr "Kiểu Phân bổ"
+
+#. module: to_cost_revenue_deferred
+#: code:addons/to_cost_revenue_deferred/models/deferral_line.py:0
+#, python-format
+msgid "Deferral line posted."
+msgstr "Dòng Phân bổ được vào sổ."
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__deferred_account_id
+msgid "Deferred Account"
+msgstr "Tài khoản Phân bổ"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields.selection,name:to_cost_revenue_deferred.selection__cost_revenue_deferral__method__degressive
+#: model:ir.model.fields.selection,name:to_cost_revenue_deferred.selection__cost_revenue_deferral_category__method__degressive
+msgid "Degressive"
+msgstr "Vi phạm"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__display_name
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__display_name
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_line__display_name
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_deferral_confirm__display_name
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_deferral_disposal__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_revenue_deferral_form
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.deferral_disposal_form
+msgid "Disposal"
+msgstr "Thanh lý"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__account_disposal_deferral_id
+msgid "Disposal Account"
+msgstr "Tài khoản Thanh lý"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.actions.act_window,name:to_cost_revenue_deferred.deferral_disposal_action
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.deferral_disposal_form
+msgid "Dispose Deferral"
+msgstr "Thanh lý Phân bổ"
+
+#. module: to_cost_revenue_deferred
+#: code:addons/to_cost_revenue_deferred/models/deferral_line.py:0
+#, python-format
+msgid "Document closed."
+msgstr "Tài liệu được đóng."
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields.selection,name:to_cost_revenue_deferred.selection__cost_revenue_deferral__state__draft
+msgid "Draft"
+msgstr "Dự thảo"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__method_end
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__method_end
+#: model:ir.model.fields.selection,name:to_cost_revenue_deferred.selection__cost_revenue_deferral__method_time__end
+#: model:ir.model.fields.selection,name:to_cost_revenue_deferred.selection__cost_revenue_deferral_category__method_time__end
+msgid "Ending Date"
+msgstr "Ngày Kết thúc"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__account_move_line_ids
+msgid "Entries"
+msgstr "Phát sinh kế toán"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__date
+msgid "Entry Date"
+msgstr "Ngày"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__message_follower_ids
+msgid "Followers"
+msgstr "Người dõi theo"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Người theo dõi (Các kênh)"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Người theo dõi (Các đối tác)"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,help:to_cost_revenue_deferred.field_cost_revenue_deferral_category__analytic_tag_ids
+msgid "For analytic distributions"
+msgstr "Đối với phân phối phân tích"
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_revenue_deferral_form
+msgid "General"
+msgstr "Chung"
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.deferral_confirm_form
+msgid ""
+"Generate journal entries for cost/revenue deferral lines by the selected "
+"date."
+msgstr ""
+"Tạo bút toán cho các dòng phân bổ chi phí/doanh thu theo ngày được chọn."
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__id
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__id
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_line__id
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_deferral_confirm__id
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_deferral_disposal__id
+msgid "ID"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,help:to_cost_revenue_deferred.field_cost_revenue_deferral__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,help:to_cost_revenue_deferred.field_cost_revenue_deferral__message_needaction
+#: model:ir.model.fields,help:to_cost_revenue_deferred.field_cost_revenue_deferral__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Nếu đánh dấu kiểm, các thông điệp mới yêu cầu sự có mặt của bạn."
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,help:to_cost_revenue_deferred.field_cost_revenue_deferral__message_has_error
+#: model:ir.model.fields,help:to_cost_revenue_deferred.field_cost_revenue_deferral__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Nếu được đánh dấu, thông điệp có lỗi về gửi tin."
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__message_is_follower
+msgid "Is Follower"
+msgstr "Là người theo dõi"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__journal_id
+msgid "Journal"
+msgstr "Sổ nhật ký"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model,name:to_cost_revenue_deferred.model_account_move
+msgid "Journal Entries"
+msgstr "Bút toán Sổ nhật ký"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_line__move_check
+msgid "Journal Entry"
+msgstr "Bút toán sổ nhật ký"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model,name:to_cost_revenue_deferred.model_account_move_line
+msgid "Journal Item"
+msgstr "Phát sinh bút toán"
+
+#. module: to_cost_revenue_deferred
+#: code:addons/to_cost_revenue_deferred/models/deferral.py:0
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_revenue_deferral_form
+#, python-format
+msgid "Journal Items"
+msgstr "Phát sinh Kế toán"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral____last_update
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category____last_update
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_line____last_update
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_deferral_confirm____last_update
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_deferral_disposal____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__write_uid
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__write_uid
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_line__write_uid
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_deferral_confirm__write_uid
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_deferral_disposal__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__write_date
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__write_date
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_line__write_date
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_deferral_confirm__write_date
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_deferral_disposal__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields.selection,name:to_cost_revenue_deferred.selection__cost_revenue_deferral__method__linear
+#: model:ir.model.fields.selection,name:to_cost_revenue_deferred.selection__cost_revenue_deferral_category__method__linear
+msgid "Linear"
+msgstr "Đường thẳng"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Đính kèm chính"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__message_has_error
+msgid "Message Delivery error"
+msgstr "Có Lỗi Gửi Thông điệp"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__message_ids
+msgid "Messages"
+msgstr "Thông điệp"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__name
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__name
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_line__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Hạn chót lần hành động kế tiếp"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__activity_summary
+msgid "Next Activity Summary"
+msgstr "Tóm tắt hoạt động tiếp theo"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__activity_type_id
+msgid "Next Activity Type"
+msgstr "Kiểu hành động kế tiếp"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_line__remaining_value
+msgid "Next Deferral Period"
+msgstr "Giai đoạn Phân bổ Tiếp theo"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__note
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__note
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_deferral_category_form
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_revenue_deferral_form
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.revenue_deferral_category_form
+msgid "Notes"
+msgstr "Ghi chú"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Số lượng Hành động"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__method_number
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__method_number
+#: model:ir.model.fields.selection,name:to_cost_revenue_deferred.selection__cost_revenue_deferral__method_time__number
+#: model:ir.model.fields.selection,name:to_cost_revenue_deferred.selection__cost_revenue_deferral_category__method_time__number
+msgid "Number of Deferrals"
+msgstr "Số lần Phân bổ"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__method_period
+msgid "Number of Months in a Period"
+msgstr "Số Tháng trong Kỳ phân bổ"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__message_has_error_counter
+msgid "Number of errors"
+msgstr "Số lỗi"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,help:to_cost_revenue_deferred.field_cost_revenue_deferral__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Số thông điệp cần có hành động"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,help:to_cost_revenue_deferred.field_cost_revenue_deferral__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Số lượng các thông điệp có lỗi về gửi tin"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,help:to_cost_revenue_deferred.field_cost_revenue_deferral__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Số thông điệp chưa đọc"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,help:to_cost_revenue_deferred.field_product_product__cost_deferral_category_id
+#: model:ir.model.fields,help:to_cost_revenue_deferred.field_product_template__cost_deferral_category_id
+msgid ""
+"Once specified, Odoo will try to add some default values when this product "
+"gets billed by your vendors. I.e., analytic account, analytic tags"
+msgstr ""
+"Sau khi được chỉ định, Odoo sẽ cố gắng thêm một số giá trị mặc định khi sản "
+"phẩm nàydo nhà cung cấp của bạn lập hóa đơn. Tức là tài khoản phân tích, thẻ"
+" phân tích"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,help:to_cost_revenue_deferred.field_product_product__revenue_deferral_category_id
+#: model:ir.model.fields,help:to_cost_revenue_deferred.field_product_template__revenue_deferral_category_id
+msgid ""
+"Once specified, Odoo will try to add some default values when this product "
+"gets invoiced to your customers. I.e., analytic account, analytic tags"
+msgstr ""
+"Sau khi được chỉ định, Odoo sẽ cố gắng thêm một số giá trị mặc định khi sản "
+"phẩm nàyđược lập hóa đơn cho khách hàng của bạn. Tức là tài khoản phân tích,"
+" thẻ phân tích"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__method_period
+msgid "One Entry Every"
+msgstr "Phân bổ Mỗi"
+
+#. module: to_cost_revenue_deferred
+#: code:addons/to_cost_revenue_deferred/models/deferral_line.py:0
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__partner_id
+#, python-format
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_deferral_category_form
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.revenue_deferral_category_form
+msgid "Periodicity"
+msgstr "Định kỳ"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_line__move_posted_check
+msgid "Posted"
+msgstr "Đã vào sổ"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model,name:to_cost_revenue_deferred.model_product_product
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model,name:to_cost_revenue_deferred.model_product_template
+msgid "Product Template"
+msgstr "Mẫu Sản phẩm"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_deferral_disposal__reason
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.deferral_disposal_form
+msgid "Reason"
+msgstr "Lý do"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__recognition_account_id
+msgid "Recognition Account"
+msgstr "Tài khoản Doanh thu / Chi phí"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_deferral_disposal__name
+msgid "Reference"
+msgstr "Tham chiếu"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__value_residual
+msgid "Residual Value"
+msgstr "Giá trị còn lại"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__activity_user_id
+msgid "Responsible User"
+msgstr "Người chịu trách nhiệm"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields.selection,name:to_cost_revenue_deferred.selection__cost_revenue_deferral__type__revenue
+#: model:ir.model.fields.selection,name:to_cost_revenue_deferred.selection__cost_revenue_deferral_category__type__revenue
+msgid "Revenue"
+msgstr "Doanh Thu"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.actions.act_window,name:to_cost_revenue_deferred.revenue_deferral_category_action
+#: model:ir.ui.menu,name:to_cost_revenue_deferred.revenue_deferral_category_menu
+msgid "Revenue Deferral Categories"
+msgstr "Nhóm Phân bổ Doanh thu"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_product_product__revenue_deferral_category_id
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_product_template__revenue_deferral_category_id
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.revenue_deferral_category_form
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.revenue_deferral_category_tree
+msgid "Revenue Deferral Category"
+msgstr "Nhóm Phân bổ Doanh thu"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.actions.act_window,name:to_cost_revenue_deferred.revenue_deferral_action
+#: model:ir.ui.menu,name:to_cost_revenue_deferred.revenue_deferral_menu
+msgid "Revenue Deferrals"
+msgstr "Phân bổ Doanh thu"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields.selection,name:to_cost_revenue_deferred.selection__cost_revenue_deferral__state__open
+msgid "Running"
+msgstr "Đang thực hiện"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Lỗi gửi SMS"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__salvage_value
+msgid "Salvage Value"
+msgstr "Giá trị Vãn hồi"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_line__sequence
+msgid "Sequence"
+msgstr "Trình tự"
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_revenue_deferral_form
+msgid "Set to Close"
+msgstr "Đặt về Đóng"
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_revenue_deferral_form
+msgid "Set to Draft"
+msgstr "Đặt về dự thảo"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__state
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_line__state
+msgid "Status"
+msgstr "Tình trạng"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,help:to_cost_revenue_deferred.field_cost_revenue_deferral__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Trạng thái dựa trên hoạt động\n"
+"Quá hạn: Ngày đến hạn đã trôi qua\n"
+"Hôm nay: Hôm nay là ngày phải thực hiện\n"
+"Đã hoạch định: Các hoạt động trong tương lai."
+
+#. module: to_cost_revenue_deferred
+#: code:addons/to_cost_revenue_deferred/models/deferral.py:0
+#, python-format
+msgid ""
+"The type of the deferral must be the same as the one of the corresponding "
+"category."
+msgstr "Kiểu doanh thu hoãn lại phải giống thể loại tương ứng"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__method_time
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__method_time
+msgid "Time Method"
+msgstr "Phương pháp Thời gian"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__type
+msgid "Type"
+msgstr "Kiểu"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,help:to_cost_revenue_deferred.field_cost_revenue_deferral__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Loại hoạt động ngoại lệ được ghi lại"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__message_unread
+msgid "Unread Messages"
+msgstr "Thông điệp chưa đọc"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Bộ đếm Thông điệp chưa đọc"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__value
+msgid "Value"
+msgstr "Giá trị"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__website_message_ids
+msgid "Website Messages"
+msgstr "Thông điệp Website"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,help:to_cost_revenue_deferred.field_cost_revenue_deferral__website_message_ids
+msgid "Website communication history"
+msgstr "Lịch sử thông tin liên lạc website"
+
+#. module: to_cost_revenue_deferred
+#: code:addons/to_cost_revenue_deferred/models/deferral_line.py:0
+#, python-format
+msgid ""
+"You cannot delete cost deferral lines while its journal entries status is "
+"not Cancel."
+msgstr ""
+"Bạn không thể xoá các dòng phân bổ chi phí trong khi trạng thái bút toán của"
+" nó không phải là Đã hủy"
+
+#. module: to_cost_revenue_deferred
+#: code:addons/to_cost_revenue_deferred/models/deferral_line.py:0
+#, python-format
+msgid ""
+"You cannot delete revenue deferral lines while its journal entries status is"
+" not Cancel."
+msgstr ""
+"Bạn không thể xoá các dòng phân bổ doanh thu trong khi trạng thái bút toán "
+"của nó không phải là Đã hủy"
+
+#. module: to_cost_revenue_deferred
+#: code:addons/to_cost_revenue_deferred/wizard/deferral_disposal.py:0
+#, python-format
+msgid ""
+"You cannot dispose the deferral %s while it has no deferral line that the "
+"Deferral Date of which is earlier than or equal to '%s'."
+msgstr "Bạn không thể thanh lý phân bổ %s trong khi nó không có các dòng phân bổ mà Ngày Phân bổ sớm hơn hoặc bằng '%s'."
+
+#. module: to_cost_revenue_deferred
+#: code:addons/to_cost_revenue_deferred/wizard/deferral_disposal.py:0
+#, python-format
+msgid ""
+"You cannot dispose the deferral %s while it has the deferral line after the "
+"date '%s' has the journal entry."
+msgstr "Bạn không thể thanh lý phân bổ %s trong khi nó có dòng phân bổ sau ngày '%s' đã có bút toán."
+
+#. module: to_cost_revenue_deferred
+#: code:addons/to_cost_revenue_deferred/wizard/deferral_disposal.py:0
+#, python-format
+msgid ""
+"You cannot dispose the deferral %s while it has the deferral line earlier or"
+" equal to date '%s' without the journal entry."
+msgstr "Bạn không thể thanh lý phân bổ %s trong khi nó có dòng phân bổ sớm hơn hặc bằng ngày '%s' mà chưa có bút toán."
+
+#. module: to_cost_revenue_deferred
+#: code:addons/to_cost_revenue_deferred/wizard/deferral_disposal.py:0
+#, python-format
+msgid ""
+"You cannot dispose the deferral %s while its all deferral lines already have"
+" journal entries."
+msgstr "Bạn không thể thanh lý phân bổ %s trong khi tất cả các dòng phân bổ của nó đã có bút toán."
+
+#. module: to_cost_revenue_deferred
+#: code:addons/to_cost_revenue_deferred/models/deferral.py:0
+#, python-format
+msgid "You need to cancel all journal entries of the deferral '%s' first."
+msgstr "Bạn cần huỷ tất cả bút toán của phân bổ '%s' trước."
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_deferral_category_form
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.revenue_deferral_category_form
+msgid "months"
+msgstr "tháng"
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.deferral_confirm_form
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.deferral_disposal_form
+msgid "or"
+msgstr "hoặc"

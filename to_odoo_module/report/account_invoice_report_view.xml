@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+	    <!-- Custom reports (aka filters) -->    
+	    <record id="filter_odoo_module" model="ir.filters">
+	        <field name="name">By Odoo Module</field>
+	        <field name="model_id">account.invoice.report</field>
+	        <field name="domain">[('odoo_module_id','!=',False)]</field>
+	        <field name="user_id" eval="False"/>
+	        <field name="context">{'group_by': ['date:month', 'odoo_module_id']}</field>
+	    </record>
+	    <record id="filter_odoo_module_version" model="ir.filters">
+	        <field name="name">By Odoo Module Version</field>
+	        <field name="model_id">account.invoice.report</field>
+	        <field name="domain">[('odoo_module_version_id','!=',False)]</field>
+	        <field name="user_id" eval="False"/>
+	        <field name="context">{'group_by': ['date:month', 'odoo_module_version_id']}</field>
+	    </record>
+	
+	    <record id="view_account_invoice_report_search" model="ir.ui.view">
+	        <field name="name">account.invoice.report.search</field>
+	        <field name="model">account.invoice.report</field>
+	        <field name="inherit_id" ref="account.view_account_invoice_report_search"/>
+	        <field name="arch" type="xml">
+	        	<xpath expr="//filter[@name='supplier']" position="after">
+	        		<separator/>
+	                <filter string="Odoo Apps" name="ftr_with_odoo_app" domain="[('odoo_module_version_id','!=',False)]"/>
+	                <filter string="Non Odoo Apps" name="ftr_without_odoo_app" domain="[('odoo_module_version_id','=',False)]"/>
+	        	</xpath>
+	        </field>
+	    </record>
+	</data>
+</odoo>

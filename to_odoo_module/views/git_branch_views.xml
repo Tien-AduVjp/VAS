@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="git_branch_form_view" model="ir.ui.view">
+			<field name="name">git.branch.form</field>
+			<field name="model">git.branch</field>
+			<field name="inherit_id" ref="to_git.git_branch_form_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//header" position="inside">
+					<field name="modules_discovered_once" invisible="1" />
+					<button id="normal_btn" name="action_discover_odoo_modules" type="object"
+						attrs="{'invisible': ['|',('checked_out','=',False),('modules_discovered_once','=',False)]}"
+						groups="to_odoo_module.odoo_module_user"
+						string="Discover Odoo Modules"
+						help="This will search for Odoo modules in the branch work tree and create (if not exists) or update (if exists) Odoo module records in your system" />
+					<button id="highlight_btn" name="action_discover_odoo_modules" type="object"
+						class="oe_highlight"
+						attrs="{'invisible': ['|',('checked_out','=',False),('modules_discovered_once','=',True)]}"
+						groups="to_odoo_module.odoo_module_user"
+						string="Discover Odoo Modules"
+						help="This will search for Odoo modules in the branch work tree and create (if not exists) or update (if exists) Odoo module records in your system" />
+				</xpath>
+				<xpath expr="//div[@name='button_box']" position="inside">
+					<button name="action_view_odoo_module_versions"
+						type="object"
+						attrs="{'invisible': [('odoo_module_versions_count','&lt;=',0)]}"
+						groups="to_odoo_module.odoo_module_user" class="oe_stat_button"
+						icon="fa-cubes">
+						<field name="odoo_module_versions_count"
+							groups="to_odoo_module.odoo_module_user"
+							string="Odoo App Versions" widget="statinfo" />
+					</button>
+				</xpath>
+				<xpath expr="//sheet/group" position="inside">
+					<group groups="to_odoo_module.odoo_module_user">
+						<field name="auto_module_discovery" widget="boolean_toggle"
+							attrs="{'readonly': [('odoo_version_id', '=', False)]}" />
+						<field name="last_modules_discovery"
+							attrs="{'invisible': [('modules_discovered_once', '=', False)]}" />
+						<field name="generate_app_products" widget="boolean_toggle"
+							attrs="{'readonly': [('odoo_version_id', '=', False)]}" />
+					</group>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

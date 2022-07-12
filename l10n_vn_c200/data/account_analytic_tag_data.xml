@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="analytic_tag_short_term_prepaid_expense"
+			model="account.analytic.tag">
+			<field name="name">Short-term prepaid expenses</field>
+		</record>
+		<record id="analytic_tag_long_term_prepaid_expense"
+			model="account.analytic.tag">
+			<field name="name">Long-term prepaid expenses</field>
+		</record>
+		<record id="analytic_tag_fixed_assets"
+			model="account.analytic.tag">
+			<field name="name">Fixed Assets</field>
+		</record>
+		<record id="analytic_tag_interests_dividends_distributed_profits"
+			model="account.analytic.tag">
+			<field name="name">Lending Loan Interests, dividends and distributed profits</field>
+		</record>
+		<record id="analytic_tag_borrowing_loan"
+			model="account.analytic.tag">
+			<field name="name">Borrowing Loans</field>
+		</record>
+		<record id="analytic_tag_lending_loan"
+			model="account.analytic.tag">
+			<field name="name">Lending Loans</field>
+		</record>
+	</data>
+</odoo>

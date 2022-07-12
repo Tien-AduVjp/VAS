@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_website_config_settings" model="ir.ui.view">
+        <field name="name">reCaptcha Settings</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="website.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <div id="google_maps_setting" position="after">
+                <div class="col-12 col-md-6 o_setting_box" id="reCaptcha_setting">                   
+                    <div class="o_setting_right_pane">
+                        <img width="20px" alt="captcha" class="mr-2" src="to_website_recaptcha/static/description/recaptcha_ico.png"/>                      
+                        <div class="content-group">
+                            <div class="row mt16">
+                                <label class="col-lg-5 o_light_label" for="recaptcha_site_key"/>
+                                <field name="recaptcha_site_key" placeholder="XXXXX"/>
+                                <label class="col-lg-5 o_light_label" for="recaptcha_secret_key"/>
+                                <field name="recaptcha_secret_key" placeholder="XXXXX"/>
+                            </div>
+                            <div class="row mt16">
+                                <label class="col-lg-5 o_light_label" for="recaptcha_site_key_v3"/>
+                                <field name="recaptcha_site_key_v3" placeholder="XXXXX"/>
+                                <label class="col-lg-5 o_light_label" for="recaptcha_secret_key_v3"/>
+                                <field name="recaptcha_secret_key_v3" placeholder="XXXXX"/>
+                                <label class="col-lg-5 o_light_label" for="recaptcha_score"/>
+                                <field name="recaptcha_score" placeholder="XXXXX"/>
+                            </div>
+                        </div>
+                        <div class="mt8">
+                            <a role="button" class="btn-link" target="_blank" href="http://www.google.com/recaptcha/admin"><i class="fa fa-arrow-right"></i>
+                            How to get my reCaptcha Key
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </field>
+    </record>
+
+</odoo>

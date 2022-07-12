@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="hr_employee_public_view_form" model="ir.ui.view">
+			<field name="name">hr.employee.public.form</field>
+			<field name="model">hr.employee.public</field>
+			<field name="inherit_id" ref="viin_hr_rank.hr_employee_public_view_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//div[@name='button_box']" position="inside">
+					<button name="action_view_required_skill_descriptions"
+						class="oe_stat_button" icon="fa-book" type="object">
+						<field name="skill_descriptions_count" widget="statinfo"
+							string="Required Skills" />
+					</button>
+					<button name="action_view_preferred_skill_descriptions"
+						class="oe_stat_button" icon="fa-book" type="object">
+						<field name="preferred_skill_descriptions_count"
+							widget="statinfo" string="Preferred Skills" />
+					</button>
+				</xpath>
+				<xpath expr="//field[@name='next_rank_id']" position="after">
+					<field name="job_position_skills_required" />
+				</xpath>
+			</field>
+		</record>
+		
+		<menuitem id="menu_hr_employee_public" name="Employee Directory"
+			action="hr.hr_employee_public_action" parent="menu_hr_employee"
+			groups="base.group_user" sequence="20" />
+	</data>
+</odoo>

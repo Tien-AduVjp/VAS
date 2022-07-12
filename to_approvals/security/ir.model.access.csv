@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_approval_employee_request,approval.request.employee.request,model_approval_request,base.group_user,1,1,1,1
+access_approval_user_request,approval.request.user.request,model_approval_request,group_approval_officer,1,1,1,1
+access_approval_type_manager,approval.request.type.manager,model_approval_request_type,group_approval_manager,1,1,1,1
+access_approval_type_user,approval.request.type.user,model_approval_request_type,group_approval_officer,1,0,0,0
+access_approval_type_employee,approval.request.type.employee,model_approval_request_type,base.group_user,1,0,0,0

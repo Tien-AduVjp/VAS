@@ -1,0 +1,47 @@
+<odoo>
+	<data>
+
+		<record model="ir.ui.view" id="hr_contract_view_form">
+			<field name="name">hr.contract.form</field>
+			<field name="model">hr.contract</field>
+			<field name="inherit_id"
+				ref="hr_contract.hr_contract_view_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='trial_date_end']" position="after">
+					<field name="years" />
+					<field name="months" />
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="hr_contract_view_kanban">
+			<field name="name">hr.contract.kanban</field>
+			<field name="model">hr.contract</field>
+			<field name="inherit_id"
+				ref="hr_contract.hr_contract_view_kanban" />
+			<field name="arch" type="xml">
+				<xpath expr="//div/field[@name='job_id']" position="after">
+					<div
+						class="text-muted o_kanban_record_subtitle o_hr_contract_years">
+						<span>Service Years:</span>
+						<field name="years" />
+					</div>
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="hr_contract_view_tree">
+			<field name="name">hr.contract.tree</field>
+			<field name="model">hr.contract</field>
+			<field name="inherit_id"
+				ref="hr_contract.hr_contract_view_tree" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='job_id']" position="after">
+					<field name="years" />
+				</xpath>
+			</field>
+		</record>
+
+
+	</data>
+</odoo>

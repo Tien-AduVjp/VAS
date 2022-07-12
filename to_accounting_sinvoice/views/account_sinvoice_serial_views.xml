@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="account_sinvoice_serial_form" model="ir.ui.view">
+			<field name="name">account.sinvoice.serial.form</field>
+			<field name="model">account.sinvoice.serial</field>
+			<field name="arch" type="xml">
+				<form string="S-Invoice Serial">
+					<sheet>
+						<group>
+							<group>
+								<field name="name" />
+								<field name="template_id" />
+								<field name="type_id"
+									attrs="{'invisible':[('type_id','=',False)]}" />
+								<field name="description" />
+							</group>
+						</group>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers"
+							groups="base.group_user" />
+						<field name="activity_ids" widget="mail_activity" />
+						<field name="message_ids" widget="mail_thread" />
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record id="account_sinvoice_template_tree" model="ir.ui.view">
+			<field name="name">account.sinvoice.serial.tree</field>
+			<field name="model">account.sinvoice.serial</field>
+			<field name="arch" type="xml">
+				<tree string="S-Invoice Serial">
+					<field name="name" />
+					<field name="template_id" />
+					<field name="type_id" />
+					<field name="description" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="action_sinvoice_serial"
+			model="ir.actions.act_window">
+			<field name="name">S-Invoice Serial</field>
+			<field name="res_model">account.sinvoice.serial</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem action="action_sinvoice_serial"
+			id="menu_action_sinvoice_serial" parent="menu_sinvoice"
+			groups="account.group_account_manager" sequence="10" />
+	</data>
+</odoo>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record model="ir.ui.view" id="warranty_claim_form_view">
+		<field name="name">warranty.claim.form</field>
+		<field name="inherit_id"
+			ref="to_warranty_management.warranty_claim_form_view" />
+		<field name="model">warranty.claim</field>
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='product_id']" position="before">
+				<field name="available_product_ids" invisible="1"></field>
+				<field name="lot_id" options="{'no_create': True, 'no_create_edit':True}"/>
+			</xpath>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="warranty_claim_tree_view">
+		<field name="name">warranty.claim.tree</field>
+		<field name="inherit_id"
+			ref="to_warranty_management.warranty_claim_tree_view" />
+		<field name="model">warranty.claim</field>
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='product_id']" position="before">
+				<field name="lot_id" />
+			</xpath>
+		</field>
+	</record>
+
+	<record id="warranty_claim_search_view" model="ir.ui.view">
+		<field name="name">warranty.claim.search</field>
+		<field name="inherit_id"
+			ref="to_warranty_management.warranty_claim_search_view" />
+		<field name="model">warranty.claim</field>
+		<field name="arch" type="xml">
+			<xpath expr="//filter[@name='grp_product_id']"
+				position="before">
+				<filter string="Lot Serial" name="grp_lot_id" domain="[]"
+					context="{'group_by':'lot_id'}" />
+			</xpath>
+		</field>
+	</record>
+</odoo>
+
+
+
+
+

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="payment_icon_bank_vcb" model="payment.icon">
+		<field name="name">VCB</field>
+		<field name="image" type="base64"
+			file="to_vietnam_bank_icons/static/img/VCB.png" />
+	</record>
+	<record id="payment_icon_bank_acb" model="payment.icon">
+		<field name="name">ACB</field>
+		<field name="image" type="base64"
+			file="to_vietnam_bank_icons/static/img/ACB.png" />
+	</record>
+
+	<record id="payment_icon_bank_bidv" model="payment.icon">
+		<field name="name">BIDV</field>
+		<field name="image" type="base64"
+			file="to_vietnam_bank_icons/static/img/BIDV.png" />
+	</record>
+	<record id="payment_icon_bank_dab" model="payment.icon">
+		<field name="name">DAB</field>
+		<field name="image" type="base64"
+			file="to_vietnam_bank_icons/static/img/DAB.png" />
+	</record>
+	<record id="payment_icon_bank_exb" model="payment.icon">
+		<field name="name">EXB</field>
+		<field name="image" type="base64"
+			file="to_vietnam_bank_icons/static/img/EXB.png" />
+	</record>
+	<record id="payment_icon_bank_icb" model="payment.icon">
+		<field name="name">ICB</field>
+		<field name="image" type="base64"
+			file="to_vietnam_bank_icons/static/img/ICB.png" />
+	</record>
+	<record id="payment_icon_bank_MB" model="payment.icon">
+		<field name="name">MB</field>
+		<field name="image" type="base64"
+			file="to_vietnam_bank_icons/static/img/MB.png" />
+	</record>
+	<record id="payment_icon_bank_msb" model="payment.icon">
+		<field name="name">MSB</field>
+		<field name="image" type="base64"
+			file="to_vietnam_bank_icons/static/img/MSB.png" />
+	</record>
+	<record id="payment_icon_bank_stb" model="payment.icon">
+		<field name="name">STB</field>
+		<field name="image" type="base64"
+			file="to_vietnam_bank_icons/static/img/STB.png" />
+	</record>
+	<record id="payment_icon_bank_tcb" model="payment.icon">
+		<field name="name">TCB</field>
+		<field name="image" type="base64"
+			file="to_vietnam_bank_icons/static/img/TCB.png" />
+	</record>
+	<record id="payment_icon_bank_vib" model="payment.icon">
+		<field name="name">VIB</field>
+		<field name="image" type="base64"
+			file="to_vietnam_bank_icons/static/img/VIB.png" />
+	</record>
+</odoo>

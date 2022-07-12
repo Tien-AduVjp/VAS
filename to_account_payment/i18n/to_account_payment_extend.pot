@@ -1,0 +1,111 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_account_payment_extend
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-07 08:12+0000\n"
+"PO-Revision-Date: 2020-08-07 08:12+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_account_payment_extend
+#: model:ir.model.fields,field_description:to_account_payment_extend.field_account_payment_line__account_id
+msgid "Accounts"
+msgstr ""
+
+#. module: to_account_payment_extend
+#: model:ir.model.fields,field_description:to_account_payment_extend.field_account_payment_line__amount
+msgid "Amount"
+msgstr ""
+
+#. module: to_account_payment_extend
+#: code:addons/to_account_payment_extend/models/account_payment.py:0
+#, python-format
+msgid ""
+"Amount in payment must be equal to the sum of amount in lines of Payment "
+"Details "
+msgstr ""
+
+#. module: to_account_payment_extend
+#: model:ir.model.fields,field_description:to_account_payment_extend.field_account_payment_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: to_account_payment_extend
+#: model:ir.model.fields,field_description:to_account_payment_extend.field_account_payment_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: to_account_payment_extend
+#: model:ir.model.fields,field_description:to_account_payment_extend.field_account_payment_line__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: to_account_payment_extend
+#: model:ir.model.fields,field_description:to_account_payment_extend.field_account_payment_line__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: to_account_payment_extend
+#: model:ir.model.fields,field_description:to_account_payment_extend.field_account_payment_line__id
+msgid "ID"
+msgstr ""
+
+#. module: to_account_payment_extend
+#: model:ir.model.fields,help:to_account_payment_extend.field_account_payment__account_payment_line_ids
+msgid ""
+"If you don't add any record to this field, accounting will run as default of"
+" odoo, whereas if you add, it will base on accounts set in this field to "
+"keep accounting records"
+msgstr ""
+
+#. module: to_account_payment_extend
+#: model:ir.model.fields,field_description:to_account_payment_extend.field_account_payment_line__name
+msgid "Label"
+msgstr ""
+
+#. module: to_account_payment_extend
+#: model:ir.model.fields,field_description:to_account_payment_extend.field_account_payment_line____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: to_account_payment_extend
+#: model:ir.model.fields,field_description:to_account_payment_extend.field_account_payment_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: to_account_payment_extend
+#: model:ir.model.fields,field_description:to_account_payment_extend.field_account_payment_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: to_account_payment_extend
+#: model:ir.model,name:to_account_payment_extend.model_account_payment_line
+#: model:ir.model.fields,field_description:to_account_payment_extend.field_account_payment__account_payment_line_ids
+msgid "Payment Details"
+msgstr ""
+
+#. module: to_account_payment_extend
+#: model:ir.actions.act_window,name:to_account_payment_extend.action_account_payment_line
+#: model_terms:ir.ui.view,arch_db:to_account_payment_extend.view_account_payment_line_form
+#: model_terms:ir.ui.view,arch_db:to_account_payment_extend.view_account_payment_line_tree
+msgid "Payment Type"
+msgstr ""
+
+#. module: to_account_payment_extend
+#: model:ir.model,name:to_account_payment_extend.model_account_payment
+#: model:ir.model.fields,field_description:to_account_payment_extend.field_account_payment_line__payment_id
+msgid "Payments"
+msgstr ""
+
+#. module: to_account_payment_extend
+#: model:ir.model.fields,field_description:to_account_payment_extend.field_account_payment_line__sequence
+msgid "Sequence"
+msgstr ""

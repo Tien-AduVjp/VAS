@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="wizard_website_document_merge_form_view"
+		model="ir.ui.view">
+		<field name="name">wizard.website.document.merge.form</field>
+		<field name="model">wizard.website.document.merge</field>
+		<field name="arch" type="xml">
+			<form string="Documents Merging Wizard">
+				<sheet>
+					<group>
+						<field name="document_ids" invisible="1" />
+						<field name="source_document_id" />
+						<field name="destination_document_id" />
+						<field name="update_name" />
+					</group>
+				</sheet>
+				<footer>
+					<button name="action_merge" string="Merge" type="object"
+						class="btn-primary" />
+					<button string="Cancel" class="btn-default" special="cancel" />
+				</footer>
+			</form>
+		</field>
+	</record>
+
+	<record id="wizard_website_document_merge_action"
+		model="ir.actions.act_window">
+		<field name="name">Documents Merging Wizard</field>
+		<field name="res_model">wizard.website.document.merge</field>
+		<field name="binding_model_id" ref="model_website_document" />
+		<field name="binding_type">action</field>
+		<field name="view_mode">form</field>
+		<field name="view_id"
+			ref="wizard_website_document_merge_form_view" />
+		<field name="target">new</field>
+	</record>
+</odoo>

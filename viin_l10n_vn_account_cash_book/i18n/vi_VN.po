@@ -1,0 +1,566 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_l10n_vn_account_cash_book
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-11 12:26+0000\n"
+"PO-Revision-Date: 2020-10-11 12:26+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#, python-format
+msgid "(Signature, Full Name)"
+msgstr "(Chữ ký, Họ và Tên)"
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#, python-format
+msgid "(Signature, Full Name, Job Title)"
+msgstr "(Chữ ký, Họ và Tên, Dấu chức danh)"
+
+#. module: viin_l10n_vn_account_cash_book
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s07dn
+msgid "- Date To:"
+msgstr "- đến ngày:"
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#, python-format
+msgid "- Date To: "
+msgstr "- Đến ngày: "
+
+#. module: viin_l10n_vn_account_cash_book
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s08dn
+msgid "- Date to:"
+msgstr "- Đến ngày: "
+
+#. module: viin_l10n_vn_account_cash_book
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s07dn
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s08dn
+msgid "- Issue Date:"
+msgstr "- Ngày mở sổ:"
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#, python-format
+msgid "- Issue Date: "
+msgstr "- Ngày mở sổ: "
+
+#. module: viin_l10n_vn_account_cash_book
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s07dn
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s08dn
+msgid ""
+"<br/>\n"
+"\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\tCurrency:"
+msgstr ""
+"<br/>\n"
+"\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\tĐơn vị tiền tệ:"
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.actions.act_window,name:viin_l10n_vn_account_cash_book.action_wizard_c200_s08dn
+msgid "ACCOUNT BANK DEPOSIT BOOK (S08-DN)"
+msgstr "SỔ QUỸ TIỀN GỬI NGÂN HÀNG (S08DN)"
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.actions.act_window,name:viin_l10n_vn_account_cash_book.action_wizard_c200_s07dn
+msgid "ACCOUNT CASH BOOK (S07-DN)"
+msgstr "SỔ QUỸ TIỀN MẶT (S07-DN)"
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/controllers/main.py:0
+#, python-format
+msgid "Account Bank Book.xlsx"
+msgstr "Sổ tiền gửi Ngân hàng.xlsx"
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.actions.report,name:viin_l10n_vn_account_cash_book.act_report_c200_s08dn
+#: model:ir.ui.menu,name:viin_l10n_vn_account_cash_book.to_menu_account_bank_book
+msgid "Account Bank Deposit Book (S08-DN)"
+msgstr "Sổ tiền gửi ngân hàng (S08-DN)"
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.actions.report,name:viin_l10n_vn_account_cash_book.act_report_c200_s07dn
+#: model:ir.ui.menu,name:viin_l10n_vn_account_cash_book.to_menu_account_cash_book
+msgid "Account Cash Book (S07-DN)"
+msgstr "Sổ quỹ tiền mặt (S07-DN)"
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/controllers/main.py:0
+#, python-format
+msgid "Account Cash Book.xlsx"
+msgstr "Sổ Quỹ tiền mặt.xlsx"
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s07dn__account_ids
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s08dn__account_ids
+msgid "Accounts"
+msgstr "Tài khoản"
+
+#. module: viin_l10n_vn_account_cash_book
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s07dn
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s08dn
+msgid "Accounts:"
+msgstr "Tài khoản:"
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#, python-format
+msgid "Accounts: "
+msgstr "Tài Khoản: "
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s07dn
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s08dn
+#, python-format
+msgid "Amount"
+msgstr "Tổng tiền"
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s07dn
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s08dn
+#, python-format
+msgid "Balance"
+msgstr "Số dư"
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s07dn
+#, python-format
+msgid "CASH BOOK"
+msgstr "SỔ QUỸ TIỀN MẶT"
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s08dn
+#, python-format
+msgid "CASH IN BANK DEPOSIT BOOK"
+msgstr "SỔ QUỸ TIỀN GỬI NGÂN HÀNG"
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#, python-format
+msgid "Chief Accountant"
+msgstr "Kế toán trưởng"
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s07dn__company_id
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s08dn__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: viin_l10n_vn_account_cash_book
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s08dn
+msgid ""
+"Counterpart\n"
+"\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\tAccounts"
+msgstr ""
+"Tài khoản\n"
+"\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\tĐối ứng"
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#, python-format
+msgid ""
+"Counterpart \n"
+" Accounts"
+msgstr ""
+"Tài khoản \n"
+" Đối ứng"
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s07dn__create_uid
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s08dn__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s07dn__create_date
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s08dn__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#, python-format
+msgid "Currency:"
+msgstr "Đơn vị tiền tệ:"
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s08dn
+#, python-format
+msgid "Date"
+msgstr "Ngày"
+
+#. module: viin_l10n_vn_account_cash_book
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s07dn
+msgid "Date From:"
+msgstr "Từ ngày: "
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#, python-format
+msgid "Date From: "
+msgstr "Từ ngày: "
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s07dn__date_from
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s08dn__date_from
+msgid "Date from"
+msgstr "Từ ngày"
+
+#. module: viin_l10n_vn_account_cash_book
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s08dn
+msgid "Date from:"
+msgstr "Từ ngày:"
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s07dn__date_to
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s08dn__date_to
+msgid "Date to"
+msgstr "Đến ngày"
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s07dn
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s08dn
+#, python-format
+msgid "Description"
+msgstr "Diễn giải"
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#, python-format
+msgid "Director/CEO"
+msgstr "Giám đốc"
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_report_viin_l10n_vn_account_cash_book_report_c200_s07dn__display_name
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_report_viin_l10n_vn_account_cash_book_report_c200_s08dn__display_name
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s07dn__display_name
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s08dn__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/reports/report_c200_s07dn.py:0
+#, python-format
+msgid "Ending Balance"
+msgstr "Số dư cuối kỳ"
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_report_viin_l10n_vn_account_cash_book_report_c200_s07dn__id
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_report_viin_l10n_vn_account_cash_book_report_c200_s08dn__id
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s07dn__id
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s08dn__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s07dn__journal_ids
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s08dn__journal_ids
+msgid "Journals"
+msgstr "Sổ nhật ký"
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_report_viin_l10n_vn_account_cash_book_report_c200_s07dn____last_update
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_report_viin_l10n_vn_account_cash_book_report_c200_s08dn____last_update
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s07dn____last_update
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s08dn____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s07dn__write_uid
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s08dn__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s07dn__write_date
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s08dn__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#, python-format
+msgid "Month ..... Day ..... Year ....."
+msgstr "Tháng ..... Ngày ..... Năm ....."
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s08dn
+#, python-format
+msgid "No."
+msgstr "Số"
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s07dn
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s08dn
+#, python-format
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/reports/report_c200_s07dn.py:0
+#, python-format
+msgid "Opening Balance"
+msgstr "Số dư đầu kỳ"
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s07dn
+#, python-format
+msgid "Payment"
+msgstr "Chi"
+
+#. module: viin_l10n_vn_account_cash_book
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s08dn
+msgid ""
+"Payment\n"
+"\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t(WithDraw)"
+msgstr ""
+"Chi\n"
+"\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t(Rút ra)"
+#. module: viin_l10n_vn_account_cash_book
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s07dn
+msgid ""
+"Payment\n"
+"\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\tT"
+msgstr "Chi"
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#, python-format
+msgid ""
+"Payment \n"
+" (WithDraw)"
+msgstr ""
+"Chi \n"
+" (Rút ra)"
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#, python-format
+msgid ""
+"Payment \n"
+" T"
+msgstr "Chi"
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/reports/report_c200_s07dn.py:0
+#, python-format
+msgid "Period Total"
+msgstr "Cộng số phát sinh"
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#, python-format
+msgid ""
+"Posting \n"
+" Date"
+msgstr ""
+"Ngày, tháng \n"
+"Ghi sổ"
+
+#. module: viin_l10n_vn_account_cash_book
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s07dn
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s08dn
+msgid "Posting Date"
+msgstr "Ngày vào sổ"
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#, python-format
+msgid "Prepared By"
+msgstr "Người ghi sổ"
+
+#. module: viin_l10n_vn_account_cash_book
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.viin_c200_s07dn_form
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.viin_c200_s08dn_form
+msgid "Print Excel"
+msgstr "In Excel"
+
+#. module: viin_l10n_vn_account_cash_book
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.viin_c200_s07dn_form
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.viin_c200_s08dn_form
+msgid "Print Pdf"
+msgstr "In Pdf"
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s07dn
+#, python-format
+msgid "Receipt"
+msgstr "Thu"
+
+#. module: viin_l10n_vn_account_cash_book
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s08dn
+msgid ""
+"Receipt\n"
+"\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t(Deposit)"
+msgstr ""
+"Thu\n"
+"\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t(Gửi vào)"
+#. module: viin_l10n_vn_account_cash_book
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s07dn
+msgid ""
+"Receipt\n"
+"\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\tT"
+msgstr "Thu"
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#, python-format
+msgid ""
+"Receipt \n"
+" (Deposit)"
+msgstr ""
+"Thu \n"
+" (Gửi vào)"
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#, python-format
+msgid ""
+"Receipt \n"
+" T"
+msgstr "Thu"
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/controllers/main.py:0
+#, python-format
+msgid "Record not found: id: %s, uid: %s"
+msgstr "Bản ghi không được tìm thấy: id: %s, uid: %s"
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s07dn__target_move
+#: model:ir.model.fields,field_description:viin_l10n_vn_account_cash_book.field_wizard_l10n_vn_c200_s08dn__target_move
+msgid "Target Moves"
+msgstr "Lọc Bút toán"
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.actions.report,legal_name:viin_l10n_vn_account_cash_book.act_report_c200_s07dn
+msgid "Template S07-DN"
+msgstr "Mẫu số: S07-DN"
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.actions.report,legal_name:viin_l10n_vn_account_cash_book.act_report_c200_s08dn
+msgid "Template S08-DN"
+msgstr "Mẫu số: S08-DN"
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#, python-format
+msgid ""
+"Template: S07DN \n"
+" (Released Under the Circular No. 200/2014/TT-BTC Dated 22/12/2014 by the Ministry of Finance)"
+msgstr ""
+"Mẫu số: S07DN \n"
+" (Ban hành theo thông tư số 200/2014/TT-BTC Ngày 22/12/2014 của Bộ tài Chính)"
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#, python-format
+msgid ""
+"Template: S08DN \n"
+" (Released Under the Circular No. 200/2014/TT-BTC Dated 22/12/2014 by the Ministry of Finance)"
+msgstr ""
+"Mẫu số: S08DN \n"
+" (Ban hành theo thông tư số 200/2014/TT-BTC Ngày 22/12/2014 của Bộ tài Chính)"
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#, python-format
+msgid "The Date From must be less than the Date To."
+msgstr "Ngày bắt đầu phải nhỏ hơn ngày kết thúc"
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.model,name:viin_l10n_vn_account_cash_book.model_report_viin_l10n_vn_account_cash_book_report_c200_s07dn
+msgid "VietNam C200 S07dn Report"
+msgstr "Mẫu báo cáo quỹ tiền mặt s07dn Việt Nam"
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.model,name:viin_l10n_vn_account_cash_book.model_wizard_l10n_vn_c200_s07dn
+msgid "VietNam C200 S07dn Report Winzard"
+msgstr "Mẫu báo cáo quỹ tiền mặt Việt Nam Winzard"
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.model,name:viin_l10n_vn_account_cash_book.model_report_viin_l10n_vn_account_cash_book_report_c200_s08dn
+msgid "VietNam C200 S08dn Report"
+msgstr "Mẫu báo cáo sổ tiền gửi ngân hàng s08dn Việt Nam"
+
+#. module: viin_l10n_vn_account_cash_book
+#: model:ir.model,name:viin_l10n_vn_account_cash_book.model_wizard_l10n_vn_c200_s08dn
+msgid "VietNam C200 S08dn Report Winzard"
+msgstr "Mẫu báo cáo tiền gửi ngân hàng Việt Nam Winzard"
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s08dn.py:0
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s08dn
+#, python-format
+msgid "Voucher"
+msgstr "Chứng từ"
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#, python-format
+msgid ""
+"Voucher \n"
+" Date"
+msgstr ""
+"Ngày, tháng \n"
+" Chứng từ"
+
+#. module: viin_l10n_vn_account_cash_book
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s07dn
+msgid "Voucher Date"
+msgstr "Ngày, tháng <br> Chứng từ"
+
+#. module: viin_l10n_vn_account_cash_book
+#: code:addons/viin_l10n_vn_account_cash_book/wizards/l10n_vn_c200_s07dn.py:0
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_account_cash_book.report_c200_s07dn
+#, python-format
+msgid "Voucher No."
+msgstr "Số hiệu chứng từ"

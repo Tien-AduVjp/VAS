@@ -1,0 +1,229 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_purchase_order_advance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-08 09:51+0000\n"
+"PO-Revision-Date: 2021-09-08 09:51+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_purchase_order_advance
+#: code:addons/to_purchase_order_advance/models/account_payment.py:0
+#, python-format
+msgid ""
+"\n"
+"                        <ul class=\"o_mail_thread_message_tracking\">\n"
+"                            <li>\n"
+"                                Purchases Orders:\n"
+"                                <span>%s</span>\n"
+"                                <span class=\"fa fa-long-arrow-right\" role=\"img\" aria-label=\"Changed\" title=\"Changed\"/>\n"
+"                                <span>%s</span>\n"
+"                            </li>\n"
+"                        </ul>\n"
+"                    "
+msgstr ""
+
+#. module: to_purchase_order_advance
+#: code:addons/to_purchase_order_advance/models/account_payment.py:0
+#, python-format
+msgid ""
+"\n"
+"                        <ul class=\"o_mail_thread_message_tracking\">\n"
+"                            <li>\n"
+"                                Purchases Orders:\n"
+"                                <span>%s</span>\n"
+"                            </li>\n"
+"                        </ul>\n"
+"                    "
+msgstr ""
+
+#. module: to_purchase_order_advance
+#: model_terms:ir.ui.view,arch_db:to_purchase_order_advance.purchase_order_form_inherit
+msgid "<span class=\"o_stat_text\">Advance Payment</span>"
+msgstr ""
+
+#. module: to_purchase_order_advance
+#: model:ir.model.fields,field_description:to_purchase_order_advance.field_add_po_to_payment_wizard__account_payment_id
+msgid "Account Payment"
+msgstr ""
+
+#. module: to_purchase_order_advance
+#: model:ir.model,name:to_purchase_order_advance.model_account_reconciliation_widget
+msgid "Account Reconciliation widget"
+msgstr ""
+
+#. module: to_purchase_order_advance
+#: model_terms:ir.ui.view,arch_db:to_purchase_order_advance.add_po_to_payment_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:to_purchase_order_advance.assign_to_invoice_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:to_purchase_order_advance.view_account_payment_form_inherit
+msgid "Add"
+msgstr ""
+
+#. module: to_purchase_order_advance
+#: model:ir.actions.act_window,name:to_purchase_order_advance.action_add_po_to_payment
+msgid "Add Purchases Orders To Payment"
+msgstr ""
+
+#. module: to_purchase_order_advance
+#: model:ir.model,name:to_purchase_order_advance.model_add_po_to_payment_wizard
+msgid "Add Purchases Orders To Payment Wizard"
+msgstr ""
+
+#. module: to_purchase_order_advance
+#: model_terms:ir.ui.view,arch_db:to_purchase_order_advance.purchase_order_tree_inherit
+msgid "Advance Payment"
+msgstr ""
+
+#. module: to_purchase_order_advance
+#: model:ir.model.fields,field_description:to_purchase_order_advance.field_purchase_order__advance_payment_amount
+msgid "Advance Payment Amount"
+msgstr ""
+
+#. module: to_purchase_order_advance
+#: model:ir.model.fields,field_description:to_purchase_order_advance.field_purchase_order__advance_payment_ids
+msgid "Advance Payments"
+msgstr ""
+
+#. module: to_purchase_order_advance
+#: model:ir.model.fields,field_description:to_purchase_order_advance.field_assign_to_invoice_wizard__amount
+msgid "Amount"
+msgstr ""
+
+#. module: to_purchase_order_advance
+#: model:ir.model,name:to_purchase_order_advance.model_assign_to_invoice_wizard
+msgid "Assign To Invoice Wizard"
+msgstr ""
+
+#. module: to_purchase_order_advance
+#: model_terms:ir.ui.view,arch_db:to_purchase_order_advance.add_po_to_payment_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:to_purchase_order_advance.assign_to_invoice_wizard_view_form
+msgid "Cancel"
+msgstr ""
+
+#. module: to_purchase_order_advance
+#: model:ir.model.fields,field_description:to_purchase_order_advance.field_add_po_to_payment_wizard__create_uid
+#: model:ir.model.fields,field_description:to_purchase_order_advance.field_assign_to_invoice_wizard__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: to_purchase_order_advance
+#: model:ir.model.fields,field_description:to_purchase_order_advance.field_add_po_to_payment_wizard__create_date
+#: model:ir.model.fields,field_description:to_purchase_order_advance.field_assign_to_invoice_wizard__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: to_purchase_order_advance
+#: model:ir.model.fields,field_description:to_purchase_order_advance.field_add_po_to_payment_wizard__display_name
+#: model:ir.model.fields,field_description:to_purchase_order_advance.field_assign_to_invoice_wizard__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: to_purchase_order_advance
+#: model:ir.model.fields,field_description:to_purchase_order_advance.field_add_po_to_payment_wizard__id
+#: model:ir.model.fields,field_description:to_purchase_order_advance.field_assign_to_invoice_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: to_purchase_order_advance
+#: model:ir.model,name:to_purchase_order_advance.model_account_move
+msgid "Journal Entries"
+msgstr ""
+
+#. module: to_purchase_order_advance
+#: model:ir.model,name:to_purchase_order_advance.model_account_move_line
+msgid "Journal Item"
+msgstr ""
+
+#. module: to_purchase_order_advance
+#: model:ir.model.fields,field_description:to_purchase_order_advance.field_add_po_to_payment_wizard____last_update
+#: model:ir.model.fields,field_description:to_purchase_order_advance.field_assign_to_invoice_wizard____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: to_purchase_order_advance
+#: model:ir.model.fields,field_description:to_purchase_order_advance.field_add_po_to_payment_wizard__write_uid
+#: model:ir.model.fields,field_description:to_purchase_order_advance.field_assign_to_invoice_wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: to_purchase_order_advance
+#: model:ir.model.fields,field_description:to_purchase_order_advance.field_add_po_to_payment_wizard__write_date
+#: model:ir.model.fields,field_description:to_purchase_order_advance.field_assign_to_invoice_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: to_purchase_order_advance
+#: model:ir.model,name:to_purchase_order_advance.model_account_payment
+msgid "Payments"
+msgstr ""
+
+#. module: to_purchase_order_advance
+#: model:ir.model,name:to_purchase_order_advance.model_purchase_order
+msgid "Purchase Order"
+msgstr ""
+
+#. module: to_purchase_order_advance
+#. openerp-web
+#: code:addons/to_purchase_order_advance/static/src/xml/account_reconciliation.xml:0
+#: model:ir.model.fields,field_description:to_purchase_order_advance.field_account_payment__purchase_order_ids
+#: model:ir.model.fields,field_description:to_purchase_order_advance.field_add_po_to_payment_wizard__current_purchase_order_ids
+#: model:ir.model.fields,field_description:to_purchase_order_advance.field_add_po_to_payment_wizard__purchase_order_ids
+#, python-format
+msgid "Purchases Orders"
+msgstr ""
+
+#. module: to_purchase_order_advance
+#: model:ir.model.fields,help:to_purchase_order_advance.field_assign_to_invoice_wizard__amount
+msgid "The amount that is assigned to invoice"
+msgstr ""
+
+#. module: to_purchase_order_advance
+#: code:addons/to_purchase_order_advance/wizards/assign_to_invoice_wizard.py:0
+#, python-format
+msgid "The amount that is assigned to invoice must be greater than 0!"
+msgstr ""
+
+#. module: to_purchase_order_advance
+#: code:addons/to_purchase_order_advance/wizards/assign_to_invoice_wizard.py:0
+#, python-format
+msgid ""
+"The amount that is assigned to invoice is greater than the amount for "
+"advance payment %s!"
+msgstr ""
+
+#. module: to_purchase_order_advance
+#: code:addons/to_purchase_order_advance/models/account_payment.py:0
+#, python-format
+msgid "The partner on payment '%s' and the purchase order should be the same."
+msgstr ""
+
+#. module: to_purchase_order_advance
+#: model:ir.model.fields,help:to_purchase_order_advance.field_add_po_to_payment_wizard__current_purchase_order_ids
+msgid "The purchases orders on this payment to filter"
+msgstr ""
+
+#. module: to_purchase_order_advance
+#: model:ir.model.fields,help:to_purchase_order_advance.field_add_po_to_payment_wizard__purchase_order_ids
+msgid "The purchases orders that is added to this payment"
+msgstr ""
+
+#. module: to_purchase_order_advance
+#: model_terms:ir.ui.view,arch_db:to_purchase_order_advance.purchase_order_tree_inherit
+msgid "Total Advance Payments"
+msgstr ""
+
+#. module: to_purchase_order_advance
+#: code:addons/to_purchase_order_advance/models/account_move_line.py:0
+#, python-format
+msgid ""
+"You can not reconcile entries those belong to different purchase orders. "
+"Please add the purchase order '%s' to the payment '%s' to reconcile."
+msgstr ""

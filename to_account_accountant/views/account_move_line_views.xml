@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="view_move_line_tree" model="ir.ui.view">
+		<field name="name">account.move.line.tree</field>
+		<field name="model">account.move.line</field>
+		<field name="inherit_id" ref="account.view_move_line_tree" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='date_maturity']" position="after">
+				<field name="amount_residual" sum="Total Residual" optional="hide" />
+				<field name="amount_residual_currency" optional="hide" sum="Total Currency Residual" />
+			</xpath>
+		</field>
+	</record>
+
+	<record id="view_account_move_line_filter" model="ir.ui.view">
+		<field name="name">account.move.line.select.inherit</field>
+		<field name="model">account.move.line</field>
+		<field name="inherit_id" ref="account.view_account_move_line_filter" />
+		<field name="arch" type="xml">
+			<xpath expr="//filter[@name='posted']" position="after">
+				<separator/>
+				<filter string="Invoice Lines" name="ftr_inv_lines" domain="[('move_id.type','in',['out_invoice','out_refund','in_invoice','in_refund'])]"/>
+			</xpath>
+			<xpath expr="//filter[@name='to_check']" position="after">
+				<filter string="Manual Entries" name="manual_entry" domain="[('move_id.manual_entry', '=', True)]"/>
+			</xpath>
+			<xpath expr="//filter[@name='misc_filter']" position="after">
+				<separator/>
+				<filter string="Tax Items" name="ftr_tax_items" domain="[('tax_line_id', '!=', False)]"/>
+			</xpath>
+			<xpath expr="//filter[@name='group_by_move']" position="after">
+				<filter string="Originator Tax" name="group_by_tax_line_id" domain="[]" context="{'group_by': 'tax_line_id'}"/>
+			</xpath>
+		</field>
+	</record>
+</odoo>

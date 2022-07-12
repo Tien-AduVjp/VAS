@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!--Email template -->
+        <record id="email_template_trip_schedule" model="mail.template">
+            <field name="name">Trip Schedule - Send by Email</field>
+            <field name="email_from">${(object.operator_id.email_formatted or '')|safe}</field>
+            <field name="subject">Schedule for Trip ${object.name or 'n/a' } has been confirmed</field>
+            <field name="partner_to">${object.driver_id.id},${object.assistant_ids and ",".join(map(str, object.assistant_ids.ids)) or ''}</field>
+            <field name="model_id" ref="to_fleet_operation_planning.model_fleet_vehicle_trip"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="report_template" ref="report_vehicle_trip"/>
+            <field name="report_name">${(object.name or '').replace('/','_')}${object.state == 'draft' and '_draft' or ''}</field>
+            <field name="lang">${object.driver_id.lang}</field>
+            <field name="body_html">
+                <![CDATA[
+                    <p>Dear ${object.driver_id.name},</p>
+                    <p>The trip <strong>${object.name}</strong> has been confirmed assigning you as the driver.</p>
+                    <p>Please find attached the printed report on the trip's details</p>
+                    <p>You can reply to this email if you have any questions.</p>
+                    <p>Thank you,</p>
+
+                    <p style="color:#eeeeee;">
+                    % if object.operator_id and object.operator_id.signature:
+                        ${object.operator_id.signature | safe}
+                    % endif
+                    </p>
+                ]]>
+            </field>
+        </record>
+        
+        <!--Default Notification Email template for trip report-->
+        <template id="mail_template_data_notification_email_fleet_vehicle_trip" name="Fleet Vehicle Trip Notification Email">
+<table border="0" width="100%" cellpadding="0" bgcolor="#ededed" style="padding: 20px; background-color: #ededed" summary="o_mail_notification">
+    <tbody>
+      <!-- HEADER -->
+      <tr>
+        <td align="center" style="min-width: 590px;">
+          <table width="590" border="0" cellpadding="0" bgcolor="#875A7B" style="min-width: 590px; background-color: rgb(135,90,123); padding: 20px;">
+            <tr>
+              <td valign="middle">
+                  <span style="font-size:20px; color:white; font-weight: bold;">
+                      <t t-esc="message.record_name"/>
+                  </span>
+              </td>
+              <td valign="middle" align="right">
+                  <img t-att-src="'/logo.png?company=%s' % (company.id or 0)" style="padding: 0px; margin: 0px; height: auto; width: 80px;" t-att-alt="'%s' % company.name"/>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      
+      <!-- CONTENT -->
+      <tr>
+        <td align="center" style="min-width: 590px;">
+          <table width="590" border="0" cellpadding="0" bgcolor="#ffffff" style="min-width: 590px; background-color: rgb(255, 255, 255); padding: 20px;">
+            <tbody>
+              <td valign="top" style="font-family:Arial,Helvetica,sans-serif; color: #555; font-size: 14px;">
+                <t t-raw="message.body"/>
+              </td>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+
+      <!-- FOOTER -->
+      <tr>
+        <td align="center" style="min-width: 590px;">
+          <table width="590" border="0" cellpadding="0" bgcolor="#875A7B" style="min-width: 590px; background-color: rgb(135,90,123); padding: 20px;">
+            <tr>
+              <td valign="middle" align="left" style="color: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;">
+                <t t-esc="company.name"/><br/>
+                <t t-esc="company.phone"/>
+              </td>
+              <td valign="middle" align="right" style="color: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;">
+                <t t-if="company.email">
+                    <a t-att-href="'mailto:%s' % company.email" style="text-decoration:none; color: white;"><t t-esc="company.email"/></a>
+                </t>
+                <t t-if="company.website">
+                    <a t-att-href="'%s' % company.website" style="text-decoration:none; color: white;">
+                        <t t-esc="company.website"/>
+                    </a>
+                </t>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td align="center">
+            Powered by <a href="https://www.erponline.vn">ERPOnline</a>.
+        </td>
+      </tr>
+    </tbody>
+</table>
+        </template>
+    </data>
+</odoo>

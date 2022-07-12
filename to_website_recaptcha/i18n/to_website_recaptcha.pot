@@ -1,0 +1,115 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_website_recaptcha
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-30 04:56+0000\n"
+"PO-Revision-Date: 2021-03-30 04:56+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_website_recaptcha
+#: model_terms:ir.ui.view,arch_db:to_website_recaptcha.view_website_config_settings
+msgid ""
+"<i class=\"fa fa-arrow-right\"/>\n"
+"                            How to get my reCaptcha Key"
+msgstr ""
+
+#. module: to_website_recaptcha
+#: model:ir.model,name:to_website_recaptcha.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: to_website_recaptcha
+#: model:ir.model.fields,field_description:to_website_recaptcha.field_website_recaptcha__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: to_website_recaptcha
+#: model:ir.model.fields,field_description:to_website_recaptcha.field_res_config_settings__recaptcha_score
+#: model:ir.model.fields,field_description:to_website_recaptcha.field_website__recaptcha_score
+msgid "Human Score"
+msgstr ""
+
+#. module: to_website_recaptcha
+#: code:addons/to_website_recaptcha/models/website.py:0
+#, python-format
+msgid "Human Score is only in (0.0 - 1.0)"
+msgstr ""
+
+#. module: to_website_recaptcha
+#: model:ir.model.fields,field_description:to_website_recaptcha.field_website_recaptcha__id
+msgid "ID"
+msgstr ""
+
+#. module: to_website_recaptcha
+#: model:ir.model.fields,field_description:to_website_recaptcha.field_website_recaptcha____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: to_website_recaptcha
+#: model:ir.model.fields,field_description:to_website_recaptcha.field_res_config_settings__recaptcha_secret_key
+msgid "ReCaptcha Secret Key"
+msgstr ""
+
+#. module: to_website_recaptcha
+#: model:ir.model.fields,field_description:to_website_recaptcha.field_res_config_settings__recaptcha_site_key
+msgid "ReCaptcha Site Key"
+msgstr ""
+
+#. module: to_website_recaptcha
+#: model:ir.model.fields,field_description:to_website_recaptcha.field_website__recaptcha_secret_key
+msgid "ReCaptcha v2 Secret Key"
+msgstr ""
+
+#. module: to_website_recaptcha
+#: model:ir.model.fields,field_description:to_website_recaptcha.field_website__recaptcha_site_key
+msgid "ReCaptcha v2 Site Key"
+msgstr ""
+
+#. module: to_website_recaptcha
+#: model:ir.model.fields,field_description:to_website_recaptcha.field_res_config_settings__recaptcha_secret_key_v3
+#: model:ir.model.fields,field_description:to_website_recaptcha.field_website__recaptcha_secret_key_v3
+msgid "ReCaptcha v3 Secret Key"
+msgstr ""
+
+#. module: to_website_recaptcha
+#: model:ir.model.fields,field_description:to_website_recaptcha.field_res_config_settings__recaptcha_site_key_v3
+#: model:ir.model.fields,field_description:to_website_recaptcha.field_website__recaptcha_site_key_v3
+msgid "ReCaptcha v3 Site Key"
+msgstr ""
+
+#. module: to_website_recaptcha
+#: model:ir.model.fields,help:to_website_recaptcha.field_res_config_settings__recaptcha_score
+#: model:ir.model.fields,help:to_website_recaptcha.field_website__recaptcha_score
+msgid ""
+"Score returned by ReCaptcha v3 must be greater than or equal to this score "
+"to consider to be human."
+msgstr ""
+
+#. module: to_website_recaptcha
+#: model:ir.model,name:to_website_recaptcha.model_website
+msgid "Website"
+msgstr ""
+
+#. module: to_website_recaptcha
+#: model:ir.model,name:to_website_recaptcha.model_website_recaptcha
+msgid "Website Recaptcha Validations"
+msgstr ""
+
+#. module: to_website_recaptcha
+#: model_terms:ir.ui.view,arch_db:to_website_recaptcha.view_website_config_settings
+msgid "XXXXX"
+msgstr ""
+
+#. module: to_website_recaptcha
+#: model_terms:ir.ui.view,arch_db:to_website_recaptcha.view_website_config_settings
+msgid "captcha"
+msgstr ""

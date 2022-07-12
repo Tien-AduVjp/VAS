@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="report_overdue_document"
+		inherit_id="account.report_overdue_document">
+		<xpath expr="//span[@t-esc=&quot;line['ref']&quot;]"
+			position="after">
+			<t t-if="line['communication'] != '/'">
+				<br />
+				<i>
+					Related to:
+					<br />
+					<span t-esc="line['communication']" />
+				</i>
+			</t>
+		</xpath>
+	</template>
+
+</odoo>

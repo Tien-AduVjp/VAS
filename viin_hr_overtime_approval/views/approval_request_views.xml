@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record id="approval_request_view_form" model="ir.ui.view">
+			<field name="name">approval.request.form</field>
+			<field name="model">approval.request</field>
+			<field name="inherit_id"
+				ref="to_approvals.approval_request_view_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//div[@name='button_box']" position="inside">
+					<button name="action_view_overtime_plan_lines" type="object"
+						class="oe_stat_button" icon="fa-clock-o"
+						attrs="{'invisible': [('type', '!=', 'overtime')]}">
+						<field string="Overtime Plans"
+							name="overtime_plan_lines_count" widget="statinfo" />
+					</button>
+				</xpath>
+				<xpath expr="//notebook" position="inside">
+					<page name="overtime" string="Overtime"
+						attrs="{'invisible': [('type', '!=', 'overtime')]}">
+						<button name="action_mass_registration" type="object"
+							class="oe_highlight" string="Mass Registration"
+							attrs="{'invisible':[('state', '!=', 'draft')]}" />
+						<button name="action_recompute_overtime_plans"
+							type="object" string="Recompute"
+							attrs="{'invisible':[('state', 'in', ['done','refuse','cancel'])]}"
+							confirm="This action will recompute all the overtime plan below for updating its related HR contracts then overtime plan details according to the newly updated contracts.
+							Are you sure to proceed?" />
+						<field name="overtime_plan_ids">
+							<tree editable="bottom"
+								decoration-muted="state in ['cancel','refuse']">
+								<field name="employee_id" />
+								<field name="reason_id" />
+								<field name="recognition_mode" optional="hide" />
+								<field name="date" />
+								<field name="time_start" widget="float_time" />
+								<field name="time_end" widget="float_time" />
+								<field name="date_start" invisible="1" />
+								<field name="date_end" invisible="1" />
+								<field name="planned_hours" sum="Total Planned Hours" />
+								<field name="actual_hours" sum="Total Actual Hours" />
+								<field name="planned_overtime_pay" optional="hide" sum="Total Planned Pay" />
+								<field name="actual_overtime_pay" optional="hide" sum="Total Actual Pay" />
+								<field name="company_id" groups="base.group_multi_company" />
+								<field name="currency_id" invisible="1" />
+								<field name="state" />
+								<field name="can_recognize" invisible="1" />
+								<button name="action_recognize_actual_overtime"
+									type="object" string="Recognize" class="btn-sm btn-secondary"
+									attrs="{'invisible':['|',('can_recognize','=',False),('state', 'in', ['cancel','refuse','done'])]}"
+									help="Automatically recognize actual overtime" />
+								<button name="action_refuse" type="object"
+									string="Refuse" class="btn-sm btn-secondary"
+									attrs="{'invisible':[('state','not in',['confirm','validate1','validate'])]}"
+									help="Refuse the overtime plan" />
+								<button name="action_cancel" type="object"
+									string="Cancel" class="btn-sm btn-secondary"
+									attrs="{'invisible':[('state','not in',['refuse','validate'])]}"
+									help="Refuse the overtime plan" />
+							</tree>
+						</field>
+					</page>
+				</xpath>
+			</field>
+		</record>
+
+
+	</data>
+</odoo>

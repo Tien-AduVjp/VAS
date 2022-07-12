@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="product_normal_form_view" model="ir.ui.view">
+			<field name="name">product.product.form</field>
+			<field name="model">product.product</field>
+			<field name="inherit_id" ref="product.product_normal_form_view" />
+			<field name="arch" type="xml">
+				<label for="volume" position="before">
+					<label for="length"
+						attrs="{'invisible':[('type', 'not in', ['product', 'consu'])]}" />
+					<div class="o_row" name="length"
+						attrs="{'invisible': [('type','not in',['consu','product'])]}">
+						<field name="length" digits="[14, 0]" />
+						<span>mm</span>
+					</div>
+
+					<label for="width"
+						attrs="{'invisible':[('type', 'not in', ['product', 'consu'])]}" />
+					<div class="o_row" name="width"
+						attrs="{'invisible': [('type','not in',['consu','product'])]}">
+						<field name="width" digits="[14, 0]" />
+						<span>mm</span>
+					</div>
+
+					<label for="height"
+						attrs="{'invisible':[('type', 'not in', ['product', 'consu'])]}" />
+					<div class="o_row" name="height"
+						attrs="{'invisible': [('type','not in',['consu','product'])]}">
+						<field name="height" digits="[14, 0]" />
+						<span>mm</span>
+					</div>
+
+					<field name="stowage_factor"
+						attrs="{'invisible': [('type','not in',['consu','product'])]}" />
+					<field name="concat_dimension_in_name"
+						attrs="{'invisible': [('type','not in',['consu','product'])]}" />
+				</label>
+
+				<xpath expr="//label[@for='volume']" position="attributes">
+					<attribute name="attrs">{'invisible':[('type', 'not in',['product', 'consu'])]}</attribute>
+				</xpath>
+
+				<xpath expr="//div[@name='volume']" position="attributes">
+					<attribute name="attrs">{'invisible':[('type', 'not in',['product', 'consu'])]}</attribute>
+				</xpath>
+
+				<xpath expr="//field[@name='volume']" position="attributes">
+					<attribute name="digits">[14, 3]</attribute>
+				</xpath>
+
+				<div name="volume" position="after">
+					<label for="stowage_volume"
+						attrs="{'invisible':[('type', 'not in', ['product', 'consu'])]}" />
+					<div class="o_row" name="stowage_volume"
+						attrs="{'invisible':[('type', 'not in', ['product', 'consu'])]}">
+						<field name="stowage_volume" digits="[14, 3]" />
+						<span>m³</span>
+					</div>
+				</div>
+			</field>
+		</record>
+
+		<!-- Inherit Product Product Easy View -->
+		<record id="product_variant_easy_edit_view" model="ir.ui.view">
+			<field name="name">product.product.view.form.easy</field>
+			<field name="model">product.product</field>
+			<field name="inherit_id"
+				ref="product.product_variant_easy_edit_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//group[@name='weight']" position="before">
+					<group name="dimensions" string="Dimensions">
+						<label for="length" attrs="{'invisible':[('type', 'not in', ['product', 'consu'])]}" />
+						<div class="o_row" name="length" attrs="{'invisible':[('type', 'not in', ['product', 'consu'])]}">
+							<field name="length" digits="[14, 0]" />
+							<span>mm</span>
+						</div>
+						
+						<label for="width" attrs="{'invisible':[('type', 'not in', ['product', 'consu'])]}" />
+						<div class="o_row" name="width" attrs="{'invisible':[('type', 'not in', ['product', 'consu'])]}">
+							<field name="width" digits="[14, 0]" />
+							<span>mm</span>
+						</div>
+						
+						<label for="height" attrs="{'invisible':[('type', 'not in', ['product', 'consu'])]}" />
+						<div class="o_row" name="height" attrs="{'invisible':[('type', 'not in', ['product', 'consu'])]}">
+							<field name="height" digits="[14, 0]" />
+							<span>mm</span>
+						</div>
+						<field name="stowage_factor" attrs="{'invisible':[('type', 'not in', ['product', 'consu'])]}" />
+						<field name="concat_dimension_in_name" attrs="{'invisible':[('type', 'not in', ['product', 'consu'])]}" />
+					</group>
+				</xpath>
+				<xpath expr="//label[@for='volume']" position="before">
+					<label for="stowage_volume" attrs="{'invisible':[('type', 'not in', ['product', 'consu'])]}" />
+					<div class="o_row" attrs="{'invisible':[('type', 'not in', ['product', 'consu'])]}">
+						<field digits="[14, 0]" name="stowage_volume" />
+						<span>m³</span>
+					</div>
+				</xpath>
+			</field>
+		</record>
+
+		<!-- Inherit Product Product Tree View -->
+		<record id="product_product_tree_view" model="ir.ui.view">
+			<field name="name">product.product.tree</field>
+			<field name="model">product.product</field>
+			<field name="inherit_id"
+				ref="product.product_product_tree_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='name']" position="after">
+					<field name="length" />
+					<field name="width" />
+					<field name="height" />
+				</xpath>
+			</field>
+		</record>
+
+	</data>
+</odoo>

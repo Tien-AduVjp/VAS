@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+	<data>
+		<record id="hr_job_form" model="ir.ui.view">
+			<field name="name">hr.job.inherit.form</field>
+			<field name="model">hr.job</field>
+			<field name="inherit_id" ref="to_hr_payroll.view_hr_job_form"/>
+			<field name="arch" type="xml">
+				<field name="currency_id" position="before">
+					<field name="payroll_timesheet_enabled"/>
+				</field>
+			</field>
+		</record>
+	</data>
+</odoo>

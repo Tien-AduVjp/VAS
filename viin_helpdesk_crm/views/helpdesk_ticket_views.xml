@@ -1,0 +1,14 @@
+<odoo>
+	<data>
+		<record id="helpdesk_ticket_form_view" model="ir.ui.view">
+			<field name="name">helpdesk.ticket.form</field>
+			<field name="model">helpdesk.ticket</field>
+			<field name="inherit_id" ref="viin_helpdesk.helpdesk_ticket_form_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='active']" position="after">
+					<field name="lead_id" groups='sales_team.group_sale_salesman_all_leads'/>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+		<template id="report_repair">
+			<t t-call="web.basic_layout">
+				<div class="page">
+					<table class="table table-bordered" >
+						<thead>
+							<tr>
+								<th name="sequence">#</th>
+								<th name="date">Date</th>
+								<th name="service">Service</th>
+								<th name="items">Items</th>
+								<th name="items">Code</th>
+								<th name="user">Responsible</th>
+								<th name="supervisor">Supervisor</th>
+								<th name="feedback">Customer's Feedback</th>
+								<th name="forecast">Forecast</th>
+								<th name="note">Note</th>
+							</tr>
+						</thead>
+						<tbody>
+							<t t-set="index" t-value="1" />
+							<t t-foreach="docs" t-as="repair">
+								<tr>
+									<td><span t-esc="index" /></td>
+									<td><span t-esc="repair.repair_date" /></td>
+									<td>
+										<t t-foreach="repair.fees_lines" t-as="service">
+											<span t-esc="service.product_id.name" /><br />
+										</t>										
+									</td>
+									<td>
+										<t t-foreach="repair.operations" t-as="operation">
+											<span t-esc="operation.product_id.name" /><br />
+										</t>										
+									</td>
+									<td>
+										<t t-foreach="repair.operations" t-as="operation">
+											<span t-esc="operation.product_id.default_code" /><br />
+										</t>	
+									</td>
+									<td><span t-esc="repair.user_id.name" /></td>
+									<td><span t-esc="repair.supervisor_id.name" /></td>
+									<td><t t-esc="repair.feedback" /></td>
+									<td><t t-esc="repair.forecast" /></td>
+									<td><t t-esc="repair.internal_notes" /></td>
+									<t t-set="index" t-value="index+1"/>
+								</tr>
+							</t>
+						</tbody>            
+                    </table>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>

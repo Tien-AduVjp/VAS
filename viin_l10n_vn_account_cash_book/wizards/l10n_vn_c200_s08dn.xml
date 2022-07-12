@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="viin_c200_s08dn_form" model="ir.ui.view">
+		<field name="name">C200 S08-DN Form</field>
+		<field name="model">wizard.l10n_vn.c200.s08dn</field>
+		<field name="inherit_id"
+			ref="account.account_common_report_view" />
+		<field name="arch" type="xml">
+			<data>
+				<xpath expr="//field[@name='target_move']" position="replace">
+				</xpath>
+				<xpath expr="//field[@name='journal_ids']"
+					position="attributes">
+					<attribute name="invisible">1</attribute>
+				</xpath>
+				<xpath expr="//field[@name='company_id']" position="attributes">
+					<attribute name="invisible">1</attribute>
+				</xpath>
+				<xpath expr="//field[@name='journal_ids']" position="before">
+					<field name="account_ids" widget="many2many_tags"
+						options="{'no_create': True}" />
+					<newline />
+				</xpath>
+				<xpath expr="//button[@name='check_report']"
+					position="attributes">
+					<attribute name="string">Print Pdf</attribute>
+				</xpath>
+				<xpath expr="//button[@name='check_report']" position="after">
+					<button name="check_report_excel" string="Print Excel"
+						type="object" class="oe_highlight" />
+				</xpath>
+			</data>
+		</field>
+	</record>
+
+	<record id="action_wizard_c200_s08dn"
+		model="ir.actions.act_window">
+		<field name="name">ACCOUNT BANK DEPOSIT BOOK (S08-DN)</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">wizard.l10n_vn.c200.s08dn</field>
+		<field name="view_mode">form</field>
+		<field name="view_id" ref="viin_c200_s08dn_form" />
+		<field name="target">new</field>
+	</record>
+	
+	<!-- Menu of Account Bank Deposit Book (S08-DN) -->
+	<menuitem parent="l10n_vn.account_reports_vn_statements_menu"
+		id="to_menu_account_bank_book" groups="account.group_account_user"
+		action="action_wizard_c200_s08dn" sequence="2"
+		name="Account Bank Deposit Book (S08-DN)" />
+</odoo>

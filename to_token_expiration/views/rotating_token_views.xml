@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="rotating_token_view_form" model="ir.ui.view">
+			<field name="name">rotating.token.view.form.inherit.token</field>
+			<field name="model">rotating.token</field>
+			<field name="arch" type="xml">
+				<form string="Rotating Tokens">
+					<sheet>
+						<group>
+							<group>
+								<field name="name" />
+								<field name="expiration" />
+							</group>
+							<group>
+								<field name="model" />
+								<field name="res_id" />
+								<field name="reference" widget="reference" string="Record"/>
+							</group>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record id="rotating_token_view_tree" model="ir.ui.view">
+			<field name="name">rotating.token.view.form.inherit.token</field>
+			<field name="model">rotating.token</field>
+			<field name="arch" type="xml">
+				<tree string="Rotating Tokens">
+					<field name="name" />
+					<field name="model" />
+					<field name="res_id" />
+					<field name="create_date" />
+					<field name="expiration" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="action_rotating_token"
+			model="ir.actions.act_window">
+			<field name="name">Rotating Token</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">rotating.token</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem action="action_rotating_token"
+			id="menu_rotating_token" name="Rotating Tokens"
+			parent="resource.menu_resource_config" sequence="10" />
+	</data>
+</odoo>

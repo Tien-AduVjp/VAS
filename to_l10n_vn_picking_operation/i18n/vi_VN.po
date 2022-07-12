@@ -1,0 +1,398 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_l10n_vn_picking_operation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-06 08:15+0000\n"
+"PO-Revision-Date: 2021-08-06 08:15+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_l10n_vn_picking_operation
+#: model_terms:ir.ui.view,arch_db:to_l10n_vn_picking_operation.report_picking_operation_template
+msgid "- Delivered by (Full Name):"
+msgstr "- Họ và tên người giao:"
+
+#. module: to_l10n_vn_picking_operation
+#: model_terms:ir.ui.view,arch_db:to_l10n_vn_picking_operation.report_picking_operation_template
+msgid "- Picked from:"
+msgstr "- Xuất tại kho (ngăn lô):"
+
+#. module: to_l10n_vn_picking_operation
+#: model_terms:ir.ui.view,arch_db:to_l10n_vn_picking_operation.report_picking_operation_template
+msgid "- Reason:"
+msgstr "- Lý do xuất kho:"
+
+#. module: to_l10n_vn_picking_operation
+#: model_terms:ir.ui.view,arch_db:to_l10n_vn_picking_operation.report_picking_operation_template
+msgid "- Received from:"
+msgstr "- Nhập tại kho:"
+
+#. module: to_l10n_vn_picking_operation
+#: model_terms:ir.ui.view,arch_db:to_l10n_vn_picking_operation.report_picking_operation_template
+msgid "- Receiver (Full Name):"
+msgstr "- Họ và tên người nhận hàng:"
+
+#. module: to_l10n_vn_picking_operation
+#: model_terms:ir.ui.view,arch_db:to_l10n_vn_picking_operation.report_picking_operation_template
+msgid "- Total Amount (in words):"
+msgstr "- Tổng số tiền (viết bằng chữ):"
+
+#. module: to_l10n_vn_picking_operation
+#: model_terms:ir.ui.view,arch_db:to_l10n_vn_picking_operation.report_picking_operation_template
+msgid ""
+".\n"
+"\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t- Attached Docs:"
+msgstr ""
+".\n"
+"\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t- Số chứng từ gốc kèm theo:"
+
+#. module: to_l10n_vn_picking_operation
+#: model_terms:ir.ui.view,arch_db:to_l10n_vn_picking_operation.report_picking_operation_template
+msgid ""
+"<br/>\n"
+"\t\t\t\t\t\t\t\tCredit:"
+msgstr ""
+"<br/>\n"
+"\t\t\t\t\t\t\t\tCó:"
+
+#. module: to_l10n_vn_picking_operation
+#: model_terms:ir.ui.view,arch_db:to_l10n_vn_picking_operation.report_picking_operation_template
+msgid ""
+"<br/>\n"
+"\t\t\t\t\t\t\t\tNumber:"
+msgstr ""
+"<br/>\n"
+"\t\t\t\t\t\t\t\tSố:"
+
+#. module: to_l10n_vn_picking_operation
+#: model_terms:ir.ui.view,arch_db:to_l10n_vn_picking_operation.picking_operation_external_layout
+msgid ""
+"<br/>\n"
+"\t\t\t\t\t\t<i>\n"
+"\t\t\t\t\t\t\t(Released Under the Circular No. 200/2014/TT-BTC\n"
+"\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\tDated 22/12/2014 by the Ministry of Finance)\n"
+"\t\t\t\t\t\t</i>"
+msgstr ""
+"<br/>\n"
+"\t\t\t\t\t\t<i>\n"
+"\t\t\t\t\t\t\t(Ban hành theo Thông tư Số 200/2014/TT-BTC\n"
+"\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\tNgày 22/12/2014 của Bộ Tài chính)\n"
+"\t\t\t\t\t\t</i>"
+
+#. module: to_l10n_vn_picking_operation
+#: model_terms:ir.ui.view,arch_db:to_l10n_vn_picking_operation.report_picking_operation_template
+msgid ""
+"<strong>Chief Accountant</strong>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<i>\n"
+"\t\t\t\t\t\t\t\t\t\t(Request by department)\n"
+"\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t(Signature, Full Name)\n"
+"\t\t\t\t\t\t\t\t\t</i>"
+msgstr ""
+"<strong>Kế toán trưởng</strong>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<i>\n"
+"\t\t\t\t\t\t\t\t\t\t(Hoặc bộ phận có nhu cầu nhập)\n"
+"\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t(Ký, họ tên)\n"
+"\t\t\t\t\t\t\t\t\t</i>"
+
+#. module: to_l10n_vn_picking_operation
+#: model_terms:ir.ui.view,arch_db:to_l10n_vn_picking_operation.report_picking_operation_template
+msgid ""
+"<strong>Chief Accountant</strong>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<i>(Signature, Full Name)</i>"
+msgstr ""
+"<strong>Kế toán trưởng</strong>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<i>(Ký, họ tên)</i>"
+
+#. module: to_l10n_vn_picking_operation
+#: model_terms:ir.ui.view,arch_db:to_l10n_vn_picking_operation.report_picking_operation_template
+msgid ""
+"<strong>Delivered By</strong>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<i>(Signature, Full Name)</i>"
+msgstr ""
+"<strong>Người giao hàng</strong>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<i>(Ký, họ tên)</i>"
+
+#. module: to_l10n_vn_picking_operation
+#: model_terms:ir.ui.view,arch_db:to_l10n_vn_picking_operation.report_picking_operation_template
+msgid ""
+"<strong>Director/CEO</strong>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<i>(Signature, Full Name)</i>"
+msgstr ""
+"<strong>Giám đốc</strong>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<i>(Ký, họ tên)</i>"
+
+#. module: to_l10n_vn_picking_operation
+#: model_terms:ir.ui.view,arch_db:to_l10n_vn_picking_operation.report_picking_operation_template
+msgid ""
+"<strong>Prepared By</strong>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<i>(Signature, Full Name)</i>"
+msgstr ""
+"<strong>Người lập phiếu</strong>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<i>(Ký, họ tên)</i>"
+
+#. module: to_l10n_vn_picking_operation
+#: model_terms:ir.ui.view,arch_db:to_l10n_vn_picking_operation.report_picking_operation_template
+msgid ""
+"<strong>Receiver</strong>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<i>(Signature, Full Name)</i>"
+msgstr ""
+"<strong>Người nhận hàng</strong>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<i>(Ký, họ tên)</i>"
+
+#. module: to_l10n_vn_picking_operation
+#: model_terms:ir.ui.view,arch_db:to_l10n_vn_picking_operation.report_picking_operation_template
+msgid ""
+"<strong>Stockkeeper</strong>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<i>(Signature, Full Name)</i>"
+msgstr ""
+"<strong>Thủ kho</strong>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<i>(Ký, họ tên)</i>"
+
+#. module: to_l10n_vn_picking_operation
+#: model_terms:ir.ui.view,arch_db:to_l10n_vn_picking_operation.report_picking_operation_template
+msgid "<strong>Total</strong>"
+msgstr "<strong>Cộng</strong>"
+
+#. module: to_l10n_vn_picking_operation
+#: code:addons/to_l10n_vn_picking_operation/models/stock_picking.py:0
+#: code:addons/to_l10n_vn_picking_operation/models/stock_picking.py:0
+#, python-format
+msgid "According to the %s"
+msgstr "Theo tài liệu %s"
+
+#. module: to_l10n_vn_picking_operation
+#: code:addons/to_l10n_vn_picking_operation/models/stock_picking.py:0
+#, python-format
+msgid "According to the purchase order %s, placed on Day %s Month %s Year %s"
+msgstr "Theo đơn mua %s, đặt hàng ngày %s tháng %s năm %s"
+
+#. module: to_l10n_vn_picking_operation
+#: code:addons/to_l10n_vn_picking_operation/models/stock_picking.py:0
+#, python-format
+msgid "According to the sales order %s, confirmed on Day %s Month %s Year %s"
+msgstr "Theo đơn bán %s, xác nhận ngày %s tháng %s năm %s"
+
+#. module: to_l10n_vn_picking_operation
+#: model_terms:ir.ui.view,arch_db:to_l10n_vn_picking_operation.report_picking_operation_template
+msgid "Address:"
+msgstr "Địa chỉ:"
+
+#. module: to_l10n_vn_picking_operation
+#: model:ir.model.fields,field_description:to_l10n_vn_picking_operation.field_stock_picking__attached_docs
+msgid "Attached Docs"
+msgstr "Số chứng từ gốc kèm theo"
+
+#. module: to_l10n_vn_picking_operation
+#: model_terms:ir.ui.view,arch_db:to_l10n_vn_picking_operation.report_picking_operation_template
+msgid "Barcode"
+msgstr "Mã vạch"
+
+#. module: to_l10n_vn_picking_operation
+#: model:ir.model.fields,field_description:to_l10n_vn_picking_operation.field_stock_picking__credit_code
+msgid "Credit Acc."
+msgstr "Tài khoản ghi có"
+
+#. module: to_l10n_vn_picking_operation
+#: model:ir.model.fields,field_description:to_l10n_vn_picking_operation.field_stock_picking__currency_id
+msgid "Currency"
+msgstr "Tiền tệ"
+
+#. module: to_l10n_vn_picking_operation
+#: model_terms:ir.ui.view,arch_db:to_l10n_vn_picking_operation.report_picking_operation_template
+msgid "DELIVERY ORDER"
+msgstr "PHIẾU XUẤT KHO"
+
+#. module: to_l10n_vn_picking_operation
+#: code:addons/to_l10n_vn_picking_operation/models/stock_picking.py:0
+#, python-format
+msgid "Day %s Month %s Year %s"
+msgstr "Ngày %s tháng %s năm %s"
+
+#. module: to_l10n_vn_picking_operation
+#: model:ir.model.fields,field_description:to_l10n_vn_picking_operation.field_stock_picking__debit_code
+msgid "Debit Acc."
+msgstr "Tài khoản ghi nợ"
+
+#. module: to_l10n_vn_picking_operation
+#: model_terms:ir.ui.view,arch_db:to_l10n_vn_picking_operation.report_picking_operation_template
+msgid "Debit:"
+msgstr "Nợ:"
+
+#. module: to_l10n_vn_picking_operation
+#: model_terms:ir.ui.view,arch_db:to_l10n_vn_picking_operation.report_picking_operation_template
+msgid "Default Code"
+msgstr "Mã hàng"
+
+#. module: to_l10n_vn_picking_operation
+#: model:ir.model.fields,field_description:to_l10n_vn_picking_operation.field_report_to_l10n_vn_picking_operation_report_picking_operation__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_l10n_vn_picking_operation
+#: model:ir.model.fields,field_description:to_l10n_vn_picking_operation.field_stock_picking__footer_date
+msgid "Footer Date"
+msgstr ""
+
+#. module: to_l10n_vn_picking_operation
+#: model_terms:ir.ui.view,arch_db:to_l10n_vn_picking_operation.report_picking_operation_template
+msgid "GOODS RECEIPT"
+msgstr "PHIẾU NHẬP KHO"
+
+#. module: to_l10n_vn_picking_operation
+#: model:ir.model.fields,field_description:to_l10n_vn_picking_operation.field_report_to_l10n_vn_picking_operation_report_picking_operation__id
+msgid "ID"
+msgstr ""
+
+#. module: to_l10n_vn_picking_operation
+#: model_terms:ir.ui.view,arch_db:to_l10n_vn_picking_operation.report_picking_operation_template
+msgid "Initial Demand"
+msgstr "Theo chứng từ"
+
+#. module: to_l10n_vn_picking_operation
+#: model:ir.model.fields,field_description:to_l10n_vn_picking_operation.field_report_to_l10n_vn_picking_operation_report_picking_operation____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_l10n_vn_picking_operation
+#: model_terms:ir.ui.view,arch_db:to_l10n_vn_picking_operation.report_picking_operation_template
+msgid "Location:"
+msgstr "Địa điểm:"
+
+#. module: to_l10n_vn_picking_operation
+#: model_terms:ir.ui.view,arch_db:to_l10n_vn_picking_operation.report_picking_operation_template
+msgid "No."
+msgstr "STT"
+
+#. module: to_l10n_vn_picking_operation
+#: model_terms:ir.ui.view,arch_db:to_l10n_vn_picking_operation.report_picking_operation_template
+msgid "Price Unit"
+msgstr "Đơn giá"
+
+#. module: to_l10n_vn_picking_operation
+#: model_terms:ir.ui.view,arch_db:to_l10n_vn_picking_operation.report_picking_operation_template
+msgid "Product"
+msgstr ""
+"Tên, nhãn hiệu, quy cách, phẩm chất vật tư, dụng cụ, sản phẩm, hàng hóa"
+
+#. module: to_l10n_vn_picking_operation
+#: model_terms:ir.ui.view,arch_db:to_l10n_vn_picking_operation.report_picking_operation_template
+msgid "Q'ty Done"
+msgstr "Thực xuất"
+
+#. module: to_l10n_vn_picking_operation
+#: model_terms:ir.ui.view,arch_db:to_l10n_vn_picking_operation.report_picking_operation_template
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: to_l10n_vn_picking_operation
+#: model_terms:ir.ui.view,arch_db:to_l10n_vn_picking_operation.report_picking_operation_template
+msgid "Quantity Done"
+msgstr "Thực nhập"
+
+#. module: to_l10n_vn_picking_operation
+#: model:ir.model.fields,field_description:to_l10n_vn_picking_operation.field_stock_picking__reason
+msgid "Reason"
+msgstr "Lý do"
+
+#. module: to_l10n_vn_picking_operation
+#: model:ir.model.fields,help:to_l10n_vn_picking_operation.field_stock_picking__attached_docs
+msgid ""
+"Reference of Source/Related documents, if any, that are attached to this "
+"documents for printing purpose."
+msgstr ""
+"Tài liệu nguồn tham chiếu về Nguồn / Tài liệu liên quan, nếu có, nó được "
+"đính kèm với tài liệu này cho mục đích in."
+
+#. module: to_l10n_vn_picking_operation
+#: model_terms:ir.ui.view,arch_db:to_l10n_vn_picking_operation.report_picking_operation_template
+msgid "Request"
+msgstr "Yêu cầu"
+
+#. module: to_l10n_vn_picking_operation
+#: model_terms:ir.ui.view,arch_db:to_l10n_vn_picking_operation.report_picking_operation_template
+msgid "Subtotal"
+msgstr "Thành tiền"
+
+#. module: to_l10n_vn_picking_operation
+#: model:ir.model.fields,help:to_l10n_vn_picking_operation.field_stock_picking__reason
+msgid "Technical field that will be printed on pricking operation sheets"
+msgstr "Trường kĩ thuật dùng sẽ dùng để in trên phiếu xuất nhập kho"
+
+#. module: to_l10n_vn_picking_operation
+#: model_terms:ir.ui.view,arch_db:to_l10n_vn_picking_operation.picking_operation_external_layout
+msgid "Template 01-VT"
+msgstr "Mẫu số 01 - VT"
+
+#. module: to_l10n_vn_picking_operation
+#: model_terms:ir.ui.view,arch_db:to_l10n_vn_picking_operation.picking_operation_external_layout
+msgid "Template 02-VT"
+msgstr "Mẫu số 02 - VT"
+
+#. module: to_l10n_vn_picking_operation
+#: model:ir.model.fields,field_description:to_l10n_vn_picking_operation.field_stock_picking__total_amount_untaxed
+msgid "Total Amount Untaxed"
+msgstr "Tổng tiền"
+
+#. module: to_l10n_vn_picking_operation
+#: model:ir.model.fields,field_description:to_l10n_vn_picking_operation.field_stock_picking__total_amount_untaxed_in_words
+msgid "Total Amount Untaxed In Words"
+msgstr "Tổng số tiền bằng chữ"
+
+#. module: to_l10n_vn_picking_operation
+#: model:ir.model,name:to_l10n_vn_picking_operation.model_stock_picking
+msgid "Transfer"
+msgstr "Dịch chuyển"
+
+#. module: to_l10n_vn_picking_operation
+#: model_terms:ir.ui.view,arch_db:to_l10n_vn_picking_operation.report_picking_operation_template
+msgid "Unit of Measure"
+msgstr "Đơn vị tính"
+
+#. module: to_l10n_vn_picking_operation
+#: model:ir.model.fields,help:to_l10n_vn_picking_operation.field_stock_picking__total_amount_untaxed
+msgid "Use to print PDF Picking Operation"
+msgstr "Dùng để In phiếu Xuất, Nhập kho"
+
+#. module: to_l10n_vn_picking_operation
+#: model:ir.model.fields,help:to_l10n_vn_picking_operation.field_stock_picking__total_amount_untaxed_in_words
+msgid "Use to show Total Amount by Words when print PDF Picking Operation"
+msgstr "Dùng để hiển thị Tổng số tiền bằng chữ khi In phiếu Xuất, Nhập kho"
+
+#. module: to_l10n_vn_picking_operation
+#: model:ir.model,name:to_l10n_vn_picking_operation.model_report_to_l10n_vn_picking_operation_report_picking_operation
+msgid "Vietnam Report Picking Operation"
+msgstr ""
+
+#. module: to_l10n_vn_picking_operation
+#: model_terms:ir.ui.view,arch_db:to_l10n_vn_picking_operation.report_picking_operation_template
+msgid "of"
+msgstr "của"
+

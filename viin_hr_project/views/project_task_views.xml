@@ -1,0 +1,45 @@
+<odoo>
+	<record id="view_task_form2" model="ir.ui.view">
+		<field name="name">project.task.form</field>
+		<field name="model">project.task</field>
+		<field name="inherit_id" ref="hr_timesheet.view_task_form2_inherited"/>
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='user_id']" position="after">
+				<field name="employee_ids" attrs="{'invisible':[('timesheet_ids','=',[])]}" widget="many2many_tags"/>	
+				<field name="associated_department_ids" widget="many2many_tags"/>		
+			</xpath>
+		</field>
+	</record>
+
+	<record id="view_task_tree2" model="ir.ui.view">
+			<field name="name">project.task.tree</field>
+            <field name="model">project.task</field>
+			<field name="inherit_id" ref="project.view_task_tree2"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='user_id']" position="after">
+					<field name="department_id" string="Lead Department"/>
+				</xpath>
+			</field>
+
+	</record>
+
+	<record id="view_task_search_form" model="ir.ui.view">
+		<field name="name">project.task.search.form</field>
+		<field name="model">project.task</field>
+		<field name="inherit_id" ref="project.view_task_search_form"/>
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='user_id']" position="after">	
+				<field name="department_id" string="Department"/>	
+				<field name="employee_ids"/>
+				<field name="associated_department_ids"/>							
+			</xpath>	
+			<xpath expr="//filter[@name='unassigned']" position="after">	
+				<separator name="department_subordinate_separator" />							
+			</xpath>				
+			<xpath expr="//group//filter[@name='user']" position="after">
+				<filter string="Department" name="grp_department" context="{'group_by': 'department_id'}"/>
+				<filter string="Employee" name="grp_employee" context="{'group_by':'assign_employee_id'}"/>
+			</xpath>
+		</field>
+	</record>
+</odoo>

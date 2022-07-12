@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="user_navbar" inherit_id="website.user_navbar">
+        <xpath expr="//ul['id=oe_applications']" position="replace">
+            <a href="#" class="fa fa-th o_menu_toggle" title="Go to Backoffice" aria-label="Go to Backoffice"/>
+        </xpath>
+        <xpath expr="//ul[hasclass('o_menu_sections')]" position="before">
+            <a class="o_menu_brand" role="button">Website</a>
+        </xpath>
+    </template>
+</odoo>

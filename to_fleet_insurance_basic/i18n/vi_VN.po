@@ -1,0 +1,599 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_fleet_insurance_basic
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-26 04:10+0000\n"
+"PO-Revision-Date: 2020-02-26 04:10+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_fleet_insurance_basic
+#: model:mail.template,body_html:to_fleet_insurance_basic.email_template_fleet_vehicle_insurance_expiry_warning
+msgid ""
+"\n"
+"<div style=\"font-family: 'Lucida Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n"
+"\n"
+"    <p>Hello ${object.vehicle_id.driver_id.name or ''},</p>\n"
+"    \n"
+"    <p>This is to notify that the ${object.display_name} will be expired on: ${object.date_end}. </p>\n"
+"    \n"
+"    <p>Best Regard,</p>\n"
+"\n"
+"</div>\n"
+"            "
+msgstr ""
+"\n"
+"<div style=\"font-family: 'Lucida Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n"
+"\n"
+"    <p>Dear ${object.vehicle_id.driver_id.name or ''},</p>\n"
+"    \n"
+"    <p>Thông điệp này để thông báo rằng ${object.display_name} sẽ hết hạn vào: ${object.date_end}. </p>\n"
+"    \n"
+"    <p>Trân trọng,</p>\n"
+"\n"
+"</div>\n"
+"            "
+
+#. module: to_fleet_insurance_basic
+#: code:addons/to_fleet_insurance_basic/models/fleet_vehicle_insurance.py:0
+#, python-format
+msgid ""
+"%(insurance_type)s [%(insurance_ref)s] for %(vehicle_name)s from "
+"%(date_start)s to %(date_end)s"
+msgstr ""
+"%(insurance_type)s [%(insurance_ref)s] cho %(vehicle_name)s từ "
+"%(date_start)s đến %(date_end)s"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_abstract_fleet_insurance__message_needaction
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_insurance_type__message_needaction
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_vehicle_insurance__message_needaction
+msgid "Action Needed"
+msgstr "Cần có Hành động"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_abstract_fleet_insurance__activity_ids
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_vehicle_insurance__activity_ids
+msgid "Activities"
+msgstr "Các hoạt động"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_abstract_fleet_insurance__activity_exception_decoration
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_vehicle_insurance__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Hành động Ngoại lệ"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_abstract_fleet_insurance__activity_state
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_vehicle_insurance__activity_state
+msgid "Activity State"
+msgstr "Trạng thái Hoạt động"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_abstract_fleet_insurance__message_attachment_count
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_insurance_type__message_attachment_count
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_vehicle_insurance__message_attachment_count
+msgid "Attachment Count"
+msgstr "Số lượng đính kèm"
+
+#. module: to_fleet_insurance_basic
+#: model_terms:ir.ui.view,arch_db:to_fleet_insurance_basic.fleet_vehicle_insurance_form_view
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields.selection,name:to_fleet_insurance_basic.selection__abstract_fleet_insurance__state__cancelled
+#: model:ir.model.fields.selection,name:to_fleet_insurance_basic.selection__fleet_vehicle_insurance__state__cancelled
+#: model_terms:ir.ui.view,arch_db:to_fleet_insurance_basic.fleet_vehicle_insurance_search_view
+msgid "Cancelled"
+msgstr "Bị Huỷ"
+
+#. module: to_fleet_insurance_basic
+#: model_terms:ir.ui.view,arch_db:to_fleet_insurance_basic.fleet_vehicle_insurance_form_view
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields.selection,name:to_fleet_insurance_basic.selection__abstract_fleet_insurance__state__confirmed
+#: model:ir.model.fields.selection,name:to_fleet_insurance_basic.selection__fleet_vehicle_insurance__state__confirmed
+#: model_terms:ir.ui.view,arch_db:to_fleet_insurance_basic.fleet_vehicle_insurance_search_view
+msgid "Confirmed"
+msgstr "Đã xác nhận"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_insurance_type__create_uid
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_vehicle_insurance__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_insurance_type__create_date
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_vehicle_insurance__create_date
+msgid "Created on"
+msgstr "Được tạo vào"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_abstract_fleet_insurance__days_to_notify
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_vehicle_insurance__days_to_notify
+msgid "Days to Notify"
+msgstr "Số ngày báo trước"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.constraint,message:to_fleet_insurance_basic.constraint_abstract_fleet_insurance_positive_days_to_notify_check
+#: model:ir.model.constraint,message:to_fleet_insurance_basic.constraint_fleet_insurance_type_positive_days_to_notify_check
+#: model:ir.model.constraint,message:to_fleet_insurance_basic.constraint_fleet_vehicle_insurance_positive_days_to_notify_check
+msgid "Days to Notify must be greater than or equal to zero!"
+msgstr "Số Ngày để Thông báo phải lớn hơn bằng bằng không (0)!"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_insurance_type__days_to_notify
+msgid "Days to notify"
+msgstr "Số Ngày để Thông báo"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_abstract_fleet_insurance__display_name
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_insurance_type__display_name
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_vehicle_insurance__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields.selection,name:to_fleet_insurance_basic.selection__abstract_fleet_insurance__state__draft
+#: model:ir.model.fields.selection,name:to_fleet_insurance_basic.selection__fleet_vehicle_insurance__state__draft
+#: model_terms:ir.ui.view,arch_db:to_fleet_insurance_basic.fleet_vehicle_insurance_search_view
+msgid "Draft"
+msgstr "Dự thảo"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields.selection,name:to_fleet_insurance_basic.selection__abstract_fleet_insurance__state__expired
+#: model:ir.model.fields.selection,name:to_fleet_insurance_basic.selection__fleet_vehicle_insurance__state__expired
+#: model_terms:ir.ui.view,arch_db:to_fleet_insurance_basic.fleet_vehicle_insurance_search_view
+msgid "Expired"
+msgstr "Đã hết hạn"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_abstract_fleet_insurance__date_end
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_vehicle_insurance__date_end
+msgid "Expiry"
+msgstr "Hết hạn"
+
+#. module: to_fleet_insurance_basic
+#: model_terms:ir.ui.view,arch_db:to_fleet_insurance_basic.fleet_vehicle_insurance_search_view
+msgid "Expiry Date"
+msgstr "Hết hạn"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.ui.menu,name:to_fleet_insurance_basic.fleet_insurance_menu_root
+msgid "Fleet Insurance"
+msgstr "Bảo hiểm Phương tiện"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model,name:to_fleet_insurance_basic.model_fleet_insurance_type
+msgid "Fleet Insurance Type"
+msgstr "Loại Bảo hiểm"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.actions.act_window,name:to_fleet_insurance_basic.action_fleet_vehicle_insurance
+#: model:ir.model,name:to_fleet_insurance_basic.model_fleet_vehicle_insurance
+msgid "Fleet Vehicle Insurance"
+msgstr "Bảo hiểm Phương tiện"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.actions.server,name:to_fleet_insurance_basic.ir_cron_send_expire_notice_ir_actions_server
+#: model:ir.cron,cron_name:to_fleet_insurance_basic.ir_cron_send_expire_notice
+#: model:ir.cron,name:to_fleet_insurance_basic.ir_cron_send_expire_notice
+msgid "Fleet Vehicle Insurance - Expiry Notification"
+msgstr "Bảo hiểm Phương tiện - Thông báo hết hạn"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.actions.server,name:to_fleet_insurance_basic.ir_cron_find_to_set_expire_ir_actions_server
+#: model:ir.cron,cron_name:to_fleet_insurance_basic.ir_cron_find_to_set_expire
+#: model:ir.cron,name:to_fleet_insurance_basic.ir_cron_find_to_set_expire
+msgid "Fleet Vehicle Insurance - Set Expiry"
+msgstr "Bảo hiểm Phương tiện - Đặt về Hết hạn"
+
+#. module: to_fleet_insurance_basic
+#: model:mail.template,subject:to_fleet_insurance_basic.email_template_fleet_vehicle_insurance_expiry_warning
+msgid ""
+"Fleet Vehicle Insurance is about to get expired (Ref ${object.display_name})"
+msgstr "Bảo hiểm Phương tiện chuẩn bị hết hạn (Ref ${object.display_name})"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_abstract_fleet_insurance__message_follower_ids
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_insurance_type__message_follower_ids
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_vehicle_insurance__message_follower_ids
+msgid "Followers"
+msgstr "Theo dõi"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_abstract_fleet_insurance__message_channel_ids
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_insurance_type__message_channel_ids
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_vehicle_insurance__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Người theo dõi (Các kênh)"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_abstract_fleet_insurance__message_partner_ids
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_insurance_type__message_partner_ids
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_vehicle_insurance__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Người theo dõi (Các đối tác)"
+
+#. module: to_fleet_insurance_basic
+#: model_terms:ir.ui.view,arch_db:to_fleet_insurance_basic.fleet_vehicle_insurance_search_view
+msgid "Group By..."
+msgstr "Nhóm theo..."
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_abstract_fleet_insurance__id
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_insurance_type__id
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_vehicle_insurance__id
+msgid "ID"
+msgstr ""
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_abstract_fleet_insurance__activity_exception_icon
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_vehicle_insurance__activity_exception_icon
+msgid "Icon"
+msgstr "Biểu tượng"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,help:to_fleet_insurance_basic.field_abstract_fleet_insurance__activity_exception_icon
+#: model:ir.model.fields,help:to_fleet_insurance_basic.field_fleet_vehicle_insurance__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Biểu tượng để chỉ ra một hành động ngoại lệ"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,help:to_fleet_insurance_basic.field_abstract_fleet_insurance__message_needaction
+#: model:ir.model.fields,help:to_fleet_insurance_basic.field_abstract_fleet_insurance__message_unread
+#: model:ir.model.fields,help:to_fleet_insurance_basic.field_fleet_insurance_type__message_needaction
+#: model:ir.model.fields,help:to_fleet_insurance_basic.field_fleet_insurance_type__message_unread
+#: model:ir.model.fields,help:to_fleet_insurance_basic.field_fleet_vehicle_insurance__message_needaction
+#: model:ir.model.fields,help:to_fleet_insurance_basic.field_fleet_vehicle_insurance__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Nếu đánh dấu chọn, các thông điệp mới yêu cầu sự có mặt của bạn."
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,help:to_fleet_insurance_basic.field_abstract_fleet_insurance__message_has_error
+#: model:ir.model.fields,help:to_fleet_insurance_basic.field_abstract_fleet_insurance__message_has_sms_error
+#: model:ir.model.fields,help:to_fleet_insurance_basic.field_fleet_insurance_type__message_has_error
+#: model:ir.model.fields,help:to_fleet_insurance_basic.field_fleet_insurance_type__message_has_sms_error
+#: model:ir.model.fields,help:to_fleet_insurance_basic.field_fleet_vehicle_insurance__message_has_error
+#: model:ir.model.fields,help:to_fleet_insurance_basic.field_fleet_vehicle_insurance__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Nếu được đánh dấu, thông điệp có lỗi về gửi tin."
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_insurance_type__period
+msgid "Insurance Period"
+msgstr "Thời hạn Bảo hiểm"
+
+#. module: to_fleet_insurance_basic
+#: model_terms:ir.ui.view,arch_db:to_fleet_insurance_basic.fleet_insurance_type_form_view
+#: model_terms:ir.ui.view,arch_db:to_fleet_insurance_basic.fleet_insurance_type_tree_view
+msgid "Insurance Type"
+msgstr "Loại Bảo hiểm"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.actions.act_window,name:to_fleet_insurance_basic.action_fleet_insurance_type
+#: model:ir.ui.menu,name:to_fleet_insurance_basic.fleet_insurance_type_menu
+msgid "Insurance Types"
+msgstr "Loại Bảo hiểm"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_vehicle__insurance_ids
+#: model_terms:ir.ui.view,arch_db:to_fleet_insurance_basic.fleet_vehicle_view_form
+msgid "Insurances"
+msgstr "Bảo hiểm"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_vehicle__current_insurance_ids
+msgid "Current Insurances"
+msgstr "Bảo hiểm Hiện hành"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_vehicle__current_insurances_count
+msgid "Current Insurances Count"
+msgstr "SL Bảo hiểm Hiện hành"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_abstract_fleet_insurance__message_is_follower
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_insurance_type__message_is_follower
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_vehicle_insurance__message_is_follower
+msgid "Is Follower"
+msgstr "Là người theo dõi"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_abstract_fleet_insurance____last_update
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_insurance_type____last_update
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_vehicle_insurance____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_insurance_type__write_uid
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_vehicle_insurance__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_insurance_type__write_date
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_vehicle_insurance__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,help:to_fleet_insurance_basic.field_fleet_insurance_type__vehicle_insurance_ids
+msgid "List of vehicle insurances of this type"
+msgstr "Danh mục các bảo hiểm phương tiện của kiểu này"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_abstract_fleet_insurance__message_main_attachment_id
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_insurance_type__message_main_attachment_id
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_vehicle_insurance__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Đính kèm chính"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_abstract_fleet_insurance__message_has_error
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_insurance_type__message_has_error
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_vehicle_insurance__message_has_error
+msgid "Message Delivery error"
+msgstr "Có Lỗi Gửi Thông điệp"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_abstract_fleet_insurance__message_ids
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_insurance_type__message_ids
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_vehicle_insurance__message_ids
+msgid "Messages"
+msgstr "Thông điệp"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_abstract_fleet_insurance__activity_date_deadline
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_vehicle_insurance__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Hạn chót lần hành động kế tiếp"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_abstract_fleet_insurance__activity_summary
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_vehicle_insurance__activity_summary
+msgid "Next Activity Summary"
+msgstr "Tóm tắt hoạt động tiếp theo"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_abstract_fleet_insurance__activity_type_id
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_vehicle_insurance__activity_type_id
+msgid "Next Activity Type"
+msgstr "Kiểu hành động kế tiếp"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_abstract_fleet_insurance__message_needaction_counter
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_insurance_type__message_needaction_counter
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_vehicle_insurance__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Số lượng Hành động"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,help:to_fleet_insurance_basic.field_fleet_insurance_type__days_to_notify
+msgid ""
+"Number of days prior to the expiry to notify the insurance's followers."
+msgstr "Số ngày trước ngày hết hạn để gửi thông báo đến những người theo dõi."
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_abstract_fleet_insurance__message_has_error_counter
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_insurance_type__message_has_error_counter
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_vehicle_insurance__message_has_error_counter
+msgid "Number of errors"
+msgstr "Số lượng lỗi"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,help:to_fleet_insurance_basic.field_abstract_fleet_insurance__message_needaction_counter
+#: model:ir.model.fields,help:to_fleet_insurance_basic.field_fleet_insurance_type__message_needaction_counter
+#: model:ir.model.fields,help:to_fleet_insurance_basic.field_fleet_vehicle_insurance__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Số thông điệp cần có hành động"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,help:to_fleet_insurance_basic.field_abstract_fleet_insurance__message_has_error_counter
+#: model:ir.model.fields,help:to_fleet_insurance_basic.field_fleet_insurance_type__message_has_error_counter
+#: model:ir.model.fields,help:to_fleet_insurance_basic.field_fleet_vehicle_insurance__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Số lượng các thông điệp có lỗi về gửi tin"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,help:to_fleet_insurance_basic.field_abstract_fleet_insurance__message_unread_counter
+#: model:ir.model.fields,help:to_fleet_insurance_basic.field_fleet_insurance_type__message_unread_counter
+#: model:ir.model.fields,help:to_fleet_insurance_basic.field_fleet_vehicle_insurance__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Số thông điệp chưa đọc"
+
+#. module: to_fleet_insurance_basic
+#: model:fleet.insurance.type,name:to_fleet_insurance_basic.fleet_physical_damage_insurance
+msgid "Physical Damage Insurance"
+msgstr "Bảo hiểm Vật chất"
+
+#. module: to_fleet_insurance_basic
+#: model:fleet.insurance.type,name:to_fleet_insurance_basic.fleet_public_liability_insurance
+msgid "Public Liability Insurance"
+msgstr "Bảo hiểm TNDS Chủ xe"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_abstract_fleet_insurance__name
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_vehicle_insurance__name
+msgid "Reference"
+msgstr "Tham chiếu"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_abstract_fleet_insurance__activity_user_id
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_vehicle_insurance__activity_user_id
+msgid "Responsible User"
+msgstr "Người chịu trách nhiệm"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_abstract_fleet_insurance__message_has_sms_error
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_insurance_type__message_has_sms_error
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_vehicle_insurance__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "SMS gửi đi gặp lỗi"
+
+#. module: to_fleet_insurance_basic
+#: model_terms:ir.ui.view,arch_db:to_fleet_insurance_basic.fleet_vehicle_insurance_search_view
+msgid "Search Vehicle Insurance"
+msgstr "Tìm Bảo hiểm Phương tiện"
+
+#. module: to_fleet_insurance_basic
+#: model_terms:ir.ui.view,arch_db:to_fleet_insurance_basic.fleet_vehicle_insurance_form_view
+msgid "Set to Draft"
+msgstr "Đặt về dự thảo"
+
+#. module: to_fleet_insurance_basic
+#: model_terms:ir.ui.view,arch_db:to_fleet_insurance_basic.fleet_vehicle_insurance_form_view
+msgid "Set to Expired"
+msgstr "Hết hạn"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model,name:to_fleet_insurance_basic.model_abstract_fleet_insurance
+msgid "Share business Logics between Fleet Insurance models"
+msgstr ""
+"Chia sẻ logics nghiệp vụ giữa các model liên quan đến bảo hiểm phương tiện"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_abstract_fleet_insurance__date_start
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_vehicle_insurance__date_start
+msgid "Start Date"
+msgstr "Ngày bắt đầu"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_abstract_fleet_insurance__state
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_vehicle_insurance__state
+msgid "Status"
+msgstr "Tình trạng"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,help:to_fleet_insurance_basic.field_abstract_fleet_insurance__activity_state
+#: model:ir.model.fields,help:to_fleet_insurance_basic.field_fleet_vehicle_insurance__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Trạng thái dựa trên hoạt động\n"
+"Quá hạn: Ngày đến hạn đã trôi qua\n"
+"Hôm nay: Hôm nay là ngày phải thực hiện\n"
+"Đã hoạch định: Các hoạt động trong tương lai."
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,help:to_fleet_insurance_basic.field_abstract_fleet_insurance__date_end
+#: model:ir.model.fields,help:to_fleet_insurance_basic.field_fleet_vehicle_insurance__date_end
+msgid "The date on which the insurance gets expired"
+msgstr "Ngày mà bảo hiểm hết hạn"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,help:to_fleet_insurance_basic.field_abstract_fleet_insurance__date_start
+#: model:ir.model.fields,help:to_fleet_insurance_basic.field_fleet_vehicle_insurance__date_start
+msgid "The date on which the insurance starts"
+msgstr "Ngày mà bảo hiểm có hiệu lực"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,help:to_fleet_insurance_basic.field_fleet_insurance_type__period
+msgid "The default period in months for the insurance of this type"
+msgstr "Thời hạn bảo hiểm mặc định (tính theo tháng) của loại bảo hiểm này"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,help:to_fleet_insurance_basic.field_abstract_fleet_insurance__days_to_notify
+#: model:ir.model.fields,help:to_fleet_insurance_basic.field_fleet_vehicle_insurance__days_to_notify
+msgid ""
+"The number of days prior to the expiry date on which a notification will be "
+"posted to the followers of this documents. Input zero to disable "
+"notification."
+msgstr ""
+"Số ngày trước ngày hết hạn mà tại đó một thông báo sẽ được gửi đến những "
+"người theo dõi tài liệu này. Nhập số không (0) để vô hiệu thông báo cho tài "
+"liệu này."
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,help:to_fleet_insurance_basic.field_fleet_vehicle_insurance__vehicle_id
+msgid "The vehicle for which this insurance is applied"
+msgstr "Phương tiện mà bảo hiểm này được áp dụng"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,help:to_fleet_insurance_basic.field_fleet_insurance_type__vehicle_ids
+msgid "The vehicles that currently have active_insurances of this type"
+msgstr "Các phương tiện mà hiện đang có bảo hiểm loại này còn hiệu lực"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_insurance_type__name
+msgid "Title"
+msgstr "Danh xưng"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_abstract_fleet_insurance__fleet_insurance_type_id
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_vehicle_insurance__fleet_insurance_type_id
+#: model_terms:ir.ui.view,arch_db:to_fleet_insurance_basic.fleet_vehicle_insurance_search_view
+msgid "Type"
+msgstr "Kiểu"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,help:to_fleet_insurance_basic.field_abstract_fleet_insurance__activity_exception_decoration
+#: model:ir.model.fields,help:to_fleet_insurance_basic.field_fleet_vehicle_insurance__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Kiểu của hành động ngoại lệ trên bản ghi."
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_abstract_fleet_insurance__message_unread
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_insurance_type__message_unread
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_vehicle_insurance__message_unread
+msgid "Unread Messages"
+msgstr "Thông điệp chưa đọc"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_abstract_fleet_insurance__message_unread_counter
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_insurance_type__message_unread_counter
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_vehicle_insurance__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Bộ đếm Thông điệp chưa đọc"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model,name:to_fleet_insurance_basic.model_fleet_vehicle
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_vehicle_insurance__vehicle_id
+#: model_terms:ir.ui.view,arch_db:to_fleet_insurance_basic.fleet_vehicle_insurance_search_view
+msgid "Vehicle"
+msgstr "Phương tiện"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_insurance_type__vehicle_insurance_ids
+#: model:ir.ui.menu,name:to_fleet_insurance_basic.fleet_vehicle_insurance_menu
+#: model_terms:ir.ui.view,arch_db:to_fleet_insurance_basic.fleet_vehicle_insurance_form_view
+#: model_terms:ir.ui.view,arch_db:to_fleet_insurance_basic.fleet_vehicle_insurance_tree_view
+msgid "Vehicle Insurance"
+msgstr "Bảo hiểm Phương tiện"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_insurance_type__vehicle_ids
+msgid "Vehicles"
+msgstr "Phương tiện"
+
+#. module: to_fleet_insurance_basic
+#: model:ir.model.fields,field_description:to_fleet_insurance_basic.field_fleet_insurance_type__vehicles_count
+msgid "Vehicles Count"
+msgstr "SL Phương tiện"
+
+#. module: to_fleet_insurance_basic
+#: code:addons/to_fleet_insurance_basic/models/abstract_fleet_insurance.py:0
+#, python-format
+msgid "You cannot delete an insurance that is not in draft state!"
+msgstr "Bạn không thể xoá bảo hiểm mà không ở trạng thái dự thảo!"
+
+#. module: to_fleet_insurance_basic
+#: model_terms:ir.ui.view,arch_db:to_fleet_insurance_basic.fleet_vehicle_view_form
+msgid "show the active insurances of this vehicle"
+msgstr "hiển thị các bảo hiểm còn hiệu lực của phương tiện này"

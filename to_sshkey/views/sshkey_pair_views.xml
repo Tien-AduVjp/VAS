@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="sshkey_pair_form_view">
+			<field name="name">sshkey.pair.form</field>
+			<field name="model">sshkey.pair</field>
+			<field name="arch" type="xml">
+				<form string="SSH Key Pair Form">
+					<sheet>
+						<div class="oe_button_box" name="button_box" />
+						<group col="2">
+							<group>
+								<field name="privkey_bin" filename="privkey_filename" />
+								<field name="privkey_filename" invisible="1" />
+								<field name="privkey_passphrare" password="True" />
+								<field name="pubkey_bin" filename="pubkey_filename" />
+								<field name="pubkey_filename" invisible="1" />
+								<field name="name" />
+							</group>
+							<group>
+								<field name="type" />
+								<field name="pubkey_fingerprint"
+									attrs="{'invisible': [('pubkey_fingerprint','=',False)]}"
+									readonly="1" />
+								<field name="description" />
+								<field name="user_id" invisible="1" />
+								<field name="company_id" groups="base.group_multi_company" />
+							</group>
+						</group>
+						<notebook>
+						</notebook>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id='sshkey_pair_search_view'>
+			<field name="name">sshkey.pair.search</field>
+			<field name="model">sshkey.pair</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" />
+					<field name="type" />
+					<group string="Group By">
+						<filter name="type" string="Type"
+							context="{'group_by': 'type'}" />
+					</group>
+				</search>
+			</field>
+		</record>
+
+
+		<record model="ir.ui.view" id="sshkey_pair_tree_view">
+			<field name="name">sshkey.pair.tree</field>
+			<field name="model">sshkey.pair</field>
+			<field name="arch" type="xml">
+				<tree string="sshkeys Tree">
+					<field name="name" />
+					<field name="type" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="sshkey_pair_action">
+			<field name="name">SSH Key Pairs</field>
+			<field name="res_model">sshkey.pair</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+	</data>
+</odoo>
+
+
+
+		

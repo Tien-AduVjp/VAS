@@ -1,0 +1,10 @@
+<odoo>
+    <template id="assets_backend" inherit_id="web.assets_backend">
+        <xpath expr="script[last()]" position="after">
+            <script type="text/javascript" src="/viin_mobile/static/src/js/thread_window.js"></script>
+        </xpath>
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" type="text/scss" href="/viin_mobile/static/src/scss/thread_window_mobile.scss" />
+        </xpath>
+    </template>
+</odoo>

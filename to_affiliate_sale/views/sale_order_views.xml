@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+
+		<record id="view_order_form" model="ir.ui.view">
+			<field name="name">sale.order.form</field>
+			<field name="model">sale.order</field>
+			<field name="inherit_id" ref="sale.view_order_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//div[@name='button_box']" position="inside">
+					<button name="action_view_commission" type="object"
+						class="oe_stat_button" icon="fa-money"
+						groups="to_affiliate.group_to_affiliate_user"
+						attrs="{'invisible': [('commission_ids_count', '=', 0)]}">
+						<field name="commission_ids_count" widget="statinfo"
+							string="Commission" />
+					</button>
+				</xpath>
+				<field name="payment_term_id" position="after">
+					<field name="affcode_id" options="{'no_create': True}"
+						groups="to_affiliate.group_to_affiliate_user" />
+				</field>
+			</field>
+		</record>
+
+	</data>
+</odoo>

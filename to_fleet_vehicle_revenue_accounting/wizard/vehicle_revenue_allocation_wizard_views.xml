@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="view_vehicle_revenue_allocation_wizard" model="ir.ui.view">
+		<field name="name">Vehicle Revenue Allocation Wizard</field>
+		<field name="model">vehicle.revenue.allocation.wizard</field>
+		<field name="arch" type="xml">
+			<form string="Vehicle Revenue Allocation Wizard">
+				<group>
+					<field name="vehicle_ids" widget="many2many_tags" />
+				</group>
+				<separator string="Invoice Lines" />
+				<field name="invoice_line_ids">
+					<tree name="invoice_line_ids">
+						<field name="product_id" />
+						<field name="name" />
+						<field name="account_id" />
+						<field name="price_unit" />
+						<field name="price_subtotal" />
+						<field name="currency_id" />
+					</tree>
+				</field>
+				<separator string="Vehicle Revenue Allocation Board" />
+				<field name="vehicle_revenue_allocation_line_ids">
+					<tree name="vehicle_revenue_allocation_line_ids" editable="bottom">
+						<field name="invoice_line_id" readonly="1" force_save="1"/>
+						<field name="vehicle_id" readonly="1" force_save="1"/>
+						<field name="currency_id" invisible="1" force_save="1"/>
+						<field name="revenue_subtype_id" />
+						<field name="amount" />
+					</tree>
+				</field>
+
+				<footer>
+					<button name="create_vehicle_revenue" string="Create Vehicle Revenues"
+						type="object" class="btn-primary" />
+					<button string="Cancel" class="btn-default" special="cancel" />
+				</footer>
+			</form>
+		</field>
+	</record>
+
+	<record id="action_vehicle_revenue_allocation_wizard" model="ir.actions.act_window">
+		<field name="name">Vehicle Revenue Allocation Wizard</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">vehicle.revenue.allocation.wizard</field>
+		<field name="view_mode">form</field>
+		<field name="target">new</field>
+		<field name="context">{'default_invoice_line_ids':active_ids}</field>
+	</record>
+</odoo>

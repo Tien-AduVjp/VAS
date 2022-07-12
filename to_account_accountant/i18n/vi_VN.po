@@ -1,0 +1,497 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_account_accountant
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-02 08:36+0000\n"
+"PO-Revision-Date: 2021-03-02 08:36+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_account_accountant
+#: model_terms:ir.ui.view,arch_db:to_account_accountant.res_config_settings_view_form
+msgid ""
+"<span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-"
+"specific.\" role=\"img\" aria-label=\"Values set here are company-"
+"specific.\" groups=\"base.group_multi_company\"/>"
+msgstr ""
+"<span class=\"fa fa-lg fa-building-o\" title=\"Giá trị thiết lập ở đây mang "
+"đặc trưng công ty.\" role=\"img\" aria-label=\"Giá trị thiết lập ở đây mang "
+"đặc trưng công ty.\" groups=\"base.group_multi_company\"/>"
+
+#. module: to_account_accountant
+#: model_terms:ir.ui.view,arch_db:to_account_accountant.res_config_settings_view_form
+msgid "<span class=\"o_form_label\">Fiscal Period Closing</span>"
+msgstr "<span class=\"o_form_label\">Đóng kỳ tài chính</span>"
+
+#. module: to_account_accountant
+#: model_terms:ir.ui.view,arch_db:to_account_accountant.res_config_settings_view_form
+msgid "<span class=\"o_form_label\">Fiscal Year</span>"
+msgstr "<span class=\"o_form_label\">Năm Tài chính</span>"
+
+#. module: to_account_accountant
+#: model_terms:ir.ui.view,arch_db:to_account_accountant.res_config_settings_view_form
+msgid "<span class=\"o_form_label\">Inter-Banks Transfers</span>"
+msgstr "<span class=\"o_form_label\">Chuyển tiền Liên Ngân hàng</span>"
+
+#. module: to_account_accountant
+#: code:addons/to_account_accountant/models/digest.py:0
+#, python-format
+msgid ""
+"Access denied for non account user, ignore bank and cash data for digest "
+"email"
+msgstr ""
+"Truy cập bị từ chối đối với tài khoản không phải kế toán, bỏ qua dữ liệu "
+"liên quan đến tiền mặt và ngân hàng trong trường hợp nàyKhông có quyền truy "
+"cập, bỏ qua dữ liệu này cho email tổng hợp gửi cho người dùng"
+
+#. module: to_account_accountant
+#: model_terms:ir.ui.view,arch_db:to_account_accountant.view_account_move_filter
+msgid "Account"
+msgstr "Tài khoản"
+
+#. module: to_account_accountant
+#: model:ir.model,name:to_account_accountant.model_account_chart_template
+msgid "Account Chart Template"
+msgstr "Mẫu Hệ thống Tài khoản"
+
+#. module: to_account_accountant
+#: model:ir.ui.menu,name:to_account_accountant.menu_account_group
+msgid "Account Groups"
+msgstr "Nhóm Tài khoản"
+
+#. module: to_account_accountant
+#: model:ir.ui.menu,name:to_account_accountant.account_tag_menu
+msgid "Account Tags"
+msgstr "Thẻ Tài khoản"
+
+#. module: to_account_accountant
+#: model:ir.model.fields,help:to_account_accountant.field_account_move__manual_entry
+msgid ""
+"Accountants are not encouraged to encode accounting with direct and manual "
+"entries (from the menu Accounting > Accounting > Miscellaneous > Journal "
+"Entries). When they do so, we need to know that by checking this field "
+"automatically."
+msgstr ""
+"Kế toán viên không được khuyến khích nhập các bút toán thủ công một cách "
+"trực tiếp (thông qua menu Kế toán > Kế toán > Khác > Bút toán Sổ nhật ký). "
+"Khi họ làm vậy, chúng ta vẫn phải biết bằng cách đánh dấu trường này một "
+"cách tự động."
+
+#. module: to_account_accountant
+#: model_terms:ir.ui.view,arch_db:to_account_accountant.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:to_account_accountant.view_partner_property_form
+msgid "Accounting"
+msgstr "Kế toán"
+
+#. module: to_account_accountant
+#: model_terms:ir.ui.view,arch_db:to_account_accountant.view_invoice_tree
+msgid "Accounting Date"
+msgstr "Ngày Kế toán"
+
+#. module: to_account_accountant
+#: model:ir.model.fields,help:to_account_accountant.field_account_change_lock_date__fiscalyear_lock_date
+msgid ""
+"All users are prohibited from editing accounts with dates prior to or "
+"inclusive of this date.. Can use it to lock fiscal year."
+msgstr ""
+
+#. module: to_account_accountant
+#: model_terms:ir.ui.view,arch_db:to_account_accountant.res_config_settings_view_form
+msgid "Anglo-saxon accounting"
+msgstr "Kế toán Anglo-saxon"
+
+#. module: to_account_accountant
+#: model:ir.model.fields,field_description:to_account_accountant.field_account_bank_statement__attachment_ids
+#: model:ir.model.fields,field_description:to_account_accountant.field_account_move__attachment_ids
+#: model:ir.model.fields,field_description:to_account_accountant.field_account_payment__attachment_ids
+msgid "Attachments"
+msgstr "Đính kèm"
+
+#. module: to_account_accountant
+#: model:ir.model.fields,field_description:to_account_accountant.field_digest_digest__kpi_account_bank_cash
+msgid "Bank & Cash Moves"
+msgstr "Giao dịch Ngân hàng & Tiền mặt"
+
+#. module: to_account_accountant
+#: model:ir.model,name:to_account_accountant.model_account_bank_statement
+msgid "Bank Statement"
+msgstr "Sao kê Ngân hàng"
+
+#. module: to_account_accountant
+#: model_terms:ir.ui.view,arch_db:to_account_accountant.account_change_lock_date_view_form
+msgid "Cancel"
+msgstr ""
+
+#. module: to_account_accountant
+#: model:ir.model,name:to_account_accountant.model_res_config_settings
+msgid "Config Settings"
+msgstr "Thiết lập Cấu hình"
+
+#. module: to_account_accountant
+#: model:ir.model.fields,field_description:to_account_accountant.field_account_change_lock_date__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: to_account_accountant
+#: model:ir.model.fields,field_description:to_account_accountant.field_account_change_lock_date__create_date
+msgid "Created on"
+msgstr "Được tạo vào"
+
+#. module: to_account_accountant
+#: model:ir.model,name:to_account_accountant.model_digest_digest
+msgid "Digest"
+msgstr "Tổng hợp"
+
+#. module: to_account_accountant
+#: model:ir.model.fields,field_description:to_account_accountant.field_account_change_lock_date__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_account_accountant
+#: model_terms:ir.ui.view,arch_db:to_account_accountant.res_config_settings_view_form
+msgid "Enable Anglo-Saxon accounting"
+msgstr "Kích hoạt kế toán Anglo-Saxon"
+
+#. module: to_account_accountant
+#: model_terms:ir.ui.view,arch_db:to_account_accountant.res_config_settings_view_form
+msgid ""
+"Enable fiscal year feature. A fiscal year can be more or less than a year"
+msgstr ""
+
+#. module: to_account_accountant
+#: model:ir.ui.menu,name:to_account_accountant.menu_account_fiscal_year
+#: model_terms:ir.ui.view,arch_db:to_account_accountant.res_config_settings_view_form
+msgid "Fiscal Years"
+msgstr "Năm Tài chính"
+
+#. module: to_account_accountant
+#: model:ir.model.fields,field_description:to_account_accountant.field_res_config_settings__fiscalyear_last_day
+msgid "Fiscalyear Last Day"
+msgstr "Ngày cuối cùng năm tài chính"
+
+#. module: to_account_accountant
+#: model:ir.model.fields,field_description:to_account_accountant.field_res_config_settings__fiscalyear_last_month
+msgid "Fiscalyear Last Month"
+msgstr "Tháng cuối cùng năm tài chính"
+
+#. module: to_account_accountant
+#: model:ir.model.fields,field_description:to_account_accountant.field_account_change_lock_date__id
+msgid "ID"
+msgstr ""
+
+#. module: to_account_accountant
+#: code:addons/to_account_accountant/models/res_config_settings.py:0
+#, python-format
+msgid ""
+"Incorrect fiscal year date: day is out of range for month. Month: %s; Day: "
+"%s"
+msgstr ""
+"Ngày của năm tài chính không hợp lệ: ngày nằm ngoài phạm vi của tháng. "
+"Tháng: %s; Ngày: %s"
+
+#. module: to_account_accountant
+#: model_terms:ir.ui.view,arch_db:to_account_accountant.view_account_move_line_filter
+msgid "Invoice Lines"
+msgstr "Dòng hóa đơn"
+
+#. module: to_account_accountant
+#: model:ir.model.fields,field_description:to_account_accountant.field_account_move__invoice_date
+msgid "Invoice/Bill Date"
+msgstr "Ngày hoá đơn"
+
+#. module: to_account_accountant
+#: model:ir.model,name:to_account_accountant.model_account_journal
+msgid "Journal"
+msgstr "Sổ nhật ký"
+
+#. module: to_account_accountant
+#: model:ir.model,name:to_account_accountant.model_account_move
+msgid "Journal Entries"
+msgstr "Bút toán Sổ nhật ký"
+
+#. module: to_account_accountant
+#: model:ir.model,name:to_account_accountant.model_account_move_line
+msgid "Journal Item"
+msgstr "Phát sinh bút toán"
+
+#. module: to_account_accountant
+#: model:ir.model.fields,field_description:to_account_accountant.field_digest_digest__kpi_account_bank_cash_value
+msgid "Kpi Account Bank Cash Value"
+msgstr ""
+
+#. module: to_account_accountant
+#: model_terms:ir.ui.view,arch_db:to_account_accountant.res_config_settings_view_form
+msgid "Last Day"
+msgstr "Ngày Cuối"
+
+#. module: to_account_accountant
+#: model:ir.model.fields,field_description:to_account_accountant.field_account_change_lock_date____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_account_accountant
+#: model:ir.model.fields,field_description:to_account_accountant.field_account_change_lock_date__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: to_account_accountant
+#: model:ir.model.fields,field_description:to_account_accountant.field_account_change_lock_date__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối"
+
+#. module: to_account_accountant
+#: model_terms:ir.ui.view,arch_db:to_account_accountant.res_config_settings_view_form
+msgid "Last day of your fiscal year, for automatic opening entries"
+msgstr ""
+"Ngày cuối của năm tài chính của bạn, phục vụ cho các bút toán đầu kỳ tự động"
+
+#. module: to_account_accountant
+#. openerp-web
+#: code:addons/to_account_accountant/static/src/js/tour.js:0
+#, python-format
+msgid "Let's start with a new customer invoice."
+msgstr "Hãy cùng bắt đầu với một hoá đơn khách hàng mới."
+
+#. module: to_account_accountant
+#: model_terms:ir.ui.view,arch_db:to_account_accountant.account_change_lock_date_view_form
+msgid "Lock"
+msgstr "Khóa"
+
+#. module: to_account_accountant
+#: model:ir.model.fields,field_description:to_account_accountant.field_account_change_lock_date__fiscalyear_lock_date
+#: model:ir.model.fields,field_description:to_account_accountant.field_res_config_settings__fiscalyear_lock_date
+msgid "Lock Date for All Users"
+msgstr "Ngày Khoá cho Mọi Người dùng"
+
+#. module: to_account_accountant
+#: model:ir.model.fields,field_description:to_account_accountant.field_account_change_lock_date__period_lock_date
+#: model:ir.model.fields,field_description:to_account_accountant.field_res_config_settings__period_lock_date
+msgid "Lock Date for Non-Advisers"
+msgstr "Ngày Khoá đối với người không phải Quản lý Tài chính"
+
+#. module: to_account_accountant
+#: model:ir.ui.menu,name:to_account_accountant.menu_action_change_lock_date
+msgid "Lock Dates"
+msgstr "Ngày khóa"
+
+#. module: to_account_accountant
+#: model:ir.actions.act_window,name:to_account_accountant.account_change_lock_date_action
+msgid "Lock your Fiscal Period"
+msgstr "Khóa năm tài chính của bạn"
+
+#. module: to_account_accountant
+#: model_terms:ir.ui.view,arch_db:to_account_accountant.res_config_settings_view_form
+msgid "Lock your fiscal period"
+msgstr "Khóa năm kỳ tài chính của bạn"
+
+#. module: to_account_accountant
+#. openerp-web
+#: code:addons/to_account_accountant/static/src/js/tour.js:0
+#, python-format
+msgid "Make your system ready to invoice in a few steps."
+msgstr ""
+"Làm cho hệ thống của bạn sẵn sàng cho việc lên hoá đơn chỉ với vài bước."
+
+#. module: to_account_accountant
+#: model:ir.model.fields,field_description:to_account_accountant.field_account_move__manual_entry
+msgid "Manual Direct Entry"
+msgstr "Bút toán thủ công"
+
+#. module: to_account_accountant
+#: model_terms:ir.ui.view,arch_db:to_account_accountant.view_account_move_filter
+#: model_terms:ir.ui.view,arch_db:to_account_accountant.view_account_move_line_filter
+msgid "Manual Entries"
+msgstr "Bút toán thủ công"
+
+#. module: to_account_accountant
+#: model:ir.model.fields,field_description:to_account_accountant.field_account_move_line__move_attachment_ids
+msgid "Move Attachment"
+msgstr "Đính kèm của bút toán"
+
+#. module: to_account_accountant
+#: model:ir.model.fields,help:to_account_accountant.field_account_change_lock_date__tax_lock_date
+#: model:ir.model.fields,help:to_account_accountant.field_res_config_settings__tax_lock_date
+msgid ""
+"No users can edit journal entries related to a tax prior and inclusive of "
+"this date."
+msgstr ""
+"Không người nào có thể sửa bút toán kế toán liên quan đến thuế trước và bao "
+"gồm ngày này."
+
+#. module: to_account_accountant
+#: model:ir.model.fields,help:to_account_accountant.field_res_config_settings__fiscalyear_lock_date
+msgid ""
+"No users, including Advisers, can edit accounts prior to and inclusive of "
+"this date. Use it for fiscal year locking for example."
+msgstr ""
+"Không người dùng nào, bao gồm cả Quản lý Tài chính có thể sửa tài khoản "
+"trước và bao gồm ngày này. Một ví dụ cho cho việc sử dụng cái này là để khoá"
+" sổ năm tài chính."
+
+#. module: to_account_accountant
+#: code:addons/to_account_accountant/wizard/account_change_lock_date.py:0
+#, python-format
+msgid ""
+"Only users who are granted with the access group '%s' will be able to "
+"execute this action."
+msgstr ""
+"Chỉ những người dùng có nhóm quyền '%s' mới có thể thực hiện hành động này."
+
+#. module: to_account_accountant
+#: model:ir.model.fields,help:to_account_accountant.field_res_config_settings__period_lock_date
+msgid ""
+"Only users with the 'Adviser' role can edit accounts prior to and inclusive "
+"of this date. Use it for period locking inside an open fiscal year, for "
+"example."
+msgstr ""
+"Chỉ những người dùng ở vai trò 'Quản lý Tài chính' mới có thể sửa các tài "
+"khoản trước và bao gồm ngày này. Sử dụng cái này, ví dụ, để khoá chu kỳ kế "
+"toán trong phạm vi một năm tài chính đang mở."
+
+#. module: to_account_accountant
+#: model_terms:ir.ui.view,arch_db:to_account_accountant.view_account_move_line_filter
+msgid "Originator Tax"
+msgstr "Thuế khởi nguồn"
+
+#. module: to_account_accountant
+#: model:ir.model,name:to_account_accountant.model_account_payment
+msgid "Payments"
+msgstr "Thanh toán"
+
+#. module: to_account_accountant
+#: model:ir.model.fields,field_description:to_account_accountant.field_account_move__post_date
+msgid "Posted Date"
+msgstr "Ngày Hạch toán"
+
+#. module: to_account_accountant
+#: model_terms:ir.ui.view,arch_db:to_account_accountant.view_account_move_filter
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: to_account_accountant
+#: model:ir.ui.menu,name:to_account_accountant.menu_product_product_categories
+msgid "Product Categories"
+msgstr "Nhóm Sản phẩm"
+
+#. module: to_account_accountant
+#. openerp-web
+#: code:addons/to_account_accountant/static/src/js/tour.js:0
+#, python-format
+msgid ""
+"Ready to discover your new favorite <b>accounting app</b>? Get started by "
+"clicking here."
+msgstr ""
+"Sẵn sàng để khám phá <b>Ứng dụng kế toán</b> được yêu thích? Hãy bắt đầu "
+"bằng việc bấm vào đây."
+
+#. module: to_account_accountant
+#: model:ir.model.fields,field_description:to_account_accountant.field_account_payment__state
+msgid "Status"
+msgstr "Tình trạng"
+
+#. module: to_account_accountant
+#: model_terms:ir.ui.view,arch_db:to_account_accountant.view_account_move_line_filter
+msgid "Tax Items"
+msgstr "Phát sinh Thuế"
+
+#. module: to_account_accountant
+#: model:ir.model.fields,field_description:to_account_accountant.field_account_change_lock_date__tax_lock_date
+#: model:ir.model.fields,field_description:to_account_accountant.field_res_config_settings__tax_lock_date
+msgid "Tax Lock Date"
+msgstr "Ngày khoá Bút toán Thuế"
+
+#. module: to_account_accountant
+#: model:ir.model.fields,help:to_account_accountant.field_account_change_lock_date__period_lock_date
+msgid ""
+"The accounts whose accounting dates are prior to or inclusive of this date "
+"can be edited only by users with Advisor Role.        For instance, this "
+"function can be used to lock a period inside an open fiscal year."
+msgstr ""
+
+#. module: to_account_accountant
+#: model:ir.model.fields,help:to_account_accountant.field_account_move__post_date
+msgid "The date and time at which the entry was posted."
+msgstr "Ngày giờ mà bút toán được vào sổ."
+
+#. module: to_account_accountant
+#: model:ir.model.fields,help:to_account_accountant.field_res_config_settings__transfer_account_id
+msgid "This account used to transfer from liquidity to another."
+msgstr ""
+
+#. module: to_account_accountant
+#: model_terms:ir.ui.view,arch_db:to_account_accountant.view_move_line_tree
+msgid "Total Currency Residual"
+msgstr ""
+
+#. module: to_account_accountant
+#: model_terms:ir.ui.view,arch_db:to_account_accountant.view_move_line_tree
+msgid "Total Residual"
+msgstr ""
+
+#. module: to_account_accountant
+#: model:ir.model.fields,field_description:to_account_accountant.field_res_config_settings__transfer_account_id
+msgid "Transfer Account"
+msgstr "Tài khoản Tiền đang chuyển"
+
+#. module: to_account_accountant
+#: model:ir.model.fields,field_description:to_account_accountant.field_res_config_settings__use_anglo_saxon
+msgid "Use Anglo-Saxon Accounting"
+msgstr "Sử dụng kế toán Anglo-Saxon"
+
+#. module: to_account_accountant
+#: model_terms:ir.ui.view,arch_db:to_account_accountant.res_config_settings_view_form
+msgid "Use the account to transfer between banks"
+msgstr "Sử dụng tài khoản kế toán này để chuyển tiền giữa các ngân hàng"
+
+#. module: to_account_accountant
+#. openerp-web
+#: code:addons/to_account_accountant/static/src/js/tour.js:0
+#, python-format
+msgid ""
+"Use the path to quickly click back to <b>previous screens</b>, without "
+"reloading the page."
+msgstr ""
+"Sử dụng đường dẫn để nhanh chóng quay lại <b>màn hình trước đó</b> mà không "
+"cần nạp lại trang."
+
+#. module: to_account_accountant
+#. openerp-web
+#: code:addons/to_account_accountant/static/src/js/tour.js:0
+#, python-format
+msgid "When you're ready, close this planner to continue the tour."
+msgstr "Khi bạn sẵn sàng, hãy đóng trình hoạch định này để tiếp tục tour."
+
+#. module: to_account_accountant
+#: model:ir.model,name:to_account_accountant.model_account_change_lock_date
+msgid "Wizard to change lock date"
+msgstr ""
+
+#. module: to_account_accountant
+#. openerp-web
+#: code:addons/to_account_accountant/static/src/js/tour.js:0
+#, python-format
+msgid ""
+"Your reports are available in real time. <i>No need to close a fiscal year "
+"to get a Profit &amp; Loss statement or view the Balance Sheet.</i>"
+msgstr ""
+"Các báo cáo của bạn sẵn sàng theo thời gian thực. <i>Không cần phải đóng một"
+" năm tài chính mới có thể xem được báo cáo Kết quả Hoạt động SXKD (P &amp; "
+"L) hay Bảng cân đối kế toán</i>."
+
+#. module: to_account_accountant
+#: model:res.groups,name:account.group_account_user
+msgid "Accountant"
+msgstr "Kế toán viên"
+
+#. module: to_account_accountant
+#: model:res.groups,name:account.group_account_manager
+msgid "Administrator"
+msgstr "Quản trị"

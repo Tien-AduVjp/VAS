@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<template id="filter_info_template"
+			inherit_id="to_account_reports.filter_info_template">
+			<xpath
+				expr="//div[hasclass('row') and hasclass('print_only')]/div[hasclass('col-4')][2]"
+				position="inside">
+				<t t-if="options.get('show_ignored_entries')"
+					groups="account.group_account_user">Include Report-off Entries</t>
+				<t t-if="options.get('show_ignored_entries') == False">Exclude Report-off Entries</t>
+			</xpath>
+		</template>
+	</data>
+</odoo>

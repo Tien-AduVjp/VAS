@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="inherit_license_res_partner_filter" model="ir.ui.view">
+			<field name="name">fleet.driver.search.form</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.view_res_partner_filter"/>
+			<field name="arch" type="xml">
+					<xpath expr="//field[@name='name']" position="after">
+						<filter string="Drivers" name="is_driver" domain="[('is_driver', '=', True)]"/>
+					</xpath>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="fleet_driver_view_tree">
+			<field name="name">fleet.driver.tree</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.view_partner_tree" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='email']" position="after">
+					<field name="current_license_id" />
+				</xpath>
+			</field>
+		</record>
+
+		<record id="fleet_driver_view_form_all" model="ir.ui.view">
+			<field name="name">fleet.driver.view.form.all</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.view_partner_form"/>
+			<field name="arch" type="xml">
+				<xpath	expr="//field[@name='vat']" position="after">
+					<field name="is_driver" attrs="{'invisible':[('company_type','!=','person')]}"/>
+				</xpath>
+			</field>
+
+		</record>
+		<record model="ir.ui.view" id="fleet_driver_view_form">
+			<field name="name">fleet.driver.view.form</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.res_partner_view_form_private" />
+			<field name="arch" type="xml">
+				<xpath expr="//label[@for='street']" position="before">
+					<field name="is_driver" readonly="context.get('from_license_view', False)"/>
+				</xpath>
+				<xpath expr="//group[last()]" position="after">
+					<field name="license_ids" attrs="{'invisible': [('is_driver', '=', False)]}">
+						<tree string="Licenses" nolable="1" create="false">
+							<field name="legal_number" />
+							<field name="class_id" />
+							<field name="issued_date" />
+							<field name="expired_date" />
+							<field name="issued_by" />
+							<field name="state" />
+						</tree>
+					</field>
+
+				</xpath>
+			</field>
+		</record>
+
+		<record id="fleet_driver_action" model="ir.actions.act_window">
+			<field name="name">Drivers</field>
+			<field name="res_model">res.partner</field>
+			<field name="view_mode">tree,form,search</field>
+			<field name="search_view_id" ref="inherit_license_res_partner_filter"></field>
+			<field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('fleet_driver_view_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('fleet_driver_view_form')})]"/>
+        	<field name="context">{'search_default_is_driver': 1, 'default_is_driver':True}</field>
+		</record>
+
+		<menuitem id="fleet_drivers_root_menu" parent="fleet.menu_root"
+			name="Drivers" sequence="7" />
+
+		<menuitem id="fleet_drivers_menu" parent="fleet_drivers_root_menu"
+			name="Drivers" sequence="0" action="fleet_driver_action" />
+	</data>
+</odoo>

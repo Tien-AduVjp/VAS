@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<menuitem id="cash_flow_forecast_root_menu" sequence="99"
+			web_icon="to_cash_flow_forecast,static/description/icon.png"
+			name="Cash Flow Forecast" groups="account.group_account_user" />
+
+		<menuitem id="user_input_menu" sequence="0"
+			name="User Inputs Data" parent="cash_flow_forecast_root_menu" />
+
+		<menuitem id="report_menu" sequence="1" name="Reports"
+			parent="cash_flow_forecast_root_menu" />
+
+	</data>
+</odoo>

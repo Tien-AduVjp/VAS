@@ -1,0 +1,100 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_promotion_voucher_account_payment
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-21 03:49+0000\n"
+"PO-Revision-Date: 2021-08-21 03:49+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_promotion_voucher_account_payment
+#: model:ir.model.fields,field_description:to_promotion_voucher_account_payment.field_account_payment__voucher_payment
+msgid "Is Voucher Payment"
+msgstr "Là thanh toán Voucher"
+
+#. module: to_promotion_voucher_account_payment
+#: code:addons/to_promotion_voucher_account_payment/models/account_payment.py:0
+#, python-format
+msgid ""
+"Only a draft payment can be posted. Trying to post a payment in state %s."
+msgstr "Chỉ có thể xác nhận thanh toán ở trạng thái dự thảo. Bạn đang cố xác nhận thanh toán ở trạng thái %s."
+
+#. module: to_promotion_voucher_account_payment
+#: model:ir.model,name:to_promotion_voucher_account_payment.model_account_payment
+msgid "Payments"
+msgstr "Thanh toán"
+
+#. module: to_promotion_voucher_account_payment
+#: code:addons/to_promotion_voucher_account_payment/models/account_payment.py:0
+#, python-format
+msgid ""
+"Promotion voucher payment method is only applicable to payment type 'Receive"
+" Money' and partner type 'Customer'"
+msgstr ""
+"Phương thức thanh toán bằng voucher khuyến mãi chỉ áp dụng cho kiểu thanh toán 'Nhận tiền' "
+"và kiểu đối tác là 'Khách hàng'"
+
+#. module: to_promotion_voucher_account_payment
+#: code:addons/to_promotion_voucher_account_payment/models/account_payment.py:0
+#: code:addons/to_promotion_voucher_account_payment/models/account_payment.py:0
+#, python-format
+msgid "The Voucher '%s' has been used. Please re-input another voucher code."
+msgstr "Voucher '%s' đã được sử dụng. Vui lòng nhập mã voucher khác."
+
+#. module: to_promotion_voucher_account_payment
+#: code:addons/to_promotion_voucher_account_payment/models/account_payment.py:0
+#, python-format
+msgid "The amount exceeds the voucher 's value : %s."
+msgstr "Số tiền vượt quá giá trị sử dụng của voucher: %s."
+
+#. module: to_promotion_voucher_account_payment
+#: code:addons/to_promotion_voucher_account_payment/models/account_payment.py:0
+#, python-format
+msgid "The payment cannot be processed because the invoice is not open!"
+msgstr ""
+"Khoản thanh toán không thể xử lý được vì hoá đơn liên quan không ở trạng "
+"thái Mở"
+
+#. module: to_promotion_voucher_account_payment
+#: code:addons/to_promotion_voucher_account_payment/models/account_payment.py:0
+#, python-format
+msgid "This Voucher code is incorrect. Please re-input another voucher code."
+msgstr ""
+
+#. module: to_promotion_voucher_account_payment
+#: code:addons/to_promotion_voucher_account_payment/models/account_payment.py:0
+#: code:addons/to_promotion_voucher_account_payment/models/account_payment.py:0
+#, python-format
+msgid "This Voucher has not been actived. Hence, it cannot be used."
+msgstr "Voucher này chưa được kích hoạt. Do đó, nó không thể sử dụng."
+
+#. module: to_promotion_voucher_account_payment
+#: code:addons/to_promotion_voucher_account_payment/models/account_payment.py:0
+#: code:addons/to_promotion_voucher_account_payment/models/account_payment.py:0
+#, python-format
+msgid "This Voucher is already expired. Please re-input another voucher code."
+msgstr "Voucher này đã hết hạn. Vui lòng nhập mã voucher khác."
+
+#. module: to_promotion_voucher_account_payment
+#: model:ir.model.fields,field_description:to_promotion_voucher_account_payment.field_account_payment__voucher_id
+msgid "Voucher"
+msgstr ""
+
+#. module: to_promotion_voucher_account_payment
+#: model:ir.model.fields,field_description:to_promotion_voucher_account_payment.field_account_payment__voucher_code
+msgid "Voucher Series"
+msgstr "Sê-ri Voucher"
+
+#. module: to_promotion_voucher_account_payment
+#: code:addons/to_promotion_voucher_account_payment/models/account_payment.py:0
+#, python-format
+msgid "You have to define a sequence for %s in your company."
+msgstr "Bạn phải quy định một trình tự cho %s ở công ty của bạn."

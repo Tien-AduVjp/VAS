@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	
+    <record id="account.group_account_invoice" model="res.groups">
+        <field name="implied_ids" eval="[(4, ref('to_fleet_vehicle_revenue.fleet_vehicle_revenue_group_read'))]" />
+    </record>
+    
+    <record id="fleet_vehicle_revenue_group_account_invoice" model="ir.rule">
+		<field name="name">Billing Users: Delete own vehicle revenues only</field>
+		<field name="model_id" ref="model_fleet_vehicle_revenue" />
+		<field name="groups" eval="[(4, ref('account.group_account_invoice'))]" />
+		<field name="perm_read" eval="True" />
+		<field name="perm_write" eval="True" />
+		<field name="perm_create" eval="True" />
+		<field name="perm_unlink" eval="True" />
+		<field name="domain_force">[('create_uid','=',user.id)]</field>
+	</record>
+
+	<record id="fleet_vehicle_revenue_group_account_user" model="ir.rule">
+		<field name="name">Accountants: Handle All vehicle Revenues</field>
+		<field name="model_id" ref="model_fleet_vehicle_revenue" />
+		<field name="groups" eval="[(4, ref('account.group_account_user'))]" />
+		<field name="perm_read" eval="True" />
+		<field name="perm_write" eval="True" />
+		<field name="perm_create" eval="True" />
+		<field name="perm_unlink" eval="True" />
+		<field name="domain_force">[(1,'=',1)]</field>
+	</record>
+</odoo>

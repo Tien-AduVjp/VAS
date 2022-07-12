@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<menuitem id="menu_loyalty_root" sequence="30"
+		groups="to_loyalty.group_loyalty_user" name="Loyalty"
+		web_icon="to_loyalty,static/description/icon.png" />
+
+	<menuitem id="menu_loyalty_report" name="Reports"
+		parent="menu_loyalty_root" sequence="10"
+		groups="to_loyalty.group_loyalty_manager" />
+
+	<menuitem id="menu_loyalty_config" name="Configuration"
+		parent="menu_loyalty_root" sequence="10"
+		groups="to_loyalty.group_loyalty_manager" />
+
+</odoo>

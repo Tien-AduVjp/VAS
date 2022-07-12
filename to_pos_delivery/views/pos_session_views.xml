@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="view_pos_session_form">
+			<field name="name">pos.session.form.view</field>
+			<field name="model">pos.session</field>
+			<field name="inherit_id" ref="point_of_sale.view_pos_session_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='picking_count']" position="attributes">
+					<attribute name="string">Undelivered Pickings</attribute>
+				</xpath>
+			</field>
+		</record>
+
+	</data>
+</odoo>

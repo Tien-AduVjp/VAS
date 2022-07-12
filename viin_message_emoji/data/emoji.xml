@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="emoji_love" model="emoji">
+            <field name="name">love</field>
+            <field name="emoji">❤️</field>
+        </record>
+        <record id="emoji_laughing" model="emoji">
+            <field name="name">laughing</field>
+            <field name="emoji">😆</field>
+        </record>
+        <record id="emoji_surprised" model="emoji">
+            <field name="name">surprised</field>
+            <field name="emoji">😮</field>
+        </record>
+        <record id="emoji_nervous" model="emoji">
+            <field name="name">nervous</field>
+            <field name="emoji">😬</field>
+        </record>
+        <record id="emoji_angry" model="emoji">
+            <field name="name">angry</field>
+            <field name="emoji">😠</field>
+        </record>
+        <record id="emoji_like" model="emoji">
+            <field name="name">like</field>
+            <field name="emoji">👍</field>
+        </record>
+    </data>
+</odoo>

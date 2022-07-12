@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="fleet_insurance_type_form_view" model="ir.ui.view">
+			<field name="name">fleet.insurance.type.form</field>
+			<field name="model">fleet.insurance.type</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Insurance Type">
+					<sheet>
+						<div class="oe_button_box" name="button_box">
+						</div>
+						<group>
+							<group>
+								<field name="name" />
+								<field name="period" />
+							</group>
+							<group>
+								<field name="days_to_notify" />
+							</group>
+						</group>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers" />
+						<field name="message_ids" widget="mail_thread" />
+					</div>
+
+				</form>
+			</field>
+		</record>
+
+		<record id="fleet_insurance_type_tree_view" model="ir.ui.view">
+			<field name="name">fleet.insurance.type.tree</field>
+			<field name="model">fleet.insurance.type</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Insurance Type">
+					<field name="name" />
+					<field name="period" />
+					<field name="days_to_notify" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_fleet_insurance_type">
+			<field name="name">Insurance Types</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">fleet.insurance.type</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem action="action_fleet_insurance_type" id="fleet_insurance_type_menu"
+			name="Insurance Types" parent="fleet.fleet_configuration" sequence="99" />
+
+	</data>
+</odoo>

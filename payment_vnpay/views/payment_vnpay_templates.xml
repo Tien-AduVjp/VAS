@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <template id="vnpay_form">
+            <div>
+            	<input type="hidden" name="data_set" t-att-data-action-url="tx_url" data-remove-me=""/>
+                <input type="hidden" name="vnp_Amount" t-att-value="vnp_Amount" />
+                <input type="hidden" name="vnp_Command" t-att-value="vnp_Command" />
+                <input type="hidden" name="vnp_CreateDate" t-att-value="vnp_CreateDate" />
+                <input type="hidden" name="vnp_CurrCode" t-att-value="vnp_CurrCode" />
+                <input type="hidden" name="vnp_IpAddr" t-att-value="vnp_IpAddr" />
+                <input type="hidden" name="vnp_Locale" t-att-value="vnp_Locale" />
+                <input type="hidden" name="vnp_OrderInfo" t-att-value="vnp_OrderInfo" />
+                <input type="hidden" name="vnp_OrderType" t-att-value="vnp_OrderType" />
+                <input type="hidden" name="vnp_ReturnUrl" t-att-value="vnp_ReturnUrl" />
+                <input type="hidden" name="vnp_TmnCode" t-att-value="vnp_TmnCode" />
+                <input type="hidden" name="vnp_TxnRef" t-att-value="vnp_TxnRef" />
+                <input type="hidden" name="vnp_Version" t-att-value="vnp_Version" />
+                <input type="hidden" name="vnp_SecureHash" t-att-value="vnp_SecureHash" />
+            </div>
+        </template>
+    </data>
+</odoo>

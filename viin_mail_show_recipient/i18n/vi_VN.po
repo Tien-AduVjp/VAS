@@ -1,0 +1,30 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_mail_show_recipient
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-24 04:56+0000\n"
+"PO-Revision-Date: 2021-11-24 04:56+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_mail_show_recipient
+#: model_terms:ir.ui.view,arch_db:viin_mail_show_recipient.message_notification_email
+msgid ""
+"<strong>Carbon Copy</strong>\n"
+"\t\t\t\t\t\t\t\t\t: This message was also sent to"
+msgstr ""
+"<strong>Bản sao</strong>\n"
+"\t\t\t\t\t\t\t\t\t: Tin nhắn này được gửi tới"
+
+#. module: viin_mail_show_recipient
+#: model:ir.model,name:viin_mail_show_recipient.model_mail_thread
+msgid "Email Thread"
+msgstr "Luồng Email"

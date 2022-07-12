@@ -1,0 +1,166 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_stock_equipment_bom_kit
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-01 09:51+0000\n"
+"PO-Revision-Date: 2020-04-01 09:51+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_stock_equipment_bom_kit
+#: model:ir.model.fields,field_description:to_stock_equipment_bom_kit.field_product_set__bom_id
+msgid "Bom Kit"
+msgstr "Bom Kit"
+
+#. module: to_stock_equipment_bom_kit
+#: model:ir.model.fields,field_description:to_stock_equipment_bom_kit.field_product_set__can_create_equipment
+msgid "Create Equipment"
+msgstr "Tạo thiết bị"
+
+#. module: to_stock_equipment_bom_kit
+#: model:ir.model.fields,field_description:to_stock_equipment_bom_kit.field_product_set__create_uid
+#: model:ir.model.fields,field_description:to_stock_equipment_bom_kit.field_product_set_line__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: to_stock_equipment_bom_kit
+#: model:ir.model.fields,field_description:to_stock_equipment_bom_kit.field_product_set__create_date
+#: model:ir.model.fields,field_description:to_stock_equipment_bom_kit.field_product_set_line__create_date
+msgid "Created on"
+msgstr "Được tạo vào"
+
+#. module: to_stock_equipment_bom_kit
+#: model:ir.model.fields,field_description:to_stock_equipment_bom_kit.field_product_set__display_name
+#: model:ir.model.fields,field_description:to_stock_equipment_bom_kit.field_product_set_line__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_stock_equipment_bom_kit
+#: model:ir.model.fields,field_description:to_stock_equipment_bom_kit.field_product_set__equipment_id
+msgid "Equipment"
+msgstr "Thiết bị"
+
+#. module: to_stock_equipment_bom_kit
+#: model:ir.model.fields,field_description:to_stock_equipment_bom_kit.field_product_set__id
+#: model:ir.model.fields,field_description:to_stock_equipment_bom_kit.field_product_set_line__id
+msgid "ID"
+msgstr "ID"
+
+#. module: to_stock_equipment_bom_kit
+#: model:ir.model.fields,field_description:to_stock_equipment_bom_kit.field_product_set____last_update
+#: model:ir.model.fields,field_description:to_stock_equipment_bom_kit.field_product_set_line____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_stock_equipment_bom_kit
+#: model:ir.model.fields,field_description:to_stock_equipment_bom_kit.field_product_set__write_uid
+#: model:ir.model.fields,field_description:to_stock_equipment_bom_kit.field_product_set_line__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: to_stock_equipment_bom_kit
+#: model:ir.model.fields,field_description:to_stock_equipment_bom_kit.field_product_set__write_date
+#: model:ir.model.fields,field_description:to_stock_equipment_bom_kit.field_product_set_line__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối"
+
+#. module: to_stock_equipment_bom_kit
+#: model:ir.model.fields,field_description:to_stock_equipment_bom_kit.field_product_set__line_ids
+msgid "Line Ids"
+msgstr "Line Ids"
+
+#. module: to_stock_equipment_bom_kit
+#: model_terms:ir.ui.view,arch_db:to_stock_equipment_bom_kit.view_picking_form
+msgid "Main Equipments"
+msgstr "Các thiết bị chính"
+
+#. module: to_stock_equipment_bom_kit
+#: model:ir.model.fields,field_description:to_stock_equipment_bom_kit.field_product_set__product_id
+#: model:ir.model.fields,field_description:to_stock_equipment_bom_kit.field_product_set_line__product_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: to_stock_equipment_bom_kit
+#: model:ir.model,name:to_stock_equipment_bom_kit.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "Chuyển sản phẩm (Chi tiết phiếu kho)"
+
+#. module: to_stock_equipment_bom_kit
+#: model:ir.model.fields,field_description:to_stock_equipment_bom_kit.field_product_set_line__product_set_id
+msgid "Product Set"
+msgstr "Tập sản phẩm"
+
+#. module: to_stock_equipment_bom_kit
+#: model:ir.model.fields,field_description:to_stock_equipment_bom_kit.field_stock_picking__product_set_line_ids
+msgid "Product Set Line"
+msgstr "Chi tiết tập sản phẩm"
+
+#. module: to_stock_equipment_bom_kit
+#: model_terms:ir.ui.view,arch_db:to_stock_equipment_bom_kit.view_picking_form
+msgid "Product Set Tree"
+msgstr "Danh sách tập sản phẩm"
+
+#. module: to_stock_equipment_bom_kit
+#: model:ir.model.fields,field_description:to_stock_equipment_bom_kit.field_product_set__product_uom
+#: model:ir.model.fields,field_description:to_stock_equipment_bom_kit.field_product_set_line__product_uom
+msgid "Product Unit of Measure"
+msgstr "Đơn vị tính của sản phẩm"
+
+#. module: to_stock_equipment_bom_kit
+#: model:ir.model,name:to_stock_equipment_bom_kit.model_purchase_order
+msgid "Purchase Order"
+msgstr "Đơn Mua"
+
+#. module: to_stock_equipment_bom_kit
+#: model:ir.model.fields,field_description:to_stock_equipment_bom_kit.field_product_set__purchase_line_id
+msgid "Purchase Order Line"
+msgstr "Dòng hàng Đơn Mua"
+
+#. module: to_stock_equipment_bom_kit
+#: model:ir.model.fields,field_description:to_stock_equipment_bom_kit.field_product_set__product_qty
+#: model:ir.model.fields,field_description:to_stock_equipment_bom_kit.field_product_set_line__product_qty
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: to_stock_equipment_bom_kit
+#: model:ir.model.fields,field_description:to_stock_equipment_bom_kit.field_product_set__name
+msgid "Ref"
+msgstr "Tham chiếu"
+
+#. module: to_stock_equipment_bom_kit
+#: model:ir.model.fields,field_description:to_stock_equipment_bom_kit.field_product_set_line__remaining_qty
+msgid "Remaining Quantity"
+msgstr "Số lượng còn lại"
+
+#. module: to_stock_equipment_bom_kit
+#: model:ir.model.fields,field_description:to_stock_equipment_bom_kit.field_product_set__sequence
+msgid "Sequence"
+msgstr "Trình tự"
+
+#. module: to_stock_equipment_bom_kit
+#: model:ir.model.fields,field_description:to_stock_equipment_bom_kit.field_product_set__picking_id
+msgid "Stock Picking"
+msgstr "Giao nhận"
+
+#. module: to_stock_equipment_bom_kit
+#: model:ir.model,name:to_stock_equipment_bom_kit.model_stock_picking
+msgid "Transfer"
+msgstr "Dịch chuyển"
+
+#. module: to_stock_equipment_bom_kit
+#: model:ir.model,name:to_stock_equipment_bom_kit.model_product_set
+msgid "product.set"
+msgstr "product.set"
+
+#. module: to_stock_equipment_bom_kit
+#: model:ir.model,name:to_stock_equipment_bom_kit.model_product_set_line
+msgid "product.set.line"
+msgstr "product.set.line"

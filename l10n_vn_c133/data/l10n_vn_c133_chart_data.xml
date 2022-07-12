@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+	    <!-- Account Chart Templates -->
+	    <record id="vn_template_c133" model="account.chart.template">
+	        <field name="name">VN - Chart of Accounts - Circular No. 133/2016/TT-BTC</field>
+	        <field name="code_digits">0</field>
+	        <field name="currency_id" ref="base.VND"/>
+	        <field name="bank_account_code_prefix">112</field>
+	        <field name="cash_account_code_prefix">111</field>
+            <field name="transfer_account_code_prefix">113</field>
+	    </record>
+	</data>
+</odoo>

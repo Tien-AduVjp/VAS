@@ -1,0 +1,95 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_website_hr_recruitment_website_editor
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-26 15:06+0000\n"
+"PO-Revision-Date: 2021-10-26 15:06+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_website_hr_recruitment_website_editor
+#: model_terms:ir.ui.view,arch_db:viin_website_hr_recruitment_website_editor.res_config_settings_view_form
+msgid ""
+"Allow Website Editors to edit HR Job Recruitment Page Base On Company "
+"Setting"
+msgstr ""
+
+#. module: viin_website_hr_recruitment_website_editor
+#: model_terms:ir.ui.view,arch_db:viin_website_hr_recruitment_website_editor.res_config_settings_view_form
+msgid ""
+"Allow Website Editors to edit HR Job Recruitment Page Base on Specific "
+"Website"
+msgstr ""
+
+#. module: viin_website_hr_recruitment_website_editor
+#: model:ir.model.fields,field_description:viin_website_hr_recruitment_website_editor.field_res_company__allow_edit_website_jobs_company_setting
+#: model:ir.model.fields,field_description:viin_website_hr_recruitment_website_editor.field_res_config_settings__allow_edit_website_jobs_company_setting
+#: model_terms:ir.ui.view,arch_db:viin_website_hr_recruitment_website_editor.res_config_settings_view_form
+msgid "Allow Website Editors to edit job recruitment pages"
+msgstr ""
+
+#. module: viin_website_hr_recruitment_website_editor
+#: model:ir.model.fields,field_description:viin_website_hr_recruitment_website_editor.field_res_config_settings__allow_edit_website_jobs_website_setting
+#: model:ir.model.fields,field_description:viin_website_hr_recruitment_website_editor.field_website__allow_edit_website_jobs_website_setting
+#: model_terms:ir.ui.view,arch_db:viin_website_hr_recruitment_website_editor.res_config_settings_view_form
+msgid "Allow Website Editors to edit this website's job recruitment pages"
+msgstr ""
+
+#. module: viin_website_hr_recruitment_website_editor
+#: model:ir.model,name:viin_website_hr_recruitment_website_editor.model_ir_attachment
+msgid "Attachment"
+msgstr ""
+
+#. module: viin_website_hr_recruitment_website_editor
+#: model:ir.model,name:viin_website_hr_recruitment_website_editor.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: viin_website_hr_recruitment_website_editor
+#: model:ir.model,name:viin_website_hr_recruitment_website_editor.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: viin_website_hr_recruitment_website_editor
+#: model:ir.model.fields,help:viin_website_hr_recruitment_website_editor.field_res_company__allow_edit_website_jobs_company_setting
+#: model:ir.model.fields,help:viin_website_hr_recruitment_website_editor.field_res_config_settings__allow_edit_website_jobs_company_setting
+msgid ""
+"If enabled, the users who are granted as Website Editors will be able to edit job recruitment pages on the company's websites.\n"
+"If a job position is set only available for a specific website, that website is required to have the option 'Allow Website Editors to edit job recruitment pages' enabled too."
+msgstr ""
+
+#. module: viin_website_hr_recruitment_website_editor
+#: model:ir.model.fields,help:viin_website_hr_recruitment_website_editor.field_res_config_settings__allow_edit_website_jobs_website_setting
+#: model:ir.model.fields,help:viin_website_hr_recruitment_website_editor.field_website__allow_edit_website_jobs_website_setting
+msgid ""
+"If enabled, the users who are granted as Website Editors will be able to edit job recruitment pages on the current websites as long as the company allows that.\n"
+"This option does not affect job positions that have no website set. Those job positions are constrained by the corresponding company's settings."
+msgstr ""
+
+#. module: viin_website_hr_recruitment_website_editor
+#: model:ir.model,name:viin_website_hr_recruitment_website_editor.model_hr_job
+msgid "Job Position"
+msgstr ""
+
+#. module: viin_website_hr_recruitment_website_editor
+#: model:ir.model,name:viin_website_hr_recruitment_website_editor.model_website
+msgid "Website"
+msgstr ""
+
+#. module: viin_website_hr_recruitment_website_editor
+#: code:addons/viin_website_hr_recruitment_website_editor/models/hr_job.py:0
+#, python-format
+msgid ""
+"You don't have permission to edit this recruitment post. Please ask an "
+"administrator to configure website for the job first. In case this job is "
+"not website specific, please get it configured to allow editing in General "
+"Settings / Recruitment ."
+msgstr ""

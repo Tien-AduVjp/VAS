@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data noupdate="0">
+		<template id="to_affiliate_commissions"
+			name="Affiliate Commissions">
+			<t t-call="website.layout">
+				<div id="wrap">
+					<div class="oe_structure">
+						<section data-snippet-id="text-block" class="mt16 mb16">
+							<div class="container">
+								<div class="row">
+									<div class="col-md-12 text-center mb16"
+										data-snippet-id="colmd">
+										<h2>Affiliate Commissions</h2>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-3 col-lg-offset-1 o_my_sidebar">
+										<t
+											t-call="to_website_affiliate.portal_my_home_menu_affiliate" />
+									</div>
+									<div class="col-md-9 col-lg-8">
+										<div class="row">
+											<t t-if="not comissions">
+												<p>There are currently no affiliate commission on your
+													account.
+												</p>
+											</t>
+											<t t-if="comissions">
+												<table class="table o_my_status_table">
+													<thead>
+														<tr class="active">
+															<th>Commission</th>
+															<th>Date</th>
+															<th>Amount</th>
+															<th>State</th>
+														</tr>
+													</thead>
+													<tbody>
+														<t t-foreach="comissions" t-as="c">
+															<tr>
+																<td class="comission_name">
+																	<t t-esc="c.name" />
+																</td>
+																<td class="comission_date">
+																	<t t-esc="c.date" />
+																</td>
+																<td class="comission_amount">
+																	<t t-esc="c.comm_amount"
+																		t-options="{'widget': 'monetary', 'display_currency': c.currency_id}" />
+																</td>
+																<td class="comission_state">
+																	<t t-if="c.state == 'draft'">Draft</t>
+																	<t t-elif="c.state == 'confirm'">Confirmed</t>
+																	<t t-elif="c.state == 'submit'">Payment Request</t>
+																	<t t-elif="c.state == 'comm_paid'">Commission Paid</t>																	
+																	<t t-elif="c.state == 'cancel'">Cancelled</t>
+																</td>
+															</tr>
+														</t>
+													</tbody>
+												</table>
+											</t>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</t>
+		</template>
+
+		<template id="to_affiliate_payment_requests"
+			name="Affiliate Payments">
+			<t t-call="website.layout">
+				<div id="wrap">
+					<div class="oe_structure">
+						<section data-snippet-id="text-block" class="mt16 mb16">
+							<div class="container">
+								<div class="row">
+									<div class="col-md-12 text-center mb16"
+										data-snippet-id="colmd">
+										<h2>Affiliate Payments</h2>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-3 col-lg-offset-1 o_my_sidebar">
+										<t
+											t-call="to_website_affiliate.portal_my_home_menu_affiliate" />
+									</div>
+									<div class="col-md-9 col-lg-8">
+										<div class="row">
+											<div class="col-md-12 text-center mb16">
+												<p>
+													Your Unpaid Commission Total:
+													<b t-esc="total"
+														t-options="{'widget': 'monetary', 'display_currency': website.sudo().company_id.currency_id}" />
+												</p>
+												<a
+													t-att-href="'/affiliate/payment_requests/new' if total &gt; min_payout else '#'"
+													t-att-class="'btn btn-primary new_request_btn tooltip '+ (' disable' if total &lt; min_payout else '')">
+													New Payment Request
+													<span class="tooltiptext"
+														t-esc="('Your Unpaid Commission so far is %s while the minimum payout is %s. You need to make additional %s before you can request for commission payment' % (total, (min_payout-total), min_payout)) if total &lt; min_payout else 'Create new payment request'" />
+												</a>
+											</div>
+											<t t-if="not requests">
+												<p>There are currently no affiliate payment request for your
+													account.
+												</p>
+											</t>
+											<t t-if="requests">
+												<table class="table o_my_status_table">
+													<thead>
+														<tr class="active">
+															<th>Request</th>
+															<th>Date</th>
+															<th>Amount</th>
+															<th>State</th>
+														</tr>
+													</thead>
+													<tbody>
+														<t t-foreach="requests" t-as="c">
+															<tr>
+																<td class="payment_name">
+																	<a
+																		t-att-href="'/affiliate/payment_requests/%s' % c.id">
+																		<t t-esc="c.name" />
+																	</a>
+																</td>
+																<td class="payment_date">
+																	<t t-esc="c.date" />
+																</td>
+																<td class="payment_amount">
+																	<t t-esc="c.total"
+																		t-options="{'widget': 'monetary', 'display_currency': c.company_id.sudo().currency_id}" />
+																</td>
+																<td class="payment_state">
+																	<t t-if="c.state == 'draft'">Draft</t>
+																	<t t-elif="c.state == 'confirm'">Confirmed by Affiliate</t>
+																	<t t-elif="c.state == 'approve'">Approved</t>
+																	<t t-elif="c.state == 'paid'">Paid</t>
+																	<t t-elif="c.state == 'cancel'">Rejected</t>
+																</td>
+															</tr>
+														</t>
+													</tbody>
+												</table>
+											</t>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</t>
+		</template>
+		<template id="to_affiliate_payment_request_detail"
+			name="Affiliate Payment Detail">
+			<t t-call="website.layout">
+				<div id="wrap">
+					<div class="oe_structure">
+						<section data-snippet-id="text-block" class="mt16 mb16">
+							<div class="container">
+								<div class="row">
+									<div class="col-md-12 text-center mb16"
+										data-snippet-id="colmd">
+										<t t-if="pay_request">
+											<h2>Affiliate Payment Request Detail</h2>
+										</t>
+										<t t-else="">
+											<h2>New Payments Request</h2>
+										</t>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-3 col-lg-offset-1 o_my_sidebar">
+										<t
+											t-call="to_website_affiliate.portal_my_home_menu_affiliate" />
+									</div>
+									<div class="col-md-9 col-lg-8">
+										<div class="row">
+											<t t-if="pay_request">
+												<div class="row">
+													<div class="col-md-6">
+														<p>
+															Request:
+															<t t-esc="pay_request.name" />
+														</p>
+													</div>
+													<div class="col-md-6">
+														<p>
+															Payment Date:
+															<t t-esc="pay_request.date" />
+														</p>
+													</div>
+												</div>
+												<table class="table o_my_status_table">
+													<thead>
+														<tr class="active">
+															<th>Commission</th>
+															<th>Date</th>
+															<th>Amount</th>
+														</tr>
+													</thead>
+													<tbody>
+														<t t-foreach="commissions" t-as="c">
+															<tr>
+																<td class="comission_name">
+																	<t t-esc="c.name" />
+																</td>
+																<td class="comission_date">
+																	<t t-esc="c.date" />
+																</td>
+																<td class="comission_amount">
+																	<t t-esc="c.comm_amount"
+																		t-options="{'widget': 'monetary', 'display_currency': c.currency_id}" />
+																</td>
+															</tr>
+														</t>
+													</tbody>
+												</table>
+												<div class="row">
+													<div class="col-md-8 payment_note_div">
+														<label for="notes">Notes</label>
+														<p class="payment_notes">
+															<t t-esc="pay_request.notes" />
+														</p>
+													</div>
+													<div class="col-md-4 payment_total">
+														<p>
+															Commission Total:
+															<t t-esc="total"
+																t-options="{'widget': 'monetary', 'display_currency': website.sudo().company_id.currency_id}" />
+														</p>
+													</div>
+												</div>
+											</t>
+											<t t-else="">
+												<div class="row">
+													<div class="col-md-6">
+														<p>
+															Payment Date:
+															<t t-esc="today" />
+														</p>
+													</div>
+													<div class="col-md-6">
+														<p>
+															Currency:
+															<t t-esc="website.sudo().company_id.currency_id.name" />
+														</p>
+													</div>
+												</div>
+												<table class="table o_my_status_table">
+													<thead>
+														<tr class="active">
+															<th>Commission</th>
+															<th>Date</th>
+															<th>Amount</th>
+														</tr>
+													</thead>
+													<tbody>
+														<t t-foreach="commissions" t-as="c">
+															<tr>
+																<td class="comission_name">
+																	<t t-esc="c.name" />
+																</td>
+																<td class="comission_date">
+																	<t t-esc="c.date" />
+																</td>
+																<td class="comission_amount">
+																	<t t-esc="c.comm_amount"
+																		t-options="{'widget': 'monetary', 'display_currency': c.currency_id}" />
+																</td>
+															</tr>
+														</t>
+													</tbody>
+												</table>
+												<form method="post"
+													action="/affiliate/payment_requests/new">
+													<div class="row">
+														<div class="col-md-8 payment_note_div">
+															<label for="notes">Notes</label>
+															<textarea name="notes" class="payment_notes"></textarea>
+														</div>
+														<div class="col-md-4 payment_total">
+															<p>
+																Commission Total:
+																<t t-esc="total"
+																	t-options="{'widget': 'monetary', 'display_currency': website.sudo().company_id.currency_id}" />
+															</p>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-md-12 payment_request_submit">
+															<input type="hidden" name="csrf_token"
+																t-att-value="request.csrf_token()" />
+															<input class="btn btn-primary mb32 common-btn"
+																type="submit" />
+														</div>
+													</div>
+												</form>
+											</t>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</t>
+		</template>
+		<template id="to_affiliate" name="Affiliate Register">
+			<t t-call="website.layout">
+				<div id="wrap">
+					<div class="oe_structure">
+						<section data-snippet-id="text-block" class="mt16 mb16">
+							<div class="container">
+
+								<div class="row" t-if="user_id.partner_id.is_affiliate">
+									<div class="col-md-3 col-lg-offset-1 o_my_sidebar">
+										<t
+											t-call="to_website_affiliate.portal_my_home_menu_affiliate" />
+									</div>
+									<div class="col-md-9 col-lg-8">
+										<div class="row"
+											t-if="not user_id.partner_id.is_affiliate">
+											<div class="col-md-12 text-center mb16"
+												data-snippet-id="colmd">
+												<h2>Welcome to Affiliate Program</h2>
+											</div>
+											<div class="col-md-12 mt16 mb16">
+												<form action="/affiliate/join" method="post"
+													class="form-horizontal mt16" enctype="multipart/form-data">
+													<input type="hidden" name="user"
+														t-att-value="user_id.id" />
+													<input type="hidden" name="csrf_token"
+														t-att-value="request.csrf_token()" />
+													<div class="form-group"
+														t-if="len(kwargs['res_company']) > 1">
+														<label for="company"
+															class="col-md-3 col-sm-4 control-label">Preferred Seller</label>
+														<div class="col-md-7 col-sm-8">
+															<select name="res_company" class="form-control"
+																id="company">
+																<option value="0">Select a Company</option>
+																<t t-foreach="kwargs['res_company']" t-as="company">
+																	<t t-if="company.aff_allowed">
+																		<option t-att-value="company.id">
+																			<span t-esc="company.name" />
+																		</option>
+																	</t>
+																</t>
+															</select>
+														</div>
+													</div>
+													<div class="form-group">
+														<div
+															class="col-md-offset-3 col-sm-offset-4 col-sm-8 col-md-7">
+															<button class="btn btn-primary btn-lg">Join</button>
+														</div>
+													</div>
+													<div class="form-group  col-md-12">
+														<label class="control-label" for="source">Source</label>
+														<select class="form-control link_source"
+															name="source">
+															<t t-foreach="source" t-as="s">
+																<option t-att-value="s.id">
+																	<t t-esc="s.name" />
+																</option>
+															</t>
+														</select>
+													</div>
+													<div class="form-group col-md-12 buttons">
+														<input class="btn btn-primary mb32 common-btn"
+															type="submit" />
+													</div>
+												</form>
+											</div>
+										</div>
+										<div class="row" t-if="user_id.partner_id.is_affiliate">
+											<div class="col-md-12 text-center mb16"
+												data-snippet-id="colmd">
+												<h2>Welcome to Affiliate Program</h2>
+											</div>
+											<div class="col-md-12 mb16 mt16"
+												t-if="kwargs['aff_code']">
+												<div class="alert alert-info" role="alert">
+													<p>
+														Firstly, you will need to create a new link tracker in order to get
+                                                        started with the code
+														<code>
+															<span t-esc="kwargs['aff_code'].name" />
+														</code>
+													</p>
+												</div>
+												<div class="link_tracker_div">
+													<div class="link_tracker_form">
+														<h3 class="chs_heading">Add New Link</h3>
+														<form method="post" action="/affiliate/create_link">
+															<input type="hidden" name="csrf_token"
+																t-att-value="request.csrf_token()" />
+															<div class="form-group  col-md-12">
+																<label class="control-label" for="title">Title</label>
+																<input class="form-control" name="title"
+																	type="text" />
+															</div>
+															<div class="form-group  col-md-12">
+																<label class="control-label" for="url">Target URL
+																</label>
+																<input class="form-control" name="url" type="text" />
+															</div>
+															<div class="form-group  col-md-12">
+																<label class="control-label" for="medium">Medium</label>
+																<select class="form-control link_medium"
+																	name="medium">
+																	<t t-foreach="medium" t-as="m">
+																		<option t-att-value="m.id">
+																			<t t-esc="m.name" />
+																		</option>
+																	</t>
+																</select>
+															</div>
+															<div class="form-group  col-md-12">
+																<label class="control-label" for="source">Source</label>
+																<select class="form-control link_source"
+																	name="source">
+																	<t t-foreach="source" t-as="s">
+																		<option t-att-value="s.id">
+																			<t t-esc="s.name" />
+																		</option>
+																	</t>
+																</select>
+															</div>
+															<div class="form-group col-md-12 buttons">
+																<input class="btn btn-primary mb32 common-btn"
+																	type="submit" />
+															</div>
+														</form>
+													</div>
+													<div class="link_tracker_list">
+														<h3 class="chs_heading">Your Links</h3>
+														<div class="link_tracker_list_wp">
+															<t t-foreach="links" t-as="l">
+																<div class="link_tracker">
+																	<div class="link_info">
+																		<h4 t-esc="l.title"></h4>
+																		<input class="link_title hidden_input hide"
+																			t-att-value="l.title" type="text" />
+																		<span class="link_url">
+																			<b>Url:</b>
+																			<t t-esc="l.url" />
+																		</span>
+																		<br />
+																		<span class="link_track_url">
+																			<b>Affiliate URL:</b>
+																			<t t-esc="l.short_url" />
+																		</span>
+																		<br />
+																		<input class="short_url_val"
+																			t-att-value="l.short_url" type="text" />
+																		<span class="medium">
+																			<b>Medium:</b>
+																			<span
+																				t-esc="l.medium_id.name if l.medium_id else 'N/A'" />
+																			<select class="form-control link_medium_val"
+																				name="medium">
+																				<t t-foreach="medium" t-as="m">
+																					<option t-if="l.medium_id.id == m.id"
+																						t-att-value="m.id" selected="selected">
+																						<t t-esc="m.name" />
+																					</option>
+																					<option t-if="l.medium_id.id != m.id"
+																						t-att-value="m.id">
+																						<t t-esc="m.name" />
+																					</option>
+																				</t>
+																			</select>
+																		</span>
+																		<br />
+																		<span class="source">
+																			<b>Source:</b>
+																			<span
+																				t-esc="l.source_id.name if l.source_id else 'N/A'" />
+																			<select class="form-control link_source_val"
+																				name="source">
+																				<t t-foreach="source" t-as="s">
+																					<option t-if="l.source_id.id == s.id"
+																						t-att-value="s.id" selected="selected">
+																						<t t-esc="s.name" />
+																					</option>
+																					<option t-if="l.source_id.id != s.id"
+																						t-att-value="s.id">
+																						<t t-esc="s.name" />
+																					</option>
+																				</t>
+																			</select>
+																		</span>
+																	</div>
+																	<div class="link_actions">
+																		<span
+																			class="btn btn-sm btn-primary o_clipboard_button o_btn_char_copy copy_link_button"
+																			t-att-data-url="l.short_url">
+																			<i class="fa fa-clipboard">
+																				Copy
+																			</i>
+																		</span>
+																		<span
+																			class="btn btn-sm btn-primary save_link_button"
+																			t-att-data-id="l.id">
+																			<i class="fa fa-edit" />
+																			Save
+																		</span>
+																		<span
+																			class="btn btn-sm btn-secondary edit_link_button"
+																			t-att-data-id="l.id">
+																			<i class="fa fa-edit" />
+																			Edit
+																		</span>
+																		<span class="btn delete_link_button"
+																			t-att-data-id="l.id">
+																			<i class="fa fa-times" />
+																			Delete
+																		</span>
+																	</div>
+																</div>
+															</t>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</t>
+		</template>
+
+		<template id="portal_affiliate_invoices"
+			name="Affiliate Invoices">
+			<t t-call="website.layout">
+				<div id="wrap">
+					<div class="oe_structure">
+						<section data-snippet-id="text-block" class="mt16 mb16">
+							<div class="container">
+								<div class="row">
+									<div class="col-md-12 text-center mb16"
+										data-snippet-id="colmd">
+										<h2>Affiliate Invoices</h2>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-3 col-lg-offset-1 o_my_sidebar">
+										<t
+											t-call="to_website_affiliate.portal_my_home_menu_affiliate" />
+									</div>
+									<div class="col-md-9 col-lg-8">
+										<div class="row">
+											<t t-if="not invoices">
+												<p>There are currently no affiliate invoices for your
+													account.
+												</p>
+											</t>
+											<t t-if="invoices">
+												<table class="table table-hover o_my_status_table">
+													<thead>
+														<tr class="active">
+															<th>Invoice #</th>
+															<th>Invoice Date</th>
+															<th>Due Date</th>
+															<th></th>
+															<th>Amount Due</th>
+														</tr>
+													</thead>
+													<t t-foreach="invoices" t-as="invoice">
+														<tr>
+															<td class="cell_overflow">
+																<a t-att-href="invoice.get_portal_url()"
+																	t-att-title="invoice.name">
+																	<t t-esc="invoice.name" />
+																</a>
+															</td>
+															<td>
+																<span t-field="invoice.invoice_date" />
+															</td>
+															<td>
+																<span t-field="invoice.invoice_date_due" />
+															</td>
+															<td>
+																<t t-if="invoice.invoice_payment_state == 'paid'">
+																	<span class="label label-default">
+																		<i class="fa fa-fw fa-check" />
+																		Paid
+																	</span>
+																</t>
+																<t t-elif="invoice.state in ('draft', 'posted')">
+																	<span class="label label-info">
+																		<i class="fa fa-fw fa-clock-o" />
+																		Waiting for Payment
+																	</span>
+																</t>
+																<t t-else="">
+																	<span class="label label-default">
+																		<i class="fa fa-fw fa-remove" />
+																		Cancelled
+																	</span>
+																</t>
+															</td>
+															<td>
+																<span t-field="invoice.amount_residual"
+																	t-options='{"widget": "monetary", "display_currency": invoice.currency_id}' />
+															</td>
+														</tr>
+													</t>
+												</table>
+											</t>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</t>
+		</template>
+
+		<template id="portal_my_home_sale"
+			name="Portal My Home : affiliate links"
+			inherit_id="portal.portal_my_home" priority="20">
+			<xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
+				<a
+					class="list-group-item list-group-item-action d-flex align-items-center justify-content-between"
+					href="/affiliate">Affiliate Program</a>
+			</xpath>
+		</template>
+	
+		<template id="portal_my_home_menu_affiliate">
+			<div class="navbar-collapse"
+				id="oe-help-navbar-collapse">
+				<div class="o_portal_docs list-group">
+					<a class="list-group-item list-group-item-action d-flex align-items-center justify-content-between" href="/affiliate">Affiliate Links</a>
+					<a class="list-group-item list-group-item-action d-flex align-items-center justify-content-between" t-if="user_id.partner_id.is_affiliate"
+						href="/affiliate/commissions">Affiliate Commissions</a>
+					<a class="list-group-item list-group-item-action d-flex align-items-center justify-content-between" t-if="user_id.partner_id.is_affiliate"
+						href="/affiliate/payment_requests">Affiliate Payment Requests</a>
+					<a class="list-group-item list-group-item-action d-flex align-items-center justify-content-between" t-if="user_id.partner_id.is_affiliate"
+						href="/affiliate/invoices">Affiliate Invoices</a>
+				</div>
+			</div>
+		</template>
+	</data>
+</odoo>

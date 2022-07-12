@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="account_tag_111" model="account.account.tag">
+            <field name="name">Tiền mặt</field>
+            <field name="code">111</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_112" model="account.account.tag">
+            <field name="name">Tiền gửi ngân hàng</field>
+            <field name="code">112</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_113" model="account.account.tag">
+            <field name="name">Tiền đang chuyển</field>
+            <field name="code">113</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_121" model="account.account.tag">
+            <field name="name">Chứng khoán kinh doanh</field>
+            <field name="code">121</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_128" model="account.account.tag">
+            <field name="name">Đầu tư nắm giữ đến ngày đáo hạn</field>
+            <field name="code">128</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_131" model="account.account.tag">
+            <field name="name">Phải thu của khách hàng</field>
+            <field name="code">131</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_133" model="account.account.tag">
+            <field name="name">Thuế giá trị gia tăng được khấu trừ</field>
+            <field name="code">133</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_136" model="account.account.tag">
+            <field name="name">Phải thu nội bộ</field>
+            <field name="code">136</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_138" model="account.account.tag">
+            <field name="name">Phải thu khác</field>
+            <field name="code">138</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_141" model="account.account.tag">
+            <field name="name">Tạm ứng</field>
+            <field name="code">141</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_151" model="account.account.tag">
+            <field name="name">Hàng mua đang đi trên đường</field>
+            <field name="code">151</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_152" model="account.account.tag">
+            <field name="name">Nguyên liệu, vật liệu</field>
+            <field name="code">152</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_153" model="account.account.tag">
+            <field name="name">Công cụ dụng cụ</field>
+            <field name="code">153</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_154" model="account.account.tag">
+            <field name="name">Chi phí sản xuất kinh doanh dở dang</field>
+            <field name="code">154</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_155" model="account.account.tag">
+            <field name="name">Thành phẩm</field>
+            <field name="code">155</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_156" model="account.account.tag">
+            <field name="name">Hàng hóa</field>
+            <field name="code">156</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_157" model="account.account.tag">
+            <field name="name">Hàng gửi đi bán</field>
+            <field name="code">157</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_158" model="account.account.tag">
+            <field name="name">Hàng hóa kho bảo thuế</field>
+            <field name="code">158</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_161" model="account.account.tag">
+            <field name="name">Chi sự nghiệp</field>
+            <field name="code">161</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_171" model="account.account.tag">
+            <field name="name">Giao dịch mua bán lại trái phiếu chính phủ</field>
+            <field name="code">171</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_211" model="account.account.tag">
+            <field name="name">Tài sản cố định hữu hình</field>
+            <field name="code">211</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_212" model="account.account.tag">
+            <field name="name">Tài sản cố định thuê tài chính</field>
+            <field name="code">212</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_213" model="account.account.tag">
+            <field name="name">Tài sản cố định vô hình</field>
+            <field name="code">213</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_214" model="account.account.tag">
+            <field name="name">Hao mòn tài sản cố định</field>
+            <field name="code">214</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_217" model="account.account.tag">
+            <field name="name">Bất động sản đầu tư</field>
+            <field name="code">217</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_221" model="account.account.tag">
+            <field name="name">Đầu tư vào công ty con</field>
+            <field name="code">221</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_222" model="account.account.tag">
+            <field name="name">Đầu tư vào công ty liên doanh, liên kết</field>
+            <field name="code">222</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_228" model="account.account.tag">
+            <field name="name">Đầu tư khác</field>
+            <field name="code">228</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_229" model="account.account.tag">
+            <field name="name">Dự phòng tổn thất tài sản (dư có)</field>
+            <field name="code">229</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_241" model="account.account.tag">
+            <field name="name">Xây dựng cơ bản dở dang</field>
+            <field name="code">241</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_242" model="account.account.tag">
+            <field name="name">Chi phí trả trước</field>
+            <field name="code">242</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_243" model="account.account.tag">
+            <field name="name">Tài sản thuế thu nhập hoãn lại</field>
+            <field name="code">243</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_244" model="account.account.tag">
+            <field name="name">Cầm cố, thế chấp, ký quỹ, ký cược</field>
+            <field name="code">244</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_331" model="account.account.tag">
+            <field name="name">Phải trả cho người bán</field>
+            <field name="code">331</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_333" model="account.account.tag">
+            <field name="name">Thuế và các khoản phải nộp Nhà nước</field>
+            <field name="code">333</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_3331" model="account.account.tag">
+            <field name="name">Thuế GTGT phải nộp</field>
+            <field name="code">3331</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_3338" model="account.account.tag">
+            <field name="name">Thuế bảo vệ môi trường và các loại thuế khác</field>
+            <field name="code">3338</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_334" model="account.account.tag">
+            <field name="name">Phải trả người lao động</field>
+            <field name="code">334</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_335" model="account.account.tag">
+            <field name="name">Chi phí phải trả</field>
+            <field name="code">335</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_336" model="account.account.tag">
+            <field name="name">Phải trả nội bộ</field>
+            <field name="code">336</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_337" model="account.account.tag">
+            <field name="name">Thanh toán theo tiến độ hợp đồng xây dựng</field>
+            <field name="code">337</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_338" model="account.account.tag">
+            <field name="name">Phải trả phải nộp khác</field>
+            <field name="code">338</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_341" model="account.account.tag">
+            <field name="name">Vay và nợ thuê tài chính</field>
+            <field name="code">341</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_343" model="account.account.tag">
+            <field name="name">Trái phiếu phát hành</field>
+            <field name="code">343</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_3431" model="account.account.tag">
+            <field name="name">Trái phiếu thường</field>
+            <field name="code">3431</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_344" model="account.account.tag">
+            <field name="name">Nhận ký quỹ, ký cược</field>
+            <field name="code">344</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_347" model="account.account.tag">
+            <field name="name">Thuế thu nhập hoãn lại phải trả</field>
+            <field name="code">347</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_352" model="account.account.tag">
+            <field name="name">Dự phòng phải trả</field>
+            <field name="code">352</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_353" model="account.account.tag">
+            <field name="name">Quỹ khen thưởng, phúc lợi</field>
+            <field name="code">353</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_356" model="account.account.tag">
+            <field name="name">Quỹ phát triển khoa học và công nghệ</field>
+            <field name="code">356</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_357" model="account.account.tag">
+            <field name="name">Quỹ bình ổn giá</field>
+            <field name="code">357</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_411" model="account.account.tag">
+            <field name="name">Vốn đầu tư của chủ sở hữu</field>
+            <field name="code">411</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_4111" model="account.account.tag">
+            <field name="name">Vốn góp của chủ sở hữu</field>
+            <field name="code">4111</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_412" model="account.account.tag">
+            <field name="name">Chênh lệch đánh giá lại tài sản</field>
+            <field name="code">412</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_413" model="account.account.tag">
+            <field name="name">Chênh lệch tỷ giá hối đoái</field>
+            <field name="code">413</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_414" model="account.account.tag">
+            <field name="name">Quỹ đầu tư phát triển</field>
+            <field name="code">414</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_417" model="account.account.tag">
+            <field name="name">Quỹ hỗ trợ sắp xếp doanh nghiệp</field>
+            <field name="code">417</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_418" model="account.account.tag">
+            <field name="name">Các quỹ khác thuộc vốn chủ sở hữu</field>
+            <field name="code">418</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_419" model="account.account.tag">
+            <field name="name">Cổ phiếu quỹ</field>
+            <field name="code">419</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_421" model="account.account.tag">
+            <field name="name">Lợi nhuận sau thuế chưa phân phối</field>
+            <field name="code">421</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_441" model="account.account.tag">
+            <field name="name">Nguồn vốn đầu tư xây dựng cơ bản</field>
+            <field name="code">441</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_461" model="account.account.tag">
+            <field name="name">Nguồn kinh phí sự nghiệp</field>
+            <field name="code">461</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_466" model="account.account.tag">
+            <field name="name">Nguồn kinh phí sự nghiệp đã hình thành TSCĐ</field>
+            <field name="code">466</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_511" model="account.account.tag">
+            <field name="name">Doanh thu bán hàng và cung cấp dịch vụ</field>
+            <field name="code">511</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_515" model="account.account.tag">
+            <field name="name">Doanh thu hoạt động tài chính</field>
+            <field name="code">515</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_521" model="account.account.tag">
+            <field name="name">Các khoản giảm trừ doanh thu</field>
+            <field name="code">521</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_611" model="account.account.tag">
+            <field name="name">Mua hàng (áp dụng cho phương pháp kiểm kê định kỳ)</field>
+            <field name="code">611</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_621" model="account.account.tag">
+            <field name="name">Chi phí nguyên liệu, vật liệu trực tiếp</field>
+            <field name="code">621</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_622" model="account.account.tag">
+            <field name="name">Chi phí nhân công trực tiếp</field>
+            <field name="code">622</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_623" model="account.account.tag">
+            <field name="name">Chi phí sử dụng máy thi công</field>
+            <field name="code">623</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_627" model="account.account.tag">
+            <field name="name">Chi phí sản xuất chung</field>
+            <field name="code">627</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_631" model="account.account.tag">
+            <field name="name">Giá thành sản xuất</field>
+            <field name="code">631</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_632" model="account.account.tag">
+            <field name="name">Giá vốn hàng bán</field>
+            <field name="code">632</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_635" model="account.account.tag">
+            <field name="name">Chi phí tài chính</field>
+            <field name="code">635</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_641" model="account.account.tag">
+            <field name="name">Chi phí bán hàng</field>
+            <field name="code">641</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_642" model="account.account.tag">
+            <field name="name">Chi phí quản lý doanh nghiệp</field>
+            <field name="code">642</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_711" model="account.account.tag">
+            <field name="name">Thu nhập khác</field>
+            <field name="code">711</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_811" model="account.account.tag">
+            <field name="name">Chi phí khác</field>
+            <field name="code">811</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_821" model="account.account.tag">
+            <field name="name">Chi phí thuế thu nhập doanh nghiệp</field>
+            <field name="code">821</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_911" model="account.account.tag">
+            <field name="name">Xác định kết quả kinh doanh</field>
+            <field name="code">911</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <!-- added for account reports -->
+        <record id="account_tag_3334" model="account.account.tag">
+            <field name="name">Thuế thu nhập doanh nghiệp</field>
+            <field name="code">3334</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_5117" model="account.account.tag">
+            <field name="name">Doanh thu kinh doanh bất động sản đầu tư</field>
+            <field name="code">5117</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_2281" model="account.account.tag">
+            <field name="name">Đầu tư góp vốn vào đơn vị khác</field>
+            <field name="code">2281</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_3411" model="account.account.tag">
+            <field name="name">Các khoản đi vay</field>
+            <field name="code">3411</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_3432" model="account.account.tag">
+            <field name="name">Trái phiếu chuyển đổi</field>
+            <field name="code">3432</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_41112" model="account.account.tag">
+            <field name="name">Cổ phiếu ưu đãi</field>
+            <field name="code">41112</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_41111" model="account.account.tag">
+            <field name="name">Cổ phiếu phổ thông có quyền biểu quyết</field>
+            <field name="code">41111</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_3412" model="account.account.tag">
+            <field name="name">Nợ thuê tài chính</field>
+            <field name="code">3412</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_3385" model="account.account.tag">
+            <field name="name">Phải trả về cổ phần hóa</field>
+            <field name="code">3385</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_1281" model="account.account.tag">
+            <field name="name">Tiền gửi có kì hạn</field>
+            <field name="code">1281</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_1282" model="account.account.tag">
+            <field name="name">Trái phiếu</field>
+            <field name="code">1282</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_1288" model="account.account.tag">
+            <field name="name">Các khoản đầu tư khác nắm giữ đến ngày đáo hạn</field>
+            <field name="code">1288</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_1211" model="account.account.tag">
+            <field name="name">Cổ phiếu</field>
+            <field name="code">1211</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_1212" model="account.account.tag">
+            <field name="name">Trái phiếu, tín phiếu, ký phiếu</field>
+            <field name="code">1212</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_2291" model="account.account.tag">
+            <field name="name">Dự phòng giảm giá chứng khoán kinh doanh</field>
+            <field name="code">2291</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_1362" model="account.account.tag">
+            <field name="name">Phải thu nội bộ về chênh lệch tỷ giá</field>
+            <field name="code">1362</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_1363" model="account.account.tag">
+            <field name="name">Phải thu nội bộ về chi phí đi vay đủ điều kiện được vốn</field>
+            <field name="code">1363</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_1368" model="account.account.tag">
+            <field name="name">Phải thu nội bộ khác</field>
+            <field name="code">1368</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_1283" model="account.account.tag">
+            <field name="name">Cho vay</field>
+            <field name="code">1283</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_1385" model="account.account.tag">
+            <field name="name">Phải thu về cổ phần hóa</field>
+            <field name="code">1385</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_1388" model="account.account.tag">
+            <field name="name">Phải thu khác</field>
+            <field name="code">1388</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_2411" model="account.account.tag">
+            <field name="name">Mua sắm TSCĐ</field>
+            <field name="code">2411</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_2293" model="account.account.tag">
+            <field name="name">Dự phòng phải thu khó đòi</field>
+            <field name="code">2293</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_1381" model="account.account.tag">
+            <field name="name">Tài sản thiếu chờ xử lý</field>
+            <field name="code">1381</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_2294" model="account.account.tag">
+            <field name="name">Dự phòng giảm giá hàng tồn kho</field>
+            <field name="code">2294</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_2288" model="account.account.tag">
+            <field name="name">Đầu tư khác</field>
+            <field name="code">2288</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_1361" model="account.account.tag">
+            <field name="name">Vốn kinh doanh ở đơn vị trực thuộc</field>
+            <field name="code">1361</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_2111" model="account.account.tag">
+            <field name="name">Nhà cửa, vật, kiến trúc</field>
+            <field name="code">2111</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_2141" model="account.account.tag">
+            <field name="name">Hao mòn TSCĐ hữu hình</field>
+            <field name="code">2141</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_2143" model="account.account.tag">
+            <field name="name">Hao mòn TSCĐ vô hình</field>
+            <field name="code">2143</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_2147" model="account.account.tag">
+            <field name="name">Hao mòn bất động sản đầu tư</field>
+            <field name="code">2147</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_2292" model="account.account.tag">
+            <field name="name">Dự phòng tổn thất đầu tư vào đơn vị khác</field>
+            <field name="code">2292</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_1534" model="account.account.tag">
+            <field name="name">Thiết bị phụ tùng thay thế</field>
+            <field name="code">1534</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_3387" model="account.account.tag">
+            <field name="name">Doanh thu chưa thực hiện</field>
+            <field name="code">3387</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_34311" model="account.account.tag">
+            <field name="name">Mệnh giá trái phiếu</field>
+            <field name="code">34311</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_34313" model="account.account.tag">
+            <field name="name">Phụ trội trái phiếu</field>
+            <field name="code">34313</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_3361" model="account.account.tag">
+            <field name="name">Phải trả nội bộ về vốn kinh doanh</field>
+            <field name="code">3361</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_3362" model="account.account.tag">
+            <field name="name">Phải trả nội bộ về chênh lệch tỷ giá</field>
+            <field name="code">3362</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_3363" model="account.account.tag">
+            <field name="name">Phải trả nội bộ về chi phí đi vay đủ điều kiện được vốn hóa</field>
+            <field name="code">3363</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_3368" model="account.account.tag">
+            <field name="name">Phải trả nội bộ khác</field>
+            <field name="code">3368</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_4112" model="account.account.tag">
+            <field name="name">Thặng dư vốn cổ phần</field>
+            <field name="code">4112</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_4113" model="account.account.tag">
+            <field name="name">Quyền chọn chuyển đổi trái phiếu</field>
+            <field name="code">4113</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_4118" model="account.account.tag">
+            <field name="name">Vốn khác của chủ sơ hữu</field>
+            <field name="code">4118</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_4211" model="account.account.tag">
+            <field name="name">Lợi nhuận chưa phân phối năm trước</field>
+            <field name="code">4211</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_4212" model="account.account.tag">
+            <field name="name">Lợi nhuận chưa phân phối năm nay</field>
+            <field name="code">4212</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_2412" model="account.account.tag">
+            <field name="name">Hao mòn TSCĐ thuê tài chính</field>
+            <field name="code">2142</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_8211" model="account.account.tag">
+            <field name="name">Chi phí thuế TNDN hiện hành</field>
+            <field name="code">8211</field>
+            <field name="applicability">accounts</field>
+        </record>
+        <record id="account_tag_8212" model="account.account.tag">
+            <field name="name">Chi phí thuế TNDN hoãn lại</field>
+            <field name="code">8212</field>
+            <field name="applicability">accounts</field>
+        </record>
+	</data>
+</odoo>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<!-- Inherit Stock Picking Type -->
+
+		<record id="stock_picking_type_inherit_form" model="ir.ui.view">
+			<field name="name">stock.picking.type.inherit.form</field>
+			<field name="model">stock.picking.type</field>
+			<field name="inherit_id" ref="stock.view_picking_type_form" />
+			<field name="arch" type="xml">
+				<field name="code" position="after">
+					<field name="is_foreign_trade"
+						attrs="{'invisible': [('code','not in',['incoming', 'outgoing'])]}" />
+				</field>
+				<field name="default_location_dest_id" position="after">
+					<field name="is_custom_clearance" invisible="1" />
+					<field name="custom_clearance_type"
+						attrs="{'invisible': [('is_custom_clearance','=',False)], 'required': [('is_custom_clearance','=',True)]}" />
+					<field name="custom_authority_id"
+						attrs="{'invisible': [('custom_clearance_type','=',False)], 'required': [('is_custom_clearance','!=',False)]}" />
+				</field>
+			</field>
+		</record>
+
+	</data>
+</odoo>

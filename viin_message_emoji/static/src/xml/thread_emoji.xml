@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-extend="mail.widget.Thread.Message">
+        <t t-jquery=".o_thread_message_content" t-operation="append">
+            <t t-if="message.model=='mail.channel'">
+                <div class="emoji_message_class" t-att-data-message-id="message.getID()">
+                    <t t-call="message.Emoji">
+                        <t t-set="message" t-value="message" />
+                    </t>
+                </div>
+            </t>
+        </t>
+    </t>
+    <t t-name="message.Emoji">
+        <t t-if="message.emoji!==undefined &amp;&amp; message.listEmoji!==undefined">
+            <div t-attf-class="dropdown emoji_message #{(message.emoji.total>0)?'emoji_message_have_emoji':'emoji_hover'}">
+                <div class="dropdown-toggle row emoji_row" id="dropdownEmoji" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <t t-foreach="message.listEmoji" t-as="emoji">
+                        <div t-attf-class="emoji_item #{(message.emoji[emoji.name]===undefined)?'o_hidden':''}" t-att-data-message-id="message.getID()" t-att-name="emoji.name">
+                            <span class="emoji_icon">
+                                <t t-raw="emoji.emoji" />
+                            </span>
+                            <sub>
+                                <t t-if="message.emoji[emoji.name]!==undefined">
+                                    <t t-esc="message.emoji[emoji.name].number" />
+                                </t>
+                            </sub>
+                        </div>
+                    </t>
+                    <div t-attf-class="#{(message.emoji.total===0)?'':'o_hidden'}" name="default_emoji">
+                        <i class="fa fa-smile-o o_composer_button_emoji" style="color: black" role='img' aria-label="Default emoji" title="Default emoji" />
+                    </div>
+                </div>
+                <div class="dropdown-menu emoji_dropdown" aria-labelledby="dropdownEmoji">
+                    <div class="row emoji_dropdown_row">
+                        <t t-foreach="message.listEmoji" t-as="emoji">
+                            <button class="dropdown-item emoji_item_btn click_emoji" t-att-data-emoj-name="emoji.name" t-att-data-message-id="message.getID()">
+                                <span>
+                                    <t t-raw="emoji.emoji" />
+                                </span>
+                            </button>
+                        </t>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </t>
+</templates>

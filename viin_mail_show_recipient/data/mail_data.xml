@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="message_notification_email" inherit_id="mail.message_notification_email">
+		<xpath expr="//div[@t-raw='message.body']" position="before">
+			<div t-if="is_discussion and mail_recipients"
+				summary="o_mail_notification" style="padding: 0px; width:600px;">
+				<table cellspacing="0" cellpadding="0" border="0"
+					style="width: 600px; margin-top: 5px;">
+					<tbody>
+						<tr>
+							<td colspan="2" style="text-align:center;">
+								<p t-if="subtype.internal != True"
+									style="background-color: #f2dede; padding: 5px; margin-bottom: 16px;">
+									<strong>Carbon Copy</strong>
+									: This message was also sent to <i><t t-esc="', '.join(mail_recipients)"/></i>
+								</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</xpath>
+	</template>
+</odoo>

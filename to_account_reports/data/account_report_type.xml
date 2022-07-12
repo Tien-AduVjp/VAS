@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+
+		<menuitem id="af_dynamic_reports_legal_statements_menu"
+			name="GAAP Statements" parent="account.menu_finance_reports"
+			sequence="1" groups="account.group_account_user" />
+
+		<menuitem id="account_reports_partners_reports_menu"
+			name="Partner Reports" parent="account.menu_finance_reports"
+			groups="account.group_account_user" sequence="5" />
+
+		<menuitem id="af_dynamic_reports_biz_statements_menu"
+			name="Business Statements" parent="account.menu_finance_reports"
+			sequence="10" groups="account.group_account_user" />
+
+
+		<menuitem id="account_reports_audit_reports_menu"
+			name="Audit Reports" parent="account.menu_finance_reports"
+			groups="account.group_account_user" sequence="15" />
+
+		<record model="ir.actions.server" id="action_journal_items">
+			<field name="name">Journal Items by tax</field>
+			<field name="model_id"
+				ref="to_account_reports.model_account_financial_dynamic_report_line" />
+			<field name="code">action = env['account.financial.dynamic.report.line'].browse(env.context['active_id']).report_move_lines_action()</field>
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view"
+			id="odoo_module_version_tree_embed_view">
+			<field name="name">odoo.module.version.tree.embed</field>
+			<field name="model">odoo.module.version</field>
+			<field name="arch" type="xml">
+				<tree string="Odoo Module Version">
+					<field name="name" />
+					<field name="technical_name" />
+					<field name="odoo_version_id" />
+					<field name="version" />
+					<field name="price_currency"
+						groups="account.group_account_invoice,to_odoo_module.odoo_module_user" />
+					<field name="currency_id" invisible="1" />
+					<field name="price"
+						groups="account.group_account_invoice,to_odoo_module.odoo_module_user" />
+					<field name="company_currency_id" invisible="1" />
+				</tree>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="odoo_module_version_form_view">
+			<field name="name">odoo.module.version.form</field>
+			<field name="model">odoo.module.version</field>
+			<field name="arch" type="xml">
+				<form string="Odoo Module Version Form">
+					<header>
+						<button id="normal_btn" name="action_rotate_token"
+							type="object" groups="to_odoo_module.odoo_module_user"
+							string="Rotate Token"
+							help="This will replace the existing token with a new one."
+							confirm="This will generate new token and delete the existing one. This will make the last public download link invalid. Are you sure?" />
+					</header>
+					<sheet>
+						<div class="oe_button_box" name="button_box">
+							<button name="action_view_download_stats" type="object"
+								groups="to_odoo_module.odoo_module_user" class="oe_stat_button"
+								icon="fa-bar-chart-o">
+								<field name="total_downloads_count"
+									groups="to_odoo_module.odoo_module_user" string="Downloads"
+									widget="statinfo" />
+							</button>
+						</div>
+						<field name="icon" widget="image" class="oe_avatar" />
+						<field name="active" invisible="1" />
+						<widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+						<div class="oe_title">
+							<h1>
+								<label class="oe_edit_only" for="name" />
+								<field name="name" placeholder="Name" />
+							</h1>
+							<div name="options">
+								<div>
+									<field name="module_id" placeholder="Select a Module" />
+								</div>
+								<div>
+									<field name="technical_name" placeholder="Technical Name" />
+								</div>
+							</div>
+						</div>
+						<div name="attachment" string="Module Source Code Zip Archive">
+
+						</div>
+						<group>
+							<group>
+								<field name="git_branch_id" />
+								<field name="zipped_source_code" filename="filename" />
+								<field name="filename" invisible="1" />
+								<field name="version" />
+								<field name="odoo_version_id" />
+								<field name="full_version_str" />
+								<field name="author_ids" widget="many2many_tags" />
+								<field name="website" widget="url" />
+								<field name="live_test_url" widget="url" />
+								<field name="support" />
+								<field name="installable" />
+								<field name="application" />
+								<field name="auto_install" />
+								<field name="is_standard_enterprise_module" />
+								<field name="is_standard_odoo_module" />
+								<field name="ee_required" />
+								<field name="ir_module_category_id" />
+							</group>
+							<group>
+								<field name="product_id"
+									groups="account.group_account_invoice,to_odoo_module.odoo_module_user" />
+								<field name="price_currency"
+									groups="account.group_account_invoice,to_odoo_module.odoo_module_user" />
+								<field name="recursive_price_currency"
+									groups="account.group_account_invoice,to_odoo_module.odoo_module_user" />
+								<field name="currency_id"
+									groups="base.group_multi_currency" />
+								<field name="price"
+									groups="account.group_account_invoice,to_odoo_module.odoo_module_user" />
+								<field name="recursive_price"
+									groups="account.group_account_invoice,to_odoo_module.odoo_module_user" />
+								<field name="company_currency_id"
+									groups="base.group_multi_currency" />
+								<field name="license_version_id" />
+								<field name="git_repository_id" force_save="1" />
+								<field name="vendor_id" domain="[('supplier','=',True)]"
+									context="{'default_customer': False, 'default_supplier': True}" />
+								<field name="depends" groups="base.group_no_one" />
+								<field name="required_standard_odoo_app_ids"
+									widget="many2many_tags" />
+								<field name="included_dependency_ids"
+									widget="many2many_tags" />
+
+							</group>
+						</group>
+						<notebook>
+							<page name="summary" string="Summary">
+								<field name="summary" />
+								<field name="description_html" class="oe_styling_v8" />
+							</page>
+							<page name="desc" string="Rst. Description">
+								<field name="description" />
+							</page>
+							<page name="index_html" string='HTML Description'>
+								<field name="index_html" />
+							</page>
+							<page name="doc_rst" string="Rst. Documentation">
+								<field name="doc_rst" />
+							</page>
+							<page name="dependancies" string="Dependencies">
+								<label for="depending_module_version_ids" />
+								<field name="depending_module_version_ids"
+									context="{'tree_view_ref':'to_odoo_module.odoo_module_version_tree_embed_view'}" />
+								<label for="recursive_depending_module_version_ids" />
+								<field name="recursive_depending_module_version_ids"
+									context="{'tree_view_ref':'to_odoo_module.odoo_module_version_tree_embed_view'}" />
+							</page>
+							<page name="inheritances" string="Inheritances">
+								<label for="depended_module_version_ids" />
+								<field name="depended_module_version_ids"
+									context="{'tree_view_ref':'to_odoo_module.odoo_module_version_tree_embed_view'}" />
+								<label for="recursive_depended_module_version_ids" />
+								<field name="recursive_depended_module_version_ids"
+									context="{'tree_view_ref':'to_odoo_module.odoo_module_version_tree_embed_view'}" />
+							</page>
+							<page string="Images">
+								<field name="image_ids" mode="kanban"
+									context="{'default_name': name, 'default_module_version_id': active_id}">
+									<kanban string="Module Version Images">
+										<field name="name" />
+										<field name="image" />
+										<templates>
+											<t t-name="kanban-box">
+												<div class="oe_kanban_global_click">
+													<a t-if="!read_only_mode" type="delete"
+														class="fa fa-times pull-right" />
+													<div class="o_kanban_image">
+														<img t-if="record.image.raw_value"
+															t-att-src="'data:image/png;base64,'+record.image.raw_value"
+															alt="Image" />
+													</div>
+													<div class="oe_kanban_details">
+														<field name="name" />
+													</div>
+												</div>
+											</t>
+										</templates>
+									</kanban>
+								</field>
+							</page>
+							<page name="infor" string="Other Info">
+								<label for="source_path" groups="base.group_system" />
+								<field name="source_path" groups="base.group_system" />
+								<group>
+									<group>
+										<field name="authors" groups="base.group_no_one" />
+									</group>
+									<group>
+										<field name="other_version_ids" widget="many2many_tags"
+											groups="base.group_no_one" />
+									</group>
+								</group>
+							</page>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers" />
+						<field name="activity_ids" widget="mail_activity" />
+						<field name="message_ids" widget="mail_thread" />
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="odoo_module_version_tree_view">
+			<field name="name">odoo.module.version.tree</field>
+			<field name="model">odoo.module.version</field>
+			<field name="arch" type="xml">
+				<tree string="Odoo Module Version">
+					<field name="name" />
+					<field name="technical_name" />
+					<field name="product_id" />
+					<field name="odoo_version_id" groups="base.group_no_one" />
+					<field name="version" groups="base.group_no_one" />
+					<field name="full_version_str" />
+					<field name="included_dependency_ids" widget="many2many_tags" />
+					<field name="required_standard_odoo_app_ids"
+						widget="many2many_tags" />
+					<field name="other_version_ids" widget="many2many_tags"
+						groups="base.group_no_one" />
+					<field name="price_currency"
+						groups="account.group_account_invoice,to_odoo_module.odoo_module_user" />
+					<field name="currency_id" invisible="1" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="odoo_module_version_kanban_view">
+			<field name="name">odoo.module.version.kanban</field>
+			<field name="model">odoo.module.version</field>
+			<field name="arch" type="xml">
+				<kanban
+					class="oe_background_grey o_kanban_dashboard o_odoo_module_version_kanban">
+					<field name="id" />
+					<field name="name" />
+					<field name="icon" />
+					<field name="summary" />
+					<field name="version" />
+					<field name="price_currency" />
+					<field name="price" />
+					<field name="currency_id" />
+					<field name="company_currency_id" />
+					<field name="full_version_str" />
+					<field name="license_version_id" />
+					<templates>
+						<t t-name="kanban-box">
+							<div class="oe_kanban_global_click">
+								<div class="o_kanban_card_header">
+									<div class="o_kanban_card_header_title">
+										<div class="o_primary">
+											<field name="name" />
+										</div>
+									</div>
+									<div class="o_kanban_manage_button_section">
+										<a class="o_kanban_manage_toggle_button" href="#">
+											<i class="fa fa-ellipsis-v" aria-label="Selection"
+												role="img" title="Selection" />
+										</a>
+									</div>
+								</div>
+								<div class="container o_kanban_card_content">
+									<div class="row">
+										<div class="col-3 o_kanban_primary_left">
+											<div class="o_kanban_image">
+												<img
+													t-att-src="kanban_image('odoo.module.version', 'icon', record.id.raw_value)"
+													alt="Image" />
+											</div>
+										</div>
+										<div class="col-9 o_kanban_primary_right">
+											<div class="oe_kanban_details">
+												<code t-if="record.technical_name.value">
+													<field name="technical_name" />
+												</code>
+												<field name="summary" />
+												<ul>
+													<li>
+														Price:
+														<field name="price" widget="monetary"
+															groups="account.group_account_invoice,to_odoo_module.odoo_module_user"
+															options="{'currency_field': 'company_currency_id', 'field_digits': True}" />
+													</li>
+													<li>
+														Currency Price:
+														<field name="price_currency" widget="monetary"
+															groups="account.group_account_invoice,to_odoo_module.odoo_module_user"
+															options="{'currency_field': 'currency_id', 'field_digits': True}" />
+													</li>
+												</ul>
+												<span class="badge badge-info">
+													<t t-esc="record.full_version_str.value" />
+												</span>
+												<br />
+												<field name="license_version_id" />
+												<br />
+												Downloads:
+												<field name="total_downloads_count" />
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<div
+									class="container o_kanban_card_manage_pane dropdown-menu"
+									role="menu">
+									<div class="o_kanban_card_manage_settings row">
+										<div class="col-8">
+											<a type="object" name="action_get_download_url"
+												class="dropdown-item">Get Download URL</a>
+										</div>
+										<div class="col-4 text-right"
+											groups="to_odoo_module.odoo_module_user">
+											<a t-if="widget.editable" type="edit">Edit</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</t>
+					</templates>
+				</kanban>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="odoo_module_version_search_view">
+			<field name="name">odoo.module.version.search</field>
+			<field name="model">odoo.module.version</field>
+			<field name="arch" type="xml">
+				<search string="Search Odoo Module Version">
+					<field name="name"
+						filter_domain="['|','|',('name','ilike',self),('technical_name','ilike',self),('module_id.name','ilike',self)]" />
+					<field name="module_id" />
+					<field name="technical_name" />
+					<separator />
+					<field name="odoo_version_id" />
+					<separator />
+					<field name="version" />
+					<field name="full_version_str" />
+					<separator />
+					<field name="authors" />
+					<field name="vendor_id" />
+					<filter string="Latest Versions" name="ftr_latest_version"
+						domain="[('is_latest_version','=',True)]"
+						help="Show the latest versions only. For example, only the version for Odoo 12.0 will be shown if the module has three versions for Odoo 10.0, 11.0, 12.0" />
+					<separator />
+					<filter string="8.0" name="ftr_odoo_v8"
+						domain="[('odoo_version_id.name','=','8.0')]" />
+					<filter string="9.0" name="ftr_odoo_v9"
+						domain="[('odoo_version_id.name','=','9.0')]" />
+					<filter string="10.0" name="ftr_odoo_v10"
+						domain="[('odoo_version_id.name','=','10.0')]" />
+					<filter string="11.0" name="ftr_odoo_v11"
+						domain="[('odoo_version_id.name','=','11.0')]" />
+					<filter string="12.0" name="ftr_odoo_v12"
+						domain="[('odoo_version_id.name','=','12.0')]" />
+					<filter string="13.0" name="ftr_odoo_v13"
+						domain="[('odoo_version_id.name','=','13.0')]" />
+					<filter string="14.0" name="ftr_odoo_v14"
+						domain="[('odoo_version_id.name','=','14.0')]" />
+					<separator />
+					<filter string="Application" name="ftr_apps"
+						domain="[('application','=',True)]" />
+					<filter string="None Application" name="ftr_none_apps"
+						domain="[('application','=',False)]" />
+					<separator />
+					<filter string="Free" name="ftr_free"
+						domain="[('price_currency','=',0)]" />
+					<filter string="Paid" name="ftr_paid"
+						domain="[('price_currency','>',0)]" />
+					<separator />
+					<filter string="With Vendor" name="ftr_vendor"
+						domain="[('vendor_id','!=',False)]" />
+					<filter string="Without Vendor" name="ftr_no_vendor"
+						domain="[('vendor_id','=',False)]" />
+					<separator />
+					<filter string="With Product" name="ftr_product"
+						domain="[('product_id','!=',False)]" />
+					<filter string="Without Product" name="ftr_no_product"
+						domain="[('product_id','=',False)]" />
+					<separator />
+					<filter string="EE Not Required" name="ftr_ee_not_required"
+						domain="[('ee_required','=',False)]"
+						help="Show module versions that do NOT require Odoo Enterprise Editions" />
+					<filter string="EE Required" name="ftr_ee_required"
+						domain="[('ee_required','=',True)]"
+						help="Show module versions that require Odoo Enterprise Editions" />
+					<separator />
+					<filter name="ftr_std_module" string="Standard Odoo Modules"
+						domain="[('is_standard_odoo_module','=',True)]"
+						help="Show only standard Odoo modules that come along with either Odoo CE or Odoo EE." />
+					<filter name="ftr_non_std_module"
+						string="Non-Standard Odoo Modules"
+						domain="[('is_standard_odoo_module','=',False)]"
+						help="Show non standard Odoo modules only. The modules that come along with either Odoo CE or Odoo EE will be excluded." />
+
+					<group expand="0" name="group_by" string="Group By">
+						<filter name="grp_module" string="Module" domain="[]"
+							context="{'group_by' : 'module_id'}" />
+						<filter name="grp_vendor" string="Vendor" domain="[]"
+							context="{'group_by' : 'vendor_id'}" />
+						<filter name="grp_odoo_version" string="Odoo Version"
+							domain="[]" context="{'group_by' : 'odoo_version_id'}" />
+						<filter name="grp_license_version" string="License"
+							domain="[]" context="{'group_by' : 'license_version_id'}" />
+					</group>
+				</search>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window"
+			id="odoo_module_version_action">
+			<field name="name">Odoo Module Versions</field>
+			<field name="res_model">odoo.module.version</field>
+			<field name="view_mode">kanban,tree,form</field>
+			<field name="context">{'search_default_ftr_latest_version':1,'search_default_ftr_non_std_module':1}
+			</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create a new Odoo module</p>
+			</field>
+		</record>
+
+		<record id="action_server_odoo_module_version_rotate_token"
+			model="ir.actions.server">
+			<field name="name">Regenerate Tokens</field>
+			<field name="type">ir.actions.server</field>
+			<field name="model_id" ref="model_odoo_module_version" />
+			<field name="binding_model_id" ref="model_odoo_module_version" />
+			<field name="state">code</field>
+			<field name="code">records.action_rotate_token()</field>
+		</record>
+
+		<menuitem id="odoo_module_version_menu"
+			name="Modules Versions" parent="odoo_module_main_menu" sequence="10"
+			action="odoo_module_version_action" />
+	</data>
+</odoo>

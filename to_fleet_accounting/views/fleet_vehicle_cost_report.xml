@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="fleet_vehicle_cost_report_view_tree"
+		model="ir.ui.view">
+		<field name="name">fleet.vehicle.cost.report.tree</field>
+		<field name="model">fleet.vehicle.cost.report</field>
+		<field name="arch" type="xml">
+			<tree string="Vehicles costs">
+				<field name="name" />
+				<field name="date" />
+				<field name="amount" />
+				<field name="cost_subtype_id" />
+				<field name="cost_type" />
+				<field name="vendor_id" />
+				<field name="vehicle_id" />
+				<field name="invoice_id" />
+				<field name="product_id" />
+				<field name="company_id" groups="base.group_multi_company" />
+			</tree>
+		</field>
+	</record>
+
+	<record id='fleet_vehicle_cost_indicative_report_view_pivot'
+		model='ir.ui.view'>
+		<field name="name">fleet.vehicle.cost.report.pivot</field>
+		<field name="model">fleet.vehicle.cost.report</field>
+		<field name="arch" type="xml">
+			<pivot string="Vehicles costs">
+				<field name="vehicle_id" type="row" />
+				<field name="date" type="col" />
+				<field name="cost_type" type="col" />
+				<field name="amount" type="measure" />
+			</pivot>
+		</field>
+	</record>
+
+	<record id='fleet_vehicle_cost_indicative_report_view_graph'
+		model='ir.ui.view'>
+		<field name="name">fleet.vehicle.cost.report.graph</field>
+		<field name="model">fleet.vehicle.cost.report</field>
+		<field name="arch" type="xml">
+			<graph string="Vehicles costs">
+				<field name="parent_id" type="row" />
+				<field name="cost_type" type="col" />
+				<field name="amount" type="measure" />
+			</graph>
+		</field>
+	</record>
+
+	<record id='fleet_vehicle_costs_report_view_search'
+		model='ir.ui.view'>
+		<field name="name">fleet.vehicle.cost.report.search</field>
+		<field name="model">fleet.vehicle.cost.report</field>
+		<field name="arch" type="xml">
+			<search string="Vehicles costs">
+				<field name="vehicle_id" />
+				<field name="cost_subtype_id" />
+				<field name="date" />
+				<field name="parent_id" />
+				<separator />
+				<filter name="parent_false"
+					domain="[('parent_id','=',False)]" string="Effective Costs" />
+				<filter name="parent_true"
+					domain="[('parent_id','!=',False)]" string="Indicative Costs" />
+				<separator />
+				<filter string="This Year" name="thisyear"
+					domain="[('date','&gt;=',time.strftime('%%Y-01-01'))]" />						
+				<filter string="Last Year" name="ftr_last_year"
+					domain="[('date','&gt;=',(context_today()-relativedelta(years=1)).strftime('%Y-01-01')),('date','&lt;',time.strftime('%Y-01-01'))]" />
+				<group expand="1" name="group_by" string="Group By">
+					<filter name="groupby_cost_type"
+						context="{'group_by': 'cost_type'}" string="Cost Type" />
+					<filter name="groupby_cost_subtype_id"
+						context="{'group_by': 'cost_subtype_id'}" string="Cost Subtype" />
+					<filter name="groupby_vehicle_id"
+						context="{'group_by': 'vehicle_id'}" string="Vehicle" />
+					<filter name="groupby_parent_id"
+						context="{'group_by': 'parent_id'}" string="Parent" />
+					<separator />
+					<filter name="groupby_date"
+						context="{'group_by': 'date:month'}" string="Month"
+						help="Vehicle Costs by Month" />
+					<filter name="groupby_year"
+						context="{'group_by': 'date:year'}" string="Year" />
+				</group>
+			</search>
+		</field>
+	</record>
+
+	<record id="fleet_costs_reporting_action"
+		model="ir.actions.act_window">
+		<field name="name">Costs Analysis</field>
+		<field name="res_model">fleet.vehicle.cost.report</field>
+		<field name="view_mode">pivot,graph,tree</field>
+		<field name="view_id"></field>  <!-- force empty -->
+		<field name="context">{"search_default_parent_false" : True, 'search_default_thisyear':1}</field>
+	</record>
+
+	<record id="fleet_costs_reporting_non_effective_action"
+		model="ir.actions.act_window">
+		<field name="name">Indicative Costs Analysis</field>
+		<field name="res_model">fleet.vehicle.cost.report</field>
+		<field name="view_mode">pivot,graph,tree</field>
+		<field name="context">{"search_default_parent_true" : True, 'search_default_thisyear':1}</field>
+	</record>
+
+	<menuitem id="fleet.menu_fleet_reporting_costs" name="Costs"
+		parent="fleet.menu_fleet_reporting"
+		action="to_fleet_accounting.fleet_costs_reporting_action" sequence="1"
+		groups="fleet.fleet_group_manager" />
+
+	<menuitem id="fleet.menu_fleet_reporting_indicative_costs"
+		name="Indicative Costs" parent="fleet.menu_fleet_reporting"
+		action="to_fleet_accounting.fleet_costs_reporting_non_effective_action"
+		sequence="2" groups="fleet.fleet_group_manager" />
+</odoo>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+
+		<record id="deferral_confirm_form" model="ir.ui.view">
+			<field name="name">deferral.confirm.form</field>
+			<field name="model">deferral.confirm</field>
+			<field name="arch" type="xml">
+				<form string="Compute Cost / Revenue Deferral">
+					<div>
+						<p>
+							Generate journal entries for cost/revenue deferral lines by the selected date.
+						</p>
+					</div>
+					<group>
+						<field name="date" />
+					</group>
+					<footer>
+						<button string="Compute" name="deferral_compute"
+							type="object" class="oe_highlight" />
+						or
+						<button string="Cancel" class="oe_link" special="cancel" />
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<record id="deferral_confirm_action"
+			model="ir.actions.act_window">
+			<field name="name">Compute Cost/Revenue Deferral</field>
+			<field name="res_model">deferral.confirm</field>
+			<field name="view_mode">tree,form</field>
+			<field name="view_id" ref="deferral_confirm_form" />
+			<field name="target">new</field>
+		</record>
+
+		<menuitem id="menu_deferral_confirm"
+			action="deferral_confirm_action" groups="account.group_account_user"
+			parent="account.menu_finance_entries_generate_entries" sequence="100" />
+
+    </data>
+</odoo>

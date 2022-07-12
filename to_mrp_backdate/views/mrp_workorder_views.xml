@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mrp_production_workorder_form_view_inherit" model="ir.ui.view">
+        <field name="name">mrp.production.work.order.form.inherit</field>
+        <field name="model">mrp.workorder</field>
+        <field name="inherit_id" ref="mrp.mrp_production_workorder_form_view_inherit"/>
+        <field name="arch" type="xml">
+			<xpath expr="//button[@name='record_production']" position="attributes">
+                <attribute name="context">{'open_mrp_workorder_backdate_wizard': True}</attribute>
+            </xpath>
+            <xpath expr="//button[@name='button_start'][1]" position="attributes">
+                <attribute name="context">{'open_mrp_workorder_backdate_wizard': True}</attribute>
+            </xpath>
+            <xpath expr="//button[@name='button_start'][2]" position="attributes">
+                <attribute name="context">{'open_mrp_workorder_backdate_wizard': True}</attribute>
+            </xpath>
+            <xpath expr="//button[@name='button_start'][3]" position="attributes">
+                <attribute name="context">{'open_mrp_workorder_backdate_wizard': True}</attribute>
+            </xpath>
+            <xpath expr="//button[@name='button_finish']" position="attributes">
+                <attribute name="context">{'open_mrp_workorder_backdate_wizard': True}</attribute>
+            </xpath>
+            <xpath expr="//button[@name='button_pending']" position="attributes">
+                <attribute name="context">{'open_mrp_workorder_backdate_wizard': True}</attribute>
+            </xpath>
+            <xpath expr="//button[@name='button_unblock']" position="attributes">
+                <attribute name="context">{'open_mrp_workorder_backdate_wizard': True}</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

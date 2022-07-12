@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<!-- Tags -->
+		<record id="tag_form" model="ir.ui.view">
+			<field name="name">website.doc.tag.form</field>
+			<field name="model">website.doc.tag</field>
+			<field name="arch" type="xml">
+				<form string="Tags">
+					<group>
+						<field name="name"></field>
+					</group>
+				</form>
+			</field>
+		</record>
+
+		<record id="tag_tree" model="ir.ui.view">
+			<field name="name">website.doc.tag.tree</field>
+			<field name="model">website.doc.tag</field>
+			<field name="arch" type="xml">
+				<tree string="Tags" editable="top">
+					<field name="name" />
+					<field name="document_count" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="tag_filter" model="ir.ui.view">
+			<field name="name">website.doc.tag.filter</field>
+			<field name="model">website.doc.tag</field>
+			<field name="arch" type="xml">
+				<search string="Search">
+					<field name="name" />
+				</search>
+			</field>
+		</record>
+
+		<record id="tag_action" model="ir.actions.act_window">
+			<field name="name">Document Tag</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">website.doc.tag</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">
+					Click to create a new tag.
+				</p>
+				<p>
+					Tags of Document
+				</p>
+			</field>
+		</record>
+		
+		<menuitem id="tag_menu" sequence="6" name="Tags" parent="menu_base_docs" action="tag_action" groups="to_website_docs.group_website_doc_reviewer" />
+	</data>
+</odoo>

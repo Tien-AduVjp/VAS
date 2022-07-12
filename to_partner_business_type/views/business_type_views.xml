@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+	
+		<record id="business_type_view_tree" model="ir.ui.view" >
+			<field name="name">res.partner.business.type.view.tree</field>
+			<field name="model">res.partner.business.type</field>
+			<field name="arch" type="xml">
+				<tree string="Business Types">
+					<field name="name" />
+				</tree>
+			</field>
+		</record>
+		
+		<record id="business_type_view_form" model="ir.ui.view" >
+			<field name="name">res.partner.business.type.view.form</field>
+			<field name="model">res.partner.business.type</field>
+			<field name="arch" type="xml">
+				<form string="Business Type Form">
+					<sheet>						
+						<group>
+							<field name="name" />
+							<field name="description" />								
+						</group>						
+					</sheet>
+				</form>
+			</field>
+		</record>
+		
+		<record id="business_type_view_search" model="ir.ui.view" >
+			<field name="name">res.partner.business.type.view.search</field>
+			<field name="model">res.partner.business.type</field>
+			<field name="arch" type="xml">
+				<search string="Search Business Type">
+					<field name="name" />
+				</search>
+			</field>
+		</record>
+		
+		<record id="business_type_action" model="ir.actions.act_window" >
+			<field name="name">Business Types</field>
+			<field name="res_model">res.partner.business.type</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create a new Business Type</p>
+			</field>
+		</record>
+		
+		<menuitem id="business_type_menu_action" action="business_type_action" parent="contacts.res_partner_menu_config" sequence="15"/>
+	
+	</data>
+</odoo>

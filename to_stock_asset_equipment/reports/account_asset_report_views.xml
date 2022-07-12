@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="asset_asset_report_search_view_inherited" model="ir.ui.view">
+        <field name="name">asset.asset.report.search.inherited</field>
+        <field name="model">asset.asset.report</field>
+        <field name="inherit_id" ref="to_account_asset.view_asset_asset_report_search"/>
+        <field name="arch" type="xml">
+        	<xpath expr="//filter[@name='asset']" position="after">
+        		<filter string="Equipment" name="ftr_equipment_id" context="{'group_by':'equipment_id'}"/>
+        		<filter string="Employee" name="ftr_employee_id" context="{'group_by':'employee_id'}"/>
+        		<filter string="Department" name="ftr_department_id" context="{'group_by':'department_id'}"/>
+        	</xpath>
+        </field>
+    </record>
+</odoo>

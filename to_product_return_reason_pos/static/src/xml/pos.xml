@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+	<t t-extend="OrderDetailsReturn">
+   		<t t-jquery='.order-line-list tr > :last-child' t-operation='before'>
+   			<th>Return Reason</th>
+   		</t>
+   		
+    </t>
+    
+    <t t-extend="OrderDetails">
+        <t t-jquery='.order-details-left' t-operation='append'>
+        	<div class='order-detail'>
+                <span class='label'>Return Reason</span>
+                <t t-if='order.return_reason_id'>
+                    <span class='detail order-return-reason'><t t-esc='order.return_reason_id[1]' /></span>
+                </t>
+                <t t-if='!order.return_reason_id'>
+                    <span class='detail order-return-reason empty'>N/A</span>
+                </t>
+            </div>
+   		</t>
+    </t>
+    
+    <t t-extend="OrderLineReturnList">
+        <t t-jquery='.return-list > :last-child' t-operation='before'>
+       		<td>
+        		<select class='order-line-return-reason return-detail' name='return_reason_id' style='width:150px;'>
+	                 <option value=''>None</option>
+	                 <t t-foreach='widget.pos.return_reasons' t-as='r'>
+	                     <option t-att-value='r.id'> 
+	                         <t t-esc='r.name'/>
+	                     </option>
+	                 </t>
+	                 <option class="other_reason" value='-1'>Other</option>
+	             </select><br/>
+	             <input class="new_return_reason return-detail" name="new_return_reason" style='width:150px;display:none;'/>
+             </td>            
+   		</t>
+    </t>
+</templates>

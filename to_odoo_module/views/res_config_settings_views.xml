@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="res_config_settings_view_form" model="ir.ui.view">
+			<field name="name">res.config.settings.view.form.odoo.module</field>
+			<field name="model">res.config.settings</field>
+			<field name="priority" eval="1000" />
+			<field name="inherit_id"
+				ref="base.res_config_settings_view_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//div[hasclass('settings')]" position="inside">
+					<div class="app_settings_block" data-string="Odoo Apps Store"
+						string="Odoo Apps Store" data-key="to_odoo_module"
+						groups="to_odoo_module.odoo_module_manager">
+						<h2>Odoo Apps Management</h2>
+						<div class="row mt16 o_settings_container">
+							<div class="col-xs-12 col-md-6 o_setting_box">
+								<div class="o_setting_left_pane">
+								</div>
+								<div class="o_setting_right_pane">
+									<label for="vendor_app_comm_percent" />
+									<div class="content-group">
+										<div class="mt16">
+											<field name="vendor_app_comm_percent" />
+											<span>%</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12 col-md-6 o_setting_box">
+								<div class="o_setting_left_pane">
+								</div>
+								<div class="o_setting_right_pane">
+									<label for="vendor_app_min_payout" />
+									<div class="content-group">
+										<div class="mt16">
+											<field name="vendor_app_min_payout" />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 col-lg-6 o_setting_box"
+								groups="base.group_no_one">
+								<div class="o_setting_left_pane">
+									<field name="dedicated_app_download_token_lifetime" />
+								</div>
+								<div class="o_setting_right_pane">
+									<label for="rotating_token_life"
+										attrs="{'invisible': [('dedicated_app_download_token_lifetime' ,'=', False)]}" />
+									<div class="text-muted"
+										attrs="{'invisible': [('dedicated_app_download_token_lifetime' ,'=', False)]}">
+										If a positive value is set, download tokens will live
+										for that given days. Otherwise, they will never get expired.
+									</div>
+									<div class="content-group"
+										attrs="{'invisible': [('dedicated_app_download_token_lifetime' ,'=', False)]}">
+										<div class="mt16">
+											<field name="rotating_token_life" />
+											<span>days</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</xpath>
+			</field>
+		</record>
+
+		<record id="action_odoo_app_settings"
+			model="ir.actions.act_window">
+			<field name="name">Configure Odoo Apps Management</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">res.config.settings</field>
+			<field name="view_mode">form</field>
+			<field name="target">inline</field>
+			<field name="context">{'module' : 'to_odoo_module'}</field>
+		</record>
+
+		<menuitem id="menu_odoo_app_settings" name="Settings"
+			parent="configuration_menu"
+			web_icon="to_odoo_module,static/description/icon.png"
+			action="action_odoo_app_settings"
+			groups="to_odoo_module.odoo_module_manager" />
+			
+		<menuitem id="menu_odoo_version" name="Odoo Versions"
+			parent="configuration_menu"
+			action="to_odoo_version.odoo_version_action"
+			groups="to_odoo_version.group_manager" />
+
+	</data>
+</odoo>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<template id="report_c200_s11dn">
+			<t t-call="web.html_container">
+				<t t-call="to_l10n_vn_qweb_layout.accounting_external_layout_c200">
+					<div class="page">
+						<div class="text-center">
+							<h2>GENERAL INVENTORY JOURNAL</h2>
+							<p>
+								Date From:
+								<span t-field="doc.date_from" />
+								- Date To:
+								<span t-field="doc.date_to" />
+								<br />
+								<t t-call="to_l10n_vn_stock_reports.warehouse_info" />
+							</p>
+						</div>
+						<div class="text-right">
+							Currency:
+							<span t-field="doc.company_id.currency_id" />
+						</div>
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th rowspan="2"
+										style="vertical-align: middle; text-align: center;">
+										<div>Product Ref.</div>
+									</th>
+									<th rowspan="2"
+										style="vertical-align: middle; text-align: center;">
+										<div>Product</div>
+									</th>
+									<th rowspan="2"
+										style="vertical-align: middle; text-align: center;">
+										<div>UoM</div>
+									</th>
+									<th colspan="2" class="text-center">
+										<div>Opening Balance</div>
+									</th>
+									<th colspan="2" class="text-center">
+										<div>Stock-In</div>
+									</th>
+									<th colspan="2" class="text-center">
+										<div>Stock-Out</div>
+									</th>
+									<th colspan="2" class="text-center">
+										<div>Ending Balance</div>
+									</th>
+								</tr>
+								<tr>
+									<th class="text-center">
+										<div>Quantity</div>
+									</th>
+									<th class="text-center">
+										<div>Value</div>
+									</th>
+									<th class="text-center">
+										<div>Quantity</div>
+									</th>
+									<th class="text-center">
+										<div>Value</div>
+									</th>
+									<th class="text-center">
+										<div>Quantity</div>
+									</th>
+									<th class="text-center">
+										<div>Value</div>
+									</th>
+									<th class="text-center">
+										<div>Quantity</div>
+									</th>
+									<th class="text-center">
+										<div>Value</div>
+									</th>
+								</tr>
+								<tr>
+									<th class="text-center">
+										<div>A</div>
+									</th>
+									<th class="text-center">
+										<div>B</div>
+									</th>
+									<th class="text-center">
+										<div>C</div>
+									</th>
+									<th class="text-center">
+										<div>(1)</div>
+									</th>
+									<th class="text-center">
+										<div>(2)</div>
+									</th>
+									<th class="text-center">
+										<div>(3)</div>
+									</th>
+									<th class="text-center">
+										<div>(4)</div>
+									</th>
+									<th class="text-center">
+										<div>(5)</div>
+									</th>
+									<th class="text-center">
+										<div>(6)</div>
+									</th>
+									<th class="text-center">
+										<div>(7)</div>
+									</th>
+									<th class="text-center">
+										<div>(8)</div>
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<t t-foreach="lines" t-as="line">
+									<t t-if="not line['is_last_line']">
+										<tr>
+											<td>
+												<span t-esc="line['product_code']" />
+											</td>
+											<td>
+												<span t-esc="line['product_name']" />
+											</td>
+											<td class="text-center">
+												<span t-esc="line['product_uom']" />
+											</td>
+											<td class="text-right">
+												<span t-esc="line['last_invt_qty']" />
+											</td>
+											<td class="text-right">
+												<span t-esc="line['last_invt_val']" />
+											</td>
+											<td class="text-right">
+												<span t-esc="line['stock_in_qty']" />
+											</td>
+											<td class="text-right">
+												<span t-esc="line['stock_in_val']" />
+											</td>
+											<td class="text-right">
+												<span t-esc="line['stock_out_qty']" />
+											</td>
+											<td class="text-right">
+												<span t-esc="line['stock_out_val']" />
+											</td>
+											<td class="text-right">
+												<span t-esc="line['cur_invt_qty']" />
+											</td>
+											<td class="text-right">
+												<span t-esc="line['cur_invt_val']" />
+											</td>
+										</tr>
+									</t>
+									<t t-elif="line['is_last_line']">
+										<tr style="font-weight: bold;">
+											<td colspan="3" class="text-right">
+												Sum
+											</td>
+											<td colspan="2" class="text-right">
+												<span t-esc="line['last_invt_val']" />
+											</td>
+											<td colspan="2" class="text-right">
+												<span t-esc="line['stock_in_val']" />
+											</td>
+											<td colspan="2" class="text-right">
+												<span t-esc="line['stock_out_val']" />
+											</td>
+											<td colspan="2" class="text-right">
+												<span t-esc="line['cur_invt_val']" />
+											</td>
+										</tr>
+									</t>
+								</t>
+							</tbody>
+						</table>
+						<t t-call="to_l10n_vn_qweb_layout.signature_block" />
+					</div>
+				</t>
+			</t>
+		</template>
+
+	</data>
+</odoo>

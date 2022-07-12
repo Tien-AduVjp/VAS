@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mrp_workcenter_view_kanban" model="ir.ui.view">
+        <field name="name">mrp.workcenter.view.kanban</field>
+        <field name="model">mrp.workcenter</field>
+        <field name="inherit_id" ref="mrp.mrp_workcenter_kanban"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_work_order']" position="after">
+                <button class="btn btn-secondary fa fa-filter" name="action_work_order" type="object" 
+                		title="Filter Work Orders" aria-label="Filter Work Orders of this Work Center"
+                		context="{'filter_work_order': 1, 'search_default_ready': 1, 'search_default_progress': 1, 'search_default_pending': 1, 'search_default_workcenter_id': active_id}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

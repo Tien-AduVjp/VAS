@@ -1,0 +1,13 @@
+<odoo>
+    <template id="assets_backend" inherit_id="web.assets_backend">
+        <xpath expr="script[last()]" position="after">
+            <script type="text/javascript" src="/viin_message_emoji/static/src/js/abstract_message.js"/>
+            <script type="text/javascript" src="/viin_message_emoji/static/src/js/searchable_thread.js"/>
+            <script type="text/javascript" src="/viin_message_emoji/static/src/js/thread_widget.js"/>
+            <script type="text/javascript" src="/viin_message_emoji/static/src/js/mail_notification_manager.js"/>
+        </xpath>
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" type="text/scss" href="/viin_message_emoji/static/src/scss/thread_emoji.scss" />
+        </xpath>
+    </template>
+</odoo>

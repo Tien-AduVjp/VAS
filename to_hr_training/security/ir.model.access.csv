@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_require_training_base,hr.require.training.base,model_hr_require_training,base.group_user,1,0,0,0
+access_hr_employee_training_line_base,hr.employee.training.line.base,model_hr_employee_training_line,base.group_user,1,0,0,0
+access_hr_require_training_user,hr.require.training.office,model_hr_require_training,hr.group_hr_user,1,1,1,1
+access_hr_employee_training_line_user,hr.employee.training.line.office,model_hr_employee_training_line,hr.group_hr_user,1,1,1,1

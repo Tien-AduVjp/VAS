@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="payroll_assets_backend" name="payroll assets"
+		inherit_id="web.assets_backend">
+		<xpath expr="//link[last()]" position="after">
+			<link rel="stylesheet" type="text/scss"
+				href="/to_hr_payroll/static/src/scss/searchpanel.scss" />
+		</xpath>
+	</template>
+</odoo>

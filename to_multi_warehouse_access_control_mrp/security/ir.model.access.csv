@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_mrp_production_stock_own_document_user,mrp.production.stock.user_own_doc,mrp.model_mrp_production,to_multi_warehouse_access_control.group_stock_own_document_user,1,0,0,0
+access_mrp_bom_stock_own_document_user,mrp.bom.stock.user_own_doc,mrp.model_mrp_bom,to_multi_warehouse_access_control.group_stock_own_document_user,1,0,0,0
+access_mrp_bom_line_stock_own_document_user,mrp.bom.line.stock.user_own_doc,mrp.model_mrp_bom_line,to_multi_warehouse_access_control.group_stock_own_document_user,1,0,0,0
+access_mrp_workorder_stock_own_document_user,mrp.workorder.stock.user_own_doc,mrp.model_mrp_workorder,to_multi_warehouse_access_control.group_stock_own_document_user,1,0,0,0

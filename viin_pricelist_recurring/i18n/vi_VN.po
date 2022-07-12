@@ -1,0 +1,175 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_pricelist_recurring
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-25 06:33+0000\n"
+"PO-Revision-Date: 2021-06-25 06:33+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_pricelist_recurring
+#: model_terms:ir.ui.view,arch_db:viin_pricelist_recurring.product_pricelist_item_form_view
+msgid ""
+"<b attrs=\"{'invisible': [('recurring_period', '!=', 'monthly')]}\">From Day</b>\n"
+"                            <b attrs=\"{'invisible': [('recurring_period', '!=', 'annually')]}\">From Date</b>"
+msgstr ""
+"<b attrs=\"{'invisible': [('recurring_period', '!=', 'monthly')]}\">Từ ngày</b>\n"
+"                            <b attrs=\"{'invisible': [('recurring_period', '!=', 'annually')]}\">Từ ngày</b>"
+
+#. module: viin_pricelist_recurring
+#: model_terms:ir.ui.view,arch_db:viin_pricelist_recurring.product_pricelist_item_form_view
+msgid "<span> To </span>"
+msgstr "<span> Đến </span>"
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_period__annually
+msgid "Annually"
+msgstr "Hàng năm"
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_from__4
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_to__4
+msgid "April"
+msgstr "Tháng Tư"
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_from__8
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_to__8
+msgid "August"
+msgstr "Tháng Tám"
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields,help:viin_pricelist_recurring.field_product_pricelist_item__recurring
+msgid "Check this if you want to configure a recurring rule."
+msgstr "Tích vào đây nếu bạn muốn cấu hình một quy tắc định kỳ."
+
+#. module: viin_pricelist_recurring
+#: code:addons/viin_pricelist_recurring/models/product_pricelist.py:0
+#, python-format
+msgid "Date start cannot be after date end."
+msgstr "Ngày bắt đầu không được sau ngày kết thúc."
+
+#. module: viin_pricelist_recurring
+#: code:addons/viin_pricelist_recurring/models/product_pricelist.py:0
+#, python-format
+msgid "Day start cannot be greater than day end."
+msgstr "Ngày bắt đầu không được lớn hơn ngày kết thúc."
+
+#. module: viin_pricelist_recurring
+#: code:addons/viin_pricelist_recurring/models/product_pricelist.py:0
+#, python-format
+msgid "Days must be in range from 1 to 31."
+msgstr "Ngày phải nằm trong khoảng từ 1 đến 31."
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_from__12
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_to__12
+msgid "December"
+msgstr "Tháng Mười hai"
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_from__2
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_to__2
+msgid "February"
+msgstr "Tháng Hai"
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields,field_description:viin_pricelist_recurring.field_product_pricelist_item__recurring_day_from
+msgid "From Day"
+msgstr "Từ ngày"
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields,field_description:viin_pricelist_recurring.field_product_pricelist_item__recurring_month_from
+msgid "From Month"
+msgstr "Từ tháng"
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_from__1
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_to__1
+msgid "January"
+msgstr "Tháng Một"
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_from__7
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_to__7
+msgid "July"
+msgstr "Tháng Bảy"
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_from__6
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_to__6
+msgid "June"
+msgstr "Tháng Sáu"
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_from__3
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_to__3
+msgid "March"
+msgstr "Tháng Ba"
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_from__5
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_to__5
+msgid "May"
+msgstr "Tháng Năm"
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_period__monthly
+msgid "Monthly"
+msgstr "Hàng tháng"
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_from__11
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_to__11
+msgid "November"
+msgstr "Tháng Mười một"
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_from__10
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_to__10
+msgid "October"
+msgstr "Tháng Mười"
+
+#. module: viin_pricelist_recurring
+#: model:ir.model,name:viin_pricelist_recurring.model_product_pricelist
+msgid "Pricelist"
+msgstr "Bảng giá"
+
+#. module: viin_pricelist_recurring
+#: model:ir.model,name:viin_pricelist_recurring.model_product_pricelist_item
+msgid "Pricelist Rule"
+msgstr "Qui tắc bảng giá"
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields,field_description:viin_pricelist_recurring.field_product_pricelist_item__recurring
+msgid "Recurring"
+msgstr "Định kỳ"
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields,field_description:viin_pricelist_recurring.field_product_pricelist_item__recurring_period
+msgid "Recurring Period"
+msgstr "Chu kỳ lặp lại"
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_from__9
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_to__9
+msgid "September"
+msgstr "Tháng Chín"
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields,field_description:viin_pricelist_recurring.field_product_pricelist_item__recurring_day_to
+msgid "To Day"
+msgstr "Đến ngày"
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields,field_description:viin_pricelist_recurring.field_product_pricelist_item__recurring_month_to
+msgid "To Month"
+msgstr "Đến tháng"

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates xml:space="preserve">
+
+<t t-inherit="account.reconciliation.statement" t-inherit-mode="extension">
+	<xpath expr="//div[hasclass('o_reconciliation_lines')]" position="before">
+		<button class="batch_reconcile btn btn-secondary">Validate All</button>
+	</xpath>
+</t>
+
+</templates>

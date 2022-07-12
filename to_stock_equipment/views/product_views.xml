@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="view_product_to_stock_equipment_form"
+			model="ir.ui.view">
+			<field name="name">product.template.equipment.form</field>
+			<field name="model">product.template</field>
+			<field name="inherit_id"
+				ref="product.product_template_form_view" />
+			<field name="arch" type="xml">
+				<div name="options" position="inside">
+					<div>
+						<field name="can_be_equipment" />
+						<label for="can_be_equipment" />
+					</div>
+				</div>
+				<xpath expr="//page[@name='general_information']" position="after">
+					<page name="equipment_info" string="Equipments"
+						attrs="{'invisible':[('can_be_equipment','=',False)]}"
+						groups="maintenance.group_equipment_manager">
+						<group name="equipment_info">
+							<group>
+								<field name="property_default_equipment_category_id" />
+								<field name="property_maintenance_team_id" />
+								<field name="technician_user_id" />
+							</group>
+							<group>
+								<field name="equipment_assign_to" />
+							</group>
+						</group>
+					</page>
+				</xpath>
+			</field>
+		</record>
+
+		<record id="view_template_property_form" model="ir.ui.view">
+			<field name="name">product.template.stock.property.form.inherit
+			</field>
+			<field name="model">product.template</field>
+			<field name="inherit_id"
+				ref="stock.view_template_property_form" />
+			<field name="arch" type="xml">
+				<field name="tracking" position="replace">
+					<field name="tracking" widget="radio"
+						attrs="{'invisible':[('type', 'in', ['service', 'digital'])]}"
+						groups="stock.group_production_lot" />
+				</field>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window"
+			id="action_equipment_products">
+			<field name="name">Equipment Products</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">product.template</field>
+			<field name="view_mode">kanban,tree,form</field>
+			<field name="domain">[('can_be_equipment','=',True)]</field>
+			<field name="context">{'default_can_be_equipment':True}</field>
+		</record>
+	</data>
+</odoo>

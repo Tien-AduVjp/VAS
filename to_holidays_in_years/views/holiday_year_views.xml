@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+		<record id="holiday_year_view_tree" model="ir.ui.view">
+            <field name="name">holiday.year.tree</field>
+            <field name="model">holiday.year</field>
+            <field name="arch" type="xml">
+                <tree string="Holiday Tree">
+                    <field name="lunar_date"/>
+                    <field name="date_type"/>
+                    <field name="holiday_date"/>
+                    <field name="name" string="Description"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="holiday_year_view_form" model="ir.ui.view">
+            <field name="name">holiday.year.form</field>
+            <field name="model">holiday.year</field>
+            <field name="arch" type="xml">
+                <form string="Holiday Form">
+                    <sheet>
+                        <group>
+                        	<field name="lunar_date"/>
+                        	<field name="date_type"/>
+                        	<field name="holiday_type"/>
+                        	<field name="company_id" groups="base.group_multi_company"/>
+                        	<field name="name" string="Description"/>
+                        	<field name="date_from" invisible="1" />
+                        	<field name="date_to" invisible="1" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="holiday_year_view_search" model="ir.ui.view">
+            <field name="name">holiday.year.search</field>
+            <field name="model">holiday.year</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="year" string="Year" filter_domain="[('holiday_date','&gt;','01-01-'+str(self)), ('holiday_date','&lt;','31-12-'+str(self))]"/>
+                    <field name="date_type"/>
+                    <field name="company_id"/>
+                </search>
+            </field>
+        </record>
+
+    	<record id="holiday_year_action" model="ir.actions.act_window">
+            <field name="name">Holidays</field>
+            <field name="res_model">holiday.year</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="holiday_year_menu" name="Holidays in Years" parent="base.menu_administration" action="holiday_year_action"/>
+    </data>
+</odoo>

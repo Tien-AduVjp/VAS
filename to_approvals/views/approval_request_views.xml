@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record id="approval_request_view_form" model="ir.ui.view">
+			<field name="name">approval.request.form</field>
+			<field name="model">approval.request</field>
+			<field name="arch" type="xml">
+				<form string="Approval Request">
+				<field name="can_approve" invisible="1" />
+				<field name="can_validate" invisible="1" />
+				<field name="can_done" invisible="1" />
+				<field name="can_refuse" invisible="1" />
+				<field name="can_confirm" invisible="1" />
+					<header>
+						<button string="Confirm" name="action_confirm" states="draft" type="object" class="oe_highlight" 
+								attrs="{'invisible': ['|', ('can_confirm', '=', False)]}" />
+						<button string="Approve" name="action_approve" type="object" class="oe_highlight" 
+								attrs="{'invisible': ['|', ('can_approve', '=', False), ('state', '!=', 'confirm')]}" />
+						<button string="Validate" name="action_validate" type="object" class="oe_highlight"
+								groups="to_approvals.group_approval_officer"
+								attrs="{'invisible': ['|', ('can_validate', '=', False), ('state', '!=', 'validate1')]}" />
+						<button string="Mark as Done" name="action_done" type="object" class="oe_highlight"
+								attrs="{'invisible': ['|', ('can_done', '=', False), ('state', '!=', 'validate')]}" />
+						<button string="Refuse" name="action_refuse"  type="object" 
+								attrs="{'invisible': ['|', ('can_refuse', '=', False), ('state', 'in', ['draft', 'refuse', 'cancel'])]}" />
+						<button string="Reset to Draft" name="action_draft" type="object" states="cancel,refuse" 
+								attrs="{'invisible': ['|', ('can_confirm', '=', False)]}" />
+						<button string="Cancel" name="action_cancel" states="draft,confirm" type="object" 
+								attrs="{'invisible': ['|', ('can_confirm', '=', False)]}" />
+							<field name="state" widget="statusbar" statusbar_visible="draft,confirm,validate1,validate,done,refuse,cancel" />
+					</header>
+					<sheet>
+						<div name="button_box" class="oe_button_box">
+						</div>
+
+						<div class="oe_title">
+							<label for="title" class="oe_edit_only"/>
+							<h1>
+								<field name="title" placeholder="e.g. Purchase new computer" />
+							</h1>
+						</div>
+						<group>
+							<group>
+								<field name="approval_type_id" />
+								<field name="type" invisible="1" />
+								<field name="date" />
+								<field name="employee_id" />
+								<field name="company_id" groups="base.group_multi_company" />
+								<field name="department_id"/>
+							</group>
+							<group>
+								<label for="" name="first_approver_name">
+									<b attrs="{'invisible': ['|',('state', 'in', ['draft', 'confirm', 'cancel', 'refuse']), ('validation_type', 'in', ['both', 'no_validation'])]}">Approval By</b>
+									<b attrs="{'invisible': ['|',('state', 'in', ['draft', 'confirm', 'cancel', 'refuse']), ('validation_type', 'in', ['hr', 'leader', 'no_validation'])]}">First Approval By</b>
+								</label>
+								<field name="first_approver_id" nolabel="1" attrs="{'invisible': ['|',('state', 'in', ['draft', 'confirm', 'cancel', 'refuse']), ('validation_type', '=', 'no_validation')]}" />
+								<field name="second_approver_id" attrs="{'invisible': ['|',('state', 'in', ['draft', 'confirm', 'cancel', 'refuse']), ('validation_type', '!=', 'both')]}" />
+								<field name="validation_type" invisible="1" />
+							</group>
+						</group>
+							<label for="description" />
+							<field name="description" />
+						<notebook></notebook>
+					</sheet>
+					<div class="oe_chatter">
+ 						<field name="message_follower_ids" widget="mail_followers" />
+ 						<field name="activity_ids" widget="mail_activity" />
+						<field name="message_ids" widget="mail_thread" />
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record id="approval_request_view_kanban"
+			model="ir.ui.view">
+			<field name="name">approval.request.kanban</field>
+			<field name="model">approval.request</field>
+			<field name="arch" type="xml">
+				<kanban class="o_kanban_mobile" default_group_by="state" quick_create="0">
+					<field name="employee_id" />
+					<templates>
+						<t t-name="kanban-box">
+							<div t-attf-class="oe_kanban_content oe_kanban_global_click">
+								<div class="row">
+									<div class="col-8">
+										<strong>
+											<field name="display_name" />
+										</strong>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-12">
+										<field name="approval_type_id" />
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-12">
+										<span>
+											Request Date:
+											<field name="date" />
+										</span>
+									</div>
+								</div>
+								<div class="oe_kanban_bottom_right">
+									<img t-att-src="kanban_image('hr.employee', 'image_128', record.employee_id.raw_value)" t-att-title="record.employee_id.value" t-att-alt="record.employee_id.value" width="24" height="24" class="oe_kanban_avatar float-right"/>
+								</div>
+							</div>
+						</t>
+					</templates>
+				</kanban>
+			</field>
+		</record>
+		<record id="approval_request_search_view"
+			model="ir.ui.view">
+			<field name="name">approval.request.search</field>
+			<field name="model">approval.request</field>
+			<field name="arch" type="xml">
+				<search string="Approval Request">
+					<field name="name" />
+					<field name="title" />
+					<field name="date" />
+					<separator />
+					<field name="employee_id" />
+					<field name="involve_employee_ids" />
+					<field name="department_id" />
+					<separator />
+					<field name="approval_type_id" />
+					<field name="validation_type" />
+					<filter name="draft" string="Draft"
+						domain="[('state','=','draft')]" />
+					<filter name="confirm_request" string="Confirmed" 
+						domain="[('state','=', 'confirm')]" />
+					<filter name="approval_request" string="First Approved" 
+						domain="[('state','=', 'validate1')]" />
+					<filter name="validate_request" string="Approved" 
+						domain="[('state','=', 'validate')]" />
+					<filter name="cancelled" string="Cancelled"
+						domain="[('state','=','cancel')]" />
+					<filter name="refused" string="Refused"
+						domain="[('state','=','refuse')]" />
+					<separator />
+					<filter	string="Today Request" name="today_request"
+							domain="[('date', '=', context_today().strftime('%Y-%m-%d'))]" />
+					<group expand="0" string="Group By">
+						<filter name="group_state" string="State" context="{'group_by':'state'}" />
+						<separator/>
+						<filter name="group_name" string="Title" context="{'group_by':'name'}"/>
+						<filter name="group_employee" string="Employee" context="{'group_by':'employee_id'}" />
+						<filter name="group_department" string="Department" context="{'group_by':'department_id'}" />
+						<filter name="group_type" string="Type" context="{'group_by':'approval_type_id'}" />
+						<filter name="group_company" string="Company" context="{'group_by':'company_id'}" groups="base.group_multi_company" />
+						<separator/>
+						<filter name="group_date" string="Request Date" context="{'group_by':'date'}" />
+					</group>
+				</search>
+			</field>
+		</record>
+
+		<record id="approval_request_tree_view" model="ir.ui.view">
+			<field name="name">approval.request.tree</field>
+			<field name="model">approval.request</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Approval Requests"
+					decoration-bf="message_needaction==True"
+					decoration-muted="state in ['cancel', 'refuse']">
+					<field name="message_needaction" invisible="1" />
+					<field name="name" />
+					<field name="title" />
+					<field name="approval_type_id" />
+					<field name="date" />
+					<field name="employee_id" />
+					<field name="state" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="approval_request_action"
+			model="ir.actions.act_window">
+			<field name="name">Approval Request</field>
+			<field name="res_model">approval.request</field>
+			<field name="view_mode">kanban,tree,form</field>
+			<field name="search_view_id" ref="approval_request_search_view"/>
+			<field name="context">{}</field>
+		</record>
+
+		<record id="action_approval_request_tree_waiting" model="ir.actions.act_window">
+			<field name="name">Waiting Request</field>
+			<field name="res_model">approval.request</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="view_mode">tree,form</field>
+			<field name="domain"></field>
+			<field name="search_view_id" ref="approval_request_search_view"/>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Display information about the number of pending requests for this type. 
+					When clicked, go to the list containing the corresponding requests
+				</p>
+			</field>
+		</record>
+
+		<menuitem id="approval_request_menu" name="Request"
+			parent="request_root_menu" sequence="1"
+			action="approval_request_action" />
+
+	</data>
+</odoo>

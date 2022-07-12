@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<!-- Purchase -->
+		<record id="account_tax_report_line_purchase_tax_val_exemption" model="account.tax.report.line">
+			<field name="name">Thuế GTGT HHDV mua vào không thuộc ĐT chịu thuế GTGT</field>
+			<field name="tag_name">Thuế GTGT HHDV mua vào không thuộc ĐT chịu thuế GTGT</field>
+			<field name="sequence" eval="0" />
+			<field name="parent_id"
+				ref="l10n_vn.account_tax_report_line_01_01_vn" />
+			<field name="country_id" ref="base.vn" />
+		</record>
+
+		<record id="account_tax_report_line_purchase_val_exemption"
+			model="account.tax.report.line">
+			<field name="name">Giá trị HHDV mua vào không thuộc ĐT chịu thuế GTGT</field>
+			<field name="tag_name">Giá trị HHDV mua vào không thuộc ĐT chịu thuế GTGT</field>
+			<field name="sequence" eval="0" />
+			<field name="parent_id"
+				ref="l10n_vn.account_tax_report_line_02_01_vn" />
+			<field name="country_id" ref="base.vn" />
+		</record>
+
+		<!-- Sale -->
+		<record id="account_tax_report_line_sale_tax_val_exemption" model="account.tax.report.line">
+			<field name="name">Thuế GTGT HHDV bán ra không thuộc ĐT chịu thuế GTGT</field>
+			<field name="tag_name">Thuế GTGT HHDV bán ra không thuộc ĐT chịu thuế GTGT</field>
+			<field name="sequence" eval="0" />
+			<field name="parent_id"
+				ref="l10n_vn.account_tax_report_line_01_02_vn" />
+			<field name="country_id" ref="base.vn" />
+		</record>
+
+		<record id="account_tax_report_line_sale_val_exemption" model="account.tax.report.line">
+			<field name="name">Giá trị HHDV bán ra không thuộc ĐT chịu thuế GTGT</field>
+			<field name="tag_name">Giá trị HHDV bán ra không thuộc ĐT chịu thuế GTGT</field>
+			<field name="sequence" eval="0" />
+			<field name="parent_id" ref="l10n_vn.account_tax_report_line_02_02_vn" />
+			<field name="country_id" ref="base.vn" />
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,763 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_procurement_requests
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-03 02:14+0000\n"
+"PO-Revision-Date: 2019-12-03 02:14+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_procurement_requests
+#: code:addons/to_procurement_requests/models/replenishment_request.py:0
+#, python-format
+msgid ""
+"%s is not the user who has proper access rights to approve the replenishment"
+" request %s. She or he must has %s access rights to do so."
+msgstr ""
+"%s không phải là người có quyền phù hợp để duyệt. Người này phải được phân "
+"quyền vào nhóm %s thì mới có thể duyệt."
+
+#. module: to_procurement_requests
+#: model:mail.template,body_html:to_procurement_requests.email_template_submit_notification
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t<p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"\t\tDear ${object.responsible_id.partner_id.name},\n"
+"\t\t<br/>\n"
+"\t\t<br/>\n"
+"\t\tThe Replenishment Request\n"
+"\t\t<strong>${object.name}</strong>\n"
+"\t\thas been submitted and is waiting for your approval.\n"
+"\t</p>\n"
+"</div>\n"
+"\t\t\t"
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t<p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"\t\tDear ${object.responsible_id.partner_id.name},\n"
+"\t\t<br/>\n"
+"\t\t<br/>\n"
+"\t\tĐề nghị tái cung ứng\n"
+"\t\t<strong>${object.name}</strong>\n"
+"\t\tvừa được trình và chờ bạn phê duyệt.\n"
+"\t</p>\n"
+"</div>\n"
+"\t\t\t"
+
+#. module: to_procurement_requests
+#: code:addons/to_procurement_requests/models/procurement_group.py:0
+#, python-format
+msgid ""
+"A single procurement group is not allowed to refer to multiple replenishment"
+" requests."
+msgstr "Một Nhóm Cung ứng không thể liên kết đến nhiều Đề nghị Tái cung ứng."
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__message_needaction
+msgid "Action Needed"
+msgstr "Cần có Hành động"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__activity_ids
+msgid "Activities"
+msgstr "Các hoạt động"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__activity_state
+msgid "Activity State"
+msgstr "Trạng thái Hoạt động"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__approval_date
+msgid "Approval Date"
+msgstr "Ngày Duyệt"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__responsible_id
+msgid "Approval User"
+msgstr "Người Duyệt"
+
+#. module: to_procurement_requests
+#: model_terms:ir.ui.view,arch_db:to_procurement_requests.replenishment_request_form_view
+msgid "Approve"
+msgstr "Duyệt"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields.selection,name:to_procurement_requests.selection__replenishment_request__state__approved
+#: model_terms:ir.ui.view,arch_db:to_procurement_requests.replenishment_request_search_view
+msgid "Approved"
+msgstr "Đã duyệt"
+
+#. module: to_procurement_requests
+#: model_terms:ir.ui.view,arch_db:to_procurement_requests.replenishment_request_search_view
+msgid "Approved by Me"
+msgstr "Duyệt bởi Tôi"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__message_attachment_count
+msgid "Attachment Count"
+msgstr "Số đính kèm"
+
+#. module: to_procurement_requests
+#: model_terms:ir.ui.view,arch_db:to_procurement_requests.replenishment_request_form_view
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields.selection,name:to_procurement_requests.selection__replenishment_request__state__cancelled
+#: model_terms:ir.ui.view,arch_db:to_procurement_requests.replenishment_request_search_view
+msgid "Cancelled"
+msgstr "Đã hủy"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: to_procurement_requests
+#: model_terms:ir.ui.view,arch_db:to_procurement_requests.replenishment_request_form_view
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: to_procurement_requests
+#: model_terms:ir.actions.act_window,help:to_procurement_requests.action_done_replenishment_request
+#: model_terms:ir.actions.act_window,help:to_procurement_requests.action_replenishment_request
+msgid "Create a new replenishment request"
+msgstr "Tạo mới một đề nghị tái cung ứng"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__create_uid
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request_line__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__create_date
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request_line__create_date
+msgid "Created on"
+msgstr "Được tạo vào"
+
+#. module: to_procurement_requests
+#: model_terms:ir.ui.view,arch_db:to_procurement_requests.replenishment_request_form_view
+msgid ""
+"Depending on your product configuration, this may trigger a request for "
+"quotation, a manufacturing order or a stock transfer. Once approved, the "
+"request will not be able to get cancelled nor refused. Are you sure that you"
+" want to proceed?"
+msgstr ""
+"Tuỳ thuộc vào cấu hình sản phẩm và các tuyến cung ứng, điều này có thể tự "
+"động tạo một yêu cầu báo giá, một lệnh sản xuất hoặc một dịch chuyển hàng "
+"hoá từ kho/địa điểm khác về. Một khi được chấp thuận, đề nghị này sẽ không "
+"thể bị huỷ hay từ chối nữa. Bạn có chắc bạn muốn tiếp tục?"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request_line__description
+msgid "Description"
+msgstr "Mô tả"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__display_name
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request_line__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields.selection,name:to_procurement_requests.selection__replenishment_request__state__done
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: to_procurement_requests
+#: model:ir.ui.menu,name:to_procurement_requests.done_replenishment_request_menu
+msgid "Done Requests"
+msgstr "Đề nghị đã Hoàn thành"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields.selection,name:to_procurement_requests.selection__replenishment_request__state__draft
+#: model_terms:ir.ui.view,arch_db:to_procurement_requests.replenishment_request_search_view
+msgid "Draft"
+msgstr "Dự thảo"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__message_follower_ids
+msgid "Followers"
+msgstr "Theo dõi"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Người theo dõi (Các kênh)"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Người theo dõi (Các đối tác)"
+
+#. module: to_procurement_requests
+#: model_terms:ir.ui.view,arch_db:to_procurement_requests.replenishment_request_search_view
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: to_procurement_requests
+#: model:ir.module.category,description:to_procurement_requests.module_category_replenishment_request
+msgid ""
+"Helps you manage your employee's procurement\n"
+"\t\t\t\trequests and fullfill the needs according to the requests.\n"
+"\t\t\t"
+msgstr ""
+"Giúp bạn quản lý các đề nghị cung ứng của nhân\n"
+" viên và đáp ứng các nhu cầu theo các đề nghị đó.\n"
+"\t\t\t"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__id
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request_line__id
+msgid "ID"
+msgstr ""
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,help:to_procurement_requests.field_replenishment_request__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,help:to_procurement_requests.field_replenishment_request__message_needaction
+#: model:ir.model.fields,help:to_procurement_requests.field_replenishment_request__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Nếu đánh dấu chọn, các thông điệp mới yêu cầu sự có mặt của bạn."
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,help:to_procurement_requests.field_replenishment_request__message_has_error
+#: model:ir.model.fields,help:to_procurement_requests.field_replenishment_request__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Nếu được đánh dấu, thông điệp có lỗi về gửi tin."
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__message_is_follower
+msgid "Is Follower"
+msgstr "Là người theo dõi"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request____last_update
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request_line____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__write_uid
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request_line__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__write_date
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request_line__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Đính kèm chính"
+
+#. module: to_procurement_requests
+#: model:res.groups,name:to_procurement_requests.group_manager
+msgid "Manager"
+msgstr "Người quản lý"
+
+#. module: to_procurement_requests
+#: model_terms:ir.ui.view,arch_db:to_procurement_requests.replenishment_request_form_view
+msgid "Mark as Done"
+msgstr "Đánh dấu hoàn tất"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__message_has_error
+msgid "Message Delivery error"
+msgstr "Có Lỗi Gửi Thông điệp"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__message_ids
+msgid "Messages"
+msgstr "Thông điệp"
+
+#. module: to_procurement_requests
+#: model_terms:ir.ui.view,arch_db:to_procurement_requests.replenishment_request_search_view
+msgid "My Requests"
+msgstr "Đề nghị của Tôi"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Hạn chót lần hành động kế tiếp"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__activity_summary
+msgid "Next Activity Summary"
+msgstr "Tóm tắt hoạt động tiếp theo"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__activity_type_id
+msgid "Next Activity Type"
+msgstr "Kiểu hành động kế tiếp"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__note
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Số lượng Hành động"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__message_has_error_counter
+msgid "Number of errors"
+msgstr "Số lượng lỗi"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,help:to_procurement_requests.field_replenishment_request__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Số thông điệp cần có hành động"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,help:to_procurement_requests.field_replenishment_request__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Số lượng các thông điệp có lỗi về gửi tin"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,help:to_procurement_requests.field_replenishment_request__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Số thông điệp chưa đọc"
+
+#. module: to_procurement_requests
+#: model_terms:ir.actions.act_window,help:to_procurement_requests.action_done_replenishment_request
+#: model_terms:ir.actions.act_window,help:to_procurement_requests.action_replenishment_request
+msgid ""
+"Once you input and confirm your replenishment request, it\n"
+"\t\t\t\t\twill be sent to a manager for approval. Once the request is\n"
+"\t\t\t\t\tapproved, depending on your product configuration, Odoo may\n"
+"\t\t\t\t\tgenerate a request for quotation, a manufacturing order or a stock\n"
+"\t\t\t\t\ttransfer to fullfil your needs."
+msgstr ""
+"Sau khi bạn đã tạo và trình Đề nghị Tái cung ứng, nó sẽ được\n"
+"                   gửi cho người quản lý đề phê duyệt. Một khi đề nghị được duyệt,\n"
+"                   Tuỳ thuộc vào cấu hình sản phẩm và các tuyến cung ứng, Odoo sẽ\n"
+"                   tự động tạo một yêu cầu báo giá, một lệnh sản xuất hoặc một dịch\n"
+"                   chuyển hàng hoá từ kho/địa điểm khác về để đáp ứng nhu cầu của bạn."
+
+#. module: to_procurement_requests
+#: model_terms:ir.ui.view,arch_db:to_procurement_requests.replenishment_request_form_view
+msgid "Picking"
+msgstr "Giao nhận"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__pickings_count
+msgid "Pickings Count"
+msgstr "SL Lô hàng"
+
+#. module: to_procurement_requests
+#: model:mail.template,subject:to_procurement_requests.email_template_submit_notification
+msgid ""
+"Please approve the replenishment request\n"
+"\t\t\t\t${object.name}"
+msgstr ""
+"Vui lòng phê duyệt đề nghị tái cung ứng\n"
+"\t\t\t\t${object.name}"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request_line__route_ids
+msgid "Preferred Routes"
+msgstr "Các tuyến ưa thích"
+
+#. module: to_procurement_requests
+#: model:ir.actions.act_window,name:to_procurement_requests.action_procurement_group_view
+#: model:ir.model,name:to_procurement_requests.model_procurement_group
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__procurement_group_ids
+#: model_terms:ir.ui.view,arch_db:to_procurement_requests.replenishment_request_form_view
+msgid "Procurement Group"
+msgstr "Nhóm Cung ứng"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__procurement_groups_count
+msgid "Procurement Groups Count"
+msgstr "SL Nhóm Cung ứng"
+
+#. module: to_procurement_requests
+#: model_terms:ir.ui.view,arch_db:to_procurement_requests.procurement_group_tree_view
+msgid "Procurement group"
+msgstr "Nhóm cung ứng"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request_line__procurement_group_id
+msgid "Procurment Group"
+msgstr "Nhóm Cung ứng"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__product_id
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request_line__product_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request_line__quantity
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: to_procurement_requests
+#: model_terms:ir.ui.view,arch_db:to_procurement_requests.replenishment_request_form_view
+msgid "Refuse"
+msgstr "Từ chối"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields.selection,name:to_procurement_requests.selection__replenishment_request__state__refused
+#: model_terms:ir.ui.view,arch_db:to_procurement_requests.replenishment_request_search_view
+msgid "Refused"
+msgstr "Bị Từ chối"
+
+#. module: to_procurement_requests
+#: model:ir.ui.menu,name:to_procurement_requests.replenishment_request_root_menu
+msgid "Replenishment"
+msgstr "Tái cung ứng"
+
+#. module: to_procurement_requests
+#: code:addons/to_procurement_requests/models/replenishment_request_line.py:0
+#: model:ir.actions.act_window,name:to_procurement_requests.action_done_replenishment_request
+#: model:ir.actions.act_window,name:to_procurement_requests.action_replenishment_request
+#: model:ir.model,name:to_procurement_requests.model_replenishment_request
+#: model:ir.model.fields,field_description:to_procurement_requests.field_procurement_group__replenishment_request_id
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request_line__request_id
+#: model:ir.module.category,name:to_procurement_requests.module_category_replenishment_request
+#, python-format
+msgid "Replenishment Request"
+msgstr "Đề nghị Tái Cung ứng"
+
+#. module: to_procurement_requests
+#: model_terms:ir.ui.view,arch_db:to_procurement_requests.replenishment_request_calendar_view
+msgid "Replenishment Request Calendar"
+msgstr "Lịch Đề nghị Tái cung ứng"
+
+#. module: to_procurement_requests
+#: model_terms:ir.ui.view,arch_db:to_procurement_requests.replenishment_request_form_view
+msgid "Replenishment Request Form"
+msgstr "Mẫu Đề nghị Tái Cung ứng"
+
+#. module: to_procurement_requests
+#: model:ir.model,name:to_procurement_requests.model_replenishment_request_line
+msgid "Replenishment Request Line"
+msgstr "Dòng Yêu cầu Tái cung ứng"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_procurement_group__replenishment_request_line_ids
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__line_ids
+msgid "Replenishment Request Lines"
+msgstr "Dòng Yêu cầu Tái cung ứng"
+
+#. module: to_procurement_requests
+#: model_terms:ir.ui.view,arch_db:to_procurement_requests.replenishment_request_search_view
+msgid "Replenishment Request Search"
+msgstr "Tìm kiếm Yêu cầu Tái cung ứng"
+
+#. module: to_procurement_requests
+#: model_terms:ir.ui.view,arch_db:to_procurement_requests.replenishment_request_tree_view
+msgid "Replenishment Request Tree"
+msgstr "Danh sách Yêu cầu Tái cung ứng"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_stock_picking__replenishment_request_ids
+msgid "Replenishment Requests"
+msgstr "Đề nghị Tái cung ứng"
+
+#. module: to_procurement_requests
+#: model:ir.ui.menu,name:to_procurement_requests.replenishment_request_main_menu
+#: model:ir.ui.menu,name:to_procurement_requests.replenishment_request_menu
+msgid "Requests"
+msgstr "Đề nghị"
+
+#. module: to_procurement_requests
+#: model_terms:ir.ui.view,arch_db:to_procurement_requests.replenishment_request_search_view
+msgid "Responsible"
+msgstr "Người phụ trách"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__activity_user_id
+msgid "Responsible User"
+msgstr "Người chịu trách nhiệm"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Lỗi gửi tin"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__scheduled_date
+#: model_terms:ir.ui.view,arch_db:to_procurement_requests.replenishment_request_search_view
+msgid "Scheduled Date"
+msgstr "Ngày dự kiến"
+
+#. module: to_procurement_requests
+#: model_terms:ir.ui.view,arch_db:to_procurement_requests.replenishment_request_form_view
+msgid "Set to draft"
+msgstr "Đặt về Dự thảo"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__state
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request_line__state
+msgid "Status"
+msgstr "Tình trạng"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,help:to_procurement_requests.field_replenishment_request__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Trạng thái dựa trên hoạt động\n"
+"Quá hạn: Ngày đến hạn đã trôi qua\n"
+"Hôm nay: Hôm nay là ngày phải thực hiện\n"
+"Đã hoạch định: Các hoạt động trong tương lai."
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,help:to_procurement_requests.field_replenishment_request_line__procurement_group_id
+msgid ""
+"Technical field to store the procurement group generated automatically "
+"during replenishment request approval."
+msgstr ""
+"Trường kỹ thuật để lưu nhóm cung ứng được sinh ra trong quá trình phê duyệt "
+"đề nghị tái cung ứng."
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,help:to_procurement_requests.field_replenishment_request__approval_date
+msgid "The date on which the request is approved."
+msgstr "Ngày mà đề nghị được phê duyệt."
+
+#. module: to_procurement_requests
+#: code:addons/to_procurement_requests/models/replenishment_request_line.py:0
+#, python-format
+msgid "The procurement group not found for the replenishment request line %s"
+msgstr "Không tìm thấy nhóm cung ứng cho dòng đề nghị tái cung ứng %s"
+
+#. module: to_procurement_requests
+#: model:res.groups,comment:to_procurement_requests.group_user
+msgid ""
+"The user in this group will have ability to create\n"
+"\t\t\t\treplenishment requests and submit to managers for approval.\n"
+"\t\t\t"
+msgstr ""
+"Người dùng thuộc nhóm này sẽ có quyền tạo các đề nghị\n"
+"\t\t\t\ttái cung ứng và trình cho người quản lý duyệt.\n"
+"\t\t\t"
+
+#. module: to_procurement_requests
+#: model:res.groups,comment:to_procurement_requests.group_manager
+msgid ""
+"The user in this group will have all access rights\n"
+"\t\t\t\tto this application and inventory application."
+msgstr ""
+"Người dùng thuộc nhóm này có toàn quyền với phân hệ này\n"
+"               và phân hệ Kho vận."
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,help:to_procurement_requests.field_replenishment_request__responsible_id
+msgid "The user who will be responsible for approving/refusing the request."
+msgstr "Người mà sẽ chịu trách nhiệm phê duyệt hoặc từ chối đề nghị này."
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,help:to_procurement_requests.field_replenishment_request__warehouse_id
+msgid "The warehouse for which the replenishment is."
+msgstr "Nhà kho mà đề nghị tái cung ứng này phục vụ cho."
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,help:to_procurement_requests.field_replenishment_request_line__route_ids
+msgid ""
+"This is to override the routes set on the product. If no route selected, the"
+" routes specified for the product will be used."
+msgstr ""
+"Trường này để ghi đè các quy tắc tái cung ứng được thiết lập ở sản phẩm. Nếu"
+" không có tuyến nào được chọn, các tuyến được thiết lập cho sản phẩm sẽ được"
+" sử dụng."
+
+#. module: to_procurement_requests
+#: model:ir.model,name:to_procurement_requests.model_stock_picking
+msgid "Transfer"
+msgstr "Dịch chuyển"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__picking_ids
+msgid "Transfers"
+msgstr "Dịch chuyển"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,help:to_procurement_requests.field_replenishment_request__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request_line__uom_id
+msgid "Unit of Measure"
+msgstr "Đơn vị tính"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__message_unread
+msgid "Unread Messages"
+msgstr "Thông điệp chưa đọc"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Bộ đếm Thông điệp chưa đọc"
+
+#. module: to_procurement_requests
+#: model:res.groups,name:to_procurement_requests.group_user
+msgid "User"
+msgstr "Người dùng"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields.selection,name:to_procurement_requests.selection__replenishment_request__state__waiting
+#: model_terms:ir.ui.view,arch_db:to_procurement_requests.replenishment_request_search_view
+msgid "Waiting Approval"
+msgstr "Chờ duyệt"
+
+#. module: to_procurement_requests
+#: model_terms:ir.ui.view,arch_db:to_procurement_requests.replenishment_request_search_view
+msgid "Waiting my approval"
+msgstr "Chờ tôi Phê duyệt"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__warehouse_id
+#: model_terms:ir.ui.view,arch_db:to_procurement_requests.replenishment_request_search_view
+msgid "Warehouse"
+msgstr "Kho hàng"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,field_description:to_procurement_requests.field_replenishment_request__website_message_ids
+msgid "Website Messages"
+msgstr "Thông điệp Website"
+
+#. module: to_procurement_requests
+#: model:ir.model.fields,help:to_procurement_requests.field_replenishment_request__website_message_ids
+msgid "Website communication history"
+msgstr "Lịch sử thông tin liên lạc website"
+
+#. module: to_procurement_requests
+#: code:addons/to_procurement_requests/models/replenishment_request.py:0
+#, python-format
+msgid ""
+"You are not allowed to delete the replenishment request %s. You must be "
+"either the user who has created the request or the one who has %s access "
+"rights to do so"
+msgstr ""
+"Bạn không được phép xoá đề nghị tái cung ứng %s. Bạn phải là người tạo ra đề"
+" nghị đó hoặc là người được phân quyền quản lý để có thể làm vậy."
+
+#. module: to_procurement_requests
+#: code:addons/to_procurement_requests/models/replenishment_request.py:0
+#, python-format
+msgid ""
+"You cannot approve a Replenishment Request whose state is neither Refused "
+"nor Waiting Approval"
+msgstr ""
+"Bạn không thể phê duyệt Đề nghị tái cung ứng mà trạng thái của nó không phải"
+" Bị từ chối cũng không phải Đang chờ duyệt."
+
+#. module: to_procurement_requests
+#: code:addons/to_procurement_requests/models/replenishment_request.py:0
+#, python-format
+msgid ""
+"You cannot cancel a Replenishment Request whose state is neither Refused nor"
+" Waiting Approval!"
+msgstr ""
+"Bạn không thể huỷ một Đề nghị tái cung ứng mà trạng thái của nó không phải "
+"Bị từ chối cũng không phải Đang chờ duyệt!"
+
+#. module: to_procurement_requests
+#: code:addons/to_procurement_requests/models/replenishment_request.py:0
+#, python-format
+msgid ""
+"You cannot delete the replenishment request %s while it is not in Draft "
+"state."
+msgstr ""
+"Bạn không thể xoá một Đề nghị tái cung ứng mà trạng thái của nó không phải "
+"là Dự thảo."
+
+#. module: to_procurement_requests
+#: code:addons/to_procurement_requests/models/replenishment_request.py:0
+#, python-format
+msgid ""
+"You cannot refuse a Replenishment Request that is not in Waiting Approval "
+"state."
+msgstr ""
+"Bạn không thể từ chối một Đề nghị tái cung ứng mà trạng thái của nó không "
+"phải là Đang chờ duyệt"
+
+#. module: to_procurement_requests
+#: code:addons/to_procurement_requests/models/replenishment_request_line.py:0
+#, python-format
+msgid ""
+"You cannot remove a line while its corresponding request is not in draft "
+"state."
+msgstr ""
+"Bạn không thể xoá một dòng ở Đề nghị tái cung ứng khi mà đề nghị đó không ở "
+"trạng thái dự thảo."
+
+#. module: to_procurement_requests
+#: code:addons/to_procurement_requests/models/replenishment_request.py:0
+#, python-format
+msgid ""
+"You cannot set the replenishment request %s as Done while its state is not "
+"Approved!"
+msgstr ""
+"Bạn không thể đánh dấu đề nghị tái cung ứng %s như là đã hoàn thành khi mà "
+"trạng thái của nó không phải là Được duyệt!"
+
+#. module: to_procurement_requests
+#: code:addons/to_procurement_requests/models/replenishment_request.py:0
+#, python-format
+msgid ""
+"You cannot set the replenishment request %s to Draft state while it is "
+"neither Refused nor Cancelled!"
+msgstr ""
+"Bạn không thể thiết lập Đề nghị tái cung ứng %s về Dự thảo khi mà mà trạng "
+"thái của nó không phải Bị từ chối hoặc Bị huỷ"
+
+#. module: to_procurement_requests
+#: code:addons/to_procurement_requests/models/replenishment_request.py:0
+#, python-format
+msgid "You cannot submit a replenishment request that is not in Draft state."
+msgstr ""
+"Bạn không thể trình một đề nghị tái cung ứng khi mà trạng thái của nó không "
+"phải Dự thảo."
+
+#. module: to_procurement_requests
+#: code:addons/to_procurement_requests/models/replenishment_request.py:0
+#, python-format
+msgid ""
+"You must have at least one non-zero quantity line to submit for approval. "
+"Submitting a zero-quanity line does not make sense."
+msgstr ""
+"Bạn phải có ít nhất một dòng với số lượng khác không để có thể trình quản lý"
+" duyệt. Trình các dòng với số lượng bằng không không có ý nghĩa gì."

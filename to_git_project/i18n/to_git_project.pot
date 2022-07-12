@@ -1,0 +1,108 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_git_project
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-23 10:18+0000\n"
+"PO-Revision-Date: 2020-02-23 10:18+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_git_project
+#: model_terms:ir.ui.view,arch_db:to_git_project.project_project_view_form_simplified
+msgid "Choose a Git Repo."
+msgstr ""
+
+#. module: to_git_project
+#: model:ir.model.fields,field_description:to_git_project.field_project_project__git_repository_id
+msgid "Default Git Repo."
+msgstr ""
+
+#. module: to_git_project
+#: model:ir.model,name:to_git_project.model_git_branch
+#: model:ir.model.fields,field_description:to_git_project.field_project_task__git_branch_id
+msgid "Git Branch"
+msgstr ""
+
+#. module: to_git_project
+#: model:ir.model.fields,help:to_git_project.field_project_task__git_branch_id
+msgid "Git Branch to which this task concerns"
+msgstr ""
+
+#. module: to_git_project
+#: model:ir.model.fields,field_description:to_git_project.field_project_task__git_repository_id
+msgid "Git Repo."
+msgstr ""
+
+#. module: to_git_project
+#: model:ir.model,name:to_git_project.model_git_repository
+msgid "Git Repository"
+msgstr ""
+
+#. module: to_git_project
+#: model:ir.model.fields,help:to_git_project.field_project_task__git_repository_id
+msgid "Git Repostory to which this task concerns"
+msgstr ""
+
+#. module: to_git_project
+#: model:ir.model,name:to_git_project.model_project_project
+msgid "Project"
+msgstr ""
+
+#. module: to_git_project
+#: model:ir.model.fields,field_description:to_git_project.field_git_repository__project_ids
+#: model_terms:ir.ui.view,arch_db:to_git_project.git_branch_form_view
+#: model_terms:ir.ui.view,arch_db:to_git_project.git_repository_view_form
+msgid "Projects"
+msgstr ""
+
+#. module: to_git_project
+#: model:ir.model.fields,field_description:to_git_project.field_git_branch__projects_count
+#: model:ir.model.fields,field_description:to_git_project.field_git_repository__projects_count
+msgid "Projects Count"
+msgstr ""
+
+#. module: to_git_project
+#: model:ir.model,name:to_git_project.model_project_task
+msgid "Task"
+msgstr ""
+
+#. module: to_git_project
+#: model:ir.model.fields,field_description:to_git_project.field_git_branch__task_ids
+#: model:ir.model.fields,field_description:to_git_project.field_git_repository__task_ids
+#: model_terms:ir.ui.view,arch_db:to_git_project.git_branch_form_view
+#: model_terms:ir.ui.view,arch_db:to_git_project.git_repository_view_form
+msgid "Tasks"
+msgstr ""
+
+#. module: to_git_project
+#: model:ir.model.fields,field_description:to_git_project.field_git_branch__tasks_count
+#: model:ir.model.fields,field_description:to_git_project.field_git_repository__tasks_count
+msgid "Tasks Count"
+msgstr ""
+
+#. module: to_git_project
+#: model:ir.model.fields,help:to_git_project.field_project_project__git_repository_id
+msgid ""
+"The default Git Repostory of the project which will be filled automatically "
+"when handling tasks and issues"
+msgstr ""
+
+#. module: to_git_project
+#: code:addons/to_git_project/models/project_task.py:0
+#, python-format
+msgid "You cannot input a branch without its repository!"
+msgstr ""
+
+#. module: to_git_project
+#: code:addons/to_git_project/models/project_task.py:0
+#, python-format
+msgid "You cannot select a branch that does not belong to the repository %s"
+msgstr ""

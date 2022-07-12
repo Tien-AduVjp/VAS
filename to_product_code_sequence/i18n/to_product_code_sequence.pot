@@ -1,0 +1,54 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_product_code_sequence
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-01 09:06+0000\n"
+"PO-Revision-Date: 2020-04-01 09:06+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_product_code_sequence
+#: model:ir.model,name:to_product_code_sequence.model_product_product
+msgid "Product"
+msgstr ""
+
+#. module: to_product_code_sequence
+#: model:ir.model,name:to_product_code_sequence.model_product_category
+msgid "Product Category"
+msgstr ""
+
+#. module: to_product_code_sequence
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_product_category__product_code_prefix
+msgid "Product Code Prefix"
+msgstr ""
+
+#. module: to_product_code_sequence
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_product_category__ir_sequence_id
+msgid "Product Sequence"
+msgstr ""
+
+#. module: to_product_code_sequence
+#: model:ir.model,name:to_product_code_sequence.model_product_template
+msgid "Product Template"
+msgstr ""
+
+#. module: to_product_code_sequence
+#: model:ir.model.fields,help:to_product_code_sequence.field_product_category__product_code_prefix
+msgid ""
+"The text string to be used as the prefix of the auto-generated default codes"
+" of the category's products."
+msgstr ""
+
+#. module: to_product_code_sequence
+#: model:ir.actions.server,name:to_product_code_sequence.action_server_update_prod_code
+#: model:ir.actions.server,name:to_product_code_sequence.action_server_update_prod_tmpl_code
+msgid "Update Product Code"
+msgstr ""

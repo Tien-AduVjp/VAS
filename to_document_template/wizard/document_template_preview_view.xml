@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Email Template Preview -->
+        <record model="ir.ui.view" id="document_template_preview_form">
+            <field name="name">document_template.preview.form</field>
+            <field name="model">document_template.preview</field>
+            <field name="arch" type="xml">
+                <form string="Document Preview">
+                    <field name="model_id" invisible="1"/>
+                    <h3>Preview of <field name="name" readonly="1" nolabel="1" class="oe_inline"/></h3>
+                    Choose an example <field name="model_id" class="oe_inline" readonly="1"/> record:
+                    <field name="res_id" class="oe_inline" style="margin-left: 8px;"/>
+                    <field name="content_html" widget="html" readonly="1"
+                            nolabel="1" options='{"safe": True}'/>
+                    <footer>
+                        <button string="Discard" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="wizard_document_template_preview" model="ir.actions.act_window">
+            <field name="name">Template Preview</field>
+            <field name="res_model">document_template.preview</field>
+            <field name="binding_model_id" ref="to_document_template.model_document_template" />
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="document_template_preview_form"/>
+            <field name="target">new</field>
+            <field name="context">{'template_id':active_id}</field>
+        </record>
+
+    </data>
+</odoo>

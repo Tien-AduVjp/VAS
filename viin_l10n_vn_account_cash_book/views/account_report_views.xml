@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<!-- Action print report cash book -->
+		<report id="act_report_c200_s07dn" menu="False"
+			model="wizard.l10n_vn.c200.s07dn"
+			name="viin_l10n_vn_account_cash_book.report_c200_s07dn"
+			file="viin_l10n_vn_account_cash_book.report_c200_s07dn"
+			report_type="qweb-pdf" string="Account Cash Book (S07-DN)" />
+		<record id="act_report_c200_s07dn" model="ir.actions.report">
+			<field name="paperformat_id"
+				ref="to_l10n_vn_qweb_layout.to_qwl_template_paperformat_landscape" />
+			<field name="legal_name">Template S07-DN</field>
+		</record>
+
+		<!-- Action print report bank deposit book -->
+		<report id="act_report_c200_s08dn" menu="False"
+			model="wizard.l10n_vn.c200.s08dn"
+			name="viin_l10n_vn_account_cash_book.report_c200_s08dn"
+			file="viin_l10n_vn_account_cash_book.report_c200_s08dn"
+			report_type="qweb-pdf" string="Account Bank Deposit Book (S08-DN)" />
+		<record id="act_report_c200_s08dn" model="ir.actions.report">
+			<field name="paperformat_id"
+				ref="to_l10n_vn_qweb_layout.to_qwl_template_paperformat_landscape" />
+			<field name="legal_name">Template S08-DN</field>
+		</record>
+	</data>
+</odoo>

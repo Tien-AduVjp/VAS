@@ -1,0 +1,311 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_procurement_approval
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-11 07:49+0000\n"
+"PO-Revision-Date: 2020-08-11 07:49+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,help:to_procurement_approval.field_procurement_request_line__type
+msgid ""
+"A storable product is a product for which you manage stock. The Inventory app has to be installed.\n"
+"A consumable product is a product for which stock is not managed.\n"
+"A service is a non-material product you provide."
+msgstr ""
+"Một sản phẩm có thể lưu trữ là một sản phẩm mà bạn quản lý kho. Ứng dụng Kho vận phải được cài đặt.\n"
+"Một sản phẩm tiêu thụ là một sản phẩm mà kho không quản lý.\n"
+"Dịch vụ là sản phẩm phi vật chất mà bạn cung cấp."
+
+#. module: to_procurement_approval
+#: code:addons/to_procurement_approval/models/approval_request.py:0
+#, python-format
+msgid "All lines must be have product."
+msgstr "Tất cả các dòng mua sắm phải chọn sản phẩm"
+
+#. module: to_procurement_approval
+#: model:ir.model,name:to_procurement_approval.model_approval_request
+msgid "Approval Request"
+msgstr "Đề nghị phê duyệt"
+
+#. module: to_procurement_approval
+#: model:ir.model,name:to_procurement_approval.model_approval_request_type
+msgid "Approval Request Type"
+msgstr "Kiểu đề nghị phê duyệt"
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_request_line__approval_request_id
+#: model:ir.model.fields,field_description:to_procurement_approval.field_stock_picking__approval_request_id
+msgid "Approval request"
+msgstr "Duyệt đề nghị"
+
+#. module: to_procurement_approval
+#: model:ir.model,name:to_procurement_approval.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_request_line__create_uid
+msgid "Created by"
+msgstr "Tạo bởi"
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_request_line__create_date
+msgid "Created on"
+msgstr "Tạo vào"
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_request_line__description
+msgid "Description"
+msgstr "Mô tả"
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_request_line__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_request_line__id
+msgid "ID"
+msgstr "Khóa"
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_request_line____last_update
+msgid "Last Modified on"
+msgstr "Lần sửa cuối cùng vào"
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_request_line__write_uid
+msgid "Last Updated by"
+msgstr "Lần cập nhật cuối cùng bởi"
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_request_line__write_date
+msgid "Last Updated on"
+msgstr "Lần cập nhật cuối cùng vào"
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,help:to_procurement_approval.field_approval_request__procurement_group_ids
+msgid "List of procurement group associated to this procurement request"
+msgstr "Danh sách các nhóm mua sắm liên quan đến yêu cầu mua sắm này"
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,help:to_procurement_approval.field_approval_request__procurement_request_line_ids
+msgid "List of products associated to this procurement request"
+msgstr "Danh sách các sản phẩm liên quan đến yêu cầu mua sắm này"
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,help:to_procurement_approval.field_approval_request__purchase_order_ids
+msgid "List of purchase orders associated to this procurement request"
+msgstr "Danh sách các đơn đặt hàng liên quan đến yêu cầu mua sắm này"
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,help:to_procurement_approval.field_approval_request__picking_ids
+msgid "List of transfers associated to this procurement request"
+msgstr "Danh sách các dịch chuyển liên quan đến yêu cầu mua sắm này"
+
+#. module: to_procurement_approval
+#: model_terms:ir.ui.view,arch_db:to_procurement_approval.approval_request_view_form_inherit
+msgid "Picking"
+msgstr "Giao nhận"
+
+#. module: to_procurement_approval
+#: code:addons/to_procurement_approval/models/approval_request.py:0
+#, python-format
+msgid "Please add some items to procurement."
+msgstr "Vui lòng thêm một số mặt hàng vào yêu cầu mua sắm"
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_request_line__route_ids
+msgid "Preferred Routes"
+msgstr "Tuyến "
+
+#. module: to_procurement_approval
+#: code:addons/to_procurement_approval/models/res_company.py:0
+#, python-format
+msgid "Procurement Approval"
+msgstr "Duyệt mua sắm"
+
+#. module: to_procurement_approval
+#: model:ir.actions.act_window,name:to_procurement_approval.action_procurement_group_view
+#: model:ir.model,name:to_procurement_approval.model_procurement_group
+#: model:ir.model.fields,field_description:to_procurement_approval.field_approval_request__procurement_group_ids
+#: model_terms:ir.ui.view,arch_db:to_procurement_approval.approval_request_view_form_inherit
+msgid "Procurement Group"
+msgstr "Nhóm Cung ứng"
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_approval_request__procurement_groups_count
+msgid "Procurement Groups Count"
+msgstr "SL Nhóm mua sắm"
+
+#. module: to_procurement_approval
+#: code:addons/to_procurement_approval/models/procurement_request_line.py:0
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_group__approval_request_id
+#, python-format
+msgid "Procurement Request"
+msgstr "Yêu cầu mua sắm"
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_approval_request__procurement_request_line_ids
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_group__procurement_request_line_ids
+msgid "Procurement Request Lines"
+msgstr "Dòng Yêu cầu mua sắm"
+
+#. module: to_procurement_approval
+#: model_terms:ir.ui.view,arch_db:to_procurement_approval.procurement_group_tree_view
+msgid "Procurement group"
+msgstr "Nhóm mua sắm"
+
+#. module: to_procurement_approval
+#: model:ir.model.fields.selection,name:to_procurement_approval.selection__approval_request_type__type__procurement
+msgid "Procurement request"
+msgstr "Yêu cầu mua sắm"
+
+#. module: to_procurement_approval
+#: model:ir.model,name:to_procurement_approval.model_procurement_request_line
+msgid "Procurement request line"
+msgstr "Dòng yêu cầu mua sắm"
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_request_line__procurement_group_id
+msgid "Procurment Group"
+msgstr "Nhóm mua sắm"
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_request_line__product_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_approval_request__purchase_order_ids
+#: model_terms:ir.ui.view,arch_db:to_procurement_approval.approval_request_view_form_inherit
+msgid "Purchase Orders"
+msgstr "Đơn đặt hàng"
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_approval_request__purchase_orders_count
+msgid "Purchase order count"
+msgstr "SL Đơn đặt hàng"
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_request_line__quantity
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: to_procurement_approval
+#: model_terms:ir.ui.view,arch_db:to_procurement_approval.approval_request_view_form_inherit
+msgid ""
+"Show all procurement groups that have been issued for this procurement "
+"request"
+msgstr "Hiển thị tất cả các nhóm mua sắm đã được ban hành cho yêu cầu mua sắm"
+
+#. module: to_procurement_approval
+#: model_terms:ir.ui.view,arch_db:to_procurement_approval.approval_request_view_form_inherit
+msgid ""
+"Show all purchase orders that have been issued for this procurement request"
+msgstr "Hiển thị tất cả các đơn đặt hàng dành cho yêu cầu mua sắm này"
+
+#. module: to_procurement_approval
+#: model_terms:ir.ui.view,arch_db:to_procurement_approval.approval_request_view_form_inherit
+msgid "Show all tranfers that have been issued for this procurement request"
+msgstr "Hiển thị tất cả các giao nhận dành cho yêu cầu mua sắm này"
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_request_line__state
+msgid "Status"
+msgstr "Trạng thái"
+
+#. module: to_procurement_approval
+#: code:addons/to_procurement_approval/models/procurement_request_line.py:0
+#: model:ir.model.fields,help:to_procurement_approval.field_procurement_request_line__procurement_group_id
+#, python-format
+msgid ""
+"Technical field to store the procurement group generated automatically "
+"during procurement request approval."
+msgstr ""
+"Trường kỹ thuật để lưu trữ nhóm mua sắm được tạo tự độngtrong quá trình yêu "
+"cầu mua sắm ."
+
+#. module: to_procurement_approval
+#: code:addons/to_procurement_approval/models/procurement_request_line.py:0
+#, python-format
+msgid "The procurement group not found for the procurement request line %s"
+msgstr "Không tìm thấy nhóm mua sắm cho dòng yêu cầu mua sắm %s"
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,help:to_procurement_approval.field_procurement_request_line__warehouse_id
+msgid "The warehouse for which the procurement is."
+msgstr "Kho yêu cầu mua sắm"
+
+#. module: to_procurement_approval
+#: code:addons/to_procurement_approval/models/approval_request.py:0
+#, python-format
+msgid ""
+"There is no matching vendor price to generate the purchase order for product"
+" '%s' (no vendor defined, minimum quantity not reached, dates not valid, "
+"...). Go on the product form and complete the list of vendors."
+msgstr ""
+"Không có bảng giá nhà cung cấp phù hợp để tạo đơn đặt hàng cho sản phẩm'%s' "
+"(không xác định nhà cung cấp, số lượng tối thiểu không đạt được, ngày không "
+"hợp lệ,...). Vào sản phẩm và hoàn thành danh sách các nhà cung cấp."
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,help:to_procurement_approval.field_procurement_request_line__route_ids
+msgid ""
+"This is to override the routes set on the product. If no route selected, the"
+" routes specified for the product will be used."
+msgstr ""
+"Tuyến đường này là để ghi đè các tuyến đường được đặt trên sản phẩm. Nếu "
+"không có tuyến đường nào được chọn, các tuyến đường được chỉ định cho sản "
+"phẩm sẽ được sử dụng."
+
+#. module: to_procurement_approval
+#: model:ir.model,name:to_procurement_approval.model_stock_picking
+msgid "Transfer"
+msgstr "Dịch chuyển"
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_approval_request__picking_ids
+msgid "Transfers"
+msgstr "Giao nhận"
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_approval_request__pickings_count
+msgid "Transfers count"
+msgstr "SL Dịch chuyển"
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_approval_request_type__type
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_request_line__type
+msgid "Type"
+msgstr "Kiểu"
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_request_line__uom_id
+msgid "Unit of Measure"
+msgstr "Đơn vị"
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_request_line__warehouse_id
+msgid "Warehouse"
+msgstr "Kho"
+
+#. module: to_procurement_approval
+#: code:addons/to_procurement_approval/models/procurement_request_line.py:0
+#, python-format
+msgid ""
+"You cannot remove a line while its corresponding request is not in draft "
+"state."
+msgstr ""
+"Bạn không thể xóa một dòng khi yêu cầu tương ứng của nó không ở trạng thái "
+"dự thảo."

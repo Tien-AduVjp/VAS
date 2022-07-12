@@ -1,0 +1,65 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_vat_counterpart
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-12 04:38+0000\n"
+"PO-Revision-Date: 2020-05-12 04:38+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_vat_counterpart
+#: model:ir.model.fields,help:to_vat_counterpart.field_account_tax__vat_ctp_account_id
+msgid ""
+"In some cases where we do not have a counterpart account for a tax entry, the account set here as a counterpart account might help.\n"
+"For example, according to Vietnam Accounting Standards, the account code 33312 (VAT on imported goods) requires the account 1331 (VAT on purchase of goods and services - Deducted VAT) for a counterpart of its."
+msgstr ""
+
+#. module: to_vat_counterpart
+#: model:ir.model,name:to_vat_counterpart.model_account_tax
+msgid "Tax"
+msgstr ""
+
+#. module: to_vat_counterpart
+#: model:ir.model,name:to_vat_counterpart.model_account_tax_group
+msgid "Tax Group"
+msgstr ""
+
+#. module: to_vat_counterpart
+#: model:ir.model,name:to_vat_counterpart.model_account_tax_repartition_line
+msgid "Tax Repartition Line"
+msgstr ""
+
+#. module: to_vat_counterpart
+#: model:ir.model.fields,help:to_vat_counterpart.field_account_tax_group__vat_ctp_account_id
+msgid ""
+"This provides default value for VAT Counterpart Account on the tax form"
+msgstr ""
+
+#. module: to_vat_counterpart
+#: code:addons/to_vat_counterpart/models/account_tax_group.py:0
+#, python-format
+msgid ""
+"This tax group is not for VAT, hence, its counterpart account must be "
+"removed before saving. Or, you have to check the field 'Is VAT'."
+msgstr ""
+
+#. module: to_vat_counterpart
+#: code:addons/to_vat_counterpart/models/account_tax.py:0
+#, python-format
+msgid "This tax is not a VAT, hence, its counterpart account must be removed"
+msgstr ""
+
+#. module: to_vat_counterpart
+#: model:ir.model.fields,field_description:to_vat_counterpart.field_account_tax__vat_ctp_account_id
+#: model:ir.model.fields,field_description:to_vat_counterpart.field_account_tax_group__vat_ctp_account_id
+#: model:ir.model.fields,field_description:to_vat_counterpart.field_account_tax_repartition_line__vat_ctp_account_id
+msgid "VAT Counterpart Account"
+msgstr ""

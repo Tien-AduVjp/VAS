@@ -1,0 +1,56 @@
+<odoo>
+	<record id="administrative_region_view_tree" model="ir.ui.view">
+		<field name="name">administrative.region.tree</field>
+		<field name="model">administrative.region</field>
+		<field name="arch" type="xml">
+			<tree string="Administrative Region Tree">
+				<field name="name" />
+				<field name="country_id"/>
+				<field name="currency_id" invisible="1"/>
+			</tree>
+		</field>
+	</record>
+
+	<record id="administrative_region_view_form" model="ir.ui.view">
+		<field name="name">administrative.region.form</field>
+		<field name="model">administrative.region</field>
+		<field name="arch" type="xml">
+			<form string="Administrative Region Form">
+				<sheet>
+					<group>
+						<group>
+							<field name="name" />
+							<field name="country_id" />
+							<field name="currency_id" invisible="1"/>
+						</group>
+					</group>
+				</sheet>
+				<div class="oe_chatter">
+	                <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+	                <field name="message_ids" widget="mail_thread"/>
+                </div>
+			</form>
+		</field>
+	</record>
+
+	<record id="administrative_region_view_search" model="ir.ui.view">
+		<field name="name">administrative.region.form</field>
+		<field name="model">administrative.region</field>
+		<field name="arch" type="xml">
+			<search string="Administrative Region Search">
+				<field name="name" />
+				<field name="country_id" />
+				<group expand="0" string="Group By">
+					<filter name="grp_country_id" string="Country"
+						context="{'group_by': 'country_id'}" />
+				</group>
+			</search>
+		</field>
+	</record>
+
+	<record id="administrative_region_action" model="ir.actions.act_window">
+		<field name="name">Administrative Region</field>
+		<field name="res_model">administrative.region</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+</odoo>

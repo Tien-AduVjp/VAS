@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="product_template_only_form_view" model="ir.ui.view">
+			<field name="name">product.template.product.form</field>
+			<field name="model">product.template</field>
+			<field name="inherit_id"
+				ref="product.product_template_only_form_view" />
+			<field name="arch" type="xml">
+				<label for="volume" position="before">
+					<label for="length"
+						attrs="{'invisible':['|', ('type', 'not in', ['product', 'consu']), ('product_variant_count', '&gt;', 1)]}" />
+					<div class="o_row" name="length"
+						attrs="{'invisible': ['|',('type','not in',['consu','product']),('product_variant_count', '&gt;', 1)]}">
+						<field name="length" digits="[14, 0]" />
+						<span>mm</span>
+					</div>
+
+					<label for="width"
+						attrs="{'invisible':['|', ('type', 'not in', ['product', 'consu']), ('product_variant_count', '&gt;', 1)]}" />
+					<div class="o_row" name="width"
+						attrs="{'invisible': ['|',('type','not in',['consu','product']),('product_variant_count', '&gt;', 1)]}">
+						<field name="width" digits="[14, 0]" />
+						<span>mm</span>
+					</div>
+
+					<label for="height"
+						attrs="{'invisible':['|', ('type', 'not in', ['product', 'consu']), ('product_variant_count', '&gt;', 1)]}" />
+					<div class="o_row" name="height"
+						attrs="{'invisible': ['|',('type','not in',['consu','product']),('product_variant_count', '&gt;', 1)]}">
+						<field name="height" digits="[14, 0]" />
+						<span>mm</span>
+					</div>
+
+					<field name="stowage_factor"
+						attrs="{'invisible': ['|',('type','not in',['consu','product']),('product_variant_count', '&gt;', 1)]}" />
+					<field name="concat_dimension_in_name"
+						attrs="{'invisible': [('type','not in',['consu','product'])]}" />
+				</label>
+
+				<xpath expr="//label[@for='volume']" position="attributes">
+					<attribute name="attrs">{'invisible':['|', ('type', 'not in',['product', 'consu']), ('product_variant_count', '&gt;', 1)]}</attribute>
+				</xpath>
+
+				<xpath expr="//div[@name='volume']" position="attributes">
+					<attribute name="attrs">{'invisible':['|', ('type', 'not in',['product', 'consu']), ('product_variant_count', '&gt;', 1)]}</attribute>
+				</xpath>
+
+				<xpath expr="//field[@name='volume']" position="attributes">
+					<attribute name="digits">[14, 3]</attribute>
+				</xpath>
+
+				<div name="volume" position="after">
+					<label for="stowage_volume"
+						attrs="{'invisible':['|', ('type', 'not in', ['product', 'consu']), ('product_variant_count', '&gt;', 1)]}" />
+					<div class="o_row" name="stowage_volume"
+						attrs="{'invisible':['|', ('type', 'not in', ['product', 'consu']), ('product_variant_count', '&gt;', 1)]}">
+						<field name="stowage_volume" digits="[14, 3]" />
+						<span>m³</span>
+					</div>
+				</div>
+			</field>
+		</record>
+
+		<record id="product_template_search_view" model="ir.ui.view">
+			<field name="name">product.template.search</field>
+			<field name="model">product.template</field>
+			<field name="inherit_id"
+				ref="product.product_template_search_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='name']" position="after">
+					<field name="length" />
+					<field name="width" />
+					<field name="height" />
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- Budgets -->
+	<record model="ir.ui.view" id="view_budget_post_form">
+		<field name="name">account.budget.post.form</field>
+		<field name="model">account.budget.post</field>
+		<field name="inherit_id"
+			ref="to_account_budget.view_budget_post_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='company_id']" position="before">
+				<field name="include_timesheets" />
+			</xpath>
+		</field>
+	</record>
+
+	<record id="view_budget_post_search" model="ir.ui.view">
+		<field name="name">account.budget.post.search</field>
+		<field name="model">account.budget.post</field>
+		<field name="inherit_id"
+			ref="to_account_budget.view_budget_post_search" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='company_id']" position="after">
+				<separator />
+				<filter name="ftr_include_timesheets"
+					string="Timesheets Included"
+					domain="[('include_timesheets','=',True)]" />
+				<filter name="ftr_exclude_timesheets"
+					string="Timesheets Excluded"
+					domain="[('include_timesheets','=',False)]" />
+			</xpath>
+		</field>
+	</record>
+
+	<record id="view_budget_post_tree" model="ir.ui.view">
+		<field name="name">account.budget.post.tree</field>
+		<field name="model">account.budget.post</field>
+		<field name="inherit_id"
+			ref="to_account_budget.view_budget_post_tree" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='company_id']" position="before">
+				<field name="include_timesheets" />
+			</xpath>
+		</field>
+	</record>
+</odoo>

@@ -1,0 +1,43 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_partner_gender
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-28 09:02+0000\n"
+"PO-Revision-Date: 2021-06-28 09:02+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_partner_gender
+#: model:ir.model,name:viin_partner_gender.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: viin_partner_gender
+#: model:ir.model.fields.selection,name:viin_partner_gender.selection__res_partner__gender__female
+msgid "Female"
+msgstr ""
+
+#. module: viin_partner_gender
+#: model:ir.model.fields,field_description:viin_partner_gender.field_res_partner__gender
+#: model:ir.model.fields,field_description:viin_partner_gender.field_res_users__gender
+#: model_terms:ir.ui.view,arch_db:viin_partner_gender.view_res_partner_filter
+msgid "Gender"
+msgstr ""
+
+#. module: viin_partner_gender
+#: model:ir.model.fields.selection,name:viin_partner_gender.selection__res_partner__gender__male
+msgid "Male"
+msgstr ""
+
+#. module: viin_partner_gender
+#: model:ir.model.fields.selection,name:viin_partner_gender.selection__res_partner__gender__other
+msgid "Other"
+msgstr ""

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="view_tax_form" model="ir.ui.view">
+			<field name="name">account.tax.form</field>
+			<field name="model">account.tax</field>
+			<field name="inherit_id" ref="account.view_tax_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='tax_group_id']" position="after">
+					<field name="is_vat" />
+				</xpath>
+			</field>
+		</record>
+		<record id="view_tax_tree" model="ir.ui.view">
+			<field name="name">account.tax.tree</field>
+			<field name="model">account.tax</field>
+			<field name="inherit_id" ref="account.view_tax_tree" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='company_id']" position="before">
+					<field name="is_vat" />
+				</xpath>
+			</field>
+		</record>
+		<record id="view_account_tax_search" model="ir.ui.view">
+			<field name="name">account.tax.search</field>
+			<field name="model">account.tax</field>
+			<field name="inherit_id" ref="account.view_account_tax_search" />
+			<field name="arch" type="xml">
+				<xpath expr="//filter[@name='inactive']" position="after">
+					<separator />
+					<filter name="ftr_is_vat" string="VAT"
+						domain="[('is_vat','=',True)]" help="Show value added taxes only" />
+					<filter name="ftr_is_vat" string="Non-VAT"
+						domain="[('is_vat','=',False)]"
+						help="Show taxes that are not value added taxes" />
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

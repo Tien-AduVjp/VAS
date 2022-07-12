@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record model="ir.ui.view" id="account_asset_asset_add_wizard_view_form">
+		<field name="name">account.asset.asset.add.wizard.form</field>
+		<field name="model">account.asset.asset.add.wizard</field>
+		<field name="priority" eval="8" />
+		<field name="arch" type="xml">
+			<form string="Add Value To Asset">
+				<group>
+					<group>
+						<field name="first_depreciation_date" />
+						<field name="analytic_account_id" />
+						<field name="analytic_tag_ids" widget="many2many_tags" />
+					</group>
+				</group>
+				<footer invisible="not context.get('edit', True)">
+					<button string="Add" name="action_add_value" type="object" class="btn-primary" />
+					<button string="Cancel" class="btn-secondary" special="cancel" />
+				</footer>
+			</form>
+		</field>
+	</record>
+	
+	<record id="add_value_to_asset_wizard_act" model="ir.actions.act_window">
+           <field name="name">Add Value To Asset</field>
+           <field name="res_model">account.asset.asset.add.wizard</field>
+           <field name="view_mode">form</field>
+           <field name="target">new</field>
+           <field name="binding_model_id" ref="to_account_asset.model_account_asset_asset" />
+           <field name="view_id" ref="to_account_asset.account_asset_asset_add_wizard_view_form" />
+       </record>
+</odoo>

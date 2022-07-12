@@ -1,0 +1,128 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_product_return_reason_pos
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20200318\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-13 08:46+0000\n"
+"PO-Revision-Date: 2020-04-13 08:46+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_product_return_reason_pos
+#: model:ir.model.fields,field_description:to_product_return_reason_pos.field_pos_config__allow_to_create_new_reason
+msgid "Allow to create new return reason in front-end"
+msgstr "Cho phép tạo mới lý do trả hàng trong giao diện"
+
+#. module: to_product_return_reason_pos
+#. openerp-web
+#: code:addons/to_product_return_reason_pos/static/src/js/pos_return_order.js:0
+#, python-format
+msgid "Are you sure that you want to return these items?"
+msgstr "Bạn có chắc muốn trả lại mặt hàng này?"
+
+#. module: to_product_return_reason_pos
+#. openerp-web
+#: code:addons/to_product_return_reason_pos/static/src/xml/pos.xml:0
+#, python-format
+msgid "N/A"
+msgstr "N/A"
+
+#. module: to_product_return_reason_pos
+#. openerp-web
+#: code:addons/to_product_return_reason_pos/static/src/js/pos_return_order.js:0
+#, python-format
+msgid "Network Failure (XmlHttpRequestError)"
+msgstr "Lỗi mạng (XmlHttpRequestError)"
+
+#. module: to_product_return_reason_pos
+#. openerp-web
+#: code:addons/to_product_return_reason_pos/static/src/xml/pos.xml:0
+#, python-format
+msgid "None"
+msgstr "Không dùng"
+
+#. module: to_product_return_reason_pos
+#. openerp-web
+#: code:addons/to_product_return_reason_pos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Other"
+msgstr "Khác"
+
+#. module: to_product_return_reason_pos
+#. openerp-web
+#: code:addons/to_product_return_reason_pos/static/src/js/pos_return_order.js:0
+#, python-format
+msgid "Please Confirm Return Products"
+msgstr "Làm Ơn Xác Nhận Trả Lại Hàng"
+
+#. module: to_product_return_reason_pos
+#: model:ir.model,name:to_product_return_reason_pos.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "Cấu hình điểm bán lẻ"
+
+#. module: to_product_return_reason_pos
+#: model:ir.model,name:to_product_return_reason_pos.model_pos_order_line
+msgid "Point of Sale Order Lines"
+msgstr "Chi tiết dòng PoS"
+
+#. module: to_product_return_reason_pos
+#: model:ir.model,name:to_product_return_reason_pos.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Đơn bán lẻ"
+
+#. module: to_product_return_reason_pos
+#: model:ir.ui.menu,name:to_product_return_reason_pos.menu_pos_product_return_reason
+msgid "Products Return Reason"
+msgstr "Lý do trả lại hàng"
+
+#. module: to_product_return_reason_pos
+#: model_terms:ir.ui.view,arch_db:to_product_return_reason_pos.pos_config_view_form
+msgid "Return Products"
+msgstr "Các mặt hàng trả lại"
+
+#. module: to_product_return_reason_pos
+#. openerp-web
+#: code:addons/to_product_return_reason_pos/static/src/xml/pos.xml:0
+#: code:addons/to_product_return_reason_pos/static/src/xml/pos.xml:0
+#: model:ir.model.fields,field_description:to_product_return_reason_pos.field_pos_order_line__return_reason_id
+#, python-format
+msgid "Return Reason"
+msgstr "Lý do trả lại"
+
+#. module: to_product_return_reason_pos
+#. openerp-web
+#: code:addons/to_product_return_reason_pos/static/src/js/pos_return_order.js:0
+#, python-format
+msgid "Some products in this order are not returnable."
+msgstr "Một số mặt hàng trong đơn hàng là không thể trả lại"
+
+#. module: to_product_return_reason_pos
+#. openerp-web
+#: code:addons/to_product_return_reason_pos/static/src/js/pos_return_order.js:0
+#, python-format
+msgid ""
+"The Point of Sale could not be loaded due to a network problem.\n"
+" Please check your internet connection."
+msgstr ""
+"Điểm bán lẻ không thể tải do gặp vấn đề về mạng.\n"
+" Làm ơn kiểm tra kết nối mạng"
+
+#. module: to_product_return_reason_pos
+#: code:addons/to_product_return_reason_pos/models/pos_order.py:0
+#, python-format
+msgid "The operation '%s' requires Return Reason. Please specify one."
+msgstr "Hoạt động '%s' yêu cầu lý do trả hàng. Hãy chọn một lý do."
+
+#. module: to_product_return_reason_pos
+#. openerp-web
+#: code:addons/to_product_return_reason_pos/static/src/js/pos_return_order.js:0
+#, python-format
+msgid "Traceback not available."
+msgstr "Không thể trở lại"

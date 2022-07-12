@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_account_vninvoice_type_employee,account.vninvoice.type.employee,model_account_vninvoice_type,base.group_user,1,0,0,0
+access_account_vninvoice_type_account_advisor,account.vninvoice.type.account_advisor,model_account_vninvoice_type,account.group_account_manager,1,1,1,1
+access_account_vninvoice_type_admin,account.vninvoice.type.admin,model_account_vninvoice_type,base.group_system,1,1,1,1
+access_account_vninvoice_serial_employee,account.vninvoice.serial.employee,model_account_vninvoice_serial,base.group_user,1,0,0,0
+access_account_vninvoice_serial_account_advisor,account.vninvoice.serial.account_advisor,model_account_vninvoice_serial,account.group_account_manager,1,1,1,1
+access_account_vninvoice_serial_admin,account.vninvoice.serial.admin,model_account_vninvoice_serial,base.group_system,1,1,1,1
+access_account_vninvoice_template_employee,account.vninvoice.template.employee,model_account_vninvoice_template,base.group_user,1,0,0,0
+access_account_vninvoice_template_account_advisor,account.vninvoice.template.account_advisor,model_account_vninvoice_template,account.group_account_manager,1,1,1,1
+access_account_vninvoice_template_admin,account.vninvoice.template.admin,model_account_vninvoice_template,base.group_system,1,1,1,1

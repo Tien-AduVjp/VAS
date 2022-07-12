@@ -1,0 +1,443 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_fleet_specs
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-26 07:20+0000\n"
+"PO-Revision-Date: 2020-02-26 07:20+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_fleet_specs
+#: model_terms:ir.ui.view,arch_db:to_fleet_specs.fleet_vehicle_view_form
+#: model_terms:ir.ui.view,arch_db:to_fleet_specs.vehicle_class_form_view
+msgid "<span>kg</span>"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.fields.selection,name:to_fleet_specs.selection__vehicle_type__type__bus
+#: model:vehicle.type,name:to_fleet_specs.vehicle_type_bus
+msgid "Bus"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:vehicle.class,name:to_fleet_specs.bus_13_29_seats
+msgid "Bus 13~29 Seats"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model_terms:ir.ui.view,arch_db:to_fleet_specs.fleet_vehicle_view_search
+#: model_terms:ir.ui.view,arch_db:to_fleet_specs.vehicle_class_search_view
+#: model_terms:ir.ui.view,arch_db:to_fleet_specs.vehicle_type_search_view
+msgid "Buses"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.fields.selection,name:to_fleet_specs.selection__vehicle_type__type__car
+#: model:vehicle.type,name:to_fleet_specs.vehicle_type_car
+msgid "Car"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model_terms:ir.ui.view,arch_db:to_fleet_specs.fleet_vehicle_view_search
+#: model_terms:ir.ui.view,arch_db:to_fleet_specs.vehicle_class_search_view
+#: model_terms:ir.ui.view,arch_db:to_fleet_specs.vehicle_type_search_view
+msgid "Cars"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model_terms:ir.ui.view,arch_db:to_fleet_specs.vehicle_class_form_view
+msgid "Class Name"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.fields,field_description:to_fleet_specs.field_vehicle_class__create_uid
+#: model:ir.model.fields,field_description:to_fleet_specs.field_vehicle_type__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.fields,field_description:to_fleet_specs.field_vehicle_class__create_date
+#: model:ir.model.fields,field_description:to_fleet_specs.field_vehicle_type__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.fields,field_description:to_fleet_specs.field_vehicle_class__description
+#: model_terms:ir.ui.view,arch_db:to_fleet_specs.vehicle_class_form_view
+msgid "Description"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.fields,field_description:to_fleet_specs.field_vehicle_class__display_name
+#: model:ir.model.fields,field_description:to_fleet_specs.field_vehicle_type__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.fields,field_description:to_fleet_specs.field_fleet_vehicle__engine_sn
+msgid "Engine Serial Number"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.fields,help:to_fleet_specs.field_fleet_vehicle__engine_sn
+msgid "Engine serial number of the vehicle."
+msgstr ""
+
+#. module: to_fleet_specs
+#: model_terms:ir.ui.view,arch_db:to_fleet_specs.vehicle_class_search_view
+#: model_terms:ir.ui.view,arch_db:to_fleet_specs.vehicle_type_search_view
+msgid "Group By"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.fields,field_description:to_fleet_specs.field_vehicle_class__id
+#: model:ir.model.fields,field_description:to_fleet_specs.field_vehicle_type__id
+msgid "ID"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.fields,field_description:to_fleet_specs.field_vehicle_class____last_update
+#: model:ir.model.fields,field_description:to_fleet_specs.field_vehicle_type____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.fields,field_description:to_fleet_specs.field_vehicle_class__write_uid
+#: model:ir.model.fields,field_description:to_fleet_specs.field_vehicle_type__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.fields,field_description:to_fleet_specs.field_vehicle_class__write_date
+#: model:ir.model.fields,field_description:to_fleet_specs.field_vehicle_type__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.fields,field_description:to_fleet_specs.field_vehicle_class__max_seats
+msgid "Max. Seats"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.fields,field_description:to_fleet_specs.field_vehicle_class__max_weight
+msgid "Max. Weight"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.fields,help:to_fleet_specs.field_vehicle_class__max_seats
+msgid "Maximum Seats for vehicles in this vehicle class"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.fields,help:to_fleet_specs.field_vehicle_class__max_weight
+msgid "Maximum Weight in kilograms for vehicles in this vehicle class"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.fields,field_description:to_fleet_specs.field_vehicle_class__min_seats
+msgid "Min. Seats"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.fields,field_description:to_fleet_specs.field_vehicle_class__min_weight
+msgid "Min. Weight"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.fields,help:to_fleet_specs.field_vehicle_class__min_seats
+msgid "Minimum Seats for vehicles in this vehicle class"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.fields,help:to_fleet_specs.field_vehicle_class__min_weight
+msgid "Minimum Weight in kilograms for vehicles in this vehicle class"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.fields,field_description:to_fleet_specs.field_vehicle_class__name
+#: model_terms:ir.ui.view,arch_db:to_fleet_specs.vehicle_class_search_view
+#: model_terms:ir.ui.view,arch_db:to_fleet_specs.vehicle_type_search_view
+msgid "Name"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model_terms:ir.ui.view,arch_db:to_fleet_specs.vehicle_class_search_view
+msgid "Search Vehicle Class"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model_terms:ir.ui.view,arch_db:to_fleet_specs.vehicle_type_search_view
+msgid "Search Vehicle Type"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:vehicle.class,name:to_fleet_specs.sedan_5_seats
+msgid "Sedan 5 Seats"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.fields,field_description:to_fleet_specs.field_fleet_vehicle__self_weight
+msgid "Self-Weight"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model_terms:ir.ui.view,arch_db:to_fleet_specs.vehicle_type_search_view
+msgid "Technical Type"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.constraint,message:to_fleet_specs.constraint_vehicle_class_check_max_seats
+msgid "The Max. Seats must be greater than or equal to zero!"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.constraint,message:to_fleet_specs.constraint_vehicle_class_check_min_seats
+msgid "The Min. Seats must be greater than or equal to zero!"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.constraint,message:to_fleet_specs.constraint_vehicle_class_check_seats
+msgid "The Min. Seats must be less than or equal to the Max. Weight!"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.constraint,message:to_fleet_specs.constraint_vehicle_class_check_min_weight
+msgid "The Min. Weight must be greater than or equal to zero!"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.constraint,message:to_fleet_specs.constraint_vehicle_class_check_weights
+msgid "The Min. Weight must be less than or equal to the Max. Weight!"
+msgstr ""
+
+#. module: to_fleet_specs
+#: code:addons/to_fleet_specs/models/fleet_vehicle.py:0
+#, python-format
+msgid "The Self Weight must not be a negative value"
+msgstr ""
+
+#. module: to_fleet_specs
+#: code:addons/to_fleet_specs/models/fleet_vehicle.py:0
+#, python-format
+msgid "The Trailer Inner Height must not be a negative value"
+msgstr ""
+
+#. module: to_fleet_specs
+#: code:addons/to_fleet_specs/models/fleet_vehicle.py:0
+#, python-format
+msgid "The Trailer Inner Length must not be a negative value"
+msgstr ""
+
+#. module: to_fleet_specs
+#: code:addons/to_fleet_specs/models/fleet_vehicle.py:0
+#, python-format
+msgid "The Trailer Inner Width must not be a negative value"
+msgstr ""
+
+#. module: to_fleet_specs
+#: code:addons/to_fleet_specs/models/fleet_vehicle.py:0
+#, python-format
+msgid ""
+"The Weight of the vehicle must be equal to or greater than the type's min. weight which is %s.\n"
+"You may need to change the Vehicle Class to meet the requirement."
+msgstr ""
+
+#. module: to_fleet_specs
+#: code:addons/to_fleet_specs/models/fleet_vehicle.py:0
+#, python-format
+msgid ""
+"The Weight of the vehicle must be equal to or less than the type's max. weight which is %s.\n"
+"You may need to change the Vehicle Class to meet the requirement."
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.fields,help:to_fleet_specs.field_fleet_vehicle__trailer_inner_height
+msgid ""
+"The inner height in meters of the built-in trailer. This applies vehicle in "
+"type of Truck only."
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.fields,help:to_fleet_specs.field_fleet_vehicle__trailer_inner_length
+msgid ""
+"The inner length in meters of the built-in trailer. This applies vehicle in "
+"type of Truck only."
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.fields,help:to_fleet_specs.field_fleet_vehicle__trailer_inner_width
+msgid ""
+"The inner width in meters of the built-in trailer. This applies vehicle in "
+"type of Truck only."
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.constraint,message:to_fleet_specs.constraint_vehicle_class_check_max_weight
+msgid "The max. Weight must be greater than or equal to zero!"
+msgstr ""
+
+#. module: to_fleet_specs
+#: code:addons/to_fleet_specs/models/fleet_vehicle.py:0
+#, python-format
+msgid ""
+"The number of seats of the vehicle must be equal to or greater than the type's min. seats which is %s.\n"
+"You may need to change the Vehicle Class to meet the requirement."
+msgstr ""
+
+#. module: to_fleet_specs
+#: code:addons/to_fleet_specs/models/fleet_vehicle.py:0
+#, python-format
+msgid ""
+"The number of seats of the vehicle must be equal to or less than the type's max. seats which is %s.\n"
+"You may need to change the Vehicle Class to meet the requirement."
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.fields,help:to_fleet_specs.field_fleet_vehicle__self_weight
+msgid "The self weight of the vehicle in kilograms."
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.fields,help:to_fleet_specs.field_vehicle_class__type
+#: model:ir.model.fields,help:to_fleet_specs.field_vehicle_type__type
+msgid "The technical type of the vehicle"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.fields,help:to_fleet_specs.field_fleet_vehicle__type
+msgid ""
+"The type of the vehicle which is related to the vehicle class's Vehicle "
+"Type."
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.fields,help:to_fleet_specs.field_fleet_vehicle__year_made
+msgid "The year in which the vehicle was made."
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.fields,field_description:to_fleet_specs.field_vehicle_type__name
+msgid "Title"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.fields,field_description:to_fleet_specs.field_fleet_vehicle__trailer_inner_height
+msgid "Trailer Inner Height"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.fields,field_description:to_fleet_specs.field_fleet_vehicle__trailer_inner_length
+msgid "Trailer Inner Length"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.fields,field_description:to_fleet_specs.field_fleet_vehicle__trailer_inner_width
+msgid "Trailer Inner Width"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.fields.selection,name:to_fleet_specs.selection__vehicle_type__type__truck
+#: model:vehicle.type,name:to_fleet_specs.vehicle_type_truck
+msgid "Truck"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model_terms:ir.ui.view,arch_db:to_fleet_specs.fleet_vehicle_view_search
+#: model_terms:ir.ui.view,arch_db:to_fleet_specs.vehicle_class_search_view
+#: model_terms:ir.ui.view,arch_db:to_fleet_specs.vehicle_type_search_view
+msgid "Trucks"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:vehicle.class,name:to_fleet_specs.truck_10_18_tons
+msgid "Trucks 10~18 Tons"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:vehicle.class,name:to_fleet_specs.truck_over_18_tons
+msgid "Trucks 18 Tons"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:vehicle.class,name:to_fleet_specs.truck_2_4_tons
+msgid "Trucks 2~4 Tons"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:vehicle.class,name:to_fleet_specs.truck_4_10_tons
+msgid "Trucks 4~10 Tons"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.fields,field_description:to_fleet_specs.field_fleet_vehicle__type
+#: model:ir.model.fields,field_description:to_fleet_specs.field_vehicle_class__type
+#: model:ir.model.fields,field_description:to_fleet_specs.field_vehicle_type__type
+#: model_terms:ir.ui.view,arch_db:to_fleet_specs.fleet_vehicle_view_search
+msgid "Type"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model_terms:ir.ui.view,arch_db:to_fleet_specs.vehicle_type_form_view
+msgid "Type Title"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model,name:to_fleet_specs.model_fleet_vehicle
+msgid "Vehicle"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.actions.act_window,name:to_fleet_specs.vehicle_class_action
+#: model:ir.model,name:to_fleet_specs.model_vehicle_class
+#: model:ir.model.fields,field_description:to_fleet_specs.field_fleet_vehicle__class_id
+#: model:ir.ui.menu,name:to_fleet_specs.vehicle_class_menu
+#: model_terms:ir.ui.view,arch_db:to_fleet_specs.vehicle_class_form_view
+#: model_terms:ir.ui.view,arch_db:to_fleet_specs.vehicle_class_tree_view
+msgid "Vehicle Class"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model_terms:ir.ui.view,arch_db:to_fleet_specs.vehicle_class_form_view
+msgid "Vehicle Class Name"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.actions.act_window,name:to_fleet_specs.vehicle_type_action
+#: model:ir.model,name:to_fleet_specs.model_vehicle_type
+#: model:ir.model.fields,field_description:to_fleet_specs.field_fleet_vehicle__type_id
+#: model:ir.model.fields,field_description:to_fleet_specs.field_vehicle_class__type_id
+#: model:ir.ui.menu,name:to_fleet_specs.vehicle_type_menu
+#: model_terms:ir.ui.view,arch_db:to_fleet_specs.vehicle_class_search_view
+#: model_terms:ir.ui.view,arch_db:to_fleet_specs.vehicle_type_form_view
+#: model_terms:ir.ui.view,arch_db:to_fleet_specs.vehicle_type_tree_view
+msgid "Vehicle Type"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model_terms:ir.ui.view,arch_db:to_fleet_specs.vehicle_type_form_view
+msgid "Vehicle Type Title..."
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:ir.model.fields,field_description:to_fleet_specs.field_fleet_vehicle__year_made
+msgid "Year Made"
+msgstr ""
+
+#. module: to_fleet_specs
+#: code:addons/to_fleet_specs/models/fleet_vehicle.py:0
+#, python-format
+msgid "Year made must be between 1900 and %s"
+msgstr ""
+
+#. module: to_fleet_specs
+#: model:vehicle.class,description:to_fleet_specs.truck_2_4_tons
+msgid "kl;k"
+msgstr ""

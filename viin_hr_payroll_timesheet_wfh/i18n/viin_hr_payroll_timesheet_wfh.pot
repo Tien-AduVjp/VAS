@@ -1,0 +1,400 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_hr_payroll_timesheet_wfh
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-28 12:18+0000\n"
+"PO-Revision-Date: 2022-03-03 11:34+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_leave_view_form
+msgid "<span>Hours</span>"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_working_month_calendar_form_view
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_working_month_calendar_line_view_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.view_hr_payslip_form
+msgid "<span>days</span>"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_working_month_calendar_form_view
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_working_month_calendar_line_view_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.view_hr_payslip_form
+msgid "<span>hours</span>"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_leave_view_form
+msgid ""
+"<strong>Warning:</strong>\n"
+"                        The Time-off of the type"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model,name:viin_hr_payroll_timesheet_wfh.model_account_analytic_line
+msgid "Analytic Line"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model,name:viin_hr_payroll_timesheet_wfh.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model,name:viin_hr_payroll_timesheet_wfh.model_hr_employee
+msgid "Employee"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: code:addons/viin_hr_payroll_timesheet_wfh/models/res_company.py:0
+#, python-format
+msgid "HR Timesheet"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model.fields,help:viin_hr_payroll_timesheet_wfh.field_hr_employee__pow_timesheet_required
+msgid ""
+"If checked, the employee will be required to log timesheet for PoW (proof of"
+" work) during time off of the time off types that require timesheet "
+"recording for PoW (e.g. Work from home, etc)."
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_working_month_calendar_form_view
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_working_month_calendar_line_view_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.view_hr_payslip_form
+msgid "Missed"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_payslip__missing_pow_days
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_working_month_calendar__missing_pow_days
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_working_month_calendar_line__missing_pow_days
+msgid "Missing PoW Days"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_payslip__missing_pow_hours
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_working_month_calendar__missing_pow_hours
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_working_month_calendar_line__missing_pow_hours
+msgid "Missing PoW Hours"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: code:addons/viin_hr_payroll_timesheet_wfh/models/res_company.py:0
+#, python-format
+msgid "Missing PoW Timesheet"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: code:addons/viin_hr_payroll_timesheet_wfh/models/hr_leave.py:0
+#, python-format
+msgid ""
+"Only users that are granted with the access group '%s' will be able to "
+"execute this action."
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model,name:viin_hr_payroll_timesheet_wfh.model_hr_payslip
+msgid "Pay Slip"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.view_hr_holidays_filter
+msgid "PoW Not Required"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.view_hr_holidays_filter
+msgid "PoW Required"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_payslip__pow_timesheet_ids
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_working_month_calendar__pow_timesheet_ids
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_working_month_calendar_line__pow_timesheet_ids
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_leave_view_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.view_hr_payslip_form
+msgid "PoW Timesheet"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_payslip__pow_timesheet_count
+msgid "PoW Timesheet Count"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_payslip__pow_timesheet_days
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_working_month_calendar__pow_timesheet_days
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_working_month_calendar_line__pow_timesheet_days
+msgid "PoW Timesheet Days"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_leave__pow_timesheet_ids
+msgid "PoW Timesheet Entries"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_leave__pow_timesheet_hours
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_payslip__pow_timesheet_hours
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_working_month_calendar__pow_timesheet_hours
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_working_month_calendar_line__pow_timesheet_hours
+msgid "PoW Timesheet Hours"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.view_hr_holidays_filter
+msgid "PoW Timesheet Not Recorded"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_leave_view_form
+msgid "PoW Timesheet Not Required"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.view_hr_holidays_filter
+msgid "PoW Timesheet Recorded"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_employee__pow_timesheet_required
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_leave__pow_timesheet_required
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_leave_type__pow_timesheet_required
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_leave_view_form
+msgid "PoW Timesheet Required"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: code:addons/viin_hr_payroll_timesheet_wfh/models/hr_leave_type.py:0
+#, python-format
+msgid ""
+"PoW Timesheet Required option cannot be enabled for the time-off type '%s' "
+"while its Unpaid option is also enabled."
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_working_month_calendar_form_view
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_working_month_calendar_line_view_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.view_hr_payslip_form
+msgid "PoW Timesheet Summary"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_account_analytic_line__pow_for_timeoff_id
+msgid "PoW for Time-off"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_payslip__pow_required_days
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_working_month_calendar__pow_required_days
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_working_month_calendar_line__pow_required_days
+msgid "PoW-Required Time-Off Days"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_payslip__pow_required_hours
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_working_month_calendar__pow_required_hours
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_working_month_calendar_line__pow_required_hours
+msgid "PoW-Required Time-Off Hours"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_timesheet_line_search
+msgid "PoW-Required Time-off"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.view_hr_payslip_form
+msgid ""
+"Proof-of-Work timesheet entries for the related time-off records that "
+"require proof-of-work timesheet."
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_working_month_calendar_form_view
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_working_month_calendar_line_view_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.view_hr_payslip_form
+msgid "Recorded"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_working_month_calendar_form_view
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_working_month_calendar_line_view_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.view_hr_payslip_form
+msgid "Required"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_leave_view_form
+msgid "Show Proof-of-Work timesheet candidates related to this time off."
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_leave_view_form
+msgid "Show Proof-of-Work timesheet entries related to this time off."
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model.fields,help:viin_hr_payroll_timesheet_wfh.field_account_analytic_line__pow_for_timeoff_id
+msgid "The Time-Off that requires proof of work timesheet records"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model.fields,help:viin_hr_payroll_timesheet_wfh.field_hr_leave__pow_timesheet_ids
+msgid "The related timesheet entries for PoW (proof of work)."
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: code:addons/viin_hr_payroll_timesheet_wfh/models/hr_leave.py:0
+#, python-format
+msgid ""
+"The time off '%s' does not require proof of work timesheet as either its "
+"type or the employee setting does not require that. Please enable PoW "
+"Timesheet Required option for both of them first."
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: code:addons/viin_hr_payroll_timesheet_wfh/models/hr_leave.py:0
+#, python-format
+msgid ""
+"The time off '%s' requires proof of work timesheet as both its type and the "
+"employee setting require that. Please disable PoW Timesheet Required option "
+"for either of them first."
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: code:addons/viin_hr_payroll_timesheet_wfh/models/hr_timesheet.py:0
+#, python-format
+msgid ""
+"The timesheet entry `%s` was generated for the time-off `%s` during time-off"
+" validation and will not be able to be considered as proof of work"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model.fields,help:viin_hr_payroll_timesheet_wfh.field_hr_leave__pow_timesheet_hours
+msgid ""
+"The total actual hours by timesheet recorded as proof of work for the time-"
+"off."
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_leave_view_form
+msgid ""
+"This action will set the time-off as being requiring proof of work. It also "
+"finds and matches all PoW timesheet candidates to be PoW timesheet. Are you "
+"sure?"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_leave_view_form
+msgid ""
+"This action will set the time-off as not being requiring proof of work. It "
+"also resets all the related timesheet to be non-pow. Are you sure?"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: code:addons/viin_hr_payroll_timesheet_wfh/models/hr_timesheet.py:0
+#, python-format
+msgid ""
+"This could be a programming error when there is more than one "
+"resource.calendar.leaves in res_calendar_leaves"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_leave_view_form
+msgid "This sets this time off a non-pow required one."
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_leave_view_form
+msgid "This sets this time off a pow required one."
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model,name:viin_hr_payroll_timesheet_wfh.model_hr_leave
+msgid "Time Off"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model,name:viin_hr_payroll_timesheet_wfh.model_hr_leave_type
+msgid "Time Off Type"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.actions.server,name:viin_hr_payroll_timesheet_wfh.action_server_toggle_pow_timesheet_required
+msgid "Toggle PoW Timesheet Requirement"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_leave_view_form
+msgid "View PoW Timesheet"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_leave_view_form
+msgid "View PoW Timesheet Candidates"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model.fields,help:viin_hr_payroll_timesheet_wfh.field_hr_leave_type__pow_timesheet_required
+msgid ""
+"Whether or not Proof-Of-Work timesheet is required. If a time off of this type will be considered as working time (with Unpaid being unchecked, e.g. Work From Home), this field could be checked to require the corresponding time-off employees to record timesheet for proof of work.\n"
+"Note: this can be disabled for specific employees with the same option in the main Employee form view."
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:hr.leave.type,name:viin_hr_payroll_timesheet_wfh.time_off_type_wfh
+msgid "Work From Home"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model,name:viin_hr_payroll_timesheet_wfh.model_hr_working_month_calendar
+msgid "Working Month Calendar"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model,name:viin_hr_payroll_timesheet_wfh.model_hr_working_month_calendar_line
+msgid "Working Month Calendar Line"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: code:addons/viin_hr_payroll_timesheet_wfh/models/hr_timesheet.py:0
+#, python-format
+msgid ""
+"You may not be able to assign the timesheet entry `%s` as a proof of work "
+"for the Time-Off `%s` since its date `%s` is not valid for the time-off "
+"which is from `%s` to `%s`."
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: code:addons/viin_hr_payroll_timesheet_wfh/models/hr_timesheet.py:0
+#, python-format
+msgid ""
+"You may not be able to assign the timesheet record `%s` as proof of work for"
+" the Time-Off `%s` as it would make total PoW timesheet hours greater than "
+"the corresponding time-off duration of the day (%s time-off hours on %s). In"
+" other words, if the current timesheet hours is greater than or equal to the"
+" total time-off hours of the day, no more PoW timesheet of the same day is "
+"allowed."
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_leave_view_form
+msgid ""
+"is considered as work time and requires\n"
+"                        employees to record work timesheet for proof of\n"
+"                        work."
+msgstr ""

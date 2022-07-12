@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+
+		<record model="ir.ui.view" id="fleet_vehicle_revenues_view_form">
+			<field name="name">fleet.vehicle.revenue.form</field>
+			<field name="model">fleet.vehicle.revenue</field>
+			<field name="inherit_id"
+				ref="to_fleet_vehicle_revenue.fleet_vehicle_revenues_view_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='revenue_subtype_id']" position="after">
+					<field name="currency_id" groups="base.group_multi_currency" />
+					<field name="product_id" />
+					<field name="customer_id" context="{'res_partner_search_mode': 'customer', 'show_address': 1, 'default_is_company': True, 'show_vat': True}"/>
+					<field name="company_id" groups="base.group_multi_company" />
+				</xpath>
+				<xpath expr="//field[@name='date']" position="after">
+					<field name="invoice_line_id" groups="base.group_no_one"/>
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="fleet_vehicle_revenue_view_tree">
+			<field name="name">fleet.vehicle.revenue.tree</field>
+			<field name="model">fleet.vehicle.revenue</field>
+			<field name="inherit_id"
+				ref="to_fleet_vehicle_revenue.fleet_vehicle_revenue_view_tree" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='revenue_subtype_id']" position="after">
+					<field name="currency_id" groups="base.group_multi_currency" />
+					<field name="product_id" />
+					<field name="customer_id" />
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="fleet_vehicle_revenues_view_search">
+			<field name="name">fleet.vehicle.revenue.search</field>
+			<field name="model">fleet.vehicle.revenue</field>
+			<field name="inherit_id"
+				ref="to_fleet_vehicle_revenue.fleet_vehicle_revenues_view_search" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='vehicle_id']" position="after">
+					<field name="invoice_id" />
+					<separator />
+					<filter name="invoiced" domain="[('invoice_line_id','!=',False)]"
+						string="Invoiced" />
+					<filter name="uninvoiced" domain="[('invoice_line_id','=',False)]"
+						string="Uninvoiced" />
+					<filter name="invoiceable"
+						domain="[('invoice_line_id','=',False),('customer_id','!=',False),('created_from_invoice_line_id','=',False)]"
+						string="Invoiceable"
+						help="Filter revenues having a customer defined but have not been invoiced yet." />
+					<separator />
+					<filter name="garbage"
+						domain="[('invoice_line_id','=',False),('created_from_invoice_line_id','!=',False)]"
+						string="Garbage"
+						help="The revenues that were created from invoices but does not link to any invoice currently which should be removed" />
+				</xpath>
+				<xpath expr="//group/filter[@name='groupby_vehicle_id']"
+					position="after">
+					<separator />
+					<filter name="groupby_customer_id" context="{'group_by': 'customer_id'}"
+						string="Customer" />
+					<filter name="groupby_currency_id" context="{'group_by': 'currency_id'}"
+						string="Currency" groups="base.group_multi_currency" />
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

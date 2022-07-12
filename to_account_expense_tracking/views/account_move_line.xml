@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="view_account_move_line_filter">
+      <field name="name">account.move.line.search</field>
+      <field name="model">account.move.line</field>
+      <field name="inherit_id" ref="account.view_account_move_line_filter"></field>
+      <field name="arch" type="xml">
+          <xpath expr="//filter[@name='to_check']" position="after">
+          	<separator/>
+          	<filter string="Expense" name="expense" domain="[('expense_id','!=',False)]"/>
+          </xpath>
+          <xpath expr ="//filter[@name='journal']" position ="after">
+          	<filter string="Expense" name="groupby_expense" domain="[]" context="{'group_by': 'expense_id'}"/>
+          </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>

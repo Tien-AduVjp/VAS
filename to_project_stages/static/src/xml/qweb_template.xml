@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <t t-name="FieldColorPills">
+         <span t-attf-class="o_color_pill o_color_#{widget.value} active"
+         t-att-data-val="pill_no"
+         data-toggle="tooltip"
+         data-placement="top"
+         t-attf-title="#{widget.color_stage_name[widget.value]}"
+         />
+    </t>
+</templates> 

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    
+    	<record id="to_employee_advance_reconcile_batch_form" model="ir.ui.view">
+            <field name="name">employee.advance.reconcile.batch.form</field>
+            <field name="model">employee.advance.reconcile.batch</field>
+            <field name="arch" type="xml">
+                <form string="Employee Advance Reconcile Batches">
+                    <group>
+                    	<group>	                        
+	                        <field name="journal_id" widget="selection" />
+	                    </group>
+	                    <group>
+	                    	<field name="date" />	                    	
+	                    </group>
+                    </group>
+                    <separator string="Employees"/>
+                    <field name="employee_ids"/>
+                    <footer>
+                        <button name="action_create" string="Generate" type="object" class="oe_highlight" />                       	
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="action_to_employee_advance_reconcile_batch">
+            <field name="name">Reconcile Batches</field>
+            <field name="res_model">employee.advance.reconcile.batch</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="to_employee_advance_reconcile_batch_form"/>
+            <field name="target">new</field>
+        </record>
+        
+        <menuitem action="action_to_employee_advance_reconcile_batch" id="employee_advance_reconcile_batch_menu"
+			parent="employee_advance_accounting_menu" sequence="1" />
+    
+    </data>
+</odoo>

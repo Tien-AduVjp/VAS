@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+
+		<record id="action_trip_fleet_vehicle_revenue_stat"
+			model="ir.actions.act_window">
+			<field name="name">Trip Revenue</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">fleet.vehicle.revenue</field>
+			<field name="view_mode">pivot,tree,form</field>
+			<field name="search_view_id"
+				ref="fleet_vehicle_revenues_view_search" />
+			<field name="domain">[('trip_id','=', active_id)]</field>
+		</record>
+
+		<record id="fleet_trip_form" model="ir.ui.view">
+			<field name="name">fleet.vehicle.trip.form</field>
+			<field name="model">fleet.vehicle.trip</field>
+			<field name="inherit_id"
+				ref="to_fleet_operation_planning.fleet_trip_form" />
+			<field name="arch" type="xml">
+				<xpath
+					expr="//button[@name='%(to_fleet_operation_planning.launch_vehicle_trip_register_cost_wizard)d']"
+					position="after">
+					<button
+						name="%(launch_vehicle_trip_register_revenue_wizard)d"
+						states="progress,done" string="Record Revenue" type="action"
+						class="btn-primary" context="{'default_trip_id': active_id}"
+						groups="fleet.fleet_group_manager" />
+				</xpath>
+				<xpath expr="//div[@name='button_box']" position="inside">
+					<button name="%(action_trip_fleet_vehicle_revenue_stat)d"
+						type="action" class="oe_stat_button" icon="fa-usd"
+						help="Show all the revenues for this trip">
+						<field name="fleet_vehicle_revenues_count" widget="statinfo"
+							string="Revenues" />
+					</button>
+					<button name="action_view_customer_invoices" type="object"
+						class="oe_stat_button" icon="fa-pencil-square-o"
+						help="Show all customer invoices that have been issued for this trip">
+						<field name="customer_invoices_count" widget="statinfo"
+							string="Customer Invoices" />
+					</button>
+				</xpath>
+			</field>
+		</record>
+
+	</data>
+</odoo>

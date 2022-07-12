@@ -1,0 +1,170 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* to_odoo_module_sale
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-07-26 05:07+0000\n"
+"PO-Revision-Date: 2019-07-26 05:07+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_odoo_module_sale
+#: model:ir.model.fields,field_description:to_odoo_module_sale.field_product_product__print_app_desc_on_sale_order
+#: model:ir.model.fields,field_description:to_odoo_module_sale.field_product_template__print_app_desc_on_sale_order
+msgid "App Description on PDF Quotation/Sale Order"
+msgstr "In Mô tả Module trên Báo giá/Đơn bán PDF"
+
+#. module: to_odoo_module_sale
+#: model_terms:ir.ui.view,arch_db:to_odoo_module_sale.view_order_form
+msgid "Apps"
+msgstr "Ứng dụng"
+
+#. module: to_odoo_module_sale
+#: model:ir.model.fields,field_description:to_odoo_module_sale.field_sale_order__auto_load_app_dependencies
+msgid "Auto Load Apps Dependencies"
+msgstr "Tự động Nạp Ứng dụng Phụ thuộc"
+
+#. module: to_odoo_module_sale
+#: model:ir.filters,name:to_odoo_module_sale.filter_odoo_module
+msgid "By Odoo Module"
+msgstr "Theo Odoo Module"
+
+#. module: to_odoo_module_sale
+#: model:ir.filters,name:to_odoo_module_sale.filter_odoo_module_version
+msgid "By Odoo Module Version"
+msgstr "Theo Phiên bản Odoo Module"
+
+#. module: to_odoo_module_sale
+#: model:ir.model,name:to_odoo_module_sale.model_res_partner
+msgid "Contact"
+msgstr "Liên hệ"
+
+#. module: to_odoo_module_sale
+#: model_terms:ir.ui.view,arch_db:to_odoo_module_sale.view_order_form
+msgid "Dependency"
+msgstr "Phụ thuộc"
+
+#. module: to_odoo_module_sale
+#: model:ir.model.fields,field_description:to_odoo_module_sale.field_res_partner__exclude_already_purchased_apps
+#: model:ir.model.fields,field_description:to_odoo_module_sale.field_res_users__exclude_already_purchased_apps
+#: model:ir.model.fields,field_description:to_odoo_module_sale.field_sale_order__exclude_already_purchased_apps
+msgid "Exclude Already-Purchased Apps"
+msgstr "Loại trừ các Apps đã Mua"
+
+#. module: to_odoo_module_sale
+#: model_terms:ir.ui.view,arch_db:to_odoo_module_sale.report_saleorder_document
+msgid "For Odoo"
+msgstr "Cho Odoo"
+
+#. module: to_odoo_module_sale
+#: model:ir.model.fields,help:to_odoo_module_sale.field_sale_order__exclude_already_purchased_apps
+msgid "If checked, the Autoload Apps Dependencies will exclude the apps that the customer has purchased and paid."
+msgstr "Nếu đánh dấu, tính năng Tự động Nạp Ứng dụng Phụ thuộc sẽ loại trừ các ứng dụng mà khách hàng này đã mua và thanh toán rồi."
+
+#. module: to_odoo_module_sale
+#: model:ir.model.fields,help:to_odoo_module_sale.field_sale_order__auto_load_app_dependencies
+msgid "If checked, upon on changing of order lines, Odoo will check if any Odoo Module Dependency is needed to load. The dependecies that already bought before will not be loaded."
+msgstr "Nếu được đánh dấu, khi thay đổi các dòng đơn bán, Odoo sẽ kiểm tra có cần nạp thêm các module phụ thuộc hay không. Các module phụ thuộc mà đã được khách hàng mua trước đó sẽ không được nạp."
+
+#. module: to_odoo_module_sale
+#: model:ir.model.fields,help:to_odoo_module_sale.field_res_partner__exclude_already_purchased_apps
+#: model:ir.model.fields,help:to_odoo_module_sale.field_res_users__exclude_already_purchased_apps
+msgid "If checked, when selling apps to this partner, the Auto Load Apps Dependencies on sales orders of this customer will exclude the apps that have been sold and paid to the customer."
+msgstr "Nếu đánh dấu, tính năng Tự động Nạp Ứng dụng Phụ thuộc ở trên đơn bán đối với khách hàng này sẽ loại trừ các ứng dụng mà khách hàng này đã mua và thanh toán rồi."
+
+#. module: to_odoo_module_sale
+#: model:ir.model.fields,help:to_odoo_module_sale.field_sale_order__print_app_desc_on_sale_order
+msgid "If enabled, PDF version of this will include the description of the related Odoo Apps.\n"
+"Note: if the option 'App Description on PDF Quotation/Sale Order' is unchecked on the Product form, the App description will not be included anyway."
+msgstr "Nếu kích hoạt, bản in PDF của báo giá/đơn bán sẽ bao gồm cả nội dung mô tả của các module liên quan.\n"
+"Lưu ý: nếu tuỳ chọn 'In Mô tả Module trên Báo giá/Đơn bán PDF' không được kích hoạt cho sản phẩm, mô tả của module cũng vẫn không được bao gồm trong bản in PDF."
+
+#. module: to_odoo_module_sale
+#: model:ir.model.fields,help:to_odoo_module_sale.field_product_product__print_app_desc_on_sale_order
+#: model:ir.model.fields,help:to_odoo_module_sale.field_product_template__print_app_desc_on_sale_order
+msgid "If enabled, the description of Odoo App related to this product will be included in the PDF version of Quotations / Sales Orders"
+msgstr "Nếu kích hoạt, mô tả của module liên quan đến sản phẩm này sẽ được bao gồm trong bản in PDF của Báo giá / Đơn bán"
+
+#. module: to_odoo_module_sale
+#: model_terms:ir.ui.view,arch_db:to_odoo_module_sale.view_order_product_search
+msgid "Non Odoo Apps"
+msgstr "Không phải Odoo App"
+
+#. module: to_odoo_module_sale
+#: model:ir.model.fields,field_description:to_odoo_module_sale.field_sale_order_line__odoo_app_dependency
+msgid "Odoo App Dependencies"
+msgstr "Ứng dụng Phụ thuộc"
+
+#. module: to_odoo_module_sale
+#: model_terms:ir.ui.view,arch_db:to_odoo_module_sale.view_order_product_search
+msgid "Odoo Apps"
+msgstr "Ứng dụng Odoo"
+
+#. module: to_odoo_module_sale
+#: model_terms:ir.ui.view,arch_db:to_odoo_module_sale.view_partner_form
+msgid "Odoo Apps settings are managed on"
+msgstr "Thiết lập Odoo Apps được quản lý bởi"
+
+#. module: to_odoo_module_sale
+#: model:ir.model.fields,field_description:to_odoo_module_sale.field_sale_report__odoo_module_id
+msgid "Odoo Module"
+msgstr ""
+
+#. module: to_odoo_module_sale
+#: model:ir.model.fields,field_description:to_odoo_module_sale.field_sale_report__odoo_module_version_id
+msgid "Odoo Module Version"
+msgstr "Phiên bản Module Odoo"
+
+#. module: to_odoo_module_sale
+#: model:ir.model.fields,field_description:to_odoo_module_sale.field_sale_order__odoo_module_version_ids
+#: model:ir.model.fields,field_description:to_odoo_module_sale.field_sale_order_line__odoo_module_version_id
+msgid "Odoo Module Versions"
+msgstr "Phiên bản Odoo Module"
+
+#. module: to_odoo_module_sale
+#: model:ir.model.fields,field_description:to_odoo_module_sale.field_sale_order__odoo_module_versions_count
+msgid "Odoo Module Versions Count"
+msgstr "SL Phiên bản Odoo Module"
+
+#. module: to_odoo_module_sale
+#: model:ir.model.fields,field_description:to_odoo_module_sale.field_sale_order__print_app_desc_on_sale_order
+msgid "Print App Description"
+msgstr "In Mô tả Ứng dụng"
+
+#. module: to_odoo_module_sale
+#: model:ir.model,name:to_odoo_module_sale.model_product_template
+msgid "Product Template"
+msgstr "Mẫu Sản phẩm"
+
+#. module: to_odoo_module_sale
+#: model:ir.model,name:to_odoo_module_sale.model_sale_order
+msgid "Sale Order"
+msgstr "Đơn Bán"
+
+#. module: to_odoo_module_sale
+#: model:ir.model,name:to_odoo_module_sale.model_sale_report
+msgid "Sales Analysis Report"
+msgstr "Báo cáo Phân tích Bán"
+
+#. module: to_odoo_module_sale
+#: model:ir.model,name:to_odoo_module_sale.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Chi tiết Đơn Bán"
+
+#. module: to_odoo_module_sale
+#: model:ir.model.fields,help:to_odoo_module_sale.field_sale_order_line__odoo_app_dependency
+msgid "This field is to indicate that the line is added as a dependency for other lines"
+msgstr "Trường này chỉ báo rằng, dòng được thêm vào làm dòng phụ thuộc cho (các) dòng khác."
+
+#. module: to_odoo_module_sale
+#: model_terms:ir.ui.view,arch_db:to_odoo_module_sale.view_partner_form
+msgid "the parent company"
+msgstr "công ty mẹ"
+

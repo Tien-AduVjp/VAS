@@ -1,0 +1,659 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_fleet_vehicle_revenue_accounting
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-15 07:56+0000\n"
+"PO-Revision-Date: 2021-01-15 07:56+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: code:addons/to_fleet_vehicle_revenue_accounting/models/account_move_line.py:0
+#, python-format
+msgid ""
+"A Journal Item cannot refer to both vehicle cost and vehicle revenue. It is "
+"able to refer to either or neither of those"
+msgstr ""
+"Phát sinh Kế toán không thể tham chiếu đến cả chi phí và doanh thu của "
+"phương tiện. Nó chỉ có thể tham chiếu đến 1 trong 2 hoặc không cái nào cả"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields,help:to_fleet_vehicle_revenue_accounting.field_fleet_vehicle_revenue__created_from_invoice_line_id
+msgid ""
+"A technical field to indicate that this revenue was created from an invoice "
+"line"
+msgstr ""
+"Một trường kỹ thuật để chỉ ra rằng doanh thu đã được sinh ra từ một dòng hoá"
+" đơn (được tạo từ hoá đơn)"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_vehicle_revenue_allocation_line__amount
+msgid "Amount"
+msgstr "Tổng tiền"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: code:addons/to_fleet_vehicle_revenue_accounting/models/account_analytic_line.py:0
+#, python-format
+msgid ""
+"An analytic line cannot refer to both vehicle revenue and vehicle revenue. "
+"It is able to refer to either or neither of those"
+msgstr ""
+"Phát sinh Kế toán Quản trị không thể tham chiếu đến cả chi phí và doanh thu "
+"của phương tiện. Nó chỉ có thể tham chiếu đến 1 trong 2 hoặc không cái nào "
+"cả"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model,name:to_fleet_vehicle_revenue_accounting.model_account_analytic_line
+msgid "Analytic Line"
+msgstr "Phát sinh KT Quản trị"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue_accounting.view_fleet_vehicle_revenue_invoicing_wizard
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue_accounting.view_vehicle_revenue_allocation_wizard
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.actions.server,name:to_fleet_vehicle_revenue_accounting.ir_cron_fleet_vehicle_revenue_garbage_ir_actions_server
+#: model:ir.cron,cron_name:to_fleet_vehicle_revenue_accounting.ir_cron_fleet_vehicle_revenue_garbage
+#: model:ir.cron,name:to_fleet_vehicle_revenue_accounting.ir_cron_fleet_vehicle_revenue_garbage
+msgid "Clean Orphan Vehicle Revenues"
+msgstr "Xoá các Doanh thu phương tiện Mồ côi"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_fleet_vehicle_revenue_report__communication
+msgid "Communication"
+msgstr "Thông tin giao dịch"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_fleet_vehicle_revenue__company_id
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_fleet_vehicle_revenue_report__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields.selection,name:to_fleet_vehicle_revenue_accounting.selection__fleet_vehicle_revenue_report__revenue_type__contract
+msgid "Contract"
+msgstr "Hợp đồng"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue_accounting.view_fleet_vehicle_revenue_invoicing_wizard
+msgid "Create Invoices"
+msgstr "Tạo Hoá đơn"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue_accounting.view_vehicle_revenue_allocation_wizard
+msgid "Create Vehicle Revenues"
+msgstr "Tạo Doanh thu Phương tiện"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue_accounting.view_fleet_vehicle_revenue_invoicing_wizard
+msgid "Create and View Invoices"
+msgstr "Tạo và Xem Hoá đơn"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_fleet_vehicle_revenue__created_from_invoice_line_id
+msgid "Created From Invoice Line"
+msgstr "Được tạo từ Dòng Hoá đơn"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_abstract_fleet_vehicle_revenue_invoicing_wizard__create_uid
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_fleet_vehicle_revenue_invoicing_wizard__create_uid
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_vehicle_revenue_allocation_line__create_uid
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_vehicle_revenue_allocation_wizard__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_abstract_fleet_vehicle_revenue_invoicing_wizard__create_date
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_fleet_vehicle_revenue_invoicing_wizard__create_date
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_vehicle_revenue_allocation_line__create_date
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_vehicle_revenue_allocation_wizard__create_date
+msgid "Created on"
+msgstr "Được tạo vào"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_fleet_vehicle_revenue__currency_id
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_vehicle_revenue_allocation_line__currency_id
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue_accounting.fleet_vehicle_revenues_view_search
+msgid "Currency"
+msgstr "Tiền tệ"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_fleet_vehicle_revenue__customer_id
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_fleet_vehicle_revenue_report__customer_id
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue_accounting.fleet_vehicle_revenues_view_search
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_fleet_vehicle_revenue_report__date
+msgid "Date"
+msgstr "Ngày tháng"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_abstract_fleet_vehicle_revenue_invoicing_wizard__display_name
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_fleet_vehicle_revenue_invoicing_wizard__display_name
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_fleet_vehicle_revenue_report__display_name
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_vehicle_revenue_allocation_line__display_name
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_vehicle_revenue_allocation_wizard__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#. openerp-web
+#: code:addons/to_fleet_vehicle_revenue_accounting/static/src/js/to_fleet_vehicle_revenue_accounting.js:0
+#, python-format
+msgid "Distributed into Vehicle Revenues"
+msgstr "Đã phân bổ vào phương tiện"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue_accounting.fleet_vehicle_revenues_view_search
+msgid ""
+"Filter revenues having a customer defined but have not been invoiced yet."
+msgstr "Lọc doanh thu mà có xác định khách hàng nhưng chưa xuất hoá đơn."
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model,name:to_fleet_vehicle_revenue_accounting.model_fleet_service_type
+msgid "Fleet Service Type"
+msgstr "Kiểu dịch vụ phương tiện"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model,name:to_fleet_vehicle_revenue_accounting.model_fleet_vehicle_revenue_report
+msgid "Fleet Vehicle Revenue Analysis"
+msgstr "Phân tích Doanh thu Phương tiện"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model,name:to_fleet_vehicle_revenue_accounting.model_fleet_vehicle_revenue_invoicing_wizard
+msgid "Fleet Vehicle Revenue Invoicing Wizard"
+msgstr "Đồ thuật Xuất Hoá đơn Doanh thu Phương tiện"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields.selection,name:to_fleet_vehicle_revenue_accounting.selection__fleet_vehicle_revenue_report__revenue_type__fuel
+msgid "Fuel"
+msgstr "Nhiên liệu"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue_accounting.fleet_vehicle_revenues_view_search
+msgid "Garbage"
+msgstr "Rác rưởi"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue_accounting.fleet_vehicle_revenues_report_view_search
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_account_move_line__has_vehicle_revenue
+msgid "Has Vehicle revenue"
+msgstr ""
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_abstract_fleet_vehicle_revenue_invoicing_wizard__id
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_fleet_vehicle_revenue_invoicing_wizard__id
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_fleet_vehicle_revenue_report__id
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_vehicle_revenue_allocation_line__id
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_vehicle_revenue_allocation_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue_accounting.view_fleet_vehicle_revenue_invoicing_wizard
+msgid "Invoice Fleet Revenue"
+msgstr "Xuất hoá đơn Doanh thu Phương tiện"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_vehicle_revenue_allocation_line__invoice_line_id
+msgid "Invoice Line"
+msgstr "Chi tiết hoá đơn"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_vehicle_revenue_allocation_wizard__invoice_line_ids
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue_accounting.view_vehicle_revenue_allocation_wizard
+msgid "Invoice Lines"
+msgstr "Chi tiết hoá đơn"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_fleet_vehicle_revenue_report__move_id
+msgid "Invoice Ref."
+msgstr "Số Hoá đơn."
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.actions.act_window,name:to_fleet_vehicle_revenue_accounting.action_view_fleet_vehicle_revenue_invoicing_wizard
+msgid "Invoice Vehicle Revenues"
+msgstr "Xuất hoá đơn Doanh thu Phương tiện"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue_accounting.fleet_vehicle_revenues_view_search
+msgid "Invoiceable"
+msgstr "Có thể Xuất hoá đơn"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_fleet_service_type__product_id
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_fleet_vehicle_revenue_report__product_id
+msgid "Invoiceable Product"
+msgstr "Sản phẩm Xuất hoá đơn"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue_accounting.fleet_vehicle_revenues_view_search
+msgid "Invoiced"
+msgstr "Đã xuất Hoá đơn"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields.selection,name:to_fleet_vehicle_revenue_accounting.selection__fleet_vehicle_revenue_report__state__invoiced_paid
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue_accounting.fleet_vehicle_revenues_report_view_search
+msgid "Invoiced and Paid"
+msgstr "Đã xuất Hoá đơn và Thanh toán"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields.selection,name:to_fleet_vehicle_revenue_accounting.selection__fleet_vehicle_revenue_report__state__invoiced_not_paid
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue_accounting.fleet_vehicle_revenues_report_view_search
+msgid "Invoiced but Not Paid"
+msgstr "Đã xuất Hoá đơn, Chưa Thanh toán"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue_accounting.view_fleet_vehicle_revenue_invoicing_wizard
+msgid ""
+"Invoices will be created in draft so that you can review\n"
+"\t\t\t\t\t\tthem before validation."
+msgstr ""
+"Hoá đơn sẽ được tạo ở trạng thái dự thảo để bản có thể xem\n"
+"                       xét trước khi xác nhận."
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model,name:to_fleet_vehicle_revenue_accounting.model_account_move
+msgid "Journal Entries"
+msgstr "Bút toán Sổ nhật ký"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model,name:to_fleet_vehicle_revenue_accounting.model_account_move_line
+msgid "Journal Item"
+msgstr "Phát sinh bút toán"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_abstract_fleet_vehicle_revenue_invoicing_wizard____last_update
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_fleet_vehicle_revenue_invoicing_wizard____last_update
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_fleet_vehicle_revenue_report____last_update
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_vehicle_revenue_allocation_line____last_update
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_vehicle_revenue_allocation_wizard____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_abstract_fleet_vehicle_revenue_invoicing_wizard__write_uid
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_fleet_vehicle_revenue_invoicing_wizard__write_uid
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_vehicle_revenue_allocation_line__write_uid
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_vehicle_revenue_allocation_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_abstract_fleet_vehicle_revenue_invoicing_wizard__write_date
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_fleet_vehicle_revenue_invoicing_wizard__write_date
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_vehicle_revenue_allocation_line__write_date
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_vehicle_revenue_allocation_wizard__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue_accounting.fleet_vehicle_revenues_report_view_search
+msgid "Last Year"
+msgstr "Năm ngoái"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue_accounting.account_move_view_form
+msgid "Linked Fleet Vehicle Revenues"
+msgstr "Doanh thu Phương tiện Liên quan"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue_accounting.fleet_vehicle_revenues_report_view_search
+msgid "Month"
+msgstr "Tháng"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_fleet_vehicle_revenue_report__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: code:addons/to_fleet_vehicle_revenue_accounting/wizard/abstract_fleet_vehicle_revenue_invoicing_wizard.py:0
+#, python-format
+msgid "No Sales Journal found for the currency %s"
+msgstr "Không tìm thấy sổ nhật ký bán hàng nào cho tiền tệ %s"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: code:addons/to_fleet_vehicle_revenue_accounting/wizard/abstract_fleet_vehicle_revenue_invoicing_wizard.py:0
+#, python-format
+msgid ""
+"No invoiceable revenues for invoicing! Please select at least one that has "
+"not been invoiced."
+msgstr ""
+"Không có doanh thu nào có thể xuất hoá đơn để xuất hoá đơn cho chúng. Vui "
+"lòng lựa chọn ít nhất một doanh thu mà chưa được xuất hoá đơn."
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields.selection,name:to_fleet_vehicle_revenue_accounting.selection__fleet_vehicle_revenue_report__state__not_invoiced
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue_accounting.fleet_vehicle_revenues_report_view_search
+msgid "Not Invoiced"
+msgstr "Chưa Xuất Hoá đơn"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#. openerp-web
+#: code:addons/to_fleet_vehicle_revenue_accounting/static/src/js/to_fleet_vehicle_revenue_accounting.js:0
+#, python-format
+msgid "Not distributed into vehicle revenues yet"
+msgstr "Vẫn chưa phân bổ vào các phương tiện"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields.selection,name:to_fleet_vehicle_revenue_accounting.selection__fleet_vehicle_revenue_report__revenue_type__other
+msgid "Other"
+msgstr "Khác"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: code:addons/to_fleet_vehicle_revenue_accounting/models/account_move_line.py:0
+#, python-format
+msgid "Please hit Save button first!"
+msgstr "Vui lòng nhấn nút Lưu trước!"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_fleet_vehicle_revenue_report__amount
+msgid "Revenue"
+msgstr "Doanh thu"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_vehicle_revenue_allocation_wizard__vehicle_revenue_allocation_line_ids
+msgid "Revenue Allocation Lines"
+msgstr "Chi tiết Phân bổ Doanh thu"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_fleet_vehicle_revenue_report__revenue_subtype_id
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue_accounting.fleet_vehicle_revenues_report_view_search
+msgid "Revenue Subtype"
+msgstr "Kiểu Doanh thu"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_fleet_vehicle_revenue_report__revenue_type
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue_accounting.fleet_vehicle_revenues_report_view_search
+msgid "Revenue Type"
+msgstr "Kiểu Doanh thu"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model,name:to_fleet_vehicle_revenue_accounting.model_fleet_vehicle_revenue
+msgid "Revenue related to a vehicle"
+msgstr "Doanh thu liên quan đến một phương tiện"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.actions.act_window,name:to_fleet_vehicle_revenue_accounting.fleet_revenues_reporting_action
+msgid "Revenues Analysis"
+msgstr "Phân tích Doanh thu"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields,help:to_fleet_vehicle_revenue_accounting.field_vehicle_revenue_allocation_wizard__vehicle_ids
+msgid "Select vehicles to allocate the revenue"
+msgstr "Chọn các phương tiện để phân bổ doanh thu"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields.selection,name:to_fleet_vehicle_revenue_accounting.selection__fleet_vehicle_revenue_report__revenue_type__services
+msgid "Services"
+msgstr "Dịch vụ"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model,name:to_fleet_vehicle_revenue_accounting.model_abstract_fleet_vehicle_revenue_invoicing_wizard
+msgid "Share business Logics between Fleet Vehicle Revenue Invoicing Wizards"
+msgstr ""
+"Chia sẻ logics nghiệp vụ giữa các đồ thuật xuất hoá đơn cho doanh thu phương "
+"tiện"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_fleet_vehicle_revenue_report__state
+msgid "Status"
+msgstr "Tình trạng"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields,help:to_fleet_vehicle_revenue_accounting.field_fleet_vehicle_revenue_report__product_id
+msgid "The product to be used when invoicing the vehicle revenue"
+msgstr "Sản phẩm mà được sử dụng để xuất hoá đơn doanh thu phương tiện"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields,help:to_fleet_vehicle_revenue_accounting.field_fleet_service_type__product_id
+msgid ""
+"The product to be used when invoicing vehicle revenues/revenue of this "
+"service type"
+msgstr ""
+"Sản phẩm mà được sử dung để xuất hóa đơn (các) doanh thu phương tiện của "
+"kiểu dịch vụ này"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: code:addons/to_fleet_vehicle_revenue_accounting/wizard/abstract_fleet_vehicle_revenue_invoicing_wizard.py:0
+#, python-format
+msgid ""
+"The revenue id: %d has no currency set. Hence, cannot create invoice for it."
+msgstr ""
+"Doanh thu có id: %d chưa được thiết lập tiền tệ. Vì vậy không thể tạo được "
+"hoá đơn cho nó."
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: code:addons/to_fleet_vehicle_revenue_accounting/wizard/abstract_fleet_vehicle_revenue_invoicing_wizard.py:0
+#, python-format
+msgid ""
+"The revenue id: %d has no customer set. Hence, cannot create invoice for it."
+msgstr ""
+"Doanh thu có id: %d chưa được thiết lập khách hàng. Vì vậy không thể tạo "
+"được hoá đơn cho nó."
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: code:addons/to_fleet_vehicle_revenue_accounting/models/fleet_vehicle_revenue.py:0
+#, python-format
+msgid ""
+"The revenue must have the same product as its Type's product. Otherwise, you"
+" must leave its Product field empty so that the Type's Product will be used."
+msgstr ""
+"Doanh thu phải có cùng sản phẩm với sản phẩm thiết lập trên Kiểu của doanh "
+"thu. Hoặc bạn phải để trống trường Sản phẩm trên Doanh thu để có thể sử dụng"
+" Sản phẩm của Kiểu của Doanh thu."
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue_accounting.fleet_vehicle_revenues_view_search
+msgid ""
+"The revenues that were created from invoices but does not link to any "
+"invoice currently which should be removed"
+msgstr ""
+"Doanh thu đã được tạo từ hoá đơn nhưng không link đến bất kỳ hoá đơn nào sẽ "
+"được xoá bỏ"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: code:addons/to_fleet_vehicle_revenue_accounting/models/account_move_line.py:0
+#, python-format
+msgid ""
+"The sum of the vehicle revenue (%d) of the invoice line is not equal to the "
+"Amount of the invoice line (%d). Please adjust the unit price to make the "
+"Amount equal."
+msgstr ""
+"Tổng giá trị doanh thu phân bổ (%d) tương ứng với dòng hoá đơn thì không "
+"bằng tổng giá trị dòng hoá đơn tương ứng (%d). Vui lòng điều chỉnh đơn giá "
+"để đáp ứng yêu cầu này."
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: code:addons/to_fleet_vehicle_revenue_accounting/models/account_analytic_line.py:0
+#: code:addons/to_fleet_vehicle_revenue_accounting/models/account_move_line.py:0
+#, python-format
+msgid ""
+"There is discrepancy between the Vehicle Revenue and the Vehicle. The "
+"Vehicle Revenue is registered for the vehicle %s while the Vehicle on the "
+"move line is %s"
+msgstr ""
+"Có sự bất đồng giữa doanh thu phương tiện và phương tiện. Doanh thu này ứng "
+"với phương tiện %s trong khi phương tiện ở phát sinh kế toán tương ứng lại "
+"là %s"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: code:addons/to_fleet_vehicle_revenue_accounting/models/fleet_vehicle_revenue.py:0
+#, python-format
+msgid ""
+"There is neither product defined for the revenue id: %d nor income account "
+"in product category property."
+msgstr ""
+"Không tìm thấy sản phẩm được định nghĩa cho doanh thu phương tiện có ID: %d "
+"cũng như tài khoản doanh thu cho thuộc tính nhóm sản phẩm."
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: code:addons/to_fleet_vehicle_revenue_accounting/models/fleet_vehicle_revenue.py:0
+#, python-format
+msgid ""
+"There is no income account defined for this product: \"%s\". You may have to"
+" install a chart of account from Accounting app, Settings menu."
+msgstr ""
+"Không tìm thấy tài khoản doanh thu được định nghĩa cho sản phẩm: \"%s\". Bạn"
+" có thể cần cài đặt hệ thống tài khoản kế toán từ ứng dụng Kế toán, menu "
+"Thiết lập."
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue_accounting.fleet_vehicle_revenues_report_view_search
+msgid "This Year"
+msgstr "Năm nay"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields,help:to_fleet_vehicle_revenue_accounting.field_fleet_vehicle_revenue_report__communication
+msgid ""
+"This field holds the name value of either the invoiceable product or the "
+"revenue sub-type (in case of no product specified)"
+msgstr ""
+"Trường này lưu giữ tên của Sản phẩm có thể xuất hoá đơn hoặc Kiểu dịch vụ "
+"phương tiện tương ứng (nếu không có sản phẩm)"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields,help:to_fleet_vehicle_revenue_accounting.field_account_analytic_line__vehicle_revenue_id
+msgid ""
+"This field is to indicate that the analytic line relates to a vehicle "
+"revenue registered in the Fleet Management application"
+msgstr ""
+"Trường này để chỉ ra rằng phát sinh kế toán quản trị liên quan đến một doanh"
+" thu phương tiện được ghi nhận ở ứng dụng Đội phương tiện"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields,help:to_fleet_vehicle_revenue_accounting.field_account_move_line__vehicle_revenue_id
+msgid ""
+"This field is to indicate that the move line relates to a vehicle revenue "
+"registered in the Fleet Management application"
+msgstr ""
+"Trường này để chỉ ra rằng phát sinh kế toán liên quan đến một doanh thu "
+"phương tiện được ghi nhận ở ứng dụng Đội phương tiện"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields,help:to_fleet_vehicle_revenue_accounting.field_account_move_line__has_vehicle_revenue
+msgid ""
+"This technical field to indicate if this invoice line refers vehicle "
+"revenue(s)."
+msgstr ""
+"Trường kỹ thuật này để cho biết dòng hóa đơn này có đề cập đến doanh thu của xe hay không."
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_fleet_vehicle_revenue__amount
+msgid "Total Price"
+msgstr "Tổng tiền"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_vehicle_revenue_allocation_line__revenue_subtype_id
+msgid "Type"
+msgstr "Kiểu"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue_accounting.fleet_vehicle_revenues_view_search
+msgid "Uninvoiced"
+msgstr "Chưa Xuất Hoá đơn"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_fleet_vehicle_revenue_report__vehicle_id
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_vehicle_revenue_allocation_line__vehicle_id
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_vehicle_revenue_allocation_wizard__vehicle_ids
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue_accounting.fleet_vehicle_revenues_report_view_search
+msgid "Vehicle"
+msgstr "Phương tiện"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_account_analytic_line__vehicle_revenue_id
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_account_move_line__vehicle_revenue_id
+msgid "Vehicle Revenue"
+msgstr "Doanh thu Phương tiện"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue_accounting.view_vehicle_revenue_allocation_wizard
+msgid "Vehicle Revenue Allocation Board"
+msgstr "Bảng phân bổ Doanh thu Phương tiện"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model,name:to_fleet_vehicle_revenue_accounting.model_vehicle_revenue_allocation_line
+msgid "Vehicle Revenue Allocation Line"
+msgstr "Chi tiết Phân bổ Doanh thu Phương tiện"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.actions.act_window,name:to_fleet_vehicle_revenue_accounting.action_vehicle_revenue_allocation_wizard
+#: model:ir.model,name:to_fleet_vehicle_revenue_accounting.model_vehicle_revenue_allocation_wizard
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_vehicle_revenue_allocation_line__vehicle_revenue_allocation_wizard_id
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue_accounting.view_vehicle_revenue_allocation_wizard
+msgid "Vehicle Revenue Allocation Wizard"
+msgstr "Đồ thuật Phân bổ Doanh thu Phương tiện"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_account_move__fleet_vehicle_revenue_ids
+msgid "Vehicle Revenues"
+msgstr "Doanh thu Phương tiện"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue_accounting.fleet_vehicle_revenues_report_view_search
+msgid "Vehicle Revenues by Month"
+msgstr "Doanh thu Phương tiện theo Tháng"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: code:addons/to_fleet_vehicle_revenue_accounting/models/account_move_line.py:0
+#, python-format
+msgid ""
+"Vehicle revenue (id: %d)'s currency (%s) must be the same as the invoice's "
+"one (%s)"
+msgstr ""
+"Doanh thu Phương tiện (id: %d) với tiền tiện (%s) không giống với tiền tệ "
+"của hoá đơn tương ứng (%s)"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_account_move_line__fleet_vehicle_revenues_count
+msgid "Vehicle revenue Count"
+msgstr "SL Doanh thu Phương tiện"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue_accounting.field_account_move_line__fleet_vehicle_revenue_ids
+msgid "Vehicle revenues"
+msgstr "Doanh thu phương tiện"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue_accounting.fleet_vehicle_revenue_report_view_graph
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue_accounting.fleet_vehicle_revenue_report_view_pivot
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue_accounting.fleet_vehicle_revenue_report_view_tree
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue_accounting.fleet_vehicle_revenues_report_view_search
+msgid "Vehicles revenues"
+msgstr "Doanh thu Phương tiện"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue_accounting.fleet_vehicle_revenues_report_view_search
+msgid "Year"
+msgstr "Năm"
+
+#. module: to_fleet_vehicle_revenue_accounting
+#: code:addons/to_fleet_vehicle_revenue_accounting/wizard/vehicle_revenue_allocation_wizard.py:0
+#, python-format
+msgid ""
+"You can allocate invoice line's amount to vehicles (as vehicle revenue) ONLY"
+" when the invoice state is neither 'Paid' nor 'Cancelled'. You may need to "
+"set the invoice back to draft state then do allocation again."
+msgstr ""
+"Bạn CHỈ CÓ THỂ phân bổ giá trị một dòng hoá đơn vào làm doanh thu phương "
+"tiện khi mà hoá đơn KHÔNG ở trạng thái 'Đã thanh toán' hoặc 'Huỷ'. Bạn có "
+"thể cần phải đặt hoá đơn về trạng thái Dự thảo rồi mới thực hiện phân bổ."
+

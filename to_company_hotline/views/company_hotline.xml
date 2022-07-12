@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="partner_hotline_search" model="ir.ui.view">
+            <field name="name">Partner Hotline Search</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='phone']" position="after">
+                    <field name="hotline"/>
+                </xpath>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="view_partner_form">
+			<field name="name">partner_hotline</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.view_partner_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='email']" position="after">
+					<field name="hotline" widget="phone"
+						attrs="{'invisible': [('is_company', '=', False)]}" />
+				</xpath>
+			</field>
+        </record>
+
+        <record id="view_company_search" model="ir.ui.view">
+            <field name="name">Company Search</field>
+            <field name="model">res.company</field>
+            <field name="arch" type="xml">
+                <search string="Company Search">
+                    <field name="name"/>
+                    <field name="hotline"/>
+                </search>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="view_company_form">
+			<field name="name">company_hotline</field>
+			<field name="model">res.company</field>
+			<field name="inherit_id" ref="base.view_company_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='email']" position="after">
+					<field name="hotline" widget="phone" />
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

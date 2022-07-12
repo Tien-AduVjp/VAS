@@ -1,0 +1,220 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_social_linkedin
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-29 03:31+0000\n"
+"PO-Revision-Date: 2021-04-29 03:31+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_social_linkedin
+#: model_terms:ir.ui.view,arch_db:viin_social_linkedin.linkedin_preview
+msgid "<b>LinkedIn Page</b>"
+msgstr "<b>Trang Linkedin</b>"
+
+#. module: viin_social_linkedin
+#: model_terms:ir.ui.view,arch_db:viin_social_linkedin.social_post_view_kanban
+msgid "<i class=\"fa fa-mouse-pointer\" title=\"Clicks\"/>"
+msgstr "<i class=\"fa fa-mouse-pointer\" title=\"Nhấp chuột\"/>"
+
+#. module: viin_social_linkedin
+#: model_terms:ir.ui.view,arch_db:viin_social_linkedin.social_post_view_kanban
+msgid ""
+"<i class=\"fa fa-percent\" title=\"Engagement Rate (Rate of total likes + "
+"comments + shares + clicks compared to views)\"/>"
+msgstr ""
+"<i class=\"fa fa-percent\" title=\"Tye lệ tương tác (Tỷ lệ của tổng lượt thích +  bình luận + chia sẻ + nhấp chuột được so sánh với lượt xem)\"/>"
+
+#. module: viin_social_linkedin
+#: model_terms:ir.ui.view,arch_db:viin_social_linkedin.res_config_settings_view_form
+msgid "App ID"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model_terms:ir.ui.view,arch_db:viin_social_linkedin.res_config_settings_view_form
+msgid "App Secret"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model:ir.model,name:viin_social_linkedin.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: viin_social_linkedin
+#: model:ir.model,name:viin_social_linkedin.model_res_config_settings
+msgid "Config Settings"
+msgstr "Thiết lập Cấu hình"
+
+#. module: viin_social_linkedin
+#: code:addons/viin_social_linkedin/controllers/main.py:0
+#, python-format
+msgid "Connection failed, please try again later"
+msgstr "Kết nối thất bại, vui lòng thử lại sau"
+
+#. module: viin_social_linkedin
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_article__display_linkedin_preview
+msgid "Display LinkedIn Preview"
+msgstr "Hiển thị Xem trước Linkedin"
+
+#. module: viin_social_linkedin
+#: model:ir.model,name:viin_social_linkedin.model_social_post_action_edit_post
+msgid "Edit Post"
+msgstr "Sửa bài đăng"
+
+#. module: viin_social_linkedin
+#: model:ir.model.fields,help:viin_social_linkedin.field_social_media__linkedin_date_expired
+msgid "Expiration date of access token"
+msgstr "Ngày hết hạn của mã truy cập"
+
+#. module: viin_social_linkedin
+#: model:ir.model.fields,help:viin_social_linkedin.field_social_media__linkedin_refresh_date_expired
+msgid "Expiration date of refresh access token"
+msgstr "Ngày hết hạn của mã truy cập"
+
+#. module: viin_social_linkedin
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_media__linkedin_date_expired
+msgid "LinkedIn Token Expired Date"
+msgstr "Ngày hết hạn Token LinkedIn"
+
+#. module: viin_social_linkedin
+#: model:ir.model.fields.selection,name:viin_social_linkedin.selection__social_media__social_provider__linkedin
+msgid "LinkedIn"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_media__linkedin_access_token
+msgid "LinkedIn Access Token"
+msgstr "Mã truy cập Linkedin"
+
+#. module: viin_social_linkedin
+#: code:addons/viin_social_linkedin/models/social_article.py:0
+#, python-format
+msgid "LinkedIn Page: Please select video with size <200Mb"
+msgstr "Trang Linkedin: vui lòng chọn video với dung lượng < 200Mb"
+
+#. module: viin_social_linkedin
+#: code:addons/viin_social_linkedin/models/social_article.py:0
+#, python-format
+msgid "LinkedIn Page: You cannot post both photos and videos to Linkedin"
+msgstr "Trang Linkedin: Bạn không thể vừa đăng ảnh và video lên Linkedin"
+
+#. module: viin_social_linkedin
+#: code:addons/viin_social_linkedin/models/social_article.py:0
+#, python-format
+msgid "LinkedIn Page: You cannot post multiple videos on Linkedin"
+msgstr "Trang Linkedin: Bạn không thể đăng nhiều video lên Linkedin"
+
+#. module: viin_social_linkedin
+#: code:addons/viin_social_linkedin/models/social_article.py:0
+#, python-format
+msgid ""
+"LinkedIn Page: You need to choose the right file format: *png, *jpeg, *mp4"
+msgstr ""
+"Trang Linkedin: Bạn cần chọn đúng định dạng tập tin được hỗ trợ: *png, *jpeg, *mp4"
+
+#. module: viin_social_linkedin
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_article__linkedin_preview
+msgid "LinkedIn Preview"
+msgstr "Xem trước Linkedin"
+
+#. module: viin_social_linkedin
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_media__linkedin_refresh_token
+msgid "LinkedIn Refresh Token"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_page__linkedin_page_admin_urn
+msgid "LinkedIn organization Admin"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_page__linkedin_page_urn
+msgid "LinkedIn organization URN"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model_terms:ir.ui.view,arch_db:viin_social_linkedin.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:viin_social_linkedin.social_article_view_search
+#: model_terms:ir.ui.view,arch_db:viin_social_linkedin.social_post_view_search
+msgid "Linkedin"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_res_company__linkedin_app_id
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_res_config_settings__linkedin_app_id
+msgid "Linkedin App ID"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_res_company__linkedin_client_secret
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_res_config_settings__linkedin_client_secret
+msgid "Linkedin Client Secret"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model_terms:ir.ui.view,arch_db:viin_social_linkedin.linkedin_preview
+msgid "Post Image"
+msgstr "Đăng ảnh"
+
+#. module: viin_social_linkedin
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_post__rate_engagement
+msgid "Engagement Rate"
+msgstr "Tỷ lệ Tương tác"
+
+#. module: viin_social_linkedin
+#: model:ir.model.fields,help:viin_social_linkedin.field_social_post__rate_engagement
+msgid "Rate of total likes, comments, shares, clicks compared to views"
+msgstr "Tỷ lệ của tổng lượt thích, bình luận, chia sẻ, nhấp chuột được so sánh với lượt xem"
+
+#. module: viin_social_linkedin
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_media__linkedin_refresh_date_expired
+msgid "Refresh Expired Date"
+msgstr "Làm mới ngày hết hạn"
+
+#. module: viin_social_linkedin
+#: model:ir.model,name:viin_social_linkedin.model_social_article
+msgid "Social Article"
+msgstr "Bài viết"
+
+#. module: viin_social_linkedin
+#: model:ir.model,name:viin_social_linkedin.model_social_media
+msgid "Social Media"
+msgstr "Truyền thông Xã hội"
+
+#. module: viin_social_linkedin
+#: model:ir.model,name:viin_social_linkedin.model_social_page
+msgid "Social Page"
+msgstr "Trang xã hội"
+
+#. module: viin_social_linkedin
+#: model:ir.model,name:viin_social_linkedin.model_social_post
+msgid "Social Post"
+msgstr "Bài đăng trên mạng xã hội"
+
+#. module: viin_social_linkedin
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_media__social_provider
+msgid "Social Provider"
+msgstr "Nhà cung cấp mạng xã hội"
+
+#. module: viin_social_linkedin
+#: model_terms:ir.ui.view,arch_db:viin_social_linkedin.social_article_view_search
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: viin_social_linkedin
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_post__click_count
+msgid "Total Clicks"
+msgstr "Tổng lượt Click"
+
+#. module: viin_social_linkedin
+#: model_terms:ir.ui.view,arch_db:viin_social_linkedin.linkedin_preview
+msgid "image"
+msgstr "ảnh"

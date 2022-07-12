@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="view_zoom_user_form" model="ir.ui.view">
+			<field name="name">zoom.user.form</field>
+			<field name="model">zoom.user</field>
+			<field name="type">form</field>
+			<field name="priority" eval="8" />
+			<field name="arch" type="xml">
+				<form string="Zoom Users">
+					<sheet>
+						<group>
+							<field name="zoom_action" />
+							<field name="zoom_user_type" />
+							<field name="zoom_first_name" />
+							<field name="zoom_last_name" />
+							<field name="zoom_email" />
+							<field name="zoom_password_name"
+								attrs="{'invisible': [('zoom_action', '!=', 'autoCreate')], 'required': [('zoom_action', '=', 'autoCreate')]}" />
+							<field name="company_id" groups="base.group_multi_company"/>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record id="view_zoom_user_tree" model="ir.ui.view">
+			<field name="name">zoom.user.tree</field>
+			<field name="model">zoom.user</field>
+			<field name="type">tree</field>
+			<field name="priority" eval="8" />
+			<field name="arch" type="xml">
+				<tree string="Zoom Users">
+					<field name="zoom_action" />
+							<field name="zoom_user_type" />
+							<field name="zoom_first_name" />
+							<field name="zoom_last_name" />
+							<field name="zoom_email" />
+							<field name="zoom_password_name"
+								attrs="{'invisible': [('zoom_action', '!=', 'autoCreate')]}" />
+							<field name="company_id" groups="base.group_multi_company"/>
+				</tree>
+			</field>
+		</record>
+	</data>
+</odoo>

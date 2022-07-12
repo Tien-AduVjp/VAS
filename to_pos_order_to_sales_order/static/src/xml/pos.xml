@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-extend="PaymentScreenWidget">
+        <t t-jquery='.payment-buttons' t-operation='append'>
+	        <div t-attf-class='button js_create_sales_order'>
+                <i class='fa fa-usd' /> Create Sales Order
+            </div>
+   		</t>
+    </t>
+</templates>

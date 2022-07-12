@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="hr_expense_sheet_register_payment_view_form" model="ir.ui.view">
+		<field name="name">Register Payment</field>
+		<field name="model">hr.expense.sheet.register.payment.wizard</field>
+		<field name="inherit_id" ref="hr_expense.hr_expense_sheet_register_payment_view_form"/>
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='journal_id']" position="after">
+				<field name="is_advance_journal" invisible="1"/>
+				<field name="employee_id"
+				attrs="{'invisible':[('is_advance_journal','=',False)],'required':[('is_advance_journal','=',True)]}" />
+			</xpath>
+		</field>
+	</record>
+</odoo>

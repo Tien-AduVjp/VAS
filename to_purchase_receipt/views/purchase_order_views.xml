@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="purchase_order_form" model="ir.ui.view">
+			<field name="name">purchase.order.form</field>
+			<field name="model">purchase.order</field>
+			<field name="inherit_id" ref="purchase.purchase_order_form" />
+			<field name="arch" type="xml">
+
+				<xpath expr="//button[@name='action_view_invoice'][hasclass('oe_highlight')]" position="attributes">
+					<attribute name="attrs">{'invisible': ['|','|',('count_receipt','&gt;','0'), ('state', 'not in', ('purchase', 'done')), ('invoice_status', 'in', ('no', 'invoiced'))]}</attribute>      
+				</xpath>
+				<xpath expr="//button[@name='action_view_invoice'][not(hasclass('oe_highlight'))]" position="attributes">
+					<attribute name="attrs">{'invisible': ['|','|', '|', ('count_receipt','&gt;','0'), ('state', 'not in', ('purchase', 'done')), ('invoice_status', 'not in', ('no', 'invoiced')), ('order_line', '=', [])]}</attribute>      
+				</xpath>
+				
+				<xpath expr="//button[@name='button_draft']" position="before">
+					<button name="action_view_invoice" string="Create Receipt"
+						type="object" class="oe_highlight"
+						context="{'create_receipt':True}"
+						attrs="{'invisible': ['|','|',('count_invoice','&gt;','0'), ('state', 'not in', ('purchase', 'done')), ('invoice_status', 'in', ('no', 'invoiced'))]}" />
+					<button name="action_view_invoice" string="Create Receipt"
+						type="object" context="{'create_receipt':True}"
+						attrs="{'invisible': ['|','|', '|',('count_invoice','&gt;','0'), ('state', 'not in', ('purchase', 'done')), ('invoice_status', 'not in', ('no', 'invoiced')), ('order_line', '=', [])]}" />
+				</xpath>
+
+				<xpath expr="//div[1]" position="inside">
+					<field name='count_receipt' invisible="1" />
+					<field name='count_invoice' invisible="1" />
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

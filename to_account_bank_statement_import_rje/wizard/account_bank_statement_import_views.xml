@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<odoo>
+    <record id="account_bank_statement_import_rje" model="ir.ui.view">
+        <field name="name">Import Bank Statements RJE</field>
+        <field name="model">account.bank.statement.import</field>
+        <field name="inherit_id" ref="account_bank_statement_import.account_bank_statement_import_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//ul[@id='statement_format']" position="inside">
+                <li>Remote job entry (.RJE) <a href="/to_account_bank_statement_import_rje/static/rje/test_rje.RJE" class="ml4" download="test_rje.RJE"><i class="fa fa-download mr4"></i>Import Sample Template RJE</a></li>
+            </xpath>
+        </field>
+    </record>
+</odoo>

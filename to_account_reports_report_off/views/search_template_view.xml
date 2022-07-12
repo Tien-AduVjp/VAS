@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<template id="search_template_extra_options"
+			inherit_id="to_account_reports.search_template_extra_options">
+			<xpath expr="//t[@id='all_entries']" position="after">
+
+				<!--Variable (display_options) not used-->
+
+				<!--<t t-if="options.get('show_ignored_entries') != None"
+					groups="account.group_account_user">
+					<t t-if="options['show_ignored_entries']" t-set="display_options"
+						t-value="(display_options or []) + ['Include Report-off Entries']" />
+					<t t-else="" t-set="display_options"
+						t-value="(display_options or []) + ['Exclude Report-off Entries']" />
+				</t>-->
+				<t t-if="options.get('show_ignored_entries') != None">
+					<t t-if="options['show_ignored_entries']">Include Report-off Entries,</t>
+					<t t-if="not options['show_ignored_entries']">Exclude Report-off Entries,</t>
+				</t>
+			</xpath>
+
+			<xpath expr="//a[@role='menuitem'][@data-filter='all_entries']"
+				position="after">
+				<a role="menuitem" class="dropdown-item js_af_report_bool_filter"
+					t-if="options.get('show_ignored_entries') != None"
+					title="Include Report-off Entries"
+					data-filter="show_ignored_entries"
+					groups="account.group_account_user">Include Report-Off Entries</a>
+			</xpath>
+
+		</template>
+
+	</data>
+</odoo>

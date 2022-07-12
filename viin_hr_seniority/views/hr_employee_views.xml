@@ -1,0 +1,116 @@
+<odoo>
+	<data>
+
+		<record model="ir.ui.view" id="view_employee_form">
+			<field name="name">hr.hr.employee.view.form2</field>
+			<field name="model">hr.employee</field>
+			<field name="inherit_id" ref="hr.view_employee_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='work_location']" position="after">
+					<field name="first_contract_date" string="Boarding Date"
+						attrs="{'invisible':[('first_contract_date','=',False)]}" />
+					<field name="first_non_trial_contract_date"
+						string="First Non-Trial Contract Date"
+						attrs="{'invisible':[('first_non_trial_contract_date','=',False)]}" />
+					<field name="termination_date"
+						attrs="{'invisible':[('termination_date','=',False)]}" />
+					<field name="seniority_message"
+						attrs="{'invisible':[('first_contract_date','=',False)]}"
+						string="Seniority" />
+					<button string="View Seniority" class="btn btn-link"
+						type="object"
+						attrs="{'invisible': [('first_contract_date', '=', False)]}"
+						name="action_view_employee_seniority"
+						help="This will show employee's service history" />
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="hr_kanban_view_employees">
+			<field name="name">hr.employee.kanban</field>
+			<field name="model">hr.employee</field>
+			<field name="inherit_id" ref="hr.hr_kanban_view_employees" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='hr_presence_state']"
+					position="after">
+					<field name="seniority_years" />
+				</xpath>
+				<xpath expr="//li[./field[@name='work_phone']]"
+					position="after">
+					<li t-if="record.seniority_years.raw_value > 0"
+						class="o_force_ltr">
+						<span class="fa fa-history" />
+						<field name="seniority_message" />
+					</li>
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="view_employee_tree">
+			<field name="name">hr.hr.employee.view.form2</field>
+			<field name="model">hr.employee</field>
+			<field name="inherit_id" ref="hr.view_employee_tree" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='coach_id']" position="after">
+					<field name="seniority_message" optional="hide" />
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="view_employee_filter">
+			<field name="name">hr.employee.view.search</field>
+			<field name="model">hr.employee</field>
+			<field name="inherit_id" ref="hr.view_employee_filter" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='job_id']" position="after">
+					<separator />
+					<field name="employee_seniority_ids" />
+					<separator />
+					<field name="first_contract_date" string="Boarding Date" />
+					<field name="termination_date" />
+					<field name="seniority_years"
+						filter_domain="[('seniority_years','>=',self)]" />
+					<field name="seniority_months"
+						filter_domain="[('seniority_months','>=',self)]" />
+				</xpath>
+				<xpath expr="//group/filter[@name='group_job']"
+					position="after">
+					<separator />
+					<filter name="grp_first_contract_date"
+						string="Boarding Date" domain="[]"
+						context="{'group_by': 'first_contract_date'}" />
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="hr_employee_view_search">
+			<field name="name">hr.employee.view.search</field>
+			<field name="model">hr.employee</field>
+			<field name="inherit_id"
+				ref="hr_contract.hr_employee_view_search" />
+			<field name="arch" type="xml">
+				<xpath expr="//filter[@name='with_contract_warning']"
+					position="after">
+					<separator />
+					<filter string="Hired Last 30 Days"
+						name="ftr_hired_last_30_days"
+						domain="[('first_contract_date','&gt;=',(context_today() - relativedelta(days=30)).strftime('%Y-%m-%d')),'|',('active','=',True),('active','=',False)]" />
+					<filter string="Hired This Year" name="ftr_hired_thisyear"
+						domain="[('first_contract_date','&gt;=',time.strftime('%%Y-01-01')),'|',('active','=',True),('active','=',False)]" />
+					<filter string="Hired Last Year" name="ftr_hired_lastyear"
+						domain="[('first_contract_date','&gt;=',(context_today()-relativedelta(years=1)).strftime('%Y-01-01')),('first_contract_date','&lt;',time.strftime('%Y-01-01')),'|',('active','=',True),('active','=',False)]" />
+					<separator />
+					<filter string="Terminated Last 30 Days"
+						name="ftr_leave_last_30_days"
+						domain="[('termination_date','&gt;=',(context_today() - relativedelta(days=30)).strftime('%Y-%m-%d')),('termination_date','&lt;=',context_today().strftime('%Y-%m-%d')),'|',('active','=',True),('active','=',False)]" />
+					<filter string="Terminated This Year"
+						name="ftr_leave_thisyear"
+						domain="[('termination_date','&gt;=',time.strftime('%%Y-01-01')),('termination_date','&lt;=',context_today().strftime('%Y-%m-%d')),'|',('active','=',True),('active','=',False)]" />
+					<filter string="Terminated Last Year"
+						name="ftr_leave_lastyear"
+						domain="[('termination_date','&gt;=',(context_today()-relativedelta(years=1)).strftime('%Y-01-01')),('termination_date','&lt;',time.strftime('%Y-01-01')),'|',('active','=',True),('active','=',False)]" />
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

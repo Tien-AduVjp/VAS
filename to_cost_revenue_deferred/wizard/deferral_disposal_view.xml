@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    
+    	<record id="deferral_disposal_form" model="ir.ui.view">
+            <field name="name">deferral.disposal.form</field>
+            <field name="model">deferral.disposal</field>
+            <field name="arch" type="xml">
+                <form string="Dispose Deferral">
+                    <group>
+                    	<group>	                        
+	                        <field name="deferral_id" invisible="1" />
+	                        <field name="name" />
+	                    </group>
+	                    <group>
+	                    	<field name="date" />                		                    	
+	                    </group>
+                    </group>
+                    <separator string="Reason"/>
+					<field name="reason"/>
+                    <footer>
+                        <button name="action_disposal" string="Disposal" type="object" class="oe_highlight" />                       	
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+        
+        <record id="deferral_disposal_action" model="ir.actions.act_window">
+            <field name="name">Dispose Deferral</field>
+            <field name="res_model">deferral.disposal</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="deferral_disposal_form"/>
+            <field name="target">new</field>
+        </record>
+    
+    </data>
+</odoo>

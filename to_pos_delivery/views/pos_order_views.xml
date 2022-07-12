@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="view_pos_pos_form">
+			<field name="name">pos.order.form</field>
+			<field name="model">pos.order</field>
+			<field name="inherit_id" ref="point_of_sale.view_pos_pos_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='picking_id']" position="after">
+					<field name="to_delivery" readonly="1" />
+					<field name="carrier_id" readonly="1" />
+					<field name="delivery_date" readonly="1" />
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="view_pos_order_tree">
+			<field name="name">pos.order.tree</field>
+			<field name="model">pos.order</field>
+			<field name="inherit_id" ref="point_of_sale.view_pos_order_tree" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='date_order']" position="after">
+					<field name="delivery_date" />
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="view_pos_order_filter">
+			<field name="name">pos.order.list.select</field>
+			<field name="model">pos.order</field>
+			<field name="inherit_id" ref="point_of_sale.view_pos_order_filter" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='date_order']" position="after">
+					<separator />
+					<filter name="undelivered" string="Undelivered"
+						domain="[('picking_id.state', '!=', 'done')]" />
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

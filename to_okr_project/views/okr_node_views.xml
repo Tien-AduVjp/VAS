@@ -1,0 +1,58 @@
+<odoo>
+	<data>
+		<record id="okr_node_view_form" model="ir.ui.view">
+			<field name="name">okr.node.form</field>
+			<field name="inherit_id" ref="to_okr.okr_node_view_form" />
+			<field name="model">okr.node</field>
+			<field name="arch" type="xml">
+				<xpath expr="//sheet/group" position="before">
+					<div class="oe_button_box" name="button_box">
+						<button name="action_view_projects" class="o_stat_button"
+							type="object" icon="fa-puzzle-piece">
+							<field name="projects_count" string="Projects"
+								widget="statinfo" />
+						</button>
+						<button name="action_view_project_tasks"
+							class="o_stat_button" type="object" icon="fa-tasks">
+							<field name="project_tasks_count" string="Project Tasks"
+								widget="statinfo" />
+						</button>
+					</div>
+				</xpath>
+			</field>
+		</record>
+
+		<record id="okr_node_view_tree" model="ir.ui.view">
+			<field name="name">okr.node.tree</field>
+			<field name="model">okr.node</field>
+			<field name="inherit_id" ref="to_okr.okr_node_view_tree" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='key_results_count']"
+					position="after">
+					<field name="project_tasks_count" string="# Tasks" optional="hide" />
+				</xpath>
+			</field>
+		</record>
+
+		<record id="okr_node_view_search" model="ir.ui.view">
+			<field name="name">okr.node.search</field>
+			<field name="model">okr.node</field>
+			<field name="inherit_id" ref="to_okr.okr_node_view_search" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='year']" position="after">
+					<separator />
+					<field name="project_task_ids" string="Project Tasks" />
+				</xpath>
+				<xpath expr="//filter[@name='ftr_is_assigned_to_me']"
+					position="after">
+					<separator />
+					<filter name="ftr_has_proj_task" string="With Project Tasks"
+						domain="[('project_task_ids','!=', False)]" />
+					<filter name="ftr_no_proj_task"
+						string="Without Project Tasks"
+						domain="[('project_task_ids','=', False)]" />
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

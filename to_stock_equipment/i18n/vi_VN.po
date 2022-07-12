@@ -1,0 +1,351 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_stock_equipment
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-23 09:39+0000\n"
+"PO-Revision-Date: 2021-08-23 09:39+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,help:to_stock_equipment.field_product_product__type
+#: model:ir.model.fields,help:to_stock_equipment.field_product_template__type
+msgid ""
+"A storable product is a product for which you manage stock. The Inventory app has to be installed.\n"
+"A consumable product is a product for which stock is not managed.\n"
+"A service is a non-material product you provide."
+msgstr ""
+"Một sản phẩm có thể lưu kho là một sản phẩm mà bạn có thể quản lý dự trữ của nó (với các tính năng quản lý kho). Ứng dụng Kho vận phải được cài đặt.\n"
+"Một sản phẩm tiêu dùng là một sản phẩm mà không có tính năng quản lý kho / dự trữ.\n"
+"Một dịch vụ là một sản phẩm phi vật thể (hay nói cách khác, là một dịch vụ) mà bạn cung cấp."
+
+#. module: to_stock_equipment
+#: code:addons/to_stock_equipment/models/product_template.py:0
+#, python-format
+msgid ""
+"An equipment product must have 'Tracking By Unique Serial Number' enabled."
+msgstr ""
+"Một sản phẩm thiết bị phải được cho phép 'Theo dõi theo số sê-ri duy nhất'."
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_maintenance_equipment__product_id
+msgid "Associated Product"
+msgstr "Sản phẩm Liên kết"
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_product__can_be_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_template__can_be_equipment
+msgid "Can be Equipment"
+msgstr "Có thể là Thiết bị"
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_stock_picking_type__can_create_equipment
+msgid "Can create equipment"
+msgstr "Có thể tạo thiết bị"
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,help:to_stock_equipment.field_stock_move_line__can_create_equipment
+msgid ""
+"Checking this to have a new equipment generated automatically once the stock"
+" picking will be validated"
+msgstr ""
+"Kiểm tra điều này để có một thiết bị mới được tạo tự động sau khi giao nhận "
+"được xác nhận"
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_stock_move_line__can_create_equipment
+msgid "Create Equipment"
+msgstr "Tạo Thiết bị"
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_maintenance_equipment__created_from_stock_lot
+msgid "Created from Stock Lot"
+msgstr "Tạo từ Lô hàng"
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_maintenance_equipment__current_stock_location_id
+#: model_terms:ir.ui.view,arch_db:to_stock_equipment.maintenance_equipment_view_search_inherit_hr
+msgid "Current Stock Location"
+msgstr "Vị trí kho hiện tại"
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_category__property_default_equipment_category_id
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_product__property_default_equipment_category_id
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_template__property_default_equipment_category_id
+msgid "Default Equipment Category"
+msgstr "Nhóm thiết bị mặc định"
+
+#. module: to_stock_equipment
+#: model:ir.model.fields.selection,name:to_stock_equipment.selection__product_category__equipment_assign_to__department
+#: model:ir.model.fields.selection,name:to_stock_equipment.selection__product_template__equipment_assign_to__department
+msgid "Department"
+msgstr "Phòng ban"
+
+#. module: to_stock_equipment
+#: model:ir.model.fields.selection,name:to_stock_equipment.selection__product_category__equipment_assign_to__employee
+#: model:ir.model.fields.selection,name:to_stock_equipment.selection__product_template__equipment_assign_to__employee
+msgid "Employee"
+msgstr "Nhân viên"
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,help:to_stock_equipment.field_product_product__tracking
+#: model:ir.model.fields,help:to_stock_equipment.field_product_template__tracking
+msgid "Ensure the traceability of a storable product in your warehouse."
+msgstr ""
+"Đảm bảo truy xuất nguồn gốc của một sản phẩm có thể lưu trữ trong kho của "
+"bạn."
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_stock_move_line__equipment_id
+#: model:ir.model.fields,field_description:to_stock_equipment.field_stock_production_lot__equipment_id
+#: model_terms:ir.ui.view,arch_db:to_stock_equipment.view_picking_type_form
+msgid "Equipment"
+msgstr "Thiết bị"
+
+#. module: to_stock_equipment
+#: model:ir.actions.act_window,name:to_stock_equipment.hr_equipment_request_stock_move_from_equipment
+msgid "Equipment Moves"
+msgstr "Dịch chuyển Thiết bị"
+
+#. module: to_stock_equipment
+#: model:ir.actions.act_window,name:to_stock_equipment.action_equipment_products
+msgid "Equipment Products"
+msgstr "Sản phẩm Thiết bị"
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_stock_move__equipment_ids
+#: model:ir.model.fields,field_description:to_stock_equipment.field_stock_production_lot__equipment_ids
+#: model_terms:ir.ui.view,arch_db:to_stock_equipment.product_category_form_view
+#: model_terms:ir.ui.view,arch_db:to_stock_equipment.view_product_to_stock_equipment_form
+msgid "Equipments"
+msgstr "Thiết bị"
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,help:to_stock_equipment.field_stock_move__equipment_ids
+msgid "Equipments that refer this move"
+msgstr "Thiết bị mà tham chiếu đến dịch chuyển"
+
+#. module: to_stock_equipment
+#: model_terms:ir.ui.view,arch_db:to_stock_equipment.maintenance_equipment_view_search_inherit_hr
+msgid "Generated from Stock Operations"
+msgstr "Được tạo từ Hoạt động Kho"
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_maintenance_equipment__lot_id
+msgid "Logistics Serial Number"
+msgstr "Số Sê-ri"
+
+#. module: to_stock_equipment
+#: model:ir.model,name:to_stock_equipment.model_stock_production_lot
+#: model:ir.model.fields,field_description:to_stock_equipment.field_maintenance_request__lot_id
+msgid "Lot/Serial"
+msgstr "Lô/Sê-ri"
+
+#. module: to_stock_equipment
+#: model:ir.model,name:to_stock_equipment.model_maintenance_equipment
+msgid "Maintenance Equipment"
+msgstr "Thiết bị bảo trì"
+
+#. module: to_stock_equipment
+#: model_terms:ir.ui.view,arch_db:to_stock_equipment.view_production_lot_form
+msgid "Maintenance History"
+msgstr "Lịch sử Bảo trì"
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_stock_production_lot__maintenance_history_count
+msgid "Maintenance History Count"
+msgstr "Số lượng Lịch sử Bảo trì"
+
+#. module: to_stock_equipment
+#: model:ir.model,name:to_stock_equipment.model_maintenance_request
+msgid "Maintenance Request"
+msgstr "Yêu cầu Bảo trì"
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_category__property_maintenance_team_id
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_product__property_maintenance_team_id
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_template__property_maintenance_team_id
+msgid "Maintenance Team"
+msgstr "Nhóm bảo trì"
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_stock_production_lot__maintenance_ids
+msgid "Maintenances"
+msgstr "Bảo trì"
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_maintenance_equipment__stock_move_lines
+msgid "Move History"
+msgstr "Lịch sử Dịch chuyển"
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_maintenance_equipment__history_count
+msgid "Move History Count"
+msgstr "Số lượng Lịch sử Dịch chuyển"
+
+#. module: to_stock_equipment
+#: model_terms:ir.ui.view,arch_db:to_stock_equipment.hr_equipment_view_form
+msgid "Moves"
+msgstr "Dịch chuyển"
+
+#. module: to_stock_equipment
+#: model:ir.model.fields.selection,name:to_stock_equipment.selection__product_category__equipment_assign_to__other
+#: model:ir.model.fields.selection,name:to_stock_equipment.selection__product_template__equipment_assign_to__other
+msgid "Other"
+msgstr "Khác"
+
+#. module: to_stock_equipment
+#: model:ir.model,name:to_stock_equipment.model_stock_picking_type
+msgid "Picking Type"
+msgstr "Kiểu giao nhận"
+
+#. module: to_stock_equipment
+#: model:ir.model,name:to_stock_equipment.model_product_product
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: to_stock_equipment
+#: model:ir.model,name:to_stock_equipment.model_product_category
+msgid "Product Category"
+msgstr "Nhóm Sản phẩm"
+
+#. module: to_stock_equipment
+#: model:ir.model,name:to_stock_equipment.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "Chuyển sản phẩm (Chi tiết phiếu kho)"
+
+#. module: to_stock_equipment
+#: model:ir.model,name:to_stock_equipment.model_product_template
+msgid "Product Template"
+msgstr "Mẫu Sản phẩm"
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_product__type
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_template__type
+msgid "Product Type"
+msgstr "Kiểu Sản phẩm"
+
+#. module: to_stock_equipment
+#: code:addons/to_stock_equipment/models/product_template.py:0
+#, python-format
+msgid ""
+"Product marked with 'Can be Equipment' must be in type of 'Storable "
+"Product'."
+msgstr ""
+"Sản phẩm được đánh dấu 'Có thể là Thiết bị' phải thuộc loại 'Có thể "
+"Lưu kho'."
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_maintenance_equipment__serial_no
+msgid "Serial Number"
+msgstr "Số sê-ri"
+
+#. module: to_stock_equipment
+#: model:ir.model,name:to_stock_equipment.model_stock_move
+msgid "Stock Move"
+msgstr "Dịch chuyển kho"
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_category__technician_user_id
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_product__technician_user_id
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_template__technician_user_id
+msgid "Technician"
+msgstr "Kỹ thuật viên"
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,help:to_stock_equipment.field_stock_production_lot__equipment_id
+msgid "The Equipment that refers to this lot for equipment movement tracking."
+msgstr ""
+"Thiết bị mà tham chiếu đến lô hàng này cho theo dõi dịch chuyển thiết bị"
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,help:to_stock_equipment.field_stock_production_lot__equipment_ids
+msgid "The Equipments that refer to this lot"
+msgstr "Thiết bị mà theo dõi đến lô hàng này"
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,help:to_stock_equipment.field_product_product__property_default_equipment_category_id
+#: model:ir.model.fields,help:to_stock_equipment.field_product_template__property_default_equipment_category_id
+msgid ""
+"The default equipment category to put newly created equipment(s) when "
+"creating the equipment(s) from a stock picking."
+msgstr ""
+"Nhóm thiết bị mặc định áp dụng cho các thiết bị mới được tạo ra từ "
+"phiếu nhận."
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,help:to_stock_equipment.field_product_category__property_default_equipment_category_id
+msgid ""
+"The default equipment category to put newly created equipment(s) when "
+"creating the equipment(s) from a stock picking. This parameter can be "
+"overridden on the product configuration."
+msgstr ""
+"Nhóm thiết bị mặc định áp dụng cho các thiết bị mới được tạo ra từ "
+"phiếu nhận. Thông số này có thể sẽ được ghi đè lên cấu hình sản phẩm."
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,help:to_stock_equipment.field_product_category__property_maintenance_team_id
+msgid ""
+"The default maintenance team for equipments created from a product of this "
+"product category"
+msgstr ""
+"Nhóm bảo trì mặc định cho thiết bị được tạo ra từ sản phẩm thuộc nhóm "
+"sản phẩm này"
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,help:to_stock_equipment.field_product_product__property_maintenance_team_id
+#: model:ir.model.fields,help:to_stock_equipment.field_product_template__property_maintenance_team_id
+msgid ""
+"The default maintenance team for having equipments created from this product"
+" during stock transfer"
+msgstr ""
+"Nhóm bảo trì mặc định cho thiết bị được tạo ra từ sản phẩm này trong quá "
+"trình dịch chuyển kho"
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,help:to_stock_equipment.field_stock_move_line__equipment_id
+msgid "The equipment that was generated by this stock move line."
+msgstr "Các thiết bị được tạo ra bởi dòng dịch chuyển kho."
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,help:to_stock_equipment.field_maintenance_equipment__lot_id
+#: model:ir.model.fields,help:to_stock_equipment.field_maintenance_request__lot_id
+msgid "The unique logistics serial number that associated with the Equipment"
+msgstr "Số sê-ri duy nhất có liên quan đến Thiết bị"
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,help:to_stock_equipment.field_product_product__can_be_equipment
+#: model:ir.model.fields,help:to_stock_equipment.field_product_template__can_be_equipment
+msgid "To allow link between an equipment and a product"
+msgstr "Để cho phép liên kết giữa thiết bị và sản phẩm"
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_product__tracking
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_template__tracking
+msgid "Tracking"
+msgstr "Truy vết"
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_category__equipment_assign_to
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_product__equipment_assign_to
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_template__equipment_assign_to
+msgid "Used By"
+msgstr "Được sử dụng bởi"
+
+#. module: to_stock_equipment
+#: code:addons/to_stock_equipment/models/stock_move_line.py:0
+#, python-format
+msgid ""
+"You cannot create equipment from this picking since its operation '%s' does "
+"not allow that"
+msgstr ""
+"Bạn không thể tạo thiết bị từ phiếu giao nhận này vì kiểu hoạt động '%s' của nó không "
+"cho phép điều đó"

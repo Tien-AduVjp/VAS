@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="maintenance_request_view_form" model="ir.ui.view">
+        <field name="name">maintenance.request.form</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form"/>
+        <field name="arch" type="xml">
+            <field name="priority" position="after">
+                <field name="production_id"/>
+                <field name="workorder_id"/>
+            </field>
+            <xpath expr="//field[@name='equipment_id']" position="attributes">
+                <attribute name="domain">['|', ('workcenter_id', '=', False), ('workcenter_id.order_ids', 'in', workorder_id)]</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="maintenance_request_view_search" model="ir.ui.view">
+        <field name="name">maintenence.request.search</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_search"/>
+        <field name="arch" type="xml">
+            <field name="maintenance_team_id" position="after">
+                <field name="production_id"/>
+                <field name="workorder_id"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="maintenance_request_action_reports" model="ir.actions.act_window">
+        <field name="name">Maintenance Requests</field>
+        <field name="res_model">maintenance.request</field>
+        <field name="view_mode">graph,pivot,kanban,tree,form,calendar</field>
+        <field name="help" type="html">
+            <p>
+                Create a new Maintenance Requests
+            </p>
+        </field>
+    </record>
+
+</odoo>

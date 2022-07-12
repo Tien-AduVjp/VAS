@@ -1,0 +1,36 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_lines_count_on_account_move
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-25 01:49+0000\n"
+"PO-Revision-Date: 2020-05-25 01:49+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_lines_count_on_account_move
+#: model:ir.model,name:to_lines_count_on_account_move.model_account_move
+msgid "Journal Entries"
+msgstr ""
+
+#. module: to_lines_count_on_account_move
+#: model:ir.model.fields,field_description:to_lines_count_on_account_move.field_account_move__lines_count
+msgid "Journal Items Count"
+msgstr ""
+
+#. module: to_lines_count_on_account_move
+#: model_terms:ir.ui.view,arch_db:to_lines_count_on_account_move.view_account_move_filter
+msgid "Large Entries"
+msgstr ""
+
+#. module: to_lines_count_on_account_move
+#: model_terms:ir.ui.view,arch_db:to_lines_count_on_account_move.view_account_move_filter
+msgid "Show Journal Entries having more than 100 journal items"
+msgstr ""

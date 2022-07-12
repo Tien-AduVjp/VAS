@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="0">
+		<!-- PROFIT AND LOSS -->
+		<record id="to_account_reports.pnl_af_report_dynamic_line_expense0"
+			model="account.financial.dynamic.report.line">
+			<field name="domain"
+				eval="[('account_id.user_type_id', '=', ref('account.data_account_type_expenses')),
+				('analytic_tag_ids','not in',ref('l10n_vn_c200.analytic_tag_fixed_assets'))]" />
+		</record>
+	</data>
+</odoo>

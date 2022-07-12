@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+    
+        <record id="fleet_vehicle_revenue_group_read" model="res.groups">
+           	<field name="name">Only View Fleet Vehicle Revenue</field>
+        </record>
+        
+        <record id="fleet.fleet_group_manager" model="res.groups">
+            <field name="implied_ids" eval="[(4, ref('fleet_vehicle_revenue_group_read'))]" />
+        </record>
+        
+	</data>
+</odoo>

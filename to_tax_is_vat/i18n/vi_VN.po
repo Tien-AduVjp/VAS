@@ -1,0 +1,70 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_tax_is_vat
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~12.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-04 14:22+0000\n"
+"PO-Revision-Date: 2019-09-04 14:22+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_tax_is_vat
+#: model:ir.model.fields,help:to_tax_is_vat.field_account_tax_group__is_vat
+msgid ""
+"Check this to indicate that this tax group is for grouping Value Added "
+"Taxes. All taxes belong to this group will hence be value added taxes"
+msgstr ""
+"Đánh dầu vào trường này để chỉ ra rằng nhóm thuế này để nhóm các loại thuế "
+"GTGT. Tất cả các thuế thuộc về nhóm này vì thế sẽ được coi là thuế GTGT."
+
+#. module: to_tax_is_vat
+#: model:ir.model.fields,field_description:to_tax_is_vat.field_account_tax__is_vat
+#: model:ir.model.fields,field_description:to_tax_is_vat.field_account_tax_group__is_vat
+msgid "Is VAT"
+msgstr "Là thuế GTGT"
+
+#. module: to_tax_is_vat
+#: model_terms:ir.ui.view,arch_db:to_tax_is_vat.view_account_tax_search
+msgid "Non-VAT"
+msgstr "Không Là thuế GTGT"
+
+#. module: to_tax_is_vat
+#: model_terms:ir.ui.view,arch_db:to_tax_is_vat.view_account_tax_search
+msgid "Show taxes that are not value added taxes"
+msgstr "Hiển thị các thuế mà không phải thuế GTGT"
+
+#. module: to_tax_is_vat
+#: model_terms:ir.ui.view,arch_db:to_tax_is_vat.view_account_tax_search
+msgid "Show value added taxes only"
+msgstr "Chỉ hiển thị các Thuế GTGT"
+
+#. module: to_tax_is_vat
+#: model:ir.model,name:to_tax_is_vat.model_account_tax
+msgid "Tax"
+msgstr "Thuế"
+
+#. module: to_tax_is_vat
+#: model:ir.model,name:to_tax_is_vat.model_account_tax_group
+msgid "Tax Group"
+msgstr "Nhóm Thuế"
+
+#. module: to_tax_is_vat
+#: model:ir.model.fields,help:to_tax_is_vat.field_account_tax__is_vat
+msgid ""
+"The value of this field is related to the value of the 'Is VAT' field of the"
+" corresponding Tax Group set in Advanced Options tab"
+msgstr ""
+"Giá trị của trường này liên quan đến giá trị của trường 'Là thuế GTGT' của "
+"Nhóm thuế tương ứng được thiết lập ở tab Tuỳ chọn Nâng cao."
+
+#. module: to_tax_is_vat
+#: model_terms:ir.ui.view,arch_db:to_tax_is_vat.view_account_tax_search
+msgid "VAT"
+msgstr "Thuế GTGT"

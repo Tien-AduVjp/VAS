@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_hr_payslip_form">
+            <field name="name">payslip.form</field>
+            <field name="model">hr.payslip</field>
+            <field name="inherit_id"
+                ref="to_hr_payroll.view_hr_payslip_form" />
+            <field name="arch" type="xml">
+                <xpath
+                    expr="//div[@name='button_box']/button[@name='action_view_timesheet']"
+                    position="after">
+                    <button name="action_view_pow_timesheet"
+                        class="oe_stat_button"
+                        icon="fa-calendar-check-o" type="object"
+                        attrs="{'invisible': [('pow_timesheet_count','=',0)]}">
+                        <field name="pow_timesheet_count"
+                            widget="statinfo" string="PoW Timesheet"
+                            help="Proof-of-Work timesheet entries for the related time-off records that require proof-of-work timesheet." />
+                    </button>
+                </xpath>
+                <xpath
+                    expr="//group[./group/label[@for='leave_hours']]"
+                    position="after">
+                    <group string="PoW Timesheet Summary">
+                        <group>
+                            <label for="pow_required_hours"
+                                string="Required" />
+                            <div class="o_row">
+                                <field name="pow_required_hours" />
+                                <span>hours</span>
+                            </div>
+                            <label for="pow_timesheet_hours"
+                                string="Recorded" />
+                            <div class="o_row">
+                                <field name="pow_timesheet_hours" />
+                                <span>hours</span>
+                            </div>
+                            <label for="missing_pow_hours"
+                                string="Missed" />
+                            <div class="o_row">
+                                <field name="missing_pow_hours" />
+                                <span>hours</span>
+                            </div>
+                        </group>
+                        <group>
+                            <label for="pow_required_days"
+                                string="Required" />
+                            <div class="o_row">
+                                <field name="pow_required_days" />
+                                <span>days</span>
+                            </div>
+                            <label for="pow_timesheet_days"
+                                string="Recorded" />
+                            <div class="o_row">
+                                <field name="pow_timesheet_days" />
+                                <span>days</span>
+                            </div>
+                            <label for="missing_pow_days"
+                                string="Missed" />
+                            <div class="o_row">
+                                <field name="missing_pow_days" />
+                                <span>days</span>
+                            </div>
+                        </group>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

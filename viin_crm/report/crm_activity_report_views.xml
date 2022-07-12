@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="crm_activity_report_view_search" model="ir.ui.view">
+        <field name="name">crm.activity.report.search.inherit</field>
+        <field name="model">crm.activity.report</field>
+        <field name="inherit_id" ref="crm.crm_activity_report_view_search"/>
+        <field name="arch" type="xml">
+            <filter name="won" position="after">
+                <filter string="Lost" name="ftr_lost" domain="[('won_status', '=', 'lost')]"/>
+            </filter>
+            <field name="author_id" position="after">
+                <field name="referred" string="Referred By"/>
+                <field name="lost_reason" string="Lost Reason"/>
+            </field>
+            <filter name="group_by_date_closed" position="after">
+                <filter string="Referred By" name="grp_referred" context="{'group_by': 'referred'}"/>
+                <filter string="Lost Reason" name="grp_lost_reason" context="{'group_by': 'lost_reason'}"/>
+                <filter string="Days To Convert" name="grp_days_to_convert" context="{'group_by': 'days_to_convert'}"/>
+                <filter string="Exceeded Closing Days" name="grp_days_exceeding_closing" context="{'group_by': 'days_exceeding_closing'}"/>
+            </filter>
+        </field>
+    </record>
+
+</odoo>

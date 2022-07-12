@@ -1,0 +1,22 @@
+<odoo>
+	<!-- Add 2 Button into Sale Order Portal Detail -->
+	
+	<template id="sale_order_portal_template"
+		inherit_id="sale.sale_order_portal_template">
+		<xpath expr="//li[hasclass('list-group-item')]"
+			position="inside">
+			<div class="btn-toolbar">
+				<a id="btn_create_ticket" t-attf-href="/my/tickets/create?saleorder={{sale_order.id}}"
+					class="btn btn-primary btn-block mb-1">
+					Create Ticket
+				</a>
+			</div>
+			<div class="btn-toolbar">
+				<a id="btn_view_all_ticket" t-attf-href="/my/tickets?saleorder={{sale_order.id}}"
+					class="btn btn-primary btn-block">
+					View All Ticket Sale
+				</a>
+			</div>
+		</xpath>
+	</template>
+</odoo>

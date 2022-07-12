@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="fleet_vehicle_revenues_view_form" model="ir.ui.view">
+		<field name="name">fleet.vehicle.revenue.form</field>
+		<field name="model">fleet.vehicle.revenue</field>
+		<field name="arch" type="xml">
+			<form string="Vehicle revenues">
+				<header>
+				</header>
+				<sheet>
+					<group col="2" string="Revenue Details">
+						<group>
+							<field name="vehicle_id" />
+							<field name="revenue_subtype_id" />
+							<field name="amount" />
+						</group>
+						<group>
+							<field name="date" />
+						</group>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<record id="fleet_vehicle_revenue_view_tree" model="ir.ui.view">
+		<field name="name">fleet.vehicle.revenue.tree</field>
+		<field name="model">fleet.vehicle.revenue</field>
+		<field name="arch" type="xml">
+			<tree string="Vehicle Revenues">
+				<field name="vehicle_id" />
+				<field name="revenue_subtype_id" />
+				<field name="amount" />
+				<field name="date" />
+			</tree>
+		</field>
+	</record>
+
+	<record id="fleet_vehicle_revenue_view_pivot" model="ir.ui.view">
+		<field name="name">fleet.vehicle.revenue.pivot</field>
+		<field name="model">fleet.vehicle.revenue</field>
+		<field name="arch" type="xml">
+			<pivot string="Vehicles Revenues">
+				<field name="vehicle_id" type="row" />
+				<field name="date" interval="year" type="col" />
+				<field name="amount" type="measure" />
+			</pivot>
+		</field>
+	</record>
+
+	<record id="fleet_vehicle_revenue_view_graph" model="ir.ui.view">
+		<field name="name">fleet.vehicle.revenue.graph</field>
+		<field name="model">fleet.vehicle.revenue</field>
+		<field name="arch" type="xml">
+			<graph string="Vehicles Revenues">
+				<field name="vehicle_id" />
+				<field name="date" interval="year" />
+				<field name="amount" type="measure" />
+			</graph>
+		</field>
+	</record>
+
+	<record id="fleet_vehicle_revenues_view_search" model="ir.ui.view">
+		<field name="name">fleet.vehicle.revenue.search</field>
+		<field name="model">fleet.vehicle.revenue</field>
+		<field name="arch" type="xml">
+			<search string="Vehicles Revenues">
+				<field name="vehicle_id" />
+				<field name="revenue_subtype_id" />
+				<field name="date" />
+				<group expand="1" string="Group By" name="groupby">
+					<filter name="groupby_revenue_subtype_id" context="{'group_by': 'revenue_subtype_id'}"
+						string="Revenue Subtype" />
+					<filter name="groupby_vehicle_id" context="{'group_by': 'vehicle_id'}"
+						string="Vehicle" />
+					<separator />
+					<filter name="groupby_date" context="{'group_by': 'date:month'}"
+						string="Month" help="Vehicle revenues by Month" />
+					<filter name="groupby_year" context="{'group_by': 'date:year'}"
+						string="Year" />
+				</group>
+			</search>
+		</field>
+	</record>
+
+	<record id="fleet_vehicle_revenues_view_graph" model="ir.ui.view">
+		<field name="name">fleet.vehicle.revenue.graph</field>
+		<field name="model">fleet.vehicle.revenue</field>
+		<field name="arch" type="xml">
+			<graph string="revenues Per Month" stacked="True">
+				<field name="date" type="row" />
+				<field name="vehicle_id" type="col" />
+				<field name="amount" type="measure" />
+			</graph>
+		</field>
+	</record>
+
+	<record id="fleet_vehicle_revenues_action" model="ir.actions.act_window">
+		<field name="name">Vehicle revenues</field>
+		<field name="res_model">fleet.vehicle.revenue</field>
+		<field name="view_mode">tree,form,pivot,graph</field>
+		<field name="context">{"search_default_parent_false" : True,
+			"search_default_groupby_vehicle_id" : True,}
+		</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">
+				Click to create a new revenue.
+			</p>
+			<p>
+				Odoo helps you managing the revenues for your different
+				vehicles.
+			</p>
+		</field>
+	</record>
+
+	<menuitem id="fleet_vehicle_revenues_menu" name="Vehicle Revenues"
+		action="fleet_vehicle_revenues_action" parent="fleet.fleet_vehicles"
+		groups="to_fleet_vehicle_revenue.fleet_vehicle_revenue_group_read" />
+</odoo>

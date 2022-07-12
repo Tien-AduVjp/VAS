@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_personal_sales_target_pos_user,personal.sales.target.pos_user,model_personal_sales_target,point_of_sale.group_pos_user,1,1,0,0
+access_personal_sales_target_pos_manager,personal.sales.target.pos_manager,model_personal_sales_target,point_of_sale.group_pos_manager,1,1,1,1
+access_team_sales_target_pos_manager,team.sales.target.pos_manager,model_team_sales_target,point_of_sale.group_pos_manager,1,1,1,1

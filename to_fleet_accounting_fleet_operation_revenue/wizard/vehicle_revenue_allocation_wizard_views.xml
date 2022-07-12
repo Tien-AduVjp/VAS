@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="view_vehicle_revenue_allocation_wizard" model="ir.ui.view">
+			<field name="name">Vehicle Revenue Allocation Wizard</field>
+			<field name="model">vehicle.revenue.allocation.wizard</field>
+			<field name="inherit_id"
+				ref="to_fleet_vehicle_revenue_accounting.view_vehicle_revenue_allocation_wizard" />
+			<field name="arch" type="xml">
+				<xpath
+					expr="//tree[@name='vehicle_revenue_allocation_line_ids']/field[@name='amount']"
+					position="before">
+					<field name="trip_id" options="{'no_create':True}" />
+					<field name="trip_section_id" options="{'no_create':True}" />
+					<field name="trip_waypoint_id" options="{'no_create':True}" />
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,110 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_sale_product_duplication_warning
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-05 05:27+0000\n"
+"PO-Revision-Date: 2021-06-06 04:44+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_sale_product_duplication_warning
+#: code:addons/viin_sale_product_duplication_warning/models/sale_order.py:0
+#, python-format
+msgid " and "
+msgstr ", "
+
+#. module: viin_sale_product_duplication_warning
+#: code:addons/viin_sale_product_duplication_warning/models/sale_order.py:0
+#, python-format
+msgid ""
+"<li>The product <strong>%s</strong> was found appearing <strong>%s "
+"times</strong> at lines %s</li>"
+msgstr ""
+"<li>Sản phẩm <strong>%s</strong> được thấy xuất hiện <strong>%s lần</strong>"
+" ở các dòng %s</li>"
+
+#. module: viin_sale_product_duplication_warning
+#: code:addons/viin_sale_product_duplication_warning/models/sale_order.py:0
+#, python-format
+msgid "<strong>Product duplication found</strong><ul>%s</ul>"
+msgstr "<strong>Trùng lặp sản phẩm</strong><ul>%s</ul>"
+
+#. module: viin_sale_product_duplication_warning
+#: model:ir.model.fields,field_description:viin_sale_product_duplication_warning.field_sale_order__duplicated_product
+msgid "Duplicated Product"
+msgstr "Sản phẩm bị trùng lặp"
+
+#. module: viin_sale_product_duplication_warning
+#: model:ir.model.fields,help:viin_sale_product_duplication_warning.field_product_product__ignore_product_duplication_warning
+#: model:ir.model.fields,help:viin_sale_product_duplication_warning.field_product_template__ignore_product_duplication_warning
+msgid ""
+"If enabled, duplication warning for this product on the same quotation/sales order will be ignored.\n"
+"If this product is usually expected to appear more than 1 times in the same quotation/sales order, you should enable this option."
+msgstr ""
+"Nếu kích hoạt, cảnh bảo trùng lặp cho sản phẩm này trên cùng báo giá/đơn bản sẽ bị bỏ qua.\n"
+"Nếu sản phẩm này thường hay được sử dụng trùng lặp trên các báo giá/đơn bán, bạn nên kích hoạt tùy chọn này."
+
+#. module: viin_sale_product_duplication_warning
+#: model:ir.model.fields,field_description:viin_sale_product_duplication_warning.field_product_product__ignore_product_duplication_warning
+#: model:ir.model.fields,field_description:viin_sale_product_duplication_warning.field_product_template__ignore_product_duplication_warning
+msgid "Ignore Product Duplication Warning on Quotation/Sales Orders"
+msgstr "Bỏ qua Cảnh báo Trùng Sản phẩm trên Báo giá/Đơn bán"
+
+#. module: viin_sale_product_duplication_warning
+#: model:ir.model.fields,field_description:viin_sale_product_duplication_warning.field_sale_order__product_duplication_warning
+msgid "Product Duplication Warning"
+msgstr "Cảnh báo Trùng lặp Sản phẩm"
+
+#. module: viin_sale_product_duplication_warning
+#: model:ir.model,name:viin_sale_product_duplication_warning.model_product_template
+msgid "Product Template"
+msgstr "Mẫu Sản phẩm"
+
+#. module: viin_sale_product_duplication_warning
+#: model:ir.model,name:viin_sale_product_duplication_warning.model_sale_order
+msgid "Sales Order"
+msgstr "Đơn bán"
+
+#. module: viin_sale_product_duplication_warning
+#: model_terms:ir.ui.view,arch_db:viin_sale_product_duplication_warning.view_sales_order_filter
+msgid ""
+"Show the orders having a product that appears more than one time in the same"
+" orders."
+msgstr ""
+"Hiển thị đơn bán mà có sản phẩm xuất hiện nhiều hơn 1 lần trên cùng một "
+"đơnbán."
+
+#. module: viin_sale_product_duplication_warning
+#: model:ir.model.fields,help:viin_sale_product_duplication_warning.field_sale_order__duplicated_product
+msgid ""
+"Technical field that indicates if the order contains a product that appears "
+"more than 1 time."
+msgstr ""
+"Trường kỹ thuật để chỉ báo đơn bán có chứa các sản phẩm bị trùng lặp hay "
+"không (xuất hiện nhiều hơn 1 lần trên cùng một đơn)."
+
+#. module: viin_sale_product_duplication_warning
+#: model:ir.model.fields,help:viin_sale_product_duplication_warning.field_sale_order__product_duplication_warning
+msgid ""
+"Technical field to store warning text for product duplication in the sales "
+"order."
+msgstr ""
+"Trường kỹ thuật để lưu cảnh báo khi có trùng lặp sản phẩm trên đơn bán"
+
+#. module: viin_sale_product_duplication_warning
+#: model_terms:ir.ui.view,arch_db:viin_sale_product_duplication_warning.view_sales_order_filter
+msgid "With Duplicated Products"
+msgstr "Chứa sản phẩm bị trùng lặp"
+
+#. module: viin_sale_product_duplication_warning
+#: model_terms:ir.ui.view,arch_db:viin_sale_product_duplication_warning.view_order_form
+msgid "You could ignore this warning if it is what you want."
+msgstr "Bạn có thể bỏ qua cảnh báo này nếu đây là điều bạn muốn."

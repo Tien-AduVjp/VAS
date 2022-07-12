@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="fleet_vehicle_revenue_report_view_tree"
+		model="ir.ui.view">
+		<field name="name">fleet.vehicle.revenue.report.tree</field>
+		<field name="model">fleet.vehicle.revenue.report</field>
+		<field name="inherit_id" ref="to_fleet_vehicle_revenue_accounting.fleet_vehicle_revenue_report_view_tree" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='vehicle_id']" position="after">
+				<field name="trip_id" />
+			</xpath>
+		</field>
+	</record>
+
+	<record id="fleet_vehicle_revenues_report_view_search"
+		model="ir.ui.view">
+		<field name="name">fleet.vehicle.revenue.report.search</field>
+		<field name="model">fleet.vehicle.revenue.report</field>
+		<field name="inherit_id"
+			ref="to_fleet_vehicle_revenue_accounting.fleet_vehicle_revenues_report_view_search" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='date']" position="after">
+				<separator />
+				<field name="route_id" />
+				<separator />
+				<field name="trip_id" />
+			</xpath>
+			<xpath
+				expr="//group[@name='group_by']/filter[@name='groupby_year']"
+				position="after">
+				<filter name="groupby_trip_id"
+					context="{'group_by': 'trip_id'}" string="Trip" />
+				<filter name="groupby_route_id"
+					context="{'group_by': 'route_id'}" string="Route" />
+			</xpath>
+		</field>
+	</record>
+
+	<menuitem id="menu_main_fleet_reporting_revenues"
+		name="Revenues Analysis"
+		parent="to_fleet_operation_planning.menu_fleet_trip_reporting"
+		sequence="10" />
+
+	<menuitem id="menu_fleet_reporting_revenues" name="Revenues"
+		parent="menu_main_fleet_reporting_revenues"
+		action="to_fleet_vehicle_revenue_accounting.fleet_revenues_reporting_action"
+		sequence="0" />
+
+</odoo>

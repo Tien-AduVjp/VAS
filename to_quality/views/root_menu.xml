@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- Menu structure -->
+	<menuitem id="quality_root_menu" name="Quality"
+		web_icon="to_quality,static/description/icon.png" sequence="51"
+		groups="to_quality.group_quality_user" />
+
+	<menuitem id="quality_control_menu" name="Quality Control"
+		parent="quality_root_menu" sequence="15" />
+
+	<menuitem id="quality_controls_menu" name="Quality Controls"
+		parent="quality_control_menu" sequence="16" />
+
+	<menuitem id="quality_alerts_menu" name="Alerts" 
+		parent="quality_control_menu" sequence="19" />
+
+	<menuitem id="quality_reporting_menu" name="Reporting"
+		groups="to_quality.group_quality_manager" parent="quality_root_menu"
+		sequence="20" />
+
+	<menuitem id="quality_configuration_menu" name="Configuration"
+		groups="to_quality.group_quality_manager" parent="quality_root_menu"
+		sequence="25" />
+
+</odoo>

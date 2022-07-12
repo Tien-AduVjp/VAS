@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view"
+			id="fleet_vehicle_log_services_view_tree">
+			<field name="name">fleet.vehicle.log.services.tree</field>
+			<field name="model">fleet.vehicle.log.services</field>
+			<field name="inherit_id"
+				ref="fleet.fleet_vehicle_log_services_view_tree" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='amount']" position="before">
+					<field name="currency_id" invisible="1" />
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view"
+			id="fleet_vehicle_log_services_view_form">
+			<field name="name">fleet.vehicle.log.services.form</field>
+			<field name="model">fleet.vehicle.log.services</field>
+			<field name="inherit_id"
+				ref="fleet.fleet_vehicle_log_services_view_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='amount']" position="before">
+					<field name="currency_id"
+						options="{'no_create': True, 'no_open': True}"
+						groups="base.group_multi_currency" />
+				</xpath>
+				<xpath expr="//field[@name='inv_ref']" position="after">
+					<field name="company_id" groups="base.group_multi_company" />
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view"
+			id="fleet_vehicle_log_services_view_search">
+			<field name="name">fleet.vehicle.log.services.search</field>
+			<field name="model">fleet.vehicle.log.services</field>
+			<field name="inherit_id"
+				ref="fleet.fleet_vehicle_log_services_view_search" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='cost_subtype_id']"
+					position="after">
+					<separator />
+					<field name="vendor_id" />
+					<field name="invoice_id" />
+					<separator />
+					<filter name="ftr_to_invoice"
+						domain="[('invoiceable','=',True)]" string="To Invoice" />
+					<filter name="ftr_invoiced"
+						domain="[('invoice_line_id','!=',False)]" string="Invoiced" />
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

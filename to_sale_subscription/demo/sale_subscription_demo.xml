@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+         <record id="erponline_tag" model="account.analytic.tag">
+            <field name="name">ERPOnline</field>
+         </record>
+
+        <!-- Subscription templates -->
+        <record id="erponline_monthly" model="sale.subscription.template">
+            <field name="name">ERPOnline Monthly</field>
+            <field name="code">MON</field>
+            <field name="recurring_interval">1</field>
+            <field name="recurring_rule_type">monthly</field>
+            <field name="payment_mode">validate_send</field>
+            <field name="invoice_mail_template_id" ref="to_sale_subscription.mail_template_subscription_invoice" />
+            <field name="analytic_tag_ids" eval="[(6,0, (ref('to_sale_subscription.erponline_tag'),))]"/>
+            <field name="description">
+Payment
+All payments are due upon receipt. If a payment is not received or payment method is declined, the buyer forfeits the ownership of any items purchased. If no payment is received, no items will be shipped.
+
+Shipping Policies
+Shipping will be paid for by the buyer in the amount agreed upon by the seller at the time of purchase. If an item is lost during shipping, the total cost of item, including shipping, will be refunded to the buyer by the seller. Shipping costs may double if shipping internationally. If an item is damaged during shipping, seller will not be held responsible.
+
+Refund/Return Policy
+Items are entitled to be refunded or returned based on complaint. If an item is damaged during shipping, a replacement item will be sent free of charge. If an item is unsatisfactory, a written explanation is needed before the item may be considered for a refund. Buyer must take into account the description of the item before requesting a refund. If the item matches the description by the seller and the buyer is unsatisfied, seller is not responsible for refund. Exchanges are granted on a case-by-case basis.
+
+Cancellation
+An item may be cancelled up until payment has been processed. Once payment has been processed, the buyer is responsible for payment.
+
+Complaints
+Any complaints about items or sellers may be sent to our support team: apps.support@viindoo.com or 012 2222 1004. There is no guarantee of a resolution. Each case will be looked at individually, and the seller will be in contact as well.
+            </field>
+        </record>
+
+        <record id="erponline_yearly" model="sale.subscription.template">
+            <field name="name">ERPOnline Yearly</field>
+            <field name="code">YEA</field>
+            <field name="recurring_interval">1</field>
+            <field name="recurring_rule_type">yearly</field>
+            <field name="payment_mode">validate_send</field>
+            <field name="invoice_mail_template_id" ref="to_sale_subscription.mail_template_subscription_invoice" />
+            <field name="analytic_tag_ids" eval="[(6,0, (ref('to_sale_subscription.erponline_tag'),))]"/>
+            <field name="description">
+Payment
+All payments are due upon receipt. If a payment is not received or payment method is declined, the buyer forfeits the ownership of any items purchased. If no payment is received, no items will be shipped.
+
+Shipping Policies
+Shipping will be paid for by the buyer in the amount agreed upon by the seller at the time of purchase. If an item is lost during shipping, the total cost of item, including shipping, will be refunded to the buyer by the seller. Shipping costs may double if shipping internationally. If an item is damaged during shipping, seller will not be held responsible.
+
+Refund/Return Policy
+Items are entitled to be refunded or returned based on complaint. If an item is damaged during shipping, a replacement item will be sent free of charge. If an item is unsatisfactory, a written explanation is needed before the item may be considered for a refund. Buyer must take into account the description of the item before requesting a refund. If the item matches the description by the seller and the buyer is unsatisfied, seller is not responsible for refund. Exchanges are granted on a case-by-case basis.
+
+Cancellation
+An item may be cancelled up until payment has been processed. Once payment has been processed, the buyer is responsible for payment.
+
+Complaints
+Any complaints about items or sellers may be sent to our support team: apps.support@viindoo.com or 012 2222 1004. There is no guarantee of a resolution. Each case will be looked at individually, and the seller will be in contact as well.
+            </field>
+        </record>
+
+        <!-- Subscription products -->
+        <record id="erponline_saas_monthly" model="product.product">
+            <field name="name">ERPOnline SAAS (Monthly)</field>
+            <field name="description_sale">ERPOnline SAAS
+        Access to your Odoo Instance. Stored on our servers: high speed, high reliability and daily backups.</field>
+            <field name="recurring_invoice">True</field>
+            <field name="subscription_template_id" ref="erponline_monthly"/>
+            <field name="categ_id" ref="product.product_category_3"/>
+            <field name="type">service</field>
+            <field name="list_price">20.0</field>
+            <field name="uom_id" ref="to_uom_subscription.uom_subscription_month"/>
+            <field name="uom_po_id" ref="to_uom_subscription.uom_subscription_month"/>
+        </record>
+         
+        <record id="erponline_saas_yearly" model="product.product">
+            <field name="name">ERPOnline SAAS (Yearly)</field>
+            <field name="description_sale">ERPOnline SAAS
+        Access to your Odoo Instance. Stored on our servers: high speed, high reliability and daily backups.</field>
+            <field name="recurring_invoice">True</field>
+            <field name="subscription_template_id" ref="erponline_yearly"/>
+            <field name="categ_id" ref="product.product_category_3"/>
+            <field name="type">service</field>
+            <field name="list_price">200.0</field>
+            <field name="uom_id" ref="to_uom_subscription.uom_subscription_year"/>
+            <field name="uom_po_id" ref="to_uom_subscription.uom_subscription_year"/>
+        </record> 
+
+        <record id="custom_module_monthly" model="product.product">
+            <field name="name">Custom Module (Monthly)</field>
+            <field name="description_sale">Custom Module
+        A custom module tailored specifically for your company</field>
+            <field name="recurring_invoice">True</field>
+            <field name="subscription_template_id" ref="erponline_monthly"/>
+            <field name="categ_id" ref="product.product_category_3"/>
+            <field name="type">service</field>
+            <field name="list_price">200.0</field>
+            <field name="uom_id" ref="to_uom_subscription.uom_subscription_month"/>
+            <field name="uom_po_id" ref="to_uom_subscription.uom_subscription_month"/>
+        </record>
+
+		<record id="custom_module_yearly" model="product.product">
+            <field name="name">Custom Module (Yearly)</field>
+            <field name="description_sale">Customized Module
+        A custom module tailored specifically for your company.</field>
+            <field name="recurring_invoice">True</field>
+            <field name="subscription_template_id" ref="erponline_yearly"/>
+            <field name="categ_id" ref="product.product_category_3"/>
+            <field name="type">service</field>
+            <field name="list_price">40.0</field>
+            <field name="uom_id" ref="to_uom_subscription.uom_subscription_month"/>
+            <field name="uom_po_id" ref="to_uom_subscription.uom_subscription_month"/>
+         </record>
+
+        <record id="custom_view_monthly" model="product.product">
+            <field name="name">Customized Views (Monthly)</field>
+            <field name="description_sale">Customized View
+        Customize one or more views (in a single module) to better suit your needs.</field>
+            <field name="recurring_invoice">True</field>
+            <field name="subscription_template_id" ref="erponline_monthly"/>
+            <field name="categ_id" ref="product.product_category_3"/>
+            <field name="type">service</field>
+            <field name="list_price">10.0</field>
+            <field name="uom_id" ref="to_uom_subscription.uom_subscription_month"/>
+            <field name="uom_po_id" ref="to_uom_subscription.uom_subscription_month"/>
+         </record>
+
+        <record id="odoo_custom_view_yearly" model="product.product">
+            <field name="name">Customized Views (Yearly)</field>
+            <field name="description_sale">Customized View
+        Customize one or more views (in a single module) to better suit your needs.</field>
+            <field name="recurring_invoice">True</field>
+            <field name="subscription_template_id" ref="erponline_yearly"/>
+            <field name="categ_id" ref="product.product_category_3"/>
+            <field name="type">service</field>
+            <field name="list_price">100.0</field>
+            <field name="uom_id" ref="to_uom_subscription.uom_subscription_year"/>
+            <field name="uom_po_id" ref="to_uom_subscription.uom_subscription_year"/>
+        </record>
+
+         <record id="custom_domain_monthly" model="product.product">
+            <field name="name">Custom Domain (Monthly)</field>
+            <field name="description_sale">Custom Domain
+        Access your Odoo Instance using your own domain.</field>
+            <field name="recurring_invoice">True</field>
+            <field name="subscription_template_id" ref="erponline_monthly"/>
+            <field name="categ_id" ref="product.product_category_3"/>
+            <field name="type">service</field>
+            <field name="list_price">0.0</field>
+            <field name="uom_id" ref="to_uom_subscription.uom_subscription_month"/>
+            <field name="uom_po_id" ref="to_uom_subscription.uom_subscription_month"/>
+        </record>
+
+        <record id="odoo_custom_domain_yearly" model="product.product">
+            <field name="name">Custom Domain (Yearly)</field>
+            <field name="description_sale">Custom Domain
+        Access your Odoo Instance using your own domain.</field>
+            <field name="recurring_invoice">True</field>
+            <field name="subscription_template_id" ref="erponline_yearly"/>
+            <field name="categ_id" ref="product.product_category_3"/>
+            <field name="type">service</field>
+            <field name="list_price">0.0</field>
+            <field name="uom_id" ref="to_uom_subscription.uom_subscription_year"/>
+            <field name="uom_po_id" ref="to_uom_subscription.uom_subscription_year"/>
+        </record>
+
+		<!-- Sale Subscription -->
+        <record id="erponline_saas_sale_subscription" model="sale.subscription">
+            <field name="name">ERPOnline SAAS</field>
+            <field name="code">subscription.portal</field>
+            <field name="partner_id" ref="base.partner_demo_portal"/>
+            <field name="template_id" ref="erponline_monthly"/>
+            <field name="pricelist_id" ref="product.list0"/>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="date_start" eval="(DateTime.now() - timedelta(days=9))"/>
+            <field name="recurring_next_date" eval="(DateTime.now() - timedelta(days=9))"/>
+            <field name="description">
+Payment
+All payments are due upon receipt. If a payment is not received or payment method is declined, the buyer forfeits the ownership of any items purchased. If no payment is received, no items will be shipped.
+
+Shipping Policies
+Shipping will be paid for by the buyer in the amount agreed upon by the seller at the time of purchase. If an item is lost during shipping, the total cost of item, including shipping, will be refunded to the buyer by the seller. Shipping costs may double if shipping internationally. If an item is damaged during shipping, seller will not be held responsible.
+
+Refund/Return Policy
+Items are entitled to be refunded or returned based on complaint. If an item is damaged during shipping, a replacement item will be sent free of charge. If an item is unsatisfactory, a written explanation is needed before the item may be considered for a refund. Buyer must take into account the description of the item before requesting a refund. If the item matches the description by the seller and the buyer is unsatisfied, seller is not responsible for refund. Exchanges are granted on a case-by-case basis.
+
+Cancellation
+An item may be cancelled up until payment has been processed. Once payment has been processed, the buyer is responsible for payment.
+
+Complaints
+Any complaints about items or sellers may be sent to our support team: apps.support@viindoo.com or 012 2222 1004. There is no guarantee of a resolution. Each case will be looked at individually, and the seller will be in contact as well.
+            </field>
+        </record>
+
+	    <function model="sale.subscription" name="message_subscribe"
+	      eval="[ref('to_sale_subscription.erponline_saas_sale_subscription')], [ref('base.partner_demo_portal')]"/>
+
+		<!-- Sale Subscription Line -->
+        <record id="erponline_saas_sale_subscription_line" model="sale.subscription.line">
+            <field name="name">ERPOnline SAAS
+        Access to your Odoo Instance. Stored on our servers: high speed, high reliability and daily backups.</field>
+            <field name="subscription_id" ref="erponline_saas_sale_subscription"/>
+            <field name="product_id" ref="erponline_saas_monthly"/>
+            <field name="quantity">1</field>
+            <field name="price_unit">20.0</field>
+            <field name="uom_id" ref="to_uom_subscription.uom_subscription_month"/>
+        </record>
+ 
+    </data>
+</odoo>

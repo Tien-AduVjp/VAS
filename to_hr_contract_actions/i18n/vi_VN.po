@@ -1,0 +1,173 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_hr_contract_actions
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-14 04:03+0000\n"
+"PO-Revision-Date: 2020-05-14 04:03+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_hr_contract_actions
+#: model_terms:ir.ui.view,arch_db:to_hr_contract_actions.hr_contract_view_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: to_hr_contract_actions
+#: model_terms:ir.ui.view,arch_db:to_hr_contract_actions.hr_contract_view_form
+msgid "Click here to cancel the contract"
+msgstr "Bấm đề huỷ hợp đồng"
+
+#. module: to_hr_contract_actions
+#: model_terms:ir.ui.view,arch_db:to_hr_contract_actions.hr_contract_view_form
+msgid "Click here to set contract to New"
+msgstr "Bẩm để thiết lập hợp đồng về trạng thái Mới"
+
+#. module: to_hr_contract_actions
+#: model_terms:ir.ui.view,arch_db:to_hr_contract_actions.hr_contract_view_form
+msgid ""
+"Click here to set the contract as Expired. The contract will also be closed "
+"automatically when its End Date or its employee's Visa Expire Date is "
+"earlier or equal to tomorrow."
+msgstr ""
+"Bấm để thiết lập hợp đồng về trạng thái Hết hạn (đóng). Hợp đồng cũng có thể"
+" được đóng tự động khi Ngày kết thúc của hợp đồng hoặc Ngày hết hạn Visa của"
+" Nhân viên là hôm nay hoặc ngày mai."
+
+#. module: to_hr_contract_actions
+#: model_terms:ir.ui.view,arch_db:to_hr_contract_actions.hr_contract_view_form
+msgid ""
+"Click here to start the contract so that it can be available in other "
+"business processes"
+msgstr ""
+"Bấm để khởi động hợp đồng, từ đó, hợp đồng sẽ có thể khả dụng trong các quy "
+"trình nghiệp vụ khác"
+
+#. module: to_hr_contract_actions
+#: model_terms:ir.ui.view,arch_db:to_hr_contract_actions.hr_contract_view_form
+msgid "Close"
+msgstr "Đóng"
+
+#. module: to_hr_contract_actions
+#: model:ir.model,name:to_hr_contract_actions.model_hr_contract
+msgid "Contract"
+msgstr "Hợp đồng"
+
+#. module: to_hr_contract_actions
+#: code:addons/to_hr_contract_actions/models/hr_contract.py:0
+#, python-format
+msgid "Invalid status %s"
+msgstr "Tình trạng %s không hợp lệ"
+
+#. module: to_hr_contract_actions
+#: model_terms:ir.ui.view,arch_db:to_hr_contract_actions.hr_contract_view_form
+msgid "Renew"
+msgstr "Gia hạn"
+
+#. module: to_hr_contract_actions
+#: model_terms:ir.ui.view,arch_db:to_hr_contract_actions.hr_contract_view_form
+msgid "Set as To Renew"
+msgstr "Đặt về Chờ Gia hạn"
+
+#. module: to_hr_contract_actions
+#: model_terms:ir.ui.view,arch_db:to_hr_contract_actions.hr_contract_view_form
+msgid ""
+"Set the contract status as 'To Renew'. Or, the contract will be set to 'To "
+"Renew' automatically when its End Date is between tomorrow and the next 7 "
+"days, OR its employee's Visa Expire Date is between tomorrow and the next 60"
+" days."
+msgstr ""
+"Thiết lập tình trạng của hợp đồng về 'Chờ Gia hạn'. Hoặc hợp đồng cũng có "
+"thể được thiết lập tự động về trạng thai này khi ngày kết thúc hợp đồng hoặc"
+" ngày hết hạn Visa của nhân viên nằm trong khoảng 60 ngày tới."
+
+#. module: to_hr_contract_actions
+#: model_terms:ir.ui.view,arch_db:to_hr_contract_actions.hr_contract_view_form
+msgid "Set to New"
+msgstr "Thiết lập về Mới"
+
+#. module: to_hr_contract_actions
+#: model_terms:ir.ui.view,arch_db:to_hr_contract_actions.hr_contract_view_form
+msgid "Start"
+msgstr "Khởi động"
+
+#. module: to_hr_contract_actions
+#: model:ir.model.fields,field_description:to_hr_contract_actions.field_hr_contract__state
+msgid "Status"
+msgstr "Tình trạng"
+
+#. module: to_hr_contract_actions
+#: model:ir.model.fields,help:to_hr_contract_actions.field_hr_contract__state
+msgid ""
+"The Status of the contract which is either:\n"
+"New: The contract is a draft contract which may not visible in payslip.\n"
+"Running: the contract is valid and running. It will be available in other processes in the system.\n"
+"To Renew: the contract will be set to this status automatically when its End Date is between tomorrow and the next 7 days, OR its employee's Visa Expire Date is between tomorrow and the next 60 days\n"
+"Expired: The contract will be set to this status automatically when its End Date or its employee's Visa Expire Date is earlier or equal to tomorrow."
+msgstr ""
+
+#. module: to_hr_contract_actions
+#: code:addons/to_hr_contract_actions/models/hr_contract.py:0
+#, python-format
+msgid ""
+"You may not be able to cancel the contract %s while its status is neither "
+"Running nor To Renew nor Expired."
+msgstr ""
+"Bạn không thể huỷ hợp đồng %s khi mà trạng thái của nó không phải là một "
+"trong các trạng thái: Đang chạy | Chờ Gia hạn | Hết hạn."
+
+#. module: to_hr_contract_actions
+#: code:addons/to_hr_contract_actions/models/hr_contract.py:0
+#, python-format
+msgid ""
+"You may not be able to renew the contract %s while its status is neither To "
+"Renew nor Expired"
+msgstr ""
+"Bạn không thể gia hạn hợp đồng %s khi mà trạng thái của nó không phải là một"
+" trong các trạng thái: Chờ Gia hạn | Hết hạn."
+
+#. module: to_hr_contract_actions
+#: code:addons/to_hr_contract_actions/models/hr_contract.py:0
+#, python-format
+msgid ""
+"You may not be able to set expired the contract %s while its status is "
+"neither Running nor To Renew"
+msgstr ""
+"Bạn không thể đóng đồng %s khi mà trạng thái của nó không phải là một trong "
+"các trạng thái: Đang chạy | Chờ Gia hạn."
+
+#. module: to_hr_contract_actions
+#: code:addons/to_hr_contract_actions/models/hr_contract.py:0
+#, python-format
+msgid ""
+"You may not be able to set the contract %s as To Renew while its status is "
+"not Running"
+msgstr ""
+"Bạn không thể thiết lập hợp đồng %s sang trạng thái Chờ Gia hạn khi mà trạng"
+" thái của nó không phải là Đang chạy"
+
+#. module: to_hr_contract_actions
+#: code:addons/to_hr_contract_actions/models/hr_contract.py:0
+#, python-format
+msgid ""
+"You may not be able to set to draft the contract %s while its status is not "
+"Cancelled"
+msgstr ""
+"Bạn không thể thiết lập hợp đồng %s về trạng thái Mới (dự thảo) khi mà trạng"
+" thái hiện tại của nó không phải là Huỷ."
+
+#. module: to_hr_contract_actions
+#: code:addons/to_hr_contract_actions/models/hr_contract.py:0
+#, python-format
+msgid ""
+"You may not be able to start the contract %s while its status is not New"
+msgstr ""
+"Bạn không thể khởi động hợp đồng %s khi mà trạng thái hiện hành của nó không"
+" phải Mới (Dự thảo)."

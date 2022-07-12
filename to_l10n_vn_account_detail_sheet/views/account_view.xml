@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<menuitem parent="l10n_vn.account_reports_vn_statements_menu"
+			id="to_menu_account_detail_sheet"
+			groups="account.group_account_user"
+			action="action_wizard_c200_s38dn" 
+			sequence="2" name="Account Detail Sheet (S38-DN)" />
+	</data>
+</odoo>

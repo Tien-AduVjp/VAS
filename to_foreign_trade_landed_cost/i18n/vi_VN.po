@@ -1,0 +1,155 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_foreign_trade_landed_cost
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-29 04:48+0000\n"
+"PO-Revision-Date: 2020-08-29 04:48+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_foreign_trade_landed_cost
+#: model:ir.model,name:to_foreign_trade_landed_cost.model_account_chart_template
+msgid "Account Chart Template"
+msgstr "Mẫu Hệ thống Tài khoản"
+
+#. module: to_foreign_trade_landed_cost
+#: code:addons/to_foreign_trade_landed_cost/models/abstract_custom_declaration.py:0
+#, python-format
+msgid "Can not cancel this document while it has some posted landed cost."
+msgstr ""
+"Không thể hủy khai báo thông quan này, vì có một số chi phí về kho đã được "
+"vào sổ."
+
+#. module: to_foreign_trade_landed_cost
+#: model:ir.model,name:to_foreign_trade_landed_cost.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: to_foreign_trade_landed_cost
+#: model:ir.model,name:to_foreign_trade_landed_cost.model_res_config_settings
+msgid "Config Settings"
+msgstr "Thiết lập Cấu hình"
+
+#. module: to_foreign_trade_landed_cost
+#: model:ir.model,name:to_foreign_trade_landed_cost.model_abstract_custom_declaration
+msgid "Contains the logic shared between models"
+msgstr "Chứa các logics nghiệp vụ chia sẻ giữa các mô hình"
+
+#. module: to_foreign_trade_landed_cost
+#: model:ir.model.fields,field_description:to_foreign_trade_landed_cost.field_stock_landed_cost__custom_declaration_export_id
+msgid "Custom Clearance Request"
+msgstr "Khai báo Thông quan Xuất khẩu"
+
+#. module: to_foreign_trade_landed_cost
+#: model:ir.model.fields,field_description:to_foreign_trade_landed_cost.field_stock_landed_cost__custom_declaration_import_id
+msgid "Custom Clearance Import Request"
+msgstr "Khai báo Thông quan Nhập khẩu"
+
+#. module: to_foreign_trade_landed_cost
+#: model:ir.model,name:to_foreign_trade_landed_cost.model_abstract_custom_declaration_tax
+msgid "Custom Declaration Tax"
+msgstr "Thuế Tờ khai Hải quan"
+
+#. module: to_foreign_trade_landed_cost
+#: code:addons/to_foreign_trade_landed_cost/models/res_company.py:0
+#, python-format
+msgid "Default Landed Cost Journal"
+msgstr "Sổ nhật ký Chi phí về kho mặc định"
+
+#. module: to_foreign_trade_landed_cost
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade_landed_cost.res_config_settings_view_form
+msgid ""
+"Default journal for account entries related to import landed cost taxes"
+msgstr ""
+"Sổ nhật ký mặc định cho bút toán kế toán liên quan đến chi phí thuế nhập khẩu về kho"
+
+#. module: to_foreign_trade_landed_cost
+#: model:ir.model,name:to_foreign_trade_landed_cost.model_custom_declaration_export
+msgid "Export Custom Declaration"
+msgstr "Thông quan Xuất khẩu"
+
+#. module: to_foreign_trade_landed_cost
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade_landed_cost.res_config_settings_view_form
+msgid "Foreign Trade Landed Cost"
+msgstr "Chi phí Xuất/Nhập khẩu về kho"
+
+#. module: to_foreign_trade_landed_cost
+#: model:ir.model,name:to_foreign_trade_landed_cost.model_custom_declaration_import
+msgid "Import Custom Declaration"
+msgstr "Khai báo Thông quan Hàng nhập"
+
+#. module: to_foreign_trade_landed_cost
+#: model:product.product,name:to_foreign_trade_landed_cost.to_product_product_import_tax_cost
+#: model:product.template,name:to_foreign_trade_landed_cost.to_product_product_import_tax_cost_product_template
+msgid "Import Tax Cost"
+msgstr "Chi phí thuế nhập khẩu"
+
+#. module: to_foreign_trade_landed_cost
+#: model:ir.model,name:to_foreign_trade_landed_cost.model_account_journal
+msgid "Journal"
+msgstr "Sổ nhật ký"
+
+#. module: to_foreign_trade_landed_cost
+#: model:ir.actions.act_window,name:to_foreign_trade_landed_cost.act_export_custom_declaration_2_landed_cost
+#: model:ir.actions.act_window,name:to_foreign_trade_landed_cost.act_import_custom_declaration_2_landed_cost
+#: model:ir.model.fields,field_description:to_foreign_trade_landed_cost.field_custom_declaration_export__landed_cost_ids
+#: model:ir.model.fields,field_description:to_foreign_trade_landed_cost.field_custom_declaration_import__landed_cost_ids
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade_landed_cost.custom_declaration_export_form
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade_landed_cost.custom_declaration_import_form
+msgid "Landed Cost"
+msgstr "Chi phí về kho"
+
+#. module: to_foreign_trade_landed_cost
+#: model:ir.model.fields,field_description:to_foreign_trade_landed_cost.field_res_company__landed_cost_journal_id
+#: model:ir.model.fields,field_description:to_foreign_trade_landed_cost.field_res_config_settings__landed_cost_journal_id
+msgid "Landed Cost Journal"
+msgstr "Sổ nhật ký Chi phí về kho"
+
+#. module: to_foreign_trade_landed_cost
+#: model:product.product,description:to_foreign_trade_landed_cost.to_product_product_import_tax_cost
+#: model:product.template,description:to_foreign_trade_landed_cost.to_product_product_import_tax_cost_product_template
+msgid "Product to import tax cost."
+msgstr "Sản phẩm Chi phí Thuế nhập khẩu"
+
+#. module: to_foreign_trade_landed_cost
+#: model:ir.model,name:to_foreign_trade_landed_cost.model_stock_landed_cost
+msgid "Stock Landed Cost"
+msgstr "Phí nhập kho"
+
+#. module: to_foreign_trade_landed_cost
+#: code:addons/to_foreign_trade_landed_cost/models/abstract_custom_declaration.py:0
+#, python-format
+msgid ""
+"There is no account journal defined on the Landed Cost Journal for current "
+"company."
+msgstr ""
+"Không có Sổ nhật ký Kế toán được xác định trên Số nhật ký Chi phí về kho cho công ty hiện tại"
+#. module: to_foreign_trade_landed_cost
+#: code:addons/to_foreign_trade_landed_cost/models/stock_landed_cost.py:0
+#, python-format
+msgid ""
+"This landed cost was generated from custom declaration, so you can not "
+"recompute it."
+msgstr ""
+"Chi phí về kho này được tạo từ khai báo thông quan, vì vậy bạn không thể "
+"tính toán lại"
+
+#. module: to_foreign_trade_landed_cost
+#: model:product.product,uom_name:to_foreign_trade_landed_cost.to_product_product_import_tax_cost
+#: model:product.template,uom_name:to_foreign_trade_landed_cost.to_product_product_import_tax_cost_product_template
+msgid "Units"
+msgstr "Đơn vị"
+
+#. module: to_foreign_trade_landed_cost
+#: model:ir.model.fields,field_description:to_foreign_trade_landed_cost.field_custom_declaration_export__landed_cost_count
+#: model:ir.model.fields,field_description:to_foreign_trade_landed_cost.field_custom_declaration_import__landed_cost_count
+msgid "landed Cost Count"
+msgstr "Số lượng Chi phí về kho"

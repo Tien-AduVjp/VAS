@@ -1,0 +1,73 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_inter_company_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-18 04:28+0000\n"
+"PO-Revision-Date: 2020-03-18 04:28+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_inter_company_base
+#: model:ir.model,name:to_inter_company_base.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: to_inter_company_base
+#: model:ir.model,name:to_inter_company_base.model_res_config_settings
+msgid "Config Settings"
+msgstr "Thiết lập Cấu hình"
+
+#. module: to_inter_company_base
+#: model:ir.model,name:to_inter_company_base.model_res_partner
+msgid "Contact"
+msgstr "Liên hệ"
+
+#. module: to_inter_company_base
+#: model_terms:ir.ui.view,arch_db:to_inter_company_base.view_company_inter_change_inherit_form
+msgid "Inter-Company Rules"
+msgstr "Các quy tắc liên công ty"
+
+#. module: to_inter_company_base
+#: model:ir.model.fields,field_description:to_inter_company_base.field_res_company__intercompany_user_id
+#: model:ir.model.fields,field_description:to_inter_company_base.field_res_config_settings__intercompany_user_id
+msgid "Inter-Company User"
+msgstr "Người dùng liên công ty"
+
+#. module: to_inter_company_base
+#: model:ir.model.fields,field_description:to_inter_company_base.field_res_config_settings__module_to_inter_company_invoice
+msgid "Inter-Company for Invoices"
+msgstr "Hóa đơn liên công ty"
+#. module: to_inter_company_base
+#: code:addons/to_inter_company_base/models/res_config_settings.py:0
+#, python-format
+msgid ""
+"Inter-Company for Invoices will be enabled if Inter-Company for "
+"Sale/Purchase is enabled."
+msgstr "Hóa đơn liên công ty kích hoạt nếu giao dịch liên công ty được chọn"
+
+#. module: to_inter_company_base
+#: model:ir.model.fields,field_description:to_inter_company_base.field_res_config_settings__module_to_inter_company_sale_purchase
+msgid "Inter-Company for Sale/Purchase"
+msgstr "Giao dịch liên công ty"
+
+#. module: to_inter_company_base
+#: model:ir.model.fields,help:to_inter_company_base.field_res_company__intercompany_user_id
+#: model:ir.model.fields,help:to_inter_company_base.field_res_config_settings__intercompany_user_id
+msgid ""
+"Responsible user for creation of documents triggered by intercompany rules. "
+"The user should have full access rights to related document models (i.e. "
+"invoice, sales order, purchase order) of the current company. Otherwise, "
+"Odoo Bot will be used instead."
+msgstr ""
+"Người dùng chịu trách nhiệm tạo các tài liệu được kích hoạt bởi các quy tắc "
+"liên công ty. Người dùng này phải có quyền đầy đủ với các model tài liệu "
+"liên quan (cụ thể: hoá đơn, đơn bán, đơn mua) ở công ty hiện hành. Nếu "
+"không, tài khoản Odoo Bot sẽ được sử dụng thay vào đó."

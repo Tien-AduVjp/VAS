@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<menuitem id="replenishment_request_root_menu"
+			name="Replenishment"
+			web_icon="to_procurement_requests,static/description/icon.png"
+			groups="to_procurement_requests.group_user" />
+
+		<menuitem id="replenishment_request_main_menu"
+			parent="replenishment_request_root_menu" name="Requests" />
+
+	</data>
+</odoo>

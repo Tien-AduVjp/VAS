@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="view_voucher_tree" model="ir.ui.view">
+		<field name="name">voucher.tree</field>
+		<field name="model">voucher.voucher</field>
+		<field name="arch" type="xml">
+			<tree string="Promotion Voucher" edit="0" create="0" delete="0">
+				<field name="name" />
+				<field name="product_id" />
+				<field name="lot_id" />
+				<field name="value" />
+				<field name="issue_date" />
+				<field name="activated_date" />
+				<field name="expiry_date" />
+				<field name="current_stock_location_id" />
+				<field name="state" />
+			</tree>
+		</field>
+	</record>
+
+	<record id="to_promotion_voucher_stock_move"
+		model="ir.actions.act_window">
+		<field name="name">Vouchers Moves</field>
+		<field name="res_model">stock.move.line</field>
+		<field name="view_mode">tree,pivot</field>
+		<field name="view_id" ref="stock.view_move_line_tree" />
+		<field name="domain">[('voucher_id', '=', active_id),('state',
+			'!=','cancel')]
+		</field>
+	</record>
+
+	<record id="view_voucher_form" model="ir.ui.view">
+		<field name="name">voucher.form</field>
+		<field name="model">voucher.voucher</field>
+		<field name="arch" type="xml">
+			<form string="Promotion Voucher" edit="0" create="0" delete="0">
+				<header>
+					<field name="state" widget="statusbar" />
+				</header>
+				<sheet>
+					<div class="oe_button_box" name="button_box">
+						<button name="%(to_promotion_voucher_stock_move)d"
+							type="action" class="oe_stat_button" icon="fa-arrows-v">
+							<field string="Moves" name="history_count"
+								widget="statinfo" />
+						</button>
+					</div>
+					<group>
+						<group>
+							<field name="name" />
+							<field name="product_id" />
+							<field name="lot_id" />
+							<field name="serial"
+								groups="to_promotion_voucher.group_promotion_voucher_manager" />
+						</group>
+						<group>
+							<field name="value" />
+							<field name="price" />
+							<field name="used_amount" />
+							<field name="issue_date" />
+							<field name="activated_date"
+								attrs="{'invisible': [('state', '=', 'new')]}" />
+							<field name="expiry_date"
+								attrs="{'invisible': [('state', '=', 'new')]}" />
+							<field name="used_date"
+								attrs="{'invisible': [('state', '!=', 'used')]}" />
+							<field name="valid_duration" />
+						</group>
+					</group>
+				</sheet>
+				<div class="oe_chatter">
+					<field name="message_follower_ids" widget="mail_followers" />
+					<field name="activity_ids" widget="mail_activity" />
+					<field name="message_ids" widget="mail_thread" />
+				</div>
+			</form>
+		</field>
+	</record>
+
+	<record id="voucher_filter" model="ir.ui.view">
+		<field name="name">voucher.filter</field>
+		<field name="model">voucher.voucher</field>
+		<field name="arch" type="xml">
+			<search string="Promotion Voucher">
+				<field name="name" />
+				<field name="lot_id" />
+				<field name="value" />
+				<field name="product_id" />
+				<field name="issue_date" />
+				<field name="issue_order_id" />
+				<separator />
+				<filter name="ftr_inactivated"
+					domain="[('state', '=', 'new')]" string="Inactivated Voucher"
+					help="Inactivated" />
+				<filter name="ftr_activated"
+					domain="[('state', '=', 'activated')]" string="Activated Voucher"
+					help="Activated" />
+				<filter name="ftr_expired"
+					domain="[('state', '=', 'expired')]" string="Expired Voucher" />
+				<filter name="ftr_used" domain="[('state', '=', 'used')]"
+					string="Used Voucher" />
+				<separator />
+				<group expand="0" string="Group By">
+					<filter name="grp_product" string="Product" domain="[]"
+						context="{'group_by': 'product_id'}" />
+					<filter name="grp_lot" string="Lot" domain="[]"
+						context="{'group_by': 'lot_id'}" />
+					<separator />
+					<filter name="grp_status" string="Status" domain="[]"
+						context="{'group_by': 'state'}" />
+				</group>
+			</search>
+		</field>
+	</record>
+
+	<record id="view_inactivated_voucher_action"
+		model="ir.actions.act_window">
+		<field name="name">Promotion Voucher</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">voucher.voucher</field>
+		<field name="view_mode">tree,form</field>
+		<field name="context">{'search_default_ftr_inactivated': 1}</field>
+		<field name="search_view_id" ref="voucher_filter" />
+	</record>
+	<record id="view_activated_voucher_action"
+		model="ir.actions.act_window">
+		<field name="name">Promotion Voucher</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">voucher.voucher</field>
+		<field name="view_mode">tree,form</field>
+		<field name="context">{'search_default_ftr_activated': 1}</field>
+		<field name="search_view_id" ref="voucher_filter" />
+	</record>
+	<record id="view_expired_voucher_action"
+		model="ir.actions.act_window">
+		<field name="name">Promotion Voucher</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">voucher.voucher</field>
+		<field name="view_mode">tree,form</field>
+		<field name="context">{'search_default_ftr_expired': 1}</field>
+		<field name="search_view_id" ref="voucher_filter" />
+	</record>
+	<record id="view_used_voucher_action"
+		model="ir.actions.act_window">
+		<field name="name">Promotion Voucher</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">voucher.voucher</field>
+		<field name="view_mode">tree,form</field>
+		<field name="context">{'search_default_ftr_used': 1}</field>
+		<field name="search_view_id" ref="voucher_filter" />
+	</record>
+
+	<menuitem id="menu_inactivated_voucher"
+		parent="menu_voucher_root" action="view_inactivated_voucher_action"
+		name="Inactivated Vouchers" sequence="1" />
+	<menuitem id="menu_new_voucher" parent="menu_voucher_root"
+		action="view_activated_voucher_action" name="Activated Vouchers"
+		sequence="2" />
+	<menuitem id="menu_expired_voucher" parent="menu_voucher_root"
+		action="view_expired_voucher_action" name="Expired Vouchers"
+		sequence="3" />
+	<menuitem id="menu_used_voucher" parent="menu_voucher_root"
+		action="view_used_voucher_action" name="Used Vouchers" sequence="4" />
+
+	<record id="action_server_voucher_set_expire"
+		model="ir.actions.server">
+		<field name="name">Set Expired</field>
+		<field name="type">ir.actions.server</field>
+		<field name="model_id" ref="model_voucher_voucher" />
+		<field name="binding_model_id" ref="model_voucher_voucher" />
+		<field name="state">code</field>
+		<field name="code">records.action_set_expiry()</field>
+	</record>
+</odoo>

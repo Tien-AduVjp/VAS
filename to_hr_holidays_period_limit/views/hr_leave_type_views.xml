@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="edit_holiday_status_form">
+			<field name="name">Holiday Type</field>
+			<field name="model">hr.leave.type</field>
+			<field name="inherit_id"
+				ref="hr_holidays.edit_holiday_status_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='allocation_type']"
+					position="after">
+					<label for="max_leave_days" />
+					<div class="o_row">
+						<field name="max_leave_days"
+							attrs="{'invisible': [('allocation_type','=', 'no')]}" />
+						/
+						<field name="leave_period_unit"
+							attrs="{'invisible': [('allocation_type','=', 'no')], 'required': [('max_leave_days', '&gt;', 0)]}" />
+					</div>
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="view_holiday_status_normal_tree">
+			<field name="name">hr.holidays.status.normal.tree</field>
+			<field name="model">hr.leave.type</field>
+			<field name="inherit_id"
+				ref="hr_holidays.view_holiday_status_normal_tree" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='allocation_type']"
+					position="after">
+					<field name="max_leave_days" />
+					<field name="leave_period_unit" />
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

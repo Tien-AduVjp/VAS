@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="cost_deferral_category_tree"
+			model="ir.ui.view">
+			<field name="name">cost.revenue.deferral.category.tree</field>
+			<field name="model">cost.revenue.deferral.category</field>
+			<field name="arch" type="xml">
+				<tree string="Cost Deferral Category">
+					<field name="name" />
+					<field name="type" invisible="1" />
+					<field name="journal_id" />
+					<field name="deferred_account_id" />
+					<field name="recognition_account_id" />
+					<field name="method_time" />
+					<field name="company_id" groups="base.group_multi_company" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="cost_deferral_category_form" model="ir.ui.view">
+			<field name="name">cost.revenue.deferral.category.form</field>
+			<field name="model">cost.revenue.deferral.category</field>
+			<field name="arch" type="xml">
+				<form string="Cost Deferral Category">
+					<sheet>
+						<h1>
+							<field name="name" />
+						</h1>
+						<group>
+							<group string="Accounting">
+								<field name="type" invisible="1" />
+								<field name="journal_id" />
+								<field name="deferred_account_id"
+									help="A prepaid expense account" />
+								<field name="recognition_account_id"
+									help="An account to store recognition moves. It is usually a cost account" />
+								<field name="account_disposal_deferral_id" />
+								<field name="account_analytic_id"
+									groups="analytic.group_analytic_accounting" />
+								<field name="analytic_tag_ids" widget="many2many_tags"
+									groups="analytic.group_analytic_tags" />
+								<field name="company_id" widget="selection"
+									groups="base.group_multi_company" />
+							</group>
+							<group string="Periodicity">
+								<field name="method_time" />
+								<field name="method_number"
+									attrs="{'invisible':[('method_time','=','end')], 'required':[('method_time','=','number')]}" />
+								<label for="method_period" />
+								<div>
+									<field name="method_period" class="oe_inline" />
+									months
+								</div>
+								<field name="method_end"
+									attrs="{'required': [('method_time','=','end')], 'invisible':[('method_time','=','number')]}" />
+							</group>
+							<group string="Additional Options">
+								<field name="auto_create_move" />
+							</group>
+							<group string="Deferral Method" invisible="1">
+								<field name="method" invisible="1" />
+							</group>
+						</group>
+						<separator string="Notes" />
+						<field name="note" />
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<!-- Cost Action -->
+
+		<record id="cost_deferral_category_action"
+			model="ir.actions.act_window">
+			<field name="name">Cost Deferral Categories</field>
+			<field name="res_model">cost.revenue.deferral.category</field>
+			<field name="view_mode">tree,form</field>
+			<field name="view_ids"
+				eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('cost_deferral_category_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('cost_deferral_category_form')})]" />
+			<field name="domain">[('type','=','cost')]</field>
+			<field name="context">{'default_type':'cost'}</field>
+		</record>
+
+		<menuitem id="cost_deferral_category_menu"
+			groups="account.group_account_user" name="Cost Deferral Categories"
+			action="cost_deferral_category_action"
+			parent="account.account_management_menu" sequence="1" />
+
+		<record id="revenue_deferral_category_form" model="ir.ui.view">
+			<field name="name">cost.revenue.deferral.category.form</field>
+			<field name="model">cost.revenue.deferral.category</field>
+			<field name="arch" type="xml">
+				<form string="Revenue Deferral Category">
+					<sheet>
+						<h1>
+							<field name="name" />
+						</h1>
+						<group>
+							<group string="Accounting">
+								<field name="type" invisible="1" />
+								<field name="journal_id" />
+								<field name="deferred_account_id"
+									help="An unearn revenue account" />
+								<field name="recognition_account_id"
+									help="An account to store recognition moves. It is usually an income account" />
+								<field name="account_disposal_deferral_id" />
+								<field name="account_analytic_id" 
+									groups="analytic.group_analytic_accounting"/>
+								<field name="analytic_tag_ids" widget="many2many_tags"
+									groups="analytic.group_analytic_tags" />
+								<field name="company_id" widget="selection"
+									groups="base.group_multi_company" />
+							</group>
+							<group string="Periodicity">
+								<field name="method_time" />
+								<field name="method_number"
+									attrs="{'invisible':[('method_time','=','end')], 'required':[('method_time','=','number')]}" />
+								<label for="method_period" />
+								<div>
+									<field name="method_period" class="oe_inline" />
+									months
+								</div>
+								<field name="method_end"
+									attrs="{'required': [('method_time','=','end')], 'invisible':[('method_time','=','number')]}" />
+							</group>
+							<group string="Deferral Method" invisible="1">
+								<field name="method" invisible="1" />
+							</group>
+						</group>
+						<separator string="Notes" />
+						<field name="note" />
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record id="revenue_deferral_category_tree"
+			model="ir.ui.view">
+			<field name="name">cost.revenue.deferral.category.tree</field>
+			<field name="model">cost.revenue.deferral.category</field>
+			<field name="arch" type="xml">
+				<tree string="Revenue Deferral Category">
+					<field name="name" />
+					<field name="type" invisible="1" />
+					<field name="journal_id" />
+					<field name="deferred_account_id" />
+					<field name="recognition_account_id" />
+					<field name="method_time" />
+					<field name="company_id" groups="base.group_multi_company" />
+				</tree>
+			</field>
+		</record>
+		<!-- Revenue Action -->
+
+		<record id="revenue_deferral_category_action"
+			model="ir.actions.act_window">
+			<field name="name">Revenue Deferral Categories</field>
+			<field name="res_model">cost.revenue.deferral.category</field>
+			<field name="view_mode">tree,form</field>
+			<field name="view_ids"
+				eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('revenue_deferral_category_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('revenue_deferral_category_form')})]" />
+			<field name="domain">[('type','=','revenue')]</field>
+			<field name="context">{'default_type':'revenue'}</field>
+		</record>
+
+		<menuitem id="revenue_deferral_category_menu"
+			name="Revenue Deferral Categories"
+			groups="account.group_account_user"
+			action="revenue_deferral_category_action"
+			parent="account.account_management_menu" sequence="2" />
+
+	</data>
+</odoo>

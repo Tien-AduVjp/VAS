@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-extend="PaymentScreenWidget">
+        <t t-jquery='.payment-buttons' t-operation='append'>
+	        <div t-attf-class='button js_delivery'>
+                <i class='fa fa-truck' /> Delivery
+            </div>
+            <div t-attf-class='input-delivery hidden'>
+            	<div class='delivery-method'>Delivery Method:</div>
+            	<select class='input-delivery-method needsclick'>
+                    <option value=''>None</option>
+                    <t t-foreach='widget.pos.deliveries' t-as='method'>
+                        <option t-att-value='method.id'> 
+                            <t t-esc='method.name'/>
+                        </option>
+                    </t>
+                </select>
+            	
+            	<div class='date-delivery'>Delivery Date:</div>
+            	<div>
+	            	<input type="date" class="input-date"/>
+                    <input type="time" class="input-time"/>
+            	</div>
+            </div>
+   		</t>
+    </t>
+</templates>

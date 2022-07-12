@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="view_picking_form">
+			<field name="name">stock.picking.form</field>
+			<field name="model">stock.picking</field>
+			<field name="inherit_id" ref="stock.view_picking_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='location_dest_id']" position="after">
+					<field name="fleet_service_type_id"
+						attrs="{'invisible':[('picking_type_code','!=','fleet_consumption')], 'required':[('picking_type_code','=','fleet_consumption')]}" />
+				</xpath>
+				<xpath expr="//page/field[@name='move_ids_without_package']" position="attributes">
+					<attribute name="context">{'default_picking_code': picking_type_code, 'default_company_id': company_id, 'picking_type_code': picking_type_code, 'default_picking_id': id, 'form_view_ref':'stock.view_move_form', 'address_in_id': partner_id, 'default_picking_type_id': picking_type_id, 'default_location_id': location_id, 'default_location_dest_id': location_dest_id}</attribute>
+				</xpath>
+				<xpath expr="//page/field[@name='move_ids_without_package']/tree/field[@name='product_uom_qty']" position="after">
+					<field name="vehicle_id"
+						attrs="{'column_invisible': [('parent.picking_type_code', '!=', 'fleet_consumption')], 'required':[('picking_code','=','fleet_consumption')]}" />
+				</xpath>
+			</field>
+		</record>
+
+		<record id="stock_production_type_kanban" model="ir.ui.view">
+			<field name="name">stock.picking.type.kanban</field>
+			<field name="model">stock.picking.type</field>
+			<field name="inherit_id" ref="stock.stock_picking_type_kanban" />
+			<field name="arch" type="xml">
+				<xpath expr='//div[@name="stock_picking"]' position="attributes">
+					<attribute name="t-if">['incoming', 'outgoing', 'internal','fleet_consumption'].indexOf(record.code.raw_value) &gt; -1</attribute>
+				</xpath>
+				<xpath expr='//button[@name="get_action_picking_tree_ready"]'
+					position="inside">
+					<span t-if="record.code.raw_value =='fleet_consumption'">
+						<t t-esc="record.count_picking_ready.value" />
+						Consumptions
+					</span>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

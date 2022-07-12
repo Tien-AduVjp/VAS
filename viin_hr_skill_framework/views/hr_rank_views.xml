@@ -1,0 +1,65 @@
+<odoo>
+	<data>
+
+		<record model="ir.ui.view" id="view_hr_rank_form">
+			<field name="name">hr.rank.form</field>
+			<field name="model">hr.rank</field>
+			<field name="inherit_id" ref="viin_hr_rank.view_hr_rank_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//div[@name='button_box']" position="inside">
+					<button name="action_view_required_skill_descriptions"
+						class="oe_stat_button" icon="fa-book" type="object">
+						<field name="skill_descriptions_count" widget="statinfo"
+							string="Required Skills" />
+					</button>
+					<button name="action_view_preferred_skill_descriptions"
+						class="oe_stat_button" icon="fa-book" type="object">
+						<field name="preferred_skill_descriptions_count"
+							widget="statinfo" string="Preferred Skills" />
+					</button>
+				</xpath>
+				<xpath expr="//page[@name='applied_job']" position="before">
+					<page name="skills" string="Skill Framework">
+						<separator string="Direct Skills Requirements" />
+						<field name="rank_skill_description_ids">
+							<tree editable="bottom">
+								<field name="skill_type_id" />
+								<field name="skill_id" />
+								<field name="skill_level_id" />
+								<field name="level_progress" widget="progressbar" />
+								<field name="expectation" />
+								<field name="skill_description_id" />
+							</tree>
+						</field>
+						<separator string="Child Skills Requirements" />
+						<field name="child_rank_skill_description_ids">
+							<tree>
+								<field name="skill_type_id" />
+								<field name="skill_id" />
+								<field name="skill_level_id" invisible="1" />
+								<field name="level_progress" widget="progressbar" />
+								<field name="expectation" />
+								<field name="skill_description_id"
+									groups="base.group_no_one" />
+							</tree>
+						</field>
+						<separator string="Consolidated Skills Requirements" />
+						<field name="consolidated_rank_skill_description_ids">
+							<tree>
+								<field name="skill_type_id" />
+								<field name="skill_id" />
+								<field name="skill_level_id" invisible="1" />
+								<field name="level_progress" widget="progressbar" />
+								<field name="expectation" />
+								<field name="skill_description_id" />
+							</tree>
+						</field>
+					</page>
+				</xpath>
+			</field>
+		</record>
+
+		<menuitem name="Ranks" id="menu_rank" parent="menu_root"
+			action="viin_hr_rank.action_hr_rank" sequence="40" />
+	</data>
+</odoo>

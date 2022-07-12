@@ -1,0 +1,86 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_mobile_notification
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-25 09:25+0000\n"
+"PO-Revision-Date: 2021-05-25 09:25+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_mobile_notification
+#: code:addons/viin_mobile_notification/models/mail_thread.py:0
+#, python-format
+msgid "Change stage to "
+msgstr "Chuyển trạng thái đến "
+
+#. module: viin_mobile_notification
+#: code:addons/viin_mobile_notification/models/mail_thread.py:0
+#, python-format
+msgid "Channel: "
+msgstr "Kênh: "
+
+#. module: viin_mobile_notification
+#: model_terms:ir.ui.view,arch_db:viin_mobile_notification.mail_channel_view_form
+msgid "Receive"
+msgstr "Nhận"
+
+#. module: viin_mobile_notification
+#: model:ir.model.fields,field_description:viin_mobile_notification.field_mail_channel__receive_mobile_notification
+msgid "Receive notification on mobile"
+msgstr "Nhận thông báo trên điện thoại"
+
+#. module: viin_mobile_notification
+#: code:addons/viin_mobile_notification/models/mail_thread.py:0
+#, python-format
+msgid "You may have new notification"
+msgstr "Bạn có thông báo mới"
+
+#. module: viin_mobile_notification
+#: code:addons/viin_mobile_notification/models/mail_thread.py:0
+#, python-format
+msgid "Your post have been approved"
+msgstr "Bài đăng của bạn đã được phê duyệt"
+
+#. module: viin_mobile_notification
+#: model:ir.model.fields,field_description:viin_mobile_notification.field_res_config_settings__mobile_notify_provider
+msgid "Mobile notification provider"
+msgstr "Nhà cung cấp thông báo cho thiết bị di động"
+
+#. module: viin_mobile_notification
+#: model:ir.model.fields,field_description:viin_mobile_notification.field_res_config_settings__mobile_notify_type
+msgid "Notification type"
+msgstr "Kiểu thông báo"
+
+#. module: viin_mobile_notification
+#: model:ir.model.fields,field_description:viin_mobile_notification.field_res_config_settings__mobile_notify_auth_key
+msgid "Mobile notification auth key"
+msgstr "Mã khoá API của nhà cung cấp"
+
+#. module: viin_mobile_notification
+#: model:ir.model.fields,field_description:viin_mobile_notification.field_res_config_settings__mobile_notify_max_retry
+msgid "Max retry"
+msgstr "Số lần gửi lại tối đa"
+
+#. module: viin_mobile_notification
+#: model:ir.model.fields,field_description:viin_mobile_notification.field_res_config_settings__mobile_base_package
+#: model_terms:ir.ui.view,arch_db:viin_mobile_notification.res_config_settings_view_form
+msgid "Base package"
+msgstr ""
+
+#. module: viin_mobile_notification
+#: model:ir.model.fields,help:viin_mobile_notification.field_res_config_settings__mobile_base_package
+msgid ""
+"If the models's notifications are not specified by the application, those "
+"notifications will be sent to the application whose package name is base "
+"package."
+msgstr ""
+"Nếu thông báo của các model không được chỉ định gửi đến một ứng dụng mobile, "
+"thì các thông báo đó sẽ được gửi đến ứng dụng base."

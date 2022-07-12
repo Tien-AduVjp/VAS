@@ -1,0 +1,440 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_cash_flow_forecast
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-07-21 08:45+0000\n"
+"PO-Revision-Date: 2020-07-21 08:45+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields.selection,name:to_cash_flow_forecast.selection__cash_flow_forecast_report__resource__account_payable
+msgid "Account Payable"
+msgstr "Tài khoản phải trả"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields.selection,name:to_cash_flow_forecast.selection__cash_flow_forecast_report__resource__account_receivable
+msgid "Account Receivable"
+msgstr "Tài khoản phải thu"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_user_input__message_needaction
+msgid "Action Needed"
+msgstr "Cần có Hành động"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_user_input__activity_ids
+msgid "Activities"
+msgstr "Các hoạt động"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_user_input__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Đánh dấu hoạt động ngoại lệ"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_user_input__activity_state
+msgid "Activity State"
+msgstr "Trạng thái Hoạt động"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_forecast_report__amount
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_user_input__amount
+msgid "Amount"
+msgstr "Tổng tiền"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_user_input__message_attachment_count
+msgid "Attachment Count"
+msgstr "Số lượng đính kèm"
+
+#. module: to_cash_flow_forecast
+#: model_terms:ir.ui.view,arch_db:to_cash_flow_forecast.cash_flow_user_input_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields.selection,name:to_cash_flow_forecast.selection__cash_flow_user_input__state__cancel
+msgid "Canceled"
+msgstr "Đã Hủy"
+
+#. module: to_cash_flow_forecast
+#: model:ir.actions.act_window,name:to_cash_flow_forecast.action_cash_flow_forecast_pivot
+#: model:ir.ui.menu,name:to_cash_flow_forecast.cash_flow_forecast_menu
+#: model:ir.ui.menu,name:to_cash_flow_forecast.cash_flow_forecast_root_menu
+#: model_terms:ir.ui.view,arch_db:to_cash_flow_forecast.view_cash_flow_forecast_graph
+#: model_terms:ir.ui.view,arch_db:to_cash_flow_forecast.view_cash_flow_forecast_pivot
+#: model_terms:ir.ui.view,arch_db:to_cash_flow_forecast.view_cash_flow_forecast_search
+msgid "Cash Flow Forecast"
+msgstr "Dự Báo Dòng Tiền"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model,name:to_cash_flow_forecast.model_cash_flow_forecast_report
+msgid "Cash Flow Forecast Report"
+msgstr "Báo Cáo Dự Báo Dòng Tiền"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model,name:to_cash_flow_forecast.model_cash_flow_user_input
+#: model_terms:ir.ui.view,arch_db:to_cash_flow_forecast.cash_flow_user_input_form
+msgid "Cash Flow User Input"
+msgstr "Dữ Liệu Đầu Vào Của Dòng Tiền"
+
+#. module: to_cash_flow_forecast
+#: model:ir.actions.act_window,name:to_cash_flow_forecast.action_cash_flow_user_input_confirm
+#: model:ir.actions.act_window,name:to_cash_flow_forecast.action_cash_flow_user_input_draft
+#: model_terms:ir.ui.view,arch_db:to_cash_flow_forecast.cash_flow_user_input_tree
+msgid "Cash Flow User Inputs"
+msgstr "Dữ Liệu Đầu Vào Của Dòng Tiền"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields.selection,name:to_cash_flow_forecast.selection__cash_flow_forecast_report__type__cash_in
+#: model:ir.model.fields.selection,name:to_cash_flow_forecast.selection__cash_flow_user_input__type__cash_in
+#: model_terms:ir.ui.view,arch_db:to_cash_flow_forecast.view_cash_flow_forecast_search
+msgid "Cash In"
+msgstr "Tiền Vào"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields.selection,name:to_cash_flow_forecast.selection__cash_flow_forecast_report__type__cash_out
+#: model:ir.model.fields.selection,name:to_cash_flow_forecast.selection__cash_flow_user_input__type__cash_out
+#: model_terms:ir.ui.view,arch_db:to_cash_flow_forecast.view_cash_flow_forecast_search
+msgid "Cash Out"
+msgstr "Tiền Ra"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_user_input__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: to_cash_flow_forecast
+#: model_terms:ir.ui.view,arch_db:to_cash_flow_forecast.cash_flow_user_input_form
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields.selection,name:to_cash_flow_forecast.selection__cash_flow_user_input__state__confirm
+#: model_terms:ir.ui.view,arch_db:to_cash_flow_forecast.cash_flow_user_input_search
+msgid "Confirmed"
+msgstr "Đã được xác nhận"
+
+#. module: to_cash_flow_forecast
+#: model:ir.ui.menu,name:to_cash_flow_forecast.cash_flow_user_input_confirm_menu
+msgid "Confirmed Inputs"
+msgstr "Đã được xác nhận Dữ Liệu Đầu Vào"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_user_input__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_user_input__create_date
+msgid "Created on"
+msgstr "Được tạo vào"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_user_input__currency_id
+msgid "Currency"
+msgstr "Tiền tệ"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_user_input__date
+msgid "Date"
+msgstr "Ngày"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_forecast_report__date
+msgid "Date Forecast"
+msgstr "Ngày dự báo"
+
+#. module: to_cash_flow_forecast
+#: model_terms:ir.ui.view,arch_db:to_cash_flow_forecast.cash_flow_user_input_form
+msgid "Description of the cash flow input data and its reason ..."
+msgstr "Miêu tả về dữ liệu dòng vào và lý do của nó"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_forecast_report__display_name
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_user_input__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields.selection,name:to_cash_flow_forecast.selection__cash_flow_user_input__state__draft
+#: model_terms:ir.ui.view,arch_db:to_cash_flow_forecast.cash_flow_user_input_search
+msgid "Draft"
+msgstr "Dự Thảo"
+
+#. module: to_cash_flow_forecast
+#: model:ir.ui.menu,name:to_cash_flow_forecast.cash_flow_user_input_draft_menu
+msgid "Draft Inputs"
+msgstr "Dự Thảo Đầu Vào"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_user_input__message_follower_ids
+msgid "Followers"
+msgstr "Theo dõi"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_user_input__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Người theo dõi (Các kênh)"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_user_input__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Người theo dõi (Các đối tác)"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_forecast_report__id
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_user_input__id
+msgid "ID"
+msgstr "ID"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_user_input__activity_exception_icon
+msgid "Icon"
+msgstr "Biểu tượng"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,help:to_cash_flow_forecast.field_cash_flow_user_input__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Biểu tượng để chỉ ra một hoạt động ngoại lệ"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,help:to_cash_flow_forecast.field_cash_flow_user_input__message_needaction
+#: model:ir.model.fields,help:to_cash_flow_forecast.field_cash_flow_user_input__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Nếu đánh dấu chọn, các thông điệp mới yêu cầu sự có mặt của bạn."
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,help:to_cash_flow_forecast.field_cash_flow_user_input__message_has_error
+#: model:ir.model.fields,help:to_cash_flow_forecast.field_cash_flow_user_input__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Nếu được đánh dấu, thông điệp có lỗi về gửi tin."
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_user_input__message_is_follower
+msgid "Is Follower"
+msgstr "Là người theo dõi"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_forecast_report____last_update
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_user_input____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_user_input__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_user_input__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_user_input__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Đính kèm chính"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_user_input__message_has_error
+msgid "Message Delivery error"
+msgstr "Có Lỗi Gửi Thông điệp"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_user_input__message_ids
+msgid "Messages"
+msgstr "Thông điệp"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_user_input__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Hạn chót lần hành động kế tiếp"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_user_input__activity_summary
+msgid "Next Activity Summary"
+msgstr "Tóm tắt hoạt động tiếp theo"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_user_input__activity_type_id
+msgid "Next Activity Type"
+msgstr "Kiểu hành động kế tiếp"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_user_input__note
+#: model_terms:ir.ui.view,arch_db:to_cash_flow_forecast.cash_flow_user_input_form
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_user_input__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Số lượng Hành động"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_user_input__message_has_error_counter
+msgid "Number of errors"
+msgstr "Số lượng lỗi"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,help:to_cash_flow_forecast.field_cash_flow_user_input__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Số thông điệp cần có hành động"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,help:to_cash_flow_forecast.field_cash_flow_user_input__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Số lượng các thông điệp có lỗi về gửi tin"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,help:to_cash_flow_forecast.field_cash_flow_user_input__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Số thông điệp chưa đọc"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_forecast_report__partner_id
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_user_input__partner_id
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields.selection,name:to_cash_flow_forecast.selection__cash_flow_forecast_report__resource__purchase_order
+msgid "Purchase Order"
+msgstr "Đơn mua"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_forecast_report__name
+#: model_terms:ir.ui.view,arch_db:to_cash_flow_forecast.cash_flow_user_input_search
+msgid "Reference"
+msgstr "Tham chiếu"
+
+#. module: to_cash_flow_forecast
+#: model:ir.ui.menu,name:to_cash_flow_forecast.report_menu
+msgid "Reports"
+msgstr "Báo cáo"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_forecast_report__resource
+msgid "Resource"
+msgstr "Nguồn lực"
+
+#. module: to_cash_flow_forecast
+#: model_terms:ir.ui.view,arch_db:to_cash_flow_forecast.view_cash_flow_forecast_search
+msgid "Resource without User Input"
+msgstr "Nguồn lực không phải của người dùng nhập"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_user_input__activity_user_id
+msgid "Responsible User"
+msgstr "Người chịu trách nhiệm"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_user_input__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Lỗi gửi SMS"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields.selection,name:to_cash_flow_forecast.selection__cash_flow_forecast_report__resource__sale_order
+msgid "Sale Orders"
+msgstr "Đơn bán"
+
+#. module: to_cash_flow_forecast
+#: model_terms:ir.ui.view,arch_db:to_cash_flow_forecast.cash_flow_user_input_search
+msgid "Search Cash Flow user Inputs"
+msgstr "Nghiên cứu dòng tiền nhập vào của người dùng"
+
+#. module: to_cash_flow_forecast
+#: model_terms:ir.ui.view,arch_db:to_cash_flow_forecast.cash_flow_user_input_form
+msgid "Set to Draft"
+msgstr "Đặt về dự thảo"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_user_input__name
+#: model_terms:ir.ui.view,arch_db:to_cash_flow_forecast.cash_flow_user_input_form
+msgid "Short Summary"
+msgstr "Tóm tắt ngắn gọn"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields.selection,name:to_cash_flow_forecast.selection__cash_flow_forecast_report__resource___a0_start_cash_balance
+#: model:ir.model.fields.selection,name:to_cash_flow_forecast.selection__cash_flow_forecast_report__type___a0_start_cash_balance
+msgid "Start Cash Balance"
+msgstr "Số Dư Tiền Mặt Ban Đầu"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_user_input__state
+msgid "State"
+msgstr "Bang / Tỉnh"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,help:to_cash_flow_forecast.field_cash_flow_user_input__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Trạng thái dựa trên hoạt động\n"
+"Quá hạn: Ngày đến hạn đã trôi qua\n"
+"Hôm nay: Hôm nay là ngày phải thực hiện\n"
+"Đã hoạch định: Các hoạt động trong tương lai."
+
+#. module: to_cash_flow_forecast
+#: model_terms:ir.ui.view,arch_db:to_cash_flow_forecast.view_cash_flow_forecast_search
+msgid "To end of next year"
+msgstr "Cuối năm sau"
+
+#. module: to_cash_flow_forecast
+#: model_terms:ir.ui.view,arch_db:to_cash_flow_forecast.view_cash_flow_forecast_search
+msgid "To end of this year"
+msgstr "Hết năm nay"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_forecast_report__type
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_user_input__type
+msgid "Type"
+msgstr "Kiểu"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,help:to_cash_flow_forecast.field_cash_flow_user_input__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Loại hoạt động ngoại lệ trên bản ghi."
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_user_input__message_unread
+msgid "Unread Messages"
+msgstr "Thông điệp chưa đọc"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_user_input__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Bộ đếm Thông điệp chưa đọc"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields.selection,name:to_cash_flow_forecast.selection__cash_flow_forecast_report__resource__user_input
+msgid "User Inputs"
+msgstr "Đầu Vào Của Người Dùng"
+
+#. module: to_cash_flow_forecast
+#: model:ir.ui.menu,name:to_cash_flow_forecast.user_input_menu
+msgid "User Inputs Data"
+msgstr "Dữ Liệu Đầu Vào Của Người Dùng"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,field_description:to_cash_flow_forecast.field_cash_flow_user_input__website_message_ids
+msgid "Website Messages"
+msgstr "Thông điệp Website"
+
+#. module: to_cash_flow_forecast
+#: model:ir.model.fields,help:to_cash_flow_forecast.field_cash_flow_user_input__website_message_ids
+msgid "Website communication history"
+msgstr "Lịch sử thông tin liên lạc website"

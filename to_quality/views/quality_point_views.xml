@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="quality_point_view_tree" model="ir.ui.view">
+		<field name="name">quality.point.tree</field>
+		<field name="model">quality.point</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="sequence" widget="handle" />
+				<field name="name" />
+				<field name="title" />
+				<field name="product_tmpl_id" />
+			</tree>
+		</field>
+	</record>
+
+	<record id="quality_point_view_form" model="ir.ui.view">
+		<field name="name">quality.point.form</field>
+		<field name="model">quality.point</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<div class="oe_button_box" name="button_box">
+						<button name="action_see_quality_checks" type="object"
+							icon="fa-check" class="oe_stat_button">
+							<field string="Quality Checks" name="check_count" widget="statinfo" />
+						</button>
+						<button name="action_see_spc_control" type="object"
+							class="oe_stat_button"
+							attrs="{'invisible': ['|', ('check_count', '=', 0), '|', ('average', '=', 0), ('test_type', '!=', 'measure')]}">
+							<span class="fa fa-2x" data-icon="&#x2211;"
+								style="padding-left: 10px;" role="img" aria-label="Statistics"
+								title="Statistics" />
+							<div class="o_field_widget o_stat_info mr4">
+								<span class="o_stat_text">AVG:</span>
+								<span class="o_stat_text">STD:</span>
+							</div>
+							<div class="o_field_widget o_stat_info">
+								<span class="o_stat_value">
+									<field name="average" />
+								</span>
+								<span class="o_stat_value">
+									<field name="standard_deviation" />
+								</span>
+							</div>
+						</button>
+						<field name="active" invisible="1"/>
+						<widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+					</div>
+					<h2>
+						<field name="name" />
+					</h2>
+					<group>
+						<group>
+							<field name="title" />
+							<field name="product_tmpl_id" />
+							<field name="product_id" groups="product.group_product_variant" />
+							<field name="no_proceed_if_failed" />
+							<field name="company_id" groups="base.group_multi_company" />
+						</group>
+						<group name="measures">
+							<field name="measure_frequency_type" string="Control Type" />
+							<label for="measure_frequency_value"
+								string="Control Frequency"
+								attrs="{'invisible': [('measure_frequency_type', '=', 'all')]}" />
+							<div class="o_row"
+								attrs="{'invisible': [('measure_frequency_type', '=', 'all')]}">
+								<span
+									attrs="{'invisible': [('measure_frequency_type', '=', 'all')]}">Every </span>
+								<field name="measure_frequency_value" nolabel="1"
+									attrs="{'invisible': [('measure_frequency_type', '!=', 'random')]}" />
+								<label for="measure_frequency_value"
+									string="% of the operation"
+									attrs="{'invisible': [('measure_frequency_type', '!=', 'random')]}" />
+								<field name="measure_frequency_unit_value" nolabel="1"
+									attrs="{'invisible': [('measure_frequency_type', '!=', 'periodical')]}" />
+								<field name="measure_frequency_unit"
+									attrs="{'invisible': [('measure_frequency_type', '!=', 'periodical')]}" />
+							</div>
+							<field name="test_type" invisible="1" />
+							<field name="test_type_id" widget="selection" string="Type" />
+							<label for="norm"
+								attrs="{'invisible': [('test_type', '!=', 'measure')]}" />
+							<div class="o_row"
+								attrs="{'invisible': [('test_type', '!=', 'measure')]}">
+								<field name="norm"
+									attrs="{'required': [('test_type', '=', 'measure')]}" />
+								<field name="norm_unit"
+									attrs="{'required': [('test_type', '=', 'measure')]}" />
+							</div>
+							<label for="tolerance_min" string="Tolerance"
+								attrs="{'invisible': [('test_type', '!=', 'measure')]}" />
+							<div attrs="{'invisible': [('test_type', '!=', 'measure')]}"
+								class="o_row">
+								<span>from </span>
+								<field name="tolerance_min" />
+								<span>to </span>
+								<field name="tolerance_max" />
+							</div>
+							<label for="quantity_to_check" />
+							<div class="o_row">
+								<field name="quantity_to_check" />
+								%
+							</div>
+							<field name="team_id" widget="selection" />
+							<field name="user_id" />
+						</group>
+					</group>
+					<notebook>
+						<page name="instructions" string="Instructions">
+							<field name="note"
+								placeholder="Describe the quality check to do..." />
+						</page>
+						<page string="Notes" name="notes">
+							<field name="reason" string="Note"
+								placeholder="Describe why you need to perform this quality check..." />
+						</page>
+						<page name="message_if_failure" string="Message If Failure"
+							attrs="{'invisible': [('test_type', '!=', 'measure')]}">
+							<field name="failure_message" />
+						</page>
+					</notebook>
+				</sheet>
+				<div class="oe_chatter">
+					<field name="message_follower_ids" widget="mail_followers" />
+					<field name="message_ids" widget="mail_thread" />
+				</div>
+			</form>
+		</field>
+	</record>
+
+	<record id="quality_point_view_kanban" model="ir.ui.view">
+		<field name="name">quality.point.kanban</field>
+		<field name="model">quality.point</field>
+		<field name="arch" type="xml">
+			<kanban class="o_kanban_mobile">
+				<field name="name" />
+				<field name="product_tmpl_id" />
+				<templates>
+					<t t-name="kanban-box">
+						<div t-attf-class="oe_kanban_card oe_kanban_global_click">
+							<div>
+								<strong>
+									<t t-esc="record.name.value" />
+								</strong>
+							</div>
+							<div>
+								<strong>Product template:</strong>
+								<t t-esc="record.product_tmpl_id.value" />
+							</div>
+						</div>
+					</t>
+				</templates>
+			</kanban>
+		</field>
+	</record>
+
+	<record id="quality_point_view_search" model="ir.ui.view">
+		<field name="name">quality.point.search</field>
+		<field name="model">quality.point</field>
+		<field name="arch" type="xml">
+			<search string="Search Quality Point">
+				<field name="name" />
+				<field name="title" />
+				<field name="user_id" />
+				<field name="team_id" />
+				<field name="product_tmpl_id" />
+				<field name="product_id" groups="product.group_product_variant" />
+				<filter name="ftr_inactive" string="Archived" domain="[('active','=',False)]" />
+			</search>
+		</field>
+	</record>
+
+	<record id="template_open_quality_point" model="ir.actions.act_window">
+		<field name="name">Quality Points</field>
+		<field name="res_model">quality.point</field>
+		<field name="context">{'default_product_tmpl_id': active_id, 'search_default_product_tmpl_id': active_id}</field>
+	</record>
+
+	<record id="quality_point_action" model="ir.actions.act_window">
+		<field name="name">Quality Control Points</field>
+		<field name="res_model">quality.point</field>
+		<field name="view_mode">tree,kanban,form</field>
+		<field name="search_view_id" ref="quality_point_view_search" />
+	</record>
+
+	<menuitem id="quality_point_menu" name="Control Points" parent="quality_controls_menu"
+		action="quality_point_action"
+		groups="to_quality.group_quality_manager" sequence="20" />
+
+</odoo>

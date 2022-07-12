@@ -1,0 +1,86 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_accounting_entry_report_flag
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-16 04:34+0000\n"
+"PO-Revision-Date: 2021-03-16 04:34+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_accounting_entry_report_flag
+#: model:res.groups,name:to_accounting_entry_report_flag.group_accounting_report_flag_manager
+msgid "Accounting Report Flag Manager"
+msgstr "Bật/Tắt Loại trừ phát sinh bút toán ở Báo cáo Luật định"
+
+#. module: to_accounting_entry_report_flag
+#: model:ir.model.fields,field_description:to_accounting_entry_report_flag.field_account_move__legal_report_off
+#: model:ir.model.fields,field_description:to_accounting_entry_report_flag.field_account_move_line__legal_report_off
+#: model_terms:ir.ui.view,arch_db:to_accounting_entry_report_flag.view_account_move_line_filter
+msgid "Excluded in Legal Reports"
+msgstr "Loại trừ khỏi Báo cáo Luật định"
+
+#. module: to_accounting_entry_report_flag
+#: model:ir.actions.server,name:to_accounting_entry_report_flag.action_server_account_move_report_flag_off
+#: model:ir.actions.server,name:to_accounting_entry_report_flag.action_server_aml_report_flag_off
+msgid "Flag Report Off"
+msgstr "Loại bỏ khỏi báo cáo"
+
+#. module: to_accounting_entry_report_flag
+#: model:ir.actions.server,name:to_accounting_entry_report_flag.action_server_account_move_report_flag_on
+#: model:ir.actions.server,name:to_accounting_entry_report_flag.action_server_aml_report_flag_on
+msgid "Flag Report On"
+msgstr "Bao gồm ở báo cáo"
+
+#. module: to_accounting_entry_report_flag
+#: model:ir.model,name:to_accounting_entry_report_flag.model_account_move
+msgid "Journal Entries"
+msgstr "Bút toán Sổ nhật ký"
+
+#. module: to_accounting_entry_report_flag
+#: model:ir.model,name:to_accounting_entry_report_flag.model_account_move_line
+msgid "Journal Item"
+msgstr "Phát sinh KT"
+
+#. module: to_accounting_entry_report_flag
+#: model_terms:ir.ui.view,arch_db:to_accounting_entry_report_flag.view_account_move_line_filter
+msgid "Legal Report On"
+msgstr "Bật ở Báo cáo Luật định"
+
+#. module: to_accounting_entry_report_flag
+#: model_terms:ir.ui.view,arch_db:to_accounting_entry_report_flag.view_move_line_form
+msgid "Legal Reports"
+msgstr "Báo cáo Luật định"
+
+#. module: to_accounting_entry_report_flag
+#: model:res.groups,comment:to_accounting_entry_report_flag.group_accounting_report_flag_manager
+msgid ""
+"Member of this group will have access rights to the field Excluded in Legal "
+"Reports of journal entries and journal items."
+msgstr ""
+"Thành viên của nhóm này sẽ có quyền truy cập tới trường Loại trừ khỏi Báo cáo Luật định"
+"của Bút toán và Phát sinh kế toán."
+
+#. module: to_accounting_entry_report_flag
+#: model_terms:ir.ui.view,arch_db:to_accounting_entry_report_flag.view_account_move_line_filter
+msgid "Show journal items that are flagged with Excluded in Legal Reports"
+msgstr "Hiển thị các phát sinh kế toán mà được gắn cờ Tắt ở Báo cáo Luật định"
+
+#. module: to_accounting_entry_report_flag
+#: model_terms:ir.ui.view,arch_db:to_accounting_entry_report_flag.view_account_move_line_filter
+msgid "Show journal items that are not flagged with Excluded in Legal Reports"
+msgstr ""
+"Hiển thị các phát sinh kế toán mà không được gắn cờ Tắt ở Báo cáo Luật định"
+
+#. module: to_accounting_entry_report_flag
+#: model:ir.model.fields,help:to_accounting_entry_report_flag.field_account_move__legal_report_off
+#: model:ir.model.fields,help:to_accounting_entry_report_flag.field_account_move_line__legal_report_off
+msgid "This field is for filtering in some legal reports"
+msgstr "Trường này để lọc trong một số báo cáo luật định"

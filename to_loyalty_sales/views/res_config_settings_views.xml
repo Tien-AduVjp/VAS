@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="res_config_settings_view_form" model="ir.ui.view">
+		<field name="name">res.config.settings.view.form.inherit.sale</field>
+		<field name="model">res.config.settings</field>
+		<field name="priority" eval="10" />
+		<field name="inherit_id"
+			ref="to_loyalty.res_config_settings_view_form" />
+		<field name="arch" type="xml">
+			<xpath
+				expr="//div[./div/field[@name='module_to_loyalty_sales']]"
+				position="after">
+				<div class="col-12 col-lg-6 o_setting_box">
+					<div class="o_setting_left_pane">
+					</div>
+					<div class="o_setting_right_pane">
+						<label for="loyalty_points_reward_policy" />
+						<div class="text-muted">
+							How you reward your customers with loyalty points
+						</div>
+						<div class="mt16">
+							<field name="loyalty_points_reward_policy"
+								class="o_light_label" widget="radio" />
+						</div>
+
+					</div>
+				</div>
+			</xpath>
+		</field>
+	</record>
+
+</odoo>

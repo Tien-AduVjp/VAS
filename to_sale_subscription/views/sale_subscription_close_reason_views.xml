@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="sale_subscription_close_reason_view_tree" model="ir.ui.view">
+		<field name="name">sale.subscription.reason.list</field>
+		<field name="model">sale.subscription.close.reason</field>
+		<field name="arch" type="xml">
+			<tree string="Close Reasons" editable="bottom">
+				<field name="sequence" widget="handle" />
+				<field name="name" />
+				<field name="active" />
+			</tree>
+		</field>
+	</record>
+	
+	<record id="sale_subscription_close_reason_view_form" model="ir.ui.view">
+		<field name="name">sale.subscription.close.reason.view.form</field>
+		<field name="model">sale.subscription.close.reason</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group>
+						<group>
+							<field name="name"/>
+							<field name="active" />
+						</group>
+						<group>
+							<field name="sequence"/>
+						</group>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+    <record id="sale_subscription_close_reason_view_search" model="ir.ui.view">
+            <field name="name">sale.subscription.close.reason.search</field>
+            <field name="model">sale.subscription.close.reason</field>
+            <field name="arch" type="xml">
+                <search string="Search Sale Subscription Close Reason">
+                    <filter string="Include archived" name="archived"
+                            domain="['|', ('active', '=', True), ('active', '=', False)]"/>
+                </search>
+            </field>
+        </record>
+
+	<record id="sale_subscription_close_reason_action" model="ir.actions.act_window">
+		<field name="name">Close Reasons</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">sale.subscription.close.reason</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+	<menuitem id="menu_sale_subscription_close_reason_action"  parent="menu_sale_subscription_config" sequence="10"
+		action="sale_subscription_close_reason_action"
+		groups="to_sale_subscription.group_sale_subscription_manager" />
+
+
+</odoo>

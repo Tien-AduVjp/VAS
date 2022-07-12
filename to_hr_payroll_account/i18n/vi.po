@@ -1,0 +1,346 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_hr_payroll_account
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-08 09:47+0000\n"
+"PO-Revision-Date: 2021-10-27 01:43+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_hr_payroll_account
+#: model:ir.model,name:to_hr_payroll_account.model_account_chart_template
+msgid "Account Chart Template"
+msgstr "Mẫu Hệ thống Tài khoản"
+
+#. module: to_hr_payroll_account
+#: model_terms:ir.ui.view,arch_db:to_hr_payroll_account.hr_contract_form_inherit
+#: model_terms:ir.ui.view,arch_db:to_hr_payroll_account.hr_salary_rule_form_inherit
+msgid "Accounting"
+msgstr "Kế toán"
+
+#. module: to_hr_payroll_account
+#: model:ir.model.fields,field_description:to_hr_payroll_account.field_hr_payslip__date
+#: model:ir.model.fields,field_description:to_hr_payroll_account.field_hr_payslip_run__date
+msgid "Accounting Date"
+msgstr "Ngày kế toán"
+
+#. module: to_hr_payroll_account
+#: model:ir.model.fields,field_description:to_hr_payroll_account.field_hr_payslip__move_id
+msgid "Accounting Entry"
+msgstr "Bút toán Kế toán"
+
+#. module: to_hr_payroll_account
+#: code:addons/to_hr_payroll_account/models/hr_payslip_line.py:0
+#: code:addons/to_hr_payroll_account/models/hr_payslip_line.py:0
+#: code:addons/to_hr_payroll_account/models/hr_payslip_run.py:0
+#: code:addons/to_hr_payroll_account/models/hr_payslip_run.py:0
+#, python-format
+msgid "Adjustment Entry"
+msgstr "Bút toán Điều chỉnh"
+
+#. module: to_hr_payroll_account
+#: model:ir.model.fields,field_description:to_hr_payroll_account.field_hr_contract__analytic_account_id
+#: model:ir.model.fields,field_description:to_hr_payroll_account.field_hr_salary_rule__analytic_account_id
+msgid "Analytic Account"
+msgstr "Tài khoản KT Quản trị"
+
+#. module: to_hr_payroll_account
+#: model:ir.model.fields,field_description:to_hr_payroll_account.field_hr_salary_rule__anylytic_option
+msgid "Analytic Option"
+msgstr "Tuỳ chọn Kế toán Quản trị"
+
+#. module: to_hr_payroll_account
+#: model:ir.model.fields,field_description:to_hr_payroll_account.field_hr_contract__analytic_tag_ids
+#: model:ir.model.fields,field_description:to_hr_payroll_account.field_hr_salary_rule__analytic_tag_ids
+msgid "Analytic Tags"
+msgstr "Thẻ Quản trị"
+
+#. module: to_hr_payroll_account
+#: model:ir.model,name:to_hr_payroll_account.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: to_hr_payroll_account
+#: model:ir.model,name:to_hr_payroll_account.model_res_config_settings
+msgid "Config Settings"
+msgstr "Thiết lập Cấu hình"
+
+#. module: to_hr_payroll_account
+#: model:ir.model,name:to_hr_payroll_account.model_hr_contract
+msgid "Contract"
+msgstr "Hợp đồng"
+
+#. module: to_hr_payroll_account
+#: code:addons/to_hr_payroll_account/models/hr_payslip_line.py:0
+#, python-format
+msgid ""
+"Could not prepare journal items data for multiple payslip at the same time. "
+"This could be a programming error!"
+msgstr ""
+"Không thể tạo các phát sinh kế toán cho nhiều phiếu lương trong cùng một "
+"thời điểm. Đây có thể là lỗi lập trình!"
+
+#. module: to_hr_payroll_account
+#: model:ir.model.fields,field_description:to_hr_payroll_account.field_hr_salary_rule__account_credit
+#: model:ir.model.fields.selection,name:to_hr_payroll_account.selection__hr_salary_rule__anylytic_option__credit_account
+msgid "Credit Account"
+msgstr "Tài khoản ghi Có"
+
+#. module: to_hr_payroll_account
+#: model:ir.model.fields,field_description:to_hr_payroll_account.field_hr_salary_rule__account_debit
+#: model:ir.model.fields.selection,name:to_hr_payroll_account.selection__hr_salary_rule__anylytic_option__debit_account
+msgid "Debit Account"
+msgstr "Tài khoản ghi Nợ"
+
+#. module: to_hr_payroll_account
+#: model:ir.model.fields,help:to_hr_payroll_account.field_hr_contract__account_expense_id
+msgid ""
+"Default Expense Account that will be used for encoding employee expenses "
+"into general accounting system (e.g. employee payroll expenses). If not "
+"specified, the one specified for the corresponding department will be used."
+msgstr ""
+
+#. module: to_hr_payroll_account
+#: model:ir.model.fields,help:to_hr_payroll_account.field_hr_contract__analytic_account_id
+msgid ""
+"Default analytic account to be used for encoding analytic items related to "
+"payslips of this contract when no analytic account defined on the salary "
+"rules that concern."
+msgstr ""
+"Tài khoản quản trị mặc định được sử dụng để tạo các phát sinh kế toán quản "
+"trị liên quan đến các phiếu lương của hợp đồng này khi không có tài khoản "
+"quản trị được chỉ định ở quy tắc lương liên quan."
+
+#. module: to_hr_payroll_account
+#: code:addons/to_hr_payroll_account/models/hr_payslip.py:0
+#, python-format
+msgid ""
+"Direct verifying a payslip belong to a batch is not allowed. Please validate"
+" the corresponding payslip batch instead."
+msgstr ""
+"Trực tiếp xác nhận một phiếu lương mà thuộc về một bảng lương thì không được"
+" phép. Vui lòng xác nhận bảng lương tương ứng."
+
+#. module: to_hr_payroll_account
+#: code:addons/to_hr_payroll_account/models/res_company.py:0
+#, python-format
+msgid "Employee Salary"
+msgstr "Lương Nhân viên"
+
+#. module: to_hr_payroll_account
+#: model:ir.model.fields,field_description:to_hr_payroll_account.field_hr_contract__account_expense_id
+msgid "Expense Account"
+msgstr "Tài khoản Chi phí"
+
+#. module: to_hr_payroll_account
+#: model:ir.model.fields,field_description:to_hr_payroll_account.field_hr_salary_rule__generate_account_move_line
+msgid "Generate Journal Item"
+msgstr "Tạo phát sinh kế toán"
+
+#. module: to_hr_payroll_account
+#: model:ir.model,name:to_hr_payroll_account.model_hr_payslip_employees
+msgid "Generate payslips for all selected employees"
+msgstr "Tạo phiếu lương cho tất cả nhân viên được chọn"
+
+#. module: to_hr_payroll_account
+#: model:ir.model.fields,help:to_hr_payroll_account.field_hr_salary_rule__generate_account_move_line
+msgid ""
+"If checked, an accounting journal item will be generated for the result of "
+"this rule. You may need to specify credit account for the rule and debit "
+"account for the rule or expense account for the contract if you don't whant "
+"to use the debit account of the rule."
+msgstr ""
+
+#. module: to_hr_payroll_account
+#: model_terms:ir.ui.view,arch_db:to_hr_payroll_account.res_config_settings_view_form
+msgid ""
+"If enabled, a single journal entry will be\n"
+"\t\t\t\t\t\t\tgenerated for all payslips of a payslip batch. Otherwise, each\n"
+"\t\t\t\t\t\t\tpayslip will generate a journal entry."
+msgstr ""
+"Nếu kích hoạt, một bút toán duy nhất sẽ được\n"
+"\t\t\t\t\t\t\tsinh ra cho tất cả các phiếu lương thuộc cùng một bảng lương. Ngược lại, mỗi\n"
+"\t\t\t\t\t\t\tphiếu lương sẽ có riêng một bút toán kế toán."
+
+#. module: to_hr_payroll_account
+#: model:ir.model.fields,help:to_hr_payroll_account.field_res_company__payslip_batch_journal_entry
+#: model:ir.model.fields,help:to_hr_payroll_account.field_res_config_settings__payslip_batch_journal_entry
+msgid ""
+"If enabled, a single journal entry will be generated for all payslips of a "
+"payslip batch. Otherwise, each payslip will generate a journal entry."
+msgstr ""
+"Nếu kích hoạt, một bút toán kế toán duy nhất sẽ được tạo ra cho tất cả phiếu"
+" lương của một bảng lương. Nếu không kích hoạt, mỗi phiếu lương sẽ sinh ra "
+"một bút toán kế toán."
+
+#. module: to_hr_payroll_account
+#: model:ir.model.fields,help:to_hr_payroll_account.field_hr_salary_rule__account_debit
+msgid ""
+"If not specified, either the expense account specified for the employee "
+"contract or employee contract department will be used instead."
+msgstr ""
+
+#. module: to_hr_payroll_account
+#: model:ir.model.fields,help:to_hr_payroll_account.field_hr_salary_rule__analytic_account_id
+msgid ""
+"If specified, analytic items of this analytic account will be generated "
+"along with the corresponding general journal item. If not, the analytic "
+"account defined on the corresponding employee contract will be used, if "
+"specified on the contract."
+msgstr ""
+"Nếu được chỉ định, các phát sinh kế toán quản trị sẽ được tạo cho tài khoản "
+"này cùng với các phát sinh kế toán tài chính tương ứng. Nếu không, tài khoản"
+" quản trị được chỉ định trên hợp đồng liên quan sẽ được sử dụng."
+
+#. module: to_hr_payroll_account
+#: model_terms:ir.ui.view,arch_db:to_hr_payroll_account.hr_payslip_run_form
+#: model_terms:ir.ui.view,arch_db:to_hr_payroll_account.hr_payslip_run_tree_inherit
+msgid "Journal Entries"
+msgstr "Bút toán Kế toán"
+
+#. module: to_hr_payroll_account
+#: model:ir.model.fields,field_description:to_hr_payroll_account.field_hr_payslip_run__moves_count
+msgid "Journal Entries Count"
+msgstr "SL Bút toán Kế toán"
+
+#. module: to_hr_payroll_account
+#: model:ir.model.fields,field_description:to_hr_payroll_account.field_hr_payslip_run__move_id
+msgid "Journal Entry"
+msgstr "Bút toán Kế toán"
+
+#. module: to_hr_payroll_account
+#: model:ir.model,name:to_hr_payroll_account.model_account_move_line
+msgid "Journal Item"
+msgstr "Phát sinh KT"
+
+#. module: to_hr_payroll_account
+#: model:ir.model.fields,help:to_hr_payroll_account.field_hr_payslip_run__date
+msgid ""
+"Keep empty to use the period of the validation (Payslip Batch) end date."
+msgstr ""
+"Để trống để sử dụng Ngày kết thúc của Bảng lương để làm ngày kế toán."
+
+#. module: to_hr_payroll_account
+#: model:ir.model.fields,help:to_hr_payroll_account.field_hr_payslip__date
+msgid "Keep empty to use the period of the validation(Payslip) date."
+msgstr "Để trống để sử dụng chu kỳ theo ngày xác nhận phiếu lương."
+
+#. module: to_hr_payroll_account
+#: model:ir.model.fields,field_description:to_hr_payroll_account.field_hr_payslip__non_private_address_alert
+msgid "Non Private Address Alert"
+msgstr "Cảnh báo không có địa chỉ riêng tư"
+
+#. module: to_hr_payroll_account
+#: model:ir.model.fields.selection,name:to_hr_payroll_account.selection__hr_salary_rule__anylytic_option__none
+msgid "None"
+msgstr "Không áp dụng"
+
+#. module: to_hr_payroll_account
+#: model:ir.model,name:to_hr_payroll_account.model_hr_payslip
+msgid "Pay Slip"
+msgstr "Phiếu lương"
+
+#. module: to_hr_payroll_account
+#: model:ir.model.fields,field_description:to_hr_payroll_account.field_res_company__payslip_batch_journal_entry
+#: model:ir.model.fields,field_description:to_hr_payroll_account.field_res_config_settings__payslip_batch_journal_entry
+msgid "Payslip Batch Journal Entry"
+msgstr "Bút toán cho Bảng lương"
+
+#. module: to_hr_payroll_account
+#: model:ir.model,name:to_hr_payroll_account.model_hr_payslip_run
+msgid "Payslip Batches"
+msgstr "Bảng lương"
+
+#. module: to_hr_payroll_account
+#: model:ir.model,name:to_hr_payroll_account.model_hr_payslip_line
+msgid "Payslip Line"
+msgstr "Dòng Phiếu lương"
+
+#. module: to_hr_payroll_account
+#: code:addons/to_hr_payroll_account/models/hr_payslip.py:0
+#, python-format
+msgid "Payslip of %s"
+msgstr "Phiếu lương của %s"
+
+#. module: to_hr_payroll_account
+#: model:ir.model.fields,field_description:to_hr_payroll_account.field_hr_contract__journal_id
+#: model:ir.model.fields,field_description:to_hr_payroll_account.field_hr_payslip__journal_id
+#: model:ir.model.fields,field_description:to_hr_payroll_account.field_hr_payslip_run__journal_id
+msgid "Salary Journal"
+msgstr "Sổ nhật ký Lương"
+
+#. module: to_hr_payroll_account
+#: model:ir.model,name:to_hr_payroll_account.model_hr_salary_rule
+#: model:ir.model.fields,field_description:to_hr_payroll_account.field_account_move_line__salary_rule_id
+msgid "Salary Rule"
+msgstr "Quy tắc tính lương"
+
+#. module: to_hr_payroll_account
+#: model:ir.model.fields,field_description:to_hr_payroll_account.field_hr_salary_rule__account_tax_id
+msgid "Tax"
+msgstr "Thuế"
+
+#. module: to_hr_payroll_account
+#: code:addons/to_hr_payroll_account/models/hr_payslip_line.py:0
+#: code:addons/to_hr_payroll_account/models/hr_payslip_run.py:0
+#, python-format
+msgid "The Expense Journal \"%s\" has not properly configured the Credit Account!"
+msgstr "Sổ nhật ký \"%s\" không được cấu hình phù cho cho Tài khoản ghi Có!"
+
+#. module: to_hr_payroll_account
+#: code:addons/to_hr_payroll_account/models/hr_payslip_line.py:0
+#: code:addons/to_hr_payroll_account/models/hr_payslip_run.py:0
+#, python-format
+msgid "The Expense Journal \"%s\" has not properly configured the Debit Account!"
+msgstr "Sổ nhật ký \"%s\" không được cấu hình phù cho cho Tài khoản ghi Nợ!"
+
+#. module: to_hr_payroll_account
+#: model:ir.model.fields,help:to_hr_payroll_account.field_hr_payslip_run__move_id
+msgid "The journal entry for all payslips of this batch."
+msgstr "Bút toán kế toán cho tất cả các phiếu lương của bảng lương này."
+
+#. module: to_hr_payroll_account
+#: model:ir.model.fields,help:to_hr_payroll_account.field_account_move_line__salary_rule_id
+msgid "The salary rule that generated this journal item."
+msgstr "Quy tắc lương mà đã tạo ra phát sinh kế toán này."
+
+#. module: to_hr_payroll_account
+#: code:addons/to_hr_payroll_account/models/hr_payslip.py:0
+#, python-format
+msgid ""
+"There is no private address specified for the employee '%s'. Therefore, the "
+"account entries generated by this payslip will not address anyone."
+msgstr ""
+"Không có địa chỉ riêng tư thiết lập cho nhân viên '%s'. Vì vậy, các bút toán"
+" kế toán tạo ra bởi phiếu lương này sẽ không liên kết đến bất kỳ ai."
+
+#. module: to_hr_payroll_account
+#: model:ir.model.fields,help:to_hr_payroll_account.field_hr_salary_rule__anylytic_option
+msgid ""
+"This controls what account analytic line will be generated for this rule,\n"
+"* None: no analytic items will be generated for this rule,\n"
+"* Debit Account: an analytic line will be generated for the journal item of the Debit Account only,\n"
+"* Credit Account: an analytic line will be generated for the journal item of the Credit Account only."
+msgstr ""
+"Trường này kiểm soát tài khoản kế toán nào của quy tắc sẽ tạo phát sinh kế toán quản trị,\n"
+"* Không áp dụng: không tạo phát sinh kế toán quản trị cho quy tắc lương này,\n"
+"* Tài khoản ghi Nợ: một phát sinh kế toán quản trị sẽ được sinh ra ứng với phát sinh kế toán của Tài khoản ghi Nợ,\n"
+"* Tài khoản ghi Có: một phát sinh kế toán quản trị sẽ được sinh ra ứng với phát sinh kế toán của Tài khoản ghi Có."
+
+#. module: to_hr_payroll_account
+#: code:addons/to_hr_payroll_account/models/hr_payslip.py:0
+#, python-format
+msgid ""
+"You cannot cancel the payslips having full or partial reconciled accounting journal entries. Please ask someone who has Accountant access rights for help removing reconciliation for the following accounting entries first.\n"
+"%s"
+msgstr ""
+"Bạn không thể hủy phiếu lương mà có các bút toán đã đối soát một phần hoặc hoàn toàn. Vui lòng đề nghị ai đó có quyền kế toán giúp bạn xóa bỏ đối soát cho các bút toán sau đây:\n"
+"%s"

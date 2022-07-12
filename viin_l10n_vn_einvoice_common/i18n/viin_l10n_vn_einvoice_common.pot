@@ -1,0 +1,45 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_l10n_vn_einvoice_common
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-10 02:11+0000\n"
+"PO-Revision-Date: 2021-09-10 02:11+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_l10n_vn_einvoice_common
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_einvoice_common.view_move_form
+msgid "Add Vietnamese Invoice Line Description"
+msgstr ""
+
+#. module: viin_l10n_vn_einvoice_common
+#: model:ir.model,name:viin_l10n_vn_einvoice_common.model_account_move
+msgid "Journal Entries"
+msgstr ""
+
+#. module: viin_l10n_vn_einvoice_common
+#: model:ir.model,name:viin_l10n_vn_einvoice_common.model_account_move_line
+msgid "Journal Item"
+msgstr ""
+
+#. module: viin_l10n_vn_einvoice_common
+#: code:addons/viin_l10n_vn_einvoice_common/models/account_move.py:0
+#, python-format
+msgid "Only users in the group %s can do this action"
+msgstr ""
+
+#. module: viin_l10n_vn_einvoice_common
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_einvoice_common.view_move_form
+msgid ""
+"This action will prepend sale description in Vietnamese of the products to "
+"the corresponding invoice lines' label.       Please note that this will not"
+" check duplication. So, don't do it multiple times."
+msgstr ""

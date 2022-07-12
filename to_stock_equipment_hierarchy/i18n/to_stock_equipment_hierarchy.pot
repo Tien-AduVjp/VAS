@@ -1,0 +1,43 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_stock_equipment_hierarchy
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-13 02:08+0000\n"
+"PO-Revision-Date: 2020-04-13 02:08+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_stock_equipment_hierarchy
+#: model:ir.model.fields,field_description:to_stock_equipment_hierarchy.field_stock_production_lot__recursive_maintenances_count
+msgid "All Maintenances"
+msgstr ""
+
+#. module: to_stock_equipment_hierarchy
+#: model:ir.model.fields,help:to_stock_equipment_hierarchy.field_stock_production_lot__recursive_maintenance_ids
+msgid "All the maintenances of this equipment and its parts"
+msgstr ""
+
+#. module: to_stock_equipment_hierarchy
+#: model:ir.model,name:to_stock_equipment_hierarchy.model_stock_production_lot
+msgid "Lot/Serial"
+msgstr ""
+
+#. module: to_stock_equipment_hierarchy
+#: model:ir.model.fields,field_description:to_stock_equipment_hierarchy.field_stock_production_lot__recursive_maintenance_ids
+msgid "Recursive Maintenance"
+msgstr ""
+
+#. module: to_stock_equipment_hierarchy
+#: model_terms:ir.ui.view,arch_db:to_stock_equipment_hierarchy.view_production_lot_form
+msgid ""
+"Show all the maintenances of this equipment including its parts' "
+"maintenances"
+msgstr ""

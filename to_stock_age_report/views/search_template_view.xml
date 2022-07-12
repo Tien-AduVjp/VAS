@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<template id="search_template_product_filter">
+			<a type="button" class="dropdown-toggle" data-toggle="dropdown">
+				<span class="fa fa-shopping-cart" title="product" 
+					aria-label="Product" /> Product
+			</a>
+			 <div class="dropdown-menu o_filters_menu form-group" role="menu">
+		        	<div class="container ">
+		        	 	<label>Product Category:</label><br />
+					<select name="Product Category" id="af-product-category" class="form-control mb-3">
+						<t t-foreach="options['product_category']" t-as="category">
+							<option class="form-control" t-att-value="category['id']"
+							t-att-selected="'selected' if (options['current_product']['product_category_id'] == category['id']) else None">
+							<t t-esc="category['name']"/></option>
+						</t>
+					</select>
+					<label>Product:</label><br />
+					<select name="Product" id="af-product-id" class="form-control mb-3">
+						<option value="all"> All </option>
+						<t t-foreach="options.get('product_category')" t-as="categorys">
+							<!-- <t t-if="categorys['id'] == options['current_product']['product_category_id'] or options['current_product']['product_category_id']==1"> -->
+								<t t-foreach="categorys.get('product')" t-as="product">
+									<option t-att-value="product['id']"
+									 t-att-selected="'selected' if (options['current_product']['product_id'] == product['id']) else None">
+									<t t-esc="product['name']"/></option>
+								</t>
+							<!-- </t> -->
+						</t>
+					</select>	 	           
+		               	<button type="button" class="btn btn-primary js_af_report_product_filter">Apply</button>
+		        	</div>
+		        </div>
+				
+		</template>
+
+		<template id="search_template_period">
+		        <a type="button" class="dropdown-toggle" data-toggle="dropdown">
+		            <span class="fa fa-calendar"/> Period:
+		        </a>
+		        <div class="dropdown-menu o_filters_menu" role="menu">
+		        	<div class="container">
+		        	 	<label>Period Length:</label><br />
+		               	<input type="number" id="period-length" t-att-value="options['periods'].get('period_length')"/><br />
+		               	<label>Number of periods:</label><br />
+		               	<input type="number" id="number-of-period" t-att-value="options['periods'].get('number_of_period')"/><br />
+		               	<div class="form-group custom-date">
+		               		<label>To Date:</label><br />
+						<div class='o_datepicker js_af_report_datetimepicker_period'
+							t-att-data-default-value="options['periods'].get('date')">
+							<input type='text' class="o_datepicker_input"
+								name="date" />
+							<span class="o_datepicker_button" />
+						</div>
+					</div>
+		               	<button type="button" class="btn btn-primary js_af_report_period_filter" 
+		               	data-filter='period-custom'>Apply</button>
+		        	</div>
+		        </div>
+		</template>
+		
+		<template id="search_template_warehouse_location">
+		        <a type="button" class="dropdown-toggle" data-toggle="dropdown">
+		            <span class="fa fa-map-marker"/> Warehouse and Location:
+		        </a>
+		        <div class="dropdown-menu o_filters_menu" role="menu">
+		        	<div class="container form-group">
+		        	 	<label>Warehouse:</label><br />
+		      		<select name="Warehouse" id="warehouse-id" class="form-control mb-3">
+						<option value="none"> All </option>
+						<t t-foreach="options.get('warehouses')" t-as="warehouse">
+							<option t-att-value="warehouse['id']" 
+							 t-att-selected="'selected' if (options['current_warehouse_location']['warehouse_id'] == warehouse['id']) else None">
+							<t t-esc="warehouse['name']"/></option>
+						</t>
+					</select>
+					<label>Location:</label><br />
+		      		<select name="location" id="location-id" class="form-control mb-3">
+						<option value="none"> All </option>
+						<t t-foreach="options.get('current_locations')" t-as="location">
+							<option t-att-value="location['id']" 
+						 			t-att-selected="'selected' if (options['current_warehouse_location']['location_id'] == location['id']) else None">
+								<t t-esc="location['name']"/>
+							</option>
+						</t>
+					</select>
+					<button type="button" class="btn btn-primary af_report_warehouse_location">Apply</button>
+		        	</div>
+		        </div>
+		</template>
+		
+		<template id="search_template_multi_company">
+			<a type="button" class="dropdown-toggle" data-toggle="dropdown">
+				<span class="fa fa-filter" />
+				Companies:
+				<t t-set="selected_companies"
+					t-value="', '.join(company.get('name') for company in options['multi_company'] if company.get('selected'))" />
+				<t t-if="selected_companies">
+					<t t-esc="selected_companies" />
+				</t>
+				<t t-else="">
+					All
+				</t>
+			</a>
+			<div class="dropdown-menu o_filters_menu" role="menu">
+				<t t-foreach="options['multi_company']" t-as="c">
+					<a role="menuitem"
+						class="dropdown-item js_af_report_choice_filter"
+						t-att-title="c.get('name')" data-filter="multi_company"
+						t-att-data-id="c.get('id')">
+						<t t-esc="c.get('name')" />
+					</a>
+				</t>
+			</div>
+		</template>
+
+		<template id="search_template">
+			<div class="btn-group o_dropdown"
+				t-if="options.get('product_category') != None">
+				<t t-call="to_stock_age_report.search_template_product_filter" />
+			</div>
+			<div class="btn-group o_dropdown"
+				t-if="(options.get('warehouses') != None)">
+				<t t-call="to_stock_age_report.search_template_warehouse_location" />
+			</div>
+			<div class="btn-group o_dropdown"
+				t-if="options.get('periods') != None">
+				<t t-call="to_stock_age_report.search_template_period" />
+			</div>
+			<div
+				class="btn-group o_dropdown o_af_reports_filter_multi_company"
+				t-if="options.get('multi_company') != None">
+				<t t-call="to_stock_age_report.search_template_multi_company" />
+			</div>
+		</template>
+
+	</data>
+</odoo>

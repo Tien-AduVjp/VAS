@@ -1,0 +1,39 @@
+<odoo>
+	<data>
+		<record model="ir.ui.view"
+			id="hr_employee_skill_type_view_form">
+			<field name="name">hr.skill.type.form</field>
+			<field name="model">hr.skill.type</field>
+			<field name="inherit_id"
+				ref="hr_skills.hr_employee_skill_type_view_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//div[./h1/field[@name='name']]"
+					position="before">
+					<div name="button_box" class="oe_button_box">
+						<button name="action_view_description_entries"
+							class="oe_stat_button" icon="fa-book" type="object">
+							<field name="hr_skill_descriptions_count" widget="statinfo"
+								string="Description Entries" />
+						</button>
+					</div>
+				</xpath>
+				<xpath
+					expr="//field[@name='skill_ids']/tree/field[@name='name']"
+					position="after">
+					<field name="code" />
+					<field name="description" />
+				</xpath>
+				<xpath expr="//sheet" position="after">
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers" />
+						<field name="activity_ids" widget="mail_activity" />
+						<field name="message_ids" widget="mail_thread" />
+					</div>
+				</xpath>
+			</field>
+		</record>
+		<menuitem name="Skill Types" id="menu_skill_types"
+			parent="menu_skills" action="hr_skills.hr_skill_type_action"
+			sequence="0" />
+	</data>
+</odoo>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- Employee View -->
+	<record id="hr_employee_view_form_inherit_timesheet"
+		model="ir.ui.view">
+		<field name="name">payroll.hr.employee.view.form</field>
+		<field name="model">hr.employee</field>
+		<field name="inherit_id"
+			ref="hr_timesheet.hr_employee_view_form_inherit_timesheet" />
+		<field name="arch" type="xml">
+			<xpath expr="//div[./field[@name='timesheet_cost']]"
+				position="inside">
+				<button
+					name="action_update_timesheet_cost_from_payslips"
+					type="object"
+					groups="hr_timesheet.group_timesheet_manager"
+					confirm="This action calculate timesheet cost base on its payslip data and update the result into this field. Are you sure to proceed?">
+					Calculate Timesheet Cost
+				</button>
+			</xpath>
+
+		</field>
+	</record>
+</odoo>

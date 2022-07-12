@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<template id="report_c200_s12dn">
+			<t t-call="web.html_container">
+				<t t-call="to_l10n_vn_qweb_layout.accounting_external_layout_c200">
+					<div class="page">
+						<div class="text-center">
+							<h2>Stock Card</h2>
+							<p>
+								Created Date:
+								<span t-field="doc.opening_date" />
+							</p>
+						</div>
+						<div>
+							<strong>Product:</strong>
+							<span t-field="doc.product_id" />
+							<br />
+							<strong>Unit of Measure:</strong>
+							<span t-field="doc.uom_id" />
+							<br />
+							<strong>Product Code:</strong>
+							<span t-field="doc.product_id.default_code" />
+							<br />
+							<t t-call="to_l10n_vn_stock_reports.warehouse_info" />
+							<t t-if="doc.description">
+								<br />
+								- Description:
+								<span t-field="doc.description" />
+							</t>
+						</div>
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th rowspan="2"
+										style="vertical-align: middle; text-align: center;">#</th>
+									<th rowspan="2"
+										style="vertical-align: middle; text-align: center;">Date</th>
+									<th colspan="2" class="text-center">Ref.</th>
+									<th rowspan="2"
+										style="vertical-align: middle; text-align: center;">Description</th>
+									<th rowspan="2"
+										style="vertical-align: middle; text-align: center;">Date of Operation</th>
+									<th colspan="3" class="text-center">Quantity</th>
+									<th rowspan="2"
+										style="vertical-align: middle; text-align: center;">Accounting Dept.</th>
+								</tr>
+								<tr>
+									<th class="text-center">In</th>
+									<th class="text-center">Out</th>
+									<th class="text-center">In</th>
+									<th class="text-center">Out</th>
+									<th class="text-center">Balance</th>
+								</tr>
+								<tr>
+									<th class="text-center">A</th>
+									<th class="text-center">B</th>
+									<th class="text-center">C</th>
+									<th class="text-center">D</th>
+									<th class="text-center">E</th>
+									<th class="text-center">F</th>
+									<th class="text-center">1</th>
+									<th class="text-center">2</th>
+									<th class="text-center">3</th>
+									<th class="text-center">G</th>
+								</tr>
+							</thead>
+							<tbody>
+								<t t-set="stt" t-value="0" />
+								<t t-foreach="lines" t-as="line">
+									<t t-set="stt" t-value="stt + 1" />
+									<t t-if="not line['is_last_line']">
+										<tr>
+											<td class="text-center">
+												<span t-esc="stt" />
+											</td>
+											<td class="text-center">
+												<span t-if="line['scheduled_date']"
+													t-esc="(line['scheduled_date'])" />
+											</td>
+											<td class="text-center">
+												<span
+													t-esc="line['operation_type']=='in' and line['reference'] or ''" />
+											</td>
+											<td class="text-center">
+												<span
+													t-esc="line['operation_type']=='out' and line['reference'] or ''" />
+											</td>
+											<td>
+												<span t-esc="line['source']" />
+												<br />
+												<span t-esc="line['description']" />
+												<t t-if="line['note']">
+													<br />
+													<span t-esc="line['note']" />
+												</t>
+											</td>
+											<td class="text-center">
+												<span t-esc="(line['move_date'])" />
+											</td>
+											<td class="text-right">
+												<span t-esc="formatLang(line['in_qty'],dp=line['dp'])" />
+											</td>
+											<td class="text-right">
+												<span t-esc="formatLang(line['out_qty'],dp=line['dp'])" />
+											</td>
+											<td class="text-right">
+												<span t-esc="formatLang(line['inv_qty'],dp=line['dp'])" />
+											</td>
+											<td></td>
+										</tr>
+									</t>
+									<t t-elif="line['is_last_line']">
+										<tr style="font-weight: bold;">
+											<td colspan="6" class="text-right">Sum</td>
+											<td class="text-right">
+												<span
+													t-esc="formatLang(line['sum_in_qty'],dp=line['dp'])" />
+											</td>
+											<td class="text-right">
+												<span
+													t-esc="formatLang(line['sum_out_qty'],dp=line['dp'])" />
+											</td>
+											<td class="text-right">
+												<span t-esc="formatLang(line['inv_qty'],dp=line['dp'])" />
+											</td>
+											<td></td>
+										</tr>
+									</t>
+								</t>
+
+							</tbody>
+						</table>
+						<t t-call="to_l10n_vn_qweb_layout.signature_block" />
+					</div>
+				</t>
+			</t>
+		</template>
+
+	</data>
+</odoo>

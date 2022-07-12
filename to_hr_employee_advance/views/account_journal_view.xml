@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    	<!-- Account Journal -->
+    	
+    	<record model="ir.ui.view" id="to_advance_journal_inherit_form">
+			<field name="name">to.advance.journal.inherit.form</field>
+			<field name="model">account.journal</field>
+			<field name="type">form</field>
+			<field name="inherit_id" ref="account.view_account_journal_form" />
+			<field name="arch" type="xml">
+				<field name="type" position="after">
+					<field name="is_advance_journal"/>
+				</field>
+			</field>
+		</record>
+		
+    </data>
+</odoo>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="view_hr_overtime_plan_form"
+		model="ir.ui.view">
+		<field name="name">hr.overtime.plan.form</field>
+		<field name="model">hr.overtime.plan</field>
+		<field name="inherit_id"
+			ref="viin_hr_overtime.view_hr_overtime_plan_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//header" position="inside">
+				<button name="action_match_attendances"
+					string="Match Attendance" type="object" class="btn-primary"
+					attrs="{'invisible': [('attendance_match_ids','!=',[])]}"
+					groups="base.group_no_one" />
+				<button name="action_match_attendances"
+					string="Rematch Attendance" type="object"
+					attrs="{'invisible': [('attendance_match_ids','=',[])]}"
+					groups="base.group_no_one" />
+			</xpath>
+			<xpath expr="//div[./field[@name='planned_hours']]" position="after">
+				<label for="matched_attendance_hours" string="Matched Attendance" />
+				<div>
+					<field name="matched_attendance_hours" class="oe_inline" />
+					hours
+				</div>
+			</xpath>
+
+			<xpath expr="//page[@name='line_ids']" position="after">
+				<field name="attendance_match_ids">
+					<tree>
+						<field name="attendance_id" />
+						<field name="date_start" />
+						<field name="date_end" />
+						<field name="matched_hours" />
+						<field name="unmatched_hours" />
+					</tree>
+				</field>
+			</xpath>
+		</field>
+	</record>
+
+	<record id="view_hr_overtime_plan_tree"
+		model="ir.ui.view">
+		<field name="name">hr.overtime.plan.tree</field>
+		<field name="model">hr.overtime.plan</field>
+		<field name="inherit_id"
+			ref="viin_hr_overtime.view_hr_overtime_plan_tree" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='planned_hours']" position="after">
+				<field name="matched_attendance_hours" />
+			</xpath>
+		</field>
+	</record>
+</odoo>

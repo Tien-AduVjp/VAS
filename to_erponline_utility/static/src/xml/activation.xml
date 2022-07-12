@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+	<t t-name="activation_systray_button">
+		<t t-if="!widget.trial_activated">
+			<li class="activation_systray bg-danger">
+				<a href="#" class="activation_button">
+					<span class="fa fa-fw fa-bell"/> 
+					<t t-if="!widget.isMobile">Activate Instance</t>
+				</a>
+			</li>
+		</t>
+		<t t-else="">
+			<li class="activation_systray bg-warning">
+				<a href="#" class="activation_button text-800">
+					<span class="fa fa-fw fa-bell"/> 
+					<t t-if="!widget.isMobile">Trial Info</t>
+				</a>
+			</li>
+		</t>
+	</t>
+
+	<t t-name="activation_modal">
+		<div class="modal fade" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">
+							<t t-if="trial_activated">Trial Info</t>
+							<t t-else="">Activate Instance!</t>
+						</h4>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span>x</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div t-attf-class="alert alert-#{trial_activated ? 'warning':'danger'}" role="alert">
+							<span>
+								<i class="fa fa-fw fa-bell"></i>
+								<t t-if="trial_activated">Your trial instance will be expired in about</t>
+								<t t-else="">Your instance will be expired in about</t>
+								<t t-set="expiredays" t-value="Math.floor(duration.asDays())"/>
+								<t t-if="expiredays > 0">
+									<t t-esc="expiredays"/><t t-if="expiredays === 1"> day.</t><t t-else=""> days.</t>
+								</t>
+								<t t-elif="duration.hours() > 0">
+									<t t-esc="duration.hours()"/><t t-if="duration.hours() === 1"> hour.</t><t t-else=""> hours.</t>
+								</t>
+								<t t-elif="duration.minutes() > 0">
+									<t t-esc="duration.minutes()"/><t t-if="duration.minutes() === 1"> minute.</t><t t-else=""> minutes.</t>
+								</t>
+								<t t-else="">
+									less than a minute.
+								</t>
+								<t t-if="trial_activated">
+									<a href="https://viindoo.com/pricing" target="_blank" alt="https://viindoo.com/pricing"> Buy a subcription now</a>.
+								</t>
+								<t t-if="!trial_activated &amp;&amp; activation_warning === 'admin'">
+									Use the activation link sent by email to <b><t t-esc="activation_email" /></b> to get <t t-esc="trial_days"/>-day free trial.
+								</t>
+								<t t-elif="!trial_activated &amp;&amp; activation_warning === 'user'">
+									Contact your system administrator to solve this problem.
+								</t>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</t>
+</templates>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="new_question" inherit_id="website_forum.new_question">
+        <xpath expr="//form/div[hasclass('form-group')]" position="before">
+            <t t-set="is_moderator" t-value="request.env.uid in forum.moderator_ids.ids or request.env.user.has_group('viin_website_forum_security_groups.group_forum_moderator')"/>
+        </xpath>
+        <xpath expr="//input[@id='karma_tag_create']" position="attributes">
+            <attribute name="t-attf-value">#{not is_moderator and forum.karma_tag_create or 0}</attribute>
+        </xpath>
+        <xpath expr="//input[@id='karma_edit_retag']" position="attributes">
+            <attribute name="t-attf-value">#{not is_moderator and forum.karma_edit_retag or 0}</attribute>
+        </xpath>
+        <xpath expr="//textarea[@name='content']" position="attributes">
+            <attribute name="t-att-data-karma">not is_moderator and forum.karma_editor or 0</attribute>
+        </xpath>
+        <xpath expr="//button[@type='submit']" position="attributes">
+            <attribute name="t-attf-class">btn btn-primary #{forum.allow_share and 'oe_social_share_call'} #{not is_moderator and user.karma &lt; forum.karma_ask and 'karma_required'}</attribute>
+        </xpath>
+    </template>
+
+    <template id="edit_post" inherit_id="website_forum.edit_post">
+        <xpath expr="//form/div[hasclass('form-group')]" position="before">
+            <t t-set="is_moderator" t-value="request.env.uid in forum.moderator_ids.ids or request.env.user.has_group('viin_website_forum_security_groups.group_forum_moderator')"/>
+        </xpath>
+        <xpath expr="//input[@id='karma_tag_create']" position="attributes">
+            <attribute name="t-attf-value">#{not is_moderator and forum.karma_tag_create or 0}</attribute>
+        </xpath>
+        <xpath expr="//input[@id='karma_edit_retag']" position="attributes">
+            <attribute name="t-attf-value">#{not is_moderator and forum.karma_edit_retag or 0}</attribute>
+        </xpath>
+        <xpath expr="//textarea[@name='content']" position="attributes">
+            <attribute name="t-att-data-karma">not is_moderator and forum.karma_editor or 0</attribute>
+        </xpath>
+        <xpath expr="//input[@name='post_tags']" position="before">
+            <t t-set="edit_tags_karma_fail" t-value="not is_moderator and user.karma &lt; forum.karma_edit_retag"/>
+        </xpath>
+    </template>
+
+    <template id="post_reply" inherit_id="website_forum.post_reply">
+        <xpath expr="//form" position="before">
+            <t t-set="is_moderator" t-value="request.env.uid in forum.moderator_ids.ids or request.env.user.has_group('viin_website_forum_security_groups.group_forum_moderator')"/>
+        </xpath>
+        <xpath expr="//textarea[@name='content']" position="attributes">
+            <attribute name="t-att-data-karma">not is_moderator and forum.karma_editor or 0</attribute>
+        </xpath>
+    </template>
+
+    <template id="post_answer" inherit_id="website_forum.post_answer">
+        <xpath expr="//form" position="before">
+            <t t-set="is_moderator" t-value="request.env.uid in forum.moderator_ids.ids or request.env.user.has_group('viin_website_forum_security_groups.group_forum_moderator')"/>
+        </xpath>
+        <xpath expr="//textarea[@name='content']" position="attributes">
+            <attribute name="t-att-data-karma">not is_moderator and forum.karma_editor or 0</attribute>
+        </xpath>
+    </template>
+
+    <template id="forum_nav_header" inherit_id="website_forum.forum_nav_header">
+        <xpath expr="//div[hasclass('navbar')]" position="before">
+            <t t-set="is_moderator" t-value="request.env.uid in forum.moderator_ids.ids or request.env.user.has_group('viin_website_forum_security_groups.group_forum_moderator')"/>
+        </xpath>
+        <xpath expr="//t[@t-if='user.karma>=forum.karma_moderate']" position="attributes">
+            <attribute name="t-if">is_moderator or user.karma &gt;= forum.karma_moderate</attribute>
+        </xpath>
+    </template>
+
+    <template id="user_sidebar" inherit_id="website_forum.user_sidebar">
+        <xpath expr="//nav[hasclass('o_wforum_nav')]" position="before">
+            <t t-set="is_moderator" t-value="request.env.uid in forum.moderator_ids.ids or request.env.user.has_group('viin_website_forum_security_groups.group_forum_moderator')"/>
+        </xpath>
+        <xpath expr="//t[@t-if='user.karma>=forum.karma_moderate or queue_type']" position="attributes">
+            <attribute name="t-if">is_moderator or user.karma &gt;= forum.karma_moderate or queue_type</attribute>
+        </xpath>
+    </template>
+
+</odoo>

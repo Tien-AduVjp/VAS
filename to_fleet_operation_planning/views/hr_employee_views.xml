@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="employee_fleet_done_trip_action" model="ir.actions.act_window">
+		<field name="name">Done Trips</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">fleet.vehicle.trip</field>
+		<field name="view_mode">tree,form</field>
+		<field name="domain">[('state','=','done')]</field>
+		<field name="context">{'search_default_employee_id': active_id}</field>
+	</record>
+
+	<record model="ir.ui.view" id="view_employee_form">
+		<field name="name">hr.employee.form</field>
+		<field name="model">hr.employee</field>
+		<field name="inherit_id" ref="to_fleet_driver.view_employee_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//div[@name='button_box']" position="inside">
+				<button class="oe_stat_button" type="action"
+					attrs="{'invisible':[('is_driver','=',False)]}"
+					name="%(to_fleet_operation_planning.employee_fleet_done_trip_action)d"
+					icon="fa-bus">
+					<field string="Done Trips" name="driver_done_trips_count"
+						widget="statinfo" />
+				</button>
+			</xpath>
+		</field>
+	</record>
+
+</odoo>

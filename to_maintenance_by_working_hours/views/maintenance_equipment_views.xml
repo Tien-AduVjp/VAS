@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="hr_equipment_view_form" model="ir.ui.view">
+			<field name="name">equipment.form</field>
+			<field name="model">maintenance.equipment</field>
+			<field name="inherit_id"
+				ref="maintenance.hr_equipment_view_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//group[@name='maintenance']" position="before">
+					<group name="working_frequency">
+						<label for="ave_daily_working_hours" />
+						<div class="o_row">
+							<field name="ave_daily_working_hours" />
+							hours / day
+						</div>
+						<label for="working_hour_period" />
+						<div class="o_row">
+							<field name="working_hour_period" />
+							hours
+						</div>
+					</group>
+				</xpath>
+				<field name="maintenance_team_id" position="attributes">
+					<attribute name="attrs">{'required': ['|',('period', '!=', 0), ('working_hour_period', '!=', 0)]}</attribute>
+				</field>
+			</field>
+		</record>
+	</data>
+</odoo>

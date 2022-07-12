@@ -1,0 +1,59 @@
+<odoo>
+	<record id="queue_view_tree" model="ir.ui.view">
+		<field name="name">queue.view.tree</field>
+		<field name="model">queue</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="name" />
+				<field name="scheduling_method" />
+				<field name="undone_job_count" />
+			</tree>
+		</field>
+	</record>
+
+	<record id="queue_view_form" model="ir.ui.view">
+		<field name="name">queue.view.form</field>
+		<field name="model">queue</field>
+		<field name="arch" type="xml">
+			<form>
+				<header>
+					<button string="Process" name="action_process" type="object" class="oe_highlight"
+						attrs="{'invisible': [('undone_job_count', '=', 0)]}" />
+				</header>
+				<sheet>
+					<div name="button_box" class="oe_button_box oe_read_only">
+						<button name="action_view_undone_jobs" type="object" icon="fa-send">
+							<field name="undone_job_count" string="Undone Jobs" widget="statinfo" />
+						</button>
+					</div>
+					<group>
+						<group>
+							<field name="name" />
+							<field name="scheduling_method" />
+						</group>
+					</group>
+				</sheet>
+				<div class="oe_chatter">
+					<field name="message_follower_ids" widget="mail_followers" />
+					<field name="message_ids" widget="mail_thread" />
+				</div>
+			</form>
+		</field>
+	</record>
+
+	<record id="queue_action" model="ir.actions.act_window">
+		<field name="name">Queues</field>
+		<field name="res_model">queue</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+	<menuitem id="menu_queue"
+		name="Queue"
+		parent="base.menu_custom"
+		sequence="900" />
+
+	<menuitem id="menu_queues"
+		name="Queues"
+		parent="menu_queue"
+		action="queue_action" />
+</odoo>

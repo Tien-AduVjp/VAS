@@ -1,0 +1,485 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_print_payment_vi
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-09 02:23+0000\n"
+"PO-Revision-Date: 2021-04-09 02:23+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_receipt_voucher
+msgid "(In Words):"
+msgstr "(Bằng chữ):"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_general_voucher_document
+msgid "<b>Total</b>"
+msgstr "<b>Tổng cộng</b>"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_receipt_voucher
+msgid ""
+"<br/>\n"
+"\t\t\t\t\t\t\t(Sign, Full Name)"
+msgstr ""
+"<br/>\n"
+"\t\t\t\t\t\t\t\t(Ký, Ghi rõ họ tên)"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_receipt_voucher
+msgid ""
+"<br/>\n"
+"\t\t\t\t\t\t\tTotal Amount:"
+msgstr ""
+"<br/>\n"
+"\t\t\t\t\t\t\t\tSố tiền:"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.payment_receipt_external_layout
+msgid ""
+"<br/>\n"
+"\t\t\t\t\t(Released Under the Circular 200/2014/TT-BTC\n"
+"\t\t\t\t\t<br/>\n"
+"\t\t\t\t\tDated 22/12/2014 by the Ministry of Finance)"
+msgstr ""
+"<br/>\n"
+"\t\t\t\t\t\t(Ban hành theo TT số 200/2014/TT-BTC\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\tNgày 22/12/2014 của Bộ Tài chính)"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_general_voucher_document
+msgid "<span>GENERAL VOUCHER </span>"
+msgstr "<span>PHIẾU KẾ TOÁN </span>"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_receipt_voucher
+msgid ""
+"<strong>Cashier</strong>\n"
+"\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t(Sign, Full Name)"
+msgstr ""
+"<strong>Thủ Quỹ</strong>\n"
+"\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t(Ký, Ghi rõ họ tên)"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_receipt_voucher
+msgid ""
+"<strong>Chief Accountant</strong>\n"
+"\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t(Sign, Full Name)"
+msgstr ""
+"<strong>Kế toán trưởng</strong>\n"
+"\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t(Ký, Ghi rõ họ tên)"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_receipt_voucher
+msgid ""
+"<strong>Director</strong>\n"
+"\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t(Sign, Full Name, Stamp)"
+msgstr ""
+"<strong>Giám đốc</strong>\n"
+"\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t(Ký, Họ tên, Đóng dấu)"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_receipt_voucher
+msgid ""
+"<strong>Prepared By</strong>\n"
+"\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t(Sign, Full Name)"
+msgstr ""
+"<strong>Người lập phiếu</strong>\n"
+"\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t(Ký, Ghi rõ họ tên)"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_general_voucher_document
+msgid "Account"
+msgstr "Tài khoản"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_general_voucher_document
+msgid "Account Date:"
+msgstr "Ngày kế toán:"
+
+#. module: to_print_payment_vi
+#: model:ir.model,name:to_print_payment_vi.model_report_to_print_payment_vi_report_accountpayment
+msgid "Account payment rerport"
+msgstr "Phiếu báo cáo payment"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_receipt_voucher
+msgid "Address:"
+msgstr "Địa chỉ:"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_receipt_voucher
+msgid "Attached:"
+msgstr "Kèm theo:"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_receipt_voucher
+msgid "Attached: ... source document(s)."
+msgstr "Kèm theo: ... chứng từ gốc."
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.payment_receipt_external_layout
+msgid "CREDIT NOTE"
+msgstr "GIẤY BÁO CÓ"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_receipt_voucher
+msgid "Company:"
+msgstr "Đơn vị:"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_receipt_voucher
+msgid ""
+"Company:\n"
+"\t\t\t\t\t\t\t\t\t<br/>"
+msgstr ""
+"Đơn vị:\n"
+"\t\t\t\t\t\t\t\t\t<br/>"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_receipt_voucher
+msgid ""
+"Company:\n"
+"\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\tAddress:"
+msgstr ""
+"Đơn vị:\n"
+"\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\tĐịa chỉ:"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_general_voucher_document
+msgid "Content:"
+msgstr "Nội dung:"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_general_voucher_document
+msgid "Credit"
+msgstr "Có"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_receipt_voucher
+msgid "Credit:"
+msgstr "Có:"
+
+#. module: to_print_payment_vi
+#: model:ir.model,name:to_print_payment_vi.model_res_currency
+msgid "Currency"
+msgstr "Tiền tệ"
+
+#. module: to_print_payment_vi
+#: model:ir.model.fields,field_description:to_print_payment_vi.field_res_currency__currency_unit_label
+msgid "Currency Unit"
+msgstr "Đơn vị Tiền tệ"
+
+#. module: to_print_payment_vi
+#: model:ir.model.fields,help:to_print_payment_vi.field_res_currency__currency_unit_label
+msgid "Currency Unit Name"
+msgstr "Tên Đơn vị Tiền tệ"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_general_voucher_document
+msgid "Currency:"
+msgstr "Đơn vị Tiền tệ:"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_general_voucher_document
+msgid "Customer:"
+msgstr "Tên khách hàng:"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.payment_receipt_external_layout
+msgid "DEBIT NOTE"
+msgstr "GIẤY BÁO NỢ"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_general_voucher_document
+msgid "Date No:"
+msgstr "Ngày hóa đơn:"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.payment_receipt_external_layout
+msgid "Date:"
+msgstr "Ngày:"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_general_voucher_document
+msgid "Debit"
+msgstr "Nợ"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_receipt_voucher
+msgid "Debit:"
+msgstr "Nợ:"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_general_voucher_document
+msgid "Description"
+msgstr "Nội dung"
+
+#. module: to_print_payment_vi
+#: model:ir.model.fields,field_description:to_print_payment_vi.field_report_to_print_payment_vi_report_accountpayment__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.to_print_payment_inherit_account_payment_form
+msgid "For Receipt Printing"
+msgstr "Dùng cho việc in Phiếu Thu/Chi"
+
+#. module: to_print_payment_vi
+#: model:ir.actions.report,name:to_print_payment_vi.report_general_voucher
+msgid "General voucher"
+msgstr "Phiếu kế toán"
+
+#. module: to_print_payment_vi
+#: model:ir.model.fields,field_description:to_print_payment_vi.field_report_to_print_payment_vi_report_accountpayment__id
+msgid "ID"
+msgstr ""
+
+#. module: to_print_payment_vi
+#: model:ir.model.fields.selection,name:to_print_payment_vi.selection__account_move__in_out_payment__in
+msgid "In"
+msgstr ""
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_general_voucher_document
+msgid "In Words:"
+msgstr "Bằng chữ:"
+
+#. module: to_print_payment_vi
+#: model:ir.model.fields,field_description:to_print_payment_vi.field_account_move__total_in_word
+#: model:ir.model.fields,field_description:to_print_payment_vi.field_account_payment__total_in_word
+msgid "In words"
+msgstr "Bằng chữ"
+
+#. module: to_print_payment_vi
+#: model:ir.model,name:to_print_payment_vi.model_account_move
+msgid "Journal Entries"
+msgstr "Bút toán Sổ nhật ký"
+
+#. module: to_print_payment_vi
+#: model:ir.model.fields,field_description:to_print_payment_vi.field_report_to_print_payment_vi_report_accountpayment____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_receipt_voucher
+msgid ""
+"Log #:..............\n"
+"\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\tNumber:"
+msgstr ""
+"Quyển Số:..............\n"
+"\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\tSố:"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_receipt_voucher
+msgid "Name of Payment Applicant:"
+msgstr "Họ và tên Người nộp tiền:"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_receipt_voucher
+msgid "Name of Payment Receiver:"
+msgstr "Họ và tên Người nhận tiền:"
+
+#. module: to_print_payment_vi
+#: model:ir.model.fields,field_description:to_print_payment_vi.field_account_payment__no_of_origin
+msgid "No. of Origin"
+msgstr "Số chứng từ gốc"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_general_voucher_document
+msgid "No:"
+msgstr "Số chứng từ:"
+
+#. module: to_print_payment_vi
+#: model:ir.model.fields,help:to_print_payment_vi.field_account_payment__no_of_origin
+msgid ""
+"Number of the origin documents (e.g. Purchase Voucher number, Invoice "
+"Number, etc), to be displayed on the PDF printed version of this document."
+msgstr ""
+"Số tài liệu nguồn (vd: số phiếu mua hàng, số hoá đơn, v.v.), để hiển thị "
+"trên bản in PDF của tài liệu này."
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_receipt_voucher
+msgid "On........Month.......Year........"
+msgstr "Ngày........Tháng.......Năm........"
+
+#. module: to_print_payment_vi
+#: model:ir.model.fields.selection,name:to_print_payment_vi.selection__account_move__in_out_payment__out
+msgid "Out"
+msgstr ""
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.payment_receipt_external_layout
+msgid "PAYMENT RECEIPT"
+msgstr "PHIẾU THU"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.payment_receipt_external_layout
+msgid "PAYMENT VOUCHER"
+msgstr "PHIẾU CHI"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.to_print_payment_inherit_account_payment_form
+msgid "Payer"
+msgstr "Người Nộp"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_receipt_voucher
+msgid "Payment Applicant"
+msgstr "Người nộp tiền"
+
+#. module: to_print_payment_vi
+#: model:ir.model.fields,field_description:to_print_payment_vi.field_account_move__in_out_payment
+msgid "Payment In/Out"
+msgstr ""
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_receipt_voucher
+msgid "Payment Reason:"
+msgstr "Lý do chi:"
+
+#. module: to_print_payment_vi
+#: model:ir.actions.report,name:to_print_payment_vi.to_account_payment
+msgid "Payment Receipt (Template 01-TT/02-TT)"
+msgstr "Phiếu Thu/Chi (Mẫu 01-TT/02-TT)"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_receipt_voucher
+msgid "Payment Receiver"
+msgstr "Người nhận tiền"
+
+#. module: to_print_payment_vi
+#: model:ir.model,name:to_print_payment_vi.model_account_payment
+msgid "Payments"
+msgstr "Thanh toán"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_receipt_voucher
+msgid "Receipt Reason:"
+msgstr "Lý do thu:"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_receipt_voucher
+msgid ""
+"Received Amount (in words):\n"
+"\t\t\t\t\t\t\t\t\t.......................................................................................................\n"
+"\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t+ Foreign Exchange Rate (or Gold Currency):\n"
+"\t\t\t\t\t\t\t\t\t...........................................................................\n"
+"\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t+ Conversion Amount:\n"
+"\t\t\t\t\t\t\t\t\t................................................................................................................."
+msgstr ""
+"Đã nhận đủ số tiền (bằng chữ):\n"
+"\t\t\t\t\t\t\t\t\t.......................................................................................................\n"
+"\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t+ Tỷ giá Ngoại tệ (hoặc Vàng):\n"
+"\t\t\t\t\t\t\t\t\t...........................................................................\n"
+"\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t+ Số tiền Quy đổi:\n"
+"\t\t\t\t\t\t\t\t\t................................................................................................................."
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.to_print_payment_inherit_account_payment_form
+msgid "Recipient"
+msgstr "Người nhận"
+
+#. module: to_print_payment_vi
+#: model:ir.model.fields,field_description:to_print_payment_vi.field_account_payment__recipient_payer
+msgid "Recipient / Payer"
+msgstr "Người nộp / nhận"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.payment_receipt_external_layout
+msgid "Template 01-TT"
+msgstr "Mẫu 01-TT"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.payment_receipt_external_layout
+msgid "Template 02-TT"
+msgstr "Mẫu 02-TT"
+
+#. module: to_print_payment_vi
+#: model:ir.model.fields,help:to_print_payment_vi.field_account_payment__recipient_payer
+msgid ""
+"The name of the person who pay/receive the payment. If empty, the "
+"corresponding partner name will be used instead."
+msgstr ""
+"Tên của người nộp/nhận tiền. Nếu để trống, tên của đối tác tương ứng sẽ được"
+" sử dụng thay thế"
+
+#. module: to_print_payment_vi
+#: code:addons/to_print_payment_vi/reports/account_payment_report.py:0
+#, python-format
+msgid ""
+"There are a few Payments not in state Validated or Reconciled. You can post "
+"it and try again."
+msgstr ""
+"Có một số thanh toán của bạn không ở trạng thái Đã xác nhận hoặc Đã được đối"
+" soát.Bạn có thể xác nhận thanh toán và thử lại."
+
+#. module: to_print_payment_vi
+#: model:ir.model.fields,help:to_print_payment_vi.field_account_move__in_out_payment
+msgid ""
+"This is technical field, use to specify this move is payment in or payment "
+"out."
+msgstr ""
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_general_voucher_document
+msgid "Vendor:"
+msgstr "Tên đối tác:"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_receipt_voucher
+msgid ""
+"[\n"
+"\t\t\t\t\t\t\t\t\t\t<span class=\"fa fa-warning\" style=\"color: red;\"/>\n"
+"\t\t\t\t\t\t\t\t\t\tYou have not specified currency unit (e.g. Dollars, Vietnam\n"
+"\t\t\t\t\t\t\t\t\t\t\tDong, etc) for the corresponding currency"
+msgstr ""
+"[\n"
+"\t\t\t\t\t\t\t\t\t\t\t<span class=\"fa fa-warning\" style=\"color: red;\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\tBạn chưa thiết lập Đơn vị Tiền tệ (ví dụ: Đô-la,\n"
+"\t\t\t\t\t\t\t\t\t\t\tĐồng, v.v.) cho tiền tệ tương ứng"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_general_voucher_document
+msgid ""
+"[\n"
+"\t\t\t\t\t\t\t\t<span class=\"fa fa-warning\" style=\"color: red;\"/>\n"
+"\t\t\t\t\t\t\t\tYou have not specified currency unit (e.g. Dollars, Vietnam\n"
+"\t\t\t\t\t\t\t\t\t\t\tDong, etc) for the corresponding currency"
+msgstr ""
+"[\n"
+"\t\t\t\t\t\t\t\t\t\t\t<span class=\"fa fa-warning\" style=\"color: red;\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\tBạn chưa thiết lập Đơn vị Tiền tệ (ví dụ: Đô-la,\n"
+"\t\t\t\t\t\t\t\t\t\t\tĐồng, v.v.) cho tiền tệ tương ứng"
+
+#. module: to_print_payment_vi
+#: model_terms:ir.ui.view,arch_db:to_print_payment_vi.report_account_receipt_voucher
+msgid "source document(s)."
+msgstr "chứng từ gốc"

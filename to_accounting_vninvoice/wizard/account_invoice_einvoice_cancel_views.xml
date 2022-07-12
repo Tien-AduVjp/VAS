@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="view_account_invoice_einvoice_cancel"
+			model="ir.ui.view">
+			<field name="name">VN-invoice Cancellation Wizard</field>
+			<field name="model">account.invoice.einvoice.cancel</field>
+			<field name="inherit_id" ref="to_einvoice_common.view_account_invoice_einvoice_cancel" />
+			<field name="arch" type="xml">
+				<xpath expr="//group/field[@name='additional_reference_desc']" position="after">
+					<field name="reason" attrs="{'invisible':[('vninvoice_transactionid', '=', False)],'required':[('vninvoice_transactionid', '!=', False)]}"/>
+					<field name="vninvoice_transactionid" invisible="1"/>
+				</xpath>
+				<xpath expr="//group/field[@name='cancellation_record']" position="attributes">
+					<attribute name="attrs">{'required':[('vninvoice_transactionid','!=',False)]}</attribute>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

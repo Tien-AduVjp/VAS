@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="hr_contract_view_form">
+			<field name="name">hr.contract.form</field>
+			<field name="model">hr.contract</field>
+			<field name="inherit_id" ref="hr_contract.hr_contract_view_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//header/field[@name='state']" position="replace">
+					<field name="state" widget="statusbar" />
+				</xpath>
+				<xpath expr="//header/field[@name='state']" position="before">
+					<button name="action_start_contract" string="Start"
+						states="draft" type="object" class="oe_highlight"
+						help="Click here to start the contract so that it can be available in other business processes" />
+					<button name="action_to_renew" string="Set as To Renew"
+						groups="base.group_no_one" states="open" type="object"
+						help="Set the contract status as 'To Renew'. Or, the contract will be set to 'To Renew' automatically when its End Date is between tomorrow and the next 7 days, OR its employee's Visa Expire Date is between tomorrow and the next 60 days." />
+					<button name="action_renew" string="Renew"
+						states="pending,close" type="object" class="oe_highlight" />
+					<button name="set_as_close" string="Close"
+						help="Click here to set the contract as Expired. The contract will also be closed automatically when its End Date or its employee's Visa Expire Date is earlier or equal to tomorrow."
+						states="open,pending" type="object" />
+					<button name="action_cancel" string="Cancel"
+						help="Click here to cancel the contract" states="close,open,pending"
+						type="object" />
+					<button name="action_set_to_draft" string="Set to New"
+						help="Click here to set contract to New" states="cancel"
+						type="object" />
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

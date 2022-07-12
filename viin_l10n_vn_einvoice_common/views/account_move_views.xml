@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="view_move_form" model="ir.ui.view">
+			<field name="name">account.move.form</field>
+			<field name="model">account.move</field>
+			<field name="inherit_id" ref="account.view_move_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//button[@name='action_issue_einvoices']"
+					position="after">
+					<button name="action_prepend_vietnamese_description_to_invoice_lines" type="object"
+						string="Add Vietnamese Invoice Line Description" class="oe_highlight"
+						attrs="{'invisible': ['|','|',
+						('einvoice_state', '!=', 'not_issued'),
+						('type', 'not in', ('out_invoice', 'out_refund'))]}"
+						confirm="This action will prepend sale description in Vietnamese of the products to the corresponding invoice lines' label.
+						Please note that this will not check duplication. So, don't do it multiple times."
+						groups="account.group_account_invoice" />
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

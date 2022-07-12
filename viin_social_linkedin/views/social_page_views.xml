@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+	<data>
+		<record id="social_page_view_form" model="ir.ui.view">
+			<field name="name">Social Page</field>
+			<field name="model">social.page</field>
+			<field name="inherit_id" ref="viin_social.social_page_view_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='social_page_id']" position="after">
+					<field name="linkedin_page_urn" attrs="{'invisible': [('social_provider','!=','linkedin')]}" groups="viin_social.viin_social_group_admin"/>
+					<field name="linkedin_page_admin_urn" attrs="{'invisible': [('social_provider','!=','linkedin')]}" groups="viin_social.viin_social_group_admin"/>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

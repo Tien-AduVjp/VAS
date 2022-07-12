@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="view_move_form">
+			<field name="name">account.move.form</field>
+			<field name="model">account.move</field>
+			<field name="inherit_id" ref="account.view_move_form" />
+			<field name="arch" type="xml">
+				<xpath
+					expr="//field[@name='invoice_line_ids']/tree/field[@name='account_id']"
+					position="after">
+					<field name="fleet_vehicle_cost_ids" invisible="1" />
+				</xpath>
+				<xpath
+					expr="//field[@name='invoice_line_ids']/tree/field[@name='currency_id']"
+					position="after">
+					<field name="has_vehicle_cost" widget="widgetbusbutton"
+						attrs="{'column_invisible': [('parent.type', 'not in', ['in_invoice','in_refund'])]}"
+						options="{&quot;warn&quot;: true}" />
+				</xpath>
+				<xpath expr="//notebook/page[2]" position="inside">
+					<separator string="Linked Fleet Vehicle Costs"
+						attrs="{'invisible':[('type','in',['out_invoice','out_refund'])]}"
+						groups="base.group_no_one" />
+					<field name="fleet_vehicle_cost_ids"
+						attrs="{'invisible':[('type','in',['out_invoice','out_refund'])]}"
+						groups="base.group_no_one">
+						<tree name="fleet_vehicle_cost_ids">
+							<field name="vehicle_id" />
+							<field name="cost_subtype_id" />
+							<field name="product_id" />
+							<field name="vendor_id" />
+							<field name="amount" />
+							<field name="date" />
+						</tree>
+					</field>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

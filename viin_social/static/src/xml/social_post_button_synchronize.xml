@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<template id="action_synchronize_all_posts" xml:space="preserve">
+          <t t-extend="ListView.buttons">
+            <t t-jquery="button.o_list_export_xlsx" t-operation="before">
+                <button t-if="widget.modelName == 'social.post'" class="btn btn-primary action-synchronize-all-posts" type="button">Synch all Posts</button>
+            </t>
+          </t>
+    </template>

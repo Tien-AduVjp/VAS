@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+
+    <t t-extend="mail.discuss.SidebarChannels">
+        <t t-jquery="t[t-call='mail.discuss.SidebarItems']:last" t-operation="after">
+            <t t-set="type" t-value="'social_chat'"/>
+            <t t-set="disableAddThread" t-value="true"/>
+            <t t-call="mail.discuss.SidebarTitle">
+                <t t-set="title">Social Conversation</t>
+                <t t-set="icon" t-value="fa-comments"/>
+            </t>
+            <t t-call="mail.discuss.SidebarItems"/>
+        </t>
+    </t>
+
+</template>

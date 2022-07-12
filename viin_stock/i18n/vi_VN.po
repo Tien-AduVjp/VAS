@@ -1,0 +1,317 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_stock
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-18 04:05+0000\n"
+"PO-Revision-Date: 2021-03-18 04:05+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_stock
+#: model:ir.model.fields.selection,name:viin_stock.selection__stock_report__state__assigned
+msgid "Available"
+msgstr "Khả dụng"
+
+#. module: viin_stock
+#: model_terms:ir.ui.view,arch_db:viin_stock.stock_report_viin_view_dashboard
+msgid "Ave. Delivery Cycle Time"
+msgstr "Thời gian Giao hàng TB"
+
+#. module: viin_stock
+#: model_terms:ir.ui.view,arch_db:viin_stock.stock_report_viin_view_dashboard
+msgid "Ave. Delivery Delay"
+msgstr "Độ trễ Giao hàng TB"
+
+#. module: viin_stock
+#: model_terms:ir.ui.view,arch_db:viin_stock.stock_report_viin_view_dashboard
+msgid "Ave. Receipt Cycle Time"
+msgstr "Thời gian Nhận hàng TB"
+
+#. module: viin_stock
+#: model_terms:ir.ui.view,arch_db:viin_stock.stock_report_viin_view_dashboard
+msgid "Ave. Receipt Delay"
+msgstr "Độ trễ Nhận hàng TB"
+
+#. module: viin_stock
+#: model:ir.model.fields.selection,name:viin_stock.selection__stock_report__state__cancel
+msgid "Cancelled"
+msgstr "Đã hủy"
+
+#. module: viin_stock
+#: model:ir.model.fields,field_description:viin_stock.field_stock_report__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: viin_stock
+#: model:ir.model.fields,field_description:viin_stock.field_stock_report__creation_date
+msgid "Creation Date"
+msgstr "Ngày tạo"
+
+#. module: viin_stock
+#: model_terms:ir.ui.view,arch_db:viin_stock.stock_report_view_form
+msgid "Cycle Time"
+msgstr "Chu kỳ"
+
+#. module: viin_stock
+#: model:ir.model.fields,field_description:viin_stock.field_stock_report__cycle_time
+msgid "Cycle Time (Days)"
+msgstr "Chu kỳ (Ngày)"
+
+#. module: viin_stock
+#: model_terms:ir.ui.view,arch_db:viin_stock.stock_report_view_form
+msgid "Days"
+msgstr "Ngày"
+
+#. module: viin_stock
+#: model_terms:ir.ui.view,arch_db:viin_stock.stock_report_view_form
+msgid "Delay"
+msgstr "Độ trễ"
+
+#. module: viin_stock
+#: model:ir.model.fields,field_description:viin_stock.field_stock_report__delay
+msgid "Delay (Days)"
+msgstr "Độ trễ (Ngày)"
+
+#. module: viin_stock
+#: model_terms:ir.ui.view,arch_db:viin_stock.stock_report_viin_view_dashboard
+msgid ""
+"Delay (days) to deliver an order. Calculated by minusing the done/effective "
+"date of the delivery order and its scheduled date."
+msgstr ""
+"Độ trễ (tính theo ngày) để bàn giao một lô hàng. Được tính toán bằng hiệu "
+"số giữa ngày hoàn thành giao hàng và ngày kế hoạch giao hàng."
+
+#. module: viin_stock
+#: model_terms:ir.ui.view,arch_db:viin_stock.stock_report_viin_view_dashboard
+msgid ""
+"Delay (days) to receive an order. Calculated by minusing the done/effective "
+"date of the receipt and its scheduled date."
+msgstr ""
+"Độ trễ (tính theo ngày) để nhận một lô hàng. Được tính toán bằng hiệu số giữa"
+" ngày hoàn thành nhận hàng và ngày kế hoạch nhận hàng."
+
+#. module: viin_stock
+#: model:ir.model.fields,field_description:viin_stock.field_stock_report__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: viin_stock
+#: model:ir.model.fields.selection,name:viin_stock.selection__stock_report__state__done
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: viin_stock
+#: model_terms:ir.ui.view,arch_db:viin_stock.stock_report_view_search
+msgid "Done Deliveries"
+msgstr "Giao hàng hoàn thành"
+
+#. module: viin_stock
+#: model_terms:ir.ui.view,arch_db:viin_stock.stock_report_view_search
+msgid "Done Receipts"
+msgstr "Nhận hàng hoàn thành"
+
+#. module: viin_stock
+#: model_terms:ir.ui.view,arch_db:viin_stock.stock_report_view_search
+msgid "Done Transfers"
+msgstr "Giao nhận hoàn thành"
+
+#. module: viin_stock
+#: model:ir.model.fields,field_description:viin_stock.field_stock_report__scheduled_date
+msgid "Expected Date"
+msgstr "Ngày mong đợi"
+
+#. module: viin_stock
+#: model_terms:ir.ui.view,arch_db:viin_stock.stock_report_view_search
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: viin_stock
+#: model:ir.model.fields,field_description:viin_stock.field_stock_report__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_stock
+#: model:ir.model.fields,field_description:viin_stock.field_stock_report__inventory_id
+msgid "Inventory Adjustment"
+msgstr "Điều chỉnh tồn kho"
+
+#. module: viin_stock
+#: model:ir.model.fields,field_description:viin_stock.field_stock_report__is_late
+msgid "Is Late"
+msgstr "Bị muộn"
+
+#. module: viin_stock
+#: model:ir.model.fields,field_description:viin_stock.field_stock_report__is_backorder
+msgid "Is a Backorder"
+msgstr "Dở dang"
+
+#. module: viin_stock
+#: model:ir.model.fields,field_description:viin_stock.field_stock_report____last_update
+msgid "Last Modified on"
+msgstr "Cập nhật lần cuối"
+
+#. module: viin_stock
+#: model:ir.model.fields.selection,name:viin_stock.selection__stock_report__state__draft
+msgid "New"
+msgstr "Mới"
+
+#. module: viin_stock
+#: model:ir.model.fields,field_description:viin_stock.field_stock_report__picking_type_id
+msgid "Operation Type"
+msgstr "Kiểu hoạt động"
+
+#. module: viin_stock
+#: model:ir.model.fields.selection,name:viin_stock.selection__stock_report__state__partially_available
+msgid "Partially Available"
+msgstr "Khả dụng một phần"
+
+#. module: viin_stock
+#: model:ir.model.fields,field_description:viin_stock.field_stock_report__partner_id
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: viin_stock
+#: model:ir.model.fields,field_description:viin_stock.field_stock_report__picking_name
+msgid "Picking Name"
+msgstr "Tên lô hàng"
+
+#. module: viin_stock
+#: model:ir.model.fields,field_description:viin_stock.field_stock_report__product_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: viin_stock
+#: model:ir.model.fields,field_description:viin_stock.field_stock_report__categ_id
+#: model_terms:ir.ui.view,arch_db:viin_stock.stock_report_view_search
+msgid "Product Category"
+msgstr "Nhóm Sản phẩm"
+
+#. module: viin_stock
+#: model:ir.model.fields,field_description:viin_stock.field_stock_report__product_qty
+msgid "Product Quantity"
+msgstr "Số lượng Sản phẩm"
+
+#. module: viin_stock
+#: model_terms:ir.ui.view,arch_db:viin_stock.viin_stock_move_view_tree
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: viin_stock
+#: model:ir.model.fields,field_description:viin_stock.field_stock_report__reference
+#: model_terms:ir.ui.view,arch_db:viin_stock.stock_viin_view_map
+msgid "Reference"
+msgstr "Tham chiếu"
+
+#. module: viin_stock
+#: model_terms:ir.ui.view,arch_db:viin_stock.stock_report_viin_cohort_view
+msgid "Report"
+msgstr "Báo cáo"
+
+#. module: viin_stock
+#: model_terms:ir.ui.view,arch_db:viin_stock.stock_viin_view_map
+msgid "Scheduled Date"
+msgstr "Ngày kế hoạch"
+
+#. module: viin_stock
+#: model:ir.model.fields,field_description:viin_stock.field_stock_report__state
+msgid "Status"
+msgstr "Tình trạng"
+
+#. module: viin_stock
+#: model_terms:ir.ui.view,arch_db:viin_stock.stock_report_view_pivot
+msgid "Stock Overview"
+msgstr "Tổng quan Kho"
+
+#. module: viin_stock
+#: model:ir.model,name:viin_stock.model_stock_report
+msgid "Stock Report"
+msgstr "Báo cáo kho"
+
+#. module: viin_stock
+#: model_terms:ir.ui.view,arch_db:viin_stock.stock_report_viin_view_dashboard
+msgid ""
+"The number of day needed to deliver an order. Calculated by minusing the "
+"done date of the delivery order and its creation date (order/confirmation "
+"date)."
+msgstr ""
+"Số ngày cần thiết để giao một lô hàng. Được tính toán bằng "
+"hiệu số của ngày hoàn thành và ngày tạo đơn (ngày đặt hàng/xác nhận)"
+
+#. module: viin_stock
+#: model_terms:ir.ui.view,arch_db:viin_stock.stock_report_viin_view_dashboard
+msgid ""
+"The number of day needed to receive an order. Calculated by minusing the "
+"done date of the receipt and its creation date (order/confirmation date)."
+msgstr ""
+"Số ngày cần thiết để nhận một lô hàng. Được tính toán bằng "
+"hiệu số của ngày hoàn thành và ngày tạo đơn (ngày đặt hàng/xác nhận)"
+
+#. module: viin_stock
+#: model:ir.model.fields,help:viin_stock.field_stock_report__cycle_time
+msgid ""
+"The time period (days) between the creation date and the actual transfer "
+"date (which is usually either order date or confirmation date)"
+msgstr "Khoảng thời gian (tính theo ngày) giữa ngày tạo và ngày giao nhận"
+"thực tế (thường là ngày đặt hàng hoặc ngày xác nhận đơn)"
+
+#. module: viin_stock
+#: model:ir.model.fields,help:viin_stock.field_stock_report__delay
+msgid ""
+"The time period (days) between the scheduled date and the actual transfer "
+"date."
+msgstr "Khoảng thời gian (tính theo ngày) giữa ngày tạo theo kế hoạch và "
+"ngày giao nhận thực tế."
+
+#. module: viin_stock
+#: model:ir.model.fields,field_description:viin_stock.field_stock_report__date_done
+msgid "Transfer Date"
+msgstr "Ngày giao nhận"
+
+#. module: viin_stock
+#: model:ir.model.fields,field_description:viin_stock.field_stock_report__picking_id
+msgid "Transfer Reference"
+msgstr "Tham chiếu Giao nhận"
+
+#. module: viin_stock
+#: model:ir.model.fields,field_description:viin_stock.field_stock_report__picking_type_code
+msgid "Type"
+msgstr "Kiểu"
+
+#. module: viin_stock
+#: model:ir.model.fields.selection,name:viin_stock.selection__stock_report__state__waiting
+msgid "Waiting Another Move"
+msgstr "Đang chờ hoạt động khác"
+
+#. module: viin_stock
+#: model:ir.model.fields.selection,name:viin_stock.selection__stock_report__state__confirmed
+msgid "Waiting Availability"
+msgstr "Đang chờ khả dụng"
+
+#. module: viin_stock
+#: model:ir.model.fields,field_description:viin_stock.field_stock_report__warehouse_id
+msgid "Warehourse"
+msgstr ""
+
+#. module: viin_stock
+#: model_terms:ir.ui.view,arch_db:viin_stock.stock_report_view_search
+msgid "Warehouse"
+msgstr "Kho"
+
+#. module: viin_stock
+#: model:ir.actions.act_window,name:viin_stock.stock_report_viin_dashboard_action
+#: model:ir.ui.menu,name:viin_stock.stock_viin_dashboard_menu
+msgid "Warehouse Dashboard"
+msgstr "Tổng quan Kho vận"
+
+#. module: viin_stock
+#: model_terms:ir.ui.view,arch_db:viin_stock.stock_report_viin_view_dashboard
+msgid "days"
+msgstr "ngày"

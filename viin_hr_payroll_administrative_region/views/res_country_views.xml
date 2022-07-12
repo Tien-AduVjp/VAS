@@ -1,0 +1,12 @@
+<odoo>
+	<record id="view_country_form" model="ir.ui.view">
+		<field name="name">res.country.form</field>
+		<field name="model">res.country</field>
+		<field name="inherit_id" ref="viin_administrative_region.view_country_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='administrative_region_ids']/tree/field[@name='name']" position="after">
+				<field name="minimum_wage" />
+			</xpath>
+		</field>
+	</record>
+</odoo>

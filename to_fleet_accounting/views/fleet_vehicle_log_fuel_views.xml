@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view"
+			id="fleet_vehicle_log_fuel_view_tree">
+			<field name="name">fleet.vehicle.log.fuel.tree</field>
+			<field name="model">fleet.vehicle.log.fuel</field>
+			<field name="inherit_id"
+				ref="fleet.fleet_vehicle_log_fuel_view_tree" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='amount']" position="before">
+					<field name="currency_id" invisible="1" />
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view"
+			id="fleet_vehicle_log_fuel_view_form">
+			<field name="name">fleet.vehicle.log.fuel.form</field>
+			<field name="model">fleet.vehicle.log.fuel</field>
+			<field name="inherit_id"
+				ref="fleet.fleet_vehicle_log_fuel_view_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//sheet" position="before">
+					<header>
+					</header>
+				</xpath>
+				<xpath expr="//field[@name='amount']" position="before">
+					<field name="currency_id"
+						options="{'no_create': True, 'no_open': True}"
+						groups="base.group_multi_currency" />
+				</xpath>
+				<xpath expr="//field[@name='vendor_id']" position="after">
+					<field name="company_id" groups="base.group_multi_company" />
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view"
+			id="fleet_vehicle_log_fuel_view_search">
+			<field name="name">fleet.vehicle.log.fuel.search</field>
+			<field name="model">fleet.vehicle.log.fuel</field>
+			<field name="inherit_id"
+				ref="fleet.fleet_vehicle_log_fuel_view_search" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='amount']" position="after">
+					<separator />
+					<field name="vendor_id" />
+					<field name="invoice_id" />
+					<separator />
+					<filter name="ftr_to_invoice"
+						domain="[('invoiceable','=',True)]" string="To Invoice" />
+					<filter name="ftr_invoiced"
+						domain="[('invoice_line_id','!=',False)]" string="Invoiced" />
+				</xpath>
+
+			</field>
+		</record>
+	</data>
+</odoo>

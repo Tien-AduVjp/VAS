@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    	<record id="mrp_production_form_view1" model="ir.ui.view">
+        	<field name="name">mrp.production.form.view1</field>
+        	<field name="model">mrp.production</field>
+        	<field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+        	<field name="arch" type="xml">
+            	<xpath expr="//button[@name='action_toggle_is_locked'][1]" position="attributes">
+            		<attribute name="attrs">{'invisible': 1}</attribute>
+            	</xpath>
+            	<xpath expr="//button[@name='action_toggle_is_locked'][2]" position="attributes">
+            		<attribute name="attrs">{'invisible': 1}</attribute>
+            	</xpath>
+            	<xpath expr="//button[@name='open_produce_product'][1]" position="attributes">
+            		<attribute name="attrs">{'invisible': 1}</attribute>
+            	</xpath>
+            	<xpath expr="//button[@name='open_produce_product'][2]" position="attributes">
+            		<attribute name="attrs">{'invisible': 1}</attribute>
+            	</xpath>
+            	
+            	<xpath expr="//button[@name='action_toggle_is_locked'][1]" position="after">
+            		<button name="action_toggle_is_locked1" barcode_trigger="action_toggle_is_locked" attrs="{'invisible': ['|', '|', ('state', '=', 'cancel'), ('id', '=', False), ('is_locked', '=', False)]}" string="Unlock" groups="mrp.group_mrp_manager" type="object" help="Unlock the manufacturing order to correct what has been consumed or produced."/>
+            	</xpath>
+            	<xpath expr="//button[@name='action_toggle_is_locked'][2]" position="after">
+            		<button name="action_toggle_is_locked2" barcode_trigger="action_toggle_is_locked" attrs="{'invisible': [('is_locked', '=', True)]}" string="Lock" class="oe_highlight" groups="mrp.group_mrp_manager" type="object"/>
+            	</xpath>
+            	<xpath expr="//button[@name='open_produce_product'][1]" position="after">
+            		<button name="open_produce_product1" barcode_trigger="open_produce_product" attrs="{'invisible': ['|', '|', '|', ('state', '=', 'to_close'), ('is_locked', '=', False), ('reservation_state', '!=', 'assigned'), ('routing_id', '!=', False)]}" string="Produce" type="object" class="oe_highlight"/>
+            	</xpath>
+            	<xpath expr="//button[@name='open_produce_product'][2]" position="after">
+            		<button name="open_produce_product2" barcode_trigger="open_produce_product" attrs="{'invisible': ['|', '|', '|', ('state', '=', 'to_close'), ('is_locked', '=', False), ('reservation_state', 'not in', ('confirmed', 'waiting')), ('routing_id', '!=', False)]}" string="Produce" type="object"/>
+            	</xpath>
+            	
+				<xpath expr="//button[@name='button_mark_done']" position="attributes">
+                	<attribute name="barcode_trigger">button_mark_done</attribute>
+            	</xpath>
+            	<xpath expr="//button[@name='action_assign']" position="attributes">
+                	<attribute name="barcode_trigger">action_assign</attribute>
+            	</xpath>
+            	<xpath expr="//button[@name='action_cancel']" position="attributes">
+                	<attribute name="barcode_trigger">action_cancel</attribute>
+            	</xpath>
+            	<xpath expr="//button[@name='button_scrap']" position="attributes">
+                	<attribute name="barcode_trigger">button_scrap</attribute>
+            	</xpath>
+            	<xpath expr="//button[@name='button_unreserve']" position="attributes">
+                	<attribute name="barcode_trigger">button_unreserve</attribute>
+            	</xpath>	
+            	<xpath expr="//button[@name='post_inventory']" position="attributes">
+                	<attribute name="barcode_trigger">post_inventory</attribute>
+            	</xpath>		
+            	<xpath expr="//button[@name='button_plan']" position="attributes">
+                	<attribute name="barcode_trigger">button_plan</attribute>
+            	</xpath>
+            	<xpath expr="//button[@name='button_unplan']" position="attributes">
+                	<attribute name="barcode_trigger">button_unplan</attribute>
+            	</xpath>
+        	</field>
+    	</record>
+    </data>
+</odoo>

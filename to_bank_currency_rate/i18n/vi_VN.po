@@ -1,0 +1,151 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_bank_currency_rate
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-17 01:24+0000\n"
+"PO-Revision-Date: 2021-08-17 01:24+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_bank_currency_rate
+#: model_terms:ir.ui.view,arch_db:to_bank_currency_rate.res_config_settings_view_form
+msgid ""
+"<span class=\"o_form_label\">Main Bank</span>\n"
+"                            <span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-specific.\" aria-label=\"Values set here are company-specific.\" role=\"img\"/>"
+msgstr ""
+"<span class=\"o_form_label\">Ngân hàng Chính</span>\n"
+"                            <span class=\"fa fa-lg fa-building-o\" title=\"Giá trị thiết lập ở đây mang đặc thù Doanh nghiệp.\" aria-label=\"Giá trị thiết lập ở đây mang đặc thù Doanh nghiệp.\" role=\"img\"/>"
+
+#. module: to_bank_currency_rate
+#: model:ir.model.fields,field_description:to_bank_currency_rate.field_res_bank__auto_rate_update
+msgid "Auto Currency Rates Update"
+msgstr "Cập nhật tỷ giá tiền tệ tự động"
+
+#. module: to_bank_currency_rate
+#: model:ir.model.fields,field_description:to_bank_currency_rate.field_res_bank__auto_rate_update_provider
+msgid "Auto Currency Rates Update Service Provider"
+msgstr "Nhà cung cấp dịch vụ cập nhật tỷ giá tiền tệ tự động"
+
+#. module: to_bank_currency_rate
+#: model:ir.model,name:to_bank_currency_rate.model_res_bank
+#: model:ir.model.fields,field_description:to_bank_currency_rate.field_res_currency_rate__bank_id
+#: model_terms:ir.ui.view,arch_db:to_bank_currency_rate.view_currency_rate_search
+msgid "Bank"
+msgstr "Ngân hàng"
+
+#. module: to_bank_currency_rate
+#: model:ir.model,name:to_bank_currency_rate.model_account_bank_statement_line
+msgid "Bank Statement Line"
+msgstr "Cho tiết Sao kê ngân hàng"
+
+#. module: to_bank_currency_rate
+#: model:ir.model.fields.selection,name:to_bank_currency_rate.selection__res_currency_rate__exchange_type__buy_rate
+msgid "Buy Rate"
+msgstr "Tỷ giá Mua"
+
+#. module: to_bank_currency_rate
+#: model:ir.model.fields,help:to_bank_currency_rate.field_res_currency_rate__exchange_type
+msgid ""
+"Buy Rate: the rate applied when we buy;\n"
+"Transfer Rate: the rate applied in custom declaration.\n"
+"Sell Rate: the rate applied when we sell.\n"
+"Leave it empty if the rate is not specific to Buy/Sell activities"
+msgstr ""
+"Tỷ giá Mua: tỷ giá được áp dụng khi chúng ta mua ngoại tệ;\n"
+"Transfer Rate: tỷ giá được áp dụng khi chuyển khoản.\n"
+"Sell Rate: Tỷ giá được áp dụng khi bán ngoại tệ.\n"
+"Để trống nếu tỷ giá này không liên quan đến hoạt động mua/bán hoặc không thể xác định"
+
+#. module: to_bank_currency_rate
+#: model:ir.model,name:to_bank_currency_rate.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: to_bank_currency_rate
+#: model:ir.model,name:to_bank_currency_rate.model_res_config_settings
+msgid "Config Settings"
+msgstr "Thiết lập Cấu hình"
+
+#. module: to_bank_currency_rate
+#: model:ir.model,name:to_bank_currency_rate.model_res_currency
+msgid "Currency"
+msgstr "Tiền tệ"
+
+#. module: to_bank_currency_rate
+#: model:ir.model,name:to_bank_currency_rate.model_res_currency_rate
+msgid "Currency Rate"
+msgstr "Tỷ giá"
+
+#. module: to_bank_currency_rate
+#: model:ir.model.fields,field_description:to_bank_currency_rate.field_res_currency_rate__exchange_type
+#: model_terms:ir.ui.view,arch_db:to_bank_currency_rate.view_currency_rate_search
+msgid "Exchange Type"
+msgstr "Kiểu Tỷ giá"
+
+#. module: to_bank_currency_rate
+#: model:ir.model,name:to_bank_currency_rate.model_account_move
+msgid "Journal Entries"
+msgstr "Bút toán Sổ nhật ký"
+
+#. module: to_bank_currency_rate
+#: model:ir.model,name:to_bank_currency_rate.model_account_move_line
+msgid "Journal Item"
+msgstr "Phát sinh bút toán"
+
+#. module: to_bank_currency_rate
+#: model:ir.model.fields,field_description:to_bank_currency_rate.field_res_company__main_currency_bank_id
+#: model:ir.model.fields,field_description:to_bank_currency_rate.field_res_config_settings__main_currency_bank_id
+msgid "Main Bank"
+msgstr "Ngân hàng Chính"
+
+#. module: to_bank_currency_rate
+#: model:ir.model.constraint,message:to_bank_currency_rate.constraint_res_currency_rate_unique_name_per_day
+msgid "Only one currency rate per day per bank per Exchange Type allowed!"
+msgstr ""
+"Chỉ một tỷ giá hối đoái được phép ghi nhận trong cùng một ngày cho cùng một ngân hàng!"
+
+#. module: to_bank_currency_rate
+#: model:ir.model,name:to_bank_currency_rate.model_account_payment
+msgid "Payments"
+msgstr "Thanh toán"
+
+#. module: to_bank_currency_rate
+#: model:ir.model.fields.selection,name:to_bank_currency_rate.selection__res_currency_rate__exchange_type__sell_rate
+msgid "Sell Rate"
+msgstr "Tỷ giá Bán"
+
+#. module: to_bank_currency_rate
+#: model:ir.model.fields,help:to_bank_currency_rate.field_res_currency_rate__bank_id
+msgid "The bank that the rate is applied"
+msgstr "Ngân hàng mà tỷ giá được áp dụng"
+
+#. module: to_bank_currency_rate
+#: model_terms:ir.ui.view,arch_db:to_bank_currency_rate.res_config_settings_view_form
+msgid ""
+"The bank whose exchange rates are used for currency conversion when no "
+"specific bank is known."
+msgstr "Ngân hàng có tỷ giá hối đoái được sử dụng để chuyển đổi tiền tệ khi không có ngân hàng cụ thể nào được biết."
+
+#. module: to_bank_currency_rate
+#: model:ir.model.fields,help:to_bank_currency_rate.field_res_company__main_currency_bank_id
+#: model:ir.model.fields,help:to_bank_currency_rate.field_res_config_settings__main_currency_bank_id
+msgid ""
+"The bank whose exchange rates are used for currency conversion when no "
+"specific bank is known. Leave this empty to disable this function to apply "
+"the latest rate to the transaction date no matter the bank is specified or "
+"not."
+msgstr "Ngân hàng có tỷ giá hối đoái được sử dụng để chuyển đổi tiền tệ khi không có ngân hàng cụ thể nào được biết."
+" Để trống để tắt chức năng này để áp dụng tỷ giá mới nhất cho ngày giao dịch bất kể ngân hàng có được chỉ định hay không."
+
+#. module: to_bank_currency_rate
+#: model:ir.model.fields.selection,name:to_bank_currency_rate.selection__res_currency_rate__exchange_type__transfer_rate
+msgid "Transfer Rate"
+msgstr "Tỷ giá Chuyển khoản"

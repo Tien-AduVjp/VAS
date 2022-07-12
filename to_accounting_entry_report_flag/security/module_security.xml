@@ -1,0 +1,8 @@
+<odoo>
+    <record id="group_accounting_report_flag_manager" model="res.groups">
+        <field name="name">Accounting Report Flag Manager</field>
+        <field name="category_id" ref="base.module_category_hidden"/>
+        <field name="comment">Member of this group will have access rights to the field Excluded in Legal Reports of journal entries and journal items.</field>
+        <field name="users" eval="[(4, ref('base.user_root')),(4, ref('base.user_admin'))]" />
+    </record>
+</odoo>

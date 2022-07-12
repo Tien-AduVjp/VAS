@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<act_window name="Asset Sell" id="act_asset_sell"
+	        res_model="asset.sell.wizard"
+	        view_mode="form" target="new"/>
+	
+		<record model="ir.ui.view" id="asset_sell_wizard_view_form">
+			<field name="name">asset.sell.wizard.form</field>
+			<field name="model">asset.sell.wizard</field>
+			<field name="priority" eval="8" />
+			<field name="arch" type="xml">
+				<form string="Asset Sell">
+					<group>
+						<field name="asset_id" options="{'no_create': True, 'no_open': True}"/>
+						<field name="stopped_depreciating_date" />
+						<field name="sale_date" />
+					</group>
+					<footer invisible="not context.get('edit', True)">
+						<button string="Sell" name="action_sell" type="object" class="btn-primary" />
+						<button string="Cancel" class="btn-secondary" special="cancel" />
+					</footer>
+				</form>
+			</field>
+		</record>
+	</data>
+</odoo>

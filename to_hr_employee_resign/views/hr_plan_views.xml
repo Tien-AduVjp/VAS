@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+	<data>
+		<record id="hr_plan_view_form" model="ir.ui.view">
+            <field name="name">hr.plan.view.form</field>
+            <field name="model">hr.plan</field>
+            <field name="inherit_id" ref="hr.hr_plan_view_form"/>
+            <field name="arch" type="xml">
+            	<xpath expr="//div[hasclass('oe_title')]" position="after">
+            		<group>
+            			<group>
+	            			<field name="department_id"/>
+	            			<field name="is_offboarding"/>
+            			</group>
+            		</group>
+            	</xpath>
+            </field>
+		</record>
+	</data>
+</odoo>

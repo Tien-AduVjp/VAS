@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="view_account_journal_form" model="ir.ui.view">
+			<field name="name">account.journal.form</field>
+			<field name="model">account.journal</field>
+			<field name="inherit_id"
+				ref="to_einvoice_common.view_account_journal_form" />
+			<field name="arch" type="xml">				
+				<xpath expr="//page[@name='einvoice_integration']" position="inside" >
+					<group string="VN-invoice" attrs="{'invisible': ['|',('einvoice_disabled','=',True),('company_einvoice_provider','!=','vninvoice')]}">
+						<group>					
+							<field name="account_vninvoice_serial_id"/>
+							<field name="account_vninvoice_template_id"/>
+							<field name="account_vninvoice_type_id"/>
+						</group>
+					</group>
+				</xpath>
+				<xpath expr="//field[@name='einvoice_item_name_limit']" position="attributes">
+					<attribute name="attrs">{'invisible':[('company_einvoice_provider', '=', 'vninvoice')]}</attribute>
+				</xpath>
+				<xpath expr="//field[@name='einvoice_item_name']" position='attributes'>
+					<attribute name="attrs">{'invisible':[('company_einvoice_provider', '=', 'vninvoice')]}</attribute>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

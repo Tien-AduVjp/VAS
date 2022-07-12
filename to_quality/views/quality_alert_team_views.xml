@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="quality_alert_team_view_tree" model="ir.ui.view">
+		<field name="name">quality.alert.team.tree</field>
+		<field name="model">quality.alert.team</field>
+		<field name="arch" type="xml">
+			<tree string="Teams">
+				<field name="sequence" widget="handle" />
+				<field name="name" />
+				<field name="alias_id"/>
+			</tree>
+		</field>
+	</record>
+
+	<record id="quality_alert_team_view_form" model="ir.ui.view">
+		<field name="name">quality.alert.team.form</field>
+		<field name="model">quality.alert.team</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group>
+						<group>
+							<field name="name" placeholder="Project Name" />
+						</group>
+						<group name="group_alias">
+							<label for="alias_name" string="Email Alias" />
+							<div name="alias_def">
+								<field name="alias_id" class="oe_read_only oe_inline"
+									string="Email Alias" required="0" />
+								<div class="oe_edit_only oe_inline" name="edit_alias"
+									style="display: inline;">
+									<field name="alias_name" class="oe_inline" />
+									@
+									<field name="alias_domain" class="oe_inline" readonly="1" />
+								</div>
+							</div>
+							<field name="alias_contact" class="oe_inline"
+								groups="base.group_no_one" string="Accept Emails From" />
+						</group>
+					</group>
+				</sheet>
+				<div class="oe_chatter">
+					<field name="message_follower_ids" widget="mail_followers" />
+					<field name="message_ids" widget="mail_thread" />
+				</div>
+			</form>
+		</field>
+	</record>
+
+	<record id="quality_alert_team_view_kanban" model="ir.ui.view">
+		<field name="name">quality.alert.team.kanban</field>
+		<field name="model">quality.alert.team</field>
+		<field name="arch" type="xml">
+			<kanban class="oe_background_grey o_kanban_dashboard o_quality_kanban" create="0">
+				<field name="name" />
+				<field name="check_count" />
+				<field name="alert_count" />
+				<field name="alias_id" />
+				<field name="alias_name" />
+				<field name="alias_domain" />
+				<field name="color" />
+				<templates>
+					<t t-name="kanban-box">
+						<div t-attf-class="#{kanban_color(record.color.raw_value)}">
+							<span class="oe_kanban_color_help"
+								t-attf-title="In #{kanban_getcolorname(record.color.raw_value)}"
+								role="img"
+								t-attf-aria-label="In #{kanban_getcolorname(record.color.raw_value)}" />
+							<div t-attf-class="o_kanban_card_header">
+								<div class="o_kanban_card_header_title">
+									<div class="o_primary">
+										<field name="name" />
+									</div>
+									<div
+										t-if="record.alias_name.value and record.alias_domain.value">
+										<small>
+											<i class="fa fa-envelope-o" role="img"
+												aria-label="Domain alias" title="Domain alias"></i>
+											&amp;nbsp;
+											<field name="alias_id" />
+										</small>
+									</div>
+								</div>
+								<div class="o_kanban_manage_button_section">
+									<a class="o_kanban_manage_toggle_button" href="#">
+										<i class="fa fa-ellipsis-v" role="img" aria-label="Manage" title="Manage" />
+									</a>
+								</div>
+							</div>
+							<div class="container o_kanban_card_content">
+								<div class="quality_action_team">
+									<div class="mb-1">
+										<button class="btn btn-primary" name="%(quality_alert_action_team)d" type="action">
+											<span>
+												Quality Alerts
+												<field name="alert_count" />
+											</span>
+										</button>
+									</div>
+									<div class="mt-1">
+										<button class="btn btn-primary" name="%(quality_check_action_team)d" type="action">
+											<span>
+												Checks In Progress
+												<field name="check_count" />
+											</span>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="container o_kanban_card_manage_pane dropdown-menu" role="menu">
+								<div class="row">
+									<div class="col-6 o_kanban_card_manage_section o_kanban_manage_view"></div>
+									<div class="col-6 o_kanban_card_manage_section o_kanban_manage_new"></div>
+								</div>
+								<div t-if="widget.editable" class="o_kanban_card_manage_settings row">
+									<div role="menuitem" aria-haspopup="true" class="col-8">
+										<ul role="menu" class="oe_kanban_colorpicker" data-field="color" />
+									</div>
+									<div class="col-4 text-right">
+										<a type="edit">Settings</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</t>
+				</templates>
+			</kanban>
+		</field>
+	</record>
+
+	<record id="quality_alert_team_mobile_view_kanban" model="ir.ui.view">
+		<field name="name">quality.alert.team.mobile.kanban</field>
+		<field name="model">quality.alert.team</field>
+		<field name="arch" type="xml">
+			<kanban class="o_kanban_mobile">
+				<templates>
+					<t t-name="kanban-box">
+						<div t-attf-class="oe_kanban_content oe_kanban_global_click">
+							<div class="row">
+								<div class="col-xs-12">
+									<strong>
+										<field name="name" />
+									</strong>
+								</div>
+							</div>
+						</div>
+					</t>
+				</templates>
+			</kanban>
+		</field>
+	</record>
+
+	<record id="quality_alert_team_action" model="ir.actions.act_window">
+		<field name="name">Quality Dashboard</field>
+		<field name="res_model">quality.alert.team</field>
+		<field name="view_mode">kanban,form</field>
+		<field name="view_id" ref="quality_alert_team_view_kanban" />
+		<field name="help" type="html">
+			<p>
+				Create a new Quality Teams
+			</p>
+		</field>
+	</record>
+
+	<record id="quality_alert_team_configuration_action" model="ir.actions.act_window">
+		<field name="name">Quality Teams</field>
+		<field name="res_model">quality.alert.team</field>
+		<field name="view_mode">tree,form</field>
+		<field name="view_ids"
+			eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'tree', 'view_id': ref('quality_alert_team_view_tree')}),
+            (0, 0, {'view_mode': 'kanban', 'view_id': ref('quality_alert_team_mobile_view_kanban')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('quality_alert_team_view_form')})]" />
+	</record>
+
+	<menuitem id="quality_dashboard_menu" name="Dashboard" action="quality_alert_team_action" parent="quality_root_menu" sequence="10" />
+
+	<menuitem id="quality_config_alert_team_menu" name="Quality Alert Teams" parent="quality_configuration_menu" 
+			  action="quality_alert_team_configuration_action"
+		 	  sequence="10" />
+</odoo>

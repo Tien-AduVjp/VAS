@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="1">
+		<record id="vninvoice_template_01GTKT0_001"
+			model="account.vninvoice.template">
+			<field name="name">01GTKT0/001</field>
+			<field name="description">Value Added Tax Invoice</field>
+			<field name="type_id" ref="vninvoice_type_01GTKT" />
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="view_cash_flow_forecast_pivot" model="ir.ui.view">
+			<field name="name">cash.flow.forecast.pivot</field>
+			<field name="model">cash.flow.forecast.report</field>
+			<field name="arch" type="xml">
+				<pivot string="Cash Flow Forecast">
+					<field name="resource" type="row" />
+					<field name="date" type="col" />
+					<field name="amount" type="measure" />
+				</pivot>
+			</field>
+		</record>
+		
+		<record id="view_cash_flow_forecast_graph" model="ir.ui.view">
+			<field name="name">cash.flow.forecast.graph</field>
+			<field name="model">cash.flow.forecast.report</field>
+			<field name="arch" type="xml">
+				<graph string="Cash Flow Forecast">
+					<field name="date" type="row" />
+					<field name="resource" type="col" />
+					<field name="amount" type="measure" />
+				</graph>
+			</field>
+		</record>
+		
+		<record id="view_cash_flow_forecast_search" model="ir.ui.view">
+			<field name="name">cash.flow.forecast.search</field>
+			<field name="model">cash.flow.forecast.report</field>
+			<field name="arch" type="xml">
+				<search string="Cash Flow Forecast">
+					<field name="partner_id" />
+					<separator />
+					<filter name="ftr_resource" string="Resource without User Input" domain="[('resource','!=', 'user_input')]" />
+					<separator />
+					<filter string="To end of this year" name="thisyear" domain="[('date','&lt;=',time.strftime('%%Y-12-31'))]"/>
+					<filter string="To end of next year" name="nextyear" domain="[('date','&lt;=',(context_today()+relativedelta(years=1)).strftime('%Y-12-31'))]"/>
+					<separator />
+					<filter name="cash_in" string="Cash In" domain="[('type', '=', 'cash_in')]" />
+					<filter name="cash_out" string="Cash Out" domain="[('type','=', 'cash_out')]" />
+				</search>
+			</field>
+		</record>
+		
+		<record id="action_cash_flow_forecast_pivot" model="ir.actions.act_window">
+			<field name="name">Cash Flow Forecast</field>
+			<field name="res_model">cash.flow.forecast.report</field>
+			<field name="view_mode">pivot,graph</field>
+			<field name="view_id"></field>  <!-- force empty -->
+			<field name="context">{}</field>
+		</record>
+
+		<menuitem name="Cash Flow Forecast" parent="report_menu"
+			sequence="1" id="cash_flow_forecast_menu" action="action_cash_flow_forecast_pivot" />
+	</data>
+</odoo>

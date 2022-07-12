@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<menuitem id="root_odoo_module_menu"
+			groups="to_odoo_module.odoo_module_user"
+			web_icon="to_odoo_module,static/description/icon.png"
+			name="Apps Store" />
+
+		<menuitem id="odoo_module_main_menu" name="Modules"
+			groups="to_odoo_module.odoo_module_user"
+			parent="root_odoo_module_menu" sequence="50" />
+
+		<menuitem id="reports_main_menu" sequence="99"
+			groups="to_odoo_module.odoo_module_manager" name="Reports"
+			parent="root_odoo_module_menu" />
+
+		<menuitem id="configuration_menu" sequence="999"
+			groups="to_odoo_module.odoo_module_manager" name="Configuration"
+			parent="root_odoo_module_menu" />
+
+	</data>
+</odoo>
+	
+	
+				

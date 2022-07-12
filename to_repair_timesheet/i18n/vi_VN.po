@@ -1,0 +1,445 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_repair_timesheet
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-04 06:45+0000\n"
+"PO-Revision-Date: 2021-10-04 06:45+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields,field_description:to_repair_timesheet.field_repair_order__invoice_count
+msgid "# of Invoices"
+msgstr "SL hoá đơn"
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields,field_description:to_repair_timesheet.field_repair_advance_payment_inv__count
+msgid "# of Orders"
+msgstr "SL đơn hàng"
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields,help:to_repair_timesheet.field_repair_advance_payment_inv__deposit_account_id
+msgid "Account used for deposits"
+msgstr "Tài khoản được dùng để ghi nhận đặt cọc"
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields,field_description:to_repair_timesheet.field_repair_order__analytic_account_id
+msgid "Analytic Account"
+msgstr "Tài khoản quản trị"
+
+#. module: to_repair_timesheet
+#: model:ir.model,name:to_repair_timesheet.model_account_analytic_line
+msgid "Analytic Line"
+msgstr "Phát sinh KT Quản trị"
+
+#. module: to_repair_timesheet
+#: model_terms:ir.ui.view,arch_db:to_repair_timesheet.view_repair_advance_payment_inv
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: to_repair_timesheet
+#: model_terms:ir.ui.view,arch_db:to_repair_timesheet.view_order_form_inherit_repair_timesheet
+msgid "Create Invoice"
+msgstr "Tạo Hoá đơn"
+
+#. module: to_repair_timesheet
+#: model_terms:ir.ui.view,arch_db:to_repair_timesheet.view_repair_advance_payment_inv
+msgid "Create Invoices"
+msgstr "Tạo hoá đơn"
+
+#. module: to_repair_timesheet
+#: model:ir.model,name:to_repair_timesheet.model_repair_order_make_invoice
+msgid "Create Mass Invoice (repair)"
+msgstr "Tạo hàng loạt hóa đơn"
+
+#. module: to_repair_timesheet
+#: model_terms:ir.ui.view,arch_db:to_repair_timesheet.view_repair_advance_payment_inv
+msgid "Create and View Invoices"
+msgstr "Tạo và Xem Hoá đơn"
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields,field_description:to_repair_timesheet.field_repair_advance_payment_inv__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields,field_description:to_repair_timesheet.field_repair_advance_payment_inv__create_date
+msgid "Created on"
+msgstr "Được tạo vào"
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields,field_description:to_repair_timesheet.field_repair_advance_payment_inv__deposit_taxes_id
+msgid "Customer Taxes"
+msgstr "Thuế Khách hàng"
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields,field_description:to_repair_timesheet.field_repair_fee__qty_delivered
+msgid "Delivered"
+msgstr "Đã giao hàng"
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields,field_description:to_repair_timesheet.field_repair_advance_payment_inv__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields,field_description:to_repair_timesheet.field_repair_advance_payment_inv__amount
+msgid "Down Payment Amount"
+msgstr "Tổng tiền đặt cọc"
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields,field_description:to_repair_timesheet.field_repair_advance_payment_inv__product_id
+msgid "Down Payment Product"
+msgstr "Sản phẩm Tiền đặt cọc"
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields.selection,name:to_repair_timesheet.selection__repair_fee__invoice_status__invoiced
+#: model:ir.model.fields.selection,name:to_repair_timesheet.selection__repair_line__invoice_status__invoiced
+#: model:ir.model.fields.selection,name:to_repair_timesheet.selection__repair_order__invoice_status__invoiced
+msgid "Fully Invoiced"
+msgstr "Đã xuất toàn bộ hóa đơn"
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields,field_description:to_repair_timesheet.field_repair_advance_payment_inv__id
+msgid "ID"
+msgstr ""
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields,field_description:to_repair_timesheet.field_repair_advance_payment_inv__deposit_account_id
+msgid "Income Account"
+msgstr "Tài khoản Doanh thu"
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields,field_description:to_repair_timesheet.field_repair_fee__invoice_lines
+msgid "Invoice Lines"
+msgstr "Chi tiết hoá đơn"
+
+#. module: to_repair_timesheet
+#: model:ir.actions.act_window,name:to_repair_timesheet.action_view_advance_payment_inv
+msgid "Invoice Order"
+msgstr "Xuất Hoá đơn"
+
+#. module: to_repair_timesheet
+#: model_terms:ir.ui.view,arch_db:to_repair_timesheet.view_repair_advance_payment_inv
+msgid "Invoice Repair Order"
+msgstr "Xuất hóa đơn sửa chữa"
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields,field_description:to_repair_timesheet.field_repair_fee__invoice_status
+#: model:ir.model.fields,field_description:to_repair_timesheet.field_repair_line__invoice_status
+#: model:ir.model.fields,field_description:to_repair_timesheet.field_repair_order__invoice_status
+msgid "Invoice Status"
+msgstr "Tình trạng hoá đơn"
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields.selection,name:to_repair_timesheet.selection__repair_advance_payment_inv__advance_payment_method__delivered
+msgid "Invoiceable lines"
+msgstr "Dòng hóa đơn"
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields.selection,name:to_repair_timesheet.selection__repair_advance_payment_inv__advance_payment_method__all
+msgid "Invoiceable lines (deduct down payments)"
+msgstr "Dòng hóa đơn (khấu trừ tiền đặt cọc)"
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields,field_description:to_repair_timesheet.field_repair_fee__qty_invoiced
+msgid "Invoiced Quantity"
+msgstr "SL Đã xuất hoá đơn"
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields,field_description:to_repair_timesheet.field_repair_order__invoice_ids
+#: model_terms:ir.ui.view,arch_db:to_repair_timesheet.view_order_form_inherit_repair_timesheet
+msgid "Invoices"
+msgstr "Hoá đơn"
+
+#. module: to_repair_timesheet
+#: model_terms:ir.ui.view,arch_db:to_repair_timesheet.view_repair_advance_payment_inv
+msgid ""
+"Invoices will be created in draft so that you can review\n"
+"                        them before validation."
+msgstr ""
+"Hoá đơn sẽ được tạo ở trạng thái dự thảo để bạn có thể xem xét lại trước khi"
+" xác nhận."
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields,field_description:to_repair_timesheet.field_repair_fee__is_service
+msgid "Is a Service"
+msgstr "Là một Dịch vụ"
+
+#. module: to_repair_timesheet
+#: model:ir.model,name:to_repair_timesheet.model_account_move_line
+msgid "Journal Item"
+msgstr "Phát sinh KT"
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields,field_description:to_repair_timesheet.field_repair_advance_payment_inv____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields,field_description:to_repair_timesheet.field_repair_advance_payment_inv__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields,field_description:to_repair_timesheet.field_repair_advance_payment_inv__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối"
+
+#. module: to_repair_timesheet
+#: code:addons/to_repair_timesheet/models/repair_order.py:0
+#, python-format
+msgid "No account defined for product \"%s\"."
+msgstr "Không có tài khoản được xác định cho sản phẩm \"%s\"."
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields.selection,name:to_repair_timesheet.selection__repair_fee__invoice_status__no
+#: model:ir.model.fields.selection,name:to_repair_timesheet.selection__repair_line__invoice_status__no
+#: model:ir.model.fields.selection,name:to_repair_timesheet.selection__repair_order__invoice_status__no
+msgid "Nothing to Invoice"
+msgstr "Không có gì để lập hóa đơn"
+
+#. module: to_repair_timesheet
+#: code:addons/to_repair_timesheet/models/repair_order.py:0
+#, python-format
+msgid "Please define an accounting sales journal for this company."
+msgstr "Vui lòng xác định một tài khoản sổ nhật ký bán hàng cho công ty này."
+
+#. module: to_repair_timesheet
+#: code:addons/to_repair_timesheet/models/repair_fee.py:0
+#, python-format
+msgid ""
+"Please define income account for this product: \"%s\" (id:%d) - or for its "
+"category: \"%s\"."
+msgstr ""
+"Vui lòng xác định tài khoản thu nhập cho sản phẩm này: \"%s\" (id:%d) - hoặc"
+" cho danh mục của nó: \"%s\"."
+
+#. module: to_repair_timesheet
+#: model:ir.model,name:to_repair_timesheet.model_project_project
+msgid "Project"
+msgstr "Dự án"
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields,field_description:to_repair_timesheet.field_repair_order__project_project_id
+msgid "Project associated to this sale"
+msgstr "Dự án liên quan đến bán hàng này"
+
+#. module: to_repair_timesheet
+#: model_terms:ir.ui.view,arch_db:to_repair_timesheet.view_order_form_inherit_repair_timesheet
+msgid "Project(s) Overview"
+msgstr "Tổng quan (các) Dự án"
+
+#. module: to_repair_timesheet
+#: code:addons/to_repair_timesheet/models/repair_order.py:0
+#: model:ir.model.fields,field_description:to_repair_timesheet.field_repair_order__project_ids
+#, python-format
+msgid "Projects"
+msgstr "Dự án"
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields,help:to_repair_timesheet.field_repair_order__project_ids
+msgid "Projects used in this sales order."
+msgstr "Các Dự án được sử dụng trong đơn hàng này."
+
+#. module: to_repair_timesheet
+#: model:ir.model,name:to_repair_timesheet.model_repair_advance_payment_inv
+msgid "Repair Advance Payment Invoice"
+msgstr "Thanh toán tạm ứng hóa đơn sửa chữa"
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields,field_description:to_repair_timesheet.field_project_project__repair_fee_line_id
+#: model:ir.model.fields,field_description:to_repair_timesheet.field_project_task__repair_fee_line_id
+msgid "Repair Fee Line"
+msgstr "Dòng phí sửa chữa"
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields,field_description:to_repair_timesheet.field_account_move_line__repair_fee_line_ids
+msgid "Repair Fee Lines"
+msgstr "Dòng Phí sửa chữa"
+
+#. module: to_repair_timesheet
+#: model:ir.model,name:to_repair_timesheet.model_repair_fee
+msgid "Repair Fees"
+msgstr "Phí sửa chữa"
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields,field_description:to_repair_timesheet.field_account_analytic_line__ro_line
+msgid "Repair Fees Line"
+msgstr "Dòng phí sửa chữa"
+
+#. module: to_repair_timesheet
+#: model:ir.model,name:to_repair_timesheet.model_repair_line
+msgid "Repair Line (parts)"
+msgstr "Hạng mục sửa chữa (bộ phận)"
+
+#. module: to_repair_timesheet
+#: model:ir.model,name:to_repair_timesheet.model_repair_order
+msgid "Repair Order"
+msgstr "Lệnh sữa chữa"
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields,help:to_repair_timesheet.field_project_project__repair_fee_line_id
+msgid ""
+"Repair fee line from which the project has been created. Used for "
+"tracability."
+msgstr ""
+"Dòng phí sửa chữa mà từ đó dự án đã được tạo ra. Được sử dụng để truy xuất "
+"nguồn gốc."
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields,help:to_repair_timesheet.field_repair_fee__is_service
+msgid ""
+"Repair order fee line should generate a task and/or a project, depending on "
+"the product settings."
+msgstr ""
+"Dòng phí lệnh sửa chữa sẽ tạo ra một nhiệm vụ và/hoặc một dự án, tùy thuộc "
+"vào cài đặt sản phẩm."
+
+#. module: to_repair_timesheet
+#: model:ir.model,name:to_repair_timesheet.model_project_task
+#: model:ir.model.fields,field_description:to_repair_timesheet.field_repair_fee__task_id
+msgid "Task"
+msgstr "Nhiệm vụ"
+
+#. module: to_repair_timesheet
+#: code:addons/to_repair_timesheet/models/repair_fee.py:0
+#, python-format
+msgid ""
+"Task Created (%s): <a href=# data-oe-model=project.task data-oe-id=%d>%s</a>"
+msgstr ""
+"Nhiệm vụ được tạo (%s): <a href=# data-oe-model=project.task data-oe-"
+"id=%d>%s</a>"
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields,help:to_repair_timesheet.field_repair_fee__task_id
+msgid "Task generated by the repair order fee line"
+msgstr "Nhiệm vụ được tạo ra bởi dòng phí đặt hàng sửa chữa"
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields,field_description:to_repair_timesheet.field_repair_order__tasks_count
+#: model_terms:ir.ui.view,arch_db:to_repair_timesheet.view_order_form_inherit_repair_timesheet
+msgid "Tasks"
+msgstr "Nhiệm vụ"
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields,field_description:to_repair_timesheet.field_repair_order__tasks_ids
+msgid "Tasks associated to this sale"
+msgstr "Các nhiệm vụ gắn với đơn hàng này"
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields,help:to_repair_timesheet.field_repair_advance_payment_inv__deposit_taxes_id
+msgid "Taxes used for deposits"
+msgstr "Các thuế được dùng cho các khoản đặt cọc"
+
+#. module: to_repair_timesheet
+#: code:addons/to_repair_timesheet/models/account_analytic_line.py:0
+#: code:addons/to_repair_timesheet/models/account_analytic_line.py:0
+#, python-format
+msgid ""
+"The Repair Order %s linked to the Analytic Account must be validated before "
+"registering expenses."
+msgstr ""
+"Lệnh sửa chữa %s gắn với tài khoản kế toán quản trị phải được xác nhận trước"
+" khi đăng ký thành chi phí."
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields,help:to_repair_timesheet.field_repair_advance_payment_inv__amount
+msgid "The amount to be invoiced in advance, taxes excluded."
+msgstr "Giá trị để xuất hoá đơn trước, thuế bao gồm."
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields,help:to_repair_timesheet.field_repair_order__analytic_account_id
+msgid "The analytic account related to a repair order."
+msgstr "Tài khoản phân tích liên quan đến lệnh sửa chữa."
+
+#. module: to_repair_timesheet
+#: code:addons/to_repair_timesheet/models/repair_order.py:0
+#, python-format
+msgid ""
+"The invoicing feature on this repair order has been deactivated. Please "
+"check the option 'Create Invoices' in the creation form. You need to tick on"
+" it to turn on activate the feature."
+msgstr ""
+"Tính năng xuất hóa đơn cho đơn sửa chữa này chưa được kích hoạt. Bạn cần "
+"đánh dấu tick lên ô chọn 'Tạo hóa đơn' trên form tạo hóa đơn sửa chữa "
+"để bật lại tính năng này."
+
+#. module: to_repair_timesheet
+#: code:addons/to_repair_timesheet/models/repair_order.py:0
+#: code:addons/to_repair_timesheet/models/repair_order.py:0
+#, python-format
+msgid "There is no invoiceable line."
+msgstr "Không có dòng hóa đơn."
+
+#. module: to_repair_timesheet
+#: code:addons/to_repair_timesheet/models/repair_fee.py:0
+#, python-format
+msgid ""
+"This task has been created from: <a href=# data-oe-model=sale.order data-oe-"
+"id=%d>%s</a> (%s)"
+msgstr ""
+"Nhiệm vụ này đã được tạo từ: <a href=# data-oe-model=sale.order data-oe-"
+"id=%d>%s</a> (%s)"
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields,field_description:to_repair_timesheet.field_repair_order__timesheet_count
+msgid "Timesheet activities"
+msgstr "Hoạt động Bảng chấm công"
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields,field_description:to_repair_timesheet.field_repair_order__timesheet_ids
+msgid "Timesheet activities associated to this sale"
+msgstr "Hoạt động bảng chấm công gắn với đơn bán này"
+
+#. module: to_repair_timesheet
+#: code:addons/to_repair_timesheet/models/account_analytic_line.py:0
+#: code:addons/to_repair_timesheet/models/account_analytic_line.py:0
+#, python-format
+msgid ""
+"Timesheet, that is linked to an invoice, cannot be updated or deleted. "
+"Please remove the invoice first."
+msgstr ""
+"Không thể sửa hoặc xóa bảng chấm công đã được xuất hóa đơn. "
+"Vui lòng xóa hóa đơn tương ứng trước."
+
+#. module: to_repair_timesheet
+#: model_terms:ir.ui.view,arch_db:to_repair_timesheet.view_order_form_inherit_repair_timesheet
+msgid "Timesheets"
+msgstr "Chấm công"
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields,field_description:to_repair_timesheet.field_repair_order__create_invoice
+msgid "To Create Invoices"
+msgstr "Tạo hóa đơn"
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields,field_description:to_repair_timesheet.field_repair_fee__qty_to_invoice
+#: model:ir.model.fields.selection,name:to_repair_timesheet.selection__repair_fee__invoice_status__to_invoice
+#: model:ir.model.fields.selection,name:to_repair_timesheet.selection__repair_line__invoice_status__to_invoice
+#: model:ir.model.fields.selection,name:to_repair_timesheet.selection__repair_order__invoice_status__to_invoice
+msgid "To Invoice"
+msgstr "Lập hóa đơn"
+
+#. module: to_repair_timesheet
+#: model:ir.model.fields,field_description:to_repair_timesheet.field_repair_advance_payment_inv__advance_payment_method
+msgid "What do you want to invoice?"
+msgstr "Bạn muốn xuất hoá đơn cho cái gì?"
+
+#. module: to_repair_timesheet
+#: code:addons/to_repair_timesheet/models/project_task.py:0
+#, python-format
+msgid ""
+"You cannot delete a task related to a Repair Order. You can only archive "
+"this task."
+msgstr ""
+"Bạn không thể xóa một nhiệm vụ được gắn với một lệnh sửa chữa. Bạn chỉ có "
+"thể lưu trữ nhiệm vụ này."

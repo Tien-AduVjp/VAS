@@ -1,0 +1,38 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_social_facebook_verify
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-29 03:47+0000\n"
+"PO-Revision-Date: 2021-04-29 03:47+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_social_facebook_verify
+#: model_terms:ir.ui.view,arch_db:viin_social_facebook_verify.social_media_view_form
+msgid "Convert Token to 60 days"
+msgstr ""
+
+#. module: viin_social_facebook_verify
+#: model:ir.model,name:viin_social_facebook_verify.model_social_media
+msgid "Social Media"
+msgstr ""
+
+#. module: viin_social_facebook_verify
+#: model:ir.model.fields,field_description:viin_social_facebook_verify.field_social_media__fb_exchange_token
+msgid "User Exchange Token"
+msgstr ""
+
+#. module: viin_social_facebook_verify
+#: model:ir.model.fields,help:viin_social_facebook_verify.field_social_media__fb_exchange_token
+msgid ""
+"you can get this token at https://developers.facebook.com/tools/explorer/"
+msgstr ""
+

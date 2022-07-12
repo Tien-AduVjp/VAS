@@ -1,0 +1,9 @@
+<odoo>
+	<record id="to_approvals.user_approve_officer_demo" model="res.users">
+		<field name="groups_id" eval="[(4, ref('viin_hr_overtime.group_overtime_officer'))]"/>
+    </record>
+    
+    <record id="to_approvals.user_approval_employee_manager_demo" model="res.users">
+    	<field name="groups_id" eval="[(4, ref('viin_hr_overtime.group_overtime_team_approval'))]"/>
+    </record>
+</odoo>

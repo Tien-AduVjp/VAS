@@ -1,0 +1,49 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_stock_block_quantity
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-27 08:45+0000\n"
+"PO-Revision-Date: 2021-04-27 08:45+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_stock_block_quantity
+#: model:ir.model.fields,field_description:to_stock_block_quantity.field_stock_picking_type__allow_process_exceeded_demand_qty
+msgid "Allow process exceeded demand quantity"
+msgstr "Cho phép xử lý vượt quá số lượng nhu cầu"
+
+#. module: to_stock_block_quantity
+#: model:ir.model.fields,help:to_stock_block_quantity.field_stock_picking_type__allow_process_exceeded_demand_qty
+msgid ""
+"If you not checked, when making stock picking the system will check the quantity 'Done' and quantity 'Initial Demand'.\n"
+"If user input a quantity of 'Done' greater than the 'Initial Demand' quantity column, then user will not be able to validate it"
+msgstr ""
+"Nếu bạn không đánh dấu, hệ thống sẽ kiểm tra số lượng 'Hoàn thành' và số lượng 'Nhu cầu ban đầu' khi xác nhận phiếu kho."
+"Nếu người dùng nhập số lượng cột 'Hoàn thành' lớn hơn số lượng cột 'Nhu cầu ban đầu', người dùng sẽ không thể xác nhận nó"
+#. module: to_stock_block_quantity
+#: model:ir.model,name:to_stock_block_quantity.model_stock_picking_type
+msgid "Picking Type"
+msgstr "Kiểu giao nhận"
+
+#. module: to_stock_block_quantity
+#: code:addons/to_stock_block_quantity/models/stock_picking.py:0
+#, python-format
+msgid ""
+"The quantity done must not be greater than the initial demand \n"
+"Product: %s, Initial Demand: %s, Done: %s"
+msgstr ""
+"Số lượng hoàn thành không được lớn hơn số lượng nhu cầu ban đầu \n"
+"Sản phẩm: %s, Nhu cầu ban đầu: %s, Hoàn thành: %s"
+
+#. module: to_stock_block_quantity
+#: model:ir.model,name:to_stock_block_quantity.model_stock_picking
+msgid "Transfer"
+msgstr "Dịch chuyển"

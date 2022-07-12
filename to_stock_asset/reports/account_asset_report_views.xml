@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="asset_asset_report_search_view_inherited" model="ir.ui.view">
+        <field name="name">asset.asset.report.search.inherited</field>
+        <field name="model">asset.asset.report</field>
+        <field name="inherit_id" ref="to_account_asset.view_asset_asset_report_search"/>
+        <field name="arch" type="xml">
+        	<xpath expr="//group/filter[@name='asset']" position="after">
+        		<filter string="Lot/Seria Number" name="ftr_lot_id" context="{'group_by':'lot_id'}"/>
+        	</xpath>
+        </field>
+    </record>
+</odoo>

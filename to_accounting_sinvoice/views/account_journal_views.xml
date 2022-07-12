@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="view_account_journal_form" model="ir.ui.view">
+			<field name="name">account.journal.form</field>
+			<field name="model">account.journal</field>
+			<field name="inherit_id"
+				ref="to_einvoice_common.view_account_journal_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//page[@name='einvoice_integration']" position="inside" >
+					<group string="S-Invoice" attrs="{'invisible': [('company_einvoice_provider','!=','sinvoice'),('send_mail_einvoice_disabled','=',True)]}">
+						<group>
+							<field name="account_sinvoice_serial_id"
+								attrs="{'invisible': ['|',('einvoice_disabled','=',True),('company_einvoice_provider','!=','sinvoice')]}" />
+							<field name="account_sinvoice_template_id"
+								attrs="{'invisible': ['|',('einvoice_disabled','=',True),('company_einvoice_provider','!=','sinvoice')]}" />
+							<field name="account_sinvoice_type_id"
+								attrs="{'invisible': ['|',('einvoice_disabled','=',True),('company_einvoice_provider','!=','sinvoice')]}" />
+						</group>
+					</group>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

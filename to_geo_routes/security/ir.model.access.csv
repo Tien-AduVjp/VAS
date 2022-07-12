@@ -1,0 +1,12 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_route_section_employee,route.section.employee,model_route_section,base.group_user,1,0,0,0
+access_route_waypoint_employee,route.waypoint.employee,model_route_waypoint,base.group_user,1,0,0,0
+access_route_route_employee,route.route.employee,model_route_route,base.group_user,1,0,0,0
+access_route_section_line_employee,route.section.line.employee,model_route_section_line,base.group_user,1,0,0,0
+access_route_waypoint_area_employee,route.waypoint.area.employee,model_route_waypoint_area,base.group_user,1,0,0,0
+access_route_section_user,route.section.user,model_route_section,to_geo_routes.group_user,1,1,1,1
+access_route_waypoint_user,route.route.waypoint.user,model_route_waypoint,to_geo_routes.group_user,1,1,1,1
+access_route_route_user,route.route.user,model_route_route,to_geo_routes.group_user,1,1,1,0
+access_route_route_manager,route.route.manager,model_route_route,to_geo_routes.group_manager,1,1,1,1
+access_route_waypoint_area_user,route.waypoint.area.user,model_route_waypoint_area,to_geo_routes.group_user,1,1,1,1
+access_route_section_line_user,route.section.line.user,model_route_section_line,to_geo_routes.group_user,1,1,1,1

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+	<t t-extend="UserMenu">
+		<t t-jquery="li.dropdown > ul.dropdown-menu > li > a[data-menu='account']" t-operation="replace" />
+	</t>
+	<t t-extend="PlannerLauncher">
+		<t t-jquery="li.o_planner_help > ul.dropdown-menu > li > a[data-menu='documentation']" t-operation="replace">
+			<li><a href="https://erponline.vn" target="_blank">Documentation</a></li>
+		</t>
+		<t t-jquery="li.o_planner_help > ul.dropdown-menu > li > a[data-menu='support']" t-operation="replace">
+			<li><a href="https://erponline.vn" target="_blank">Q &amp; A Forum</a></li>
+		</t>
+	</t>
+</templates>

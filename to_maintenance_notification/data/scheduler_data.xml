@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<odoo>
+	<record model="ir.cron" id="ir_cron_scheduler_send_email">
+        <field name="name">Maintenance: Send Email Notify Maintenance</field>
+        <field name="model_id" ref="model_maintenance_request"/>
+        <field name="state">code</field>
+        <field name="code">model.cron_notify_maintenance()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False"/>
+    </record>
+</odoo>

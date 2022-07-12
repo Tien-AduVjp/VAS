@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="1">
+		<record id="odoo_v8" model="odoo.version">
+			<field name="name">8.0</field>
+			<field name="release_date">2014-09-18</field>
+			<field name="end_of_functional_support">2017-10-05</field>
+			<field name="end_of_life">2019-10-05</field>
+			<field name="description">Revamped Inventory and WMS, Support for CMS: Website builder, e-commerce, point of sale and business intelligence</field>
+		</record>
+		<record id="odoo_v9" model="odoo.version">
+			<field name="name">9.0</field>
+			<field name="release_date">2015-10-01</field>
+			<field name="end_of_functional_support">2018-10-01</field>
+			<field name="end_of_life">2020-10-01</field>
+			<field name="description">Revamped Accounting features, Odoo Community split from Odoo Enterprise</field>
+		</record>
+		<record id="odoo_v10" model="odoo.version">
+			<field name="name">10.0</field>
+			<field name="release_date">2016-10-05</field>
+			<field name="end_of_functional_support">2019-10-05</field>
+			<field name="end_of_life">2021-10-05</field>
+			<field name="description">Revamped Manufacturing features, Introduction of Odoo Studio</field>
+		</record>
+		<record id="odoo_v11" model="odoo.version">
+			<field name="name">11.0</field>
+			<field name="release_date">2017-10-05</field>
+			<field name="end_of_functional_support">2020-10-05</field>
+			<field name="end_of_life">2022-10-05</field>
+			<field name="description">Studio, Revamped Services Support, Revamped Reporting, moved to Python 3</field>
+		</record>
+		<record id="odoo_v12" model="odoo.version">
+			<field name="name">12.0</field>
+			<field name="release_date">2018-10-05</field>
+			<field name="end_of_functional_support">2021-10-05</field>
+			<field name="end_of_life">2023-10-05</field>
+			<field name="description">Multi-Website Support, Bootstrap 4, Sass intead of Less, IoT, Chat Bot, etc</field>
+		</record>
+		<record id="odoo_v13" model="odoo.version">
+			<field name="name">13.0</field>
+			<field name="release_date">2019-10-03</field>
+			<field name="end_of_functional_support">2022-10-03</field>
+			<field name="end_of_life">2024-10-03</field>
+			<field name="description">Sales Coupons &amp; Promotions for Odoo CE, MRP Subcontracting, Skill Management, Website Form Builder, Product Videos on Website, Inventory Forecast, Ribbon Widget, Calculator Widget, New ‘Buy Now’ Button in Ecommerce, Restrict available product categories in POS, etc</field>
+		</record>
+		<record id="odoo_v14" model="odoo.version">
+			<field name="name">14.0</field>
+			<field name="release_date">2020-10-01</field>
+			<field name="end_of_functional_support">2023-10-01</field>
+			<field name="end_of_life">2025-10-01</field>
+		</record>
+		<record id="odoo_v15" model="odoo.version">
+			<field name="name">15.0</field>
+			<field name="release_date">2021-10-01</field>
+			<field name="end_of_functional_support">2024-10-01</field>
+			<field name="end_of_life">2026-10-01</field>
+		</record>
+	</data>
+</odoo>

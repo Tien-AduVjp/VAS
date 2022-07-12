@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<template id="report_c200_s10dn">
+			<t t-call="web.html_container">
+				<t t-call="to_l10n_vn_qweb_layout.accounting_external_layout_c200">
+					<div class="page">
+						<div class="text-center">
+							<h3>
+								PRODUCT JOURNAL
+								<small>
+									(Stockable Products)
+								</small>
+							</h3>
+							<div class="small">
+								Date From:
+								<span t-field="doc.date_from" />
+								- Date To:
+								<span t-field="doc.date_to" />
+								<br />
+								<t t-call="to_l10n_vn_stock_reports.warehouse_info" />
+								<br />
+								Product:
+								<span t-field="doc.product_id" />
+								<t t-if="doc.description">
+									<br />
+									Description:
+									<span t-field="doc.description" />
+								</t>
+								<br />
+								Unit of Measure:
+								<span t-field="doc.uom_id" />
+							</div>
+						</div>
+						<div class="text-right">
+							Currency:
+							<span t-field="doc.company_id.currency_id" />
+						</div>
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th colspan="2" class="text-center">
+										<div>Documents</div>
+									</th>
+									<th rowspan="2"
+										style="vertical-align: middle; text-align: center;">
+										<div>Description</div>
+									</th>
+									<th rowspan="2"
+										style="vertical-align: middle; text-align: center;">
+										<div>Unit Price</div>
+									</th>
+									<th colspan="2" class="text-center">
+										<div>In</div>
+									</th>
+									<th colspan="2" class="text-center">
+										<div>Out</div>
+									</th>
+									<th colspan="2" class="text-center">
+										<div>Balance</div>
+									</th>
+									<th rowspan="2"
+										style="vertical-align: middle; text-align: center;">
+										<div>Notes</div>
+									</th>
+								</tr>
+								<tr>
+									<th class="text-center">
+										<div>Ref.</div>
+									</th>
+									<th class="text-center">
+										<div>Date</div>
+									</th>
+									<th class="text-center">
+										<div>Quantity</div>
+									</th>
+									<th class="text-center">
+										<div>Value</div>
+									</th>
+									<th class="text-center">
+										<div>Quantity</div>
+									</th>
+									<th class="text-center">
+										<div>Value</div>
+									</th>
+									<th class="text-center">
+										<div>Quantity</div>
+									</th>
+									<th class="text-center">
+										<div>Value</div>
+									</th>
+								</tr>
+								<tr>
+									<th class="text-center">
+										<div>A</div>
+									</th>
+									<th class="text-center">
+										<div>B</div>
+									</th>
+									<th class="text-center">
+										<div>C</div>
+									</th>
+									<th class="text-center">
+										<div>1</div>
+									</th>
+									<th class="text-center">
+										<div>2</div>
+									</th>
+									<th class="text-center">
+										<div>3 = 1x2</div>
+									</th>
+									<th class="text-center">
+										<div>4</div>
+									</th>
+									<th class="text-center">
+										<div>5 = 1x4</div>
+									</th>
+									<th class="text-center">
+										<div>6</div>
+									</th>
+									<th class="text-center">
+										<div>7</div>
+									</th>
+									<th class="text-center">
+										<div>8</div>
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<t t-foreach="lines" t-as="line">
+									<t t-if="not line['is_last_line']">
+										<tr>
+											<td>
+												<span t-esc="line['ref']" />
+											</td>
+											<td class="text-center">
+												<span t-if="line['date']"
+													t-esc="line['date']" />
+											</td>
+											<td>
+												<span t-esc="line['description']" />
+											</td>
+											<td class="text-right">
+												<span
+													t-esc="formatLang(line['unit_price'], digits=line['decimal_places'])" />
+											</td>
+											<td class="text-right">
+												<span t-esc="formatLang(line['in_qty'], dp=line['dp'])" />
+											</td>
+											<td class="text-right">
+												<span
+													t-esc="formatLang(line['in_total'], digits=line['decimal_places'])" />
+											</td>
+											<td class="text-right">
+												<span
+													t-esc="formatLang(line['out_qty'], dp=line['dp'])" />
+											</td>
+											<td class="text-right">
+												<span
+													t-esc="formatLang(line['out_total'], digits=line['decimal_places'])" />
+											</td>
+											<td class="text-right">
+												<t t-if="line['inv_qty']">
+													<span
+														t-esc="formatLang(line['inv_qty'], dp=line['dp'])" />
+												</t>
+											</td>
+											<td class="text-right">
+												<t t-if="line['inv_total']">
+													<span
+														t-esc="formatLang(line['inv_total'], digits=line['decimal_places'])" />
+												</t>
+											</td>
+											<td>
+												<span t-esc="line['notes']" />
+											</td>
+										</tr>
+									</t>
+									<t t-elif="line['is_last_line']">
+										<tr style="font-weight: bold;">
+											<td colspan="4" class="text-right">Sum</td>
+											<td class="text-right">
+												<span t-esc="in_qty" />
+												<span t-esc="formatLang(line['in_qty'], dp=line['dp'])" />
+
+											</td>
+											<td class="text-right">
+												<span t-esc="in_total" />
+												<span
+													t-esc="formatLang(line['in_total'], digits=line['decimal_places'])" />
+											</td>
+											<td class="text-right">
+												<span t-esc="out_qty" />
+												<span
+													t-esc="formatLang(line['out_qty'], dp=line['dp'])" />
+											</td>
+											<td class="text-right">
+												<span t-esc="out_total" />
+												<span
+													t-esc="formatLang(line['out_total'], digits=line['decimal_places'])" />
+											</td>
+											<td class="text-right">
+												<span t-esc="inv_qty" />
+												<span
+													t-esc="formatLang(line['inv_qty'], dp=line['dp'])" />
+
+											</td>
+											<td class="text-right">
+												<span t-esc="inv_total" />
+												<span
+													t-esc="formatLang(line['inv_total'], digits=line['decimal_places'])" />
+											</td>
+											<td></td>
+										</tr>
+									</t>
+								</t>
+							</tbody>
+						</table>
+						<div class="row">
+							<div class="col-12 text-left" style="padding-left:40px;">
+								- Journal Opening
+								Date:.............
+							</div>
+						</div>
+						<t t-call="to_l10n_vn_qweb_layout.signature_block" />
+					</div>
+				</t>
+			</t>
+		</template>
+
+	</data>
+</odoo>

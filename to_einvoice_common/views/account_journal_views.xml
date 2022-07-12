@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+	<data>
+		<record id="view_account_journal_form" model="ir.ui.view">
+			<field name="name">account.journal.form</field>
+			<field name="model">account.journal</field>
+			<field name="inherit_id" ref="account.view_account_journal_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//page[@name='advanced_settings']" position="after">
+					<page name="einvoice_integration"
+						string="E-Invoice Integration"
+						groups="account.group_account_manager,base.group_system"
+						attrs="{'invisible': [('type','!=','sale')]}">
+						<field name='company_einvoice_provider' invisible="1" />
+						<div class="text-muted"
+							attrs="{'invisible': [('company_einvoice_provider','!=','none')]}">
+							E-Invoice is not enabled for the current company yet.
+							Please go to Accounting > Configuration > Settings to enabled
+							E-Invoice if you want.
+						</div>
+						<group string="E-Invoice">
+							<group>
+								<field name="einvoice_disabled"
+									attrs="{'invisible': [('company_einvoice_provider','=','none')]}" />
+								<field name="einvoice_enabled" invisible="1" attrs="{'invisible': [('company_einvoice_provider','=','none')]}" />
+								<field name="einvoice_auto_issue" attrs="{'invisible': [('einvoice_enabled','=','False')]}" />
+								<field name="einvoice_item_name"
+									attrs="{'invisible': ['|',('einvoice_disabled','=',True),('company_einvoice_provider','=','none')]}" />
+								<field name="send_mail_einvoice_disabled" />
+								<field name="einvoice_send_mail_option" attrs="{'invisible': [('send_mail_einvoice_disabled','=',True)]}" />
+							</group>
+							<group attrs="{'invisible': ['|',('einvoice_disabled','=',True),('company_einvoice_provider','=','none')]}">
+								<field name="einvoice_item_name_new_line_replacement" />
+								<field name="einvoice_item_name_limit" />
+							</group>
+						</group>
+					</page>
+				</xpath>
+				<field name="bank_id" position="after">
+					<field name="einvoice_display_bank_account"/>
+				 </field>
+			</field>
+		</record>
+	</data>
+</odoo>

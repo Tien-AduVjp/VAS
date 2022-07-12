@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+
+		<!-- PRODUCT JOURNAL (S10-DN) -->
+
+		<record id="to_c200_s10dn_form" model="ir.ui.view">
+			<field name="name">C200 S10DN Form</field>
+			<field name="model">wizard.l10n_vn.c200_s10dn</field>
+			<field name="inherit_id"
+				ref="to_stock_report_common.wizard_stock_report_common_form"></field>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='warehouse_id']" position="before">
+					<field name="product_id" />
+				</xpath>
+				<xpath expr="//field[@name='location_id']" position="after">
+					<field name="description" invisible="1" />
+					<field name="uom_id" invisible="1" />
+				</xpath>
+			</field>
+		</record>
+
+		<record id="action_wizard_c200_s10dn"
+			model="ir.actions.act_window">
+			<field name="name">PRODUCT JOURNAL (S10-DN)</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">wizard.l10n_vn.c200_s10dn</field>
+			<field name="view_mode">form</field>
+			<field name="view_id" ref="to_c200_s10dn_form" />
+			<field name="target">new</field>
+		</record>
+
+		<menuitem id="menu_wizard_c200_s10dn"
+			name="Product Journal (S10-DN)"
+			parent="menu_l10n_vn_stock_legal_reports" sequence="1"
+			groups="stock.group_stock_manager" action="action_wizard_c200_s10dn" />
+
+
+	</data>
+</odoo>

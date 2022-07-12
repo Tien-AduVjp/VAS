@@ -1,0 +1,195 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_holidays_in_years
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-19 08:59+0000\n"
+"PO-Revision-Date: 2021-04-19 08:59+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_holidays_in_years
+#: model:ir.model.fields,field_description:to_holidays_in_years.field_holiday_year__company_id
+msgid "Company"
+msgstr ""
+
+#. module: to_holidays_in_years
+#: model:ir.model.fields,field_description:to_holidays_in_years.field_holiday_year__holiday_date
+msgid "Convert to Calendar day"
+msgstr ""
+
+#. module: to_holidays_in_years
+#: model:ir.model.fields,field_description:to_holidays_in_years.field_holiday_year__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: to_holidays_in_years
+#: model:ir.model.fields,field_description:to_holidays_in_years.field_holiday_year__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: to_holidays_in_years
+#: model:ir.model.fields,field_description:to_holidays_in_years.field_holiday_year__date_type
+msgid "Date Type"
+msgstr ""
+
+#. module: to_holidays_in_years
+#: model_terms:ir.ui.view,arch_db:to_holidays_in_years.holiday_year_view_form
+#: model_terms:ir.ui.view,arch_db:to_holidays_in_years.holiday_year_view_tree
+msgid "Description"
+msgstr ""
+
+#. module: to_holidays_in_years
+#: model:ir.model.fields,field_description:to_holidays_in_years.field_holiday_year__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: to_holidays_in_years
+#: model:ir.model.fields,field_description:to_holidays_in_years.field_holiday_year__date_to
+msgid "End Date"
+msgstr ""
+
+#. module: to_holidays_in_years
+#: model:ir.model.fields,field_description:to_holidays_in_years.field_holiday_year__lunar_date
+msgid "Holiday Date"
+msgstr ""
+
+#. module: to_holidays_in_years
+#: model_terms:ir.ui.view,arch_db:to_holidays_in_years.holiday_year_view_form
+msgid "Holiday Form"
+msgstr ""
+
+#. module: to_holidays_in_years
+#: model_terms:ir.ui.view,arch_db:to_holidays_in_years.holiday_year_view_tree
+msgid "Holiday Tree"
+msgstr ""
+
+#. module: to_holidays_in_years
+#: model:ir.model.fields,field_description:to_holidays_in_years.field_holiday_year__holiday_type
+msgid "Holiday Type"
+msgstr ""
+
+#. module: to_holidays_in_years
+#: model:ir.actions.act_window,name:to_holidays_in_years.holiday_year_action
+msgid "Holidays"
+msgstr ""
+
+#. module: to_holidays_in_years
+#: model:ir.ui.menu,name:to_holidays_in_years.holiday_year_menu
+msgid "Holidays in Years"
+msgstr ""
+
+#. module: to_holidays_in_years
+#: model:ir.model.fields,field_description:to_holidays_in_years.field_holiday_year__id
+msgid "ID"
+msgstr ""
+
+#. module: to_holidays_in_years
+#: model:ir.model.fields,help:to_holidays_in_years.field_holiday_year__resource_id
+msgid ""
+"If empty, this is a generic time off for the company. If a resource is set, "
+"the time off is only for this resource"
+msgstr ""
+
+#. module: to_holidays_in_years
+#: code:addons/to_holidays_in_years/models/holiday_year.py:0
+#, python-format
+msgid ""
+"Incorrect lunar date: day is out of range for month. Month: %s; Day: %s"
+msgstr ""
+
+#. module: to_holidays_in_years
+#: model:ir.model.fields,field_description:to_holidays_in_years.field_holiday_year____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: to_holidays_in_years
+#: model:ir.model.fields,field_description:to_holidays_in_years.field_holiday_year__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: to_holidays_in_years
+#: model:ir.model.fields,field_description:to_holidays_in_years.field_holiday_year__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: to_holidays_in_years
+#: model:ir.model.fields.selection,name:to_holidays_in_years.selection__holiday_year__date_type__lunar_date
+msgid "Lunar Day"
+msgstr ""
+
+#. module: to_holidays_in_years
+#: model:ir.model.fields.selection,name:to_holidays_in_years.selection__holiday_year__holiday_type__national_holiday
+msgid "National Holiday"
+msgstr ""
+
+#. module: to_holidays_in_years
+#: model:ir.model.fields.selection,name:to_holidays_in_years.selection__holiday_year__holiday_type__other_holiday
+msgid "Other Holiday"
+msgstr ""
+
+#. module: to_holidays_in_years
+#: model:ir.model.fields,field_description:to_holidays_in_years.field_holiday_year__name
+msgid "Reason"
+msgstr ""
+
+#. module: to_holidays_in_years
+#: model:ir.model.fields,field_description:to_holidays_in_years.field_holiday_year__resource_id
+msgid "Resource"
+msgstr ""
+
+#. module: to_holidays_in_years
+#: model:ir.model.fields,field_description:to_holidays_in_years.field_holiday_year__resource_leaves_id
+msgid "Resource Leaves"
+msgstr ""
+
+#. module: to_holidays_in_years
+#: model:ir.model.fields.selection,name:to_holidays_in_years.selection__holiday_year__date_type__solar_date
+msgid "Solar Calendar"
+msgstr ""
+
+#. module: to_holidays_in_years
+#: model:ir.model.fields,field_description:to_holidays_in_years.field_holiday_year__date_from
+msgid "Start Date"
+msgstr ""
+
+#. module: to_holidays_in_years
+#: model:ir.model.constraint,message:to_holidays_in_years.constraint_holiday_year_unique_date
+msgid "The holiday has been declared."
+msgstr ""
+
+#. module: to_holidays_in_years
+#: model:ir.model.fields,field_description:to_holidays_in_years.field_holiday_year__time_type
+msgid "Time Type"
+msgstr ""
+
+#. module: to_holidays_in_years
+#: model:ir.model.fields,help:to_holidays_in_years.field_holiday_year__time_type
+msgid ""
+"Whether this should be computed as a time off or as work time (eg: "
+"formation)"
+msgstr ""
+
+#. module: to_holidays_in_years
+#: model:ir.model.fields,field_description:to_holidays_in_years.field_holiday_year__calendar_id
+msgid "Working Hours"
+msgstr ""
+
+#. module: to_holidays_in_years
+#: model:ir.model.fields,field_description:to_holidays_in_years.field_holiday_year__year
+#: model_terms:ir.ui.view,arch_db:to_holidays_in_years.holiday_year_view_search
+msgid "Year"
+msgstr ""
+
+#. module: to_holidays_in_years
+#: model:ir.model,name:to_holidays_in_years.model_holiday_year
+msgid "holiday.year"
+msgstr ""
+

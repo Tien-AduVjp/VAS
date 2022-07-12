@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<template id="report_vehicle_trip_view_document"
+			inherit_id="to_fleet_operation_planning.report_vehicle_trip_view_document">
+			<xpath expr="//table[@name='waypoints']/thead/tr/th[@name='address']"
+				position="after">
+				<th name="pickings">Stock Pickings</th>
+			</xpath>
+			<xpath
+				expr="//t[@t-foreach='doc.trip_waypoint_ids']/tr/td[@name='address_id']"
+				position="after">
+				<td name="stock_picking_ids">
+					<t t-foreach="waypoint.stock_picking_ids" t-as="stock_picking_id">
+						<span t-field="stock_picking_id.name" />
+						<br />
+					</t>
+				</td>
+			</xpath>
+		</template>
+	</data>
+</odoo>

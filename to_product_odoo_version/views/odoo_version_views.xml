@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="odoo_version_form_view">
+			<field name="name">odoo_version.form</field>
+			<field name="model">odoo.version</field>
+			<field name="inherit_id"
+				ref="to_odoo_version.odoo_version_form_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='end_of_life']" position="after">
+					<field name="product_attribute_value_id" />
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>   
+

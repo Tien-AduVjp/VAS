@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="product_license_view_form" model="ir.ui.view">
+			<field name="name">product.license.form</field>
+			<field name="model">product.license</field>
+			<field name="arch" type="xml">
+				<form string="License Form">
+					<sheet>
+						<div class="oe_button_box" name="button_box">
+							<button name="action_view_versions" type="object"
+								class="oe_stat_button" icon="fa-code-fork">
+								<field name="versions_count" string="Version(s)"
+									widget="statinfo" />
+							</button>
+							<button name="action_view_products" type="object"
+								class="oe_stat_button" icon="fa-cube">
+								<field name="products_count" string="Product(s)"
+									widget="statinfo" />
+							</button>
+						</div>
+						<field name="active" invisible="1" />
+						<widget name="web_ribbon" title="Archived"
+							bg_color="bg-danger"
+							attrs="{'invisible': [('active', '=', True)]}" />
+						<h1>
+							<div class="oe_title">
+								<field name="name"
+									placeholder="The full name of the license..." />
+							</div>
+						</h1>
+						<h2>
+							<div>
+								<field name="short_name" placeholder="Abbreviation..." />
+							</div>
+							<div>
+								<field name="ref_url" widget="url"
+									placeholder="Reference URL" />
+							</div>
+						</h2>
+
+						<group>
+							<group>
+								<field name="first_version_id"
+									attrs="{'invisible':[('first_version_id','=',False)]}" />
+								<field name="first_released_date"
+									attrs="{'invisible':[('first_released_date','=',False)]}" />
+							</group>
+							<group>
+								<field name="latest_version_id"
+									attrs="{'invisible':[('latest_version_id','=',False)]}" />
+								<field name="latest_released_date"
+									attrs="{'invisible':[('latest_released_date','=',False)]}" />
+							</group>
+						</group>
+						<notebook>
+							<page name="page_summary" string="Summary">
+								<field name="summary" />
+							</page>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers" />
+						<field name="activity_ids" widget="mail_activity" />
+						<field name="message_ids" widget="mail_thread" />
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record id="product_license_tree_view" model="ir.ui.view">
+			<field name="name">product.license.tree</field>
+			<field name="model">product.license</field>
+			<field name="arch" type="xml">
+				<tree string="Licenses">
+					<field name="name" />
+					<field name="product_license_version_ids"
+						widget="many2many_tags" />
+					<field name="first_released_date" />
+					<field name="latest_released_date" />
+					<field name="active" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="product_license_search_view" model="ir.ui.view">
+			<field name="name">product.license.search</field>
+			<field name="model">product.license</field>
+			<field name="arch" type="xml">
+				<search string="Search for License">
+					<field name="name" />
+					<field name="summary" />
+					<filter name="ftr_active" string="Active"
+						domain="[('active','=',True)]" />
+					<filter name="ftr_inactive" string="Inactive"
+						domain="[('active','=',False)]" />
+					<separator />
+				</search>
+			</field>
+		</record>
+
+		<record id="product_license_action"
+			model="ir.actions.act_window">
+			<field name="name">Licenses</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">product.license</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem id="license_root_menu" name="License"
+			groups="group_license_manager" sequence="49"
+			web_icon="to_product_license,static/description/icon.png" />
+
+		<menuitem id="license_menu" name="License"
+			parent="license_root_menu" action="product_license_action" />
+	</data>
+</odoo>

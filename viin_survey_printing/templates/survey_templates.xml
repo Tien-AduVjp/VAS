@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="survey_header_horizontal">
+            <t t-set="company" t-value="survey.env.company"/>
+            <button t-if="not survey.env.user._is_public()"
+                    class="btn btn-primary btn-survey-print my-5 font-weight-bold" onclick="window.print()"><span
+                    class="fa fa-print"/> Print</button>
+            <div class="header d-flex justify-content-between align-items-center">
+                <div class="company-logo">
+                    <img t-att-src="image_data_uri(company.logo)" class="img img-fluid"
+                         style="max-width: 10rem"
+                         t-attf-alt="{{ company.name }} 'Logo'"/>
+                </div>
+                <div class="company-info">
+                    <span class="company_address" t-field="company.partner_id"
+                          t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True, "phone_icons": True}'/>
+                </div>
+            </div>
+        </template>
+
+        <template id="survey_print" inherit_id="survey.survey_print">
+            <xpath expr="//t[@t-call='survey.back']" position="before">
+                <t t-call="viin_survey_printing.survey_header_horizontal"/>
+            </xpath>
+
+            <xpath expr="//div[hasclass('container')]" position="inside">
+                <div class="oe_structure"/>
+            </xpath>
+        </template>
+
+        <template id="survey" inherit_id="survey.survey">
+            <xpath expr="//t[@t-call='survey.back']" position="before">
+                <t t-call="viin_survey_printing.survey_header_horizontal"/>
+            </xpath>
+        </template>
+        <!-- Show dotted line instead of input, textarea in print mode-->
+        <template id="textbox" inherit_id="survey.textbox">
+            <xpath expr="." position="inside">
+                <div class="print-only dotted-line"/>
+            </xpath>
+        </template>
+
+        <template id="free_text" inherit_id="survey.free_text">
+            <xpath expr="." position="inside">
+                <div t-foreach="range(3)" t-as="line" class="print-only dotted-line"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

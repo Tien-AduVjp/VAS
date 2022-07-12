@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="assets" inherit_id="point_of_sale.assets">
+		<xpath expr="." position="inside">
+			<script type="text/javascript" src="/to_loyalty_pos/static/src/js/loyalty.js"></script>
+			<link rel="stylesheet" href="/to_loyalty_pos/static/src/css/loyalty.css" />
+		</xpath>
+	</template>
+	<template id="assets_tests" name="Point Of Sale Assets Tests" inherit_id="web.assets_tests">
+		<xpath expr="." position="inside">
+			<script type="text/javascript" src="/to_loyalty_pos/static/tests/tours/loyalty_pos.js"></script>
+		</xpath>
+	</template>
+</odoo>

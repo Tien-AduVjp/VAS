@@ -1,0 +1,265 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_crm
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-11 03:54+0000\n"
+"PO-Revision-Date: 2021-03-11 03:54+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_crm
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_lead_view_dashboard
+msgid "% Opportunities"
+msgstr "% Cơ hội"
+
+#. module: viin_crm
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_opportunity_view_search
+msgid "Archived"
+msgstr "Đã lưu"
+
+#. module: viin_crm
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_opportunity_view_dashboard
+msgid "Average Deal Size"
+msgstr "Trung bình một giao dịch thành công"
+
+#. module: viin_crm
+#: model:ir.model,name:viin_crm.model_crm_activity_report
+msgid "CRM Activity Analysis"
+msgstr "Phân tích hoạt động CRM"
+
+#. module: viin_crm
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_lead_view_dashboard
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_opportunity_view_dashboard
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_opportunity_view_search
+msgid "Campaign"
+msgstr "Chiến dịch"
+
+#. module: viin_crm
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_opportunity_view_search
+msgid "City"
+msgstr "Thành phố"
+
+#. module: viin_crm
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_opportunity_view_search
+msgid "Closed Date"
+msgstr "Ngày đóng"
+
+#. module: viin_crm
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_opportunity_view_search
+msgid "Company"
+msgstr "Công ty"
+
+#. module: viin_crm
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_opportunity_view_search
+msgid "Conversion Date"
+msgstr "Ngày chuyển đổi"
+
+#. module: viin_crm
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_opportunity_view_search
+msgid "Country"
+msgstr "Quốc gia"
+
+#. module: viin_crm
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_opportunity_view_search
+msgid "Creation Date"
+msgstr "Ngày tạo"
+
+#. module: viin_crm
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_lead_view_map
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: viin_crm
+#: model:ir.model.fields,field_description:viin_crm.field_crm_activity_report__days_to_convert
+#: model:ir.model.fields,field_description:viin_crm.field_crm_lead__days_to_convert
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_activity_report_view_search
+msgid "Days To Convert"
+msgstr "Số ngày để chuyển đổi"
+
+#. module: viin_crm
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_lead_view_dashboard
+msgid "Days To Opportunity"
+msgstr "Số ngày để chuyển thành cơ hội"
+
+#. module: viin_crm
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_lead_view_dashboard
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_opportunity_view_dashboard
+msgid "Days to Assign"
+msgstr "Số ngày đến lúc phân công"
+
+#. module: viin_crm
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_lead_view_dashboard
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_opportunity_view_dashboard
+msgid "Days to Close"
+msgstr "Số ngày đến lúc đóng"
+
+#. module: viin_crm
+#: model:ir.model.fields,field_description:viin_crm.field_crm_activity_report__days_exceeding_closing
+#: model:ir.model.fields,field_description:viin_crm.field_crm_lead__days_exceeding_closing
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_activity_report_view_search
+msgid "Exceeded Closing Days"
+msgstr "Số ngày quá hạn đóng"
+
+#. module: viin_crm
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_opportunity_view_dashboard
+msgid "Exceeding Close Days"
+msgstr "Số ngày quá hạn đóng"
+
+#. module: viin_crm
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_opportunity_view_search
+msgid "Expected Closing Date"
+msgstr "Ngày đóng dự kiến"
+
+#. module: viin_crm
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_lead_view_dashboard
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_opportunity_view_dashboard
+msgid "Expected Revenue"
+msgstr "Doanh thu mong đợi"
+
+#. module: viin_crm
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_opportunity_view_search
+msgid "Extended Filters"
+msgstr "Bộ lọc mở rộng"
+
+#. module: viin_crm
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_opportunity_view_search
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: viin_crm
+#: model:ir.model.fields,field_description:viin_crm.field_crm_activity_report__won_status
+#: model:ir.model.fields,field_description:viin_crm.field_crm_lead__won_status
+msgid "Is Won"
+msgstr "Đã thành công"
+
+#. module: viin_crm
+#: model:ir.model,name:viin_crm.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Tiềm năng/Cơ hội"
+
+#. module: viin_crm
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_lead_view_dashboard
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_opportunity_view_search
+msgid "Leads"
+msgstr "Tiềm năng"
+
+#. module: viin_crm
+#: model:ir.actions.act_window,name:viin_crm.crm_lead_action_dashboard
+msgid "Leads Analysis"
+msgstr "Phân tích tiềm năng"
+
+#. module: viin_crm
+#: model:ir.model.fields.selection,name:viin_crm.selection__crm_activity_report__won_status__lost
+#: model:ir.model.fields.selection,name:viin_crm.selection__crm_lead__won_status__lost
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_activity_report_view_search
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_opportunity_view_search
+msgid "Lost"
+msgstr "Thất bại"
+
+#. module: viin_crm
+#: model:ir.model.fields,field_description:viin_crm.field_crm_activity_report__lost_reason
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_activity_report_view_search
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_opportunity_view_search
+msgid "Lost Reason"
+msgstr "Lý do thất bại"
+
+#. module: viin_crm
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_lead_view_dashboard
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_opportunity_view_dashboard
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_opportunity_view_search
+msgid "Medium"
+msgstr "Phương tiện"
+
+#. module: viin_crm
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_opportunity_view_search
+msgid "My Pipeline"
+msgstr "Pipeline của tôi"
+
+#. module: viin_crm
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_lead_view_dashboard
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_lead_view_viin_cohort
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_opportunity_view_dashboard
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_opportunity_view_search
+msgid "Opportunities"
+msgstr "Cơ hội"
+
+#. module: viin_crm
+#: model:ir.model.fields.selection,name:viin_crm.selection__crm_activity_report__won_status__pending
+#: model:ir.model.fields.selection,name:viin_crm.selection__crm_lead__won_status__pending
+msgid "Pending"
+msgstr "Đang chờ"
+
+#. module: viin_crm
+#: model:ir.actions.act_window,name:viin_crm.crm_opportunity_action_dashboard
+msgid "Pipeline Analysis"
+msgstr "Phân tích Pipeline"
+
+#. module: viin_crm
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_lead_view_dashboard
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_opportunity_view_dashboard
+msgid "Prorated Revenue"
+msgstr "Doanh thu theo tỷ lệ"
+
+#. module: viin_crm
+#: model:ir.model.fields,field_description:viin_crm.field_crm_activity_report__referred
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_activity_report_view_search
+msgid "Referred By"
+msgstr "Giới thiệu bởi"
+
+#. module: viin_crm
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_opportunity_view_search
+msgid "Sales Team"
+msgstr "Đội ngũ bán hàng"
+
+#. module: viin_crm
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_lead_view_dashboard
+msgid "Sales Teams"
+msgstr "Nhóm bán hàng"
+
+#. module: viin_crm
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_opportunity_view_search
+msgid "Salesperson"
+msgstr "Nhân viên kinh doanh"
+
+#. module: viin_crm
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_lead_view_dashboard
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_opportunity_view_dashboard
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_opportunity_view_search
+msgid "Source"
+msgstr "Nguồn"
+
+#. module: viin_crm
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_opportunity_view_search
+msgid "Stage"
+msgstr "Giai đoạn"
+
+#. module: viin_crm
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_lead_view_map
+msgid "Title"
+msgstr "Tiêu đề"
+
+#. module: viin_crm
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_opportunity_view_dashboard
+msgid "Win/Loss Ratio"
+msgstr "Tỷ lệ thắng/thua"
+
+#. module: viin_crm
+#: model:ir.model.fields.selection,name:viin_crm.selection__crm_activity_report__won_status__won
+#: model:ir.model.fields.selection,name:viin_crm.selection__crm_lead__won_status__won
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_opportunity_view_search
+msgid "Won"
+msgstr "Thắng"
+
+#. module: viin_crm
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_lead_view_dashboard
+#: model_terms:ir.ui.view,arch_db:viin_crm.crm_opportunity_view_dashboard
+msgid "days"
+msgstr "ngày"

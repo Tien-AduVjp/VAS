@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="view_picking_form" model="ir.ui.view">
+		<field name="name">stock.picking.form</field>
+		<field name="model">stock.picking</field>
+		<field name="inherit_id" ref="stock.view_picking_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//button[@name='button_validate']" position="attributes">
+				<attribute name="groups" add="to_repair_access_group.group_repair_manager" separator=","/>
+			</xpath>
+			<xpath expr="//button[@name='do_print_picking']" position="attributes">
+				<attribute name="groups" add="to_repair_access_group.group_repair_manager" separator=","/>
+			</xpath>
+			<xpath expr="//page[@name='extra']//field[@name='group_id']" position="after">
+				<field name="repair_id" attrs="{'invisible': [('picking_type_code', '!=', 'repair_supply')]}"/>
+			</xpath>
+		</field>
+	</record>
+
+	<record id="view_picking_internal_search" model="ir.ui.view">
+		<field name="name">stock.picking.search</field>
+		<field name="model">stock.picking</field>
+		<field name="inherit_id" ref="stock.view_picking_internal_search" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='picking_type_id']" position="after">
+				<field name="repair_id"/>
+			</xpath>
+			<xpath expr="//filter[@name='picking_type']" position="after">
+				<filter string="Repair Order" name="grp_repair" domain="[]" context="{'group_by': 'repair_id'}"/>
+			</xpath>
+		</field>
+	</record>
+</odoo>

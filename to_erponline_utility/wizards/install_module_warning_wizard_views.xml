@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="install_module_warning_wizard_form" model="ir.ui.view">
+			<field name="name">install.module.warning.wizard.form</field>
+			<field name="model">install.module.warning.wizard</field>
+			<field name="arch" type="xml">
+				<form>
+					<div class="alert alert-warning" role="alertdialog">
+						You are about to install new apps that will cost an extra amount per month. We will start charging cost for those apps at the moment.
+					</div>
+					<h4 class="mt-3">The following apps will be installed:</h4>
+					<group>
+						<field name="module_ids" nolabel="1" readonly="1">
+							<kanban edit="false" import="false">
+								<field name="id"/>
+								<field name="state"/>
+								<field name="shortdesc"/>
+								<field name="name"/>
+								<field name="icon"/>
+								<templates>
+									<t t-name="kanban-box">
+										<div class="oe_module_vignette" style="width: 33%;">
+											<img t-attf-src="#{record.icon.value}" class="oe_module_icon" alt="Icon"/>
+											<div class="oe_module_desc" t-att-title="record.shortdesc.value">
+												<h4 class="o_kanban_record_title">
+													<field name="shortdesc"/>
+												</h4>
+												<p class="oe_module_name">
+													<t t-if="record.summary.raw_value">
+														<field name="summary"/>
+													</t>
+													<code groups="base.group_no_one">
+														<field name="name" groups="base.group_no_one"/>
+													</code>
+												</p>
+											</div>
+										</div>
+									</t>
+								</templates>
+							</kanban>
+						</field>
+					</group>
+					<p>You can find more information about the pricing on <a href="https://viindoo.com/pricing" target="_blank" alt="https://viindoo.com/pricing">https://viindoo.com/pricing</a>.</p>
+					<footer>
+						<button string="Continue" name="action_continue_install" type="object" class="oe_highlight" />
+						<button string="Cancel" class="btn-secondary" special="cancel" />
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<record id="install_module_warning_wizard_action" model="ir.actions.act_window">
+			<field name="name">New Apps Warning</field>
+			<field name="res_model">install.module.warning.wizard</field>
+			<field name="view_mode">form</field>
+			<field name="target">new</field>
+		</record>
+
+	</data>
+</odoo>

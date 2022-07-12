@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- Root Menus -->
+
+	<menuitem id="menu_hr_payroll_root" name="Payroll"
+		sequence="45" web_icon="to_hr_payroll,static/description/icon.png" />
+
+	<menuitem id="menu_employees_root" name="Employees"
+		parent="menu_hr_payroll_root" sequence="5"
+		groups="to_hr_payroll.group_hr_payroll_user" />
+
+	<menuitem id="menu_employees"
+		action="hr.open_view_employee_list_my" sequence="5"
+		parent="menu_employees_root"
+		groups="to_hr_payroll.group_hr_payroll_user" />
+
+	<menuitem id="menu_hr_contracts"
+		action="hr_contract.action_hr_contract" sequence="10"
+		parent="menu_employees_root"
+		groups="to_hr_payroll.group_hr_payroll_user" />
+
+	<menuitem id="menu_hr_payroll_reports" name="Reports"
+		parent="menu_hr_payroll_root" sequence="99"
+		groups="base.group_user" />
+
+	<menuitem id="menu_hr_payroll_configuration"
+		name="Configuration" parent="menu_hr_payroll_root" sequence="100"
+		groups="to_hr_payroll.group_hr_payroll_manager" />
+
+	<!-- Contract View -->
+	<record id="hr_contract_form_inherit" model="ir.ui.view">
+		<field name="name">hr.contract.view.form.inherit</field>
+		<field name="model">hr.contract</field>
+		<field name="inherit_id" ref="hr_contract.hr_contract_view_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//div[@name='button_box']" position="inside">
+				<button name="action_view_payslips" type="object"
+					groups="hr.group_hr_user" class="oe_stat_button" icon="fa-money">
+					<field name="payslips_count" widget="statinfo"
+						string="Payslips" />
+				</button>
+			</xpath>
+			<field name="name" position="attributes">
+				<attribute name="attrs"
+					add="{'readonly':[('state','!=','draft')]}" separator=" " />
+			</field>
+			<field name="employee_id" position="attributes">
+				<attribute name="attrs"
+					add="{'readonly':[('state','!=','draft')]}" separator=" " />
+			</field>
+			<field name="job_id" position="attributes">
+				<attribute name="attrs"
+					add="{'readonly':[('state','!=','draft')]}" separator=" " />
+			</field>
+			<field name="department_id" position="attributes">
+				<attribute name="attrs"
+					add="{'readonly':[('state','!=','draft')]}" separator=" " />
+			</field>
+			<field name="wage" position="attributes">
+				<attribute name="attrs"
+					add="{'readonly':[('state','!=','draft')]}" separator=" " />
+			</field>
+			<field name="date_start" position="attributes">
+				<attribute name="attrs"
+					add="{'readonly':[('state','!=','draft')]}" separator=" " />
+			</field>
+			<field name="company_id" position="attributes">
+				<attribute name="attrs"
+					add="{'readonly':[('state','!=','draft')]}" separator=" " />
+			</field>
+			<field name="resource_calendar_id" position="attributes">
+				<attribute name="attrs"
+					add="{'readonly':[('state','!=','draft')]}" separator=" " />
+			</field>
+			<xpath expr="//field[@name='job_id']" position="before">
+				<field name="currency_id" invisible="1" />
+				<field name="struct_id" required="1"
+					attrs="{'readonly':[('state','!=','draft')]}" />
+				<field name="thirteen_month_struct_id" />
+			</xpath>
+			<xpath expr="//div[./field[@name='resource_calendar_id']]"
+				position="after">
+				<label for="salary_computation_mode" />
+				<div>
+					<field name="salary_computation_mode" />
+				</div>
+				<label for="salary_attendance_computation_mode" />
+				<div>
+					<field name="salary_attendance_computation_mode" />
+				</div>
+				<label for="personal_tax_policy" />
+				<div>
+					<field name="personal_tax_policy" />
+				</div>
+				<label for="personal_tax_rule_id" />
+				<div>
+					<field name="personal_tax_rule_id" required="1" />
+				</div>
+			</xpath>
+			<xpath expr="//div[@name='wage']" position="after">
+				<label for="advantage_ids" />
+				<div class="o_row" name="advantage_ids">
+					<field name="advantage_ids"
+						attrs="{'readonly':[('state','!=','draft')]}">
+						<tree editable="bottom">
+							<field name="job_advantage_id" invisible="1" />
+							<field name="template_id"
+								domain="[('company_id','=',parent.company_id),('currency_id','=',currency_id)]" />
+							<field name="code" force_save="1" />
+							<field name="amount" string="Amount" />
+							<field name="currency_id" invisible="1" />
+							<field name="included_in_payroll_contribution_register"
+								widget="boolean_toggle" />
+						</tree>
+					</field>
+				</div>
+				<label for="gross_salary" />
+				<div class="o_row" name="gross_salary">
+					<field name="gross_salary" nolabel="1" />
+					<span>/ month</span>
+				</div>
+				<field name="payslips_auto_generation" />
+			</xpath>
+			<xpath expr="//group[@name='salary_and_advantages']"
+				position="after">
+				<group>
+					<div class="alert alert-info border-0 rounded-0" role="alert"
+						groups="base.group_no_one">
+						You can access these values of the Employee's Advantages on
+						Contract in salary rule's Python code as:
+						<code>result = advantages.CODE.field_name</code>
+						<br />
+						Where,
+						<br />
+						<ul>
+							<li>CODE: is the code of an advantage specified above.</li>
+							<li>
+								field_name: the name of a field of the model
+								<code>hr.contract.advantage</code>
+								.
+							</li>
+						</ul>
+					</div>
+				</group>
+			</xpath>
+			<xpath expr="//page[@name='information']" position="after">
+				<page string="Contribution Registers" name="payroll_contrib">
+					<group>
+						<field name="payroll_contribution_type_ids"
+							widget="many2many_tags" />
+					</group>
+					<div>
+						<button string="Generate Payroll Contribution Registers"
+							class="btn btn-link" type="object"
+							attrs="{'invisible': [('payroll_contribution_type_ids', '=', [])]}"
+							name="generate_payroll_contribution_registers"
+							help="This will generate payroll contribution registers (if not exists) for the types selected above." />
+						<separator />
+						<label for="payroll_contribution_register_ids"
+							attrs="{'invisible': [('payroll_contribution_register_ids', '=', [])]}" />
+						<div class="o_row" name="payroll_contribution_register_ids"
+							attrs="{'invisible': [('payroll_contribution_register_ids', '=', [])]}">
+							<field name="payroll_contribution_register_ids"
+								attrs="{'readonly':[('state','!=','draft')]}">
+								<tree>
+									<field name="type_id" />
+									<field name="registered_number" />
+									<field name="contribution_base" />
+									<field name="state" />
+								</tree>
+							</field>
+						</div>
+					</div>
+				</page>
+			</xpath>
+		</field>
+	</record>
+
+	<record id="hr_contract_view_tree" model="ir.ui.view">
+		<field name="name">hr.contract.view.tree.inherit</field>
+		<field name="model">hr.contract</field>
+		<field name="inherit_id" ref="hr_contract.hr_contract_view_tree" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='date_end']" position="after">
+				<field name="gross_salary" optional="hide" sum="Total Gross Salary"/>
+				<field name="personal_tax_rule_id" optional="hide" />
+			</xpath>
+		</field>
+	</record>
+</odoo>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="account_invoice_form">
+			<field name="name">account.invoice.form</field>
+			<field name="model">account.move</field>
+			<field name="inherit_id" ref="sale.account_invoice_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//group[@name='sale_info_group']/field[@name='team_id']" position="after">
+					<field name="team_leader_id" groups="base.group_no_one"
+						force_save="1" />
+					<field name="regional_manager_id" groups="base.group_no_one"
+						force_save="1" />
+					<field name="crm_team_region_id" groups="base.group_no_one"
+						force_save="1" />
+				</xpath>
+			</field>
+		</record>
+
+	</data>
+</odoo>

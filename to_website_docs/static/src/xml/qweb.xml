@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates id="template" xml:space="preserve">
+	<t t-name="DialogDocument">
+		<div class="list-group">
+			<div class="form-group list-group-item">
+				<h5 class="list-group-item-heading">
+					<label class="control-label" for="document-name">Name</label>
+				</h5>
+				<input class="form-control" id="document-name" required="required" type="text" />
+			</div>
+		</div>
+	</t>
+	<t t-name="ContextDocument">
+		<div t-attf-id="docsContext-{{options.id}}" t-attf-class="popover-context popover {{options.position}} in">
+			<div class="arrow" style="left: 50%;"></div>
+			<div class="popover-content">
+				<ul class="docs-context">
+					<li id="btnContextEdit" data-id="options.id" data-method="edit" class="docs-context-item"
+						t-if="options.write and options.res_model == 'website.document'">
+						<a>
+							<span>Change name</span>
+							<i class="fa fa-edit" />
+						</a>
+					</li>
+					<li id="btnContextFullEdit" data-id="options.id" data-method="full_edit" class="docs-context-item" t-if="options.write">
+						<a>
+							<span>Edit</span>
+							<i class="fa fa-edit" />
+						</a>
+					</li>
+					<li id="btnContextDelete" data-id="options.id" data-method="action_context_delete" class="docs-context-item" t-if="options.unlink">
+						<a>
+							<span>Delete</span>
+							<i class="fa fa-trash-o" />
+						</a>
+					</li>
+					<li id="btnContextCancel" data-id="options.id" data-method="cancel" class="docs-context-item"
+						t-if="options.state != 'cancelled' and options.approve and options.res_model == 'website.document'">
+						<a>
+							<span>Cancel</span>
+							<i class="fa fa-ban" />
+						</a>
+					</li>
+					<li id="btnContextDraft" data-id="options.id" data-method="draft" class="docs-context-item"
+						t-if="options.state == 'cancelled' and options.approve and options.res_model == 'website.document'">
+						<a>
+							<span>Set to Draft</span>
+							<i class="fa fa-check" />
+						</a>
+					</li>
+					<li id="btnContextConfirm" data-id="options.id" data-method="confirm" class="docs-context-item"
+						t-if="options.state == 'draft' or options.state == 'rejected' and options.write and options.res_model == 'website.document'">
+						<a>
+							<span>Confirm</span>
+							<i class="fa fa-check" />
+						</a>
+					</li>
+					<li id="btnContextApprove" data-id="options.id" data-method="approve" class="docs-context-item"
+						t-if="options.state == 'confirmed' and options.approve and options.res_model == 'website.document'">
+						<a>
+							<span>Approve</span>
+							<i class="fa fa-globe" />
+						</a>
+					</li>
+					<li id="btnContextPublish" data-id="options.id" data-method="publish" class="docs-context-item"
+						t-if="options.state == 'approved' and options.approve and options.publish == 'off' and options.res_model == 'website.document'">
+						<a>
+							<span>Publish</span>
+							<i class="fa fa-globe" />
+						</a>
+					</li>
+					<li id="btnContextUnpublish" data-id="options.id" data-method="unpublish" class="docs-context-item"
+						t-if="options.state == 'approved' and options.approve and options.publish == 'on'">
+						<a>
+							<span>Unpublish</span>
+							<i class="fa fa-fw fa-globe" />
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</t>
+	<t t-name="ContextCategory">
+		<div t-attf-id="docsContextCategory-{{options.id}}" t-attf-class="popover-context popover {{options.position}} in category category-{{options.type}}">
+			<div class="arrow" style="left: 50%;"></div>
+			<div class="popover-content">
+				<ul class="docs-context">
+					<li id="btnContextCreate" data-id="options.id" data-method="create_category" class="docs-context-item"
+						t-if="options.type != 'category' and (options.type == 'subject' or options.write)">
+						<a>
+							<span t-if="options.type == 'subject'">Add Section</span>
+							<span t-if="options.type == 'section'">Add Category</span>
+							<i class="fa fa-plus" />
+						</a>
+					</li>
+					<li id="btnContextEdit" data-id="options.id" data-method="edit" class="docs-context-item" t-if="options.write">
+						<a>
+							<span>Change name</span>
+							<i class="fa fa-edit" />
+						</a>
+					</li>
+					<li id="btnContextFullEdit" data-id="options.id" data-method="full_edit" class="docs-context-item" t-if="options.write">
+						<a>
+							<span>Edit</span>
+							<i class="fa fa-edit" />
+						</a>
+					</li>
+					<li id="btnContextImage" data-id="options.id" data-method="change_image" class="docs-context-item"
+						t-if="options.type != 'section' and options.write">
+						<a>
+							<span>Change Image</span>
+							<i class="fa fa-picture-o" />
+						</a>
+					</li>
+					<li id="btnContextDelete" data-id="options.id" data-method="action_context_delete" class="docs-context-item" t-if="options.unlink">
+						<a>
+							<span>Delete</span>
+							<i class="fa fa-trash-o" />
+						</a>
+					</li>
+					<li id="btnContextPublish" data-id="options.id" data-method="publish" class="docs-context-item"
+						t-if="options.type == 'category' and options.write and options.publish == 'off'">
+						<a>
+							<span>Publish</span>
+							<i class="fa fa-globe" />
+						</a>
+					</li>
+					<li id="btnContextUnpublish" data-id="options.id" data-method="unpublish" class="docs-context-item"
+						t-if="options.type == 'category' and options.write and options.publish == 'on'">
+						<a>
+							<span>Unpublish</span>
+							<i class="fa fa-fw fa-globe" />
+						</a>
+					</li>
+					<li id="btnContextDocumentLink" data-id="options.id" data-method="change_to_link" class="docs-context-item"
+						t-if="options.type == 'category' and options.write and options.is_hash">
+						<a>
+							<span>Display as Link</span>
+							<i class="fa fa-link" />
+						</a>
+					</li>
+					<li id="btnContextDocumentHash" data-id="options.id" data-method="change_to_hash" class="docs-context-item"
+						t-if="options.type == 'category' and options.write and !options.is_hash">
+						<a>
+							<span>Display as Hash</span>
+							<i class="fa fa-slack" />
+						</a>
+					</li>
+					<div id="btnContextCols" class="docs-context-item dropdown" t-if="options.type == 'section' and options.write">
+						<a class="dropdown">
+							<span>Width</span>
+							<i class="fa fa-angle-right" />
+						</a>
+						<div class="dropdown-menu">
+							<a data-id="options.id" data-method="change_cols" class="docs-context-item dropdown-item" data-value="col-md-12">100%</a>
+							<a data-id="options.id" data-method="change_cols" class="docs-context-item dropdown-item" data-value="col-md-9">75%</a>
+							<a data-id="options.id" data-method="change_cols" class="docs-context-item dropdown-item" data-value="col-md-8">66%</a>
+							<a data-id="options.id" data-method="change_cols" class="docs-context-item dropdown-item" data-value="col-md-6">50%</a>
+							<a data-id="options.id" data-method="change_cols" class="docs-context-item dropdown-item" data-value="col-md-4">33%</a>
+							<a data-id="options.id" data-method="change_cols" class="docs-context-item dropdown-item" data-value="col-md-3">25%</a>
+						</div>
+					</div>
+					<li id="btnContextItemCols" class="docs-context-item dropdown" t-if="options.type == 'section' and options.write">
+						<a class="dropdown">
+							<span>Item Width</span>
+							<i class="fa fa-angle-right" />
+						</a>
+						<ul class="dropdown-menu">
+							<li class="docs-context-item" data-id="options.id" data-method="change_item_cols" data-value="col-md-12">
+								<a>
+									<span>100%</span>
+								</a>
+							</li>
+							<li class="docs-context-item" data-id="options.id" data-method="change_item_cols" data-value="col-md-6">
+								<a>
+									<span>50%</span>
+								</a>
+							</li>
+							<li class="docs-context-item" data-id="options.id" data-method="change_item_cols" data-value="col-md-4">
+								<a>
+									<span>33%</span>
+								</a>
+							</li>
+							<li class="docs-context-item" data-id="options.id" data-method="change_item_cols" data-value="col-md-3">
+								<a>
+									<span>25%</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</t>
+	<t t-name="ContextDocumentContent">
+		<div t-attf-id="docsContentContext-{{options.id}}" t-attf-class="popover-context popover {{options.position}} in">
+			<div class="arrow" style="left: 50%;"></div>
+			<div class="popover-content">
+				<ul class="docs-context">
+					<li id="btnContextFullEdit" data-id="options.id" data-method="full_edit" class="docs-context-item" t-if="options.write">
+						<a>
+							<span>Edit</span>
+							<i class="fa fa-edit" />
+						</a>
+					</li>
+					<li id="btnContextDelete" data-id="options.id" data-method="action_context_delete" class="docs-context-item" t-if="options.unlink">
+						<a>
+							<span>Delete</span>
+							<i class="fa fa-trash-o" />
+						</a>
+					</li>
+					<li id="btnContextCancel" data-id="options.id" data-method="cancel" class="docs-context-item"
+						t-if="options.state != 'cancelled' and options.approve and options.res_model == 'website.document.content'">
+						<a>
+							<span>Cancel</span>
+							<i class="fa fa-ban" />
+						</a>
+					</li>
+					<li id="btnContextDraft" data-id="options.id" data-method="draft" class="docs-context-item"
+						t-if="options.state == 'cancelled' and options.approve and options.res_model == 'website.document.content'">
+						<a>
+							<span>Set to Draft</span>
+							<i class="fa fa-check" />
+						</a>
+					</li>
+					<li id="btnContextConfirm" data-id="options.id" data-method="confirm" class="docs-context-item"
+						t-if="options.state == 'draft' or options.state == 'rejected' and options.write and options.res_model == 'website.document.content'">
+						<a>
+							<span>Confirm</span>
+							<i class="fa fa-check" />
+						</a>
+					</li>
+					<li id="btnContextApprove" data-id="options.id" data-method="approve" class="docs-context-item"
+						t-if="options.state == 'confirmed' and options.approve and options.res_model == 'website.document.content'">
+						<a>
+							<span>Approve</span>
+							<i class="fa fa-check" />
+						</a>
+					</li>
+					<li id="btnContextApprovePublish" data-id="options.id" data-method="approve_publish" class="docs-context-item"
+						t-if="options.state == 'confirmed' and options.approve and options.publish == 'off' and options.res_model == 'website.document.content'">
+						<a>
+							<span>Approve &amp; Publish</span>
+							<i class="fa fa-globe" />
+						</a>
+					</li>
+					<li id="btnContextPublish" data-id="options.id" data-method="publish" class="docs-context-item"
+						t-if="options.state == 'approved' and options.approve and options.publish == 'off'">
+						<a>
+							<span>Publish</span>
+							<i class="fa fa-globe" />
+						</a>
+					</li>
+					<li id="btnContextUnpublish" data-id="options.id" data-method="unpublish" class="docs-context-item"
+						t-if="options.state == 'approved' and options.approve and options.publish == 'on'">
+						<a>
+							<span>Unpublish</span>
+							<i class="fa fa-fw fa-globe" />
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</t>
+</templates>

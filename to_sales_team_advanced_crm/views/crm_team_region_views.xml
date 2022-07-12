@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem name="Sales Regions"
+            id="sales_team_region_config"
+            parent="crm.crm_menu_config"
+            action="to_sales_team_advanced.sales_team_region_config_action"
+            sequence="7" />
+            
+    </data>
+</odoo>

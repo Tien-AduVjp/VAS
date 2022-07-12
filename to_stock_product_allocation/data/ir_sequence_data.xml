@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Sequences for allocation request -->
+        <record id="seq_allocation_request" model="ir.sequence">
+            <field name="name">Stock Allocation Request</field>
+            <field name="code">stock.allocation.request</field>
+            <field name="prefix">AR</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+    </data>
+</odoo>

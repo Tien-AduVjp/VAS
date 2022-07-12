@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="res_config_settings_view_form" model="ir.ui.view">
+			<field name="name">res.config.settings.view.form.inherit.inter.company.rules
+			</field>
+			<field name="model">res.config.settings</field>
+			<field name="inherit_id"
+				ref="to_enterprice_marks_inter_company.res_config_settings_view_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//div[@id='inter_companies_setting']"
+					position="inside">
+					<div class="mt16"></div>
+					<div name="module_inter_company_base_sale_purchase"
+						id="module_inter_company_base_sale_purchase">
+						<field name="module_to_inter_company_sale_purchase"
+							class="oe_inline" />
+						<label for="module_to_inter_company_sale_purchase"
+							class="o_light_label" />
+					</div>
+					<div name="module_inter_company_base_invoice"
+						id="module_inter_company_base_invoice">
+						<field name="module_to_inter_company_invoice"
+							class="oe_inline" />
+						<label for="module_to_inter_company_invoice"
+							class="o_light_label" />
+					</div>
+					<div class="row ml16">
+						<label for="intercompany_user_id"
+							class="col-4 col-lg-4 o_light_label" />
+						<field name="intercompany_user_id"
+							options="{'no_create_edit': True}" require="True" />
+					</div>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

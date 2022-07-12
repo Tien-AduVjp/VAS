@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="hr_equipment_view_form" model="ir.ui.view">
+			<field name="name">equipment.form</field>
+			<field name="model">maintenance.equipment</field>
+			<field name="inherit_id"
+				ref="maintenance.hr_equipment_view_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='category_id']" position="after">
+					<field name="parent_id" domain="[('id', 'not in',recursive_child_ids),('id','!=',id)]"/>
+					<field name="recursive_parent_ids" widget="many2many_tags" />
+				</xpath>
+ 				<xpath
+					expr="//button[@name='%(maintenance.hr_equipment_request_action_from_equipment)d']"
+					position="attributes">
+					<attribute name="name">action_view_recursive_maintenances</attribute>
+					<attribute name="type">object</attribute>
+				</xpath>
+				<xpath expr="//field[@name='maintenance_count']"
+					position="replace">
+					<field name="recursive_maintenances_count" widget="statinfo"
+						help="Show all the maintenances of this equipment including its parts' maintenances" />
+				</xpath>
+				<xpath expr="//div[@name='button_box']" position="inside">
+					<button name="action_view_child_maintenances" type="object"
+						class="oe_stat_button" icon="fa-ticket">
+						<field string="Parts Maintenances"
+							name="child_maintenances_count" widget="statinfo"
+							help="Maintenances of the equipment parts only, which does not include the maintenance of the current equipment" />
+					</button>
+				</xpath>
+				<xpath expr="//field[@name='note']" position="after">
+					<separator string="Direct Parts" />
+					<field name="child_ids"
+						context="{'default_category_id': category_id, 'default_parent_id':id, 'default_maintenance_team_id':maintenance_team_id, 'default_technician_user_id':technician_user_id}">
+						<tree>
+							<field name="name" string="Part Name" />
+							<field name="serial_no" />
+							<field name="technician_user_id" />
+							<field name="period" />
+							<field name="maintenance_duration" />
+							<field name="next_action_date" />
+						</tree>
+					</field>
+					<separator string="All Parts (recursively)" />
+					<field name="recursive_child_ids">
+						<tree>
+							<field name="name" string="Part Name" />
+							<field name="serial_no" />
+							<field name="technician_user_id" />
+							<field name="period" />
+							<field name="maintenance_duration" />
+							<field name="next_action_date" />
+						</tree>
+					</field>
+					<separator string="All Maintenance" />
+					<field name="recursive_maintenance_ids">
+						<tree>
+							<field name="name" />
+							<field name="equipment_id" />
+						</tree>
+					</field>
+				</xpath>
+			</field>
+		</record>
+
+		<record id="hr_equipment_view_tree" model="ir.ui.view">
+			<field name="name">equipment.tree</field>
+			<field name="model">maintenance.equipment</field>
+			<field name="inherit_id"
+				ref="maintenance.hr_equipment_view_tree" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='category_id']" position="after">
+					<field name="parent_id" />
+					<field name="next_action_date" string="Next maintenance time" />
+				</xpath>
+			</field>
+		</record>
+
+		<record id="hr_equipment_view_search" model="ir.ui.view">
+			<field name="name">equipment.search</field>
+			<field name="model">maintenance.equipment</field>
+			<field name="inherit_id"
+				ref="maintenance.hr_equipment_view_search" />
+			<field name="arch" type="xml">
+				<xpath expr="field[@name='category_id']" position="after">
+					<field name="parent_id" />
+					<field name="child_ids" />
+				</xpath>
+				<xpath expr="//filter[@name='message_needaction']"
+					position="before">
+					<separator />
+					<filter name="ftr_no_part" string="No Parts"
+						domain="[('parent_id','=',False)]"
+						help="Show Equipments without their parts" />
+					<filter name="ftr_parts_only" string="Parts Only"
+						domain="[('parent_id','!=',False)]"
+						help="Show equipments that are parts of others" />
+				</xpath>
+				<xpath expr="//group" position="inside">
+					<filter string="Parent Equipment" name="grp_parent_id"
+						domain="[]" context="{'group_by': 'parent_id'}" />
+				</xpath>
+				<xpath expr="//group" position="after">
+					<searchpanel>
+						<field name="company_id" groups="base.group_multi_company"
+							icon="fa-building" />
+						<field name="category_id" />
+						<field name="parent_id" icon="fa-cog" string="Assembly" />
+					</searchpanel>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>
+

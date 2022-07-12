@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="fleet_vehicle_view_form" model="ir.ui.view">
+			<field name="name">fleet.vehicle.form</field>
+			<field name="model">fleet.vehicle</field>
+			<field name="inherit_id" ref="fleet.fleet_vehicle_view_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//div[@name='button_box']" position="inside">
+					<button name="action_view_scheduled_trips" type="object"
+						class="oe_stat_button" icon="fa-bus"
+						help="show the trips that have been scheduled for this vehicle">
+						<field name="scheduled_trips_count" widget="statinfo"
+							string="Scheduled Trips" />
+					</button>
+				</xpath>
+				<xpath expr="//field[@name='location']" position="attributes">
+					<attribute name="invisible">1</attribute>
+				</xpath>
+				<xpath expr="//field[@name='location']" position="after">
+					<field name="address_id" />
+				</xpath>
+				<xpath expr="//field[@name='car_value']" position="after">
+					<field name="operation_distance" />
+					<field name="operation_hours" />
+				</xpath>
+			</field>
+		</record>
+
+		<record id="fleet_vehicle_view_tree" model="ir.ui.view">
+			<field name="name">fleet.vehicle.form</field>
+			<field name="model">fleet.vehicle</field>
+			<field name="inherit_id" ref="fleet.fleet_vehicle_view_tree" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='acquisition_date']" position="after">
+					<field name="operation_distance" />
+					<field name="operation_hours" widget="float_time" />
+				</xpath>
+			</field>
+		</record>
+
+		<record id="fleet_vehicle_view_search" model="ir.ui.view">
+			<field name="name">fleet.vehicle.search</field>
+			<field name="model">fleet.vehicle</field>
+			<field name="inherit_id" ref="fleet.fleet_vehicle_view_search" />
+			<field name="arch" type="xml">
+				<xpath expr="//filter[@name='alert_true']" position="after">
+					<separator />
+					<filter name="idle_today" string="Idle Today"
+						domain="['|',('next_scheduled_trip_date','=',False),('next_scheduled_trip_date','&gt;=', datetime.datetime.combine(context_today(), datetime.time(23,59,59)))]" />
+					<filter name="idle_in_2day" string="Idle in Two Days"
+						domain="['|',('next_scheduled_trip_date','=',False),('next_scheduled_trip_date','&gt;=', (context_today() + relativedelta(days=2)).strftime('%Y-%m-%d'))]" />
+					<filter name="idle_in_3day" string="Idle in Three Days"
+						domain="['|',('next_scheduled_trip_date','=',False),('next_scheduled_trip_date','&gt;=', (context_today() + relativedelta(days=3)).strftime('%Y-%m-%d'))]" />
+					<filter name="idle_in_7day" string="Idle in Seven Days"
+						domain="['|',('next_scheduled_trip_date','=',False),('next_scheduled_trip_date','&gt;=', (context_today() + relativedelta(days=7)).strftime('%Y-%m-%d'))]" />
+				</xpath>
+			</field>
+		</record>
+
+		<record id="fleet_vehicle_view_kanban" model="ir.ui.view">
+			<field name="name">fleet.vehicle.kanban</field>
+			<field name="model">fleet.vehicle</field>
+			<field name="inherit_id" ref="fleet.fleet_vehicle_view_kanban" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='contract_renewal_total']"
+					position="after">
+					<field name="next_scheduled_trip_id" />
+					<field name="next_scheduled_trip_date" />
+				</xpath>
+				<xpath
+					expr="//div[hasclass('oe_kanban_details')]/ul/li[last()]"
+					position="after">
+					<li>
+						<t t-if="record.next_scheduled_trip_id.raw_value">
+							<field name="next_scheduled_trip_id" />
+						</t>
+						<t t-if="record.next_scheduled_trip_date.raw_value">
+							<field name="next_scheduled_trip_date" widget="datetime" />
+						</t>
+					</li>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

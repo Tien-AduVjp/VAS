@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="res_config_settings_view_form" model="ir.ui.view">
+		<field name="name">res.config.settings.view.form.inherit.website.sale.apps
+		</field>
+		<field name="model">res.config.settings</field>
+		<field name="inherit_id"
+			ref="website_sale.res_config_settings_view_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//div[@id='digital_content_setting']"
+				position="after">
+				<div class="col-xs-12 col-md-6 o_setting_box"
+					id="to_apps_store_setting" title="Sell your Odoo apps online">
+					<div class="o_setting_left_pane">
+						<field name="dedicate_apps_store" />
+					</div>
+					<div class="o_setting_right_pane">
+						<label for="dedicate_apps_store" />
+						<div class="text-muted">
+							If checked, a dedicted Apps Store will be activated
+							on your website to sell your Apps. Otherwise, all your apps will
+							be listed in the Shop (together with other products)
+						</div>
+					</div>
+				</div>				
+			</xpath>
+		</field>
+	</record>
+</odoo>

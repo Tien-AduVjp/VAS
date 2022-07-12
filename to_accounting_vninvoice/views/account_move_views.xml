@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="view_move_form" model="ir.ui.view">
+			<field name="name">account.move.form</field>
+			<field name="model">account.move</field>
+			<field name="inherit_id" ref="to_einvoice_common.view_move_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//button[@name='action_invoice_sent'][1]"  position="before">
+					<button name="%(to_einvoice_common.account_einvoice_error_notification_action)d"
+							type="action" string="Create E-invoice Error Notification"
+							attrs="{'invisible': ['|','|','|', '|', '|', '|', '|',
+								('einvoice_enabled','=',False),
+								('einvoice_state', 'not in', ('issued', 'paid')),
+								('state', 'not in', ('posted', 'cancel')),
+								('type', '!=', 'out_invoice'),
+								('vninvoice_transactionid', '=', False),
+								('einvoice_api_version', '!=', 'v2'),
+								('einvoice_error_notif_state', 'not in', ('none', 'signed')),
+								('check_vninvoice_approved_and_signed', '=', False)
+							]}"
+							groups="account.group_account_invoice"/>
+					<button name="action_sign_einvoice_error_notif"
+							type="object" string="Sign E-invoice Error Notification"
+							attrs="{'invisible': ['|','|','|', '|', '|', '|', '|',
+								('einvoice_enabled','=',False),
+								('einvoice_state', 'not in', ('issued', 'paid')),
+								('state', 'not in', ('posted', 'cancel')),
+								('type', '!=', 'out_invoice'),
+								('vninvoice_transactionid', '=', False),
+								('einvoice_api_version', '!=', 'v2'),
+								('einvoice_error_notif_state', '!=', 'draft'),
+								('check_vninvoice_approved_and_signed', '=', False)
+							]}"
+							groups="account.group_account_invoice"/>
+					<button name="action_delete_einvoice_error_notif"
+							type="object" string="Delete E-invoice Error Notification"
+							attrs="{'invisible': ['|','|','|', '|', '|', '|', '|',
+								('einvoice_enabled','=',False),
+								('einvoice_state', 'not in', ('issued', 'paid')),
+								('state', 'not in', ('posted', 'cancel')),
+								('type', '!=', 'out_invoice'),
+								('vninvoice_transactionid', '=', False),
+								('einvoice_api_version', '!=', 'v2'),
+								('einvoice_error_notif_state', '!=', 'draft'),
+								('check_vninvoice_approved_and_signed', '=', False)
+							]}"
+							groups="account.group_account_invoice"/>
+					<button name="action_approve_and_sign" type="object"
+						string="Sign VN-invoice" class="oe_highlight"
+						attrs="{'invisible': ['|','|','|','|','|',('einvoice_enabled','=',False),('einvoice_state', 'not in', ('issued','paid')),('check_vninvoice_approved_and_signed','=',True), ('state', 'not in', ('posted')),('type', 'not in', ('out_invoice', 'out_refund')), ('vninvoice_transactionid', '=', False)]}"
+						groups="account.group_account_invoice" />
+				</xpath>
+				
+				<!--TODO: Need improvement: Temporary disable this warning message until the auto approve and sign function is improved.-->
+				<!--<xpath expr="//header" position="after">
+					<div groups="account.group_account_invoice"
+                         class="alert alert-danger" role="alert" style="margin-bottom:0px;"
+                         attrs="{'invisible': ['|','|','|','|','|',('einvoice_enabled','=',False),('einvoice_state', 'not in', ('issued','paid')),('check_vninvoice_approved_and_signed','=',True), ('state', 'not in', ('posted')),('type', 'not in', ('out_invoice')), ('vninvoice_transactionid', '=', False)]}">
+                         Error occured in the process of signing this invoice (You can see error details in log note area). Please contact your service provider for help and sign the invoice again after that.
+                    </div>
+				</xpath>-->
+
+				<xpath expr="//button[@name='button_draft']" position="before">
+					<button name="%(to_einvoice_common.action_account_invoice_einvoice_cancel)d"
+						type="action" string="Cancel VN-Invoice"
+						attrs="{'invisible': ['|','|','|','|', '|',
+						('einvoice_enabled','=',False),
+						('einvoice_state', 'not in', ('issued','paid')),
+						('state', '!=', 'posted'),
+						('type', 'not in', ('out_invoice', 'out_refund')),
+						('vninvoice_transactionid', '=', False),
+						('einvoice_api_version', '!=', 'v1')
+						]}"
+						groups="account.group_account_invoice" />
+                    <button name="cancel_vninvoice"
+                        type="object" string="Cancel VN-Invoice"
+                        attrs="{'invisible': ['|','|','|','|', '|', '|',
+                        ('einvoice_enabled','=',False),
+                        ('einvoice_state', 'not in', ('issued','paid')),
+                        ('state', '!=', 'posted'),
+                        ('type', 'not in', ('out_invoice', 'out_refund')),
+                        ('vninvoice_transactionid', '=', False),
+                        ('einvoice_api_version', '!=', 'v2'),
+                        ('einvoice_error_notif_state', '=', 'signed')
+                        ]}"
+                        groups="account.group_account_invoice" />
+					<button name="cancel_vninvoice"
+						type="object" string="Cancel VN-Invoice" class="oe_highlight"
+						attrs="{'invisible': ['|','|','|','|', '|', '|',
+						('einvoice_enabled','=',False),
+						('einvoice_state', 'not in', ('issued','paid')),
+						('state', '!=', 'posted'),
+						('type', 'not in', ('out_invoice', 'out_refund')),
+						('vninvoice_transactionid', '=', False),
+						('einvoice_api_version', '!=', 'v2'),
+						('einvoice_error_notif_state', '!=', 'signed')
+						]}"
+						groups="account.group_account_invoice" />
+				</xpath>
+
+				<xpath expr="//field[@name='einvoice_invoice_date']" position="after">
+					<!-- PDF representation file -->
+					<field name="vninvoice_representation_filename_pdf"
+						invisible="1" />
+					<field name="vninvoice_representation_pdf"
+						filename="vninvoice_representation_filename_pdf" attrs="{'invisible':[('vninvoice_representation_filename_pdf', '=', False)]}"/>
+					<!-- XML representation file -->
+					<field name="vninvoice_representation_filename_xml" invisible="1" />		
+					<field name="vninvoice_representation_xml" 
+						filename="vninvoice_representation_filename_xml" attrs="{'invisible':[('vninvoice_representation_filename_xml', '=', False)]}"/>
+					<!-- PDF converted file -->
+					<field name="vninvoice_converted_filename" invisible="1" />
+					<field name="vninvoice_converted_file" 
+						filename="vninvoice_converted_filename" attrs="{'invisible':[('vninvoice_converted_file', '=', False)]}"/>
+					<field name="check_vninvoice_approved_and_signed" invisible="1"/>
+					<field name="einvoice_error_notif_state" invisible="1"/>
+				</xpath>
+
+				<xpath expr="//page[@name='einvoice']/group/group[1]" position="inside">
+					<field name="vninvoice_transactionid" groups="base.group_no_one" attrs="{'invisible':[('vninvoice_transactionid', '=', False)]}"/>
+					<field name="account_vninvoice_serial_id" attrs="{'invisible':[('account_vninvoice_serial_id','=',False)]}"/>
+					<field name="account_vninvoice_template_id" attrs="{'invisible':[('account_vninvoice_template_id','=',False)]}"/>
+					<field name="account_vninvoice_type_id" attrs="{'invisible':[('account_vninvoice_type_id','=',False)]}"/>
+				</xpath>
+			</field>
+		</record>
+
+	</data>
+</odoo>

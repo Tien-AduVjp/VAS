@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+
+		<!-- inherit payment terms -->
+
+		<record id="to_payment_term_extended_inherit_form" model="ir.ui.view">
+			<field name="name">to.payment.term.extended.inherit.form</field>
+			<field name="model">account.payment.term.line</field>
+			<field name="inherit_id" ref="account.view_payment_term_line_form" />
+			<field name="arch" type="xml">
+				<field name="days" position="attributes">
+					<attribute name="attrs">{'invisible': [('option', 'in',
+						['last_day_following_month',
+						'last_day_current_month','fix_day_next_x_months','last_day_next_x_months'])]}
+					</attribute>
+				</field>
+				<xpath expr="//label[@for='days']" position="before">
+					<label for="fixed_day_of_month"
+						   attrs="{'invisible': [('option','!=', 'fix_day_next_x_months')]}"/>
+					<field name="fixed_day_of_month"
+						attrs="{'invisible': [('option','!=', 'fix_day_next_x_months')], 'required':[('option','=', 'fix_day_next_x_months')]}" />
+					<label for="number_of_next_month"
+						   attrs="{'invisible': [('option','not in', ['fix_day_next_x_months','last_day_next_x_months'])]}"/>
+					<field name="number_of_next_month"
+						attrs="{'invisible': [('option','not in', ['fix_day_next_x_months','last_day_next_x_months'])], 'required':[('option','in', ['fix_day_next_x_months','last_day_next_x_months'])]}" />
+				</xpath>
+			</field>
+		</record>
+
+	</data>
+</odoo>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <record id="group_show_line_tax_details" model="res.groups">
+            <field name="name">Tax display Details</field>
+            <field name="comment">Show tax details on invoice lines</field>
+            <field name="category_id" ref="base.module_category_hidden"/>
+        </record>
+</odoo>

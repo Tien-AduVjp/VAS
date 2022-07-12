@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.setting.viin_mobile.inherit</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base_setup.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='appstore']/div/div[hasclass('o_setting_right_pane')]/a" position="replace">
+                <a class="d-block mx-auto" href="https://play.google.com/store/apps/details?id=com.viindoo" target="blank">
+                    <img alt="On Google Play" class="d-block mx-auto img img-fluid" src="/base_setup/static/src/img/google_play.png" />
+                </a>
+            </xpath>
+            <xpath expr="//div[@id='appstore']/div/div[2]/a" position="replace">
+                <a class="d-block mx-auto" href="https://itunes.apple.com/vn/app/viindoo-mobile/id1562267579" target="blank">
+                    <img alt="On Apple Store" class="d-block mx-auto img img-fluid" src="/base_setup/static/src/img/app_store.png" />
+                </a>
+            </xpath>
+        </field>
+    </record>
+</odoo>

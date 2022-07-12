@@ -1,0 +1,77 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_maintenance_approval
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-10 04:08+0000\n"
+"PO-Revision-Date: 2020-08-10 04:08+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_maintenance_approval
+#: model:ir.model,name:to_maintenance_approval.model_approval_request
+#: model:ir.model.fields,field_description:to_maintenance_approval.field_maintenance_request__approval_id
+msgid "Approval Request"
+msgstr "Đề nghị phê duyệt"
+
+#. module: to_maintenance_approval
+#: model:ir.model,name:to_maintenance_approval.model_approval_request_type
+msgid "Approval Request Type"
+msgstr "Kiểu đề nghị phê duyệt"
+
+#. module: to_maintenance_approval
+#: model:ir.model,name:to_maintenance_approval.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: to_maintenance_approval
+#: model:ir.actions.act_window,name:to_maintenance_approval.create_maintenance_request_action
+#: model_terms:ir.ui.view,arch_db:to_maintenance_approval.approval_request_view_inherit_form
+msgid "Create Maintenance Request"
+msgstr "Tạo yêu cầu sửa chữa"
+
+#. module: to_maintenance_approval
+#: model:ir.model.fields,field_description:to_maintenance_approval.field_approval_request__equipment_id
+msgid "Equipment"
+msgstr "Thiết bị"
+
+#. module: to_maintenance_approval
+#: code:addons/to_maintenance_approval/models/approval_request.py:0
+#, python-format
+msgid "Equipment cannot be empty!"
+msgstr "Thiết bị không được để trống"
+
+#. module: to_maintenance_approval
+#: code:addons/to_maintenance_approval/models/res_company.py:0
+#, python-format
+msgid "Maintenance Approval"
+msgstr "Phê duyệt sửa chữa"
+
+#. module: to_maintenance_approval
+#: model:ir.model,name:to_maintenance_approval.model_maintenance_request
+#: model:ir.model.fields,field_description:to_maintenance_approval.field_approval_request__maintenance_request_ids
+#: model_terms:ir.ui.view,arch_db:to_maintenance_approval.approval_request_view_inherit_form
+msgid "Maintenance Request"
+msgstr "Yêu cầu sửa chữa"
+
+#. module: to_maintenance_approval
+#: model:ir.model.fields,field_description:to_maintenance_approval.field_approval_request__maintenance_request_count
+msgid "Maintenance Request Count"
+msgstr "Yêu cầu sửa chữa"
+
+#. module: to_maintenance_approval
+#: model:ir.model.fields.selection,name:to_maintenance_approval.selection__approval_request_type__type__maintenance_type
+msgid "Maintenance Type"
+msgstr "Kiểu sửa chữa"
+
+#. module: to_maintenance_approval
+#: model:ir.model.fields,field_description:to_maintenance_approval.field_approval_request_type__type
+msgid "Type"
+msgstr "Kiểu"

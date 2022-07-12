@@ -1,0 +1,63 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_payment_terms_extended
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-09 03:17+0000\n"
+"PO-Revision-Date: 2021-08-23 06:27+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_payment_terms_extended
+#: model:ir.model.fields,field_description:to_payment_terms_extended.field_account_payment_term_line__fixed_day_of_month
+msgid "Day of month"
+msgstr ""
+
+#. module: to_payment_terms_extended
+#: model:ir.model.fields.selection,name:to_payment_terms_extended.selection__account_payment_term_line__option__fix_day_next_x_months
+msgid "Fixed day of Next X months"
+msgstr ""
+
+#. module: to_payment_terms_extended
+#: model:ir.model.fields.selection,name:to_payment_terms_extended.selection__account_payment_term_line__option__last_day_next_x_months
+msgid "Last day of Next X months"
+msgstr ""
+
+#. module: to_payment_terms_extended
+#: model:ir.model.fields,field_description:to_payment_terms_extended.field_account_payment_term_line__number_of_next_month
+msgid "Number of next month"
+msgstr ""
+
+#. module: to_payment_terms_extended
+#: model:ir.model.fields,field_description:to_payment_terms_extended.field_account_payment_term_line__option
+msgid "Options"
+msgstr ""
+
+#. module: to_payment_terms_extended
+#: model:ir.model,name:to_payment_terms_extended.model_account_payment_term
+msgid "Payment Terms"
+msgstr ""
+
+#. module: to_payment_terms_extended
+#: model:ir.model,name:to_payment_terms_extended.model_account_payment_term_line
+msgid "Payment Terms Line"
+msgstr ""
+
+#. module: to_payment_terms_extended
+#: code:addons/to_payment_terms_extended/models/account.py:0
+#, python-format
+msgid "The fixed day of month used for a payment term cannot be negative."
+msgstr ""
+
+#. module: to_payment_terms_extended
+#: code:addons/to_payment_terms_extended/models/account.py:0
+#, python-format
+msgid "The number of next month used for a payment term cannot be negative."
+msgstr ""

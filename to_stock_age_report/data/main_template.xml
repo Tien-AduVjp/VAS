@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="line_template">
+		 	<t t-foreach="lines.get('lines')" t-as="line">
+		 		<tr>
+						<td><t t-if="not line_last"><t t-esc="line[2]" /></t></td>
+						<t t-if="not line_last">
+							<td class="number text-left">
+								<t t-esc="line[3]" />
+							</td>
+						</t>
+						<t t-else="">
+							<td class="number text-left font-weight-bold">Summary</td>
+						</t>
+
+				     	<t t-set="index" t-value="0"/>
+					<t t-foreach="lines.get('columns_header')"
+						t-as="column_header">
+						<t t-if="column_header_index &gt; 0">
+
+							<t t-if="not line_last">
+								<td class="number text-right">
+									<t t-esc="format_qty(line[index + 4])" />
+								</td>
+							</t>
+							<t t-else="">
+								<td class="number text-right font-weight-bold">
+									<t t-esc="format_qty(line[index + 1])" />
+								</td>
+							</t>
+
+							<t t-if="not line_last">
+								<td class="number text-right">
+									<t t-esc="format_valuation(line[index + 5])" />
+								</td>
+							</t>
+							<t t-else="">
+								<td class="number text-right font-weight-bold">
+									<t t-esc="format_valuation(line[index + 2])" />
+								</td>
+							</t>
+							<t t-set="index" t-value="index+2"/>
+						</t>
+					</t>
+				</tr>
+			</t>
+
+	</template>
+	<template id="main_template">
+		<div class="container-fluid">
+			<h2>
+				<t t-esc="report.get('name')"></t>
+			</h2>
+			<t t-if="not options.get('multi_company')">
+				<h4 class='text-muted' t-esc="report.get('company_name')" />
+			</t>
+			<t t-else="">
+				<h4>
+					Companies:
+					<t t-set="company_value" t-value="'All'" />
+					<t t-foreach="options['multi_company']" t-as="c">
+						<t t-if="c.get('selected') == True">
+							<t t-set="company_value" t-value="''" />
+							"
+							<t t-esc="c.get('name')" />
+							"
+						</t>
+					</t>
+					<t t-esc="company_value" />
+				</h4>
+			</t>
+			<t t-if="options.get('periods').get('date')">
+				<h5>To date: <t t-esc="options.get('periods').get('date')"/> - Interval Days: <t t-esc="options.get('periods').get('period_length')"/></h5>
+			</t>
+			<div class="table-responsive table table-striped table-bordered">
+				<table width="100%" class="table table-striped">
+					<thead>
+						<tr class="text-center">
+							<th rowspan="2"> Product Name </th>
+							<t t-foreach="lines.get('columns_header')"
+								t-as="column_header">
+								 <t t-if="column_header_index==0">
+								 	<th class="text-center" rowspan="2"> Product Category </th>
+								 </t>
+								 <t t-else="">
+									<th
+										t-att-class="'text-center ' + (column_header.get('class', ''))"
+										t-att-style="column_header.get('style', '')"
+										t-att-colspan="column_header.get('colspan', '')">
+										<t t-esc="column_header.get('name')" />
+									</th>
+								</t>
+							</t>
+						</tr>
+						<tr class="text-center">
+							
+							<t t-foreach="lines.get('columns_header')"
+								t-as="column_header">
+								 <t t-if="column_header_index &gt; 0">
+								 	<th>Q'ty On Hand</th>
+									<th>Valuation</th>
+								 </t>
+							</t>
+						</tr>
+					</thead>
+					<tbody>
+						<t t-if="lines.get('lines')">
+							<t t-call="to_stock_age_report.line_template" />	
+						</t>
+					</tbody>
+				</table>
+			</div>
+			<div class="js_af_report_footnotes" />
+		</div>
+		
+	</template>
+</odoo>

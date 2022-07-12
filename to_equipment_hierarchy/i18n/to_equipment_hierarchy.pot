@@ -1,0 +1,252 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_equipment_hierarchy
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-07 09:40+0000\n"
+"PO-Revision-Date: 2020-01-07 09:40+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,help:to_equipment_hierarchy.field_maintenance_request__parent_equipment_ids
+msgid ""
+"A maintenance of an equipment part is considered as a maintenance for all "
+"the other equipments that contain the equipment of the maintenance"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model_terms:ir.ui.view,arch_db:to_equipment_hierarchy.hr_equipment_view_form
+msgid "All Maintenance"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,field_description:to_equipment_hierarchy.field_maintenance_equipment__recursive_maintenance_ids
+msgid "All Maintenances"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model_terms:ir.ui.view,arch_db:to_equipment_hierarchy.hr_equipment_view_form
+msgid "All Parts (recursively)"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,help:to_equipment_hierarchy.field_maintenance_equipment__recursive_maintenance_ids
+msgid "All the maintenances of this equipment and its parts"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,field_description:to_equipment_hierarchy.field_maintenance_equipment__recursive_parent_ids
+msgid "Also apart of"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,field_description:to_equipment_hierarchy.field_maintenance_request__parent_equipment_ids
+msgid "Also for"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model_terms:ir.ui.view,arch_db:to_equipment_hierarchy.hr_equipment_view_search
+msgid "Assembly"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,field_description:to_equipment_hierarchy.field_maintenance_equipment__assign_date
+msgid "Assigned Date"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,field_description:to_equipment_hierarchy.field_maintenance_equipment__recursive_maintenances_open_count
+msgid "Current Maintenances"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model_terms:ir.ui.view,arch_db:to_equipment_hierarchy.hr_equipment_view_form
+msgid "Direct Parts"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,field_description:to_equipment_hierarchy.field_maintenance_equipment__parent_id
+msgid "Directly apart of"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,help:to_equipment_hierarchy.field_maintenance_equipment__child_ids
+msgid ""
+"Equipments that are directly apart of this equipment, not including parts of"
+" parts"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,help:to_equipment_hierarchy.field_maintenance_equipment__recursive_child_ids
+msgid ""
+"Equipments that are recursively apart of this equipments. For example, parts"
+" of parts"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: code:addons/to_equipment_hierarchy/models/maintenance_equipment.py:0
+#, python-format
+msgid ""
+"It is impossible for the part '%s' to be put in a location other than the "
+"location of its parent ('%s')'s location"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,field_description:to_equipment_hierarchy.field_maintenance_equipment__location
+msgid "Location"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model:ir.model,name:to_equipment_hierarchy.model_maintenance_equipment
+msgid "Maintenance Equipment"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model:ir.model,name:to_equipment_hierarchy.model_maintenance_request
+msgid "Maintenance Request"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,field_description:to_equipment_hierarchy.field_maintenance_equipment__recursive_maintenances_count
+msgid "Maintenances"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,help:to_equipment_hierarchy.field_maintenance_equipment__child_maintenance_ids
+#: model_terms:ir.ui.view,arch_db:to_equipment_hierarchy.hr_equipment_view_form
+msgid ""
+"Maintenances of the equipment parts only, which does not include the "
+"maintenance of the current equipment"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model_terms:ir.ui.view,arch_db:to_equipment_hierarchy.hr_equipment_view_tree
+msgid "Next maintenance time"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model_terms:ir.ui.view,arch_db:to_equipment_hierarchy.hr_equipment_view_search
+msgid "No Parts"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,field_description:to_equipment_hierarchy.field_maintenance_equipment__owner_user_id
+msgid "Owner"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model_terms:ir.ui.view,arch_db:to_equipment_hierarchy.hr_equipment_view_search
+msgid "Parent Equipment"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model_terms:ir.ui.view,arch_db:to_equipment_hierarchy.hr_equipment_view_form
+msgid "Part Name"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,field_description:to_equipment_hierarchy.field_maintenance_equipment__child_ids
+msgid "Parts"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,field_description:to_equipment_hierarchy.field_maintenance_equipment_child_maintenances_open_count
+msgid "Parts Current Maintenances Count"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model:ir.ui.view,arch_db:to_equipment_hierarchy.hr_equipment_view_form
+msgid "Parts Maintenances"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,field_description:to_equipment_hierarchy.field_maintenance_equipment_child_maintenances_count
+msgid "Parts Maintenances Count"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model:ir.ui.view,arch_db:to_equipment_hierarchy.hr_equipment_view_search
+msgid "Parts Only"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,field_description:to_equipment_hierarchy.field_maintenance_equipment_child_maintenance_ids
+msgid "Parts Only Maintenances"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,field_description:to_equipment_hierarchy.field_maintenance_equipment_recursive_child_ids
+msgid "Recursive Parts"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model_terms:ir.ui.view,arch_db:to_equipment_hierarchy.hr_equipment_view_search
+msgid "Show Equipments without their parts"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model_terms:ir.ui.view,arch_db:to_equipment_hierarchy.hr_equipment_view_form
+msgid ""
+"Show all the maintenances of this equipment including its parts' "
+"maintenances"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model_terms:ir.ui.view,arch_db:to_equipment_hierarchy.hr_equipment_view_search
+msgid "Show equipments that are parts of others"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,field_description:to_equipment_hierarchy.field_maintenance_request__child_maintenance_ids
+msgid "Sub-maintenance"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model_terms:ir.ui.view,arch_db:to_equipment_hierarchy.hr_equipment_request_view_form
+msgid "Sub-maintenances"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,help:to_equipment_hierarchy.field_maintenance_request__child_maintenance_ids
+msgid "The maintenances of the parts of the equipment of this maintenance"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,help:to_equipment_hierarchy.field_maintenance_equipment__recursive_parent_ids
+msgid ""
+"This field is to indicate that this equipment is apart of other equipments. "
+"For example, a cylinder is apart of its engine assembled in a car"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,help:to_equipment_hierarchy.field_maintenance_equipment__parent_id
+msgid ""
+"This field is to indicate that this equipment is directly apart of another "
+"equipment"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: code:addons/to_equipment_hierarchy/models/maintenance_equipment.py:65
+#, python-format
+msgid "You cannot create recursive region."
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model:ir.ui.view,arch_db:to_equipment_hierarchy.hr_equipment_request_view_form
+msgid "You could ignore if you may not want to."
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model_terms:ir.ui.view,arch_db:to_equipment_hierarchy.hr_equipment_request_view_form
+msgid ""
+"You may want to carry out the following sub\n"
+"\t\t\t\t\t\t\tmaintenance(s) at the same time..."
+msgstr ""

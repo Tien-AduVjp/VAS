@@ -1,0 +1,112 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_website_docs_odoo
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-02-18 01:28+0000\n"
+"PO-Revision-Date: 2021-02-18 01:28+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_website_docs_odoo
+#: code:addons/to_website_docs_odoo/controllers/main.py:0
+#, python-format
+msgid "%s - Odoo %s"
+msgstr ""
+
+#. module: to_website_docs_odoo
+#: model_terms:ir.ui.view,arch_db:to_website_docs_odoo.document_content_filter
+msgid "Odoo Version"
+msgstr "Phiên bản Odoo"
+
+#. module: to_website_docs_odoo
+#: model:ir.model.constraint,message:to_website_docs_odoo.constraint_website_document_content_version_uniq
+msgid "Odoo Version is already assigned!"
+msgstr "Phiên bản Odoo này đã được sử dụng"
+
+#. module: to_website_docs_odoo
+#: model:ir.model.fields,field_description:to_website_docs_odoo.field_website_doc_category__odoo_version_ids
+#: model:ir.model.fields,field_description:to_website_docs_odoo.field_website_document__odoo_version_ids
+msgid "Odoo Versions"
+msgstr "Phiên bản Odoo"
+
+#. module: to_website_docs_odoo
+#: code:addons/to_website_docs_odoo/models/website_document_content.py:0
+#, python-format
+msgid "Odoo version is Required"
+msgstr "Phiên bản Odoo là bắt buộc"
+
+#. module: to_website_docs_odoo
+#: model:ir.model.fields,help:to_website_docs_odoo.field_website_document__odoo_version_ids
+msgid "The Odoo Versions related to this document"
+msgstr "Phiên bản Odoo liên quan đến tài liệu này"
+
+#. module: to_website_docs_odoo
+#: model:ir.model.fields,help:to_website_docs_odoo.field_website_document__unassigned_odoo_version_ids
+msgid "The Odoo Versions that are not related to this document"
+msgstr "Các phiên bản mà khoonglieen quan đến tài liệu này"
+
+#. module: to_website_docs_odoo
+#: code:addons/to_website_docs_odoo/models/website_document.py:0
+#, python-format
+msgid ""
+"The source document contains a content in Odoo version %s which is already "
+"available in the destination content. You must remove one from either before"
+" proceeding."
+msgstr ""
+"Tài liệu nguồn chứa nội dung trong phiên bản %s của Odoo đã có sẵn trong nội"
+" dung đích. Bạn phải xóa một trong hai trước khi tiếp tục."
+
+#. module: to_website_docs_odoo
+#: model:ir.model.fields,field_description:to_website_docs_odoo.field_website_document__unassigned_odoo_version_ids
+msgid "Unassigned Odoo Versions"
+msgstr "Phiên bản Odoo chưa được chỉ định"
+
+#. module: to_website_docs_odoo
+#: model:ir.model.fields,field_description:to_website_docs_odoo.field_website_document_content__odoo_version_id
+msgid "Version"
+msgstr "Phiên bản"
+
+#. module: to_website_docs_odoo
+#: model:ir.model,name:to_website_docs_odoo.model_website
+msgid "Website"
+msgstr ""
+
+#. module: to_website_docs_odoo
+#: model:ir.model,name:to_website_docs_odoo.model_website_document
+msgid "Website Document"
+msgstr "Tài liệu Website"
+
+#. module: to_website_docs_odoo
+#: model:ir.model,name:to_website_docs_odoo.model_website_doc_category
+msgid "Website Document Category"
+msgstr "Chuyên mục Tài liệu Website"
+
+#. module: to_website_docs_odoo
+#: model:ir.model,name:to_website_docs_odoo.model_website_document_content
+msgid "Website Document Content"
+msgstr "Nội dung Tài liệu Website"
+
+#. module: to_website_docs_odoo
+#: code:addons/to_website_docs_odoo/controllers/editor.py:0
+#, python-format
+msgid ""
+"You are not allowed to create new document in the category in type of %s"
+msgstr "Bạn không có quyền tạo mới tài liệu trong chuyên mục với kiểu %s"
+
+#. module: to_website_docs_odoo
+#: code:addons/to_website_docs_odoo/models/website_document_content.py:0
+#, python-format
+msgid ""
+"You don't have right with this Document Contents '%s' (%s) which is "
+"published"
+msgstr ""
+"Bạn không có quyền với Nội dung Tài liệu này: '%s' (%s), cái đã được xuất "
+"bản"

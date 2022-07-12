@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="route_form" model="ir.ui.view">
+			<field name="name">route.route.form</field>
+			<field name="model">route.route</field>
+			<field name="inherit_id" ref="to_geo_routes.route_form" />
+			<field name="arch" type="xml">
+				<xpath
+					expr="//field[@name='waypoint_ids']/tree/field[@name='waypoint_area_id']"
+					position="after">
+					<field name="stop_duration" widget="float_time" />
+				</xpath>
+			</field>
+		</record>
+		
+		<menuitem id="fleet_planning_menu" name="Fleet Operations"
+			sequence="116"
+			web_icon="to_fleet_operation_planning,static/description/icon.png"
+			groups="fleet_group_operator" />
+
+		<menuitem id="fleet_operations_menu"
+			parent="fleet_planning_menu" name="Operations" sequence="5" />
+			
+		<menuitem name="Reports" parent="fleet_planning_menu" id="menu_fleet_trip_reporting"
+			sequence="80" groups="fleet_group_operator" />
+
+		<!-- Routes &amp; Waypoints menu entries -->
+		<menuitem id="fleet_trip_config_menu"
+			parent="fleet_planning_menu" name="Routes &amp; Waypoints" sequence="50" groups="to_geo_routes.group_user"/>
+
+		<menuitem id="geo_route_menu" name="Routes"
+			parent="fleet_trip_config_menu"
+			action="to_geo_routes.geo_route_action" sequence="5" />
+		<menuitem id="geo_route_section_menu" name="Route Sections"
+			parent="fleet_trip_config_menu"
+			action="to_geo_routes.geo_route_section_action" sequence="6" />
+		<menuitem id="geo_route_section_line_menu"
+			name="Route Section Lines" parent="fleet_trip_config_menu"
+			groups="base.group_no_one"
+			action="to_geo_routes.geo_route_section_line_action" sequence="7" />
+
+		<menuitem id="route_waypoint_menu"
+			parent="fleet_trip_config_menu" name="Waypoints"
+			action="to_geo_routes.route_waypoint_action" sequence="8" />
+		<menuitem id="waypoint_area_menu"
+			parent="fleet_trip_config_menu" name="Waypoint Areas"
+			action="to_geo_routes.waypoint_area_action" sequence="10" />
+
+	</data>
+</odoo>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="analytic_tag_vat_taxable"
+			model="account.analytic.tag">
+			<field name="name">VAT Taxable Goods &amp; Services for Production &amp; Business be eligible for VAT deduction</field>
+		</record>
+		<record id="analytic_tag_vat_exemption"
+			model="account.analytic.tag">
+			<field name="name">VAT Exemption Goods &amp; Services for Production and Business</field>
+		</record>
+		<record id="analytic_tag_vat_vat_taxable_and_exemption"
+			model="account.analytic.tag">
+			<field name="name">VAT Taxable and Exemption Goods &amp; Services for Production and Business be eligible for VAT deduction</field>
+		</record>
+		<record id="analytic_tag_goods_and_services_investment_projects"
+			model="account.analytic.tag">
+			<field name="name">Goods and Services for Investment Projects be eligible for VAT deduction</field>
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+
+		<record id="hr_equipment_request_stock_move_from_equipment" model="ir.actions.act_window">
+			<field name="name">Equipment Moves</field>
+			<field name="res_model">stock.move.line</field>
+			<field name="view_mode">tree,pivot</field>
+			<field name="view_id" ref="stock.view_move_line_tree" />
+			<field name="domain">[('equipment_id', '=', active_id),('state', '!=','cancel')]</field>
+		</record>
+
+		<record model="ir.ui.view" id="hr_equipment_view_form">
+			<field name="name">maintenance.equipment.form</field>
+			<field name="model">maintenance.equipment</field>
+			<field name="inherit_id" ref="maintenance.hr_equipment_view_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//div[@name='button_box']" position="inside">
+					<button name="%(hr_equipment_request_stock_move_from_equipment)d"
+							type="action" 
+							class="oe_stat_button" 
+							icon="fa-arrows-v">
+							<field string="Moves" name="history_count" widget="statinfo" />
+					</button>
+				</xpath>
+				<xpath expr="//field[@name='partner_id']" position="before">
+					<field name="lot_id" context="{'default_company_id': company_id}"
+						attrs="{'readonly':[('created_from_stock_lot','=',True)]}" />
+					
+					<field name="product_id"
+						attrs="{'readonly':[('created_from_stock_lot','=',True)]}" />
+					<field name="created_from_stock_lot" invisible="1" />
+				</xpath>
+				<xpath expr="//field[@name='location']" position="after">
+					<field name="current_stock_location_id" attrs="{'invisible':[('current_stock_location_id','=',False)]}" />
+				</xpath>
+				
+				
+				
+			</field>
+		</record>
+		
+		<record model="ir.ui.view" id="maintenance_equipment_view_search_inherit_hr">
+			<field name="name">maintenance.equipment.view.search.inherit.hr</field>
+			<field name="model">maintenance.equipment</field>
+			<field name="inherit_id"
+				ref="hr_maintenance.maintenance_equipment_view_search_inherit_hr" />
+			<field name="arch" type="xml">
+				<xpath expr="//filter[@name='my']" position="after">
+					<separator />
+					<filter string="Generated from Stock Operations" name="created_from_stock_lot"
+						domain="[('created_from_stock_lot', '=', True)]" />
+				</xpath>
+				<xpath expr="//group" position="inside">
+					<filter string="Current Stock Location" domain="[]" name="grp_current_stock_location"
+						context="{'group_by': 'current_stock_location_id'}" />
+				</xpath>
+				<filter name="available" position="attributes">
+					<attribute name="domain">[('employee_id', '=', False),('department_id', '=', False),'|',('current_stock_location_id.usage','=','internal'),('current_stock_location_id','=',False)]
+					</attribute>
+				</filter>
+			</field>
+		</record>
+	</data>
+</odoo>

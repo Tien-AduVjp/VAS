@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="product_template_form_view">
+			<field name="name">product.template.common.form</field>
+			<field name="model">product.template</field>
+			<field name="inherit_id"
+				ref="product.product_template_form_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//div[@name='button_box']"
+					position="inside">
+					<button name="action_view_product_licenses" type="object"
+						attrs="{'invisible': [('product_licenses_count','&lt;=',0)]}"
+						class="oe_stat_button" icon="fa-certificate">
+						<field name="product_licenses_count" string="License"
+							widget="statinfo" />
+					</button>
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="product_template_only_form_view">
+			<field name="name">product.template.common.form</field>
+			<field name="model">product.template</field>
+			<field name="inherit_id"
+				ref="product.product_template_only_form_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//page[last()]" position="before">
+					<page name="license" string="Licenses"
+						attrs="{'invisible': [('product_variant_count', '&gt;', 1)]}">
+						<field name="product_license_version_ids" nolabel="True">
+							<tree name="product_license_version_ids">
+								<field name="license_id" />
+								<field name="name" />
+								<field name="date_released" />
+								<field name="ref_url" />
+							</tree>
+						</field>
+					</page>
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="product_template_kanban_view">
+			<field name="name">Product.template.product.kanban</field>
+			<field name="model">product.template</field>
+			<field name="inherit_id"
+				ref="product.product_template_kanban_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='product_variant_count']"
+					position="after">
+					<field name="product_license_version_ids" />
+					<field name="product_licenses_count"/>
+				</xpath>
+				<xpath expr="//ul/li[./field[@name='lst_price']]"
+					position="after">
+					<t t-if="record.product_licenses_count.value &gt; 1">
+						<li>
+							Licenses:
+							<field name="product_license_version_ids"
+								widget="many2many_tags" />
+						</li>
+					</t>
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="product_template_search_view">
+			<field name="name">product.template.search</field>
+			<field name="model">product.template</field>
+			<field name="inherit_id"
+				ref="product.product_template_search_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='categ_id']" position="after">
+					<separator />
+					<field string="Licenses" name="product_license_ids"
+						filter_domain="['|',('product_license_ids.name','ilike',self),('product_license_ids.short_name','ilike',self)]" />
+					<field string="License Versions"
+						name="product_license_version_ids"
+						filter_domain="[('product_license_version_ids.name', 'ilike', self)]" />
+				</xpath>
+				<xpath expr="//filter[@name='consumable']" position="after">
+					<separator />
+					<filter string="With License(s)" name="ftr_with_license"
+						domain="[('product_license_ids','!=',False)]" />
+					<filter string="Without License" name="ftr_without_license"
+						domain="[('product_license_ids','=',False)]" />
+				</xpath>
+			</field>
+		</record>
+
+	</data>
+</odoo>

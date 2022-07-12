@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="view_currency_rate_form" model="ir.ui.view">
+			<field name="name">res.currency.rate.form</field>
+			<field name="model">res.currency.rate</field>
+			<field name="inherit_id" ref="base.view_currency_rate_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='rate']" position="after">
+					<field name="inverse_rate" digits="[12,12]" />
+				</xpath>
+			</field>
+		</record>
+
+		<record id="view_currency_rate_tree" model="ir.ui.view">
+			<field name="name">res.currency.rate.tree</field>
+			<field name="model">res.currency.rate</field>
+			<field name="inherit_id" ref="base.view_currency_rate_tree" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='rate']" position="after">
+					<field name="inverse_rate" digits="[12,12]" />
+				</xpath>
+			</field>
+		</record>
+
+		<record id="to_view_currency_rate_graph" model="ir.ui.view">
+			<field name="name">res.currency.rate.graph</field>
+			<field name="model">res.currency.rate</field>
+			<field name="arch" type="xml">
+				<graph string="Currency Rates">
+					<field name="name" />
+					<field name="rate" type="measure" />
+					<field name="company_id" groups="base.group_multi_company" />
+				</graph>
+			</field>
+		</record>
+
+		<record id="view_currency_rate_search" model="ir.ui.view">
+			<field name="name">res.currency.rate.search</field>
+			<field name="model">res.currency.rate</field>
+			<field name="inherit_id" ref="base.view_currency_rate_search" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='name']" position="after">
+					<group expand="0" string="Group By">
+						<filter name="grp_name_day" string="Group by Date::Day"
+							context="{'group_by':'name'}" />
+					</group>
+				</xpath>
+			</field>
+		</record>
+
+		<act_window id="base.act_view_currency_rates"
+			name="Currency Rates" view_mode='tree,form,graph'
+			view_id='base.view_currency_rate_tree'
+			domain="[('currency_id','=', active_id)]"
+			context="{'default_currency_id': active_id}"
+			res_model="res.currency.rate" />
+
+		<record id="view_currency_tree" model="ir.ui.view">
+			<field name="name">res.currency.tree</field>
+			<field name="model">res.currency</field>
+			<field name="inherit_id" ref="base.view_currency_tree" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='rate']" position="after">
+					<field name="inverse_rate" digits="[12,12]" />
+				</xpath>
+			</field>
+		</record>
+
+		<record id="view_currency_form" model="ir.ui.view">
+			<field name="name">res.currency.form</field>
+			<field name="model">res.currency</field>
+			<field name="inherit_id" ref="base.view_currency_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='rate']" position="after">
+					<field name="inverse_rate" digits="[12,12]" />
+				</xpath>
+			</field>
+		</record>
+
+	</data>
+</odoo>

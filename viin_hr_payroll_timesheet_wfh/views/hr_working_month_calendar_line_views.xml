@@ -1,0 +1,84 @@
+<odoo>
+    <data>
+        <record id="hr_working_month_calendar_line_view_tree"
+            model="ir.ui.view">
+            <field name="name">hr.working.month.calendar.line.tree
+            </field>
+            <field name="model">hr.working.month.calendar.line</field>
+            <field name="inherit_id"
+                ref="to_hr_payroll.hr_working_month_calendar_line_view_tree" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='unpaid_leave_hours']"
+                    position="after">
+                    <field name="pow_required_hours"
+                        optional="hide" />
+                    <field name="pow_required_days"
+                        optional="hide" />
+                    <field name="pow_timesheet_hours"
+                        optional="hide" />
+                    <field name="pow_timesheet_days"
+                        optional="hide" />
+                    <field name="missing_pow_hours"
+                        optional="hide" />
+                    <field name="missing_pow_days" optional="hide" />
+                </xpath>
+            </field>
+        </record>
+
+        <record id="hr_working_month_calendar_line_view_form"
+            model="ir.ui.view">
+            <field name="name">hr.working.month.calendar.line.form
+            </field>
+            <field name="model">hr.working.month.calendar.line</field>
+            <field name="inherit_id"
+                ref="to_hr_payroll.hr_working_month_calendar_line_view_form" />
+            <field name="arch" type="xml">
+                <xpath
+                    expr="//group[./field[@name='unpaid_leave_hours']]"
+                    position="after">
+                    <group string="PoW Timesheet Summary">
+                        <label for="pow_required_hours"
+                            string="Required" />
+                        <div class="o_row">
+                            <field name="pow_required_hours" />
+                            <span>hours</span>
+                        </div>
+                        <label for="pow_timesheet_hours"
+                            string="Recorded" />
+                        <div class="o_row">
+                            <field name="pow_timesheet_hours" />
+                            <span>hours</span>
+                        </div>
+                        <label for="missing_pow_hours"
+                            string="Missed" />
+                        <div class="o_row">
+                            <field name="missing_pow_hours" />
+                            <span>hours</span>
+                        </div>
+                    </group>
+                    <group>
+                        <label for="pow_required_days"
+                            string="Required" />
+                        <div class="o_row">
+                            <field name="pow_required_days" />
+                            <span>days</span>
+                        </div>
+                        <label for="pow_timesheet_days"
+                            string="Recorded" />
+                        <div class="o_row">
+                            <field name="pow_timesheet_days" />
+                            <span>days</span>
+                        </div>
+                        <label for="missing_pow_days"
+                            string="Missed" />
+                        <div class="o_row">
+                            <field name="missing_pow_days" />
+                            <span>days</span>
+                        </div>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

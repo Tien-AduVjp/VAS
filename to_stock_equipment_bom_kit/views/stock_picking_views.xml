@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+	<data>
+		<record id="view_picking_form" model="ir.ui.view">
+			<field name="name">stock.picking.form</field>
+			<field name="model">stock.picking</field>
+			<field name="inherit_id" ref="stock.view_picking_form" />
+			<field name="arch" type="xml">
+				<notebook position="inside">
+					<page string="Main Equipments">
+						<field name="product_set_line_ids">
+							<tree string="Product Set Tree" create="0" editable="bottom">
+								<field name="name"/>
+								<field name="product_id" />
+								<field name="can_create_equipment" />
+								<field name="product_qty" />
+								<field name="product_uom"/>	
+								<field name="bom_id"/>														
+							</tree>
+						</field>
+					</page>
+				</notebook>
+			</field>
+		</record>
+	</data>
+</odoo>

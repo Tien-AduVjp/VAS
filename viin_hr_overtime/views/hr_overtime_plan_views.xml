@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="view_hr_overtime_plan_form" model="ir.ui.view">
+		<field name="name">hr.overtime.plan.form</field>
+		<field name="model">hr.overtime.plan</field>
+		<field name="arch" type="xml">
+			<form>
+				<header>
+					<button name="action_recognize_actual_overtime"
+						string="Recognize Overtime" type="object" class="oe_highlight" />
+				</header>
+				<sheet>
+					<div class="oe_button_box" name="button_box">
+					</div>
+					<group>
+						<group>
+							<field name="employee_id"
+								attrs="{'readonly':[('readonly','=',True)]}" />
+							<field name="reason_id"
+								attrs="{'readonly':[('readonly','=',True)]}" />
+							<field name="recognition_mode"
+								attrs="{'readonly':[('readonly','=',True)]}" />
+							<field name="date"
+								attrs="{'readonly':[('readonly','=',True)]}" />
+							<label for="time_start" string="Period"
+								help="The period of overtime work for the date specified above" />
+							<div>
+								<field name="time_start" widget="float_time"
+									attrs="{'readonly':[('readonly','=',True)]}" class="oe_inline" />
+								-
+								<field name="time_end" widget="float_time"
+									attrs="{'readonly':[('readonly','=',True)]}" class="oe_inline" />
+							</div>
+							<field name="date_start" groups="base.group_no_one"
+								attrs="{'readonly':[('readonly','=',True)]}" invisible="1" />
+							<field name="date_end" groups="base.group_no_one"
+								attrs="{'readonly':[('readonly','=',True)]}" invisible="1" />
+							<field name="currency_id" invisible="1" />
+						</group>
+						<group>
+							<label for="planned_hours" string="Planned" />
+							<div>
+								<field name="planned_hours" class="oe_inline" />
+								hours
+							</div>
+							<label for="actual_hours" string="Actual" />
+							<div>
+								<field name="actual_hours" class="oe_inline" />
+								hours
+							</div>
+							<label for="planned_overtime_pay" string="Planned Pay" />
+							<div>
+								<field name="planned_overtime_pay" class="oe_inline" />
+							</div>
+							<label for="actual_overtime_pay" string="Actual Pay" />
+							<div>
+								<field name="actual_overtime_pay" class="oe_inline" />
+							</div>
+							<field name="contract_ids" widget="many2many_tags" />
+							<field name="has_non_draft_payslips"
+								string="Included in Payslips" />
+							<field name="readonly" groups="base.group_no_one" />
+							<field name="company_id"
+								attrs="{'readonly':[('readonly','=',True)]}"
+								groups="base.group_multi_company" />
+						</group>
+					</group>
+					<div
+						attrs="{'invisible': [('no_contract_warning_text','=',False)]}"
+						class="alert alert-danger" role="alert">
+						<field name='no_contract_warning_text' />
+					</div>
+					<notebook>
+						<page name="line_ids" string="Plan Lines">
+							<button name="action_recompute_plan_lines" type="object"
+								string="Reload" attrs="{'invisible':[('readonly','=',True)]}"
+								confirm="This action will recompute related contracts and remove existing lines before generating new ones for the table below. Are you sure to proceed?" />
+							<field name="line_ids"
+								context="{'tree_view_ref':'viin_hr_overtime.view_hr_overtime_plan_line_tree_simple','default_overtime_plan_id':active_id}">
+							</field>
+						</page>
+					</notebook>
+				</sheet>
+				<div class="oe_chatter">
+					<field name="message_follower_ids" widget="mail_followers" />
+					<field name="activity_ids" widget="mail_activity" />
+					<field name="message_ids" widget="mail_thread" />
+				</div>
+			</form>
+		</field>
+	</record>
+
+	<record id="view_hr_overtime_plan_tree" model="ir.ui.view">
+		<field name="name">hr.overtime.plan.tree</field>
+		<field name="model">hr.overtime.plan</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="employee_id" />
+				<field name="date_start" />
+				<field name="date_end" />
+				<field name="planned_hours" />
+				<field name="actual_hours" />
+				<field name="planned_overtime_pay" optional="hide" />
+				<field name="actual_overtime_pay" optional="hide" />
+				<field name="recognition_mode" />
+				<field name="reason_id" />
+				<field name="company_id" groups="base.group_multi_company" />
+				<field name="currency_id" invisible="1" />
+				<field name="can_recognize" invisible="1" />
+			</tree>
+		</field>
+	</record>
+
+	<record id="view_hr_overtime_plan_calendar" model="ir.ui.view">
+		<field name="name">hr.overtime.plan.calendar</field>
+		<field name="model">hr.overtime.plan</field>
+		<field name="arch" type="xml">
+			<calendar string="Overtime Plan" event_open_popup="true"
+				mode="month" date_start="date_start" date_stop="date_end"
+				quick_add="False" color="employee_id">
+				<field name="display_name" />
+				<field name="employee_id" avatar_field="image_128" />
+				<field name="reason_id" />
+				<field name="planned_hours" />
+			</calendar>
+		</field>
+	</record>
+
+	<record id="view_hr_overtime_plan_search" model="ir.ui.view">
+		<field name="name">hr.overtime.plan.tree</field>
+		<field name="model">hr.overtime.plan</field>
+		<field name="arch" type="xml">
+			<search>
+				<field name="employee_id" />
+				<separator />
+				<field name="date_start" />
+				<field name="date_end" />
+				<separator />
+				<field name="reason_id" />
+				<separator />
+				<field name="company_id" groups="base.group_multi_company" />
+				<separator />
+				<filter name="ftr_actual_hours"
+					string="Positive Actual Hours" domain="[('actual_hours','>',0)]" />
+				<separator />
+				<filter name="ftr_contract_mismatch"
+					string="Contract Mismatch" domain="[('mismatched_contract_ids','!=',False)]" />
+				<separator />
+			</search>
+		</field>
+	</record>
+
+	<record id="action_server_resolve_contract_mismatch"
+		model="ir.actions.server">
+		<field name="name">Resolve Contract Mismatch</field>
+		<field name="type">ir.actions.server</field>
+		<field name="model_id" ref="model_hr_overtime_plan" />
+		<field name="binding_model_id" ref="model_hr_overtime_plan" />
+		<field name="state">code</field>
+		<field name="code">records.action_resolve_contract_mismatch()</field>
+	</record>
+
+	<record id="action_hr_overtime_plan"
+		model="ir.actions.act_window">
+		<field name="name">Overtime Plan</field>
+		<field name="res_model">hr.overtime.plan</field>
+		<field name="view_mode">tree,form,calendar</field>
+	</record>
+
+	<menuitem id="menu_hr_overtime_plan" name="Planning"
+		action="action_hr_overtime_plan" parent="hr_overtime_planning"
+		groups="viin_hr_overtime.group_overtime_officer" sequence="50" />
+</odoo>

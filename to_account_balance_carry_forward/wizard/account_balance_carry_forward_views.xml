@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="account_balance_carry_forward_wizard_form_view"
+			model="ir.ui.view">
+			<field name="name">account.balance.carry.forward.wizard.form</field>
+			<field name="model">account.balance.carry.forward.wizard</field>
+			<field name="arch" type="xml">
+				<form>
+					<field name="company_id" invisible="1" />
+					<field name="company_currency_id" invisible="1" />
+					<group>
+						<group>
+							<field name="date" string="Recognize on" />
+							<field name="dest_account_id" />
+						</group>
+						<group>
+							<field name="total_amount" string="Amount" />
+							<field name="journal_id" />
+							<field name="active_move_line_ids" invisible="1" />
+						</group>
+					</group>
+					<footer>
+						<button string="Create Balance Carry Forward Entry"
+							name="amend_entries" type="object" class="oe_highlight" />
+						<button string="Cancel" class="btn btn-secondary"
+							special="cancel" />
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<record id="account_balance_carry_forward_wizard_action"
+			model="ir.actions.act_window">
+			<field name="name">Carry Balance Forward</field>
+			<field name="res_model">account.balance.carry.forward.wizard</field>
+			<field name="view_mode">form</field>
+			<field name="target">new</field>
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="event_project_view">
+            <field name="name">event.event.form</field>
+            <field name="model">event.event</field>
+            <field name="inherit_id" ref="event.view_event_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//header" position="inside">
+                    <button name="get_project_view_form_simplified" string="Create Project" type="object"
+                            attrs="{'invisible': ['|', ('state','!=','confirm'), ('project_count','!=',0)]}" groups="project.group_project_manager" />
+                </xpath>
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="action_view_projects" type="object" icon="fa-puzzle-piece" class="oe_stat_button"
+                            attrs="{'invisible': [('project_count','=',0)]}" groups="project.group_project_user">
+                        <field name="project_count" widget="statinfo" string="Projects" />
+                     </button>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

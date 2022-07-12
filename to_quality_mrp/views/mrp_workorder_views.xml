@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="mrp_workorder_view_form_inherit_quality" model="ir.ui.view">
+		<field name="name">mrp.workorder.view.form.inherit.quality</field>
+		<field name="model">mrp.workorder</field>
+		<field name="inherit_id" ref="mrp.mrp_production_workorder_form_view_inherit" />
+		<field name="arch" type="xml">
+			<button name="record_production" position="replace">
+				<button name="record_production" type="object" string="Done" class="btn-success" attrs="{'invisible': ['|', '|', ('state', '!=', 'progress'), ('is_user_working', '=', False), ('check_todo','=', True)]}" />
+				<field name="check_todo" invisible="1" />
+			</button>
+			<button name="record_production" position="before">
+				<button name="check_quality" attrs="{'invisible': ['|', ('check_todo', '=', False), ('state', 'in', ('pending', 'ready'))]}" type="object" string="Quality Checks" class="oe_highlight" />
+				<field name="check_ids" invisible="1" />
+			</button>
+			<xpath expr="//header" position="inside">
+				<button name="action_view_quality_alerts" type="object" string="Quality Alert" context="{'default_workcenter_id' : workcenter_id}" />
+			</xpath>
+			<div name="button_box" position="inside">
+				<button name="action_view_quality_alerts_wo" type="object" class="oe_stat_button" icon="fa-bell" attrs="{'invisible': [('alert_count', '=', 0)]}" context="{'search_default_operation_id': active_id}">
+					<div class="o_form_field o_stat_info">
+						<span class="o_stat_value">
+							<field name="alert_count" />
+						</span>
+						<span class="o_stat_text">Quality Alert</span>
+					</div>
+				</button>
+				<button name="%(quality_check_action_wo)d" attrs="{'invisible': ['|', ('check_ids', '=', []), ('state', 'in', ('pending', 'ready'))]}" type="action" string="Quality Checks" class="oe_stat_button" icon="fa-check" />
+			</div>
+		</field>
+	</record>
+
+</odoo>

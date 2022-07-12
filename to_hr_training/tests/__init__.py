@@ -1,0 +1,3 @@
+from . import test_to_hr_training_common, test_to_hr_training_function
+from . import test_to_hr_training_access_right_common, test_to_hr_training_access_right
+

@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_stock_move_line_user,Stock.move.line.fleet_user,stock.model_stock_move_line,fleet.fleet_group_user,1,0,0,0
+access_stock_move_fleet_user,Stock.move.fleet_user,stock.model_stock_move,fleet.fleet_group_user,1,0,0,0
+access_stock_picking_fleet_user,stock.picking.fleet_user,stock.model_stock_picking,fleet.fleet_group_user,1,0,0,0
+access_stock_picking_type_fleet_user,Stock.picking.type_fleet_user,stock.model_stock_picking_type,fleet.fleet_group_user,1,0,0,0

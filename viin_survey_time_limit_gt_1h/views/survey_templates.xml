@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- A page -->
+    <template id="page" name="Page" inherit_id="survey.page" priority="10">
+    	<xpath expr="//input[@name='csrf_token']" position="replace">
+    		<input type="hidden" name="csrf_token" t-att-value="survey.get_csrf_token()"/>
+    	</xpath>
+    </template>
+</odoo>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<menuitem id="menu_pos_product_return_reason"
+		parent="point_of_sale.menu_point_config_product" sequence="99"
+		groups="point_of_sale.group_pos_manager" name="Products Return Reason"
+		action="to_product_return_reason.action_product_return_reason" />
+</odoo>

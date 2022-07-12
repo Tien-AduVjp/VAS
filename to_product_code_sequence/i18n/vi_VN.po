@@ -1,0 +1,56 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_product_code_sequence
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-01 09:11+0000\n"
+"PO-Revision-Date: 2020-04-01 09:11+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_product_code_sequence
+#: model:ir.model,name:to_product_code_sequence.model_product_product
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: to_product_code_sequence
+#: model:ir.model,name:to_product_code_sequence.model_product_category
+msgid "Product Category"
+msgstr "Nhóm Sản phẩm"
+
+#. module: to_product_code_sequence
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_product_category__product_code_prefix
+msgid "Product Code Prefix"
+msgstr "Tiền tố Mã Sản phẩm"
+
+#. module: to_product_code_sequence
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_product_category__ir_sequence_id
+msgid "Product Sequence"
+msgstr "Mã trình tự"
+
+#. module: to_product_code_sequence
+#: model:ir.model,name:to_product_code_sequence.model_product_template
+msgid "Product Template"
+msgstr "Mẫu sản phẩm"
+
+#. module: to_product_code_sequence
+#: model:ir.model.fields,help:to_product_code_sequence.field_product_category__product_code_prefix
+msgid ""
+"The text string to be used as the prefix of the auto-generated default codes"
+" of the category's products."
+msgstr ""
+"Chuỗi ký tự được sử dụng làm tiền tố cho Mã Mặc định tự sinh cho sản phẩm "
+"thuộc nhóm."
+
+#. module: to_product_code_sequence
+#: model:ir.actions.server,name:to_product_code_sequence.action_server_update_prod_code
+#: model:ir.actions.server,name:to_product_code_sequence.action_server_update_prod_tmpl_code
+msgid "Update Product Code"
+msgstr "Cập nhật Mã Sản phẩm"

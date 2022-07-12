@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="survey_assets" inherit_id="survey.survey_assets">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" type="text/scss" href="/viin_survey_printing/static/src/scss/survey.scss"  />
+            </xpath>
+        </template>
+    </data>
+</odoo>

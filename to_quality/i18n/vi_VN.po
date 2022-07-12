@@ -1,0 +1,1806 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_quality
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-18 02:51+0000\n"
+"PO-Revision-Date: 2021-10-18 02:51+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_team__alert_count
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__alert_count
+msgid "# Quality Alerts"
+msgstr "SL Cảnh bảo Chất lượng"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_team__check_count
+msgid "# Quality Checks"
+msgstr "SL Kiểm tra Chất lượng"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert__no_of_corrective_action
+msgid "# of Corrective Actions"
+msgstr "SL Hành động Khắc phục"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert__no_of_preventive_action
+msgid "# of Preventive Actions"
+msgstr "SL Hành động Phòng ngừa"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_point_view_form
+msgid "% of the operation"
+msgstr "% các hoạt động"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_alert_team_view_kanban
+msgid "<i class=\"fa fa-ellipsis-v\" role=\"img\" aria-label=\"Manage\" title=\"Manage\"/>"
+msgstr "<i class=\"fa fa-ellipsis-v\" role=\"img\" aria-label=\"Quản lý\" title=\"Quản lý\"/>"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_alert_team_view_kanban
+msgid ""
+"<i class=\"fa fa-envelope-o\" role=\"img\" aria-label=\"Domain alias\" title=\"Domain alias\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t&amp;nbsp;"
+msgstr ""
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_point_view_form
+msgid ""
+"<span attrs=\"{'invisible': [('measure_frequency_type', '=', "
+"'all')]}\">Every </span>"
+msgstr ""
+"<span attrs=\"{'invisible': [('measure_frequency_type', '=', 'all')]}\">Mỗi "
+"</span>"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_point_view_form
+msgid ""
+"<span class=\"fa fa-2x\" data-icon=\"∑\" style=\"padding-left: 10px;\" "
+"role=\"img\" aria-label=\"Statistics\" title=\"Statistics\"/>"
+msgstr ""
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_point_view_form
+msgid ""
+"<span class=\"o_stat_text\">AVG:</span>\n"
+"\t\t\t\t\t\t\t\t<span class=\"o_stat_text\">STD:</span>"
+msgstr ""
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_alert_view_form
+msgid "<span class=\"o_stat_text\">Quality Check</span>"
+msgstr "<span class=\"o_stat_text\">Kiểm tra chất lượng</span>"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_point_view_form
+msgid "<span>from </span>"
+msgstr "<span>từ </span>"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_point_view_form
+msgid "<span>to </span>"
+msgstr "<span>đến </span>"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_point_view_kanban
+msgid "<strong>Product template:</strong>"
+msgstr "<strong>Mẫu sản phẩm:</strong>"
+
+#. module: to_quality
+#: model:ir.model.fields,help:to_quality.field_quality_alert_team__alias_defaults
+msgid ""
+"A Python dictionary that will be evaluated to provide default values when "
+"creating new records for this alias."
+msgstr ""
+"Một Python dictionary mà sẽ được biểu thị/đánh giá để cung cấp các giá trị "
+"mặc định khi tạo mới các bản ghi cho bí danh này."
+
+#. module: to_quality
+#: model:ir.model,name:to_quality.model_abstract_quality_alert_action
+msgid "Abstract Quality Alert Action to share business logics"
+msgstr "Abstract Quality Alert Action để chia sẻ logics về nghiệp vụ"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_alert_team_view_form
+msgid "Accept Emails From"
+msgstr "Chấp nhận email Từ"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_action__quality_action_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__quality_action_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__quality_action_id
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_alert_action_view_search
+msgid "Action"
+msgstr "Hành động"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_alert_action_view_search
+msgid "Action Done"
+msgstr "Hành động Hoàn thành"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_abstract_quality_alert_action__message_needaction
+#: model:ir.model.fields,field_description:to_quality.field_quality_action__message_needaction
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert__message_needaction
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__message_needaction
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__message_needaction
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_team__message_needaction
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__message_needaction
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__message_needaction
+msgid "Action Needed"
+msgstr "Cần có Hành động"
+
+#. module: to_quality
+#: model:quality.alert.stage,name:to_quality.quality_alert_stage_2
+msgid "Action Proposed"
+msgstr "Hành động được Đề xuất"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_action__type
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__type
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__type
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_alert_action_view_search
+msgid "Action Type"
+msgstr "Kiểu Hành động"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_action__action_done
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__action_done
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__action_done
+msgid "Action time has been complete"
+msgstr "Thời gian hành động đã hoàn tất"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__active
+msgid "Active"
+msgstr "Hiệu lực"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_abstract_quality_alert_action__activity_ids
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__activity_ids
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__activity_ids
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__activity_ids
+msgid "Activities"
+msgstr "Các hoạt động"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_abstract_quality_alert_action__activity_exception_decoration
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__activity_exception_decoration
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__activity_exception_decoration
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Trang trí cho Hoạt động ngoại lệ"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_abstract_quality_alert_action__activity_state
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__activity_state
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__activity_state
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__activity_state
+msgid "Activity State"
+msgstr "Trạng thái Hoạt động"
+
+#. module: to_quality
+#: model:ir.actions.act_window,name:to_quality.quality_alert_action_action
+msgid "Alert Actions"
+msgstr "Hành động Cảnh báo"
+
+#. module: to_quality
+#: model:ir.ui.menu,name:to_quality.quality_alert_action_menu
+msgid "Alert Actions Analysis"
+msgstr "Phân tích Hành động Cảnh báo"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_stage__done
+msgid "Alert Processed"
+msgstr "Cảnh báo Đã xử lý"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_check_view_form
+msgid "Alert(s)"
+msgstr "Cảnh báo"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__alert_ids
+#: model:ir.ui.menu,name:to_quality.quality_alerts_menu
+msgid "Alerts"
+msgstr "Cảnh báo"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_team__alias_id
+msgid "Alias"
+msgstr "Bí danh"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_team__alias_contact
+msgid "Alias Contact Security"
+msgstr "An ninh về Bí danh liên hệ"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_team__alias_name
+msgid "Alias Name"
+msgstr "Tên bí danh"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_team__alias_domain
+msgid "Alias domain"
+msgstr "Miền bí danh"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_team__alias_model_id
+msgid "Aliased Model"
+msgstr "Bí danh Model"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_alert_action_view_pivot
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_alert_action_view_tree
+msgid "All Alert Actions"
+msgstr "Tất cả Hành động Cảnh báo"
+
+#. module: to_quality
+#: model:ir.model.fields.selection,name:to_quality.selection__quality_point__measure_frequency_type__all
+msgid "All Operations"
+msgstr "Tất cả các hoạt động"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_point_view_form
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_point_view_search
+msgid "Archived"
+msgstr "Lưu trữ"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_abstract_quality_alert_action__message_attachment_count
+#: model:ir.model.fields,field_description:to_quality.field_quality_action__message_attachment_count
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert__message_attachment_count
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__message_attachment_count
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__message_attachment_count
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_team__message_attachment_count
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__message_attachment_count
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__message_attachment_count
+msgid "Attachment Count"
+msgstr "Số lượng đính kèm"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__average
+msgid "Average"
+msgstr "Trung bình"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_check_view_form_small
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert__check_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_action__check_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__check_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__check_id
+msgid "Check"
+msgstr "Kiểm tra"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__check_count
+msgid "Check Count"
+msgstr "Số lần Kiểm tra"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_check_view_tree
+msgid "Checked By"
+msgstr "Kiểm tra Bởi"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_check_view_tree
+msgid "Checked Date"
+msgstr "Ngày Kiểm tra"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__checked_qty_deviation
+msgid "Checked Qty Deviation"
+msgstr "Độ lệch SL Kiểm tra"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__checked_quantity
+msgid "Checked Quantity"
+msgstr "Số lượng đã kiểm tra"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_alert_team_view_kanban
+msgid "Checks In Progress"
+msgstr "Đang kiểm tra"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_team__color
+msgid "Color"
+msgstr "Màu sắc"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_tag__color
+msgid "Color Index"
+msgstr "Mã màu"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert__company_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_team__company_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__company_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: to_quality
+#: model:ir.ui.menu,name:to_quality.quality_configuration_menu
+msgid "Configuration"
+msgstr "Cấu hình"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_check_view_form_failure
+msgid "Confirm Measure"
+msgstr "Xác nhận đo lường"
+
+#. module: to_quality
+#: model:quality.alert.stage,name:to_quality.quality_alert_stage_1
+msgid "Confirmed"
+msgstr "Đã Xác nhận"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__control_date
+msgid "Control Date"
+msgstr "Ngày Kiểm soát"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_point_view_form
+msgid "Control Frequency"
+msgstr "Tần suất Kiểm soát"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_check_view_search
+msgid "Control Person"
+msgstr "Người Kiểm soát"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__point_id
+msgid "Control Point"
+msgstr "Tiêu chí Kiểm soát"
+
+#. module: to_quality
+#: model:ir.ui.menu,name:to_quality.quality_point_menu
+msgid "Control Points"
+msgstr "Tiêu chí Kiểm soát"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_point_view_form
+msgid "Control Type"
+msgstr "Kiểu Kiểm soát"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_check_view_form_failure
+msgid "Correct Measure"
+msgstr "Đo lường chính xác"
+
+#. module: to_quality
+#: model:ir.model.fields.selection,name:to_quality.selection__quality_alert_action__type__corrective
+msgid "Corrective"
+msgstr "Khắc phục"
+
+#. module: to_quality
+#: model:ir.actions.act_window,name:to_quality.quality_alert_corrective_action_action
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert__action_corrective_ids
+#: model:ir.ui.menu,name:to_quality.alert_corrective_action_menu
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_alert_view_form
+msgid "Corrective Actions"
+msgstr "Hành động Khắc phục"
+
+#. module: to_quality
+#: model:ir.model,name:to_quality.model_quality_alert_corrective_action
+msgid "Corrective Quality Alert Action"
+msgstr "Hành động Khắc phục"
+
+#. module: to_quality
+#: model_terms:ir.actions.act_window,help:to_quality.quality_action_action
+msgid "Create a new Quality Action."
+msgstr "Tạo một Hành động Chất lượng"
+
+#. module: to_quality
+#: model_terms:ir.actions.act_window,help:to_quality.quality_alert_stage_action
+msgid "Create a new Quality Alert stages"
+msgstr "Tạo một giai đoạn Cảnh báo Chất lượng"
+
+#. module: to_quality
+#: model_terms:ir.actions.act_window,help:to_quality.quality_alert_action_report
+msgid "Create a new Quality Alerts."
+msgstr "Tạo một Cảnh báo Chất lượng"
+
+#. module: to_quality
+#: model_terms:ir.actions.act_window,help:to_quality.quality_check_action_main
+#: model_terms:ir.actions.act_window,help:to_quality.quality_check_action_team
+msgid "Create a new Quality Check"
+msgstr "Tạo một Kiểm tra Chất lượng"
+
+#. module: to_quality
+#: model_terms:ir.actions.act_window,help:to_quality.quality_alert_team_action
+msgid "Create a new Quality Teams"
+msgstr "Tạo một Đội kiểm soát Chất lượng"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_action__create_uid
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert__create_uid
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_action__create_uid
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__create_uid
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__create_uid
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_stage__create_uid
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_team__create_uid
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__create_uid
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__create_uid
+#: model:ir.model.fields,field_description:to_quality.field_quality_point_test_type__create_uid
+#: model:ir.model.fields,field_description:to_quality.field_quality_reason__create_uid
+#: model:ir.model.fields,field_description:to_quality.field_quality_tag__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_action__create_date
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert__create_date
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_action__create_date
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__create_date
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__create_date
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_stage__create_date
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_team__create_date
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__create_date
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__create_date
+#: model:ir.model.fields,field_description:to_quality.field_quality_point_test_type__create_date
+#: model:ir.model.fields,field_description:to_quality.field_quality_reason__create_date
+#: model:ir.model.fields,field_description:to_quality.field_quality_tag__create_date
+msgid "Created on"
+msgstr "Được tạo vào"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_alert_view_search
+msgid "Creation Date"
+msgstr "Ngày tạo"
+
+#. module: to_quality
+#: model:ir.ui.menu,name:to_quality.quality_dashboard_menu
+msgid "Dashboard"
+msgstr "Bảng thông tin"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert__date_assign
+msgid "Date Assigned"
+msgstr "Ngày được Phân công"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert__date_close
+msgid "Date Closed"
+msgstr "Ngày Đóng"
+
+#. module: to_quality
+#: model:ir.model.fields.selection,name:to_quality.selection__quality_point__measure_frequency_unit__day
+msgid "Day(s)"
+msgstr "Ngày"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_action__deadline
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__deadline
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__deadline
+msgid "Deadline"
+msgstr "Hạn chót"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_team__alias_defaults
+msgid "Default Values"
+msgstr "Giá trị mặc định"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_point_view_form
+msgid "Describe the quality check to do..."
+msgstr "Mô tả kiểm tra chất lượng cần thực hiện..."
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_point_view_form
+msgid "Describe why you need to perform this quality check..."
+msgstr "Mô tả lý do mà bạn muốn thực hiện kiểm tra chất lượng này..."
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_action__description
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert__description
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_action__description
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__description
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__description
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_alert_view_form
+msgid "Description"
+msgstr "Miêu tả"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_alert_view_form
+msgid "Description of the issue..."
+msgstr "Mô tả vấn đề phát sinh..."
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_abstract_quality_alert_action__display_name
+#: model:ir.model.fields,field_description:to_quality.field_quality_action__display_name
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert__display_name
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_action__display_name
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__display_name
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__display_name
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_stage__display_name
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_team__display_name
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__display_name
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__display_name
+#: model:ir.model.fields,field_description:to_quality.field_quality_point_test_type__display_name
+#: model:ir.model.fields,field_description:to_quality.field_quality_reason__display_name
+#: model:ir.model.fields,field_description:to_quality.field_quality_tag__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_alert_view_search
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_alert_team_view_form
+msgid "Email Alias"
+msgstr "Bí danh Email"
+
+#. module: to_quality
+#: model:ir.model.fields.selection,name:to_quality.selection__quality_check__measure_success__fail
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_check_view_form
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_check_view_form_small
+msgid "Fail"
+msgstr "Thất bại"
+
+#. module: to_quality
+#: model:ir.model.fields.selection,name:to_quality.selection__quality_check__quality_state__fail
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_check_view_search
+msgid "Failed"
+msgstr "Thất bại"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__failure_message
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__failure_message
+msgid "Failure Message"
+msgstr ""
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_stage__folded
+msgid "Folded"
+msgstr "Đóng"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_abstract_quality_alert_action__message_follower_ids
+#: model:ir.model.fields,field_description:to_quality.field_quality_action__message_follower_ids
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert__message_follower_ids
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__message_follower_ids
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__message_follower_ids
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_team__message_follower_ids
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__message_follower_ids
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__message_follower_ids
+msgid "Followers"
+msgstr "Người dõi theo"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_abstract_quality_alert_action__message_channel_ids
+#: model:ir.model.fields,field_description:to_quality.field_quality_action__message_channel_ids
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert__message_channel_ids
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__message_channel_ids
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__message_channel_ids
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_team__message_channel_ids
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__message_channel_ids
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Người theo dõi (Các kênh)"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_abstract_quality_alert_action__message_partner_ids
+#: model:ir.model.fields,field_description:to_quality.field_quality_action__message_partner_ids
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert__message_partner_ids
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__message_partner_ids
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__message_partner_ids
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_team__message_partner_ids
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__message_partner_ids
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Người theo dõi (Các đối tác)"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__measure_frequency_type
+msgid "Frequency"
+msgstr "Tần suất"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__measure_frequency_unit_value
+msgid "Frequency Value"
+msgstr "Giá trị Tần suất"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_alert_action_view_search
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_alert_view_search
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_check_view_search
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: to_quality
+#: model:ir.model.fields.selection,name:to_quality.selection__quality_alert__priority__2
+msgid "High"
+msgstr "Cao"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_abstract_quality_alert_action__id
+#: model:ir.model.fields,field_description:to_quality.field_quality_action__id
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert__id
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_action__id
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__id
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__id
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_stage__id
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_team__id
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__id
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__id
+#: model:ir.model.fields,field_description:to_quality.field_quality_point_test_type__id
+#: model:ir.model.fields,field_description:to_quality.field_quality_reason__id
+#: model:ir.model.fields,field_description:to_quality.field_quality_tag__id
+msgid "ID"
+msgstr ""
+
+#. module: to_quality
+#: model:ir.model.fields,help:to_quality.field_quality_alert_team__alias_parent_thread_id
+msgid ""
+"ID of the parent record holding the alias (example: project holding the task"
+" creation alias)"
+msgstr ""
+"ID của bản ghi cha mà chứa bí danh (ví dụ: dự án chứa bí danh để tạo nhiệm "
+"vụ)"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_abstract_quality_alert_action__activity_exception_icon
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__activity_exception_icon
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__activity_exception_icon
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: to_quality
+#: model:ir.model.fields,help:to_quality.field_abstract_quality_alert_action__activity_exception_icon
+#: model:ir.model.fields,help:to_quality.field_quality_alert_corrective_action__activity_exception_icon
+#: model:ir.model.fields,help:to_quality.field_quality_alert_preventive_action__activity_exception_icon
+#: model:ir.model.fields,help:to_quality.field_quality_check__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: to_quality
+#: model:ir.model.fields,help:to_quality.field_abstract_quality_alert_action__message_needaction
+#: model:ir.model.fields,help:to_quality.field_abstract_quality_alert_action__message_unread
+#: model:ir.model.fields,help:to_quality.field_quality_action__message_needaction
+#: model:ir.model.fields,help:to_quality.field_quality_action__message_unread
+#: model:ir.model.fields,help:to_quality.field_quality_alert__message_needaction
+#: model:ir.model.fields,help:to_quality.field_quality_alert__message_unread
+#: model:ir.model.fields,help:to_quality.field_quality_alert_corrective_action__message_needaction
+#: model:ir.model.fields,help:to_quality.field_quality_alert_corrective_action__message_unread
+#: model:ir.model.fields,help:to_quality.field_quality_alert_preventive_action__message_needaction
+#: model:ir.model.fields,help:to_quality.field_quality_alert_preventive_action__message_unread
+#: model:ir.model.fields,help:to_quality.field_quality_alert_team__message_needaction
+#: model:ir.model.fields,help:to_quality.field_quality_alert_team__message_unread
+#: model:ir.model.fields,help:to_quality.field_quality_check__message_needaction
+#: model:ir.model.fields,help:to_quality.field_quality_check__message_unread
+#: model:ir.model.fields,help:to_quality.field_quality_point__message_needaction
+#: model:ir.model.fields,help:to_quality.field_quality_point__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Nếu đánh dấu chọn, các thông điệp mới yêu cầu sự có mặt của bạn."
+
+#. module: to_quality
+#: model:ir.model.fields,help:to_quality.field_abstract_quality_alert_action__message_has_error
+#: model:ir.model.fields,help:to_quality.field_abstract_quality_alert_action__message_has_sms_error
+#: model:ir.model.fields,help:to_quality.field_quality_action__message_has_error
+#: model:ir.model.fields,help:to_quality.field_quality_action__message_has_sms_error
+#: model:ir.model.fields,help:to_quality.field_quality_alert__message_has_error
+#: model:ir.model.fields,help:to_quality.field_quality_alert__message_has_sms_error
+#: model:ir.model.fields,help:to_quality.field_quality_alert_corrective_action__message_has_error
+#: model:ir.model.fields,help:to_quality.field_quality_alert_corrective_action__message_has_sms_error
+#: model:ir.model.fields,help:to_quality.field_quality_alert_preventive_action__message_has_error
+#: model:ir.model.fields,help:to_quality.field_quality_alert_preventive_action__message_has_sms_error
+#: model:ir.model.fields,help:to_quality.field_quality_alert_team__message_has_error
+#: model:ir.model.fields,help:to_quality.field_quality_alert_team__message_has_sms_error
+#: model:ir.model.fields,help:to_quality.field_quality_check__message_has_error
+#: model:ir.model.fields,help:to_quality.field_quality_check__message_has_sms_error
+#: model:ir.model.fields,help:to_quality.field_quality_point__message_has_error
+#: model:ir.model.fields,help:to_quality.field_quality_point__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Nếu được đánh dấu, thông điệp có lỗi về gửi tin."
+
+#. module: to_quality
+#: model:ir.model.fields,help:to_quality.field_quality_point__no_proceed_if_failed
+msgid "If quality check fails, the goods will be blocked."
+msgstr "Nếu kiểm tra chất lượng thất bại, hàng hóa sẽ bị chặn lại."
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_alert_team_view_kanban
+msgid "In #{kanban_getcolorname(record.color.raw_value)}"
+msgstr ""
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_check_view_search
+msgid "In Progress"
+msgstr "Đang xử lý"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_alert_view_search
+msgid "In progress"
+msgstr "Đang Xử lý"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_point_view_form
+msgid "Instructions"
+msgstr "Hướng dẫn"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_abstract_quality_alert_action__message_is_follower
+#: model:ir.model.fields,field_description:to_quality.field_quality_action__message_is_follower
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert__message_is_follower
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__message_is_follower
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__message_is_follower
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_team__message_is_follower
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__message_is_follower
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__message_is_follower
+msgid "Is Follower"
+msgstr "Là người theo dõi"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_abstract_quality_alert_action____last_update
+#: model:ir.model.fields,field_description:to_quality.field_quality_action____last_update
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert____last_update
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_action____last_update
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action____last_update
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action____last_update
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_stage____last_update
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_team____last_update
+#: model:ir.model.fields,field_description:to_quality.field_quality_check____last_update
+#: model:ir.model.fields,field_description:to_quality.field_quality_point____last_update
+#: model:ir.model.fields,field_description:to_quality.field_quality_point_test_type____last_update
+#: model:ir.model.fields,field_description:to_quality.field_quality_reason____last_update
+#: model:ir.model.fields,field_description:to_quality.field_quality_tag____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_action__write_uid
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert__write_uid
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_action__write_uid
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__write_uid
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__write_uid
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_stage__write_uid
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_team__write_uid
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__write_uid
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__write_uid
+#: model:ir.model.fields,field_description:to_quality.field_quality_point_test_type__write_uid
+#: model:ir.model.fields,field_description:to_quality.field_quality_reason__write_uid
+#: model:ir.model.fields,field_description:to_quality.field_quality_tag__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_action__write_date
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert__write_date
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_action__write_date
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__write_date
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__write_date
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_stage__write_date
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_team__write_date
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__write_date
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__write_date
+#: model:ir.model.fields,field_description:to_quality.field_quality_point_test_type__write_date
+#: model:ir.model.fields,field_description:to_quality.field_quality_reason__write_date
+#: model:ir.model.fields,field_description:to_quality.field_quality_tag__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối"
+
+#. module: to_quality
+#: model:ir.model.fields,help:to_quality.field_quality_alert_action__deadline
+#: model:ir.model.fields,help:to_quality.field_quality_alert_corrective_action__deadline
+#: model:ir.model.fields,help:to_quality.field_quality_alert_preventive_action__deadline
+msgid "Last timeout which action must be finished"
+msgstr "Thời gian cuối cùng hành động phải hoàn thành"
+
+#. module: to_quality
+#: model:ir.model.fields.selection,name:to_quality.selection__quality_alert__priority__1
+msgid "Low"
+msgstr "Thấp"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_abstract_quality_alert_action__message_main_attachment_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_action__message_main_attachment_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert__message_main_attachment_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__message_main_attachment_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__message_main_attachment_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_team__message_main_attachment_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__message_main_attachment_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Đính kèm chính"
+
+#. module: to_quality
+#: model:quality.alert.team,name:to_quality.quality_alert_team0
+msgid "Main Quality Team"
+msgstr "Đội Chất lượng Chính"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_check_view_form
+msgid "Make Alert"
+msgstr "Tạo Cảnh báo"
+
+#. module: to_quality
+#: model:res.groups,comment:to_quality.group_quality_manager
+msgid "Manage the quality process"
+msgstr "Quản lý quy trình chất lượng"
+
+#. module: to_quality
+#: model:ir.module.category,description:to_quality.module_category_quality
+msgid "Manage your quality alerts and quality checks."
+msgstr "Quản lý các cảnh báo chất lượng và kiểm tra chất lượng."
+
+#. module: to_quality
+#: model:res.groups,name:to_quality.group_quality_manager
+msgid "Manager"
+msgstr "Người quản lý"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__tolerance_max
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__tolerance_max
+msgid "Max Tolerance"
+msgstr "Dung sai Tối đa"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__measure
+msgid "Measure"
+msgstr "Đo lường"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__measure_frequency_unit
+msgid "Measure Frequency Unit"
+msgstr "Đo lường Thành công"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__measure_success
+msgid "Measure Success"
+msgstr "Đo lường Thành công"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_abstract_quality_alert_action__message_has_error
+#: model:ir.model.fields,field_description:to_quality.field_quality_action__message_has_error
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert__message_has_error
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__message_has_error
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__message_has_error
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_team__message_has_error
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__message_has_error
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__message_has_error
+msgid "Message Delivery error"
+msgstr "Có Lỗi Gửi Thông điệp"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_point_view_form
+msgid "Message If Failure"
+msgstr "Gửi Thông điệp nếu Thất bại"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_abstract_quality_alert_action__message_ids
+#: model:ir.model.fields,field_description:to_quality.field_quality_action__message_ids
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert__message_ids
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__message_ids
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__message_ids
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_team__message_ids
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__message_ids
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__message_ids
+msgid "Messages"
+msgstr "Thông điệp"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__tolerance_min
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__tolerance_min
+msgid "Min Tolerance"
+msgstr "Dung sai Tối thiểu"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_alert_view_form
+msgid "Miscellaneous"
+msgstr "Khác"
+
+#. module: to_quality
+#: model:ir.model.fields.selection,name:to_quality.selection__quality_point__measure_frequency_unit__month
+msgid "Month(s)"
+msgstr "Tháng"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_alert_view_search
+msgid "My Alerts"
+msgstr "Cảnh báo của Tôi"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_action__name
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert__name
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_stage__name
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_team__name
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__name
+#: model:ir.model.fields,field_description:to_quality.field_quality_point_test_type__name
+#: model:ir.model.fields,field_description:to_quality.field_quality_reason__name
+#: model:ir.model.fields,field_description:to_quality.field_quality_tag__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: to_quality
+#: code:addons/to_quality/models/quality_action.py:0
+#: code:addons/to_quality/models/quality_alert.py:0
+#: code:addons/to_quality/models/quality_alert.py:0
+#: code:addons/to_quality/models/quality_alert.py:0
+#: code:addons/to_quality/models/quality_alert.py:0
+#: code:addons/to_quality/models/quality_alert.py:0
+#: code:addons/to_quality/models/quality_check.py:0
+#: code:addons/to_quality/models/quality_check.py:0
+#: code:addons/to_quality/models/quality_check.py:0
+#: code:addons/to_quality/models/quality_point.py:0
+#: code:addons/to_quality/models/quality_point.py:0
+#: code:addons/to_quality/models/quality_point.py:0
+#: model:quality.alert.stage,name:to_quality.quality_alert_stage_0
+#, python-format
+msgid "New"
+msgstr "Mới"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_abstract_quality_alert_action__activity_date_deadline
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__activity_date_deadline
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__activity_date_deadline
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Hạn chót lần hành động kế tiếp"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_abstract_quality_alert_action__activity_summary
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__activity_summary
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__activity_summary
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__activity_summary
+msgid "Next Activity Summary"
+msgstr "Tóm tắt hoạt động tiếp theo"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_abstract_quality_alert_action__activity_type_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__activity_type_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__activity_type_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__activity_type_id
+msgid "Next Activity Type"
+msgstr "Kiểu hành động kế tiếp"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__no_proceed_if_failed
+msgid "No Proceed if Failed"
+msgstr "Không đi tiếp nếu Thất bại"
+
+#. module: to_quality
+#: model:ir.model.fields.selection,name:to_quality.selection__quality_check__measure_success__none
+msgid "No measure"
+msgstr "Không đo lường"
+
+#. module: to_quality
+#: model_terms:ir.actions.act_window,help:to_quality.quality_check_action_report
+msgid "No quality checks."
+msgstr "Không có kiểm tra chất lượng."
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__norm
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__norm
+msgid "Norm"
+msgstr "Bình thường"
+
+#. module: to_quality
+#: model:ir.model.fields.selection,name:to_quality.selection__quality_alert__priority__0
+msgid "Normal"
+msgstr "Bình thường"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__note
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__note
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_point_view_form
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_check_view_form
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_point_view_form
+msgid "Notes"
+msgstr "Ghi chú"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_abstract_quality_alert_action__message_needaction_counter
+#: model:ir.model.fields,field_description:to_quality.field_quality_action__message_needaction_counter
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert__message_needaction_counter
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__message_needaction_counter
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__message_needaction_counter
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_team__message_needaction_counter
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__message_needaction_counter
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Số lượng Hành động"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_abstract_quality_alert_action__message_has_error_counter
+#: model:ir.model.fields,field_description:to_quality.field_quality_action__message_has_error_counter
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert__message_has_error_counter
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__message_has_error_counter
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__message_has_error_counter
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_team__message_has_error_counter
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__message_has_error_counter
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__message_has_error_counter
+msgid "Number of errors"
+msgstr "Số lượng lỗi"
+
+#. module: to_quality
+#: model:ir.model.fields,help:to_quality.field_abstract_quality_alert_action__message_needaction_counter
+#: model:ir.model.fields,help:to_quality.field_quality_action__message_needaction_counter
+#: model:ir.model.fields,help:to_quality.field_quality_alert__message_needaction_counter
+#: model:ir.model.fields,help:to_quality.field_quality_alert_corrective_action__message_needaction_counter
+#: model:ir.model.fields,help:to_quality.field_quality_alert_preventive_action__message_needaction_counter
+#: model:ir.model.fields,help:to_quality.field_quality_alert_team__message_needaction_counter
+#: model:ir.model.fields,help:to_quality.field_quality_check__message_needaction_counter
+#: model:ir.model.fields,help:to_quality.field_quality_point__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Số thông điệp cần có hành động"
+
+#. module: to_quality
+#: model:ir.model.fields,help:to_quality.field_abstract_quality_alert_action__message_has_error_counter
+#: model:ir.model.fields,help:to_quality.field_quality_action__message_has_error_counter
+#: model:ir.model.fields,help:to_quality.field_quality_alert__message_has_error_counter
+#: model:ir.model.fields,help:to_quality.field_quality_alert_corrective_action__message_has_error_counter
+#: model:ir.model.fields,help:to_quality.field_quality_alert_preventive_action__message_has_error_counter
+#: model:ir.model.fields,help:to_quality.field_quality_alert_team__message_has_error_counter
+#: model:ir.model.fields,help:to_quality.field_quality_check__message_has_error_counter
+#: model:ir.model.fields,help:to_quality.field_quality_point__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Số lượng các thông điệp có lỗi về gửi tin"
+
+#. module: to_quality
+#: model:ir.model.fields,help:to_quality.field_abstract_quality_alert_action__message_unread_counter
+#: model:ir.model.fields,help:to_quality.field_quality_action__message_unread_counter
+#: model:ir.model.fields,help:to_quality.field_quality_alert__message_unread_counter
+#: model:ir.model.fields,help:to_quality.field_quality_alert_corrective_action__message_unread_counter
+#: model:ir.model.fields,help:to_quality.field_quality_alert_preventive_action__message_unread_counter
+#: model:ir.model.fields,help:to_quality.field_quality_alert_team__message_unread_counter
+#: model:ir.model.fields,help:to_quality.field_quality_check__message_unread_counter
+#: model:ir.model.fields,help:to_quality.field_quality_point__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Số thông điệp chưa đọc"
+
+#. module: to_quality
+#: model:ir.model.fields,help:to_quality.field_quality_alert_team__alias_force_thread_id
+msgid ""
+"Optional ID of a thread (record) to which all incoming messages will be "
+"attached, even if they did not reply to it. If set, this will disable the "
+"creation of new records completely."
+msgstr ""
+"ID tuỳ chọn của một chủ đề/bản ghi (thread) mà tất cả các thông điệp đến sẽ "
+"được gắn/đính vào, thâm chí nếu người ta không reply nó. Nếu được thiết lập,"
+" điều này sẽ vô hiệu hoàn toàn việc tạo mới bản ghi."
+
+#. module: to_quality
+#: model:quality.reason,name:to_quality.reason_other
+msgid "Others"
+msgstr "Khác"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_team__alias_user_id
+msgid "Owner"
+msgstr "Chủ sở hữu"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_team__alias_parent_model_id
+msgid "Parent Model"
+msgstr "Model cha"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_team__alias_parent_thread_id
+msgid "Parent Record Thread ID"
+msgstr ""
+
+#. module: to_quality
+#: model:ir.model.fields,help:to_quality.field_quality_alert_team__alias_parent_model_id
+msgid ""
+"Parent model holding the alias. The model holding the alias reference is not"
+" necessarily the model given by alias_model_id (example: project "
+"(parent_model) and task (model))"
+msgstr ""
+
+#. module: to_quality
+#: model:quality.reason,name:to_quality.reason_parts
+msgid "Parts Quality"
+msgstr "Chất lượng Vật tư"
+
+#. module: to_quality
+#: model:ir.model.fields.selection,name:to_quality.selection__quality_check__measure_success__pass
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_check_view_form
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_check_view_form_small
+msgid "Pass"
+msgstr "Đạt"
+
+#. module: to_quality
+#: model:ir.model.fields.selection,name:to_quality.selection__quality_check__quality_state__pass
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_check_view_search
+msgid "Passed"
+msgstr "Đạt"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__measure_frequency_value
+msgid "Percentage"
+msgstr "Phần trăm"
+
+#. module: to_quality
+#: model:ir.model.fields.selection,name:to_quality.selection__quality_point__measure_frequency_type__periodical
+msgid "Periodically"
+msgstr "Định kỳ"
+
+#. module: to_quality
+#: model:ir.model.fields,help:to_quality.field_quality_alert_team__alias_contact
+msgid ""
+"Policy to post a message on the document using the mailgateway.\n"
+"- everyone: everyone can post\n"
+"- partners: only authenticated partners\n"
+"- followers: only followers of the related document or members of following channels\n"
+msgstr ""
+"Cho sách cho phép post các thông điệp lên tài liệu sử dụng.\n"
+"- mọi người: Mọi người có thể post\n"
+"- đối tác: Chỉ các đối tác đã xác thực\n"
+"- người theo dõi: Chỉ những người ở trong danh sách dõi theo của tài liệu hoặc thành viên của các kênh sau đây\n"
+
+#. module: to_quality
+#: model:ir.model.fields.selection,name:to_quality.selection__quality_alert_action__type__preventive
+msgid "Preventive"
+msgstr "Phòng ngừa"
+
+#. module: to_quality
+#: model:ir.actions.act_window,name:to_quality.quality_alert_preventive_action_action
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert__action_preventive_ids
+#: model:ir.ui.menu,name:to_quality.alert_preventive_action_menu
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_alert_view_form
+msgid "Preventive Actions"
+msgstr "Hành động Phòng ngừa"
+
+#. module: to_quality
+#: model:ir.model,name:to_quality.model_quality_alert_preventive_action
+msgid "Preventive Quality Alert Action"
+msgstr "Hành động Phòng ngừa"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert__priority
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_action__priority
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__priority
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__priority
+msgid "Priority"
+msgstr "Độ ưu tiên"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert__product_tmpl_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_action__product_tmpl_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__product_tmpl_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__product_tmpl_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__product_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__product_tmpl_id
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_alert_action_view_search
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_check_view_search
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert__product_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_action__product_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__product_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__product_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__product_id
+msgid "Product Variant"
+msgstr "Biến thể Sản phẩm"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_alert_team_view_form
+msgid "Project Name"
+msgstr "Tên dự án"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__quantity_to_check
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__quantity_to_check
+msgid "Qty to Check"
+msgstr "SL cần Kiểm tra"
+
+#. module: to_quality
+#: model:ir.module.category,name:to_quality.module_category_quality
+#: model:ir.ui.menu,name:to_quality.quality_root_menu
+msgid "Quality"
+msgstr "Chất lượng"
+
+#. module: to_quality
+#: model:ir.model,name:to_quality.model_quality_action
+msgid "Quality Action"
+msgstr "Hành động Chất lượng"
+
+#. module: to_quality
+#: model:ir.actions.act_window,name:to_quality.quality_action_action
+#: model:ir.ui.menu,name:to_quality.quality_action_menu
+msgid "Quality Actions"
+msgstr "Hành động Chất lượng"
+
+#. module: to_quality
+#: code:addons/to_quality/models/quality_check.py:0
+#: code:addons/to_quality/models/quality_check.py:0
+#: model:ir.model,name:to_quality.model_quality_alert
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_action__quality_alert_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__quality_alert_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__quality_alert_id
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_alert_view_calendar
+#, python-format
+msgid "Quality Alert"
+msgstr "Cảnh báo Chất lượng"
+
+#. module: to_quality
+#: model:ir.model,name:to_quality.model_quality_alert_action
+#: model:ir.model.fields,field_description:to_quality.field_abstract_quality_alert_action__alert_action_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__alert_action_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__alert_action_id
+msgid "Quality Alert Action"
+msgstr "Hành động Cảnh báo Chất lượng"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_action__quality_alert_action_ids
+msgid "Quality Alert Actions"
+msgstr "Hành động Cảnh báo Chất lượng"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_alert_view_graph
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_alert_view_pivot
+msgid "Quality Alert Analysis"
+msgstr "Phân tích Cảnh báo Chất lượng"
+
+#. module: to_quality
+#: model:ir.model,name:to_quality.model_quality_alert_stage
+msgid "Quality Alert Stage"
+msgstr "Giai đoạn Cảnh báo CL"
+
+#. module: to_quality
+#: model:ir.actions.act_window,name:to_quality.quality_alert_stage_action
+#: model:ir.ui.menu,name:to_quality.quality_config_alert_stage_menu
+msgid "Quality Alert Stages"
+msgstr "Giai đoạn Cảnh báo Chất lượng"
+
+#. module: to_quality
+#: model:ir.model,name:to_quality.model_quality_alert_team
+msgid "Quality Alert Team"
+msgstr "Đội Cảnh báo Chất lượng"
+
+#. module: to_quality
+#: model:ir.ui.menu,name:to_quality.quality_config_alert_team_menu
+msgid "Quality Alert Teams"
+msgstr "Đội Cảnh báo Chất lượng"
+
+#. module: to_quality
+#: model:ir.actions.act_window,name:to_quality.quality_alert_action_check
+#: model:ir.actions.act_window,name:to_quality.quality_alert_action_report
+#: model:ir.actions.act_window,name:to_quality.quality_alert_action_team
+#: model:ir.model.fields,field_description:to_quality.field_quality_action__quality_alert_ids
+#: model:ir.ui.menu,name:to_quality.quality_alert_menu
+#: model:ir.ui.menu,name:to_quality.quality_alert_report_menu
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_alert_team_view_kanban
+msgid "Quality Alerts"
+msgstr "Cảnh báo Chất lượng"
+
+#. module: to_quality
+#: code:addons/to_quality/models/quality_alert.py:0
+#: model:ir.model,name:to_quality.model_quality_check
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_check_view_form_small
+#, python-format
+msgid "Quality Check"
+msgstr "Kiểm tra Chất lượng"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_check_view_graph
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_check_view_pivot
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_check_with_coltrol_point_view_graph
+msgid "Quality Check Analysis"
+msgstr "Phân tích Kiểm tra Chất lượng"
+
+#. module: to_quality
+#: code:addons/to_quality/models/quality_check.py:0
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_check_view_form_failure
+#, python-format
+msgid "Quality Check Failed"
+msgstr "Kiểm tra Chất lượng Không đạt"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_check_view_form
+msgid "Quality Check Form"
+msgstr "Form Kiểm tra Chất lượng"
+
+#. module: to_quality
+#: code:addons/to_quality/models/quality_check.py:0
+#: model:ir.actions.act_window,name:to_quality.quality_check_action_main
+#: model:ir.actions.act_window,name:to_quality.quality_check_action_report
+#: model:ir.actions.act_window,name:to_quality.quality_check_action_small
+#: model:ir.actions.act_window,name:to_quality.quality_check_action_team
+#: model:ir.model.fields,field_description:to_quality.field_quality_action__quality_check_ids
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__check_ids
+#: model:ir.ui.menu,name:to_quality.quality_check_report_menu
+#: model:ir.ui.menu,name:to_quality.quality_checks_menu
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_point_view_form
+#, python-format
+msgid "Quality Checks"
+msgstr "Kiểm tra Chất lượng"
+
+#. module: to_quality
+#: model:ir.actions.act_window,name:to_quality.quality_check_action_spc
+msgid "Quality Checks SPC"
+msgstr "Kiểm tra Chất lượng bằng SPC"
+
+#. module: to_quality
+#: model:ir.ui.menu,name:to_quality.quality_control_menu
+msgid "Quality Control"
+msgstr "Kiểm soát Chất lượng"
+
+#. module: to_quality
+#: model:ir.actions.act_window,name:to_quality.quality_point_action
+msgid "Quality Control Points"
+msgstr "Tiêu chí Kiểm soát Chất lượng"
+
+#. module: to_quality
+#: model:ir.ui.menu,name:to_quality.quality_controls_menu
+msgid "Quality Controls"
+msgstr "Kiểm soát Chất lượng"
+
+#. module: to_quality
+#: model:ir.actions.act_window,name:to_quality.quality_alert_team_action
+msgid "Quality Dashboard"
+msgstr "Bảng thông tin Chất lượng"
+
+#. module: to_quality
+#: model:ir.model,name:to_quality.model_quality_point
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_check_view_search
+msgid "Quality Point"
+msgstr "Tiêu chí KS Chất lượng"
+
+#. module: to_quality
+#: model:ir.actions.act_window,name:to_quality.template_open_quality_point
+msgid "Quality Points"
+msgstr "Tiêu chí Chất lượng"
+
+#. module: to_quality
+#: model:ir.model,name:to_quality.model_quality_reason
+msgid "Quality Reason"
+msgstr "Lý do Chất lượng"
+
+#. module: to_quality
+#: model:ir.model,name:to_quality.model_quality_tag
+msgid "Quality Tag"
+msgstr "Tag Chất lượng"
+
+#. module: to_quality
+#: model:ir.actions.act_window,name:to_quality.quality_tag_action
+#: model:ir.ui.menu,name:to_quality.quality_tag_menu
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_tag_view_search
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_tag_view_tree
+msgid "Quality Tags"
+msgstr "Tag Chất lượng"
+
+#. module: to_quality
+#: model:ir.actions.act_window,name:to_quality.quality_alert_team_configuration_action
+msgid "Quality Teams"
+msgstr "Đội Cảnh báo Chất lượng"
+
+#. module: to_quality
+#: model:ir.model.fields.selection,name:to_quality.selection__quality_point__measure_frequency_type__random
+msgid "Randomly"
+msgstr "Ngẫu nhiên"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__reason
+msgid "Reason"
+msgstr "Lý do"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_team__alias_force_thread_id
+msgid "Record Thread ID"
+msgstr ""
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__name
+msgid "Reference"
+msgstr "Tham chiếu"
+
+#. module: to_quality
+#: model:ir.model.fields,help:to_quality.field_quality_alert_action__quality_alert_id
+#: model:ir.model.fields,help:to_quality.field_quality_alert_corrective_action__quality_alert_id
+#: model:ir.model.fields,help:to_quality.field_quality_alert_preventive_action__quality_alert_id
+msgid "Related Quality Alert"
+msgstr "Cảnh báo Chất lượng có liên quan"
+
+#. module: to_quality
+#: model:ir.ui.menu,name:to_quality.quality_reporting_menu
+msgid "Reporting"
+msgstr "Báo cáo"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_action__user_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert__user_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_action__user_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__user_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__user_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__user_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__user_id
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_alert_action_view_search
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_alert_view_search
+msgid "Responsible"
+msgstr "Người phụ trách"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_abstract_quality_alert_action__activity_user_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__activity_user_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__activity_user_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__activity_user_id
+msgid "Responsible User"
+msgstr "Người phụ trách"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert__reason_id
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_alert_view_search
+msgid "Root Cause"
+msgstr "Nguyên nhân Gốc"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_abstract_quality_alert_action__message_has_sms_error
+#: model:ir.model.fields,field_description:to_quality.field_quality_action__message_has_sms_error
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert__message_has_sms_error
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__message_has_sms_error
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__message_has_sms_error
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_team__message_has_sms_error
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__message_has_sms_error
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_alert_view_search
+msgid "Search Quality Alert"
+msgstr "Tìm Cảnh báo Chất lượng"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_alert_action_view_search
+msgid "Search Quality Alert Action"
+msgstr "Tìm Hành động Cảnh báo Chất lượng"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_check_view_search
+msgid "Search Quality Check"
+msgstr "Tìm Kiểm tra Chất lượng"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_point_view_search
+msgid "Search Quality Point"
+msgstr "Tìm Tiêu chí Chất lượng"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_action__sequence
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__sequence
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__sequence
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_stage__sequence
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_team__sequence
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__sequence
+msgid "Sequence"
+msgstr "Trình tự"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_alert_team_view_kanban
+msgid "Settings"
+msgstr "Thiết lập"
+
+#. module: to_quality
+#: model:quality.alert.stage,name:to_quality.quality_alert_stage_3
+msgid "Solved"
+msgstr "Đã Giải quyết"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert__stage_id
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_alert_view_search
+msgid "Stage"
+msgstr "Giai đoạn"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__standard_deviation
+msgid "Standard Deviation"
+msgstr "Lệch chuẩn"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_check_view_search
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__quality_state
+msgid "Status"
+msgstr "Tình trạng"
+
+#. module: to_quality
+#: model:ir.model.fields,help:to_quality.field_abstract_quality_alert_action__activity_state
+#: model:ir.model.fields,help:to_quality.field_quality_alert_corrective_action__activity_state
+#: model:ir.model.fields,help:to_quality.field_quality_alert_preventive_action__activity_state
+#: model:ir.model.fields,help:to_quality.field_quality_check__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Trạng thái dựa trên hoạt động\n"
+"Quá hạn: Ngày đến hạn đã trôi qua\n"
+"Hôm nay: Hôm nay là ngày phải thực hiện\n"
+"Đã hoạch định: Các hoạt động trong tương lai."
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert__tag_ids
+msgid "Tags"
+msgstr "Thẻ"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert__team_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__team_id
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__team_id
+msgid "Team"
+msgstr "Đội"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_alert_team_view_tree
+msgid "Teams"
+msgstr "Đội"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__test_type
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__test_type
+#: model:ir.model.fields,field_description:to_quality.field_quality_point_test_type__technical_name
+msgid "Technical name"
+msgstr "Tên Kỹ thuật"
+
+#. module: to_quality
+#: model:ir.model,name:to_quality.model_quality_point_test_type
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__test_type_id
+msgid "Test Type"
+msgstr "Kiểu Kiểm thử"
+
+#. module: to_quality
+#: model:ir.model.fields,help:to_quality.field_quality_alert_action__quality_action_id
+#: model:ir.model.fields,help:to_quality.field_quality_alert_corrective_action__quality_action_id
+#: model:ir.model.fields,help:to_quality.field_quality_alert_preventive_action__quality_action_id
+msgid "The action to perform"
+msgstr "Hành động cần thực hiện"
+
+#. module: to_quality
+#: model:ir.model.fields,help:to_quality.field_quality_check__checked_qty_deviation
+msgid ""
+"The deviation between Qty to Check and Checked Quantity. A Possible Value "
+"indecates the checked quantity is more than the quantity that needs to check"
+msgstr ""
+"Độ lệnh giữa số lượng cần kiểm tra và số lượng thực tế kiểm tra (hiệu số "
+"lượng). Giá trị dương có nghĩa là số lượng đã kiểm tra lớn hơn số lượng cần "
+"kiểm tra."
+
+#. module: to_quality
+#: model:ir.model.fields,help:to_quality.field_quality_alert_team__alias_model_id
+msgid ""
+"The model (Odoo Document Kind) to which this alias corresponds. Any incoming"
+" email that does not reply to an existing record will cause the creation of "
+"a new record of this model (e.g. a Project Task)"
+msgstr ""
+"Model (Kiểu Tài liệu Odoo) mà bí danh này ứng với nó. Bất kỳ thông điệp "
+"email mà không đáp lại (reply) một bản ghi có sẵn sẽ làm cho Hệ thống tự "
+"động tạo một bản ghi mới cho model này (vd: tạo mới một Nhiệm vụ Dự án nếu "
+"model là project.task)"
+
+#. module: to_quality
+#: model:ir.model.constraint,message:to_quality.constraint_quality_action_name_unique
+msgid "The name of the action must be unique!"
+msgstr "Tên của hành động phải là duy nhất!"
+
+#. module: to_quality
+#: model:ir.model.fields,help:to_quality.field_quality_alert_team__alias_name
+msgid ""
+"The name of the email alias, e.g. 'jobs' if you want to catch emails for "
+"<jobs@example.viindoo.com>"
+msgstr ""
+
+#. module: to_quality
+#: model:ir.model.fields,help:to_quality.field_quality_alert_team__alias_user_id
+msgid ""
+"The owner of records created upon receiving emails on this alias. If this "
+"field is not set the system will attempt to find the right owner based on "
+"the sender (From) address, or will use the Administrator account if no "
+"system user is found for that address."
+msgstr ""
+
+#. module: to_quality
+#: code:addons/to_quality/models/quality_check.py:0
+#, python-format
+msgid ""
+"The product of the quality check %s must be a variant of the product of the "
+"corresponding quality point %s"
+msgstr ""
+"Sản phẩm của kiểm tra chất lượng %s phải là một biến thể của sản phẩm "
+"trong tiêu chí kiếm soát %s tương ứng"
+
+#. module: to_quality
+#: code:addons/to_quality/models/quality_check.py:0
+#, python-format
+msgid ""
+"The product of the quality check %s must be the same as the product of the "
+"corresponding quality point %s"
+msgstr ""
+"Sản phẩm của kiểm tra chất lượng %s phải giống với sản phẩm của tiêu chí"
+"kiểm soát %s tương ứng"
+
+#. module: to_quality
+#: model:ir.model.fields,help:to_quality.field_quality_check__quantity_to_check
+#: model:ir.model.fields,help:to_quality.field_quality_point__quantity_to_check
+msgid "The quantity for the quality check (in percentage)"
+msgstr ""
+"Số lượng cần phải lấy ra để kiểm tra chất lượng (tính bằng phần trăm của lô "
+"hàng)"
+
+#. module: to_quality
+#: model:ir.model.fields,help:to_quality.field_quality_check__checked_quantity
+msgid "The total quantity that has been checked (in percentage)"
+msgstr "Tổng số lượng đã được kiểm tra (tính bằng phần trăm của lô hàng)"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__title
+msgid "Title"
+msgstr "Tiêu đề"
+
+#. module: to_quality
+#: model:ir.model.fields.selection,name:to_quality.selection__quality_check__quality_state__none
+msgid "To do"
+msgstr "Cần làm"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_point_view_form
+msgid "Tolerance"
+msgstr "Dung sai"
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_point_view_form
+msgid "Type"
+msgstr "Kiểu"
+
+#. module: to_quality
+#: model:ir.model.fields,help:to_quality.field_abstract_quality_alert_action__activity_exception_decoration
+#: model:ir.model.fields,help:to_quality.field_quality_alert_corrective_action__activity_exception_decoration
+#: model:ir.model.fields,help:to_quality.field_quality_alert_preventive_action__activity_exception_decoration
+#: model:ir.model.fields,help:to_quality.field_quality_check__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__norm_unit
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__norm_unit
+msgid "Unit of Measure"
+msgstr "Đơn vị đo lường"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_abstract_quality_alert_action__message_unread
+#: model:ir.model.fields,field_description:to_quality.field_quality_action__message_unread
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert__message_unread
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__message_unread
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__message_unread
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_team__message_unread
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__message_unread
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__message_unread
+msgid "Unread Messages"
+msgstr "Thông điệp chưa đọc"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_abstract_quality_alert_action__message_unread_counter
+#: model:ir.model.fields,field_description:to_quality.field_quality_action__message_unread_counter
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert__message_unread_counter
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__message_unread_counter
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__message_unread_counter
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_team__message_unread_counter
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__message_unread_counter
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Bộ đếm Thông điệp chưa đọc"
+
+#. module: to_quality
+#: model:res.groups,comment:to_quality.group_quality_user
+msgid "Use the quality process"
+msgstr "Sử dụng các quy trình chất lượng"
+
+#. module: to_quality
+#: model:res.groups,name:to_quality.group_quality_user
+msgid "User"
+msgstr "Người dùng"
+
+#. module: to_quality
+#: model:ir.model.fields,help:to_quality.field_quality_action__user_id
+#: model:ir.model.fields,help:to_quality.field_quality_alert_action__user_id
+#: model:ir.model.fields,help:to_quality.field_quality_alert_corrective_action__user_id
+#: model:ir.model.fields,help:to_quality.field_quality_alert_preventive_action__user_id
+msgid "User who responsible for this quality alert action."
+msgstr "Người dùng chịu trách nhiệm về hành động cảnh báo chất lượng này."
+
+#. module: to_quality
+#: model_terms:ir.ui.view,arch_db:to_quality.quality_check_view_form_small
+msgid "Validate"
+msgstr "Xác nhận"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert__partner_id
+msgid "Vendor"
+msgstr "Nhà cung cấp"
+
+#. module: to_quality
+#: model:ir.model.fields.selection,name:to_quality.selection__quality_alert__priority__3
+msgid "Very High"
+msgstr "Rất cao"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__warning_message
+msgid "Warning Message"
+msgstr "Thông điệp Cảnh báo"
+
+#. module: to_quality
+#: model:ir.model.fields,field_description:to_quality.field_abstract_quality_alert_action__website_message_ids
+#: model:ir.model.fields,field_description:to_quality.field_quality_action__website_message_ids
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert__website_message_ids
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_corrective_action__website_message_ids
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_preventive_action__website_message_ids
+#: model:ir.model.fields,field_description:to_quality.field_quality_alert_team__website_message_ids
+#: model:ir.model.fields,field_description:to_quality.field_quality_check__website_message_ids
+#: model:ir.model.fields,field_description:to_quality.field_quality_point__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: to_quality
+#: model:ir.model.fields,help:to_quality.field_abstract_quality_alert_action__website_message_ids
+#: model:ir.model.fields,help:to_quality.field_quality_action__website_message_ids
+#: model:ir.model.fields,help:to_quality.field_quality_alert__website_message_ids
+#: model:ir.model.fields,help:to_quality.field_quality_alert_corrective_action__website_message_ids
+#: model:ir.model.fields,help:to_quality.field_quality_alert_preventive_action__website_message_ids
+#: model:ir.model.fields,help:to_quality.field_quality_alert_team__website_message_ids
+#: model:ir.model.fields,help:to_quality.field_quality_check__website_message_ids
+#: model:ir.model.fields,help:to_quality.field_quality_point__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: to_quality
+#: model:ir.model.fields.selection,name:to_quality.selection__quality_point__measure_frequency_unit__week
+msgid "Week(s)"
+msgstr "Tuần"
+
+#. module: to_quality
+#: model:quality.reason,name:to_quality.reason_wo
+msgid "Work Operation"
+msgstr "Hoạt động Sản xuất"
+
+#. module: to_quality
+#: model:quality.reason,name:to_quality.reason_workcenter
+msgid "Workcenter Failure"
+msgstr "Sự cố Năng lực sản xuất"
+
+#. module: to_quality
+#: code:addons/to_quality/models/quality_point.py:0
+#, python-format
+msgid ""
+"You cannot delete a quality point which has been assigned with a quality "
+"check. If possible, archive it instead."
+msgstr ""
+"Bạn không thể xóa một tiêu chí kiểm soát cái mà đã được gán với một"
+"kiểm tra chất lượng. Nếu có thể, lưu trữ nó để thay thế."
+
+#. module: to_quality
+#: code:addons/to_quality/models/quality_check.py:0
+#, python-format
+msgid "You measured %.2f %s and it should be between %.2f and %.2f %s."
+msgstr ""
+"Bạn đã đo được %.2f %s và thông số chỉ nên nằm trong khoảng %.2f và %.2f %s."

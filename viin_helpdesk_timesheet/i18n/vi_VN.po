@@ -1,0 +1,280 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_helpdesk_timesheet
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-10 04:07+0000\n"
+"PO-Revision-Date: 2021-04-10 04:07+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model,name:viin_helpdesk_timesheet.model_account_analytic_line
+msgid "Analytic Line"
+msgstr "Phát sinh KT Quản trị"
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_task2ticket_wizard__assign_to_me
+msgid "Assign To Me"
+msgstr "Phân công cho Tôi"
+
+#. module: viin_helpdesk_timesheet
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.task2ticket_wizard_view_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: viin_helpdesk_timesheet
+#: code:addons/viin_helpdesk_timesheet/wizards/task_to_ticket_wizard.py:0
+#, python-format
+msgid "Company of task '%s' must be the same as the helpdesk team!"
+msgstr "Công ty của nhiệm vụ '%s' phải cùng công ty của nhóm helpdesk!"
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model,name:viin_helpdesk_timesheet.model_task2ticket_wizard
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.task2ticket_wizard_view_form
+msgid "Convert Task to Ticket"
+msgstr "Chuyển Nhiệm vụ thành Ticket"
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.actions.act_window,name:viin_helpdesk_timesheet.action_task2ticket
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.project_task_view_form
+msgid "Convert to Ticket"
+msgstr "Chuyển Nhiệm vụ thành Ticket"
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.actions.act_window,name:viin_helpdesk_timesheet.action_task2tickets
+msgid "Convert to Tickets"
+msgstr "Chuyển Nhiệm vụ thành Ticket"
+
+#. module: viin_helpdesk_timesheet
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.project_task_view_form
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.task2ticket_wizard_view_form
+msgid "Create Ticket"
+msgstr "Tạo Ticket"
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_task2ticket_wizard__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_task2ticket_wizard__create_date
+msgid "Created on"
+msgstr "Được tạo vào"
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_task2ticket_wizard__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: viin_helpdesk_timesheet
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.helpdesk_ticket_form_view
+msgid "Duration"
+msgstr "Thời lượng"
+
+#. module: viin_helpdesk_timesheet
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.helpdesk_ticket_form_view
+msgid "Duration (Hours)"
+msgstr "Thời lượng (Giờ)"
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,help:viin_helpdesk_timesheet.field_helpdesk_ticket__use_helpdesk_timesheet
+msgid "Enable timesheeting on the project."
+msgstr "Kích hoạt Chấm công trên Dự án."
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model,name:viin_helpdesk_timesheet.model_helpdesk_team
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_task2ticket_wizard__team_id
+msgid "Helpdesk Team"
+msgstr "Nhóm Helpdesk"
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model,name:viin_helpdesk_timesheet.model_helpdesk_ticket
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_account_analytic_line__ticket_id
+msgid "Helpdesk Ticket"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_project_project__ticket_ids
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_project_task__ticket_ids
+msgid "Helpdesk Tickets"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_task2ticket_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,help:viin_helpdesk_timesheet.field_task2ticket_wizard__send_notification_email
+msgid ""
+"If set, then an email will be sent to the partner when the ticket changes "
+"stage."
+msgstr ""
+"Nếu thiết lập, thì một email sẽ được gửi đến đối tác khi giai đoạn của "
+"ticket thay đổi."
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,help:viin_helpdesk_timesheet.field_helpdesk_team__project_id
+msgid ""
+"If specified, it will be the default project for the tickets of this team."
+msgstr ""
+"Nếu được thiết lập, nó sẽ được dùng làm dự án mặc định cho các ticket của "
+"đội này."
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_task2ticket_wizard__is_team_member
+msgid "Is Team Member"
+msgstr "Là Thành viên của Nhóm"
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_task2ticket_wizard____last_update
+msgid "Last Modified on"
+msgstr "Sửa đổi lần cuối vào"
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_task2ticket_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Sửa đổi lần cuối bởi"
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_task2ticket_wizard__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_task2ticket_wizard__partner_id
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: viin_helpdesk_timesheet
+#: code:addons/viin_helpdesk_timesheet/wizards/task_to_ticket_wizard.py:0
+#, python-format
+msgid "Please select more than one task."
+msgstr "Vui lòng chọn nhiều hơn một nhiệm vụ."
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model,name:viin_helpdesk_timesheet.model_project_project
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_helpdesk_team__project_id
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_helpdesk_ticket__project_id
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_report_helpdesk_ticket__project_id
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.helpdesk_ticket_search_view
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.view_helpdesk_ticket_search
+msgid "Project"
+msgstr "Dự án"
+
+#. module: viin_helpdesk_timesheet
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.helpdesk_team_form_view
+msgid "Project & Timesheets"
+msgstr "Dự án & Chấm công"
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,help:viin_helpdesk_timesheet.field_helpdesk_ticket__project_id
+msgid "Project which the helpdesk tickets and timesheets will be used."
+msgstr "Dự án mà Helpdesk tickets và Bảng chấm công sẽ dùng."
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_task2ticket_wizard__send_notification_email
+msgid "Send Notification Email"
+msgstr "Gửi Email Thông báo"
+
+#. module: viin_helpdesk_timesheet
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.helpdesk_team_form_view
+msgid ""
+"Specify a project to make\n"
+"\t\t\t\t\t\t\tit the default project for the tickets of this team so that the\n"
+"\t\t\t\t\t\t\tmembers will be able to link a ticket with a project task and log\n"
+"\t\t\t\t\t\t\ttimesheet (if timesheet is enabled on the project accordingly)."
+msgstr ""
+"Thiết lập một dự án để\n"
+"\t\t\t\t\t\t\tlàm cho nó trở thành dự án mặc định cho các ticket của đội này để các\n"
+"\t\t\t\t\t\t\tthành viên có thể gắn ticket vào Nhiệm vụ dự án và chấm công\n"
+"\t\t\t\t\t\t\t(nếu tính năng chấm công được kích hoạt ở dự án tương ứng)."
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_task2ticket_wizard__tag_ids
+msgid "Tags"
+msgstr "Thẻ"
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model,name:viin_helpdesk_timesheet.model_project_task
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_helpdesk_ticket__task_id
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_report_helpdesk_ticket__task_id
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.helpdesk_ticket_search_view
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.view_helpdesk_ticket_search
+msgid "Task"
+msgstr "Nhiệm vụ"
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,help:viin_helpdesk_timesheet.field_helpdesk_ticket__task_id
+msgid "Task which the helpdesk tickets and timesheets will be used."
+msgstr "Nhiệm vụ mà Helpdesk tickets và Bảng chấm công sẽ dùng."
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_task2ticket_wizard__task_ids
+msgid "Tasks"
+msgstr "Nhiệm vụ"
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model,name:viin_helpdesk_timesheet.model_report_helpdesk_ticket
+msgid "Ticket Report"
+msgstr "Báo cáo Ticket"
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_task2ticket_wizard__ticket_type_id
+msgid "Ticket Type"
+msgstr "Loại Ticket"
+
+#. module: viin_helpdesk_timesheet
+#: code:addons/viin_helpdesk_timesheet/models/project_task.py:0
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_project_project__tickets_count
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_project_task__tickets_count
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.project_project_view_form
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.project_task_view_form
+#, python-format
+msgid "Tickets"
+msgstr "Ticket"
+
+#. module: viin_helpdesk_timesheet
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.helpdesk_ticket_form_view
+msgid "Timesheet Activities"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_helpdesk_ticket__use_helpdesk_timesheet
+msgid "Timesheet on Tickets"
+msgstr "Chấm công trên Ticket"
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_helpdesk_ticket__timesheet_ids
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.helpdesk_ticket_form_view
+msgid "Timesheets"
+msgstr "Chấm công"
+
+#. module: viin_helpdesk_timesheet
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.helpdesk_ticket_form_view
+msgid "Total hours"
+msgstr "Tổng số giờ"
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,help:viin_helpdesk_timesheet.field_task2ticket_wizard__ticket_type_id
+msgid "Used to classify question type for customer"
+msgstr "Dùng để phân loại câu hỏi cho khách hàng"
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,help:viin_helpdesk_timesheet.field_task2ticket_wizard__team_id
+msgid "Used to classify support group for customer"
+msgstr "Dùng để phân loại Nhóm hỗ trợ khách hàng"
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,help:viin_helpdesk_timesheet.field_task2ticket_wizard__partner_id
+msgid "You can choose a partner if you want them to follow this ticket."
+msgstr "Bạn có thể chọn một đối tác nếu bạn muốn họ theo dõi ticket này."
+

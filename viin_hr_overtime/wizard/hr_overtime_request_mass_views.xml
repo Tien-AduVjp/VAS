@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+	<data>
+		<record id="view_hr_overtime_request_mass_form"
+			model="ir.ui.view">
+			<field name="name">hr.overtime.request.mass.form</field>
+			<field name="model">hr.overtime.request.mass</field>
+			<field name="arch" type="xml">
+				<form string="Mass Overtime Planning">
+					<sheet>
+						<div class="alert alert-info" role="alert">
+							This wizard helps you
+							generate overtime plans for massive employees or entire
+							departments or companies based on the mode you choose below.
+						</div>
+						<group>
+							<group>
+								<field name="mode" />
+								<field name="reason_id" />
+							</group>
+							<group>
+								<field name="company_ids" widget="many2many_tags"
+									groups="base.group_multi_company" />
+								<field name="department_ids" widget="many2many_tags" />
+								<field name="employee_ids" widget="many2many_tags" />
+							</group>
+
+						</group>
+						<notebook>
+							<page string="Scheduling">
+								<field name="line_ids">
+									<tree name="line_ids" editable="bottom">
+										<field name="date" />
+										<field name="time_start" widget="float_time"/>
+										<field name="time_end" widget="float_time"/>
+									</tree>
+								</field>
+							</page>
+						</notebook>
+					</sheet>
+					<footer>
+						<button name="action_schedule" type="object"
+							string="Schedule" class="oe_highlight" />
+						<button special="cancel" string="Cancel" />
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<record id="action_hr_overtime_request_mass_window"
+			model="ir.actions.act_window">
+			<field name="name">Massive Overtime Planning</field>
+			<field name="res_model">hr.overtime.request.mass</field>
+			<field name="view_mode">form</field>
+			<field name="view_id"></field>
+			<field name="target">new</field>
+		</record>
+
+		<menuitem id="menu_hr_overtime_request_mass"
+			parent="hr_overtime_planning" sequence="110" name="Mass Schedule"
+			action="action_hr_overtime_request_mass_window"
+			groups="viin_hr_overtime.group_overtime_officer" />
+
+	</data>
+</odoo>

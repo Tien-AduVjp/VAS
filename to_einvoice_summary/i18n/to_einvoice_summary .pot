@@ -1,0 +1,27 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_einvoice_summary
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-16 09:26+0000\n"
+"PO-Revision-Date: 2020-09-16 09:26+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_einvoice_summary
+#: code:addons/to_einvoice_summary/models/invoice_line_summary.py:0
+#, python-format
+msgid "All the invoice lines must belong to the same invoice."
+msgstr ""
+
+#. module: to_einvoice_summary
+#: model:ir.model,name:to_einvoice_summary.model_invoice_line_summary
+msgid "Invoice Lines Summary"
+msgstr ""

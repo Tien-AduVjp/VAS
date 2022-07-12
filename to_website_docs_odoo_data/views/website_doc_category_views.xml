@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="subject_form" model="ir.ui.view">
+			<field name="name">docs.subject.form</field>
+			<field name="model">website.doc.category</field>
+			<field name="inherit_id" ref="to_website_docs.subject_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//group[@name='main_grp']" position="inside">
+					<group>
+						<field name="git_repository_id"
+							groups="to_website_docs.group_website_doc_manager" />
+					</group>
+				</xpath>
+
+			</field>
+		</record>
+
+	</data>
+</odoo>

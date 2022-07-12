@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="view_hr_expense_sheet_form" model="ir.ui.view">
+    	<field name="name">hr.expense.sheet.form</field>
+    	<field name="model">hr.expense.sheet</field>
+    	<field name="inherit_id" ref="hr_expense.view_hr_expense_sheet_form"/>
+    	<field name="arch" type="xml">
+    		<field name="state" position="before">
+    			<button name="action_cancel" string="Cancel" type="object"
+    					states="post,done" groups="account.group_account_user"/>
+    		</field>
+    		
+     		<button name="reset_expense_sheets" position="attributes">
+    			<attribute name="attrs">{'invisible': ['|', ('can_reset', '=', False), '|', ('state', 'not in', ['submit', 'cancel']), ('account_move_id', '!=', False)]}
+    			</attribute>
+    		</button>
+    		
+    		<xpath expr="//field[@name='expense_line_ids']/tree/field[@name='tax_ids']" position="before">
+    			<field name="to_invoice" />
+    			<field name="vendor_id"  />
+    			<field name="untaxed_amount"  />
+    		</xpath>
+    		<button name="action_get_attachment_view" position="after">
+    			<button name="action_view_payments" class="oe_stat_button" icon="fa-dollar" attrs="{'invisible': [('payments_count', '=', 0)]}"
+				 	type="object" groups="account.group_account_user">
+	                <field name="payments_count" widget="statinfo" string="Payments"/>
+	            </button>
+    		</button>
+    		<field name="journal_id" position="after">
+	    		<field name="aggregate_payments" attrs="{'invisible': [('payment_mode', '!=', 'company_account')]}" groups="account.group_account_user"/>
+	    	</field>
+    	</field>
+    </record>
+</odoo>

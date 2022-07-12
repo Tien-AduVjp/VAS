@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="product_pricelist_item_form_view" model="ir.ui.view">
+            <field name="name">product.pricelist.item.form</field>
+            <field name="model">product.pricelist.item</field>
+            <field name="inherit_id" ref="product.product_pricelist_item_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='pricelist_rule_limits']" position="after">
+                    <group name="recurring">
+                        <field name="recurring"/>
+                        <field name="recurring_period" widget="radio" attrs="{'invisible': [('recurring', '=', False)], 'required': [('recurring', '=', True)]}"/>
+                        <label for="" name="recurring_range" attrs="{'invisible': ['|', ('recurring', '=', False), ('recurring_period', '=', False)]}">
+                            <b attrs="{'invisible': [('recurring_period', '!=', 'monthly')]}">From Day</b>
+                            <b attrs="{'invisible': [('recurring_period', '!=', 'annually')]}">From Date</b>
+                        </label>
+                        <div class="o_row" attrs="{'invisible': ['|', ('recurring', '=', False), ('recurring_period', '=', False)]}">
+                            <field name="recurring_month_from" attrs="{'invisible': [('recurring_period', '!=', 'annually')], 'required': [('recurring_period', '=', 'annually')]}"/>
+                            <field name="recurring_day_from" attrs="{'required': [('recurring_period', '!=', False)]}"/>
+                            <span> To </span>
+                            <field name="recurring_month_to" attrs="{'invisible': [('recurring_period', '!=', 'annually')], 'required': [('recurring_period', '=', 'annually')]}"/>
+                            <field name="recurring_day_to" attrs="{'required': [('recurring_period', '!=', False)]}"/>
+                        </div>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

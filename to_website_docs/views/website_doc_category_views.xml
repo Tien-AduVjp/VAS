@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<!-- Document Category -->
+		<record id="category_form" model="ir.ui.view">
+			<field name="name">website.doc.category.form</field>
+			<field name="model">website.doc.category</field>
+			<field name="arch" type="xml">
+				<form string="Document Category">
+					<sheet>
+						<div class="oe_button_box" name="button_box">
+							
+							<button class="oe_inline oe_stat_button" type="object"
+								name="action_view_childs" icon="fa-file-text">
+								<field name="docs_count" string="Document"
+									widget="statinfo" />
+							</button>
+							<field name="is_published" widget="website_redirect_button"/>
+						</div>
+						<div class="oe_title">
+							<label class="oe_edit_only" for="name"
+								string="Category Name" />
+							<h1>
+								<field name="name" placeholder="Category Name" />
+								<field name="has_content" invisible="1" />
+								<field name="type" invisible="1" />
+								<field name="lang_ids" invisible="1" />
+							</h1>
+						</div>
+						<notebook>
+							<page string="General Information"
+								name="general_information">
+								<group name="group_general">
+									<group>
+										<label for="document_type" />
+										<div>
+											<field name="document_type" widget="radio"
+												attrs="{'readonly': [('has_content', '=', True)]}"
+												required="1" />
+											<br />
+											<button name="open_website_url" string="Open Page"
+												type="object" class="btn-primary" />
+										</div>
+										<field name="parent_id" string="Section"
+											domain="[('type', '=', 'section')]" required="1"
+											context="{'default_type': 'section'}" />
+										<field name="depth" />
+										<field name="description"></field>
+									</group>
+									<group>
+										<field name="tag_ids" widget="many2many_tags" />
+										<field name="author_id"
+											attrs="{'invisible': [('document_type', '!=', 'hash')]}" />
+										<field name="date_published" readonly="1" />
+									</group>
+								</group>
+							</page>
+							<page string="Security" name="security"
+								groups="to_website_docs.group_website_doc_reviewer"
+								attrs="{'invisible': [('type', 'in', ['section', 'subject'])]}">
+								<group name="group_security">
+									<group>
+										<field name="private_type" widget="radio" />
+									</group>
+									<group>
+										<field name="user_id"
+											groups="to_website_docs.group_website_doc_manager"
+											options="{'no_create': True, 'no_quick_edit': True, 'no_create_edit': True, 'no_open': True}" />
+										<field name="member_ids"
+											groups="to_website_docs.group_website_doc_reviewer"
+											widget="many2many_tags"
+											attrs="{'invisible': [('private_type', '!=', 'user')]}"
+											options="{'no_create': True, 'no_quick_edit': True, 'no_create_edit': True, 'no_open': True}" />
+										<field name="description_private" colspan="2"
+											nolabel="1" />
+									</group>
+								</group>
+							</page>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers" />
+						<field name="activity_ids" widget="mail_activity" />
+						<field name="message_ids" widget="mail_thread" />
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record id="section_form" model="ir.ui.view">
+			<field name="name">docs.section.form</field>
+			<field name="model">website.doc.category</field>
+			<field name="arch" type="xml">
+				<form string="Document Section">
+					<sheet>
+						<div class="oe_button_box" name="button_box">
+							<button class="oe_inline oe_stat_button" type="object"
+								name="action_view_childs" icon="fa-file-text">
+								<field name="child_count" string="Categories"
+									widget="statinfo" />
+							</button>
+						</div>
+						<div class="oe_title">
+							<label class="oe_edit_only" for="name"
+								string="Section Name" />
+							<h1>
+								<field name="name" placeholder="Section Name" />
+							</h1>
+						</div>
+						<notebook>
+							<page string="General Information"
+								name="general_information">
+								<group name="group_general">
+									<group>
+										<field name="type" invisible="1" />
+										<field name="parent_id" string="Subject"
+											domain="[('type', '=', 'subject')]" required="1"
+											context="{'force_subject': 1, 'default_type': 'subject'}"
+											options="{'no_create': True, 'no_quick_create': True, 'no_quick_edit': True, 'no_create_edit': True, 'no_open': True}" />
+										<field name="depth" />
+										<field name="lang_ids" invisible="1" />
+									</group>
+								</group>
+							</page>
+						</notebook>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record id="subject_form" model="ir.ui.view">
+			<field name="name">docs.subject.form</field>
+			<field name="model">website.doc.category</field>
+			<field name="arch" type="xml">
+				<form string="Document Subject">
+					<header>
+					</header>
+					<sheet>
+						<div class="oe_button_box" name="button_box">
+							<button class="oe_inline oe_stat_button" type="object"
+								name="action_view_childs" icon="fa-file">
+								<field name="child_count" string="Sections"
+									widget="statinfo" />
+							</button>
+						</div>
+						<div class="oe_title">
+							<label class="oe_edit_only" for="name"
+								string="Subject Name" />
+							<h1>
+								<field name="name" placeholder="Subject Name" />
+							</h1>
+						</div>
+						<group name="main_grp">
+							<field name="website_id" />
+						</group>
+						<notebook>
+							<page string="General Information"
+								name="general_information">
+								<group name="group_general">
+									<group>
+										<label for="lang_ids" />
+										<div>
+											<field name="lang_ids" widget="many2many_tags"
+												options="{'no_create': True, 'no_quick_edit': True, 'no_create_edit': True, 'no_open': True}" />
+											<br />
+											<button name="open_website_url" string="Open Page"
+												type="object" class="btn-primary" />
+										</div>
+										<field name="type" invisible="1" />
+									</group>
+									<field name="description"></field>
+								</group>
+							</page>
+						</notebook>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record id="category_tree" model="ir.ui.view">
+			<field name="name">website.doc.category.tree</field>
+			<field name="model">website.doc.category</field>
+			<field name="arch" type="xml">
+				<tree string="Document Category">
+					<field name="sequence" widget="handle" />
+					<field name="name" />
+					<field name="parent_id" string="Section" />
+					<field name="depth" />
+					<field name="document_type" />
+					<field name="lang_ids" widget="many2many_tags" />
+					<field name="private_type"
+						groups="to_website_docs.group_website_doc_reviewer" />
+					<field name="user_id"
+						groups="to_website_docs.group_website_doc_manager" />
+					<field name="website_published" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="section_tree" model="ir.ui.view">
+			<field name="name">docs.section.tree</field>
+			<field name="model">website.doc.category</field>
+			<field name="arch" type="xml">
+				<tree string="Document Section">
+					<field name="sequence" widget="handle" />
+					<field name="name" />
+					<field name="parent_id" string="Subject" />
+					<field name="depth" />
+					<field name="lang_ids" widget="many2many_tags" />
+					<field name="user_id"
+						groups="to_website_docs.group_website_doc_manager" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="subject_tree" model="ir.ui.view">
+			<field name="name">docs.subject.tree</field>
+			<field name="model">website.doc.category</field>
+			<field name="arch" type="xml">
+				<tree string="Document Subject">
+					<field name="sequence" widget="handle" />
+					<field name="name" />
+					<field name="lang_ids" widget="many2many_tags" />
+					<field name="user_id"
+						groups="to_website_docs.group_website_doc_manager" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="category_filter" model="ir.ui.view">
+			<field name="name">website.doc.category.filter</field>
+			<field name="model">website.doc.category</field>
+			<field name="arch" type="xml">
+				<search string="Search">
+					<field name="name" />
+					<field name="type" />
+					<field name="parent_id" />
+					<field name="depth" />
+					<separator />
+					<field name="website_id" />
+					<separator />
+					<field name="lang_ids" />
+					<separator />
+					<filter string="Published" name="filter_published"
+						domain="[('website_published','=',True)]" />
+					<filter string="Unpublished" name="filter_unpublished"
+						domain="[('website_published','=',False)]" />
+					<group expand="0" string="Group By">
+						<filter string="Parent" name="grp_parent" domain="[]"
+							context="{'group_by':'parent_id'}" />
+						<filter string="Depth" name="grp_depth" domain="[]"
+							context="{'group_by': 'depth'}" />
+						<filter string="Manager" name="filter_user" domain="[]"
+							context="{'group_by':'user_id'}" />
+						<filter string="Author" name="grp_author" domain="[]"
+							context="{'group_by':'author_id'}" />
+						<filter string="Website" name="grp_website" domain="[]"
+							context="{'group_by':'website_id'}" />
+					</group>
+				</search>
+			</field>
+		</record>
+
+		<record id="category_action" model="ir.actions.act_window">
+			<field name="name">Document Category</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">website.doc.category</field>
+			<field name="view_mode">tree,form</field>
+			<field name="domain">[('type', '=', 'category')]</field>
+			<field name="context">{'default_type': 'category'}</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">
+					Click to create a new category.
+				</p>
+				<p>
+					Document Category
+				</p>
+			</field>
+		</record>
+
+		<record id="section_action" model="ir.actions.act_window">
+			<field name="name">Document Section</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">website.doc.category</field>
+			<field name="view_mode">tree,form</field>
+			<field name="domain">[('type', '=', 'section')]</field>
+			<field name="context">{'default_type': 'section'}</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">
+					Click to create a new Section.
+				</p>
+				<p>
+					Document Section
+				</p>
+			</field>
+		</record>
+
+		<record id="subject_action" model="ir.actions.act_window">
+			<field name="name">Document Subject</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">website.doc.category</field>
+			<field name="view_mode">tree,form</field>
+			<field name="domain">[('type', '=', 'subject')]</field>
+			<field name="context">{'default_type': 'subject'}</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">
+					Click to create a new Section.
+				</p>
+				<p>
+					Document Section
+				</p>
+			</field>
+		</record>
+
+		<record id="section_action_view_tree"
+			model="ir.actions.act_window.view">
+			<field name="sequence" eval="1" />
+			<field name="view_mode">tree</field>
+			<field name="view_id" ref="section_tree" />
+			<field name="act_window_id" ref="section_action" />
+		</record>
+
+		<record id="section_action_view_form"
+			model="ir.actions.act_window.view">
+			<field name="sequence" eval="2" />
+			<field name="view_mode">form</field>
+			<field name="view_id" ref="section_form" />
+			<field name="act_window_id" ref="section_action" />
+		</record>
+
+		<record id="subject_action_view_tree"
+			model="ir.actions.act_window.view">
+			<field name="sequence" eval="1" />
+			<field name="view_mode">tree</field>
+			<field name="view_id" ref="subject_tree" />
+			<field name="act_window_id" ref="subject_action" />
+		</record>
+
+		<record id="subject_action_view_form"
+			model="ir.actions.act_window.view">
+			<field name="sequence" eval="2" />
+			<field name="view_mode">form</field>
+			<field name="view_id" ref="subject_form" />
+			<field name="act_window_id" ref="subject_action" />
+		</record>
+
+		<record id="category_action_view_tree"
+			model="ir.actions.act_window.view">
+			<field name="sequence" eval="1" />
+			<field name="view_mode">tree</field>
+			<field name="view_id" ref="category_tree" />
+			<field name="act_window_id" ref="category_action" />
+		</record>
+
+		<record id="category_action_view_form"
+			model="ir.actions.act_window.view">
+			<field name="sequence" eval="2" />
+			<field name="view_mode">form</field>
+			<field name="view_id" ref="category_form" />
+			<field name="act_window_id" ref="category_action" />
+		</record>
+
+		<menuitem id="category_menu" sequence="2" name="Category"
+			parent="menu_base_docs" action="category_action" />
+		<menuitem id="section_menu" sequence="3" name="Section"
+			parent="menu_base_docs" action="section_action"
+ 			groups="to_website_docs.group_website_doc_manager" />
+		<menuitem id="subject_menu" sequence="4" name="Subject"
+			parent="menu_base_docs" action="subject_action"
+ 			groups="to_website_docs.group_website_doc_manager" />
+	</data>
+</odoo>

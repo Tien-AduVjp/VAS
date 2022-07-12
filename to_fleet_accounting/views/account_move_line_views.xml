@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="view_move_line_form">
+			<field name="name">account.move.line.form</field>
+			<field name="model">account.move.line</field>
+			<field name="inherit_id" ref="account.view_move_line_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//page[1]/group/group[1]" position="after">
+					<group name="fleet" string="Fleet">
+						<field name="fleet_vehicle_cost_ids" widget="many2many_tags" />
+						<field name="vehicle_ids" widget="many2many_tags" />
+					</group>
+				</xpath>
+			</field>
+		</record>
+		
+		<record model="ir.ui.view" id="view_account_move_line_filter">
+			<field name="name">Journal Items</field>
+			<field name="model">account.move.line</field>
+			<field name="inherit_id" ref="account.view_account_move_line_filter" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='tax_ids']" position="after">
+					<field name="vehicle_ids" />
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<report id="report_general_voucher_on_payment" model="account.payment"
+			string="General voucher" report_type="qweb-pdf"
+			name="to_l10n_vn_employee_advance.report_account_general_voucher_on_payment"
+			file="to_l10n_vn_employee_advance.report_account_general_voucher_on_payment" />
+
+		<record id="report_general_voucher_on_payment" model="ir.actions.report">
+			<field name="paperformat_id" ref="to_l10n_vn_qweb_layout.to_qwl_template_paperformat_portrait" />
+		</record>
+	</data>
+</odoo>

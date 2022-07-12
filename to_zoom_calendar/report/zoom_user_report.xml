@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<report id="action_report_zoom_user" string="Zoom Users"
+		model="zoom.user" report_type="qweb-pdf"
+		name="to_zoom_calendar.report_zoom_user"
+		file="to_zoom_calendar.report_zoom_user" menu="False" />
+		
+	<template id="report_zoom_user">
+		<t t-call="web.html_container">
+			<t t-call="web.external_layout">
+				<div class="page">
+					<div style="text-align: center;">
+						<h2>
+							<b>
+								<span t-field='res_company.name' />
+								<span class="ml-2">Zoom Hosts Report</span>
+							</b>
+						</h2>
+					</div>
+					<br></br>
+					<div class="row mt24">
+						<div style="width:50%; margin-left:15px;">
+							<b>Total Meetings:</b>
+							<span t-esc="data['total_meetings']" />
+							<b>Total Meeting Minutes</b>
+							<span t-esc="data['total_meeting_minutes']" />
+						</div>
+						<div style="width:50%; margin-left:15px;">
+							<b>From Date:</b>
+							<span t-esc="data['date_from']"
+								t-options="{'widget':'date'}" />
+							<b>To Date:</b>
+							<span t-esc="data['date_to']" t-options="{'widget':'date'}" />
+						</div>
+					</div>
+					<br></br>
+					<table class="table table-bordered">
+						<thead class="text-center"
+							style="background-color:#eeeeee; font-size:14px; font-weight:600;">
+							<th>Email</th>
+							<th>Total Meetings</th>
+							<th>Total Meeting Minutes</th>
+						</thead>
+						<tbody class="text-center" style="font-size:12px;">
+							<t t-foreach="data['user_list']" t-as="u">
+								<tr>
+									<td class="text-left">
+										<span t-esc="u['email']" />
+									</td>
+									<td class="text-left">
+										<span t-esc="u['meetings']" />
+									</td>
+									<td class="text-left">
+										<span t-esc="u['meeting_minutes']" />
+									</td>
+								</tr>
+							</t>
+						</tbody>
+					</table>
+				</div>
+			</t>
+		</t>
+	</template>
+</odoo>

@@ -1,0 +1,120 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_maintenance_notification
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-06 07:06+0000\n"
+"PO-Revision-Date: 2020-03-06 07:06+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_maintenance_notification
+#: model:mail.template,body_html:to_maintenance_notification.email_template_notify_maintenance
+msgid ""
+"\n"
+"<div style=\"font-family: 'Lucida Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n"
+"\n"
+"    <p>Hello <strong>${object.user_id.name}</strong>,</p>\n"
+"    \n"
+"\t<p>This is a ${object.days_to_notify}-day nofitication of the maintenance <strong>${object.name} </strong> for the equipment <strong>${object.equipment_id.name}</strong>, which is scheduled to be carried out on ${object.schedule_date}.</p>\n"
+"      \n"
+"    <p>Best Regard,</p>\n"
+"\n"
+"</div>\n"
+"            "
+msgstr ""
+
+#. module: to_maintenance_notification
+#: model:ir.model.fields,field_description:to_maintenance_notification.field_maintenance_request__date_to_notify
+msgid "Date to notify"
+msgstr ""
+
+#. module: to_maintenance_notification
+#: model:ir.model.fields,field_description:to_maintenance_notification.field_maintenance_equipment__days_to_notify
+#: model:ir.model.fields,field_description:to_maintenance_notification.field_maintenance_equipment_category__days_to_notify
+#: model:ir.model.fields,field_description:to_maintenance_notification.field_maintenance_request__days_to_notify
+msgid "Days to Notify"
+msgstr ""
+
+#. module: to_maintenance_notification
+#: model:ir.model,name:to_maintenance_notification.model_equipment_working_frequency
+msgid "Equipment Working Frequency"
+msgstr ""
+
+#. module: to_maintenance_notification
+#: model_terms:ir.ui.view,arch_db:to_maintenance_notification.hr_equipment_request_view_form_button
+msgid "Maintenance Detail"
+msgstr ""
+
+#. module: to_maintenance_notification
+#: model:ir.model,name:to_maintenance_notification.model_maintenance_equipment
+msgid "Maintenance Equipment"
+msgstr ""
+
+#. module: to_maintenance_notification
+#: model:ir.model,name:to_maintenance_notification.model_maintenance_equipment_category
+msgid "Maintenance Equipment Category"
+msgstr ""
+
+#. module: to_maintenance_notification
+#: model:ir.model.fields,field_description:to_maintenance_notification.field_maintenance_request__maintenance_milestone_id
+msgid "Maintenance Milestone"
+msgstr ""
+
+#. module: to_maintenance_notification
+#: model:ir.model,name:to_maintenance_notification.model_maintenance_request
+msgid "Maintenance Request"
+msgstr ""
+
+#. module: to_maintenance_notification
+#: model:ir.actions.server,name:to_maintenance_notification.ir_cron_scheduler_send_email_ir_actions_server
+#: model:ir.cron,cron_name:to_maintenance_notification.ir_cron_scheduler_send_email
+#: model:ir.cron,name:to_maintenance_notification.ir_cron_scheduler_send_email
+msgid "Maintenance: Send Email Notify Maintenance"
+msgstr ""
+
+#. module: to_maintenance_notification
+#: model:ir.model.fields,field_description:to_maintenance_notification.field_maintenance_equipment__next_maintenance_milestone_id
+msgid "Next Maintenance Milestone"
+msgstr ""
+
+#. module: to_maintenance_notification
+#: model:ir.model.fields,field_description:to_maintenance_notification.field_maintenance_request__notified
+msgid "Notified"
+msgstr ""
+
+#. module: to_maintenance_notification
+#: code:addons/to_maintenance_notification/models/maintenance_equipment.py:0
+#, python-format
+msgid "Preventive Maintenance - %s"
+msgstr ""
+
+#. module: to_maintenance_notification
+#: model:ir.model,name:to_maintenance_notification.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr ""
+
+#. module: to_maintenance_notification
+#: model:ir.model.fields,help:to_maintenance_notification.field_maintenance_request__date_to_notify
+msgid ""
+"Technical field that indicated the date on which the notification should be "
+"sent."
+msgstr ""
+
+#. module: to_maintenance_notification
+#: model:mail.template,subject:to_maintenance_notification.email_template_notify_maintenance
+msgid ""
+"[Maintenance Nofitication] ${object.name} // ${object.equipment_id.name}"
+msgstr ""
+
+#. module: to_maintenance_notification
+#: model_terms:ir.ui.view,arch_db:to_maintenance_notification.hr_equipment_category_view_form
+msgid "note..."
+msgstr ""

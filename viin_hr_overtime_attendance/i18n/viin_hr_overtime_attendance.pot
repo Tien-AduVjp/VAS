@@ -1,0 +1,253 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_hr_overtime_attendance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-10 10:14+0000\n"
+"PO-Revision-Date: 2021-07-31 04:35+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_hr_overtime_attendance
+#: model:ir.model.fields,help:viin_hr_overtime_attendance.field_overtime_plan_line_attendance_match__unmatched_hours
+msgid "Actual worked hours that did NOT match the planned."
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model:ir.model.fields,help:viin_hr_overtime_attendance.field_overtime_plan_line_attendance_match__matched_hours
+msgid "Actual worked hours that match the planned."
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model:ir.model,name:viin_hr_overtime_attendance.model_hr_attendance
+#: model:ir.model.fields.selection,name:viin_hr_overtime_attendance.selection__hr_contract__overtime_recognition_mode__attendance
+#: model:ir.model.fields.selection,name:viin_hr_overtime_attendance.selection__hr_overtime_plan__recognition_mode__attendance
+#: model:ir.model.fields.selection,name:viin_hr_overtime_attendance.selection__hr_overtime_plan_line__recognition_mode__attendance
+#: model:ir.model.fields.selection,name:viin_hr_overtime_attendance.selection__hr_overtime_reason__recognition_mode__attendance
+#: model:ir.model.fields.selection,name:viin_hr_overtime_attendance.selection__res_company__overtime_recognition_mode__attendance
+msgid "Attendance"
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model:ir.model.fields,field_description:viin_hr_overtime_attendance.field_overtime_plan_line_attendance_match__attendance_id
+msgid "Attendance Log"
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model:ir.model.fields,field_description:viin_hr_overtime_attendance.field_hr_attendance__attendance_match_ids
+#: model:ir.model.fields,field_description:viin_hr_overtime_attendance.field_hr_overtime_plan__attendance_match_ids
+#: model:ir.model.fields,field_description:viin_hr_overtime_attendance.field_hr_overtime_plan_line__attendance_match_ids
+msgid "Attendance Match"
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model:ir.model,name:viin_hr_overtime_attendance.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model:ir.model.fields,field_description:viin_hr_overtime_attendance.field_overtime_plan_line_attendance_match__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model:ir.model.fields,field_description:viin_hr_overtime_attendance.field_overtime_plan_line_attendance_match__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model:ir.model.fields,field_description:viin_hr_overtime_attendance.field_overtime_plan_line_attendance_match__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model:ir.model,name:viin_hr_overtime_attendance.model_hr_contract
+msgid "Employee Contract"
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model:ir.model,name:viin_hr_overtime_attendance.model_hr_employee_overtime
+msgid "Employee Overtime"
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model:ir.model.fields,field_description:viin_hr_overtime_attendance.field_overtime_plan_line_attendance_match__date_end
+msgid "End Date"
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model:ir.model.fields,field_description:viin_hr_overtime_attendance.field_hr_overtime_plan__recognition_mode
+msgid "Force Recognition Mode"
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model:ir.model.fields,field_description:viin_hr_overtime_attendance.field_overtime_plan_line_attendance_match__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model:ir.model.fields,field_description:viin_hr_overtime_attendance.field_overtime_plan_line_attendance_match____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model:ir.model.fields,field_description:viin_hr_overtime_attendance.field_overtime_plan_line_attendance_match__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model:ir.model.fields,field_description:viin_hr_overtime_attendance.field_overtime_plan_line_attendance_match__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_attendance.view_hr_overtime_plan_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_attendance.view_hr_overtime_plan_line_form
+msgid "Match Attendance"
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model:ir.model.fields,field_description:viin_hr_overtime_attendance.field_overtime_plan_line_attendance_match__matched_hours
+msgid "Match Hours"
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model:ir.model.fields,field_description:viin_hr_overtime_attendance.field_hr_employee_overtime__matched_attendance_hours
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_attendance.view_hr_overtime_plan_form
+msgid "Matched Attendance"
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model:ir.model.fields,field_description:viin_hr_overtime_attendance.field_hr_overtime_plan__matched_attendance_hours
+#: model:ir.model.fields,field_description:viin_hr_overtime_attendance.field_hr_overtime_plan_line__matched_attendance_hours
+msgid "Matched Attendance Hours"
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model:ir.model,name:viin_hr_overtime_attendance.model_hr_overtime_plan
+#: model:ir.model.fields,field_description:viin_hr_overtime_attendance.field_overtime_plan_line_attendance_match__overtime_plan_id
+msgid "Overtime Plan"
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model:ir.model,name:viin_hr_overtime_attendance.model_hr_overtime_plan_line
+#: model:ir.model.fields,field_description:viin_hr_overtime_attendance.field_overtime_plan_line_attendance_match__overtime_plan_line_id
+msgid "Overtime Plan Line"
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model:ir.model,name:viin_hr_overtime_attendance.model_overtime_plan_line_attendance_match
+msgid "Overtime Plan Line Attendance Match"
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model:ir.model.fields,field_description:viin_hr_overtime_attendance.field_hr_attendance__overtime_plan_line_ids
+msgid "Overtime Plan Lines"
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model:ir.actions.act_window,name:viin_hr_overtime_attendance.action_overtime_plan_line_attendance_match
+msgid "Overtime Planning Attendance Match"
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model:ir.model.fields,field_description:viin_hr_overtime_attendance.field_hr_attendance__overtime_plan_ids
+msgid "Overtime Plans"
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model:ir.model,name:viin_hr_overtime_attendance.model_hr_overtime_reason
+msgid "Overtime Reason"
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model:ir.model.fields,field_description:viin_hr_overtime_attendance.field_hr_contract__overtime_recognition_mode
+#: model:ir.model.fields,field_description:viin_hr_overtime_attendance.field_res_company__overtime_recognition_mode
+msgid "Overtime Recognition Mode"
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model:ir.model.fields,field_description:viin_hr_overtime_attendance.field_hr_overtime_plan_line__recognition_mode
+#: model:ir.model.fields,field_description:viin_hr_overtime_attendance.field_hr_overtime_reason__recognition_mode
+msgid "Recognition Mode"
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model:ir.model.fields,field_description:viin_hr_overtime_attendance.field_hr_overtime_plan_line__attendance_ids
+msgid "Related Attendance"
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model:ir.model.fields,field_description:viin_hr_overtime_attendance.field_hr_overtime_plan__attendance_ids
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_attendance.view_hr_overtime_plan_line_form
+msgid "Related Attendances"
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_attendance.view_hr_overtime_plan_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_attendance.view_hr_overtime_plan_line_form
+msgid "Rematch Attendance"
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model:ir.model.fields,field_description:viin_hr_overtime_attendance.field_overtime_plan_line_attendance_match__date_start
+msgid "Start Date"
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model:ir.model.fields,help:viin_hr_overtime_attendance.field_hr_attendance__attendance_match_ids
+msgid ""
+"Technical field to store matching records which map the current attendance "
+"record with the related matched overtime plan lines"
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model:ir.model.fields,help:viin_hr_overtime_attendance.field_hr_attendance__overtime_plan_line_ids
+msgid ""
+"Technical field to store the overtime plan lines that match / cross this "
+"attendance."
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model:ir.model.fields,help:viin_hr_overtime_attendance.field_hr_overtime_plan__recognition_mode
+#: model:ir.model.fields,help:viin_hr_overtime_attendance.field_res_company__overtime_recognition_mode
+msgid ""
+"This indicates mode to recognize actual overtime against the plan which "
+"could be either By Plan or Attendance or Timesheet. Bridging modules will be"
+" required to have full options accordingly."
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model:ir.model.fields,help:viin_hr_overtime_attendance.field_hr_contract__overtime_recognition_mode
+msgid ""
+"This indicates mode to recognize actual overtime against the plan which could be either By Plan or Attendance or Timesheet. Bridging modules will be required to have full options accordingly.\n"
+"If this field is left empty, the value will be taken from the corresponding company's settings."
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model:ir.model.fields,field_description:viin_hr_overtime_attendance.field_hr_employee_overtime__unmatched_attendance_hours
+msgid "Unmatched Attendance"
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model:ir.model.fields,field_description:viin_hr_overtime_attendance.field_hr_overtime_plan_line__unmatched_attendance_hours
+msgid "Unmatched Attendance Hours"
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model:ir.model.fields,field_description:viin_hr_overtime_attendance.field_overtime_plan_line_attendance_match__unmatched_hours
+msgid "Unmatched Hours"
+msgstr ""
+
+#. module: viin_hr_overtime_attendance
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_attendance.view_hr_overtime_plan_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_attendance.view_hr_overtime_plan_line_form
+msgid "hours"
+msgstr ""

@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_repair_picking_manager,Repair Manager Stock Picking,stock.model_stock_picking,to_repair_access_group.group_repair_manager,1,1,1,0
+access_repair_stock_scrap_manager,Repair Manager Stock Scrap,stock.model_stock_scrap,to_repair_access_group.group_repair_manager,1,0,0,0

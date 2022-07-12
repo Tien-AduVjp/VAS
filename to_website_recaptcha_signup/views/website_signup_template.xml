@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="signup_form"
+              inherit_id="auth_signup.signup"
+              name="Signup Form Captcha">
+        <xpath expr="//button[@type='submit']" position="before">
+            <script>
+                function onSubmitSignupForm(token) {
+                    $('.oe_signup_form').submit();
+                }
+            </script>
+        </xpath>
+        <xpath expr="//button[@type='submit']" position="attributes">
+            <attribute name="class" separator=" " add="o_website_recaptcha" />
+            <attribute name="data-recaptcha-version">v3</attribute>
+            <attribute name="data-callback">onSubmitSignupForm</attribute>
+            <attribute name="data-action">submit</attribute>
+        </xpath>
+    </template>
+</odoo>

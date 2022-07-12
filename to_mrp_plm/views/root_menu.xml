@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="root_menu" name="PLM" web_icon="to_mrp_plm,static/description/icon.png"
+        groups="to_mrp_plm.group_plm_user" sequence="60"/>
+
+    <menuitem id="mrp_eco_menu_root" name="Changes" parent="root_menu" sequence="20"/>
+
+	<menuitem id="master_data_menu" name="Master Data" parent="root_menu" sequence="30"/>
+
+	<menuitem id="mrp_workcenter_menu" name="Work Centers" parent="master_data_menu"
+        action="mrp.mrp_workcenter_action" groups="mrp.group_mrp_routings" sequence="40"/>
+
+    <menuitem id="reporting_menu_root" name="Reporting" parent="root_menu" 
+    	groups="to_mrp_plm.group_plm_manager" sequence="50"/>
+        
+    <menuitem id="configuration_menu" name="Configuration" parent="root_menu"
+        groups="to_mrp_plm.group_plm_manager" sequence="60"/>
+</odoo>

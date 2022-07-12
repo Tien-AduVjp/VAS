@@ -1,0 +1,21 @@
+<odoo>
+	<record id="administrative_region_1" model="administrative.region">
+		<field name="name">Region I</field>
+		<field name="country_id" ref="base.vn"/>
+	</record>
+	
+	<record id="administrative_region_2" model="administrative.region">
+		<field name="name">Region II</field>
+		<field name="country_id" ref="base.vn"/>
+	</record>
+	
+	<record id="administrative_region_3" model="administrative.region">
+		<field name="name">Region III</field>
+		<field name="country_id" ref="base.vn"/>
+	</record>
+	
+	<record id="administrative_region_4" model="administrative.region">
+		<field name="name">Region IV</field>
+		<field name="country_id" ref="base.vn"/>
+	</record>
+</odoo>

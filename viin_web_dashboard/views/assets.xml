@@ -1,0 +1,20 @@
+<odoo>
+    <template id="assets_backend" name="viin_dashboard assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/viin_web_dashboard/static/src/js/viin_dashboard_model.js"/>
+            <script type="text/javascript" src="/viin_web_dashboard/static/src/js/viin_dashboard_renderer.js"/>
+            <script type="text/javascript" src="/viin_web_dashboard/static/src/js/viin_dashboard_controller.js"/>
+            <script type="text/javascript" src="/viin_web_dashboard/static/src/js/viin_dashboard_view.js"/>
+            <link rel="stylesheet" type="text/scss" href="/viin_web_dashboard/static/src/scss/viin_dashboard.scss"/>
+        </xpath>
+    </template>
+    <template id="qunit_suite" name="viiin web dashboard tests" inherit_id="web.qunit_suite">
+        <xpath expr="//script[last()]" position="after">
+            <script type="text/javascript" src="/viin_web_dashboard/static/tests/helpers/test_utils_mock.js"/>
+            <script type="text/javascript" src="/viin_web_dashboard/static/tests/helpers/test_utils_create.js"/>
+            <script type="text/javascript" src="/viin_web_dashboard/static/tests/helpers/test_utils.js"/>
+            <script type="text/javascript" src="/viin_web_dashboard/static/tests/helpers/sample_cohort_data.js"/>
+            <script type="text/javascript" src="/viin_web_dashboard/static/tests/viin_dashboard_test.js"/>
+        </xpath>
+    </template>
+</odoo>

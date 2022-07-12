@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_repair_fee_user,Repair Fee user,repair.model_repair_fee,to_repair_access_group.group_repair_manager,1,1,1,1
+access_repair_user,Repair user,repair.model_repair_order,to_repair_access_group.group_repair_manager,1,1,1,1
+access_stock_production_lot_user,stock.production.lot user,stock.model_stock_production_lot,to_repair_access_group.group_repair_manager,1,1,1,1
+access_repair_line_user,repair.line user,repair.model_repair_line,to_repair_access_group.group_repair_manager,1,1,1,1
+access_account_tax_user,account.tax,account.model_account_tax,to_repair_access_group.group_repair_manager,1,0,0,0
+access_repair_user_stock_move,Repair user stock move,stock.model_stock_move,to_repair_access_group.group_repair_manager,1,1,1,0
+access_repair_tag_user,Repair Tags user,repair.model_repair_tags,to_repair_access_group.group_repair_manager,1,1,1,1

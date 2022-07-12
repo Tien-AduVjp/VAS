@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data noupdate="1">
+		<record id="base.main_company" model="res.company">
+			<field name="vninvoice_api_username">tvt-test</field>
+			<field name="vninvoice_api_password">1234567</field>
+		</record>
+	</data>
+</odoo>

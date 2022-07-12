@@ -1,0 +1,53 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_location_warehouse
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-10 06:26+0000\n"
+"PO-Revision-Date: 2020-03-10 06:26+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_location_warehouse
+#: model:ir.model,name:to_location_warehouse.model_stock_location
+msgid "Inventory Locations"
+msgstr ""
+
+#. module: to_location_warehouse
+#: model:ir.model.fields,help:to_location_warehouse.field_stock_location__warehouse_id
+msgid "The warehouse to which this location belongs"
+msgstr ""
+
+#. module: to_location_warehouse
+#: model:ir.model,name:to_location_warehouse.model_stock_warehouse
+#: model:ir.model.fields,field_description:to_location_warehouse.field_stock_location__warehouse_id
+msgid "Warehouse"
+msgstr ""
+
+#. module: to_location_warehouse
+#: model:ir.model.fields,field_description:to_location_warehouse.field_stock_location__warehouse_ids
+msgid "Warehouses"
+msgstr ""
+
+#. module: to_location_warehouse
+#: code:addons/to_location_warehouse/models/stock_location.py:0
+#, python-format
+msgid ""
+"You cannot point a location to more than one warehouse. In other words, "
+"Multiple warehouses cannot use the same location."
+msgstr ""
+
+#. module: to_location_warehouse
+#: code:addons/to_location_warehouse/models/stock_warehouse.py:0
+#, python-format
+msgid ""
+"You cannot set the location '%s' as the view location for this warehouse "
+"since the location is being used as the view location for the warehouse '%s'"
+msgstr ""

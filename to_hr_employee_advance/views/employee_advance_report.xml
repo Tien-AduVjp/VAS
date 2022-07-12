@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="view_hr_employee_advance_pivot" model="ir.ui.view">
+			<field name="name">employee.advance.pivot</field>
+			<field name="model">employee.advance</field>
+			<field name="arch" type="xml">
+				<pivot string="Employee Advance Pivot">
+					<field name="employee_id" type="row" />
+					<field name="date" type="col" />
+					<field name="amount" type="measure" />
+				</pivot>
+			</field>
+		</record>
+		
+		<record id="view_hr_employee_advance_graph" model="ir.ui.view">
+			<field name="name">employee.advance.graph</field>
+			<field name="model">employee.advance</field>
+			<field name="arch" type="xml">
+				<graph string="Employee Advance Graph" type="pivot">
+					<field name="employee_id" type="row" />
+					<field name="date" interval="month" type="col" />
+					<field name="amount" type="measure" />
+				</graph>
+			</field>
+		</record>
+
+		<record id="action_hr_employee_advance_pivot_graph" model="ir.actions.act_window">
+			<field name="name">Employee Advance Analysis</field>
+			<field name="res_model">employee.advance</field>
+			<field name="view_mode">pivot,graph</field>
+			<field name="view_id"></field>  <!-- force empty -->
+			<field name="context">{}</field>
+		</record>
+
+		<menuitem name="Reports" parent="employee_advance_root_menu"
+			sequence="2" id="hr_employee_advance_report_menu" action="action_hr_employee_advance_pivot_graph"
+			groups="to_hr_employee_advance.group_employee_advance_manager" />
+	</data>
+</odoo>

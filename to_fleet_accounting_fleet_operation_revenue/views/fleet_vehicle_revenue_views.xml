@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="fleet_vehicle_revenues_view_form">
+			<field name="name">fleet.vehicle.revenue.form</field>
+			<field name="model">fleet.vehicle.revenue</field>
+			<field name="inherit_id" ref="to_fleet_vehicle_revenue.fleet_vehicle_revenues_view_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='date']" position="after">
+					<field name="trip_id" attrs="{'invisible':[('trip_id','=', False)]}" />
+					<field name="route_id" attrs="{'invisible':[('route_id','=', False)]}" />
+					<field name="trip_section_id" />
+					<field name="route_section_id" groups="base.group_no_one" />
+					<field name="trip_waypoint_id" />
+					<field name="address_id" groups="base.group_no_one" />
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="fleet_vehicle_revenues_view_search">
+			<field name="name">fleet.vehicle.revenue.search</field>
+			<field name="model">fleet.vehicle.revenue</field>
+			<field name="inherit_id" ref="to_fleet_vehicle_revenue_accounting.fleet_vehicle_revenues_view_search" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='date']" position="after">
+					<separator />
+					<field name="trip_id" />
+					<field name="route_id" />
+					<field name="address_id" />
+					<field name="route_section_id" />
+				</xpath>
+				<xpath expr="//filter[@name='invoiceable']" position="after">
+					<separator />
+					<filter name="has_address" domain="[('address_id','!=',False)]"
+						string="Address/Location" help="The revenues that concern addresses during the trips" />
+					<filter name="has_route_section" domain="[('route_section_id','!=',False)]"
+						string="Route Section" help="The revenues that concern route sections during the trips" />
+					<filter name="has_route" domain="[('route_id','!=',False)]"
+						string="Route" help="The revenues that concern routes during the trips." />
+					<filter name="has_trip" domain="[('trip_id','!=',False)]"
+						string="Trip" help="The revenues that have been registered for trips." />
+				</xpath>
+				<xpath expr="//group/filter[@name='groupby_currency_id']"
+					position="after">
+					<separator />
+					<filter name="groupby_trip_id" context="{'group_by': 'trip_id'}"
+						string="Trip" />
+					<filter name="groupby_route_id" context="{'group_by': 'route_id'}"
+						string="Route" />
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

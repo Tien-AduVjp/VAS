@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+	<data>
+		<record id="social_media_view_form" model="ir.ui.view">
+			<field name="name">Social Media</field>
+			<field name="model">social.media</field>
+			<field name="inherit_id" ref="viin_social_facebook.social_media_view_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//header" position="inside">
+					<button name="action_token_60day" string="Convert Token to 60 days" type="object" class="oe_highlight"
+							attrs="{'invisible': [('social_provider','!=','facebook')]}"/>
+				</xpath>
+				<xpath expr="//field[@name='facebook_access_token']" position="before">
+					<field name="fb_exchange_token"/>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

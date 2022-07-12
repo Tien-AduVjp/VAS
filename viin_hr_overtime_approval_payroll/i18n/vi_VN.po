@@ -1,0 +1,38 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_hr_overtime_approval_payroll
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-07 07:38+0000\n"
+"PO-Revision-Date: 2021-10-07 07:38+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_hr_overtime_approval_payroll
+#: model:ir.model,name:viin_hr_overtime_approval_payroll.model_approval_request
+msgid "Approval Request"
+msgstr "Đề nghị phê duyệt"
+
+#. module: viin_hr_overtime_approval_payroll
+#: model:ir.model,name:viin_hr_overtime_approval_payroll.model_hr_payslip
+msgid "Pay Slip"
+msgstr "Phiếu lương"
+
+#. module: viin_hr_overtime_approval_payroll
+#: code:addons/viin_hr_overtime_approval_payroll/models/approval_request.py:0
+#, python-format
+msgid ""
+"You cannot refuse an approval request '%s' while it still has a reference to"
+" the payslip '%s' which is not in draft status. Please have the payslip set "
+"to draft first."
+msgstr ""
+"Bạn không thể từ chối đề nghị phê duyệt tăng ca '%s' trong khi nó vẫn "
+"đang được sử dụng bởi phiếu lương '%s' mà không ở trạng thái dự thảo. "
+"Vui lòng đặt phiếu lương về trạng thái dự thảo trước."

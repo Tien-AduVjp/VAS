@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<menuitem id="shift_rotation_menu_root" name="Shift Rotation"
+			parent="hr.menu_hr_root" sequence="4" action="shift_scheduling_line_action"
+			groups="hr.group_hr_user" />
+		<menuitem id="shift_scheduling_line_menu" name="Shift Rotation"
+			sequence="1" action="shift_scheduling_line_action" parent="shift_rotation_menu_root" />
+	</data>
+</odoo>

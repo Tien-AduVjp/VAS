@@ -1,0 +1,107 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_uom_subscription
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-12 03:33+0000\n"
+"PO-Revision-Date: 2021-10-22 09:32+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_uom_subscription
+#: model:uom.uom,name:to_uom_subscription.uom_subscription_day
+msgid "Day(s)"
+msgstr "Ngày"
+
+#. module: to_uom_subscription
+#: model:uom.uom,name:to_uom_subscription.uom_subscription_hour
+msgid "Hour(s)"
+msgstr "Giờ"
+
+#. module: to_uom_subscription
+#: model:ir.model.fields,help:to_uom_subscription.field_uom_category__concat_uom_name
+msgid ""
+"If checked, the display name of Units of Measure of this category will be "
+"concatenated with the category's name"
+msgstr ""
+"Nếu đánh dấu, tên hiển thị của Đơn vị tính thuộc nhóm này sẽ được nối thêm "
+"với tên của nhóm."
+
+#. module: to_uom_subscription
+#: model:uom.uom,name:to_uom_subscription.uom_subscription_month
+msgid "Month(s)"
+msgstr "Tháng"
+
+#. module: to_uom_subscription
+#: model:ir.model.fields,field_description:to_uom_subscription.field_uom_category__concat_uom_name
+msgid "Name Concatenation"
+msgstr "Nối tên"
+
+#. module: to_uom_subscription
+#: model:ir.model,name:to_uom_subscription.model_uom_uom
+msgid "Product Unit of Measure"
+msgstr "Đơn vị tính của sản phẩm"
+
+#. module: to_uom_subscription
+#: model:ir.model,name:to_uom_subscription.model_uom_category
+msgid "Product UoM Categories"
+msgstr "Nhóm Đơn vị tính Sản phẩm"
+
+#. module: to_uom_subscription
+#: model:ir.model.fields.selection,name:to_uom_subscription.selection__uom_category__measure_type__subscription
+#: model:uom.category,name:to_uom_subscription.uom_categ_subscription
+msgid "Subscription"
+msgstr "Thuê bao"
+
+#. module: to_uom_subscription
+#: model:ir.model.fields,field_description:to_uom_subscription.field_uom_category__measure_type
+msgid "Type of Measure"
+msgstr "Kiểu Đo lường"
+
+#. module: to_uom_subscription
+#: model:uom.category,name:to_uom_subscription.uom_categ_subscription_user
+msgid "User Subscription"
+msgstr "Thuê bao người dùng"
+
+#. module: to_uom_subscription
+#: model:uom.uom,name:to_uom_subscription.uom_subscription_user_day
+msgid "User/Day"
+msgstr "Người dùng/Ngày"
+
+#. module: to_uom_subscription
+#: model:uom.uom,name:to_uom_subscription.uom_subscription_user_hour
+msgid "User/Hour"
+msgstr "Người dùng/Giờ"
+
+#. module: to_uom_subscription
+#: model:uom.uom,name:to_uom_subscription.uom_subscription_user_month
+msgid "User/Month"
+msgstr "Người dùng/Tháng"
+
+#. module: to_uom_subscription
+#: model:uom.uom,name:to_uom_subscription.uom_subscription_user_year
+msgid "User/Year"
+msgstr "Người dùng/Năm"
+
+#. module: to_uom_subscription
+#: model:uom.uom,name:to_uom_subscription.subscription_uom_week
+msgid "Week(s)"
+msgstr "Tuần"
+
+#. module: to_uom_subscription
+#: model:uom.uom,name:to_uom_subscription.uom_subscription_year
+msgid "Year(s)"
+msgstr "Năm"
+
+#. module: to_uom_subscription
+#: code:addons/to_uom_subscription/models/uom_category.py:0
+#, python-format
+msgid "You cannot delete this UoM Category as it is used by the system."
+msgstr "Bạn không thể xóa Nhóm đơn vị đo lường này vì nó được sử dụng bởi hệ thống."

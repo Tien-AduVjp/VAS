@@ -1,0 +1,52 @@
+module: to_hr_employee_advance, application=True, tạo category mới cho ứng dụng này
+
+Kế thừa: account, hr
+
+
+Khi làm thủ tục liên quan tạm ứng: chọn nhân viên; kiểm tra nhân viên có được link với partner chưa (trường address_home_id)
+
+1. Menu: Làm menu cấp 1 riêng cho ứng dụng này
+
+2. Cấu hình:
+- Kích hoạt phê duyệt 2 lần khi số tiền lớn hơn xxxx
+
+3. Nhóm:
+- Employee: là nhóm có sắn (base.group_user), mọi employee đều có thể tạm ứng
+- Employee Advance Approver: nhóm mới, được quyền phê duyệt đề nghị tạm ứng của nhân viên dưới quyền
+- Manager: toàn quyền, bao gồm cả phê duyệt lần 2 nếu tính năng phê duyệt lần 2 được kích hoạt
+
+
+1. Đề nghị tạm ứng:
+: Nhân viên tạo đề nghị, người quản lý cấp trên (thiết lập ở hồ sơ nhân viên) mà thuộc group Employee Advance Approver có quyền duyệt.
+Trong trường hợp phải phê duyệt lần 2 thì chỉ người thuộc group Manager mới có quyền
+2. Thanh toán mua hàng/bán hàng:
+- Có thể được thực hiện thông qua sổ nhật ký tạm ứng để ghi nhận khoản tiền thu/trả vào/từ tài khoản tạm ứng của nhân viên
+- Sổ nhật ký có thêm trường để phân biệt đây là sổ nhật ký tạm ứng. Nay gọi là Sổ NK Tạm ứng
+3. Tài khoản phải thu phải trả của nhân viên: lấy ở thiết lập trên hồ sơ partner mà gắn với nhân viên đó ( qua trường address_home_id trên hồ sơ nhân viên) 
+
+4. Hạch toán:
+- duyệt hoàn toàn đề nghị tạm ứng: 
+N. 141
+C. 331,334 (lấy ở tk phải trả trên hồ sơ partner gắn với nhân viên)
+
+-Chi tạm ứng nhân viên: Dùng chức năng chuyển tiền nội bộ (chuyển từ tiền mặt/ngân hàng => sổ tạm ứng)
+C.111,112
+N. 331,334 (lấy ở tk phải trả trên hồ sơ partner gắn với nhân viên)
+Lưu ý cần đối soát cần thận chỗ này vì người dùng có thể thay đổi tài khoản bất kỳ lúc nào
+
+- Thanh quyết toán tạm ứng: được thực hiện bằng cách tìm số dư của tài khoản tạm ứng thiết lập trên sổ NK Tạm ứng (cụ thể: với kế toán VN thường chọn 141):
++) Nếu số dư (nợ - có) > 0: có nghĩa nhân viên đang nợ tiền công ty, làm bút toán để hạch toán Có 141 và Nợ 131 (tài khoản phải thu ở hồ sơ đối tác gắn với employee).
++) Nếu số dư < 0: có nghĩa cty nợ tiền nhân viên, làm bút toán N.141 có 331/334
+
+
+Report: pivot/graph
+Điểm quan trọng trong report: thống kê được tình hình tạm ứng theo từng nhân viên, phòng ban, theo thời gian, lọc được trạng thái của đề nghị tạm ứng: đã duyệt, đã thanh toán, chờ duyệt, v.v.
+
+
+
+module: to_l10n_vn_employee_advance:
+Kế thừa: to_hr_employee_advance, l10n_vn
+autoinstall = True
+
+Khi đánh dấu một sổ nhật ký là sổ NK Tạm ứng (onchange) thì tự động chọn tài khoản nợ/có là 141
+

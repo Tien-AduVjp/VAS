@@ -1,0 +1,216 @@
+<odoo>
+	<data noupdate="0">
+		<record id="email_template_helpdesk_ticket_new" model="mail.template">
+			<field name="name">Ticket: New</field>
+			<field name="model_id" ref="viin_helpdesk.model_helpdesk_ticket" />
+			<field name="subject">Ticket ${object.name or 'n/a' } (#${object.id})</field>
+			<field name="partner_to">${object.partner_id.id if object.partner_id.email and object.send_notification_email else ''}</field>
+			<field name="body_html" type="html">
+				<div style="margin: 0px; padding: 0px;">
+					<p style="margin: 0px; padding: 0px; font-size: 13px;">
+						Dear${' ' + object.partner_id.name if object.partner_id.name else ' Madam/Sir'},
+						<br />
+						<br />
+						Your Ticket
+						<strong>${object.name or 'n/a' } (#${object.id})</strong> have been created.
+						<br />
+						If you have any questions, please do not hesitate to contact us.
+						<br />
+						<br />
+						Best regards,
+					</p>
+				</div>
+			</field>
+			<field name="lang">${object.get_lang()}</field>
+			<field name="auto_delete" eval="True"/>
+            <field name="user_signature" eval="False"/>
+		</record>
+	
+		<record id="email_template_helpdesk_ticket_assigned" model="mail.template">
+			<field name="name">Ticket: Assigned</field>
+			<field name="model_id" ref="viin_helpdesk.model_helpdesk_ticket" />
+			<field name="subject">Ticket ${object.name or 'n/a' } (#${object.id})</field>
+			<field name="email_to">${(object.email_from if not object.sudo().partner_id.email or object.sudo().partner_id.email != object.email_from else '') | safe}</field>
+			<field name="partner_to">${object.prepare_partner_to_mail_tempalte_data()}</field>
+			<field name="body_html" type="html">
+				<div style="margin: 0px; padding: 0px;">
+					<p style="margin: 0px; padding: 0px; font-size: 13px;">
+						Dear${' '+ object.partner_id.name if object.partner_id.name else ''},
+						<br />
+						<br />
+						Your Ticket
+						<strong>${object.name or 'n/a' } (#${object.id})</strong> have been assigned. We will try to complete it as quickly as possible.
+						<br />
+						If you have any questions, please do not hesitate to contact us.
+						<br />
+						<br />
+						Best regards,
+					</p>
+				</div>
+			</field>
+			<field name="lang">${object.get_lang()}</field>
+			<field name="auto_delete" eval="True"/>
+            <field name="user_signature" eval="True"/>
+		</record>
+
+		<record id="email_template_helpdesk_ticket_resolved"
+			model="mail.template">
+			<field name="name">Ticket: Resolved</field>
+			<field name="model_id" ref="viin_helpdesk.model_helpdesk_ticket" />
+			<field name="subject">Ticket ${object.name or 'n/a' } (#${object.id})</field>
+			<field name="email_to">${(object.email_from if not object.sudo().partner_id.email or object.sudo().partner_id.email != object.email_from else '') | safe}</field>
+			<field name="partner_to">${object.prepare_partner_to_mail_tempalte_data()}</field>
+			<field name="body_html" type="html">
+				<div style="margin: 0px; padding: 0px;">
+					<p style="margin: 0px; padding: 0px; font-size: 13px;">
+						Dear${' '+ object.partner_id.name if object.partner_id.name else ''},
+						<br />
+						<br />
+						Your Ticket
+						<strong>${object.name or 'n/a' } (#${object.id})</strong> has been processed successfully.
+						<br />
+						If you have any questions, please do not hesitate to contact us.
+						<br />
+						<br />
+						Best regards,
+					</p>
+				</div>
+			</field>
+			<field name="lang">${object.get_lang()}</field>
+			<field name="auto_delete" eval="True"/>
+            <field name="user_signature" eval="True"/>
+		</record>
+		
+		<record id="email_template_helpdesk_ticket_cancelled" model="mail.template">
+			<field name="name">Ticket: Cancelled</field>
+			<field name="model_id" ref="viin_helpdesk.model_helpdesk_ticket" />
+			<field name="subject">Ticket (Ref ${object.name or 'n/a' })</field>
+			<field name="email_to">${(object.email_from if not object.sudo().partner_id.email or object.sudo().partner_id.email != object.email_from else '') | safe}</field>
+			<field name="partner_to">${object.prepare_partner_to_mail_tempalte_data()}</field>
+			<field name="body_html" type="html">
+				<div style="margin: 0px; padding: 0px;">
+					<p style="margin: 0px; padding: 0px; font-size: 13px;">
+						Dear${' '+ object.partner_id.name if object.partner_id.name else ''},
+						<br />
+						<br />
+						Your Ticket
+						<strong>${object.name or 'n/a' } (#${object.id})</strong> have been cancelled.
+						<br />
+						If you have any questions, please do not hesitate to contact us.
+						<br />
+						<br />
+						Best regards,
+					</p>
+				</div>
+			</field>
+			<field name="lang">${object.get_lang()}</field>
+			<field name="auto_delete" eval="True"/>
+            <field name="user_signature" eval="True"/>
+		</record>
+
+		<!-- Mail sent to Request a rating for a Ticket -->
+
+		<record id="rating_ticket_email_template" model="mail.template">
+			<field name="name">Ticket: Rating Request</field>
+			<field name="model_id" ref="viin_helpdesk.model_helpdesk_ticket" />
+			<field name="subject">${object.company_id.name}: Satisfaction Survey</field>
+			<field name="email_to">${(object.email_from if not object.sudo().partner_id.email or object.sudo().partner_id.email != object.email_from else '') | safe}</field>
+			<field name="email_from">${(object.rating_get_rated_partner_id().email_formatted if object.rating_get_rated_partner_id() else user.email_formatted) | safe}</field>
+			<field name="partner_to">${object.prepare_partner_to_mail_tempalte_data()}</field>
+			<field name="body_html" type="html">
+				<div>
+					% set access_token = object.rating_get_access_token()
+					% set partner = object.rating_get_partner_id()
+					<table border="0" cellpadding="0" cellspacing="0" width="590"
+						style="width:100%; margin:0px auto;">
+						<tbody>
+							<tr>
+								<td valign="top" style="font-size: 13px;">
+									% if partner.name:
+									Hello ${partner.name},
+									<br />
+									<br />
+									% else:
+									Hello,
+									<br />
+									<br />
+									% endif
+									Please take a moment to rate our services related to the ticket "
+									<strong>${object.name or 'n/a' } (#${object.id})</strong>
+									"
+									% if object.rating_get_rated_partner_id().name:
+									assigned to
+									<strong>${object.rating_get_rated_partner_id().name}</strong>
+									.
+									<br />
+									% else:
+									.
+									<br />
+									% endif
+								</td>
+							</tr>
+							<tr>
+								<td style="text-align: center;">
+									<table border="0" cellpadding="0" cellspacing="0" width="590" summary="o_mail_notification" style="width:100%; margin: 32px 0px 32px 0px;">
+										<tr>
+											<td style="font-size: 13px;">
+												<strong>Tell us how you feel about our service</strong>
+												<br />
+												<span style="text-color: #888888">(click on one of these smileys)</span>
+											</td>
+										</tr>
+										<tr>
+											<td style="font-size: 13px;">
+												<table style="width:100%;text-align:center;">
+													<tr>
+														<td>
+															<a href="/rating/${access_token}/10">
+																<img alt="Satisfied" src="/rating/static/src/img/rating_10.png" title="Satisfied" />
+															</a>
+														</td>
+														<td>
+															<a href="/rating/${access_token}/5">
+																<img alt="Not satisfied" src="/rating/static/src/img/rating_5.png" title="Not satisfied" />
+															</a>
+														</td>
+														<td>
+															<a href="/rating/${access_token}/1">
+																<img alt="Highly Dissatisfied" src="/rating/static/src/img/rating_1.png" title="Highly Dissatisfied" />
+															</a>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td valign="top" style="font-size: 13px;">
+									We appreciate your feedback. It helps us to improve continuously. 
+									% if object.rating_status == 'stage':
+									<br />
+									<span
+										style="margin: 0px 0px 0px 0px; font-size: 12px; opacity: 0.5; color: #454748;">
+										This customer survey has been sent because your ticket has been moved to the stage <b>${object.stage_id.name}</b>
+									</span>
+									% endif
+									% if object.rating_status == 'periodic':
+									<br />
+									<span
+										style="margin: 0px 0px 0px 0px; font-size: 12px; opacity: 0.5; color: #454748;">
+										This customer survey is sent <b>${object.rating_status_period}</b> as long as the ticket is in the <b>${object.stage_id.name}</b> stage.
+									</span>
+									% endif
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</field>
+			<field name="lang">${object.get_lang()}</field>
+			<field name="auto_delete" eval="True" />
+			<field name="user_signature" eval="True" />
+		</record>
+	</data>
+</odoo>

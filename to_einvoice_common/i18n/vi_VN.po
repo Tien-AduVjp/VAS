@@ -1,0 +1,1136 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_einvoice_common
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-16 02:58+0000\n"
+"PO-Revision-Date: 2022-03-16 02:58+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_einvoice_common
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.portal_invoice_page
+msgid ""
+"<i class=\"fa fa-file-code-o\"/>\n"
+"\t\t\t\t\t\tXML"
+msgstr ""
+
+#. module: to_einvoice_common
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.res_config_settings_view_form
+msgid ""
+"<span class=\"o_form_label\">API Version</span>\n"
+"\t\t\t\t\t\t\t\tYou should check the version of your e-invoice webservices before choosing versions here"
+msgstr ""
+"<span class=\"o_form_label\">Phiên bản API</span>\n"
+"\t\t\t\t\t\t\t\tBạn nên kiểm tra phiên bản của dịch vụ web hóa đơn điện tử trước khi chọn phiên bản tại đây"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_move__einvoice_api_version
+#: model:ir.model.fields,field_description:to_einvoice_common.field_res_company__einvoice_api_version
+#: model:ir.model.fields,field_description:to_einvoice_common.field_res_config_settings__einvoice_api_version
+msgid "API Version"
+msgstr "Phiên bản API"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_einvoice_error_notification__action
+msgid "Action"
+msgstr "Hành động"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields.selection,name:to_einvoice_common.selection__account_move__einvoice_state__adjusted
+msgid "Adjusted"
+msgstr "Đã điều chỉnh"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields.selection,name:to_einvoice_common.selection__account_einvoice_error_notification__action__2
+msgid "Adjustment"
+msgstr "Điều chỉnh"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_invoice_einvoice_adjustment__adjustment_record
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_move__adjustment_record
+msgid "Adjustment File Agreement (PDF)"
+msgstr "Biên bản điều chỉnh (PDF)"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_invoice_einvoice_adjustment__adjustment_record_name
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_move__adjustment_record_name
+msgid "Adjustment File Name"
+msgstr ""
+
+#. module: to_einvoice_common
+#: code:addons/to_einvoice_common/models/account_move_line.py:0
+#, python-format
+msgid "Adjustment Line %s is not a reversal of any original invoice line"
+msgstr ""
+"Dòng điều chỉnh %s không phải là dòng điều chỉnh cho bất cứ dòng hóa đơn gốc"
+" nào"
+
+#. module: to_einvoice_common
+#: code:addons/to_einvoice_common/models/account_move_line.py:0
+#, python-format
+msgid "All the invoice lines must belong to the same invoice."
+msgstr "Tất cả các dòng hoá đơn phải thuộc về cùng một hoá đơn."
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,field_description:to_einvoice_common.field_res_company__sinvoice_exchange_file_as_attachment
+#: model:ir.model.fields,field_description:to_einvoice_common.field_res_config_settings__sinvoice_exchange_file_as_attachment
+msgid "Attach Invoice Converted Version"
+msgstr "Đính kèm phiên bản chuyển đổi hóa đơn"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,field_description:to_einvoice_common.field_res_company__sinvoice_representation_file_as_attachment
+#: model:ir.model.fields,field_description:to_einvoice_common.field_res_config_settings__sinvoice_representation_file_as_attachment
+msgid "Attach Invoice Repensentation Version"
+msgstr "Đính kèm phiên bản thể hiện hóa đơn"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_bank_statement_import_journal_creation__einvoice_auto_issue
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_journal__einvoice_auto_issue
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_move__einvoice_auto_issue
+#: model:ir.model.fields,field_description:to_einvoice_common.field_res_company__einvoice_auto_issue
+#: model:ir.model.fields,field_description:to_einvoice_common.field_res_config_settings__einvoice_auto_issue
+msgid "Auto Issue"
+msgstr "Tự dộng xuất hóa đơn điện tử"
+
+#. module: to_einvoice_common
+#: model:ir.actions.server,name:to_einvoice_common.ir_cron_auto_issue_einvoice_ir_actions_server
+#: model:ir.cron,cron_name:to_einvoice_common.ir_cron_auto_issue_einvoice
+#: model:ir.cron,name:to_einvoice_common.ir_cron_auto_issue_einvoice
+msgid "Auto Issue E-invoices"
+msgstr "Tự dộng xuất hóa đơn điện tử"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,help:to_einvoice_common.field_account_bank_statement_import_journal_creation__send_mail_einvoice_disabled
+#: model:ir.model.fields,help:to_einvoice_common.field_account_journal__send_mail_einvoice_disabled
+msgid ""
+"By default, Odoo will replace it's standard invoice PDF with E-Invoice PDF "
+"when E-Invoice is enabled for the invoice. By checking this, you will be "
+"able to disable such behaviour for invoices of this journal to fallback to "
+"the standard behaviour"
+msgstr ""
+"Mặc định, Odoo sẽ thay thế bản in hoá đơn PDF mặc định của nó bằng hoá đơn "
+"PDF của E-Invoie nếu có ở hoá đơn. Bằng việc đánh dấu vào đây, bạn sẽ có thể"
+" vô hiệu hoá cách hành xử này đối với toàn bộ hoá đơn của sổ nhật ký này để "
+"quay về cách hàng xử tiêu chuẩn"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields.selection,name:to_einvoice_common.selection__account_einvoice_error_notification__action__1
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.account_einvoice_error_notification_view_form
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.account_invoice_einvoice_adjusment_view_form
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.view_account_invoice_einvoice_cancel
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_invoice_einvoice_cancel__additional_reference_date
+msgid "Cancellation Date"
+msgstr "Ngày hủy"
+
+#. module: to_einvoice_common
+#: code:addons/to_einvoice_common/wizard/account_invoice_einvoice_adjustment.py:0
+#, python-format
+msgid ""
+"Cannot issue e-invoice because the original invoice %s is not in '%s' "
+"e-invoice state"
+msgstr ""
+"Không thể xuất hóa đơn điện tử bởi vì hóa đơn gốc %s không nằm trong trạng "
+"thái '%s'"
+
+#. module: to_einvoice_common
+#: code:addons/to_einvoice_common/wizard/account_invoice_einvoice_adjustment.py:0
+#, python-format
+msgid ""
+"Cannot issue e-invoice because this invoice is not a reversal of any "
+"customer invoice"
+msgstr ""
+"Không thể xuất hóa đơn điện tử bởi vì hóa đơn này không phải là hóa đơn điều"
+" chỉnh của bất kỳ hóa đơn khách hàng nào"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,help:to_einvoice_common.field_account_bank_statement_import_journal_creation__einvoice_send_mail_option
+#: model:ir.model.fields,help:to_einvoice_common.field_account_journal__einvoice_send_mail_option
+msgid ""
+"Choose which version of E-Invoice will be available for mail sending and "
+"download and print from customer portal."
+msgstr ""
+"Chọn phiên bản của hóa đơn điện tử sẽ khả dụng cho việc gửi mail và tải "
+"xuống và in từ cổng thông tin khách hàng."
+
+#. module: to_einvoice_common
+#: model:ir.model,name:to_einvoice_common.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_bank_statement_import_journal_creation__company_einvoice_provider
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_journal__company_einvoice_provider
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_move__company_einvoice_provider
+msgid "Company E-Invoice Provider"
+msgstr "Nhà cung cấp E-Invoice"
+
+#. module: to_einvoice_common
+#: model:ir.model,name:to_einvoice_common.model_res_config_settings
+msgid "Config Settings"
+msgstr "Thiết lập Cấu hình"
+
+#. module: to_einvoice_common
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.account_einvoice_error_notification_view_form
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.account_invoice_einvoice_adjusment_view_form
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.view_account_invoice_einvoice_cancel
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: to_einvoice_common
+#: model:ir.model,name:to_einvoice_common.model_res_partner
+msgid "Contact"
+msgstr "Danh bạ"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields.selection,name:to_einvoice_common.selection__account_journal__einvoice_send_mail_option__converted
+msgid "Converted Version"
+msgstr "Phiên bản chuyển đổi"
+
+#. module: to_einvoice_common
+#: code:addons/to_einvoice_common/models/account_move.py:0
+#, python-format
+msgid ""
+"Could not download E-invoice as the invoice %s is not a customer invoice"
+msgstr ""
+"Không thể tải xuống Hóa đơn điện tử vì hóa đơn %s không phải là hóa đơn của "
+"khách hàng"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_einvoice_error_notification__create_uid
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_invoice_einvoice_adjustment__create_uid
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_invoice_einvoice_cancel__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_einvoice_error_notification__create_date
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_invoice_einvoice_adjustment__create_date
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_invoice_einvoice_cancel__create_date
+msgid "Created on"
+msgstr "Được tạo vào"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_bank_statement_import_journal_creation__send_mail_einvoice_disabled
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_journal__send_mail_einvoice_disabled
+msgid "Disable Send E-Invoice PDF by email"
+msgstr "Vô hiệu hoá Gửi email E-Invoice"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_einvoice_error_notification__display_name
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_invoice_einvoice_adjustment__display_name
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_invoice_einvoice_cancel__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields.selection,name:to_einvoice_common.selection__account_journal__einvoice_send_mail_option__display
+msgid "Display Version"
+msgstr "Phiên bản thể hiện"
+
+#. module: to_einvoice_common
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.view_move_form
+msgid "Download E-Invoice Converted"
+msgstr "Tải E-Invoice bản chuyển đổi"
+
+#. module: to_einvoice_common
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.view_move_form
+msgid "Download E-Invoice Display Version"
+msgstr "Tải E-Invoice bản thể hiện"
+
+#. module: to_einvoice_common
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.view_move_form
+msgid "Download the invoice file converted from the electronic invoice."
+msgstr "Tải xuống tệp hóa đơn được chuyển đổi từ hóa đơn điện tử."
+
+#. module: to_einvoice_common
+#: model:ir.model.fields.selection,name:to_einvoice_common.selection__account_move__einvoice_error_notif_state__draft
+msgid "Draft"
+msgstr "Bản nháp"
+
+#. module: to_einvoice_common
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.view_account_journal_form
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.view_move_form
+msgid "E-Invoice"
+msgstr "Hóa đơn điện tử"
+
+#. module: to_einvoice_common
+#: model:ir.actions.act_window,name:to_einvoice_common.account_invoice_einvoice_cancel_action
+#: model:ir.model,name:to_einvoice_common.model_account_invoice_einvoice_adjustment
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.account_invoice_einvoice_adjusment_view_form
+msgid "E-Invoice Adjustment Wizard"
+msgstr "Đồ thuật hóa đơn điện tử điều chỉnh giảm"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_move__einvoice_cancellation_date
+msgid "E-Invoice Cancellation Date"
+msgstr "Ngày huỷ hoá đơn"
+
+#. module: to_einvoice_common
+#: model:ir.actions.act_window,name:to_einvoice_common.action_account_invoice_einvoice_cancel
+#: model:ir.model,name:to_einvoice_common.model_account_invoice_einvoice_cancel
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.view_account_invoice_einvoice_cancel
+msgid "E-Invoice Cancellation Wizard"
+msgstr "Hủy Hóa đơn điện tử"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_bank_statement_import_journal_creation__einvoice_disabled
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_journal__einvoice_disabled
+msgid "E-Invoice Disabled"
+msgstr "Vô hiệu E-Invoice"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_bank_statement_import_journal_creation__einvoice_enabled
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_journal__einvoice_enabled
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_move__einvoice_enabled
+msgid "E-Invoice Enabled"
+msgstr "Kích hoạt E-Invoice"
+
+#. module: to_einvoice_common
+#: model:ir.actions.act_window,name:to_einvoice_common.account_einvoice_error_notification_action
+#: model:ir.model,name:to_einvoice_common.model_account_einvoice_error_notification
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.account_einvoice_error_notification_view_form
+msgid "E-Invoice Error Notification Wizard"
+msgstr ""
+
+#. module: to_einvoice_common
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.view_account_journal_form
+msgid "E-Invoice Integration"
+msgstr "Tích hợp E-Invoice"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_move__einvoice_issue_user_id
+msgid "E-Invoice Issue User"
+msgstr "Người phát hành hoá đơn"
+
+#. module: to_einvoice_common
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.view_account_invoice_filter
+msgid "E-Invoice Issued"
+msgstr "Đã phát hành E-Invoice"
+
+#. module: to_einvoice_common
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.view_account_invoice_filter
+msgid "E-Invoice Issued But Cancelled"
+msgstr "Đã phát hành E-Invoice rồi Huỷ"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_move__einvoice_invoice_date
+msgid "E-Invoice Issued Date"
+msgstr "Ngày phát hành E-Invoice"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_bank_statement_import_journal_creation__einvoice_item_name
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_journal__einvoice_item_name
+msgid "E-Invoice Item"
+msgstr "Tên dòng trên E-Invoice"
+
+#. module: to_einvoice_common
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.view_account_invoice_filter
+msgid "E-Invoice Not Issued"
+msgstr "Chưa phát hành E-Invoice"
+
+#. module: to_einvoice_common
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.view_account_invoice_filter
+msgid "E-Invoice Paid"
+msgstr "Đã thanh toán E-Invoice"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,field_description:to_einvoice_common.field_res_company__einvoice_provider
+#: model:ir.model.fields,field_description:to_einvoice_common.field_res_config_settings__einvoice_provider
+msgid "E-Invoice Provider"
+msgstr "Nhà cung cấp E-Invoice"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_bank_statement_import_journal_creation__einvoice_send_mail_option
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_journal__einvoice_send_mail_option
+msgid "E-Invoice Send Mail/Portal option"
+msgstr "Tuỳ chọn Gửi mail/Portal cho E-Invoice"
+
+#. module: to_einvoice_common
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.res_config_settings_view_form
+msgid "E-Invoice Settings"
+msgstr "Cài đặt E-Invoice"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_move__einvoice_state
+msgid "E-Invoice Status"
+msgstr "Trạng thái E-Invoice"
+
+#. module: to_einvoice_common
+#: code:addons/to_einvoice_common/models/account_move.py:0
+#, python-format
+msgid "E-Invoice for the invoice %s has been issued already!"
+msgstr "Hoá đơn điện tử ứng với hoá đơn %s đã được phát hành rồi!"
+
+#. module: to_einvoice_common
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.view_account_journal_form
+msgid ""
+"E-Invoice is not enabled for the current company yet.\n"
+"\t\t\t\t\t\t\tPlease go to Accounting &gt; Configuration &gt; Settings to enabled\n"
+"\t\t\t\t\t\t\tE-Invoice if you want."
+msgstr ""
+"Tích hợp E-Invoice chưa được kích hoạt cho công ty hiện hành.\n"
+"\t\t\t\t\t\t\tNếu muốn, bạn có thể kích hoạt ở Kế toán &gt;\n"
+"\t\t\t\t\t\t\tCấu hình &gt; Thiết lập."
+
+#. module: to_einvoice_common
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.account_journal_dashboard_kanban_view
+msgid "E-Invoices to Issue"
+msgstr "E-Invoice chờ phát hành"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_bank_statement_import_journal_creation__einvoice_display_bank_account
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_journal__einvoice_display_bank_account
+msgid "E-invoice Bank Info."
+msgstr ""
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_bank_statement_import_journal_creation__einvoice_item_name_limit
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_journal__einvoice_item_name_limit
+msgid "E-invoice item name limit"
+msgstr "Giới hạn tên dòng trên E-invoice"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_bank_statement_import_journal_creation__einvoice_item_name_new_line_replacement
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_journal__einvoice_item_name_new_line_replacement
+msgid "E-invoice item name new line replacement "
+msgstr "Thay thế ký tự xuống dòng ở tên dòng của E-invoice"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_move__einvoice_error_notif_state
+msgid "Einvoice Error Notif State"
+msgstr "Trạng thái thông báo sai sót hóa đơn điện tử"
+
+#. module: to_einvoice_common
+#: model:ir.model,name:to_einvoice_common.model_mail_compose_message
+msgid "Email composition wizard"
+msgstr "Đồ thuật soạn thảo email"
+
+#. module: to_einvoice_common
+#: model:ir.actions.server,name:to_einvoice_common.ir_cron_ensure_download_einvoice_file_ir_actions_server
+#: model:ir.cron,cron_name:to_einvoice_common.ir_cron_ensure_download_einvoice_file
+#: model:ir.cron,name:to_einvoice_common.ir_cron_ensure_download_einvoice_file
+msgid "Ensure Download E-invoice Files"
+msgstr "Đảm bảo tải các file của hóa đơn điện tử"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields.selection,name:to_einvoice_common.selection__account_einvoice_error_notification__action__4
+msgid "Explanation"
+msgstr "Gỉải trình"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_invoice_einvoice_cancel__cancellation_record_name
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_move__cancellation_record_name
+msgid "File Name"
+msgstr "Tên File"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_einvoice_error_notification__id
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_invoice_einvoice_adjustment__id
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_invoice_einvoice_cancel__id
+msgid "ID"
+msgstr ""
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,help:to_einvoice_common.field_account_bank_statement_import_journal_creation__einvoice_disabled
+#: model:ir.model.fields,help:to_einvoice_common.field_account_journal__einvoice_disabled
+msgid ""
+"If checked, E-Invoice integration will be disabled for all the invoices of "
+"this journal no matter it is enabled at company level or not."
+msgstr ""
+"Nếu đánh dấu, tích hợp E-Invoice sẽ bị vô hiệu đối với tất cả các hoá đơn "
+"thuộc sổ nhật ký này dù nó có được kích hoạt đối với công ty hiện hành hay "
+"không."
+
+#. module: to_einvoice_common
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.res_config_settings_view_form
+msgid ""
+"If checked, during issuing a new E-Invoice, Odoo\n"
+"\t\t\t\t\t\t\t\twill check to validate if there is an existing unissued invoice\n"
+"\t\t\t\t\t\t\t\tthe invoice date of which is earlier than the current one's and\n"
+"\t\t\t\t\t\t\t\tlater than the date specified below. If there is, Odoo will stop\n"
+"\t\t\t\t\t\t\t\tyou from issuing E-Invoice for the current one and ask you to do\n"
+"\t\t\t\t\t\t\t\tfor the earlier one priorily."
+msgstr ""
+"Nếu đánh dấu, trong quá trình phát hành hoá đơn, Odoo sẽ\n"
+"\t\t\t\t\t\t\t\ttra cứu xem có hoá đơn nào có ngày sớm hơn ngày của hoá đơn hiện hành\n"
+"\t\t\t\t\t\t\t\tvà muộn hơn hoặc bằng ngày được thiết lập ở dưới đây mà chưa phát hành\n"
+"\t\t\t\t\t\t\t\tở E-Invoice. Nếu có, nó sẽ yêu cầu bạn phải phát hành E-Invoice cho hoá\n"
+"\t\t\t\t\t\t\t\tđơn đó trước khi có thể phát hành hoá đơn E-Invoice cho hoá đơn hiện hành."
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,help:to_einvoice_common.field_res_company__einvoice_issue_earliest_invoice_first
+#: model:ir.model.fields,help:to_einvoice_common.field_res_config_settings__einvoice_issue_earliest_invoice_first
+msgid ""
+"If checked, during issuing a new E-Invoice, Odoo will check to validate if "
+"there is an existing invoice the invoice date of which is earlier than the "
+"current one's. If there is, Odoo will stop you from issuing E-Invoice for "
+"the current one and ask you to do for the earlier one priorily."
+msgstr ""
+"Nếu đánh dấu, trong quá trình phát hành hoá đơn, Odoo sẽ tra cứu xem có hoá "
+"đơn nào có ngày sớm hơn ngày của hoá đơn hiện hành và muộn hơn hoặc bằng "
+"ngày được thiết lập ở dưới đây mà chưa phát hành ở E-Invoice. Nếu có, nó sẽ "
+"yêu cầu bạn phải phát hành E-Invoice cho hoá đơn đó trước khi có thể phát "
+"hành hoá đơn E-Invoice cho hoá đơn hiện hành."
+
+#. module: to_einvoice_common
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.res_config_settings_view_form
+msgid ""
+"If checked, invoice's legal number will be locked\n"
+"\t\t\t\t\t\t\t\tafter E-Invoice will be issued."
+msgstr ""
+"Nếu đánh dấu, mã số hoá đơn GTGT (luật định) của hoá đơn sẽ bị khoá sau khi "
+"phát hành hoá đơn E-Invoice."
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,help:to_einvoice_common.field_account_move__lock_legal_number
+#: model:ir.model.fields,help:to_einvoice_common.field_res_company__einvoice_lock_legal_number
+#: model:ir.model.fields,help:to_einvoice_common.field_res_config_settings__einvoice_lock_legal_number
+msgid ""
+"If checked, invoice's legal number will be locked after E-Invoice will be "
+"issued."
+msgstr ""
+"Nếu đánh dấu, mã số hoá đơn GTGT (luật định) của hoá đơn sẽ bị khoá sau khi "
+"phát hành hoá đơn E-Invoice."
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,help:to_einvoice_common.field_account_bank_statement_import_journal_creation__einvoice_auto_issue
+#: model:ir.model.fields,help:to_einvoice_common.field_account_journal__einvoice_auto_issue
+#: model:ir.model.fields,help:to_einvoice_common.field_account_move__einvoice_auto_issue
+#: model:ir.model.fields,help:to_einvoice_common.field_res_company__einvoice_auto_issue
+#: model:ir.model.fields,help:to_einvoice_common.field_res_config_settings__einvoice_auto_issue
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.res_config_settings_view_form
+msgid "If checked, the system automatically issue e-invoices."
+msgstr "Nếu được chọn, hệ thống sẽ tự động xuất hóa đơn điện tử"
+
+#. module: to_einvoice_common
+#: code:addons/to_einvoice_common/models/account_journal.py:0
+#: model:ir.model.fields,help:to_einvoice_common.field_account_bank_statement_import_journal_creation__einvoice_display_bank_account
+#: model:ir.model.fields,help:to_einvoice_common.field_account_journal__einvoice_display_bank_account
+#, python-format
+msgid ""
+"If checked, this bank account information will be displayed on E-Invoice"
+msgstr ""
+"Nếu được chọn, thông tin tài khoản ngân hàng này sẽ được hiển thị trên Hóa "
+"đơn điện tử"
+
+#. module: to_einvoice_common
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.res_config_settings_view_form
+msgid ""
+"If checked, when generating the converted version\n"
+"\t\t\t\t\t\t\t\tof the E-Invoice, Odoo will also generate a corresponding\n"
+"\t\t\t\t\t\t\t\tattachment and attach it to the invoice."
+msgstr ""
+"Nếu đánh dấu, khi tạo bản chuyển đổi hoá đơn\n"
+"\t\t\t\t\t\t\t\tE-Invoice, Odoo sẽ đồng thời tạo đính kèm tương ứng\n"
+"\t\t\t\t\t\t\t\tcho hoá đơn Odoo.\n"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,help:to_einvoice_common.field_res_company__sinvoice_exchange_file_as_attachment
+#: model:ir.model.fields,help:to_einvoice_common.field_res_config_settings__sinvoice_exchange_file_as_attachment
+msgid ""
+"If checked, when generating the converted version of the E-Invoice, Odoo "
+"will also generate a corresponding attachment and attach it to the invoice."
+msgstr ""
+"Nếu đánh dấu, khi tạo bản chuyển đổi hóa đơn E-Invoice, hệ thống sẽ đồng "
+"thời tạo đính kèm tương ứng gắn với hóa đơn trên hệ thống."
+
+#. module: to_einvoice_common
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.res_config_settings_view_form
+msgid ""
+"If checked, when generating the representation\n"
+"\t\t\t\t\t\t\t\tversion of the E-Invoice, Odoo will also generate a\n"
+"\t\t\t\t\t\t\t\tcorresponding attachment and attach it to the invoice."
+msgstr ""
+"Nếu đánh dấu, khi tạo bản thể hiện hoá đơn E-Invoice, Odoo sẽ đồng thời tạo "
+"đính kèm tương ứng cho hoá đơn Odoo."
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,help:to_einvoice_common.field_res_company__sinvoice_representation_file_as_attachment
+#: model:ir.model.fields,help:to_einvoice_common.field_res_config_settings__sinvoice_representation_file_as_attachment
+msgid ""
+"If checked, when generating the representation version of the E-Invoice, "
+"Odoo will also generate a corresponding attachment and attach it to the "
+"invoice."
+msgstr ""
+"Nếu đánh dấu, khi tạo bản thể hiện hoá đơn E-Invoice, Odoo sẽ đồng thời tạo "
+"đính kèm tương ứng cho hoá đơn Odoo."
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_move__total_in_word
+msgid "In words"
+msgstr "Bằng chữ"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_einvoice_error_notification__invoice_id
+msgid "Invoice"
+msgstr "Hóa đơn"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields.selection,name:to_einvoice_common.selection__account_journal__einvoice_item_name__invoice_line_name
+msgid "Invoice Line Description"
+msgstr "Mô tả Dòng hoá đơn"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_invoice_einvoice_adjustment__invoice_id
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_invoice_einvoice_cancel__invoice_id
+msgid "Invoice to Cancel"
+msgstr "Hóa đơn để hủy"
+
+#. module: to_einvoice_common
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.view_account_invoice_filter
+msgid "Is E-Invoice"
+msgstr "Là hoá đơn điện tử"
+
+#. module: to_einvoice_common
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.view_account_invoice_filter
+msgid "Is NOT E-Invoice"
+msgstr "Không phải là hóa đơn điện tử"
+
+#. module: to_einvoice_common
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.view_move_form
+msgid "Issue E-Invoice"
+msgstr "Phát hành Hoá đơn Điện tử"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,field_description:to_einvoice_common.field_res_company__einvoice_issue_earliest_invoice_first
+#: model:ir.model.fields,field_description:to_einvoice_common.field_res_config_settings__einvoice_issue_earliest_invoice_first
+msgid "Issue Earlier Invoice First"
+msgstr "Hoá đơn trước phát hành trước"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields.selection,name:to_einvoice_common.selection__account_move__einvoice_state__issued
+msgid "Issued and not Paid"
+msgstr "Đã phát hành và chưa thanh toán"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields.selection,name:to_einvoice_common.selection__account_move__einvoice_state__cancelled
+msgid "Issued but Cancelled"
+msgstr "Đã phát hành và đã Huỷ"
+
+#. module: to_einvoice_common
+#: model:ir.model,name:to_einvoice_common.model_account_journal
+msgid "Journal"
+msgstr "Sổ nhật ký"
+
+#. module: to_einvoice_common
+#: model:ir.model,name:to_einvoice_common.model_account_move
+msgid "Journal Entries"
+msgstr "Bút toán Sổ nhật ký"
+
+#. module: to_einvoice_common
+#: model:ir.model,name:to_einvoice_common.model_account_move_line
+msgid "Journal Item"
+msgstr "Phát sinh bút toán"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_einvoice_error_notification____last_update
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_invoice_einvoice_adjustment____last_update
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_invoice_einvoice_cancel____last_update
+msgid "Last Modified on"
+msgstr "Sửa đổi lần cuối vào"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_einvoice_error_notification__write_uid
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_invoice_einvoice_adjustment__write_uid
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_invoice_einvoice_cancel__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_einvoice_error_notification__write_date
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_invoice_einvoice_adjustment__write_date
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_invoice_einvoice_cancel__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_move__lock_legal_number
+#: model:ir.model.fields,field_description:to_einvoice_common.field_res_company__einvoice_lock_legal_number
+#: model:ir.model.fields,field_description:to_einvoice_common.field_res_config_settings__einvoice_lock_legal_number
+msgid "Lock Legal Number"
+msgstr "Khoá Mã số Hoá đơn GTGT"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,help:to_einvoice_common.field_account_bank_statement_import_journal_creation__einvoice_item_name_limit
+#: model:ir.model.fields,help:to_einvoice_common.field_account_journal__einvoice_item_name_limit
+msgid "Maximum number of characters for E-Invoice item name."
+msgstr "Số ký tự tối đa của tên dòng trên E-invoice"
+
+#. module: to_einvoice_common
+#: code:addons/to_einvoice_common/models/account_move.py:0
+#, python-format
+msgid ""
+"Multiple taxes on a single invoice line is not supported by einvoice "
+"provider %s"
+msgstr ""
+"Nhà cung cấp hóa đơn điện tử %s hiện không hỗ trợ nhiều loại thuế trên một "
+"dòng hóa đơn."
+
+#. module: to_einvoice_common
+#: model:ir.model.fields.selection,name:to_einvoice_common.selection__account_move__einvoice_error_notif_state__none
+#: model:ir.model.fields.selection,name:to_einvoice_common.selection__res_company__einvoice_provider__none
+msgid "None"
+msgstr "Không"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields.selection,name:to_einvoice_common.selection__account_move__einvoice_state__not_issued
+msgid "Not Issued"
+msgstr "Chưa phát hành"
+
+#. module: to_einvoice_common
+#: code:addons/to_einvoice_common/wizard/account_invoice_einvoice_adjustment.py:0
+#: code:addons/to_einvoice_common/wizard/account_invoice_einvoice_cancel.py:0
+#, python-format
+msgid "Only allow upload PDF file"
+msgstr "Chỉ cho phép tải lên file PDF"
+
+#. module: to_einvoice_common
+#: code:addons/to_einvoice_common/models/account_move.py:0
+#, python-format
+msgid "Only customer invoices can generate E-Invoice!"
+msgstr "Chỉ có thể phát hành hóa đơn điện tử hóa hóa đơn khách hàng!"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields.selection,name:to_einvoice_common.selection__account_move__einvoice_state__paid
+msgid "Paid"
+msgstr "Đã thanh toán"
+
+#. module: to_einvoice_common
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.view_account_invoice_einvoice_cancel
+msgid ""
+"Please note that, once cancelled, you will not be\n"
+"\t\t\t\t\t\table to modify or change it any more."
+msgstr ""
+"Lưu ý rằng, một khi đã huỷ, bạn sẽ không thể\n"
+"\t\t\t\t\t\tchỉnh sửa hay phát hành lại."
+
+#. module: to_einvoice_common
+#: code:addons/to_einvoice_common/models/account_move.py:0
+#, python-format
+msgid "Please specify a country for the customer %s."
+msgstr "Vui lòng thiết lập quốc gia cho hồ sơ khách hàng %s."
+
+#. module: to_einvoice_common
+#: code:addons/to_einvoice_common/models/account_move.py:0
+#, python-format
+msgid "Please specify address for the customer %s."
+msgstr "Vui lòng nhập địa chỉ cho khách hàng %s."
+
+#. module: to_einvoice_common
+#: code:addons/to_einvoice_common/models/account_move.py:0
+#, python-format
+msgid "Please specify email for the customer %s."
+msgstr "Vui lòng nhập thông tin email cho khách hàng %s."
+
+#. module: to_einvoice_common
+#: code:addons/to_einvoice_common/models/account_move.py:0
+#, python-format
+msgid "Please specify your company address before you can issue an E-Invoice"
+msgstr ""
+"Vui lòng nhập địa chỉ công ty bạn trước khi bạn có thể phát hành hoá đơn "
+"E-Invoice."
+
+#. module: to_einvoice_common
+#: model:ir.model,name:to_einvoice_common.model_product_product
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields.selection,name:to_einvoice_common.selection__account_journal__einvoice_item_name__invoice_line_product
+msgid "Product Name"
+msgstr "Tên Sản phẩm"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_einvoice_error_notification__reason
+msgid "Reason"
+msgstr "Lý do"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_invoice_einvoice_adjustment__additional_reference_desc
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_invoice_einvoice_cancel__additional_reference_desc
+msgid "Reference"
+msgstr "Tham chiếu"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields.selection,name:to_einvoice_common.selection__account_einvoice_error_notification__action__3
+msgid "Replace"
+msgstr "Thay thế"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_move__reversed_entry_einvoice_state
+msgid "Reversed E-invoice State"
+msgstr ""
+
+#. module: to_einvoice_common
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.view_account_invoice_filter
+msgid "Show invoices that are not issuable with E-Invoice"
+msgstr "Hiển thị các hoá đơn mà không thể phát hành bằng E-Invoice"
+
+#. module: to_einvoice_common
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.view_account_invoice_filter
+msgid "Show invoices that were issued or are issuable with E-Invoice"
+msgstr ""
+"Hiển thị các hoá đơn mà đã được phát hành hoặc có thể phát hành bằng "
+"E-Invoice"
+
+#. module: to_einvoice_common
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.view_account_invoice_filter
+msgid "Show invoices the E-Invoice status which is Cancelled"
+msgstr ""
+"Hiển thị các hoá đơn mà có trạng thái E-Invoice là Đã phát hành nhưng bị huỷ"
+
+#. module: to_einvoice_common
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.view_account_invoice_filter
+msgid "Show invoices the E-Invoice status which is Issued"
+msgstr "Hiển thị các hoá đơn mà có trạng thái E-Invoice là Đã phát hành"
+
+#. module: to_einvoice_common
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.view_account_invoice_filter
+msgid "Show invoices the E-Invoice status which is Paid"
+msgstr "Hiển thị các hoá đơn mà có trạng thái E-Invoice là Đã thanh toán"
+
+#. module: to_einvoice_common
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.view_account_invoice_filter
+msgid "Show invoices the E-Invoice status which is other than Not Issued"
+msgstr "Hiển thị các hoá đơn mà có trạng thái E-Invoice là Chưa phát hành"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields.selection,name:to_einvoice_common.selection__account_move__einvoice_error_notif_state__signed
+msgid "Signed"
+msgstr "Được ký"
+
+#. module: to_einvoice_common
+#: model:ir.actions.server,name:to_einvoice_common.action_server_sync_einvoice_status
+msgid "Synchronize Einvoice Status"
+msgstr "Đồng bộ trạng thái hóa đơn điện tử"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,help:to_einvoice_common.field_account_bank_statement_import_journal_creation__company_einvoice_provider
+#: model:ir.model.fields,help:to_einvoice_common.field_account_journal__company_einvoice_provider
+#: model:ir.model.fields,help:to_einvoice_common.field_account_move__company_einvoice_provider
+msgid "Technical field to indicate E-Invoice provider of company"
+msgstr "Trường kỹ thuật để chỉ nhà cung cấp E-Invoice của công ty"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,help:to_einvoice_common.field_account_bank_statement_import_journal_creation__einvoice_enabled
+#: model:ir.model.fields,help:to_einvoice_common.field_account_journal__einvoice_enabled
+msgid ""
+"Technical field to indicate if E-Invoice is enabled for invoices of this "
+"journal"
+msgstr ""
+"Trường kỹ thuật để chỉ báo việc tích hợp E-Invoice có được kích hoạt cho các"
+" hoá đơn của sổ nhật ký này hay không."
+
+#. module: to_einvoice_common
+#: code:addons/to_einvoice_common/wizard/account_invoice_einvoice_cancel.py:0
+#, python-format
+msgid ""
+"The Cancellation Date must not be earlier than the issue date which is %s"
+msgstr ""
+"Ngày huỷ hoá đơn điện tử không được sớm hơn ngày phát hành hoá đơn (%s)"
+
+#. module: to_einvoice_common
+#: code:addons/to_einvoice_common/wizard/account_invoice_einvoice_cancel.py:0
+#, python-format
+msgid "The Cancellation Date must not be in the future"
+msgstr "Ngày huỷ hoá đơn điện tử không thể là ngày trong tương lai"
+
+#. module: to_einvoice_common
+#: code:addons/to_einvoice_common/models/account_move.py:0
+#, python-format
+msgid ""
+"The E-invoice corresponding to the invoice %s could not be downloaded "
+"because it has not been issued."
+msgstr ""
+"Hoá đơn điện tử ứng với hoá đơn %s không thể được tải xuống với vì nó vẫn "
+"chưa được phát hành"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,help:to_einvoice_common.field_account_move__einvoice_cancellation_date
+msgid ""
+"The cancellation date of the E-Invoice which may differ from the date on "
+"which the cancel request was sent to E-Invoice."
+msgstr ""
+"Ngày huỷ hoá đơn E-Invoice, có thể khách với ngày mà bạn gửi yêu cầu huỷ hoá"
+" đơn đến E-Invoice."
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,help:to_einvoice_common.field_account_bank_statement_import_journal_creation__einvoice_item_name_new_line_replacement
+#: model:ir.model.fields,help:to_einvoice_common.field_account_journal__einvoice_item_name_new_line_replacement
+msgid ""
+"The character(s) with which the new line character(s) in the E-Invoice item "
+"name will be replaced."
+msgstr "Ký tự sẽ thay thế ký tự xuống dòng trong tên dòng trên E-invoice"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,help:to_einvoice_common.field_account_move__einvoice_invoice_date
+msgid "The date and time at which the E-Invoice was issued."
+msgstr "Ngày giờ mà tại đó hoá đơn E-Invoice được phát hành."
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,help:to_einvoice_common.field_account_invoice_einvoice_cancel__additional_reference_date
+msgid ""
+"The date and time of the agreement between you and your customer for the "
+"invoice cancellation."
+msgstr ""
+"Ngày giờ thoả thuận giữa bạn và khách hàng của bạn về việc huỷ hoá đơn."
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,help:to_einvoice_common.field_account_invoice_einvoice_adjustment__adjustment_record
+#: model:ir.model.fields,help:to_einvoice_common.field_account_move__adjustment_record
+msgid ""
+"The file of the agreement between you and your customer for adjustment "
+"invoice."
+msgstr "Biên bản giữa bạn và khách hàng cho hóa đơn điều chỉnh giảm."
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,help:to_einvoice_common.field_account_invoice_einvoice_cancel__cancellation_record
+#: model:ir.model.fields,help:to_einvoice_common.field_account_move__cancellation_record
+msgid ""
+"The file of the agreement between you and your customer for the invoice "
+"cancellation."
+msgstr ""
+"File biên bản thoả thuận giữa bạn và khách hàng của bạn về việc huỷ hoá đơn."
+
+#. module: to_einvoice_common
+#: code:addons/to_einvoice_common/models/account_move.py:0
+#, python-format
+msgid ""
+"The invoice %s has no legal number. This could be a data inconsitant "
+"problem. Please contact your service provider for help"
+msgstr ""
+"Hoá đơn %s không có số luật định. Điều này có thể là lỗi về toàn vẹn dữ "
+"liệu. Vui lòng liên hệ với nhà cung cấp dịch vụ của bạn để được trợ giúp."
+
+#. module: to_einvoice_common
+#: code:addons/to_einvoice_common/models/account_move.py:0
+#, python-format
+msgid "The minutes of invoice withdrawal  must be PDF file."
+msgstr "Biên bản thu hồi hóa đơn phải là file PDF"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_invoice_einvoice_cancel__cancellation_record
+#: model:ir.model.fields,field_description:to_einvoice_common.field_account_move__cancellation_record
+msgid "The minutes of invoice withdrawal (PDF)"
+msgstr "Biên bản thu hồi hóa đơn (PDF)"
+
+#. module: to_einvoice_common
+#: code:addons/to_einvoice_common/models/res_partner.py:0
+#, python-format
+msgid "The model %s has no field name for displaying address on E-Invoice"
+msgstr "Model %s không có tên trường để hiển thị địa chỉ trên Hóa đơn điện tử"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,help:to_einvoice_common.field_account_invoice_einvoice_adjustment__additional_reference_desc
+msgid ""
+"The name/reference of the agreement between you and your customer for the "
+"invoice adjustment."
+msgstr ""
+"Tên hoặc tham chiếu của biên bản thỏa thuận giữa bạn và khách hàng về việc "
+"điều chỉnh hóa đơn."
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,help:to_einvoice_common.field_account_invoice_einvoice_cancel__additional_reference_desc
+msgid ""
+"The name/reference of the agreement between you and your customer for the "
+"invoice cancellation."
+msgstr ""
+"Mã số văn bản thoả thuận giữa bạn và khách hàng của bạn liên quan đến việc "
+"huỷ hoá đơn này."
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,help:to_einvoice_common.field_account_move__einvoice_issue_user_id
+msgid "The user who issued the E-Invoice for this invoice"
+msgstr "Người dùng mà đã phát hành hoá đơn E-Invoice cho hoá đơn này"
+
+#. module: to_einvoice_common
+#: code:addons/to_einvoice_common/wizard/account_einvoice_error_notification.py:0
+#, python-format
+msgid ""
+"This action has not been integrated in the system. We will update them in "
+"later versions"
+msgstr ""
+"Tác vụ này chưa được tích hợp trong hệ thống. Chúng tôi sẽ cập nhật chúng "
+"trong phiên bản sau"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,help:to_einvoice_common.field_account_bank_statement_import_journal_creation__einvoice_item_name
+#: model:ir.model.fields,help:to_einvoice_common.field_account_journal__einvoice_item_name
+msgid ""
+"This option allows you to choose between product name and invoice line description for issuing E-Invoice:\n"
+"- Invoice Line Description: the description of Odoo's invoice lines will be sent to E-Invoice system for items name;\n"
+"- Product Name: the name of Odoo's invoice line product will be sent to E-Invoice system for items name;\n"
+msgstr ""
+"Tuỳ chọn này cho phép bạn lựa chọn việc sử dụng thông tin mô tả trên dòng hoá đơn hoặc tên sản phẩm để làm dữ liệu điền vào mô tả ở dòng hoá đơn E-Invoice được phát hành:\n"
+"- Mô tả Dòng hoá đơn: thông tin mô tả ở dòng hoá đơn trong Odoo sẽ được gửi sang E-Invoice;\n"
+"- Tên Sản phẩm: Tên sản phẩm sẽ được gửi sang E-Invoice;\n"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,help:to_einvoice_common.field_account_move__einvoice_enabled
+msgid ""
+"This technical field is to indicate if E-Invoice service is available for "
+"this invoice"
+msgstr ""
+"Trường kỹ thuật để chỉ ra rằng dịch vụ E-Invoice thì khả dụng cho hoá đơn "
+"này"
+
+#. module: to_einvoice_common
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.view_account_invoice_einvoice_cancel
+msgid ""
+"This will connect E-Invoice then cancel it. Are you\n"
+"\t\t\t\t\t\tsure you want to proceed?"
+msgstr ""
+"Hành động này sẽ kết nối với hệ thống E-Invoice để huỷ hoá đơn đã phát hành."
+" Bạn có chắc chắn muốn tiếp tục?"
+
+#. module: to_einvoice_common
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.view_move_form
+msgid ""
+"This will connect E-Invoice then generates a legal invoice for you. Please "
+"ensure the customer has correct information set (e.g. legal name, "
+"billing/registered address, tax identification number, country, language, "
+"etc). Are you sure you want to proceed?"
+msgstr ""
+"Hành động này sẽ kết nối với E-Invoice và phát hành hoá đơn điện tử luật "
+"định cho bạn. Hãy chắc chắn rằng khách đã đã được thiết lập các thông tin "
+"chính xác (tên đăng ký, địa chỉ đăng ký/xuất hoá đơn, mã số thuế, quốc gia, "
+"ngôn ngữ, v.v.). Bạn có chắc bạn muốn thực hiện?"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields.selection,name:to_einvoice_common.selection__res_company__einvoice_api_version__v1
+msgid "V1"
+msgstr ""
+
+#. module: to_einvoice_common
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.res_config_settings_view_form
+msgid ""
+"V1 for TT32\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\tV2 for TT78"
+msgstr ""
+"V1 cho thông tư 32\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\tV2 cho thông tư 78"
+
+#. module: to_einvoice_common
+#: model:ir.model.fields.selection,name:to_einvoice_common.selection__res_company__einvoice_api_version__v2
+msgid "V2"
+msgstr ""
+
+#. module: to_einvoice_common
+#: model:ir.model.fields,help:to_einvoice_common.field_account_move__einvoice_api_version
+#: model:ir.model.fields,help:to_einvoice_common.field_res_company__einvoice_api_version
+#: model:ir.model.fields,help:to_einvoice_common.field_res_config_settings__einvoice_api_version
+msgid ""
+"Versions corresponding to laws of rule in Viet Nam:\n"
+"V1 for TT32\n"
+"V2 for TT78\n"
+"You should check the version of your e-invoice webservices before choosing versions here"
+msgstr ""
+"Các phiên bản tương ứng với luật của Việt Nam:\n"
+"V1 cho thông tư 32\n"
+"V2 cho thông tư 78\n"
+"Bạn nên kiểm tra phiên bản của dịch vụ web hóa đơn điện tử trước khi chọn phiên bản tại đây"
+
+#. module: to_einvoice_common
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.res_config_settings_view_form
+msgid "View E-Invoice Disabled Journals"
+msgstr "Xem các sổ nhật ký bị vô hiệu E-Invoice"
+
+#. module: to_einvoice_common
+#: model_terms:ir.ui.view,arch_db:to_einvoice_common.portal_invoice_page
+msgid "XML"
+msgstr ""
+
+#. module: to_einvoice_common
+#: code:addons/to_einvoice_common/models/account_move.py:0
+#, python-format
+msgid ""
+"You cannot change state of the invoice '%s' while it was issuing.You can "
+"cancel the einvoice in provider 's system first, then try again later."
+msgstr ""
+"Bạn không thể thay đổi trạng thái của hóa đơn '%s' khi nó đang được phát "
+"hành hóa đơn điện tử. Bạn có thể hủy hóa đơn điện tử trên hệ thống của nhà "
+"cung cấp trước rồi thử lại sau."
+
+#. module: to_einvoice_common
+#: code:addons/to_einvoice_common/models/account_move.py:0
+#, python-format
+msgid ""
+"You cannot generate E-Invoice from the Odoo invoice %s while the Odoo "
+"invoice status is neither Open nor Paid"
+msgstr ""
+"Bạn không thể phát hành hoá đơn E-Invoice từ hoá đơn Odoo số %s khi mà hoá "
+"đơn Odoo không phải ở trạng thái Mở hoặc Đã thanh toán"
+
+#. module: to_einvoice_common
+#: code:addons/to_einvoice_common/models/account_move.py:0
+#, python-format
+msgid ""
+"You cannot issue E-Invoice for the invoices %s that has invoice date earlier than the company's E-Invoice Start Date (%s). If you still want to do it, you could either:\n"
+"* Change the date of the invoice to a date that is later than or equal to %s;\n"
+"* Or, go to Accounting > Configuration > Settings and change E-Invoice Start Date to a date that is earlier than or equal to %s."
+msgstr ""
+"Bạn không thể phát hành hoá đơn E-Invoice cho hoá đơn %s có ngày hoá đơn sớm hơn ngày công ty bắt đầu sử dụng E-Invoice (%s). Nếu bạn vẫn muốn thực hiện điều này, bạn có thể:\n"
+"* Hoặc thay đổi ngày của hoá đơn sang một ngày muốn hơn hoặc bằng %s;\n"
+"* Hoặc đi đến menu Kế toán > Cấu hình > Thiết lập và thay đổi Ngày bắt bắt đầu sử dụng E-Invoice về một ngày mà sớm hơn hoặc bằng với %s."
+
+#. module: to_einvoice_common
+#: code:addons/to_einvoice_common/models/account_move.py:0
+#, python-format
+msgid ""
+"You cannot issue this adjustment invoice because of the currency difference "
+"between original invoice %s and it"
+msgstr ""
+"Bạn không thể phát hành hóa đơn điều chỉnh bởi vì sự khác nhau về tiền tệ "
+"giữa hóa đơn gốc %s và hóa đơn này"
+
+#. module: to_einvoice_common
+#: code:addons/to_einvoice_common/models/account_move.py:0
+#, python-format
+msgid "You have not configured Tax Identication Number for your company %s."
+msgstr "Bạn vẫn chưa cấu hình mã số thuế cho công ty %s của bạn."
+
+#. module: to_einvoice_common
+#: code:addons/to_einvoice_common/models/account_move.py:0
+#, python-format
+msgid ""
+"You may not be able issue e-invoices for the invoice '%s' with invoice date "
+"different from the current date.This is inconsistent with the current "
+"provisions of the law."
+msgstr ""
+"Bạn không thể phát hành hóa đơn điện tử cho hóa đơn '%s' có ngày hóa đơn "
+"khác với ngày hiện tại. Điều này không phù hợp với các quy định hiện hành "
+"của pháp luật."
+
+#. module: to_einvoice_common
+#: code:addons/to_einvoice_common/models/account_move.py:0
+#, python-format
+msgid "You must provide Tax Identication Number of the customer %s."
+msgstr "Bạn phải cung cấp mã số thuế cho hồ sơ khách hàng %s."
+
+#. module: to_einvoice_common
+#: code:addons/to_einvoice_common/models/account_move.py:0
+#, python-format
+msgid ""
+"You should issue E-Invoice for the invoice %s dated %s before issuing "
+"E-Invoice for the current one %s dated %s. Or, you could go to Accounting > "
+"Configuration > Settings to disable this verification although you are not "
+"recommended to do that unless you know what you do."
+msgstr ""
+"Bạn nên phát hành hoá đơn E-Invoice cho hoá đơn %s ngày %s trước khi phát "
+"hành hoá đơn E-Invoice cho hoá đơn hiện hành %s ngày %s. Hoặc bạn có thể vô "
+"hiệu ràng buộc kiểm tra này ở Kế toán > Cấu hình > Thiết lập mặc dù bạn được"
+" khuyên không nên làm vậy, trừ phi bạn hiểu rõ bạn định làm gì."

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="view_hr_overtime_plan_line_form" model="ir.ui.view">
+		<field name="name">hr.overtime.plan.line.form</field>
+		<field name="model">hr.overtime.plan.line</field>
+		<field name="inherit_id"
+			ref="viin_hr_overtime.view_hr_overtime_plan_line_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//header" position="inside">
+				<button name="action_match_timesheet_entries"
+					string="Match Timesheet" type="object" class="btn-primary"
+					attrs="{'invisible': [('timesheet_ids','!=',[])]}" />
+				<button name="action_match_timesheet_entries"
+					string="Rematch Timesheet" type="object"
+					attrs="{'invisible': [('timesheet_ids','=',[])]}" />
+			</xpath>
+			<xpath expr="//div[./field[@name='planned_hours']]"
+				position="after">
+				<label for="matched_timesheet_hours" />
+				<div>
+					<field name="matched_timesheet_hours" class="oe_inline" />
+					hours
+				</div>
+			</xpath>
+			<xpath expr="//notebook" position="inside">
+				<page name="page_timesheet" string="Related Timesheet Entries">
+					<field name="timesheet_ids" />
+				</page>
+				<page name="page_project" string="Projects">
+					<field name="project_task_ids" />
+				</page>
+			</xpath>
+		</field>
+	</record>
+
+	<record id="view_hr_overtime_plan_line_tree_simple"
+		model="ir.ui.view">
+		<field name="name">hr.overtime.plan.line.tree</field>
+		<field name="model">hr.overtime.plan.line</field>
+		<field name="inherit_id"
+			ref="viin_hr_overtime.view_hr_overtime_plan_line_tree_simple" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='actual_hours']" position="after">
+				<field name="matched_timesheet_hours" optional="hide" />
+				<field name="unmatched_timesheet_hours" optional="hide" />
+				<field name="timesheet_ids" widget="many2many_tags"
+					optional="hide" />
+			</xpath>
+		</field>
+	</record>
+</odoo>

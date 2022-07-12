@@ -1,0 +1,187 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_hr_timesheet_timer
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-03 04:27+0000\n"
+"PO-Revision-Date: 2022-01-03 04:27+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_hr_timesheet_timer
+#: model_terms:ir.ui.view,arch_db:viin_hr_timesheet_timer.view_task_search_form
+msgid "All WIP Timesheet"
+msgstr "Có chấm công dở dang"
+
+#. module: viin_hr_timesheet_timer
+#: model:ir.model,name:viin_hr_timesheet_timer.model_account_analytic_line
+msgid "Analytic Line"
+msgstr "Phát sinh KT Quản trị"
+
+#. module: viin_hr_timesheet_timer
+#: model:ir.model.fields,help:viin_hr_timesheet_timer.field_account_analytic_line__time_start
+msgid "Employee's local time at which the work was started."
+msgstr "Giờ địa phương của nhân viên mà tại đó công việc được khởi động."
+
+#. module: viin_hr_timesheet_timer
+#: model:ir.model.fields,field_description:viin_hr_timesheet_timer.field_account_analytic_line__date_end
+msgid "End Date"
+msgstr "Ngày kết thúc"
+
+#. module: viin_hr_timesheet_timer
+#: model:ir.model.fields,field_description:viin_hr_timesheet_timer.field_project_task__is_login_user_doing
+msgid "Is login user doing"
+msgstr ""
+
+#. module: viin_hr_timesheet_timer
+#: code:addons/viin_hr_timesheet_timer/models/project_task.py:0
+#, python-format
+msgid ""
+"It is not allowed to log timesheet on an archived task. Please have the task"
+" unarchived first."
+msgstr ""
+"Không thể thực hiện chấm công trên nhiệm vụ đang được lưu trữ. Vui lòng  bỏ "
+"lưu trữ nhiệm vụ này trước đã."
+
+#. module: viin_hr_timesheet_timer
+#: code:addons/viin_hr_timesheet_timer/models/project_task.py:0
+#, python-format
+msgid ""
+"It is not allowed to log timesheet on task in an archived project. Please "
+"have the project unarchived first."
+msgstr ""
+"Không thể thực hiện chấm công trên dự án đang được lưu trữ. Vui lòng bỏ lưu "
+"trữ dự án này trước đã."
+
+#. module: viin_hr_timesheet_timer
+#: model_terms:ir.ui.view,arch_db:viin_hr_timesheet_timer.view_task_form2_inherited
+msgid "Log Timesheet"
+msgstr "Bắt đầu chấm công"
+
+#. module: viin_hr_timesheet_timer
+#: model_terms:ir.ui.view,arch_db:viin_hr_timesheet_timer.view_task_search_form
+msgid "My WIP Timesheet"
+msgstr "Có chấm công dở dang của tôi"
+
+#. module: viin_hr_timesheet_timer
+#: model:ir.model,name:viin_hr_timesheet_timer.model_project_project
+msgid "Project"
+msgstr "Dự án"
+
+#. module: viin_hr_timesheet_timer
+#: model_terms:ir.ui.view,arch_db:viin_hr_timesheet_timer.view_task_search_form
+msgid "Show all tasks that have a work in progress timesheet entry"
+msgstr "Hiển thị tất cả các nhiệm vụ mà có chấm công dở dang"
+
+#. module: viin_hr_timesheet_timer
+#: model_terms:ir.ui.view,arch_db:viin_hr_timesheet_timer.view_task_search_form
+msgid "Show tasks that have my work in progress timesheet entry"
+msgstr "Hiển thị tất cả các nhiệm vụ mà có chấm công dở dang của chính tôi"
+
+#. module: viin_hr_timesheet_timer
+#: model:ir.model.fields,field_description:viin_hr_timesheet_timer.field_account_analytic_line__date_start
+msgid "Start Date"
+msgstr "Ngày Bắt đầu"
+
+#. module: viin_hr_timesheet_timer
+#: model:ir.model.fields,field_description:viin_hr_timesheet_timer.field_account_analytic_line__time_start
+msgid "Start Time"
+msgstr "Giờ Bắt đầu"
+
+#. module: viin_hr_timesheet_timer
+#: model:ir.model.fields,field_description:viin_hr_timesheet_timer.field_project_task__start_moment
+msgid "Start moment"
+msgstr ""
+
+#. module: viin_hr_timesheet_timer
+#: model_terms:ir.ui.view,arch_db:viin_hr_timesheet_timer.view_task_form2_inherited
+msgid "Stop Timesheet Log"
+msgstr "Dừng chấm công"
+
+#. module: viin_hr_timesheet_timer
+#: model:ir.model,name:viin_hr_timesheet_timer.model_project_task
+msgid "Task"
+msgstr "Nhiệm vụ"
+
+#. module: viin_hr_timesheet_timer
+#: model:ir.model.fields,help:viin_hr_timesheet_timer.field_project_task__timesheet_wip
+msgid ""
+"Technical field to indicate this task has a work in progress timesheet entry"
+msgstr "Trường kỹ thuật để chỉ ra nhiệm vụ có chấm công dở dang."
+
+#. module: viin_hr_timesheet_timer
+#: code:addons/viin_hr_timesheet_timer/models/project.py:0
+#, python-format
+msgid ""
+"The project '%s' can only be archived without having any working-in-progress (WIP) timesheet. \n"
+"Please end all the WIP timesheets first."
+msgstr ""
+"Dự án '%s' chỉ có thể được lưu trữ khi không có bất kỳ chấm công đang dở dang nào. \n"
+"Vui lòng dừng toàn bộ chấm công đang dở dang trên dự án này đã."
+
+#. module: viin_hr_timesheet_timer
+#: code:addons/viin_hr_timesheet_timer/models/project_task.py:0
+#, python-format
+msgid ""
+"The start date and end date of the timesheet log must be on the same day for the timesheet recording to be stopped. You cannot stop the process now due to this reason.\n"
+"\n"
+"Please input manually the missing timesheet (start / end) on each corresponding day in order to stop it."
+msgstr ""
+"Việc chấm công chỉ được dừng nếu ngày bắt đầu và ngày kết thúc trong một phiên chấm công phải được xảy ra trong cùng một ngày. Chính vì lý do đó nên bây giờ bạn không thể dừng phiên chấm công.\n"
+"\n"
+"Để kết thúc phiên chấm công, vui lòng nhập thủ công từng phiên chấm công tương ứng (bắt đầu / kết thúc) vào mỗi ngày còn thiếu."
+
+#. module: viin_hr_timesheet_timer
+#: code:addons/viin_hr_timesheet_timer/models/project_task.py:0
+#, python-format
+msgid ""
+"The task '%s' can only be archived without having any working-in-progress (WIP) timesheet. \n"
+"Please end all the WIP timesheets first."
+msgstr ""
+"Nhiệm vụ '%s' chỉ có thể được lưu trữ khi không có bất kỳ chấm công đang dở dang nào. \n"
+"Vui lòng dừng toàn bộ chấm công đang dở dang trong nhiệm vụ này đã."
+
+#. module: viin_hr_timesheet_timer
+#: model:ir.model.fields,field_description:viin_hr_timesheet_timer.field_project_task__timesheet_wip
+msgid "Timesheet Log In Progress"
+msgstr "Chấm công dở dang"
+
+#. module: viin_hr_timesheet_timer
+#: code:addons/viin_hr_timesheet_timer/models/project_task.py:0
+#, python-format
+msgid ""
+"You cannot log another timesheet while you are currently logging on task "
+"'%s' of the project '%s'. Please end the current timesheet logging first."
+msgstr ""
+"Bạn không thể tiếp tục chấm công trong khi phiên chấm công cho nhiệm vụ '%s'"
+" của dự án '%s' vẫn đang được ghi nhận. Vui lòng dừng phiên chấm công hiện "
+"tại trước đã."
+
+#. module: viin_hr_timesheet_timer
+#: code:addons/viin_hr_timesheet_timer/models/project_task.py:0
+#, python-format
+msgid ""
+"You cannot log another timesheet while you are currently logging on the "
+"project '%s'. Please end the current timesheet logging first."
+msgstr ""
+"Bạn không thể tiếp tục chấm công trong khi phiên chấm công cho dự án '%s' "
+"vẫn đang dở dang. Vui lòng dừng phiên chấm công hiện tại trước đã."
+
+#. module: viin_hr_timesheet_timer
+#: code:addons/viin_hr_timesheet_timer/models/project_task.py:0
+#, python-format
+msgid ""
+"You cannot log timesheet on task %s because project %s is configured to not "
+"allow to do it. Please edit the project and tick on the 'timesheets' option "
+"in order to do timesheet log."
+msgstr ""
+"Không thể chấm công cho nhiệm vụ %s, vì dự án %s được thiết lập không cho "
+"phép chấm công. Vui lòng sửa dự án này và đánh dấu sự lựa chọn 'chấm công' "
+"nếu bạn vẫn muốn thực hiện việc chấm công."

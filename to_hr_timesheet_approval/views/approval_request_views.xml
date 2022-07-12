@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="approval_request_view_form" model="ir.ui.view">
+			<field name="name">approval.request.form</field>
+			<field name="model">approval.request</field>
+			<field name="inherit_id"
+				ref="to_approvals.approval_request_view_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='description']" position="after">
+					<div string="Timesheets" attrs="{'invisible':[('type','!=','timesheets')]}">
+						<label for="timesheet_line_ids" />
+						<field name="timesheet_line_ids" effect="{'remove_only_reference_from_one2many': true}"
+							context="{'form_view_ref': 'to_hr_timesheet_approval.hr_timesheet_line_form'}">
+							<tree>
+								<field name="date" />
+								<field name="name" />
+								<field name="project_id" required="1"
+									context="{'form_view_ref': 'project.project_project_view_form_simplified',}" />
+								<field name="task_id"
+									context="{'default_project_id': project_id}"
+									domain="[('project_id', '=', project_id)]" />
+								<field name="unit_amount" widget="timesheet_uom"
+									sum="Total" />
+								<field name="timesheet_state" />
+								<field name="company_id" invisible="1" />
+								<button name="action_approve" type="object"
+									string="Approve" class="btn btn-sm btn-primary"
+									attrs="{'invisible': ['|','|',('can_approve','=',False),('timesheet_state','!=','confirm'),('parent.state','in',['validate','done','cancel'])]}" />
+								<button name="action_validate" type="object"
+									attrs="{'invisible': ['|','|',('can_validate','=',False),('timesheet_state','!=','validate1'),('parent.state','in',['validate','done','cancel'])]}"
+									string="Validate" class="btn btn-sm btn-primary" />
+								<button name="action_refuse" type="object" string="Refuse"
+									attrs="{'invisible': ['|','|',('can_refuse','=',False),('timesheet_state','not in',['confirm','validate1','validate']),('parent.state','in',['validate','done','cancel'])]}"
+									class="btn btn-sm btn-primary" />
+								<field name="can_approve" invisible="1" />
+								<field name="can_validate" invisible="1" />
+								<field name="can_refuse" invisible="1" />
+							</tree>
+						</field>
+					</div>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

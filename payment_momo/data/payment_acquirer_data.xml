@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="0">
+
+		<record id="payment_acquirer_momo" model="payment.acquirer">
+			<field name="name">MoMo</field>
+			<field name="image_128" type="base64" file="payment_momo/static/src/img/momo_logo512.png" />
+			<field name="provider">momo</field>
+			<field name="company_id" ref="base.main_company" />
+			<field name="sequence">1</field>
+			<field name="view_template_id" ref="momo_form" />
+			<field name="module_id" ref="base.module_payment_momo" />
+			<field name="description" type="html">
+				<p>
+					MoMo is the easiest way to accept payments via MoMo or
+					credit cards.
+				</p>
+				<ul class="list-inline">
+					<li class="list-inline-item">
+						<i class="fa fa-check" />
+						Online Payment
+					</li>
+					<li class="list-inline-item">
+						<i class="fa fa-check" />
+						Payment Status Tracking
+					</li>
+				</ul>
+			</field>
+			<!-- https://www.paypal.com/us/selfhelp/article/Which-credit-cards-can-I-accept-with-PayPal-Merchant-Services-FAQ1525#business -->
+			<field name="payment_icon_ids"
+				eval='[(6, 0, [
+							ref("payment.payment_icon_cc_mastercard"),
+							ref("payment.payment_icon_cc_visa"),
+							ref("to_vietnam_bank_icons.payment_icon_bank_vcb"),
+							ref("to_vietnam_bank_icons.payment_icon_bank_acb"),
+							ref("to_vietnam_bank_icons.payment_icon_bank_bidv"),
+							ref("to_vietnam_bank_icons.payment_icon_bank_dab"),
+							ref("to_vietnam_bank_icons.payment_icon_bank_exb"),
+							ref("to_vietnam_bank_icons.payment_icon_bank_icb"),
+							ref("to_vietnam_bank_icons.payment_icon_bank_MB"),
+							ref("to_vietnam_bank_icons.payment_icon_bank_msb"),
+							ref("to_vietnam_bank_icons.payment_icon_bank_stb"),
+							ref("to_vietnam_bank_icons.payment_icon_bank_tcb"),
+							ref("to_vietnam_bank_icons.payment_icon_bank_vib"),
+							])
+						]' />
+			<field name="country_ids" eval="[(6,0,[ref('base.vn')])]" />
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="res_config_settings_view_form" model="ir.ui.view">
+		<field name="name">res.config.settings.view.form.inherit.hr.payroll.account
+		</field>
+		<field name="model">res.config.settings</field>
+		<field name="priority" eval="45" />
+		<field name="inherit_id"
+			ref="to_hr_payroll.res_config_settings_view_form" />
+		<field name="arch" type="xml">
+			<xpath
+				expr="//div[@id='hr_payroll_accountant']/div[./div/field[@name='module_to_hr_payroll_account']]"
+				position="after">
+				<div class="col-lg-6 col-12 o_setting_box">
+					<div class="o_setting_left_pane">
+						<field name="payslip_batch_journal_entry" />
+					</div>
+					<div class="o_setting_right_pane">
+						<label for="payslip_batch_journal_entry" />
+						<div class="text-muted">
+							If enabled, a single journal entry will be
+							generated for all payslips of a payslip batch. Otherwise, each
+							payslip will generate a journal entry.
+						</div>
+					</div>
+				</div>
+			</xpath>
+		</field>
+	</record>
+
+</odoo>

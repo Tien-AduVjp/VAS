@@ -1,0 +1,35 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_payroll_payment_acb_templates
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-22 01:31+0000\n"
+"PO-Revision-Date: 2020-04-22 01:31+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_payroll_payment_acb_templates
+#: model_terms:ir.ui.view,arch_db:to_payroll_payment_acb_templates.hr_payslip_run_form
+msgid "Download ACB Payslip Batch Payment (.xlsx)"
+msgstr "Tải bảng Chi hộ lương tháng ACB"
+
+#. module: to_payroll_payment_acb_templates
+#: model:ir.model,name:to_payroll_payment_acb_templates.model_hr_payslip_run
+msgid "Payslip Batches"
+msgstr "Bảng lương"
+
+#. module: to_payroll_payment_acb_templates
+#: code:addons/to_payroll_payment_acb_templates/models/hr_payslip_run.py:0
+#, python-format
+msgid ""
+"The employee %s has no bank account specified. Please specify one for the "
+"employee first"
+msgstr ""
+"Nhân viên %s không có Tài khoản ngân hàng được chỉ định. Vui lòng chỉ định số tài khoản cho nhân viên."

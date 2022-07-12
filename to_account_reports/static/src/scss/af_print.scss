@@ -1,0 +1,59 @@
+.o_af_reports_summary_edit {
+    display: none !important;
+}
+.o_af_reports_body_print {
+    background-color: white !important;
+    color: black !important;
+    font-size: 12px !important;
+    .o_af_reports_header {
+        padding: 10px;
+        background-color: #eee;
+    }
+    .o_af_reports_page {
+        color: black !important;
+    }
+    .o_af_reports_table {
+        font-size: 14px !important;
+        white-space: nowrap !important;
+        > tbody > tr {
+            page-break-inside: avoid;
+        }
+    }
+    .o_af_reports_level0, .o_af_reports_level1, .o_af_reports_level2, .o_af_reports_domain_total, .total {
+        .text-muted {
+            color: black !important;
+        }
+    }
+    .o_foldable_total {
+        color: black !important;
+    }
+}
+.caret {
+    display: none !important;
+}
+a {
+    color: inherit !important;
+}
+
+.whitespace_print {
+    white-space: initial !important;
+}
+.top-vertical-align {
+    vertical-align: top;
+}
+.table-bordered .number{
+	text-align: right;
+}
+
+.print_only {
+    display: block !important;
+    &.row {
+        display: flex !important;
+    }
+}
+[name="summary"] {
+    display: none;
+}
+.no_print {
+    display: none !important;
+}

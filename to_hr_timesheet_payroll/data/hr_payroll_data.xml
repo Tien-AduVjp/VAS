@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data noupdate="1">
+		<record model="hr.contribution.category"
+			id="hr_contribution_category_timesheet">
+			<field name="name">HR Timesheet</field>
+			<field name="color">4</field>
+		</record>
+	</data>
+</odoo>

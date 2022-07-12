@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="1">
+		<!-- Chart template -->
+		<record id="l10n_vn.vn_template" model="account.chart.template">
+			<field name="income_currency_conversion_diff_account_id" ref="l10n_vn.chart711" />
+			<field name="expense_currency_conversion_diff_account_id" ref="l10n_vn.chart811" />
+		</record>
+	</data>
+</odoo>

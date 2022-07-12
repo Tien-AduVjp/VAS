@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="sale_subscription_automation_view_tree" model="ir.ui.view">
+		<field name="name">sale.subscription.automation.tree</field>
+		<field name="model">sale.subscription.automation</field>
+		<field name="arch" type="xml">
+			<tree string="Automated Actions">
+				<field name="name" />
+				<field name="action_to_do" />
+				<field name="trigger_on" />
+				<field name="company_id" groups="base.group_multi_company" />
+				<field name="subscription_count" />
+				<field name="date_start" />
+				<field name="activity_user" />
+				<field name="analytic_tag_id" />
+				<field name="stage_id" />
+			</tree>
+		</field>
+	</record>
+
+	<record id="sale_subscription_automation_view_form" model="ir.ui.view">
+		<field name="name">sale.subscription.automation.form</field>
+		<field name="model">sale.subscription.automation</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<div class="oe_button_box" name="button_box">
+						<button class="oe_stat_button" icon="fa-book" name="action_view_subscriptions" type="object">
+							<field name="subscription_count" widget="statinfo" string="Subscriptions" />
+						</button>
+					</div>
+					<div class="oe_title">
+						<label for="name" class="oe_edit_only" string="Action Name" />
+						<h1>
+							<field name="name" placeholder="e.g. Upselling subscription" />
+						</h1>
+					</div>
+					<group name="action">
+						<group>
+							<field name="model_id" invisible="1" />
+							<field name="model_name" invisible="1" />
+							<field name="active"/>
+							<field name="trigger_on" />
+							<field name="trg_date_id"
+								attrs="{'invisible': [('trigger_on', '!=', 'on_time')], 'required': [('trigger_on', '=', 'on_time')]}" />
+							<label for="trg_date_range" attrs="{'invisible': [('trigger_on', '!=', 'on_time')]}" />
+							<div class="o_row" attrs="{'invisible': [('trigger_on', '!=', 'on_time')]}">
+								<field name="trg_date_range" attrs="{'required': [('trigger_on','=','on_time')]}" />
+								<field name="trg_date_range_type" attrs="{'required': [('trigger_on','=','on_time')]}" />
+							</div>
+							<field name="trg_date_calendar_id"
+								attrs="{'invisible': ['|', ('trg_date_id','=',False), ('trg_date_range_type', '!=', 'day')]}" />
+						</group>
+						<group>
+							<field name="action_to_do" />
+							<field name="analytic_tag_id" attrs="{'invisible': [('action_to_do', '!=', 'set_tag')], 'required': [('action_to_do', '=', 'set_tag')]}" />
+							<field name="stage_id" attrs="{'invisible': [('action_to_do', '!=', 'set_stage')], 'required': [('action_to_do', '=', 'set_stage')]}" />
+							<field name="template_id" attrs="{'invisible': [('action_to_do', '!=', 'email')], 'required': [('action_to_do', '=', 'email')]}" />
+						</group>
+					</group>
+					<group name="apply_rule" string="Conditions">
+						<group>
+							<field name="subscription_template_ids" widget="many2many_tags" />
+							<field name="customer_ids" widget="many2many_tags" />
+							<field name="product_ids" widget="many2many_tags" />
+							<field name="company_id" groups="base.group_multi_company" />
+						</group>
+						<group>
+							<label for="date_start" />
+							<div class="o_row">
+								<field name="date_start" />
+							</div>
+							<label for="mrr_min" string="MRR Between" />
+							<div class="o_row">
+								<field name="mrr_min" />
+								<strong> to </strong>
+								<field name="mrr_max" />
+							</div>
+							<label for="rating_percentage_satisfaction" string="% Happy" groups="to_sale_subscription.group_subscription_rating"/>
+							<div class="o_row" groups="to_sale_subscription.group_subscription_rating">
+								<field name="rating_operator" />
+								<field name="rating_percentage_satisfaction" />
+								<strong>%</strong>
+							</div>
+						</group>
+					</group>
+					<group name="next_activity" string="Next Activity" attrs="{'invisible': [('action_to_do', '!=', 'next_activity')]}">
+						<group>
+							<field name="activity_type_id"
+								options="{'no_create': True, 'no_open': True}"
+								attrs="{'required': [('action_to_do', '=', 'next_activity')]}" />
+							<field name="activity_summary" placeholder="e.g. Discuss about upselling" />
+						</group>
+						<group>
+							<label for="activity_date_deadline_range" />
+							<div class="o_row">
+								<field name="activity_date_deadline_range" />
+								<field name="activity_date_deadline_range_type" />
+							</div>
+							<field name="activity_user_type"/>
+                            <field name="activity_user_field_name" attrs="{'invisible': [('activity_user_type', '=', 'specific')], 'required': [('action_to_do', '=', 'next_activity'), ('activity_user_type', '=', 'generic')]}"/>
+                            <field name="activity_user_id" attrs="{'invisible': [('activity_user_type', '=', 'generic')], 'required': [('action_to_do', '=', 'next_activity'), ('activity_user_type', '=', 'specific')]}"/>
+						</group>
+						<separator string="Note" />
+						<field name="activity_note" placeholder="Log a note..." />
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	
+	<record id="sale_subscription_automation_view_search" model="ir.ui.view">
+		<field name="name">sale.subscription.automation.search</field>
+		<field name="model">sale.subscription.automation</field>
+		<field name="arch" type="xml">
+			<search string="Automated Action">
+				<field name="name" string="Action Name"/>
+				<field name="subscription_template_ids"/>
+				<field name="customer_ids"/>
+				<field name="product_ids"/>
+				<field name="date_start"/>
+				<filter name="ftr_action_next_activity" string="Action: Create next activity" domain="[('action_to_do','=','next_activity')]" />
+				<filter name="ftr_action_set_tag" string="Action: Set a tag" domain="[('action_to_do','=','set_tag')]" />
+				<filter name="ftr_action_set_stage" string="Action: Set a stage" domain="[('action_to_do','=','set_stage')]" />
+				<filter name="ftr_action_set_to_renew" string="Action: To Renew" domain="[('action_to_do','=','set_to_renew')]" />
+				<filter name="ftr_action_email" string="Action: Email" domain="[('action_to_do','=','email')]" />
+				<separator />
+				<filter name="ftr_trigger_on_create_or_write" string="Trigger On: Modification" domain="[('trigger_on','=','on_create_or_write')]" />
+				<filter name="ftr_trigger_on_time" string="Trigger On: Timed Condition" domain="[('trigger_on','=','on_time')]" />
+				<group expand="0" string="Group By">
+					<filter string="Action" name="grp_action" domain="[]" context="{'group_by':'action_to_do'}" />
+					<filter string="Trigger On" name="grp_trigger_condition" domain="[]" context="{'group_by':'trigger_on'}" />
+				</group>
+			</search>
+		</field>
+	</record>
+
+	<record id="sale_subscription_automation_action" model="ir.actions.act_window">
+		<field name="name">Automated Actions</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">sale.subscription.automation</field>
+		<field name="view_mode">tree,form</field>
+		<field name="help" type="html">
+			<p class="o_view_nocontent_smiling_face">
+				Create a new Subscription Automated Actions
+			</p>
+		</field>
+	</record>
+
+	<menuitem id="menu_sale_subscription_automation" parent="menu_sale_subscription_config" action="sale_subscription_automation_action" sequence="9" />
+</odoo>

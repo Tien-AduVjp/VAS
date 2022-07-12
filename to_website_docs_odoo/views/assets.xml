@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<template id="assets_frontend" inherit_id="to_website_docs.assets_frontend" name="Website Assets Frontend">
+			<xpath expr="." position="inside">
+				<link href="/to_website_docs_odoo/static/src/css/docs.css" rel="stylesheet" />
+			</xpath>
+		</template>
+
+		<template id="assets_editor" name="Website Assets Editor" inherit_id="to_website_docs.assets_editor">
+			<xpath expr="." position="inside">
+				<script src="/to_website_docs_odoo/static/src/js/docs.editor.js" />
+			</xpath>
+		</template>
+	</data>
+</odoo>

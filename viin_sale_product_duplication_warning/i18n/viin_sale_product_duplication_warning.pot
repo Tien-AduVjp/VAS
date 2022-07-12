@@ -1,0 +1,101 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_sale_product_duplication_warning
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-05 05:26+0000\n"
+"PO-Revision-Date: 2021-06-06 04:44+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_sale_product_duplication_warning
+#: code:addons/viin_sale_product_duplication_warning/models/sale_order.py:0
+#, python-format
+msgid " and "
+msgstr ""
+
+#. module: viin_sale_product_duplication_warning
+#: code:addons/viin_sale_product_duplication_warning/models/sale_order.py:0
+#, python-format
+msgid ""
+"<li>The product <strong>%s</strong> was found appearing <strong>%s "
+"times</strong> at lines %s</li>"
+msgstr ""
+
+#. module: viin_sale_product_duplication_warning
+#: code:addons/viin_sale_product_duplication_warning/models/sale_order.py:0
+#, python-format
+msgid "<strong>Product duplication found</strong><ul>%s</ul>"
+msgstr ""
+
+#. module: viin_sale_product_duplication_warning
+#: model:ir.model.fields,field_description:viin_sale_product_duplication_warning.field_sale_order__duplicated_product
+msgid "Duplicated Product"
+msgstr ""
+
+#. module: viin_sale_product_duplication_warning
+#: model:ir.model.fields,help:viin_sale_product_duplication_warning.field_product_product__ignore_product_duplication_warning
+#: model:ir.model.fields,help:viin_sale_product_duplication_warning.field_product_template__ignore_product_duplication_warning
+msgid ""
+"If enabled, duplication warning for this product on the same quotation/sales order will be ignored.\n"
+"If this product is usually expected to appear more than 1 times in the same quotation/sales order, you should enable this option."
+msgstr ""
+
+#. module: viin_sale_product_duplication_warning
+#: model:ir.model.fields,field_description:viin_sale_product_duplication_warning.field_product_product__ignore_product_duplication_warning
+#: model:ir.model.fields,field_description:viin_sale_product_duplication_warning.field_product_template__ignore_product_duplication_warning
+msgid "Ignore Product Duplication Warning on Quotation/Sales Orders"
+msgstr ""
+
+#. module: viin_sale_product_duplication_warning
+#: model:ir.model.fields,field_description:viin_sale_product_duplication_warning.field_sale_order__product_duplication_warning
+msgid "Product Duplication Warning"
+msgstr ""
+
+#. module: viin_sale_product_duplication_warning
+#: model:ir.model,name:viin_sale_product_duplication_warning.model_product_template
+msgid "Product Template"
+msgstr ""
+
+#. module: viin_sale_product_duplication_warning
+#: model:ir.model,name:viin_sale_product_duplication_warning.model_sale_order
+msgid "Sales Order"
+msgstr ""
+
+#. module: viin_sale_product_duplication_warning
+#: model_terms:ir.ui.view,arch_db:viin_sale_product_duplication_warning.view_sales_order_filter
+msgid ""
+"Show the orders having a product that appears more than one time in the same"
+" orders."
+msgstr ""
+
+#. module: viin_sale_product_duplication_warning
+#: model:ir.model.fields,help:viin_sale_product_duplication_warning.field_sale_order__duplicated_product
+msgid ""
+"Technical field that indicates if the order contains a product that appears "
+"more than 1 time."
+msgstr ""
+
+#. module: viin_sale_product_duplication_warning
+#: model:ir.model.fields,help:viin_sale_product_duplication_warning.field_sale_order__product_duplication_warning
+msgid ""
+"Technical field to store warning text for product duplication in the sales "
+"order."
+msgstr ""
+
+#. module: viin_sale_product_duplication_warning
+#: model_terms:ir.ui.view,arch_db:viin_sale_product_duplication_warning.view_sales_order_filter
+msgid "With Duplicated Products"
+msgstr ""
+
+#. module: viin_sale_product_duplication_warning
+#: model_terms:ir.ui.view,arch_db:viin_sale_product_duplication_warning.view_order_form
+msgid "You could ignore this warning if it is what you want."
+msgstr ""

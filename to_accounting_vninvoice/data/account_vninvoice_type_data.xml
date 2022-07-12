@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data noupdate="1">
+		<record id="vninvoice_type_01GTKT" model="account.vninvoice.type">
+			<field name="name">01GTKT</field>
+			<field name="description">Value Added Tax Invoice</field>
+		</record>
+		<record id="vninvoice_type_03XKNB" model="account.vninvoice.type">
+			<field name="name">03XKNB</field>
+			<field name="description">Phiếu xuất kho kiêm vận chuyển hàng hóa nội bộ</field>
+		</record>
+	</data>
+</odoo>

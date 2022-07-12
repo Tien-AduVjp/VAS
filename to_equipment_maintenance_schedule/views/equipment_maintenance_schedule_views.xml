@@ -1,0 +1,59 @@
+<odoo>
+  	<data>  				    
+		<record id="equipment_form_view" model="ir.ui.view">
+			<field name="name">equipment_maintenance_schedule</field>
+			<field name="model">maintenance.equipment</field>
+			<field name="inherit_id" ref="maintenance.hr_equipment_view_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//notebook" position="inside">
+					<page name="maintenance_schedule" string="Maintenance Schedule">
+						<field name="maintenance_schedule_ids">
+							<tree>
+								<field name="part" />
+								<field name="product_milestone_id" />
+								<field name="maintenance_action_id" />
+								<field name="product_id" />
+							</tree>
+						</field>
+					</page>
+				</xpath>
+				
+			</field>
+		</record>		
+		
+		<record id="view_production_lot_form" model="ir.ui.view">
+			<field name="name">lot_maintenance_schedule</field>
+			<field name="model">stock.production.lot</field>
+			<field name="inherit_id" ref="stock.view_production_lot_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//group[@name='main_group']" position="after">
+					<notebook>
+						<page name="maintenance_schedule" string="Maintenance Schedule">
+							<field name="maintenance_schedule_ids">
+								<tree>
+									<field name="part" />
+									<field name="product_milestone_id" />
+									<field name="maintenance_action_id" />
+									<field name="product_id" />
+								</tree>
+							</field>
+						</page>
+					</notebook>
+				</xpath>
+				
+			</field>
+		</record>	
+		
+		<menuitem id="product_milestones_menu" parent="maintenance.menu_maintenance_configuration"
+			string="Product Milestones" action="to_product_milestone.product_milestone_list_view"
+		sequence="100" />
+		
+		<menuitem id="maintenance_action_menu" parent="maintenance.menu_maintenance_configuration"
+			string="Maintenance Actions" action="to_product_maintenance_schedule.maintenance_action_list_view"
+		sequence="101" />
+		<menuitem id="maintenance_schedule_menu" parent="maintenance.menu_maintenance_configuration"
+			string="Maintenance Schedule" action="to_product_maintenance_schedule.maintenance_schedule_list_view"
+		sequence="102" />
+									
+  </data>
+</odoo>

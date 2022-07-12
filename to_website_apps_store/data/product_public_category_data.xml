@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- These category for auto mapping during git fetching. Therefore, noupdate="0" 
+		is necessarry -->
+	<data noupdate="0">
+		<!-- ALL APPS (incl normal modules and themes) -->
+		<record id="prod_public_categ_odoo_apps"
+			model="product.public.category">
+			<field name="name">Odoo Apps</field>
+			<field name="parent_id" eval="False" />
+			<field name="sequence" type="int">100</field>
+		</record>
+
+		<!-- Non-theme modules -->
+		<record id="prod_public_categ_modules"
+			model="product.public.category">
+			<field name="name">Apps</field>
+			<field name="parent_id" ref="prod_public_categ_odoo_apps" />
+			<field name="sequence" type="int">105</field>
+		</record>
+
+		<!-- children module categories -->
+		<record id="prod_public_categ_accounting"
+			model="product.public.category">
+			<field name="name">Accounting</field>
+			<field name="parent_id" ref="prod_public_categ_modules" />
+			<field name="sequence" type="int">120</field>
+		</record>
+		<record id="prod_public_categ_discuss"
+			model="product.public.category">
+			<field name="name">Discuss</field>
+			<field name="parent_id" ref="prod_public_categ_modules" />
+			<field name="sequence" type="int">125</field>
+		</record>
+		<record id="prod_public_categ_document_management"
+			model="product.public.category">
+			<field name="name">Document Management</field>
+			<field name="parent_id" ref="prod_public_categ_modules" />
+			<field name="sequence" type="int">130</field>
+		</record>
+		<record id="prod_public_categ_ecommerce"
+			model="product.public.category">
+			<field name="name">eCommerce</field>
+			<field name="parent_id" ref="prod_public_categ_modules" />
+			<field name="sequence" type="int">135</field>
+		</record>
+		<record id="prod_public_categ_human_resources"
+			model="product.public.category">
+			<field name="name">Human Resources</field>
+			<field name="parent_id" ref="prod_public_categ_modules" />
+			<field name="sequence" type="int">140</field>
+		</record>
+		<record id="prod_public_categ_industries"
+			model="product.public.category">
+			<field name="name">Industries</field>
+			<field name="parent_id" ref="prod_public_categ_modules" />
+			<field name="sequence" type="int">145</field>
+		</record>
+		<record id="prod_public_categ_localization"
+			model="product.public.category">
+			<field name="name">Localization</field>
+			<field name="parent_id" ref="prod_public_categ_modules" />
+			<field name="sequence" type="int">150</field>
+		</record>
+		<record id="prod_public_categ_manufacturing"
+			model="product.public.category">
+			<field name="name">Manufacturing</field>
+			<field name="parent_id" ref="prod_public_categ_modules" />
+			<field name="sequence" type="int">155</field>
+		</record>
+		<record id="prod_public_categ_marketing"
+			model="product.public.category">
+			<field name="name">Marketing</field>
+			<field name="parent_id" ref="prod_public_categ_modules" />
+			<field name="sequence" type="int">160</field>
+		</record>
+		<record id="prod_public_categ_point_of_sale"
+			model="product.public.category">
+			<field name="name">Point of Sale</field>
+			<field name="parent_id" ref="prod_public_categ_modules" />
+			<field name="sequence" type="int">165</field>
+		</record>
+		<record id="prod_public_categ_productivity"
+			model="product.public.category">
+			<field name="name">Productivity</field>
+			<field name="parent_id" ref="prod_public_categ_modules" />
+			<field name="sequence" type="int">170</field>
+		</record>
+		<record id="prod_public_categ_project"
+			model="product.public.category">
+			<field name="name">Project</field>
+			<field name="parent_id" ref="prod_public_categ_modules" />
+			<field name="sequence" type="int">175</field>
+		</record>
+		<record id="prod_public_categ_purchases"
+			model="product.public.category">
+			<field name="name">Purchases</field>
+			<field name="parent_id" ref="prod_public_categ_modules" />
+			<field name="sequence" type="int">180</field>
+		</record>
+		<record id="prod_public_categ_sales"
+			model="product.public.category">
+			<field name="name">Sales</field>
+			<field name="parent_id" ref="prod_public_categ_modules" />
+			<field name="sequence" type="int">185</field>
+		</record>
+		<record id="prod_public_categ_warehouse"
+			model="product.public.category">
+			<field name="name">Warehouse</field>
+			<field name="parent_id" ref="prod_public_categ_modules" />
+			<field name="sequence" type="int">190</field>
+		</record>
+		<record id="prod_public_categ_website"
+			model="product.public.category">
+			<field name="name">Website</field>
+			<field name="parent_id" ref="prod_public_categ_modules" />
+			<field name="sequence" type="int">195</field>
+		</record>
+
+		<record id="prod_public_categ_fleet"
+			model="product.public.category">
+			<field name="name">Fleet</field>
+			<field name="parent_id" ref="prod_public_categ_modules" />
+			<field name="sequence" type="int">200</field>
+		</record>
+
+		<record id="prod_public_categ_extra_tools"
+			model="product.public.category">
+			<field name="name">Extra Tools</field>
+			<field name="parent_id" ref="prod_public_categ_modules" />
+			<field name="sequence" type="int">203</field>
+		</record>
+
+
+		<!-- theme modules -->
+		<record id="prod_public_categ_themes"
+			model="product.public.category">
+			<field name="name">Themes</field>
+			<field name="parent_id" ref="prod_public_categ_odoo_apps" />
+			<field name="sequence" type="int">210</field>
+		</record>
+
+		<!-- children theme categories -->
+
+		<record id="prod_public_categ_themes_backend"
+			model="product.public.category">
+			<field name="name">Backend</field>
+			<field name="parent_id" ref="prod_public_categ_themes" />
+			<field name="sequence" type="int">215</field>
+		</record>
+
+		<record id="prod_public_categ_themes_corporate"
+			model="product.public.category">
+			<field name="name">Corporate</field>
+			<field name="parent_id" ref="prod_public_categ_themes" />
+			<field name="sequence" type="int">220</field>
+		</record>
+		<record id="prod_public_categ_themes_creative"
+			model="product.public.category">
+			<field name="name">Creative</field>
+			<field name="parent_id" ref="prod_public_categ_themes" />
+			<field name="sequence" type="int">225</field>
+		</record>
+		<record id="prod_public_categ_themes_ecommerce"
+			model="product.public.category">
+			<field name="name">Ecommerce</field>
+			<field name="parent_id" ref="prod_public_categ_themes" />
+			<field name="sequence" type="int">230</field>
+		</record>
+		<record id="prod_public_categ_themes_education"
+			model="product.public.category">
+			<field name="name">Education</field>
+			<field name="parent_id" ref="prod_public_categ_themes" />
+			<field name="sequence" type="int">235</field>
+		</record>
+		<record id="prod_public_categ_themes_entertainment"
+			model="product.public.category">
+			<field name="name">Entertainment</field>
+			<field name="parent_id" ref="prod_public_categ_themes" />
+			<field name="sequence" type="int">240</field>
+		</record>
+		<record id="prod_public_categ_themes_nonprofit"
+			model="product.public.category">
+			<field name="name">Nonprofit</field>
+			<field name="parent_id" ref="prod_public_categ_themes" />
+			<field name="sequence" type="int">245</field>
+		</record>
+		<record id="prod_public_categ_themes_personal"
+			model="product.public.category">
+			<field name="name">Personal</field>
+			<field name="parent_id" ref="prod_public_categ_themes" />
+			<field name="sequence" type="int">250</field>
+		</record>
+		<record id="prod_public_categ_themes_retail"
+			model="product.public.category">
+			<field name="name">Retail</field>
+			<field name="parent_id" ref="prod_public_categ_themes" />
+			<field name="sequence" type="int">255</field>
+		</record>
+		<record id="prod_public_categ_themes_services"
+			model="product.public.category">
+			<field name="name">Services</field>
+			<field name="parent_id" ref="prod_public_categ_themes" />
+			<field name="sequence" type="int">260</field>
+		</record>
+		<record id="prod_public_categ_themes_technology"
+			model="product.public.category">
+			<field name="name">Technology</field>
+			<field name="parent_id" ref="prod_public_categ_themes" />
+			<field name="sequence" type="int">265</field>
+		</record>
+		<record id="prod_public_categ_themes_miscellaneous"
+			model="product.public.category">
+			<field name="name">Miscellaneous</field>
+			<field name="parent_id" ref="prod_public_categ_themes" />
+			<field name="sequence" type="int">270</field>
+		</record>
+
+	</data>
+</odoo>

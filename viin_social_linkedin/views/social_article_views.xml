@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+    <record id="social_article_view_form" model="ir.ui.view">
+        <field name="name">social.article.form.inherit.facebook</field>
+        <field name="model">social.article</field>
+        <field name="inherit_id" ref="viin_social.social_article_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='previews_placeholder']" position="inside">
+                <field name="display_linkedin_preview" invisible="1" />
+                <field name="linkedin_preview" readonly="1" nolabel="1" colspan="2" widget="viin_social_post_preview"
+                    attrs="{'invisible': [('display_linkedin_preview', '=', False)]}"
+                    class="viin_social_preview_wrapper m-0 px-4 py-4 bg-200"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="social_article_view_search" model="ir.ui.view">
+        <field name="name">social.article.form.inherit.facebook</field>
+        <field name="model">social.article</field>
+        <field name="inherit_id" ref="viin_social.social_article_view_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='author_id']" position="after">
+				<separator string="State"/>
+ 				    <filter name="ftr_linkedin" string="Linkedin"
+				            domain="[('page_ids.social_provider', '=', 'linkedin')]"/>
+			    <separator />
+            </xpath>
+        </field>
+    </record>
+</data>
+</odoo>

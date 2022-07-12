@@ -1,0 +1,71 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_invoice_tax_details
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-20 07:16+0000\n"
+"PO-Revision-Date: 2020-04-20 07:16+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_invoice_tax_details
+#: model_terms:ir.ui.view,arch_db:to_invoice_tax_details.report_invoice_document
+msgid "<span>Amount</span>"
+msgstr ""
+
+#. module: to_invoice_tax_details
+#: model_terms:ir.ui.view,arch_db:to_invoice_tax_details.report_invoice_document
+msgid "<span>Tax Amount</span>"
+msgstr ""
+
+#. module: to_invoice_tax_details
+#: model_terms:ir.ui.view,arch_db:to_invoice_tax_details.report_invoice_document
+msgid "<span>Total Price</span>"
+msgstr ""
+
+#. module: to_invoice_tax_details
+#: model:ir.model,name:to_invoice_tax_details.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: to_invoice_tax_details
+#: model:ir.model,name:to_invoice_tax_details.model_account_move_line
+msgid "Journal Item"
+msgstr ""
+
+#. module: to_invoice_tax_details
+#: model:ir.model.fields,field_description:to_invoice_tax_details.field_res_config_settings__show_line_subtotals_tax_selection
+msgid "Line Subtotals Tax Display"
+msgstr ""
+
+#. module: to_invoice_tax_details
+#: model:ir.model.fields,field_description:to_invoice_tax_details.field_res_config_settings__group_show_line_tax_details
+msgid "Show line tax details"
+msgstr ""
+
+#. module: to_invoice_tax_details
+#: model:res.groups,comment:to_invoice_tax_details.group_show_line_tax_details
+msgid "Show tax details on invoice lines"
+msgstr ""
+
+#. module: to_invoice_tax_details
+#: model:ir.model.fields,field_description:to_invoice_tax_details.field_account_move_line__price_tax
+msgid "Tax Amount"
+msgstr ""
+
+#. module: to_invoice_tax_details
+#: model:ir.model.fields.selection,name:to_invoice_tax_details.selection__res_config_settings__show_line_subtotals_tax_selection__tax_details
+msgid "Tax Details"
+msgstr ""
+
+#. module: to_invoice_tax_details
+#: model:res.groups,name:to_invoice_tax_details.group_show_line_tax_details
+msgid "Tax display Details"
+msgstr ""

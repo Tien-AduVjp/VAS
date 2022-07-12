@@ -1,0 +1,198 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_hr_attendance_validation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-21 10:09+0000\n"
+"PO-Revision-Date: 2021-07-27 06:08+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_hr_attendance_validation
+#: model:ir.model,name:viin_hr_attendance_validation.model_hr_attendance
+msgid "Attendance"
+msgstr ""
+
+#. module: viin_hr_attendance_validation
+#: model:ir.actions.server,name:viin_hr_attendance_validation.action_server_auto_checkout
+#: model:ir.model.fields,field_description:viin_hr_attendance_validation.field_hr_attendance__auto_checkout
+#: model_terms:ir.ui.view,arch_db:viin_hr_attendance_validation.hr_attendance_view_filter
+msgid "Auto Check-out"
+msgstr ""
+
+#. module: viin_hr_attendance_validation
+#: model:ir.model.fields,field_description:viin_hr_attendance_validation.field_hr_attendance__days_crossing
+#: model_terms:ir.ui.view,arch_db:viin_hr_attendance_validation.hr_attendance_view_filter
+msgid "Days Crossing"
+msgstr ""
+
+#. module: viin_hr_attendance_validation
+#: model_terms:ir.ui.view,arch_db:viin_hr_attendance_validation.hr_attendance_view_filter
+msgid "Early Leave"
+msgstr ""
+
+#. module: viin_hr_attendance_validation
+#: model:ir.model.fields,field_description:viin_hr_attendance_validation.field_hr_attendance__early_leave_hours
+msgid "Early Leave Hours"
+msgstr ""
+
+#. module: viin_hr_attendance_validation
+#: model:ir.model,name:viin_hr_attendance_validation.model_hr_contract
+msgid "Employee Contract"
+msgstr ""
+
+#. module: viin_hr_attendance_validation
+#: model:ir.actions.server,name:viin_hr_attendance_validation.ir_cron_auto_check_out_ir_actions_server
+#: model:ir.cron,cron_name:viin_hr_attendance_validation.ir_cron_auto_check_out
+#: model:ir.cron,name:viin_hr_attendance_validation.ir_cron_auto_check_out
+msgid "HR Attendance - Auto Checkout"
+msgstr ""
+
+#. module: viin_hr_attendance_validation
+#: model_terms:ir.ui.view,arch_db:viin_hr_attendance_validation.hr_attendance_view_filter
+msgid "Late Attendance"
+msgstr ""
+
+#. module: viin_hr_attendance_validation
+#: model:ir.model.fields,field_description:viin_hr_attendance_validation.field_hr_attendance__late_attendance_hours
+msgid "Late Coming Hours"
+msgstr ""
+
+#. module: viin_hr_attendance_validation
+#: model_terms:ir.ui.view,arch_db:viin_hr_attendance_validation.hr_attendance_view_filter
+msgid "Manual Check-out Modification"
+msgstr ""
+
+#. module: viin_hr_attendance_validation
+#: model:ir.model.fields,field_description:viin_hr_attendance_validation.field_hr_attendance__manual_checkout_by_user_id
+msgid "Manual Checkout Modification By"
+msgstr ""
+
+#. module: viin_hr_attendance_validation
+#: code:addons/viin_hr_attendance_validation/models/hr_attendance.py:0
+#, python-format
+msgid "Only users who are granted for '%s' can do auto-checkout action."
+msgstr ""
+
+#. module: viin_hr_attendance_validation
+#: model:ir.model,name:viin_hr_attendance_validation.model_resource_calendar_leaves
+msgid "Resource Time Off Detail"
+msgstr ""
+
+#. module: viin_hr_attendance_validation
+#: model:ir.actions.server,name:viin_hr_attendance_validation.action_server_compute_valid_check_in_check_out
+msgid "Revalidation"
+msgstr ""
+
+#. module: viin_hr_attendance_validation
+#: model_terms:ir.ui.view,arch_db:viin_hr_attendance_validation.hr_attendance_view_filter
+msgid "Show attendance entries that have been checked out automatically"
+msgstr ""
+
+#. module: viin_hr_attendance_validation
+#: model_terms:ir.ui.view,arch_db:viin_hr_attendance_validation.hr_attendance_view_filter
+msgid ""
+"Show attendance entries that have been manual checkout/modified by an "
+"Attendance Officer."
+msgstr ""
+
+#. module: viin_hr_attendance_validation
+#: model:ir.model.fields,help:viin_hr_attendance_validation.field_hr_attendance__valid_worked_hours
+msgid ""
+"The actual attendance hours that match the corresponding working schedule. "
+"Early coming and late leave will be ignored."
+msgstr ""
+
+#. module: viin_hr_attendance_validation
+#: model:ir.model.fields,help:viin_hr_attendance_validation.field_hr_attendance__early_leave_hours
+msgid ""
+"The total early leave hours counting from the actual check-out time to the "
+"Valid Check-out."
+msgstr ""
+
+#. module: viin_hr_attendance_validation
+#: model:ir.model.fields,help:viin_hr_attendance_validation.field_hr_attendance__late_attendance_hours
+msgid ""
+"The total late attendance hours counting from the Valid Check-in time to the"
+" actual check-in time."
+msgstr ""
+
+#. module: viin_hr_attendance_validation
+#: model:ir.model.fields,help:viin_hr_attendance_validation.field_hr_attendance__valid_check_in
+msgid ""
+"The valid time of checking-in according to the corresponding working "
+"schedule."
+msgstr ""
+
+#. module: viin_hr_attendance_validation
+#: model:ir.model.fields,help:viin_hr_attendance_validation.field_hr_attendance__valid_check_out
+msgid ""
+"The valid time of checking-out according to the corresponding working "
+"schedule."
+msgstr ""
+
+#. module: viin_hr_attendance_validation
+#: model:ir.model.fields,help:viin_hr_attendance_validation.field_hr_attendance__resource_calendar_id
+msgid ""
+"The working schedule that matches the duration of this attendance entry, "
+"which is computed automatically."
+msgstr ""
+
+#. module: viin_hr_attendance_validation
+#: model:ir.model.fields,help:viin_hr_attendance_validation.field_hr_attendance__manual_checkout_by_user_id
+msgid ""
+"This field stores the user who filled/modified the check out time of the "
+"current attendance entry"
+msgstr ""
+
+#. module: viin_hr_attendance_validation
+#: model:ir.model.fields,help:viin_hr_attendance_validation.field_hr_attendance__days_crossing
+msgid ""
+"This indicates if the entry has check-in and check hours in different days "
+"(at emplpyee's local time)."
+msgstr ""
+
+#. module: viin_hr_attendance_validation
+#: model_terms:ir.ui.view,arch_db:viin_hr_attendance_validation.hr_attendance_view_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_attendance_validation.view_attendance_tree
+msgid "Total Early Leave Hours"
+msgstr ""
+
+#. module: viin_hr_attendance_validation
+#: model_terms:ir.ui.view,arch_db:viin_hr_attendance_validation.hr_attendance_view_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_attendance_validation.view_attendance_tree
+msgid "Total Late Coming Hours"
+msgstr ""
+
+#. module: viin_hr_attendance_validation
+#: model_terms:ir.ui.view,arch_db:viin_hr_attendance_validation.hr_attendance_view_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_attendance_validation.view_attendance_tree
+msgid "Total Valid Attendance Hours"
+msgstr ""
+
+#. module: viin_hr_attendance_validation
+#: model:ir.model.fields,field_description:viin_hr_attendance_validation.field_hr_attendance__valid_worked_hours
+msgid "Valid Attendance Hours"
+msgstr ""
+
+#. module: viin_hr_attendance_validation
+#: model:ir.model.fields,field_description:viin_hr_attendance_validation.field_hr_attendance__valid_check_in
+msgid "Valid Check-in"
+msgstr ""
+
+#. module: viin_hr_attendance_validation
+#: model:ir.model.fields,field_description:viin_hr_attendance_validation.field_hr_attendance__valid_check_out
+msgid "Valid Check-out"
+msgstr ""
+
+#. module: viin_hr_attendance_validation
+#: model:ir.model.fields,field_description:viin_hr_attendance_validation.field_hr_attendance__resource_calendar_id
+msgid "Working Schedule"
+msgstr ""

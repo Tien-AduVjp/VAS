@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="git_branch_form_view" model="ir.ui.view">
+			<field name="name">git.branch.form</field>
+			<field name="model">git.branch</field>
+			<field name="inherit_id"
+				ref="to_odoo_module.git_branch_form_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='generate_app_products']" position="after">
+					<field name="apps_website_published" widget="boolean_toggle" />
+					<field name="visible_on_apps_store" widget="boolean_toggle" />
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

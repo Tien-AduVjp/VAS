@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+	
+		<menuitem parent="account.menu_finance_reports"
+			id="invoice_declaration_vn_statements_menu"
+			groups="account.group_account_user"
+			sequence="1" name="Invoice Declaration" />
+	
+	</data>
+</odoo>

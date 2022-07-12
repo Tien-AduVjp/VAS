@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="hr_meal_order_form_view" model="ir.ui.view">
+			<field name="name">hr.meal.order.form</field>
+			<field name="model">hr.meal.order</field>
+			<field name="inherit_id" ref="to_hr_meal.hr_meal_order_form_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//notebook/page/field[@name='order_line_ids']//field[@name='total_price']" position="after">
+					<field name="employee_price"/>
+					<field name="employee_amount"/>
+					<field name="company_amount"/>
+				</xpath>
+				<xpath expr="//group[@name='order_total']//field[@name='total_price']" position="after">
+					<field name="total_employee_pay"/>
+					<field name="total_company_pay"/>
+				</xpath>				
+			</field>
+		</record>
+	</data>
+</odoo>

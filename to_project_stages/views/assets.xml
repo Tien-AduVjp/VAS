@@ -1,0 +1,7 @@
+<odoo>
+    <template id="qunit_suite" name="to_project_stages_test" inherit_id="web.qunit_suite">
+        <xpath expr="//script[last()]" position="after">
+            <script type="text/javascript" src="/to_project_stages/static/tests/test_widget_int_color.js"/>
+        </xpath>
+    </template>
+</odoo>

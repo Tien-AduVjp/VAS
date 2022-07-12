@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>        
+        <record id="action_server_aml_report_flag_off" model="ir.actions.server">
+            <field name="name">Flag Report Off</field>
+            <field name="type">ir.actions.server</field>
+            <field name="model_id" ref="model_account_move_line" />
+            <field name="binding_model_id" ref="model_account_move_line" />
+            <field name="state">code</field>
+            <field name="code">records.action_flag_report_off()</field>
+        </record>
+
+		<record id="action_server_aml_report_flag_on" model="ir.actions.server">
+            <field name="name">Flag Report On</field>
+            <field name="type">ir.actions.server</field>
+            <field name="model_id" ref="model_account_move_line" />
+            <field name="binding_model_id" ref="model_account_move_line" />
+            <field name="state">code</field>
+            <field name="code">records.action_flag_report_on()</field>
+        </record>
+	</data>
+</odoo>

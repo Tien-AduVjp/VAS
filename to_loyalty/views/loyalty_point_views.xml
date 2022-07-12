@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="view_loyalty_point_pivot" model="ir.ui.view">
+		<field name="name">loyalty.point.pivot</field>
+		<field name="model">loyalty.point</field>
+		<field name="arch" type="xml">
+			<pivot string="Pivot Loyalty Point">
+				<field name="partner_id" type="row" />
+				<field name="points" type="measure" />
+			</pivot>
+		</field>
+	</record>
+
+	<record id="action_loyalty_point_form"
+		model="ir.actions.act_window">
+		<field name="name">Loyalty Point</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">loyalty.point</field>
+		<field name="view_mode">pivot</field>
+	</record>
+
+	<record id="view_loyalty_point_form" model="ir.ui.view">
+		<field name="name">loyalty.point.form</field>
+		<field name="model">loyalty.point</field>
+		<field name="arch" type="xml">
+			<form string="Points Adjustment">
+				<sheet>
+					<group>
+						<group>
+							<field name="partner_id"
+								attrs="{'readonly':[('manual_adjustment','=',False)]}" />
+							<field name="loyalty_program_id"
+								attrs="{'readonly':[('manual_adjustment','=',False)]}" />
+							<field name="points"
+								attrs="{'readonly':[('manual_adjustment','=',False)]}" />
+						</group>
+						<group>
+							<field name="manual_adjustment" invisible="1" />
+							<field name="date_order" string="Date"
+								attrs="{'readonly':[('manual_adjustment','=',False)]}" />
+							<field name="reason"
+								attrs="{'readonly':[('manual_adjustment','=',False)]}" />
+						</group>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<record id="view_loyalty_point_tree" model="ir.ui.view">
+		<field name="name">loyalty.point.tree</field>
+		<field name="model">loyalty.point</field>
+		<field name="arch" type="xml">
+			<tree string="Points Adjustment">
+				<field name="partner_id" />
+				<field name="loyalty_program_id" />
+				<field name="points" />
+			</tree>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="loyalty_points_filter_view">
+		<field name="name">loyalty.points.filter</field>
+		<field name="model">loyalty.point</field>
+		<field name="arch" type="xml">
+			<search>
+				<field name="partner_id" />
+				<field name="loyalty_program_id" />
+				<group expand="0" string="Group By">
+					<filter name="group_partner" string="Customer"
+						context="{'group_by':'partner_id'}" />
+				</group>
+			</search>
+		</field>
+	</record>
+
+	<record id="action_loyalty_point_action"
+		model="ir.actions.act_window">
+		<field name="name">Points Adjustment</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">loyalty.point</field>
+		<field name="view_mode">tree,form</field>
+		<field name="domain">[('product_id', '=', False)]</field>
+		<field name="context">{'search_default_group_partner': 1}</field>
+	</record>
+
+	<menuitem id="menu_loyalty_point_adjustment"
+		parent="menu_loyalty_config" action="action_loyalty_point_action"
+		name="Points manual adjustment" sequence="20" />
+
+</odoo>

@@ -1,0 +1,110 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_git_project
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-23 10:18+0000\n"
+"PO-Revision-Date: 2020-02-23 10:18+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_git_project
+#: model_terms:ir.ui.view,arch_db:to_git_project.project_project_view_form_simplified
+msgid "Choose a Git Repo."
+msgstr "Chọn Kho Git"
+
+#. module: to_git_project
+#: model:ir.model.fields,field_description:to_git_project.field_project_project__git_repository_id
+msgid "Default Git Repo."
+msgstr "Kho Git Mặc định"
+
+#. module: to_git_project
+#: model:ir.model,name:to_git_project.model_git_branch
+#: model:ir.model.fields,field_description:to_git_project.field_project_task__git_branch_id
+msgid "Git Branch"
+msgstr "Nhánh Git"
+
+#. module: to_git_project
+#: model:ir.model.fields,help:to_git_project.field_project_task__git_branch_id
+msgid "Git Branch to which this task concerns"
+msgstr "Nhánh Git mà Nhiệm vụ này liên quan"
+
+#. module: to_git_project
+#: model:ir.model.fields,field_description:to_git_project.field_project_task__git_repository_id
+msgid "Git Repo."
+msgstr "Kho Git"
+
+#. module: to_git_project
+#: model:ir.model,name:to_git_project.model_git_repository
+msgid "Git Repository"
+msgstr "Kho Git"
+
+#. module: to_git_project
+#: model:ir.model.fields,help:to_git_project.field_project_task__git_repository_id
+msgid "Git Repostory to which this task concerns"
+msgstr "Kho Git mà Nhệm vụ này liên quan"
+
+#. module: to_git_project
+#: model:ir.model,name:to_git_project.model_project_project
+msgid "Project"
+msgstr "Dự án"
+
+#. module: to_git_project
+#: model:ir.model.fields,field_description:to_git_project.field_git_repository__project_ids
+#: model_terms:ir.ui.view,arch_db:to_git_project.git_branch_form_view
+#: model_terms:ir.ui.view,arch_db:to_git_project.git_repository_view_form
+msgid "Projects"
+msgstr "Dự án"
+
+#. module: to_git_project
+#: model:ir.model.fields,field_description:to_git_project.field_git_branch__projects_count
+#: model:ir.model.fields,field_description:to_git_project.field_git_repository__projects_count
+msgid "Projects Count"
+msgstr "SL Dự án"
+
+#. module: to_git_project
+#: model:ir.model,name:to_git_project.model_project_task
+msgid "Task"
+msgstr "Nhiệm vụ"
+
+#. module: to_git_project
+#: model:ir.model.fields,field_description:to_git_project.field_git_branch__task_ids
+#: model:ir.model.fields,field_description:to_git_project.field_git_repository__task_ids
+#: model_terms:ir.ui.view,arch_db:to_git_project.git_branch_form_view
+#: model_terms:ir.ui.view,arch_db:to_git_project.git_repository_view_form
+msgid "Tasks"
+msgstr "Nhiệm vụ"
+
+#. module: to_git_project
+#: model:ir.model.fields,field_description:to_git_project.field_git_branch__tasks_count
+#: model:ir.model.fields,field_description:to_git_project.field_git_repository__tasks_count
+msgid "Tasks Count"
+msgstr "SL Nhiệm vụ"
+
+#. module: to_git_project
+#: model:ir.model.fields,help:to_git_project.field_project_project__git_repository_id
+msgid ""
+"The default Git Repostory of the project which will be filled automatically "
+"when handling tasks and issues"
+msgstr ""
+"Nhánh Git mặc định của dự án mà sẽ được điền tự động và nhiệm vụ khi làm "
+"việc với các nhiệm vụ thuộc dự án này"
+
+#. module: to_git_project
+#: code:addons/to_git_project/models/project_task.py:0
+#, python-format
+msgid "You cannot input a branch without its repository!"
+msgstr "Bạn không thể nhập một nhánh git mà không nhập kho git của nó!"
+
+#. module: to_git_project
+#: code:addons/to_git_project/models/project_task.py:0
+#, python-format
+msgid "You cannot select a branch that does not belong to the repository %s"
+msgstr "Bạn không thể chọn một nhánh mà không thuộc về kho git %s"

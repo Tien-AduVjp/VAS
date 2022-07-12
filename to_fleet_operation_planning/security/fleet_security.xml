@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<!-- Access Groups -->
+	<record id="fleet_group_operator" model="res.groups">
+		<field name="name">Operator</field>
+		<field name="implied_ids"
+			eval="[(4,ref('fleet.fleet_group_user')), (4,ref('to_geo_routes.group_user'))]" />
+		<field name="category_id"
+			ref="base.module_category_human_resources_fleet" />
+	</record>
+
+	<record id="fleet.fleet_group_manager" model="res.groups">
+		<field name="name">Manager</field>
+		<field name="implied_ids"
+			eval="[(4,ref('fleet_group_operator')), (4,ref('to_geo_routes.group_manager'))]" />
+		<field name="category_id"
+			ref="base.module_category_human_resources_fleet" />
+	</record>
+
+	<!-- Fleet user -->
+	<record id="fleet_rule_trip_visibility_fleet_user"
+		model="ir.rule">
+		<field name="name">Fleet user can see/handle his/her own trip only
+		</field>
+		<field name="model_id" ref="model_fleet_vehicle_trip" />
+		<field name="groups" eval="[(4, ref('fleet.fleet_group_user'))]" />
+		<field name="perm_read" eval="True" />
+		<field name="perm_write" eval="True" />
+		<field name="perm_create" eval="False" />
+		<field name="perm_unlink" eval="False" />
+		<field name="domain_force">[('driver_id','=',user.partner_id.id)]</field>
+	</record>
+
+	<record id="fleet.fleet_rule_vehicle_visibility_user"
+		model="ir.rule">
+		<field name="name">Fleet User can only see his/her vehicle or the
+			vehicles set on trips where he is assigned as the driver
+		</field>
+		<field name="domain_force">['|',('driver_id','=',user.partner_id.id),'&amp;',('access_partner_ids','!=',False),('access_partner_ids','in',[user.partner_id.id])]
+		</field>
+	</record>
+
+	<record id="fleet.fleet_rule_contract_visibility_user"
+		model="ir.rule">
+		<field name="domain_force">['|',('cost_id.vehicle_id.driver_id','=',user.partner_id.id),'&amp;',('cost_id.trip_id','!=',False),('cost_id.trip_id.driver_id','=',user.partner_id.id)]
+		</field>
+	</record>
+	<record id="fleet.fleet_rule_cost_visibility_user"
+		model="ir.rule">
+		<field name="domain_force">['|',('vehicle_id.driver_id','=',user.partner_id.id),'&amp;',('trip_id','!=',False),('trip_id.driver_id','=',user.partner_id.id)]
+		</field>
+	</record>
+	<record id="fleet.fleet_rule_service_visibility_user"
+		model="ir.rule">
+		<field name="domain_force">['|',('cost_id.vehicle_id.driver_id','=',user.partner_id.id),'&amp;',('cost_id.trip_id','!=',False),('cost_id.trip_id.driver_id','=',user.partner_id.id)]
+		</field>
+	</record>
+	<record id="fleet.fleet_rule_odometer_visibility_user"
+		model="ir.rule">
+		<field name="domain_force">['|',('vehicle_id.driver_id','=',user.partner_id.id),'&amp;',('vehicle_id.access_partner_ids','!=',False),('vehicle_id.access_partner_ids','in',[user.partner_id.id])]
+		</field>
+	</record>
+	<record id="fleet.fleet_rule_fuel_log_visibility_user"
+		model="ir.rule">
+		<field name="domain_force">['|',('cost_id.vehicle_id.driver_id','=',user.partner_id.id),'&amp;',('cost_id.trip_id','!=',False),('cost_id.trip_id.driver_id','=',user.partner_id.id)]
+		</field>
+	</record>
+
+	<!-- Fleet Operator -->
+	<record id="fleet_rule_trip_visibility_fleet_operator"
+		model="ir.rule">
+		<field name="name">Fleet operator can handle all trips</field>
+		<field name="model_id" ref="model_fleet_vehicle_trip" />
+		<field name="groups"
+			eval="[(4, ref('to_fleet_operation_planning.fleet_group_operator'))]" />
+		<field name="perm_read" eval="True" />
+		<field name="perm_write" eval="True" />
+		<field name="perm_create" eval="True" />
+		<field name="perm_unlink" eval="True" />
+		<field name="domain_force">[(1,'=',1)]</field>
+	</record>
+	<record id="fleet_rule_contract_visibility_operator"
+		model="ir.rule">
+		<field name="name">Operator can handle all contracts</field>
+		<field name="model_id"
+			ref="fleet.model_fleet_vehicle_log_contract" />
+		<field name="groups" eval="[(4, ref('fleet_group_operator'))]" />
+		<field name="perm_read" eval="True" />
+		<field name="perm_write" eval="True" />
+		<field name="perm_create" eval="True" />
+		<field name="perm_unlink" eval="True" />
+		<field name="domain_force">[(1,'=',1)]</field>
+	</record>
+	<record id="fleet_rule_cost_visibility_operator" model="ir.rule">
+		<field name="name">Operator can handle all costs</field>
+		<field name="model_id" ref="model_fleet_vehicle_cost" />
+		<field name="groups" eval="[(4, ref('fleet_group_operator'))]" />
+		<field name="perm_read" eval="True" />
+		<field name="perm_write" eval="True" />
+		<field name="perm_create" eval="True" />
+		<field name="perm_unlink" eval="True" />
+		<field name="domain_force">[(1,'=',1)]</field>
+	</record>
+	<record id="fleet_rule_service_visibility_operator"
+		model="ir.rule">
+		<field name="name">Operator can handle all vehicle's services</field>
+		<field name="model_id"
+			ref="fleet.model_fleet_vehicle_log_services" />
+		<field name="groups" eval="[(4, ref('fleet_group_operator'))]" />
+		<field name="perm_read" eval="True" />
+		<field name="perm_write" eval="True" />
+		<field name="perm_create" eval="True" />
+		<field name="perm_unlink" eval="True" />
+		<field name="domain_force">[(1,'=',1)]</field>
+	</record>
+	<record id="fleet_rule_odometer_visibility_operator"
+		model="ir.rule">
+		<field name="name">Operator can handle all vehicle's odometer</field>
+		<field name="model_id" ref="model_fleet_vehicle_odometer" />
+		<field name="groups" eval="[(4, ref('fleet_group_operator'))]" />
+		<field name="perm_read" eval="True" />
+		<field name="perm_write" eval="True" />
+		<field name="perm_create" eval="True" />
+		<field name="perm_unlink" eval="True" />
+		<field name="domain_force">[(1,'=',1)]</field>
+	</record>
+	<record id="fleet_rule_fuel_log_visibility_operator"
+		model="ir.rule">
+		<field name="name">Operator can handle all vehicle's fuel log</field>
+		<field name="model_id" ref="fleet.model_fleet_vehicle_log_fuel" />
+		<field name="groups" eval="[(4, ref('fleet_group_operator'))]" />
+		<field name="perm_read" eval="True" />
+		<field name="perm_write" eval="True" />
+		<field name="perm_create" eval="True" />
+		<field name="perm_unlink" eval="True" />
+		<field name="domain_force">[(1,'=',1)]</field>
+	</record>
+	<record id="fleet_rule_vehicle_visibility_operator"
+		model="ir.rule">
+		<field name="name">Operators can see/handle all vehicles</field>
+		<field name="model_id" ref="fleet.model_fleet_vehicle" />
+		<field name="groups" eval="[(4, ref('fleet_group_operator'))]" />
+		<field name="perm_read" eval="True" />
+		<field name="perm_write" eval="True" />
+		<field name="perm_create" eval="True" />
+		<field name="perm_unlink" eval="False" />
+		<field name="domain_force">[(1,'=',1)]</field>
+	</record>
+</odoo>

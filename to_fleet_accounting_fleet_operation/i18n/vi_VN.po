@@ -1,0 +1,353 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_fleet_accounting_fleet_operation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-23 10:06+0000\n"
+"PO-Revision-Date: 2021-03-23 10:06+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_vehicle_trip_register_cost_wizard__amount
+msgid "Amount"
+msgstr "Tổng tiền"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model,name:to_fleet_accounting_fleet_operation.model_account_analytic_line
+msgid "Analytic Line"
+msgstr "Phát sinh KT Quản trị"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation.view_trip_fleet_vehicle_cost_invoicing_wizard
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_vehicle_trip_register_cost_wizard__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.ui.menu,name:to_fleet_accounting_fleet_operation.menu_main_fleet_reporting_costs
+msgid "Cost Analysis"
+msgstr "Phân tích Chi phí"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model,name:to_fleet_accounting_fleet_operation.model_fleet_vehicle_cost
+msgid "Cost related to a vehicle"
+msgstr "Chi phí liên quan đến phương tiện"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.ui.menu,name:to_fleet_accounting_fleet_operation.menu_fleet_reporting_costs
+msgid "Costs"
+msgstr "Chi phí"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.actions.act_window,name:to_fleet_accounting_fleet_operation.fleet_costs_reporting_action
+msgid "Costs Analysis"
+msgstr "Phân tích Chi phí"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_fleet_vehicle_trip__costs_invoiced
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation.fleet_trip_search
+msgid "Costs Invoiced"
+msgstr "Chi Phí đã Xuất hoá đơn"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation.fleet_trip_search
+msgid "Costs Uninvoiced"
+msgstr "Chi Phí chưa Xuất hoá đơn"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_trip_invoicing_cost_wizard__vehicle_cost_ids
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation.view_trip_fleet_vehicle_cost_invoicing_wizard
+msgid "Costs to Invoice"
+msgstr "Chi Phí chờ Xuất hoá đơn"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation.view_trip_fleet_vehicle_cost_invoicing_wizard
+msgid "Create Invoices"
+msgstr "Tạo Hoá đơn"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation.view_trip_fleet_vehicle_cost_invoicing_wizard
+msgid "Create and View Invoices"
+msgstr "Tạo và Xem Hoá đơn"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_trip_invoicing_cost_wizard__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_trip_invoicing_cost_wizard__create_date
+msgid "Created on"
+msgstr "Được tạo vào"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_vehicle_trip_register_cost_wizard__currency_id
+msgid "Currency"
+msgstr "Tiền tệ"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_trip_invoicing_cost_wizard__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation.fleet_trip_search
+msgid "Filter trips whose costs have been fully invoiced."
+msgstr "Lọc các chuyến mà chi phí của chúng đã được xuất hoá đơn đầy đủ."
+
+#. module: to_fleet_accounting_fleet_operation
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation.fleet_trip_search
+msgid "Filter trips whose costs have not been fully invoiced."
+msgstr "Lọc các chuyến mà chi phí của chúng chưa được xuất hoá đơn đầy đủ."
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model,name:to_fleet_accounting_fleet_operation.model_fleet_vehicle_trip
+msgid "Fleet Trip"
+msgstr "Chuyến"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model,name:to_fleet_accounting_fleet_operation.model_fleet_trips_analysis
+msgid "Fleet Trips Analysis"
+msgstr "Phân tích các Chuyến"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model,name:to_fleet_accounting_fleet_operation.model_fleet_vehicle_cost_report
+msgid "Fleet Vehicle Cost Analysis"
+msgstr "Phân tích Chi phí Phương tiện"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_trip_invoicing_cost_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.ui.menu,name:to_fleet_accounting_fleet_operation.menu_fleet_reporting_indicative_costs
+msgid "Indicative Costs"
+msgstr "Chi phí Phát sinh"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.actions.act_window,name:to_fleet_accounting_fleet_operation.fleet_costs_reporting_non_effective_action
+msgid "Indicative Costs Analysis"
+msgstr "Phân tích các Chi phí Phát sinh"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.actions.act_window,name:to_fleet_accounting_fleet_operation.action_trip_fleet_vehicle_cost_invoicing_wizard
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation.view_trip_fleet_vehicle_cost_invoicing_wizard
+msgid "Invoice Trips' Costs"
+msgstr "Xuất Hoá đơn Chi phí Chuyến"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_vehicle_trip_register_cost_wizard__product_id
+msgid "Invoiceable Product"
+msgstr "Sản phẩm Xuất hoá đơn"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation.view_trip_fleet_vehicle_cost_invoicing_wizard
+msgid ""
+"Invoices will be created in draft so that you can review\n"
+"\t\t\t\t\t\tthem before validation."
+msgstr ""
+"Hoá đơn sẽ được tạo ở trạng thái dự thảo để bản có thể xem\n"
+"                       xét trước khi xác nhận."
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model,name:to_fleet_accounting_fleet_operation.model_trip_invoicing_cost_wizard
+msgid "Invoicing Trip's Costs Wizard"
+msgstr "Đồ thuật Xuất Hoá đơn Chi phí Chuyến"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model,name:to_fleet_accounting_fleet_operation.model_account_move_line
+msgid "Journal Item"
+msgstr "Phát sinh bút toán"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_trip_invoicing_cost_wizard____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_trip_invoicing_cost_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_trip_invoicing_cost_wizard__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_fleet_vehicle_cost_report__route_id
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation.fleet_vehicle_costs_report_view_search
+msgid "Route"
+msgstr "Tuyến đường"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_fleet_vehicle_cost_report__address_id
+msgid "Route Location"
+msgstr "Địa điểm"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation.fleet_vehicle_costs_report_view_search
+msgid "Route Related"
+msgstr "Chỉ Liên quan đến Tuyến"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_fleet_vehicle_cost_report__route_section_id
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation.fleet_vehicle_costs_report_view_search
+msgid "Route Section"
+msgstr "Chặng đường"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation.fleet_vehicle_costs_report_view_search
+msgid "Route Section Only"
+msgstr "Chỉ các Chặng"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation.fleet_vehicle_costs_report_view_search
+msgid "Route Waypoint"
+msgstr "Các Địa điểm"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation.fleet_vehicle_costs_report_view_search
+msgid "Route Waypoint Only"
+msgstr "Chỉ Liên quan đến Địa điểm"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation.fleet_trip_form
+msgid "Show all vendor bills that have been issued for this trip"
+msgstr ""
+"Hiển thị tất cả các hoá đơn nhà cung cấp mà đã được xuất cho chuyến này"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,help:to_fleet_accounting_fleet_operation.field_trip_invoicing_cost_wizard__vehicle_cost_ids
+msgid ""
+"The costs having a vendor but have not been invoiced will be loaded here "
+"upon you change the trip(s)"
+msgstr ""
+"Các chi phí mà có xác định nhà cung cung nhưng chưa được xuất hoá đơn sẽ "
+"được nạp vào đây ngay khi bạn thay đổi (các) chuyến"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,help:to_fleet_accounting_fleet_operation.field_vehicle_trip_register_cost_wizard__product_id
+msgid "The product that will be used when invoicing this cost"
+msgstr "Sản phẩm mà sẽ được sử dụng để xuất hoá đơn cho chi phí này"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,help:to_fleet_accounting_fleet_operation.field_vehicle_cost_distribution_line__trip_id
+msgid "The trip on which this amount is registered"
+msgstr "Chuyến mà ở đó giá trị này được ghi nhận"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,help:to_fleet_accounting_fleet_operation.field_account_analytic_line__trip_id
+msgid "The trip that relates to this analytic line"
+msgstr "Chuyến mà liên quan đến phát sinh kế toán quản trị này"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,help:to_fleet_accounting_fleet_operation.field_account_move_line__trip_id
+msgid "The trip that relates to this journal item"
+msgstr "Chuyến mà liên quan đến dòng phát sinh kế toán này"
+
+#. module: to_fleet_accounting_fleet_operation
+#: code:addons/to_fleet_accounting_fleet_operation/wizard/vehicle_trip_register_cost_wizard.py:0
+#, python-format
+msgid ""
+"There is a discrepancy between the product (%s) you selected and the product"
+" (%s) predefined for the service type %s"
+msgstr ""
+"Có sự bất đồng giữa sản phẩm (%s) bạn chọn và sản phẩm được định sẵn cho "
+"kiểu dịch vụ (%s)"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,help:to_fleet_accounting_fleet_operation.field_fleet_vehicle_trip__costs_invoiced
+msgid ""
+"This technical field is to indicate if all the trip's costs have been fully "
+"invoiced. Note: this field takes True value when no cost is registered for "
+"the trip"
+msgstr ""
+"Trường kỹ thuật này để chỉ báo xem tất cả các chi phí của chuyến đã được "
+"xuất hoá đơn đầy đủ chưa. Chú ý: Trường này vẫn trả về giá trị True khi "
+"không có chi phí nào ghi nhận cho chuyến này"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_account_analytic_line__trip_id
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_account_move_line__trip_id
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_fleet_vehicle_cost_report__trip_id
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_vehicle_cost_distribution_line__trip_id
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation.fleet_vehicle_costs_report_view_search
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation.view_account_analytic_line_filter
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation.view_account_move_line_filter
+msgid "Trip"
+msgstr "Chuyến"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation.fleet_vehicle_costs_report_view_search
+msgid "Trip Only"
+msgstr "Chỉ liên quan đến Chuyến"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_vehicle_cost_distribution_line__trip_section_id
+msgid "Trip Section"
+msgstr "Chặng"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_vehicle_cost_distribution_line__trip_waypoint_id
+msgid "Trip Waypoint"
+msgstr "Địa điểm"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_trip_invoicing_cost_wizard__trip_ids
+msgid "Trips to Invoice"
+msgstr "Chuyến chờ Hoá đơn"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model,name:to_fleet_accounting_fleet_operation.model_vehicle_cost_distribution_line
+msgid "Vehicle Cost Distribution Line"
+msgstr "Dòng Phân bổ Chi phí Phương tiện"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_vehicle_trip_register_cost_wizard__vendor_id
+msgid "Vendor"
+msgstr "Nhà cung cấp"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_fleet_vehicle_trip__vendor_invoice_ids
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation.fleet_trip_form
+msgid "Vendor Bills"
+msgstr "Hoá đơn Nhà cung cấp"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_fleet_vehicle_trip__vendor_invoices_count
+msgid "Vendor Bills Count"
+msgstr "SL Hoá đơn Nhà cung cấp"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_fleet_vehicle_cost__vendor_is_employee
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_fleet_vehicle_log_contract__vendor_is_employee
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_fleet_vehicle_log_fuel__vendor_is_employee
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_fleet_vehicle_log_services__vendor_is_employee
+msgid "Vendor Is Employee"
+msgstr "Nhà cung cấp là Nhân viên"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model,name:to_fleet_accounting_fleet_operation.model_vehicle_trip_register_cost_wizard
+msgid "vehicle.trip.register.cost.wizard"
+msgstr ""
+
+
+#. module: to_fleet_accounting_fleet_operation
+#: code:addons/to_fleet_accounting_fleet_operation/wizard/trip_invoicing_cost_wizard.py:0
+#, python-format
+msgid "You cannot create invoice the vehicle cost of another trip"
+msgstr "Bạn không thể tạo hoá đơn cho chi phí của chuyến đi khác"

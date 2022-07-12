@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+	<div t-name="viin_social.PostAttachmentsCarousel" class="bg-black p-0">
+		<div id="carouselExampleIndicators" class="carousel slide text-center" data-ride="carousel">
+		  <div class="carousel-inner">
+		    <t t-set="current_position" t-value="0"/>
+			<t t-foreach="widget.attachments" t-as="attachment">
+				<div t-attf-class="carousel-item {{ (current_position == widget.active_position) ? 'active' : '' }}">
+					<t t-if="attachment['type'] == 'photo'">
+						<img t-att-src="attachment['src']" alt="Attachment" />
+					</t>
+			 	</div>
+			 	<t t-set="current_position" t-value="current_position + 1"/>
+			</t>
+		  </div>
+		  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+		    <span class="carousel-control-prev-icon" aria-hidden="false"></span>
+		    <span class="sr-only">Previous</span>
+		  </a>
+		  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+		    <span class="carousel-control-next-icon" aria-hidden="false"></span>
+		    <span class="sr-only">Next</span>
+		  </a>
+		</div>
+	</div>
+</templates>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+	<menuitem name="Inventory" id="stock.menu_stock_root" sequence="30"
+        groups="stock.group_stock_manager,stock.group_stock_user,to_multi_warehouse_access_control.group_stock_own_document_user"
+        web_icon="stock,static/description/icon.png"/>
+    <menuitem id="stock.menu_warehouse_report" name="Reporting" sequence="99" parent="stock.menu_stock_root" groups="to_multi_warehouse_access_control.group_warehouse_manager"/>
+</odoo>
+

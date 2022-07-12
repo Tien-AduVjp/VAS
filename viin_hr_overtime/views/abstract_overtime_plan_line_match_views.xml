@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record
+			id="view_abstract_overtime_plan_line_match_form"
+			model="ir.ui.view">
+			<field name="name">abstract.overtime.plan.line.match.form</field>
+			<field name="model">abstract.overtime.plan.line.match</field>
+			<field name="arch" type="xml">
+				<form string="Overtime Plan Line Match">
+					<sheet>
+						<div class="oe_button_box" name="button_box">
+						</div>
+						<group>
+							<group>
+
+								<field name="overtime_plan_line_id" />
+								<field name="overtime_plan_id" />
+							</group>
+							<group>
+								<field name="date_start" />
+								<field name="date_end" />
+								<field name="matched_hours" />
+								<field name="unmatched_hours" />
+							</group>
+						</group>
+						<notebook>
+						</notebook>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record id="view_abstract_overtime_plan_line_match_tree"
+			model="ir.ui.view">
+			<field name="name">abstract.overtime.plan.line.match.tree</field>
+			<field name="model">abstract.overtime.plan.line.match</field>
+			<field name="arch" type="xml">
+				<tree string="Overtime Plan Line Match">
+					<field name="overtime_plan_line_id" />
+					<field name="overtime_plan_id" />
+					<field name="date_start" />
+					<field name="date_end" />
+					<field name="matched_hours" />
+				</tree>
+			</field>
+		</record>
+
+	</data>
+</odoo>

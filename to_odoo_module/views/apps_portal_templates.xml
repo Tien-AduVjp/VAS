@@ -1,0 +1,102 @@
+<odoo>
+	<template id="portal_my_home_menu_app"
+		name="Portal layout: apps menu entries"
+		inherit_id="portal.portal_breadcrumbs" priority="21">
+		<xpath expr="//ol[hasclass('o_portal_submenu')]"
+			position="inside">
+			<!-- Breadcrumb -->
+			<li t-if="page_name == 'Odoo Apps' or odoo_apps" t-attf-class="breadcrumb-item #{'active ' if not odoo_apps else ''}">
+				<a t-if="odoo_apps" t-attf-href="/my/apps?{{ keep_query() }}">My Purchased Apps</a>
+				<t t-else="">Apps</t>
+			</li>
+		</xpath>
+	</template>
+
+	<template id="portal_my_home_apps"
+		name="Portal My Home: apps entries" inherit_id="portal.portal_my_home"
+		priority="21">
+		<xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
+			<t t-call="portal.portal_docs_entry">
+                <t t-set="title">My Purchased Apps</t>
+                <t t-set="url" t-value="'/my/apps'"/>
+                <t t-set="count" t-value="apps_count"/>
+            </t>
+			
+		</xpath>
+	</template>
+
+	<template id="portal_my_apps" name="My Odoo Apps">
+		<t t-call="portal.portal_layout">
+			<t t-set="breadcrumbs_searchbar" t-value="True"/>
+			<t t-call="portal.portal_searchbar">
+	            <t t-set="title">Odoo Apps</t>
+	        </t>
+			<t t-if="not odoo_apps">
+				<div class="alert alert-warning mt8" role="alert">
+					There are currently no Odoo Apps for your account.
+				</div>
+			</t>
+			<t t-if="odoo_apps">
+				<div class="table-responsive">
+					<table class="table table-hover">
+						<thead>
+							<tr class="active">
+								<th></th>
+								<th>Name</th>
+								<th>Summary</th>
+								<th class="text-right">Version</th>
+								<th>Odoo Version</th>
+								<th>Author</th>
+								<th></th>
+								<th class="text-right"># of Downloads</th>
+							</tr>
+						</thead>
+						<tbody>
+							<t t-foreach="odoo_apps" t-as="app">
+								<tr>
+									<td>
+										<img t-if="app.icon"
+											t-att-src="'data:image/png;base64,%s' % to_text(app.icon)"
+											alt="App Icon" />
+									</td>
+									<td>
+										<span t-field="app.name" />
+										<br />
+										<small>
+											<span t-field="app.technical_name" />
+										</small>
+									</td>
+									<td>
+										<span t-field="app.summary" />
+									</td>
+									<td class="text-right">
+										<span t-field="app.version" />
+									</td>
+									<td>
+										<div class="badge badge-info">
+											v
+											<span t-field="app.odoo_version_id.name" />
+										</div>
+									</td>
+									<td>
+										<span t-esc="', '.join(app.author_ids.mapped('name'))" />
+									</td>
+									<td class="text-nowrap text-right">
+										<a class="btn btn-primary btn-sm" target="_blank"
+											t-attf-href="/my/apps/download/{{app.id}}?{{keep_query()}}">
+											<i class="fa fa-download" />
+											Download
+										</a>
+									</td>
+									<td class="text-right">
+										<span t-field="app.total_downloads_count" />
+									</td>
+								</tr>
+							</t>
+						</tbody>
+					</table>
+				</div>
+			</t>
+		</t>
+	</template>
+</odoo>

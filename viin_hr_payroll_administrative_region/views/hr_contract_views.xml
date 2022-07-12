@@ -1,0 +1,23 @@
+<odoo>
+	<record id="hr_contract_form_inherit" model="ir.ui.view">
+		<field name="name">hr.contract.view.form.inherit</field>
+		<field name="model">hr.contract</field>
+		<field name="inherit_id" ref="to_hr_payroll.hr_contract_form_inherit" />
+		<field name="arch" type="xml">
+			<field name="payroll_contribution_type_ids" position="before">
+				<field name="administrative_region_id"/>
+			</field>
+			<field name="payroll_contribution_type_ids" position="after">
+				<field name="admin_region_payroll_contrib_ids" groups="base.group_no_one">
+					<tree>
+						<field name="payroll_contribution_type_id" />
+						<field name="max_contribution_base" />
+						<field name="min_contribution_base" />
+						<field name="max_contribution_employee" />
+						<field name="max_contribution_company" />
+					</tree>
+				</field>
+			</field>
+		</field>
+	</record>
+</odoo>

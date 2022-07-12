@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="wizard_odoo_module_version_download_form_view"
+		model="ir.ui.view">
+		<field name="name">wizard.odoo.module.version.download.form</field>
+		<field name="model">wizard.odoo.module.version.download</field>
+		<field name="arch" type="xml">
+			<form string="Odoo Apps Download Wizard">
+				<field name="state" invisible="1" />
+				<field name="filename" invisible="1" />
+				<field name="zip_all_filename" invisible="1" />
+				<sheet>
+					<div states="choose">
+						<div>This wizard will access the source code repository then
+							prepare zip archives of all the related Odoo apps for your
+							downloads.</div>
+						<group>
+							<field name="module_ids" widget="many2many_tags"
+								invisible="1" />
+						</group>
+					</div>
+					<div states="successful">
+						<h2 style="text-align: center;">Apps are ready for your downloads:</h2>
+						<p>
+							Apps and their Dependencies
+							<br />
+							<field name="zip_all" readonly="1"
+								filename="zip_all_filename" />
+							<br />
+
+							<field name="download_url_ids">
+								<tree>
+									<field name="odoo_module_version_id" />
+									<field name="public_download_url"
+										widget="CopyClipboardChar" options="{'string': 'Copy Link'}" />
+								</tree>
+                                <form>
+                                    <group>
+                                        <field
+                                            name="odoo_module_version_id" />
+                                        <field
+                                            name="public_download_url"
+                                            widget="CopyClipboardChar"
+                                            options="{'string': 'Copy Link'}" />
+                                    </group>
+                                </form>
+							</field>
+						</p>
+						<p>
+							Apps Only
+							<br />
+							<field name="file" readonly="1" filename="filename" />
+						</p>
+					</div>
+				</sheet>
+				<footer states="choose">
+					<div states="choose">
+						<button name="action_prepare_download" string="Proceed"
+							type="object" class="btn-primary" />
+						<button string="Cancel" class="btn-default"
+							special="cancel" />
+					</div>
+					<div states="successful">
+						<button special="cancel" class="btn-primary center-block"
+							string="Ok" />
+					</div>
+				</footer>
+			</form>
+		</field>
+	</record>
+
+	<record id="wizard_odoo_module_version_download_action"
+		model="ir.actions.act_window">
+		<field name="name">Apps Download</field>
+		<field name="res_model">wizard.odoo.module.version.download</field>
+		<field name="binding_model_id" ref="model_odoo_module_version" />
+		<field name="binding_type">action</field>
+		<field name="view_mode">form</field>
+		<field name="view_id"
+			ref="wizard_odoo_module_version_download_form_view" />
+		<field name="target">new</field>
+	</record>
+</odoo>

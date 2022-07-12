@@ -1,0 +1,2194 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_foreign_trade
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-02 08:36+0000\n"
+"PO-Revision-Date: 2021-11-02 08:36+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/stock_warehouse.py:0
+#, python-format
+msgid " MTO"
+msgstr "MTO"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/stock_warehouse.py:0
+#, python-format
+msgid " Sequence Export"
+msgstr " Trình tự Xuất khẩu"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/stock_warehouse.py:0
+#, python-format
+msgid " Sequence Export - Ship"
+msgstr " Trình tự Xuất khẩu - Giao hàng"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/stock_warehouse.py:0
+#, python-format
+msgid " Sequence Import"
+msgstr " Trình tự Nhập khẩu"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/stock_warehouse.py:0
+#, python-format
+msgid " Sequence Import - Receipt"
+msgstr " Trình tự Nhập khẩu - Nhận hàng"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_stock_picking__custom_dec_export_count
+msgid "# of Custom Clearance Export Request"
+msgstr "SL Hồ sơ Thông quan Xuất khẩu"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_stock_picking__custom_dec_import_count
+msgid "# of Custom Clearance Import Request"
+msgstr "SL Hồ sơ Thông quan Nhập khẩu"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_sale_order__custom_dec_count
+msgid "# of Custom Clearance Request"
+msgstr "SL Hồ sơ Thông quan"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_purchase_order__custom_dec_count
+msgid "# of Custom Declaration Documents"
+msgstr "SL Tài liệu Thông quan"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__account_moves_count
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__account_moves_count
+msgid "# of moves"
+msgstr "SL Bút toán"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/res_company.py:0
+#, python-format
+msgid ": Custom Declaration - Export"
+msgstr ": Mã số tờ khai - Xuất khẩu"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/res_company.py:0
+#, python-format
+msgid ": Custom Declaration - Import"
+msgstr ": Mã số tờ khai - Nhập khẩu"
+
+#. module: to_foreign_trade
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.foreign_trade_configuration
+msgid ""
+"<span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-"
+"specific.\" groups=\"base.group_multi_company\"/>"
+msgstr ""
+"<span class=\"fa fa-lg fa-building-o\" title=\"Các giá trị thiết lập ở đây "
+"mang đặc trưng công ty.\" groups=\"base.group_multi_company\"/>"
+
+#. module: to_foreign_trade
+#: model:ir.model,name:to_foreign_trade.model_account_chart_template
+msgid "Account Chart Template"
+msgstr "Mẫu Hệ thống Tài khoản"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration_tax__move_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export__move_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import__move_id
+msgid "Account Move"
+msgstr "Bút toán Kế toán"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__message_needaction
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__message_needaction
+msgid "Action Needed"
+msgstr "Cần có Hành động"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__activity_ids
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__activity_ids
+msgid "Activities"
+msgstr "Các hoạt động"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__activity_exception_decoration
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Hành động Ngoại lệ"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__activity_state
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__activity_state
+msgid "Activity State"
+msgstr "Trạng thái Hoạt động"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_payment__amount
+msgid "Amount"
+msgstr "Tổng tiền"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration_tax__currency_amount_tax
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export__currency_amount_tax
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import__currency_amount_tax
+msgid "Amount (in Order Currency)"
+msgstr "Giá trị (theo Tiền tệ Đơn hàng)"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/account_move.py:0
+#, python-format
+msgid ""
+"An Account Move cannot link both Import Custom Declaration and Export Custom"
+" Declaration"
+msgstr ""
+"Bút toán Kế toán không thể dẫn chiếu đồng thời đến Tờ khai Hải quan Hàng "
+"Nhập và Tờ khai Hải quan Hàng Xuất"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration_tax__account_analytic_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_line__account_analytic_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export__account_analytic_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import__account_analytic_id
+msgid "Analytic Account"
+msgstr "Tài khoản quản trị"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_line__analytic_tag_ids
+msgid "Analytic Tags"
+msgstr "Thẻ TK Quản trị"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__message_attachment_count
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__message_attachment_count
+msgid "Attachment Count"
+msgstr "Số lượng đính kèm"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration__available_invoice_ids
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__available_invoice_ids
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__available_invoice_ids
+msgid "Available Invoices"
+msgstr "Hóa đơn khả dụng"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_purchase_order__available_pk_type_ids
+msgid "Available Transfer Types"
+msgstr "Kiểu giao nhận khả dụng"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration__available_picking_ids
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__available_picking_ids
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__available_picking_ids
+msgid "Available Transfers"
+msgstr "Giao nhận khả dụng"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration_tax__base
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export__base
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import__base
+msgid "Base"
+msgstr "Cơ sở tính thuế"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/stock_warehouse.py:0
+#: model:stock.location.route,name:to_foreign_trade.route_warehouse0_import
+#, python-format
+msgid "Buy - Foreign Import"
+msgstr "Mua - Nhập khẩu"
+
+#. module: to_foreign_trade
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_dec_payment_form
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_export_form
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_import_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields.selection,name:to_foreign_trade.selection__abstract_custom_declaration__state__cancel
+#: model:ir.model.fields.selection,name:to_foreign_trade.selection__custom_declaration_export__state__cancel
+#: model:ir.model.fields.selection,name:to_foreign_trade.selection__custom_declaration_import__state__cancel
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_export_filter
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_import_filter
+msgid "Cancelled"
+msgstr "Bị Huỷ"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/stock_warehouse.py:0
+#, python-format
+msgid "Cannot find any export route"
+msgstr "Không tìm thấy tuyến xuất khẩu nào"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/custom_declaration_tax_export.py:0
+#, python-format
+msgid ""
+"Cannot find any income account specified for the product '%s' nor the "
+"product category '%s'."
+msgstr ""
+"Không tìm thấy tài khoản doanh thu được thiết lập cho sản phẩm '%s' cũng như"
+" nhóm sản phẩm '%s'."
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/custom_declaration_tax_import.py:0
+#, python-format
+msgid ""
+"Cannot find stock valuation account specify for the product category '%s'."
+msgstr ""
+"Không tìm thấy tài khoản định giá tồn kho được thiết lập cho nhóm sản phẩm "
+"'%s'."
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_abstract_custom_declaration_tax_group__is_vat
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_tax_export_group__is_vat
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_tax_import_group__is_vat
+msgid ""
+"Check this to indicate that this tax group is for grouping Value Added "
+"Taxes. All taxes belong to this group will hence be value added taxes"
+msgstr ""
+"Đánh dầu vào trường này để chỉ ra rằng nhóm thuế này để nhóm các loại thuế "
+"GTGT. Tất cả các thuế thuộc về nhóm này vì thế sẽ được coi là thuế GTGT."
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_stock_location__is_custom_clearance
+#: model:ir.model.fields,help:to_foreign_trade.field_stock_picking_type__is_custom_clearance
+msgid "Check this to indicate the location is a custom clearance location"
+msgstr "Đánh dấu để chỉ báo rằng đây là một địa điểm thông quan"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration__clearance_date
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__clearance_date
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__clearance_date
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_export_filter
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_import_filter
+msgid "Clearance Date"
+msgstr "Ngày xác nhận"
+
+#. module: to_foreign_trade
+#: model:ir.model,name:to_foreign_trade.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration__company_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration_tax__company_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__company_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__company_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_line__company_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_payment__company_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export__company_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration__company_currency_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration_tax__company_currency_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration_tax_group__company_currency_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__company_currency_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__company_currency_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export__company_currency_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export_group__company_currency_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import__company_currency_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import_group__company_currency_id
+msgid "Company Currency"
+msgstr "Tiền tệ Công ty"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_payment__company_id
+msgid "Company related to this journal"
+msgstr "Công ty liên quan tới sổ nhật ký này"
+
+#. module: to_foreign_trade
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_export_form
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_import_form
+msgid "Compute Tax Lines"
+msgstr "Tính toán Thuế"
+
+#. module: to_foreign_trade
+#: model:ir.model,name:to_foreign_trade.model_res_config_settings
+msgid "Config Settings"
+msgstr "Thiết lập Cấu hình"
+
+#. module: to_foreign_trade
+#: model:ir.ui.menu,name:to_foreign_trade.menu_foreign_trade_config_root
+msgid "Configuration"
+msgstr "Cấu hình"
+
+#. module: to_foreign_trade
+#: model:ir.actions.act_window,name:to_foreign_trade.action_to_foreign_trade_configuration
+msgid "Configure Foreign Trade"
+msgstr "Cấu hình Xuất/Nhập khẩu"
+
+#. module: to_foreign_trade
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_export_filter
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_import_filter
+msgid "Confirmed"
+msgstr "Đã được xác nhận"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields.selection,name:to_foreign_trade.selection__abstract_custom_declaration__state__confirm
+#: model:ir.model.fields.selection,name:to_foreign_trade.selection__custom_declaration_export__state__confirm
+#: model:ir.model.fields.selection,name:to_foreign_trade.selection__custom_declaration_import__state__confirm
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_export_form
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_import_form
+msgid "Confirmed by Custom"
+msgstr "Đã xác nhận Hải quan"
+
+#. module: to_foreign_trade
+#: model:ir.model,name:to_foreign_trade.model_res_partner
+msgid "Contact"
+msgstr "Danh bạ"
+
+#. module: to_foreign_trade
+#: model:ir.model,name:to_foreign_trade.model_abstract_custom_declaration
+msgid "Contains the logic shared between models"
+msgstr "Chứa các logics nghiệp vụ chia sẻ giữa các mô hình"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/purchase_order.py:0
+#, python-format
+msgid ""
+"Could not find a right picking type for Foreign Import purchase. You must "
+"have one, otherwise, foreign purchase may raise unexpected results. You may "
+"need to enable Foreign Import feature for at least one warehouse in you "
+"system."
+msgstr ""
+"Không tìm thấy Kiểu Hoạt động giao nhận phù hợp cho việc Mua Nhập khẩu. Bạn "
+"buộc phải thiết lập một kiểu hoạt động như vậy, nếu không việc mua nhập khẩu"
+" có thể cho các kết quả không mong muốn. Bạn cần kích hoạt tính năng Nhập "
+"khẩu cho ít nhất một Kho trong hệ thống của bạn."
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/custom_declaration_line.py:0
+#, python-format
+msgid ""
+"Could not find an account for the tax '%s'. Please open the tax and specify "
+"an account for it"
+msgstr ""
+"Không tìm thấy tài khoản kế toán được thiết lập cho '%s'. Vui lòng mở thuế "
+"đó ra và thiết lập một tài khoản cho nó"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/abstract_custom_declaration_tax.py:0
+#, python-format
+msgid ""
+"Could not generate custom declaration tax group when the corresponding "
+"custom declaration tax line has a group already."
+msgstr ""
+"Không thể tạo Nhóm Thuế Tờ khai Hải quan khi dòng Thuế Tờ khai Hải quan "
+"tương ứng đã thuộc nhóm"
+
+#. module: to_foreign_trade
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.purchase_order_inherit_form
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.sale_order_inherit_form
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.stock_picking_inherit_form
+msgid "Create Custom Clearance Request"
+msgstr "Tạo khai báo thông quan"
+
+#. module: to_foreign_trade
+#: model:ir.actions.act_window,name:to_foreign_trade.custom_dec_so_create_action
+#: model:ir.actions.act_window,name:to_foreign_trade.picking_custom_dec_so_create_action
+msgid "Create Export Custom Clearance Request"
+msgstr "Tạo khai báo thông quan xuất khẩu"
+
+#. module: to_foreign_trade
+#: model:ir.actions.act_window,name:to_foreign_trade.custom_dec_po_create_action
+#: model:ir.actions.act_window,name:to_foreign_trade.picking_custom_dec_po_create_action
+msgid "Create Import Custom Clearance Request"
+msgstr "Tạo khai báo thông quan nhập khẩu"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__create_uid
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__create_uid
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_line__create_uid
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_payment__create_uid
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export__create_uid
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export_group__create_uid
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import__create_uid
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import_group__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__create_date
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__create_date
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_line__create_date
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_payment__create_date
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export__create_date
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export_group__create_date
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import__create_date
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import_group__create_date
+msgid "Created on"
+msgstr "Được tạo vào"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration__currency_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration_tax__currency_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__currency_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__currency_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_line__company_currency_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_payment__currency_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export__currency_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import__currency_id
+msgid "Currency"
+msgstr "Tiền tệ"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration__currency_rate
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration_tax__currency_rate
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__currency_rate
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__currency_rate
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_line__currency_rate
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export__currency_rate
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import__currency_rate
+msgid "Currency Rate"
+msgstr "Tỷ giá"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/abstract_custom_declaration_tax.py:0
+#, python-format
+msgid "Currency Rate cannot be zero!"
+msgstr "Tỷ giá không thể bằng 0!"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_line__total_cost_currency
+msgid "Currency Taxable Value"
+msgstr "Giá trị tính thuế Nguyên tệ"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_line__currency_id
+msgid "Currency on Order"
+msgstr "Tiền tệ trên đơn hàng"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration__partner_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__partner_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__partner_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_stock_location__custom_authority_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_stock_picking_type__custom_authority_id
+msgid "Custom Authority"
+msgstr "Cơ quan Hải quan"
+
+#. module: to_foreign_trade
+#: model:ir.ui.menu,name:to_foreign_trade.menu_custom_declaration_main
+msgid "Custom Clearance Document"
+msgstr "Hồ sơ thông quan"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_stock_picking__custom_declaration_export_ids
+msgid "Custom Clearance Export Request"
+msgstr "Khai báo Thông quan Xuất khẩu"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_stock_picking__custom_declaration_import_ids
+msgid "Custom Clearance Import Request"
+msgstr "Khai báo Thông quan Nhập khẩu"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration__journal_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__journal_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__journal_id
+msgid "Custom Clearance Journal"
+msgstr "Sổ nhật ký thông quan"
+
+#. module: to_foreign_trade
+#: model:ir.actions.act_window,name:to_foreign_trade.act_picking_2_custom_dec_export
+#: model:ir.actions.act_window,name:to_foreign_trade.act_picking_2_custom_dec_import
+#: model:ir.model.fields,field_description:to_foreign_trade.field_purchase_order__custom_declaration_ids
+#: model:ir.model.fields,field_description:to_foreign_trade.field_sale_order__custom_declaration_ids
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_export_filter
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_import_filter
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_import_form
+msgid "Custom Clearance Request"
+msgstr "Khai báo thông quan"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_line__custom_declaration_export_id
+msgid "Custom Clearance Request (Export)"
+msgstr "Khai báo thông quan (Xuất khẩu)"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_line__custom_declaration_import_id
+msgid "Custom Clearance Request (Import)"
+msgstr "Khai báo thông quan (Nhập khẩu)"
+
+#. module: to_foreign_trade
+#: model:ir.model,name:to_foreign_trade.model_custom_declaration_line
+msgid "Custom Clearance Request Line"
+msgstr "Chi tiết Khai báo Thông quan"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_stock_picking_type__custom_clearance_type
+msgid "Custom Clearance Type"
+msgstr "Kiểu Thông quan Hải quan"
+
+#. module: to_foreign_trade
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.purchase_order_inherit_form
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.sale_order_inherit_form
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.stock_picking_inherit_form
+msgid "Custom Declaration"
+msgstr "Thông quan Hải quan"
+
+#. module: to_foreign_trade
+#: model:ir.model,name:to_foreign_trade.model_custom_declaration_tax_export
+msgid "Custom Declaration Export Tax"
+msgstr "Thuế Xuất khẩu ở Tờ khai Thông quan"
+
+#. module: to_foreign_trade
+#: model:ir.model,name:to_foreign_trade.model_custom_declaration_tax_export_group
+msgid "Custom Declaration Export Tax Group"
+msgstr ""
+
+#. module: to_foreign_trade
+#: model:ir.model,name:to_foreign_trade.model_custom_declaration_tax_import
+msgid "Custom Declaration Import Tax"
+msgstr "Thuế Nhập khẩu ở Tờ khai Thông quan"
+
+#. module: to_foreign_trade
+#: model:ir.model,name:to_foreign_trade.model_custom_declaration_tax_import_group
+msgid "Custom Declaration Import Tax Group"
+msgstr "Nhóm Thuế Nhập khẩu ở Tờ khai Thông quan"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration_tax__custom_declaration_line_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export__custom_declaration_line_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import__custom_declaration_line_id
+msgid "Custom Declaration Line"
+msgstr "Dòng Tờ khai Hải quan"
+
+#. module: to_foreign_trade
+#: model:ir.model,name:to_foreign_trade.model_custom_declaration_payment
+msgid "Custom Declaration Payment Wizard"
+msgstr "Đồ thuật thanh toán Thuế XN Khẩu"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_stock_picking__custom_dec_required
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.view_picking_internal_search
+msgid "Custom Declaration Required"
+msgstr "Yêu cầu tạo Hồ sơ Thông quan"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_res_company__exp_custom_dec_sequence_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_res_config_settings__exp_custom_dec_sequence_id
+msgid "Custom Declaration Sequence - Export"
+msgstr "Trình tự Tờ khai Hải quan - Xuất khẩu"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_res_company__imp_custom_dec_sequence_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_res_config_settings__imp_custom_dec_sequence_id
+msgid "Custom Declaration Sequence - Import"
+msgstr "Trình tự Tờ khai Hải quan - Nhập khẩu"
+
+#. module: to_foreign_trade
+#: model:ir.model,name:to_foreign_trade.model_abstract_custom_declaration_tax
+msgid "Custom Declaration Tax"
+msgstr "Thuế Tờ khai Hải quan"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export__custom_dec_tax_group_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import__custom_dec_tax_group_id
+msgid "Custom Declaration Tax Group"
+msgstr "Nhóm Thuế Tờ khai Hải quan"
+
+#. module: to_foreign_trade
+#: model:ir.model,name:to_foreign_trade.model_abstract_custom_declaration_tax_group
+msgid "Custom Declaration Tax Group Abstract"
+msgstr "Nhóm Thuế Tờ khai Hải quan trừu tượng"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration__number
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__number
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__number
+msgid "Custom Doc. Number"
+msgstr "Số Hồ sơ Hải Quan"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/abstract_custom_declaration.py:0
+#, python-format
+msgid ""
+"Custom clearance document for transfer \"%s\" exists.\n"
+" You should either get back to work on that document or cancel / delete it."
+msgstr ""
+"Hồ sơ thông quan cho lô hàng \"%s\" đã tồn tại.\n"
+" Bạn nên quay lại công việc dở dang đó hoặc phải xoá/huỷ hồ sơ thông quan đó đi."
+
+#. module: to_foreign_trade
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.foreign_trade_configuration
+msgid ""
+"Default Account Journal that will be used as the default for the  accounting"
+" entries related to import/export taxes."
+msgstr ""
+"Sổ Nhật ký mặc định được sử dụng để ghi nhận các bút toán kế toán liên quan "
+"đến thuế xuất nhập khẩu."
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_res_company__account_journal_custom_clearance
+#: model:ir.model.fields,field_description:to_foreign_trade.field_res_config_settings__account_journal_custom_clearance
+msgid "Default Custom Clearance Journal"
+msgstr "Sổ nhật ký Thông quan Mặc định"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_res_company__export_tax_payment_term
+#: model:ir.model.fields,field_description:to_foreign_trade.field_res_config_settings__export_tax_payment_term
+msgid "Default Export Tax Payment Term"
+msgstr "Điều khoản Thanh toán Thuế Xuất khẩu mặc định"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_res_company__import_tax_payment_term
+#: model:ir.model.fields,field_description:to_foreign_trade.field_res_config_settings__import_tax_payment_term
+msgid "Default Import Tax Payment Term"
+msgstr "Điều khoản Thanh toán Thuế Nhập khẩu mặc định"
+
+#. module: to_foreign_trade
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.foreign_trade_configuration
+msgid "Default Import/Export Tax Payment Term"
+msgstr "Điều khoản Thanh toán Thuế Xuất/Nhập khẩu Mặc định"
+
+#. module: to_foreign_trade
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.foreign_trade_configuration
+msgid "Default journal for account entries related to import/export taxes"
+msgstr ""
+"Sổ nhật ký mặc định cho việc ghi nhận các bút toán kế toán liên quan đến "
+"thuế xuất nhập khẩu"
+
+#. module: to_foreign_trade
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.foreign_trade_configuration
+msgid "Default payment terms for taxes applied to taxes authorities"
+msgstr ""
+"Điều khoản thanh toán mặc định cho cơ quan thuế đối với các khoản thuế"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration__display_name
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration_tax__display_name
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration_tax_group__display_name
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__display_name
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__display_name
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_line__display_name
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_payment__display_name
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export__display_name
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export_group__display_name
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import__display_name
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import_group__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields.selection,name:to_foreign_trade.selection__abstract_custom_declaration__state__done
+#: model:ir.model.fields.selection,name:to_foreign_trade.selection__custom_declaration_export__state__done
+#: model:ir.model.fields.selection,name:to_foreign_trade.selection__custom_declaration_import__state__done
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_export_filter
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_import_filter
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields.selection,name:to_foreign_trade.selection__abstract_custom_declaration__state__draft
+#: model:ir.model.fields.selection,name:to_foreign_trade.selection__custom_declaration_export__state__draft
+#: model:ir.model.fields.selection,name:to_foreign_trade.selection__custom_declaration_import__state__draft
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_stock_warehouse__import_to_resupply
+msgid "Enable Foreign Import/Export"
+msgstr "Cho phép Xuất Nhập khẩu"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields.selection,name:to_foreign_trade.selection__stock_picking_type__custom_clearance_type__export
+msgid "Export"
+msgstr "Xuất khẩu"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_stock_warehouse__exp_custom_zone_loc_id
+msgid "Export - Custom Location"
+msgstr "Xuất khẩu - Địa điểm Thông quan"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/stock_warehouse.py:0
+#: code:addons/to_foreign_trade/models/stock_warehouse.py:0
+#: code:addons/to_foreign_trade/models/stock_warehouse.py:0
+#: code:addons/to_foreign_trade/models/stock_warehouse.py:0
+#, python-format
+msgid "Export - Custom Zone"
+msgstr "Xuất khẩu - Khu vực Thông quan"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/stock_warehouse.py:0
+#: code:addons/to_foreign_trade/models/stock_warehouse.py:0
+#, python-format
+msgid "Export - Delivery"
+msgstr "Xuất khẩu - Giao hàng"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_stock_warehouse__exp_custom_zone_type_id
+msgid "Export Custom Clearance"
+msgstr "Thông quan Hàng xuất khẩu"
+
+#. module: to_foreign_trade
+#: model:ir.actions.act_window,name:to_foreign_trade.custom_declaration_export_action
+#: model:ir.ui.menu,name:to_foreign_trade.custom_declaration_export_menu
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_export_form
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_export_tree
+msgid "Export Custom Clearance Request"
+msgstr "Khai báo Thông quan Xuất khẩu"
+
+#. module: to_foreign_trade
+#: model:ir.model,name:to_foreign_trade.model_custom_declaration_export
+#: model:ir.model.fields,field_description:to_foreign_trade.field_account_move__custom_declaration_export_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_payment__custom_dec_export_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export__custom_declaration_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export_group__custom_declaration_id
+msgid "Export Custom Declaration"
+msgstr "Thông quan Xuất khẩu"
+
+#. module: to_foreign_trade
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.foreign_trade_configuration
+msgid "Export Custom Declaration Doc. Sequence"
+msgstr "Trình tự Tờ khai Hải quan Hàng Xuất"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/stock_warehouse.py:0
+#: code:addons/to_foreign_trade/models/stock_warehouse.py:0
+#, python-format
+msgid "Export Custom Zone/Location has not been set for warehouse %s"
+msgstr "Địa điểm thông quan chưa được thiết lập cho kho %s"
+
+#. module: to_foreign_trade
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.sale_order_view_search_inherit_sale
+msgid "Export Orders"
+msgstr "Đơn Bán xuất khẩu"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_stock_warehouse__export_route_id
+msgid "Export Route"
+msgstr "Tuyến Xuất khẩu"
+
+#. module: to_foreign_trade
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.foreign_trade_configuration
+msgid "Export Tax Payment Term"
+msgstr "Điều khoản Thanh toán Thuế xuất khẩu"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/stock_warehouse.py:0
+#, python-format
+msgid "Exporting - Ship"
+msgstr "Xuất khẩu - Giao hàng"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_product_product__export_tax_ids
+#: model:ir.model.fields,field_description:to_foreign_trade.field_product_template__export_tax_ids
+msgid "Exporting Taxes"
+msgstr "Thuế Xuất khẩu"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__message_follower_ids
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__message_follower_ids
+msgid "Followers"
+msgstr "Theo dõi"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__message_channel_ids
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Người theo dõi (Các kênh)"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__message_partner_ids
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Người theo dõi (Các đối tác)"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_sale_order__foreign_trade
+msgid "Foreign Export"
+msgstr "Xuất khẩu"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_stock_warehouse__exp_type_id
+msgid "Foreign Export Type"
+msgstr "Kiểu Xuất khẩu"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_purchase_order__foreign_trade
+msgid "Foreign Import"
+msgstr "Nhập khẩu"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_stock_warehouse__imp_type_id
+msgid "Foreign Import Type"
+msgstr "Kiểu Nhập khẩu"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_stock_warehouse__buy_import_pull_id
+msgid "Foreign Import rule"
+msgstr "Quy tắc Nhập khẩu"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_stock_warehouse__foreign_mto_pull_id
+msgid "Foreign MTO rule"
+msgstr "Quy tắc MTO nhập khẩu"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_stock_picking_type__is_foreign_trade
+#: model:ir.ui.menu,name:to_foreign_trade.menu_foreign_trade_root
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.res_partner_inherit_form
+msgid "Foreign Trade"
+msgstr "Xuất Nhập khẩu"
+
+#. module: to_foreign_trade
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.foreign_trade_configuration
+msgid "Foreign Trade & Logistics"
+msgstr "Ngoại thương & Logistics"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_res_partner__property_foreign_trade_partner
+#: model:ir.model.fields,field_description:to_foreign_trade.field_res_users__property_foreign_trade_partner
+msgid "Foreign Trade Partner"
+msgstr "Đối tác Ngoại thương"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_abstract_custom_declaration_tax__sequence
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_tax_export__sequence
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_tax_import__sequence
+msgid ""
+"Gives the sequence order when displaying a list of custom declaration tax."
+msgstr ""
+"Cung cấp trình tự hiển thị ở danh mục thuế xuất nhập khẩu trên tờ khai"
+
+#. module: to_foreign_trade
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_export_filter
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_import_filter
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_payment__hide_payment_method
+msgid "Hide Payment Method"
+msgstr "Ẩn Phương thức Thanh toán"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration__id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration_tax__id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration_tax_group__id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_line__id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_payment__id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export__id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export_group__id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import__id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import_group__id
+msgid "ID"
+msgstr ""
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__activity_exception_icon
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__activity_exception_icon
+msgid "Icon"
+msgstr "Biểu tượng"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_export__activity_exception_icon
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_import__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Biểu tượng để chỉ ra hành động ngoại lệ"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_stock_picking_type__is_foreign_trade
+msgid "If check, this will be used dedicatedly for foreign trade"
+msgstr ""
+"Nếu đánh dấu, hoạt động này sẽ được sử dụng đặc thù cho hoạt động xuất nhập "
+"khẩu"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_export__message_needaction
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_export__message_unread
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_import__message_needaction
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_import__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Nếu đánh dấu chọn, các thông điệp mới yêu cầu sự có mặt của bạn."
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_res_partner__property_foreign_trade_partner
+#: model:ir.model.fields,help:to_foreign_trade.field_res_users__property_foreign_trade_partner
+msgid ""
+"If checked, sale/purchase made with this partner will be considered as "
+"foreign trade. Hence, activate custom clearance procedure."
+msgstr ""
+"Nếu được đánh dấu, mua bán với đối tác này sẽ được xem xét là mua bán ngoại "
+"thương. Vì thế sẽ kích hoạt quy trình thông quan hải quan."
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_export__message_has_error
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_export__message_has_sms_error
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_import__message_has_error
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_import__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Nếu được đánh dấu, thông điệp có lỗi về gửi tin."
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_abstract_custom_declaration__compute_tax_lines_onfly
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_export__compute_tax_lines_onfly
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_import__compute_tax_lines_onfly
+msgid ""
+"If checked, upon changing data in the Operations table, Odoo will "
+"immediately recompute taxes table accordingly, that may introduce bad "
+"performance when you have a lot of taxes and products in the Operations "
+"table. In such case, you may want to disble on-fly taxes computation by "
+"unchecking this box. After disabling, you will need to hit Compute Tax Lines"
+" to get the computation done."
+msgstr ""
+"Nếu được chọn, khi thay đổi dữ liệu trong bảng tính, Odoo sẽ tính toán lại "
+"thuế ngay lập tức cho phù hợp, điều này có thể dẫn đến giảm hiểu năng khi có"
+" nhiều thuế và sản phẩm trong bảng tính. Trong trường hợp đó, bạn có thể tắt"
+" tính năng tính nhanh thuế bằng cách bỏ chọn trường này. Sau khi tắt, bạn sẽ"
+" cần ấn Tính toán Thuế"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields.selection,name:to_foreign_trade.selection__stock_picking_type__custom_clearance_type__import
+msgid "Import"
+msgstr "Nhập khẩu"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_stock_warehouse__imp_custom_zone_loc_id
+msgid "Import - Custom Location"
+msgstr "Nhập khẩu - Địa điểm thông quan"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/stock_warehouse.py:0
+#: code:addons/to_foreign_trade/models/stock_warehouse.py:0
+#: code:addons/to_foreign_trade/models/stock_warehouse.py:0
+#: code:addons/to_foreign_trade/models/stock_warehouse.py:0
+#, python-format
+msgid "Import - Custom Zone"
+msgstr "Nhập khẩu - Khu vực thông quan"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/stock_warehouse.py:0
+#: code:addons/to_foreign_trade/models/stock_warehouse.py:0
+#, python-format
+msgid "Import - Receipt"
+msgstr "Nhập khẩu - Nhận hàng"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_stock_warehouse__imp_custom_zone_type_id
+msgid "Import Custom Clearance"
+msgstr "Thông quan Hàng nhập khẩu"
+
+#. module: to_foreign_trade
+#: model:ir.actions.act_window,name:to_foreign_trade.custom_declaration_import_action
+#: model:ir.ui.menu,name:to_foreign_trade.custom_declaration_import_menu
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_import_tree
+msgid "Import Custom Clearance Request"
+msgstr "Khai báo thông quan nhập khẩu"
+
+#. module: to_foreign_trade
+#: model:ir.model,name:to_foreign_trade.model_custom_declaration_import
+#: model:ir.model.fields,field_description:to_foreign_trade.field_account_move__custom_declaration_import_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_payment__custom_dec_import_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import__custom_declaration_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import_group__custom_declaration_id
+msgid "Import Custom Declaration"
+msgstr "Khai báo Thông quan Hàng nhập"
+
+#. module: to_foreign_trade
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.foreign_trade_configuration
+msgid "Import Custom Declaration Doc. Sequence"
+msgstr "Trình tự Tờ khai Hải quan Hàng Nhập"
+
+#. module: to_foreign_trade
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.purchase_order_inherit_filter
+msgid "Import Orders"
+msgstr "Đơn Mua nhập khẩu"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_stock_warehouse__import_route_id
+msgid "Import Route"
+msgstr "Tuyến Nhập khẩu"
+
+#. module: to_foreign_trade
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.foreign_trade_configuration
+msgid "Import Tax Payment Term"
+msgstr "Điều khoản Thanh toán Thuế Nhập khẩu"
+
+#. module: to_foreign_trade
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.foreign_trade_configuration
+msgid "Import/Export Tax Journal"
+msgstr "Sổ nhật ký Thuế XNK"
+
+#. module: to_foreign_trade
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.foreign_trade_configuration
+msgid "Import/Export Taxes"
+msgstr "Thuế xuất nhập khẩu"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/res_company.py:0
+#, python-format
+msgid "Import/Export Taxes Journal"
+msgstr "Sổ Nhật ký Thuế XNK"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/stock_warehouse.py:0
+#, python-format
+msgid "Importing - Receipt"
+msgstr "Nhập khẩu - Nhận hàng"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_product_product__import_tax_ids
+#: model:ir.model.fields,field_description:to_foreign_trade.field_product_template__import_tax_ids
+msgid "Importing Taxes"
+msgstr "Thuế Nhập khẩu"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_stock_picking__is_custom_clearance
+msgid "Indicate if the destination location is a custom clearance zone"
+msgstr "Chỉ báo rằng địa điểm đích là một địa điểm thông quan"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration__name
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__name
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__name
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_export_filter
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_export_form
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_import_filter
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_import_form
+msgid "Internal Reference"
+msgstr "Tham chiếu Nội bộ"
+
+#. module: to_foreign_trade
+#: model:ir.model,name:to_foreign_trade.model_stock_location
+msgid "Inventory Locations"
+msgstr "Địa điểm Kiểm kê"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration__invoice_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__invoice_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__invoice_id
+msgid "Invoice"
+msgstr "Hoá đơn"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_stock_picking__is_custom_clearance
+#: model:ir.model.fields,field_description:to_foreign_trade.field_stock_picking_type__is_custom_clearance
+msgid "Is Clearance Location?"
+msgstr "Là một địa điểm thông quan?"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_stock_location__is_custom_clearance
+msgid "Is Custom Clearance Location?"
+msgstr "Là một địa điểm thông quan?"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__message_is_follower
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__message_is_follower
+msgid "Is Follower"
+msgstr "Là người theo dõi"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration__is_paid
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__is_paid
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__is_paid
+msgid "Is Paid"
+msgstr "Đã Thanh toán"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration_tax__is_vat
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration_tax_group__is_vat
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export__is_vat
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export_group__is_vat
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import__is_vat
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import_group__is_vat
+msgid "Is VAT"
+msgstr "Là thuế GTGT"
+
+#. module: to_foreign_trade
+#: model:ir.model,name:to_foreign_trade.model_account_journal
+msgid "Journal"
+msgstr "Sổ nhật ký"
+
+#. module: to_foreign_trade
+#: model:ir.actions.act_window,name:to_foreign_trade.act_export_custom_declaration_2_account_move
+#: model:ir.actions.act_window,name:to_foreign_trade.act_import_custom_declaration_2_account_move
+#: model:ir.model,name:to_foreign_trade.model_account_move
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__account_move_ids
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__account_move_ids
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_export_form
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_import_form
+msgid "Journal Entries"
+msgstr "Bút toán Sổ nhật ký"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration____last_update
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration_tax____last_update
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration_tax_group____last_update
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export____last_update
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import____last_update
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_line____last_update
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_payment____last_update
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export____last_update
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export_group____last_update
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import____last_update
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import_group____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__write_uid
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__write_uid
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_line__write_uid
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_payment__write_uid
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export__write_uid
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export_group__write_uid
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import__write_uid
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import_group__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__write_date
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__write_date
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_line__write_date
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_payment__write_date
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export__write_date
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export_group__write_date
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import__write_date
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import_group__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__message_main_attachment_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Đính kèm chính"
+
+#. module: to_foreign_trade
+#: model:res.groups,name:to_foreign_trade.group_foreign_trade_manager
+msgid "Manager"
+msgstr "Quản lý"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration_tax__manual
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export__manual
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import__manual
+msgid "Manual"
+msgstr "Thủ công"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_payment__communication
+msgid "Memo"
+msgstr "Ghi nhớ"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__message_has_error
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__message_has_error
+msgid "Message Delivery error"
+msgstr "Có Lỗi Gửi Thông điệp"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__message_ids
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__message_ids
+msgid "Messages"
+msgstr "Thông điệp"
+
+#. module: to_foreign_trade
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_export_filter
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_import_filter
+msgid "New"
+msgstr "Mới"
+
+#. module: to_foreign_trade
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_export_filter
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_import_filter
+msgid "New Mail"
+msgstr "Thư Mới"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__activity_date_deadline
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Hạn chót lần hành động kế tiếp"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__activity_summary
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__activity_summary
+msgid "Next Activity Summary"
+msgstr "Tóm tắt hoạt động tiếp theo"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__activity_type_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__activity_type_id
+msgid "Next Activity Type"
+msgstr "Kiểu hành động kế tiếp"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/custom_declaration_line.py:0
+#, python-format
+msgid "No custom declaration is defined for the custom declaration line."
+msgstr ""
+"Không có khai báo hải quản nào được xác lập cho dòng khai báo hải quan."
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__message_needaction_counter
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Số lượng Hành động"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__message_has_error_counter
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_export__message_needaction_counter
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_import__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Số thông điệp cần có hành động"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_export__message_has_error_counter
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_import__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Số lượng các thông điệp có lỗi về gửi tin"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_export__message_unread_counter
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_import__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Số thông điệp chưa đọc"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration__compute_tax_lines_onfly
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__compute_tax_lines_onfly
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__compute_tax_lines_onfly
+msgid "On-fly Taxes Computation"
+msgstr ""
+
+#. module: to_foreign_trade
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_export_form
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_import_form
+msgid "Open"
+msgstr "Mở"
+
+#. module: to_foreign_trade
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_export_filter
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_import_filter
+msgid "Open Date"
+msgstr "Ngày mở"
+
+#. module: to_foreign_trade
+#: model:ir.actions.client,name:to_foreign_trade.client_foreign_trade_menu_action
+msgid "Open Foreign Trade Menu"
+msgstr "Mở trình đơn Xuất Nhập khẩu"
+
+#. module: to_foreign_trade
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_export_form
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_import_form
+msgid "Operations"
+msgstr "Hoạt động"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration_tax__tax_repartition_line_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export__tax_repartition_line_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import__tax_repartition_line_id
+msgid "Originator Tax Repartition Line"
+msgstr ""
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration_tax__paid
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export__paid
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import__paid
+msgid "Paid"
+msgstr "Đã thanh toán"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration_tax__partner_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_payment__partner_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export__partner_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import__partner_id
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: to_foreign_trade
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_dec_payment_form
+msgid "Pay"
+msgstr "Thanh toán"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_payment__payment_date
+msgid "Payment Date"
+msgstr "Ngày thanh toán"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_payment__journal_id
+msgid "Payment Method"
+msgstr "Phương thức thanh toán"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_payment__payment_method_id
+msgid "Payment Type"
+msgstr "Kiểu thanh toán"
+
+#. module: to_foreign_trade
+#: model:ir.model,name:to_foreign_trade.model_stock_picking_type
+msgid "Picking Type"
+msgstr "Kiểu giao nhận"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/abstract_custom_declaration.py:0
+#, python-format
+msgid "Please create some operations."
+msgstr "Hãy tạo các hoạt động."
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/abstract_custom_declaration.py:0
+#, python-format
+msgid "Please select a custom clearance journal before you can confirm it."
+msgstr "Hãy chọn sổ nhật ký thông quan trước khi xác nhận."
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/custom_declaration_tax_export.py:0
+#: code:addons/to_foreign_trade/models/custom_declaration_tax_import.py:0
+#, python-format
+msgid "Please specify VAT counterpart account for the tax '%s'."
+msgstr "Vui lòng chọn tài khoản đối ứng Thuế GTGT cho thuế '%s'."
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/abstract_custom_declaration.py:0
+#, python-format
+msgid "Please validate the transfer '%s' before you can open this request!"
+msgstr "Vui lòng xác nhận lô hàng '%s' trước khi bạn có thể mở hồ sơ thông quan!"
+
+#. module: to_foreign_trade
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.view_warehouse
+msgid "Procurement Rules"
+msgstr "Quy tắc Cung ứng"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration_tax__product_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_line__product_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export__product_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import__product_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/custom_declaration_export.py:0
+#: code:addons/to_foreign_trade/models/custom_declaration_import.py:0
+#, python-format
+msgid "Product Costing Method Warning!"
+msgstr "Cảnh báo về Phương thức Giá vốn!"
+
+#. module: to_foreign_trade
+#: model:ir.model,name:to_foreign_trade.model_product_template
+msgid "Product Template"
+msgstr "Mẫu Sản phẩm"
+
+#. module: to_foreign_trade
+#: model:ir.model,name:to_foreign_trade.model_purchase_order
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__purchase_order_id
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_import_filter
+msgid "Purchase Order"
+msgstr "Đơn Mua"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration_tax__qty
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_line__qty
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export__qty
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import__qty
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration__request_date
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__request_date
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__request_date
+msgid "Request Date"
+msgstr "Ngày Đề nghị"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__custom_declaration_line_ids
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__custom_declaration_line_ids
+msgid "Request Line"
+msgstr "Dòng Khai báo"
+
+#. module: to_foreign_trade
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_export_form
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_import_form
+msgid "Request Lines"
+msgstr "Dòng Khai báo"
+
+#. module: to_foreign_trade
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_export_form
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_import_form
+msgid "Reset to Draft"
+msgstr "Đặt về dự thảo"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__activity_user_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__activity_user_id
+msgid "Responsible User"
+msgstr "Người chịu trách nhiệm"
+
+#. module: to_foreign_trade
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.view_warehouse
+msgid "Routes"
+msgstr "Tuyến Cung ứng"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__message_has_sms_error
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_line__sale_order_line_id
+msgid "Sale Order Line"
+msgstr "Chi tiết đơn hàng"
+
+#. module: to_foreign_trade
+#: model:ir.model,name:to_foreign_trade.model_sale_order
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__sale_order_id
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_export_filter
+msgid "Sales Order"
+msgstr "Đơn bán"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_res_partner__same_company_country
+#: model:ir.model.fields,field_description:to_foreign_trade.field_res_users__same_company_country
+msgid "Same Company Country"
+msgstr "Cùng Quốc gia của Công ty"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration_tax__sequence
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export__sequence
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import__sequence
+msgid "Sequence"
+msgstr "Trình tự"
+
+#. module: to_foreign_trade
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.foreign_trade_configuration
+msgid "Sequencing"
+msgstr "Trình tự"
+
+#. module: to_foreign_trade
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.foreign_trade_configuration
+msgid "Sequencing for custom clearance documents"
+msgstr "Trình tự cho các hồ sơ thông quan"
+
+#. module: to_foreign_trade
+#: model:ir.ui.menu,name:to_foreign_trade.menu_to_foreign_trade_global_settings
+msgid "Settings"
+msgstr "Thiết lập"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration__show_currency_rate
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__show_currency_rate
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__show_currency_rate
+msgid "Show Currency Rate"
+msgstr "Hiển thị Tỷ giá Hối đoái"
+
+#. module: to_foreign_trade
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.view_picking_internal_search
+msgid "Show transfers / stock pickings that requires custom declarations"
+msgstr "Hiển thị các lô hàng mà yêu cầu phải có hồ sơ thông quan"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration__state
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__state
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__state
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_export_filter
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_import_filter
+msgid "Status"
+msgstr "Tình trạng"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_export__activity_state
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_import__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Trạng thái dựa trên hoạt động\n"
+"Quá hạn: Ngày đến hạn đã trôi qua\n"
+"Hôm nay: Hôm nay là ngày phải thực hiện\n"
+"Đã hoạch định: Các hoạt động trong tương lai."
+
+#. module: to_foreign_trade
+#: model:ir.model,name:to_foreign_trade.model_stock_move
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_line__stock_move_id
+msgid "Stock Move"
+msgstr "Dịch chuyển kho"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration_tax__tax_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export__tax_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import__tax_id
+msgid "Tax"
+msgstr "Thuế"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration_tax__account_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export__account_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import__account_id
+msgid "Tax Account"
+msgstr "Tài khoản Thuế"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration_tax__amount
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration_tax_group__amount
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export__amount
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export_group__amount
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import__amount
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import_group__amount
+msgid "Tax Amount"
+msgstr "Giá trị Thuế"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration_tax__name
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export__name
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import__name
+msgid "Tax Description"
+msgstr "Mô tả thuế"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration_tax_group__tax_group_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export_group__tax_group_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import_group__tax_group_id
+msgid "Tax Group"
+msgstr "Nhóm Thuế"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__custom_dec_tax_group_ids
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__custom_dec_tax_group_ids
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_export_form
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_import_form
+msgid "Tax Groups"
+msgstr "Nhóm Thuế"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__tax_line_ids
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__tax_line_ids
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export_group__custom_declaration_tax_line_ids
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import_group__custom_declaration_tax_line_ids
+msgid "Tax Lines"
+msgstr "Chi tiết Thuế"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration_tax__payment_term_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__payment_term_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__payment_term_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_export__payment_term_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_tax_import__payment_term_id
+msgid "Tax Payment Term"
+msgstr "Điều khoản thanh toán thuế"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_abstract_custom_declaration_tax__tax_repartition_line_id
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_tax_export__tax_repartition_line_id
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_tax_import__tax_repartition_line_id
+msgid ""
+"Tax repartition line that caused the creation of this move line, if any"
+msgstr ""
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_line__total_cost
+msgid "Taxable Value"
+msgstr "Trị giá tính thuế"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_line__tax_ids
+#: model:ir.ui.menu,name:to_foreign_trade.menu_foreign_trade_tax
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_export_form
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_import_form
+msgid "Taxes"
+msgstr "Các loại Thuế"
+
+#. module: to_foreign_trade
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_export_form
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_import_form
+msgid "Taxes Computation"
+msgstr "Tính toán Thuế"
+
+#. module: to_foreign_trade
+#: model:ir.actions.act_window,name:to_foreign_trade.action_custom_dec_payment
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_dec_payment_form
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_export_form
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_import_form
+msgid "Taxes Payment"
+msgstr "Thanh toán Thuế"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_abstract_custom_declaration__available_invoice_ids
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_export__available_invoice_ids
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_import__available_invoice_ids
+msgid "Technical field to filter invoices based on selected order"
+msgstr "Trường kỹ thuật dùng để lọc hóa đơn theo Đơn hàng được chọn"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_purchase_order__available_pk_type_ids
+msgid "Technical field to filter transfer types based on foreign import"
+msgstr "Trường kỹ thuật dùng để lọc kiểu giao nhận dựa trên thuộc tính xuất nhập khẩu"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_abstract_custom_declaration__available_picking_ids
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_export__available_picking_ids
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_import__available_picking_ids
+msgid ""
+"Technical field to filter transfers based on selected order and transfer"
+msgstr ""
+"Trường kỹ thuật dùng để lọc giao nhận dựa trên Đơn hàng và giao nhận được chọn"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_payment__hide_payment_method
+msgid ""
+"Technical field used to hide the payment method if the selected journal has "
+"only one available which is 'manual'"
+msgstr ""
+"Trường dùng để ẩn phương thức thanh toán nếu sổ nhật ký chỉ khả thi  khi nó "
+"là 'thủ công'"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/wizard/custom_dec_payment.py:0
+#, python-format
+msgid "The account '%s' must be allowed to reconcile."
+msgstr "Tài khoản '%s' phải cho phép đối soát."
+
+#. module: to_foreign_trade
+#: model:ir.model.constraint,message:to_foreign_trade.constraint_custom_declaration_payment_amount_positive_check
+msgid "The amount must be greater than zero!"
+msgstr "Số tiền phải lớn hơn Không!"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_stock_location__custom_authority_id
+msgid "The custom authority at this custom clearance location"
+msgstr "Cơ quan Hải quan tại địa điểm thông quan này"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_stock_picking_type__custom_authority_id
+msgid "The custom authority serving this operaton type"
+msgstr "Cơ quan Hải quan liên quan đến hoạt động giao nhận này"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_abstract_custom_declaration__clearance_date
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_export__clearance_date
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_import__clearance_date
+msgid ""
+"The date on which the custom declaration request is accepted and cleared. "
+"Leave it empty to use the current date upon confirmation by the custom "
+"authority is set."
+msgstr ""
+"Ngày mà Hồ sơ thông quan được chấp thuận và cho thông quan. Để trống để lấy "
+"ngày hiện hành vào thời điểm bạn bấm nút Xác nhận bởi Hải quan."
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_res_config_settings__account_journal_custom_clearance
+msgid ""
+"The default account journal to record all accounting transactions (taxes) "
+"during custom clearance"
+msgstr ""
+"Sổ nhật ký mặc định để ghi nhận các bút toán kế toán liên quan đến thuế "
+"trong quá trình thông quan"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_res_config_settings__export_tax_payment_term
+msgid ""
+"The default payment term applied to exporting tax which will be filled "
+"automatically when you working on custom clearance documents."
+msgstr ""
+"Điều khoản thanh toán mặc định được áp dụng cho thuế xuất khẩu mà sẽ được "
+"điền tự động khi bạn làm việc với hồ sơ thông quan."
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_res_config_settings__import_tax_payment_term
+msgid ""
+"The default payment term applied to importing tax which will be filled "
+"automatically when you working on custom clearance documents."
+msgstr ""
+"Điều khoản thanh toán mặc định được áp dụng cho thuế nhập khẩu mà sẽ được "
+"điền tự động khi bạn làm việc với hồ sơ thông quan."
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_abstract_custom_declaration__number
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_export__number
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_import__number
+msgid "The document number that provided by Custom Authority"
+msgstr "Mã số tài liệu thông quan mà được cung cấp bởi Cơ quan Hải quan"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_stock_warehouse__imp_custom_zone_loc_id
+msgid ""
+"The location where the incoming goods must be stopped for custom clearance"
+msgstr "Địa điểm mà lô hàng nhập phải dừng lại để chờ thông quan"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_stock_warehouse__exp_custom_zone_loc_id
+msgid ""
+"The location where the outgoing goods must be stopped for custom clearance"
+msgstr "Địa điểm mà lô hàng xuất phải dừng lại để chờ thông quan"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/abstract_custom_declaration_tax.py:0
+#, python-format
+msgid ""
+"The method _compute_amount_tax() has not been implemented for the model '%s'"
+msgstr "Phương thức _compute_amount_tax() chưa được triển khai cho model '%s'"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/abstract_custom_declaration.py:0
+#, python-format
+msgid ""
+"The method `_compute_available_data_based_on_selected_order()` has not been "
+"implemented for the model `%s`"
+msgstr ""
+"Phương thức `_compute_available_data_based_on_selected_order()` không "
+"được thực thi cho model `%s`"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/abstract_custom_declaration.py:0
+#, python-format
+msgid ""
+"The method `_compute_currency_id()` has not been implemented for the model "
+"`%s`"
+msgstr ""
+"Phương thức `_compute_currency_id()` chưa được triển khai cho model `%s`"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/abstract_custom_declaration.py:0
+#, python-format
+msgid ""
+"The method `_get_tax_line_model()` has not been implemented for the model "
+"`%s`"
+msgstr ""
+"Phương thức `_get_tax_line_model()` chưa được triển khai cho model `%s`"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/abstract_custom_declaration.py:0
+#, python-format
+msgid ""
+"The method `_prepare_custom_declaration_lines_data()` has not been "
+"implemented for the model %s"
+msgstr ""
+"Phương thức `_prepare_custom_declaration_lines_data()` chưa được triển khai "
+"cho model %s"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/wizard/custom_dec_payment.py:0
+#, python-format
+msgid ""
+"The payment amount must not be greater than the total due amount which is %s"
+" only. You might be trying to pay for the taxes that are already paid, or "
+"some tax accounts do not allow reconcile."
+msgstr ""
+"Tổng giá trị thanh toán không thể lớn hơn giá trị còn lại (chỉ %s thôi). Có "
+"vẻ bạn đang cố thanh toán nhiều hơn hoặc cũng có thể các tài khoản kế toán "
+"của thuế không cho phép đối soát."
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/abstract_custom_declaration.py:0
+#, python-format
+msgid ""
+"The product '%s' of the transfer '%s' must be configured in automated "
+"valuation with FIFO or AVCO costing method"
+msgstr ""
+"Sản phẩm '%s' trong lô hàng '%s' phải được cấu hình định giá tồn kho tự động"
+" với phương pháp giá vốn FIFO hoặc AVCO"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_abstract_custom_declaration__currency_rate
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_export__currency_rate
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_import__currency_rate
+msgid "The rate to the company's currency applied when computing taxes"
+msgstr ""
+"Tỷ giá hối đoái so với tiền tệ của công ty được áp dụng khi tính toán thuế"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/custom_declaration_export.py:0
+#: code:addons/to_foreign_trade/models/custom_declaration_import.py:0
+#, python-format
+msgid ""
+"The selected transfer '%s' does not contain any move that could be used in "
+"Custom Declaration. Custom Declarations are only possible for products "
+"configured in automated valuation with FIFO or AVCO costing method. Please "
+"make sure it is the case, or you selected the correct transfer"
+msgstr ""
+"Lô hàng '%s' được chọn không chứa các dịch chuyển kho mà có thể sử dụng "
+"trong ngữ cảnh Thông quan Hải quan. Thông quan Hải quan chỉ khả dụng với các"
+" sản phẩm được cấu hình Định giá tồn kho tự động với phương pháp giá vốn "
+"FIFO hoặc AVCO. Bạn hãy chắc chắn rằng bạn đã thiết lập đúng hoặc chọn đúng lô hàng."
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_res_company__exp_custom_dec_sequence_id
+#: model:ir.model.fields,help:to_foreign_trade.field_res_config_settings__exp_custom_dec_sequence_id
+msgid ""
+"The sequence to be used as the internal document number for Custom "
+"Declaration - Export"
+msgstr ""
+"Trình tự (mã số) mà sẽ được sử dụng như là mã số nội bộ đối với Tờ khai Hải "
+"quan Hàng xuất"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_res_company__imp_custom_dec_sequence_id
+#: model:ir.model.fields,help:to_foreign_trade.field_res_config_settings__imp_custom_dec_sequence_id
+msgid ""
+"The sequence to be used as the internal document number for Custom "
+"Declaration - Import"
+msgstr ""
+"Trình tự (mã số) mà sẽ được sử dụng như là mã số nội bộ đối với Tờ khai Hải "
+"quan Hàng nhập"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_line__total_cost
+msgid ""
+"The total cost of the line in company's currency. It is calculated based on "
+"either stock value for the importing goods or sale price for exporting goods"
+msgstr ""
+"Tổng chi phí của dòng theo tiền tệ công ty. Nó được tính tự động dựa trên "
+"giá trị hàng hoá về đến địa điểm thông quan (nếu là lô hàng nhập khẩu) hoặc "
+"giá bán (nếu là hàng xuất khẩu)"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_line__price_total
+msgid "The total price at order"
+msgstr "Tổng giá trị trên đơn hàng"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/custom_declaration_import.py:0
+#, python-format
+msgid "The transfer '%s' and the purchase order '%s' are not relevant."
+msgstr "Lô hàng '%s' và đơn mua '%s' không liên đới với nhau."
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/custom_declaration_export.py:0
+#, python-format
+msgid "The transfer '%s' and the sale order '%s' are not relevant."
+msgstr "Lô hàng '%s' và đơn bán '%s' không liên đới với nhau."
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/abstract_custom_declaration.py:0
+#, python-format
+msgid ""
+"The transfer '%s' is not consistent with content of declaration. Please "
+"select transfer again!"
+msgstr ""
+"Lô hàng '%s' không đồng nhất với nội dung của khai báo hải quan. Hãy"
+" chọn lại lô hàng!"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_line__product_uom
+msgid "The unit of measure on the original order."
+msgstr "Đơn vị tính trên đơn hàng gốc."
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_line__price_unit
+msgid "The unit price at order"
+msgstr "Đơn giá trên đơn hàng"
+
+#. module: to_foreign_trade
+#: model:res.groups,comment:to_foreign_trade.group_foreign_trade_user
+msgid ""
+"The users in this group will have access to custom\n"
+"\t\t\t\tdeclarations and handle it. They also have access rights of\n"
+"\t\t\t\tInventory Users and Billing Users so that they can read all stock\n"
+"\t\t\t\ttransfers and sales orders and purchases orders to serve their\n"
+"\t\t\t\tcustom declaration tasks. However, they don't have access to the\n"
+"\t\t\t\tsettings of this application.\n"
+"\t\t\t"
+msgstr ""
+"Người dùng thuộc nhóm này sẽ có quyền chỉnh sửa\n"
+"\t\t\t\tkhai báo và xử lý nó. Ngoài ra cũng có quyền\n"
+"\t\t\t\tNgười dùng kho và người dùng hóa đơn có thể xem toàn bộ kho\n"
+"\t\t\t\tgiao dịch và đơn mua hàng và đơn bán hàng để phục vụ\n"
+"\t\t\t\tđể phục vụ việc điều chỉnh thông quan. Tuy nhiên, họ không có quyền truy cập vào\n"
+"\t\t\t\tphần cài đặt của ứng dụng.\n"
+"\t\t\t"
+
+#. module: to_foreign_trade
+#: model:res.groups,comment:to_foreign_trade.group_foreign_trade_manager
+msgid ""
+"The users in this group will have full access\n"
+"\t\t\t\trights to this application.\n"
+"\t\t\t"
+msgstr ""
+"Người dùng trong nhóm này sẽ có mọi quyền\n"
+"\t\t\t\ttruy cập vào ứng dụng này.\n"
+"\t\t\t"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_abstract_custom_declaration_tax__is_vat
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_tax_export__is_vat
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_tax_import__is_vat
+msgid ""
+"The value of this field is related to the value of the 'Is VAT' field of the"
+" corresponding Tax Group set in Advanced Options tab"
+msgstr ""
+"Giá trị của trường này liên quan đến giá trị của trường 'Là thuế GTGT' của "
+"Nhóm thuế tương ứng được thiết lập ở tab Tuỳ chọn Nâng cao."
+
+#. module: to_foreign_trade
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.foreign_trade_configuration
+msgid "These payment terms are set in any new custom declaration document."
+msgstr ""
+"Các điều khoản thanh toán này được đặt trong mọi tài liệu thông quan mới."
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration__currency_amount_tax
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__currency_amount_tax
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__currency_amount_tax
+msgid "Total Currency Taxes"
+msgstr "Tổng thuế nguyên tệ"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_line__price_total
+msgid "Total Price"
+msgstr "Giá tổng"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration__total_cost
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__total_cost
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__total_cost
+msgid "Total Taxable Value"
+msgstr "Tổng trị giá tính thuế"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration__total_cost_currency
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__total_cost_currency
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__total_cost_currency
+msgid "Total Taxable Value Currency"
+msgstr "Tổng giá trị tính thuế Nguyên tệ"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration__amount_tax
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__amount_tax
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__amount_tax
+msgid "Total Taxes"
+msgstr "Tổng thuế"
+
+#. module: to_foreign_trade
+#: model:ir.model,name:to_foreign_trade.model_stock_picking
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration__stock_picking_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__stock_picking_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__stock_picking_id
+msgid "Transfer"
+msgstr "Giao nhận"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_abstract_custom_declaration__picking_type_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__picking_type_id
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__picking_type_id
+msgid "Transfer Type"
+msgstr "Kiểu giao nhận"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_export__activity_exception_decoration
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_import__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Loại ngoại lệ hoạt động trong bản ghi"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_line__price_unit
+msgid "Unit Price"
+msgstr "Đơn giá"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/wizard/custom_dec_payment.py:0
+#, python-format
+msgid ""
+"Unknown Import Custom Declaration and Export Custom Declaration for tax "
+"payment"
+msgstr ""
+"Không biết Khai báo Thông quan Hàng nhập và Thông quan Xuất khẩu cho Thuế"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__message_unread
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__message_unread
+msgid "Unread Messages"
+msgstr "Thông điệp chưa đọc"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__message_unread_counter
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Bộ đếm Thông điệp chưa đọc"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_line__product_uom
+msgid "UoM"
+msgstr "Đơn vị"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_res_partner__same_company_country
+#: model:ir.model.fields,help:to_foreign_trade.field_res_users__same_company_country
+msgid "Used to check readonly condition on form"
+msgstr ""
+
+#. module: to_foreign_trade
+#: model:res.groups,name:to_foreign_trade.group_foreign_trade_user
+msgid "User"
+msgstr "Người dùng"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_abstract_custom_declaration__company_currency_id
+#: model:ir.model.fields,help:to_foreign_trade.field_abstract_custom_declaration_tax__company_currency_id
+#: model:ir.model.fields,help:to_foreign_trade.field_abstract_custom_declaration_tax_group__company_currency_id
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_export__company_currency_id
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_import__company_currency_id
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_line__company_currency_id
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_tax_export__company_currency_id
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_tax_export_group__company_currency_id
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_tax_import__company_currency_id
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_tax_import_group__company_currency_id
+msgid "Utility field to express amount currency"
+msgstr "Trường tiện ích để thể hiện giá trị nguyên tệ"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields.selection,name:to_foreign_trade.selection__abstract_custom_declaration__state__open
+#: model:ir.model.fields.selection,name:to_foreign_trade.selection__custom_declaration_export__state__open
+#: model:ir.model.fields.selection,name:to_foreign_trade.selection__custom_declaration_import__state__open
+msgid "Waiting Confirmation by Custom"
+msgstr "Chờ Xác nhận"
+
+#. module: to_foreign_trade
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_export_filter
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_declaration_import_filter
+msgid "Waiting for Confirmation"
+msgstr "Chờ Xác nhận"
+
+#. module: to_foreign_trade
+#: model:ir.model,name:to_foreign_trade.model_stock_warehouse
+msgid "Warehouse"
+msgstr "Kho hàng"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_export__website_message_ids
+#: model:ir.model.fields,field_description:to_foreign_trade.field_custom_declaration_import__website_message_ids
+msgid "Website Messages"
+msgstr "Thông điệp Website"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_export__website_message_ids
+#: model:ir.model.fields,help:to_foreign_trade.field_custom_declaration_import__website_message_ids
+msgid "Website communication history"
+msgstr "Lịch sử thông tin liên lạc website"
+
+#. module: to_foreign_trade
+#: model:ir.model.fields,help:to_foreign_trade.field_stock_warehouse__import_to_resupply
+msgid ""
+"When products are imported from oversea, they can be delivered to this "
+"warehouse"
+msgstr ""
+"Khi hàng hoá được mua nhập khẩu từ nước ngoài, chúng có thể được giao đến "
+"kho này"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/abstract_custom_declaration.py:0
+#, python-format
+msgid "You can only delete a draft record!"
+msgstr "Bạn chỉ có thể xóa các bản ghi ở dạng dự thảo!"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/abstract_custom_declaration.py:0
+#, python-format
+msgid ""
+"You cannot confirm the declaration '%s' while its state is not 'Waiting "
+"Confirmation by Custom'"
+msgstr ""
+"Bạn không thể xác nhận hồ sơ thông quan '%s' khi trạng thái hiện hành của nó"
+" không phải là 'Đợi Xác nhận bởi Hải quan'"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/abstract_custom_declaration.py:0
+#, python-format
+msgid ""
+"You cannot do taxes computation for the declaration '%s' which is neither in"
+" Draft state or Open state."
+msgstr ""
+"Bạn không thể tính toán thuế cho hồ sơ thông quan '%s' khi mà trạng thái của nó"
+" không phải Dự thảo hoặc Mở"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/custom_declaration_line.py:0
+#, python-format
+msgid ""
+"You cannot have a custom declaration report line that belongs/links to both "
+"Export Custom Declaration and Import Custom Declaration"
+msgstr ""
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/wizard/custom_dec_payment.py:0
+#, python-format
+msgid ""
+"You cannot make tax payment for both Import Custom Declaration and Export "
+"Custom Declaration at the same time"
+msgstr ""
+"Bạn không thể tạo thanh toán cho cả hồ sơ thông quan nhập khẩu và xuất khẩu "
+"tại cùng một thời điểm"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/stock_move.py:0
+#: code:addons/to_foreign_trade/models/stock_move.py:0
+#, python-format
+msgid ""
+"You cannot process the transfer %s while its original transfer %s 's custom "
+"declaration document %s has not been confirmed by the custom authority. "
+"Please get it confirmed first!"
+msgstr ""
+"Bạn không thể xác nhận giao nhận %s khi giao nhận gốc của nó %s có hồ sơ "
+"thông quan %s chưa được xác nhận bởi hải quan. Hãy xác nhận hồ sơ thông quan"
+" này trước!"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/stock_move.py:0
+#, python-format
+msgid ""
+"You cannot process the transfer %s while its original transfer %s requires a"
+" custom declaration document. Please create a custom declaration document "
+"for that transfer."
+msgstr ""
+"Bạn không thể xác nhận giao nhận %s khi giao nhận gốc của nó %s yêu cầu 1 hồ"
+" sơ thông quan. Hãy tạo hồ sơ thông quan cho giao nhận gốc này."
+
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/abstract_custom_declaration.py:0
+#, python-format
+msgid ""
+"You cannot set done for the declaration '%s' while its state is not "
+"'Confirmed by Custom'"
+msgstr ""
+"Bạn không thể đánh dấu hoàn thành hồ sơ '%s' khi mà trạng thái hiện hành của"
+" nó không phải là 'Được xác nhận bởi Hải Quan'"
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/abstract_custom_declaration.py:0
+#, python-format
+msgid ""
+"You may want to specify a partner as Custom Authority for the operation type '%s' so that you can save your time in the future.\n"
+"This can be done by opening the form view of the operation type and specify a partner there"
+msgstr ""
+"Bạn có thể thiết lập một đối tác làm Cơ quan Hải quan cho hoạt động '%s' để bạn có thể tiết kiệm thời gian nhập liệu trong tương lai.\n"
+"Việc này có thể được thực hiện bằng các mở giao diện form của kiểu hoạt động này và chọn đối tác phù hợp ở đó."
+
+#. module: to_foreign_trade
+#: code:addons/to_foreign_trade/models/abstract_custom_declaration_tax.py:0
+#, python-format
+msgid ""
+"You must set Allow Reconciliation for the account `%s` (%s) before you can "
+"proceed."
+msgstr ""
+"Bạn phải thiết lập Cho phép Đối soát đối với tài khoản `%s` (%s) trước khi "
+"bạn có thể tiếp tục."
+
+#. module: to_foreign_trade
+#: model_terms:ir.ui.view,arch_db:to_foreign_trade.custom_dec_payment_form
+msgid "or"
+msgstr "hoặc"

@@ -1,0 +1,89 @@
+<odoo>
+	<data>
+
+		<record model="ir.ui.view" id="view_hr_role_form">
+			<field name="name">hr.role.form</field>
+			<field name="model">hr.role</field>
+			<field name="inherit_id" ref="viin_hr_rank.view_hr_role_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//div[@name='button_box']" position="inside">
+					<button name="action_view_required_skill_descriptions"
+						class="oe_stat_button" icon="fa-book" type="object">
+						<field name="skill_descriptions_count" widget="statinfo"
+							string="Required Skills" />
+					</button>
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="view_hr_role_kanban">
+			<field name="name">hr.role.kanban</field>
+			<field name="model">hr.role</field>
+			<field name="inherit_id" ref="viin_hr_role.view_hr_role_kanban" />
+			<field name="arch" type="xml">
+				<xpath expr="//templates" position="before">
+					<field name="skill_descriptions_count" />
+					<field name="skill_failure_report_count" />
+				</xpath>
+				<xpath expr="//div[hasclass('o_kanban_primary_right')]"
+					position="inside">
+					<t t-foreach="dashboard.grades" t-as="grade">
+						<div class="row">
+							<div class="col overflow-hidden text-left">
+								<a type="object" t-att="grade.action">
+									<span t-att-title="grade.name">
+										<t t-esc="grade.employees_count" />
+										<t t-esc="grade.name" />
+									</span>
+								</a>
+							</div>
+						</div>
+					</t>
+					<div t-if="record.skill_descriptions_count.raw_value &gt; 0"
+						class="row">
+						<div class="col overflow-hidden text-left">
+							<a name="action_view_required_skill_descriptions" type="object">
+								<field name="skill_descriptions_count" />
+								Required Skills
+							</a>
+						</div>
+					</div>
+					<div t-if="record.skill_failure_report_count.raw_value &gt; 0"
+						class="row">
+						<div class="col overflow-hidden text-left">
+							<a name="action_view_skill_failure_report" type="object">
+								<field name="skill_failure_report_count" />
+								Skill Failure
+								Records
+							</a>
+						</div>
+					</div>
+				</xpath>
+				<xpath expr="//div[hasclass('o_kanban_manage_reports')]"
+					position="inside">
+					<div class="row">
+						<div class="col-12 text-left">
+							<a name="action_view_skill_report" type="object">
+								Skills
+							</a>
+						</div>
+					</div>
+				</xpath>
+			</field>
+		</record>
+
+        <record id="hr_role_view_search" model="ir.ui.view">
+            <field name="name">hr.role.search.inherit</field>
+            <field name="model">hr.role</field>
+            <field name="inherit_id" ref="viin_hr_role.view_hr_role_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='company_id']" position="after">
+                    <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
+                </xpath>
+            </field>
+            </record>
+
+		<menuitem name="Roles" id="menu_role" parent="menu_dashboard"
+			action="viin_hr_role.action_hr_role" sequence="10" />
+	</data>
+</odoo>

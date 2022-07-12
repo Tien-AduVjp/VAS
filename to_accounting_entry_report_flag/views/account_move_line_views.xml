@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="view_move_line_tree" model="ir.ui.view">
+			<field name="name">account.move.line.tree</field>
+			<field name="model">account.move.line</field>
+			<field name="inherit_id" ref="account.view_move_line_tree" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='full_reconcile_id']"
+					position="after">
+					<field name="legal_report_off" />
+				</xpath>
+			</field>
+		</record>
+		<record id="view_move_line_form" model="ir.ui.view">
+			<field name="name">account.move.line.form</field>
+			<field name="model">account.move.line</field>
+			<field name="inherit_id" ref="account.view_move_line_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//page[1]/group[1]/group[last()]"
+					position="after">
+					<group string="Legal Reports" groups="to_accounting_entry_report_flag.group_accounting_report_flag_manager">
+						<field name="legal_report_off" />
+					</group>
+				</xpath>
+			</field>
+		</record>
+		<record id="view_account_move_line_filter" model="ir.ui.view">
+			<field name="model">account.move.line</field>
+			<field name="inherit_id"
+				ref="account.view_account_move_line_filter" />
+			<field name="arch" type="xml">
+				<xpath expr="//filter[@name='posted']" position="after">
+					<separator />
+					<filter name="legal_report_off" string="Excluded in Legal Reports"
+						domain="[('legal_report_off','=',True)]"
+						help="Show journal items that are flagged with Excluded in Legal Reports" />
+					<filter name="not_legal_report_on" string="Legal Report On"
+						domain="[('legal_report_off','=',False)]"
+						help="Show journal items that are not flagged with Excluded in Legal Reports" />
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

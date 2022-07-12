@@ -1,0 +1,140 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_hr_expense_payroll
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-27 08:30+0000\n"
+"PO-Revision-Date: 2020-10-27 08:30+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_hr_expense_payroll
+#: model:ir.model.fields,help:to_hr_expense_payroll.field_hr_expense_sheet__has_reimbursed_by_payslip_expense
+msgid ""
+"Auto computed technical field to indicates if the sheet contains an expense "
+"that will be reimbursed in payslip."
+msgstr "Trường kĩ thuật được tự động tính toán, để chỉ ra kê khai này có chứa một chi tiêu nào"
+"mà sẽ được bồi hoàn trong phiếu lương không."
+
+#. module: to_hr_expense_payroll
+#: model:ir.model,name:to_hr_expense_payroll.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: to_hr_expense_payroll
+#: code:addons/to_hr_expense_payroll/models/hr_expense.py:0
+#, python-format
+msgid ""
+"Could not set Reimbursed in Payslip for the expense '%s [%s]' while its "
+"currency differs from the corresponding company's currency. You may need to "
+"uncheck the Reimbursed in Payslip first."
+msgstr ""
+"Không thể thiết lập Bồi hoàn ở Phiếu lương cho Chi tiêu '%s [%s]' khi chi "
+"tiêu này sử dụng ngoại tệ. Bạn cần phải bỏ chọn Bồi hoàn ở Phiếu lương "
+"trước."
+
+#. module: to_hr_expense_payroll
+#: model:ir.model,name:to_hr_expense_payroll.model_hr_expense
+msgid "Expense"
+msgstr "Chi tiêu"
+
+#. module: to_hr_expense_payroll
+#: model:ir.model,name:to_hr_expense_payroll.model_hr_expense_sheet_register_payment_wizard
+msgid "Expense Register Payment Wizard"
+msgstr "Tính năng ghi nhận thanh toán chi tiêu"
+
+#. module: to_hr_expense_payroll
+#: model:ir.model,name:to_hr_expense_payroll.model_hr_expense_sheet
+msgid "Expense Report"
+msgstr "Kê khai Chi tiêu"
+
+#. module: to_hr_expense_payroll
+#: code:addons/to_hr_expense_payroll/models/res_company.py:0
+#: code:addons/to_hr_expense_payroll/models/res_company.py:0
+#: code:addons/to_hr_expense_payroll/models/res_company.py:0
+#: model:hr.contribution.category,name:to_hr_expense_payroll.hr_contribution_category_reimbursement
+#, python-format
+msgid "HR Expense Reimbursement"
+msgstr "Bồi hoàn Chi tiêu"
+
+#. module: to_hr_expense_payroll
+#: code:addons/to_hr_expense_payroll/models/res_company.py:0
+#, python-format
+msgid "HR Expense Reimbursement Amount"
+msgstr ""
+
+#. module: to_hr_expense_payroll
+#: model:ir.model.fields,field_description:to_hr_expense_payroll.field_hr_payslip__hr_expense_ids
+#: model_terms:ir.ui.view,arch_db:to_hr_expense_payroll.view_hr_payslip_form
+msgid "HR Expenses"
+msgstr "Chi tiêu (HR)"
+
+#. module: to_hr_expense_payroll
+#: model:ir.model.fields,field_description:to_hr_expense_payroll.field_hr_expense_sheet__has_reimbursed_by_payslip_expense
+msgid "Has Reimbursed By Payslip Expense"
+msgstr "Đã được hoàn trả qua phiếu lương"
+
+#. module: to_hr_expense_payroll
+#: model:ir.model.fields,help:to_hr_expense_payroll.field_hr_expense__reimbursed_in_payslip
+msgid ""
+"If checked, this expense will be included in the next HR Payslip. No direct "
+"payment on the expense anymore."
+msgstr ""
+"Nếu được đánh dấu, chi tiêu này sẽ được tính toán và bao gồm trong phiếu "
+"lương tiếp theo. Không thanh toán / bồi hoàn trực tiếp nữa."
+
+#. module: to_hr_expense_payroll
+#: model:ir.model.fields,field_description:to_hr_expense_payroll.field_hr_expense_sheet__is_paid
+msgid "Is Paid"
+msgstr "Đã thanh toán"
+
+#. module: to_hr_expense_payroll
+#: model:ir.model,name:to_hr_expense_payroll.model_hr_payslip
+msgid "Pay Slip"
+msgstr "Phiếu lương"
+
+#. module: to_hr_expense_payroll
+#: model:ir.model.fields,field_description:to_hr_expense_payroll.field_hr_expense__hr_payslip_id
+msgid "Payslip"
+msgstr "Phiếu lương"
+
+#. module: to_hr_expense_payroll
+#: model:ir.model.fields,field_description:to_hr_expense_payroll.field_hr_expense_sheet__payslip_ids
+#: model_terms:ir.ui.view,arch_db:to_hr_expense_payroll.view_hr_expense_sheet_form
+msgid "Payslips"
+msgstr "Phiếu lương"
+
+#. module: to_hr_expense_payroll
+#: model:ir.model.fields,field_description:to_hr_expense_payroll.field_hr_expense_sheet__payslips_count
+msgid "Payslips Count"
+msgstr ""
+
+#. module: to_hr_expense_payroll
+#: model:ir.model.fields,field_description:to_hr_expense_payroll.field_hr_expense__reimbursed_in_payslip
+msgid "Reimbursed in Payslip"
+msgstr "Bồi hoàn ở Phiếu lương"
+
+#. module: to_hr_expense_payroll
+#: model_terms:ir.ui.view,arch_db:to_hr_expense_payroll.view_hr_expense_sheet_form
+msgid ""
+"There're some expenses in this sheet that will be reimbursed in payslips. "
+"Hence, their corresponding accounting entries will be done in payslips "
+"instead."
+msgstr ""
+"Có một số chi tiêu trên kê khai này sẽ được bồi hoàn trong phiếu lương."
+"Do đó, kê khai chi tiêu này sẽ chỉ được hoàn thành thanh toán khi phiếu lương hoàn thành."
+
+#. module: to_hr_expense_payroll
+#: model:ir.model.fields,help:to_hr_expense_payroll.field_hr_expense_sheet__is_paid
+msgid ""
+"This field used to show/hide button Payment if this expense sheet has been "
+"fully paid, not included the expense is set to be paid by payslip"
+msgstr "Trường này được sử đụng để hiện/ẩn nút thanh toán trong trường hợp bảng kê khai chi tiêu này"
+"đã được thanh toán đầy đủ, không bao gồm các chi tiêu được thiết lập là bồi hoàn trên phiếu lương."

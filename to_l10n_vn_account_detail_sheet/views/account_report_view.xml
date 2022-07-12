@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<report id="act_report_c200_s38dn" menu="False"
+			model="wizard.l10n_vn.c200_s38dn"
+			name="to_l10n_vn_account_detail_sheet.report_c200_s38dn"
+			file="to_l10n_vn_account_detail_sheet.report_c200_s38dn"
+			report_type="qweb-pdf" string="Account Detail Sheet (S38-DN)" />
+		<record id="act_report_c200_s38dn" model="ir.actions.report">
+			<field name="paperformat_id"
+				ref="to_ads_vn_report_paperformat_euro_landscape" />
+			<field name="legal_name">Template S38-DN</field>
+		</record>
+	</data>
+</odoo>

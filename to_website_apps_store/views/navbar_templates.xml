@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<template id="search" name="Search Box">
+		<form t-att-action="keep('/apps/browse'+ ('/category/'+slug(category)) if category else None, search=0)" method="get" t-att-class="_classes">
+			<t t-if="attrib_values">
+				<t t-foreach="attrib_values" t-as="a">
+					<input type="hidden" name="attrib" t-att-value="'%s-%s' % (a[0], a[1])" />
+				</t>
+			</t>
+			<t t-call="website.website_search_box" />
+		</form>
+	</template>
+	
+	<template id="pricelist_list" name="Pricelists Dropdown">
+		<t t-set="website_sale_pricelists" t-value="website.get_pricelist_available(show_visible=True)" />
+		<div t-attf-class="dropdown#{'' if website_sale_pricelists and len(website_sale_pricelists)&gt;1 else ' d-none'} #{_classes}">
+			<t t-set="curr_pl" t-value="website.get_current_pricelist()" />
+			<a role="button" href="#" class="dropdown-toggle btn btn-secondary" data-toggle="dropdown">
+				<t t-esc="curr_pl and curr_pl.name or ' - '" />
+			</a>
+			<div class="dropdown-menu" role="menu">
+				<t t-foreach="website_sale_pricelists" t-as="pl">
+					<a role="menuitem" t-att-href="'/apps/change_pricelist/%s' % pl.id" class="dropdown-item">
+						<span class="switcher_pricelist" t-att-data-pl_id="pl.id" t-esc="pl.name" />
+					</a>
+				</t>
+			</div>
+		</div>
+	</template>
+
+	<template id="app_main_nav" name="Apps Main Navbar">
+        <nav id="app_main_navbar" class="navbar navbar-expand container">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/apps/modules">
+                            <i class="fa fa-cube"></i>
+                            APPS
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/apps/themes">
+                            <i class="fa fa-paint-brush"></i>
+                            THEMES
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav mx-auto col-md-5">
+                    <li t-call="to_website_apps_store.search">
+                        <t t-set="search_class" t-value="'pagination form-inline o_website_sale_search'"/>
+                    </li>
+                    <li t-call="to_website_apps_store.pricelist_list">
+                    	<t t-set="_classes">ml-2</t>
+                    </li>
+                </ul>
+                <!-- remove d-none for third party author upload -->
+                <ul class="navbar-nav ml-auto d-none">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/apps/upload">
+                            <i class="fa fa-upload"></i> SUBMIT
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+	</template>
+
+	<template id="app_sub_menu" name="Apps Sub Menu">
+        <nav id="app_sub_navbar" class="navbar navbar-expand-sm navbar-light bg-white">
+            <div class="container">
+                <div class="navbar-nav mr-auto">
+                    <div class="nav-item dropdown">
+                        <a href="#" class="btn btn-light dropdown-toggle" data-toggle="dropdown"
+                            role="button" aria-haspopup="true" aria-expanded="false">
+                            <t t-esc="category.name if category else 'Categories'" />
+                            <span class="caret"></span>
+                        </a>
+                        <div class="dropdown-menu" t-if="root_categ">
+                            <a class="dropdown-item"
+                                    t-att-href="keep(list_url if products else chart_url, category=0)">All</a>
+                            <t t-foreach="root_categ.child_id" t-as="c">
+                                <t t-call="to_website_apps_store.categories_recursive" />
+                            </t>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a class="btn btn-light" t-if="not products"
+                            t-att-href="keep(list_url+'/category/' + slug(category), category=0) if category else list_url">
+                            <i class="fa fa-th"></i> List View
+                        </a>
+                        <a class="btn btn-light" t-if="products"
+                            t-att-href="keep(chart_url+'/category/' + slug(category), category=0) if category else chart_url">
+                            <i class="fa fa-star"></i> Top Charts
+                        </a>
+                    </div>
+                    <a class="btn btn-light nav-item" t-att-href="keep(list_url+'/category/' + slug(category), category=0, price='')">
+                        All
+                    </a>
+                    <a class="btn btn-light nav-item" t-att-href="keep(list_url+'/category/' + slug(category), category=0, price='Free')">
+                        Free
+                    </a>
+                    <a class="btn btn-light nav-item" t-att-href="keep(list_url+'/category/' + slug(category), category=0, price='Paid')">
+                        Paid
+                    </a>
+                    <div class="nav-item dropdown">
+                        <a
+                            t-att-href="keep(list_url+'/category/' + slug(category), category=0, version='')"
+                            class="btn btn-light dropdown-toggle" data-toggle="dropdown" role="button"
+                            aria-haspopup="true" aria-expanded="false">
+                            <t t-esc="request.params.get('version', 'All Versions')" />
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <a class="dropdown-item"
+                                t-att-href="keep(list_url+'/category/' + slug(category), category=0, version='')">All Versions</a>
+                            <t t-foreach="odoo_versions" t-as="odoo_version">
+                                <a class="dropdown-item"
+                                    t-att-href="keep(list_url+'/category/' + slug(category), category=0, version='%s'%odoo_version.name)">
+                                    <span t-field="odoo_version.name" />
+                                </a>
+                            </t>
+                        </ul>
+                    </div>
+                </div>
+                <div class="navbar-nav ml-auto">
+                    <a class="btn btn-light" href="/apps-refund-policy">
+                        Refund Policy
+                    </a>
+                </div>
+            </div>
+        </nav>
+	</template>
+
+	<template id="apps_store_nav_bars" name="Apps Store Navbars">
+		<t t-call="to_website_apps_store.app_main_nav" />
+		<t t-call="to_website_apps_store.app_sub_menu" />
+		<!-- <script type="text/javascript" src="/to_website_apps_store/static/src/js/apps_store.js"></script> -->
+	</template>
+
+</odoo>

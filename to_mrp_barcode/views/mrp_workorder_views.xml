@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	
+	<record id="mrp_workorder_form_view_inherit1" model="ir.ui.view">
+        <field name="name">mrp.workorder.form.view1</field>
+        <field name="model">mrp.workorder</field>
+        <field name="inherit_id" ref="mrp.mrp_production_workorder_form_view_inherit"/>
+        <field name="arch" type="xml">
+        	<form position="inside">
+                <field name="_barcode_scanned" widget="barcode_handler"/>
+            </form>
+        	<xpath expr="//button[@name='button_start'][1]" position="attributes">
+            	<attribute name="attrs">{'invisible': 1}</attribute>
+            </xpath>
+            <xpath expr="//button[@name='button_start'][2]" position="attributes">
+            	<attribute name="attrs">{'invisible': 1}</attribute>
+            </xpath>
+            <xpath expr="//button[@name='button_start'][3]" position="attributes">
+            	<attribute name="attrs">{'invisible': 1}</attribute>
+            </xpath>
+        
+            <xpath expr="//button[@name='button_start'][1]" position="after">
+            	<button name="button_start1" barcode_trigger="button_start" type="object" string="Start Working" attrs="{'invisible': ['|', ('working_state', '=', 'blocked'), ('state', '!=', 'pending')]}"/>
+            </xpath>
+            <xpath expr="//button[@name='button_start'][2]" position="after">
+            	<button name="button_start2" barcode_trigger="button_start" type="object" string="Start Working" attrs="{'invisible': ['|', ('working_state', '=', 'blocked'), ('state', '!=', 'ready')]}" class="btn-success"/>
+            </xpath>
+            <xpath expr="//button[@name='button_start'][3]" position="after">
+            	<button name="button_start3" barcode_trigger="button_start" type="object" string="Continue Production" attrs="{'invisible': ['|', '|', '|', ('production_state', '=', 'done'), ('working_state', '=', 'blocked'), ('is_user_working', '=', True), ('state', '!=', 'progress')]}"/>
+            </xpath>
+            
+            <xpath expr="//button[@name='button_finish']" position="attributes">
+                <attribute name="barcode_trigger">button_finish</attribute>
+            </xpath>
+            <xpath expr="//button[@name='button_pending']" position="attributes">
+                <attribute name="barcode_trigger">button_pending</attribute>
+            </xpath>
+            <xpath expr="//button[@name='button_unblock']" position="attributes">
+                <attribute name="barcode_trigger">button_unblock</attribute>
+            </xpath>
+            <xpath expr="//button[@name='record_production']" position="attributes">
+                <attribute name="barcode_trigger">record_production</attribute>
+            </xpath>
+            <xpath expr="//button[@name='button_scrap']" position="attributes">
+                <attribute name="barcode_trigger">button_scrap</attribute>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

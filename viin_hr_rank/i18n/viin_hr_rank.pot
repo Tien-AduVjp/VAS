@@ -1,0 +1,631 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_hr_rank
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-21 11:18+0000\n"
+"PO-Revision-Date: 2022-01-21 11:18+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:hr.rank,name:viin_hr_rank.rank_administrator_expert
+msgid "Administrator | Expert"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:hr.rank,name:viin_hr_rank.rank_administrator_intern
+msgid "Administrator | Internship"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:hr.rank,name:viin_hr_rank.rank_administrator_junior
+msgid "Administrator | Junior"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:hr.rank,name:viin_hr_rank.rank_administrator_senior
+msgid "Administrator | Senior"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:hr.rank,name:viin_hr_rank.rank_administrator_trainee
+msgid "Administrator | Trainee"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,help:viin_hr_rank.field_hr_rank__employee_ids
+msgid "All the employees that are currently set at this rank."
+msgstr ""
+
+#. module: viin_hr_rank
+#: model_terms:ir.ui.view,arch_db:viin_hr_rank.view_hr_rank_form
+msgid "Applicable Job Positions"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model,name:viin_hr_rank.model_hr_employee_base
+msgid "Basic Employee"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__company_id
+#: model_terms:ir.ui.view,arch_db:viin_hr_rank.view_hr_rank_search
+msgid "Company"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:hr.rank,name:viin_hr_rank.rank_consultant_expert
+msgid "Consultant | Expert"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:hr.rank,name:viin_hr_rank.rank_consultant_intern
+msgid "Consultant | Internship"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:hr.rank,name:viin_hr_rank.rank_consultant_junior
+msgid "Consultant | Junior"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:hr.rank,name:viin_hr_rank.rank_consultant_senior
+msgid "Consultant | Senior"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:hr.rank,name:viin_hr_rank.rank_consultant_trainee
+msgid "Consultant | Trainee"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_job_rank_line__create_uid
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_job_rank_line__create_date
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_employee__rank_id
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_employee_base__rank_id
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_employee_public__rank_id
+msgid "Current Rank"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,help:viin_hr_rank.field_hr_employee__rank_id
+#: model:ir.model.fields,help:viin_hr_rank.field_hr_employee_base__rank_id
+#: model:ir.model.fields,help:viin_hr_rank.field_hr_employee_public__rank_id
+msgid ""
+"Current rank of the employee which is computed automatically based on the "
+"selected level and role."
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:hr.rank,name:viin_hr_rank.rank_customer_support_expert
+msgid "Customer Support Specialist | Expert"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:hr.rank,name:viin_hr_rank.rank_customer_support_intern
+msgid "Customer Support Specialist | Internship"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:hr.rank,name:viin_hr_rank.rank_customer_support_junior
+msgid "Customer Support Specialist | Junior"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:hr.rank,name:viin_hr_rank.rank_customer_support_senior
+msgid "Customer Support Specialist | Senior"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:hr.rank,name:viin_hr_rank.rank_customer_support_trainee
+msgid "Customer Support Specialist | Trainee"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__department_id
+#: model_terms:ir.ui.view,arch_db:viin_hr_rank.view_hr_rank_search
+msgid "Department"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,help:viin_hr_rank.field_hr_rank__recursive_child_ids
+msgid "Direct and indirect lower ranks"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_job_rank_line__display_name
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model,name:viin_hr_rank.model_hr_employee
+msgid "Employee"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model,name:viin_hr_rank.model_hr_employee_grade
+msgid "Employee Grade"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__employee_ids
+#: model_terms:ir.ui.view,arch_db:viin_hr_rank.view_hr_rank_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_rank.view_hr_rank_list
+msgid "Employees"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__employees_count
+msgid "Employees Count"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model_terms:ir.ui.view,arch_db:viin_hr_rank.view_hr_rank_search
+msgid "Grade"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model_terms:ir.ui.view,arch_db:viin_hr_rank.view_hr_rank_search
+msgid "Group By"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model,name:viin_hr_rank.model_hr_department
+msgid "HR Department"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model,name:viin_hr_rank.model_hr_rank
+msgid "HR Rank"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model,name:viin_hr_rank.model_hr_role
+msgid "HR Role"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__parent_id
+msgid "Higher Rank"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model,name:viin_hr_rank.model_hr_job_rank_line
+msgid "Hr Job Rank Line"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_job_rank_line__id
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,help:viin_hr_rank.field_hr_rank__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,help:viin_hr_rank.field_hr_rank__message_needaction
+#: model:ir.model.fields,help:viin_hr_rank.field_hr_rank__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,help:viin_hr_rank.field_hr_rank__message_has_error
+#: model:ir.model.fields,help:viin_hr_rank.field_hr_rank__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model,name:viin_hr_rank.model_hr_job
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_job_rank_line__job_id
+msgid "Job Position"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model_terms:ir.ui.view,arch_db:viin_hr_rank.view_hr_rank_form
+msgid "Job Positions"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__job_line_ids
+msgid "Job Positions Applied"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__matched_job_ids
+msgid "Jobs that match this rank"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_job_rank_line____last_update
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_job_rank_line__write_uid
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_job_rank_line__write_date
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:hr.rank,name:viin_hr_rank.rank_leader_expert
+msgid "Leader | Expert"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:hr.rank,name:viin_hr_rank.rank_leader_intern
+msgid "Leader | Internship"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:hr.rank,name:viin_hr_rank.rank_leader_junior
+msgid "Leader | Junior"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:hr.rank,name:viin_hr_rank.rank_leader_senior
+msgid "Leader | Senior"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:hr.rank,name:viin_hr_rank.rank_leader_trainee
+msgid "Leader | Trainee"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_job_rank_line__grade_id
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__grade_id
+msgid "Level"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__child_ids
+msgid "Lower Rank"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_job__rank_ids
+msgid "Minimum Ranks"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__name
+msgid "Name"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_employee__next_rank_id
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_employee_base__next_rank_id
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_employee_public__next_rank_id
+msgid "Next Targeted Rank"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,help:viin_hr_rank.field_hr_rank__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,help:viin_hr_rank.field_hr_rank__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,help:viin_hr_rank.field_hr_rank__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,help:viin_hr_rank.field_hr_rank__department_id
+msgid ""
+"Once specified, the rank is ONLY available for the selected department. In "
+"most cases, this field is preferred to be left blank."
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_job_rank_line__rank_id
+#: model_terms:ir.ui.view,arch_db:viin_hr_rank.hr_employee_public_view_search
+#: model_terms:ir.ui.view,arch_db:viin_hr_rank.view_employee_filter
+msgid "Rank"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.actions.act_window,name:viin_hr_rank.action_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_department__rank_ids
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_employee_grade__rank_ids
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_role__rank_ids
+#: model:ir.ui.menu,name:viin_hr_rank.menu_rank
+#: model_terms:ir.ui.view,arch_db:viin_hr_rank.view_department_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_rank.view_hr_job_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_rank.view_hr_role_form
+msgid "Ranks"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_department__ranks_count
+msgid "Ranks Count"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__recursive_child_ids
+msgid "Recursive Children"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__matched_jobs_count
+msgid "Related Job Positions"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_job__grade_ids
+msgid "Related Levels"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_job__role_ids
+msgid "Related Roles"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_job__rank_line_ids
+msgid "Required Ranks"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_job_rank_line__role_id
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__role_id
+#: model_terms:ir.ui.view,arch_db:viin_hr_rank.view_hr_rank_search
+msgid "Role"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.constraint,message:viin_hr_rank.constraint_hr_job_rank_line_role_grade_uniq
+msgid "Role must be unique per job position!"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:hr.rank,name:viin_hr_rank.rank_sales_executive_expert
+msgid "Sales Executive | Expert"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:hr.rank,name:viin_hr_rank.rank_sales_executive_intern
+msgid "Sales Executive | Internship"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:hr.rank,name:viin_hr_rank.rank_sales_executive_junior
+msgid "Sales Executive | Junior"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:hr.rank,name:viin_hr_rank.rank_sales_executive_senior
+msgid "Sales Executive | Senior"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:hr.rank,name:viin_hr_rank.rank_sales_executive_trainee
+msgid "Sales Executive | Trainee"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__grade_sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,help:viin_hr_rank.field_hr_rank__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.constraint,message:viin_hr_rank.constraint_hr_rank_name_uniq
+msgid "The combination of Role and Grade must be unique per company!"
+msgstr ""
+
+#. module: viin_hr_rank
+#: code:addons/viin_hr_rank/models/hr_rank.py:0
+#, python-format
+msgid ""
+"The department %s is invalid for the company %s while it is dedicated for "
+"the company %s only."
+msgstr ""
+
+#. module: viin_hr_rank
+#: code:addons/viin_hr_rank/models/hr_rank.py:0
+#, python-format
+msgid ""
+"The grade %s cannot be applied for the department %s while it is dedicated "
+"for the department %s only."
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,help:viin_hr_rank.field_hr_job__rank_ids
+msgid ""
+"The ranks at lowest levels that may require for the employees of this job "
+"position."
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,help:viin_hr_rank.field_hr_department__rank_ids
+msgid "The ranks that are dedicated for this department."
+msgstr ""
+
+#. module: viin_hr_rank
+#: code:addons/viin_hr_rank/models/hr_rank.py:0
+#, python-format
+msgid ""
+"The role %s cannot be applied for the department %s while it is dedicated "
+"for the department %s only."
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,help:viin_hr_rank.field_hr_rank__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,field_description:viin_hr_rank.field_hr_rank__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: viin_hr_rank
+#: model:ir.model.fields,help:viin_hr_rank.field_hr_rank__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: viin_hr_rank
+#: code:addons/viin_hr_rank/models/hr_job.py:0
+#, python-format
+msgid ""
+"You should select only one rank for the same role. A rank that requires less"
+" skills is preferred."
+msgstr ""
+
+#. module: viin_hr_rank
+#: code:addons/viin_hr_rank/models/hr_rank.py:0
+#, python-format
+msgid "{role} | {grade}"
+msgstr ""

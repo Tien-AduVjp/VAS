@@ -1,0 +1,55 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_hr_assignment_log
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-02-03 02:57+0000\n"
+"PO-Revision-Date: 2021-02-03 02:57+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_hr_assignment_log
+#: model:ir.model.fields,field_description:viin_hr_assignment_log.field_hr_employee__user_assignment_ids
+#: model_terms:ir.ui.view,arch_db:viin_hr_assignment_log.res_users_view_form_profile
+#: model_terms:ir.ui.view,arch_db:viin_hr_assignment_log.view_employee_form
+msgid "Assignments"
+msgstr ""
+
+#. module: viin_hr_assignment_log
+#: model:ir.model.fields,field_description:viin_hr_assignment_log.field_hr_employee__user_assignments_count
+msgid "Assignments Count"
+msgstr ""
+
+#. module: viin_hr_assignment_log
+#: model:ir.ui.menu,name:viin_hr_assignment_log.menu_user_assignment
+msgid "Assignments Log"
+msgstr ""
+
+#. module: viin_hr_assignment_log
+#: model:ir.model,name:viin_hr_assignment_log.model_base
+msgid "Base"
+msgstr ""
+
+#. module: viin_hr_assignment_log
+#: model:ir.model,name:viin_hr_assignment_log.model_hr_employee
+#: model:ir.model.fields,field_description:viin_hr_assignment_log.field_user_assignment__employee_id
+#: model_terms:ir.ui.view,arch_db:viin_hr_assignment_log.user_assignment_view_search
+msgid "Employee"
+msgstr ""
+
+#. module: viin_hr_assignment_log
+#: model:ir.model,name:viin_hr_assignment_log.model_user_assignment
+msgid "User Assignment"
+msgstr ""
+
+#. module: viin_hr_assignment_log
+#: model:ir.actions.act_window,name:viin_hr_assignment_log.action_employee_assignment
+msgid "User Assignments"
+msgstr ""

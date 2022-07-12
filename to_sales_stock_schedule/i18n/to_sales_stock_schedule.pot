@@ -1,0 +1,166 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_sales_stock_schedule
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-10 08:40+0000\n"
+"PO-Revision-Date: 2022-02-10 08:40+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_sales_stock_schedule
+#: model_terms:ir.ui.view,arch_db:to_sales_stock_schedule.view_stock_move_future_delivery_search
+msgid "Creation"
+msgstr ""
+
+#. module: to_sales_stock_schedule
+#: model:ir.ui.menu,name:to_sales_stock_schedule.delivery_control_menu
+msgid "Delivery Controls"
+msgstr ""
+
+#. module: to_sales_stock_schedule
+#: model_terms:ir.ui.view,arch_db:to_sales_stock_schedule.view_stock_move_future_delivery_form
+msgid "Delivery Schedule"
+msgstr ""
+
+#. module: to_sales_stock_schedule
+#: model:ir.actions.act_window,name:to_sales_stock_schedule.stock_move_delivery_action
+#: model:ir.ui.menu,name:to_sales_stock_schedule.delivery_schedule_menu
+#: model_terms:ir.ui.view,arch_db:to_sales_stock_schedule.view_stock_move_future_delivery_pivot
+#: model_terms:ir.ui.view,arch_db:to_sales_stock_schedule.view_stock_move_future_delivery_search
+#: model_terms:ir.ui.view,arch_db:to_sales_stock_schedule.view_stock_move_future_delivery_tree
+msgid "Delivery Schedules"
+msgstr ""
+
+#. module: to_sales_stock_schedule
+#: model_terms:ir.ui.view,arch_db:to_sales_stock_schedule.view_stock_move_future_delivery_search
+msgid "Destination"
+msgstr ""
+
+#. module: to_sales_stock_schedule
+#: model_terms:ir.ui.view,arch_db:to_sales_stock_schedule.view_stock_move_future_delivery_search
+msgid "Done"
+msgstr ""
+
+#. module: to_sales_stock_schedule
+#: model:ir.model.fields,field_description:to_sales_stock_schedule.field_sale_order_line__date_expected
+msgid "Est. Delivery"
+msgstr ""
+
+#. module: to_sales_stock_schedule
+#: model_terms:ir.ui.view,arch_db:to_sales_stock_schedule.view_stock_move_future_delivery_search
+msgid "Group By"
+msgstr ""
+
+#. module: to_sales_stock_schedule
+#: model_terms:ir.ui.view,arch_db:to_sales_stock_schedule.view_stock_move_future_delivery_search
+msgid "Location"
+msgstr ""
+
+#. module: to_sales_stock_schedule
+#: model_terms:ir.ui.view,arch_db:to_sales_stock_schedule.view_stock_move_future_delivery_search
+msgid "Orders processed Today or planned for Today"
+msgstr ""
+
+#. module: to_sales_stock_schedule
+#: model_terms:ir.ui.view,arch_db:to_sales_stock_schedule.view_stock_move_future_delivery_search
+msgid "Partner"
+msgstr ""
+
+#. module: to_sales_stock_schedule
+#: model_terms:ir.ui.view,arch_db:to_sales_stock_schedule.view_stock_move_future_delivery_search
+msgid "Picking"
+msgstr ""
+
+#. module: to_sales_stock_schedule
+#: model_terms:ir.ui.view,arch_db:to_sales_stock_schedule.view_stock_move_future_delivery_search
+msgid "Product"
+msgstr ""
+
+#. module: to_sales_stock_schedule
+#: model_terms:ir.ui.view,arch_db:to_sales_stock_schedule.view_stock_move_future_delivery_search
+msgid "Ready"
+msgstr ""
+
+#. module: to_sales_stock_schedule
+#: model_terms:ir.ui.view,arch_db:to_sales_stock_schedule.view_stock_move_future_delivery_search
+#: model_terms:ir.ui.view,arch_db:to_sales_stock_schedule.view_stock_move_future_delivery_tree
+msgid "Reference"
+msgstr ""
+
+#. module: to_sales_stock_schedule
+#: model:ir.model,name:to_sales_stock_schedule.model_sale_order_line
+msgid "Sales Order Line"
+msgstr ""
+
+#. module: to_sales_stock_schedule
+#: model_terms:ir.ui.view,arch_db:to_sales_stock_schedule.view_stock_move_future_delivery_search
+msgid "Scheduled by Days"
+msgstr ""
+
+#. module: to_sales_stock_schedule
+#: model_terms:ir.ui.view,arch_db:to_sales_stock_schedule.view_stock_move_future_delivery_search
+msgid "Scheduled by Hours"
+msgstr ""
+
+#. module: to_sales_stock_schedule
+#: model_terms:ir.ui.view,arch_db:to_sales_stock_schedule.view_stock_move_future_delivery_search
+msgid "Source"
+msgstr ""
+
+#. module: to_sales_stock_schedule
+#: model_terms:ir.ui.view,arch_db:to_sales_stock_schedule.view_stock_move_future_delivery_search
+msgid "Status"
+msgstr ""
+
+#. module: to_sales_stock_schedule
+#: model:ir.model,name:to_sales_stock_schedule.model_stock_move
+msgid "Stock Move"
+msgstr ""
+
+#. module: to_sales_stock_schedule
+#: model_terms:ir.ui.view,arch_db:to_sales_stock_schedule.view_stock_move_future_delivery_search
+msgid "Stock moves that are Available (Ready to process)"
+msgstr ""
+
+#. module: to_sales_stock_schedule
+#: model_terms:ir.ui.view,arch_db:to_sales_stock_schedule.view_stock_move_future_delivery_search
+msgid "Stock moves that are Confirmed, Available or Waiting"
+msgstr ""
+
+#. module: to_sales_stock_schedule
+#: model_terms:ir.ui.view,arch_db:to_sales_stock_schedule.view_stock_move_future_delivery_search
+msgid "Stock moves that have been processed"
+msgstr ""
+
+#. module: to_sales_stock_schedule
+#: model:ir.model.fields,help:to_sales_stock_schedule.field_sale_order_line__date_expected
+msgid "The date of delivery that you promise your customer."
+msgstr ""
+
+#. module: to_sales_stock_schedule
+#: model_terms:ir.ui.view,arch_db:to_sales_stock_schedule.view_stock_move_future_delivery_search
+msgid "To Do"
+msgstr ""
+
+#. module: to_sales_stock_schedule
+#: model_terms:ir.ui.view,arch_db:to_sales_stock_schedule.view_stock_move_future_delivery_search
+msgid "Today"
+msgstr ""
+
+#. module: to_sales_stock_schedule
+#: model:ir.model.fields,field_description:to_sales_stock_schedule.field_stock_move__picking_partner_id
+msgid "Transfer Destination Address"
+msgstr ""
+
+#. module: to_sales_stock_schedule
+#: model_terms:ir.ui.view,arch_db:to_sales_stock_schedule.view_stock_move_future_delivery_tree
+msgid "Unit of Measure"
+msgstr ""

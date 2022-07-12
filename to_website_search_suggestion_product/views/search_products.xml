@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="search_input" inherit_id="website_sale.website_sale_products_search_box" active="True" customize_show="True" name="Search Suggestion">
+        <xpath expr="//form" position="replace">
+        	<form t-att-action="action if action else '/shop'" t-value="keep('/shop'+ ('/category/'+slug(category)) if category else None, search=0)" method="get" t-attf-class="search_class">
+	            <t t-if="attrib_values">
+	                <t t-foreach="attrib_values" t-as="a">
+	                    <input type="hidden" name="attrib" t-att-value="'%s-%s' % (a[0], a[1])" />
+	                </t>
+	            </t>
+	            <t t-call="to_website_search_suggestion_product.website_search_suggestion_product_box" />
+	        </form>
+        </xpath>
+    </template>
+    <template id="website_search_suggestion_product_box" name="Website Search Suggestion Product Box">
+	    <div class="input-group">
+	        <div class="oe_search">
+	            <input type="text"
+                               name="search"
+                               class="js_website_suggestion search-query form-control oe_search_box"
+                               t-att-value="search"
+                               data-query-field="name"
+                               data-display-field="name"
+                               data-value-field="name"
+                               data-limit="10"
+                               data-model="product.template"
+                               data-domain='[["website_published", "=", true]]'
+                               />
+	        </div>
+	        <span class="input-group-btn">
+	           <button type="submit" class="btn btn-default oe_search_button"><i class="fa fa-search"/></button>
+	        </span>
+	    </div>
+	</template>
+</odoo>

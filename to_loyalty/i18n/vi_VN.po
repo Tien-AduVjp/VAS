@@ -1,0 +1,1118 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_loyalty
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-31 01:01+0000\n"
+"PO-Revision-Date: 2020-03-31 01:01+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_loyalty
+#: model_terms:ir.ui.view,arch_db:to_loyalty.view_customer_level_tree
+msgid "# of Customers"
+msgstr "SL Khách hàng"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_customer_level__message_needaction
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_program__message_needaction
+msgid "Action Needed"
+msgstr "Cần có Hành động"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_customer_level__activity_ids
+msgid "Activities"
+msgstr "Các hoạt động"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_customer_level__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Hoạt động ngoại lệ"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_customer_level__activity_state
+msgid "Activity State"
+msgstr "Trạng thái Hoạt động"
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_loyalty_program__name
+msgid "An internal identification for the loyalty program configuration"
+msgstr "Định danh nội bộ cho Chương trình Khách hàng Thân thiết"
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_loyalty_rule__name
+msgid "An internal identification for this loyalty program rule"
+msgstr "Định danh nội bộ cho các Quy tắc Chương trình Khách hàng Thân thiết"
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_loyalty_reward__name
+msgid "An internal identification for this loyalty reward"
+msgstr "Định danh nội bộ cho Phần thưởng Chương trình Khách hàng Thân thiết"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_customer_level__message_attachment_count
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_program__message_attachment_count
+msgid "Attachment Count"
+msgstr "Số đính kèm"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_rule__product_category_id
+msgid "Category"
+msgstr "Danh mục"
+
+#. module: to_loyalty
+#: model_terms:ir.actions.act_window,help:to_loyalty.action_loyalty_program_form
+msgid "Click to create a Loyalty Program."
+msgstr "Bấm để tạo một chương trình khách hàng thân thiết."
+
+#. module: to_loyalty
+#: model_terms:ir.actions.act_window,help:to_loyalty.action_customer_level_form
+msgid "Click to create a customer level."
+msgstr "Bấm để tạo một cấp độ khách hàng."
+
+#. module: to_loyalty
+#: model_terms:ir.ui.view,arch_db:to_loyalty.view_customer_level_form
+msgid "Code"
+msgstr "Mã"
+
+#. module: to_loyalty
+#: model:ir.model,name:to_loyalty.model_res_config_settings
+msgid "Config Settings"
+msgstr "Thiết lập Cấu hình"
+
+#. module: to_loyalty
+#: model:ir.ui.menu,name:to_loyalty.menu_loyalty_config
+msgid "Configuration"
+msgstr "Cấu hình"
+
+#. module: to_loyalty
+#: model:ir.model,name:to_loyalty.model_res_partner
+msgid "Contact"
+msgstr "Liên hệ"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_customer_level__create_uid
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_point__create_uid
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_program__create_uid
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_reward__create_uid
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_rule__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_customer_level__create_date
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_point__create_date
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_program__create_date
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_reward__create_date
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_rule__create_date
+msgid "Created on"
+msgstr "Được tạo vào"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_rule__cumulative
+msgid "Cumulative"
+msgstr "Tích lũy"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_program__currency_id
+msgid "Currency"
+msgstr "Tiền tệ"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_point__partner_id
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_points_report__partner_id
+#: model_terms:ir.ui.view,arch_db:to_loyalty.loyalty_points_filter_view
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: to_loyalty
+#: model:ir.actions.act_window,name:to_loyalty.action_customer_level_form
+#: model:ir.model,name:to_loyalty.model_customer_level
+#: model:ir.ui.menu,name:to_loyalty.menu_loyalty_customer_level
+#: model_terms:ir.ui.view,arch_db:to_loyalty.view_customer_level_form
+#: model_terms:ir.ui.view,arch_db:to_loyalty.view_customer_level_tree
+msgid "Customer Level"
+msgstr "Cấp độ khách hàng"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_customer_level__property_sync_partner_pricelist
+msgid "Customer's Pricelist Sync."
+msgstr "Đồng bộ Bảng giá Khách hàng"
+
+#. module: to_loyalty
+#: model_terms:ir.ui.view,arch_db:to_loyalty.view_customer_level_form
+msgid "Customers"
+msgstr "Khách hàng"
+
+#. module: to_loyalty
+#: model_terms:ir.ui.view,arch_db:to_loyalty.view_loyalty_point_form
+msgid "Date"
+msgstr "Ngày"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_point__date_order
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_points_report__date_order
+msgid "Date Order"
+msgstr "Ngày đặt hàng"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_reward__discount
+#: model:ir.model.fields.selection,name:to_loyalty.selection__loyalty_reward__reward_type__discount
+msgid "Discount"
+msgstr "Chiết khấu/Giảm giá"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_reward__discount_product_id
+msgid "Discount Product"
+msgstr "Sản phẩm Chiết khấu"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_customer_level__display_name
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_point__display_name
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_points_report__display_name
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_program__display_name
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_reward__display_name
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_rule__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_loyalty_rule__rule_type
+msgid "Does this rule affects products, or a category of products?"
+msgstr "Quy tắc này áp dụng cho sản phẩm, hay một nhóm các sản phẩm?"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_customer_level__message_follower_ids
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_program__message_follower_ids
+msgid "Followers"
+msgstr "Người dõi theo"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_customer_level__message_channel_ids
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_program__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Người theo dõi (Các kênh)"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_customer_level__message_partner_ids
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_program__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Người theo dõi (Các đối tác)"
+
+#. module: to_loyalty
+#: model:ir.model.fields.selection,name:to_loyalty.selection__loyalty_reward__reward_type__gift
+msgid "Gift"
+msgstr "Quà tặng"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_reward__gift_product_id
+msgid "Gift Product"
+msgstr "Sản phẩm quà tặng"
+
+#. module: to_loyalty
+#: model_terms:ir.ui.view,arch_db:to_loyalty.loyalty_points_filter_view
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: to_loyalty
+#: model:ir.module.category,description:to_loyalty.module_category_loyalty
+msgid "Helps you manage your customer loyalty."
+msgstr "Giúp bạn quản lý chương trình khách hàng thân thiết."
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_loyalty_program__pp_product
+msgid ""
+"How many loyalty points are given to the customer by a quantity of product sold.\n"
+"Note: these points are won only if all of the matched rules is marked as Commulative."
+msgstr "Số Điểm thưởng khách hàng nhận được khi mua một số lượng sản phẩm.\n"
+"Ghi chú: Những điểm này chỉ giành được nếu tất cả các quy tắc phù hợp được đánh dấu là Tích lũy"
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_loyalty_program__pp_currency
+msgid ""
+"How many loyalty points are given to the customer by sold currency.\n"
+"Note: these points are won only if all of the matched rules is marked as Commulative."
+msgstr ""
+"Số Điểm thưởng khách hàng nhận bởi 1 đơn vị tiền tệ.\n"
+"Ghi chú: Những điểm này chỉ giành được nếu tất cả các quy tắc phù hợp được đánh dấu là Tích lũy"
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_loyalty_program__pp_order
+msgid ""
+"How many loyalty points are given to the customer for each sale or order"
+msgstr "Bao nhiêu Điểm thưởng được tặng cho khách hàng đối với mỗi đơn hàng"
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_loyalty_rule__pp_product
+msgid "How many points the customer will earn per product ordered"
+msgstr ""
+"Bao nhiêu Điểm thưởng được tặng cho khách hàng đối với mỗi sản phẩm được đặt"
+" mua"
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_loyalty_rule__pp_currency
+msgid "How many points the customer will earn per value sold"
+msgstr ""
+"Bao nhiêu Điểm thưởng được tặng cho khách hàng đối với mỗi giá trị đơn hàng"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_customer_level__id
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_point__id
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_points_report__id
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_program__id
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_reward__id
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_rule__id
+msgid "ID"
+msgstr "Định danh"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_customer_level__activity_exception_icon
+msgid "Icon"
+msgstr "Biểu tượng"
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_customer_level__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Biểu tượng liên quan đến hoạt động ngoại lệ"
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_customer_level__name
+msgid "Identification for the customer level. E.g. Silver, Gold, etc"
+msgstr "Định danh cho cấp độ khách hàng. Vd: Bạc, Vàng, v.v."
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_customer_level__message_needaction
+#: model:ir.model.fields,help:to_loyalty.field_customer_level__message_unread
+#: model:ir.model.fields,help:to_loyalty.field_loyalty_program__message_needaction
+#: model:ir.model.fields,help:to_loyalty.field_loyalty_program__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Nếu đánh dấu chọn, các thông điệp mới yêu cầu sự có mặt của bạn."
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_customer_level__message_has_error
+#: model:ir.model.fields,help:to_loyalty.field_customer_level__message_has_sms_error
+#: model:ir.model.fields,help:to_loyalty.field_loyalty_program__message_has_error
+#: model:ir.model.fields,help:to_loyalty.field_loyalty_program__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Nếu được đánh dấu, thông điệp có lỗi về gửi tin."
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_customer_level__property_sync_partner_pricelist
+msgid ""
+"If checked, this will synchronize partner pricelist also. In case no "
+"pricelist specified for the level, default pricelist will be written on the "
+"corresponding partners."
+msgstr ""
+"Nếu đánh dấu, lưu cấp độ khách hàng sẽ động bộ bảng giá của cấp độ khách "
+"hàng với bảng giá trên hồ sơ khách hàng. Trong trường hợp cấp độ này không "
+"có bảng giá, các khách hàng sẽ sử dụng bảng giá mặc định của Odoo."
+
+#. module: to_loyalty
+#: code:addons/to_loyalty/models/loyalty_program.py:0
+#, python-format
+msgid ""
+"Invalid reward '%s'. The reward must either a global reward or belong the "
+"the program '%s'"
+msgstr ""
+"Phần thưởng '%s' không hợp lệ. Phần thưởng buộc phải là một phần thưởng áp "
+"dụng toàn cục hoặc phải thuộc về chương trình '%s'."
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_customer_level__message_is_follower
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_program__message_is_follower
+msgid "Is Follower"
+msgstr "Là người theo dõi"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_customer_level____last_update
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_point____last_update
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_points_report____last_update
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_program____last_update
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_reward____last_update
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_rule____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_customer_level__write_uid
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_point__write_uid
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_program__write_uid
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_reward__write_uid
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_rule__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_customer_level__write_date
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_point__write_date
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_program__write_date
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_reward__write_date
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_rule__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_res_partner__level_id
+#: model:ir.model.fields,field_description:to_loyalty.field_res_users__level_id
+msgid "Level"
+msgstr "Cấp độ"
+
+#. module: to_loyalty
+#: model:ir.module.category,name:to_loyalty.module_category_loyalty
+#: model:ir.ui.menu,name:to_loyalty.menu_loyalty_root
+#: model_terms:ir.ui.view,arch_db:to_loyalty.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:to_loyalty.view_partner_property_form
+msgid "Loyalty"
+msgstr "Khách hàng thân thiết"
+
+#. module: to_loyalty
+#: model:ir.actions.act_window,name:to_loyalty.action_loyalty_point_form
+#: model:ir.model,name:to_loyalty.model_loyalty_point
+msgid "Loyalty Point"
+msgstr "Điểm thưởng"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_crm_team__loyalty_point_ids
+#: model:ir.model.fields,field_description:to_loyalty.field_res_partner__loyalty_point_ids
+#: model:ir.model.fields,field_description:to_loyalty.field_res_users__loyalty_point_ids
+msgid "Loyalty Points"
+msgstr "Điểm thưởng"
+
+#. module: to_loyalty
+#: model:ir.actions.act_window,name:to_loyalty.action_loyalty_points_report
+msgid "Loyalty Points Analysis"
+msgstr "Thống kê Điểm thưởng"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_crm_team__loyalty_points_given
+msgid "Loyalty Points Given"
+msgstr "Điểm thưởng đã tặng"
+
+#. module: to_loyalty
+#: model:ir.model,name:to_loyalty.model_loyalty_points_report
+msgid "Loyalty Points Report"
+msgstr "Báo cáo Điểm thưởng"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_crm_team__loyalty_points_spent
+msgid "Loyalty Points Spent"
+msgstr "Điểm thưởng đã chuyển đổi"
+
+#. module: to_loyalty
+#: model:ir.model,name:to_loyalty.model_loyalty_program
+#: model:ir.model.fields,field_description:to_loyalty.field_crm_team__loyalty_id
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_point__loyalty_program_id
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_points_report__loyalty_program_id
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_reward__loyalty_program_id
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_rule__loyalty_program_id
+#: model:ir.model.fields,field_description:to_loyalty.field_res_partner__loyalty_id
+#: model:ir.model.fields,field_description:to_loyalty.field_res_users__loyalty_id
+#: model_terms:ir.ui.view,arch_db:to_loyalty.view_loyalty_program_form
+msgid "Loyalty Program"
+msgstr "Chương trình Khách hàng Thân thiết"
+
+#. module: to_loyalty
+#: model:ir.actions.act_window,name:to_loyalty.action_loyalty_program_form
+#: model:ir.ui.menu,name:to_loyalty.menu_loyalty_program
+#: model_terms:ir.ui.view,arch_db:to_loyalty.view_loyalty_program_tree
+msgid "Loyalty Programs"
+msgstr "Chương trình khách hàng thân thiết"
+
+#. module: to_loyalty
+#: model_terms:ir.actions.act_window,help:to_loyalty.action_loyalty_program_form
+msgid ""
+"Loyalty Programs allows your customer to earn points\n"
+"\t\t\t\tand rewards\n"
+"\t\t\t\twhen doing business with you."
+msgstr ""
+"Chương trình Khách hàng thân thiết cho phép khách hàng của bạn\n"
+"              tích luỹ Điểm thưởng và tặng thưởng khi giao dịch với bạn."
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_res_config_settings__module_to_loyalty_pos
+#: model_terms:ir.ui.view,arch_db:to_loyalty.res_config_settings_view_form
+msgid "Loyalty Programs for Point of Sales"
+msgstr "Chương trình Khách hàng Thân thiết cho Điểm bán lẻ"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_res_config_settings__module_to_loyalty_sales
+#: model_terms:ir.ui.view,arch_db:to_loyalty.res_config_settings_view_form
+msgid "Loyalty Programs for Sales Management"
+msgstr "Chương trình Khách hàng Thân thiết cho Quản lý Bán hàng"
+
+#. module: to_loyalty
+#: model:ir.model,name:to_loyalty.model_loyalty_reward
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_point__reward_id
+#: model_terms:ir.ui.view,arch_db:to_loyalty.view_loyalty_reward_form
+msgid "Loyalty Reward"
+msgstr "Phần thưởng"
+
+#. module: to_loyalty
+#: model:ir.model,name:to_loyalty.model_loyalty_rule
+#: model_terms:ir.ui.view,arch_db:to_loyalty.view_loyalty_rule_form
+msgid "Loyalty Rule"
+msgstr "Quy tắc Chương trình Khách hàng Thân thiết"
+
+#. module: to_loyalty
+#: model_terms:ir.ui.view,arch_db:to_loyalty.view_loyalty_point_report_graph
+#: model_terms:ir.ui.view,arch_db:to_loyalty.view_loyalty_point_report_pivot
+msgid "Loyalty points"
+msgstr "Điểm thưởng"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_customer_level__message_main_attachment_id
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_program__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Đính kèm chính"
+
+#. module: to_loyalty
+#: model:res.groups,name:to_loyalty.group_loyalty_manager
+msgid "Manager"
+msgstr "Người quản lý"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_point__manual_adjustment
+msgid "Manual Adjustment"
+msgstr "Điều chỉnh Thủ công"
+
+#. module: to_loyalty
+#: code:addons/to_loyalty/models/loyalty_point.py:0
+#, python-format
+msgid "Manual Adjustment must not have the product specified"
+msgstr "Điều chỉnh Thủ công không được phép liên quan đến sản phẩm nào"
+
+#. module: to_loyalty
+#: code:addons/to_loyalty/models/loyalty_point.py:0
+#, python-format
+msgid "Manual Adjustment must not have the reward specified"
+msgstr "Điều chỉnh Thủ công không được phép liên quan đến phần thưởng nào"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_customer_level__message_has_error
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_program__message_has_error
+msgid "Message Delivery error"
+msgstr "Có Lỗi Gửi Thông điệp"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_customer_level__message_ids
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_program__message_ids
+msgid "Messages"
+msgstr "Thông điệp"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_customer_level__points
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_reward__minimum_points
+msgid "Minimum Points"
+msgstr "Số điểm tối thiểu"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_customer_level__name
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_program__name
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_reward__name
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_rule__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_customer_level__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Hạn chót lần hành động kế tiếp"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_customer_level__activity_summary
+msgid "Next Activity Summary"
+msgstr "Tóm tắt hoạt động tiếp theo"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_customer_level__activity_type_id
+msgid "Next Activity Type"
+msgstr "Kiểu hành động kế tiếp"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_customer_level__message_needaction_counter
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_program__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Số lượng Hành động"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_customer_level__message_has_error_counter
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_program__message_has_error_counter
+msgid "Number of errors"
+msgstr "Số lỗi"
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_customer_level__message_needaction_counter
+#: model:ir.model.fields,help:to_loyalty.field_loyalty_program__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Số thông điệp cần có hành động"
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_customer_level__message_has_error_counter
+#: model:ir.model.fields,help:to_loyalty.field_loyalty_program__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Số lượng các thông điệp có lỗi về gửi tin"
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_customer_level__message_unread_counter
+#: model:ir.model.fields,help:to_loyalty.field_loyalty_program__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Số thông điệp chưa đọc"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_customer_level__partner_ids
+msgid "Partners"
+msgstr "Đối tác"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_customer_level__partner_ids_count
+msgid "Partners Count"
+msgstr "SL Đối tác"
+
+#. module: to_loyalty
+#: model_terms:ir.ui.view,arch_db:to_loyalty.view_loyalty_point_pivot
+msgid "Pivot Loyalty Point"
+msgstr "Pivot Điểm trung thành"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_reward__point_cost
+msgid "Point Cost"
+msgstr "Chi phí Điểm thưởng"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_points_report__point_type
+msgid "Point Type"
+msgstr "Kiểu Điểm thưởng"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_point__points
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_points_report__points
+#: model:ir.ui.menu,name:to_loyalty.menu_loyalty_point_report
+msgid "Points"
+msgstr "Điểm thưởng"
+
+#. module: to_loyalty
+#: model:ir.actions.act_window,name:to_loyalty.action_loyalty_point_action
+#: model_terms:ir.ui.view,arch_db:to_loyalty.view_loyalty_poinstricyalty_program__rounding
+msgid "Points Rounding"
+msgstr "Giá trị làm tròn Điểm thưởng"
+
+#. module: to_loyalty
+#: model:ir.ui.menu,name:to_loyalty.menu_loyalty_point_adjustment
+msgid "Points manual adjustment"
+msgstr "Điều chỉnh Điểm thủ công"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_program__pp_currency
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_rule__pp_currency
+msgid "Points per currency"
+msgstr "Điểm thưởng cho 1 đơn vị tiền tệ"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_program__pp_order
+msgid "Points per order"
+msgstr "Điểm thưởng cho 1 đơn hàng"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_program__pp_product
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_rule__pp_product
+msgid "Points per product"
+msgstr "Điểm thưởng cho 1 sản phẩm"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_points_report__price_total
+msgid "Price Subtotal"
+msgstr "Thành tiền"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_point__price_total
+msgid "Price Total"
+msgstr "Tổng"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_customer_level__property_pricelist_id
+msgid "Pricelist"
+msgstr "Bảng giá"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_point__product_id
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_points_report__product_id
+#: model:ir.model.fields.selection,name:to_loyalty.selection__loyalty_rule__rule_type__product
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: to_loyalty
+#: model:ir.model.fields.selection,name:to_loyalty.selection__loyalty_rule__rule_type__product_category
+msgid "Product Category"
+msgstr "Danh mục sản phẩm"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_point__product_qty
+msgid "Product Q'ty"
+msgstr "SL Sản phẩm"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_points_report__product_qty
+msgid "Product Quantity"
+msgstr "Số lượng sản phẩm"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_point__reason
+msgid "Reason"
+msgstr "Lý do"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_point__name
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_points_report__name
+msgid "Reference"
+msgstr "Tham chiếu"
+
+#. module: to_loyalty
+#: model:ir.ui.menu,name:to_loyalty.menu_loyalty_report
+msgid "Reports"
+msgstr "Báo cáo"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_customer_level__activity_user_id
+msgid "Responsible User"
+msgstr "Người chịu trách nhiệm"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_points_report__reward_id
+msgid "Reward"
+msgstr "Phần thưởng"
+
+#. module: to_loyalty
+#: model_terms:ir.ui.view,arch_db:to_loyalty.view_loyalty_reward_form
+msgid "Reward Name"
+msgstr "Tên Phần thưởng"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_reward__reward_type
+msgid "Reward Type"
+msgstr "Kiểu Phần thưởng"
+
+#. module: to_loyalty
+#: model_terms:ir.ui.view,arch_db:to_loyalty.view_loyalty_program_form
+msgid "Reward the customer with gifts or discounts for loyalty points"
+msgstr ""
+"Phần thưởng cho khách hàng quà tặng hoặc chiết khấu từ quỹ Điểm thưởng"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_program__reward_ids
+#: model_terms:ir.ui.view,arch_db:to_loyalty.view_loyalty_program_form
+msgid "Rewards"
+msgstr "Phần thưởng"
+
+#. module: to_loyalty
+#: model_terms:ir.ui.view,arch_db:to_loyalty.view_loyalty_rule_form
+msgid "Rule Name"
+msgstr "Tên quy tắc"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_program__rule_ids
+#: model_terms:ir.ui.view,arch_db:to_loyalty.view_loyalty_program_form
+msgid "Rules"
+msgstr "Quy tắc"
+
+#. module: to_loyalty
+#: model_terms:ir.ui.view,arch_db:to_loyalty.view_loyalty_program_form
+msgid ""
+"Rules change how loyalty points are earned for specific products\n"
+"\t\t\t\t\t\tor categories"
+msgstr ""
+"Quy tắc thay đổi cách nhận Điểm thưởng cho các sản phẩm hay nhóm sản phẩm "
+"đặc thù"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_customer_level__message_has_sms_error
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_program__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Lỗi gửi SMS"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_point__team_id
+msgid "Sales Channel"
+msgstr "Kênh bán hàng"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_program__team_ids
+msgid "Sales Channels"
+msgstr "Kênh bán"
+
+#. module: to_loyalty
+#: model:ir.model,name:to_loyalty.model_crm_team
+msgid "Sales Team"
+msgstr "Đội Bán hàng"
+
+#. module: to_loyalty
+#: model:ir.ui.menu,name:to_loyalty.crm_team_config
+msgid "Sales Teams"
+msgstr "Kênh / Đội Bán hàng"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_point__salesperson_id
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_points_report__salesperson_id
+msgid "Salesperson"
+msgstr "Nhân viên bán hàng"
+
+#. module: to_loyalty
+#: model_terms:ir.ui.view,arch_db:to_loyalty.res_config_settings_view_form
+msgid ""
+"Sell with Point of Sale app and reward your\n"
+"\t\t\t\t\t\t\t\t\tcustomers"
+msgstr ""
+"Bán bằng ứng dụng Điểm bán lẻ và thưởng cho\n"
+"\t\t\t\t\t\t\t\t\tkhách hàng"
+
+#. module: to_loyalty
+#: model_terms:ir.ui.view,arch_db:to_loyalty.res_config_settings_view_form
+msgid ""
+"Sell with Sales Management app and reward your\n"
+"\t\t\t\t\t\t\t\t\tcustomers"
+msgstr ""
+"Bán bằng ứng dụng Quản lý Bán hàng và thưởng cho\n"
+"\t\t\t\t\t\t\t\t\tkhách hàng"
+
+#. module: to_loyalty
+#: model:ir.actions.act_window,name:to_loyalty.action_loyalty_config_settings
+#: model:ir.ui.menu,name:to_loyalty.menu_loyalty_general_settings
+msgid "Settings"
+msgstr "Thiết lập"
+
+#. module: to_loyalty
+#: model_terms:ir.ui.view,arch_db:to_loyalty.view_customer_level_form
+msgid "Show customers of this level"
+msgstr "Hiển thị các khách hàng của cấp độ này"
+
+#. module: to_loyalty
+#: model_terms:ir.ui.view,arch_db:to_loyalty.loyalty_points_report_search_view
+msgid "Show points that your customers gain"
+msgstr "Hiển thị điểm thưởng mà khách hàng nhận được"
+
+#. module: to_loyalty
+#: model_terms:ir.ui.view,arch_db:to_loyalty.loyalty_points_report_search_view
+msgid "Show points that your customers spent to get rewarded"
+msgstr "Hiển thị điểm thưởng mà khách hàng đã chuyển đổi"
+
+#. module: to_loyalty
+#: model:ir.model.fields.selection,name:to_loyalty.selection__loyalty_points_report__point_type__spent
+msgid "Spent"
+msgstr "Đã chuyển đổi"
+
+#. module: to_loyalty
+#: model_terms:ir.ui.view,arch_db:to_loyalty.loyalty_points_report_search_view
+msgid "Spent Points"
+msgstr "Điểm thưởng Đã chuyển đổi"
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_customer_level__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Trạng thái dựa trên hoạt động\n"
+"Quá hạn: Ngày đến hạn đã trôi qua\n"
+"Hôm nay: Hôm nay là ngày phải thực hiện\n"
+"Đã hoạch định: Các hoạt động trong tương lai."
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_rule__product_id
+msgid "Target Product"
+msgstr "Sản phẩm đích"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_points_report__team_id
+msgid "Team/Channel"
+msgstr "Đội / Kênh"
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_loyalty_point__loyalty_program_id
+msgid "The Loyalty Program this customer used"
+msgstr "Chương trình khách hàng đã sử dụng"
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_loyalty_reward__loyalty_program_id
+msgid ""
+"The Loyalty Program this reward belongs to. If empty, this reward is global "
+"that can be applied to any loyalty program"
+msgstr ""
+"Chương trình Khách hàng Thân thiết mà phần thường này thuộc về. Nếu để "
+"trống, phần thường này mang tính toàn cục và có thể áp dụng cho mọi chương "
+"trình khách hàng thân thiết."
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_loyalty_rule__loyalty_program_id
+msgid "The Loyalty Program to which this loyalty rule belongs"
+msgstr "Chương trình Khách hàng Thân thiết mà quy tắc này thuộc về"
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_loyalty_point__reward_id
+msgid "The Loyalty Reward this customer used"
+msgstr "Phần thưởng khách hàng đã sủ dụng"
+
+#. module: to_loyalty
+#: model:ir.model.constraint,message:to_loyalty.constraint_customer_level_points_uniq
+msgid "The Minimum Points definition must be unique!"
+msgstr "Mỗi hạn mức điểm phải là duy nhất!"
+
+#. module: to_loyalty
+#: model:ir.model.constraint,message:to_loyalty.constraint_customer_level_name_unique
+msgid "The Name must be unique!"
+msgstr "Tên sử dụng phải là duy nhất!"
+
+#. module: to_loyalty
+#: model:ir.model.constraint,message:to_loyalty.constraint_loyalty_program_positive_rounding_check
+msgid "The Points Rounding must be strictly positive!"
+msgstr "Số điểm làm tròn phải là một số dương!"
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_loyalty_rule__product_category_id
+msgid "The Product category affected by the rule"
+msgstr "Danh mục sản phẩm bị ảnh hưởng bởi các quy tắc"
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_loyalty_reward__point_cost
+msgid ""
+"The cost of one point in either the corresponding Loyalty Program's currency"
+" or the company's currency if the Program does not specify a currency or the"
+" reward is global."
+msgstr ""
+"Chi phí của một điểm, tính bằng tiền tệ của Chương trình Khách hàng Thân "
+"thiết hoặc tiền tệ công ty nếu Chương trình không thiết lập tiền tệ hoặc "
+"Phần thưởng này là một phần thưởng toàn cục (áp dụng cho mọi chương trình)."
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_loyalty_reward__discount
+msgid "The discount percentage"
+msgstr "Phần trăm giảm giá"
+
+#. module: to_loyalty
+#: code:addons/to_loyalty/models/loyalty_reward.py:0
+#, python-format
+msgid "The discount product field is mandatory for discount rewards '%s'"
+msgstr ""
+"Trường sản phẩm chiết khấu thì bắt buộc đối với phần thưởng kiểu chiết khấu "
+"'%s'"
+
+#. module: to_loyalty
+#: code:addons/to_loyalty/models/loyalty_reward.py:0
+#, python-format
+msgid "The gift product field is mandatory for gift rewards '%s'"
+msgstr ""
+"Trường sản phẩm quà tặng là bắt buộc đối với phần thưởng quà tặng '%s'"
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_loyalty_program__rounding
+msgid "The loyalty point amounts are rounded to multiples of this value."
+msgstr "Giá trị Điểm thưởng được làm tròn thành bội số của giá trị này."
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_res_partner__loyalty_points
+#: model:ir.model.fields,help:to_loyalty.field_res_users__loyalty_points
+msgid "The loyalty points the user won as part of a Loyalty Program"
+msgstr ""
+"Điểm thưởng khách hàng nhận được qua chương trình khách hàng thân thiết"
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_loyalty_point__points
+msgid "The loyalty points the user won or lost as part of a Loyalty Program"
+msgstr ""
+"Điểm thưởng khách hàng nhận được hoặc mất đi qua chương trình khách hàng "
+"thân thiết"
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_crm_team__loyalty_id
+msgid "The loyalty program that will be used for sales of this channel"
+msgstr ""
+"Chương trình khách hàng thân thiết mà sẽ được áp dụng cho doanh thu của kênh"
+" này"
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_customer_level__points
+msgid ""
+"The minimum amount of points for this level at which the customer will be "
+"promoted to this level"
+msgstr ""
+"Số điểm tối thiểu của khách hàng để đạt được cấp độ này mà tại đó khách hàng"
+" được tự động nâng cấp thành cấp độ này"
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_loyalty_reward__minimum_points
+msgid ""
+"The minimum amount of points the customer must have to qualify for this "
+"reward"
+msgstr ""
+"Số điểm tối thiểu mà khách hàng phải có để có đủ tiêu chuẩn nhận phần thưởng"
+" này"
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_customer_level__partner_ids
+msgid "The partners who are classified at this level"
+msgstr "Các đối tác mà thuộc cấp độ này"
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_loyalty_rule__cumulative
+msgid ""
+"The points won from this rule will be won in addition to other rules of the same type.\n"
+"For example, the Program A has three rules applied to the same Product A.\n"
+" - If the first rule is marked as Cumulative while non the of rest is marked as Cumulative, only the first and the second rules will be considered when computing won points selling the Product A.\n"
+" - If the first rule and the second rules are marked as Cumulative, no matter if the third one is marked, all those 3 rules will be considered when compute won points selling the Product A.\n"
+" - But if the first rule is NOT marked as Cumulative, it will be the only one that will be considered during computing won selling the Product A, no matter if others are marked or not."
+msgstr ""
+"Điểm thưởng từ quy tắc này sẽ được thưởng cùng với điểm thưởng của quy tắc kế tiếp, cùng loại.\n"
+"Ví dụ ta có Chương trình A có 3 quy tắc cùng áp dụng cho Sản phẩm A.\n"
+" - Nếu quy tắc đầu tiên được đánh dấu là Luỹ tích trong khi các quy tắc khác thì không, khi tính toán điểm thưởng lúc bán Sản phẩm A, chỉ quy tắc đầu tiên và quy tắc thứ 2 sẽ được sử dụng.\n"
+" - Nếu quy tắc đầu tiên và thứ 2 được đánh dấu là Luỹ tích, không cần biết quy tắc thứ 3 có được đánh dấu hay không, khi tính toán điểm thưởng lúc bán Sản phẩm A, cả 3 quy tắc đều sẽ được áp dụng.\n"
+" - Nhưng nếu quy tắc đầu tiên không được đánh dấu là Luỹ tích, không cần biết các quy tắc sau có được đánh dấu hay không, khi tính toán điểm thưởng lúc bán Sản phẩm A, chỉ DUY NHẤT quy tắc đầu tiên là được áp dụng."
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_loyalty_point__price_total
+msgid "The price in the corresponding order's currency"
+msgstr "Giá tính theo tiền tệ của đơn hàng tương ứng"
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_loyalty_rule__product_id
+msgid "The product affected by the rule"
+msgstr "Quy tắc áp dụng cho sản phẩm"
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_loyalty_reward__gift_product_id
+msgid "The product is given as a reward (aka selling at price of zero)"
+msgstr "Sản phẩm mà sẽ được tặng thưởng cho khách hàng (bán với giá 0)"
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_loyalty_reward__discount_product_id
+msgid ""
+"The product used to apply discounts (aka selling this product at a negative "
+"price)"
+msgstr ""
+"Sản phẩm để áp dụng khi giảm giá (có thể hiểu là khi giảm giá cho sản phẩm "
+"khác thì phần giảm giá được tính vào sản phẩm này với giá trị âm)"
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_loyalty_point__product_qty
+msgid "The quantity of product in Default Product UoM"
+msgstr "Số lượng sản phẩm theo Đơn vị tính mặc định của sản phẩm"
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_loyalty_program__reward_ids
+msgid "The rewards to be given to the customer"
+msgstr "Các phần thưởng để tặng cho khách hàng"
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_loyalty_point__team_id
+msgid "The sales team / channel that recorded this loyalty points"
+msgstr "Đội bán hàng mà ghi nhận điểm thưởng này"
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_loyalty_program__team_ids
+msgid "The sales teams / channels that will use this loyalty program"
+msgstr ""
+"Kênh / Đội bán hàng mà sẽ sử dụng chương trình khách hàng thân thiết này"
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_customer_level__property_pricelist_id
+msgid ""
+"The specific pricelist that will be applied to the customers of this level. "
+"Leave this empty if you want to disable this feature for customers of this "
+"level."
+msgstr ""
+"Bảng giá mà sẽ được áp dụng cho các khách hàng ở cấp độ này. Để trống trường"
+" này nếu bạn không muốn áp dụng tính năng này cho các khách hàng của cấp độ "
+"này."
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_loyalty_reward__reward_type
+msgid ""
+"The type of the reward\n"
+"- Gift: The customer spends points to get free Gift. Gift is also a product that you define as the Gift of the reward\n"
+"- Discount: The customer spend points to get discounted."
+msgstr ""
+"Kiểu phần thưởng\n"
+"- Quà tặng: Khách hàng sử dụng điểm thưởng để được nhận Quà tặng. Quà tặng của là một sản phẩm mà bạn thiết lập để làm phần thưởng\n"
+"- Chiết khấu/Giảm giá: Khách hàng được giảm giá khi mua hàng theo số điểm mà họ có"
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_loyalty_point__manual_adjustment
+msgid ""
+"This field is to indicate if this point is manually created (e.g. created "
+"during manual loyalty points adjustment)"
+msgstr ""
+"Trường này để chỉ báo rằng điểm thưởng này được tạo một cách thủ công (vd: "
+"thông qua việc điều chỉnh điểm thủ công)"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_res_partner__loyalty_points
+#: model:ir.model.fields,field_description:to_loyalty.field_res_users__loyalty_points
+msgid "Total Loyalty Points"
+msgstr "Tổng Điểm thưởng"
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_crm_team__loyalty_points_given
+msgid ""
+"Total loyalty points that have been given to the customers from sales of "
+"this channel"
+msgstr ""
+"Tổng điểm thưởng mà đã tặng cho khách hàng thông qua việc bán hàng từ kênh "
+"này"
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_crm_team__loyalty_points_spent
+msgid "Total loyalty points that have been spent by customers in this channel"
+msgstr "Tổng điểm thưởng mà đã được chuyển đổi cho khách hàng ở kênh này"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_rule__rule_type
+msgid "Type"
+msgstr "Kiểu"
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_customer_level__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Kiểu của hoạt động ngoại lệ trên bản ghi"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_customer_level__message_unread
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_program__message_unread
+msgid "Unread Messages"
+msgstr "Thông điệp chưa đọc"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_customer_level__message_unread_counter
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_program__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Bộ đếm Thông điệp chưa đọc"
+
+#. module: to_loyalty
+#: model:res.groups,name:to_loyalty.group_loyalty_user
+msgid "User"
+msgstr "Người dùng"
+
+#. module: to_loyalty
+#: model:ir.model.fields,field_description:to_loyalty.field_customer_level__website_message_ids
+#: model:ir.model.fields,field_description:to_loyalty.field_loyalty_program__website_message_ids
+msgid "Website Messages"
+msgstr "Thông điệp Website"
+
+#. module: to_loyalty
+#: model:ir.model.fields,help:to_loyalty.field_customer_level__website_message_ids
+#: model:ir.model.fields,help:to_loyalty.field_loyalty_program__website_message_ids
+msgid "Website communication history"
+msgstr "Lịch sử thông tin liên lạc website"
+
+#. module: to_loyalty
+#: model:ir.model.fields.selection,name:to_loyalty.selection__loyalty_points_report__point_type__won
+msgid "Won"
+msgstr "Được tặng"
+
+#. module: to_loyalty
+#: model_terms:ir.ui.view,arch_db:to_loyalty.loyalty_points_report_search_view
+msgid "Won Points"
+msgstr "Điểm được tặng"

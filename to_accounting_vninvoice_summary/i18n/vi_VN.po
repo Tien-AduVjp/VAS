@@ -1,0 +1,65 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_accounting_vninvoice_summary
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-07 02:20+0000\n"
+"PO-Revision-Date: 2022-04-07 02:20+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_accounting_vninvoice_summary
+#: model:ir.model,name:to_accounting_vninvoice_summary.model_invoice_line_summary
+msgid "Invoice Lines Summary"
+msgstr "Dòng hóa đơn tóm tắt"
+
+#. module: to_accounting_vninvoice_summary
+#: model:ir.model,name:to_accounting_vninvoice_summary.model_account_move
+msgid "Journal Entries"
+msgstr "Bút toán Sổ nhật ký"
+
+#. module: to_accounting_vninvoice_summary
+#: code:addons/to_accounting_vninvoice_summary/models/invoice_line_summary.py:0
+#, python-format
+msgid ""
+"Product %s don't have Unit of measure. VN-Invoice requires Unit of measure "
+"in every invoice line"
+msgstr ""
+"Sản phẩm %s không có Đơn vị đo lường. VN-Invoice yêu cầu Đơn vị đo "
+"lường trong mọi dòng hóa đơn"
+
+#. module: to_accounting_vninvoice_summary
+#: code:addons/to_accounting_vninvoice_summary/models/invoice_line_summary.py:0
+#, python-format
+msgid ""
+"The line containing the product %s comes with more than one tax which is not supported by VN-incoice.\n"
+"You may set some taxes to get their value included in the price to ensure that there is no more than one tax on a single line."
+msgstr ""
+"Dòng hoá đơn chưa sản phẩm %s có nhiều hơn một loại thuế và không được hỗ trợ bởi VN-Invoice.\n"
+"Bạn có thể thiết lập một vài loại thuế sao cho giá trị của chúng đã bao gồm trong giá để đảm bảo sẽ không cần phải sử dụng nhiều hơn 1 loại thuế cho mỗi dòng."
+
+#. module: to_accounting_vninvoice_summary
+#: code:addons/to_accounting_vninvoice_summary/models/invoice_line_summary.py:0
+#, python-format
+msgid "The line containing the product %s comes with no tax."
+msgstr "Dòng chứa sản phẩm %s không có thuế."
+
+#. module: to_accounting_vninvoice_summary
+#: code:addons/to_accounting_vninvoice_summary/models/invoice_line_summary.py:0
+#, python-format
+msgid "You must provide Internal Reference of product: %s."
+msgstr "Bạn phải cung cấp Mã sản phẩm của sản phẩm: %s."
+
+#. module: to_accounting_vninvoice_summary
+#: code:addons/to_accounting_vninvoice_summary/models/account_move.py:0
+#, python-format
+msgid ""
+"You have to set E-invoice Template being only number, not include letter"
+msgstr "Bạn phải đặt Mẫu hóa đơn điện tử chỉ là số, không bao gồm chữ cái"

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="survey_create_question_bank_wizard_form_view" model="ir.ui.view">
+        <field name="name">survey.create.question.bank.wizard.form</field>
+        <field name="model">survey.create.question.bank.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <div class="alert alert-warning" role="alert">
+                    Select category to create question bank
+                </div>
+                <group>
+                    <group>
+                        <field name="category_id"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="action_create_question" type="object" string="Create Question Bank" class="oe_highlight" />
+                    <button string="Cancel" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+    
+    <record id="survey_create_question_bank_wizard_action" model="ir.actions.act_window">
+        <field name="name">Create Question Bank</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">survey.create.question.bank.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="groups_id" eval="[(4,ref('viin_survey_exam.survey_exam_group_manager'))]"/>
+        <field name="binding_model_id" ref="survey.model_survey_question" />
+        <field name="binding_view_types">form,list</field>
+    </record>
+
+</odoo>

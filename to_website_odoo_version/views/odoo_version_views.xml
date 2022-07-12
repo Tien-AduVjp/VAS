@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="odoo_version_form_view">
+			<field name="name">odoo_version.form</field>
+			<field name="model">odoo.version</field>
+			<field name="inherit_id"
+				ref="to_odoo_version.odoo_version_form_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//div[@name='button_box']" position="inside">
+					<button name="website_publish_button" type="object"
+						class="oe_stat_button" icon="fa-globe"
+						groups="website.group_website_publisher">
+						<field name="website_published" widget="website_publish_button" />
+					</button>
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="odoo_version_tree_view">
+			<field name="name">os.version.tree</field>
+			<field name="model">odoo.version</field>
+			<field name="inherit_id"
+				ref="to_odoo_version.odoo_version_tree_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='recommended']" position="after">
+					<field name="website_published" />
+				</xpath>
+			</field>
+		</record>
+
+		<menuitem id="website_config_odoo_versions" sequence="99"
+			name="Odoo Versions"
+			parent="website.menu_website_global_configuration"
+			action="to_odoo_version.odoo_version_action" />
+
+	</data>
+</odoo>   
+

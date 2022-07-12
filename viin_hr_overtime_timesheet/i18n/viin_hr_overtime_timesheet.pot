@@ -1,0 +1,310 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_hr_overtime_timesheet
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-13 09:08+0000\n"
+"PO-Revision-Date: 2021-08-17 09:07+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,help:viin_hr_overtime_timesheet.field_overtime_plan_line_timesheet_match__unmatched_hours
+msgid "Actual worked hours that did NOT match the planned."
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,help:viin_hr_overtime_timesheet.field_overtime_plan_line_timesheet_match__matched_hours
+msgid "Actual worked hours that match the planned."
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model,name:viin_hr_overtime_timesheet.model_account_analytic_line
+msgid "Analytic Line"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model,name:viin_hr_overtime_timesheet.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model,name:viin_hr_overtime_timesheet.model_hr_contract
+msgid "Contract"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_overtime_plan_line_timesheet_match__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_overtime_plan_line_timesheet_match__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_overtime_plan_line_timesheet_match__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model,name:viin_hr_overtime_timesheet.model_hr_employee_overtime
+msgid "Employee Overtime"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_overtime_plan_line_timesheet_match__date_end
+msgid "End Date"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_overtime_plan__recognition_mode
+msgid "Force Recognition Mode"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model,name:viin_hr_overtime_timesheet.model_hr_overtime_request_mass_line
+msgid "HR Overtime Request Mass Line"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_overtime_plan_line_timesheet_match__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,help:viin_hr_overtime_timesheet.field_hr_overtime_plan__project_required
+#: model:ir.model.fields,help:viin_hr_overtime_timesheet.field_hr_overtime_reason__project_required
+#: model:ir.model.fields,help:viin_hr_overtime_timesheet.field_hr_overtime_request_mass__project_required
+msgid ""
+"If enabled, all the overtime plans of this reason require a project "
+"specified."
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_overtime_plan_line_timesheet_match____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_overtime_plan_line_timesheet_match__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_overtime_plan_line_timesheet_match__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model,name:viin_hr_overtime_timesheet.model_hr_overtime_request_mass
+msgid "Mass Overtime Request Wizard"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_overtime_plan_line_timesheet_match__matched_hours
+msgid "Match Hours"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_timesheet.view_hr_overtime_plan_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_timesheet.view_hr_overtime_plan_line_form
+msgid "Match Timesheet"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_employee_overtime__matched_timesheet_hours
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_timesheet.view_hr_overtime_plan_form
+msgid "Matched Timesheet"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_overtime_plan__matched_timesheet_hours
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_overtime_plan_line__matched_timesheet_hours
+msgid "Matched Timesheet Hours"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model,name:viin_hr_overtime_timesheet.model_hr_overtime_plan
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_overtime_plan_line_timesheet_match__overtime_plan_id
+msgid "Overtime Plan"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model,name:viin_hr_overtime_timesheet.model_hr_overtime_plan_line
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_overtime_plan_line_timesheet_match__overtime_plan_line_id
+msgid "Overtime Plan Line"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model,name:viin_hr_overtime_timesheet.model_overtime_plan_line_timesheet_match
+msgid "Overtime Plan Line Timesheet Match"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_account_analytic_line__overtime_plan_line_ids
+msgid "Overtime Plan Lines"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.actions.act_window,name:viin_hr_overtime_timesheet.action_overtime_plan_line_timesheet_match
+msgid "Overtime Planning Timesheet Match"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_account_analytic_line__overtime_plan_ids
+msgid "Overtime Plans"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model,name:viin_hr_overtime_timesheet.model_hr_overtime_reason
+msgid "Overtime Reason"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_contract__overtime_recognition_mode
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_res_company__overtime_recognition_mode
+msgid "Overtime Recognition Mode"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_overtime_plan__for_project_id
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_overtime_request_mass__for_project_id
+msgid "Project"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_overtime_plan__project_required
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_overtime_reason__project_required
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_overtime_request_mass__project_required
+msgid "Project Required"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_overtime_plan__project_ids
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_overtime_plan_line__project_ids
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_timesheet.view_hr_overtime_plan_line_form
+msgid "Projects"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_overtime_plan_line__recognition_mode
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_overtime_reason__recognition_mode
+msgid "Recognition Mode"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_overtime_plan__timesheet_ids
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_overtime_plan_line__timesheet_ids
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_timesheet.view_hr_overtime_plan_line_form
+msgid "Related Timesheet Entries"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_timesheet.view_hr_overtime_plan_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_timesheet.view_hr_overtime_plan_line_form
+msgid "Rematch Timesheet"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_overtime_plan_line_timesheet_match__date_start
+msgid "Start Date"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_overtime_plan__project_task_ids
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_overtime_plan_line__project_task_ids
+msgid "Tasks"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,help:viin_hr_overtime_timesheet.field_account_analytic_line__timesheet_match_ids
+msgid ""
+"Technical field to store matching records which map the current timesheet "
+"entry with the related matched overtime plan lines"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,help:viin_hr_overtime_timesheet.field_account_analytic_line__overtime_plan_line_ids
+msgid ""
+"Technical field to store the overtime plan lines that match / cross this "
+"timesheet."
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,help:viin_hr_overtime_timesheet.field_hr_overtime_plan__for_project_id
+#: model:ir.model.fields,help:viin_hr_overtime_timesheet.field_hr_overtime_request_mass__for_project_id
+msgid "The project for which this overtime plan is"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,help:viin_hr_overtime_timesheet.field_res_company__overtime_recognition_mode
+msgid ""
+"This indicates mode to recognize actual overtime against the plan which "
+"could be either By Plan or Attendance or Timesheet. Bridging modules will be"
+" required to have full options accordingly."
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,help:viin_hr_overtime_timesheet.field_hr_contract__overtime_recognition_mode
+msgid ""
+"This indicates mode to recognize actual overtime against the plan which could be either By Plan or Attendance or Timesheet. Bridging modules will be required to have full options accordingly.\n"
+"If this field is left empty, the value will be taken from the corresponding company's settings."
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,help:viin_hr_overtime_timesheet.field_hr_overtime_plan__recognition_mode
+msgid ""
+"This indicates mode to recognize actual overtime against the plan which could be either By Plan or Attendance or Timesheet. Bridging modules will be required to have full options accordingly.\n"
+"Note: If not specified, the setting from the corresponding contract or company will be taken into account."
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields.selection,name:viin_hr_overtime_timesheet.selection__hr_contract__overtime_recognition_mode__timesheet
+#: model:ir.model.fields.selection,name:viin_hr_overtime_timesheet.selection__hr_overtime_plan__recognition_mode__timesheet
+#: model:ir.model.fields.selection,name:viin_hr_overtime_timesheet.selection__hr_overtime_plan_line__recognition_mode__timesheet
+#: model:ir.model.fields.selection,name:viin_hr_overtime_timesheet.selection__hr_overtime_reason__recognition_mode__timesheet
+#: model:ir.model.fields.selection,name:viin_hr_overtime_timesheet.selection__res_company__overtime_recognition_mode__timesheet
+msgid "Timesheet"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_overtime_plan_line_timesheet_match__timesheet_id
+msgid "Timesheet Entry"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_account_analytic_line__timesheet_match_ids
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_overtime_plan__timesheet_match_ids
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_overtime_plan_line__timesheet_match_ids
+msgid "Timesheet Match"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_overtime_plan_line_timesheet_match__unmatched_hours
+msgid "Unmatched Hours"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_employee_overtime__unmatched_timesheet_hours
+msgid "Unmatched Timesheet"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet.field_hr_overtime_plan_line__unmatched_timesheet_hours
+msgid "Unmatched Timesheet Hours"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_timesheet.view_hr_overtime_plan_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_timesheet.view_hr_overtime_plan_line_form
+msgid "hours"
+msgstr ""

@@ -1,0 +1,25 @@
+<odoo>
+	<record id="quality_alert_view_search" model="ir.ui.view">
+		<field name="name">quality.alert.view.search</field>
+		<field name="model">quality.alert</field>
+		<field name="inherit_id" ref="to_quality.quality_alert_view_search" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='user_id']" position="after">
+				<field name="workcenter_id" />
+			</xpath>
+		</field>
+	</record>
+
+	<record id="mrp_workcenter_view_kanban" model="ir.ui.view">
+		<field name="name">mrp.workcenter.view.kanban</field>
+		<field name="model">mrp.workcenter</field>
+		<field name="inherit_id" ref="mrp.mrp_workcenter_kanban" />
+		<field name="arch" type="xml">
+			<xpath expr="//div[@name='plan_order']" position="before">
+				<div>
+					<a name="%(to_quality.quality_alert_action_check)d" type="action" context="{'search_default_new_stage': 1, 'default_workcenter_id' : active_id, 'search_default_workcenter_id' : [active_id]}">Quality Alert</a>
+				</div>
+			</xpath>
+		</field>
+	</record>
+</odoo>

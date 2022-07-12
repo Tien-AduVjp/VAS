@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+	<data>
+		<record id="hr_contract_form_inherit" model="ir.ui.view">
+			<field name="name">hr.contract.view.form.inherit</field>
+			<field name="model">hr.contract</field>
+			<field name="inherit_id" ref="to_hr_payroll.hr_contract_form_inherit"/>
+			<field name="arch" type="xml">
+				<xpath expr="//div[@name='gross_salary']" position="after">
+					<label for="payroll_timesheet_enabled"/>
+					<div class="o_row" name="payroll_timesheet_enabled">
+						<field name="payroll_timesheet_enabled"/>
+					</div>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

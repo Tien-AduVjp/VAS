@@ -1,0 +1,113 @@
+<odoo>
+	<data>
+		<record id="hr_working_month_calendar_line_view_tree"
+			model="ir.ui.view">
+			<field name="name">hr.working.month.calendar.line.tree</field>
+			<field name="model">hr.working.month.calendar.line</field>
+			<field name="arch" type="xml">
+				<tree string="Working Month Calendar Lines" edit="false"
+					create="false" delete="false">
+					<field name="payslip_id" optional="hide" />
+					<field name="employee_id" />
+					<field name="date_from" />
+					<field name="date_to" />
+					<field name="contract_id" />
+					<field name="resource_calendar_id" />
+					<field name="duty_working_hours" />
+					<field name="calendar_working_hours" />
+					<field name="duty_working_days" />
+					<field name="calendar_working_days" />
+					<field name="leave_days" />
+					<field name="leave_hours" />
+					<field name="unpaid_leave_days" />
+					<field name="unpaid_leave_hours" />
+					<field name="paid_rate" />
+					<field name="salary_computation_mode" optional="hide" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="hr_working_month_calendar_line_view_form"
+			model="ir.ui.view">
+			<field name="name">hr.working.month.calendar.line.form</field>
+			<field name="model">hr.working.month.calendar.line</field>
+			<field name="arch" type="xml">
+				<form string="Working Month Calendar Line" edit="false"
+					create="false" delete="false">
+					<header></header>
+					<sheet>
+						<group>
+							<group>
+								<field name="working_month_calendar_id" />
+								<field name="contract_id" />
+								<field name="resource_calendar_id" />
+							</group>
+							<group>
+								<field name="date_from" />
+								<field name="date_to" />
+							</group>
+							<group>
+								<field name="duty_working_hours" />
+								<field name="duty_working_days" />
+							</group>
+							<group>
+								<field name="calendar_working_hours" />
+								<field name="calendar_working_days" />
+							</group>
+							<group>
+								<field name="leave_days" />
+								<field name="leave_hours" />
+							</group>
+							<group>
+								<field name="unpaid_leave_days" />
+								<field name="unpaid_leave_hours" />
+							</group>
+							<group>
+								<field name="paid_rate" />
+							</group>
+						</group>
+						<notebook>
+							<page string="Related Time Off" name="page_timeoff">
+								<field name="leave_ids">
+									<tree>
+										<field name="date" />
+										<field name="days" sum="Total Days" />
+										<field name="hours" sum="Total Hours" />
+										<field name="leave_id" />
+										<field name="unpaid" />
+									</tree>
+								</field>
+							</page>
+						</notebook>
+					</sheet>
+
+				</form>
+			</field>
+		</record>
+
+		<record id="view_hr_working_month_calendar_line_filter"
+			model="ir.ui.view">
+			<field name="name">hr.working.month.calendar.line.select</field>
+			<field name="model">hr.working.month.calendar.line</field>
+			<field name="arch" type="xml">
+				<search string="Search Working Month Calendar Line Record">
+					<group expand="0" string="Group By">
+						<filter string="Working Month"
+							name="grp_working_month_calendar"
+							context="{'group_by':'working_month_calendar_id'}" />
+						<filter string="Contract" name="grp_contract"
+							context="{'group_by':'contract_id'}" />
+					</group>
+				</search>
+			</field>
+		</record>
+
+		<record id="act_hr_working_month_calendar_line_view_list"
+			model="ir.actions.act_window">
+			<field name="res_model">hr.working.month.calendar.line</field>
+			<field name="name">Working Month Calendar Lines</field>
+			<field name="view_mode">tree,form</field>
+			<field name="context">{}</field>
+		</record>
+	</data>
+</odoo>

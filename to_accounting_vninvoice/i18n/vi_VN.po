@@ -1,0 +1,1329 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_accounting_vninvoice
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-16 03:32+0000\n"
+"PO-Revision-Date: 2022-03-16 03:32+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"\n"
+"You will be able to find it in the tab E-Invoice of the invoice form view above."
+msgstr ""
+"\n"
+"Bạn có thể tìm nó trong tab E-invoice của form view hóa đơn phía trên."
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+" You might have not configured allowed IPs in your VN-invoice portal to "
+"grant access from your Odoo instance's IP. Or there could be something wrong"
+" with your VN-invoice's username and/or password."
+msgstr ""
+" Có thể bạn chưa cấu hình (hoặc cấu hình sai) các IP của hệ thống Odoo là IP"
+" được phép ở bên VN-Invoice để cho phép Odoo có thể kết nối với VN-Invoice. "
+"Hoặc có thể bạn thiết lập sai tên/mật khẩu cho VN-Invoice ở Cấu hình Kế "
+"toán."
+
+#. module: to_accounting_vninvoice
+#: model_terms:ir.ui.view,arch_db:to_accounting_vninvoice.portal_invoice_page
+msgid "/#!/portal/dashboard"
+msgstr ""
+
+#. module: to_accounting_vninvoice
+#: model_terms:ir.ui.view,arch_db:to_accounting_vninvoice.res_config_settings_view_form
+msgid "<span class=\"o_form_label\">API URL</span>"
+msgstr ""
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_move__einvoice_api_version
+msgid "API Version"
+msgstr "Phiên bản API"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_serial__message_needaction
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_template__message_needaction
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_type__message_needaction
+msgid "Action Needed"
+msgstr "Cần có hành động"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_serial__activity_ids
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_template__activity_ids
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_type__activity_ids
+msgid "Activities"
+msgstr "Các hoạt động"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_serial__activity_exception_decoration
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_template__activity_exception_decoration
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_type__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_serial__activity_state
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_template__activity_state
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_type__activity_state
+msgid "Activity State"
+msgstr "Trạng thái Hoạt động"
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid "Approve and Sign of The invoice %s is failed. Error: %s"
+msgstr "Duyệt và ký hóa đơn %s bị thất bại. Lỗi: %s"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_serial__message_attachment_count
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_template__message_attachment_count
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_type__message_attachment_count
+msgid "Attachment Count"
+msgstr "Số lượng đính kèm"
+
+#. module: to_accounting_vninvoice
+#: model_terms:ir.ui.view,arch_db:to_accounting_vninvoice.view_move_form
+msgid "Cancel VN-Invoice"
+msgstr "Hủy hóa đơn điện tử"
+
+#. module: to_accounting_vninvoice
+#: model:ir.actions.server,name:to_accounting_vninvoice.action_check_vninvoices_signed
+msgid "Check VN-invoice Signed"
+msgstr "Kiểm tra Hoá đơn điện tử đã ký"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_move__check_vninvoice_approved_and_signed
+msgid "Check Vninvoice Approved And Signed"
+msgstr "Kiểm tra hóa đơn điện tử "
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_res_company__vninvoice_mode
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_res_config_settings__vninvoice_mode
+msgid "Choose Sandbox mode for testing before switch it to Production"
+msgstr "Chọn chế độ Sandbox để kiểm thử trước khi vận hành thật."
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_type__name
+msgid "Code"
+msgstr "Mã"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model,name:to_accounting_vninvoice.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model,name:to_accounting_vninvoice.model_res_config_settings
+msgid "Config Settings"
+msgstr "Thiết lập Cấu hình"
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Converted file of the invoice %s be downloaded unsuccessfully. Error: %s"
+msgstr "Hóa đơn chuyển đổi %s được tải không thành công. Lỗi: %s"
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid "Could not cancel the E-invoice %s in VN-invoice system. Error: %s"
+msgstr "Không thể huỷ hoá đơn điện tử VN-Invoice %s. Lỗi: %s"
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid "Could not cancel the VN-invoice %s."
+msgstr "Không thể huỷ của hoá đơn điện tử %s"
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid "Could not issue the E-invoice %s in VN-invoice system. Error: %s"
+msgstr ""
+"Không thể phát hành hóa đơn điện tử %s trên hộ thống VN-invoice. Lỗi: %s"
+
+#. module: to_accounting_vninvoice
+#: model_terms:ir.ui.view,arch_db:to_accounting_vninvoice.view_move_form
+msgid "Create E-invoice Error Notification"
+msgstr "Tạo thông báo sai sót hóa đơn điện tử"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_serial__create_uid
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_template__create_uid
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_type__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_serial__create_date
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_template__create_date
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_type__create_date
+msgid "Created on"
+msgstr "Được tạo vào"
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid "Creating e-invoice error notification is successful"
+msgstr "Tạo thông báo sai sót hóa đơn điện tử thành công"
+
+#. module: to_accounting_vninvoice
+#: model_terms:ir.ui.view,arch_db:to_accounting_vninvoice.view_move_form
+msgid "Delete E-invoice Error Notification"
+msgstr "Xóa thông báo sai sót hóa đơn điện tử"
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid "Deleting e-invoice error notification is successful"
+msgstr "Xóa thông báo sai sót hóa đơn điện tử thành công"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_serial__description
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_template__description
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_type__description
+msgid "Description"
+msgstr "Miêu tả"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_serial__display_name
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_template__display_name
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_type__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model,name:to_accounting_vninvoice.model_account_invoice_einvoice_cancel
+msgid "E-Invoice Cancellation Wizard"
+msgstr "Đồ thuật hủy hóa đơn điện tử"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_res_company__einvoice_provider
+msgid "E-Invoice Provider"
+msgstr "Nhà cung cấp E-Invoice"
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid "E-Invoice created on VN-Invoice: Invoice No: %s"
+msgstr "Hóa đơn điện tử đã được tạo trên hệ thống VN-Invoice. Số hóa đơn: %s"
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid "E-Invoice has been approved and signed successfully"
+msgstr "Hóa đơn điện tử đã được duyệt và ký thành công"
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/controllers/portal.py:0
+#, python-format
+msgid "E-invoice is not signed, so you cannot download the XML file"
+msgstr "Hóa đơn điện tử chưa được ký nên bạn không thể tải file XML xuống"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model,name:to_accounting_vninvoice.model_mail_compose_message
+msgid "Email composition wizard"
+msgstr "Đồ thuật soạn thảo email"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_serial__expiration
+msgid "Expiration"
+msgstr "Hết hạn"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_serial__message_follower_ids
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_template__message_follower_ids
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_type__message_follower_ids
+msgid "Followers"
+msgstr "Người theo dõi"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_serial__message_channel_ids
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_template__message_channel_ids
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_type__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Người theo dõi (Các kênh)"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_serial__message_partner_ids
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_template__message_partner_ids
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_type__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Người theo dõi (Các đối tác)"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_serial__id
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_template__id
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_type__id
+msgid "ID"
+msgstr ""
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_serial__activity_exception_icon
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_template__activity_exception_icon
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_type__activity_exception_icon
+msgid "Icon"
+msgstr "Biểu tượng"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_vninvoice_serial__activity_exception_icon
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_vninvoice_template__activity_exception_icon
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_vninvoice_type__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Biểu tượng để chỉ ra một hoạt động ngoại lệ."
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_vninvoice_serial__message_needaction
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_vninvoice_serial__message_unread
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_vninvoice_template__message_needaction
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_vninvoice_template__message_unread
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_vninvoice_type__message_needaction
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_vninvoice_type__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Nếu đánh dấu chọn, các thông điệp mới yêu cầu sự có mặt của bạn."
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_vninvoice_serial__message_has_error
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_vninvoice_serial__message_has_sms_error
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_vninvoice_template__message_has_error
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_vninvoice_template__message_has_sms_error
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_vninvoice_type__message_has_error
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_vninvoice_type__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Nếu được đánh dấu, thông điệp có lỗi về gửi tin."
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move_line.py:0
+#, python-format
+msgid "Invoice line %s is not a reversal of any invoice line"
+msgstr ""
+"Dòng hóa đơn %s không phải là đảo ngược của bất kỳ dòng hóa đơn gốc nào"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_serial__invoice_ids
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_template__invoice_ids
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_type__invoice_ids
+msgid "Invoices"
+msgstr "Hoá đơn"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_serial__message_is_follower
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_template__message_is_follower
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_type__message_is_follower
+msgid "Is Follower"
+msgstr "Là người theo dõi"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model,name:to_accounting_vninvoice.model_account_journal
+msgid "Journal"
+msgstr "Sổ nhật ký"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model,name:to_accounting_vninvoice.model_account_move
+msgid "Journal Entries"
+msgstr "Bút toán Sổ nhật ký"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model,name:to_accounting_vninvoice.model_account_move_line
+msgid "Journal Item"
+msgstr "Phát sinh bút toán"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_serial____last_update
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_template____last_update
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_type____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_serial__write_uid
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_template__write_uid
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_type__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_serial__write_date
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_template__write_date
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_type__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối"
+
+#. module: to_accounting_vninvoice
+#: model_terms:ir.ui.view,arch_db:to_accounting_vninvoice.portal_invoice_page
+msgid "Legal E-Invoice"
+msgstr "Hóa đơn điện tử hợp pháp"
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/res_company.py:0
+#: code:addons/to_accounting_vninvoice/models/res_company.py:0
+#, python-format
+msgid "Log in VN-Invoice system unsuccessfully. Error: %s"
+msgstr "Đăng nhập hệ thống VN-Invoice không thành công. Lỗi: %s"
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/res_company.py:0
+#, python-format
+msgid ""
+"Log in VN-Invoice system unsuccessfully. You should check the account "
+"configuration in setting"
+msgstr ""
+"Đăng nhập hệ thống VN-Invoice không thành công. Bạn nên kiểm tra tài khoản "
+"cấu hình trong cài đặt"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_serial__message_main_attachment_id
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_template__message_main_attachment_id
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_type__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Đính kèm chính"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_serial__message_has_error
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_template__message_has_error
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_type__message_has_error
+msgid "Message Delivery error"
+msgstr "Có Lỗi Gửi Thông điệp"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_serial__message_ids
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_template__message_ids
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_type__message_ids
+msgid "Messages"
+msgstr "Thông điệp"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_template__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_serial__activity_date_deadline
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_template__activity_date_deadline
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_type__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Hạn chót lần hành động kế tiếp"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_serial__activity_summary
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_template__activity_summary
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_type__activity_summary
+msgid "Next Activity Summary"
+msgstr "Tóm tắt hoạt động tiếp theo"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_serial__activity_type_id
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_template__activity_type_id
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_type__activity_type_id
+msgid "Next Activity Type"
+msgstr "Kiểu hành động kế tiếp"
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"No converted file avaiable yet. Please wait for a few minutes before trying "
+"again!"
+msgstr ""
+"Không có tập tin chuyển đổi hoá đơn. Vui lòng chờ đợi ít phút trước khi thử "
+"lại!"
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"No representation files avaiable yet. Please wait for a few minutes before "
+"trying again!"
+msgstr ""
+"Không có tập tin thể hiện hoá đơn. Vui lòng chờ đợi ít phút trước khi thử "
+"lại!"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_serial__message_needaction_counter
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_template__message_needaction_counter
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_type__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Số lượng Hành động"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_serial__message_has_error_counter
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_template__message_has_error_counter
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_type__message_has_error_counter
+msgid "Number of errors"
+msgstr "Số lượng lỗi"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_vninvoice_serial__message_needaction_counter
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_vninvoice_template__message_needaction_counter
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_vninvoice_type__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Số thông điệp cần có hành động"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_vninvoice_serial__message_has_error_counter
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_vninvoice_template__message_has_error_counter
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_vninvoice_type__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Số lượng các thông điệp có lỗi về gửi tin"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_vninvoice_serial__message_unread_counter
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_vninvoice_template__message_unread_counter
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_vninvoice_type__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Số thông điệp chưa đọc"
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid "Original invoice %s has not been signed."
+msgstr "Hóa đơn gốc %s chưa được ký."
+
+#. module: to_accounting_vninvoice
+#: model_terms:ir.ui.view,arch_db:to_accounting_vninvoice.portal_invoice_page
+msgid "Our Tax Identification Number:"
+msgstr "Mã số thuế của chúng tôi:"
+
+#. module: to_accounting_vninvoice
+#: model:account.vninvoice.type,description:to_accounting_vninvoice.vninvoice_type_03XKNB
+msgid "Phiếu xuất kho kiêm vận chuyển hàng hóa nội bộ"
+msgstr ""
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move_line.py:0
+#, python-format
+msgid ""
+"Product %s don't have Unit of measure. VN-Invoice requires Unit of measure "
+"in every invoice line"
+msgstr ""
+"Sản phẩm %s không có Đơn vị đo lường. VN-Invoice yêu cầu Đơn vị đo lường "
+"trong mọi dòng hóa đơn"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields.selection,name:to_accounting_vninvoice.selection__res_company__vninvoice_mode__production
+msgid "Production"
+msgstr "Vận hành thật"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_invoice_einvoice_cancel__reason
+msgid "Reason"
+msgstr "Lý do thu hồi hóa đơn"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model,name:to_accounting_vninvoice.model_ir_actions_report
+msgid "Report Action"
+msgstr "Báo cáo hành động"
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Representation PDF file of the invoice %s be downloaded unsuccessfully. "
+"Error: %s"
+msgstr "Bản thể hiện (PDF) của hóa đơn %s Tải xuống không thành công.Lỗi:% s"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_serial__activity_user_id
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_template__activity_user_id
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_type__activity_user_id
+msgid "Responsible User"
+msgstr "Người chịu trách nhiệm"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_serial__message_has_sms_error
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_template__message_has_sms_error
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_type__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Lỗi gửi SMS"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields.selection,name:to_accounting_vninvoice.selection__res_company__vninvoice_mode__sandbox
+msgid "Sandbox"
+msgstr "Kiểm thử"
+
+#. module: to_accounting_vninvoice
+#: model_terms:ir.ui.view,arch_db:to_accounting_vninvoice.portal_invoice_page
+msgid "Secret Code:"
+msgstr "Mã bí mật:"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_serial__name
+msgid "Serial"
+msgstr "Ký hiệu"
+
+#. module: to_accounting_vninvoice
+#: model_terms:ir.ui.view,arch_db:to_accounting_vninvoice.view_move_form
+msgid "Sign E-invoice Error Notification"
+msgstr "Ký thông báo sai sót hóa đơn điện tử"
+
+#. module: to_accounting_vninvoice
+#: model_terms:ir.ui.view,arch_db:to_accounting_vninvoice.view_move_form
+msgid "Sign VN-invoice"
+msgstr "Ký hóa đơn VN-invoice"
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid "Sign e-invoice error notification is successful"
+msgstr "Ký thông báo sai sót hóa đơn điện tử thành công"
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Something went wrong when Creating E-Invoice Error Notification. Here is the debugging information:\n"
+"%s"
+msgstr ""
+"Đã xảy ra lỗi khi tạo Thông báo sai sót hóa đơn điện tử. Đây là thông tin gỡ lỗi: \n"
+"%s"
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Something went wrong when approve and sign the E-Invoice %s. Here is the debugging information:\n"
+"%s"
+msgstr ""
+"Có lỗi gì đó xảy ra trong quá trình duyệt và ký hoá đơn điện tử %s. Đây là thông tin gỡ lỗi:\n"
+"%s"
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Something went wrong when cancelling the E-Invoice %s. Here is the debugging information:\n"
+"%s"
+msgstr ""
+"Có lỗi gì đó xảy ra trong quá trình huỷ hoá đơn điện tử %s. Đây là thông tin gỡ lỗi:\n"
+"%s"
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Something went wrong when checking Sign status of E-Invoice %s. Here is the debugging information:\n"
+"%s"
+msgstr ""
+"Đã xảy ra lỗi khi kiểm tra trạng thái Ký của Hóa đơn điện tử %s. Đây là thông tin gỡ lỗi: \n"
+"%s"
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Something went wrong when deleting E-Invoice Error Notification. Here is the debugging information:\n"
+"%s"
+msgstr ""
+"Đã xảy ra lỗi khi xóa Hóa đơn điện tử %s. Đây là thông tin gỡ lỗi: \n"
+"%s"
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Something went wrong when get invoice file of the E-Invoice %s. Here is the debugging information:\n"
+"%s"
+msgstr ""
+"Có lỗi gì đó xảy ra trong quá trình lấy hoá đơn điện tử %s. Đây là thông tin gỡ lỗi:\n"
+"%s"
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Something went wrong when issuing E-Invoice. Here is the debugging information:\n"
+"%s"
+msgstr ""
+"Có lỗi gì đó xảy ra trong quá trình phát hành hoá đơn điện tử. Đây là thông tin gỡ lỗi:\n"
+"%s"
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid "Something went wrong when issuing the E-Invoice: %s"
+msgstr "Có lỗi xảy ra khi phát hành hóa đơn điện tử: %s"
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/res_company.py:0
+#: code:addons/to_accounting_vninvoice/models/res_company.py:0
+#, python-format
+msgid ""
+"Something went wrong when log in VN-Invoice system. Here is the debugging information:\n"
+"%s"
+msgstr ""
+"Đã xảy ra lỗi khi đăng nhập hệ thống VN-Invoice. Đây là thông tin debugging:"
+" \\ n%s"
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Something went wrong when signing E-Invoice Error Notification. Here is the debugging information:\n"
+"%s"
+msgstr ""
+"Đã xảy ra lỗi khi ký Hóa đơn điện tử %s. Đây là thông tin gỡ lỗi: \n"
+"%s"
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Something went wrong when synchronizing E-Invoice status. Here is the debugging information:\n"
+"%s"
+msgstr "Đã có lỗi xảy ra khi đồng bộ trạng thái hóa đơn điện tử. Đây là thông tin gỡ lỗi:\n"
+"%s"
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Something went wrong when synchronizing status for E-Invoice %s. Here is the debugging information:\n"
+"%s"
+msgstr "Đã có lỗi xảy ra khi đồng bộ trạng thái cho hóa đơn điện tử %s. Đây là thông tin gỡ lỗi:\n"
+"%s"
+
+#. module: to_accounting_vninvoice
+#: model_terms:ir.ui.view,arch_db:to_accounting_vninvoice.res_config_settings_view_form
+msgid "Start date of VN-Invoice"
+msgstr "Ngày bắt đầu của VN-invoice"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_vninvoice_serial__activity_state
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_vninvoice_template__activity_state
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_vninvoice_type__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Trạng thái dựa trên hoạt động\n"
+"Quá hạn: Ngày đến hạn đã trôi qua\n"
+"Hôm nay: Hôm nay là ngày phải thực hiện\n"
+"Đã hoạch định: Các hoạt động trong tương lai."
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid "Successfully downloaded the XML version of the VN-invoice %s."
+msgstr "Đã tải xuống thành công phiên bản XML của VN-invoice% s."
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid "Successfully downloaded the converted version of the VN-invoice %s."
+msgstr "Đã tải xuống thành công phiên bản chuyển đổi của VN-invoice% s."
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Successfully downloaded the representation version of the VN-invoice %s."
+msgstr "Đã tải xuống thành công phiên bản thể hiện của VN-invoice% s."
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_move__vninvoice_recordid
+msgid ""
+"Technical field to store record ID that was returned by VN-invoice after "
+"invoice creation."
+msgstr ""
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_invoice_einvoice_cancel__vninvoice_transactionid
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_move__vninvoice_transactionid
+msgid ""
+"Technical field to store transaction ID that was returned by VN-invoice "
+"after invoice creation."
+msgstr ""
+"Trường kỹ thuật để lưu transaction ID được trả về bởi bên VN-invoice sau khi"
+" tạo hóa đơn"
+
+#. module: to_accounting_vninvoice
+#: model_terms:ir.ui.view,arch_db:to_accounting_vninvoice.res_config_settings_view_form
+msgid ""
+"The Invoice Type that you have registered with\n"
+"\t\t\t\t\t\t\t\tVN-Invoice"
+msgstr "Loại hoá đơn mà bạn đã đăng ký với VN-Invoice"
+
+#. module: to_accounting_vninvoice
+#: model_terms:ir.ui.view,arch_db:to_accounting_vninvoice.res_config_settings_view_form
+msgid "The Serial that you have registered with VN-Invoice"
+msgstr "Ký hiệu hoá đơn mà bạn đã đăng ký với VN-Invoice"
+
+#. module: to_accounting_vninvoice
+#: model_terms:ir.ui.view,arch_db:to_accounting_vninvoice.res_config_settings_view_form
+msgid ""
+"The Template that you have registered with\n"
+"\t\t\t\t\t\t\t\tVN-Invoice"
+msgstr "Mẫu hoá đơn mà bạn đã đăng ký với VN-Invoice"
+
+#. module: to_accounting_vninvoice
+#: model_terms:ir.ui.view,arch_db:to_accounting_vninvoice.res_config_settings_view_form
+msgid "The URL to connect to VN-Invoice's API service"
+msgstr "URL để kết nối với API của VN-Invoice"
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"The VN-invoice corresponding to the invoice %s could not be cancelled "
+"because it has not been issued or cancelled already."
+msgstr ""
+"Hoá đơn điện tử ứng với hoá đơn %s không thể bị huỷ với vì nó vẫn chưa được "
+"phát hành hoặc đã huỷ rồi."
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_vninvoice_type__name
+msgid "The VN-invoice type's code that provided by VN-invoice."
+msgstr "Mã số của Kiểu hoá đơn mà được cung cấp bởi VN-Invoice."
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.constraint,message:to_accounting_vninvoice.constraint_account_vninvoice_type_name_unique
+msgid "The code must be unique!"
+msgstr "Mã phải là duy nhất!"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_vninvoice_serial__expiration
+msgid ""
+"The date and time at which this serial becomes expired and will not be able "
+"to used"
+msgstr "Ngày giờ mà ký hiệu này hết hạn và sẽ không thể sử dụng được nữa"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_res_company__vninvoice_start_date
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_res_config_settings__vninvoice_start_date
+msgid ""
+"The date from which your company announced the start of using VN-Invoice."
+msgstr "Ngày mà công ty bạn bắt đầu phát hành hoá đơn điện tử với VN-Invoice."
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_move__vninvoice_representation_xml
+msgid "The display version of the VN-Invoice in XML format."
+msgstr "Bản thể hiện của VN-invoice bằng xml"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_move__vninvoice_representation_pdf
+msgid "The display version of the VN-invoice in PDF format"
+msgstr "Phiên bản thể hiện của hoá đơn VN-Invoice định dạng PDF"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_res_company__account_vninvoice_type_id
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_res_config_settings__account_vninvoice_type_id
+msgid "The invoice type provided by VN-Invoice."
+msgstr "Kiểu hoá đơn được cung cấp bởi VN-Invoice"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_bank_statement_import_journal_creation__account_vninvoice_type_id
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_journal__account_vninvoice_type_id
+msgid ""
+"The invoice type provided by VN-invoice. Leave it empty to use the one specified in the global Settings.\n"
+"Note: If this is not set, Odoo will use the one specified in the global Settings"
+msgstr ""
+"Kiểu hoá đơn được cung cấp bởi Viettel VN-invoice. Để trống nếu bạn muốn sử dụng kiểu hoá đơn được thiết lập ở Thiết lập Kế toán.\n"
+"Chú ý: nếu không được thiết lập, Odoo sẽ sử dụng kiểu được thiết lập ở Thiết lập Kế toán."
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_vninvoice_template__invoice_ids
+msgid "The invoices associated with this VN-invoice template"
+msgstr "Các hoá đơn mà được phát hành theo mẫu này"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_vninvoice_type__invoice_ids
+msgid "The invoices associated with this invoice type"
+msgstr "Các hoá đơn mà được phát hành theo loại này"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_vninvoice_serial__invoice_ids
+msgid "The invoices associated with this serial"
+msgstr "Các hoá đơn mà được phát hành theo ký hiệu này"
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid "The legal E-Invoice %s has been cancelled on VN-invoice."
+msgstr "Hoá đơn Điện tử %s đã được huỷ ở hệ thống VN-Invoice."
+
+#. module: to_accounting_vninvoice
+#: model_terms:ir.ui.view,arch_db:to_accounting_vninvoice.portal_invoice_page
+msgid "The legal e-invoice numbered"
+msgstr "Hoá đơn điện tử số"
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move_line.py:0
+#, python-format
+msgid ""
+"The line containing the product %s comes with more than one tax which is not supported by VN-incoice.\n"
+"            You may set some taxes to get their value included in the price to ensure that there is no more than one tax on a single line."
+msgstr ""
+"Dòng hoá đơn chưa sản phẩm %s có nhiều hơn một loại thuế và không được hỗ trợ bởi VN-Invoice.\n"
+"                Bạn có thể thiết lập một vài loại thuế sao cho giá trị của chúng đã bao gồm trong giá để đảm bảo sẽ không cần phải sử dụng nhiều hơn 1 loại thuế cho mỗi dòng."
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move_line.py:0
+#, python-format
+msgid "The line containing the product %s comes with no tax."
+msgstr "Dòng chứa sản phẩm %s không có thuế."
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_vninvoice_template__name
+msgid "The name of the invoice template that provided by VN-invoice."
+msgstr "Tên của mẫu hoá đơn mà được cung cấp bởi VN-Invoice"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.constraint,message:to_accounting_vninvoice.constraint_account_vninvoice_template_name_unique
+msgid "The name of the template must be unique!"
+msgstr "Tên của mẫu hóa đơn phải là duy nhất"
+
+#. module: to_accounting_vninvoice
+#: model_terms:ir.ui.view,arch_db:to_accounting_vninvoice.res_config_settings_view_form
+msgid "The password for VN-invoice API authentication"
+msgstr "Mật khẩu để xác thực với VN-invoice API"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_res_company__account_vninvoice_serial_id
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_res_config_settings__account_vninvoice_serial_id
+msgid ""
+"The prefix (e.g. AA/16E, AA/17E, etc) of the invoice number that must be "
+"registered with VN-Invoice priorily. See the Circular No. 39/2014/TT-BTC "
+"dated March 31, 2014 by The Ministry of Finance of Vietnam."
+msgstr ""
+"Tiền tố / Ký hiệu (vd: AA/16E, AA/17E, v.v.) của số hoá đơn mà phải được "
+"đăng ký trước với VN-Invoice. Xem thêm về Thông tư No. 39/2014/TT-BTC ngày "
+"31/3/2014 của Bộ Tài chính để biết thêm quy tắc lập ký hiệu."
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_vninvoice_serial__name
+msgid ""
+"The prefix (e.g. AA/16E, AA/17E, etc) of the invoice number that must be "
+"registered with VN-invoice priorily. See the Circular No. 39/2014/TT-BTC "
+"dated March 31, 2014 by The Ministry of Finance of Vietnam."
+msgstr ""
+"Tiền tố / Ký hiệu (vd: AA/16E, AA/17E, v.v.) của số hoá đơn mà phải được "
+"đăng ký trước với VN-Invoice. Xem thêm về Thông tư No. 39/2014/TT-BTC ngày "
+"31/3/2014 của Bộ Tài chính để biết thêm quy tắc lập ký hiệu."
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_bank_statement_import_journal_creation__account_vninvoice_serial_id
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_journal__account_vninvoice_serial_id
+msgid ""
+"The prefix (e.g. AA/16E, AA/17E, etc) of the invoice number that must be registered with VN-invoice priorily. See the Circular No. 39/2014/TT-BTC dated March 31, 2014 by The Ministry of Finance of Vietnam.\n"
+"Note: If this is not set, Odoo will use the one specified in the global Settings"
+msgstr ""
+"Tiền tố / Ký hiệu (vd: AA/16E, AA/17E, v.v.) của số hoá đơn mà phải được đăng ký trước với VN-Invoice. Xem thêm về Thông tư No. 39/2014/TT-BTC ngày 31/3/2014 của Bộ Tài chính để biết thêm quy tắc lập ký hiệu.\n"
+"Chú ý: nếu không được thiết lập, Odoo sẽ sử dụng ký hiệu được thiết lập ở Thiết lập Kế toán."
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_res_company__account_vninvoice_template_id
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_res_config_settings__account_vninvoice_template_id
+msgid ""
+"The template that you have registered with VN-Invoice for rendering your "
+"invoices of this template"
+msgstr ""
+"Mẫu hoá đơn mà bạn đã đăng ký với VN-Invoice để phục vụ cho việc phát hành "
+"hoá đơn điện tử theo mẫu đó."
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_bank_statement_import_journal_creation__account_vninvoice_template_id
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_journal__account_vninvoice_template_id
+msgid ""
+"The template that you have registered with VN-invoice for rendering your invoices of this template.\n"
+"Note: If this is not set, Odoo will use the one specified in the global Settings"
+msgstr ""
+"Mẫu hoá đơn mà bạn đã đăng ký với VN-Invoice để phục vụ cho việc phát hành "
+"hoá đơn điện tử theo mẫu đó.Nếu không được thiết lập, Odoo sẽ sử dụng mẫu "
+"được thiết lập ở Thiết lập Kế toán."
+
+#. module: to_accounting_vninvoice
+#: model_terms:ir.ui.view,arch_db:to_accounting_vninvoice.res_config_settings_view_form
+msgid "The username for VN-invoice API authentication"
+msgstr "Tên tài khoản để xác thực với VN-Invoice API"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_move__check_vninvoice_approved_and_signed
+msgid ""
+"This field is to check whether the invoice is signed or not. In the case "
+"that api to sign is failed, a button will appear after issuing the invoiceto"
+" sign the invoice again"
+msgstr ""
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_vninvoice_serial__activity_exception_decoration
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_vninvoice_template__activity_exception_decoration
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_vninvoice_type__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Loại hoạt động ngoại lệ được ghi lại."
+
+#. module: to_accounting_vninvoice
+#: model_terms:ir.ui.view,arch_db:to_accounting_vninvoice.portal_invoice_page
+msgid "URL:"
+msgstr ""
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_serial__message_unread
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_template__message_unread
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_type__message_unread
+msgid "Unread Messages"
+msgstr "Thông điệp chưa đọc"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_serial__message_unread_counter
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_template__message_unread_counter
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_type__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Bộ đếm Thông điệp chưa đọc"
+
+#. module: to_accounting_vninvoice
+#: model_terms:ir.ui.view,arch_db:to_accounting_vninvoice.res_config_settings_view_form
+msgid ""
+"Using sandbox to test your VN-Invoice integration\n"
+"\t\t\t\t\t\t\t\tfirst."
+msgstr ""
+"Sử dụng chế độ Kiểm thử để thử việc tích hợp trước\n"
+"\t\t\t\t\t\t\t\tkhi dùng thật."
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields.selection,name:to_accounting_vninvoice.selection__res_company__einvoice_provider__vninvoice
+msgid "VN-Invoice"
+msgstr ""
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_move__vninvoice_converted_file
+msgid "VN-Invoice Converted File"
+msgstr "File chuyển đổi của VN-Invoice"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_move__vninvoice_converted_filename
+msgid "VN-Invoice Converted Filename"
+msgstr "Tên file chuyển đổi của VN-Invoice"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_move__vninvoice_recordid
+msgid "VN-Invoice ID"
+msgstr ""
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_move__vninvoice_representation_xml
+msgid "VN-Invoice Representation File (XML)"
+msgstr "File thể hiện (XML) của VN-Invoice"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_move__vninvoice_representation_filename_xml
+msgid "VN-Invoice Representation Filename (XML)"
+msgstr "Tên file thể hiện (XML) của VN-Invoice"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_move__account_vninvoice_serial_id
+msgid "VN-Invoice Serial"
+msgstr "Ký hiệu VN-Invoice"
+
+#. module: to_accounting_vninvoice
+#: model_terms:ir.ui.view,arch_db:to_accounting_vninvoice.res_config_settings_view_form
+msgid "VN-Invoice Settings"
+msgstr "Cài đặt VN-Invoice"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_res_company__vninvoice_start_date
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_res_config_settings__vninvoice_start_date
+msgid "VN-Invoice Start Date"
+msgstr "Ngày bắt đầu VN-invoice"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_move__account_vninvoice_template_id
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_res_company__account_vninvoice_template_id
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_res_config_settings__account_vninvoice_template_id
+msgid "VN-Invoice Template"
+msgstr "Mẫu VN-invoice"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_move__account_vninvoice_type_id
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_res_company__account_vninvoice_type_id
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_res_config_settings__account_vninvoice_type_id
+msgid "VN-Invoice Type"
+msgstr "Loại VN-invoice"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_res_company__vninvoice_api_password
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_res_config_settings__vninvoice_api_password
+msgid "VN-Invoice password"
+msgstr "Mật khẩu"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_res_company__vninvoice_api_username
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_res_config_settings__vninvoice_api_username
+msgid "VN-Invoice username"
+msgstr "Tài khoản"
+
+#. module: to_accounting_vninvoice
+#: model:ir.ui.menu,name:to_accounting_vninvoice.menu_vninvoice
+#: model_terms:ir.ui.view,arch_db:to_accounting_vninvoice.view_account_journal_form
+msgid "VN-invoice"
+msgstr ""
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_res_company__vninvoice_mode
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_res_config_settings__vninvoice_mode
+msgid "VN-invoice Mode"
+msgstr "Chế độ VN-Invoice"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_move__vninvoice_representation_pdf
+msgid "VN-invoice Representation File (PDF)"
+msgstr "Bản thể hiện VN-Invoice (PDF)"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_move__vninvoice_representation_filename_pdf
+msgid "VN-invoice Representation Filename (PDF)"
+msgstr "Tên tập tin Bản thể hiện VN-Invoice (PDF)"
+
+#. module: to_accounting_vninvoice
+#: model:ir.actions.act_window,name:to_accounting_vninvoice.action_vninvoice_serial
+#: model:ir.model,name:to_accounting_vninvoice.model_account_vninvoice_serial
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_bank_statement_import_journal_creation__account_vninvoice_serial_id
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_journal__account_vninvoice_serial_id
+#: model:ir.ui.menu,name:to_accounting_vninvoice.menu_action_vninvoice_serial
+#: model_terms:ir.ui.view,arch_db:to_accounting_vninvoice.account_vninvoice_serial_form
+msgid "VN-invoice Serial"
+msgstr "Ký hiệu Hoá đơn VN-Invoice"
+
+#. module: to_accounting_vninvoice
+#: model:ir.actions.act_window,name:to_accounting_vninvoice.action_vninvoice_template
+#: model:ir.model,name:to_accounting_vninvoice.model_account_vninvoice_template
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_bank_statement_import_journal_creation__account_vninvoice_template_id
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_journal__account_vninvoice_template_id
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_serial__template_id
+#: model:ir.ui.menu,name:to_accounting_vninvoice.menu_action_vninvoice_template
+#: model_terms:ir.ui.view,arch_db:to_accounting_vninvoice.account_vninvoice_template_form
+#: model_terms:ir.ui.view,arch_db:to_accounting_vninvoice.account_vninvoice_template_tree
+msgid "VN-invoice Template"
+msgstr "Mẫu hoá đơn VN-Invoice"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_invoice_einvoice_cancel__vninvoice_transactionid
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_move__vninvoice_transactionid
+msgid "VN-invoice Transaction ID"
+msgstr "Transaction ID của VN-Invoice"
+
+#. module: to_accounting_vninvoice
+#: model:ir.actions.act_window,name:to_accounting_vninvoice.action_vninvoice_type
+#: model:ir.model,name:to_accounting_vninvoice.model_account_vninvoice_type
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_bank_statement_import_journal_creation__account_vninvoice_type_id
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_journal__account_vninvoice_type_id
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_serial__type_id
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_template__type_id
+#: model:ir.ui.menu,name:to_accounting_vninvoice.menu_action_vninvoice_type
+#: model_terms:ir.ui.view,arch_db:to_accounting_vninvoice.account_vninvoice_type_form
+#: model_terms:ir.ui.view,arch_db:to_accounting_vninvoice.account_vninvoice_type_tree
+msgid "VN-invoice Type"
+msgstr "Kiểu hoá đơn VN-Invoice"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_res_company__vninvoice_api_url
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_res_config_settings__vninvoice_api_url
+msgid "VNInvoice API URL"
+msgstr ""
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_res_company__account_vninvoice_serial_id
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_res_config_settings__account_vninvoice_serial_id
+msgid "VNInvoice Invoice Serial"
+msgstr "Ký hiệu Hoá đơn VNInvoice"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_res_company__sandbox_vninvoice_api_url
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_res_config_settings__sandbox_vninvoice_api_url
+msgid "VNInvoice Sandbox API URL"
+msgstr "API URL Kiểm thử VNInvoice "
+
+#. module: to_accounting_vninvoice
+#: model:ir.actions.server,name:to_accounting_vninvoice.ir_cron_check_vninvoices_signed_ir_actions_server
+#: model:ir.cron,cron_name:to_accounting_vninvoice.ir_cron_check_vninvoices_signed
+#: model:ir.cron,name:to_accounting_vninvoice.ir_cron_check_vninvoices_signed
+msgid "VNInvoice: Check VN-invoice Signed"
+msgstr "VNInvoice: Kiểm tra Hoá đơn điện tử đã ký"
+
+#. module: to_accounting_vninvoice
+#: model:account.vninvoice.template,description:to_accounting_vninvoice.vninvoice_template_01GTKT0_001
+#: model:account.vninvoice.type,description:to_accounting_vninvoice.vninvoice_type_01GTKT
+msgid "Value Added Tax Invoice"
+msgstr "Hoá đơn GTGT"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_move__einvoice_api_version
+msgid ""
+"Versions corresponding to laws of rule in Viet Nam:\n"
+"V1 for TT32\n"
+"V2 for TT78\n"
+"You should check the version of your e-invoice webservices before choosing versions here"
+msgstr ""
+"Các phiên bản tương ứng với luật của Việt Nam:\n"
+"V1 cho thông tư 32\n"
+"V2 cho thông tư 78\n"
+"Bạn nên kiểm tra phiên bản của dịch vụ web hóa đơn điện tử trước khi chọn phiên bản tại đây"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_serial__website_message_ids
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_template__website_message_ids
+#: model:ir.model.fields,field_description:to_accounting_vninvoice.field_account_vninvoice_type__website_message_ids
+msgid "Website Messages"
+msgstr "Thông điệp Website"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_vninvoice_serial__website_message_ids
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_vninvoice_template__website_message_ids
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_vninvoice_type__website_message_ids
+msgid "Website communication history"
+msgstr "Lịch sử thông tin liên lạc website"
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid "XML files of the invoice %s be downloaded unsuccessfully. Error: %s"
+msgstr "File XML của hóa đơn %s tải xuống không thành công. Lỗi: %s "
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"You cannot download the converted file of this invoice, because it's not "
+"signed"
+msgstr "Bạn không thể tải bản chuyển đổi của hóa đơn vì nó chưa được ký"
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"You cannot issue VN-invoice for the invoice %s dated %s because Issued "
+"E-invoices with later invoice date are existing."
+msgstr ""
+"Bạn không thể xuất hóa đơn điện tử %s ngày %s bởi vì Có hóa đơn điện tử VN-"
+"Invoice đã được xuất với ngày muộn hơn đang tồn tại"
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"You cannot issue this credit note because VN-invoice system only allow to "
+"issue one adjustment invoice for an original invoice. The original invoice "
+"of invoice %s has have one adjustment invoice %s."
+msgstr ""
+"Bạn không thể phát hành hóa đơn điều chỉnh giảm này vì hệ thống VN-invoice "
+"chỉ cho phép phát hành một hóa đơn điều chỉnh cho một hóa đơn gốc. Hóa đơn "
+"gốc của hóa đơn %s đã có một hóa đơn điều chỉnh %s."
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_vninvoice_type.py:0
+#, python-format
+msgid ""
+"You cannot modify the Code of the invoice type %s to %s while it is referred"
+" by the invoice %s. You should either delete all the related invoices or "
+"create another invoice type."
+msgstr ""
+"Bạn không thể thay đổi mã của kiểu hoá đơn %s thành %s trong khi mã này đã "
+"được sử dụng bởi hoá đơn %s. Bạn cần phải xoá tất cả các hoá đơn liên quan "
+"hoặc tạo một kiểu hoá đơn khác."
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_vninvoice_template.py:0
+#, python-format
+msgid ""
+"You cannot modify the Name of the template %s to %s while it is referred by "
+"the invoice %s. You should either delete all the related invoices or create "
+"another template."
+msgstr ""
+"Bạn không thể thay đổi tên của mẫu hoá đơn %s thành %s trong khi mẫu này đã "
+"được sử dụng bởi hoá đơn %s. Bạn cần phải xoá tất cả các hoá đơn liên quan "
+"hoặc tạo một mẫu hoá đơn khác."
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_vninvoice_serial.py:0
+#, python-format
+msgid ""
+"You cannot modify the Serial %s to %s while it is referred by the invoice "
+"%s. You should either delete all the related invoices or create another "
+"serial."
+msgstr ""
+"Bạn không thể thay đổi tên của ký hiệu hoá đơn %s thành %s trong khi ký hiệu"
+" này đã được sử dụng bởi hoá đơn %s. Bạn cần phải xoá tất cả các hoá đơn "
+"liên quan hoặc tạo một ký hiệu hoá đơn khác."
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"You have to set E-invoice Template being only number, not include letter"
+msgstr "Bạn phải đặt Mẫu hóa đơn điện tử chỉ là số, không bao gồm chữ cái"
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"You must create and sign the e-invoice error notification of invoice %s "
+"before issuing this adjustment invoice"
+msgstr ""
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"You must sign the e-invoice error notification of invoice %s before issuing "
+"this adjustment invoice"
+msgstr ""
+
+#. module: to_accounting_vninvoice
+#: model_terms:ir.ui.view,arch_db:to_accounting_vninvoice.portal_invoice_page
+msgid ""
+"has been issued to you with VN-Invoice. You can login VN-Invoice system for "
+"the original invoice:"
+msgstr ""
+"đã được phát hành thông qua VN-Invoice. Bạn có thể đăng nhập hệ thống VN-"
+"Invoice để tra cứu hoá đơn gốc:"
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move_line.py:0
+#, python-format
+msgid ""
+"price unit %s of line %s must not greater than price unit %s of invoice line"
+" %s of original invoice %s"
+msgstr ""
+"Đơn vị giá %s của dòng %s không được lớn hơn đơn vị giá %s của dòng hóa đơn "
+"%s của hóa đơn gốc %s"
+
+#. module: to_accounting_vninvoice
+#: code:addons/to_accounting_vninvoice/models/account_move_line.py:0
+#, python-format
+msgid ""
+"quantity %s of line %s must not greater than quantity %s of invoice line %s "
+"of original invoice %s"
+msgstr ""
+"Số lượng %s của dòng %s không được lớn hơn Số lượng %s của dòng hóa đơn %s "
+"của hóa đơn gốc %s"
+
+#. module: to_accounting_vninvoice
+#: model:ir.model.fields,help:to_accounting_vninvoice.field_account_invoice_einvoice_cancel__reason
+msgid ""
+"the reason of the agreement between you and your customer for the invoice "
+"cancellation."
+msgstr ""
+"Lý do của văn bản thoả thuận giữa bạn và khách hàng của bạn liên quan đến "
+"việc huỷ hoá đơn này."

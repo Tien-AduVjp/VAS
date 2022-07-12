@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="viin_social.discuss.Sidebar">
+        <div class="o_mail_discuss_sidebar">
+            <div t-if="displayQuickSearch" class="o_discuss_sidebar_quick_search">
+                <t t-set="inputPlaceholder">Quick search...</t>
+                <input t-att-placeholder="inputPlaceholder"/>
+            </div>
+            <div class="o_mail_discuss_sidebar_channels">
+                <t t-call="viin_social.SocialConversation"/>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="viin_social.SocialConversation">
+		<t t-set="type" t-value="'social_chat'"/>
+		<t t-set="disableAddThread" t-value="true"/>
+		<t t-call="mail.discuss.SidebarTitle">
+		    <t t-set="title">Social Conversation</t>
+		    <t t-set="icon" t-value="fa-comments"/>
+		</t>
+		<t t-call="mail.discuss.SidebarItems"/>
+    </t>
+</templates>

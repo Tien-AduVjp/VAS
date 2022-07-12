@@ -1,0 +1,46 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_hr_expense_employee_advance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-14 09:28+0000\n"
+"PO-Revision-Date: 2020-08-14 09:28+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_hr_expense_employee_advance
+#: model:ir.model.fields,help:to_hr_expense_advanced_employee_advance.field_hr_expense_sheet_register_payment_wizard__is_advance_journal
+msgid "Check this to enable this journal for employee advance."
+msgstr "Đánh dấu vào mục này để bật sổ nhật ký này cho nhân viên"
+
+#. module: to_hr_expense_employee_advance
+#: model:ir.model.fields,field_description:to_hr_expense_advanced_employee_advance.field_hr_expense_sheet_register_payment_wizard__employee_id
+msgid "Employee"
+msgstr "Nhân Viên"
+
+#. module: to_hr_expense_employee_advance
+#: model:ir.model.fields,field_description:to_hr_expense_advanced_employee_advance.field_hr_expense_sheet_register_payment_wizard__is_advance_journal
+msgid "Employee Advance Journal?"
+msgstr "Sổ nhật ký tạm ứng nhân viên"
+
+#. module: to_hr_expense_employee_advance
+#: model:ir.model,name:to_hr_expense_employee_advance.model_hr_expense_sheet_register_payment_wizard
+msgid "Expense Register Payment Wizard"
+msgstr "Tính năng ghi nhận thanh toán chi tiêu"
+
+#. module: to_hr_expense_employee_advance
+#: code:addons/to_hr_expense_employee_advance/wizard/hr_expense_sheet_register_payment.py:0
+#, python-format
+msgid ""
+"The employee '%s' you've selected has no Private Address specified. Please "
+"specify one for this employee first."
+msgstr ""
+"Nhân viên '%s' bạn vừa chọn chưa được thiết lập Địa chỉ Cá nhân. Hãy thiết "
+"lập Địa chỉ Cá nhân cho Nhân viên này trước."

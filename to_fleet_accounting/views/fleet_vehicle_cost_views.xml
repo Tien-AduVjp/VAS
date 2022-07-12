@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+
+		<record model="ir.ui.view" id="fleet_vehicle_costs_view_form">
+			<field name="name">fleet.vehicle.cost.form</field>
+			<field name="model">fleet.vehicle.cost</field>
+			<field name="inherit_id" ref="fleet.fleet_vehicle_costs_view_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//sheet" position="before">
+					<header>
+					</header>
+				</xpath>
+				<xpath expr="//sheet/group[1]" position="before">
+					<div class="oe_button_box" name="button_box">
+					</div>
+				</xpath>
+				<xpath expr="//field[@name='parent_id']" position="after">
+					<field name="invoice_line_id" groups="base.group_no_one" />
+					<field name="invoiceable" groups="base.group_no_one" />
+				</xpath>
+				<xpath expr="//field[@name='cost_subtype_id']" position="after">
+					<field name="currency_id" groups="base.group_multi_currency"
+						attrs="{'readonly':[('invoice_line_id','!=',False)]}" />
+					<field name="product_id" attrs="{'readonly':[('invoice_line_id','!=',False)]}" />
+					<field name="vendor_id" attrs="{'readonly':[('invoice_line_id','!=',False)]}" />
+					<field name="company_id" groups="base.group_multi_company"
+						attrs="{'readonly':[('invoice_line_id','!=',False)]}" />
+				</xpath>
+
+				<xpath expr="//field[@name='vehicle_id']" position="attributes">
+					<attribute name="attrs">{'readonly':[('invoice_line_id','!=',False)]}
+					</attribute>
+				</xpath>
+				<xpath expr="//field[@name='cost_subtype_id']" position="attributes">
+					<attribute name="attrs">{'readonly':[('invoice_line_id','!=',False)]}
+					</attribute>
+				</xpath>
+				<xpath expr="//field[@name='amount']" position="attributes">
+					<attribute name="attrs">{'readonly':[('invoice_line_id','!=',False)]}
+					</attribute>
+				</xpath>
+				<xpath expr="//field[@name='date']" position="attributes">
+					<attribute name="attrs">{'readonly':[('invoice_line_id','!=',False)]}
+					</attribute>
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="fleet_vehicle_cost_view_tree">
+			<field name="name">fleet.vehicle.cost.tree</field>
+			<field name="model">fleet.vehicle.cost</field>
+			<field name="inherit_id" ref="fleet.fleet_vehicle_cost_view_tree" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='cost_subtype_id']" position="after">
+					<field name="currency_id" invisible="1" />
+					<field name="product_id" />
+					<field name="vendor_id" />
+					<field name="invoiceable" groups="base.group_no_one" />
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="fleet_vehicle_costs_view_search">
+			<field name="name">fleet.vehicle.cost.search</field>
+			<field name="model">fleet.vehicle.cost</field>
+			<field name="inherit_id" ref="fleet.fleet_vehicle_costs_view_search" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='parent_id']" position="after">
+					<field name="invoice_id" />
+				</xpath>
+				<xpath expr="//filter[@name='parent_true']" position="after">
+					<separator />
+					<filter name="invoiced" domain="[('invoice_line_id','!=',False)]"
+						string="Invoiced" />
+					<filter name="uninvoiced" domain="[('invoice_line_id','=',False)]"
+						string="Uninvoiced" />
+					<filter name="invoiceable" domain="[('invoiceable','=',True)]"
+						string="Invoiceable"
+						help="Filter costs that can be invoiceable but have not been invoiced yet." />
+					<separator />
+					<filter name="garbage"
+						domain="[('invoice_line_id','=',False),('created_from_invoice_line_id','!=',False)]"
+						string="Garbage"
+						help="The costs that were created from invoices but does not link to any invoice currently which should be removed" />
+				</xpath>
+				<xpath expr="//group/filter[@name='groupby_parent_id']"
+					position="after">
+					<separator />
+					<filter name="vendor_id" context="{'group_by': 'vendor_id'}"
+						string="Vendor" />
+					<filter name="currency_id" context="{'group_by': 'currency_id'}"
+						string="Currency" groups="base.group_multi_currency" />
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

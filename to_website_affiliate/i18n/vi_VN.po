@@ -1,0 +1,446 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_website_affiliate
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-15 00:41+0000\n"
+"PO-Revision-Date: 2022-03-01 06:03+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_website_affiliate
+#: code:addons/to_website_affiliate/models/affiliate_code.py:0
+#, python-format
+msgid ""
+"\n"
+"                    In order to get started with the code <code>%s</code>,\n"
+"                    just copy the URL <code>%s/?%s=%s</code> and share it with your friends and partners.\n"
+"                    You can put the URL on your social network like Facebook, LinkedIn\n"
+"                    or put it on webpages where you can to get more and more customers.\n"
+"                    "
+msgstr ""
+"\n"
+"                    Để bắt đầu với mã <code>%s</code>,\n"
+"                    chỉ cần sao chép liên kết <code>%s/?%s=%s</code> và chia sẻ nó với bạn bè và đối tác của bạn.\n"
+"                    Bạn có thể đặt liên kết trên mạng xã hội của mình như Facebook, LinkedIn\n"
+"                    hoặc đưa nó lên các trạng web mà bạn có thể thu hút được nhiều khách hàng.\n"
+"                    "
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate
+msgid "<b>Affiliate URL:</b>"
+msgstr "<b>URL Giới thiệu:</b>"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate
+msgid "<b>Medium:</b>"
+msgstr "<b>Phương tiện:</b>"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate
+msgid "<b>Source:</b>"
+msgstr "<b>Nguồn:</b>"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate
+msgid "<b>Url:</b>"
+msgstr ""
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate
+msgid ""
+"<i class=\"fa fa-clipboard\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tCopy\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</i>"
+msgstr ""
+"<i class=\"fa fa-clipboard\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSao chép\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</i>"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate
+msgid ""
+"<i class=\"fa fa-edit\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tEdit"
+msgstr ""
+"<i class=\"fa fa-edit\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tChỉnh sửa"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate
+msgid ""
+"<i class=\"fa fa-edit\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSave"
+msgstr ""
+"<i class=\"fa fa-edit\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tLưu"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate
+msgid ""
+"<i class=\"fa fa-times\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tDelete"
+msgstr ""
+"<i class=\"fa fa-times\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tXoá"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.portal_affiliate_invoices
+msgid ""
+"<span class=\"label label-default\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-fw fa-check\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tPaid\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</span>"
+msgstr ""
+"<span class=\"label label-default\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-fw fa-check\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tĐã thanh toán\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</span>"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.portal_affiliate_invoices
+msgid ""
+"<span class=\"label label-default\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-fw fa-remove\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tCancelled\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</span>"
+msgstr ""
+"<span class=\"label label-default\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-fw fa-remove\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tĐã huỷ\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</span>"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.portal_affiliate_invoices
+msgid ""
+"<span class=\"label label-info\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-fw fa-clock-o\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tWaiting for Payment\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</span>"
+msgstr ""
+"<span class=\"label label-info\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-fw fa-clock-o\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tĐang chờ thanh toán\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</span>"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate
+msgid "Add New Link"
+msgstr "Thêm liên kết mới"
+
+#. module: to_website_affiliate
+#: model:ir.model,name:to_website_affiliate.model_affiliate_code
+#: model:ir.model.fields,field_description:to_website_affiliate.field_link_tracker__affiliate_code_id
+msgid "Affiliate Code"
+msgstr "Mã cộng tác viên"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.view_website_form
+msgid "Affiliate Commission Rules"
+msgstr "Quy tắc hoa hồng cộng tác viên"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.portal_my_home_menu_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate_commissions
+msgid "Affiliate Commissions"
+msgstr "Hoa hồng cộng tác viên"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.portal_affiliate_invoices
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.portal_my_home_menu_affiliate
+msgid "Affiliate Invoices"
+msgstr "Hoá đơn cộng tác viên"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.portal_my_home_menu_affiliate
+msgid "Affiliate Links"
+msgstr "Liên kết cộng tác viên"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate_payment_request_detail
+msgid "Affiliate Payment Request Detail"
+msgstr "Chi tiết yêu cầu thanh toán cộng tác viên"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.portal_my_home_menu_affiliate
+msgid "Affiliate Payment Requests"
+msgstr "Yêu cầu thanh toán cộng tác viên"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate_payment_requests
+msgid "Affiliate Payments"
+msgstr "Thanh toán cộng tác viên"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.portal_my_home_sale
+#: model:website.menu,name:to_website_affiliate.affiliate_link
+msgid "Affiliate Program"
+msgstr "Chương trình cộng tác viên"
+
+#. module: to_website_affiliate
+#: model:ir.model.fields,field_description:to_website_affiliate.field_website__aff_url_param
+msgid "Affiliate URL Param"
+msgstr "Tham số liên kết cộng tác viên"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate_commissions
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate_payment_request_detail
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate_payment_requests
+msgid "Amount"
+msgstr "Số tiền"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.portal_affiliate_invoices
+msgid "Amount Due"
+msgstr "Số tiền đến hạn"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate_payment_requests
+msgid "Approved"
+msgstr "Đã phê duyệt"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate_commissions
+msgid "Cancelled"
+msgstr "Đã huỷ bỏ"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate_commissions
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate_payment_request_detail
+msgid "Commission"
+msgstr "Hoa hồng"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate_commissions
+msgid "Commission Paid"
+msgstr "Đã thanh toán tiền hoa hồng"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate_payment_request_detail
+msgid "Commission Total:"
+msgstr "Tổng tiền hoa hồng:"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate_commissions
+msgid "Confirmed"
+msgstr "Đã xác nhận"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate_payment_requests
+msgid "Confirmed by Affiliate"
+msgstr "Đã xác nhận bởi cộng tác viên"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate_payment_request_detail
+msgid "Currency:"
+msgstr "Tiền tệ:"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate_commissions
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate_payment_request_detail
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate_payment_requests
+msgid "Date"
+msgstr "Ngày"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate_commissions
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate_payment_requests
+msgid "Draft"
+msgstr "Dự thảo"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.portal_affiliate_invoices
+msgid "Due Date"
+msgstr "Ngày hết hạn"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate
+msgid ""
+"Firstly, you will need to create a new link tracker in order to get\n"
+"                                                        started with the code"
+msgstr ""
+"Trước tiên, bạn cần phải tạo mới một trình truy vết liên kết để có thể\n"
+"                                                        có thể bắt đầu sử dụng mã"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.portal_affiliate_invoices
+msgid "Invoice #"
+msgstr "Hoá đơn #"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.portal_affiliate_invoices
+msgid "Invoice Date"
+msgstr "Ngày hoá đơn"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate
+msgid "Join"
+msgstr "Tham gia"
+
+#. module: to_website_affiliate
+#: model:ir.model,name:to_website_affiliate.model_link_tracker
+msgid "Link Tracker"
+msgstr "Theo dõi Link"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate
+msgid "Medium"
+msgstr "Phương tiện"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate_payment_requests
+msgid "New Payment Request"
+msgstr "Yêu cầu thanh toán mới"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate_payment_request_detail
+msgid "New Payments Request"
+msgstr "Yêu cầu thanh toán mới"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate_payment_request_detail
+msgid "Notes"
+msgstr "Ghi chú"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate_payment_requests
+msgid "Paid"
+msgstr "Đã thanh toán"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate_payment_request_detail
+msgid "Payment Date:"
+msgstr "Ngày thanh toán:"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate_commissions
+msgid "Payment Request"
+msgstr "Yêu cầu thanh toán"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate
+msgid "Preferred Seller"
+msgstr "Người bán ưu tiên"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate_payment_requests
+msgid "Rejected"
+msgstr "Đã từ chối"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate_payment_requests
+msgid "Request"
+msgstr "Yêu cầu"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate_payment_request_detail
+msgid "Request:"
+msgstr "Yêu cầu:"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate
+msgid "Select a Company"
+msgstr "Chọn một công ty"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate
+msgid "Source"
+msgstr "Nguồn"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate_commissions
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate_payment_requests
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate
+msgid "Target URL"
+msgstr "Liên kết mục tiêu"
+
+#. module: to_website_affiliate
+#: model:ir.model.fields,help:to_website_affiliate.field_website__aff_url_param
+msgid ""
+"The URL param for affiliate. The default value is affcode which will "
+"generate affiliate URL like http://domain.com/?affcode=xxxxxx"
+msgstr ""
+
+#. module: to_website_affiliate
+#: model:ir.model.fields,help:to_website_affiliate.field_website__commission_rule_ids
+msgid "The commission rules those are available on this website"
+msgstr "Các quy tắc hoa hồng có sẵn trên trang web này"
+
+#. module: to_website_affiliate
+#: model:ir.model.fields,help:to_website_affiliate.field_affiliate_code__website_id
+msgid "The website to which the affiliate code is applied"
+msgstr "Trang web áp dụng mã cộng tác viên"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate_commissions
+msgid ""
+"There are currently no affiliate commission on your\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\taccount."
+msgstr ""
+"Hiện tại không có hoa hồng cộng tác nào trên tài khoản\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\tcủa bạn."
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.portal_affiliate_invoices
+msgid ""
+"There are currently no affiliate invoices for your\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\taccount."
+msgstr ""
+"Hiện tại không có hoá đơn cộng tác nào trên tài khoản\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\tcủa bạn."
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate_payment_requests
+msgid ""
+"There are currently no affiliate payment request for your\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\taccount."
+msgstr ""
+"Hiện tại không có yêu cầu thanh toán công tác nào trên tài khoản\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\tcủa bạn."
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate
+msgid "Title"
+msgstr "Tiêu đề"
+
+#. module: to_website_affiliate
+#: model:ir.model,name:to_website_affiliate.model_website
+#: model:ir.model.fields,field_description:to_website_affiliate.field_affiliate_code__website_id
+msgid "Website"
+msgstr ""
+
+#. module: to_website_affiliate
+#: model:ir.model.fields,field_description:to_website_affiliate.field_affiliate_code__website_description
+msgid "Website Description"
+msgstr "Mô tả Website"
+
+#. module: to_website_affiliate
+#: model:ir.model.fields,field_description:to_website_affiliate.field_website__commission_rule_ids
+msgid "Websites"
+msgstr ""
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate
+msgid "Welcome to Affiliate Program"
+msgstr "Chào mừng đến với chương trình cộng tác viên"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate
+msgid "Your Links"
+msgstr "Liên kết của bạn"
+
+#. module: to_website_affiliate
+#: model_terms:ir.ui.view,arch_db:to_website_affiliate.to_affiliate_payment_requests
+msgid "Your Unpaid Commission Total:"
+msgstr "Tổng số tiền hoa hồng chưa thanh toán của bạn"

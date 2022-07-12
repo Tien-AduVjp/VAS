@@ -1,0 +1,58 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_website_livechat
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-02-25 10:09+0000\n"
+"PO-Revision-Date: 2021-02-25 10:09+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_website_livechat
+#: model:ir.model.fields,field_description:viin_website_livechat.field_im_livechat_channel__input_placeholder
+msgid "Chat Input Placeholder"
+msgstr ""
+
+#. module: viin_website_livechat
+#: model:ir.model.fields,help:viin_website_livechat.field_im_livechat_channel__button_text
+msgid "Default text displayed on the Livechat Support Button"
+msgstr "Dòng chữ mặc định được hiển thị ở nút Livechat Support"
+
+#. module: viin_website_livechat
+#: model:ir.model,name:viin_website_livechat.model_mail_channel
+msgid "Discussion Channel"
+msgstr "Kênh thảo luận"
+
+#. module: viin_website_livechat
+#: model:ir.model,name:viin_website_livechat.model_im_livechat_channel
+msgid "Livechat Channel"
+msgstr "Kênh Chat Trực tuyến"
+
+#. module: viin_website_livechat
+#: model:ir.model.fields,field_description:viin_website_livechat.field_im_livechat_channel__button_text
+msgid "Text of the Button"
+msgstr "Chữ trên Nút"
+
+#. module: viin_website_livechat
+#: model:ir.model.fields,help:viin_website_livechat.field_im_livechat_channel__input_placeholder
+msgid "Text that prompts the user to initiate the chat."
+msgstr ""
+
+#. module: viin_website_livechat
+#: model:ir.model.fields,help:viin_website_livechat.field_im_livechat_channel__default_message
+msgid ""
+"This is an automated 'welcome' message that your visitor will see when they "
+"initiate a new conversation."
+msgstr ""
+
+#. module: viin_website_livechat
+#: model:ir.model.fields,field_description:viin_website_livechat.field_im_livechat_channel__default_message
+msgid "Welcome Message"
+msgstr "Thông điệp Chào mừng"

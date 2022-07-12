@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mrp_production_view_form" model="ir.ui.view">
+        <field name="name">mrp.production.form</field>
+        <field name="model">mrp.production</field>
+        <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="button_maintenance_request" type="object" string="Maintenance Request"/>
+            </xpath>
+            <div name="button_box" position="inside">
+                <button name="action_view_maintenance_request" type="object" 
+                		class="oe_stat_button" icon="fa-wrench" 
+                		attrs="{'invisible': [('maintenance_count', '=', 0)]}" 
+                		context="{'search_default_production_id': active_id}">
+                    <div class="o_form_field o_stat_info">
+                        <span class="o_stat_value"><field name="maintenance_count"/></span>
+                        <span class="o_stat_text">Maintenance</span>
+                    </div>
+                </button>
+            </div>
+        </field>
+    </record>
+
+</odoo>

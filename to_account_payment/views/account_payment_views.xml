@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_account_payment_form" model="ir.ui.view">
+        <field name="name">account.payment.form</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="viin_payment_mediate.view_account_payment_form"/>
+        <field name="arch" type="xml">
+        	<xpath expr="//field[@name='company_id']" position="after">
+        		<field name="suggest_lines" attrs="{'invisible': [('payment_type', 'not in', ('outbound','inbound'))]}"/>
+        	</xpath>
+            <xpath expr="//notebook" position="inside">
+     			<group name="account_payment_line_ids" colspan="4"
+     				string="Payment Details"
+     				attrs="{'invisible': [('payment_type', 'not in', ('outbound','inbound'))]}">
+                    <field name="account_payment_line_ids"
+                           options="{'no_create_edit': True}" nolabel="1"
+                           mode="tree">
+                        <tree editable="bottom">
+                            <field name="sequence" widget="handle"/>
+                            <field name="name" widget="section_and_note_text"/>
+                            <field name="account_id" optional="show"/>
+                            <field name="amount"/>
+                            <field name="currency_id" invisible="1"/>
+                        </tree>
+                    </field>
+              	</group>    
+            </xpath>
+        </field>
+    </record>
+    
+    <record id="view_account_payment_invoice_form" model="ir.ui.view">
+    	<field name="name">account.payment.invoice.form</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_invoice_form"/>
+        <field name="arch" type="xml">
+        	<xpath expr="//field[@name='account_payment_line_ids']" position="replace"></xpath>
+        </field>
+    </record>
+    
+</odoo>

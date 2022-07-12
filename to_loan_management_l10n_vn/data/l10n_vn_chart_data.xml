@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="1">
+		<!-- Chart template -->
+		<record id="l10n_vn.vn_template" model="account.chart.template">
+			<field name="property_borrowing_account_id" ref="l10n_vn.chart3411"/>
+			<field name="property_lending_account_id" ref="l10n_vn.chart1283"/>
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record model="ir.ui.view" id="view_repair_order_form">
+		<field name="name">repair.form</field>
+		<field name="model">repair.order</field>
+		<field name="inherit_id" ref="repair.view_repair_order_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='lot_id']" position="after">
+				<field name="maintenance_request_id" />
+			</xpath>			
+		</field>
+	</record>
+	
+	<record id="view_repair_order_form_filter" model="ir.ui.view">
+		<field name="name">repair.order.select</field>
+		<field name="model">repair.order</field>
+		<field name="inherit_id"
+			ref="repair.view_repair_order_form_filter" />
+		<field name="arch" type="xml">
+			<xpath expr="//search/field[@name='partner_id']"
+				position="after">
+				<field name="maintenance_request_id"
+					string="Maintenance Request" />
+				<filter name="ftr_maintenance_request_id"
+					string="Maintenance Request" domain="[]"
+					context="{'group_by':'maintenance_request_id'}" />
+			</xpath>
+		</field>
+	</record>
+</odoo>
+
+
+
+
+

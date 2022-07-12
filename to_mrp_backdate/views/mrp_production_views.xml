@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mrp_production_form_view" model="ir.ui.view">
+        <field name="name">mrp.production.form.inherit</field>
+        <field name="model">mrp.production</field>
+        <field name="inherit_id" ref="mrp.mrp_production_form_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='post_inventory']" position="attributes">
+                <attribute name="context">{'open_mrp_inventory_backdate_wizard': True}</attribute>
+            </xpath>
+            <xpath expr="//button[@name='button_mark_done']" position="attributes">
+                <attribute name="context">{'open_mrp_markdone_backdate_wizard': True}</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

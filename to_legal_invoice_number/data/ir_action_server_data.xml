@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="action_server_synch_legal_number"
+			model="ir.actions.server">
+			<field name="name">Synchronize Legal Number to Invoice Number</field>
+			<field name="type">ir.actions.server</field>
+			<field name="model_id" ref="model_account_move" />
+			<field name="binding_model_id" ref="model_account_move" />
+			<field name="state">code</field>
+			<field name="code">records.action_synch_legal_number()</field>
+		</record>
+	</data>
+</odoo>

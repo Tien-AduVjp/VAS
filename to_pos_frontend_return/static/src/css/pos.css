@@ -1,0 +1,229 @@
+.pos .manageorder-button{
+	color: #DDD;
+	dont-size: 16px !important;
+}
+
+.pos .orderlist-screen .window,
+.pos .orderlist-screen .full-content .subwindow{
+    display: block;
+}
+.pos .orderlist-screen .full-content .subwindow-container{
+    display: block;
+    height: 100%;
+}
+.pos .orderlist-screen .full-content .subwindow.collapsed,
+.pos .orderlist-screen .full-content .subwindow-container.collapsed{
+    height: auto;
+}
+
+/* e) The order List Screen */
+
+.pos .orderlist-screen .order-list{
+    font-size: 16px;
+    width: 100%;
+    line-height: 40px;
+}
+.pos .orderlist-screen .order-list th,
+.pos .orderlist-screen .order-list td {
+    padding: 0px 8px;
+}
+.pos .orderlist-screen .order-list tr{
+    transition: all 150ms linear;
+    background: rgb(230,230,230);
+}
+.pos .orderlist-screen .order-list thead > tr,
+.pos .orderlist-screen .order-list tr:nth-child(even) {
+    background: rgb(247,247,247);
+}
+.pos .orderlist-screen .order-list tr.highlight{
+    transition: all 150ms linear;
+    background: rgb(110,200,155) !important;
+    color: white;
+}
+.pos .orderlist-screen .order-list tr.lowlight{
+    transition: all 150ms linear;
+    background: rgb(216, 238, 227);
+}
+.pos .orderlist-screen .order-list tr.lowlight:nth-child(even){
+    transition: all 150ms linear;
+    background: rgb(227, 246, 237);
+}
+.pos .orderlist-screen .order-details{
+    padding: 16px;
+    border-bottom: solid 5px rgb(110,200,155);
+}
+.pos .orderlist-screen .order-picture{
+    height: 64px;
+    width: 64px;
+    border-radius: 32px;
+    overflow: hidden;
+    text-align: center;
+    float: left;
+    margin-right: 16px;
+    background: white;
+    position: relative;
+}
+.pos .orderlist-screen .order-picture > img {
+    position: absolute;
+    top: -9999px;
+    bottom: -9999px;
+    right: -9999px;
+    left: -9999px;
+    max-height: 64px;
+    margin: auto;
+}
+.pos .orderlist-screen .order-picture > .fa {
+    line-height: 64px;
+    font-size: 32px;
+}
+.pos .orderlist-screen .order-picture .image-uploader {
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+.pos .orderlist-screen .order-name {
+    font-size: 32px;
+    line-height: 64px;
+    margin-bottom:16px;
+}
+.pos .orderlist-screen .edit-buttons {
+    position: absolute;
+    right: 16px;
+    top: 10px;
+}
+.pos .orderlist-screen .edit-buttons .button{
+    display: inline-block;
+    margin-left: 16px;
+    color: rgb(128,128,128);
+    cursor: pointer;
+    font-size: 36px;
+}
+.pos .orderlist-screen .order-details-box{
+    position: relative;
+    font-size: 16px;
+}
+.pos .orderlist-screen .order-details-left{
+    width: 50%;
+    float: left;
+}
+.pos .orderlist-screen .order-details-right{
+    width: 50%;
+    float: right;
+}
+.pos .orderlist-screen .order-detail{
+    line-height: 24px;
+}
+.pos .orderlist-screen .order-detail > .label,
+.pos .orderlist-screen .order-payment > .label{
+    font-weight: bold;
+    display: inline-block;
+    width: 110px;
+    text-align: right;
+    margin-right: 8px;
+}
+.pos .orderlist-screen .order-details input,
+.pos .orderlist-screen .order-details select
+{
+    padding: 4px;
+    border-radius: 3px;
+    border: solid 1px #cecbcb;
+    margin-bottom: 4px;
+    background: white;
+    font-family: "Lato","Lucida Grande", Helvetica, Verdana, Arial;
+    color: #555555;
+    width: 340px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+.pos .orderlist-screen .order-details input.order-name {
+    font-size: 24px;
+    line-height: 24px;
+    margin: 18px 6px;
+    width: 340px;
+}
+.pos .orderlist-screen .order-detail > .empty{
+    opacity: 0.3;
+}
+.pos .orderlist-screen .searchbox{
+    right: auto;
+    margin-left: -90px;
+    margin-top:8px;
+    left: 50%;
+}
+.pos .orderlist-screen .searchbox input{
+    width: 120px;
+}
+.pos .orderlist-screen .button.new-customer {
+    left: 50%;
+    margin-left: 120px;
+}
+
+.pos .orderlist-screen .return-buttons, 
+.pos .orderlist-screen .xpayment-buttons {
+    position: absolute;
+    right: 16px;
+    top: 10px;
+}
+.pos .orderlist-screen .return-buttons .button,
+.pos .orderlist-screen .xpayment-buttons .button{
+    display: inline-block;
+    margin-left: 16px;
+    line-height: 32px;
+    padding: 3px 13px;
+    font-size: 20px;
+    background: rgb(230, 230, 230);
+    margin: 12px;
+    border-radius: 3px;
+    border: solid 1px rgb(209, 209, 209);
+    cursor: pointer;
+    transition: all 150ms linear;
+}
+
+.pos .order-lines{
+	margin-top: 15px;
+	font-size: 16px;
+}
+.pos .orderlist-screen .order-line-list{
+	line-height: 30px;
+}
+.pos .orderlist-screen .order-line-list th,
+.pos .orderlist-screen .order-line-list td {
+    padding: 0px 8px;
+}
+.pos .orderlist-screen .order-line-list tr{
+    transition: all 150ms linear;
+    background: rgb(230,230,230);
+}
+.pos .orderlist-screen .order-line-list thead > tr,
+.pos .orderlist-screen .order-line-list tr:nth-child(even) {
+    background: rgb(247,247,247);
+}
+.pos .orderlist-screen .order-line-list tr.highlight{
+    transition: all 150ms linear;
+    background: rgb(110,200,155) !important;
+    color: white;
+}
+.pos .orderlist-screen .order-line-list tr.lowlight{
+    transition: all 150ms linear;
+    background: rgb(216, 238, 227);
+}
+.pos .orderlist-screen .order-line-list tr.lowlight:nth-child(even){
+    transition: all 150ms linear;
+    background: rgb(227, 246, 237);
+}
+.pos .return-list input.return-detail{
+	width: 70px;
+}
+.pos .orderlist-screen .order-line-list tr.error{
+    transition: all 150ms linear;
+    background: rgb(237,50,10) !important;
+    color: white;
+}
+.pos .orderlist-screen .order-line-list .button{
+	cursor: pointer;
+}

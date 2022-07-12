@@ -1,0 +1,115 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_website_hr_recruitment_website_editor
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-26 15:07+0000\n"
+"PO-Revision-Date: 2021-10-26 15:07+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_website_hr_recruitment_website_editor
+#: model_terms:ir.ui.view,arch_db:viin_website_hr_recruitment_website_editor.res_config_settings_view_form
+msgid ""
+"Allow Website Editors to edit HR Job Recruitment Page Base On Company "
+"Setting"
+msgstr ""
+"Cho phép người dùng thuộc nhóm quyền Biên tập và Thiết kế có thể chỉnh sửa "
+"bài đăng tuyển nhân sự trên website dựa theo thiết lập công ty"
+
+#. module: viin_website_hr_recruitment_website_editor
+#: model_terms:ir.ui.view,arch_db:viin_website_hr_recruitment_website_editor.res_config_settings_view_form
+msgid ""
+"Allow Website Editors to edit HR Job Recruitment Page Base on Specific "
+"Website"
+msgstr ""
+"Cho phép người dùng thuộc nhóm quyền Biên tập và Thiết kế có thể chỉnh sửa "
+"bài đăng tuyển nhân sự trên website dựa theo thiết lập website"
+
+#. module: viin_website_hr_recruitment_website_editor
+#: model:ir.model.fields,field_description:viin_website_hr_recruitment_website_editor.field_res_company__allow_edit_website_jobs_company_setting
+#: model:ir.model.fields,field_description:viin_website_hr_recruitment_website_editor.field_res_config_settings__allow_edit_website_jobs_company_setting
+#: model_terms:ir.ui.view,arch_db:viin_website_hr_recruitment_website_editor.res_config_settings_view_form
+msgid "Allow Website Editors to edit job recruitment pages"
+msgstr ""
+"Cho phép người dùng thuộc nhóm quyền Biên tập và Thiết kế chỉnh sửa các bài "
+"tuyển dụng trên website."
+
+#. module: viin_website_hr_recruitment_website_editor
+#: model:ir.model.fields,field_description:viin_website_hr_recruitment_website_editor.field_res_config_settings__allow_edit_website_jobs_website_setting
+#: model:ir.model.fields,field_description:viin_website_hr_recruitment_website_editor.field_website__allow_edit_website_jobs_website_setting
+#: model_terms:ir.ui.view,arch_db:viin_website_hr_recruitment_website_editor.res_config_settings_view_form
+msgid "Allow Website Editors to edit this website's job recruitment pages"
+msgstr ""
+"Cho phép người dùng thuộc nhóm quyền Biên tập và Thiết kế chỉnh sửa các bài "
+"tuyển dụng trên website."
+
+#. module: viin_website_hr_recruitment_website_editor
+#: model:ir.model,name:viin_website_hr_recruitment_website_editor.model_ir_attachment
+msgid "Attachment"
+msgstr "Đính kèm"
+
+#. module: viin_website_hr_recruitment_website_editor
+#: model:ir.model,name:viin_website_hr_recruitment_website_editor.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: viin_website_hr_recruitment_website_editor
+#: model:ir.model,name:viin_website_hr_recruitment_website_editor.model_res_config_settings
+msgid "Config Settings"
+msgstr "Thiết lập Cấu hình"
+
+#. module: viin_website_hr_recruitment_website_editor
+#: model:ir.model.fields,help:viin_website_hr_recruitment_website_editor.field_res_company__allow_edit_website_jobs_company_setting
+#: model:ir.model.fields,help:viin_website_hr_recruitment_website_editor.field_res_config_settings__allow_edit_website_jobs_company_setting
+msgid ""
+"If enabled, the users who are granted as Website Editors will be able to edit job recruitment pages on the company's websites.\n"
+"If a job position is set only available for a specific website, that website is required to have the option 'Allow Website Editors to edit job recruitment pages' enabled too."
+msgstr ""
+"Khi được bật, người dùng được cấp quyền chỉnh sửa Website có khả năng chỉnh "
+"sửa bài được tuyển nhân sự trên website của công ty. Nếu bài tuyển chỉ đăng "
+"cho một số website nhất định, thì bắt buộc phải kích hoạt tùy chọn cho phép "
+"quyền chỉnh nó theo website."
+
+#. module: viin_website_hr_recruitment_website_editor
+#: model:ir.model.fields,help:viin_website_hr_recruitment_website_editor.field_res_config_settings__allow_edit_website_jobs_website_setting
+#: model:ir.model.fields,help:viin_website_hr_recruitment_website_editor.field_website__allow_edit_website_jobs_website_setting
+msgid ""
+"If enabled, the users who are granted as Website Editors will be able to edit job recruitment pages on the current websites as long as the company allows that.\n"
+"This option does not affect job positions that have no website set. Those job positions are constrained by the corresponding company's settings."
+msgstr ""
+"Khi được bật, người dùng được cấp quyền chỉnh sửa Website có khả năng chỉnh "
+"sửa bài tuyển dụng nhân sự trên webiste miễn là công ty cho phép. Tùy chọn "
+"này không ảnh hưởng bài tuyển không có chưa có website. Bài tuyển nhân sự "
+"này bị rằng buộc bởi các thiết lập của công ty"
+
+#. module: viin_website_hr_recruitment_website_editor
+#: model:ir.model,name:viin_website_hr_recruitment_website_editor.model_hr_job
+msgid "Job Position"
+msgstr "Vị trí công việc"
+
+#. module: viin_website_hr_recruitment_website_editor
+#: model:ir.model,name:viin_website_hr_recruitment_website_editor.model_website
+msgid "Website"
+msgstr ""
+
+#. module: viin_website_hr_recruitment_website_editor
+#: code:addons/viin_website_hr_recruitment_website_editor/models/hr_job.py:0
+#, python-format
+msgid ""
+"You don't have permission to edit this recruitment post. Please ask an "
+"administrator to configure website for the job first. In case this job is "
+"not website specific, please get it configured to allow editing in General "
+"Settings / Recruitment ."
+msgstr ""
+"Bạn không có quyền chỉnh sửa bài đăng tuyển dụng này. Vui lòng liên hệ với "
+"quản trị viên để cấu hình quyền sửa trong thiết lập website. Trong trường "
+"hợp bài đăng không chỉ định website nào, hãy cấu hình cho phép sửa trong "
+"Thiết lập/ Tuyển dụng."

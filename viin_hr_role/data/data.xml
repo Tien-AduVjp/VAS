@@ -1,0 +1,25 @@
+<odoo>
+	<data noupdate="1">
+
+		<!-- Roles -->
+		<record id="role_admin" model="hr.role">
+			<field name="name">Administrator</field>
+			<field name="department_id" ref="hr.dep_administration" />
+		</record>
+
+		<record id="role_receptionist" model="hr.role">
+			<field name="name">Receptionist</field>
+			<field name="department_id" ref="hr.dep_administration" />
+		</record>
+
+		<record id="role_sales_executive" model="hr.role">
+			<field name="name">Sales Executive</field>
+			<field name="department_id" ref="hr.dep_sales" />
+		</record>
+
+		<record id="role_leader" model="hr.role">
+			<field name="name">Leader</field>
+		</record>
+
+	</data>
+</odoo>

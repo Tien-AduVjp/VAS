@@ -1,0 +1,64 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_stock_production_lot_partner_infor
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-31 08:21+0000\n"
+"PO-Revision-Date: 2020-03-31 08:21+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_stock_production_lot_partner_infor
+#: model:ir.model.fields,help:to_stock_production_lot_partner_infor.field_stock_production_lot__country_state_id
+msgid "A country state where the product of this lot serves"
+msgstr ""
+
+#. module: to_stock_production_lot_partner_infor
+#: model:ir.model,name:to_stock_production_lot_partner_infor.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: to_stock_production_lot_partner_infor
+#: model:ir.model.fields,field_description:to_stock_production_lot_partner_infor.field_stock_production_lot__customer_id
+msgid "Customer"
+msgstr ""
+
+#. module: to_stock_production_lot_partner_infor
+#: model:ir.model.fields,field_description:to_stock_production_lot_partner_infor.field_res_partner__lot_count
+#: model:ir.model.fields,field_description:to_stock_production_lot_partner_infor.field_res_users__lot_count
+msgid "Lot Count"
+msgstr ""
+
+#. module: to_stock_production_lot_partner_infor
+#: model:ir.model.fields,field_description:to_stock_production_lot_partner_infor.field_res_partner__lot_ids
+#: model:ir.model.fields,field_description:to_stock_production_lot_partner_infor.field_res_users__lot_ids
+msgid "Lot/Seri"
+msgstr ""
+
+#. module: to_stock_production_lot_partner_infor
+#: model:ir.model,name:to_stock_production_lot_partner_infor.model_stock_production_lot
+#: model_terms:ir.ui.view,arch_db:to_stock_production_lot_partner_infor.view_partner_form
+msgid "Lot/Serial"
+msgstr ""
+
+#. module: to_stock_production_lot_partner_infor
+#: model:ir.model.fields,field_description:to_stock_production_lot_partner_infor.field_stock_production_lot__country_state_id
+msgid "Service State"
+msgstr ""
+
+#. module: to_stock_production_lot_partner_infor
+#: model:ir.model.fields,field_description:to_stock_production_lot_partner_infor.field_stock_production_lot__supplier_id
+msgid "Supplier"
+msgstr ""
+
+#. module: to_stock_production_lot_partner_infor
+#: model:ir.model,name:to_stock_production_lot_partner_infor.model_stock_picking
+msgid "Transfer"
+msgstr ""

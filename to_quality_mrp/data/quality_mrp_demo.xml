@@ -1,0 +1,29 @@
+<odoo>
+    <!-- Quality Control From Manufacturing -->
+
+    <!-- For [FURN001] Computer Desk-->
+    <function model="quality.point" name="create">
+            <value model="quality.point" eval="dict(
+                obj().default_get(list(obj().fields_get())),
+                **{
+                    'product_id': ref('mrp.product_product_computer_desk'),
+                    'product_tmpl_id': ref('mrp.product_product_computer_desk_product_template'),
+                    'picking_type_id': obj().env['stock.picking.type'].search([('code', '=', 'mrp_operation')], limit=1).id,
+                }
+            )"/>
+    </function>
+    
+    <!-- Quality Control From WorkOrder -->
+    <!-- For [PCSC234] Computer SC234 -->
+    <function model="quality.point" name="create">
+            <value model="quality.point" eval="dict(
+                obj().default_get(list(obj().fields_get())),
+                **{
+                    'product_id': ref('product.product_product_3'),
+                    'product_tmpl_id': ref('product.product_product_3_product_template'),
+                    'workcenter_id': ref('mrp.mrp_workcenter_3'),
+                    'picking_type_id': obj().env['stock.picking.type'].search([('code', '=', 'mrp_operation')], limit=1).id,
+                }
+            )"/>
+    </function>
+</odoo>

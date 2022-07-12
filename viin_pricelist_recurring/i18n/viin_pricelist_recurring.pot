@@ -1,0 +1,173 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_pricelist_recurring
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-25 06:33+0000\n"
+"PO-Revision-Date: 2021-06-25 06:33+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_pricelist_recurring
+#: model_terms:ir.ui.view,arch_db:viin_pricelist_recurring.product_pricelist_item_form_view
+msgid ""
+"<b attrs=\"{'invisible': [('recurring_period', '!=', 'monthly')]}\">From Day</b>\n"
+"                            <b attrs=\"{'invisible': [('recurring_period', '!=', 'annually')]}\">From Date</b>"
+msgstr ""
+
+#. module: viin_pricelist_recurring
+#: model_terms:ir.ui.view,arch_db:viin_pricelist_recurring.product_pricelist_item_form_view
+msgid "<span> To </span>"
+msgstr ""
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_period__annually
+msgid "Annually"
+msgstr ""
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_from__4
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_to__4
+msgid "April"
+msgstr ""
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_from__8
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_to__8
+msgid "August"
+msgstr ""
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields,help:viin_pricelist_recurring.field_product_pricelist_item__recurring
+msgid "Check this if you want to configure a recurring rule."
+msgstr ""
+
+#. module: viin_pricelist_recurring
+#: code:addons/viin_pricelist_recurring/models/product_pricelist.py:0
+#, python-format
+msgid "Date start cannot be after date end."
+msgstr ""
+
+#. module: viin_pricelist_recurring
+#: code:addons/viin_pricelist_recurring/models/product_pricelist.py:0
+#, python-format
+msgid "Day start cannot be greater than day end."
+msgstr ""
+
+#. module: viin_pricelist_recurring
+#: code:addons/viin_pricelist_recurring/models/product_pricelist.py:0
+#, python-format
+msgid "Days must be in range from 1 to 31."
+msgstr ""
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_from__12
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_to__12
+msgid "December"
+msgstr ""
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_from__2
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_to__2
+msgid "February"
+msgstr ""
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields,field_description:viin_pricelist_recurring.field_product_pricelist_item__recurring_day_from
+msgid "From Day"
+msgstr ""
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields,field_description:viin_pricelist_recurring.field_product_pricelist_item__recurring_month_from
+msgid "From Month"
+msgstr ""
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_from__1
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_to__1
+msgid "January"
+msgstr ""
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_from__7
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_to__7
+msgid "July"
+msgstr ""
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_from__6
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_to__6
+msgid "June"
+msgstr ""
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_from__3
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_to__3
+msgid "March"
+msgstr ""
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_from__5
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_to__5
+msgid "May"
+msgstr ""
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_period__monthly
+msgid "Monthly"
+msgstr ""
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_from__11
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_to__11
+msgid "November"
+msgstr ""
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_from__10
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_to__10
+msgid "October"
+msgstr ""
+
+#. module: viin_pricelist_recurring
+#: model:ir.model,name:viin_pricelist_recurring.model_product_pricelist
+msgid "Pricelist"
+msgstr ""
+
+#. module: viin_pricelist_recurring
+#: model:ir.model,name:viin_pricelist_recurring.model_product_pricelist_item
+msgid "Pricelist Rule"
+msgstr ""
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields,field_description:viin_pricelist_recurring.field_product_pricelist_item__recurring
+msgid "Recurring"
+msgstr ""
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields,field_description:viin_pricelist_recurring.field_product_pricelist_item__recurring_period
+msgid "Recurring Period"
+msgstr ""
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_from__9
+#: model:ir.model.fields.selection,name:viin_pricelist_recurring.selection__product_pricelist_item__recurring_month_to__9
+msgid "September"
+msgstr ""
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields,field_description:viin_pricelist_recurring.field_product_pricelist_item__recurring_day_to
+msgid "To Day"
+msgstr ""
+
+#. module: viin_pricelist_recurring
+#: model:ir.model.fields,field_description:viin_pricelist_recurring.field_product_pricelist_item__recurring_month_to
+msgid "To Month"
+msgstr ""

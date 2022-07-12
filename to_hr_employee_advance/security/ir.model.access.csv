@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_to_hr_employee_advance_line_all,to.hr.employee.advance.line.all,model_employee_advance_line,group_employee_advance_user,1,1,1,1
+access_to_hr_employee_advance_all,to.hr.employee.advance.all,model_employee_advance,group_employee_advance_user,1,1,1,1
+access_to_hr_employee_advance_reconcile_line_user,to.hr.employee.advance.reconcile.line.user,model_employee_advance_reconcile_line,account.group_account_user,1,1,1,1
+access_to_hr_employee_advance_reconcile_user,to.hr.employee.advance.reconcile.user,model_employee_advance_reconcile,account.group_account_user,1,1,1,1
+access_account_payment_employee_advance_user,account.payment.emplyee.advance.user,model_account_payment,group_employee_advance_user,1,0,0,0
+access_account_journal_advance_user,account.journal.advance.user,account.model_account_journal,group_employee_advance_user,1,0,0,0

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="action_pos_loyalty_points"
+			model="ir.actions.act_window">
+			<field name="name">Loyalty Points Analysis</field>
+			<field name="res_model">loyalty.points.report</field>
+			<field name="view_mode">pivot,graph</field>
+			<field name="view_id"></field>  <!-- force empty -->
+			<field name="domain">[('pos_order_id', '!=', False)]</field>
+		</record>
+
+		<menuitem name="Loyalty Points Report"
+			parent="point_of_sale.menu_point_rep" sequence="10"
+			id="menu_pos_loyalty_point_report" action="action_pos_loyalty_points"
+			groups="to_loyalty.group_loyalty_user" />
+	</data>
+</odoo>

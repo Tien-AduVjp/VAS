@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+	    <record id="helpdesk_team_form_view" model="ir.ui.view">
+	    	<field name="name">helpdesk.team.form</field>
+	        <field name="model">helpdesk.team</field>
+	        <field name="inherit_id" ref="viin_helpdesk.helpdesk_team_form_view"/>
+	        <field name="arch" type="xml">
+	            <xpath expr="//div[hasclass('oe_button_box')]" position="inside">
+					<field name="is_published" widget="website_redirect_button"/>
+	            </xpath>
+	        </field>
+	    </record>
+    </data>
+</odoo>

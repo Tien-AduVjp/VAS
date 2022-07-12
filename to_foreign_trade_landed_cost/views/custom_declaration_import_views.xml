@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="act_import_custom_declaration_2_landed_cost"
+			model="ir.actions.act_window">
+			<field name="name">Landed Cost</field>
+			<field name="res_model">stock.landed.cost</field>
+			<field name="view_mode">tree,form</field>
+			<field name="view_id" ref="stock_landed_costs.view_stock_landed_cost_tree" />
+			<field name="search_view_id"
+				ref="stock_landed_costs.view_stock_landed_cost_search" />
+			<field name="context">{'search_default_custom_declaration_import_id': active_id}</field>
+		</record>
+	
+		<record id="custom_declaration_import_form" model="ir.ui.view">
+			<field name="name">custom.declaration.import.form</field>
+			<field name="model">custom.declaration.import</field>
+			<field name="inherit_id" ref="to_foreign_trade.custom_declaration_import_form" />
+			<field name="arch" type="xml">
+				<xpath
+					expr="//div[hasclass('oe_button_box')]" position="inside">
+					<button class="oe_stat_button" type="action"
+						name="%(act_import_custom_declaration_2_landed_cost)d" attrs="{'invisible': [('landed_cost_count', '&lt;', 1)]}"
+						icon="fa-th-list">
+						<field string="Landed Cost" name="landed_cost_count"
+							widget="statinfo" />
+					</button>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

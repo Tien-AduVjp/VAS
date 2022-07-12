@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="0">
+		<template id="user_navbar" inherit_id="website.user_navbar">
+			<xpath expr="//nav[@id='oe_main_menu_navbar']/ul[hasclass('o_menu_systray')]/li[@t-att-data-controller='publish_controller']" position="attributes">
+				<attribute name="t-if">'website_published' in main_object.fields_get() and ('can_publish' not in main_object.fields_get() or main_object.can_publish)</attribute>
+			</xpath>
+		</template>
+	</data>
+</odoo>

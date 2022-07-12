@@ -1,0 +1,38 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_repair_delete
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-11 10:57+0000\n"
+"PO-Revision-Date: 2021-10-11 10:57+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_repair_delete
+#: model:ir.model,name:viin_repair_delete.model_repair_order
+msgid "Repair Order"
+msgstr "Lệnh sữa chữa"
+
+#. module: viin_repair_delete
+#: code:addons/viin_repair_delete/models/repair.py:0
+#, python-format
+msgid ""
+"You can not delete a repair order once it has been confirmed. You must first"
+" cancel it."
+msgstr ""
+"Bạn không thể xóa đơn sửa chữa khi nó đã được xác nhận. Trước tiên bạn phải hủy bỏ nó."
+
+#. module: viin_repair_delete
+#: code:addons/viin_repair_delete/models/repair.py:0
+#, python-format
+msgid ""
+"You can not delete a repair order which is linked to an invoice which has "
+"been posted once."
+msgstr "Bạn không thể xóa đơn sửa chữa một khi nó được liên kết với hóa đơn đã vào sổ."

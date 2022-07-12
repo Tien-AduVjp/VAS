@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<!-- res.partner data -->
+	<data noupdate="1">
+		<!-- Odoo S.A. -->
+		<record id="res_partner_odoo_sa" model="res.partner">
+			<field name="name">Odoo S.A.</field>
+			<field name="is_company">1</field>
+			<field name="city">Grand-Rosière</field>
+			<field name="zip">1367</field>
+			<field name="country_id" ref="base.be" />
+			<field name="street">Rue des Bourlottes, 9</field>
+			<field name="website">https://www.odoo.com</field>
+			<field name="image_512" type="base64"
+				file="base/static/img/main_partner-image.png" />
+		</record>
+
+		<!-- Odoo Community Association (OCA) -->
+		<record id="res_partner_oca" model="res.partner">
+			<field name="name">Odoo Community Association (OCA)</field>
+			<field name="is_company">1</field>
+			<field name="city">Lausanne</field>
+			<field name="zip">1015</field>
+			<field name="country_id" ref="base.ch" />
+			<field name="street">c/o Camptocamp SA</field>
+			<field name="street2">EPFL Innovation Park, Bat. A</field>
+			<field name="website">https://odoo-community.org</field>
+			<field name="image_512" type="base64"
+				file="to_odoo_module/static/img/oca_logo.png" />
+		</record>
+	</data>
+
+	<!-- Author Data -->
+	<data noupdate="1">
+		<record id="software_author_odoo_sa" model="software.author">
+			<field name="name">Odoo S.A.</field>
+			<field name="partner_id"
+				ref="to_odoo_module.res_partner_odoo_sa" />
+		</record>
+
+		<record id="software_author_oca" model="software.author">
+			<field name="name">Odoo Community Association (OCA)</field>
+			<field name="partner_id" ref="to_odoo_module.res_partner_oca" />
+		</record>
+	</data>
+</odoo>

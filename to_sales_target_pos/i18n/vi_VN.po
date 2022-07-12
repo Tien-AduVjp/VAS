@@ -1,0 +1,230 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_sales_target_pos
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-08 07:41+0000\n"
+"PO-Revision-Date: 2020-04-08 07:41+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_sales_target_pos
+#: model:ir.model.fields,field_description:to_sales_target_pos.field_abstract_sales_target__invoiced_pos_order_ids
+#: model:ir.model.fields,field_description:to_sales_target_pos.field_personal_sales_target__invoiced_pos_order_ids
+#: model:ir.model.fields,field_description:to_sales_target_pos.field_team_sales_target__invoiced_pos_order_ids
+msgid "Invoiced PoS Orders"
+msgstr "Đơn PoS đã Xuất hoá đơn"
+
+#. module: to_sales_target_pos
+#: model:ir.model.fields,field_description:to_sales_target_pos.field_abstract_sales_target__invoiced_pos_orders_count
+#: model:ir.model.fields,field_description:to_sales_target_pos.field_personal_sales_target__invoiced_pos_orders_count
+#: model:ir.model.fields,field_description:to_sales_target_pos.field_team_sales_target__invoiced_pos_orders_count
+msgid "Invoiced PoS Orders Count"
+msgstr "SL Đơn PoS đã Xuất hoá đơn"
+
+#. module: to_sales_target_pos
+#: model:ir.model.fields,field_description:to_sales_target_pos.field_abstract_sales_target__invoiced_pos_sales_total
+#: model:ir.model.fields,field_description:to_sales_target_pos.field_personal_sales_target__invoiced_pos_sales_total
+#: model:ir.model.fields,field_description:to_sales_target_pos.field_team_sales_target__invoiced_pos_sales_total
+msgid "Invoiced PoS Sales Total"
+msgstr "Doanh thu PoS đã Xuất hoá đơn"
+
+#. module: to_sales_target_pos
+#: model:ir.model.fields,field_description:to_sales_target_pos.field_abstract_sales_target__non_invoiced_pos_order_ids
+#: model:ir.model.fields,field_description:to_sales_target_pos.field_personal_sales_target__non_invoiced_pos_order_ids
+#: model:ir.model.fields,field_description:to_sales_target_pos.field_team_sales_target__non_invoiced_pos_order_ids
+msgid "Non-Invoiced PoS Orders"
+msgstr "Đơn PoS chưa Xuất hoá đơn"
+
+#. module: to_sales_target_pos
+#: model:ir.model.fields,field_description:to_sales_target_pos.field_abstract_sales_target__non_invoiced_pos_orders_count
+#: model:ir.model.fields,field_description:to_sales_target_pos.field_personal_sales_target__non_invoiced_pos_orders_count
+#: model:ir.model.fields,field_description:to_sales_target_pos.field_team_sales_target__non_invoiced_pos_orders_count
+msgid "Non-Invoiced PoS Orders Count"
+msgstr "SL Đơn PoS chưa Xuất hoá đơn"
+
+#. module: to_sales_target_pos
+#: model:ir.model.fields,field_description:to_sales_target_pos.field_abstract_sales_target__non_invoiced_pos_sales_total
+#: model:ir.model.fields,field_description:to_sales_target_pos.field_personal_sales_target__non_invoiced_pos_sales_total
+#: model:ir.model.fields,field_description:to_sales_target_pos.field_team_sales_target__non_invoiced_pos_sales_total
+msgid "Non-Invoiced PoS Sales Total"
+msgstr "Doanh thu PoS chưa Xuất hoá đơn"
+
+#. module: to_sales_target_pos
+#: model:ir.model,name:to_sales_target_pos.model_personal_sales_target
+msgid "Personal Sales Target"
+msgstr "Mục tiêu Doanh số Cá nhân"
+
+#. module: to_sales_target_pos
+#: model_terms:ir.ui.view,arch_db:to_sales_target_pos.personal_sales_target_form
+#: model_terms:ir.ui.view,arch_db:to_sales_target_pos.team_sales_target_form
+msgid "PoS"
+msgstr "PoS"
+
+#. module: to_sales_target_pos
+#: model:ir.model.fields,field_description:to_sales_target_pos.field_crm_team__st_pos_order_ids
+msgid "PoS Orders"
+msgstr "Đơn PoS"
+
+#. module: to_sales_target_pos
+#: model_terms:ir.ui.view,arch_db:to_sales_target_pos.personal_sales_target_form
+#: model_terms:ir.ui.view,arch_db:to_sales_target_pos.team_sales_target_form
+msgid "PoS Orders that match this target and are invoiced"
+msgstr ""
+"Đơn PoS mà liên quan đến Mục tiêu doanh số này và đã được xuất hoá đơn"
+
+#. module: to_sales_target_pos
+#: model_terms:ir.ui.view,arch_db:to_sales_target_pos.personal_sales_target_form
+#: model_terms:ir.ui.view,arch_db:to_sales_target_pos.team_sales_target_form
+msgid "PoS Orders that match this target and are not invoiced"
+msgstr "Đơn PoS mà liên quan đến Mục tiêu doanh số này và không xuất hoá đơn"
+
+#. module: to_sales_target_pos
+#: model:ir.model.fields,field_description:to_sales_target_pos.field_abstract_sales_target__pos_sales_total
+#: model:ir.model.fields,field_description:to_sales_target_pos.field_personal_sales_target__pos_sales_total
+#: model:ir.model.fields,field_description:to_sales_target_pos.field_team_sales_target__pos_sales_total
+msgid "PoS Sales Total"
+msgstr "Tổng Doanh thu Điểm bán lẻ"
+
+#. module: to_sales_target_pos
+#: model:ir.model.fields,help:to_sales_target_pos.field_crm_team__st_pos_order_ids
+#: model:ir.model.fields,help:to_sales_target_pos.field_res_users__st_pos_order_ids
+msgid "PoS orders that are in the state of either Paid or Done or Invoiced"
+msgstr ""
+"Các đơn PoS mà ở trạng thái Đã thanh toán, Hoàn thành hoặc Đã xuất hoá đơn"
+
+#. module: to_sales_target_pos
+#: model:ir.model,name:to_sales_target_pos.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Đơn ở Điểm Bán lẻ"
+
+#. module: to_sales_target_pos
+#: model:ir.model,name:to_sales_target_pos.model_report_pos_order
+msgid "Point of Sale Orders Report"
+msgstr "Báo cáo Đơn bán ở Điểm bán lẻ"
+
+#. module: to_sales_target_pos
+#: model:ir.model.fields,field_description:to_sales_target_pos.field_crm_team__pos_config_ids
+msgid "Point of Sales"
+msgstr "Điểm bán lẻ"
+
+#. module: to_sales_target_pos
+#: model:ir.model.fields,field_description:to_sales_target_pos.field_res_users__st_pos_order_ids
+msgid "Pos Orders"
+msgstr "Đơn PoS"
+
+#. module: to_sales_target_pos
+#: model_terms:ir.ui.view,arch_db:to_sales_target_pos.view_pos_order_filter
+msgid "Sales Channel"
+msgstr "Kênh Bán"
+
+#. module: to_sales_target_pos
+#: model:ir.model.fields,field_description:to_sales_target_pos.field_abstract_sales_target__pos_sales_target_reached
+#: model:ir.model.fields,field_description:to_sales_target_pos.field_personal_sales_target__pos_sales_target_reached
+#: model:ir.model.fields,field_description:to_sales_target_pos.field_team_sales_target__pos_sales_target_reached
+msgid "PoS & Sales Target Reached"
+msgstr "Doanh số Đạt so với Mục tiêu"
+
+#. module: to_sales_target_pos
+#: model:ir.model,name:to_sales_target_pos.model_crm_team
+#: model:ir.model.fields,field_description:to_sales_target_pos.field_pos_order__crm_team_id
+msgid "Sales Team"
+msgstr "Đội bán hàng"
+
+#. module: to_sales_target_pos
+#: model_terms:ir.ui.view,arch_db:to_sales_target_pos.personal_sales_target_form
+#: model_terms:ir.ui.view,arch_db:to_sales_target_pos.team_sales_target_form
+msgid "Target Reached"
+msgstr "Mục tiêu đã Đạt"
+
+#. module: to_sales_target_pos
+#: model:ir.model,name:to_sales_target_pos.model_abstract_sales_target
+#: model:ir.model,name:to_sales_target_pos.model_team_sales_target
+msgid "Team Sales Target"
+msgstr "Mục tiêu Doanh số Đội"
+
+#. module: to_sales_target_pos
+#: model:ir.model.fields,field_description:to_sales_target_pos.field_report_pos_order__crm_team_id
+#: model_terms:ir.ui.view,arch_db:to_sales_target_pos.view_report_pos_order_search
+msgid "Team/Channel"
+msgstr "Đội / Kênh"
+
+#. module: to_sales_target_pos
+#: model:ir.model.fields,help:to_sales_target_pos.field_abstract_sales_target__invoiced_pos_order_ids
+#: model:ir.model.fields,help:to_sales_target_pos.field_personal_sales_target__invoiced_pos_order_ids
+#: model:ir.model.fields,help:to_sales_target_pos.field_team_sales_target__invoiced_pos_order_ids
+msgid ""
+"The PoS Orders that are related to this target and in the state of Invoiced"
+msgstr ""
+"Đơn PoS mà liên quan đến mục tiêu doanh số này và ở trạng thái Đã Xuất hoá đơn"
+
+#. module: to_sales_target_pos
+#: model:ir.model.fields,help:to_sales_target_pos.field_abstract_sales_target__non_invoiced_pos_order_ids
+#: model:ir.model.fields,help:to_sales_target_pos.field_personal_sales_target__non_invoiced_pos_order_ids
+#: model:ir.model.fields,help:to_sales_target_pos.field_team_sales_target__non_invoiced_pos_order_ids
+msgid ""
+"The PoS Orders that are related to this target and in the state of either "
+"Paid or Done"
+msgstr ""
+"Đơn PoS mà liên quan đến mục tiêu doanh số này và ở trạng thái Đã thanh toán"
+" hoặc Hoàn thành"
+
+#. module: to_sales_target_pos
+#: code:addons/to_sales_target_pos/models/abstract_sales_target.py:0
+#, python-format
+msgid ""
+"The method `_get_pos_orders` has not been implemented for the model '%s'."
+msgstr "Phương thức `_get_pos_orders` chưa được triển khai cho model '%s'."
+
+#. module: to_sales_target_pos
+#: model:ir.model.fields,help:to_sales_target_pos.field_abstract_sales_target__pos_sales_target_reached
+#: model:ir.model.fields,help:to_sales_target_pos.field_personal_sales_target__pos_sales_target_reached
+#: model:ir.model.fields,help:to_sales_target_pos.field_team_sales_target__pos_sales_target_reached
+msgid ""
+"The percentage of target completion according to the PoS Sales data, which "
+"is computed with the formula:Sales Target Reached = 100.0 * PoS Sales Total "
+"/ Target"
+msgstr ""
+"Phần trăm hoàn thành mục tiêu doanh số theo dữ liệu từ PoS. Chỉ tiêu này "
+"được tính tự động bằng công thức: Doanh số Đạt so với Mục tiêu = 100.0 * "
+"Tổng Doanh thu Điểm bán lẻ / Mục tiêu"
+
+#. module: to_sales_target_pos
+#: model:ir.model.fields,help:to_sales_target_pos.field_abstract_sales_target__invoiced_pos_sales_total
+#: model:ir.model.fields,help:to_sales_target_pos.field_personal_sales_target__invoiced_pos_sales_total
+#: model:ir.model.fields,help:to_sales_target_pos.field_team_sales_target__invoiced_pos_sales_total
+msgid "Total invoiced sales amount recorded in Point of Sales application"
+msgstr "Tổng doanh thu bán hàng ở Điểm bán lẻ mà được xuất hoá đơn"
+
+#. module: to_sales_target_pos
+#: model:ir.model.fields,help:to_sales_target_pos.field_abstract_sales_target__non_invoiced_pos_sales_total
+#: model:ir.model.fields,help:to_sales_target_pos.field_personal_sales_target__non_invoiced_pos_sales_total
+#: model:ir.model.fields,help:to_sales_target_pos.field_team_sales_target__non_invoiced_pos_sales_total
+msgid ""
+"Total sales amount recorded in Point of Sales application without an invoice"
+" issued"
+msgstr "Tổng doanh thu bán hàng ở Điểm bán lẻ mà không xuất hoá đơn"
+
+#. module: to_sales_target_pos
+#: model:ir.model.fields,help:to_sales_target_pos.field_abstract_sales_target__pos_sales_total
+#: model:ir.model.fields,help:to_sales_target_pos.field_personal_sales_target__pos_sales_total
+#: model:ir.model.fields,help:to_sales_target_pos.field_team_sales_target__pos_sales_total
+msgid ""
+"Total sales amount recorded in Point of Sales application, including "
+"invoiced and uninvoiced sales"
+msgstr ""
+"Tổng doanh thu bán hàng ở Điểm bán lẻ, bao gồm cả doanh thu xuất hoá đơn và "
+"không xuất hoá đơn"
+
+#. module: to_sales_target_pos
+#: model:ir.model,name:to_sales_target_pos.model_res_users
+msgid "Users"
+msgstr "Người dùng"
+

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record model="ir.ui.view" id="warranty_claim_form_view">
+		<field name="name">warranty.claim.form</field>
+		<field name="model">warranty.claim</field>
+		<field name="arch" type="xml">
+			<form string="Session Form">
+				<header>
+					<button name="action_draft" type="object"
+						string="Set to draft" states="cancelled" />
+					<button name="action_cancelled" type="object"
+						string="Cancel" states="confirmed,investigation,disclaimed" />
+					<button name="action_investigation" type="object"
+						string="Investigate" states="draft" class="oe_highlight" />
+					<button name="action_disclaimed" type="object"
+						string="Disclaim" states="investigation" class="oe_highlight" />
+					<button name="action_confirm" type="object" string="Confirm"
+						states="investigation" class="oe_highlight" />
+					<button name="action_done" type="object"
+						string="Mark as done" states="confirmed" class="oe_highlight" />
+
+					<field name="state" widget="statusbar"
+						statusbar_visible="draft,investigation,confirmed,done" />
+				</header>
+
+				<sheet>
+					<div class="oe_button_box" name="button_box">
+
+					</div>
+					<div class="oe_title">
+						<h1>
+							<field name="name" readonly="1" />
+						</h1>
+					</div>
+					<group>
+						<group>
+							<field name="product_id" />
+							<field name="type" />
+							<field name="partner_id" />
+						</group>
+						<group>
+							<field name="date_claim" />
+							<field name="user_id" />
+							<field name="warranty_start_date" />
+							<label for="warranty_period" />
+							<div>
+								<field name="warranty_period" class="oe_inline"
+									style="vertical-align:baseline" />
+								months
+							</div>
+							<field name="warranty_expiration_date" />
+						</group>
+					</group>
+					<field name="warranty_claim_policy_ids">
+						<tree string="Warranty Policy" editable="bottom">
+							<field name="product_milestone_id" />
+							<field name="operation_start" />
+							<field name="operation_end" />
+							<field name="apply_to" invisible="0" />
+							<field name="current_measurement" />
+							<field name="state" />
+						</tree>
+					</field>
+					<label for="description" class="oe_inline"
+						string="Warranty Reason" />
+					<field name="description" />
+				</sheet>
+				<div class="oe_chatter">
+					<field name="message_follower_ids" widget="mail_followers"
+						groups="base.group_user" />
+					<field name="activity_ids" widget="mail_activity" />
+					<field name="message_ids" widget="mail_thread" />
+				</div>
+			</form>
+		</field>
+	</record>
+
+	<!-- override the automatically generated list view for courses -->
+	<record model="ir.ui.view" id="warranty_claim_tree_view">
+		<field name="name">warranty.claim.tree</field>
+		<field name="model">warranty.claim</field>
+		<field name="arch" type="xml">
+			<tree string="Claim Tree"
+				decoration-muted="state in ('cancelled')"
+				decoration-info="state=='done'">
+				<field name="name" />
+				<field name="product_id" />
+				<field name="partner_id" />
+				<field name="state" string="Status" />
+			</tree>
+		</field>
+	</record>
+
+	<record id="warranty_claim_search_view" model="ir.ui.view">
+		<field name="name">warranty.claim.search</field>
+		<field name="model">warranty.claim</field>
+		<field name="arch" type="xml">
+			<search string="Search Warranty Claim">
+				<field name="name" string="Reference" />
+				<field name="product_id" />
+				<field name="partner_id" />
+				<separator />
+				<filter name="draft_request" string="Draft"
+					domain="[('state','in', ('draft', 'cancelled'))]" />
+				<filter name="confirm_request" string="Confirmed"
+					domain="[('state','=', 'confirmed')]" />
+				<filter name="investigated_request" string="Investigated"
+					domain="[('state','=', 'investigation')]" />
+				<filter name="disclaimed_request" string="Disclaimed"
+					domain="[('state','=', 'disclaimed')]" />
+				<filter name="done_request" string="Done"
+					domain="[('state','=', 'done')]" />
+				<separator />
+				<group expand="0" string="Group By">
+					<filter string="Product" name="grp_product_id" domain="[]"
+						context="{'group_by':'product_id'}" />
+					<filter string="Partner" name="grp_partner_id" domain="[]"
+						context="{'group_by':'partner_id'}" />
+				</group>
+			</search>
+		</field>
+	</record>
+
+	<record model="ir.actions.act_window"
+		id="action_warranty_claim_report">
+		<field name="name">Warranty Claim Report</field>
+		<field name="res_model">warranty.claim</field>
+
+		<field name="view_mode">pivot</field>
+	</record>
+	<record model="ir.actions.act_window"
+		id="action_warranty_claim_draft">
+		<field name="name">Draft Claims</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">warranty.claim</field>
+		<field name="view_mode">tree,form</field>
+		<field name="context">{'search_default_draft_request':1}</field>
+	</record>
+
+	<record model="ir.actions.act_window"
+		id="action_warranty_claim_confirmed">
+		<field name="name">Confirmed Claims</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">warranty.claim</field>
+		<field name="view_mode">tree,form</field>
+		<field name="context">{'search_default_confirm_request':1}</field>
+	</record>
+
+	<record model="ir.actions.act_window"
+		id="action_warranty_claim_investigated">
+		<field name="name">Investigated Claims</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">warranty.claim</field>
+		<field name="view_mode">tree,form</field>
+		<field name="context">{'search_default_investigated_request':1}</field>
+	</record>
+
+	<record model="ir.actions.act_window"
+		id="action_warranty_claim_disclaimed">
+		<field name="name">Disclaimed Claims</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">warranty.claim</field>
+		<field name="view_mode">tree,form</field>
+		<field name="context">{'search_default_disclaimed_request':1}</field>
+	</record>
+
+	<record model="ir.actions.act_window"
+		id="action_warranty_claim_done">
+		<field name="name">Done Claims</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">warranty.claim</field>
+		<field name="view_mode">tree,form</field>
+		<field name="context">{'search_default_done_request':1}</field>
+	</record>
+
+	<menuitem id="warranty_claim_draft_menu" name="Draft"
+		parent="warranty_claim_menu" action="action_warranty_claim_draft"
+		sequence="1" />
+
+	<menuitem id="warranty_claim_investigated_menu"
+		name="Investigated" parent="warranty_claim_menu"
+		action="action_warranty_claim_investigated" sequence="2" />
+
+	<menuitem id="warranty_claim_disclaimed_menu"
+		name="Disclaimed" parent="warranty_claim_menu"
+		action="action_warranty_claim_disclaimed" sequence="3" />
+
+	<menuitem id="warranty_claim_confirmed_menu"
+		name="Confirmed Claims" parent="warranty_claim_menu"
+		action="action_warranty_claim_confirmed" sequence="4" />
+
+	<menuitem id="warranty_claim_done_menu" name="Done Claims"
+		parent="warranty_claim_menu" action="action_warranty_claim_done"
+		sequence="5" />
+	<menuitem id="warranty_claim_graph_report_menu"
+		name="Reporting" parent="main_warranty_management_menu"
+		action="action_warranty_claim_report" sequence="6"
+		groups="group_warranty_manager" />
+</odoo>

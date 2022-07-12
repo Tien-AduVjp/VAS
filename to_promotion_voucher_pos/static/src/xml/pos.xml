@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+	<t t-name="PaymentScreen-Paymentlines">
+        <t t-if="!paymentlines.length">
+            <div class='paymentlines-empty'>
+                <div class='total'>
+                    <t t-esc="widget.format_currency(order.get_total_with_tax())"/>
+                </div>
+                <div class='message'>
+                    Please select a payment method. 
+                </div>
+            </div>
+        </t>
+
+        <t t-if="paymentlines.length">
+            <table class='paymentlines'>
+                <colgroup>
+                    <col class='due' />
+                    <col class='tendered' />
+                    <col class='change' />
+                    <col class='method' />
+                    <col class='controls' />
+                </colgroup>
+                <thead>
+                    <tr class='label'>
+                        <th>Due</th>
+                        <th>Tendered</th>
+                        <th>Change</th>
+                        <th>Method</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <t t-foreach='paymentlines' t-as='line'>
+                        <t t-if='line.selected and !line.voucher_id'>
+                            <tr class='paymentline selected'>
+                                <td class='col-due'> <t t-esc='widget.format_currency_no_symbol(order.get_due(line))' /> </td>
+                                <td class='col-tendered edit'> 
+                                    <t t-esc='widget.inputbuffer' />
+                                    <!-- <t t-esc='line.get_amount()' /> -->
+                                </td>
+                                <t t-if='order.get_change(line)'>
+                                    <td class='col-change highlight' > 
+                                        <t t-esc='widget.format_currency_no_symbol(order.get_change(line))' />
+                                    </td>
+                                </t>
+                                <t t-if='!order.get_change(line)'>
+                                    <td class='col-change' ></td>
+                                </t>
+                                    
+                                <td class='col-name' > <t t-esc='line.name' /> </td>
+                                <td class='delete-button' t-att-data-cid='line.cid'> <i class='fa fa-times-circle' /> </td>
+                            </tr>
+                        </t>
+                        <t t-if='line.selected and line.voucher_id'>
+                            <tr class='paymentline selected' t-att-data-cid='line.cid'>
+                                <td class='col-due'> <t t-esc='widget.format_currency_no_symbol(order.get_due(line))' /> </td>
+                                <td class='col-tendered'> <t t-esc='widget.format_currency_no_symbol(line.get_amount())' /> </td>
+                                <td class='col-change'> 
+                                    <t t-if='order.get_change(line)'>
+                                        <t t-esc='widget.format_currency_no_symbol(order.get_change(line))' />
+                                     </t>
+                                </td>
+                                <td class='col-name'> <t t-esc='line.name' /> </td>
+                                <td class='delete-button' t-att-data-cid='line.cid'> <i class='fa fa-times-circle' /> </td>
+                            </tr>
+                        </t>
+                        <t t-if='!line.selected'>
+                            <tr class='paymentline' t-att-data-cid='line.cid'>
+                                <td class='col-due'> <t t-esc='widget.format_currency_no_symbol(order.get_due(line))' /> </td>
+                                <td class='col-tendered'> <t t-esc='widget.format_currency_no_symbol(line.get_amount())' /> </td>
+                                <td class='col-change'> 
+                                    <t t-if='order.get_change(line)'>
+                                        <t t-esc='widget.format_currency_no_symbol(order.get_change(line))' />
+                                     </t>
+                                </td>
+                                <td class='col-name'> <t t-esc='line.name' /> </td>
+                                <td class='delete-button' t-att-data-cid='line.cid'> <i class='fa fa-times-circle' /> </td>
+                            </tr>
+                        </t>
+                    </t>
+                    <t t-if='extradue'>
+                        <tr class='paymentline extra' t-att-data-cid='0'>
+                            <td class='col-due'> <t t-esc='widget.format_currency_no_symbol(extradue)' /> </td>
+                        </tr>
+                    </t>
+                </tbody>
+            </table>
+        </t>
+
+    </t>    
+</templates>
+
+

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><?xml-stylesheet type="text/xsl" href="invoice.xsl"?>
+<inv:invoice
+	xmlns:inv="http://laphoadon.gdt.gov.vn/2014/09/invoicexml/v1"
+	xmlns:ns1="http://www.w3.org/2000/09/xmldsig#">
+	<inv:invoiceData id="data">
+		<inv:invoiceType>01GTKT</inv:invoiceType>
+		<inv:templateCode>01GTKT0/001</inv:templateCode>
+		<inv:invoiceSeries>AA/19E</inv:invoiceSeries>
+		<inv:invoiceNumber>0000056</inv:invoiceNumber>
+		<inv:invoiceName>HÓA ĐƠN GIÁ TRỊ GIA TĂNG</inv:invoiceName>
+		<inv:invoiceIssuedDate>2019-10-17T00:00:00+07:00</inv:invoiceIssuedDate>
+		<inv:invoiceSignedDate>2019-10-17T19:37:28.791+07:00</inv:invoiceSignedDate>
+		<inv:currencyCode>USD</inv:currencyCode>
+		<inv:adjustmentType>1</inv:adjustmentType>
+		<inv:seller>
+			<inv:sellerCode />
+			<inv:sellerLegalName>Công ty TNHH Tự động hoá Hàng hải T.V.T (T.V.T
+				Marine Automation Company Limited)</inv:sellerLegalName>
+			<inv:sellerTaxCode>0201242908</inv:sellerTaxCode>
+			<inv:sellerAddressLine>Việt Nam</inv:sellerAddressLine>
+			<inv:sellerPhoneNumber />
+			<inv:sellerFaxNumber />
+			<inv:sellerEmail>info@yourcompany.com</inv:sellerEmail>
+			<inv:sellerBankName />
+			<inv:sellerBankAccount />
+			<inv:sellerContactPersonName>Nguyễn Thị Liên</inv:sellerContactPersonName>
+			<inv:sellerContactPersonPhoneNumber />
+			<inv:sellerContactPersonEmail>billing@ma.tvtmarine.com</inv:sellerContactPersonEmail>
+			<inv:sellerWebsite />
+			<inv:sellerBusinessLicenseNo>0201242908</inv:sellerBusinessLicenseNo>
+			<inv:sellerRepresentative>Trần Ngọc Tuấn</inv:sellerRepresentative>
+			<inv:sellerBankAccountOwner>Công ty TNHH Tự động hoá Hàng hải T.V.T</inv:sellerBankAccountOwner>
+			<inv:sellerRepresentativeIdType>3</inv:sellerRepresentativeIdType>
+			<inv:sellerSearchInvoiceLink />
+			<inv:sellerRepresentativeIdNo>031002678</inv:sellerRepresentativeIdNo>
+		</inv:seller>
+		<inv:buyer>
+			<inv:buyerCode />
+			<inv:buyerDisplayName>David Tran</inv:buyerDisplayName>
+			<inv:buyerLegalName>David Tran</inv:buyerLegalName>
+			<inv:buyerTaxCode>3232333</inv:buyerTaxCode>
+			<inv:buyerAddressLine>A-rập Xau-đi</inv:buyerAddressLine>
+			<inv:buyerPostalCode />
+			<inv:buyerCityName />
+			<inv:buyerCountryCode>SA</inv:buyerCountryCode>
+			<inv:buyerPhoneNumber />
+			<inv:buyerFaxNumber />
+			<inv:buyerEmail>davidtran.hp@example.viindoo.com</inv:buyerEmail>
+			<inv:buyerBankName />
+			<inv:buyerBankAccount />
+			<inv:buyerIdType>1</inv:buyerIdType>
+			<inv:buyerIdNo />
+		</inv:buyer>
+		<inv:items>
+			<inv:item>
+				<inv:lineNumber>1</inv:lineNumber>
+				<inv:itemCode>false</inv:itemCode>
+				<inv:itemName>Sản phẩm mẫu
+					Test Product</inv:itemName>
+				<inv:unitName>Đơn vị
+					(Unit(s))</inv:unitName>
+				<inv:unitPrice>100</inv:unitPrice>
+				<inv:quantity>1</inv:quantity>
+				<inv:selection>1</inv:selection>
+				<inv:itemTotalAmountWithoutVat>100</inv:itemTotalAmountWithoutVat>
+				<inv:itemTotalAmountWithVat>110</inv:itemTotalAmountWithVat>
+				<inv:vatPercentage>10</inv:vatPercentage>
+				<inv:vatAmount>10</inv:vatAmount>
+				<inv:discount>0</inv:discount>
+				<inv:itemDiscount>0</inv:itemDiscount>
+			</inv:item>
+		</inv:items>
+		<inv:discountItems />
+		<inv:invoiceTaxBreakdowns>
+			<inv:invoiceTaxBreakdowns>
+				<inv:vatPercentage>10</inv:vatPercentage>
+				<inv:vatTaxableAmount>100</inv:vatTaxableAmount>
+				<inv:vatTaxAmount>10</inv:vatTaxAmount>
+			</inv:invoiceTaxBreakdowns>
+		</inv:invoiceTaxBreakdowns>
+		<inv:payments>
+			<inv:payment>
+				<inv:paymentMethodName>CK</inv:paymentMethodName>
+			</inv:payment>
+		</inv:payments>
+		<inv:sumOfTotalLineAmountWithoutVAT>100</inv:sumOfTotalLineAmountWithoutVAT>
+		<inv:totalAmountWithoutVAT>100</inv:totalAmountWithoutVAT>
+		<inv:totalVATAmount>10</inv:totalVATAmount>
+		<inv:totalAmountWithVAT>110</inv:totalAmountWithVAT>
+		<inv:totalAmountWithVATInWords>Một trăm mười đô la Mỹ</inv:totalAmountWithVATInWords>
+		<inv:discountAmount>0</inv:discountAmount>
+		<inv:userDefines>&lt;reservationCode&gt;YH42QXMPQ0&lt;/reservationCode&gt;</inv:userDefines>
+		<inv:customDefines>
+			<inv:reservationCode>YH42QXMPQ0</inv:reservationCode>
+		</inv:customDefines>
+		<inv:userName>Administrator</inv:userName>
+		<inv:transactionUuid>7b0b4243-6505-45fd-ae7f-561cedc638b6</inv:transactionUuid>
+	</inv:invoiceData>
+	<Barcode>0201242908|01GTKT0/001|1|AA/19E0000056|3232333|17/10/2019|110.0</Barcode>
+	<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"
+		Id="seller">
+		<SignedInfo>
+			<CanonicalizationMethod
+				Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+			<SignatureMethod
+				Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" />
+			<Reference URI="">
+				<Transforms>
+					<Transform
+						Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+				</Transforms>
+				<DigestMethod
+					Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+				<DigestValue>PcXRvAoZQf6Ut8+Y+mMMB+z3QA8=</DigestValue>
+			</Reference>
+		</SignedInfo>
+		<SignatureValue>O2vdOcTT7OAMh1TBn+WEqN6yqCKIVWq7Cg75IcYfn248eECK13R6FQR+fy8xrCSjJdW/v3WNMgro
+			VBSwltEHdbGjFQCq9HAFmNxycnnQhjvbGYoqNZR2+0ISsvRq34hnIFlrhBEEdksWcIHo76a8/ukl
+			VHqaiSyhRlkCzB0wxdU=</SignatureValue>
+		<KeyInfo>
+			<X509Data>
+				<X509SubjectName>C=VN,L=HÀ N/I,CN=T/P /OÀN CÔNG NGHI/P - VI/N THÔNG
+					QUÂN //I
+					(TEST),UID=MST:0100109106,1.2.840.113549.1.9.1=#1615647579706432407669657474656c2e636f6d2e766e</X509SubjectName>
+				<X509Certificate>MIIELDCCAxSgAwIBAgIQVAEBBQAAAABZpPu2HVQIUTANBgkqhkiG9w0BAQUFADBOMRMwEQYDVQQD
+					DApWaWV0dGVsLUNBMRYwFAYDVQQKDA1WaWV0dGVsIEdyb3VwMRIwEAYDVQQHDAlIw6AgTuG7mWkx
+					CzAJBgNVBAYTAlZOMB4XDTE5MTAxNTA0MDcxOFoXDTIwMTAxNDA0MDcxOFowgaUxJDAiBgkqhkiG
+					9w0BCQEWFWR1eXBkMkB2aWV0dGVsLmNvbS52bjEeMBwGCgmSJomT8ixkAQEMDk1TVDowMTAwMTA5
+					MTA2MT4wPAYDVQQDDDVUL1AgL0/DgE4gQ8OUTkcgTkdISS9QIC0gVkkvTiBUSMOUTkcgUVXDgk4g
+					Ly9JIChURVNUKTEQMA4GA1UEBwwHSMOAIE4vSTELMAkGA1UEBhMCVk4wgZ8wDQYJKoZIhvcNAQEB
+					BQADgY0AMIGJAoGBAJnVjxMuB6XHrU9pohV3XXy8fGn+0zqONmkM+P6VQxUpyYE3Jo0b1Wk+tqnv
+					cIEdZgrYgDx4wEyFbh0Mitxxlt6Oumb9X70S5Hmn+6Thzyc0d26Z3Tqd1cznodstDuCRHkncXot+
+					NIUEDDQXp3nrRgKt4o1Qy2KchXOMyqXahdLnAgMBAAGjggEwMIIBLDAdBgNVHQ4EFgQUhqsyIjU+
+					6Ahl1FTARMep+7ONp7YwDAYDVR0TAQH/BAIwADAfBgNVHSMEGDAWgBQ6GSkEtR29bc0wtqw0Ik4n
+					cwXwajCBrAYDVR0gBIGkMIGhMIGeBgorBgEEAYHtAwEFMIGPMEoGCCsGAQUFBwICMD4ePABUAGgA
+					aQBzACAAaQBzACAAYQBjAGMAcgBlAGQAaQB0AGUAZAAgAGMAZQByAHQAaQBmAGkAYwBhAHQAZTBB
+					BggrBgEFBQcCARY1aHR0cDovL3ZpZXR0ZWwtY2Eudm4vdXBsb2Fkcy9maWxlL2Rvd25sb2FkL0NQ
+					LUNQUy5wZGYwDgYDVR0PAQH/BAQDAgXgMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDBDAN
+					BgkqhkiG9w0BAQUFAAOCAQEAXYgcpy5GuJmgE9w2/9RDofIrM9hA5yUHfuQLukvVPQmP+gg0aFK3
+					b4fmEWUqJTezmp4+qoVIIyvV4L8QaQzvT87DsQD03ucUrkraDIjjjZv5OYxK1o57+q8tQ0KbBdMN
+					01aHJJ6YOOxHNa7CqTNHNko7u4jH5zSdO/LcKUvw3lRMYtrGdF1VLp0BbdFZL8+vOeBTqjYpA1Ed
+					4qyQzXKyQIPLZT3Ad4pPh9yeMFKXXscznlzL6YeJbm9w/HpD3jEz9MDNRn2oYmPgP8hpxqU9MmEB
+					H+Li3x5g+yLvxHa+mw4t88WeQlU1Lzjf3GWUaJOb/QPMxrpZtBfGGcPQwizWyA==</X509Certificate>
+			</X509Data>
+			<KeyValue>
+				<RSAKeyValue>
+					<Modulus>mdWPEy4HpcetT2miFXddfLx8af7TOo42aQz4/pVDFSnJgTcmjRvVaT62qe9wgR1mCtiAPHjATIVu
+						HQyK3HGW3o66Zv1fvRLkeaf7pOHPJzR3bpndOp3VzOeh2y0O4JEeSdxei340hQQMNBeneetGAq3i
+						jVDLYpyFc4zKpdqF0uc=</Modulus>
+					<Exponent>AQAB</Exponent>
+				</RSAKeyValue>
+			</KeyValue>
+		</KeyInfo>
+	</Signature>
+</inv:invoice>

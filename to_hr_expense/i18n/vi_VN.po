@@ -1,0 +1,146 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_hr_expense
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-14 04:45+0000\n"
+"PO-Revision-Date: 2021-04-14 04:45+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_hr_expense
+#: model:ir.model.fields,field_description:to_hr_expense.field_hr_expense_sheet__aggregate_payments
+msgid "Lump-sum Payment?"
+msgstr "Thanh toán gộp"
+
+#. module: to_hr_expense
+#: code:addons/to_hr_expense/models/hr_expense.py:0
+#, python-format
+msgid ""
+"An expense sheet of multiple currencies with lump-sum payment option enabled"
+" is not supported. Please either uncheck the option Lump-sum Payment or "
+"separate the sheet into multiple ones of single currency."
+msgstr ""
+"Một bảng kê gồm nhiều đơn vị tiền tệ có bật tùy chọn thanh toán một lần"
+" không được hỗ trợ. Vui lòng bỏ chọn tùy chọn thanh toán một lần hoặc "
+"tách bảng kê thành các bảng kê có một đơn vị tiền tệ."
+
+#. module: to_hr_expense
+#: model_terms:ir.ui.view,arch_db:to_hr_expense.view_hr_expense_sheet_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: to_hr_expense
+#: model:ir.model.fields,field_description:to_hr_expense.field_hr_expense__to_invoice
+msgid "Create Invoice?"
+msgstr "Tạo Hóa Đơn?"
+
+#. module: to_hr_expense
+#: code:addons/to_hr_expense/models/hr_expense_sheet.py:0
+#, python-format
+msgid ""
+"Expenditures must be set to the same 'Create Invoice?' value (either billed "
+"or invoiced)"
+msgstr ""
+"Các chi tiêu phải cùng được thiết lập 'Tạo hóa đơn' hoặc cùng không được "
+"thiết lập."
+
+#. module: to_hr_expense
+#: model:ir.model,name:to_hr_expense.model_hr_expense
+msgid "Expense"
+msgstr "Chi tiêu"
+
+#. module: to_hr_expense
+#: model:ir.model,name:to_hr_expense.model_hr_expense_sheet_register_payment_wizard
+msgid "Expense Register Payment Wizard"
+msgstr "Tính năng ghi nhận thanh toán chi tiêu"
+
+#. module: to_hr_expense
+#: model:ir.model,name:to_hr_expense.model_hr_expense_sheet
+#: model:ir.model.fields,field_description:to_hr_expense.field_account_payment__expense_sheet_id
+msgid "Expense Report"
+msgstr "Kê khai Chi tiêu"
+
+#. module: to_hr_expense
+#: model:ir.model.fields,help:to_hr_expense.field_hr_expense__to_invoice
+msgid ""
+"If checked, field Vendor is required, and this expense will be the input "
+"invoice"
+msgstr ""
+"Nếu được đánh dấu, Trường Nhà cung cấp là bắt buộc và chi tiêu này sẽ được "
+"xuất hóa đơn"
+
+#. module: to_hr_expense
+#: model:ir.model.fields,help:to_hr_expense.field_hr_expense_sheet__aggregate_payments
+msgid ""
+"If checked, in case this expense sheet was paid by company, all expense "
+"lines of this sheet will be paid by one single payment."
+msgstr ""
+"Nếu được đánh dấu, trong trường hợp thanh toán bới công ty, tất cả các chi "
+"tiêu trong kê khai chi tiêu này sẽ được chi trả chung trong một thanh toán"
+
+#. module: to_hr_expense
+#: code:addons/to_hr_expense/models/hr_expense.py:0
+#, python-format
+msgid "No credit account found for the %s journal, please configure one."
+msgstr ""
+"Không tìm thấy tài khoản ghi có cho sổ nhật ký %s, hãy cấu hình lại sổ nhật "
+"ký."
+
+#. module: to_hr_expense
+#: model:ir.model,name:to_hr_expense.model_account_payment
+#: model:ir.model.fields,field_description:to_hr_expense.field_hr_expense_sheet__payment_ids
+#: model_terms:ir.ui.view,arch_db:to_hr_expense.view_hr_expense_sheet_form
+msgid "Payments"
+msgstr "Thanh toán"
+
+#. module: to_hr_expense
+#: model:ir.model.fields,field_description:to_hr_expense.field_hr_expense_sheet__payments_count
+msgid "Payments Count"
+msgstr "Số lần thanh toán"
+
+#. module: to_hr_expense
+#: model:ir.model.fields,field_description:to_hr_expense.field_hr_expense__vendor_id
+msgid "Vendor"
+msgstr "Nhà cung cấp"
+
+#. module: to_hr_expense
+#: code:addons/to_hr_expense/models/hr_expense_sheet.py:0
+#, python-format
+msgid "Vendor of all expense lines in this sheet should be the same."
+msgstr ""
+"Nhà cung cấp trên tất cả các dòng chi tiêu của kê khai phải giống nhau."
+
+#. module: to_hr_expense
+#: code:addons/to_hr_expense/models/hr_expense_sheet.py:0
+#, python-format
+msgid ""
+"You cannot cancel a paid expense. Please cancel all Payments of this expense"
+" first"
+msgstr ""
+"Bạn không thể hủy một chi tiêu đã thanh toán. vui lòng hủy toàn bộ thnh toán"
+" của chi tiêu này trước."
+
+#. module: to_hr_expense
+#: code:addons/to_hr_expense/models/hr_expense_sheet.py:0
+#, python-format
+msgid ""
+"You cannot cancel a posted expense. Please cancel this Journal Entry first: "
+"%s"
+msgstr ""
+"Bạn không thể hủy một chi tiêu đã vào sổ. Vui lòng hủy bút toán này trước: "
+"%s"
+
+#. module: to_hr_expense
+#: code:addons/to_hr_expense/models/hr_expense_sheet.py:0
+#, python-format
+msgid ""
+"You cannot delete the expense '%s' which has been posted once entry '%s' !"
+msgstr "Bạn không thể xóa Chi tiêu '%s', cái đã có bút toán vào sổ '%s' ! "

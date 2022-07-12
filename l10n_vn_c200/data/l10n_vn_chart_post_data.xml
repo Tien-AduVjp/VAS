@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="l10n_vn.vn_template" model="account.chart.template">
+        <field name="property_account_expense_categ_id" ref="l10n_vn.chart151"/>
+        <field name="property_stock_account_input_categ_id" ref="l10n_vn.chart151"/>
+        <field name="property_stock_account_output_categ_id" ref="l10n_vn.chart632"/>
+        <field name="property_stock_valuation_account_id" ref="l10n_vn.chart1561"/>
+    </record>
+</odoo>

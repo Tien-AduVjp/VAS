@@ -1,0 +1,141 @@
+.link_tracker_div{
+	width:100%;
+	float:left;
+	.chs_heading{
+		padding-left: 15px;
+	    padding-right: 15px;
+	    font-size: 20px;
+	    margin-bottom: 10px;
+	}
+	.link_tracker_form{
+		width:40%;
+		float:left;		
+	}
+	.link_tracker_list{
+		width:60%;
+		float:left;
+		.link_tracker_list_wp{
+			width:100%;
+			float:left;
+			.link_tracker.editing{
+					.link_actions .btn.save_link_button{
+						display:block;
+					}
+					.btn.edit_link_button{
+						display:none;
+					}
+					.link_info{
+						span{
+							span{
+								display:none;
+							}
+							select{
+								display: inline-block;
+							    width: 200px;
+							    padding: 0px 5px;
+							    margin: 0;
+							    height: 25px;
+							    line-height: 20px;
+							    border: 1px solid #eee;
+							    box-shadow: none;
+							}
+						}
+					}
+			}
+			.link_tracker{
+				width: 100%;
+			    float: left;
+			    border-bottom: 1px solid #dcdcdc;
+			    padding: 10px 0;			
+				.link_info{
+					width: 80%;
+				    float: left;
+				    overflow: hidden;
+				    text-overflow: ellipsis;
+					span{						
+						width:100%;
+						white-space: nowrap;
+						b{
+						    margin-right: 5px;
+						    width: 80px;
+						    float: left;
+						}
+						select{
+							display:none;
+						}
+					}	
+					.short_url_val{
+						position: absolute;
+					    z-index: -1;
+					    opacity: 0;
+					}			
+				}	
+				.link_actions{
+					float:left;
+					width:20%;
+					padding-top: 20px;
+					.btn{
+						padding: 3px;
+					    width: 150px;
+					    max-width: 94%;
+					    margin: 5px 3% 0;
+					}
+					.btn.save_link_button{
+						display:none;
+					}
+				}
+				.link_title.hidden_input{
+			        width: 100%;
+				    border: 1px solid #eee;
+				    padding: 3px 10px;
+				    margin-top: 5px;
+				    margin-bottom: 6px;
+				    text-transform: uppercase;
+				    font-weight: bold;
+				}
+			}
+		}
+	}
+}
+.new_request_btn{
+	opacity: 1;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;    
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;    
+    position: absolute;
+    z-index: 1;
+    opacity: 0.8;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+.payment_note_div{
+	label{
+		width:100%;
+		float:left;
+	}
+	.payment_notes{
+		width:100%;
+		
+	}
+}
+.payment_request_submit{
+	text-align:right;
+}
+.payment_total{
+    text-align: right;
+    font-weight: bold;
+    font-size: 16px;
+}

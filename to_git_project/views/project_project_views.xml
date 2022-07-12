@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="project_project_view_form_simplified">
+			<field name="name">project.project.view.form.simplified</field>
+			<field name="model">project.project</field>
+			<field name="inherit_id" ref="project.project_project_view_form_simplified" />
+			<field name="arch" type="xml">
+				<xpath expr="//div[@name='alias_def']" position="after">
+					<label for="git_repository_id" string="Choose a Git Repo." />
+					<div name="git_repository_id">
+						<field name="git_repository_id" />
+					</div>
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="edit_project">
+			<field name="name">project.project.form</field>
+			<field name="model">project.project</field>
+			<field name="inherit_id" ref="project.edit_project" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='user_id']" position="before">
+					<field name="git_repository_id" />
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

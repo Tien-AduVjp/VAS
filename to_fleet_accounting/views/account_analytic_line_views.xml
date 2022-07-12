@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="view_account_analytic_line_tree">
+			<field name="name">account.analytic.line.tree</field>
+			<field name="model">account.analytic.line</field>
+			<field name="inherit_id" ref="analytic.view_account_analytic_line_tree" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='currency_id']" position="after">
+					<field name="vehicle_cost_id" />
+					<field name="vehicle_id" />
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="view_account_analytic_line_form">
+			<field name="name">account.analytic.line.form</field>
+			<field name="model">account.analytic.line</field>
+			<field name="inherit_id" ref="analytic.view_account_analytic_line_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='unit_amount']" position="after">
+					<field name="vehicle_cost_id" />
+					<field name="vehicle_id" />
+				</xpath>
+			</field>
+		</record>
+		
+		<record model="ir.ui.view" id="view_account_analytic_line_filter">
+			<field name="name">account.analytic.line.select</field>
+			<field name="model">account.analytic.line</field>
+			<field name="inherit_id" ref="analytic.view_account_analytic_line_filter" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='tag_ids']" position="after">
+					<field name="vehicle_id" />
+				</xpath>
+				<xpath expr="//group[@name='groupby']/filter[@name='account_id']" position="after">
+					<filter string="Vehicle" context="{'group_by':'vehicle_id'}" name="vehicle_id"/>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

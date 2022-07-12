@@ -1,0 +1,137 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_sale
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-04 08:16+0000\n"
+"PO-Revision-Date: 2021-03-04 08:16+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_sale
+#: model_terms:ir.ui.view,arch_db:viin_sale.sale_report_view_viin_dashboard
+msgid "# Customers"
+msgstr "SL Khách hàng"
+
+#. module: viin_sale
+#: model_terms:ir.ui.view,arch_db:viin_sale.sale_report_view_viin_dashboard
+msgid "# Lines"
+msgstr "SL Dòng"
+
+#. module: viin_sale
+#: model_terms:ir.ui.view,arch_db:viin_sale.sale_report_view_viin_dashboard
+msgid "Average Order"
+msgstr "Giá trị trung bình đơn"
+
+#. module: viin_sale
+#: model:ir.model.fields,field_description:viin_sale.field_sale_report__create_date
+msgid "Creation Date"
+msgstr "Ngày tạo"
+
+#. module: viin_sale
+#: model:ir.model.fields,field_description:viin_sale.field_sale_order__days_to_confirm
+#: model:ir.model.fields,field_description:viin_sale.field_sale_report__days_to_confirm
+msgid "Days To Confirm"
+msgstr "Số ngày để xác nhận"
+
+#. module: viin_sale
+#: model_terms:ir.ui.view,arch_db:viin_sale.sale_report_view_viin_dashboard
+msgid "Days to Confirm"
+msgstr "Số ngày để xác nhận"
+
+#. module: viin_sale
+#: model:ir.model.fields.selection,name:viin_sale.selection__sale_report__invoice_status__invoiced
+#: model_terms:ir.ui.view,arch_db:viin_sale.sale_report_view_search
+msgid "Fully Invoiced"
+msgstr "Đã xuất đủ hoá đơn"
+
+#. module: viin_sale
+#: model:ir.model.fields,field_description:viin_sale.field_sale_report__invoice_status
+msgid "Invoicing Status"
+msgstr "Tình trạng xuất hoá đơn"
+
+#. module: viin_sale
+#: model:ir.model.fields.selection,name:viin_sale.selection__sale_report__invoice_status__no
+msgid "Nothing to Invoice"
+msgstr "Không còn gì để xuất hoá đơn"
+
+#. module: viin_sale
+#: model:ir.model.fields,help:viin_sale.field_sale_order__days_to_confirm
+#: model:ir.model.fields,help:viin_sale.field_sale_report__days_to_confirm
+msgid ""
+"Number of days counting from Creation Date to Ordered Date of an order."
+msgstr "Số ngày tính từ ngày tạo đến ngày đặt hàng của một đơn bán."
+
+#. module: viin_sale
+#: model_terms:ir.ui.view,arch_db:viin_sale.sale_report_view_viin_dashboard
+msgid "Orders"
+msgstr "Đơn bán"
+
+#. module: viin_sale
+#: model_terms:ir.ui.view,arch_db:viin_sale.sale_report_view_viin_dashboard
+msgid "Products"
+msgstr "Sản phẩm"
+
+#. module: viin_sale
+#: model_terms:ir.ui.view,arch_db:viin_sale.sale_report_view_viin_cohort
+msgid "Quotations/Orders"
+msgstr "Báo giá / Đơn bán"
+
+#. module: viin_sale
+#: model:ir.actions.act_window,name:viin_sale.sale_report_action_viin_dashboard
+#: model_terms:ir.ui.view,arch_db:viin_sale.sale_report_view_pivot
+msgid "Sales Analysis"
+msgstr "Phân tích Bán"
+
+#. module: viin_sale
+#: model:ir.model,name:viin_sale.model_sale_report
+msgid "Sales Analysis Report"
+msgstr "Báo cáo Phân tích Bán"
+
+#. module: viin_sale
+#: model:ir.model,name:viin_sale.model_sale_order
+msgid "Sales Order"
+msgstr "Đơn bán"
+
+#. module: viin_sale
+#: model_terms:ir.ui.view,arch_db:viin_sale.sale_report_view_viin_dashboard
+msgid "Sales Teams"
+msgstr "Đội bán hàng"
+
+#. module: viin_sale
+#: model:ir.model.fields.selection,name:viin_sale.selection__sale_report__invoice_status__to_invoice
+#: model_terms:ir.ui.view,arch_db:viin_sale.sale_report_view_search
+msgid "To Invoice"
+msgstr "Chờ xuất hoá đơn"
+
+#. module: viin_sale
+#: model_terms:ir.ui.view,arch_db:viin_sale.sale_report_view_viin_dashboard
+msgid "Total Sales"
+msgstr "Tổng doanh thu"
+
+#. module: viin_sale
+#: model_terms:ir.ui.view,arch_db:viin_sale.sale_report_view_viin_dashboard
+msgid "Total, Tax Excluded"
+msgstr "Tổng, không bao gồm thuế"
+
+#. module: viin_sale
+#: model_terms:ir.ui.view,arch_db:viin_sale.sale_report_view_viin_dashboard
+msgid "Total, Tax Included"
+msgstr "Tổng, bao gồm thuế"
+
+#. module: viin_sale
+#: model:ir.model.fields.selection,name:viin_sale.selection__sale_report__invoice_status__upselling
+msgid "Upselling Opportunity"
+msgstr "Cơ hội bán gia tăng"
+
+#. module: viin_sale
+#: model_terms:ir.ui.view,arch_db:viin_sale.sale_report_view_viin_dashboard
+msgid "days"
+msgstr "ngày"

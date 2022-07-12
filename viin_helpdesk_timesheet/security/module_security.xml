@@ -1,0 +1,21 @@
+<odoo>
+    <data>
+        <record id="helpdesk_ticket_user_following_project_task" model="ir.rule">
+            <field name="name">Ticket(Read): Users following task or project</field>
+            <field name="model_id" ref="model_helpdesk_ticket"/>
+            <field name="domain_force">[
+                '|', 
+                    '|',
+                    ('task_id.message_partner_ids', 'in', [user.partner_id.id]),
+                    ('task_id.message_channel_ids', 'in', user.partner_id.channel_ids.ids),
+                    '|',
+                    ('project_id.message_partner_ids', 'in', [user.partner_id.id]),
+                    ('project_id.message_channel_ids', 'in', user.partner_id.channel_ids.ids),
+            ]</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+    </data>
+</odoo>

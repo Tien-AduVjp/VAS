@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<template id="report_c200_s08dn">
+			<t t-call="web.html_container">
+				<t t-call="to_l10n_vn_qweb_layout.accounting_external_layout_c200">
+					<div class="page">
+						<div class="text-center">
+							<br />
+							<h3>
+								CASH IN BANK DEPOSIT BOOK
+							</h3>
+							<h5>
+								<t>
+									Accounts:
+									<span t-esc="account_ids" />
+								</t>
+							</h5>
+
+							<div class="small">
+								Date from:
+								<span t-field="doc.date_from" />
+								- Date to:
+								<span t-field="doc.date_to" />
+								<br />
+								<br />
+								Currency:
+								<span t-field="doc.company_id.currency_id" />
+							</div>
+						</div>
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th rowspan="2" class="text-center"
+										style="vertical-align: middle; width: 100px;">Posting Date</th>
+									<th colspan="2" class="text-center width: 100px;"
+										style="vertical-align: middle; width: 100px;">Voucher</th>
+									<th rowspan="2" class="text-center"
+										style="vertical-align: middle; width: 300px;">Description</th>
+									<th rowspan="2" class="text-center"
+										style="vertical-align: middle;">
+										Counterpart
+										<br />
+										Accounts
+									</th>
+									<th colspan="3" class="text-center"
+										style="vertical-align: middle;">Amount</th>
+									<th rowspan="2" class="text-center"
+										style="vertical-align: middle; width: 100px;">Note</th>
+								</tr>
+								<tr>
+									<th class="text-center  width: 100px;">No.</th>
+									<th class="text-center  width: 100px;">Date</th>
+									<th class="text-center">
+										Receipt
+										<br />
+										(Deposit)
+									</th>
+									<th class="text-center">
+										Payment
+										<br />
+										(WithDraw)
+									</th>
+									<th class="text-center">Balance</th>
+								</tr>
+								<tr>
+									<th class="text-center">A</th>
+									<th class="text-center">B</th>
+									<th class="text-center">C</th>
+									<th class="text-center">D</th>
+									<th class="text-center">E</th>
+									<th class="text-center">1</th>
+									<th class="text-center">2</th>
+									<th class="text-center">3</th>
+									<th class="text-center">F</th>
+								</tr>
+							</thead>
+							<tbody>
+								<t t-set="line_no" t-value="0" />
+								<t t-foreach="lines" t-as="line">
+									<tr>
+										<t t-if="line['type'] == 'account_title'">
+											<td colspan="8">
+												<b t-esc="line['account_name']" />
+											</td>
+										</t>
+										<t t-if="line['type'] != 'move_line'">
+											<td colspan="3" />
+										</t>
+										<t t-if="line['type'] != 'account_title'" >
+											<td t-if="line['type'] == 'move_line'">
+												<span t-esc="format_date(line['date'])" />
+											</td>
+	
+											<td class="text-center" t-if="line['type'] == 'move_line'">
+												<span t-esc="line['ref_name']" />
+											</td>
+	
+											<td t-if="line['type'] == 'move_line'">
+												<span t-esc="format_date(line['ref_date'])" />
+											</td>
+	
+											<td t-if="line['type'] != 'account_title'">
+												<span t-raw="line['name']" />
+											</td>
+											<td class="text-center" t-if="line['type'] != 'account_title'">
+												<span t-if="line['account_id']"
+													t-esc="line['account_id']" />
+											</td>
+											<td class="text-right"
+												t-if="line['type'] != 'account_title'">
+												<span
+													t-if="line['type'] not in ('account_end', 'account_init')"
+													t-esc="formatLang(line['debit'], digits=line['decimal_places'])" />
+											</td>
+	
+											<td class="text-right"
+												t-if="line['type'] != 'account_title'">
+												<span
+													t-if="line['type'] not in ('account_end', 'account_init')"
+													t-esc="formatLang(line['credit'], digits=line['decimal_places'])" />
+											</td>
+	
+											<td class="text-right"
+												t-if="line['type'] != 'account_title'">
+												<t t-if="line['type'] != 'account_total'">
+													<span t-esc="formatLang(line['progress'], digits=line['decimal_places'])" />
+												</t>
+											</td>
+	
+											<td class="text-right"
+												t-if="line['type'] != 'account_title'">
+											</td>
+										</t>
+									</tr>
+								</t>
+							</tbody>
+						</table>
+						<div class="row">
+							<div class="col-12">
+							<br/>
+								<p>
+									- Issue Date:
+									<t t-esc="format_date(today)" />
+								</p>
+							</div>
+						</div>
+						<t t-call="to_l10n_vn_qweb_layout.signature_block" />
+					</div>
+				</t>
+			</t>
+		</template>
+
+	</data>
+</odoo>

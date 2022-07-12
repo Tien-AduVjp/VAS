@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="fleet_trip_tree" model="ir.ui.view">
+			<field name="name">fleet.trip.tree</field>
+			<field name="model">fleet.vehicle.trip</field>
+			<field name="inherit_id" ref="to_fleet_operation_planning.fleet_trip_tree" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='state']" position="after">
+					<field name="costs_invoiced" invisible="1" />
+				</xpath>
+			</field>
+		</record>
+
+		<record id="fleet_trip_search" model="ir.ui.view">
+			<field name="name">fleet.trip.search</field>
+			<field name="model">fleet.vehicle.trip</field>
+			<field name="inherit_id" ref="to_fleet_operation_planning.fleet_trip_search" />
+			<field name="type">search</field>
+			<field name="arch" type="xml">
+				<xpath expr="//filter[@name='cancelled']" position="after">
+					<filter string="Costs Invoiced" name="costs_invoiced"
+						domain="[('costs_invoiced','=',True)]" help="Filter trips whose costs have been fully invoiced." />
+					<filter string="Costs Uninvoiced" name="costs_uninvoiced"
+						help="Filter trips whose costs have not been fully invoiced."
+						domain="[('costs_invoiced','=',False)]" />
+					<separator />
+				</xpath>
+			</field>
+		</record>
+
+		<record id="fleet_trip_form" model="ir.ui.view">
+			<field name="name">fleet.vehicle.trip.form</field>
+			<field name="model">fleet.vehicle.trip</field>
+			<field name="inherit_id" ref="to_fleet_operation_planning.fleet_trip_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//div[@name='button_box']" position="inside">
+					<button name="action_view_vendor_invoices" type="object" class="oe_stat_button"
+						icon="fa-pencil-square-o" help="Show all vendor bills that have been issued for this trip">
+						<field name="vendor_invoices_count" widget="statinfo"
+							string="Vendor Bills" />
+					</button>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

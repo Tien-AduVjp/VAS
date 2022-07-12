@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="view_account_journal_form" model="ir.ui.view">
+			<field name="name">account.journal.form</field>
+			<field name="model">account.journal</field>
+			<field name="inherit_id" ref="account.view_account_journal_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//page[@name='advanced_settings']" position="after">
+					<page name="summary settings"
+						string="Summary settings"
+						groups="account.group_account_manager,base.group_system"
+						attrs="{'invisible': [('type','!=','sale')]}">
+						<group string="Invoice display summary settings">
+							<group>
+								<field name="invoice_line_summary_mode" attrs="{'required': [('type', '=', 'sale')]}"/>
+							</group>
+							<group>
+								<field name="invoice_display_mode" attrs="{'required': [('type', '=', 'sale')]}"/>
+							</group>
+						</group>
+					</page>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,81 @@
+<odoo>
+	<data>
+		<record id="account_balance_carry_forward_rule_tree_view"
+			model="ir.ui.view">
+			<field name="name">balance.carry.forward.rule.tree</field>
+			<field name="model">balance.carry.forward.rule</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Carry Forward Rule" decoration-danger="profit_loss == True">
+					<field name="sequence" widget="handle"/>
+					<field name="name" />
+					<field name="source_account_ids" widget="many2many_tags" />
+					<field name="dest_account_id" />
+					<field name="profit_loss" />
+					<field name="forward_type" />
+					<field name="succeeding_rule_id" />
+					<field name="company_id" groups="base.group_multi_company" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="account_balance_carry_forward_rule_form_view"
+			model="ir.ui.view">
+			<field name="name">balance.carry.forward.rule.form</field>
+			<field name="model">balance.carry.forward.rule</field>
+			<field name="priority" eval="8" />
+			<field name="arch" type="xml">
+				<form string="Carry Forward Rule">
+					<sheet>
+						<group>
+							<group>
+								<field name="name" />
+								<field name="forward_type" />
+								<field name="profit_loss" />
+							</group>
+							<group>
+								<field name="source_account_type_categ_id" widget="selection" />
+								<field name="source_account_ids" widget="many2many_tags" />
+								<field name="dest_account_id" />
+								<field name="succeeding_rule_id" />
+								<field name="company_id" groups="base.group_multi_company" />
+							</group>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		
+		<record id="account_balance_carry_forward_rule_search_view"
+			model="ir.ui.view">
+			<field name="name">balance.carry.forward.rule.search</field>
+			<field name="model">balance.carry.forward.rule</field>
+			<field name="arch" type="xml">
+				<search string="Search Carry Forward Rule">
+					<field name="name" />
+					<field name="source_account_ids" />
+					<field name="dest_account_id" />
+					<field name="succeeding_rule_id" />
+					<field name="company_id" groups="base.group_multi_company" />
+					<group expand="0" string="Group By">
+						<filter string="Destination Account" name="grp_dest_acc" domain="[]" context="{'group_by':'dest_account_id'}" />
+						<filter string="Company" name="grp_company" domain="[]" context="{'group_by':'company_id'}" groups="base.group_multi_company"/>
+					</group>
+				</search>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_account_balance_carry_forward_rule_view">
+			<field name="name">Carry Forward Rules</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">balance.carry.forward.rule</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+
+		<menuitem id="account_balance_carry_forward_rule_menu"
+			parent="account.account_management_menu" action="action_account_balance_carry_forward_rule_view"
+			sequence="50" />
+
+	</data>
+</odoo>

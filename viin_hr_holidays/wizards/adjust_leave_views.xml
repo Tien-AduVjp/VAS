@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+		<record id="adjustment_leave_view_form" model="ir.ui.view">
+			<field name="name">Adjustment Leave</field>
+			<field name="model">adjustment.leave</field>
+			<field name="arch" type="xml">
+				<form string="Adjustment Leave">
+				<group>
+					<field name="leave_id" invisible="1"/>
+					<field name="date_from"/>
+					<field name="date_to"/>
+				</group>
+					<footer>
+						<button name="action_confirm" string="Confirm" type="object" class="oe_highlight"/>
+						<button string="Cancel" class="btn-default"
+							special="cancel" />
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<record id="adjustment_leave_view_action" model="ir.actions.act_window">
+			<field name="name">Adjustment Leave</field>
+			<field name="res_model">adjustment.leave</field>
+			<field name="view_mode">form</field>
+			<field name="view_id" ref="adjustment_leave_view_form"/>
+			<field name="target">new</field>
+		</record>
+</odoo>

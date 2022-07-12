@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="assets" inherit_id="point_of_sale.assets">
+	  <xpath expr="." position="inside">
+	      <script type="text/javascript" src="/to_promotion_voucher_pos/static/src/js/pos.js"></script>
+	      <link rel="stylesheet" href="/to_promotion_voucher_pos/static/src/scss/pos.scss" />
+	  </xpath>
+	</template>	
+
+	<template id="assets_tests" name="Promotion Voucher Pos Tests" inherit_id="web.assets_tests">
+		<xpath expr="." position="inside">
+			<script type="text/javascript" src="/to_promotion_voucher_pos/static/tests/promotion_voucher_pos.js"></script>
+		</xpath>
+	</template>
+</odoo>
