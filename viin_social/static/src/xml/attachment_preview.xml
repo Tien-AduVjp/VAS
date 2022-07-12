@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <t t-extend="FieldBinaryFileUploader.attachment_preview">
+        <t t-jquery="a[t-att-title]">
+            this.attr("t-att-data-id", "file.id")
+        </t>
+    </t>
+</templates>

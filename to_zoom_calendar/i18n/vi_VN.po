@@ -1,0 +1,1303 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_zoom_calendar
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-25 03:16+0000\n"
+"PO-Revision-Date: 2021-11-25 03:16+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_zoom_calendar
+#: model:mail.template,subject:to_zoom_calendar.calendar_template_meeting_reminder
+msgid "${object.event_id.name} - Reminder"
+msgstr "${object.event_id.name} - Nhắc nhở"
+
+#. module: to_zoom_calendar
+#: model:mail.template,subject:to_zoom_calendar.calendar_template_meeting_changedate
+msgid "${object.event_id.name}: Date updated"
+msgstr "${object.event_id.name}: Thời gian được cập nhật"
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.report_zoom_user
+msgid "<b>From Date:</b>"
+msgstr "<b>Từ ngày:</b>"
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.report_zoom_user
+msgid "<b>To Date:</b>"
+msgstr "<b>Đến ngày:</b>"
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.report_zoom_user
+msgid "<b>Total Meeting Minutes</b>"
+msgstr "<b>Tổng số phút họp</b>"
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.report_zoom_user
+msgid "<b>Total Meetings:</b>"
+msgstr "<b>Tổng số cuộc họp</b>"
+
+#. module: to_zoom_calendar
+#: model:mail.template,body_html:to_zoom_calendar.calendar_template_meeting_reminder
+msgid ""
+"<div>\n"
+"\t\t\t\t\t% set colors = {'needsAction': 'grey', 'accepted': 'green',\n"
+"\t\t\t\t\t'tentative': '#FFFF00', 'declined': 'red'}\n"
+"\t\t\t\t\t<!-- In a recurring event case, the object.event_id is always the first \n"
+"\t\t\t\t\t\tevent This makes the event date (and a lot of other information) incorrect -->\n"
+"\t\t\t\t\t% set event_id = ctx.get('force_event_id') or object.event_id\n"
+"\t\t\t\t\t<p>\n"
+"\t\t\t\t\t\tHello ${object.common_name},\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\tThis is a reminder for the below event :\n"
+"\t\t\t\t\t</p>\n"
+"\t\t\t\t\t<div style=\"text-align: center; margin: 16px 0px 16px 0px;\">\n"
+"\t\t\t\t\t\t<a href=\"/calendar/meeting/accept?db=${'dbname' in ctx and ctx['dbname'] or ''}&amp;token=${object.access_token}&amp;action=${'action_id' in ctx and ctx['action_id'] or ''}&amp;id=${object.event_id.id}\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">\n"
+"\t\t\t\t\t\t\tAccept\n"
+"\t\t\t\t\t\t</a>\n"
+"\t\t\t\t\t\t<a href=\"/calendar/meeting/decline?db=${'dbname' in ctx and ctx['dbname'] or '' }&amp;token=${object.access_token}&amp;action=${'action_id' in ctx and ctx['action_id'] or ''}&amp;id=${object.event_id.id}\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">\n"
+"\t\t\t\t\t\t\tDecline\n"
+"\t\t\t\t\t\t</a>\n"
+"\t\t\t\t\t\t<a href=\"/calendar/meeting/view?db=${'dbname' in ctx and ctx['dbname'] or ''}&amp;token=${object.access_token}&amp;action=${'action_id' in ctx and ctx['action_id'] or ''}&amp;id=${object.event_id.id}\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">\n"
+"\t\t\t\t\t\t\tView\n"
+"\t\t\t\t\t\t</a>\n"
+"\t\t\t\t\t</div>\n"
+"\t\t\t\t\t<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\">\n"
+"\t\t\t\t\t\t<tr>\n"
+"\t\t\t\t\t\t\t<td width=\"130px;\">\n"
+"\t\t\t\t\t\t\t\t<div style=\"border-top-left-radius: 3px; border-top-right-radius: 3px; font-size: 12px; border-collapse: separate; text-align: center; font-weight: bold; color: #ffffff; min-height: 18px; background-color: #875A7B; border: 1px solid #875A7B;\">\n"
+"\t\t\t\t\t\t\t\t\t${event_id.get_interval('dayname', tz=object.partner_id.tz if not event_id.allday else None)}\n"
+"\t\t\t\t\t\t\t\t</div>\n"
+"\t\t\t\t\t\t\t\t<div style=\"font-size: 48px; min-height: auto; font-weight: bold; text-align: center; color: #5F5F5F; background-color: #F8F8F8; border: 1px solid #875A7B;\">\n"
+"\t\t\t\t\t\t\t\t\t${event_id.get_interval('day', tz=object.partner_id.tz if not event_id.allday else None)}\n"
+"\t\t\t\t\t\t\t\t</div>\n"
+"\t\t\t\t\t\t\t\t<div style=\"font-size: 12px; text-align: center; font-weight: bold; color: #ffffff; background-color: #875A7B;\">\n"
+"\t\t\t\t\t\t\t\t\t${event_id.get_interval('month', tz=object.partner_id.tz if not event_id.allday else None)}\n"
+"\t\t\t\t\t\t\t\t</div>\n"
+"\t\t\t\t\t\t\t\t<div style=\"border-collapse: separate; color: #5F5F5F; text-align: center; font-size: 12px; border-bottom-right-radius: 3px; font-weight: bold; border: 1px solid #875A7B; border-bottom-left-radius: 3px;\">\n"
+"\t\t\t\t\t\t\t\t\t${not event_id.allday and event_id.get_interval('time',\n"
+"\t\t\t\t\t\t\t\t\ttz=object.partner_id.tz) or ''}\n"
+"\t\t\t\t\t\t\t\t</div>\n"
+"\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t\t<td width=\"20px;\"/>\n"
+"\t\t\t\t\t\t\t<td style=\"padding-top: 5px;\">\n"
+"\t\t\t\t\t\t\t\t<p>\n"
+"\t\t\t\t\t\t\t\t\t<strong>Details of the event</strong>\n"
+"\t\t\t\t\t\t\t\t</p>\n"
+"\t\t\t\t\t\t\t\t<ul>\n"
+"\t\t\t\t\t\t\t\t\t% if object.event_id.is_zoom_meeting:\n"
+"\t\t\t\t\t\t\t\t\t<li>Location: Online via Zoom</li>\n"
+"\t\t\t\t\t\t\t\t\t<li>\n"
+"\t\t\t\t\t\t\t\t\t\tAttendee URL:\n"
+"\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"${object.event_id.zoom_meeting_attendee_url}\">${object.event_id.zoom_meeting_attendee_url}</a>\n"
+"\t\t\t\t\t\t\t\t\t</li>\n"
+"\t\t\t\t\t\t\t\t\t% else:\n"
+"\t\t\t\t\t\t\t\t\t% if object.event_id.location:\n"
+"\t\t\t\t\t\t\t\t\t<li>\n"
+"\t\t\t\t\t\t\t\t\t\tLocation: ${object.event_id.location}\n"
+"\t\t\t\t\t\t\t\t\t\t(\n"
+"\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"http://maps.google.com/maps?oi=map&amp;q=${object.event_id.location}\">View Map</a>\n"
+"\t\t\t\t\t\t\t\t\t\t)\n"
+"\t\t\t\t\t\t\t\t\t</li>\n"
+"\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t\t% if object.event_id.description :\n"
+"\t\t\t\t\t\t\t\t\t<li>Description: ${object.event_id.description}</li>\n"
+"\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t\t% if not object.event_id.allday and object.event_id.duration\n"
+"\t\t\t\t\t\t\t\t\t<li>Duration: ${('%dH%02d' %\n"
+"\t\t\t\t\t\t\t\t\t\t(object.event_id.duration,(object.event_id.duration*60)%60))}\n"
+"\t\t\t\t\t\t\t\t\t</li>\n"
+"\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t\t<li>\n"
+"\t\t\t\t\t\t\t\t\t\tAttendees\n"
+"\t\t\t\t\t\t\t\t\t\t<ul>\n"
+"\t\t\t\t\t\t\t\t\t\t\t% for attendee in object.event_id.attendee_ids:\n"
+"\t\t\t\t\t\t\t\t\t\t\t<li>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<div style=\"display: inline-block; border-radius: 50%; width: 10px; height: 10px; background:${colors[attendee.state] or 'white'};\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t% if attendee.common_name != object.common_name:\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<span style=\"margin-left:5px\">${attendee.common_name}</span>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t% else:\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<span style=\"margin-left:5px\">You</span>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t\t\t\t</li>\n"
+"\t\t\t\t\t\t\t\t\t\t\t% endfor\n"
+"\t\t\t\t\t\t\t\t\t\t</ul>\n"
+"\t\t\t\t\t\t\t\t\t</li>\n"
+"\t\t\t\t\t\t\t\t</ul>\n"
+"\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t</tr>\n"
+"\t\t\t\t\t</table>\n"
+"\t\t\t\t\t<br/>\n"
+"\t\t\t\t\tThank you,\n"
+"\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t% if object.event_id.user_id and object.event_id.user_id.signature:\n"
+"\t\t\t\t\t${object.event_id.user_id.signature | safe}\n"
+"\t\t\t\t\t% endif\n"
+"\t\t\t\t</div>\n"
+"\t\t\t"
+msgstr ""
+"<div>\n"
+"    % set colors = {'needsAction': 'grey', 'accepted': 'green', 'tentative': '#FFFF00',  'declined': 'red'}\n"
+"    <!--\n"
+"        In a recurring event case, the object.event_id is always the first event\n"
+"        This makes the event date (and a lot of other information) incorrect\n"
+"    -->\n"
+"    % set event_id = ctx.get('force_event_id') or object.event_id\n"
+"    <p>\n"
+"        Xin chào ${object.common_name},<br/><br/>\n"
+"        Đây là một lời nhắc cho sự kiện dưới đây:\n"
+"    </p>\n"
+"    <div style=\"text-align: center; margin: 16px 0px 16px 0px;\">\n"
+"        <a href=\"/calendar/meeting/accept?db=${'dbname' in ctx and ctx['dbname'] or ''}&amp;token=${object.access_token}&amp;action=${'action_id' in ctx and ctx['action_id'] or ''}&amp;id=${object.event_id.id}\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">\n"
+"            Chấp thuận</a>\n"
+"        <a href=\"/calendar/meeting/decline?db=${'dbname' in ctx and ctx['dbname'] or '' }&amp;token=${object.access_token}&amp;action=${'action_id' in ctx and ctx['action_id'] or ''}&amp;id=${object.event_id.id}\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">\n"
+"            Từ chối</a>\n"
+"        <a href=\"/calendar/meeting/view?db=${'dbname' in ctx and ctx['dbname'] or ''}&amp;token=${object.access_token}&amp;action=${'action_id' in ctx and ctx['action_id'] or ''}&amp;id=${object.event_id.id}\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">\n"
+"            Xem</a>\n"
+"    </div>\n"
+"    <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr>\n"
+"        <td width=\"130px;\">\n"
+"            <div style=\"border-top-left-radius: 3px; border-top-right-radius: 3px; font-size: 12px; border-collapse: separate; text-align: center; font-weight: bold; color: #ffffff; min-height: 18px; background-color: #875A7B; border: 1px solid #875A7B;\">\n"
+"                ${event_id.get_interval('dayname', tz=object.partner_id.tz if not event_id.allday else None)}\n"
+"            </div>\n"
+"            <div style=\"font-size: 48px; min-height: auto; font-weight: bold; text-align: center; color: #5F5F5F; background-color: #F8F8F8; border: 1px solid #875A7B;\">\n"
+"                ${event_id.get_interval('day', tz=object.partner_id.tz if not event_id.allday else None)}\n"
+"            </div>\n"
+"            <div style=\"font-size: 12px; text-align: center; font-weight: bold; color: #ffffff; background-color: #875A7B;\">\n"
+"                ${event_id.get_interval('month', tz=object.partner_id.tz if not event_id.allday else None)}\n"
+"            </div>\n"
+"            <div style=\"border-collapse: separate; color: #5F5F5F; text-align: center; font-size: 12px; border-bottom-right-radius: 3px; font-weight: bold; border: 1px solid #875A7B; border-bottom-left-radius: 3px;\">\n"
+"                ${not event_id.allday and event_id.get_interval('time', tz=object.partner_id.tz) or ''}\n"
+"            </div>\n"
+"        </td>\n"
+"        <td width=\"20px;\"/>\n"
+"        <td style=\"padding-top: 5px;\">\n"
+"            <p><strong>Chi tiết Sự kiện</strong></p>\n"
+"            <ul>\n"
+"                % if object.event_id.is_zoom_meeting:\n"
+"                    <li>Địa điểm: Trực tuyến qua Zoom</li>\n"
+"                    <li>URL tham dự: <a target=\"_blank\" href=\"${object.event_id.zoom_meeting_attendee_url}\">${object.event_id.zoom_meeting_attendee_url}</a></li>\n"
+"                % else:\n"
+"                \t% if object.event_id.location:\n"
+"                    <li>Địa điểm: ${object.event_id.location}\n"
+"                        (<a target=\"_blank\" href=\"http://maps.google.com/maps?oi=map&amp;q=${object.event_id.location}\">Xem Bản đồ</a>)\n"
+"                    </li>\n"
+"                \t% endif\n"
+"                % endif\n"
+"                % if object.event_id.description :\n"
+"                    <li>Mô tả: ${object.event_id.description}</li>\n"
+"                % endif\n"
+"                % if not object.event_id.allday and object.event_id.duration\n"
+"                    <li>Thời lượng: ${('%dH%02d' % (object.event_id.duration,(object.event_id.duration*60)%60))}</li>\n"
+"                % endif\n"
+"                <li>Thành phần tham dự\n"
+"                <ul>\n"
+"                % for attendee in object.event_id.attendee_ids:\n"
+"                    <li>\n"
+"                        <div style=\"display: inline-block; border-radius: 50%; width: 10px; height: 10px; background:${colors[attendee.state] or 'white'};\"> </div>\n"
+"                        % if attendee.common_name != object.common_name:\n"
+"                            <span style=\"margin-left:5px\">${attendee.common_name}</span>\n"
+"                        % else:\n"
+"                            <span style=\"margin-left:5px\">Bạn</span>\n"
+"                        % endif\n"
+"                    </li>\n"
+"                % endfor\n"
+"                </ul></li>\n"
+"            </ul>\n"
+"        </td>\n"
+"    </tr></table>\n"
+"    <br/>\n"
+"    Xin cảm ơn,\n"
+"    <br/>\n"
+"    % if object.event_id.user_id and object.event_id.user_id.signature:\n"
+"        ${object.event_id.user_id.signature | safe}\n"
+"    % endif\n"
+"</div>\n"
+"            "
+
+#. module: to_zoom_calendar
+#: model:mail.template,body_html:to_zoom_calendar.calendar_template_meeting_invitation
+msgid ""
+"<div>\n"
+"\t\t\t\t\t% set colors = {'needsAction': 'grey', 'accepted': 'green',\n"
+"\t\t\t\t\t'tentative': '#FFFF00', 'declined': 'red'}\n"
+"\t\t\t\t\t<p>\n"
+"\t\t\t\t\t\tHello ${object.common_name},\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t${object.event_id.user_id.partner_id.name} invited you for the\n"
+"\t\t\t\t\t\t${object.event_id.name} meeting of\n"
+"\t\t\t\t\t\t${object.event_id.user_id.company_id.name}.\n"
+"\t\t\t\t\t</p>\n"
+"\t\t\t\t\t<div style=\"text-align: center; margin: 16px 0px 16px 0px;\">\n"
+"\t\t\t\t\t\t<a href=\"/calendar/meeting/accept?db=${'dbname' in ctx and ctx['dbname'] or ''}&amp;token=${object.access_token}&amp;action=${'action_id' in ctx and ctx['action_id'] or ''}&amp;id=${object.event_id.id}\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">\n"
+"\t\t\t\t\t\t\tAccept\n"
+"\t\t\t\t\t\t</a>\n"
+"\t\t\t\t\t\t<a href=\"/calendar/meeting/decline?db=${'dbname' in ctx and ctx['dbname'] or '' }&amp;token=${object.access_token}&amp;action=${'action_id' in ctx and ctx['action_id'] or ''}&amp;id=${object.event_id.id}\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">\n"
+"\t\t\t\t\t\t\tDecline\n"
+"\t\t\t\t\t\t</a>\n"
+"\t\t\t\t\t\t<a href=\"/calendar/meeting/view?db=${'dbname' in ctx and ctx['dbname'] or ''}&amp;token=${object.access_token}&amp;action=${'action_id' in ctx and ctx['action_id'] or ''}&amp;id=${object.event_id.id}\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">\n"
+"\t\t\t\t\t\t\tView\n"
+"\t\t\t\t\t\t</a>\n"
+"\t\t\t\t\t</div>\n"
+"\t\t\t\t\t<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\">\n"
+"\t\t\t\t\t\t<tr>\n"
+"\t\t\t\t\t\t\t<td width=\"130px;\">\n"
+"\t\t\t\t\t\t\t\t<div style=\"border-top-left-radius: 3px; border-top-right-radius: 3px; font-size: 12px; border-collapse: separate; text-align: center; font-weight: bold; color: #ffffff; min-height: 18px; background-color: #875A7B; border: 1px solid #875A7B;\">\n"
+"\t\t\t\t\t\t\t\t\t${object.event_id.get_interval('dayname', tz=object.partner_id.tz if not object.event_id.allday else\n"
+"\t\t\t\t\t\t\t\t\tNone)}\n"
+"\t\t\t\t\t\t\t\t</div>\n"
+"\t\t\t\t\t\t\t\t<div style=\"font-size: 48px; min-height: auto; font-weight: bold; text-align: center; color: #5F5F5F; background-color: #F8F8F8; border: 1px solid #875A7B;\">\n"
+"\t\t\t\t\t\t\t\t\t${object.event_id.get_interval('day', tz=object.partner_id.tz if not object.event_id.allday else\n"
+"\t\t\t\t\t\t\t\t\tNone)}\n"
+"\t\t\t\t\t\t\t\t</div>\n"
+"\t\t\t\t\t\t\t\t<div style=\"font-size: 12px; text-align: center; font-weight: bold; color: #ffffff; background-color: #875A7B;\">\n"
+"\t\t\t\t\t\t\t\t\t${object.event_id.get_interval('month', tz=object.partner_id.tz if not object.event_id.allday else\n"
+"\t\t\t\t\t\t\t\t\tNone)}\n"
+"\t\t\t\t\t\t\t\t</div>\n"
+"\t\t\t\t\t\t\t\t<div style=\"border-collapse: separate; color: #5F5F5F; text-align: center; font-size: 12px; border-bottom-right-radius: 3px; font-weight: bold; border: 1px solid #875A7B; border-bottom-left-radius: 3px;\">\n"
+"\t\t\t\t\t\t\t\t\t${not object.event_id.allday and\n"
+"\t\t\t\t\t\t\t\t\tobject.event_id.get_interval('time', tz=object.partner_id.tz)\n"
+"\t\t\t\t\t\t\t\t\tor ''}\n"
+"\t\t\t\t\t\t\t\t</div>\n"
+"\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t\t<td width=\"20px;\"/>\n"
+"\t\t\t\t\t\t\t<td style=\"padding-top: 5px;\">\n"
+"\t\t\t\t\t\t\t\t<p>\n"
+"\t\t\t\t\t\t\t\t\t<strong>Details of the event</strong>\n"
+"\t\t\t\t\t\t\t\t</p>\n"
+"\t\t\t\t\t\t\t\t<ul>\n"
+"\t\t\t\t\t\t\t\t\t% if object.event_id.is_zoom_meeting:\n"
+"\t\t\t\t\t\t\t\t\t<li>Location: Online via Zoom</li>\n"
+"\t\t\t\t\t\t\t\t\t<li>\n"
+"\t\t\t\t\t\t\t\t\t\tAttendee URL:\n"
+"\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"${object.event_id.zoom_meeting_attendee_url}\">${object.event_id.zoom_meeting_attendee_url}</a>\n"
+"\t\t\t\t\t\t\t\t\t</li>\n"
+"\t\t\t\t\t\t\t\t\t% else:\n"
+"\t\t\t\t\t\t\t\t\t% if object.event_id.location:\n"
+"\t\t\t\t\t\t\t\t\t<li>\n"
+"\t\t\t\t\t\t\t\t\t\tLocation: ${object.event_id.location}\n"
+"\t\t\t\t\t\t\t\t\t\t(\n"
+"\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"http://maps.google.com/maps?oi=map&amp;q=${object.event_id.location}\">View Map</a>\n"
+"\t\t\t\t\t\t\t\t\t\t)\n"
+"\t\t\t\t\t\t\t\t\t</li>\n"
+"\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t\t% if object.event_id.description :\n"
+"\t\t\t\t\t\t\t\t\t<li>Description: ${object.event_id.description}</li>\n"
+"\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t\t% if not object.event_id.allday and object.event_id.duration\n"
+"\t\t\t\t\t\t\t\t\t<li>Duration: ${('%dH%02d' %\n"
+"\t\t\t\t\t\t\t\t\t\t(object.event_id.duration,round(object.event_id.duration*60)%60))}\n"
+"\t\t\t\t\t\t\t\t\t</li>\n"
+"\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t\t<li>\n"
+"\t\t\t\t\t\t\t\t\t\tAttendees\n"
+"\t\t\t\t\t\t\t\t\t\t<ul>\n"
+"\t\t\t\t\t\t\t\t\t\t\t% for attendee in object.event_id.attendee_ids:\n"
+"\t\t\t\t\t\t\t\t\t\t\t<li>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<div style=\"display: inline-block; border-radius: 50%; width: 10px; height: 10px; background:${colors[attendee.state] or 'white'};\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t% if attendee.common_name != object.common_name:\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<span style=\"margin-left:5px\">${attendee.common_name}</span>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t% else:\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<span style=\"margin-left:5px\">You</span>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t\t\t\t</li>\n"
+"\t\t\t\t\t\t\t\t\t\t\t% endfor\n"
+"\t\t\t\t\t\t\t\t\t\t</ul>\n"
+"\t\t\t\t\t\t\t\t\t</li>\n"
+"\t\t\t\t\t\t\t\t</ul>\n"
+"\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t</tr>\n"
+"\t\t\t\t\t</table>\n"
+"\t\t\t\t\t<br/>\n"
+"\t\t\t\t\tThank you,\n"
+"\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t% if object.event_id.user_id and object.event_id.user_id.signature:\n"
+"\t\t\t\t\t${object.event_id.user_id.signature | safe}\n"
+"\t\t\t\t\t% endif\n"
+"\t\t\t\t</div>\n"
+"\t\t\t"
+msgstr ""
+"<div>\n"
+"    % set colors = {'needsAction': 'grey', 'accepted': 'green', 'tentative': '#FFFF00',  'declined': 'red'}\n"
+"    <p>\n"
+"        Xin chào ${object.common_name},<br/><br/>\n"
+"        ${object.event_id.user_id.partner_id.name} đã mời bạm tham dự sự kiện ${object.event_id.name} của ${object.event_id.user_id.company_id.name}.\n"
+"    </p>\n"
+"    <div style=\"text-align: center; margin: 16px 0px 16px 0px;\">\n"
+"        <a href=\"/calendar/meeting/accept?db=${'dbname' in ctx and ctx['dbname'] or ''}&amp;token=${object.access_token}&amp;action=${'action_id' in ctx and ctx['action_id'] or ''}&amp;id=${object.event_id.id}\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">\n"
+"            Chấp thuận</a>\n"
+"        <a href=\"/calendar/meeting/decline?db=${'dbname' in ctx and ctx['dbname'] or '' }&amp;token=${object.access_token}&amp;action=${'action_id' in ctx and ctx['action_id'] or ''}&amp;id=${object.event_id.id}\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">\n"
+"            Từ chối</a>\n"
+"        <a href=\"/calendar/meeting/view?db=${'dbname' in ctx and ctx['dbname'] or ''}&amp;token=${object.access_token}&amp;action=${'action_id' in ctx and ctx['action_id'] or ''}&amp;id=${object.event_id.id}\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">\n"
+"            Xem</a>\n"
+"    </div>\n"
+"    <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr>\n"
+"        <td width=\"130px;\">\n"
+"            <div style=\"border-top-left-radius: 3px; border-top-right-radius: 3px; font-size: 12px; border-collapse: separate; text-align: center; font-weight: bold; color: #ffffff; min-height: 18px; background-color: #875A7B; border: 1px solid #875A7B;\">\n"
+"                ${object.event_id.get_interval('dayname', tz=object.partner_id.tz if not object.event_id.allday else None)}\n"
+"            </div>\n"
+"            <div style=\"font-size: 48px; min-height: auto; font-weight: bold; text-align: center; color: #5F5F5F; background-color: #F8F8F8; border: 1px solid #875A7B;\">\n"
+"                ${object.event_id.get_interval('day', tz=object.partner_id.tz if not object.event_id.allday else None)}\n"
+"            </div>\n"
+"            <div style=\"font-size: 12px; text-align: center; font-weight: bold; color: #ffffff; background-color: #875A7B;\">\n"
+"                ${object.event_id.get_interval('month', tz=object.partner_id.tz if not object.event_id.allday else None)}\n"
+"            </div>\n"
+"            <div style=\"border-collapse: separate; color: #5F5F5F; text-align: center; font-size: 12px; border-bottom-right-radius: 3px; font-weight: bold; border: 1px solid #875A7B; border-bottom-left-radius: 3px;\">\n"
+"                ${not object.event_id.allday and object.event_id.get_interval('time', tz=object.partner_id.tz) or ''}\n"
+"            </div>\n"
+"        </td>\n"
+"        <td width=\"20px;\"/>\n"
+"        <td style=\"padding-top: 5px;\">\n"
+"            <p><strong>Chi tiết Sự kiện</strong></p>\n"
+"            <ul>\n"
+"                % if object.event_id.is_zoom_meeting:\n"
+"                    <li>Địa điểm: Trực tuyến qua Zoom</li>\n"
+"                    <li>URL tham dự: <a target=\"_blank\" href=\"${object.event_id.zoom_meeting_attendee_url}\">${object.event_id.zoom_meeting_attendee_url}</a></li>\n"
+"                % else:\n"
+"                \t% if object.event_id.location:\n"
+"                    <li>Địa điểm: ${object.event_id.location}\n"
+"                        (<a target=\"_blank\" href=\"http://maps.google.com/maps?oi=map&amp;q=${object.event_id.location}\">Xem Bản đồ</a>)\n"
+"                    </li>\n"
+"                \t% endif\n"
+"                % endif\n"
+"                % if object.event_id.description :\n"
+"                    <li>Mô tả: ${object.event_id.description}</li>\n"
+"                % endif\n"
+"                % if not object.event_id.allday and object.event_id.duration\n"
+"                    <li>Thời lượng: ${('%dH%02d' % (object.event_id.duration,round(object.event_id.duration*60)%60))}</li>\n"
+"                % endif\n"
+"                <li>Thành phần tham dự\n"
+"                <ul>\n"
+"                % for attendee in object.event_id.attendee_ids:\n"
+"                    <li>\n"
+"                        <div style=\"display: inline-block; border-radius: 50%; width: 10px; height: 10px; background:${colors[attendee.state] or 'white'};\"> </div>\n"
+"                        % if attendee.common_name != object.common_name:\n"
+"                            <span style=\"margin-left:5px\">${attendee.common_name}</span>\n"
+"                        % else:\n"
+"                            <span style=\"margin-left:5px\">Bạn</span>\n"
+"                        % endif\n"
+"                    </li>\n"
+"                % endfor\n"
+"                </ul></li>\n"
+"            </ul>\n"
+"        </td>\n"
+"    </tr></table>\n"
+"    <br/>\n"
+"    Xin cảm ơn,\n"
+"    <br/>\n"
+"    % if object.event_id.user_id and object.event_id.user_id.signature:\n"
+"        ${object.event_id.user_id.signature | safe}\n"
+"    % endif\n"
+"</div>\n"
+"            "
+
+#. module: to_zoom_calendar
+#: model:mail.template,body_html:to_zoom_calendar.calendar_template_meeting_changedate
+msgid ""
+"<div>\n"
+"\t\t\t\t\t% set colors = {'needsAction': 'grey', 'accepted': 'green',\n"
+"\t\t\t\t\t'tentative': '#FFFF00', 'declined': 'red'}\n"
+"\t\t\t\t\t<p>\n"
+"\t\t\t\t\t\tHello ${object.common_name},\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\tThe date of the meeting has been updated. The meeting\n"
+"\t\t\t\t\t\t${object.event_id.name} created by\n"
+"\t\t\t\t\t\t${object.event_id.user_id.partner_id.name} is now scheduled for\n"
+"\t\t\t\t\t\t${object.event_id.get_display_time_tz(tz=object.partner_id.tz)}.\n"
+"\t\t\t\t\t</p>\n"
+"\t\t\t\t\t<div style=\"text-align: center; margin: 16px 0px 16px 0px;\">\n"
+"\t\t\t\t\t\t<a href=\"/calendar/meeting/accept?db=${'dbname' in ctx and ctx['dbname'] or ''}&amp;token=${object.access_token}&amp;action=${'action_id' in ctx and ctx['action_id'] or ''}&amp;id=${object.event_id.id}\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">\n"
+"\t\t\t\t\t\t\tAccept\n"
+"\t\t\t\t\t\t</a>\n"
+"\t\t\t\t\t\t<a href=\"/calendar/meeting/decline?db=${'dbname' in ctx and ctx['dbname'] or '' }&amp;token=${object.access_token}&amp;action=${'action_id' in ctx and ctx['action_id'] or ''}&amp;id=${object.event_id.id}\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">\n"
+"\t\t\t\t\t\t\tDecline\n"
+"\t\t\t\t\t\t</a>\n"
+"\t\t\t\t\t\t<a href=\"/calendar/meeting/view?db=${'dbname' in ctx and ctx['dbname'] or ''}&amp;token=${object.access_token}&amp;action=${'action_id' in ctx and ctx['action_id'] or ''}&amp;id=${object.event_id.id}\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">\n"
+"\t\t\t\t\t\t\tView\n"
+"\t\t\t\t\t\t</a>\n"
+"\t\t\t\t\t</div>\n"
+"\t\t\t\t\t<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\">\n"
+"\t\t\t\t\t\t<tr>\n"
+"\t\t\t\t\t\t\t<td width=\"130px;\">\n"
+"\t\t\t\t\t\t\t\t<div style=\"border-top-left-radius: 3px; border-top-right-radius: 3px; font-size: 12px; border-collapse: separate; text-align: center; font-weight: bold; color: #ffffff; min-height: 18px; background-color: #875A7B; border: 1px solid #875A7B;\">\n"
+"\t\t\t\t\t\t\t\t\t${object.event_id.get_interval('dayname', tz=object.partner_id.tz if not object.event_id.allday else\n"
+"\t\t\t\t\t\t\t\t\tNone)}\n"
+"\t\t\t\t\t\t\t\t</div>\n"
+"\t\t\t\t\t\t\t\t<div style=\"font-size: 48px; min-height: auto; font-weight: bold; text-align: center; color: #5F5F5F; background-color: #F8F8F8; border: 1px solid #875A7B;\">\n"
+"\t\t\t\t\t\t\t\t\t${object.event_id.get_interval('day', tz=object.partner_id.tz if not object.event_id.allday else\n"
+"\t\t\t\t\t\t\t\t\tNone)}\n"
+"\t\t\t\t\t\t\t\t</div>\n"
+"\t\t\t\t\t\t\t\t<div style=\"font-size: 12px; text-align: center; font-weight: bold; color: #ffffff; background-color: #875A7B;\">\n"
+"\t\t\t\t\t\t\t\t\t${object.event_id.get_interval('month', tz=object.partner_id.tz if not object.event_id.allday else\n"
+"\t\t\t\t\t\t\t\t\tNone)}\n"
+"\t\t\t\t\t\t\t\t</div>\n"
+"\t\t\t\t\t\t\t\t<div style=\"border-collapse: separate; color: #5F5F5F; text-align: center; font-size: 12px; border-bottom-right-radius: 3px; font-weight: bold; border: 1px solid #875A7B; border-bottom-left-radius: 3px;\">\n"
+"\t\t\t\t\t\t\t\t\t${not object.event_id.allday and\n"
+"\t\t\t\t\t\t\t\t\tobject.event_id.get_interval('time', tz=object.partner_id.tz)\n"
+"\t\t\t\t\t\t\t\t\tor ''}\n"
+"\t\t\t\t\t\t\t\t</div>\n"
+"\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t\t<td width=\"20px;\"/>\n"
+"\t\t\t\t\t\t\t<td style=\"padding-top: 5px;\">\n"
+"\t\t\t\t\t\t\t\t<p>\n"
+"\t\t\t\t\t\t\t\t\t<strong>Details of the event</strong>\n"
+"\t\t\t\t\t\t\t\t</p>\n"
+"\t\t\t\t\t\t\t\t<ul>\n"
+"\t\t\t\t\t\t\t\t\t% if object.event_id.is_zoom_meeting:\n"
+"\t\t\t\t\t\t\t\t\t<li>Location: Online via Zoom</li>\n"
+"\t\t\t\t\t\t\t\t\t<li>\n"
+"\t\t\t\t\t\t\t\t\t\tAttendee URL:\n"
+"\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"${object.event_id.zoom_meeting_attendee_url}\">${object.event_id.zoom_meeting_attendee_url}</a>\n"
+"\t\t\t\t\t\t\t\t\t</li>\n"
+"\t\t\t\t\t\t\t\t\t% else:\n"
+"\t\t\t\t\t\t\t\t\t% if object.event_id.location:\n"
+"\t\t\t\t\t\t\t\t\t<li>\n"
+"\t\t\t\t\t\t\t\t\t\tLocation: ${object.event_id.location}\n"
+"\t\t\t\t\t\t\t\t\t\t(\n"
+"\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"http://maps.google.com/maps?oi=map&amp;q=${object.event_id.location}\">View Map</a>\n"
+"\t\t\t\t\t\t\t\t\t\t)\n"
+"\t\t\t\t\t\t\t\t\t</li>\n"
+"\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t\t% if object.event_id.description :\n"
+"\t\t\t\t\t\t\t\t\t<li>Description: ${object.event_id.description}</li>\n"
+"\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t\t% if not object.event_id.allday and object.event_id.duration\n"
+"\t\t\t\t\t\t\t\t\t<li>Duration: ${('%dH%02d' %\n"
+"\t\t\t\t\t\t\t\t\t\t(object.event_id.duration,round(object.event_id.duration*60)%60))}\n"
+"\t\t\t\t\t\t\t\t\t</li>\n"
+"\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t\t<li>\n"
+"\t\t\t\t\t\t\t\t\t\tAttendees\n"
+"\t\t\t\t\t\t\t\t\t\t<ul>\n"
+"\t\t\t\t\t\t\t\t\t\t\t% for attendee in object.event_id.attendee_ids:\n"
+"\t\t\t\t\t\t\t\t\t\t\t<li>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<div style=\"display: inline-block; border-radius: 50%; width: 10px; height: 10px; background: ${colors[attendee.state] or 'white'};\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t% if attendee.common_name != object.common_name:\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<span style=\"margin-left:5px\">${attendee.common_name}</span>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t% else:\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<span style=\"margin-left:5px\">You</span>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t\t\t\t</li>\n"
+"\t\t\t\t\t\t\t\t\t\t\t% endfor\n"
+"\t\t\t\t\t\t\t\t\t\t</ul>\n"
+"\t\t\t\t\t\t\t\t\t</li>\n"
+"\t\t\t\t\t\t\t\t</ul>\n"
+"\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t</tr>\n"
+"\t\t\t\t\t</table>\n"
+"\t\t\t\t\t<br/>\n"
+"\t\t\t\t\tThank you,\n"
+"\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t% if object.event_id.user_id and object.event_id.user_id.signature:\n"
+"\t\t\t\t\t${object.event_id.user_id.signature | safe}\n"
+"\t\t\t\t\t% endif\n"
+"\t\t\t\t</div>\n"
+"\t\t\t"
+msgstr ""
+"<div>\n"
+"    % set colors = {'needsAction': 'grey', 'accepted': 'green', 'tentative': '#FFFF00',  'declined': 'red'}\n"
+"    <p>\n"
+"        Xin chào ${object.common_name},<br/><br/>\n"
+"        Ngày của cuộc họp đã được thay đổi. Cuộc họp ${object.event_id.name} được tạo bởi ${object.event_id.user_id.partner_id.name} bây giờ được lập lịch vào ${object.event_id.get_display_time_tz(tz=object.partner_id.tz)}.\n"
+"    </p>\n"
+"    <div style=\"text-align: center; margin: 16px 0px 16px 0px;\">\n"
+"        <a href=\"/calendar/meeting/accept?db=${'dbname' in ctx and ctx['dbname'] or ''}&amp;token=${object.access_token}&amp;action=${'action_id' in ctx and ctx['action_id'] or ''}&amp;id=${object.event_id.id}\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">\n"
+"            Chấp thuận</a>\n"
+"        <a href=\"/calendar/meeting/decline?db=${'dbname' in ctx and ctx['dbname'] or '' }&amp;token=${object.access_token}&amp;action=${'action_id' in ctx and ctx['action_id'] or ''}&amp;id=${object.event_id.id}\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">\n"
+"            Từ chối</a>\n"
+"        <a href=\"/calendar/meeting/view?db=${'dbname' in ctx and ctx['dbname'] or ''}&amp;token=${object.access_token}&amp;action=${'action_id' in ctx and ctx['action_id'] or ''}&amp;id=${object.event_id.id}\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">\n"
+"            Xem</a>\n"
+"    </div>\n"
+"    <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr>\n"
+"        <td width=\"130px;\">\n"
+"            <div style=\"border-top-left-radius: 3px; border-top-right-radius: 3px; font-size: 12px; border-collapse: separate; text-align: center; font-weight: bold; color: #ffffff; min-height: 18px; background-color: #875A7B; border: 1px solid #875A7B;\">\n"
+"                ${object.event_id.get_interval('dayname', tz=object.partner_id.tz if not object.event_id.allday else None)}\n"
+"            </div>\n"
+"            <div style=\"font-size: 48px; min-height: auto; font-weight: bold; text-align: center; color: #5F5F5F; background-color: #F8F8F8; border: 1px solid #875A7B;\">\n"
+"                ${object.event_id.get_interval('day', tz=object.partner_id.tz if not object.event_id.allday else None)}\n"
+"            </div>\n"
+"            <div style=\"font-size: 12px; text-align: center; font-weight: bold; color: #ffffff; background-color: #875A7B;\">\n"
+"                ${object.event_id.get_interval('month', tz=object.partner_id.tz if not object.event_id.allday else None)}\n"
+"            </div>\n"
+"            <div style=\"border-collapse: separate; color: #5F5F5F; text-align: center; font-size: 12px; border-bottom-right-radius: 3px; font-weight: bold; border: 1px solid #875A7B; border-bottom-left-radius: 3px;\">\n"
+"                ${not object.event_id.allday and object.event_id.get_interval('time', tz=object.partner_id.tz) or ''}\n"
+"            </div>\n"
+"        </td>\n"
+"        <td width=\"20px;\"/>\n"
+"        <td style=\"padding-top: 5px;\">\n"
+"            <p><strong>Chi tiết Sự kiện</strong></p>\n"
+"            <ul>\n"
+"                % if object.event_id.is_zoom_meeting:\n"
+"                    <li>Địa điểm: Trực tuyến qua Zoom</li>\n"
+"                    <li>URL tham dự: <a target=\"_blank\" href=\"${object.event_id.zoom_meeting_attendee_url}\">${object.event_id.zoom_meeting_attendee_url}</a></li>\n"
+"                % else:\n"
+"                \t% if object.event_id.location:\n"
+"                    <li>Địa điểm: ${object.event_id.location}\n"
+"                        (<a target=\"_blank\" href=\"http://maps.google.com/maps?oi=map&amp;q=${object.event_id.location}\">Xem Bản đồ</a>)\n"
+"                    </li>\n"
+"                \t% endif\n"
+"                % endif\n"
+"                % if object.event_id.description :\n"
+"                    <li>Mô tả: ${object.event_id.description}</li>\n"
+"                % endif\n"
+"                % if not object.event_id.allday and object.event_id.duration\n"
+"                    <li>Thời lượng: ${('%dH%02d' % (object.event_id.duration,round(object.event_id.duration*60)%60))}</li>\n"
+"                % endif\n"
+"                <li>Thành phần tham dự\n"
+"                <ul>\n"
+"                % for attendee in object.event_id.attendee_ids:\n"
+"                    <li>\n"
+"                        <div style=\"display: inline-block; border-radius: 50%; width: 10px; height: 10px; background: ${colors[attendee.state] or 'white'};\"> </div>\n"
+"                        % if attendee.common_name != object.common_name:\n"
+"                            <span style=\"margin-left:5px\">${attendee.common_name}</span>\n"
+"                        % else:\n"
+"                            <span style=\"margin-left:5px\">Bạn</span>\n"
+"                        % endif\n"
+"                    </li>\n"
+"                % endfor\n"
+"                </ul></li>\n"
+"            </ul>\n"
+"        </td>\n"
+"    </tr></table>\n"
+"    <br/>\n"
+"    Xin cảm ơn,\n"
+"    <br/>\n"
+"    % if object.event_id.user_id and object.event_id.user_id.signature:\n"
+"        ${object.event_id.user_id.signature | safe}\n"
+"    % endif\n"
+"</div>\n"
+"            "
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.res_config_settings_view_form
+msgid ""
+"<i class=\"fa fa-arrow-right\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\tGenerate your API Key &amp; Secret."
+msgstr ""
+"<i class=\"fa fa-arrow-right\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\tTạo khóa &amp; mã bí mật API của bạn."
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.report_zoom_user
+msgid "<span class=\"ml-2\">Zoom Hosts Report</span>"
+msgstr "<span class=\"ml-2\">Báo cáo Zoom Hosts</span>"
+
+#. module: to_zoom_calendar
+#: model:mail.template,body_html:to_zoom_calendar.zoom_template_notif_empty_host
+msgid ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\">\n"
+"\t\t\t\t\t<tr>\n"
+"\t\t\t\t\t\t<td align=\"center\">\n"
+"\t\t\t\t\t\t\t<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"\t\t\t\t\t\t\t\t<tbody>\n"
+"\t\t\t\t\t\t\t\t\t<!-- HEADER -->\n"
+"\t\t\t\t\t\t\t\t\t<!-- CONTENT -->\n"
+"\t\t\t\t\t\t\t\t\t<tr>\n"
+"\t\t\t\t\t\t\t\t\t\t<td align=\"center\" style=\"min-width: 590px;\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<tr>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t<td valign=\"top\" style=\"font-size: 13px;\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t% set zoom_start_datetime = ctx.get('zoom_start_datetime')\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tDear ${object.name},\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAll Zoom Hosts have been used at ${zoom_start_datetime}.\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tPlease add the Zoom Host!\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tThanks,\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t${user.signature | safe}\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t</tr>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<tr>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t<td style=\"text-align:center;\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t</tr>\n"
+"\t\t\t\t\t\t\t\t\t\t\t</table>\n"
+"\t\t\t\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t\t\t\t</tr>\n"
+"\t\t\t\t\t\t\t\t\t<!-- FOOTER -->\n"
+"\t\t\t\t\t\t\t\t\t<tr>\n"
+"\t\t\t\t\t\t\t\t\t\t<td align=\"center\" style=\"min-width: 590px;\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; font-size: 11px; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<tr>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t<td valign=\"middle\" align=\"left\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t${object.company_id.name}\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t</tr>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<tr>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t<td valign=\"middle\" align=\"left\" style=\"opacity: 0.7;\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t${object.company_id.phone}\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t% if object.company_id.email\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t|\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"'mailto:%s' % ${object.company_id.email}\" style=\"text-decoration:none; color: #454748;\">${object.company_id.email}</a>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t% if object.company_id.website\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t|\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"'%s' % ${object.company_id.website}\" style=\"text-decoration:none; color: #454748;\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t${object.company_id.website}\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t</tr>\n"
+"\t\t\t\t\t\t\t\t\t\t\t</table>\n"
+"\t\t\t\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t\t\t\t</tr>\n"
+"\t\t\t\t\t\t\t\t</tbody>\n"
+"\t\t\t\t\t\t\t</table>\n"
+"\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t</tr>\n"
+"\t\t\t\t\t<!-- POWERED BY -->\n"
+"\t\t\t\t\t<tr>\n"
+"\t\t\t\t\t\t<td align=\"center\" style=\"min-width: 590px;\">\n"
+"\t\t\t\t\t\t\t<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:separate;\">\n"
+"\t\t\t\t\t\t\t\t<tr>\n"
+"\t\t\t\t\t\t\t\t\t<td style=\"text-align: center; font-size: 13px;\">\n"
+"\t\t\t\t\t\t\t\t\t\tPowered by\n"
+"\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.odoo.com?utm_source=db&amp;utm_medium=auth\" style=\"color: #875A7B;\">Odoo</a>\n"
+"\t\t\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t\t\t</tr>\n"
+"\t\t\t\t\t\t\t</table>\n"
+"\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t</tr>\n"
+"\t\t\t\t</table>\n"
+"\t\t\t"
+msgstr ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\"><tr><td align=\"center\">\n"
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"<tbody>\n"
+"    <!-- HEADER -->\n"
+"    <!-- CONTENT -->\n"
+"    <tr>\n"
+"        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                <tr><td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                    % set zoom_start_datetime = ctx.get('zoom_start_datetime')\n"
+"                    <div>\n"
+"                        Xin chào ${object.name},<br/><br/>\n"
+"                        Tất cả Zoom Hosts đã được sử dụng vào ${zoom_start_datetime}. Vui lòng bổ sung thêm Zoom Host!<br/><br/>\n"
+"                        Xin cảm ơn,<br/><br/>\n"
+"                        ${user.signature | safe}<br/>\n"
+"                    </div>\n"
+"                </td></tr>\n"
+"                <tr><td style=\"text-align:center;\">\n"
+"                  <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                </td></tr>\n"
+"            </table>\n"
+"        </td>\n"
+"    </tr>\n"
+"    <!-- FOOTER -->\n"
+"    <tr>\n"
+"        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; font-size: 11px; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                <tr><td valign=\"middle\" align=\"left\">\n"
+"                    ${object.company_id.name}\n"
+"                </td></tr>\n"
+"                <tr><td valign=\"middle\" align=\"left\" style=\"opacity: 0.7;\">\n"
+"                    ${object.company_id.phone}\n"
+"                    % if object.company_id.email\n"
+"                        | <a href=\"'mailto:%s' % ${object.company_id.email}\" style=\"text-decoration:none; color: #454748;\">${object.company_id.email}</a>\n"
+"                    % endif\n"
+"                    % if object.company_id.website\n"
+"                        | <a href=\"'%s' % ${object.company_id.website}\" style=\"text-decoration:none; color: #454748;\">\n"
+"                        ${object.company_id.website}\n"
+"                    </a>\n"
+"                    % endif\n"
+"                </td></tr>\n"
+"            </table>\n"
+"        </td>\n"
+"    </tr>\n"
+"</tbody>\n"
+"</table>\n"
+"</td></tr>\n"
+"<!-- POWERED BY -->\n"
+"<tr><td align=\"center\" style=\"min-width: 590px;\">\n"
+"    <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:separate;\">\n"
+"      <tr><td style=\"text-align: center; font-size: 13px;\">\n"
+"        Powered by <a target=\"_blank\" href=\"https://www.odoo.com?utm_source=db&amp;utm_medium=auth\" style=\"color: #875A7B;\">Odoo</a>\n"
+"      </td></tr>\n"
+"    </table>\n"
+"</td></tr>\n"
+"</table>"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,help:to_zoom_calendar.field_calendar_event__is_owner_zoom
+msgid "A technical field to show/hide Zoom meeting information."
+msgstr "Một trường kỹ thuật để ẩn/hiện thông tin Zoom meeting."
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user__zoom_action
+msgid "Action"
+msgstr "Hành động"
+
+#. module: to_zoom_calendar
+#: model:res.groups,name:to_zoom_calendar.group_admin
+msgid "Administrator"
+msgstr "Quản trị viên"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,help:to_zoom_calendar.field_calendar_event__zoom_setting_join_before_host
+msgid ""
+"Allow participants to join the meeting before the host starts the meeting"
+msgstr ""
+"Cho phép mọi người vào cuộc họp trước khi người chủ trì bắt đầu cuộc họp"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_calendar_event__zoom_setting_approval_type
+msgid "Approval Type"
+msgstr "Kiểu Phê duyệt"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_calendar_event__zoom_meeting_attendee_url
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.invitation_page_anonymous
+msgid "Attendee URL"
+msgstr "URL tham dự"
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.invitation_page_anonymous
+msgid "Attendees"
+msgstr "Người tham dự"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields.selection,name:to_zoom_calendar.selection__zoom_user__zoom_action__autocreate
+msgid "Auto Create"
+msgstr "Tạo tự động"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_calendar_event__zoom_setting_auto_recording
+msgid "Automatic Recording"
+msgstr "Tự động Ghi hình"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields.selection,name:to_zoom_calendar.selection__calendar_event__zoom_setting_approval_type__0
+msgid "Automatically approve"
+msgstr "Phê duyệt Tự động"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields.selection,name:to_zoom_calendar.selection__zoom_user__zoom_user_type__1
+msgid "Basic"
+msgstr "Cơ sở"
+
+#. module: to_zoom_calendar
+#: model:ir.model,name:to_zoom_calendar.model_calendar_attendee
+msgid "Calendar Attendee Information"
+msgstr "Thông tin Người tham dự Lịch"
+
+#. module: to_zoom_calendar
+#: model:ir.model,name:to_zoom_calendar.model_calendar_event
+msgid "Calendar Event"
+msgstr "Lịch sự kiện"
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.invitation_page_anonymous
+msgid "Calendar Invitation"
+msgstr "Lời mời"
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.view_zoom_user_report_form
+msgid "Close"
+msgstr "Đóng"
+
+#. module: to_zoom_calendar
+#: model:ir.model,name:to_zoom_calendar.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: to_zoom_calendar
+#: model:ir.model,name:to_zoom_calendar.model_res_config_settings
+msgid "Config Settings"
+msgstr "Thiết lập cấu hình"
+
+#. module: to_zoom_calendar
+#: model:ir.ui.menu,name:to_zoom_calendar.menu_zoom_configuration
+msgid "Configuration"
+msgstr "Cấu hình"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields.selection,name:to_zoom_calendar.selection__zoom_user__zoom_action__create
+msgid "Create"
+msgstr "Mời người dùng thông qua email của họ"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user__create_uid
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user_report__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user__create_date
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user_report__create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields.selection,name:to_zoom_calendar.selection__zoom_user__zoom_action__custcreate
+msgid "Cust Create"
+msgstr "Tạo người dùng không có mật khẩu"
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.invitation_page_anonymous
+msgid "Date"
+msgstr "Ngày"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields.selection,name:to_zoom_calendar.selection__calendar_event__zoom_setting_auto_recording__none
+msgid "Disabled"
+msgstr "Vô hiệu"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_calendar_attendee__display_name
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_calendar_event__display_name
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_report_to_zoom_calendar_report_zoom_user__display_name
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_res_company__display_name
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_apiv2__display_name
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user__display_name
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user_report__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.report_zoom_user
+msgid "Email"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_calendar_event__zoom_setting_join_before_host
+msgid "Enable join before host"
+msgstr "Cho phép tham gia trước người chủ trì"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user_report__end_date
+msgid "End Date"
+msgstr "Ngày kết thúc"
+
+#. module: to_zoom_calendar
+#: code:addons/to_zoom_calendar/wizard/zoom_user_report.py:0
+#, python-format
+msgid "End Date cannot be set before Start Date."
+msgstr "Ngày kết thúc không thể trước ngày bắt đầu"
+
+#. module: to_zoom_calendar
+#: model:ir.model,name:to_zoom_calendar.model_zoom_user_report
+msgid "Generate Zoom User Report"
+msgstr "Tạo Báo cáo Zoom User"
+
+#. module: to_zoom_calendar
+#: model:ir.actions.act_window,name:to_zoom_calendar.act_open_user_report_view
+msgid "Generate Zoom Users Report"
+msgstr "Tạo Báo cáo Zoom User"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_calendar_attendee__id
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_calendar_event__id
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_report_to_zoom_calendar_report_zoom_user__id
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_res_company__id
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_res_config_settings__id
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_apiv2__id
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user__id
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user_report__id
+msgid "ID"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields.selection,name:to_zoom_calendar.selection__calendar_event__zoom_type__1
+msgid "Instant meeting"
+msgstr "Cuộc họp tức thì"
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.invitation_page_anonymous
+msgid "Invitation for"
+msgstr "Lời mời cho"
+
+#. module: to_zoom_calendar
+#: model:mail.template,subject:to_zoom_calendar.calendar_template_meeting_invitation
+msgid "Invitation to ${object.event_id.name}"
+msgstr "Lời mời đến ${object.event_id.name}"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_calendar_event__is_owner_zoom
+msgid "Is Owner Zoom"
+msgstr "Là Người chủ trì Zoom"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_calendar_event__is_zoom_meeting
+msgid "Is Zoom Meeting?"
+msgstr "Là Zoom Meeting?"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_calendar_attendee____last_update
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_calendar_event____last_update
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_report_to_zoom_calendar_report_zoom_user____last_update
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_res_company____last_update
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_apiv2____last_update
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user____last_update
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user_report____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user__write_uid
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user_report__write_uid
+msgid "Last Updated by"
+msgstr "Sửa lần cuối bởi"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user__write_date
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user_report__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields.selection,name:to_zoom_calendar.selection__zoom_user__zoom_user_type__2
+msgid "Licensed"
+msgstr "Được cấp phép"
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.invitation_page_anonymous
+msgid "Location"
+msgstr "Địa điểm"
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.invitation_page_anonymous
+msgid "Logo"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields.selection,name:to_zoom_calendar.selection__calendar_event__zoom_setting_approval_type__1
+msgid "Manually approve"
+msgstr "Phê duyệt Thủ công"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_calendar_event__zoom_type
+msgid "Meeting Type"
+msgstr "Kiểu Cuộc họp"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_calendar_event__zoom_setting_mute_upon_entry
+#: model:ir.model.fields,help:to_zoom_calendar.field_calendar_event__zoom_setting_mute_upon_entry
+msgid "Mute participants upon entry"
+msgstr "Tắt tiếng khi có người tham gia"
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.invitation_page_anonymous
+msgid "No I'm not going."
+msgstr "Tôi sẽ không tham gia."
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields.selection,name:to_zoom_calendar.selection__calendar_event__zoom_setting_approval_type__2
+msgid "No registration required"
+msgstr "Không cần đăng ký"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields.selection,name:to_zoom_calendar.selection__zoom_user__zoom_user_type__3
+msgid "On-prem"
+msgstr "Lưu trữ tại chỗ"
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.invitation_page_anonymous
+msgid "Online via Zoom"
+msgstr "Trực tuyến qua Zoom"
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.view_zoom_user_report_form
+msgid "Print"
+msgstr "In"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields.selection,name:to_zoom_calendar.selection__calendar_event__zoom_setting_auto_recording__cloud
+msgid "Record on cloud"
+msgstr "Lưu trữ trên máy chủ"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields.selection,name:to_zoom_calendar.selection__calendar_event__zoom_setting_auto_recording__local
+msgid "Record on local"
+msgstr "Lưu trữ tại máy tính"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields.selection,name:to_zoom_calendar.selection__calendar_event__zoom_type__8
+msgid "Recurring meeting with fixed time"
+msgstr "Cuộc họp định kỳ với thời gian cố định"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields.selection,name:to_zoom_calendar.selection__calendar_event__zoom_type__3
+msgid "Recurring meeting with no fixed time"
+msgstr "Cuộc họp định kỳ với thời gian linh động"
+
+#. module: to_zoom_calendar
+#: model:ir.ui.menu,name:to_zoom_calendar.zoom_user_report_menu
+msgid "Reports"
+msgstr "Báo cáo"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields.selection,name:to_zoom_calendar.selection__zoom_user__zoom_action__ssocreate
+msgid "SSO Create"
+msgstr "Tạo SSO"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields.selection,name:to_zoom_calendar.selection__calendar_event__zoom_type__2
+msgid "Scheduled"
+msgstr "Lịch trình"
+
+#. module: to_zoom_calendar
+#: code:addons/to_zoom_calendar/wizard/zoom_user_report.py:0
+#, python-format
+msgid "Select date range for a month!"
+msgstr "Chọn ngày trong phạm vi một tháng!"
+
+#. module: to_zoom_calendar
+#: model:ir.actions.act_window,name:to_zoom_calendar.action_zoom_config_settings
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_calendar_event__zoom_setting
+#: model:ir.ui.menu,name:to_zoom_calendar.menu_zoom_settings
+msgid "Settings"
+msgstr "Thiết lập"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,help:to_zoom_calendar.field_zoom_user__zoom_action
+msgid ""
+"Specify how to create the new user: \n"
+"\n"
+"                                    1. \"Create\" - User will get an email sent from Zoom. There is a confirmation link in this email. User will then need to click this link to activate their account to the Zoom service. The user can set or change their password in Zoom.\n"
+"                                    2. \"Auto Create\" - This action is provided for enterprise customer who has a managed domain. This feature is disabled by default because of the security risk involved in creating a user who does not belong to your domain without notifying the user.\n"
+"                                    3. \"Cust Create\" - This action is provided for API partner only. User created in this way has no password and is not able to log into the Zoom web site or client.\n"
+"                                    4. \"SSO Create\" - This action is provided for enabled “Pre-provisioning SSO User” option. User created in this way has no password. If it is not a basic user, will generate a Personal Vanity URL using user name (no domain) of the provisioning email. If user name or pmi is invalid or occupied, will use random number/random personal vanity URL."
+msgstr ""
+"Chỉ định cách tạo người dùng mới: \n"
+"\n"
+"1. \"Create\"- Người dùng sẽ nhận được email được gửi từ Zoom. Có một liên kết xác nhận trong email này. Người dùng sau đó sẽ cần nhấp vào liên kết này để kích hoạt tài khoản của họ với dịch vụ Zoom. Người dùng có thể đặt hoặc thay đổi mật khẩu của họ trong Zoom. \n"
+" 2. \"Auto Create\"- Hành động này được cung cấp cho khách hàng doanh nghiệp có miền được quản lý. Tính năng này bị tắt theo mặc định do rủi ro bảo mật liên quan đến việc tạo người dùng không thuộc miền của bạn mà không thông báo cho người dùng . \n"
+" 3. \"Cust Create\"- Hành động này chỉ được cung cấp cho đối tác API. Người dùng được tạo theo cách này không có mật khẩu và không thể đăng nhập vào trang web hoặc ứng dụng khách của Zoom. \n"
+"4. \"SSO Create\"- Hành động này được cung cấp để bật tùy chọn \"Pre-provisioning SSO User\". Người dùng được tạo theo cách này không có mật khẩu. Nếu không phải là người dùng cơ bản, sẽ tạo URL cá nhân cho người dùng bằng cách sử dụng tên (không có tên miền) của email cung cấp. Nếu tên người dùng hoặc pmi không hợp lệ hoặc bị chiếm dụng, sẽ sử dụng số ngẫu nhiên/URL cá nhân ngẫu nhiên. "
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user_report__start_date
+msgid "Start Date"
+msgstr "Ngày bắt đầu"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_calendar_event__zoom_meeting_start_url
+msgid "Start URL"
+msgstr "URL Bắt đầu"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,help:to_zoom_calendar.field_zoom_user__zoom_password_name
+msgid ""
+"The password has to have a minimum of 8 characters and maximum of 32 "
+"characters. By default (basic requirement), password must have at least one "
+"letter (a, b, c…), at least one number (1, 2, 3…) and include both uppercase"
+" and lowercase letters. It should not contain only one identical character "
+"repeatedly (‘11111111’ or ‘aaaaaaaa’) and it cannot contain consecutive "
+"characters (‘12345678’ or ‘abcdefgh’)."
+msgstr ""
+"Mật khẩu phải có tối thiểu 8 ký tự và tối đa 32 ký tự. Theo mặc định (yêu "
+"cầu cơ bản), mật khẩu phải có ít nhất một chữ cái (a, b, c...), ít nhất một "
+"số (1, 2, 3,) và bao gồm cả chữ hoa và chữ thường. Nó không nên chỉ chứa một"
+" ký tự giống hệt nhau lặp đi lặp lại (‘ 11111111, hoặc ‘aaaaaaaa,) và nó "
+"không thể chứa ký tự liên tiếp (‘ 12345678, hoặc ‘abcdefgh,)."
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,help:to_zoom_calendar.field_calendar_event__zoom_user_id
+msgid "This is host ID for the meeting."
+msgstr "Đây là host ID cho meeting."
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.report_zoom_user
+msgid "Total Meeting Minutes"
+msgstr "Tổng số phút họp"
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.report_zoom_user
+msgid "Total Meetings"
+msgstr "Tổng số cuộc họp"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,help:to_zoom_calendar.field_calendar_event__zoom_meeting_attendee_url
+msgid "URL to join the meeting"
+msgstr "URL để tham gia cuộc họp"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,help:to_zoom_calendar.field_calendar_event__zoom_meeting_start_url
+msgid "URL to start the meeting"
+msgstr "URL để bắt đầu cuộc họp"
+
+#. module: to_zoom_calendar
+#: model:res.groups,name:to_zoom_calendar.group_user
+msgid "User"
+msgstr "Người dùng"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user__zoom_email
+msgid "User Email Address"
+msgstr "Email của người dùng"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user__zoom_password_name
+msgid "User Password"
+msgstr "Mật khẩu người dùng"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user__zoom_user_type
+msgid "User Type"
+msgstr "Kiểu người dùng"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user__zoom_first_name
+msgid "User's First Name"
+msgstr "Tên người dùng"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user__zoom_last_name
+msgid "User's Last Name"
+msgstr "Họ người dùng"
+
+#. module: to_zoom_calendar
+#: model:ir.ui.menu,name:to_zoom_calendar.zoom_user_menu
+msgid "Users"
+msgstr "Người dùng"
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.invitation_page_anonymous
+msgid "Yes I'm going."
+msgstr "Có, Tôi sẽ tham gia."
+
+#. module: to_zoom_calendar
+#: model:ir.module.category,name:to_zoom_calendar.module_category_zoom_user
+#: model:ir.module.category,name:to_zoom_calendar.module_category_zoom_zoom
+#: model:ir.ui.menu,name:to_zoom_calendar.zoom_menu_root
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.res_config_settings_view_form
+msgid "Zoom"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model,name:to_zoom_calendar.model_zoom_apiv2
+msgid "Zoom API v2"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_res_company__zoom_api_key
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_res_config_settings__zoom_api_key
+msgid "Zoom Api Key"
+msgstr "Khóa Zoom API"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_res_config_settings__module_to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.res_config_settings_view_form
+msgid "Zoom Integration"
+msgstr "Tích hợp Zoom"
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.res_config_settings_view_form
+msgid "Zoom Integration."
+msgstr "Tích hợp Zoom"
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.view_calendar_event_form
+msgid "Zoom Meeting"
+msgstr "Cuộc họp Zoom"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_calendar_event__zoom_user_id
+msgid "Zoom Meeting Host"
+msgstr "Người dùng Zoom"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_calendar_event__zoom_meeting_id
+msgid "Zoom Meeting Id"
+msgstr "ID cuộc họp Zoom"
+
+#. module: to_zoom_calendar
+#: model:ir.actions.act_window,name:to_zoom_calendar.action_zoom_meeting
+#: model:ir.ui.menu,name:to_zoom_calendar.zoom_meeting_menu
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.view_calendar_event_search
+msgid "Zoom Meetings"
+msgstr "Cuộc họp Zoom"
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_res_company__zoom_secret_key
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_res_config_settings__zoom_secret_key
+msgid "Zoom Secret Key"
+msgstr "Khóa bảo mật Zoom"
+
+#. module: to_zoom_calendar
+#: model:ir.model,name:to_zoom_calendar.model_zoom_user
+msgid "Zoom User"
+msgstr "Người dùng Zoom"
+
+#. module: to_zoom_calendar
+#: model:ir.model,name:to_zoom_calendar.model_report_to_zoom_calendar_report_zoom_user
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.view_zoom_user_report_form
+msgid "Zoom User Report"
+msgstr "Báo cáo người dùng Zoom"
+
+#. module: to_zoom_calendar
+#: model:ir.actions.act_window,name:to_zoom_calendar.action_list_user
+#: model:ir.actions.report,name:to_zoom_calendar.action_report_zoom_user
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.view_zoom_user_form
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.view_zoom_user_tree
+msgid "Zoom Users"
+msgstr "Người dùng Zoom"
+
+#. module: to_zoom_calendar
+#: code:addons/to_zoom_calendar/models/calendar_event.py:0
+#, python-format
+msgid "Zoom meeting with forever repeat doesn't support!"
+msgstr "Không hỗ trợ cuộc họp Zoom với kiểu lặp lại mãi mãi!"
+
+#. module: to_zoom_calendar
+#: model:mail.template,subject:to_zoom_calendar.zoom_template_notif_empty_host
+msgid "Zoom: All hosts have been used"
+msgstr "Zoom: Tất cả các host đã được sử dụng"
+
+#. module: to_zoom_calendar
+#: code:addons/to_zoom_calendar/models/calendar_event.py:0
+#, python-format
+msgid ""
+"Zoom: Host that you selected that have been used at %s. Please wait for the "
+"Administration to add the Host."
+msgstr ""
+"Zoom: Host mà bạn chọn đã được sử dụng vào %s. Vui lòng chờ Quản trị viên bổ"
+" sung thêm host."
+
+#. module: to_zoom_calendar
+#: model:res.groups,comment:to_zoom_calendar.group_user
+msgid ""
+"the user will have access to all records of zoom user in the zoom "
+"application."
+msgstr ""
+"người dùng sẽ có quyền truy cập vào tất cả các bản ghi của Zoom Zser trong "
+"ứng dụng Zoom."
+
+#. module: to_zoom_calendar
+#: model:res.groups,comment:to_zoom_calendar.group_admin
+msgid ""
+"the user will have an access to the zoom configuration as well as statistic "
+"reports."
+msgstr ""
+"người dùng sẽ có quyền truy cập vào cấu hình Zoom cũng như các báo cáo  "
+"thống kê."

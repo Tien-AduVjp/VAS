@@ -1,0 +1,36 @@
+.image_thumb_flex {
+    background: $gray-200;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.v-avatar-circle-sm{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%
+}
+.v-avatar-circle-md{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%
+}
+.share-item{
+    .document-share-info{
+        flex-shrink:1;
+        max-width:80%;
+        h6.o_text_overflow{
+            font-weight:bold; max-width:100%
+        }
+    }
+    .date-and-size{
+        font-size:12px;
+        font-weight:bold;
+        color: $gray-800;
+    }
+    .right-pos{
+        width:40px ;
+        text-align: center;
+        margin-left:auto;
+    }
+}

@@ -1,0 +1,55 @@
+<odoo>
+	<record id="view_move_line_tree" model="ir.ui.view">
+		<field name="name">account.move.line.tree</field>
+		<field name="model">account.move.line</field>
+		<field name="inherit_id" ref="account.view_move_line_tree" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='date_maturity']" position="after">
+				<field name="wallet" optional="hide" />
+				<field name="wallet_id" optional="hide" />
+				<field name="wallet_amount" sum="Total Wallet Amount" optional="hide" />
+				<field name="wallet_amount_currency" sum="Total Wallet Currency Amount" optional="hide" groups="base.group_multi_currency" />
+				<field name="wallet_amount_residual" sum="Total Wallet Residual" optional="hide" />
+				<field name="wallet_amount_residual_currency" sum="Total Wallet Currency Residual" optional="hide" groups="base.group_multi_currency" />
+			</xpath>
+		</field>
+	</record>
+
+	<record id="view_move_line_tree_grouped" model="ir.ui.view">
+		<field name="name">account.move.line.tree.grouped</field>
+		<field name="model">account.move.line</field>
+		<field name="inherit_id" ref="account.view_move_line_tree_grouped" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='amount_currency']" position="after">
+				<field name="wallet" optional="hide" />
+				<field name="wallet_id" optional="hide" />
+				<field name="wallet_amount" optional="hide" />
+				<field name="wallet_amount_currency" optional="hide" groups="base.group_multi_currency" />
+				<field name="wallet_amount_residual" optional="hide" />
+				<field name="wallet_amount_residual_currency" optional="hide" groups="base.group_multi_currency" />
+			</xpath>
+		</field>
+	</record>
+
+	<record id="view_move_line_form" model="ir.ui.view">
+		<field name="name">account.move.line.form</field>
+		<field name="model">account.move.line</field>
+		<field name="inherit_id" ref="account.view_move_line_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//group[./field[@name='analytic_account_id']]" position="after">
+				<group string="eWallet" groups="to_wallet.group_wallet_manager">
+					<field name="wallet" />
+					<field name="wallet_id" />
+					<field name="wallet_amount" />
+					<field name="wallet_amount_residual" />
+					<field name="non_wallet_amount_residual" />
+				</group>
+			</xpath>
+			<xpath expr="//field[@name='amount_currency']" position="after">
+				<field name="wallet_amount_currency" groups="to_wallet.group_wallet_manager" />
+				<field name="wallet_amount_residual_currency" groups="to_wallet.group_wallet_manager" />
+				<field name="non_wallet_amount_residual_currency" groups="to_wallet.group_wallet_manager" />
+			</xpath>
+		</field>
+	</record>
+</odoo>

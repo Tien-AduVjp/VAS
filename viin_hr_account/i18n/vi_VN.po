@@ -1,0 +1,210 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_hr_account
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-26 07:40+0000\n"
+"PO-Revision-Date: 2021-11-03 06:58+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_hr_account
+#: model_terms:ir.ui.view,arch_db:viin_hr_account.res_config_settings_view_form_accounting
+msgid "<span class=\"o_form_label\">General Employee Payable Account</span>"
+msgstr "<span class=\"o_form_label\">Tài khoản phải trả nhân viên chung</span>"
+
+#. module: viin_hr_account
+#: model:ir.model.fields,help:viin_hr_account.field_res_company__general_employee_payable_account_id
+#: model:ir.model.fields,help:viin_hr_account.field_res_config_settings__general_employee_payable_account_id
+#: model_terms:ir.ui.view,arch_db:viin_hr_account.res_config_settings_view_form_accounting
+msgid ""
+"A payable account for encoding employee payable accounting entries (e.g. in "
+"payslip batch mode or in case no payable account specified for the related "
+"employee)"
+msgstr ""
+"Một tài khoản phải trả để ghi nhận các bút toán phải trả cho nhân viên (ví "
+"dụ: trong chế độ Bút toán cho Bảng lương hoặc trong trường hợp không có tài "
+"khoản phải trả nào được chỉ định cho nhân viên có liên quan)"
+
+#. module: viin_hr_account
+#: model_terms:ir.ui.view,arch_db:viin_hr_account.view_department_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_account.view_employee_form
+msgid "Accounting"
+msgstr "Kế toán"
+
+#. module: viin_hr_account
+#: model:ir.model.fields,field_description:viin_hr_account.field_hr_employee__property_advance_account_id
+msgid "Advance Account"
+msgstr "Tài khoản Tạm ứng"
+
+#. module: viin_hr_account
+#: model:ir.model,name:viin_hr_account.model_account_analytic_account
+#: model:ir.model.fields,field_description:viin_hr_account.field_hr_department__analytic_account_id
+msgid "Analytic Account"
+msgstr "Tài khoản KT Quản trị"
+
+#. module: viin_hr_account
+#: model:ir.model,name:viin_hr_account.model_account_analytic_tag
+#: model:ir.model.fields,field_description:viin_hr_account.field_hr_department__analytic_tag_ids
+msgid "Analytic Tags"
+msgstr "Thẻ TK Quản trị"
+
+#. module: viin_hr_account
+#: model:ir.model,name:viin_hr_account.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: viin_hr_account
+#: model:ir.model,name:viin_hr_account.model_res_config_settings
+msgid "Config Settings"
+msgstr "Thiết lập Cấu hình"
+
+#. module: viin_hr_account
+#: model:ir.model.fields,help:viin_hr_account.field_hr_department__account_expense_id
+msgid ""
+"Default Expense Account that will be used for encoding the department "
+"expenses into general accounting system (e.g. employee payroll expenses)."
+msgstr ""
+"Tài khoản chi phí mặc định mà sẽ được sử dụng để hạch toán các chi phí liên "
+"quan đến phòng ban này vào hệ thống kế toán (vd: các chi phí lương)"
+
+#. module: viin_hr_account
+#: model:ir.model.fields,help:viin_hr_account.field_hr_department__analytic_account_id
+msgid ""
+"Default analytic account to be used for encoding analytic items related to "
+"payslips of this contract when no analytic account defined on the salary "
+"rules that concern."
+msgstr ""
+"Tài khoản phân tích mặc định được sử dụng để ghi nhận các mục phân tích liên"
+" quan đến phiếu lương của hợp đồng này khi không có tài khoản phân tích nào "
+"được xác định trên các quy tắc tiền lương liên quan."
+
+#. module: viin_hr_account
+#: model:ir.model,name:viin_hr_account.model_hr_department
+msgid "Department"
+msgstr "Phòng ban"
+
+#. module: viin_hr_account
+#: model:ir.model.fields,field_description:viin_hr_account.field_account_analytic_account__display_name
+#: model:ir.model.fields,field_description:viin_hr_account.field_account_analytic_tag__display_name
+#: model:ir.model.fields,field_description:viin_hr_account.field_account_payment__display_name
+#: model:ir.model.fields,field_description:viin_hr_account.field_hr_department__display_name
+#: model:ir.model.fields,field_description:viin_hr_account.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:viin_hr_account.field_res_company__display_name
+#: model:ir.model.fields,field_description:viin_hr_account.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: viin_hr_account
+#: model:ir.model,name:viin_hr_account.model_hr_employee
+#: model:ir.model.fields,field_description:viin_hr_account.field_account_payment__employee_id
+#: model:ir.model.fields.selection,name:viin_hr_account.selection__account_payment__partner_type__employee
+msgid "Employee"
+msgstr "Nhân viên"
+
+#. module: viin_hr_account
+#: model:ir.model.fields,field_description:viin_hr_account.field_hr_department__account_expense_id
+msgid "Expense Account"
+msgstr "Tài khoản Chi phí"
+
+#. module: viin_hr_account
+#: model:ir.model.fields,field_description:viin_hr_account.field_res_company__general_employee_payable_account_id
+#: model:ir.model.fields,field_description:viin_hr_account.field_res_config_settings__general_employee_payable_account_id
+msgid "General Employee Payable Account"
+msgstr "Tài khoản phải trả nhân viên chung"
+
+#. module: viin_hr_account
+#: model_terms:ir.ui.view,arch_db:viin_hr_account.account_analytic_tag_form_view
+#: model_terms:ir.ui.view,arch_db:viin_hr_account.view_account_analytic_account_form
+msgid "HR"
+msgstr ""
+
+#. module: viin_hr_account
+#: model:ir.model.fields,field_description:viin_hr_account.field_account_analytic_account__department_id
+msgid "HR Department"
+msgstr "Phòng/Ban (NS)"
+
+#. module: viin_hr_account
+#: model:ir.model.fields,field_description:viin_hr_account.field_account_analytic_account__department_ids
+#: model:ir.model.fields,field_description:viin_hr_account.field_account_analytic_tag__department_ids
+msgid "HR Departments"
+msgstr "Phòng ban (NS)"
+
+#. module: viin_hr_account
+#: model:ir.model.fields,field_description:viin_hr_account.field_account_analytic_account__id
+#: model:ir.model.fields,field_description:viin_hr_account.field_account_analytic_tag__id
+#: model:ir.model.fields,field_description:viin_hr_account.field_account_payment__id
+#: model:ir.model.fields,field_description:viin_hr_account.field_hr_department__id
+#: model:ir.model.fields,field_description:viin_hr_account.field_hr_employee__id
+#: model:ir.model.fields,field_description:viin_hr_account.field_res_company__id
+#: model:ir.model.fields,field_description:viin_hr_account.field_res_config_settings__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_hr_account
+#: model:ir.model.fields,help:viin_hr_account.field_hr_employee__property_advance_account_id
+msgid ""
+"If specified, this account will be used for employee advance operations "
+"instead of the default receivable account of the related partner specified "
+"by the private address."
+msgstr ""
+"Nếu được thiết lập, tài khoản này sẽ được sử dụng cho các nghiệp vụ tạm "
+"ứng nhân viên thay vì tài khoản phải thu mặc định được thiết lập ở đối tác "
+"địa chỉ riêng tư liên quan."
+
+#. module: viin_hr_account
+#: model:ir.model.fields,field_description:viin_hr_account.field_account_analytic_account____last_update
+#: model:ir.model.fields,field_description:viin_hr_account.field_account_analytic_tag____last_update
+#: model:ir.model.fields,field_description:viin_hr_account.field_account_payment____last_update
+#: model:ir.model.fields,field_description:viin_hr_account.field_hr_department____last_update
+#: model:ir.model.fields,field_description:viin_hr_account.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:viin_hr_account.field_res_company____last_update
+#: model:ir.model.fields,field_description:viin_hr_account.field_res_config_settings____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: viin_hr_account
+#: model:ir.model.fields,field_description:viin_hr_account.field_account_payment__partner_type
+msgid "Partner Type"
+msgstr "Kiểu Đối tác"
+
+#. module: viin_hr_account
+#: model:ir.model,name:viin_hr_account.model_account_payment
+msgid "Payments"
+msgstr "Thanh toán"
+
+#. module: viin_hr_account
+#: model_terms:ir.ui.view,arch_db:viin_hr_account.res_config_settings_view_form_accounting
+msgid "Payroll"
+msgstr "Bảng lương"
+
+#. module: viin_hr_account
+#: model:ir.model.fields,help:viin_hr_account.field_account_analytic_account__department_ids
+msgid "Technical field to link analytic account to HR departments."
+msgstr "Trường kỹ thuật để liên kết tài khoản quản trị với Phòng ban (HR)"
+
+#. module: viin_hr_account
+#: code:addons/viin_hr_account/models/account_analytic_account.py:0
+#, python-format
+msgid ""
+"You may not be able to change the name of the account '%s' while it links to"
+" the HR department '%s'"
+msgstr ""
+"Bạn không thể đổi tên tài khoản '%s' khi nó đang liên kết đến phòng ban '%s'"
+
+#. module: viin_hr_account
+#: code:addons/viin_hr_account/models/account_analytic_account.py:0
+#, python-format
+msgid ""
+"You may not have a single analytic account that links to multiple HR "
+"departments."
+msgstr ""
+"Bạn không thể có một tài khoản quản trị liên kết đồng thời đến nhiều phòng "
+"ban."

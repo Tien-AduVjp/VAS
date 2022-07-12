@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="git_repository_view_form" model="ir.ui.view">
+			<field name="name">git.repository.form</field>
+			<field name="model">git.repository</field>
+			<field name="inherit_id" ref="to_git.git_repository_view_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//div[@name='button_box']" position="inside">
+					<button name="action_view_app_product_templates" type="object"
+						attrs="{'invisible': [('app_product_templates_count','&lt;=',0)]}"
+						groups="to_odoo_module.odoo_module_user" class="oe_stat_button"
+						icon="fa-dollar">
+						<field name="app_product_templates_count"
+							groups="to_odoo_module.odoo_module_user" string="Apps Products"
+							widget="statinfo" />
+					</button>
+					<button name="action_view_odoo_modules" type="object"
+						attrs="{'invisible': [('odoo_modules_count','&lt;=',0)]}"
+						groups="to_odoo_module.odoo_module_user" class="oe_stat_button"
+						icon="fa-cube">
+						<field name="odoo_modules_count"
+							groups="to_odoo_module.odoo_module_user" string="Odoo Apps"
+							widget="statinfo" />
+					</button>
+					<button name="action_view_odoo_module_versions"
+						type="object"
+						attrs="{'invisible': [('odoo_module_versions_count','&lt;=',0)]}"
+						groups="to_odoo_module.odoo_module_user" class="oe_stat_button"
+						icon="fa-cubes">
+						<field name="odoo_module_versions_count"
+							groups="to_odoo_module.odoo_module_user"
+							string="Odoo App Versions" widget="statinfo" />
+					</button>
+				</xpath>
+				<xpath expr="//button[@name='action_pull']"
+					position="attributes">
+					<attribute name="help">Update all the already checked out
+						branches of this repository. If such the branches are marked with
+						Auto Modules Discovery, Odoo will discover for available Odoo
+						modules in the branch after pulling.
+					</attribute>
+				</xpath>
+				<xpath expr="//field[@name='parent_id']" position="after">
+					<field name="exclude_dependencies_from_repo_ids"
+						widget="many2many_tags" />
+				</xpath>
+				<xpath
+					expr="//field[@name='branch_ids']/tree/field[@name='recent_pull_time']"
+					position="after">
+					<field name="last_modules_discovery"
+						groups="to_odoo_module.odoo_module_user" readonly="1" />
+				</xpath>
+				<xpath
+					expr="//field[@name='branch_ids']/tree/field[@name='auto_scan']"
+					position="after">
+					<field name="auto_module_discovery" widget="boolean_toggle"
+						groups="to_odoo_module.odoo_module_user"
+						attrs="{'readonly':[('odoo_version_id','=',False)]}" />
+					<field name="generate_app_products" widget="boolean_toggle"
+						groups="to_odoo_module.odoo_module_user"
+						attrs="{'readonly':[('odoo_version_id','=',False)]}" />
+					<field name="odoo_version_id" invisible="1" />
+				</xpath>
+			</field>
+		</record>
+
+	</data>
+</odoo>

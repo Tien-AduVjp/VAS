@@ -1,0 +1,126 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_website_docs_odoo
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-17 08:59+0000\n"
+"PO-Revision-Date: 2022-01-17 08:59+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_website_docs_odoo
+#: code:addons/to_website_docs_odoo/controllers/main.py:0
+#, python-format
+msgid "%s - Odoo %s"
+msgstr ""
+
+#. module: to_website_docs_odoo
+#: model:ir.model.fields,field_description:to_website_docs_odoo.field_website__display_name
+#: model:ir.model.fields,field_description:to_website_docs_odoo.field_website_doc_category__display_name
+#: model:ir.model.fields,field_description:to_website_docs_odoo.field_website_document__display_name
+#: model:ir.model.fields,field_description:to_website_docs_odoo.field_website_document_content__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: to_website_docs_odoo
+#: model:ir.model.fields,field_description:to_website_docs_odoo.field_website__id
+#: model:ir.model.fields,field_description:to_website_docs_odoo.field_website_doc_category__id
+#: model:ir.model.fields,field_description:to_website_docs_odoo.field_website_document__id
+#: model:ir.model.fields,field_description:to_website_docs_odoo.field_website_document_content__id
+msgid "ID"
+msgstr ""
+
+#. module: to_website_docs_odoo
+#: model:ir.model.fields,field_description:to_website_docs_odoo.field_website____last_update
+#: model:ir.model.fields,field_description:to_website_docs_odoo.field_website_doc_category____last_update
+#: model:ir.model.fields,field_description:to_website_docs_odoo.field_website_document____last_update
+#: model:ir.model.fields,field_description:to_website_docs_odoo.field_website_document_content____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: to_website_docs_odoo
+#: model_terms:ir.ui.view,arch_db:to_website_docs_odoo.document_content_filter
+msgid "Odoo Version"
+msgstr ""
+
+#. module: to_website_docs_odoo
+#: model:ir.model.constraint,message:to_website_docs_odoo.constraint_website_document_content_version_uniq
+msgid "Odoo Version is already assigned!"
+msgstr ""
+
+#. module: to_website_docs_odoo
+#: model:ir.model.fields,field_description:to_website_docs_odoo.field_website_doc_category__odoo_version_ids
+#: model:ir.model.fields,field_description:to_website_docs_odoo.field_website_document__odoo_version_ids
+msgid "Odoo Versions"
+msgstr ""
+
+#. module: to_website_docs_odoo
+#: model:ir.model.fields,help:to_website_docs_odoo.field_website_document__odoo_version_ids
+msgid "The Odoo Versions related to this document"
+msgstr ""
+
+#. module: to_website_docs_odoo
+#: model:ir.model.fields,help:to_website_docs_odoo.field_website_document__unassigned_odoo_version_ids
+msgid "The Odoo Versions that are not related to this document"
+msgstr ""
+
+#. module: to_website_docs_odoo
+#: code:addons/to_website_docs_odoo/models/website_document.py:0
+#, python-format
+msgid ""
+"The source document contains a content in Odoo version %s which is already "
+"available in the destination content. You must remove one from either before"
+" proceeding."
+msgstr ""
+
+#. module: to_website_docs_odoo
+#: model:ir.model.fields,field_description:to_website_docs_odoo.field_website_document__unassigned_odoo_version_ids
+msgid "Unassigned Odoo Versions"
+msgstr ""
+
+#. module: to_website_docs_odoo
+#: model:ir.model.fields,field_description:to_website_docs_odoo.field_website_document_content__odoo_version_id
+msgid "Version"
+msgstr ""
+
+#. module: to_website_docs_odoo
+#: model:ir.model,name:to_website_docs_odoo.model_website
+msgid "Website"
+msgstr ""
+
+#. module: to_website_docs_odoo
+#: model:ir.model,name:to_website_docs_odoo.model_website_document
+msgid "Website Document"
+msgstr ""
+
+#. module: to_website_docs_odoo
+#: model:ir.model,name:to_website_docs_odoo.model_website_doc_category
+msgid "Website Document Category"
+msgstr ""
+
+#. module: to_website_docs_odoo
+#: model:ir.model,name:to_website_docs_odoo.model_website_document_content
+msgid "Website Document Content"
+msgstr ""
+
+#. module: to_website_docs_odoo
+#: code:addons/to_website_docs_odoo/controllers/editor.py:0
+#, python-format
+msgid ""
+"You are not allowed to create new document in the category in type of %s"
+msgstr ""
+
+#. module: to_website_docs_odoo
+#: code:addons/to_website_docs_odoo/models/website_document_content.py:0
+#, python-format
+msgid ""
+"You don't have right with this Document Contents '%s' (%s) which is "
+"published"
+msgstr ""

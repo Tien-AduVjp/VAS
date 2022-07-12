@@ -1,0 +1,18 @@
+<odoo>
+	<data>
+		<record id="view_order_form" model="ir.ui.view">
+			<field name="name">sale.order.form</field>
+			<field name="inherit_id" ref="sale.view_order_form" />
+			<field name="model">sale.order</field>
+			<field name="arch" type="xml">
+				<div name="button_box" position="inside">
+					<button name="action_view_tickets" class="o_stat_button"
+						type="object" icon="fa-ticket">
+						<field name="tickets_count" string="Tickets"
+							widget="statinfo" />
+					</button>
+				</div>
+			</field>
+		</record>
+	</data>
+</odoo>

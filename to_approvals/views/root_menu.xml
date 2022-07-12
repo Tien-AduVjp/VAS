@@ -1,0 +1,12 @@
+<odoo>
+	<data>
+		<menuitem id="approval_root_menu" name="Approval"
+			sequence="95" groups="base.group_user" web_icon="to_approvals,static/description/icon.png" />
+
+		<menuitem id="request_root_menu" name="Approval Request"
+			parent="approval_root_menu" sequence="1" />
+
+		<menuitem id="approval_config_menu" name="Configuration"
+			parent="approval_root_menu" sequence="5" />
+	</data>
+</odoo>

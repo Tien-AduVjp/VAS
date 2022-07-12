@@ -1,0 +1,81 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_purchase_receipt
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-02 11:52+0000\n"
+"PO-Revision-Date: 2021-11-02 11:52+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_purchase_receipt
+#: model_terms:ir.ui.view,arch_db:to_purchase_receipt.purchase_order_form
+msgid "Create Receipt"
+msgstr "Tạo biên lai"
+
+#. module: to_purchase_receipt
+#: model:ir.model.fields,field_description:to_purchase_receipt.field_purchase_order__display_name
+#: model:ir.model.fields,field_description:to_purchase_receipt.field_purchase_order_line__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_purchase_receipt
+#: model:ir.model.fields,field_description:to_purchase_receipt.field_purchase_order__id
+#: model:ir.model.fields,field_description:to_purchase_receipt.field_purchase_order_line__id
+msgid "ID"
+msgstr ""
+
+#. module: to_purchase_receipt
+#: code:addons/to_purchase_receipt/models/purchase_order.py:0
+#, python-format
+msgid "Invoice was created from this purchase order, You can't create Receipt"
+msgstr "Hóa đơn đã được tạo từ đơn mua này, bạn không thể tạo biên lai"
+
+#. module: to_purchase_receipt
+#: model:ir.model.fields,field_description:to_purchase_receipt.field_purchase_order____last_update
+#: model:ir.model.fields,field_description:to_purchase_receipt.field_purchase_order_line____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_purchase_receipt
+#: model:ir.model.fields,field_description:to_purchase_receipt.field_purchase_order__count_invoice
+msgid "Only Invoice Count"
+msgstr "Chi tổng hóa đơn"
+
+#. module: to_purchase_receipt
+#: model:ir.model.fields,field_description:to_purchase_receipt.field_purchase_order__count_receipt
+msgid "Only Receipt Count"
+msgstr "Chỉ tổng biên lai"
+
+#. module: to_purchase_receipt
+#: model:ir.model,name:to_purchase_receipt.model_purchase_order
+msgid "Purchase Order"
+msgstr "Đơn Mua"
+
+#. module: to_purchase_receipt
+#: model:ir.model,name:to_purchase_receipt.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "Dòng Đơn Mua"
+
+#. module: to_purchase_receipt
+#: code:addons/to_purchase_receipt/models/purchase_order.py:0
+#, python-format
+msgid ""
+"Receipts was created from this purchase order, You can't create Invoice"
+msgstr "Biên lai đã được tạo từ đơn hàng này, bạn không thể tạo hóa đơn."
+
+#. module: to_purchase_receipt
+#: code:addons/to_purchase_receipt/models/purchase_order.py:0
+#, python-format
+msgid ""
+"You may not have both invoices and receipts for the same purchase order "
+"`%s`. Either should be fine."
+msgstr ""
+"Bạn không thể có cả hóa đơn lẫn biên lai cho cùng một đơn mua `%s`."

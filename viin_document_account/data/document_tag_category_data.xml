@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+
+    <record id="document_tag_category_invoice_type" model="document.tag.category">
+        <field name="name">Invoice Type</field>
+    </record>
+
+    <record id="document_tag_category_account_document" model="document.tag.category">
+        <field name="name">Accounting Document</field>
+    </record>
+
+    <record id="document_tag_category_fiscal_year" model="document.tag.category">
+        <field name="name">Fiscal Year</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,350 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_stock_equipment
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-04 07:39+0000\n"
+"PO-Revision-Date: 2021-10-04 07:39+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_stock_equipment
+#: code:addons/to_stock_equipment/models/product_template.py:0
+#, python-format
+msgid ""
+"An equipment product must have 'Tracking By Unique Serial Number' enabled."
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_maintenance_equipment__product_id
+msgid "Associated Product"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_product__can_be_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_template__can_be_equipment
+msgid "Can be Equipment"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_stock_picking_type__can_create_equipment
+msgid "Can create equipment"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,help:to_stock_equipment.field_stock_move_line__can_create_equipment
+msgid ""
+"Checking this to have a new equipment generated automatically once the stock"
+" picking will be validated"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_stock_move_line__can_create_equipment
+msgid "Create Equipment"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_maintenance_equipment__created_from_stock_lot
+msgid "Created from Stock Lot"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_maintenance_equipment__current_stock_location_id
+#: model_terms:ir.ui.view,arch_db:to_stock_equipment.maintenance_equipment_view_search_inherit_hr
+msgid "Current Stock Location"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_category__property_default_equipment_category_id
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_product__property_default_equipment_category_id
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_template__property_default_equipment_category_id
+msgid "Default Equipment Category"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model.fields.selection,name:to_stock_equipment.selection__product_category__equipment_assign_to__department
+#: model:ir.model.fields.selection,name:to_stock_equipment.selection__product_template__equipment_assign_to__department
+msgid "Department"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_maintenance_equipment__display_name
+#: model:ir.model.fields,field_description:to_stock_equipment.field_maintenance_request__display_name
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_category__display_name
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_product__display_name
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_template__display_name
+#: model:ir.model.fields,field_description:to_stock_equipment.field_stock_move__display_name
+#: model:ir.model.fields,field_description:to_stock_equipment.field_stock_move_line__display_name
+#: model:ir.model.fields,field_description:to_stock_equipment.field_stock_picking_type__display_name
+#: model:ir.model.fields,field_description:to_stock_equipment.field_stock_production_lot__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model.fields.selection,name:to_stock_equipment.selection__product_category__equipment_assign_to__employee
+#: model:ir.model.fields.selection,name:to_stock_equipment.selection__product_template__equipment_assign_to__employee
+msgid "Employee"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_stock_move_line__equipment_id
+#: model:ir.model.fields,field_description:to_stock_equipment.field_stock_production_lot__equipment_id
+#: model_terms:ir.ui.view,arch_db:to_stock_equipment.view_picking_type_form
+msgid "Equipment"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.actions.act_window,name:to_stock_equipment.hr_equipment_request_stock_move_from_equipment
+msgid "Equipment Moves"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.actions.act_window,name:to_stock_equipment.action_equipment_products
+msgid "Equipment Products"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_stock_move__equipment_ids
+#: model:ir.model.fields,field_description:to_stock_equipment.field_stock_production_lot__equipment_ids
+#: model_terms:ir.ui.view,arch_db:to_stock_equipment.product_category_form_view
+#: model_terms:ir.ui.view,arch_db:to_stock_equipment.view_product_to_stock_equipment_form
+msgid "Equipments"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,help:to_stock_equipment.field_stock_move__equipment_ids
+msgid "Equipments that refer this move"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model_terms:ir.ui.view,arch_db:to_stock_equipment.maintenance_equipment_view_search_inherit_hr
+msgid "Generated from Stock Operations"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_maintenance_equipment__id
+#: model:ir.model.fields,field_description:to_stock_equipment.field_maintenance_request__id
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_category__id
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_product__id
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_template__id
+#: model:ir.model.fields,field_description:to_stock_equipment.field_stock_move__id
+#: model:ir.model.fields,field_description:to_stock_equipment.field_stock_move_line__id
+#: model:ir.model.fields,field_description:to_stock_equipment.field_stock_picking_type__id
+#: model:ir.model.fields,field_description:to_stock_equipment.field_stock_production_lot__id
+msgid "ID"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_maintenance_equipment____last_update
+#: model:ir.model.fields,field_description:to_stock_equipment.field_maintenance_request____last_update
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_category____last_update
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_product____last_update
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_template____last_update
+#: model:ir.model.fields,field_description:to_stock_equipment.field_stock_move____last_update
+#: model:ir.model.fields,field_description:to_stock_equipment.field_stock_move_line____last_update
+#: model:ir.model.fields,field_description:to_stock_equipment.field_stock_picking_type____last_update
+#: model:ir.model.fields,field_description:to_stock_equipment.field_stock_production_lot____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_maintenance_equipment__lot_id
+msgid "Logistics Serial Number"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model,name:to_stock_equipment.model_stock_production_lot
+#: model:ir.model.fields,field_description:to_stock_equipment.field_maintenance_request__lot_id
+msgid "Lot/Serial"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model,name:to_stock_equipment.model_maintenance_equipment
+msgid "Maintenance Equipment"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model_terms:ir.ui.view,arch_db:to_stock_equipment.view_production_lot_form
+msgid "Maintenance History"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_stock_production_lot__maintenance_history_count
+msgid "Maintenance History Count"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model,name:to_stock_equipment.model_maintenance_request
+msgid "Maintenance Request"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_category__property_maintenance_team_id
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_product__property_maintenance_team_id
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_template__property_maintenance_team_id
+msgid "Maintenance Team"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_stock_production_lot__maintenance_ids
+msgid "Maintenances"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_maintenance_equipment__stock_move_lines
+msgid "Move History"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_maintenance_equipment__history_count
+msgid "Move History Count"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model_terms:ir.ui.view,arch_db:to_stock_equipment.hr_equipment_view_form
+msgid "Moves"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model.fields.selection,name:to_stock_equipment.selection__product_category__equipment_assign_to__other
+#: model:ir.model.fields.selection,name:to_stock_equipment.selection__product_template__equipment_assign_to__other
+msgid "Other"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model,name:to_stock_equipment.model_stock_picking_type
+msgid "Picking Type"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model,name:to_stock_equipment.model_product_product
+msgid "Product"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model,name:to_stock_equipment.model_product_category
+msgid "Product Category"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model,name:to_stock_equipment.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model,name:to_stock_equipment.model_product_template
+msgid "Product Template"
+msgstr ""
+
+#. module: to_stock_equipment
+#: code:addons/to_stock_equipment/models/product_template.py:0
+#, python-format
+msgid ""
+"Product marked with 'Can be Equipment' must be in type of 'Storable "
+"Product'."
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_maintenance_equipment__serial_no
+msgid "Serial Number"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model,name:to_stock_equipment.model_stock_move
+msgid "Stock Move"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_category__technician_user_id
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_product__technician_user_id
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_template__technician_user_id
+msgid "Technician"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,help:to_stock_equipment.field_stock_production_lot__equipment_id
+msgid "The Equipment that refers to this lot for equipment movement tracking."
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,help:to_stock_equipment.field_stock_production_lot__equipment_ids
+msgid "The Equipments that refer to this lot"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,help:to_stock_equipment.field_product_product__property_default_equipment_category_id
+#: model:ir.model.fields,help:to_stock_equipment.field_product_template__property_default_equipment_category_id
+msgid ""
+"The default equipment category to put newly created equipment(s) when "
+"creating the equipment(s) from a stock picking."
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,help:to_stock_equipment.field_product_category__property_default_equipment_category_id
+msgid ""
+"The default equipment category to put newly created equipment(s) when "
+"creating the equipment(s) from a stock picking. This parameter can be "
+"overridden on the product configuration."
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,help:to_stock_equipment.field_product_category__property_maintenance_team_id
+msgid ""
+"The default maintenance team for equipments created from a product of this "
+"product category"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,help:to_stock_equipment.field_product_product__property_maintenance_team_id
+#: model:ir.model.fields,help:to_stock_equipment.field_product_template__property_maintenance_team_id
+msgid ""
+"The default maintenance team for having equipments created from this product"
+" during stock transfer"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,help:to_stock_equipment.field_stock_move_line__equipment_id
+msgid "The equipment that was generated by this stock move line."
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,help:to_stock_equipment.field_maintenance_equipment__lot_id
+#: model:ir.model.fields,help:to_stock_equipment.field_maintenance_request__lot_id
+msgid "The unique logistics serial number that associated with the Equipment"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,help:to_stock_equipment.field_product_product__can_be_equipment
+#: model:ir.model.fields,help:to_stock_equipment.field_product_template__can_be_equipment
+msgid "To allow link between an equipment and a product"
+msgstr ""
+
+#. module: to_stock_equipment
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_category__equipment_assign_to
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_product__equipment_assign_to
+#: model:ir.model.fields,field_description:to_stock_equipment.field_product_template__equipment_assign_to
+msgid "Used By"
+msgstr ""
+
+#. module: to_stock_equipment
+#: code:addons/to_stock_equipment/models/stock_move_line.py:0
+#, python-format
+msgid ""
+"You cannot create equipment from this picking since its operation '%s' does "
+"not allow that"
+msgstr ""
+
+#. module: to_stock_equipment
+#: code:addons/to_stock_equipment/models/stock_move_line.py:0
+#, python-format
+msgid ""
+"You cannot create equipment from this picking since its operation '%s' does not "
+"allow Create New Lots/Serial Numbers!"
+msgstr ""

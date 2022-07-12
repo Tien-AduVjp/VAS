@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="odoo_version_form_view">
+			<field name="name">odoo_version.form</field>
+			<field name="model">odoo.version</field>
+			<field name="inherit_id"
+				ref="to_odoo_version.odoo_version_form_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//div[@name='button_box']" position="inside">
+					<button name="action_view_git_branches" type="object"
+						class="oe_stat_button" icon="fa-code-fork"
+						attrs="{'invisible': [('git_branches_count','=',0)]}"
+						groups="to_git.group_to_git_user" string="Git Branches">
+						<field name="git_branches_count" invisible="1" />
+					</button>
+				</xpath>
+			</field>
+		</record>
+
+	</data>
+</odoo>
+

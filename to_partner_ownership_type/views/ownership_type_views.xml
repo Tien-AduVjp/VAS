@@ -1,0 +1,63 @@
+<odoo>
+	<data>
+
+		<record id="ownership_type_tree_view" model="ir.ui.view" >
+			<field name="name">res.partner.ownership.type.tree</field>
+			<field name="model">res.partner.ownership.type</field>
+			<field name="arch" type="xml">
+				<tree string="Ownership Type List">
+					<field name="name" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="ownership_type_form_view" model="ir.ui.view" >
+			<field name="name">res.partner.ownership.type.form</field>
+			<field name="model">res.partner.ownership.type</field>
+			<field name="arch" type="xml">
+				<form string="Ownership Type Form">
+					<sheet>
+						<field name="active" invisible="1"/>
+						<widget name="web_ribbon" title="Archived"
+							bg_color="bg-danger"
+							attrs="{'invisible': [('active', '=', True)]}" />
+						<div class="oe_title">
+							<h1>
+								<field name="name" />
+							</h1>
+						</div>
+						<group>
+							<group>
+								<field name="description" />
+							</group>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record id="ownership_type_search_view" model="ir.ui.view" >
+			<field name="name">res.partner.ownership.type.search</field>
+			<field name="model">res.partner.ownership.type</field>
+			<field name="arch" type="xml">
+				<search string="Search Ownership Type">
+					<field name="name" />
+					<filter name="active" string="Archived"
+						domain="[('active','=',False)]"/>
+				</search>
+			</field>
+		</record>
+
+		<record id="ownership_type_action" model="ir.actions.act_window" >
+			<field name="name">Ownership Type</field>
+			<field name="res_model">res.partner.ownership.type</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create a new Ownership Type</p>
+			</field>
+		</record>
+
+		<menuitem id="ownership_type_menu" action="ownership_type_action" parent="contacts.res_partner_menu_config" sequence="17"/>
+
+	</data>
+</odoo>

@@ -1,0 +1,151 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_quality_product
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-12 01:42+0000\n"
+"PO-Revision-Date: 2022-02-12 01:42+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_quality_product
+#: model_terms:ir.ui.view,arch_db:viin_quality_product.quality_point_view_kanban
+msgid "<strong>Product template:</strong>"
+msgstr ""
+
+#. module: viin_quality_product
+#: model:ir.model.fields,field_description:viin_quality_product.field_quality_check__checked_qty_deviation
+msgid "Checked Qty Deviation"
+msgstr ""
+
+#. module: viin_quality_product
+#: model:ir.model.fields,field_description:viin_quality_product.field_quality_check__checked_quantity
+msgid "Checked Quantity"
+msgstr ""
+
+#. module: viin_quality_product
+#: model:ir.model.fields,field_description:viin_quality_product.field_quality_alert__display_name
+#: model:ir.model.fields,field_description:viin_quality_product.field_quality_alert_action__display_name
+#: model:ir.model.fields,field_description:viin_quality_product.field_quality_check__display_name
+#: model:ir.model.fields,field_description:viin_quality_product.field_quality_point__display_name
+#: model:ir.model.fields,field_description:viin_quality_product.field_quality_type__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: viin_quality_product
+#: model:ir.model.fields,field_description:viin_quality_product.field_quality_alert__id
+#: model:ir.model.fields,field_description:viin_quality_product.field_quality_alert_action__id
+#: model:ir.model.fields,field_description:viin_quality_product.field_quality_check__id
+#: model:ir.model.fields,field_description:viin_quality_product.field_quality_point__id
+#: model:ir.model.fields,field_description:viin_quality_product.field_quality_type__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_quality_product
+#: model:ir.model.fields,field_description:viin_quality_product.field_quality_alert____last_update
+#: model:ir.model.fields,field_description:viin_quality_product.field_quality_alert_action____last_update
+#: model:ir.model.fields,field_description:viin_quality_product.field_quality_check____last_update
+#: model:ir.model.fields,field_description:viin_quality_product.field_quality_point____last_update
+#: model:ir.model.fields,field_description:viin_quality_product.field_quality_type____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: viin_quality_product
+#: model:ir.model.fields,field_description:viin_quality_product.field_quality_alert__product_tmpl_id
+#: model:ir.model.fields,field_description:viin_quality_product.field_quality_alert_action__product_tmpl_id
+#: model:ir.model.fields,field_description:viin_quality_product.field_quality_alert_corrective_action__product_tmpl_id
+#: model:ir.model.fields,field_description:viin_quality_product.field_quality_alert_preventive_action__product_tmpl_id
+#: model:ir.model.fields,field_description:viin_quality_product.field_quality_check__product_id
+#: model:ir.model.fields,field_description:viin_quality_product.field_quality_point__product_tmpl_id
+#: model:ir.model.fields.selection,name:viin_quality_product.selection__quality_type__type__product
+#: model:quality.type,name:viin_quality_product.quality_type_product
+#: model_terms:ir.ui.view,arch_db:viin_quality_product.quality_alert_action_view_search
+#: model_terms:ir.ui.view,arch_db:viin_quality_product.quality_check_view_search
+msgid "Product"
+msgstr ""
+
+#. module: viin_quality_product
+#: model:ir.model.fields,field_description:viin_quality_product.field_quality_alert__product_id
+#: model:ir.model.fields,field_description:viin_quality_product.field_quality_alert_action__product_id
+#: model:ir.model.fields,field_description:viin_quality_product.field_quality_alert_corrective_action__product_id
+#: model:ir.model.fields,field_description:viin_quality_product.field_quality_alert_preventive_action__product_id
+#: model:ir.model.fields,field_description:viin_quality_product.field_quality_point__product_id
+msgid "Product Variant"
+msgstr ""
+
+#. module: viin_quality_product
+#: model:ir.model.fields,field_description:viin_quality_product.field_quality_check__quantity_to_check
+#: model:ir.model.fields,field_description:viin_quality_product.field_quality_point__quantity_to_check
+msgid "Qty to Check"
+msgstr ""
+
+#. module: viin_quality_product
+#: model:ir.model,name:viin_quality_product.model_quality_alert
+msgid "Quality Alert"
+msgstr ""
+
+#. module: viin_quality_product
+#: model:ir.model,name:viin_quality_product.model_quality_alert_action
+msgid "Quality Alert Action"
+msgstr ""
+
+#. module: viin_quality_product
+#: model:ir.model,name:viin_quality_product.model_quality_check
+msgid "Quality Check"
+msgstr ""
+
+#. module: viin_quality_product
+#: model:ir.model,name:viin_quality_product.model_quality_point
+msgid "Quality Point"
+msgstr ""
+
+#. module: viin_quality_product
+#: model:ir.model,name:viin_quality_product.model_quality_type
+msgid "Quality Type"
+msgstr ""
+
+#. module: viin_quality_product
+#: model:ir.model.fields,help:viin_quality_product.field_quality_check__checked_qty_deviation
+msgid ""
+"The deviation between Qty to Check and Checked Quantity. A Possible Value "
+"indecates the checked quantity is more than the quantity that needs to check"
+msgstr ""
+
+#. module: viin_quality_product
+#: code:addons/viin_quality_product/models/quality_check.py:0
+#, python-format
+msgid ""
+"The product of the quality check %s must be a variant of the product of the "
+"corresponding quality point %s"
+msgstr ""
+
+#. module: viin_quality_product
+#: code:addons/viin_quality_product/models/quality_check.py:0
+#, python-format
+msgid ""
+"The product of the quality check %s must be the same as the product of the "
+"corresponding quality point %s"
+msgstr ""
+
+#. module: viin_quality_product
+#: model:ir.model.fields,help:viin_quality_product.field_quality_check__quantity_to_check
+#: model:ir.model.fields,help:viin_quality_product.field_quality_point__quantity_to_check
+msgid "The quantity for the quality check (in percentage)"
+msgstr ""
+
+#. module: viin_quality_product
+#: model:ir.model.fields,help:viin_quality_product.field_quality_check__checked_quantity
+msgid "The total quantity that has been checked (in percentage)"
+msgstr ""
+
+#. module: viin_quality_product
+#: model:ir.model.fields,field_description:viin_quality_product.field_quality_type__type
+msgid "Type"
+msgstr ""

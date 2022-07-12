@@ -1,0 +1,185 @@
+<odoo>
+	<data>
+		<record id="stock_report_view_tree" model="ir.ui.view">
+			<field name="name">stock.report.tree</field>
+			<field name="model">stock.report</field>
+			<field name="arch" type="xml">
+				<tree create="false" edit="false" delete="false">
+					<field name="reference" />
+					<field name="picking_type_id" />
+					<field name="product_id" />
+					<field name="creation_date" />
+					<field name="scheduled_date" />
+					<field name="date_done" />
+					<field name="company_id" groups="base.group_multi_company" />
+					<field name="warehouse_id"
+						groups="stock.group_stock_multi_warehouses" />
+					<field name="state" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="stock_report_view_form" model="ir.ui.view">
+			<field name="name">stock.report.form</field>
+			<field name="model">stock.report</field>
+			<field name="arch" type="xml">
+				<form>
+					<header>
+						<field name="state" widget="statusbar"/>
+					</header>
+					<sheet>
+						<group>
+							<group name="picking">
+								<field name="reference" />
+								<field name="picking_id"
+									attrs="{'invisible': [('picking_id', '=', False)]}" />
+								<field name="inventory_id"
+									attrs="{'invisible': [('inventory_id', '=', False)]}" />
+								<field name="picking_type_id" />
+								<field name="product_id" />
+								<field name="product_qty" />
+								<field name="partner_id" />
+								<field name="company_id" groups="base.group_multi_company" />
+								<field name="warehouse_id"
+									groups="stock.group_stock_multi_warehouses" />
+							</group>
+							<group name="date">
+								<field name="creation_date" />
+								<field name="scheduled_date" />
+								<field name="date_done" />
+								<label for="delay" string="Delay" />
+								<div class="o_row">
+									<field name="delay" /> Days
+								</div>
+								<label for="cycle_time" string="Cycle Time" />
+								<div class="o_row">
+									<field name="cycle_time" /> Days
+								</div>
+							</group>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record id="stock_report_view_search" model="ir.ui.view">
+			<field name="name">stock.report.search</field>
+			<field name="model">stock.report</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="reference" />
+					<filter string="Done Deliveries" name="ftr_done_deliveries"
+						domain="[('state', '=', 'done'), ('picking_type_code', '=', 'outgoing')]" />
+					<filter string="Done Receipts" name="ftr_done_receipts"
+						domain="[('state', '=', 'done'), ('picking_type_code', '=', 'incoming')]" />
+					<filter string="Done Transfers" name="ftr_done"
+						domain="[('state', '=', 'done')]" />
+					<group expand="0" string="Group By">
+						<filter string="Warehouse" name="grp_warehouse" domain="[]"
+							context="{'group_by': 'warehouse_id'}"
+							groups="stock.group_stock_multi_warehouses" />
+						<filter string="Product Category" name="grp_categ"
+							domain="[]" context="{'group_by': 'categ_id'}" />
+					</group>
+				</search>
+			</field>
+		</record>
+
+		<record id="stock_report_view_graph" model="ir.ui.view">
+			<field name="name">stock.report.graph</field>
+			<field name="model">stock.report</field>
+			<field name="arch" type="xml">
+				<graph type="bar">
+					<field name="date_done" interval="week" type="row" />
+					<field name="company_id" type="row"
+						groups="base.group_multi_company" />
+					<field name="warehouse_id" type="row"
+						groups="stock.group_stock_multi_warehouses" />
+				</graph>
+			</field>
+		</record>
+
+		<record id="stock_report_view_pivot" model="ir.ui.view">
+			<field name="name">stock.report.pivot</field>
+			<field name="model">stock.report</field>
+			<field name="arch" type="xml">
+				<pivot string="Stock Overview">
+					<field name="picking_type_id" type="col" />
+					<field name="company_id" type="row"
+						groups="base.group_multi_company" />
+					<field name="warehouse_id" type="row"
+						groups="stock.group_stock_multi_warehouses" />
+					<field name="categ_id" type="row" />
+					<field name="delay" type="measure" />
+					<field name="cycle_time" type="measure" />
+				</pivot>
+			</field>
+		</record>
+
+		<record id="stock_report_viin_view_dashboard" model="ir.ui.view">
+			<field name="name">stock.report.viin_dashboard</field>
+			<field name="model">stock.report</field>
+			<field name="mode">primary</field>
+			<field name="arch" type="xml">
+				<viin_dashboard>
+					<view type="graph" ref="viin_stock.stock_report_graph_view" />
+					<group col="1">
+						<group col="4">
+							<aggregate name="delay_delivery"
+								string="Ave. Delivery Delay" field="delay" group_operator="avg"
+								domain="[('picking_type_code', '=', 'outgoing')]"
+								domain_label="Done Deliveries"
+								help="Delay (days) to deliver an order. Calculated by minusing the done/effective date of the delivery order and its scheduled date."
+								value_label="days" />
+							<aggregate name="delay_receipt"
+								string="Ave. Receipt Delay" field="delay" group_operator="avg"
+								domain="[('picking_type_code', '=', 'incoming')]"
+								domain_label="Done Receipts"
+								help="Delay (days) to receive an order. Calculated by minusing the done/effective date of the receipt and its scheduled date."
+								value_label="days" />
+							<aggregate name="cycle_time_delivery"
+								string="Ave. Delivery Cycle Time" field="cycle_time"
+								group_operator="avg"
+								domain="[('picking_type_code', '=', 'outgoing')]"
+								domain_label="Done Deliveries"
+								help="The number of day needed to deliver an order. Calculated by minusing the done date of the delivery order and its creation date (order/confirmation date)."
+								value_label="days" />
+							<aggregate name="cycle_time_receipt"
+								string="Ave. Receipt Cycle Time" field="cycle_time"
+								group_operator="avg"
+								domain="[('picking_type_code', '=', 'incoming')]"
+								domain_label="Done Receipts"
+								help="The number of day needed to receive an order. Calculated by minusing the done date of the receipt and its creation date (order/confirmation date)."
+								value_label="days" />
+						</group>
+					</group>
+					<view type="viin_cohort" ref="viin_stock.stock_report_viin_cohort_view" />
+					<view type="pivot" ref="viin_stock.stock_report_pivot_view" />
+				</viin_dashboard>
+			</field>
+		</record>
+
+		<record id="stock_report_viin_cohort_view" model="ir.ui.view">
+			<field name="name">stock.report.viin_cohort.view</field>
+			<field name="model">stock.report</field>
+			<field name="arch" type="xml">
+				<viin_cohort string="Report" start_date="creation_date"
+					stop_date="date_done" interval="week" mode="churn" />
+			</field>
+		</record>
+
+		<record id="stock_report_viin_dashboard_action" model="ir.actions.act_window">
+			<field name="name">Warehouse Dashboard</field>
+			<field name="res_model">stock.report</field>
+			<field name="view_mode">viin_dashboard</field>
+			<field name="view_id" ref="stock_report_viin_view_dashboard" />
+			<field name="search_view_id" ref="viin_stock.stock_report_view_search" />
+			<field name="domain" eval="[('picking_type_code', '!=', False)]" />
+			<field name="context">{'search_default_ftr_done':1,'time_ranges':{'field':'date_done','range':'last_30_days'}}</field>
+		</record>
+
+		<menuitem id="stock_viin_dashboard_menu"
+			name="Warehouse Dashboard" parent="stock.menu_warehouse_report"
+			action="stock_report_viin_dashboard_action" />
+	</data>
+</odoo>

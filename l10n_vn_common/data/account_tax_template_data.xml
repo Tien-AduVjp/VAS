@@ -1,0 +1,27 @@
+<odoo>
+	<!-- For Purchase -->
+	<record id="l10n_vn.tax_purchase_vat10" model="account.tax.template">
+		<field name="analytic" eval="1" />
+	</record>
+
+	<record id="l10n_vn.tax_purchase_vat5" model="account.tax.template">
+		<field name="analytic" eval="1" />
+	</record>
+
+	<record id="l10n_vn.tax_purchase_vat0" model="account.tax.template">
+		<field name="analytic" eval="1" />
+	</record>
+
+	<!-- For Sale -->
+	<record id="l10n_vn.tax_sale_vat10" model="account.tax.template">
+		<field name="analytic" eval="1" />
+	</record>
+
+	<record id="l10n_vn.tax_sale_vat5" model="account.tax.template">
+		<field name="analytic" eval="1" />
+	</record>
+
+	<record id="l10n_vn.tax_sale_vat0" model="account.tax.template">
+		<field name="analytic" eval="1" />
+	</record>
+</odoo>

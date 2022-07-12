@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="view_move_line_form">
+			<field name="name">account.move.line.form</field>
+			<field name="model">account.move.line</field>
+			<field name="inherit_id" ref="to_fleet_accounting.view_move_line_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='fleet_vehicle_cost_ids']" position="after">
+					<field name="vehicle_revenue_id" />
+					<field name="fleet_vehicle_revenue_ids" widget="many2many_tags" readonly="1"/>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="sale_subscription_alert_view_tree" model="ir.ui.view">
+		<field name="name">sale.subscription.alert.tree</field>
+		<field name="model">sale.subscription.alert</field>
+		<field name="arch" type="xml">
+			<tree string="Alerts">
+				<field name="name" />
+				<field name="action" />
+				<field name="trigger_condition" />
+				<field name="company_id" groups="base.group_multi_company" />
+				<field name="subscription_count" />
+				<field name="activity_user" />
+				<field name="analytic_tag_id" />
+				<field name="stage_id" />
+			</tree>
+		</field>
+	</record>
+
+	<record id="sale_subscription_alert_view_form" model="ir.ui.view">
+		<field name="name">sale.subscription.alert.form</field>
+		<field name="model">sale.subscription.alert</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<div class="oe_button_box" name="button_box">
+						<button name="toggle_active" type="object"
+							class="oe_stat_button" icon="fa-archive">
+							<field name="active" widget="boolean_button" />
+						</button>
+						<button class="oe_stat_button" icon="fa-book" name="action_view_subscriptions" type="object" attrs="{'invisible':[('id','=',False)]}">
+							<field name="subscription_count" widget="statinfo" string="Subscriptions" />
+						</button>
+					</div>
+					<div class="oe_title">
+						<label for="name" class="oe_edit_only" string="Alert Name" />
+						<h1>
+							<field name="name" placeholder="e.g. Upselling subscription" />
+						</h1>
+					</div>
+					<group name="action">
+						<group>
+							<field name="model_id" invisible="1" />
+							<field name="model_name" invisible="1" />
+							<field name="action" />
+						</group>
+						<group>
+							<field name="analytic_tag_id" attrs="{'invisible': [('action', '!=', 'set_tag')], 'required': [('action', '=', 'set_tag')]}" />
+							<field name="stage_id" attrs="{'invisible': [('action', '!=', 'set_stage')], 'required': [('action', '=', 'set_stage')]}" />
+							<field name="template_id" attrs="{'invisible': [('action', '!=', 'email')], 'required': [('action', '=', 'email')]}" />
+						</group>
+					</group>
+					<notebook>
+						<page name="general" string="General Settings">
+							<group name="apply_rule">
+								<group>
+									<field name="subscription_template_ids" widget="many2many_tags" />
+									<field name="customer_ids" widget="many2many_tags" />
+									<field name="product_ids" widget="many2many_tags" />
+									<field name="mrr_change_period" string="Over" />
+									<field name="company_id" groups="base.group_multi_company" />
+								</group>
+								<group>
+									<label for="mrr_min" string="MRR Between" />
+									<div class="o_row">
+										<field name="mrr_min" />
+										<strong> and </strong>
+										<field name="mrr_max" />
+									</div>
+									<label for="mrr_change_amount" string="MRR Change More" />
+									<div class="o_row">
+										<field name="mrr_change_amount" />
+										<field name="mrr_change_unit" />
+									</div>
+									<label for="rating_percentage" string="Rating Satisfaction" />
+									<div class="o_row">
+										<field name="rating_operator" />
+										<field name="rating_percentage" />
+										<strong>%</strong>
+									</div>
+									<label for="stage_from_id" string="Stage" />
+									<div class="o_row">
+										<field name="stage_from_id" />
+										<strong>to</strong>
+										<field name="stage_to_id" />
+									</div>
+								</group>
+							</group>
+						</page>
+						<page name="trigger" string="Trigger Settings">
+							<group>
+								<group>
+									<field name="trigger_condition" />
+									<field name="trg_date_id"
+										attrs="{'invisible': [('trigger_condition', '!=', 'on_time')], 'required': [('trigger_condition', '=', 'on_time')]}" />
+									<label for="trg_date_range" attrs="{'invisible': [('trigger_condition', '!=', 'on_time')]}" />
+									<div class="o_row" attrs="{'invisible': [('trigger_condition', '!=', 'on_time')]}">
+										<field name="trg_date_range" attrs="{'required': [('trigger_condition','=','on_time')]}" />
+										<field name="trg_date_range_type" attrs="{'required': [('trigger_condition','=','on_time')]}" />
+									</div>
+									<field name="trg_date_calendar_id"
+										attrs="{'invisible': ['|', ('trg_date_id','=',False), ('trg_date_range_type', '!=', 'day')]}" />
+								</group>
+								<group>
+									<field name="filter_pre_domain" widget="domain"
+										options="{'model': 'model_name', 'in_dialog': True}"
+										readonly="1" groups="base.group_no_one"
+										attrs="{'invisible': [('trigger_condition', 'not in', ['on_write','on_create_or_write'])]}" />
+									<field name="filter_domain" widget="domain"
+										options="{'model': 'model_name', 'in_dialog': True}"
+										readonly="1" groups="base.group_no_one" />
+
+								</group>
+							</group>
+						</page>
+						<page name="activity" string="Activity" attrs="{'invisible': [('action', '!=', 'next_activity')]}">
+							<group>
+								<group>
+									<field name="activity_type_id"
+										options="{'no_create': True, 'no_open': True}"
+										attrs="{'required': [('action', '=', 'next_activity')]}" />
+									<field name="activity_summary" placeholder="e.g. Discuss about upselling" />
+								</group>
+								<group>
+									<label for="activity_date_deadline_range" />
+									<div class="o_row">
+										<field name="activity_date_deadline_range" />
+										<field name="activity_date_deadline_range_type" />
+									</div>
+									<field name="activity_user"
+										attrs="{'invisible': [('action', '!=', 'next_activity')], 'required': [('action', '=', 'next_activity')]}" />
+									<field name="activity_user_ids" widget="many2many_tags"
+										attrs="{'invisible': ['|', ('action', '!=', 'next_activity'), ('activity_user', '!=', 'users')],
+		                                        'required': [('action', '=', 'next_activity'), ('activity_user', '=', 'users')]}" />
+								</group>
+								<separator string="Note" />
+								<field name="activity_note" placeholder="Log a note..." />
+							</group>
+						</page>
+					</notebook>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<record id="sale_subscription_alert_view_search" model="ir.ui.view">
+		<field name="name">sale.subscription.alert.search</field>
+		<field name="model">sale.subscription.alert</field>
+		<field name="arch" type="xml">
+			<search string="Subscription Alert">
+				<field name="name" string="Alert Name"/>
+				<field name="subscription_template_ids"/>
+				<field name="customer_ids"/>
+				<field name="product_ids"/>
+				<filter name="ftr_action_next_activity" string="Action: Create next activity" domain="[('action','=','next_activity')]" />
+				<filter name="ftr_action_set_tag" string="Action: Set a tag" domain="[('action','=','set_tag')]" />
+				<filter name="ftr_action_set_stage" string="Action: Set a stage" domain="[('action','=','set_stage')]" />
+				<filter name="ftr_action_set_to_renew" string="Action: To Renew" domain="[('action','=','set_to_renew')]" />
+				<filter name="ftr_action_email" string="Action: Email" domain="[('action','=','email')]" />
+				<separator />
+				<filter name="ftr_trigger_on_create_or_write" string="Trigger On: Modification" domain="[('trigger_condition','=','on_create_or_write')]" />
+				<filter name="ftr_trigger_on_time" string="Trigger On: Timed Condition" domain="[('trigger_condition','=','on_time')]" />
+				<group expand="0" string="Group By">
+					<filter string="Action" name="grp_action" domain="[]" context="{'group_by':'action'}" />
+					<filter string="Trigger On" name="grp_trigger_condition" domain="[]" context="{'group_by':'trigger_condition'}" />
+				</group>
+			</search>
+		</field>
+	</record>
+
+	<record id="sale_subscription_alert_action" model="ir.actions.act_window">
+		<field name="name">Subscription Alerts</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">sale.subscription.alert</field>
+		<field name="view_mode">tree,form</field>
+		<field name="help" type="html">
+			<p class="o_view_nocontent_smiling_face">
+				Create a new subscription alert
+			</p>
+		</field>
+	</record>
+
+	<menuitem id="menu_sale_subscription_alert" parent="menu_sale_subscription_config" action="sale_subscription_alert_action" sequence="9" />
+</odoo>

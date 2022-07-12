@@ -1,0 +1,441 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_hr_payroll_administrative_region
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-10 03:31+0000\n"
+"PO-Revision-Date: 2021-12-10 03:31+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_hr_payroll_administrative_region
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_administrative_region.admin_region_payroll_contrib_view_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_administrative_region.hr_payroll_contribution_history_form_view
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_administrative_region.hr_payroll_contribution_register_form_view
+msgid "<span>/ month</span>"
+msgstr "<span>/ tháng</span>"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__message_needaction
+msgid "Action Needed"
+msgstr "Cần có Hành động"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model,name:viin_hr_payroll_administrative_region.model_administrative_region
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__administrative_region_id
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_hr_contract__administrative_region_id
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_hr_employee__administrative_region_id
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_administrative_region.admin_region_payroll_contrib_view_search
+msgid "Administrative Region"
+msgstr "Vùng hành chính"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.actions.act_window,name:viin_hr_payroll_administrative_region.admin_region_payroll_contrib_action
+#: model:ir.model,name:viin_hr_payroll_administrative_region.model_admin_region_payroll_contrib
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_hr_payroll_contribution_type__admin_region_payroll_contrib_ids
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_administrative_region.admin_region_payroll_contrib_view_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_administrative_region.admin_region_payroll_contrib_view_search
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_administrative_region.admin_region_payroll_contrib_view_tree
+msgid "Administrative Region Payroll Contribution"
+msgstr "Đóng góp lương theo vùng hành chính"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.constraint,message:viin_hr_payroll_administrative_region.constraint_admin_region_payroll_contrib_check_unique
+msgid ""
+"Administrative Region Payroll Contribution must be unique per Administrative"
+" Region & Payroll Contribution Type."
+msgstr ""
+"Đóng góp lương theo vùng hành chính phải là duy nhất theo mỗi Vùng hành "
+"chính và kiểu đóng góp lương."
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_hr_contract__admin_region_payroll_contrib_ids
+msgid "Administrative Region Payroll Contributions"
+msgstr "Đóng góp lương theo vùng hành chính"
+
+#. module: viin_hr_payroll_administrative_region
+#: code:addons/viin_hr_payroll_administrative_region/models/hr_payroll_contribution_register.py:0
+#, python-format
+msgid ""
+"Amount %s is greater than the Max. Contribution Base which is %s\n"
+"Please enter an amount less than or equal to this."
+msgstr ""
+"Số tiền %s lớn hơn cơ sở đóng góp tối đa là %s\n"
+"Vui lòng nhập số tiền nhỏ hơn hoặc bằng mức này."
+
+#. module: viin_hr_payroll_administrative_region
+#: code:addons/viin_hr_payroll_administrative_region/models/hr_payroll_contribution_register.py:0
+#, python-format
+msgid ""
+"Amount %s is greater than the Max. Contribution by Company which is %s\n"
+"Please enter an amount less than or equal to this."
+msgstr ""
+"Số tiền %s lớn hơn cơ sở đóng góp tối đa bởi công ty là %s\n"
+"Vui lòng nhập số tiền nhỏ hơn hoặc bằng mức này."
+
+#. module: viin_hr_payroll_administrative_region
+#: code:addons/viin_hr_payroll_administrative_region/models/hr_payroll_contribution_register.py:0
+#, python-format
+msgid ""
+"Amount %s is greater than the Max. Contribution by Employee which is %s\n"
+"Please enter an amount less than or equal to this."
+msgstr ""
+"Số tiền %s lớn hơn cơ sở đóng góp tối đa bởi nhân viên là %s\n"
+"Vui lòng nhập số tiền nhỏ hơn hoặc bằng mức này."
+
+#. module: viin_hr_payroll_administrative_region
+#: code:addons/viin_hr_payroll_administrative_region/models/hr_payroll_contribution_register.py:0
+#, python-format
+msgid ""
+"Amount %s is less than the Min. Contribution Base which is %s\n"
+"Please enter an amount greater than or equal to this."
+msgstr ""
+"Số tiền %s nhỏ hơn cơ sở đóng góp tối thiểu là %s\n"
+"Vui lòng nhập số tiền lớn hơn hoặc bằng mức này."
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__message_attachment_count
+msgid "Attachment Count"
+msgstr "Số lượng đính kèm"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model,name:viin_hr_payroll_administrative_region.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model,name:viin_hr_payroll_administrative_region.model_hr_contract
+msgid "Contract"
+msgstr "Hợp đồng"
+
+#. module: viin_hr_payroll_administrative_region
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_administrative_region.admin_region_payroll_contrib_view_search
+msgid "Contribution Type"
+msgstr "Kiểu đóng góp"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__country_id
+msgid "Country"
+msgstr "Quốc gia"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__create_date
+msgid "Created on"
+msgstr "Được tạo lúc"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__currency_id
+msgid "Currency"
+msgstr "Tiền tệ"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__display_name
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_administrative_region__display_name
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_hr_contract__display_name
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_hr_payroll_contribution_history__display_name
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_hr_payroll_contribution_register__display_name
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_hr_payroll_contribution_type__display_name
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_hr_payslip_contribution_line__display_name
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_res_company__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model,name:viin_hr_payroll_administrative_region.model_hr_employee
+msgid "Employee"
+msgstr "Nhân viên"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__message_follower_ids
+msgid "Followers"
+msgstr "Người theo dõi"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Người theo dõi (Các kênh)"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Người theo dõi (Các đối tác)"
+
+#. module: viin_hr_payroll_administrative_region
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_administrative_region.admin_region_payroll_contrib_view_search
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__id
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_administrative_region__id
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_hr_contract__id
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_hr_employee__id
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_hr_payroll_contribution_history__id
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_hr_payroll_contribution_register__id
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_hr_payroll_contribution_type__id
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_hr_payslip_contribution_line__id
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_res_company__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,help:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__message_needaction
+#: model:ir.model.fields,help:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Nếu đánh dấu kiểm, các thông điệp mới yêu cầu sự có mặt của bạn."
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,help:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__message_has_error
+#: model:ir.model.fields,help:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Nếu đánh dấu thì một số thông điệp có lỗi."
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__message_is_follower
+msgid "Is Follower"
+msgstr "Là người theo dõi"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib____last_update
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_administrative_region____last_update
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_hr_contract____last_update
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_hr_payroll_contribution_history____last_update
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_hr_payroll_contribution_register____last_update
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_hr_payroll_contribution_type____last_update
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_hr_payslip_contribution_line____last_update
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_res_company____last_update
+msgid "Last Modified on"
+msgstr "Sửa đổi lần cuối"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối lúc"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Đính kèm chính"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__max_contribution_base
+msgid "Max. Contribution Base"
+msgstr "Cơ sở đóng góp tối đa"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.constraint,message:viin_hr_payroll_administrative_region.constraint_admin_region_payroll_contrib_check_contrib_base
+msgid ""
+"Max. Contribution Base must be greater than or equal Min. Contribution Base!"
+msgstr ""
+"Cơ sở đóng góp tối đa phải lớn hơn hoặc bằng cơ sở đóng góp tối thiểu."
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__max_contribution_company
+msgid "Max. Contribution by Company"
+msgstr "Đóng góp tối đa bởi Công ty"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.constraint,message:viin_hr_payroll_administrative_region.constraint_admin_region_payroll_contrib_check_max_contrib_comp
+msgid "Max. Contribution by Company must be greater than or equal 0!"
+msgstr "Đóng góp tối đa bởi công ty phải lớn hơn hoặc bằng 0!"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__max_contribution_employee
+msgid "Max. Contribution by Employee"
+msgstr "Đóng góp tối đa bởi Nhân viên"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.constraint,message:viin_hr_payroll_administrative_region.constraint_admin_region_payroll_contrib_check_max_contrib_emp
+msgid "Max. Contribution by Employee must be greater than or equal 0!"
+msgstr "Đóng góp tối đa bởi nhân viên phải lớn hơn hoặc bằng 0!"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__message_has_error
+msgid "Message Delivery error"
+msgstr "Có Lỗi Gửi Thông điệp"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__message_ids
+msgid "Messages"
+msgstr "Thông điệp"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__min_contribution_base
+msgid "Min. Contribution Base"
+msgstr "Cơ sở đóng góp tối thiểu"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.constraint,message:viin_hr_payroll_administrative_region.constraint_admin_region_payroll_contrib_check_min_contrib_base_emp
+msgid "Min. Contribution Base must be greater than or equal 0!"
+msgstr "Cơ sở đóng góp tối thiểu phải lớn hơn hoặc bằng 0!"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_administrative_region__minimum_wage
+msgid "Minimum Wage"
+msgstr "Lương tối thiểu"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_hr_payroll_contribution_history__max_contribution_company
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_hr_payroll_contribution_register__max_contribution_company
+msgid "Monthly Max. Contribution by Company"
+msgstr "Đóng góp tối đa hàng tháng bởi Công ty"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_hr_payroll_contribution_history__max_contribution_employee
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_hr_payroll_contribution_register__max_contribution_employee
+msgid "Monthly Max. Contribution by Employee"
+msgstr "Đóng góp tối đa hàng tháng bởi Nhân viên"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Số lượng Hành động"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__message_has_error_counter
+msgid "Number of errors"
+msgstr "Số lượng lỗi"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,help:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Số thông điệp cần có hành động"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,help:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Số tin gửi đi bị lỗi"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,help:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Số thông điệp chưa đọc"
+
+#. module: viin_hr_payroll_administrative_region
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_administrative_region.res_config_settings_view_form
+msgid "Open Administrative Regions"
+msgstr "Mở Vùng hành chính"
+
+#. module: viin_hr_payroll_administrative_region
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_administrative_region.res_config_settings_view_form
+msgid "Open Payroll Contribution by Administrative Regions"
+msgstr "Mở Đóng góp từ lương theo vùng hành chính"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model,name:viin_hr_payroll_administrative_region.model_hr_payroll_contribution_history
+msgid "Payroll Contribution History"
+msgstr "Lịch sử đóng góp từ lương"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model,name:viin_hr_payroll_administrative_region.model_hr_payroll_contribution_register
+msgid "Payroll Contribution Register"
+msgstr "Đăng ký Đóng góp từ Lương"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model,name:viin_hr_payroll_administrative_region.model_hr_payroll_contribution_type
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__payroll_contribution_type_id
+msgid "Payroll Contribution Type"
+msgstr "Kiểu Đóng góp từ Lương"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model,name:viin_hr_payroll_administrative_region.model_hr_payslip_contribution_line
+msgid "Payslip Contribution Line"
+msgstr "Dòng đóng góp phiếu lương"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Có lỗi gửi SMS"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,help:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__max_contribution_base
+msgid ""
+"The amount that is used to bound the maximum base for payroll contribution "
+"of the combination of the type and the administrative region specified here."
+"                                   Leave it zero to disable this bound."
+msgstr ""
+"Số tiền được sử dụng để giới hạn cơ sở đóng góp từ lương tối đa của sự kết "
+"hợp giữa kiểu đóng góp và vùng hành chính được chỉ định ở đây. Để nó bằng 0 "
+"để vô hiệu hóa giới hạn này."
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,help:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__min_contribution_base
+msgid ""
+"The amount that is used to bound the minimum base for payroll contribution "
+"of the combination of the type and the administrative region specified here."
+"                                   Leave it zero to disable this bound."
+msgstr ""
+"Số tiền được sử dụng để giới hạn cơ sở đóng góp từ lương tối thiểu của sự "
+"kết hợp giữa kiểu đóng góp và vùng hành chính được chỉ định ở đây. Để nó "
+"bằng 0 để vô hiệu hóa giới hạn này."
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,help:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__max_contribution_company
+#: model:ir.model.fields,help:viin_hr_payroll_administrative_region.field_hr_payroll_contribution_history__max_contribution_company
+#: model:ir.model.fields,help:viin_hr_payroll_administrative_region.field_hr_payroll_contribution_register__max_contribution_company
+msgid ""
+"The maximum amount per month that the company has to contribute. Leave this "
+"zero to disable this limit."
+msgstr ""
+"Số tiền tối đa mỗi tháng mà công ty phải đóng góp. Để nó bằng 0 để vô hiệu "
+"hóa giới hạn này."
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,help:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__max_contribution_employee
+#: model:ir.model.fields,help:viin_hr_payroll_administrative_region.field_hr_payroll_contribution_history__max_contribution_employee
+#: model:ir.model.fields,help:viin_hr_payroll_administrative_region.field_hr_payroll_contribution_register__max_contribution_employee
+msgid ""
+"The maximum amount per month that the employee has to contribute. Leave this"
+" zero to disable this limit."
+msgstr ""
+"Số tiền tối đa mỗi tháng mà nhân viên phải đóng góp. Để nó bằng 0 để vô hiệu"
+" hóa giới hạn này."
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,help:viin_hr_payroll_administrative_region.field_administrative_region__minimum_wage
+msgid "The minimum wage that is regulated by the state or government"
+msgstr "Mức lương tối thiểu do tỉnh/thành phố hoặc chính phủ quy định"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__message_unread
+msgid "Unread Messages"
+msgstr "Thông điệp chưa đọc"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Bộ đếm Thông điệp chưa đọc"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,field_description:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__website_message_ids
+msgid "Website Messages"
+msgstr "Thông điệp Website"
+
+#. module: viin_hr_payroll_administrative_region
+#: model:ir.model.fields,help:viin_hr_payroll_administrative_region.field_admin_region_payroll_contrib__website_message_ids
+msgid "Website communication history"
+msgstr ""

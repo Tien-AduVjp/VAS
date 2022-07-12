@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="ReturnOrderScreen" t-inherit="to_pos_frontend_return.ReturnOrderScreen" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('cell') and hasclass('button-delete')]" position="before">
+            <div class="cell return-select">Return Reason</div>
+        </xpath>
+        <xpath expr="//ReturnOrderLine" position="attributes">
+            <attribute name="return_reasons">return_reasons</attribute>
+        </xpath>
+    </t>
+
+</templates>

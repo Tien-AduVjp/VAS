@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mrp_production_schedule_form" model="ir.ui.view">
+        <field name="name">mrp.production.schedule.form</field>
+        <field name="model">mrp.production.schedule</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="product_id" attrs="{'readonly': [('id', '!=', False)]}"/>
+                    </group>
+                    <group>
+                        <field name="warehouse_id" attrs="{'readonly': [('id', '!=', False)]}" groups="stock.group_stock_multi_warehouses"/>
+                    </group>
+                </group>
+                <group>
+                    <group>
+                        <label for="forecast_target_qty"/>
+                        <div class="o_row">
+                            <field name="forecast_target_qty"/>
+                            <field name="product_uom_id" groups="uom.group_uom" readonly="1"/>
+                        </div>
+                        <label for="min_to_replenish_qty"/>
+                        <div class="o_row">
+                            <field name="min_to_replenish_qty"/>
+                            <field name="product_uom_id" groups="uom.group_uom" readonly="1"/>
+                        </div>
+                        <label for="max_to_replenish_qty"/>
+                        <div class="o_row">
+                            <field name="max_to_replenish_qty"/>
+                            <field name="product_uom_id" groups="uom.group_uom" readonly="1"/>
+                        </div>
+                    </group>
+                </group>
+                <footer>
+                    <button string="Save" type="object" class="btn-primary" special="save"/>
+                    <button string="Cancel" class="btn btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="mrp_production_schedule_search" model="ir.ui.view">
+        <field name="name">mrp.production.schedule.search</field>
+        <field name="model">mrp.production.schedule</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="product_id"/>
+                <field name="warehouse_id"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="mps_client_action" model="ir.actions.client">
+        <field name="name">Master Production Schedule</field>
+        <field name="res_model">mrp.production.schedule</field>
+        <field name="tag">to_mps_client_action</field>
+    </record>
+
+    <record id="mps_add_product_action" model="ir.actions.act_window">
+        <field name="name">Add a Product</field>
+        <field name="res_model">mrp.production.schedule</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="view_id" ref="mrp_production_schedule_form"/>
+    </record>
+
+    <menuitem id="mrp_mps_report_menu"
+              name="Master Production Schedule" action="mps_client_action"
+              groups="mrp.group_mrp_manager" sequence="3"
+              parent="mrp.mrp_planning_menu_root"/>
+</odoo>

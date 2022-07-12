@@ -1,0 +1,80 @@
+<odoo>
+	<data noupdate="1">
+		<record id="viin_hr_rank.rank_administrator_intern" model="hr.rank">
+			<field name="rank_skill_description_ids" eval="[
+				(0, 0, {
+					'skill_type_id': ref('hr_skills.hr_skill_type_lang'),
+					'skill_id': ref('hr_skills.hr_skill_french'),
+					'skill_level_id': ref('hr_skills.hr_skill_level_a2'),
+					'expectation': 'preferred',
+					}
+				),
+				(0, 0, {
+					'skill_type_id': ref('hr_skills.hr_skill_type_lang'),
+					'skill_id': ref('hr_skills.hr_skill_english'),
+					'skill_level_id': ref('hr_skills.hr_skill_level_a2'),
+					'expectation': 'required',
+					}
+				)]" />
+		</record>
+
+		<record id="viin_hr_rank.rank_administrator_trainee" model="hr.rank">
+			<field name="rank_skill_description_ids" eval="[
+				(0, 0, {
+					'skill_type_id': ref('hr_skills.hr_skill_type_dev'),
+					'skill_id': ref('hr_skills.hr_skill_python'),
+					'skill_level_id': ref('hr_skills.hr_skill_level_elementary'),
+					'expectation': 'required',
+					}
+				),
+				(0, 0, {
+					'skill_type_id': ref('hr_skills.hr_skill_type_lang'),
+					'skill_id': ref('hr_skills.hr_skill_english'),
+					'skill_level_id': ref('hr_skills.hr_skill_level_b1'),
+					'expectation': 'required',
+					}
+				)]" />
+		</record>
+
+		<record id="viin_hr_rank.rank_administrator_junior" model="hr.rank">
+			<field name="rank_skill_description_ids" eval="[
+				(0, 0, {
+					'skill_type_id': ref('hr_skills.hr_skill_type_dev'),
+					'skill_id': ref('hr_skills.hr_skill_python'),
+					'skill_level_id': ref('hr_skills.hr_skill_level_advanced'),
+					'expectation': 'required',
+					}
+				)]" />
+		</record>
+
+		<record id="viin_hr_rank.rank_administrator_senior" model="hr.rank">
+			<field name="rank_skill_description_ids" eval="[
+				(0, 0, {
+					'skill_type_id': ref('hr_skills.hr_skill_type_lang'),
+					'skill_id': ref('hr_skills.hr_skill_english'),
+					'skill_level_id': ref('hr_skills.hr_skill_level_c2'),
+					'expectation': 'required',
+					}
+				)]" />
+		</record>
+
+		<record id="viin_hr_rank.rank_administrator_expert" model="hr.rank">
+			<field name="rank_skill_description_ids" eval="[
+				(0, 0, {
+					'skill_type_id': ref('hr_skills.hr_skill_type_dev'),
+					'skill_id': ref('hr_skills.hr_skill_python'),
+					'skill_level_id': ref('hr_skills.hr_skill_level_expert'),
+					'expectation': 'required',
+					}
+				),
+				(0, 0, {
+					'skill_type_id': ref('hr_skills.hr_skill_type_music'),
+					'skill_id': ref('hr_skills.hr_skill_piano'),
+					'skill_level_id': ref('hr_skills.hr_skill_level_l1'),
+					'expectation': 'required',
+					}
+				)]" />
+		</record>
+
+	</data>
+</odoo>

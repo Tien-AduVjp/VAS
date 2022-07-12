@@ -1,0 +1,6 @@
+<odoo>
+	<record id="account_tax_group_exemption" model="account.tax.group">
+		<field name="name">VAT Exemption</field>
+		<field name="is_vat" eval="True" />
+	</record>
+</odoo>

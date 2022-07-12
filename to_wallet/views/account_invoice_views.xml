@@ -1,0 +1,36 @@
+<odoo>
+	<record id="view_move_form_inherit" model="ir.ui.view">
+		<field name="name">account.move.form.inherit.wallet</field>
+		<field name="model">account.move</field>
+		<field name="inherit_id" ref="account.view_move_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='ref']" position="after">
+				<field name="wallet_total" attrs="{'readonly': [('move_type','!=','entry')],'invisible': [('move_type','!=','entry')]}"/>
+			</xpath>
+			<xpath expr="//field[@name='invoice_line_ids']/tree" position="inside">
+				<field name="wallet" />
+			</xpath>
+			<xpath expr="//field[@name='line_ids']/tree" position="inside">
+				<field name="wallet" />
+				<field name="wallet_amount" optional="hide" />
+				<field name="wallet_amount_residual" optional="hide" />
+				<field name="non_wallet_amount_residual" optional="hide" />
+				<field name="wallet_amount_currency" optional="hide" />
+				<field name="wallet_amount_residual_currency" optional="hide" />
+				<field name="non_wallet_amount_residual_currency" optional="hide" />
+				<field name="wallet_id" optional="hide" />
+			</xpath>
+			<xpath expr="//field[@name='line_ids']/form/group[./field[@name='credit']]" position="after">
+				<group groups="to_wallet.group_wallet_manager">
+					<field name="wallet" readonly="1"/>
+					<field name="wallet_amount" />
+					<field name="wallet_amount_residual" />
+					<field name="non_wallet_amount_residual" />
+					<field name="wallet_amount_currency" />
+					<field name="wallet_amount_residual_currency" />
+					<field name="non_wallet_amount_residual_currency" />
+				</group>
+			</xpath>
+		</field>
+	</record>
+</odoo>

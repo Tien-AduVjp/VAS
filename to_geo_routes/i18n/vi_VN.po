@@ -1,0 +1,776 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_geo_routes
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-11 08:54+0000\n"
+"PO-Revision-Date: 2021-11-11 08:54+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_route__message_needaction
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section__message_needaction
+msgid "Action Needed"
+msgstr "Cần có Hành động"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_route__address_ids
+#: model_terms:ir.ui.view,arch_db:to_geo_routes.route_search_view
+msgid "Addresses"
+msgstr "Địa chỉ"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_route__message_attachment_count
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section__message_attachment_count
+msgid "Attachment Count"
+msgstr "Số đính kèm"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section_line__ave_speed
+msgid "Ave. Speed"
+msgstr "Tốc độ TB"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_route__average_speed
+msgid "Average Speed"
+msgstr "Vận tốc Trung bình"
+
+#. module: to_geo_routes
+#: model_terms:ir.ui.view,arch_db:to_geo_routes.route_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: to_geo_routes
+#: model:ir.model.fields.selection,name:to_geo_routes.selection__route_route__state__cancelled
+#: model_terms:ir.ui.view,arch_db:to_geo_routes.route_search_view
+msgid "Cancelled"
+msgstr "Đã hủy"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_waypoint__city
+msgid "City"
+msgstr "Thành phố"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_route__code
+msgid "Code"
+msgstr "Mã"
+
+#. module: to_geo_routes
+#: model_terms:ir.ui.view,arch_db:to_geo_routes.route_form
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: to_geo_routes
+#: model:ir.model.fields.selection,name:to_geo_routes.selection__route_route__state__confirmed
+#: model_terms:ir.ui.view,arch_db:to_geo_routes.route_search_view
+msgid "Confirmed"
+msgstr "Đã được xác nhận"
+
+#. module: to_geo_routes
+#: model:ir.model,name:to_geo_routes.model_res_partner
+msgid "Contact"
+msgstr "Liên hệ"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_waypoint__country_id
+#: model:ir.model.fields.selection,name:to_geo_routes.selection__route_waypoint_area__restricted_by__country
+msgid "Country"
+msgstr "Quốc gia"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_route__create_uid
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section__create_uid
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section_line__create_uid
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_waypoint__create_uid
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_waypoint_area__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_route__create_date
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section__create_date
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section_line__create_date
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_waypoint__create_date
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_waypoint_area__create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_route__departure_id
+msgid "Departure"
+msgstr "Khởi đầu"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_route__destination_id
+msgid "Destination"
+msgstr "Kết thúc"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_res_partner__display_name
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_route__display_name
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section__display_name
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section_line__display_name
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_waypoint__display_name
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_waypoint_area__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section__distance
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section_line__distance
+msgid "Distance (km)"
+msgstr "Khoảng cách (km)"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section__distance_in_miles
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section_line__distance_in_miles
+msgid "Distance (mi.)"
+msgstr "Khoảng cách (mi.)"
+
+#. module: to_geo_routes
+#: model:ir.model.fields.selection,name:to_geo_routes.selection__route_route__state__draft
+#: model_terms:ir.ui.view,arch_db:to_geo_routes.route_search_view
+msgid "Draft"
+msgstr "Dự thảo"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_route__est_trip_time
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section__est_trip_time
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section_line__est_trip_time
+msgid "Est. Time"
+msgstr "Thời gian Dự kiến"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_route__message_follower_ids
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section__message_follower_ids
+msgid "Followers"
+msgstr "Người dõi theo"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_route__message_channel_ids
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Người theo dõi (Các kênh)"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_route__message_partner_ids
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Người theo dõi (Các đối tác)"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section__address_from_id
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section_line__address_from_id
+msgid "From"
+msgstr "Từ"
+
+#. module: base
+#: model:ir.module.category,name:base.module_category_operations_geographical_routes
+msgid "Geographical Routes"
+msgstr "Tuyến đường"
+
+#. module: to_geo_routes
+#: model:ir.ui.menu,name:to_geo_routes.geo_route_root_menu
+msgid "Geo-Routes"
+msgstr "Tuyến đường"
+
+#. module: to_geo_routes
+#: model:res.groups,name:to_geo_routes.group_manager
+msgid "Geo-Routes Managers"
+msgstr "Người Quản lý"
+
+#. module: to_geo_routes
+#: model:res.groups,name:to_geo_routes.group_user
+msgid "Geo-Routes Users"
+msgstr "Người dùng"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,help:to_geo_routes.field_route_section_line__sequence
+msgid "Gives the sequence order when displaying a list of section."
+msgstr "Cung cấp trình tự sắp xếp khi hiển thị danh mục các chặng đường."
+
+#. module: to_geo_routes
+#: model:ir.model.fields,help:to_geo_routes.field_route_waypoint__sequence
+msgid "Gives the sequence order when displaying a list of waypoints."
+msgstr "Cung cấp trình tự sắp xếp khi hiển thị danh mục các waypoint."
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_res_partner__id
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_route__id
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section__id
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section_line__id
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_waypoint__id
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_waypoint_area__id
+msgid "ID"
+msgstr ""
+
+#. module: to_geo_routes
+#: model:ir.model.fields,help:to_geo_routes.field_route_route__message_needaction
+#: model:ir.model.fields,help:to_geo_routes.field_route_route__message_unread
+#: model:ir.model.fields,help:to_geo_routes.field_route_section__message_needaction
+#: model:ir.model.fields,help:to_geo_routes.field_route_section__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Nếu được đánh dấu, các thông điệp mới yêu cầu sự có mặt của bạn."
+
+#. module: to_geo_routes
+#: model:ir.model.fields,help:to_geo_routes.field_route_route__message_has_error
+#: model:ir.model.fields,help:to_geo_routes.field_route_section__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Nếu được đánh dấu, một số thông điệp gửi đi bị lỗi."
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_route__message_is_follower
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section__message_is_follower
+msgid "Is Follower"
+msgstr "Là người theo dõi"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_res_partner____last_update
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_route____last_update
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section____last_update
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section_line____last_update
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_waypoint____last_update
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_waypoint_area____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_route__write_uid
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section__write_uid
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section_line__write_uid
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_waypoint__write_uid
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_waypoint_area__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_route__write_date
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section__write_date
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section_line__write_date
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_waypoint__write_date
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_waypoint_area__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,help:to_geo_routes.field_route_route__waypoint_ids
+msgid ""
+"List of points in the route where each point is linked to an address (model "
+"res.partner)"
+msgstr ""
+"Danh mục các điểm thuộc tuyến mà mỗi điểm được liên kết đến một địa chỉ "
+"(model res.partner)"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_route__message_main_attachment_id
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Đính kèm chính"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section__ave_speed
+msgid "Max. Speed"
+msgstr "Tốc độ Tối đa"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_route__message_has_error
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section__message_has_error
+msgid "Message Delivery error"
+msgstr "Thông điệp gửi đi bị lỗi"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_route__message_ids
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section__message_ids
+msgid "Messages"
+msgstr "Thông điệp"
+
+#. module: to_geo_routes
+#: model:ir.model.fields.selection,name:to_geo_routes.selection__route_waypoint_area__restricted_by__none
+msgid "Non-Restricted"
+msgstr "Không bị Hạn chế"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_route__message_needaction_counter
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Số lượng Hành động"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_route__message_has_error_counter
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section__message_has_error_counter
+msgid "Number of errors"
+msgstr "Số lượng lỗi"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,help:to_geo_routes.field_route_route__message_needaction_counter
+#: model:ir.model.fields,help:to_geo_routes.field_route_section__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Số thông điệp cần có hành động"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,help:to_geo_routes.field_route_route__message_has_error_counter
+#: model:ir.model.fields,help:to_geo_routes.field_route_section__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Số thông điệp gửi đi bị lỗi"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,help:to_geo_routes.field_route_route__message_unread_counter
+#: model:ir.model.fields,help:to_geo_routes.field_route_section__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Số thông điệp chưa đọc"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,help:to_geo_routes.field_route_waypoint_area__restricted_by
+msgid ""
+"Partner Addresses linked to this area will be restricted by either state or country or non.\n"
+"For example, when this are is set restricted by state of Hanoi, only partners with addresses outside Hanoi cannot be linked to this area."
+msgstr ""
+"Địa chỉ Đối tác được liên kết với khu vực này sẽ bị hạn chế bởi bang hoặc quốc gia hoặc không.\n"
+"Ví dụ, khi điều này được đặt hạn chế bởi Hà Nội, chỉ những đối tác với địa chỉ bên ngoài Hà Nội không thể được liên kết với khu vực này."
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_waypoint_area__partner_ids
+#: model_terms:ir.ui.view,arch_db:to_geo_routes.route_waypoint_area_form
+msgid "Partners"
+msgstr "Đối tác"
+
+#. module: to_geo_routes
+#: model_terms:ir.ui.view,arch_db:to_geo_routes.route_form
+msgid "Passing Addresses"
+msgstr "Địa chỉ Đi qua"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_waypoint_area__restricted_by
+msgid "Restricted By"
+msgstr "Hạn chế bởi"
+
+#. module: to_geo_routes
+#: model:ir.model,name:to_geo_routes.model_route_route
+#: model:ir.model.fields,field_description:to_geo_routes.field_res_partner__route_ids
+#: model:ir.model.fields,field_description:to_geo_routes.field_res_users__route_ids
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section_line__route_id
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_waypoint__route_id
+msgid "Route"
+msgstr "Tuyến đường"
+
+#. module: to_geo_routes
+#: model:ir.model,name:to_geo_routes.model_route_section
+msgid "Route Section"
+msgstr "Chặng đường"
+
+#. module: to_geo_routes
+#: model:ir.actions.act_window,name:to_geo_routes.geo_route_section_line_action
+#: model:ir.model,name:to_geo_routes.model_route_section_line
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section__route_section_line_ids
+msgid "Route Section Line"
+msgstr "Chặng đường"
+
+#. module: to_geo_routes
+#: model:ir.ui.menu,name:to_geo_routes.geo_route_section_line_menu
+msgid "Route Section Lines"
+msgstr "Các Chặng trong Tuyến"
+
+#. module: to_geo_routes
+#: model:ir.actions.act_window,name:to_geo_routes.geo_route_section_action
+#: model:ir.ui.menu,name:to_geo_routes.geo_route_section_menu
+msgid "Route Sections"
+msgstr "Các Chặng"
+
+#. module: to_geo_routes
+#: model:ir.model,name:to_geo_routes.model_route_waypoint
+msgid "Route Waypoint"
+msgstr "Địa điểm"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_route__name
+msgid "Route name"
+msgstr "Tên Tuyến"
+
+#. module: to_geo_routes
+#: model:ir.actions.act_window,name:to_geo_routes.geo_route_action
+#: model:ir.ui.menu,name:to_geo_routes.geo_route_menu
+#: model_terms:ir.ui.view,arch_db:to_geo_routes.route_form
+#: model_terms:ir.ui.view,arch_db:to_geo_routes.route_section_line_tree
+#: model_terms:ir.ui.view,arch_db:to_geo_routes.route_section_tree
+#: model_terms:ir.ui.view,arch_db:to_geo_routes.route_tree
+#: model_terms:ir.ui.view,arch_db:to_geo_routes.route_waypoint_area_form
+#: model_terms:ir.ui.view,arch_db:to_geo_routes.route_waypoint_area_tree
+msgid "Routes"
+msgstr "Tuyến đường"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_res_partner__routes_count
+#: model:ir.model.fields,field_description:to_geo_routes.field_res_users__routes_count
+msgid "Routes Count"
+msgstr "Số Tuyến đường"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,help:to_geo_routes.field_res_partner__route_ids
+#: model:ir.model.fields,help:to_geo_routes.field_res_users__route_ids
+msgid "Routes that go through this address"
+msgstr "Các Tuyến mà đi qua địa chỉ này"
+
+#. module: to_geo_routes
+#: model_terms:ir.ui.view,arch_db:to_geo_routes.route_search_view
+msgid "Search Routes"
+msgstr "Tìm các Tuyến"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section_line__section_id
+msgid "Section"
+msgstr "Chặng"
+
+#. module: to_geo_routes
+#: model_terms:ir.ui.view,arch_db:to_geo_routes.route_section_form
+msgid "Section Form"
+msgstr ""
+
+#. module: to_geo_routes
+#: model_terms:ir.ui.view,arch_db:to_geo_routes.route_section_line_form
+msgid "Section Line Form"
+msgstr ""
+
+#. module: to_geo_routes
+#: model_terms:ir.ui.view,arch_db:to_geo_routes.route_form
+msgid "Section Lines"
+msgstr "Các Chặng"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section__name
+msgid "Section Name"
+msgstr "Tên Chặng"
+
+#. module: to_geo_routes
+#: model:ir.model.constraint,message:to_geo_routes.constraint_route_section_address_from_id_address_to_id_unique
+msgid "Section must be unique!"
+msgstr "Chặng phải là duy nhất"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_route__route_section_line_ids
+msgid "Sections"
+msgstr "Các Chặng"
+
+#. module: to_geo_routes
+#: model_terms:ir.ui.view,arch_db:to_geo_routes.route_form
+msgid "Sections Lines"
+msgstr "Các Chặng"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section_line__sequence
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_waypoint__sequence
+msgid "Sequence"
+msgstr "Trình tự"
+
+#. module: to_geo_routes
+#: model_terms:ir.ui.view,arch_db:to_geo_routes.route_form
+msgid "Set to Draft"
+msgstr "Đặt về dự thảo"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_waypoint__state_id
+#: model:ir.model.fields.selection,name:to_geo_routes.selection__route_waypoint_area__restricted_by__state
+msgid "State"
+msgstr "Bang / Tỉnh"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_route__state
+msgid "Status"
+msgstr "Trạng thái"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_waypoint__street
+msgid "Street"
+msgstr "Địa chỉ"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_waypoint__street2
+msgid "Street 2"
+msgstr "Địa chỉ 2"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,help:to_geo_routes.field_res_partner__route_waypoint_ids
+#: model:ir.model.fields,help:to_geo_routes.field_res_users__route_waypoint_ids
+msgid "The Waypoints on routes that base on this address"
+msgstr ""
+"Các Điểm chuyển hướng (waypoint) trên các tuyến mà dựa trên địa chỉ này"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,help:to_geo_routes.field_route_route__address_ids
+msgid "The addresses that the route crosses"
+msgstr "Các địa chỉ mà tuyến cắt qua"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,help:to_geo_routes.field_route_route__code
+msgid "The automatic generated unique code"
+msgstr "Mã duy nhất được sinh tự động"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,help:to_geo_routes.field_route_route__average_speed
+msgid ""
+"The average speed (in kilometer/hour) of the route, which is computed based "
+"on the max. speed on every section of the route."
+msgstr ""
+"Tốc độ trung bình (tính bằng km/h) của toàn tuyến. Vận tốc này được tính "
+"toán dựa trên tốc độ trung bình của từng chặng trong tuyến và độ dài toàn "
+"tuyến."
+
+#. module: to_geo_routes
+#: model:ir.model.fields,help:to_geo_routes.field_route_section_line__ave_speed
+msgid "The average speed in kilometer/hour that you can reach on this section"
+msgstr "Tốc độ trung bình (tính bằng km/h) mà bạn có thể đạt được ở chặng này"
+
+#. module: to_geo_routes
+#: code:addons/to_geo_routes/models/waypoint_area.py:0
+#, python-format
+msgid ""
+"The current partners linked to this waypoint area are in diffent countries.\n"
+" Hence, you can not make this waypoint area to restrict partners by country"
+msgstr ""
+"Các đối tác hiện tại được liên kết đến khu vực waypoint này có các quốc gia khác nhau.\n"
+"Do đó, bạn không thể tạo khu vực waypoint này để hạn chế đối tác theo quốc gia"
+
+#. module: to_geo_routes
+#: code:addons/to_geo_routes/models/waypoint_area.py:0
+#, python-format
+msgid ""
+"The current partners linked to this waypoint area have diffent states.\n"
+" Hence, you can not make this waypoint area to restrict partners by state"
+msgstr ""
+"Các đối tác hiện tại được liên kết đến khu vực waypoint này có các trạng thái khác nhau.\n"
+"Do đó, bạn không thể tạo khu vực waypoint này để hạn chế đối tác theo trạng thái"
+
+#. module: to_geo_routes
+#: code:addons/to_geo_routes/models/res_partner.py:0
+#, python-format
+msgid ""
+"The current waypoint area \"%s\" does not allow partners having country "
+"other than \"%s\""
+msgstr ""
+"Khu vực Waypoint được chọn \"%s\" không cho phép nhóm địa chỉ đối tác mà có "
+"quốc gia khác với \"%s\""
+
+#. module: to_geo_routes
+#: code:addons/to_geo_routes/models/res_partner.py:0
+#, python-format
+msgid ""
+"The current waypoint area \"%s\" does not allow partners having state other "
+"than \"%s\""
+msgstr ""
+"Khu vực Waypoint được chọn \"%s\" không cho phép nhóm địa chỉ đối tác mà có "
+"Bang/Tỉnh thành TƯ khác với \"%s\""
+
+#. module: to_geo_routes
+#: model:ir.model.fields,help:to_geo_routes.field_route_section__distance
+#: model:ir.model.fields,help:to_geo_routes.field_route_section_line__distance
+msgid "The distance in kilometers between the From and To"
+msgstr ""
+"Khoảng cách tính bằng kilomet giữa điểm bắt đầu và điểm kết thúc của chặng"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,help:to_geo_routes.field_route_section__distance_in_miles
+#: model:ir.model.fields,help:to_geo_routes.field_route_section_line__distance_in_miles
+msgid "The distance in miles between the From and To"
+msgstr "Khoảng cách tính bằng dặm từ Điểm bắt đầu đến Điểm kết thúc"
+
+#. module: to_geo_routes
+#: code:addons/to_geo_routes/models/route_section.py:0
+#, python-format
+msgid "The distance must not be negative!"
+msgstr "Khoảng cách phải lớn hơn hoặc bằng không (0)!"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,help:to_geo_routes.field_route_route__est_trip_time
+msgid ""
+"The estimated time in hours spent to go through the route (without any stop "
+"consideration)"
+msgstr ""
+"Thời gian dự kiến (tính theo giờ) để đi hết tuyến (không dừng giữa đường)"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,help:to_geo_routes.field_route_section__est_trip_time
+#: model:ir.model.fields,help:to_geo_routes.field_route_section_line__est_trip_time
+msgid "The estimated time in hours spent to go through the section"
+msgstr "Thời gian dự kiến (tính theo giờ) để đi hết chặng"
+
+#. module: to_geo_routes
+#: code:addons/to_geo_routes/models/route_section.py:0
+#, python-format
+msgid "The max speed must not be negative!"
+msgstr "Tốc độ phải lớn hơn hoặc bằng không (0)!"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,help:to_geo_routes.field_route_section__ave_speed
+msgid "The maximum speed in kilometer/hour that you can reach on this section"
+msgstr ""
+"Tốc độ trung bình tối đa (tính bằng km/h) mà bạn có thể đạt được ở chặng này"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,help:to_geo_routes.field_route_waypoint_area__partner_ids
+msgid "The partners that is listed in this area"
+msgstr "Các đối tác được liệt kê ở khu vực này"
+
+#. module: to_geo_routes
+#: code:addons/to_geo_routes/models/route_route.py:0
+#, python-format
+msgid ""
+"The waypoint %s seems to be as the same as the preceding one. You cannot "
+"have same waypoints those are adjacent to each other. I.e. A->B->B->C must "
+"be either A->B->C or A->B->C->B."
+msgstr ""
+"Waypoint %s dường như trùng với Waypoint liền trước nó. Bạn không thể có các"
+" waypoint giống nhau mà liền kề nhau. Cụ thể, tuyến A->B->B->C phải thiết "
+"lập lại thành A->B->C hoặc A->B->C->B, v.v."
+
+#. module: to_geo_routes
+#: model:ir.model.fields,help:to_geo_routes.field_res_partner__waypoint_area_id
+#: model:ir.model.fields,help:to_geo_routes.field_res_users__waypoint_area_id
+msgid "This field is to group partner addresses into an area"
+msgstr "Trường này để nhóm các địa chỉ vào một khu vực"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,help:to_geo_routes.field_route_waypoint__waypoint_area_id
+msgid "This field is to group waypoints into an area"
+msgstr "Trường này để nhóm các waypoint vào một khu vực"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section__address_to_id
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section_line__address_to_id
+msgid "To"
+msgstr "Đến"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,help:to_geo_routes.field_route_route__total_distance
+msgid ""
+"Total Distance (in kilometers) of the route, which is automatically computed"
+" from the route section lines."
+msgstr ""
+"Tổng chiều dài toàn tuyến (tính bằng km), được tính toán tự động bằng tổng "
+"chiều dài từng chặng trong tuyến."
+
+#. module: to_geo_routes
+#: model:ir.model.fields,help:to_geo_routes.field_route_route__total_distance_in_miles
+msgid ""
+"Total Distance (in miles) of the route, which is automatically computed from"
+" the route section lines."
+msgstr ""
+"Tổng chiều dài toàn tuyến (tính bằng dặm), được tính toán tự động bằng tổng "
+"chiều dài từng chặng trong tuyến."
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_route__total_distance
+msgid "Total Distance (km)"
+msgstr "Tổng chiều dài (km)"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_route__total_distance_in_miles
+msgid "Total Distance (mi.)"
+msgstr "Tổng chiều dài (mi.)"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_route__message_unread
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section__message_unread
+msgid "Unread Messages"
+msgstr "Thông điệp chưa đọc"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_route__message_unread_counter
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_section__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Bộ đếm Thông điệp chưa đọc"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_waypoint__address_id
+#: model_terms:ir.ui.view,arch_db:to_geo_routes.route_form
+#: model_terms:ir.ui.view,arch_db:to_geo_routes.route_waypoint_form_view
+msgid "Waypoint"
+msgstr "Điểm"
+
+#. module: to_geo_routes
+#: model:ir.actions.act_window,name:to_geo_routes.waypoint_area_action
+#: model:ir.model,name:to_geo_routes.model_route_waypoint_area
+#: model:ir.model.fields,field_description:to_geo_routes.field_res_partner__waypoint_area_id
+#: model:ir.model.fields,field_description:to_geo_routes.field_res_users__waypoint_area_id
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_waypoint__waypoint_area_id
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_waypoint_area__name
+msgid "Waypoint Area"
+msgstr "Khu vực"
+
+#. module: to_geo_routes
+#: model:ir.ui.menu,name:to_geo_routes.waypoint_area_menu
+msgid "Waypoint Areas"
+msgstr "Khu vực"
+
+#. module: to_geo_routes
+#: model:ir.actions.act_window,name:to_geo_routes.route_waypoint_action
+#: model:ir.model.fields,field_description:to_geo_routes.field_res_partner__route_waypoint_ids
+#: model:ir.model.fields,field_description:to_geo_routes.field_res_users__route_waypoint_ids
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_route__waypoint_ids
+#: model:ir.ui.menu,name:to_geo_routes.route_waypoint_menu
+#: model_terms:ir.ui.view,arch_db:to_geo_routes.route_form
+#: model_terms:ir.ui.view,arch_db:to_geo_routes.route_waypoint_tree_view
+msgid "Waypoints"
+msgstr "Các Điểm"
+
+#. module: to_geo_routes
+#: model:ir.model.fields,field_description:to_geo_routes.field_route_route__waypoint_ids_count
+msgid "Waypoints Count"
+msgstr "Số Điểm"
+
+#. module: to_geo_routes
+#: code:addons/to_geo_routes/models/route_route.py:0
+#, python-format
+msgid ""
+"You are about to create or update a route that has the same passing addresses as the existing one '%s' which also passes the same addresses as below:\n"
+" %s"
+msgstr ""
+"Bạn sắp tạo hoặc cập nhật tuyến đường có cùng địa chỉ với địa chỉ '%s' hiện có, cũng sẽ đi qua cùng địa chỉ như dưới đây:\n"
+" %s"
+
+#. module: to_geo_routes
+#: code:addons/to_geo_routes/models/route_route.py:0
+#, python-format
+msgid "You can only set-to-draft the routes those are in Cancelled state!"
+msgstr "Bạn chỉ có thể đặt về dự thảo các tuyến mà ở trạng thái Huỷ!"
+
+#. module: to_geo_routes
+#: model_terms:ir.ui.view,arch_db:to_geo_routes.route_form
+msgid "hours"
+msgstr "giờ"
+
+#. module: to_geo_routes
+#: model_terms:ir.ui.view,arch_db:to_geo_routes.route_form
+msgid "km"
+msgstr ""
+
+#. module: to_geo_routes
+#: model_terms:ir.ui.view,arch_db:to_geo_routes.route_form
+msgid "km/h"
+msgstr ""
+
+#. module: to_geo_routes
+#: model_terms:ir.ui.view,arch_db:to_geo_routes.route_form
+msgid "miles"
+msgstr "dặm"
+
+#. module: to_geo_routes
+#: model:res.groups,comment:to_geo_routes.group_user
+msgid ""
+"the user will be able to create/edit routes and submit to Geo-Routes Manager"
+" for Validation"
+msgstr ""
+"Người dùng thuộc nhóm này có thể tạo/sửa/ các tuyến và trình cho Người Quản "
+"lý để thẩm định và duyệt"
+
+#. module: to_geo_routes
+#: model:res.groups,comment:to_geo_routes.group_manager
+msgid "the user will be able to create/edit/validate routes"
+msgstr "Người dùng thuộc nhóm này có thể tạo/sửa/xoá/thẩm định các tuyến"

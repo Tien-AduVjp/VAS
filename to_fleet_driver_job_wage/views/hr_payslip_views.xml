@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="view_hr_payslip_form" model="ir.ui.view">
+			<field name="name">hr.payslip.form</field>
+			<field name="model">hr.payslip</field>
+			<field name="inherit_id" ref="to_hr_payroll.view_hr_payslip_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='worked_days_line_ids']" position="after">
+					<separator string="Vehicle Trips" />
+					<field name="vehicle_trip_ids">
+						<tree string="Vehicle Trips">
+							<field name="vehicle_id" />
+							<field name="route_id" />
+							<field name="end_date" />
+							<field name="fuel_based_job_wage" sum="Total"/>
+							<field name="job_allowance" sum="Total Allowance"/>
+							<field name="state" />
+						</tree>
+					</field>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

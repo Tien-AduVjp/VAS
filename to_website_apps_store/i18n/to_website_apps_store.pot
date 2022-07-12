@@ -1,0 +1,1049 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_website_apps_store
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-17 04:51+0000\n"
+"PO-Revision-Date: 2022-03-14 06:32+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_website_apps_store
+#: code:addons/to_website_apps_store/models/odoo_module_version.py:0
+#, python-format
+msgid "%s for Odoo %s"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.unauthorized_rating
+msgid "403: Forbidden"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.app
+msgid "<b>Extensions</b>"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.app
+msgid "<b>Included Dependencies</b>"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.app
+msgid "<b>License</b>"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.app
+msgid "<b>Read description for</b>"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.app
+msgid "<b>Required Apps</b>"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.app
+msgid "<b>Technical name</b>"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.app
+msgid "<b>Website</b>"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.website_apps_refund_policy_qweb_view
+#: model_terms:website.page,arch_db:to_website_apps_store.website_app_refund_policy_website_page_view
+msgid ""
+"<i class=\"fa fa-chevron-left\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\tBack to Apps"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.website_apps_refund_policy_qweb_view
+#: model_terms:website.page,arch_db:to_website_apps_store.website_app_refund_policy_website_page_view
+msgid ""
+"<i class=\"fa fa-chevron-left\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\tBack to Shop"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.app_main_nav
+msgid ""
+"<i class=\"fa fa-cube\"/>\n"
+"                            APPS"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.app
+msgid "<i class=\"fa fa-cube\"/> APPS"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.app
+msgid ""
+"<i class=\"fa fa-download\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tDownload"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.product
+msgid "<i class=\"fa fa-download\"/> Download"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.app
+msgid ""
+"<i class=\"fa fa-eye-slash\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\tLive Demo"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.app_main_nav
+msgid ""
+"<i class=\"fa fa-paint-brush\"/>\n"
+"                            THEMES"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.app
+msgid "<i class=\"fa fa-paint-brush\"/> THEMES"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.app
+msgid ""
+"<i class=\"fa fa-shopping-cart\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAdd to Cart"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.product
+msgid "<i class=\"fa fa-shopping-cart\"/> Add to Cart"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.app_sub_menu
+msgid "<i class=\"fa fa-star\"/> Top Charts"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.app_sub_menu
+msgid "<i class=\"fa fa-th\"/> List View"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.app
+msgid "<small>by</small>"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.app
+msgid ""
+"<span class=\"badge badge-info\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<em>FREE</em>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t</span>"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.product
+msgid "<span class=\"badge badge-pill badge-info\">Free</span>"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.product
+msgid "<span class=\"badge badge-pill badge-primary\">Purchased</span>"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.app
+msgid ""
+"<span class=\"badge badge-success\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<em>PURCHASED</em>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t</span>"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.app
+msgid ""
+"<span class=\"fa fa-chevron-left p-2\" role=\"img\" aria-label=\"Previous\" "
+"title=\"Previous\"/>"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.cart
+msgid ""
+"<span class=\"fa fa-chevron-left\"/>\n"
+"\t\t\t\t<span class=\"hidden-xs\">Continue Apps Shopping</span>"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.app
+msgid ""
+"<span class=\"fa fa-chevron-right p-2\" role=\"img\" aria-label=\"Next\" "
+"title=\"Next\"/>"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.top_charts
+msgid ""
+"<span class=\"fw_light float-left top_charts_title\">Most Downloaded</span>"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.top_charts
+msgid "<span class=\"fw_light float-left top_charts_title\">New Apps</span>"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.top_charts
+msgid "<span class=\"fw_light float-left top_charts_title\">Top Apps</span>"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.app
+msgid ""
+"<span class=\"ml16 sale_info_tag\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-group\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\tThird Party\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t</span>"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.module_sort
+msgid ""
+"<span>Sort by</span>\n"
+"\t\t\t\t\t\t<span class=\"caret\"/>"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.product
+msgid "<strong class=\"attribute_name\">Odoo Version</strong>"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:product.public.category,name:to_website_apps_store.prod_public_categ_accounting
+msgid "Accounting"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.app
+msgid "Add to Cart"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.app_sub_menu
+msgid "All"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.app_sub_menu
+msgid "All Versions"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module_version__anchor_title
+msgid "Anchor Title"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:product.public.category,name:to_website_apps_store.prod_public_categ_modules
+#: model:website.menu,name:to_website_apps_store.website_menu_apps
+msgid "Apps"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,field_description:to_website_apps_store.field_git_branch__apps_website_published
+msgid "Apps Published"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.website_apps_refund_policy_qweb_view
+#: model_terms:website.page,arch_db:to_website_apps_store.website_app_refund_policy_website_page_view
+msgid "Apps Refund Policy!"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.apps
+msgid "Apps Store"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:product.public.category,name:to_website_apps_store.prod_public_categ_themes_backend
+msgid "Backend"
+msgstr ""
+
+#. module: to_website_apps_store
+#: code:addons/to_website_apps_store/controllers/main.py:0
+#, python-format
+msgid "Best Sellers"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module__can_publish
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module_version__can_publish
+msgid "Can Publish"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.module_count
+msgid "Category:"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.website_apps_refund_policy_qweb_view
+#: model_terms:website.page,arch_db:to_website_apps_store.website_app_refund_policy_website_page_view
+msgid ""
+"Claims are allowed within the next two months after the\n"
+"\t\t\t\t\t\t\t\t\t\t\tpurchase.\n"
+"\t\t\t\t\t\t\t\t\t\t\tThe refund process is the following:"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model,name:to_website_apps_store.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:product.public.category,name:to_website_apps_store.prod_public_categ_themes_corporate
+msgid "Corporate"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:product.public.category,name:to_website_apps_store.prod_public_categ_themes_creative
+msgid "Creative"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.website_apps_refund_policy_qweb_view
+#: model_terms:website.page,arch_db:to_website_apps_store.website_app_refund_policy_website_page_view
+msgid ""
+"Customer requests the module publisher for support using\n"
+"\t\t\t\t\t\t\t\t\t\t\t\tthe\n"
+"\t\t\t\t\t\t\t\t\t\t\t\tdedicated button on his order page"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,field_description:to_website_apps_store.field_res_config_settings__dedicate_apps_store
+#: model:ir.model.fields,field_description:to_website_apps_store.field_website__dedicate_apps_store
+msgid "Dedicated Apps Store"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.cart_lines
+msgid "Dependency"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.app
+msgid "Description"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,field_description:to_website_apps_store.field_product_product__website_description
+#: model:ir.model.fields,field_description:to_website_apps_store.field_product_template__website_description
+msgid "Description for the website"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:product.public.category,name:to_website_apps_store.prod_public_categ_discuss
+msgid "Discuss"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,field_description:to_website_apps_store.field_git_branch__display_name
+#: model:ir.model.fields,field_description:to_website_apps_store.field_ir_http__display_name
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module__display_name
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module_version__display_name
+#: model:ir.model.fields,field_description:to_website_apps_store.field_product_public_category__display_name
+#: model:ir.model.fields,field_description:to_website_apps_store.field_product_template__display_name
+#: model:ir.model.fields,field_description:to_website_apps_store.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:to_website_apps_store.field_sale_order__display_name
+#: model:ir.model.fields,field_description:to_website_apps_store.field_website__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:product.public.category,name:to_website_apps_store.prod_public_categ_document_management
+msgid "Document Management"
+msgstr ""
+
+#. module: to_website_apps_store
+#: code:addons/to_website_apps_store/controllers/main.py:0
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.app
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.odoo_module_item
+#, python-format
+msgid "Downloads"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:product.public.category,name:to_website_apps_store.prod_public_categ_themes_ecommerce
+msgid "Ecommerce"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:product.public.category,name:to_website_apps_store.prod_public_categ_themes_education
+msgid "Education"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:product.public.category,name:to_website_apps_store.prod_public_categ_themes_entertainment
+msgid "Entertainment"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:product.public.category,name:to_website_apps_store.prod_public_categ_extra_tools
+msgid "Extra Tools"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.odoo_module_item
+msgid "FREE"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:product.public.category,name:to_website_apps_store.prod_public_categ_fleet
+msgid "Fleet"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.website_apps_refund_policy_qweb_view
+#: model_terms:website.page,arch_db:to_website_apps_store.website_app_refund_policy_website_page_view
+msgid "Fraud or stolen credit cards"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.app_sub_menu
+msgid "Free"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model,name:to_website_apps_store.model_git_branch
+msgid "Git Branch"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model,name:to_website_apps_store.model_ir_http
+msgid "HTTP Routing"
+msgstr ""
+
+#. module: to_website_apps_store
+#: code:addons/to_website_apps_store/controllers/main.py:0
+#, python-format
+msgid "Highest Price"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:product.public.category,name:to_website_apps_store.prod_public_categ_human_resources
+msgid "Human Resources"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,field_description:to_website_apps_store.field_git_branch__id
+#: model:ir.model.fields,field_description:to_website_apps_store.field_ir_http__id
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module__id
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module_version__id
+#: model:ir.model.fields,field_description:to_website_apps_store.field_product_public_category__id
+#: model:ir.model.fields,field_description:to_website_apps_store.field_product_template__id
+#: model:ir.model.fields,field_description:to_website_apps_store.field_res_config_settings__id
+#: model:ir.model.fields,field_description:to_website_apps_store.field_sale_order__id
+#: model:ir.model.fields,field_description:to_website_apps_store.field_website__id
+msgid "ID"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.res_config_settings_view_form
+msgid ""
+"If checked, a dedicted Apps Store will be activated\n"
+"\t\t\t\t\t\t\ton your website to sell your Apps. Otherwise, all your apps will\n"
+"\t\t\t\t\t\t\tbe listed in the Shop (together with other products)"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,help:to_website_apps_store.field_res_config_settings__dedicate_apps_store
+#: model:ir.model.fields,help:to_website_apps_store.field_website__dedicate_apps_store
+msgid ""
+"If checked, all products that are Odoo Apps will NOT be listed on your "
+"website's Shop. Instead, a dedicted Apps Store will be activated on your "
+"website, beside your Shop."
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.cart_lines
+msgid ""
+"If checked, it means the the line is a dependence line and cannot be removed"
+" if its entension is ordered"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,help:to_website_apps_store.field_git_branch__apps_website_published
+msgid ""
+"If enabled, all the Odoo apps in this branch will be published on the "
+"website by default"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,help:to_website_apps_store.field_git_branch__visible_on_apps_store
+msgid ""
+"If enabled, all the Odoo apps in this branch will be shown on Apps Store for online selling.\n"
+"If for any reason, you only wanted to publishing odoo module version without online selling lifetime version of it,\n"
+"you could change this option."
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,help:to_website_apps_store.field_odoo_module_version__replace_product_website_description
+msgid ""
+"If enabled, the description of this module will be used on website instead of the website description of the corresponding product.\n"
+" Note, if you edit the product's description, this field will be set as disabled automatically."
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.website_apps_refund_policy_qweb_view
+#: model_terms:website.page,arch_db:to_website_apps_store.website_app_refund_policy_website_page_view
+msgid ""
+"If no agreement has been found between parties after 15\n"
+"\t\t\t\t\t\t\t\t\t\t\t\tdays,\n"
+"\t\t\t\t\t\t\t\t\t\t\t\teither party can request the intervention of Odoo who\n"
+"\t\t\t\t\t\t\t\t\t\t\t\twill\n"
+"\t\t\t\t\t\t\t\t\t\t\t\tdecide\n"
+"\t\t\t\t\t\t\t\t\t\t\t\tto refund or not the customer."
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.website_apps_refund_policy_qweb_view
+#: model_terms:website.page,arch_db:to_website_apps_store.website_app_refund_policy_website_page_view
+msgid ""
+"In case the customer has several issues with a module,\n"
+"\t\t\t\t\t\t\t\t\t\t\tevery\n"
+"\t\t\t\t\t\t\t\t\t\t\tone\n"
+"\t\t\t\t\t\t\t\t\t\t\tof the issues should follow the above conditions."
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:product.public.category,name:to_website_apps_store.prod_public_categ_industries
+msgid "Industries"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module_version__is_latest_website_published_version
+msgid "Is Latest Website Published Version"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module__is_published
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module_version__is_published
+msgid "Is Published"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,field_description:to_website_apps_store.field_git_branch____last_update
+#: model:ir.model.fields,field_description:to_website_apps_store.field_ir_http____last_update
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module____last_update
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module_version____last_update
+#: model:ir.model.fields,field_description:to_website_apps_store.field_product_public_category____last_update
+#: model:ir.model.fields,field_description:to_website_apps_store.field_product_template____last_update
+#: model:ir.model.fields,field_description:to_website_apps_store.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:to_website_apps_store.field_sale_order____last_update
+#: model:ir.model.fields,field_description:to_website_apps_store.field_website____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module__latest_website_published_version_id
+msgid "Latest Website Published Version"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.app
+msgid "License"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:product.public.category,name:to_website_apps_store.prod_public_categ_localization
+msgid "Localization"
+msgstr ""
+
+#. module: to_website_apps_store
+#: code:addons/to_website_apps_store/controllers/main.py:0
+#, python-format
+msgid "Lowest Price"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:product.public.category,name:to_website_apps_store.prod_public_categ_manufacturing
+msgid "Manufacturing"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:product.public.category,name:to_website_apps_store.prod_public_categ_marketing
+msgid "Marketing"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:product.public.category,name:to_website_apps_store.prod_public_categ_themes_miscellaneous
+msgid "Miscellaneous"
+msgstr ""
+
+#. module: to_website_apps_store
+#: code:addons/to_website_apps_store/controllers/main.py:0
+#, python-format
+msgid "Name"
+msgstr ""
+
+#. module: to_website_apps_store
+#: code:addons/to_website_apps_store/controllers/main.py:0
+#, python-format
+msgid "Newest"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.apps
+msgid "No app that matches your criteria was found."
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:product.public.category,name:to_website_apps_store.prod_public_categ_themes_nonprofit
+msgid "Nonprofit"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:product.public.category,name:to_website_apps_store.prod_public_categ_odoo_apps
+msgid "Odoo Apps"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model,name:to_website_apps_store.model_odoo_module
+msgid "Odoo Module"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model,name:to_website_apps_store.model_odoo_module_version
+msgid "Odoo Module Version"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,field_description:to_website_apps_store.field_product_public_category__odoo_module_version_ids
+msgid "Odoo Module Versions"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.app_sub_menu
+msgid "Paid"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:product.public.category,name:to_website_apps_store.prod_public_categ_themes_personal
+msgid "Personal"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:product.public.category,name:to_website_apps_store.prod_public_categ_point_of_sale
+msgid "Point of Sale"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.product
+msgid "Product Name"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model,name:to_website_apps_store.model_product_template
+msgid "Product Template"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:product.public.category,name:to_website_apps_store.prod_public_categ_productivity
+msgid "Productivity"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:product.public.category,name:to_website_apps_store.prod_public_categ_project
+msgid "Project"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.odoo_module_item
+msgid "Purchased"
+msgstr ""
+
+#. module: to_website_apps_store
+#: code:addons/to_website_apps_store/controllers/main.py:0
+#: model:product.public.category,name:to_website_apps_store.prod_public_categ_purchases
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.app
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.odoo_module_item
+#, python-format
+msgid "Purchases"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module__rating_ids
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module_version__rating_ids
+msgid "Rating"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module__rating_avg
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module_version__rating_avg
+msgid "Rating Average"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module__rating_last_feedback
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module_version__rating_last_feedback
+msgid "Rating Last Feedback"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module__rating_last_image
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module_version__rating_last_image
+msgid "Rating Last Image"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module__rating_last_value
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module_version__rating_last_value
+msgid "Rating Last Value"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module__rating_count
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module_version__rating_count
+msgid "Rating count"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,help:to_website_apps_store.field_odoo_module__rating_last_feedback
+#: model:ir.model.fields,help:to_website_apps_store.field_odoo_module_version__rating_last_feedback
+msgid "Reason of the rating"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.app_sub_menu
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.product
+msgid "Refund Policy"
+msgstr ""
+
+#. module: to_website_apps_store
+#: code:addons/to_website_apps_store/controllers/main.py:0
+#, python-format
+msgid "Relevance"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module_version__replace_product_website_description
+msgid "Replace Product Website Description"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,help:to_website_apps_store.field_odoo_module_version__website_id
+msgid "Restrict publishing to this website."
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:product.public.category,name:to_website_apps_store.prod_public_categ_themes_retail
+msgid "Retail"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module_version__is_seo_optimized
+msgid "SEO optimized"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:product.public.category,name:to_website_apps_store.prod_public_categ_sales
+msgid "Sales"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model,name:to_website_apps_store.model_sale_order
+msgid "Sales Order"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.res_config_settings_view_form
+msgid "Sell your Odoo apps online"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module_version__seo_name
+msgid "Seo name"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:product.public.category,name:to_website_apps_store.prod_public_categ_themes_services
+msgid "Services"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.module_sort
+msgid "Sorting by:"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,help:to_website_apps_store.field_odoo_module_version__anchor_title
+msgid "Technical field for usage with anchor tag's title attribute."
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:product.public.category,name:to_website_apps_store.prod_public_categ_themes_technology
+msgid "Technology"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.website_apps_refund_policy_qweb_view
+#: model_terms:website.page,arch_db:to_website_apps_store.website_app_refund_policy_website_page_view
+msgid "The conditions in which the customer will not be refunded:"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.website_apps_refund_policy_qweb_view
+#: model_terms:website.page,arch_db:to_website_apps_store.website_app_refund_policy_website_page_view
+msgid ""
+"The customer will be refunded if one of these conditions is\n"
+"\t\t\t\t\t\t\t\t\t\t\tmet,\n"
+"\t\t\t\t\t\t\t\t\t\t\tand if he agrees to not use the module and delete his\n"
+"\t\t\t\t\t\t\t\t\t\t\tcopies:"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.website_apps_refund_policy_qweb_view
+#: model_terms:website.page,arch_db:to_website_apps_store.website_app_refund_policy_website_page_view
+msgid ""
+"The demand concerns a new feature, not advertised in the\n"
+"\t\t\t\t\t\t\t\t\t\t\t\tdescription of the module, or in the communication with the\n"
+"\t\t\t\t\t\t\t\t\t\t\t\tvendor"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,help:to_website_apps_store.field_odoo_module__website_url
+#: model:ir.model.fields,help:to_website_apps_store.field_odoo_module_version__website_url
+msgid "The full URL to access the document through the website."
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.website_apps_refund_policy_qweb_view
+#: model_terms:website.page,arch_db:to_website_apps_store.website_app_refund_policy_website_page_view
+msgid ""
+"The issue concerns a bug, that has not been fixed\n"
+"\t\t\t\t\t\t\t\t\t\t\t\tfollowing\n"
+"\t\t\t\t\t\t\t\t\t\t\t\tthe\n"
+"\t\t\t\t\t\t\t\t\t\t\t\tclaim"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.website_apps_refund_policy_qweb_view
+#: model_terms:website.page,arch_db:to_website_apps_store.website_app_refund_policy_website_page_view
+msgid ""
+"The module does not install properly on the advertised\n"
+"\t\t\t\t\t\t\t\t\t\t\t\tversion"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.website_apps_refund_policy_qweb_view
+#: model_terms:website.page,arch_db:to_website_apps_store.website_app_refund_policy_website_page_view
+msgid ""
+"The module had a bug that the publisher was able to fix\n"
+"\t\t\t\t\t\t\t\t\t\t\t\tfollowing the claim"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.website_apps_refund_policy_qweb_view
+#: model_terms:website.page,arch_db:to_website_apps_store.website_app_refund_policy_website_page_view
+msgid "The module infringe rules of the Vendor Apps Guidelines"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.website_apps_refund_policy_qweb_view
+#: model_terms:website.page,arch_db:to_website_apps_store.website_app_refund_policy_website_page_view
+msgid ""
+"The module is lacking a feature that is advertised in the\n"
+"\t\t\t\t\t\t\t\t\t\t\t\tapp\n"
+"\t\t\t\t\t\t\t\t\t\t\t\tdescription page"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.website_apps_refund_policy_qweb_view
+#: model_terms:website.page,arch_db:to_website_apps_store.website_app_refund_policy_website_page_view
+msgid "The module license is wrong"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.website_apps_refund_policy_qweb_view
+#: model_terms:website.page,arch_db:to_website_apps_store.website_app_refund_policy_website_page_view
+msgid ""
+"The modules works well, but is not satisfying the\n"
+"\t\t\t\t\t\t\t\t\t\t\t\tcustomer’s\n"
+"\t\t\t\t\t\t\t\t\t\t\t\tspecific needs"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,help:to_website_apps_store.field_odoo_module_version__website_published_date
+msgid "The value of this field is updated upon the first published only."
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:product.public.category,name:to_website_apps_store.prod_public_categ_themes
+msgid "Themes"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,help:to_website_apps_store.field_odoo_module__latest_website_published_version_id
+msgid ""
+"This field is to indicated the latest version that has been published on "
+"website"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,help:to_website_apps_store.field_odoo_module_version__is_latest_website_published_version
+msgid ""
+"This is to indicate that this version the the latest version of the "
+"respective module that has been published on the website"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,help:to_website_apps_store.field_odoo_module__website_ids
+msgid "This is to restrict publishing to these given websites"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.app
+msgid ""
+"This module is not available for buying directly. It is usually included "
+"when you buy a module (listed in the Extensions) that requires this one."
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.app
+msgid "Unpublished"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.website_apps_refund_policy_qweb_view
+#: model_terms:website.page,arch_db:to_website_apps_store.website_app_refund_policy_website_page_view
+msgid ""
+"Vendor has 15 days starting from the customer request to\n"
+"\t\t\t\t\t\t\t\t\t\t\t\tsettle\n"
+"\t\t\t\t\t\t\t\t\t\t\t\tthe claim, fix the issue and/or find an agreement"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.top_charts
+msgid "View all"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,field_description:to_website_apps_store.field_git_branch__visible_on_apps_store
+msgid "Visible on Apps Store"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module__website_published
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module_version__website_published
+msgid "Visible on current website"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:product.public.category,name:to_website_apps_store.prod_public_categ_warehouse
+msgid "Warehouse"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model,name:to_website_apps_store.model_website
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module_version__website_id
+#: model:product.public.category,name:to_website_apps_store.prod_public_categ_website
+msgid "Website"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module_version__public_categ_ids
+msgid "Website Categories"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module_version__website_intro
+msgid "Website Intro HTML"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model,name:to_website_apps_store.model_product_public_category
+msgid "Website Product Category"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module_version__website_published_date
+msgid "Website Published Date"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module__website_url
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module_version__website_url
+msgid "Website URL"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module_version__website_meta_description
+msgid "Website meta description"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module_version__website_meta_keywords
+msgid "Website meta keywords"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module_version__website_meta_title
+msgid "Website meta title"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module_version__website_meta_og_img
+msgid "Website opengraph image"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:ir.model.fields,field_description:to_website_apps_store.field_odoo_module__website_ids
+msgid "Websites"
+msgstr ""
+
+#. module: to_website_apps_store
+#: code:addons/to_website_apps_store/models/odoo_module_version.py:0
+#, python-format
+msgid "You don't have permission to modify the Odoo module version %s"
+msgstr ""
+
+#. module: to_website_apps_store
+#: code:addons/to_website_apps_store/models/product_template.py:0
+#, python-format
+msgid "You don't have permission to modify the product template %s"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.unauthorized_rating
+msgid "You may not be able to rate an app that you did not buy."
+msgstr ""
+
+#. module: to_website_apps_store
+#: model:product.public.category,name:to_website_apps_store.prod_public_categ_ecommerce
+msgid "eCommerce"
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.module_count
+msgid "found."
+msgstr ""
+
+#. module: to_website_apps_store
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.app
+#: model_terms:ir.ui.view,arch_db:to_website_apps_store.app_main_nav
+msgid "ml-2"
+msgstr ""

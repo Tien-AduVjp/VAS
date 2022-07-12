@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+
+    <!-- Mark as Recruitment Done -->
+
+    <record id="document_action_hr_recruitment_done" model="document.action">
+        <field name="name">Mark as Recruitment Done</field>
+        <field name="done_document_activity" eval="True"/>
+    </record>
+
+    <record id="document_action_set_tag_hr_recruitment_done" model="document.action.set_tag">
+        <field name="action_type">replace</field>
+        <field name="category_id" ref="document_tag_category_hr_recruitment_status"/>
+        <field name="tag_ids" eval="[(4, ref('document_tag_hr_recruitment_done'))]"/>
+        <field name="action_id" ref="document_action_hr_recruitment_done"/>
+    </record>
+
+    <!-- Mark as Recruitment Cancel -->
+
+    <record id="document_action_hr_recruitment_cancel" model="document.action">
+        <field name="name">Mark as Recruitment Cancelled</field>
+        <field name="done_document_activity" eval="True"/>
+    </record>
+
+    <record id="document_action_set_tag_hr_recruitment_cancel" model="document.action.set_tag">
+        <field name="action_type">replace</field>
+        <field name="category_id" ref="document_tag_category_hr_recruitment_status"/>
+        <field name="tag_ids" eval="[(4, ref('document_tag_hr_recruitment_cancel'))]"/>
+        <field name="action_id" ref="document_action_hr_recruitment_cancel"/>
+    </record>
+
+</odoo>

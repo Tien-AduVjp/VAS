@@ -1,0 +1,9 @@
+.o_menu_toggle {
+    font-size: 1.3em;
+    color: $white;
+    padding: 4px 0 16px;
+
+    &:hover, &:focus, &:active {
+        outline: none;
+    }
+}

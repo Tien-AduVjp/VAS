@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+
+    <record id="document_tag_sale_quotation" model="document.tag">
+        <field name="name">Sale Quotation</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_sale'))]"/>
+    </record>
+
+    <record id="document_tag_sale_order" model="document.tag">
+        <field name="name">Sale Order</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_sale'))]"/>
+    </record>
+
+    <record id="document_tag_sale_specs" model="document.tag">
+        <field name="name">Sale Specs</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_sale'))]"/>
+    </record>
+
+    <record id="document_tag_sale_expired" model="document.tag">
+        <field name="name">Quotation Expired</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_sale'))]"/>
+    </record>
+
+</odoo>

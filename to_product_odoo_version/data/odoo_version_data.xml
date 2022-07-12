@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+	<record id="to_odoo_version.odoo_v8" model="odoo.version">
+		<field name="product_attribute_value_id" ref="odoo_version_80"/>
+	</record>
+	<record id="to_odoo_version.odoo_v9" model="odoo.version">
+		<field name="product_attribute_value_id" ref="odoo_version_90"/>
+	</record>
+	<record id="to_odoo_version.odoo_v10" model="odoo.version">
+		<field name="product_attribute_value_id" ref="odoo_version_100"/>
+	</record>
+	<record id="to_odoo_version.odoo_v11" model="odoo.version">
+		<field name="product_attribute_value_id" ref="odoo_version_110"/>
+	</record>
+	<record id="to_odoo_version.odoo_v12" model="odoo.version">
+		<field name="product_attribute_value_id" ref="odoo_version_120"/>
+	</record>
+	<record id="to_odoo_version.odoo_v13" model="odoo.version">
+		<field name="product_attribute_value_id" ref="odoo_version_130"/>
+	</record>
+	<record id="to_odoo_version.odoo_v14" model="odoo.version">
+		<field name="product_attribute_value_id" ref="odoo_version_140"/>
+	</record>
+	<record id="to_odoo_version.odoo_v15" model="odoo.version">
+		<field name="product_attribute_value_id" ref="odoo_version_150"/>
+	</record>
+</odoo>

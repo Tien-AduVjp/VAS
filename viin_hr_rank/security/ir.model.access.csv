@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_rank_line_employee,hr.job.rank.line.employee,model_hr_job_rank_line,base.group_user,1,0,0,0
+access_rank_employee,hr.rank.employee,model_hr_rank,base.group_user,1,0,0,0
+access_rank_line_hr_officer,hr.job.rank.line.hr_officer,model_hr_job_rank_line,hr.group_hr_user,1,1,1,1
+access_rank_hr_officer,hr.rank.hr_officer,model_hr_rank,hr.group_hr_user,1,1,1,1

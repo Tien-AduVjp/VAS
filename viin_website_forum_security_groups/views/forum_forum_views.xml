@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_forum_forum_form" model="ir.ui.view">
+            <field name="name">view.forum.forum.form.inherit</field>
+            <field name="model">forum.forum</field>
+            <field name="inherit_id" ref="website_forum.view_forum_forum_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='website_id']" position="after">
+                    <field name="moderator_ids" widget="many2many_tags"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

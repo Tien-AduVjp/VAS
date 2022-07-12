@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_crossovered_budget_user,crossovered.budget user,model_crossovered_budget,group_budget_user,1,1,1,0
+access_crossovered_budget_line_user,crossovered.budget.line user,model_crossovered_budget_line,group_budget_user,1,1,1,0
+access_account_budget_post_user,account.budget.post user,model_account_budget_post,group_budget_user,1,0,0,0
+access_crossovered_budget_manager,crossovered.budget manager,model_crossovered_budget,group_budget_manager,1,1,1,1
+access_crossovered_budget_line_manager,crossovered.budget.line manager,model_crossovered_budget_line,group_budget_manager,1,1,1,1
+access_account_budget_post_manager,account.budget.post manager,model_account_budget_post,group_budget_manager,1,1,1,1

@@ -1,0 +1,28 @@
+<odoo>
+    <data noupdate="1">
+        <record id="affiliate_program_introduction" model="website.page">
+            <field name="name">Affiliate Program Introduction</field>
+            <field name="type">qweb</field>
+            <field name="url">/affiliate-program-introduction</field>
+            <field name="is_published">False</field>
+            <field name="key">to_website_affiliate.affiliate_program_introduction</field>
+            <field name="arch" type="xml">
+                <t t-call="website.layout">
+                    <div id="wrap">
+                        <div class="oe_structure container">
+                            <h1 class="text-center my-5"><b>Affiliate Program Introduction</b></h1> <br/>
+                            <h3>Edit this page and write a few sentences to introduce your affiliate program then publish this page</h3>
+                            <h5>Content Suggestions:</h5>
+                            <ul>
+                                <li>What is this affiliate program?</li>
+                                <li>Steps for users to register and earn from your affiliate program (register, share link, get commission, withdraw money).</li>
+                                <li>Your commission policy.</li>
+                                <li>Frequently asked questions about this affiliate program.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </t>
+            </field>
+        </record>
+    </data>
+</odoo>

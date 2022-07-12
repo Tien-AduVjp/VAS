@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+
+    <!-- Move to Delivery Picking -->
+
+    <record id="document_action_move_to_delivery_picking_demo" model="document.action">
+        <field name="name">Move to Delivery Picking</field>
+    </record>
+
+    <record id="document_action_set_tag_move_to_delivery_picking_demo" model="document.action.set_tag">
+        <field name="action_type">replace</field>
+        <field name="category_id" ref="document_tag_category_picking_type"/>
+        <field name="tag_ids" eval="[(4, ref('document_tag_stock_delivery'))]"/>
+        <field name="action_id" ref="document_action_move_to_delivery_picking_demo"/>
+    </record>
+
+    <!-- Move to Receipt Picking -->
+
+    <record id="document_action_move_to_receipt_picking_demo" model="document.action">
+        <field name="name">Move to Receipt Picking</field>
+    </record>
+
+    <record id="document_action_set_tag_move_to_receipt_picking_demo" model="document.action.set_tag">
+        <field name="action_type">replace</field>
+        <field name="category_id" ref="document_tag_category_picking_type"/>
+        <field name="tag_ids" eval="[(4, ref('document_tag_stock_receipt'))]"/>
+        <field name="action_id" ref="document_action_move_to_receipt_picking_demo"/>
+    </record>
+
+</odoo>

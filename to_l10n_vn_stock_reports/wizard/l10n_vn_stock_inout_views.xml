@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<!-- STOCK-IN REPORT -->
+		<record id="wizard_l10n_vn_stock_inout_form" model="ir.ui.view">
+			<field name="name">WH VN Report Stock Picking In Out Form</field>
+			<field name="model">wizard.l10n_vn.stock_inout</field>
+			<field name="inherit_id"
+				ref="to_stock_report_common.wizard_stock_report_common_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='location_id']" position="after">
+					<field name="type" invisible="1" />
+				</xpath>
+			</field>
+		</record>
+
+		<record id="action_wizard_stock_in"
+			model="ir.actions.act_window">
+			<field name="name">STOCK-IN REPORT</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">wizard.l10n_vn.stock_inout</field>
+			<field name="view_mode">form</field>
+			<field name="view_id" ref="wizard_l10n_vn_stock_inout_form" />
+			<field name="target">new</field>
+			<field name="context">{'default_type': 'in'}</field>
+		</record>
+
+		<menuitem id="menu_wizard_stock_in" name="Stock-In Report"
+			parent="menu_l10n_vn_stock_legal_reports" sequence="3"
+			groups="stock.group_stock_manager" action="action_wizard_stock_in" />
+
+		<!-- STOCK-OUT REPORT -->
+
+		<record id="action_wizard_stock_out"
+			model="ir.actions.act_window">
+			<field name="name">STOCK-OUT REPORT</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">wizard.l10n_vn.stock_inout</field>
+			<field name="view_mode">form</field>
+			<field name="view_id" ref="wizard_l10n_vn_stock_inout_form" />
+			<field name="target">new</field>
+			<field name="context">{'default_type': 'out'}</field>
+		</record>
+
+		<menuitem id="menu_wizard_stock_out" name="Stock-Out Report"
+			parent="menu_l10n_vn_stock_legal_reports" sequence="4"
+			groups="stock.group_stock_manager" action="action_wizard_stock_out" />
+	</data>
+</odoo>

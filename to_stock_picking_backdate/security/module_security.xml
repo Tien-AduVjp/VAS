@@ -1,0 +1,15 @@
+<odoo>
+    <record id="group_stock_backdate" model="res.groups">
+        <field name="name">Stock Backdate Operations</field>
+        <field name="category_id" ref="base.module_category_usability" />
+        <field name="implied_ids" eval="[(4, ref('stock.group_stock_user'))]"/>
+        <field name="comment">The user in this group will be able to do stock backdate
+            operations. For example, validating a stock transfer of last week.
+        </field>
+    </record>
+
+	<record id="stock.group_stock_manager" model="res.groups">
+		<field name="implied_ids"
+			eval="[(4, ref('group_stock_backdate'))]" />
+	</record>
+</odoo>

@@ -1,0 +1,20 @@
+<odoo>
+	<record id="wallet_form" model="ir.ui.view">
+		<field name="name">wallet.form.inherit.adjustment</field>
+		<field name="model">wallet</field>
+		<field name="inherit_id" ref="to_wallet.wallet_form" />
+		<field name="arch" type="xml">
+			<header position="inside">
+				<button string="Adjust Wallet Amount"
+					name="%(action_adjust_wallet)d" type="action"
+					groups="account.group_account_manager" />
+			</header>
+			<div name="button_box" position="inside">
+				<button icon="fa-edit" name="action_view_adjustment_moves" type="object"
+					groups="account.group_account_invoice">
+					<field name="adjustment_moves_count" widget="statinfo" string="Adjustment Entries" />
+				</button>
+			</div>
+		</field>
+	</record>
+</odoo>

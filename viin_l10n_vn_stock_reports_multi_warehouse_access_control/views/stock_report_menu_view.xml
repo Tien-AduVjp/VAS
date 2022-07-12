@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem id="to_l10n_vn_stock_reports.menu_l10n_vn_stock_legal_reports"
+              name="Vietnam Legal Reports"
+              parent="stock.menu_stock_root"
+              sequence="99"
+              groups="stock.group_stock_manager,to_multi_warehouse_access_control.group_warehouse_manager" />
+
+    <menuitem id="to_l10n_vn_stock_reports.menu_wizard_c200_s10dn"
+              name="Product Journal (S10-DN)"
+              parent="to_l10n_vn_stock_reports.menu_l10n_vn_stock_legal_reports"
+              sequence="1"
+              groups="stock.group_stock_manager,to_multi_warehouse_access_control.group_warehouse_manager"
+              action="to_l10n_vn_stock_reports.action_wizard_c200_s10dn" />
+
+    <menuitem id="to_l10n_vn_stock_reports.menu_wizard_c200_s11dn"
+              name="General Inventory Journal (S11-DN)"
+              parent="to_l10n_vn_stock_reports.menu_l10n_vn_stock_legal_reports"
+              sequence="2"
+              groups="stock.group_stock_manager,to_multi_warehouse_access_control.group_warehouse_manager"
+              action="to_l10n_vn_stock_reports.action_wizard_c200_s11dn" />
+
+    <menuitem id="to_l10n_vn_stock_reports.menu_wizard_c200_s12dn"
+              name="Stock Card (S12-DN)"
+              parent="to_l10n_vn_stock_reports.menu_l10n_vn_stock_legal_reports"
+              sequence="5"
+              groups="stock.group_stock_manager,to_multi_warehouse_access_control.group_warehouse_manager"
+              action="to_l10n_vn_stock_reports.action_wizard_c200_s12dn" />
+
+    <menuitem id="to_l10n_vn_stock_reports.menu_wizard_stock_in"
+              name="Stock-In Report"
+              parent="to_l10n_vn_stock_reports.menu_l10n_vn_stock_legal_reports"
+              sequence="3"
+              groups="stock.group_stock_manager,to_multi_warehouse_access_control.group_warehouse_manager"
+              action="to_l10n_vn_stock_reports.action_wizard_stock_in" />
+
+    <menuitem id="to_l10n_vn_stock_reports.menu_wizard_stock_out"
+              name="Stock-Out Report"
+              parent="to_l10n_vn_stock_reports.menu_l10n_vn_stock_legal_reports"
+              sequence="4"
+              groups="stock.group_stock_manager,to_multi_warehouse_access_control.group_warehouse_manager"
+              action="to_l10n_vn_stock_reports.action_wizard_stock_out" />
+
+</odoo>

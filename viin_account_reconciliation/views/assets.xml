@@ -1,0 +1,21 @@
+<odoo>
+	<template id="assets_backend" name="account assets"
+		inherit_id="web.assets_backend">
+		<xpath expr="." position="inside">
+			<script type="text/javascript"
+				src="/viin_account_reconciliation/static/src/js/reconciliation_action.js"></script>
+			<script type="text/javascript"
+				src="/viin_account_reconciliation/static/src/js/reconciliation_model.js"></script>
+			<script type="text/javascript"
+				src="/viin_account_reconciliation/static/src/js/reconciliation_renderer.js"></script>
+		</xpath>
+	</template>
+
+	<template id="qunit_suite" name="account tests"
+		inherit_id="web.qunit_suite_tests">
+		<xpath expr="." position="inside">
+			<script type="text/javascript"
+				src="/viin_account_reconciliation/static/tests/account_reconciliation_tests.js" />
+		</xpath>
+	</template>
+</odoo>

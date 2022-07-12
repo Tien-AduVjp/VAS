@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="hr_overtime_reason_tree_view" model="ir.ui.view">
+		<field name="name">hr.overtime.reason.tree</field>
+		<field name="model">hr.overtime.reason</field>
+		<field name="arch" type="xml">
+			<tree string="Overtime Reasons">
+				<field name="name" />
+				<field name="description" />
+				<field name="company_id" groups="base.group_multi_company" />
+			</tree>
+		</field>
+	</record>
+
+	<record id="hr_overtime_reason_form_view" model="ir.ui.view">
+		<field name="name">hr.overtime.reason.form</field>
+		<field name="model">hr.overtime.reason</field>
+		<field name="arch" type="xml">
+			<form string="Overtime Reason" delete="false">
+				<sheet>
+					<group>
+						<group>
+							<field name="name" />
+							<field name="recognition_mode" />
+							<label for="description" />
+							<div>
+								<field name="description" />
+							</div>
+
+						</group>
+						<group>
+							<field name="company_id" groups="base.group_multi_company" />
+						</group>
+
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<record id="action_hr_overtime_reason"
+		model="ir.actions.act_window">
+		<field name="name">Overtime Reason</field>
+		<field name="res_model">hr.overtime.reason</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+	<menuitem id="hr_overtime_reason_menu" name="Overtime Reasons"
+		action="action_hr_overtime_reason" parent="hr_overtime_config_menu"
+		sequence="50" groups="viin_hr_overtime.group_overtime_officer" />
+</odoo>

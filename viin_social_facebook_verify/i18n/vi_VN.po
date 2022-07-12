@@ -1,0 +1,52 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_social_facebook_verify
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-03 07:36+0000\n"
+"PO-Revision-Date: 2021-11-03 07:36+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_social_facebook_verify
+#: model_terms:ir.ui.view,arch_db:viin_social_facebook_verify.social_media_view_form
+msgid "Convert Token to 60 days"
+msgstr "chuyển đổi mã sang 60 ngày"
+
+#. module: viin_social_facebook_verify
+#: model:ir.model.fields,field_description:viin_social_facebook_verify.field_social_media__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: viin_social_facebook_verify
+#: model:ir.model.fields,field_description:viin_social_facebook_verify.field_social_media__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_social_facebook_verify
+#: model:ir.model.fields,field_description:viin_social_facebook_verify.field_social_media____last_update
+msgid "Last Modified on"
+msgstr "Chỉnh sửa lần cuối"
+
+#. module: viin_social_facebook_verify
+#: model:ir.model,name:viin_social_facebook_verify.model_social_media
+msgid "Social Media"
+msgstr "Truyền thông xã hội"
+
+#. module: viin_social_facebook_verify
+#: model:ir.model.fields,field_description:viin_social_facebook_verify.field_social_media__fb_exchange_token
+msgid "User Exchange Token"
+msgstr "Mã chuyển đổi gười dùng"
+
+#. module: viin_social_facebook_verify
+#: model:ir.model.fields,help:viin_social_facebook_verify.field_social_media__fb_exchange_token
+msgid ""
+"you can get this token at https://developers.facebook.com/tools/explorer/"
+msgstr "bạn có thể lấy mã tại https://developers.facebook.com/tools/explorer/"

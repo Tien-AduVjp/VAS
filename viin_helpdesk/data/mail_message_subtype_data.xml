@@ -1,0 +1,36 @@
+<odoo>
+	<data>
+		<!-- Ticket-related subtypes for messaging / Chatter -->
+        <record id="mt_ticket_new" model="mail.message.subtype">
+            <field name="name">Ticket Created</field>
+            <field name="res_model">helpdesk.ticket</field>
+            <field name="default" eval="False"/>
+            <field name="hidden" eval="True"/>
+            <field name="description">Ticket Created</field>
+        </record>
+        <record id="mt_ticket_blocked" model="mail.message.subtype">
+            <field name="name">Ticket Blocked</field>
+            <field name="res_model">helpdesk.ticket</field>
+            <field name="default" eval="False"/>
+            <field name="description">Ticket blocked</field>
+        </record>
+        <record id="mt_ticket_ready" model="mail.message.subtype">
+            <field name="name">Ticket Ready</field>
+            <field name="res_model">helpdesk.ticket</field>
+            <field name="default" eval="False"/>
+            <field name="description">Ticket ready for Next Stage</field>
+        </record>
+        <record id="mt_ticket_stage" model="mail.message.subtype">
+            <field name="name">Ticket Stage Changed</field>
+            <field name="res_model">helpdesk.ticket</field>
+            <field name="default" eval="False"/>
+            <field name="description">Stage changed</field>
+        </record>
+        <record id="mt_ticket_rating" model="mail.message.subtype">
+            <field name="name">Ticket Rating</field>
+            <field name="res_model">helpdesk.ticket</field>
+            <field name="default" eval="True"/>
+            <field name="description">Ratings</field>
+        </record>
+	</data>
+</odoo>

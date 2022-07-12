@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="warranty_claim_action" model="ir.actions.act_window">
+		<field name="name">Create Warranty Claim</field>
+		<field name="res_model">warranty.claim</field>
+		<field name="view_mode">tree,form</field>
+		<field name="view_id"
+			ref="to_warranty_management.warranty_claim_form_view" />
+		<field name="context">{'default_lot_id': active_id}</field>
+	</record>
+
+	<record id="view_production_lot_form" model="ir.ui.view">
+		<field name="name">stock.production.lot.form</field>
+		<field name="model">stock.production.lot</field>
+		<field name="inherit_id" ref="stock.view_production_lot_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//sheet" position="before">
+				<header>
+					<button name="%(warranty_claim_action)d"
+						string="Create Warranty Request" type="action"
+						class="oe_highlight"
+						groups="to_warranty_management.group_warranty_user" />
+				</header>
+			</xpath>
+			<xpath expr="//group[@name='main_group']" position="after">
+				<group name="warranty_info"
+					groups="to_warranty_management.group_warranty_user">
+					<group name="sale_purchase_warranty"
+						string="Sales Purchases Warranty Info">
+						<label for="warranty_period" />
+						<div>
+							<field name="warranty_period" class="oe_inline"
+								style="vertical-align:baseline" />
+							months
+						</div>
+						<field name="supplier_warranty_start_date" />
+						<field name="supplier_warranty_expiration_date" />
+						<field name="warranty_start_date" />
+						<field name="warranty_expiration_date" />
+					</group>
+					<group name="warranty_policy" string="Warranty Policy">
+						<field name="warranty_claim_policy_ids" nolabel="1">
+							<tree editable="bottom" create="false">
+								<field name="product_milestone_id" readonly="1"/>
+								<field name="apply_to" readonly="1"/>
+								<field name="operation_start" />
+								<field name="current_measurement" />
+							</tree>
+						</field>
+					</group>
+				</group>
+			</xpath>
+			<xpath expr="//div[@name='button_box']" position="inside">
+				<button type="object" name="action_view_warranty_history"
+					class="oe_stat_button" icon="fa-cogs"
+					attrs="{'invisible':[('warranty_count','=',0)]}"
+					groups="to_warranty_management.group_warranty_user">
+					<field name="warranty_count" widget="statinfo"
+						string="Warranty History" help="View warranty history" />
+				</button>
+			</xpath>
+
+		</field>
+	</record>
+
+	<menuitem id="lot_serial_number_menu"
+		name="Lot/Serial Numbers"
+		parent="to_warranty_management.main_warranty_management_menu"
+		sequence="3" action="stock.action_production_lot_form" />
+</odoo>

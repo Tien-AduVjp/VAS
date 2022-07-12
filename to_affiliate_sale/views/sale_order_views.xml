@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+
+		<record id="view_order_form" model="ir.ui.view">
+			<field name="name">sale.order.form</field>
+			<field name="model">sale.order</field>
+			<field name="inherit_id" ref="sale.view_order_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//div[@name='button_box']" position="inside">
+					<button name="action_view_commission" type="object"
+						class="oe_stat_button" icon="fa-money"
+						groups="to_affiliate.group_to_affiliate_user"
+						attrs="{'invisible': [('commission_ids_count', '=', 0)]}">
+						<field name="commission_ids_count" widget="statinfo"
+							string="Commission" />
+					</button>
+				</xpath>
+				<field name="payment_term_id" position="after">
+					<field name="affcode_id" options="{'no_create': True}"
+						groups="to_affiliate.group_to_affiliate_user" />
+				</field>
+			</field>
+		</record>
+
+    </data>
+
+    <record id="sale_order_view_search" model="ir.ui.view">
+		<field name="name">sale.order.view.search.inherit.affiliate</field>
+		<field name="model">sale.order</field>
+		<field name="inherit_id" ref="sale.view_sales_order_filter" />
+		<field name="arch" type="xml">
+			<search position="inside">
+				<separator />
+				<field name="affcode_id" />
+				<filter name="ftr_affiliate" string="Affiliate" domain="[('affcode_id', '!=', False)]" />
+				<group expand="0" string="Group By">
+					<filter name="grp_affcode_id" string="Affiliate Code" context="{'group_by': 'affcode_id'}"/>
+				</group>
+			</search>
+		</field>
+	</record>
+
+    <record id="action_affiliate_quotations" model="ir.actions.act_window">
+        <field name="name">Quotations</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sale.order</field>
+        <field name="context">{'search_default_ftr_affiliate': 1, 'search_default_draft': 1}</field>
+    </record>
+
+    <record id="action_affiliate_sales_orders" model="ir.actions.act_window">
+        <field name="name">Sales Orders</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sale.order</field>
+		<field name="search_view_id" ref="sale.sale_order_view_search_inherit_sale"/>
+		<field name="domain">[('state', 'not in', ('draft', 'sent', 'cancel'))]</field>
+		<field name="context">{'search_default_ftr_affiliate': 1}</field>
+    </record>
+
+    <menuitem id="menu_affiliate_orders_root" name="Orders"
+              parent="to_affiliate.menu_affiliate" sequence="3"
+              groups="sales_team.group_sale_salesman"/>
+
+    <menuitem id="menu_affiliate_quotations"
+              action="action_affiliate_quotations"
+              parent="menu_affiliate_orders_root"
+              groups="sales_team.group_sale_salesman"/>
+
+    <menuitem id="menu_affiliate_sale_order"
+              action="action_affiliate_sales_orders"
+              parent="menu_affiliate_orders_root"
+              groups="sales_team.group_sale_salesman"/>
+</odoo>

@@ -1,0 +1,58 @@
+<odoo>
+	<data>
+		<record id="hr_working_month_calendar_line_view_tree"
+			model="ir.ui.view">
+			<field name="name">hr.working.month.calendar.line.tree</field>
+			<field name="model">hr.working.month.calendar.line</field>
+			<field name="inherit_id"
+				ref="to_hr_payroll.hr_working_month_calendar_line_view_tree" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='salary_computation_mode']"
+					position="after">
+					<field name="total_attendance_hours"
+						string="Total Attendance Hours" optional="hide" />
+					<field name="valid_attendance_hours"
+						string="Total Valid Attendance Hours" optional="hide" />
+					<field name="late_attendance_hours"
+						string="Total Late Coming Hours" optional="hide" />
+					<field name="early_leave_hours"
+						string="Total Early Leave Hours" optional="hide" />
+					<field name="late_attendance_count" string="Late Comings"
+						optional="hide" />
+					<field name="early_leave_count" string="Early Leaves"
+						optional="hide" />
+					<field name="missing_checkout_count"
+						string="Missing Check-outs" optional="hide" />
+				</xpath>
+			</field>
+		</record>
+
+		<record id="hr_working_month_calendar_line_view_form"
+			model="ir.ui.view">
+			<field name="name">hr.working.month.calendar.line.form</field>
+			<field name="model">hr.working.month.calendar.line</field>
+			<field name="inherit_id"
+				ref="to_hr_payroll.hr_working_month_calendar_line_view_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//group[./field[@name='paid_rate']]"
+					position="after">
+					<group>
+						<field name="total_attendance_hours" />
+						<field name="valid_attendance_hours" />
+					</group>
+					<group>
+						<field name="late_attendance_hours" />
+						<field name="early_leave_hours" />
+					</group>
+					<group>
+						<field name="late_attendance_count" string="Late Comings" />
+						<field name="early_leave_count" string="Early Leaves" />
+						<field name="missing_checkout_count"
+							string="Missing Check-outs" />
+					</group>
+				</xpath>
+			</field>
+		</record>
+
+	</data>
+</odoo>

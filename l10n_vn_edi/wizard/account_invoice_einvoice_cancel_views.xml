@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="view_account_invoice_einvoice_cancel"
+			model="ir.ui.view">
+			<field name="name">E-Invoice Cancellation Wizard</field>
+			<field name="model">account.invoice.einvoice.cancel</field>
+			<field name="arch" type="xml">
+				<form string="E-Invoice Cancellation Wizard">
+					<div>This will connect E-Invoice then cancel it. Are you
+						sure you want to proceed?</div>
+					<div class="text-danger">Please note that, once cancelled, you will not be
+						able to modify or change it any more.
+					</div>
+					<group>
+						<field name="invoice_id" invisible="1"/>
+						<field name="additional_reference_desc" />
+						<field name="additional_reference_date" />
+						<field name="cancellation_record" filename="cancellation_record_name" />
+						<field name="cancellation_record_name" invisible="1"/>
+						<field name="einvoice_provider" invisible="1"/>
+					</group>
+					<footer>
+						<button name="action_cancel_einvoice" string="Confirm"
+							type="object" class="btn-primary o_safe_confirm_button" />
+						<button string="Cancel" class="btn-default"
+							special="cancel" />
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<record id="action_account_invoice_einvoice_cancel"
+			model="ir.actions.act_window">
+			<field name="name">E-Invoice Cancellation Wizard</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">account.invoice.einvoice.cancel</field>
+			<field name="view_mode">form</field>
+			<field name="target">new</field>
+			<field name="context">{'default_invoice_id':active_id}</field>
+		</record>
+	</data>
+</odoo>

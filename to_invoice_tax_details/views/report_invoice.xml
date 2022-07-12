@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<template id="report_invoice_document"
+			inherit_id="account.report_invoice_document">
+			<xpath
+				expr="//table[@name='invoice_line_table']/thead/tr/th[./span[@groups='account.group_show_line_subtotals_tax_excluded']]"
+				position="attributes">
+				<attribute name="groups">account.group_show_line_subtotals_tax_excluded,account.group_show_line_subtotals_tax_included
+				</attribute>
+			</xpath>
+			<xpath
+				expr="//table[@name='invoice_line_table']/thead/tr/th[./span[@groups='account.group_show_line_subtotals_tax_excluded']]"
+				position="after">
+				<th class="text-right"
+					groups="to_invoice_tax_details.group_show_line_tax_details">
+					<span>Amount</span>
+				</th>
+				<th class="text-right"
+					groups="to_invoice_tax_details.group_show_line_tax_details">
+					<span>Tax Amount</span>
+				</th>
+				<th class="text-right"
+					groups="to_invoice_tax_details.group_show_line_tax_details">
+					<span>Total Price</span>
+				</th>
+			</xpath>
+			<xpath
+				expr="//table[@name='invoice_line_table']//span[@id='line_tax_ids']"
+				position="after">
+				<td class="text-right o_price_total"
+					groups="to_invoice_tax_details.group_show_line_tax_details">
+					<span t-field="line.price_subtotal" />
+				</td>
+				<td class="text-right o_price_total"
+					groups="to_invoice_tax_details.group_show_line_tax_details">
+					<span t-field="line.price_tax" />
+				</td>
+				<td class="text-right o_price_total"
+					groups="to_invoice_tax_details.group_show_line_tax_details">
+					<span t-field="line.price_total" />
+				</td>
+			</xpath>
+		</template>
+	</data>
+</odoo>

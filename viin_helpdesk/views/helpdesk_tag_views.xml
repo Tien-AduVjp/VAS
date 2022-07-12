@@ -1,0 +1,23 @@
+<odoo>
+	<data>
+		<record id="helpdesk_tag_tree_view" model="ir.ui.view">
+			<field name="name">helpdesk.tag.tree</field>
+			<field name="model">helpdesk.tag</field>
+			<field name="arch" type="xml">
+				<tree editable="bottom">
+					<field name="name" />
+					<field name="color" widget="color_picker"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="helpdesk_tag_action" model="ir.actions.act_window">
+			<field name="name">Ticket Tags</field>
+			<field name="res_model">helpdesk.tag</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem id="helpdesk_tag_menu" parent="configuration_menu" action="helpdesk_tag_action" sequence="18" />
+	</data>
+</odoo>

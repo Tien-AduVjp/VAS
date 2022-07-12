@@ -1,0 +1,25 @@
+<odoo>
+    <template id="portal_invoice_page" name="Portal Invoice : E-invoice portal link" inherit_id="account.portal_invoice_page" >
+        <xpath expr="//div[@id='invoice_content']/div[hasclass('o_portal_html_view')]" position="before">
+            <div t-if="invoice.sinvoice_reservation_code" class="o_portal_page_size" style="margin-bottom: 20px;">
+            	<div class="o_portal_html_view shadow">
+            		<div class="container" style="padding:20px;">
+            			<h2>Legal E-Invoice</h2>
+            			<p>The legal e-invoice numbered <b t-esc="invoice.legal_number" /> has been issued to you with S-Invoice. You can login S-Invoice system for the original invoice:</p>
+            			<ul>
+            				<li>
+            					URL: <a href="https://sinvoice.viettel.vn/tracuuhoadon" target="_blank">https://sinvoice.viettel.vn/tracuuhoadon</a>
+            				</li>
+            				<li>
+            					Our Tax Identification Number: <b t-esc="invoice.company_id.vat" />
+            				</li>
+            				<li>
+            					Secret Code: <b t-esc="invoice.sinvoice_reservation_code" />
+            				</li>
+            			</ul>
+            		</div>
+            	</div>
+            </div>
+        </xpath>
+    </template>
+</odoo>

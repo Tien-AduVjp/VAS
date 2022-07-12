@@ -1,0 +1,505 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_odoo_version
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-29 04:49+0000\n"
+"PO-Revision-Date: 2021-10-29 04:49+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_odoo_version
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version__message_needaction
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version_config__message_needaction
+msgid "Action Needed"
+msgstr "Cần có Hành động"
+
+#. module: to_odoo_version
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version__message_attachment_count
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version_config__message_attachment_count
+msgid "Attachment Count"
+msgstr "Số lượng đính kèm"
+
+#. module: to_odoo_version
+#: model_terms:ir.ui.view,arch_db:to_odoo_version.wizard_version_config_from_file_form_views
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: to_odoo_version
+#: model:ir.model,name:to_odoo_version.model_config_section
+msgid "Configuration Section"
+msgstr ""
+
+#. module: to_odoo_version
+#: model_terms:ir.actions.act_window,help:to_odoo_version.odoo_version_config_action
+msgid "Create a new Odoo Version Config"
+msgstr ""
+
+#. module: to_odoo_version
+#: model_terms:ir.actions.act_window,help:to_odoo_version.odoo_version_action
+msgid "Create a new Odoo version"
+msgstr "Tạo mới một Phiên bản Odoo"
+
+#. module: to_odoo_version
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version__create_uid
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version_config__create_uid
+#: model:ir.model.fields,field_description:to_odoo_version.field_wizard_version_config_from_file__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: to_odoo_version
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version__create_date
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version_config__create_date
+#: model:ir.model.fields,field_description:to_odoo_version.field_wizard_version_config_from_file__create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: to_odoo_version
+#: model_terms:ir.ui.view,arch_db:to_odoo_version.odoo_version_form_view
+msgid "Default Config Directives"
+msgstr "Chỉ mục Cấu hình Mặc định"
+
+#. module: to_odoo_version
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version__description
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version_config__description
+msgid "Description"
+msgstr "Miêu tả"
+
+#. module: to_odoo_version
+#: model:ir.model.fields,field_description:to_odoo_version.field_config_section__display_name
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version__display_name
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version_config__display_name
+#: model:ir.model.fields,field_description:to_odoo_version.field_wizard_version_config_from_file__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_odoo_version
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version__end_of_functional_support
+msgid "End of Functional Support"
+msgstr "Kết thúc Hỗ trợ Tính năng"
+
+#. module: to_odoo_version
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version__end_of_life
+msgid "End of Life"
+msgstr "Hết vòng đời"
+
+#. module: to_odoo_version
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version__message_follower_ids
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version_config__message_follower_ids
+msgid "Followers"
+msgstr "Theo dõi"
+
+#. module: to_odoo_version
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version__message_channel_ids
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version_config__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Người theo dõi (Các kênh)"
+
+#. module: to_odoo_version
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version__message_partner_ids
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version_config__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Người theo dõi (Các đối tác)"
+
+#. module: to_odoo_version
+#: model_terms:ir.ui.view,arch_db:to_odoo_version.wizard_version_config_from_file_form_views
+msgid "Generate Config Directives"
+msgstr "Sinh Chỉ mục Cấu hình"
+
+#. module: to_odoo_version
+#: model:ir.actions.act_window,name:to_odoo_version.launch_version_config_from_file_wizard
+msgid "Generate Config Directives from File"
+msgstr "Sinh Chỉ mục Cấu hình từ tập tin"
+
+#. module: to_odoo_version
+#: model_terms:ir.ui.view,arch_db:to_odoo_version.wizard_version_config_from_file_form_views
+msgid "Generate Config. Directives for Odoo Version from File"
+msgstr "Sinh Chỉ mục Cấu hình cho Phiên bản Odoo từ tập tin"
+
+#. module: to_odoo_version
+#: model:ir.model.fields,field_description:to_odoo_version.field_config_section__id
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version__id
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version_config__id
+#: model:ir.model.fields,field_description:to_odoo_version.field_wizard_version_config_from_file__id
+msgid "ID"
+msgstr ""
+
+#. module: to_odoo_version
+#: model:ir.model.fields,help:to_odoo_version.field_odoo_version__message_needaction
+#: model:ir.model.fields,help:to_odoo_version.field_odoo_version__message_unread
+#: model:ir.model.fields,help:to_odoo_version.field_odoo_version_config__message_needaction
+#: model:ir.model.fields,help:to_odoo_version.field_odoo_version_config__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Nếu đánh dấu chọn, các thông điệp mới yêu cầu sự có mặt của bạn."
+
+#. module: to_odoo_version
+#: model:ir.model.fields,help:to_odoo_version.field_odoo_version__message_has_error
+#: model:ir.model.fields,help:to_odoo_version.field_odoo_version__message_has_sms_error
+#: model:ir.model.fields,help:to_odoo_version.field_odoo_version_config__message_has_error
+#: model:ir.model.fields,help:to_odoo_version.field_odoo_version_config__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Nếu được đánh dấu, thông điệp có lỗi về gửi tin."
+
+#. module: to_odoo_version
+#: model:ir.model.fields,help:to_odoo_version.field_wizard_version_config_from_file__override_existing_value
+msgid ""
+"If checked, values from uploaded config file will override the existing "
+"ones."
+msgstr ""
+"Nếu đánh dấu, các giá trị từ file cấu hình upload lên sẽ ghi đè các giá trị "
+"đang có."
+
+#. module: to_odoo_version
+#: code:addons/to_odoo_version/models/odoo_version.py:0
+#, python-format
+msgid ""
+"Invalid version number %s. The version should be in the form of either 'x.y'"
+" or 'x.y.z' where the x, y, z must be digits."
+msgstr ""
+"Mã số Phiên bản %s không hợp lệ. Phiên bản phải có dạng 'x.y' hoặc 'x.y.z', "
+"trong đó x, y, z phải là các chữ số."
+
+#. module: to_odoo_version
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version__message_is_follower
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version_config__message_is_follower
+msgid "Is Follower"
+msgstr "Là người theo dõi"
+
+#. module: to_odoo_version
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version_config__name
+msgid "Key"
+msgstr "Khoá"
+
+#. module: to_odoo_version
+#: model:ir.model.fields,field_description:to_odoo_version.field_config_section____last_update
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version____last_update
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version_config____last_update
+#: model:ir.model.fields,field_description:to_odoo_version.field_wizard_version_config_from_file____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_odoo_version
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version__write_uid
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version_config__write_uid
+#: model:ir.model.fields,field_description:to_odoo_version.field_wizard_version_config_from_file__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: to_odoo_version
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version__write_date
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version_config__write_date
+#: model:ir.model.fields,field_description:to_odoo_version.field_wizard_version_config_from_file__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối"
+
+#. module: to_odoo_version
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version__message_main_attachment_id
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version_config__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Đính kèm chính"
+
+#. module: to_odoo_version
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version__message_has_error
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version_config__message_has_error
+msgid "Message Delivery error"
+msgstr "Có Lỗi Gửi Thông điệp"
+
+#. module: to_odoo_version
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version__message_ids
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version_config__message_ids
+msgid "Messages"
+msgstr "Thông điệp"
+
+#. module: to_odoo_version
+#: code:addons/to_odoo_version/models/config_section.py:0
+#, python-format
+msgid ""
+"Modifying section name is not allowed while an Odoo version configuration "
+"directive is still referring to it"
+msgstr ""
+"Sửa tên section là không được phép khi đã có các chỉ mục cấu hình phiên bản "
+"Odoo vẫn đang dẫn chiếu đến nó"
+
+#. module: to_odoo_version
+#: model:odoo.version,description:to_odoo_version.odoo_v12
+msgid ""
+"Multi-Website Support, Bootstrap 4, Sass intead of Less, IoT, Chat Bot, etc"
+msgstr ""
+"Hỗ trợ Đa website, Bootstrap 4, Sass thay cho Less, IoT, Chat Bot, v.v."
+
+#. module: to_odoo_version
+#: model:ir.model.fields,help:to_odoo_version.field_odoo_version__end_of_life
+msgid ""
+"No more support and maintenance, including bug fixes, would be made upon "
+"this date and later on. Users must have their Odoo instances upgraded before"
+" this date."
+msgstr ""
+"Việc Không hỗ trợ và bảo trì, bao gồm cả sửa lỗi, sẽ được bắt đầu kể từ ngày"
+" này. Người dùng phải Nâng cấp phiên bản Odoo trước ngày này."
+
+#. module: to_odoo_version
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version__message_needaction_counter
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version_config__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Số lượng Hành động"
+
+#. module: to_odoo_version
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version__message_has_error_counter
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version_config__message_has_error_counter
+msgid "Number of errors"
+msgstr "Số lượng lỗi"
+
+#. module: to_odoo_version
+#: model:ir.model.fields,help:to_odoo_version.field_odoo_version__message_needaction_counter
+#: model:ir.model.fields,help:to_odoo_version.field_odoo_version_config__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Số thông điệp cần có hành động"
+
+#. module: to_odoo_version
+#: model:ir.model.fields,help:to_odoo_version.field_odoo_version__message_has_error_counter
+#: model:ir.model.fields,help:to_odoo_version.field_odoo_version_config__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Số lượng các thông điệp có lỗi về gửi tin"
+
+#. module: to_odoo_version
+#: model:ir.model.fields,help:to_odoo_version.field_odoo_version__message_unread_counter
+#: model:ir.model.fields,help:to_odoo_version.field_odoo_version_config__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Số thông điệp chưa đọc"
+
+#. module: to_odoo_version
+#: model:ir.model.fields,field_description:to_odoo_version.field_wizard_version_config_from_file__odoo_config_file_bin
+msgid "Odoo Config File"
+msgstr "Tập tin Cấu hình Odoo"
+
+#. module: to_odoo_version
+#: model:ir.model.fields,field_description:to_odoo_version.field_wizard_version_config_from_file__filename
+msgid "Odoo Config File Name"
+msgstr "Tên tập tin cấu hình Odoo"
+
+#. module: to_odoo_version
+#: model:ir.actions.act_window,name:to_odoo_version.odoo_version_action
+#: model:ir.model,name:to_odoo_version.model_odoo_version
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version_config__odoo_version_id
+#: model:ir.model.fields,field_description:to_odoo_version.field_wizard_version_config_from_file__odoo_version_id
+msgid "Odoo Version"
+msgstr "Phiên bản Odoo"
+
+#. module: to_odoo_version
+#: model:ir.model.fields,field_description:to_odoo_version.field_config_section__odoo_version_config_ids
+msgid "Odoo Version Config"
+msgstr "Cấu hình Phiên bản Odoo"
+
+#. module: to_odoo_version
+#: model_terms:ir.ui.view,arch_db:to_odoo_version.odoo_version_config_form_view
+msgid "Odoo Version Config Form"
+msgstr ""
+
+#. module: to_odoo_version
+#: model:ir.model,name:to_odoo_version.model_odoo_version_config
+msgid "Odoo Version Config. Directive"
+msgstr "Chỉ mục Cấu hình Phiên bản Odoo"
+
+#. module: to_odoo_version
+#: model:ir.actions.act_window,name:to_odoo_version.odoo_version_config_action
+#: model_terms:ir.ui.view,arch_db:to_odoo_version.config_section_form_view
+msgid "Odoo Version Configs"
+msgstr ""
+
+#. module: to_odoo_version
+#: model_terms:ir.ui.view,arch_db:to_odoo_version.odoo_version_config_tree_view
+msgid "Odoo Version Configs List"
+msgstr ""
+
+#. module: to_odoo_version
+#: model_terms:ir.ui.view,arch_db:to_odoo_version.odoo_version_form_view
+msgid "Odoo Version Form"
+msgstr "Mẫu Phiên bản Odoo"
+
+#. module: to_odoo_version
+#: model:res.groups,name:to_odoo_version.group_manager
+msgid "Odoo Version Manager"
+msgstr "Quản lý Phiên bản Odoo"
+
+#. module: to_odoo_version
+#: model_terms:ir.ui.view,arch_db:to_odoo_version.odoo_version_tree_view
+msgid "Odoo Versions Tree"
+msgstr "Danh sách Phiên bản Odoo"
+
+#. module: to_odoo_version
+#: model:ir.model.fields,field_description:to_odoo_version.field_wizard_version_config_from_file__override_existing_value
+msgid "Override Existing Values"
+msgstr "Ghi đè giá trị đang có"
+
+#. module: to_odoo_version
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version__recommended
+msgid "Recommended"
+msgstr "Khuyên dùng"
+
+#. module: to_odoo_version
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version__release_date
+msgid "Release Date"
+msgstr "Ngày Phát hành"
+
+#. module: to_odoo_version
+#: model:odoo.version,description:to_odoo_version.odoo_v9
+msgid ""
+"Revamped Accounting features, Odoo Community split from Odoo Enterprise"
+msgstr ""
+"Tân trang lại các tính năng Kế toán, tách Odoo thành 2 ấn bản: Odoo "
+"Community và Odoo Enterprise"
+
+#. module: to_odoo_version
+#: model:odoo.version,description:to_odoo_version.odoo_v8
+msgid ""
+"Revamped Inventory and WMS, Support for CMS: Website builder, e-commerce, "
+"point of sale and business intelligence"
+msgstr ""
+"Tân trang lại các tính năng Quản lý Kho, Hỗ trợ CMS: Bộ công cụ dựng "
+"Website, thương mại điện tử, điểm bán lẻ và kinh doanh thông minh"
+
+#. module: to_odoo_version
+#: model:odoo.version,description:to_odoo_version.odoo_v10
+msgid "Revamped Manufacturing features, Introduction of Odoo Studio"
+msgstr "Tân trang lại các tính năng Sản xuất, Giới thiệu ứng dụng Odoo Studio"
+
+#. module: to_odoo_version
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version__message_has_sms_error
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version_config__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: to_odoo_version
+#: model:odoo.version,description:to_odoo_version.odoo_v13
+msgid ""
+"Sales Coupons & Promotions for Odoo CE, MRP Subcontracting, Skill "
+"Management, Website Form Builder, Product Videos on Website, Inventory "
+"Forecast, Ribbon Widget, Calculator Widget, New ‘Buy Now’ Button in "
+"Ecommerce, Restrict available product categories in POS, etc"
+msgstr ""
+
+#. module: to_odoo_version
+#: model_terms:ir.ui.view,arch_db:to_odoo_version.odoo_version_config_search_view
+msgid "Search Odoo Version Configs"
+msgstr ""
+
+#. module: to_odoo_version
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version_config__section_id
+msgid "Section"
+msgstr ""
+
+#. module: to_odoo_version
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version__config_ids
+msgid "Standard Config. Directives"
+msgstr "Chỉ mục Cấu hình Tiêu chuẩn"
+
+#. module: to_odoo_version
+#: model:odoo.version,description:to_odoo_version.odoo_v11
+msgid ""
+"Studio, Revamped Services Support, Revamped Reporting, moved to Python 3"
+msgstr ""
+"Studio, Tân trang lại Dịch vụ và Hỗ trợ dịch vụ, Tân trang lại hệ thống báo "
+"cáo, chuyển sang Python 3"
+
+#. module: to_odoo_version
+#: model:ir.model.constraint,message:to_odoo_version.constraint_odoo_version_config_name_odoo_version_id_unique
+msgid "The Key must be unique per Odoo version"
+msgstr "Khoá phải là duy nhất với mỗi phiên bản Odoo"
+
+#. module: to_odoo_version
+#: model:ir.model.fields,help:to_odoo_version.field_odoo_version__end_of_functional_support
+msgid ""
+"The date on which functional support will end. However, technical "
+"maintenance and bug fixing still the end of life of the version"
+msgstr ""
+"Ngày mà việc hỗ trợ tính năng bị dừng. Tuy nhiên, bảo trì kỹ thuật và sửa "
+"lỗi vẫn sẽ tiếp tục cho đến khi kết thúc vòng đời của phiên bản"
+
+#. module: to_odoo_version
+#: model:res.groups,comment:to_odoo_version.group_manager
+msgid ""
+"The user will have full access to all Odoo\n"
+"\t\t\t\tVersions.\n"
+"\t\t\t"
+msgstr ""
+"Người dùng có quyền truy cập đầy đủ đến các (bản ghi) Phiên bản\n"
+"\t\t\t\tOdoo.\n"
+"\t\t\t"
+
+#. module: to_odoo_version
+#: model:ir.model.constraint,message:to_odoo_version.constraint_odoo_version_name_unique
+msgid "The version string (Name) must be unique!"
+msgstr "Mã (Tên) phiên bản phải là duy nhất!"
+
+#. module: to_odoo_version
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version__message_unread
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version_config__message_unread
+msgid "Unread Messages"
+msgstr "Thông điệp chưa đọc"
+
+#. module: to_odoo_version
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version__message_unread_counter
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version_config__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Bộ đếm Thông điệp chưa đọc"
+
+#. module: to_odoo_version
+#: model_terms:ir.ui.view,arch_db:to_odoo_version.odoo_version_form_view
+msgid "Upload Config File"
+msgstr "Tải lên Tập tin Cấu hình"
+
+#. module: to_odoo_version
+#: model:ir.model.fields,help:to_odoo_version.field_wizard_version_config_from_file__odoo_config_file_bin
+msgid ""
+"Upload your Odoo Config file which is corresponding to this Odoo version. "
+"The config file could be generated by executing `odoo-bin -s` in linux "
+"terminal. The file will then be saved at ~/.odoorc in your computer."
+msgstr ""
+"Tải lên Tập tin cấu hình Odoo mà tương ứng với phiên bản Odoo này. Tập tin "
+"cấu hình có thể được sinh ra bằng cách thực thi `odoo-bin -s` trên cửa sổ "
+"dòng lệnh Linux trên máy tính của bạn. Tập tin được sinh ra sẽ được lưu trữ "
+"ở ~/.odoorc trên máy tính của bạn."
+
+#. module: to_odoo_version
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version_config__value
+msgid "Value"
+msgstr "Giá trị"
+
+#. module: to_odoo_version
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version__name
+msgid "Version"
+msgstr "Phiên bản"
+
+#. module: to_odoo_version
+#: model:ir.model,name:to_odoo_version.model_wizard_version_config_from_file
+msgid "Version Config From File"
+msgstr "Cấu hình Phiên bản từ Tập tin"
+
+#. module: to_odoo_version
+#: model:ir.model.fields,help:to_odoo_version.field_odoo_version__name
+msgid "Version String, e.g. 8.0, 9.0, 10.0, etc"
+msgstr "Chuỗi Phiên bản, vd: 8.0, 9.0, 10.0, v.v."
+
+#. module: to_odoo_version
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version__website_message_ids
+#: model:ir.model.fields,field_description:to_odoo_version.field_odoo_version_config__website_message_ids
+msgid "Website Messages"
+msgstr "Thông điệp Website"
+
+#. module: to_odoo_version
+#: model:ir.model.fields,help:to_odoo_version.field_odoo_version__website_message_ids
+#: model:ir.model.fields,help:to_odoo_version.field_odoo_version_config__website_message_ids
+msgid "Website communication history"
+msgstr "Lịch sử thông tin liên lạc website"
+
+#. module: to_odoo_version
+#: model_terms:ir.ui.view,arch_db:to_odoo_version.wizard_version_config_from_file_form_views
+msgid "or"
+msgstr "hoặc"

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<menuitem id="product_function_menu" name="Product Function"
+			groups="point_of_sale.group_pos_manager"
+			parent="point_of_sale.pos_config_menu_catalog"
+			action="to_product_function.product_function_action" />
+	</data>
+</odoo>

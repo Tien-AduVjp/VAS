@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="maintenance.menu_equipment_form" name="Equipments" parent="maintenance.menu_maintenance_title"
+        groups="base.group_user,maintenance.group_equipment_manager"
+        sequence="10"/>
+
+</odoo>

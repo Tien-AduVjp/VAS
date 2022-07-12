@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+
+    <record id="document_tag_hr_employee_document" model="document.tag">
+        <field name="name">Employee Document</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_hr'))]"/>
+    </record>
+
+    <record id="document_tag_hr_certification" model="document.tag">
+        <field name="name">Certification</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_hr'))]"/>
+    </record>
+
+    <record id="document_tag_hr_hr" model="document.tag">
+        <field name="name">HR</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_hr'))]"/>
+    </record>
+
+</odoo>

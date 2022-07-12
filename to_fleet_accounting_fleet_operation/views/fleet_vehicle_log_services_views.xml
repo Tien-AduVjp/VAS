@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+
+		<record model="ir.ui.view" id="fleet_vehicle_log_services_view_form">
+			<field name="name">fleet.vehicle.log.services.form</field>
+			<field name="model">fleet.vehicle.log.services</field>
+			<field name="inherit_id" ref="to_fleet_operation_planning.fleet_vehicle_log_services_view_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='trip_id']" position="attributes">
+					<attribute name="attrs">{'readonly':[('invoice_line_id','!=',False)]}
+					</attribute>
+				</xpath>
+				<xpath expr="//field[@name='route_id']" position="attributes">
+					<attribute name="attrs">{'readonly':[('invoice_line_id','!=',False)]}
+					</attribute>
+				</xpath>
+				<xpath expr="//field[@name='trip_section_id']" position="attributes">
+					<attribute name="attrs">{'readonly':[('invoice_line_id','!=',False)]}
+					</attribute>
+				</xpath>
+				<xpath expr="//field[@name='trip_waypoint_id']" position="attributes">
+					<attribute name="attrs">{'readonly':[('invoice_line_id','!=',False)]}
+					</attribute>
+				</xpath>
+			</field>
+		</record>
+
+	</data>
+</odoo>

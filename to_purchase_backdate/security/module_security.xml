@@ -1,0 +1,15 @@
+<odoo>
+    <record id="group_purchase_backdate" model="res.groups">
+        <field name="name">Purchase Backdate Operations</field>
+        <field name="category_id" ref="base.module_category_usability" />
+        <field name="implied_ids" eval="[(4, ref('purchase.group_purchase_user'))]"/>
+        <field name="comment">The user in this group will be able to do purchase backdate
+            operations.
+        </field>
+    </record>
+
+	<record id="purchase.group_purchase_manager" model="res.groups">
+		<field name="implied_ids"
+			eval="[(4, ref('group_purchase_backdate'))]" />
+	</record>
+</odoo>

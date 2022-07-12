@@ -1,0 +1,16 @@
+<odoo>
+	<template id="report_purchasequotation_document" inherit_id="purchase.report_purchasequotation_document">
+		<xpath
+			expr="//table[hasclass('table') and hasclass('table-sm')][1]/thead/tr/th[1]"
+			position="before">
+			<th class="text-right" name="seq_nbr">#</th>
+		</xpath>
+		<xpath
+			expr="//table[hasclass('table') and hasclass('table-sm')][1]/tbody/t/tr/t[1]/td[1]"
+			position="before">
+			<td class="text-right" name="seq_nbr">
+				<span t-field="order_line.sequence_edit" />
+			</td>
+		</xpath>
+	</template>
+</odoo>

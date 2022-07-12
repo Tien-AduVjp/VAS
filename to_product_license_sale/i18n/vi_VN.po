@@ -1,0 +1,140 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_product_license_sale
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-29 07:42+0000\n"
+"PO-Revision-Date: 2021-10-29 07:42+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_product_license_sale
+#: model_terms:ir.ui.view,arch_db:to_product_license_sale.report_saleorder_document
+msgid "<span>version</span>"
+msgstr "<span>phiên bản</span>"
+
+#. module: to_product_license_sale
+#: model:ir.model.fields,field_description:to_product_license_sale.field_product_license__display_name
+#: model:ir.model.fields,field_description:to_product_license_sale.field_product_license_version__display_name
+#: model:ir.model.fields,field_description:to_product_license_sale.field_sale_order__display_name
+#: model:ir.model.fields,field_description:to_product_license_sale.field_sale_order_line__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_product_license_sale
+#: model:ir.model.fields,field_description:to_product_license_sale.field_product_license__id
+#: model:ir.model.fields,field_description:to_product_license_sale.field_product_license_version__id
+#: model:ir.model.fields,field_description:to_product_license_sale.field_sale_order__id
+#: model:ir.model.fields,field_description:to_product_license_sale.field_sale_order_line__id
+msgid "ID"
+msgstr ""
+
+#. module: to_product_license_sale
+#: model:ir.model.fields,field_description:to_product_license_sale.field_product_license____last_update
+#: model:ir.model.fields,field_description:to_product_license_sale.field_product_license_version____last_update
+#: model:ir.model.fields,field_description:to_product_license_sale.field_sale_order____last_update
+#: model:ir.model.fields,field_description:to_product_license_sale.field_sale_order_line____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_product_license_sale
+#: model:ir.model,name:to_product_license_sale.model_product_license_version
+msgid "License Version"
+msgstr "Phiên bản giấy phép"
+
+#. module: to_product_license_sale
+#: code:addons/to_product_license_sale/models/sale_order_line.py:0
+#, python-format
+msgid "License: "
+msgstr "Giấy phép: "
+
+#. module: to_product_license_sale
+#: model:ir.model.fields,field_description:to_product_license_sale.field_sale_order__product_license_version_ids
+#: model:ir.model.fields,field_description:to_product_license_sale.field_sale_order_line__product_license_version_ids
+msgid "Licenses"
+msgstr "Giấy phép"
+
+#. module: to_product_license_sale
+#: model:ir.model,name:to_product_license_sale.model_product_license
+msgid "Product License"
+msgstr "Giấy phép sản phẩm"
+
+#. module: to_product_license_sale
+#: model_terms:ir.ui.view,arch_db:to_product_license_sale.view_order_form
+msgid "Product License(s)"
+msgstr "Giấy phép Sản phẩm"
+
+#. module: to_product_license_sale
+#: model:ir.model.fields,field_description:to_product_license_sale.field_sale_order__product_license_versions_count
+msgid "Product Licenses Count"
+msgstr "SL Giấy phép Sản phẩm"
+
+#. module: to_product_license_sale
+#: model_terms:ir.ui.view,arch_db:to_product_license_sale.view_order_form
+msgid "Refresh for licenses"
+msgstr "Cập nhật Giấy phép"
+
+#. module: to_product_license_sale
+#: model:ir.model.fields,field_description:to_product_license_sale.field_product_license_version__sale_line_ids
+msgid "Sale Lines"
+msgstr "Dòng Đơn Bán"
+
+#. module: to_product_license_sale
+#: model:ir.model.fields,field_description:to_product_license_sale.field_product_license__sale_lines_count
+#: model:ir.model.fields,field_description:to_product_license_sale.field_product_license_version__sale_lines_count
+msgid "Sale Lines Count"
+msgstr "SL Dòng Đơn Bán"
+
+#. module: to_product_license_sale
+#: model_terms:ir.ui.view,arch_db:to_product_license_sale.product_license_version_view_form
+#: model_terms:ir.ui.view,arch_db:to_product_license_sale.product_license_view_form
+msgid "Sales"
+msgstr "Bán hàng"
+
+#. module: to_product_license_sale
+#: model:ir.model,name:to_product_license_sale.model_sale_order
+msgid "Sales Order"
+msgstr "Đơn Bán"
+
+#. module: to_product_license_sale
+#: model:ir.model,name:to_product_license_sale.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Chi tiết Đơn Bán"
+
+#. module: to_product_license_sale
+#: model:ir.model.fields,help:to_product_license_sale.field_sale_order__product_license_version_ids
+#: model:ir.model.fields,help:to_product_license_sale.field_sale_order_line__product_license_version_ids
+msgid "The license version(s) that you want to license for the product sold."
+msgstr "(Các) phiên bản giấy phép mà bạn muốn cấp cho sản phẩm được bán."
+
+#. module: to_product_license_sale
+#: model:ir.model.fields,help:to_product_license_sale.field_product_license_version__sale_line_ids
+msgid "The sales lines that refer to this license version"
+msgstr "Chi tiết đơn bán dẫn chiếu đến phiên bản giấy phép này"
+
+#. module: to_product_license_sale
+#: model_terms:ir.ui.view,arch_db:to_product_license_sale.view_order_form
+msgid ""
+"This will recompute all the order lines and apply the latest license "
+"configuration from the corresponding products. Are you sure to proceed?"
+msgstr ""
+"Hành động này sẽ tính toán lại toàn bộ các dòng đơn bán và áp dụng các giấy "
+"phép mới nhất từ cấu hình của các sản phẩm tương ứng. Bạn có chắc bạn muốn "
+"tiếp tục?"
+
+#. module: to_product_license_sale
+#: code:addons/to_product_license_sale/models/sale_order_line.py:0
+#, python-format
+msgid ""
+"You could not refresh the sales order line '%s' of the sales order '%s' "
+"while its state is neither 'Quotation' nor 'Quotation Sent'"
+msgstr ""
+"Bạn không thể cập nhất dòng đơn bán '%s' của đơn bán '%s' khi mà trạng thái "
+"của nó khác 'Báo giá' và 'Báo giá đã gửi'."

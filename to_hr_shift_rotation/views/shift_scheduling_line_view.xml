@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+
+		<record id="shift_scheduling_line_tree_view" model="ir.ui.view">
+			<field name="name">shift.scheduling.line.tree</field>
+			<field name="model">shift.scheduling.line</field>
+			<field name="arch" type="xml">
+				<tree string="Shift Schedule">
+					<field name="employee_id" />
+					<field name="contract_id" />
+					<field name="date_from" />
+					<field name="date_to" />
+					<field name="resource_calendar_id" />
+					<field name="rate" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="shift_scheduling_line_form_view" model="ir.ui.view">
+			<field name="name">shift.scheduling.line.form</field>
+			<field name="model">shift.scheduling.line</field>
+			<field name="arch" type="xml">
+				<form string="Shift Schedule">
+					<header>
+						<button name="action_confirm" type="object" states="draft"
+							string="Confirm" class="oe_highlight" groups="hr.group_hr_user" />
+						<button name="action_draft" type="object"
+							states="confirm,cancel" string="Set to Draft"
+							groups="hr.group_hr_user" />
+						<button name="action_cancel" type="object"
+							states="confirm,draft" string="Cancel" groups="hr.group_hr_user" />
+						<field name="state" readonly="1"
+							statusbar_visible="cancel,draft,confirm" widget="statusbar" />
+					</header>
+					<sheet>
+						<div class="oe_button_box" name="button_box">
+						</div>
+						<group>
+							<group>
+								<field name="employee_id" />
+								<field name="date_from" />
+								<field name="date_to" />
+							</group>
+							<group>
+								<field name="contract_id" />
+								<field name="resource_calendar_id" />
+								<field name="rate" />
+							</group>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record id="view_shift_rotation_filter" model="ir.ui.view">
+			<field name="name">shift.rotation.filter</field>
+			<field name="model">shift.scheduling.line</field>
+			<field name="arch" type="xml">
+				<search string="Search Shift Rotation">
+					<field name="employee_id" />
+					<field name="date_from" />
+					<field name="date_to" />
+					<group expand="0" string="Group By">
+						<filter name="group_employee" string="Employee"
+							context="{'group_by':'employee_id'}" />
+						<filter name="group_date_from" string="Start Date"
+							context="{'group_by':'date_from'}" />
+						<filter name="group_date_to" string="End Date"
+							context="{'group_by':'date_to'}" />
+					</group>
+				</search>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window"
+			id="shift_scheduling_line_action">
+			<field name="name">Shift Rotation Line</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">shift.scheduling.line</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="domain">[]</field>
+			<field name="context">{'search_default_group_employee': 1}</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create the first record
+				</p>
+			</field>
+			<field name="search_view_id" ref="view_shift_rotation_filter" />
+		</record>
+
+	</data>
+</odoo>

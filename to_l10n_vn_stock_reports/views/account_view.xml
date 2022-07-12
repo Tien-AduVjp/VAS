@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+
+		<menuitem parent="account.menu_finance_reports"
+			id="to_menu_stock_report"
+			groups="account.group_account_user,account.group_account_manager"
+			sequence="2" name="Stock Reports" />
+
+		<menuitem id="menu_wizard_c200_s10dn_account"
+			name="Product Journal (S10-DN)" parent="to_menu_stock_report" sequence="1"
+			groups="account.group_account_user"
+			action="action_wizard_c200_s10dn" />
+
+		<menuitem id="menu_wizard_c200_s11dn_account"
+			name="General Inventory Journal (S11-DN)" parent="to_menu_stock_report"
+			sequence="2" groups="account.group_account_user"
+			action="action_wizard_c200_s11dn" />
+
+		<menuitem id="menu_wizard_stock_in_account"
+			name="Stock-In Report" parent="to_menu_stock_report" sequence="3"
+			groups="account.group_account_user" action="action_wizard_stock_in" />
+
+		<menuitem id="menu_wizard_stock_out_account"
+			name="Stock-Out Report" parent="to_menu_stock_report" sequence="4"
+			groups="account.group_account_user" action="action_wizard_stock_out" />
+
+		<menuitem id="menu_wizard_c200_s12dn_account"
+			name="Stock Card (S12-DN)" parent="to_menu_stock_report" sequence="5"
+			groups="account.group_account_user"
+			action="action_wizard_c200_s12dn" />
+
+	</data>
+</odoo>

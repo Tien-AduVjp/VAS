@@ -1,0 +1,30 @@
+<odoo>
+	<data>
+
+        <record id="view_partner_form" model="ir.ui.view">
+	        <field name="name">res.partner.view.form.inherit.equity_range</field>
+	        <field name="model">res.partner</field>
+	        <field name="inherit_id" ref="base.view_partner_form" />
+	        <field name="arch" type="xml">
+            	<field name="vat" position="before">
+            		<field name="equity_range_id" attrs="{'invisible': [('company_type', '!=', 'company')]}"/>
+            	</field>
+	        </field>
+        </record>
+
+        <record id="view_res_partner_filter" model="ir.ui.view">
+	        <field name="name">res.partner.view.search.inherit.equity_range</field>
+	        <field name="model">res.partner</field>
+	        <field name="inherit_id" ref="base.view_res_partner_filter" />
+	        <field name="arch" type="xml">
+            	<field name="category_id" position="after">
+            		<field name="equity_range_id"/>
+            	</field>
+            	<filter name="salesperson" position="after">
+            		<filter name="equity_range" string="Equity Range" context="{'group_by': 'equity_range_id'}"/>
+            	</filter>
+	        </field>
+        </record>
+
+	</data>
+</odoo>

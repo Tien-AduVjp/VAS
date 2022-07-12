@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="res_config_settings_view_form" model="ir.ui.view">
+			<field name="name">res.config.settings.view.form.inherit.inter.company.rules
+			</field>
+			<field name="model">res.config.settings</field>
+			<field name="inherit_id"
+				ref="to_inter_company_base.res_config_settings_view_form" />
+			<field name="arch" type="xml">
+				<xpath
+					expr="//div[@name='module_inter_company_base_sale_purchase']"
+					position="after">
+					<div class="ml16" id="inter_comp_so_po_validate">
+						When a company validates a
+						<field name="applicable_on" class="ml8 mr8 oe_inline"
+							style='padding-right: 8px' />
+						to
+						<strong>
+							<field name="company_id" class="oe_inline"
+								readonly="1" />
+						</strong>, generate a
+						<field name="so_po_auto_validation" class="oe_inline ml8"
+							style='padding-right: 12px' />
+						<strong id="counter_doc">
+							<span
+								attrs="{'invisible': [('applicable_on','!=', 'purchase')]}"
+								class="ml8">Sale Order </span>
+							<span
+								attrs="{'invisible': [('applicable_on','!=', 'sale')]}"
+								class="ml8">Purchase Order </span>
+							<span
+								attrs="{'invisible': [('applicable_on','!=', 'sale_purchase')]}"
+								class="ml8"> Sale and Purchase Order </span>
+						</strong>
+					</div>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

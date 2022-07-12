@@ -1,0 +1,210 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_fleet_vehicle_revenue
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-25 07:24+0000\n"
+"PO-Revision-Date: 2021-08-25 07:24+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_fleet_vehicle_revenue
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue.field_fleet_vehicle_revenue__auto_generated
+msgid "Automatically Generated"
+msgstr ""
+
+#. module: to_fleet_vehicle_revenue
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue.field_fleet_vehicle_revenue__revenue_type
+msgid "Category of the Revenue"
+msgstr ""
+
+#. module: to_fleet_vehicle_revenue
+#: model_terms:ir.actions.act_window,help:to_fleet_vehicle_revenue.fleet_vehicle_revenues_action
+msgid "Click to create a new revenue."
+msgstr ""
+
+#. module: to_fleet_vehicle_revenue
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue.field_fleet_vehicle_revenue__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: to_fleet_vehicle_revenue
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue.field_fleet_vehicle_revenue__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: to_fleet_vehicle_revenue
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue.field_fleet_vehicle_revenue__date
+msgid "Date"
+msgstr ""
+
+#. module: to_fleet_vehicle_revenue
+#: model:ir.model.fields,help:to_fleet_vehicle_revenue.field_fleet_vehicle_revenue__date
+msgid "Date when the cost has been executed"
+msgstr ""
+
+#. module: to_fleet_vehicle_revenue
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue.field_fleet_vehicle_revenue__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: to_fleet_vehicle_revenue
+#: code:addons/to_fleet_vehicle_revenue/models/fleet_vehicle_revenue.py:0
+#, python-format
+msgid "Emptying the odometer value of a vehicle is not allowed."
+msgstr ""
+
+#. module: to_fleet_vehicle_revenue
+#: model:ir.model.fields,help:to_fleet_vehicle_revenue.field_fleet_vehicle_revenue__revenue_type
+msgid "For internal purpose only"
+msgstr ""
+
+#. module: to_fleet_vehicle_revenue
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue.fleet_vehicle_revenues_view_search
+msgid "Group By"
+msgstr ""
+
+#. module: to_fleet_vehicle_revenue
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue.field_fleet_vehicle_revenue__id
+msgid "ID"
+msgstr ""
+
+#. module: to_fleet_vehicle_revenue
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue.field_fleet_vehicle_revenue____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: to_fleet_vehicle_revenue
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue.field_fleet_vehicle_revenue__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: to_fleet_vehicle_revenue
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue.field_fleet_vehicle_revenue__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: to_fleet_vehicle_revenue
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue.fleet_vehicle_revenues_view_search
+msgid "Month"
+msgstr ""
+
+#. module: to_fleet_vehicle_revenue
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue.field_fleet_vehicle_revenue__name
+msgid "Name"
+msgstr ""
+
+#. module: to_fleet_vehicle_revenue
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue.field_fleet_vehicle_revenue__odometer_id
+msgid "Odometer"
+msgstr ""
+
+#. module: to_fleet_vehicle_revenue
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue.field_fleet_vehicle_revenue__odometer
+msgid "Odometer Value"
+msgstr ""
+
+#. module: to_fleet_vehicle_revenue
+#: model:ir.model.fields,help:to_fleet_vehicle_revenue.field_fleet_vehicle_revenue__odometer
+#: model:ir.model.fields,help:to_fleet_vehicle_revenue.field_fleet_vehicle_revenue__odometer_id
+msgid "Odometer measure of the vehicle at the moment of this log"
+msgstr ""
+
+#. module: to_fleet_vehicle_revenue
+#: model_terms:ir.actions.act_window,help:to_fleet_vehicle_revenue.fleet_vehicle_revenues_action
+msgid ""
+"Odoo helps you managing the revenues for your different\n"
+"\t\t\t\tvehicles."
+msgstr ""
+
+#. module: to_fleet_vehicle_revenue
+#: model:res.groups,name:to_fleet_vehicle_revenue.fleet_vehicle_revenue_group_read
+msgid "Only View Fleet Vehicle Revenue"
+msgstr ""
+
+#. module: to_fleet_vehicle_revenue
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue.fleet_vehicle_revenues_view_form
+msgid "Revenue Details"
+msgstr ""
+
+#. module: to_fleet_vehicle_revenue
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue.fleet_vehicle_revenues_view_search
+msgid "Revenue Subtype"
+msgstr ""
+
+#. module: to_fleet_vehicle_revenue
+#: model:ir.model,name:to_fleet_vehicle_revenue.model_fleet_vehicle_revenue
+msgid "Revenue related to a vehicle"
+msgstr ""
+
+#. module: to_fleet_vehicle_revenue
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue.field_fleet_vehicle_revenue__amount
+msgid "Total Price"
+msgstr ""
+
+#. module: to_fleet_vehicle_revenue
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue.field_fleet_vehicle_revenue__revenue_subtype_id
+msgid "Type"
+msgstr ""
+
+#. module: to_fleet_vehicle_revenue
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue.field_fleet_vehicle_revenue__odometer_unit
+msgid "Unit"
+msgstr ""
+
+#. module: to_fleet_vehicle_revenue
+#: model:ir.model.fields,help:to_fleet_vehicle_revenue.field_fleet_vehicle_revenue__odometer_unit
+msgid "Unit of the odometer "
+msgstr ""
+
+#. module: to_fleet_vehicle_revenue
+#: model:ir.model.fields,field_description:to_fleet_vehicle_revenue.field_fleet_vehicle_revenue__vehicle_id
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue.fleet_vehicle_revenues_view_search
+msgid "Vehicle"
+msgstr ""
+
+#. module: to_fleet_vehicle_revenue
+#: model:ir.ui.menu,name:to_fleet_vehicle_revenue.fleet_vehicle_revenues_menu
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue.fleet_vehicle_revenue_view_tree
+msgid "Vehicle Revenues"
+msgstr ""
+
+#. module: to_fleet_vehicle_revenue
+#: model:ir.model.fields,help:to_fleet_vehicle_revenue.field_fleet_vehicle_revenue__vehicle_id
+msgid "Vehicle concerned by this log"
+msgstr ""
+
+#. module: to_fleet_vehicle_revenue
+#: model:ir.actions.act_window,name:to_fleet_vehicle_revenue.fleet_vehicle_revenues_action
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue.fleet_vehicle_revenues_view_form
+msgid "Vehicle revenues"
+msgstr ""
+
+#. module: to_fleet_vehicle_revenue
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue.fleet_vehicle_revenues_view_search
+msgid "Vehicle revenues by Month"
+msgstr ""
+
+#. module: to_fleet_vehicle_revenue
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue.fleet_vehicle_revenue_view_graph
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue.fleet_vehicle_revenue_view_pivot
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue.fleet_vehicle_revenues_view_search
+msgid "Vehicles Revenues"
+msgstr ""
+
+#. module: to_fleet_vehicle_revenue
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue.fleet_vehicle_revenues_view_search
+msgid "Year"
+msgstr ""
+
+#. module: to_fleet_vehicle_revenue
+#: model_terms:ir.ui.view,arch_db:to_fleet_vehicle_revenue.fleet_vehicle_revenues_view_graph
+msgid "revenues Per Month"
+msgstr ""

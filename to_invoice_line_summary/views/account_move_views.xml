@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="view_move_form" model="ir.ui.view">
+			<field name="name">account.move.form</field>
+			<field name="model">account.move</field>
+			<field name="inherit_id" ref="account.view_move_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//page[1]" position="after">
+					<page string="Invoice Lines Summary" attrs="{'invisible':[('move_type','not in',['out_invoice','out_refund','in_invoice', 'in_refund'])]}"
+						groups="account.group_account_invoice">
+						<group >
+							<group >
+								<field name="invoice_line_summary_group_mode" widget="radio"
+                                    attrs="{'required':[('move_type','not in',['out_invoice','out_refund','in_invoice', 'in_refund'])]}" />
+
+							</group>
+							<group >
+								<field name="invoice_display_mode" widget="radio"
+                                    attrs="{'required':[('move_type','not in',['out_invoice','out_refund','in_invoice', 'in_refund'])]}"/>
+							</group>
+						</group>
+						<field name="invoice_line_summary_ids" mode="tree" widget="section_and_note_one2many">
+							<tree string="Invoice Lines Summary" editable="bottom">
+								<field name="sequence" widget="handle"/>
+								<field name="product_tmpl_id" attrs="{'column_invisible': ['|',
+										('parent.invoice_line_summary_group_mode', '=', 'product_tax_discount'),
+										('parent.invoice_line_summary_group_mode', '=', 'product_unit_price_tax_discount')]}"/>
+								<field name="product_id" attrs="{'column_invisible': ['|',
+										('parent.invoice_line_summary_group_mode', '=', 'product_template_tax_discount'),
+										('parent.invoice_line_summary_group_mode', '=', 'product_template_unit_price_tax_discount')]}"/>
+								<field name="name"/>
+								<field name="quantity" />
+								<field name="uom_id" />
+								<field name="price_unit" />
+								<field name="discount" groups="base.group_no_one" />
+								<field name="invoice_line_tax_ids" widget="many2many_tags" />
+								<field name="price_subtotal" />
+							</tree>
+						</field>
+						<group class="oe_subtotal_footer oe_right">
+                            <field name="amount_untaxed"/>
+                            <field name="amount_tax"/>
+                            <field name="amount_total" class="oe_subtotal_footer_separator"/>
+                            <field name="invoice_payments_widget" colspan="2" nolabel="1" widget="payment"/>
+                            <field name="amount_residual" class="oe_subtotal_footer_separator" attrs="{'invisible': [('state', '=', 'draft')]}"/>
+                            <field name="invoice_outstanding_credits_debits_widget" colspan="2" nolabel="1" widget="payment" attrs="{'invisible': [('state', 'not in', 'posted')]}"/>
+                        </group>
+					</page>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

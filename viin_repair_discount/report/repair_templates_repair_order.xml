@@ -1,0 +1,26 @@
+<odoo>
+	<template id="report_repairorder" inherit_id="repair.report_repairorder">
+		<xpath expr="//table[hasclass('o_main_table')]" position="before">
+			<t t-set='display_discount' t-value='any([line.discount for line in o.operations] + [fees.discount for fees in o.fees_lines])'/>
+		</xpath>
+		<xpath expr="//table[hasclass('o_main_table')]/thead/tr/t/th[1]" position="after">
+			<th t-if="display_discount" class="text-right">Disc.%</th>
+		</xpath>
+		<xpath expr="//t[@t-if='o.fees_lines']//t/td[1]" position="after">
+			<td t-if="display_discount" class="text-right">
+				<span t-field="fees.discount"/>
+			</td>
+		</xpath>
+		<xpath expr="//t[@t-if='o.fees_lines']/tr[1]/td" position="attributes">
+			<attribute t-if="display_discount" name="colspan">6</attribute>
+		</xpath>
+		<xpath expr="//t[@t-if='o.operations']//t/td[1]" position="after">
+			<td t-if="display_discount" class="text-right">
+				<span t-field="line.discount"/>
+			</td>
+		</xpath>
+		<xpath expr="//t[@t-if='o.operations']/tr[1]/td" position="attributes">
+			<attribute t-if="display_discount" name="colspan">6</attribute>
+		</xpath>
+	</template>
+</odoo>

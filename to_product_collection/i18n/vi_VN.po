@@ -1,0 +1,263 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_product_collection
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-08 02:37+0000\n"
+"PO-Revision-Date: 2021-11-08 02:37+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_product_collection
+#: model:ir.model.fields,field_description:to_product_collection.field_product_collection__message_needaction
+msgid "Action Needed"
+msgstr "Cần có Hành động"
+
+#. module: to_product_collection
+#: model:ir.model.fields,field_description:to_product_collection.field_product_collection__active
+msgid "Active"
+msgstr "Hiệu lực"
+
+#. module: to_product_collection
+#: model_terms:ir.ui.view,arch_db:to_product_collection.product_collection_view_form
+#: model_terms:ir.ui.view,arch_db:to_product_collection.product_collection_view_search
+msgid "Archived"
+msgstr "Đã lưu trữ"
+
+#. module: to_product_collection
+#: model:ir.model.fields,field_description:to_product_collection.field_product_collection__message_attachment_count
+msgid "Attachment Count"
+msgstr "Số đính kèm"
+
+#. module: to_product_collection
+#: model:ir.model.fields,field_description:to_product_collection.field_product_product__collection_id
+#: model:ir.model.fields,field_description:to_product_collection.field_product_template__collection_id
+msgid "Collection"
+msgstr "Bộ sưu tập"
+
+#. module: to_product_collection
+#: model_terms:ir.ui.view,arch_db:to_product_collection.product_collection_view_form
+msgid "Collection Title"
+msgstr "Tiêu đề Bộ sưu tập"
+
+#. module: to_product_collection
+#: model:ir.model.fields,field_description:to_product_collection.field_product_collection__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: to_product_collection
+#: model:ir.model.fields,field_description:to_product_collection.field_product_collection__create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: to_product_collection
+#: model:ir.model.fields,field_description:to_product_collection.field_product_collection__description
+msgid "Description"
+msgstr "Mô tả"
+
+#. module: to_product_collection
+#: model_terms:ir.ui.view,arch_db:to_product_collection.product_collection_view_form
+msgid "Descriptions"
+msgstr "Mô tả"
+
+#. module: to_product_collection
+#: model:ir.model.fields,field_description:to_product_collection.field_product_collection__display_name
+#: model:ir.model.fields,field_description:to_product_collection.field_product_product__display_name
+#: model:ir.model.fields,field_description:to_product_collection.field_product_template__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_product_collection
+#: model:ir.model.fields,field_description:to_product_collection.field_product_collection__message_follower_ids
+msgid "Followers"
+msgstr "Người dõi theo"
+
+#. module: to_product_collection
+#: model:ir.model.fields,field_description:to_product_collection.field_product_collection__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Người theo dõi (Các kênh)"
+
+#. module: to_product_collection
+#: model:ir.model.fields,field_description:to_product_collection.field_product_collection__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Người theo dõi (Các đối tác)"
+
+#. module: to_product_collection
+#: model:ir.model.fields,field_description:to_product_collection.field_product_collection__id
+#: model:ir.model.fields,field_description:to_product_collection.field_product_product__id
+#: model:ir.model.fields,field_description:to_product_collection.field_product_template__id
+msgid "ID"
+msgstr ""
+
+#. module: to_product_collection
+#: model:ir.model.fields,help:to_product_collection.field_product_collection__message_needaction
+#: model:ir.model.fields,help:to_product_collection.field_product_collection__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Nếu đánh dấu kiểm, các thông điệp mới yêu cầu sự có mặt của bạn."
+
+#. module: to_product_collection
+#: model:ir.model.fields,help:to_product_collection.field_product_collection__message_has_error
+#: model:ir.model.fields,help:to_product_collection.field_product_collection__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Nếu đánh dấu kiểm, thì một số thông điệp có lỗi."
+
+#. module: to_product_collection
+#: model:ir.model.fields,help:to_product_collection.field_product_collection__active
+msgid ""
+"If unchecked, it will allow you to hide the collection without removing it."
+msgstr "Cho phép bản ẩn một bộ sưu tập mà không cần phải xoá nó."
+
+#. module: to_product_collection
+#: model:ir.model.fields,field_description:to_product_collection.field_product_collection__message_is_follower
+msgid "Is Follower"
+msgstr "Là người theo dõi"
+
+#. module: to_product_collection
+#: model:ir.model.fields,field_description:to_product_collection.field_product_collection____last_update
+#: model:ir.model.fields,field_description:to_product_collection.field_product_product____last_update
+#: model:ir.model.fields,field_description:to_product_collection.field_product_template____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_product_collection
+#: model:ir.model.fields,field_description:to_product_collection.field_product_collection__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: to_product_collection
+#: model:ir.model.fields,field_description:to_product_collection.field_product_collection__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối"
+
+#. module: to_product_collection
+#: model:ir.model.fields,field_description:to_product_collection.field_product_collection__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Đính kèm chính"
+
+#. module: to_product_collection
+#: model:ir.model.fields,field_description:to_product_collection.field_product_collection__message_has_error
+msgid "Message Delivery error"
+msgstr "Thông báo gửi đi gặp lỗi"
+
+#. module: to_product_collection
+#: model:ir.model.fields,field_description:to_product_collection.field_product_collection__message_ids
+msgid "Messages"
+msgstr "Thông điệp"
+
+#. module: to_product_collection
+#: model:ir.model.fields,field_description:to_product_collection.field_product_collection__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Số lượng Hành động"
+
+#. module: to_product_collection
+#: model:ir.model.fields,field_description:to_product_collection.field_product_collection__message_has_error_counter
+msgid "Number of errors"
+msgstr "Số lượng lỗi"
+
+#. module: to_product_collection
+#: model:ir.model.fields,help:to_product_collection.field_product_collection__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Số thông điệp cần có hành động"
+
+#. module: to_product_collection
+#: model:ir.model.fields,help:to_product_collection.field_product_collection__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Số tin gửi đi bị lỗi"
+
+#. module: to_product_collection
+#: model:ir.model.fields,help:to_product_collection.field_product_collection__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Số thông điệp chưa đọc"
+
+#. module: to_product_collection
+#: model:ir.model,name:to_product_collection.model_product_product
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: to_product_collection
+#: model:ir.actions.act_window,name:to_product_collection.product_collection_action
+#: model:ir.model,name:to_product_collection.model_product_collection
+#: model_terms:ir.ui.view,arch_db:to_product_collection.product_collection_view_form
+#: model_terms:ir.ui.view,arch_db:to_product_collection.product_collection_view_tree
+#: model_terms:ir.ui.view,arch_db:to_product_collection.product_template_search_view
+msgid "Product Collection"
+msgstr "Bộ Sưu tập Sản phẩm"
+
+#. module: to_product_collection
+#: model:ir.model,name:to_product_collection.model_product_template
+msgid "Product Template"
+msgstr "Mẫu Sản phẩm"
+
+#. module: to_product_collection
+#: model:ir.model.fields,field_description:to_product_collection.field_product_collection__product_tmpl_ids
+#: model_terms:ir.ui.view,arch_db:to_product_collection.product_collection_view_form
+msgid "Product Templates"
+msgstr "Mẫu sản phẩm"
+
+#. module: to_product_collection
+#: model:ir.model.fields,field_description:to_product_collection.field_product_collection__product_tmpls_count
+msgid "Product Templates Count"
+msgstr "Số mẫu sản phẩm"
+
+#. module: to_product_collection
+#: model:ir.model.fields,field_description:to_product_collection.field_product_collection__product_ids
+#: model_terms:ir.ui.view,arch_db:to_product_collection.product_collection_view_form
+msgid "Products"
+msgstr "Sản phẩm"
+
+#. module: to_product_collection
+#: model:ir.model.fields,field_description:to_product_collection.field_product_collection__products_count
+msgid "Products Count"
+msgstr "Số sản phẩm"
+
+#. module: to_product_collection
+#: model:ir.model.fields,field_description:to_product_collection.field_product_collection__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Có lỗi gửi SMS"
+
+#. module: to_product_collection
+#: model_terms:ir.ui.view,arch_db:to_product_collection.product_collection_view_search
+msgid "Search Archived"
+msgstr ""
+
+#. module: to_product_collection
+#: model:ir.model.constraint,message:to_product_collection.constraint_product_collection_name_unique
+msgid "The collection title must be unique"
+msgstr "Tiêu đề của Bộ sưu tập phải là duy nhất"
+
+#. module: to_product_collection
+#: model:ir.model.constraint,message:to_product_collection.constraint_product_collection_name_description_check
+msgid "The title of the collection should not be the description"
+msgstr "Tiêu đề của Bộ sưu tập không nên giống với Mô tả"
+
+#. module: to_product_collection
+#: model:ir.model.fields,field_description:to_product_collection.field_product_collection__name
+msgid "Title"
+msgstr "Tiêu đề"
+
+#. module: to_product_collection
+#: model:ir.model.fields,field_description:to_product_collection.field_product_collection__message_unread
+msgid "Unread Messages"
+msgstr "Thông điệp chưa đọc"
+
+#. module: to_product_collection
+#: model:ir.model.fields,field_description:to_product_collection.field_product_collection__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Số thuông điệp chưa đọc"
+
+#. module: to_product_collection
+#: model:ir.model.fields,field_description:to_product_collection.field_product_collection__website_message_ids
+msgid "Website Messages"
+msgstr "Thông điệp Website"
+
+#. module: to_product_collection
+#: model:ir.model.fields,help:to_product_collection.field_product_collection__website_message_ids
+msgid "Website communication history"
+msgstr "Lịch sử thông tin liên lạc website"

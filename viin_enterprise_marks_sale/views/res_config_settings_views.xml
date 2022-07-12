@@ -1,0 +1,51 @@
+<odoo>
+	<record id="res_config_settings_view_form" model="ir.ui.view">
+		<field name="name">res.config.settings.view.form.inherit.sale</field>
+		<field name="model">res.config.settings</field>
+		<field name="inherit_id"
+			ref="sale.res_config_settings_view_form" />
+		<field name="arch" type="xml">
+			<xpath
+				expr="//div[@data-key='sale_management']//field[@name='module_delivery_dhl']/parent::div/parent::div"
+				position="attributes">
+				<attribute name="invisible">1</attribute>
+			</xpath>
+			<xpath
+				expr="//div[@data-key='sale_management']//field[@name='module_delivery_usps']/parent::div/parent::div"
+				position="attributes">
+				<attribute name="invisible">1</attribute>
+			</xpath>
+			<xpath
+				expr="//field[@name='module_sale_amazon']/preceding::h2[1]"
+				position="attributes">
+				<attribute name="invisible">1</attribute>
+			</xpath>
+			<xpath
+				expr="//field[@name='module_sale_amazon']/parent::div/parent::div"
+				position="attributes">
+				<attribute name="invisible">1</attribute>
+			</xpath>
+			<xpath
+				expr="//div[@data-key='sale_management']//field[@name='module_delivery_ups']/parent::div/parent::div"
+				position="attributes">
+				<attribute name="invisible">1</attribute>
+			</xpath>
+			<xpath
+				expr="//div[@data-key='sale_management']//field[@name='module_delivery_fedex']/parent::div/parent::div"
+				position="attributes">
+				<attribute name="invisible">1</attribute>
+			</xpath>
+
+			<xpath
+				expr="//div[@data-key='sale_management']//field[@name='module_delivery_bpost']/parent::div/parent::div"
+				position="attributes">
+				<attribute name="invisible">1</attribute>
+			</xpath>
+			<xpath
+				expr="//div[@data-key='sale_management']//field[@name='module_delivery_easypost']/parent::div/parent::div"
+				position="attributes">
+				<attribute name="invisible">1</attribute>
+			</xpath>
+		</field>
+	</record>
+</odoo>

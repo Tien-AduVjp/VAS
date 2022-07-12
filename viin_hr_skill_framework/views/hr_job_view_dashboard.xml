@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="viin_hr_job_view_kanban_dashboard" model="ir.ui.view">
+	    <field name="name">viin.hr.job.kanban.dashboard</field>
+	    <field name="model">hr.job</field>
+	    <field name="arch" type="xml">
+	        <kanban class="o_kanban_mobile">
+	            <templates>
+	                <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click">
+	                        <div>
+	                           <h3><strong><field name="name"/></strong></h3>
+	                        </div>
+	                        <div>
+	                           <p><b>Department: </b><span><field name="department_id"/>&amp;nbsp;</span></p>
+	                        </div>
+	                        <div>
+	                           <p><b>Minimum Ranks:</b>
+	                           <span><field name="rank_ids"
+	                               widget="many2many_tags" options="{'color_field': 'color'}"/></span></p>
+	                        </div>
+                        </div>
+	                </t>
+	            </templates>
+	        </kanban>
+	    </field>
+	</record>
+
+	<record id="viin_hr_job_view_form_dashboard" model="ir.ui.view">
+	   <field name="name">viin.hr.job.form.dashboard</field>
+	   <field name="model">hr.job</field>
+	   <field name="arch" type="xml">
+	       <form string="Job Dashboard">
+	           <sheet>
+	               <h1><field name="name" placeholder="e.g. Sales Manager"/></h1>
+	               <div>
+	                   <h2>Minimum Ranks: <span><field name="rank_ids" widget="many2many_tags"
+	                   options="{'color_field': 'color'}"/></span></h2>
+	                   <h2>Recruitment State:
+	                       <span><field name="state" widget="badge"
+	                       decoration-success="state == 'recruit'"
+	                       decoration-warning="state == 'open'" />
+	                   </span></h2>
+	               </div>
+	               <div>
+	                   <h2>Skill required for this job position: </h2>
+	                   <field name="skill_description_ids"/>
+	                   <h2>Skill preferred for this job position: </h2>
+                       <field name="preferred_skill_description_ids"/>
+	               </div>
+	           </sheet>
+	       </form>
+	   </field>
+	</record>
+
+	<record id="action_hr_job_dashboard" model="ir.actions.act_window">
+	    <field name="name">Job Positions Dashboard</field>
+	    <field name="res_model">hr.job</field>
+	    <field name="view_mode">kanban,form</field>
+	    <field name="view_ids"
+	       eval="[(5, 0, 0),
+	       (0, 0, {'view_mode': 'kanban', 'view_id': ref('viin_hr_job_view_kanban_dashboard')}),
+	       (0, 0, {'view_mode': 'form', 'view_id': ref('viin_hr_job_view_form_dashboard')})]"/>
+	</record>
+
+	<menuitem name="Job Positions" id="menu_hr_job_dashboard"
+	    parent="menu_dashboard" action="action_hr_job_dashboard"
+	    groups="viin_hr_skill_framework.group_skill_admin"/>
+
+</odoo>

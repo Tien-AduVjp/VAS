@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record model="ir.module.category" id="module_budget_category">
+			<field name="name">Budget</field>
+			<field name="parent_id" ref="base.module_category_operations" />
+			<field name="description">Helps you manage your budgets.</field>
+			<field name="sequence">7</field>
+		</record>
+		<record id="group_budget_user" model="res.groups">
+			<field name="name">User</field>
+			<field name="implied_ids" eval="[(4, ref('base.group_user'))]" />
+			<field name="category_id" ref="module_budget_category" />
+			<field name="comment">Users belong to this group can read budget</field>
+		</record>
+		<record id="group_budget_manager" model="res.groups">
+			<field name="name">Administrator</field>
+			<field name="implied_ids" eval="[(4, ref('group_budget_user'))]" />
+			<field name="category_id" ref="module_budget_category" />
+			<field name="comment">Users belong to this group have total control on this application</field>
+			<field name="users" eval="[(4, ref('base.user_root')),(4, ref('base.user_admin'))]"/>
+		</record>
+		<record id="account.group_account_user" model="res.groups">
+			<field name="implied_ids" eval="[(4, ref('group_budget_user'))]" />
+		</record>
+		<record id="account.group_account_manager" model="res.groups">
+			<field name="implied_ids" eval="[(4, ref('group_budget_manager'))]" />
+		</record>
+	</data>
+    <data noupdate="1">
+
+        <record id="budget_post_comp_rule" model="ir.rule">
+            <field name="name">Budget post multi-company</field>
+            <field name="model_id" ref="model_account_budget_post"/>
+            <field eval="True" name="global"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+        </record>
+
+        <record id="budget_comp_rule" model="ir.rule">
+            <field name="name">Budget multi-company</field>
+            <field name="model_id" ref="model_crossovered_budget"/>
+            <field eval="True" name="global"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+        </record>
+
+        <record id="budget_lines_comp_rule" model="ir.rule">
+            <field name="name">Budget lines multi-company</field>
+            <field name="model_id" ref="model_crossovered_budget_line"/>
+            <field eval="True" name="global"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+        </record>
+
+        <record id="crossovered_budget_personal_rule" model="ir.rule">
+			<field name="name">Budget: Personal</field>
+			<field ref="model_crossovered_budget" name="model_id"/>
+			<field name="domain_force">['|',('user_id','=',user.id),('user_id','=',False)]</field>
+			<field name="groups" eval="[(4, ref('group_budget_user'))]"/>
+		</record>
+
+		<record id="crossovered_budget_line_personal_rule" model="ir.rule">
+			<field name="name">Budget Lines: Personal</field>
+			<field ref="model_crossovered_budget_line" name="model_id"/>
+			<field name="domain_force">['|',('crossovered_budget_id.user_id','=',user.id),('crossovered_budget_id.user_id','=',False)]</field>
+			<field name="groups" eval="[(4, ref('group_budget_user'))]"/>
+		</record>
+
+		<record id="crossovered_budget_see_all" model="ir.rule">
+			<field name="name">Budget: All</field>
+			<field ref="model_crossovered_budget" name="model_id"/>
+			<field name="domain_force">[(1,'=',1)]</field>
+			<field name="groups" eval="[(4, ref('group_budget_manager'))]"/>
+		</record>
+
+		<record id="crossovered_budget_line_see_all" model="ir.rule">
+			<field name="name">Budget Lines: All</field>
+			<field ref="model_crossovered_budget_line" name="model_id"/>
+			<field name="domain_force">[(1,'=',1)]</field>
+			<field name="groups" eval="[(4, ref('group_budget_manager'))]"/>
+		</record>
+
+		<record model="res.users" id="base.user_root">
+            <field eval="[(4,ref('group_budget_manager'))]" name="groups_id"/>
+        </record>
+
+        <record model="res.users" id="base.user_admin">
+            <field eval="[(4,ref('group_budget_manager'))]" name="groups_id"/>
+        </record>
+
+        <record model="res.users" id="base.user_root">
+            <field eval="[(4,ref('analytic.group_analytic_accounting'))]" name="groups_id"/>
+        </record>
+
+        <record model="res.users" id="base.user_admin">
+            <field eval="[(4,ref('analytic.group_analytic_accounting'))]" name="groups_id"/>
+        </record>
+    </data>
+</odoo>

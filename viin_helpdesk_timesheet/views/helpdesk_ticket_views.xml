@@ -1,0 +1,88 @@
+<odoo>
+	<data>
+		<record id="helpdesk_ticket_form_view" model="ir.ui.view">
+			<field name="name">helpdesk.ticket.form</field>
+			<field name="model">helpdesk.ticket</field>
+			<field name="inherit_id" ref="viin_helpdesk.helpdesk_ticket_form_view"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='kanban_state']" position="after">
+					<widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+				</xpath>
+	           	<xpath expr="//header" position="inside">
+					<button name="action_tasks_view" string="Create Task" type="object" class="oe_read_only"
+           				attrs="{'invisible': [('active', '=', False)]}"
+						context="{'create_new_task': True}" groups="project.group_project_user"/>
+           			<button name="%(viin_helpdesk_timesheet.ticket2tasks_action)d" string="Convert to Task" type="action" help="Convert to Task"
+        		        attrs="{'invisible': [('active', '=', False)]}" groups="project.group_project_user"/>
+				</xpath>
+				<field name="priority_level" position="after">
+					<field name="use_helpdesk_timesheet" invisible="1"/>
+					<field name="project_id" />
+					<field name="task_id" attrs="{'invisible': [('project_id', '=', False)]}"/>
+				</field>
+
+				<page name="analysis_page" position="after">
+					<page name="timesheets_page" string="Timesheets"
+						  attrs="{'required': [('use_helpdesk_timesheet', '=', True)], 'invisible': [('use_helpdesk_timesheet', '=', False)]}"
+						  groups="hr_timesheet.group_hr_timesheet_user">
+						<field name="timesheet_ids" context="{'default_project_id': project_id, 'default_task_id': task_id, 'default_ticket_id': id}">
+							<tree editable="bottom" string="Timesheet Activities" default_order="date">
+                                <field name="date"/>
+                                <field name="name" />
+                                <field name="user_id" invisible="1"/>
+                                <field name="employee_id" required="1" widget="many2one_avatar_employee"/>
+                                <field name="project_id" readonly="1" force_save="1" context="{'allow_timesheet': True}" />
+                                <field name="task_id" readonly="1" force_save="1"/>
+                                <field name="unit_amount" string="Duration (Hours)" sum="Total hours" widget="timesheet_uom" decoration-danger="unit_amount &gt; 24"/>
+                                <field name="company_id" invisible="1"/>
+                                <field name="ticket_id" invisible="1"/>
+                            </tree>
+                            <form string="Timesheet Activities">
+	                            <sheet>
+	                                 <group>
+	                                    <field name="date"/>
+	                                    <field name="user_id" invisible="1"/>
+	                                    <field name="employee_id" required="1"/>
+	                                    <field name="name"/>
+	                                    <field name="unit_amount" string="Duration" widget="float_time"/>
+	                                    <field name="project_id" readonly="1"/>
+	                                    <field name="task_id"/>
+	                                    <field name="company_id" invisible="1"/>
+	                                </group>
+	                            </sheet>
+                        </form>
+						</field>
+					</page>
+				</page>
+			</field>
+		</record>
+
+		<record id="helpdesk_ticket_tree_view" model="ir.ui.view">
+			<field name="name">helpdesk.ticket.tree</field>
+			<field name="model">helpdesk.ticket</field>
+			<field name="inherit_id" ref="viin_helpdesk.helpdesk_ticket_tree_view"/>
+			<field name="arch" type="xml">
+				<field name="team_id" position="after">
+					<field name="project_id" optional="hide"/>
+					<field name="task_id" optional="hide"/>
+				</field>
+			</field>
+		</record>
+
+		<record id="helpdesk_ticket_search_view" model="ir.ui.view">
+			<field name="name">helpdesk.ticket.search</field>
+			<field name="model">helpdesk.ticket</field>
+			<field name="inherit_id" ref="viin_helpdesk.helpdesk_ticket_search_view"/>
+			<field name="arch" type="xml">
+				<field name="team_id" position="after">
+					<field name="project_id"/>
+					<field name="task_id"/>
+				</field>
+				<filter name="grp_team_id" position="after">
+					<filter string="Project" name="grp_project_id" domain="[]" context="{'group_by':'project_id'}"/>
+					<filter string="Task" name="grp_task_id" domain="[]" context="{'group_by':'task_id'}"/>
+				</filter>
+			</field>
+		</record>
+	</data>
+</odoo>

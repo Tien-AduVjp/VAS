@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data noupdate="0">
+		<record id="seq_geo_route" model="ir.sequence">
+			<field name="name">Geo-Route Sequence</field>
+			<field name="code">geo.route.sequence</field>
+			<field name="prefix">R</field>
+			<field name="padding">5</field>
+			<field name="company_id" eval="False" />
+		</record>
+		<function model="route.route" name="_generate_code_for_the_existing" />
+	</data>
+</odoo>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+
+    <record id="document_tag_hr_payroll_payslip_batch" model="document.tag">
+        <field name="name">Payslip Batch</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_hr_payroll'))]"/>
+    </record>
+
+    <record id="document_tag_hr_payroll_payslip" model="document.tag">
+        <field name="name">Payslip</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_hr_payroll'))]"/>
+    </record>
+
+</odoo>

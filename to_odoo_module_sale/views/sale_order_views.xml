@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="view_order_form" model="ir.ui.view">
+			<field name="name">sale.order.form</field>
+			<field name="model">sale.order</field>
+			<field name="inherit_id" ref="sale.view_order_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//button[@name='action_view_invoice']"
+					position="after">
+					<button name="action_view_odoo_module_versions"
+						type="object" class="oe_stat_button" icon="fa-cubes"
+						attrs="{'invisible': [('odoo_module_versions_count', '=', 0)]}">
+						<field name="odoo_module_versions_count" widget="statinfo"
+							string="Apps" />
+					</button>
+				</xpath>
+				<xpath expr="//field[@name='partner_shipping_id']"
+					position="after">
+					<field name="auto_load_app_dependencies"
+						attrs="{'invisible': [('odoo_module_versions_count','&lt;=',0)]}" />
+					<field name="exclude_already_purchased_apps"
+						attrs="{'invisible': ['|',('odoo_module_versions_count','&lt;=',0),('auto_load_app_dependencies','=',False)]}" />
+					<field name="print_app_desc_on_sale_order"
+						attrs="{'invisible': [('odoo_module_versions_count','&lt;=',0)]}" />
+				</xpath>
+				<xpath
+					expr="//field[@name='order_line']/tree/field[@name='product_id']"
+					position="after">
+					<field name="odoo_app_dependency" readonly="1" force_save="1"
+						string="Dependency" />
+				</xpath>
+				<xpath
+					expr="//field[@name='order_line']/form/group/group/field[@name='product_id']"
+					position="after">
+					<field name="odoo_app_dependency" readonly="1" force_save="1"
+						string="Dependency" />
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

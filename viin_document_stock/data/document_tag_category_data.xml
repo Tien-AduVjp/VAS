@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+
+    <record id="document_tag_category_picking_type" model="document.tag.category">
+        <field name="name">Picking Type</field>
+    </record>
+
+    <record id="document_tag_category_inventory_status" model="document.tag.category">
+        <field name="name">Inventory Status</field>
+    </record>
+
+</odoo>

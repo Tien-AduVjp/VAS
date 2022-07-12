@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="view_partner_form">
+      <field name="name">res.partner.view.list</field>
+      <field name="model">res.partner</field>
+      <field name="inherit_id" ref="to_partner_dob.view_partner_form" />
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='dob']" position="after">
+        	<field name="property_send_hbd_email" attrs="{'invisible': ['|',('is_company', '=', True),('dob','=',False)]}"/>
+        	<field name="property_hbd_email_template_id" attrs="{'invisible': ['|','|',('property_send_hbd_email', '=', False),('is_company', '=', True),('dob','=',False)], 'required':[('property_send_hbd_email', '!=', False)]}"/>
+        	<field name="property_last_hbd_email_sent" readonly="1" groups="base.group_no_one" attrs="{'invisible': ['|',('is_company', '=', True),('dob','=',False)]}" />
+        </xpath>
+      </field>
+    </record>
+
+    <record id="res_partner_view_form_private" model="ir.ui.view">
+            <field name="name">res.partner.view.form.private</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="to_partner_dob.res_partner_view_form_private" />
+            <field name="arch" type="xml">
+            	<xpath expr="//field[@name='dob']" position="after">
+		        	<field name="property_send_hbd_email" attrs="{'invisible': [('dob','=',False)]}" />
+		        	<field name="property_hbd_email_template_id" attrs="{'invisible': ['|',('property_send_hbd_email', '=', False),('dob','=',False)], 'required':[('property_send_hbd_email', '!=', False)]}"/>
+		        	<field name="property_last_hbd_email_sent" groups="base.group_no_one" />
+            	</xpath>
+            </field>
+	</record>
+  </data>
+</odoo>

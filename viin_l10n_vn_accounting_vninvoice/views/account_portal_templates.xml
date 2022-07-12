@@ -1,0 +1,25 @@
+<odoo>
+    <template id="portal_invoice_page" name="Portal Invoice : E-invoice portal link" inherit_id="account.portal_invoice_page" >
+        <xpath expr="//div[@id='invoice_content']/div[hasclass('o_portal_html_view')]" position="before">
+            <div t-if="invoice.einvoice_provider == 'vninvoice'" class="o_portal_page_size" style="margin-bottom: 20px;">
+            	<div class="o_portal_html_view shadow">
+            		<div class="container" style="padding:20px;">
+            			<h2>Legal E-Invoice</h2>
+            			<p>The legal e-invoice numbered <b t-esc="invoice.legal_number" /> has been issued to you with VN-Invoice. You can login VN-Invoice system for the original invoice:</p>
+            			<ul>
+            				<li>
+            					URL: <a t-attf-href=" #{invoice.einvoice_service_id._get_einvoice_api_url()}/#!/portal/dashboard" target="_blank"><t t-esc="invoice.einvoice_service_id._get_einvoice_api_url()"/>/#!/portal/dashboard</a>
+            				</li>
+            				<li>
+            					Our Tax Identification Number: <b t-esc="invoice.company_id.vat" />
+            				</li>
+            				<li>
+            					Secret Code: <b t-esc="invoice.einvoice_transactionid" />
+            				</li>
+            			</ul>
+            		</div>
+            	</div>
+            </div>
+        </xpath>
+    </template>
+</odoo>

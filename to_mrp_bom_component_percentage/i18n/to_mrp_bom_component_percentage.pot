@@ -1,0 +1,74 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_mrp_bom_component_percentage
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-08 04:42+0000\n"
+"PO-Revision-Date: 2021-11-08 04:42+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_mrp_bom_component_percentage
+#: model:ir.model,name:to_mrp_bom_component_percentage.model_mrp_bom
+msgid "Bill of Material"
+msgstr ""
+
+#. module: to_mrp_bom_component_percentage
+#: model:ir.model,name:to_mrp_bom_component_percentage.model_mrp_bom_line
+msgid "Bill of Material Line"
+msgstr ""
+
+#. module: to_mrp_bom_component_percentage
+#: model:ir.model.fields,field_description:to_mrp_bom_component_percentage.field_mrp_bom__display_name
+#: model:ir.model.fields,field_description:to_mrp_bom_component_percentage.field_mrp_bom_line__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: to_mrp_bom_component_percentage
+#: code:addons/to_mrp_bom_component_percentage/models/mrp_bom_line.py:0
+#, python-format
+msgid ""
+"Either all or none of the BoM lines should be specified with a price "
+"percentage"
+msgstr ""
+
+#. module: to_mrp_bom_component_percentage
+#: model:ir.model.fields,field_description:to_mrp_bom_component_percentage.field_mrp_bom__id
+#: model:ir.model.fields,field_description:to_mrp_bom_component_percentage.field_mrp_bom_line__id
+msgid "ID"
+msgstr ""
+
+#. module: to_mrp_bom_component_percentage
+#: model:ir.model.fields,field_description:to_mrp_bom_component_percentage.field_mrp_bom____last_update
+#: model:ir.model.fields,field_description:to_mrp_bom_component_percentage.field_mrp_bom_line____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: to_mrp_bom_component_percentage
+#: model:ir.model.fields,field_description:to_mrp_bom_component_percentage.field_mrp_bom_line__price_percent
+msgid "Price Percentage (%)"
+msgstr ""
+
+#. module: to_mrp_bom_component_percentage
+#: model:ir.model.fields,help:to_mrp_bom_component_percentage.field_mrp_bom_line__price_percent
+msgid "Price Percentage of this component in the BoM."
+msgstr ""
+
+#. module: to_mrp_bom_component_percentage
+#: code:addons/to_mrp_bom_component_percentage/models/mrp_bom_line.py:0
+#, python-format
+msgid "Price percentage should not be negative."
+msgstr ""
+
+#. module: to_mrp_bom_component_percentage
+#: code:addons/to_mrp_bom_component_percentage/models/mrp_bom_line.py:0
+#, python-format
+msgid "Sum of price percentage of all the BoM lines should be equal to 100."
+msgstr ""

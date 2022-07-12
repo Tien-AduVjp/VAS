@@ -1,0 +1,49 @@
+<odoo>
+	<data>
+		<record id="view_project_project_filter" model="ir.ui.view">
+			<field name="name">project.project.select</field>
+			<field name="model">project.project</field>
+			<field name="inherit_id"
+				ref="project.view_project_project_filter" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='partner_id']" position="after">
+					<separator />
+					<field name="okr_node_ids" string="OKR" />
+				</xpath>
+				<xpath expr="//filter[@name='my_projects']" position="after">
+					<separator />
+					<filter name="ftr_has_proj_task" string="With OKR"
+						domain="[('okr_node_ids','!=', False)]" />
+				</xpath>
+			</field>
+		</record>
+
+		<record id="view_project_kanban" model="ir.ui.view">
+			<field name="name">project.project.kanban</field>
+			<field name="model">project.project</field>
+			<field name="inherit_id" ref="project.view_project_kanban" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='partner_id']" position="after">
+					<separator />
+					<field name="okr_nodes_count" />
+				</xpath>
+				<xpath
+					expr="//div[hasclass('o_project_kanban_boxes')]/a[@name='action_view_tasks']"
+					position="after">
+					<a t-if="record.okr_nodes_count.value &gt; 0"
+						class="o_project_kanban_box" name="action_view_okr_nodes"
+						type="object">
+						<div>
+							<span class="o_value">
+								<t t-esc="record.okr_nodes_count.value" />
+							</span>
+							<span class="o_label">
+								OKR
+							</span>
+						</div>
+					</a>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

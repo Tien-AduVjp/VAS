@@ -1,0 +1,103 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_partner_business_type
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-23 03:35+0000\n"
+"PO-Revision-Date: 2021-10-23 03:35+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_partner_business_type
+#: model:ir.model.fields,field_description:to_partner_business_type.field_res_partner__business_type_id
+#: model:ir.model.fields,field_description:to_partner_business_type.field_res_users__business_type_id
+#: model_terms:ir.ui.view,arch_db:to_partner_business_type.view_res_partner_filter
+msgid "Business Type"
+msgstr ""
+
+#. module: to_partner_business_type
+#: model_terms:ir.ui.view,arch_db:to_partner_business_type.res_partner_business_view_form
+msgid "Business Type Form"
+msgstr ""
+
+#. module: to_partner_business_type
+#: model:ir.actions.act_window,name:to_partner_business_type.res_partner_business_type_action
+#: model:ir.ui.menu,name:to_partner_business_type.res_partner_business_type_menu
+#: model_terms:ir.ui.view,arch_db:to_partner_business_type.res_partner_business_type_view_tree
+msgid "Business Types"
+msgstr ""
+
+#. module: to_partner_business_type
+#: model:ir.model,name:to_partner_business_type.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: to_partner_business_type
+#: model_terms:ir.actions.act_window,help:to_partner_business_type.res_partner_business_type_action
+msgid "Create a new Business Type"
+msgstr ""
+
+#. module: to_partner_business_type
+#: model:ir.model.fields,field_description:to_partner_business_type.field_res_partner_business_type__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: to_partner_business_type
+#: model:ir.model.fields,field_description:to_partner_business_type.field_res_partner_business_type__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: to_partner_business_type
+#: model:ir.model.fields,field_description:to_partner_business_type.field_res_partner_business_type__description
+msgid "Description"
+msgstr ""
+
+#. module: to_partner_business_type
+#: model:ir.model.fields,field_description:to_partner_business_type.field_res_partner__display_name
+#: model:ir.model.fields,field_description:to_partner_business_type.field_res_partner_business_type__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: to_partner_business_type
+#: model:ir.model.fields,field_description:to_partner_business_type.field_res_partner__id
+#: model:ir.model.fields,field_description:to_partner_business_type.field_res_partner_business_type__id
+msgid "ID"
+msgstr ""
+
+#. module: to_partner_business_type
+#: model:ir.model.fields,field_description:to_partner_business_type.field_res_partner____last_update
+#: model:ir.model.fields,field_description:to_partner_business_type.field_res_partner_business_type____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: to_partner_business_type
+#: model:ir.model.fields,field_description:to_partner_business_type.field_res_partner_business_type__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: to_partner_business_type
+#: model:ir.model.fields,field_description:to_partner_business_type.field_res_partner_business_type__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: to_partner_business_type
+#: model:ir.model.fields,field_description:to_partner_business_type.field_res_partner_business_type__name
+msgid "Name"
+msgstr ""
+
+#. module: to_partner_business_type
+#: model:ir.model,name:to_partner_business_type.model_res_partner_business_type
+msgid "Partner Business Type"
+msgstr ""
+
+#. module: to_partner_business_type
+#: model_terms:ir.ui.view,arch_db:to_partner_business_type.res_partner_business_type_view_search
+msgid "Search Business Type"
+msgstr ""

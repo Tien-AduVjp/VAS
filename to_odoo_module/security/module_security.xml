@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="odoo_module_user" model="res.groups">
+			<field name="name">User</field>
+			<field name="category_id" ref="base.module_category_odoo_apps" />
+			<field name="implied_ids"
+				eval="[(4,ref('base.group_user')),(4,ref('to_token_expiration.group_rotating_token_manager'))]" />
+			<field name="comment">The user will have access rights to manage Odoo
+				modules, product licenses.
+			</field>
+		</record>
+
+		<record id="to_git.group_to_git_user" model="res.groups">
+			<field name="implied_ids" eval="[(4, ref('to_odoo_module.odoo_module_user'))]" />
+		</record>
+
+		<record id="odoo_module_manager" model="res.groups">
+			<field name="name">Administrator</field>
+			<field name="category_id" ref="base.module_category_odoo_apps" />
+			<field name="implied_ids"
+				eval="[(4,ref('to_odoo_module.odoo_module_user')),(4,ref('to_product_license.group_license_manager'))]" />
+			<field name="users" eval="[(4, ref('base.user_root')),(4, ref('base.user_admin'))]" />
+			<field name="comment">The user will have full access rights to the Odoo
+				Apps Management application.
+			</field>
+		</record>
+	</data>
+
+	<data noupdate="1">
+		<record id="odoo_module_version_comp_rule" model="ir.rule">
+			<field name="name">Odoo Module Version multi-company</field>
+			<field name="model_id" ref="model_odoo_module_version" />
+			<field name="global" eval="True" />
+			<field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,21 @@
+<odoo>
+	<data>
+		<record id="acquirer_form_nganluong" model="ir.ui.view">
+			<field name="name">acquirer.form.nganluong</field>
+			<field name="model">payment.acquirer</field>
+			<field name="inherit_id" ref="payment.acquirer_form" />
+			<field name="arch" type="xml">
+				<xpath expr='//group[@name="acquirer"]' position='after'>
+					<group attrs="{'invisible': [('provider', '!=', 'nganluong')]}">
+						<field name="nganluong_merchant_site_code" />
+						<field name="nganluong_merchant_password" />
+						<field name="nganluong_receiver_email" />
+					</group>
+				</xpath>
+				<xpath expr="//field[@name='qr_code']" position="before">
+					<field name="nganluong_accept_detained_payment" attrs="{'invisible': [('provider', '!=', 'nganluong')]}" />
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

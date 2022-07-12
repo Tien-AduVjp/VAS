@@ -1,0 +1,24 @@
+<odoo>
+	<record id="view_helpdesk_ticket_search" model="ir.ui.view">
+		<field name="name">report.helpdesk.ticket.search</field>
+		<field name="inherit_id" ref="viin_helpdesk.view_helpdesk_ticket_search"/>
+		<field name="model">report.helpdesk.ticket</field>
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='company_id']" position="before">
+				<field name="project_id" string="Project"/>
+				<field name="task_id" string="Task"/>
+			</xpath>
+
+			<xpath expr="//filter[@name='ftr_unassigned']" position="after">
+				<separator/>
+	                <filter name="ftr_project_id" string="Project" domain="[('project_id', '!=', False)]"/>
+	                <filter name="ftr_task_id" string="Task" domain="[('task_id', '!=', False)]"/>
+                <separator/>
+			</xpath>
+			<xpath expr="//filter[@name='grp_company_id']" position="before">
+				<filter name="grp_project_id" string="Project" context="{'group_by': 'project_id'}"/>
+				<filter name="grp_task_id" string="Task" context="{'group_by': 'task_id'}"/>
+			</xpath>
+		</field>
+	</record>
+</odoo>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="hr_salary_cycle_view_tree" model="ir.ui.view">
+		<field name="name">hr.salary.cycle.view.tree</field>
+		<field name="model">hr.salary.cycle</field>
+		<field name="arch" type="xml">
+			<tree string="">
+				<field name="name" />
+				<field name="start_day_offset" />
+			</tree>
+		</field>
+	</record>
+
+	<record id="hr_salary_cycle_view_form" model="ir.ui.view">
+		<field name="name">hr.salary.cycle.view.form</field>
+		<field name="model">hr.salary.cycle</field>
+		<field name="arch" type="xml">
+			<form string="">
+				<sheet>
+					<group>
+						<group>
+							<field name="name" />
+							<field name="start_day_offset" />
+							<field name="start_month_offset" />
+						</group>
+						<group>
+						</group>
+					</group>
+				</sheet>
+				<div class="oe_chatter">
+					<field name="message_follower_ids" groups="base.group_user" />
+					<field name="message_ids"/>
+				</div>
+			</form>
+		</field>
+	</record>
+
+	<record id="hr_salary_cycle_action"
+		model="ir.actions.act_window">
+		<field name="name">Salary Period</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">hr.salary.cycle</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+	<menuitem id="hr_salary_cycle_menu"
+		action="hr_salary_cycle_action" name="Salary Cycle"
+		parent="menu_hr_payroll_configuration" sequence="13" />
+
+</odoo>

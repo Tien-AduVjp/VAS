@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+
+    <record id="document_auto_generate_rule_sale_document" model="document.auto.generate.rule" forcecreate="False">
+        <field name="res_model_id" ref="sale.model_sale_order"/>
+        <field name="parent_workspace_id" ref="document_workspace_sale"/>
+        <field name="workspace_field_id" ref="sale.field_sale_order__team_id"/>
+        <field name="workspace_tag_ids" eval="[
+            (4, ref('document_tag_sale_quotation')),
+            (4, ref('document_tag_sale_order')),
+            (4, ref('document_tag_sale_specs')),
+            (4, ref('viin_document.document_tag_to_review')),
+            (4, ref('viin_document.document_tag_approve')),
+            (4, ref('viin_document.document_tag_deprecate'))]"/>
+        <field name="workspace_read_team_ids" eval="[(4, ref('document_team_sale'))]"/>
+        <field name="workspace_write_group_ids" eval="[(4, ref('sales_team.group_sale_manager'))]"/>
+        <field name="workspace_read_group_ids" eval="[(4, ref('sales_team.group_sale_salesman_all_leads'))]"/>
+        <field name="workspace_specific_group_ids" eval="[(4, ref('sales_team.group_sale_salesman'))]"/>
+        <field name="workspace_action_ids" eval="[
+            (4, ref('viin_document.document_action_ask_to_review')),
+            (4, ref('viin_document.document_action_approve'))]"/>
+    </record>
+
+</odoo>

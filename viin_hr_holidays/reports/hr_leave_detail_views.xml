@@ -1,0 +1,75 @@
+<odoo>
+	<record id="hr_leave_details_view_pivot" model="ir.ui.view">
+		<field name="name">Time Off Details</field>
+		<field name="model">hr.leave.detail</field>
+		<field name="arch" type="xml">
+			<pivot string="Time Off Details Pivot">
+				<field name="date" type="col" interval="day"/>
+				<field name="employee_id" type="row" />
+				<field name="duration_days" type="measure" />
+				<field name="duration_hours" type="measure" />
+			</pivot>
+		</field>
+	</record>
+
+	<record id="hr_leave_details_view_tree" model="ir.ui.view">
+		<field name="name">Time Off Details</field>
+		<field name="model">hr.leave.detail</field>
+		<field name="arch" type="xml">
+			<tree string="Time Off Details Tree">
+				<field name="employee_id" widget="many2one_avatar_employee"/>
+				<field name="leave_id" optional="hidden"/>
+                <field name="department_id" optional="hidden"/>
+                <field name="holiday_type" groups="base.group_no_one"/>
+                <field name="leave_type_id" class="font-weight-bold"/>
+                <field name="date_from"/>
+                <field name="date_to"/>
+                <field name="date"/>
+                <field name="duration_days"/>
+                <field name="duration_hours"/>
+                <field name="state"/>
+			</tree>
+		</field>
+	</record>
+
+	<record id="hr_leave_details_view_seach" model="ir.ui.view">
+		<field name="name">Time Off Details</field>
+		<field name="model">hr.leave.detail</field>
+		<field name="arch" type="xml">
+			<search string="Search Time Off Details">
+				<field name="employee_id"/>
+				<field name="department_id"/>
+				<field name="leave_type_id"/>
+				<separator />
+				<filter name="ftr_date" string="Date" date="date"/>
+				<separator />
+				<filter name="ftr_confirm" string="To Approve"
+					domain="[('state', '=', 'confirm')]" />
+				<filter name="ftr_approved" string="Second Approval"
+					domain="[('state', '=', 'validate1')]" />
+				<filter name="ftr_validated" string="Validated"
+					domain="[('state', '=', 'validate')]" />
+				<group expand="0" string="Group By">
+					<filter name="grp_employee_id" string="Employee" context="{'group_by': 'employee_id'}"/>
+					<filter name="grp_department_id" string="Department" context="{'group_by': 'department_id'}"/>
+					<separator />
+					<filter name="grp_leave_type_id" string="Time Off Type" context="{'group_by': 'leave_type_id'}"/>
+					<separator />
+					<filter name="grp_state" string="State" context="{'group_by': 'state'}"/>
+				</group>
+			</search>
+		</field>
+	</record>
+
+	<record id="hr_leave_details_action" model="ir.actions.act_window">
+		<field name="name">Time Off Details</field>
+		<field name="res_model">hr.leave.detail</field>
+		<field name="view_mode">pivot,tree,search</field>
+		<field name="context">{'search_default_ftr_date': 1}</field>
+	</record>
+
+	<menuitem id="hr_leave_details_menu" name="Time Off Details"
+			parent="hr_holidays.menu_hr_holidays_report"
+			action="hr_leave_details_action"
+			sequence="20" />
+</odoo>

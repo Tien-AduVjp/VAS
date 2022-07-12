@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record id="account_balance_carry_forward_tree_view"
+			model="ir.ui.view">
+			<field name="name">balance.carry.forward.tree</field>
+			<field name="model">balance.carry.forward</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Balance Carry Forward Tree"
+					decoration-muted="state=='cancelled'"
+					decoration-bf="state=='confirmed'"
+					decoration-success="state=='draft'">
+					<field name="name" />
+					<field name="date" />
+					<field name="journal_id" />
+					<field name="state" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="account_balance_carry_forward_form_view"
+			model="ir.ui.view">
+			<field name="name">balance.carry.forward.form</field>
+			<field name="model">balance.carry.forward</field>
+			<field name="priority" eval="8" />
+			<field name="arch" type="xml">
+				<form string="Account Balance Carry Forward Form">
+					<header>
+						<button name="action_confirm" string="Confirm"
+							type="object" states="draft" class="oe_highlight"
+							groups="account.group_account_user" />
+						<button name="action_post" type='object'
+							class="oe_highlight" string='Post' states='confirmed'
+							groups="account.group_account_manager" />
+						<button name="action_cancel" type="object"
+							states="confirmed,posted" string="Cancel Entry"
+							groups="account.group_account_manager" />
+						<button name="action_draft" states="cancelled"
+							string="Set to Draft" type="object"
+							groups="account.group_account_manager" class="oe_highlight" />
+						<field name="state" widget="statusbar"
+							statusbar_visible="draft,confirm,posted" />
+					</header>
+					<sheet>
+						<div class="oe_button_box" name="button_box">
+							<button type="object" name="action_view_account_moves"
+								class="oe_stat_button" icon="fa-pencil-square-o"
+								attrs="{'invisible':[('account_move_ids','=',[])]}">
+								<field name="account_moves_count" widget="statinfo"
+									string="Journal Entries" />
+								<field name="account_move_ids" invisible="1" />
+							</button>
+							<button type="object"
+								name="action_view_account_move_lines" class="oe_stat_button"
+								icon="fa-pencil" attrs="{'invisible':[('aml_ids','=',[])]}">
+								<field name="aml_count" widget="statinfo"
+									string="Journal Items" />
+								<field name="aml_ids" invisible="1" />
+							</button>
+						</div>
+						<div class="oe_title">
+							<h1>
+								<field name="name" />
+							</h1>
+						</div>
+						<group>
+							<group>
+								<field name="date" />
+								<field name="company_id" groups="base.group_multi_company" />
+								<field name="journal_id" />
+							</group>
+							<group>
+								<field name="forward_rule_ids" widget="many2many_tags" />
+							</group>
+						</group>
+						<notebook>
+							<page name="rule_lines" string="Rules">
+								<field name="forward_rule_line_ids" nolabel="1">
+									<tree>
+										<field name="sequence" widget="handle" />
+										<field name="source_account_id" />
+										<field name="balance" />
+                                        <field name="source_aml_ids" limit="0" invisible="1"/>
+										<field name="dest_account_id" />
+										<field name="forward_type" />
+										<field name="rule_id" groups="base.group_no_one" />
+										<field name="succeeding_rule_line_ids"
+											groups="base.group_no_one" />
+									</tree>
+								</field>
+							</page>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" groups="base.group_user" />
+						<field name="activity_ids"/>
+						<field name="message_ids"/>
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window"
+			id="action_account_balance_carry_forward_view">
+			<field name="name">Account Balance Carry Forward</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">balance.carry.forward</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem id="account_balance_carry_forward_menu"
+			parent="account.menu_finance_entries_management"
+			action="action_account_balance_carry_forward_view" sequence="19"
+			groups="account.group_account_user" />
+
+	</data>
+</odoo>

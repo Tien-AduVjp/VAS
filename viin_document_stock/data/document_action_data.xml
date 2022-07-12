@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+
+    <!-- Waiting Another Operation -->
+
+    <record id="document_action_stock_waiting" model="document.action">
+        <field name="name">Waiting Another Operation</field>
+        <field name="create_document_activity" eval="True"/>
+        <field name="document_activity_type_id" ref="mail.mail_activity_data_todo"/>
+        <field name="document_activity_due_date" eval="1"/>
+        <field name="document_activity_due_date_type">day</field>
+        <field name="document_activity_user_id" ref="base.user_admin"/>
+    </record>
+
+    <record id="document_action_set_tag_stock_waiting" model="document.action.set_tag">
+        <field name="action_type">replace</field>
+        <field name="category_id" ref="document_tag_category_inventory_status"/>
+        <field name="tag_ids" eval="[(4, ref('document_tag_stock_waiting_another_operation'))]"/>
+        <field name="action_id" ref="document_action_stock_waiting"/>
+    </record>
+
+    <!-- Mark Picking as Ready -->
+
+    <record id="document_action_stock_mark_as_ready" model="document.action">
+        <field name="name">Mark Picking as Ready</field>
+        <field name="create_document_activity" eval="True"/>
+        <field name="document_activity_type_id" ref="mail.mail_activity_data_todo"/>
+        <field name="document_activity_due_date" eval="1"/>
+        <field name="document_activity_due_date_type">day</field>
+        <field name="document_activity_user_id" ref="base.user_admin"/>
+    </record>
+
+    <record id="document_action_set_tag_stock_picking_ready" model="document.action.set_tag">
+        <field name="action_type">replace</field>
+        <field name="category_id" ref="document_tag_category_inventory_status"/>
+        <field name="tag_ids" eval="[(4, ref('document_tag_stock_ready'))]"/>
+        <field name="action_id" ref="document_action_stock_mark_as_ready"/>
+    </record>
+
+    <!-- Mark Picking as Done -->
+
+    <record id="document_action_stock_mark_as_done" model="document.action">
+        <field name="name">Mark Picking as Done</field>
+        <field name="done_document_activity" eval="True"/>
+    </record>
+
+    <record id="document_action_set_tag_stock_picking_done" model="document.action.set_tag">
+        <field name="action_type">replace</field>
+        <field name="category_id" ref="document_tag_category_inventory_status"/>
+        <field name="tag_ids" eval="[(4, ref('document_tag_stock_done'))]"/>
+        <field name="action_id" ref="document_action_stock_mark_as_done"/>
+    </record>
+
+</odoo>

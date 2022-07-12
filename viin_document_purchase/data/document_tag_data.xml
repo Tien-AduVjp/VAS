@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+
+    <record id="document_tag_rfq" model="document.tag">
+        <field name="name">RFQ</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_purchase'))]"/>
+    </record>
+
+    <record id="document_tag_purchase_order" model="document.tag">
+        <field name="name">Pruchase Order</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_purchase'))]"/>
+    </record>
+
+</odoo>

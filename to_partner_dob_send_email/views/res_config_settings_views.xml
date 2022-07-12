@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+	<record id="res_config_settings_view_form" model="ir.ui.view">
+		<field name="name">res.config.settings.view.form</field>
+		<field name="model">res.config.settings</field>
+		<field name="inherit_id"
+			ref="base_setup.res_config_settings_view_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//div[@id='business_documents']" position="after">
+				<div id="default_email_templates">
+					<h2>Default Email Templates</h2>
+					<div class='row mt16 o_settings_container'>
+						<div class="col-12 col-lg-6 o_setting_box"
+							title="Configure company rules to automatically send Happy Birthday Email to your partners.">
+							<div class="o_setting_left_pane">
+								<field name="send_hbd_email" />
+							</div>
+							<div class="o_setting_right_pane">
+								<label string="Send Happy Birthday Email"
+									for="send_hbd_email" />
+								<div class="text-muted">
+									Automatically Send Happy Birthday Email to your
+									partners
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-lg-6 o_setting_box"
+							attrs="{'invisible': [('send_hbd_email','=',False)]}">
+							<div class='o_setting_right_pane'>
+								<div class="o_form_label">Happy Birthday Email Template</div>
+								<span class="fa fa-lg fa-building-o"
+									title="Values set here are company-specific."
+									aria-label="Values set here are company-specific."
+									groups="base.group_multi_company" role="img" />
+								<div class="text-muted">
+									This template will use as a default template when
+									you sending a Happy Birthday Email message to the partner.
+								</div>
+								<div class="content-group">
+									<div class="mt16 row">
+										<label for="hdb_email_template_id" string="Template"
+											class="col-3 col-lg-3 o_light_label" />
+										<field name="hdb_email_template_id" class="oe_inline" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</xpath>
+		</field>
+	</record>
+</odoo>

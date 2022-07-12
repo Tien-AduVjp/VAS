@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record model="ir.ui.view" id="claim_list_form_view">
+		<field name="name">maintenance.request.form</field>
+		<field name="model">maintenance.request</field>
+		<field name="inherit_id" ref="maintenance.hr_equipment_request_view_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//button[@name='reset_equipment_request']" position="after">
+				<button name="repair_request_action" type="object"
+					string="Create Repair Order" class="oe_highlight"
+					attrs="{'invisible':[('done','=', True)]}"/>
+			</xpath>
+			<xpath expr="//div[hasclass('oe_button_box')]" position="inside">
+					<button type="object" name="action_view_repair_history"
+						class="oe_stat_button" icon="fa-wrench"
+						attrs="{'invisible':[('repair_count','=',0)]}">
+						<field name="repair_count" widget="statinfo" string="Repair History"/>
+					</button>
+			</xpath>
+		</field>
+	</record>
+</odoo>
+
+
+
+
+

@@ -1,0 +1,117 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_product_code_sequence
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-24 08:18+0000\n"
+"PO-Revision-Date: 2021-11-24 08:18+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_product_code_sequence
+#: model_terms:ir.ui.view,arch_db:to_product_code_sequence.res_config_settings_view_form
+msgid "Allows generating default product codes by product category"
+msgstr ""
+
+#. module: to_product_code_sequence
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_res_company__auto_product_default_code_generation
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_res_config_settings__auto_product_default_code_generation
+msgid "Auto Product Code Generation"
+msgstr ""
+
+#. module: to_product_code_sequence
+#: model_terms:ir.ui.view,arch_db:to_product_code_sequence.res_config_settings_view_form
+msgid ""
+"Automatically generate and update product codes based on product name or \n"
+"                            the defined product code prefix and product sequence in the product category."
+msgstr ""
+
+#. module: to_product_code_sequence
+#: model:ir.model.fields,help:to_product_code_sequence.field_res_company__auto_product_default_code_generation
+#: model:ir.model.fields,help:to_product_code_sequence.field_res_config_settings__auto_product_default_code_generation
+msgid ""
+"Automatically generate and update product codes based on product name or the"
+" defined product code prefix and product sequence in the product category."
+msgstr ""
+
+#. module: to_product_code_sequence
+#: model:ir.model,name:to_product_code_sequence.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: to_product_code_sequence
+#: model:ir.model,name:to_product_code_sequence.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: to_product_code_sequence
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_product_category__display_name
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_product_product__display_name
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_product_template__display_name
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_res_company__display_name
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: to_product_code_sequence
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_product_category__id
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_product_product__id
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_product_template__id
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_res_company__id
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_res_config_settings__id
+msgid "ID"
+msgstr ""
+
+#. module: to_product_code_sequence
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_product_category____last_update
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_product_product____last_update
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_product_template____last_update
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_res_company____last_update
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_res_config_settings____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: to_product_code_sequence
+#: model:ir.model,name:to_product_code_sequence.model_product_product
+msgid "Product"
+msgstr ""
+
+#. module: to_product_code_sequence
+#: model:ir.model,name:to_product_code_sequence.model_product_category
+msgid "Product Category"
+msgstr ""
+
+#. module: to_product_code_sequence
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_product_category__product_code_prefix
+msgid "Product Code Prefix"
+msgstr ""
+
+#. module: to_product_code_sequence
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_product_category__ir_sequence_id
+msgid "Product Sequence"
+msgstr ""
+
+#. module: to_product_code_sequence
+#: model:ir.model,name:to_product_code_sequence.model_product_template
+msgid "Product Template"
+msgstr ""
+
+#. module: to_product_code_sequence
+#: model:ir.model.fields,help:to_product_code_sequence.field_product_category__product_code_prefix
+msgid ""
+"The text string to be used as the prefix of the auto-generated default codes"
+" of the category's products."
+msgstr ""
+
+#. module: to_product_code_sequence
+#: model:ir.actions.server,name:to_product_code_sequence.action_server_update_prod_code
+#: model:ir.actions.server,name:to_product_code_sequence.action_server_update_prod_tmpl_code
+msgid "Update Product Code"
+msgstr ""

@@ -1,0 +1,44 @@
+<odoo>
+	<data>
+
+		<record model="ir.ui.view" id="user_assignment_view_list">
+			<field name="name">user.assignment.list</field>
+			<field name="model">user.assignment</field>
+			<field name="inherit_id"
+				ref="viin_user_assignment_log.user_assignment_view_list" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='user_id']" position="after">
+					<field name="employee_id" />
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="user_assignment_view_form">
+			<field name="name">user.assignment.form</field>
+			<field name="model">user.assignment</field>
+			<field name="inherit_id"
+				ref="viin_user_assignment_log.user_assignment_view_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='user_id']" position="after">
+					<field name="employee_id" />
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="user_assignment_view_search">
+			<field name="name">user.assignment.search</field>
+			<field name="model">user.assignment</field>
+			<field name="inherit_id"
+				ref="viin_user_assignment_log.user_assignment_view_search" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='user_id']" position="after">
+					<field name="employee_id" />
+				</xpath>
+				<xpath expr="//group/filter[@name='grp_user_id']" position="after">
+					<filter string="Employee" name="grp_employee_id" domain="[]" context="{'group_by':'employee_id'}" />
+				</xpath>
+			</field>
+		</record>
+
+	</data>
+</odoo>

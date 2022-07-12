@@ -1,0 +1,182 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_bank_currency_rate
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-29 10:36+0000\n"
+"PO-Revision-Date: 2021-10-29 10:36+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_bank_currency_rate
+#: model_terms:ir.ui.view,arch_db:to_bank_currency_rate.res_config_settings_view_form
+msgid ""
+"<span class=\"o_form_label\">Main Bank</span>\n"
+"                           <span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-specific.\" aria-label=\"Values set here are company-specific.\" role=\"img\"/>"
+msgstr ""
+
+#. module: to_bank_currency_rate
+#: model:ir.model.fields,field_description:to_bank_currency_rate.field_res_bank__auto_rate_update
+msgid "Auto Currency Rates Update"
+msgstr ""
+
+#. module: to_bank_currency_rate
+#: model:ir.model.fields,field_description:to_bank_currency_rate.field_res_bank__auto_rate_update_provider
+msgid "Auto Currency Rates Update Service Provider"
+msgstr ""
+
+#. module: to_bank_currency_rate
+#: model:ir.model,name:to_bank_currency_rate.model_res_bank
+#: model:ir.model.fields,field_description:to_bank_currency_rate.field_res_currency_rate__bank_id
+#: model_terms:ir.ui.view,arch_db:to_bank_currency_rate.view_currency_rate_search
+msgid "Bank"
+msgstr ""
+
+#. module: to_bank_currency_rate
+#: model:ir.model,name:to_bank_currency_rate.model_account_bank_statement_line
+msgid "Bank Statement Line"
+msgstr ""
+
+#. module: to_bank_currency_rate
+#: model:ir.model.fields.selection,name:to_bank_currency_rate.selection__res_currency_rate__exchange_type__buy_rate
+msgid "Buy Rate"
+msgstr ""
+
+#. module: to_bank_currency_rate
+#: model:ir.model.fields,help:to_bank_currency_rate.field_res_currency_rate__exchange_type
+msgid ""
+"Buy Rate: the rate applied when we buy;\n"
+"Transfer Rate: the rate applied in custom declaration.\n"
+"Sell Rate: the rate applied when we sell.\n"
+"Leave it empty if the rate is not specific to Buy/Sell activities"
+msgstr ""
+
+#. module: to_bank_currency_rate
+#: model:ir.model,name:to_bank_currency_rate.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: to_bank_currency_rate
+#: model:ir.model,name:to_bank_currency_rate.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: to_bank_currency_rate
+#: model:ir.model,name:to_bank_currency_rate.model_res_currency
+msgid "Currency"
+msgstr ""
+
+#. module: to_bank_currency_rate
+#: model:ir.model,name:to_bank_currency_rate.model_res_currency_rate
+msgid "Currency Rate"
+msgstr ""
+
+#. module: to_bank_currency_rate
+#: model:ir.model.fields,field_description:to_bank_currency_rate.field_account_bank_statement_line__display_name
+#: model:ir.model.fields,field_description:to_bank_currency_rate.field_account_move__display_name
+#: model:ir.model.fields,field_description:to_bank_currency_rate.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:to_bank_currency_rate.field_account_payment__display_name
+#: model:ir.model.fields,field_description:to_bank_currency_rate.field_res_bank__display_name
+#: model:ir.model.fields,field_description:to_bank_currency_rate.field_res_company__display_name
+#: model:ir.model.fields,field_description:to_bank_currency_rate.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:to_bank_currency_rate.field_res_currency__display_name
+#: model:ir.model.fields,field_description:to_bank_currency_rate.field_res_currency_rate__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: to_bank_currency_rate
+#: model:ir.model.fields,field_description:to_bank_currency_rate.field_res_currency_rate__exchange_type
+#: model_terms:ir.ui.view,arch_db:to_bank_currency_rate.view_currency_rate_search
+msgid "Exchange Type"
+msgstr ""
+
+#. module: to_bank_currency_rate
+#: model:ir.model.fields,field_description:to_bank_currency_rate.field_account_bank_statement_line__id
+#: model:ir.model.fields,field_description:to_bank_currency_rate.field_account_move__id
+#: model:ir.model.fields,field_description:to_bank_currency_rate.field_account_move_line__id
+#: model:ir.model.fields,field_description:to_bank_currency_rate.field_account_payment__id
+#: model:ir.model.fields,field_description:to_bank_currency_rate.field_res_bank__id
+#: model:ir.model.fields,field_description:to_bank_currency_rate.field_res_company__id
+#: model:ir.model.fields,field_description:to_bank_currency_rate.field_res_config_settings__id
+#: model:ir.model.fields,field_description:to_bank_currency_rate.field_res_currency__id
+#: model:ir.model.fields,field_description:to_bank_currency_rate.field_res_currency_rate__id
+msgid "ID"
+msgstr ""
+
+#. module: to_bank_currency_rate
+#: model:ir.model,name:to_bank_currency_rate.model_account_move
+msgid "Journal Entry"
+msgstr ""
+
+#. module: to_bank_currency_rate
+#: model:ir.model,name:to_bank_currency_rate.model_account_move_line
+msgid "Journal Item"
+msgstr ""
+
+#. module: to_bank_currency_rate
+#: model:ir.model.fields,field_description:to_bank_currency_rate.field_account_bank_statement_line____last_update
+#: model:ir.model.fields,field_description:to_bank_currency_rate.field_account_move____last_update
+#: model:ir.model.fields,field_description:to_bank_currency_rate.field_account_move_line____last_update
+#: model:ir.model.fields,field_description:to_bank_currency_rate.field_account_payment____last_update
+#: model:ir.model.fields,field_description:to_bank_currency_rate.field_res_bank____last_update
+#: model:ir.model.fields,field_description:to_bank_currency_rate.field_res_company____last_update
+#: model:ir.model.fields,field_description:to_bank_currency_rate.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:to_bank_currency_rate.field_res_currency____last_update
+#: model:ir.model.fields,field_description:to_bank_currency_rate.field_res_currency_rate____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: to_bank_currency_rate
+#: model:ir.model.fields,field_description:to_bank_currency_rate.field_res_company__main_currency_bank_id
+#: model:ir.model.fields,field_description:to_bank_currency_rate.field_res_config_settings__main_currency_bank_id
+msgid "Main Bank"
+msgstr ""
+
+#. module: to_bank_currency_rate
+#: model:ir.model.constraint,message:to_bank_currency_rate.constraint_res_currency_rate_unique_name_per_day
+msgid "Only one currency rate per day per bank per Exchange Type allowed!"
+msgstr ""
+
+#. module: to_bank_currency_rate
+#: model:ir.model,name:to_bank_currency_rate.model_account_payment
+msgid "Payments"
+msgstr ""
+
+#. module: to_bank_currency_rate
+#: model:ir.model.fields.selection,name:to_bank_currency_rate.selection__res_currency_rate__exchange_type__sell_rate
+msgid "Sell Rate"
+msgstr ""
+
+#. module: to_bank_currency_rate
+#: model:ir.model.fields,help:to_bank_currency_rate.field_res_currency_rate__bank_id
+msgid "The bank that the rate is applied"
+msgstr ""
+
+#. module: to_bank_currency_rate
+#: model_terms:ir.ui.view,arch_db:to_bank_currency_rate.res_config_settings_view_form
+msgid ""
+"The bank whose exchange rates are used for currency conversion when no "
+"specific bank is known."
+msgstr ""
+
+#. module: to_bank_currency_rate
+#: model:ir.model.fields,help:to_bank_currency_rate.field_res_company__main_currency_bank_id
+#: model:ir.model.fields,help:to_bank_currency_rate.field_res_config_settings__main_currency_bank_id
+msgid ""
+"The bank whose exchange rates are used for currency conversion when no "
+"specific bank is known. Leave this empty to disable this function to apply "
+"the latest rate to the transaction date no matter the bank is specified or "
+"not."
+msgstr ""
+
+#. module: to_bank_currency_rate
+#: model:ir.model.fields.selection,name:to_bank_currency_rate.selection__res_currency_rate__exchange_type__transfer_rate
+msgid "Transfer Rate"
+msgstr ""

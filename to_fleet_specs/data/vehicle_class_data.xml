@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="1">
+		<!-- Vehicle Classes List -->
+
+		<record id="truck_2_4_tons" model="vehicle.class">
+			<field name="name">Trucks 2~4 Tons</field>
+			<field name="min_weight">2000</field>
+			<field name="max_weight">4000</field>
+			<field name="type_id" ref="to_fleet_specs.vehicle_type_truck" />
+		</record>
+
+		<record id="truck_4_10_tons" model="vehicle.class">
+			<field name="name">Trucks 4~10 Tons</field>
+			<field name="min_weight">4000</field>
+			<field name="max_weight">10000</field>
+			<field name="type_id" ref="to_fleet_specs.vehicle_type_truck" />
+		</record>
+
+		<record id="truck_10_18_tons" model="vehicle.class">
+			<field name="name">Trucks 10~18 Tons</field>
+			<field name="min_weight">10000</field>
+			<field name="max_weight">18000</field>
+			<field name="type_id" ref="to_fleet_specs.vehicle_type_truck" />
+		</record>
+
+		<record id="truck_over_18_tons" model="vehicle.class">
+			<field name="name">Trucks 18 Tons</field>
+			<field name="min_weight">18000</field>
+			<field name="type_id" ref="to_fleet_specs.vehicle_type_truck" />
+		</record>
+
+		<record id="bus_13_29_seats" model="vehicle.class">
+			<field name="name">Bus 13~29 Seats</field>
+			<field name="min_seats" eval="13" />
+			<field name="max_seats" eval="29" />
+			<field name="type_id" ref="to_fleet_specs.vehicle_type_bus" />
+		</record>
+
+		<record id="sedan_5_seats" model="vehicle.class">
+			<field name="name">Sedan 5 Seats</field>
+			<field name="max_seats" eval="5" />
+			<field name="type_id" ref="to_fleet_specs.vehicle_type_car" />
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,34 @@
+<odoo>
+	<data>
+		<record id="timesheet_approval_request_create_form_view" model="ir.ui.view">
+			<field name="name">timesheet.approval.request.create.form</field>
+			<field name="model">timesheet.approval.request.create</field>
+			<field name="arch" type="xml">
+				<form>
+					<h3>Do you want to create Timesheet Approval Request?</h3>
+					<group>
+						<field name="title" />
+						<field name="timesheet_line_ids" invisible="1" />
+						<field name="employee_id" invisible="1" />
+						<field name="company_id" invisible="1" />
+						<field name="approval_type_id" invisible="1" />
+					</group>
+					<footer>
+						<button name="action_create_timesheet_approval_request"
+							string="Confirm" type="object" class="btn-primary" />
+						<button string="Cancel" class="btn-default"
+							special="cancel" />
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<record id="act_create_timesheet_approval_request" model="ir.actions.act_window">
+			<field name="name">Timesheet Approval Request Wizard</field>
+			<field name="res_model">timesheet.approval.request.create</field>
+			<field name="binding_model_id" ref="analytic.model_account_analytic_line" />
+			<field name="view_mode">form</field>
+			<field name="target">new</field>
+		</record>
+	</data>
+</odoo>

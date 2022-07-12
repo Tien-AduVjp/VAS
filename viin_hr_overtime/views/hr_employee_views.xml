@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record model="ir.ui.view" id="view_employee_form">
+		<field name="name">hr.employee.form</field>
+		<field name="model">hr.employee</field>
+		<field name="inherit_id" ref="hr.view_employee_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//div[@name='button_box']" position="inside">
+				<button name="action_view_overtime_report" type="object"
+					class="oe_stat_button" icon="fa-clock-o">
+					<field string="Overtime Entries"
+						name="employee_overtime_count" widget="statinfo" />
+				</button>
+			</xpath>
+		</field>
+	</record>
+</odoo>

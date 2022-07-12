@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+
+		<record id="report_affiliate_referrer_graph" model="ir.ui.view">
+			<field name="name">report.affiliate.referrer.analysis.graph</field>
+			<field name="model">report.affiliate.referrer.analysis</field>
+			<field name="inherit_id"
+				ref="to_affiliate.report_affiliate_referrer_graph" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='datetime']" position="after">
+					<field name="number_so" type="measure" />
+					<field name="amount_so" type="measure" />
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

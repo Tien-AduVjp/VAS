@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+    	<record id="to_promotion_voucher.voucher_type_generic" model="voucher.type">
+    		<field name="property_promotion_voucher_profit_account_id" search="[('code','like','711'+'%')]" />
+    		<field name="property_promotion_voucher_loss_account_id" search="[('code','like','5211'+'%')]" />
+    	</record>
+    </data>
+</odoo>

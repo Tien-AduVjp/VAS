@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record id="view_invoice_line_form_inherit_purchase" model="ir.ui.view">
+			<field name="name">account.move.line.form.inherit.purchase</field>
+			<field name="model">account.move</field>
+			<field name="inherit_id" ref="account.view_move_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='invoice_line_ids']/form/sheet//field[@name='account_id']" position="before">
+					<field name="landed_cost_for_po_ids" widget="many2many_tags"
+						attrs="{'invisible':[('landed_cost_for_po_ids','=',[])]}" />
+					<field name="landed_cost_for_stock_picking_ids" widget="many2many_tags"
+						attrs="{'invisible':[('landed_cost_for_stock_picking_ids','=',[])]}" />
+					<field name="landed_cost_for_stock_done_picking_ids" widget="many2many_tags"
+						attrs="{'invisible':[('landed_cost_for_stock_done_picking_ids','=',[])]}" />
+				</xpath>
+			</field>
+		</record>
+
+
+		<record id="account_view_move_form_inherited" model="ir.ui.view">
+			<field name="name">account.move.supplier.form</field>
+			<field name="model">account.move</field>
+			<field name="inherit_id" ref="stock_landed_costs.account_view_move_form_inherited" />
+			<field name="arch" type="xml">
+				<xpath expr="//button[@name='action_view_landed_costs']" position="attributes">
+					<attribute name="invisible">1</attribute>
+				</xpath>
+				<xpath expr="//button[@name='action_view_landed_costs']" position="after">
+					<button type="object" name="action_view_landed_costs" class="oe_stat_button" icon="fa-cubes" attrs="{'invisible':['|',('landed_costs_ids','=',[]),('state','not in',('posted'))]}">
+						<field name="landed_costs_count" widget="statinfo" string="Landed Costs" />
+					</button>
+				</xpath>
+			</field>
+		</record>
+
+	</data>
+</odoo>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="ReturnOrderLine" owl="1">
+        <div class="order-line" t-att-class="{ highlight: highlighted }" t-on-click="trigger('click-line', props.line)">
+            <div class="cell line-product">
+                <t t-esc="productDisplayName" />
+            </div>
+            <div class="cell">
+                <input class="return-input" name='quantity' t-att-value='quantity' t-on-keyup="updateQuantity" />
+            </div>
+            <div class="cell">
+                <t t-esc="priceUnit" />
+            </div>
+            <div class="cell">
+                <t t-esc="discount" />
+                %
+            </div>
+            <div class="cell">
+                <t t-esc="taxName" />
+            </div>
+            <div class="cell">
+                <input class="return-input" name='subtotalWithoutTax' t-att-value='subtotalWithoutTax' />
+            </div>
+            <div class="cell">
+                <input class="return-input" name='subtotal' t-att-value='subtotal' />
+            </div>
+            <div class="cell button-delete" t-on-click="trigger('delete-line', props.index)">
+                <i class="fa fa-trash-o" />
+            </div>
+        </div>
+    </t>
+</templates>

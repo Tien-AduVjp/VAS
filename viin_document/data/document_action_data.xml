@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+
+    <!-- Ask to Review -->
+
+    <record id="document_action_ask_to_review" model="document.action">
+        <field name="name">Ask to Review</field>
+        <field name="create_document_activity" eval="True"/>
+        <field name="document_activity_type_id" ref="mail_activity_type_data_to_review"/>
+        <field name="document_activity_due_date" eval="1"/>
+        <field name="document_activity_due_date_type">day</field>
+        <field name="document_activity_user_id" ref="base.user_admin"/>
+    </record>
+
+    <record id="document_action_set_tag_to_review" model="document.action.set_tag">
+        <field name="action_type">replace</field>
+        <field name="category_id" ref="document_tag_category_status"/>
+        <field name="tag_ids" eval="[(4, ref('document_tag_to_review'))]"/>
+        <field name="action_id" ref="document_action_ask_to_review"/>
+    </record>
+
+    <!-- Approve -->
+
+    <record id="document_action_approve" model="document.action">
+        <field name="name">Approve</field>
+        <field name="done_document_activity" eval="True"/>
+    </record>
+
+    <record id="document_action_set_tag_to_approve" model="document.action.set_tag">
+        <field name="action_type">replace</field>
+        <field name="category_id" ref="document_tag_category_status"/>
+        <field name="tag_ids" eval="[(4, ref('document_tag_approve'))]"/>
+        <field name="action_id" ref="document_action_approve"/>
+    </record>
+
+    <!-- Send to Legal -->
+
+    <record id="document_action_send_to_legal" model="document.action">
+        <field name="name">Send to Legal</field>
+        <field name="create_document_activity" eval="True"/>
+        <field name="document_activity_type_id" ref="mail_activity_type_data_to_review"/>
+        <field name="document_activity_type_id" ref="mail_activity_type_data_to_review"/>
+        <field name="document_activity_due_date" eval="1"/>
+        <field name="document_activity_due_date_type">day</field>
+        <field name="document_activity_user_id" ref="base.user_admin"/>
+    </record>
+
+    <record id="document_action_set_tag_legal_replace" model="document.action.set_tag">
+        <field name="action_type">replace</field>
+        <field name="category_id" ref="document_tag_category_status"/>
+        <field name="tag_ids" eval="[(4, ref('document_tag_to_review'))]"/>
+        <field name="action_id" ref="document_action_send_to_legal"/>
+    </record>
+
+    <record id="document_action_set_tag_legal_add" model="document.action.set_tag">
+        <field name="action_type">add</field>
+        <field name="category_id" ref="document_tag_category_general"/>
+        <field name="tag_ids" eval="[(4, ref('document_tag_company_legal'))]"/>
+        <field name="action_id" ref="document_action_send_to_legal"/>
+    </record>
+
+    <!-- Mark as Deprecated -->
+
+    <record id="document_action_deprecated" model="document.action">
+        <field name="name">Mark As Deprecated</field>
+        <field name="done_document_activity" eval="True"/>
+    </record>
+
+    <record id="document_action_set_tag_deprecated" model="document.action.set_tag">
+        <field name="action_type">replace</field>
+        <field name="category_id" ref="document_tag_category_status"/>
+        <field name="tag_ids" eval="[(4, ref('document_tag_deprecate'))]"/>
+        <field name="action_id" ref="document_action_deprecated"/>
+    </record>
+
+</odoo>

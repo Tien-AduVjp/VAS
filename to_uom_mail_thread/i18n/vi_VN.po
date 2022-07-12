@@ -1,0 +1,210 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_uom_mail_thread
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-25 13:43+0000\n"
+"PO-Revision-Date: 2021-10-25 13:43+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_uom_mail_thread
+#: model:ir.model.fields,field_description:to_uom_mail_thread.field_uom_uom__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: to_uom_mail_thread
+#: model:ir.model.fields,field_description:to_uom_mail_thread.field_uom_uom__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: to_uom_mail_thread
+#: model:ir.model.fields,field_description:to_uom_mail_thread.field_uom_uom__factor_inv
+msgid "Bigger Ratio"
+msgstr "Tỷ lệ lớn hơn"
+
+#. module: to_uom_mail_thread
+#: model:ir.model.fields,field_description:to_uom_mail_thread.field_uom_uom__category_id
+msgid "Category"
+msgstr "Nhóm"
+
+#. module: to_uom_mail_thread
+#: model:ir.model.fields,help:to_uom_mail_thread.field_uom_uom__category_id
+msgid ""
+"Conversion between Units of Measure can only occur if they belong to the "
+"same category. The conversion will be made based on the ratios."
+msgstr ""
+"Việc chuyển đổi qua lại giữa các Đơn vị tính chỉ có thể xảy ra nếu chúng "
+"thuộc cùng một nhóm. Việc chuyển đổi sẽ dựa trên tỉ lệ."
+
+#. module: to_uom_mail_thread
+#: model:ir.model.fields,field_description:to_uom_mail_thread.field_uom_uom__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_uom_mail_thread
+#: model:ir.model.fields,field_description:to_uom_mail_thread.field_uom_uom__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: to_uom_mail_thread
+#: model:ir.model.fields,field_description:to_uom_mail_thread.field_uom_uom__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: to_uom_mail_thread
+#: model:ir.model.fields,field_description:to_uom_mail_thread.field_uom_uom__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: to_uom_mail_thread
+#: model:ir.model.fields,help:to_uom_mail_thread.field_uom_uom__factor_inv
+msgid ""
+"How many times this Unit of Measure is bigger than the reference Unit of "
+"Measure in this category: 1 * (this unit) = ratio * (reference unit)"
+msgstr ""
+"Số Đơn vị tính này lớn hơn Đơn vị tính trong đơn vị này bao nhiêu lần: 1 * "
+"(đơn vị này) = tỷ lệ * (đơn vị tham chiếu)"
+
+#. module: to_uom_mail_thread
+#: model:ir.model.fields,help:to_uom_mail_thread.field_uom_uom__factor
+msgid ""
+"How much bigger or smaller this unit is compared to the reference Unit of "
+"Measure for this category: 1 * (reference unit) = ratio * (this unit)"
+msgstr ""
+"Đơn vị này lớn hơn hoặc nhỏ hơn bao nhiêu so với Đơn vị tính tham chiếu cho "
+"danh mục này: 1 * (đơn vị tham chiếu) = tỷ lệ * (đơn vị này)"
+
+#. module: to_uom_mail_thread
+#: model:ir.model.fields,field_description:to_uom_mail_thread.field_uom_uom__id
+msgid "ID"
+msgstr ""
+
+#. module: to_uom_mail_thread
+#: model:ir.model.fields,help:to_uom_mail_thread.field_uom_uom__message_needaction
+#: model:ir.model.fields,help:to_uom_mail_thread.field_uom_uom__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: to_uom_mail_thread
+#: model:ir.model.fields,help:to_uom_mail_thread.field_uom_uom__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: to_uom_mail_thread
+#: model:ir.model.fields,field_description:to_uom_mail_thread.field_uom_uom__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: to_uom_mail_thread
+#: model:ir.model.fields,field_description:to_uom_mail_thread.field_uom_uom____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_uom_mail_thread
+#: model:ir.model.fields,field_description:to_uom_mail_thread.field_uom_uom__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: to_uom_mail_thread
+#: model:ir.model.fields,field_description:to_uom_mail_thread.field_uom_uom__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: to_uom_mail_thread
+#: model:ir.model.fields,field_description:to_uom_mail_thread.field_uom_uom__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: to_uom_mail_thread
+#: model:ir.model.fields,field_description:to_uom_mail_thread.field_uom_uom__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: to_uom_mail_thread
+#: model:ir.model.fields,field_description:to_uom_mail_thread.field_uom_uom__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: to_uom_mail_thread
+#: model:ir.model.fields,help:to_uom_mail_thread.field_uom_uom__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: to_uom_mail_thread
+#: model:ir.model.fields,help:to_uom_mail_thread.field_uom_uom__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: to_uom_mail_thread
+#: model:ir.model.fields,help:to_uom_mail_thread.field_uom_uom__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: to_uom_mail_thread
+#: model:ir.model,name:to_uom_mail_thread.model_uom_uom
+msgid "Product Unit of Measure"
+msgstr "Đơn vị tính của sản phẩm"
+
+#. module: to_uom_mail_thread
+#: model:ir.model.fields,field_description:to_uom_mail_thread.field_uom_uom__factor
+#: model_terms:ir.ui.view,arch_db:to_uom_mail_thread.product_uom_form_view
+msgid "Ratio"
+msgstr "Tỷ lệ"
+
+#. module: to_uom_mail_thread
+#: model:ir.model.fields,field_description:to_uom_mail_thread.field_uom_uom__rounding
+msgid "Rounding Precision"
+msgstr "Độ chính xác Làm tròn"
+
+#. module: to_uom_mail_thread
+#: model:ir.model.fields,help:to_uom_mail_thread.field_uom_uom__rounding
+msgid ""
+"The computed quantity will be a multiple of this value. Use 1.0 for a Unit "
+"of Measure that cannot be further split, such as a piece."
+msgstr ""
+"Số lượng được tính toán sẽ là bội số (số chia hết) của giá trị này. Sử dụng "
+"1.0 cho một Đơn vị tính mà không thể được chia nhỏ nữa, ví du như đơn vị là "
+"một miếng (một mảnh)."
+
+#. module: to_uom_mail_thread
+#: model:ir.model.fields,field_description:to_uom_mail_thread.field_uom_uom__uom_type
+msgid "Type"
+msgstr "Kiểu"
+
+#. module: to_uom_mail_thread
+#: model:ir.model.fields,field_description:to_uom_mail_thread.field_uom_uom__name
+msgid "Unit of Measure"
+msgstr "Đơn vị tính"
+
+#. module: to_uom_mail_thread
+#: model_terms:ir.ui.view,arch_db:to_uom_mail_thread.product_uom_form_view
+msgid "Units of Measure"
+msgstr "Đơn vị tính"
+
+#. module: to_uom_mail_thread
+#: model:ir.model.fields,field_description:to_uom_mail_thread.field_uom_uom__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: to_uom_mail_thread
+#: model:ir.model.fields,field_description:to_uom_mail_thread.field_uom_uom__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: to_uom_mail_thread
+#: model_terms:ir.ui.view,arch_db:to_uom_mail_thread.product_uom_form_view
+msgid "e.g: 1 * (reference unit) = ratio * (this unit)"
+msgstr "ví dụ: 1 * (đơn vị gốc) = tỷ lệ * (đơn vị này)"
+
+#. module: to_uom_mail_thread
+#: model_terms:ir.ui.view,arch_db:to_uom_mail_thread.product_uom_form_view
+msgid "e.g: 1 * (this unit) = ratio * (reference unit)"
+msgstr "ví dụ: 1 * (đơn vị này) = tỷ lệ * (đơn vị gốc)"

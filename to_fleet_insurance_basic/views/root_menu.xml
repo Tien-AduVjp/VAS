@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<!-- Root Menu -->
+
+		<menuitem id="fleet_insurance_menu_root" parent="fleet.menu_root"
+			name="Fleet Insurance" sequence="9" groups="fleet.fleet_group_user"/>
+
+	</data>
+</odoo>

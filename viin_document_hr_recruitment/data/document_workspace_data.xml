@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+
+    <record id="document_workspace_hr_recruitment" model="document.workspace">
+        <field name="name">Recruitment</field>
+        <field name="tag_ids" eval="[
+            (4, ref('viin_document_hr.document_tag_hr_employee_document')),
+            (4, ref('viin_document_hr.document_tag_hr_certification')),
+            (4, ref('viin_document_hr.document_tag_hr_hr')),
+            (4, ref('document_tag_hr_recruitment_cv')),
+            (4, ref('document_tag_hr_recruitment_application_letter')),
+            (4, ref('document_tag_hr_recruitment_recruiting')),
+            (4, ref('document_tag_hr_recruitment_done')),
+            (4, ref('document_tag_hr_recruitment_cancel')),
+            (4, ref('viin_document.document_tag_to_review')),
+            (4, ref('viin_document.document_tag_approve')),
+            (4, ref('viin_document.document_tag_deprecate'))]"/>
+        <field name="read_team_ids" eval="[(4, ref('document_team_hr_recruitment'))]"/>
+        <field name="write_group_ids" eval="[(4, ref('hr.group_hr_manager'))]"/>
+        <field name="read_group_ids" eval="[(4, ref('hr.group_hr_user'))]"/>
+        <field name="action_ids" eval="[
+            (4, ref('document_action_hr_recruitment_done')),
+            (4, ref('document_action_hr_recruitment_cancel')),
+            (4, ref('viin_document.document_action_ask_to_review')),
+            (4, ref('viin_document.document_action_approve')),
+            (4, ref('viin_document.document_action_send_to_legal')),
+            (4, ref('viin_document.document_action_deprecated'))]"/>
+    </record>
+
+</odoo>

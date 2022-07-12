@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<!-- Contract View -->
+	<record id="hr_contract_form_inherit" model="ir.ui.view">
+		<field name="name">hr.contract.view.form.inherit</field>
+		<field name="model">hr.contract</field>
+		<field name="inherit_id" ref="to_hr_payroll.hr_contract_form_inherit" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='advantage_ids']/tree/field[@name='amount']" position="after">
+				<field name="overtime_base_factor" />
+			</xpath>
+		</field>
+	</record>
+</odoo>

@@ -1,0 +1,24 @@
+<odoo>
+	<data>
+
+		<record model="ir.ui.view" id="hr_leave_view_form">
+			<field name="name">hr.leave.view.form</field>
+			<field name="model">hr.leave</field>
+			<field name="inherit_id" ref="hr_holidays.hr_leave_view_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='user_id']" position="after">
+					<field name="timesheet_generate" invisible="1" />
+					<field name="project_required" invisible="1" />
+				</xpath>
+				<xpath expr="//field[@name='name']" position="after">
+					<field name="timesheet_project_id"
+						attrs="{'readonly': [('state', 'not in', ('draft', 'confirm'))], 'required': [('project_required','=',True)]}"
+						widget="many2one" />
+					<field name="timesheet_task_id"
+						attrs="{'readonly': [('state', 'not in', ('draft', 'confirm'))]}"
+						widget="many2one" />
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

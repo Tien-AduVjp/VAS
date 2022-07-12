@@ -1,0 +1,82 @@
+.pos .pads .button.set-rewards {
+    margin-left: 16px;
+    border: 1px solid;
+    border-color: #bfbfbf;
+    width: 94%;
+    margin-top: 6px
+}
+
+.pos .pads .button-rewards {
+    position: relative;
+    display: block;
+    height: 54px;
+    width: 94%;
+    margin-left: 3%;
+    font-weight: bold;
+    vertical-align: middle;
+    color: $brand-primary-darker;
+    font-size: 14px;
+    border-radius: 0;
+    border: none;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    border-color: #bfbfbf;
+    transition: all 150ms linear;
+}
+.pos .pads .button-rewards:hover {
+    background: #efefef;
+}
+.pos .pads .button-rewards:active {
+    background: black;
+    border-color: black;
+    color: white;
+}
+.pos .pads .button-rewards.selected-mode {
+    color: white;
+    background: $brand-primary-darker;
+    border-color: transparent;
+}
+.pos .pads .button-rewards.selected-mode:hover {
+    background: $brand-primary-darker;
+    color: white;
+    border-color: transparent;
+}
+.pos .pads .button-rewards.disable-mode {
+    color: white;
+    background: #d1d1d1;
+    border-color: transparent;
+}
+.pos .pads .button-rewards.disable-mode:hover {
+    background: #d1d1d1;
+    color: white;
+    border-color: transparent;
+}
+.pos .order .loyalty-points{
+    margin-left: 20px;
+    float: right;
+    padding: 10px;
+    max-width: 216px;
+    text-align: left;
+    color: #6EC89B;
+    background: rgba(110, 200, 155, 0.17);
+    border-radius: 3px;
+}
+.pos .order .loyalty-points.negative{
+    color: #C86E6E;
+    background: rgba(200, 110, 110, 0.17);
+}
+.pos .order .loyalty-points-total {
+    border-top: solid 2px;
+    text-align: center;
+    padding-top: 4px;
+    margin-top: 4px;
+}
+
+.loyalty .subtitle{
+    text-align: center;
+}
+
+.loyalty .title {
+    font-size: 20px;
+    text-align: center;
+}

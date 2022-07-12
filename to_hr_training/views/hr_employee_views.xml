@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="view_employee_form" model="ir.ui.view">
+	    <field name="name">hr.employee.view.form</field>
+	    <field name="model">hr.employee</field>
+	    <field name="inherit_id" ref="hr.view_employee_form"/>
+	    <field name="arch" type="xml">
+	        <xpath expr="//sheet/div[@name='button_box']" position="inside">
+                <button name="action_view_slide_channel_current_rank" class="oe_stat_button"
+                    icon="fa-book" type="object">
+                    <field name="slide_channel_for_current_rank_count" widget="statinfo"
+                        string="Current Rank Courses" />
+                </button>
+                <button name="action_view_slide_channel_next_rank" class="oe_stat_button"
+                    icon="fa-book" type="object">
+                    <field name="slide_channel_for_next_targeted_rank_count" widget="statinfo"
+                        string="Next Rank Courses" />
+                </button>
+	    	</xpath>
+	    </field>
+	</record>
+
+    <record id="hr_employee_public_view_form" model="ir.ui.view">
+	    <field name="name">hr.employee.public.form</field>
+	    <field name="model">hr.employee.public</field>
+	    <field name="inherit_id" ref="hr.hr_employee_public_view_form" />
+	    <field name="arch" type="xml">
+            <xpath expr="//sheet/div[@name='button_box']" position="inside">
+                <button name="action_view_slide_channel_current_rank" class="oe_stat_button"
+                    icon="fa-book" type="object">
+                    <field name="slide_channel_for_current_rank_count" widget="statinfo"
+                        string="Current Rank Courses" />
+                </button>
+
+                <button name="action_view_slide_channel_next_rank" class="oe_stat_button"
+                    icon="fa-book" type="object">
+                    <field name="slide_channel_for_next_targeted_rank_count" widget="statinfo"
+                        string="Next Rank Courses" />
+                </button>
+            </xpath>
+	    </field>
+    </record>
+</odoo>

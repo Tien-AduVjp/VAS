@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_administrative_region_everyone,administrative.region.everyone,model_administrative_region,,1,0,0,0
+access_administrative_region_group_partner_manager,administrative.region.partner_manager,model_administrative_region,base.group_partner_manager,1,1,1,1
+access_administrative_region_group_administrative_region_manager,administrative.region.manager,model_administrative_region,viin_administrative_region.group_administrative_region_manager,1,1,1,1

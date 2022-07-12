@@ -1,0 +1,30 @@
+<odoo>
+    <record id="res_config_settings_sale_price_lock" model="ir.ui.view">
+        <field name="name">res.config.settings.view.sale.price.lock</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="10"/>
+        <field name="inherit_id" ref="base.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='sale_config_online_confirmation_sign']/.." position="inside">
+                <div class="col-12 col-lg-6 o_setting_box" id="sale_order_lock_prices">
+                    <div class="o_setting_left_pane">
+                            <field name="lock_sales_prices" />
+                    </div>
+                    <div class="o_setting_right_pane">
+                        <label for="lock_sales_prices" string="Lock Sales Prices"/>
+                        <div class="text-muted">
+                            Allows to lock order/quote sales prices to prevent certain people from modifying them.
+                        </div>
+                        <div class="row mt16" attrs="{'invisible': [('lock_sales_prices', '=', False)]}">
+                            <label for="sales_price_modifying_group_id" string="Sale Price Modifying Group" class="col-lg-4 o_light_label"/>
+                            <field name="sales_price_modifying_group_id" class="oe_inline"/>
+                        </div>
+                        <div class="text-muted" attrs="{'invisible': [('lock_sales_prices', '=', False)]}">
+                            Only users who are either in this group or in the groups that inherit this group will be able to modify sales price.
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

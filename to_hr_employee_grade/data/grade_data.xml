@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+	<data noupdate="1">
+		<record id="expert_grade" model="hr.employee.grade">
+			<field name="name">Expert</field>
+			<field name="sequence" eval="100" />
+		</record>
+
+		<record id="senior_grade" model="hr.employee.grade">
+			<field name="name">Senior</field>
+			<field name="parent_id" ref="expert_grade" />
+			<field name="sequence" eval="99" />
+		</record>
+
+		<record id="junior_grade" model="hr.employee.grade">
+			<field name="name">Junior</field>
+			<field name="parent_id" ref="senior_grade" />
+			<field name="sequence" eval="98" />
+		</record>
+
+		<record id="trainee_grade" model="hr.employee.grade">
+			<field name="name">Fresher</field>
+			<field name="parent_id" ref="junior_grade" />
+			<field name="sequence" eval="97" />
+		</record>
+
+		<record id="intern_grade" model="hr.employee.grade">
+			<field name="name">Intern</field>
+			<field name="parent_id" ref="trainee_grade" />
+			<field name="sequence" eval="96" />
+		</record>
+
+	</data>
+</odoo>

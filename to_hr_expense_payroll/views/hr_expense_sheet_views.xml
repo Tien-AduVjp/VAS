@@ -1,0 +1,33 @@
+<odoo>
+	<data>
+		<record id="view_hr_expense_sheet_form" model="ir.ui.view">
+			<field name="name">hr.expense.sheet.form</field>
+			<field name="model">hr.expense.sheet</field>
+			<field name="inherit_id"
+				ref="hr_expense.view_hr_expense_sheet_form" />
+			<field name="arch" type="xml">
+				<xpath
+					expr="//field[@name='expense_line_ids']/tree/field[@name='total_amount']"
+					position="after">
+					<field name="reimbursed_in_payslip" />
+				</xpath>
+
+				<xpath
+					expr="//field[@name='account_move_id']"
+					position="after">
+					<field name="is_paid" invisible="1"/>
+					<field name="has_reimbursed_by_payslip_expense" invisible="1" />
+					<div class="alert alert-info border-0 rounded-0" role="alert" groups="account.group_account_user" attrs="{'invisible': [('has_reimbursed_by_payslip_expense', '=', False)]}">
+                		All expenses in this sheet will be reimbursed in payslips. Hence, their corresponding accounting entries will be done in payslips instead.
+                	</div>
+				</xpath>
+				<button name="action_get_attachment_view" position="after">
+	    			<button name="action_view_payslips" class="oe_stat_button" icon="fa-money" attrs="{'invisible': [('payslips_count', '=', 0)]}"
+					 	type="object" groups="to_hr_payroll.group_hr_payroll_user">
+		                <field name="payslips_count" widget="statinfo" string="Payslips"/>
+		            </button>
+	    		</button>
+			</field>
+		</record>
+	</data>
+</odoo>

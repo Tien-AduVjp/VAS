@@ -1,0 +1,19 @@
+<odoo>
+	<menuitem id="product_milestones_menu"
+		parent="maintenance.menu_maintenance_configuration"
+		name="Product Milestones"
+		action="to_product_milestone.product_milestone_view_list"
+		sequence="100" />
+
+	<menuitem id="maintenance_action_menu"
+		parent="maintenance.menu_maintenance_configuration"
+		name="Maintenance Actions"
+		action="to_product_maintenance_schedule.maintenance_action_list_view"
+		sequence="101" />
+
+	<menuitem id="maintenance_schedule_menu"
+		parent="maintenance.menu_maintenance_configuration"
+		name="Maintenance Schedule"
+		action="to_product_maintenance_schedule.maintenance_schedule_list_view"
+		sequence="102" />
+</odoo>

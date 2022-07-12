@@ -1,0 +1,7 @@
+<odoo>
+    <template id="assets_backend" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/viin_mobile/static/description/src/components/chat_window_manager/chat_window_manager.js" />
+        </xpath>
+    </template>
+</odoo>

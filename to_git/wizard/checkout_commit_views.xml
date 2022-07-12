@@ -1,0 +1,42 @@
+<odoo>
+	<record id="checkout_commit_action_select"
+		model="ir.actions.server">
+		<field name="name">Select a commit</field>
+		<field name="model_id" ref="model_git_branch_checkout_commit" />
+		<field name="state">code</field>
+		<field name="code">model.select()</field>
+	</record>
+
+	<record id="checkout_commit_view_form" model="ir.ui.view">
+		<field name="name">checkout_commit.form</field>
+		<field name="model">git.branch.checkout_commit</field>
+		<field name="arch" type="xml">
+			<form string="Checkout a Commit">
+				<label for="commit_hash">Commit Hash</label>
+				<div style="display: flex; align-items: start">
+					<field name="commit_hash" class="form-control"
+						style="margin-right: 6px" />
+					<button string="Checkout" class="oe_highlight"
+						style="height: 32px" type="object" name="select"
+						context="{'branch_id': active_id, 'from_list': False}" />
+				</div>
+				<label for="recent_commits">Recent Commits</label>
+				<field name="recent_commits" readonly="1">
+					<tree name="recent_commits">
+						<field name="hash" />
+						<field name="name" />
+						<button string="Checkout" type="action"
+							name="%(checkout_commit_action_select)d"
+							context="{'branch_id': active_id, 'from_list': True}" />
+					</tree>
+				</field>
+				<field name="detached_head" invisible="1" />
+				<footer>
+					<button string="Reset to default" type="object" name="reset"
+						context="{'branch_id': active_id}"
+						attrs="{'invisible': [('detached_head','=',False)]}" />
+				</footer>
+			</form>
+		</field>
+	</record>
+</odoo>

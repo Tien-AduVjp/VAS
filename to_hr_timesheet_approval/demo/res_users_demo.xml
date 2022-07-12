@@ -1,0 +1,45 @@
+<odoo>
+    <record id="to_approvals.employee1_user_demo" model="res.users">
+        <field name="groups_id" eval="[(4, ref('hr_timesheet.group_hr_timesheet_user'))]" />
+    </record>
+
+    <record id="to_approvals.employee2_user_demo" model="res.users">
+        <field name="groups_id" eval="[(4, ref('hr_timesheet.group_hr_timesheet_user'))]" />
+    </record>
+
+    <record id="to_approvals.employee3_user_demo" model="res.users">
+        <field name="groups_id" eval="[(4, ref('hr_timesheet.group_hr_timesheet_user'))]" />
+    </record>
+
+    <record id="to_approvals.team_leader_user_01_demo" model="res.users">
+        <field name="groups_id" eval="[(4, ref('hr_timesheet.group_hr_timesheet_approver'))]" />
+    </record>
+
+    <record id="to_approvals.team_leader_user_02_demo" model="res.users">
+        <field name="groups_id" eval="[(4, ref('hr_timesheet.group_hr_timesheet_approver'))]" />
+    </record>
+
+    <record id="to_approvals.department_manager_user_01_demo" model="res.users">
+        <field name="groups_id" eval="[(4, ref('hr_timesheet.group_hr_timesheet_user'))]" />
+    </record>
+
+    <record id="to_approvals.parent_department_manager_user_01_demo" model="res.users">
+        <field name="groups_id" eval="[(4, ref('hr_timesheet.group_hr_timesheet_user'))]" />
+    </record>
+
+    <record id="to_approvals.approval_officer_user_demo" model="res.users">
+        <field name="groups_id" eval="[(4, ref('hr_timesheet.group_hr_timesheet_approver'))]" />
+    </record>
+
+    <record id="to_approvals.approval_officer_user_01_demo" model="res.users">
+        <field name="groups_id" eval="[(4, ref('hr_timesheet.group_hr_timesheet_approver'))]" />
+    </record>
+
+    <record id="to_approvals.approval_officer_user_02_demo" model="res.users">
+        <field name="groups_id" eval="[(4, ref('hr_timesheet.group_hr_timesheet_approver'))]" />
+    </record>
+
+    <record id="to_approvals.approval_officer_user_03_demo" model="res.users">
+        <field name="groups_id" eval="[(4, ref('hr_timesheet.group_hr_timesheet_approver'))]" />
+    </record>
+</odoo>

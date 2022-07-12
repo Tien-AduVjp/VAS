@@ -1,0 +1,186 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* payment_momo
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-12 11:05+0000\n"
+"PO-Revision-Date: 2021-11-12 11:05+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: payment_momo
+#: model:ir.model.fields,field_description:payment_momo.field_payment_acquirer__display_name
+#: model:ir.model.fields,field_description:payment_momo.field_payment_transaction__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: payment_momo
+#: model:ir.model.fields,field_description:payment_momo.field_payment_acquirer__fees_dom_fixed
+msgid "Fixed domestic fees"
+msgstr ""
+
+#. module: payment_momo
+#: model:ir.model.fields,field_description:payment_momo.field_payment_acquirer__fees_int_fixed
+msgid "Fixed international fees"
+msgstr ""
+
+#. module: payment_momo
+#: model:ir.model.fields,help:payment_momo.field_payment_acquirer__momo_access_key
+msgid "Grant access to the MoMo system"
+msgstr ""
+
+#. module: payment_momo
+#: model_terms:ir.ui.view,arch_db:payment_momo.acquirer_form
+msgid "How to configure your MoMo account?"
+msgstr ""
+
+#. module: payment_momo
+#: model:ir.model.fields,field_description:payment_momo.field_payment_acquirer__id
+#: model:ir.model.fields,field_description:payment_momo.field_payment_transaction__id
+msgid "ID"
+msgstr ""
+
+#. module: payment_momo
+#: model:ir.model.fields,help:payment_momo.field_payment_acquirer__momo_partner_code
+msgid "Information to identify a business account"
+msgstr ""
+
+#. module: payment_momo
+#: model:ir.model.fields,field_description:payment_momo.field_payment_acquirer____last_update
+#: model:ir.model.fields,field_description:payment_momo.field_payment_transaction____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: payment_momo
+#: model:ir.model.fields.selection,name:payment_momo.selection__payment_acquirer__provider__momo
+#: model:payment.acquirer,name:payment_momo.payment_acquirer_momo
+msgid "MoMo"
+msgstr ""
+
+#. module: payment_momo
+#: model:ir.model.fields,field_description:payment_momo.field_payment_acquirer__momo_access_key
+msgid "MoMo Access Key"
+msgstr ""
+
+#. module: payment_momo
+#: model:ir.model.fields,field_description:payment_momo.field_payment_acquirer__momo_partner_code
+msgid "MoMo Partner Code"
+msgstr ""
+
+#. module: payment_momo
+#: model:ir.model.fields,field_description:payment_momo.field_payment_transaction__momo_payment_type
+msgid "MoMo Payment type"
+msgstr ""
+
+#. module: payment_momo
+#: model:ir.model.fields,field_description:payment_momo.field_payment_transaction__momo_request_id
+msgid "MoMo Request ID"
+msgstr ""
+
+#. module: payment_momo
+#: model:ir.model.fields,field_description:payment_momo.field_payment_acquirer__momo_secret_key
+msgid "MoMo Secret Key"
+msgstr ""
+
+#. module: payment_momo
+#: code:addons/payment_momo/controllers/main.py:0
+#, python-format
+msgid "MoMo: Could not find payment transaction matching reference #%s"
+msgstr ""
+
+#. module: payment_momo
+#: code:addons/payment_momo/controllers/main.py:0
+#, python-format
+msgid "MoMo: Error when payment validated. Please contact your administrator."
+msgstr ""
+
+#. module: payment_momo
+#: code:addons/payment_momo/models/payment_transaction.py:0
+#, python-format
+msgid ""
+"MoMo: Received unrecognized status for MoMo payment %s: %s, set as error"
+msgstr ""
+
+#. module: payment_momo
+#: code:addons/payment_momo/models/payment_transaction.py:0
+#, python-format
+msgid "MoMo: Received unrecognized status for payment #%s: %s, set as cancel"
+msgstr ""
+
+#. module: payment_momo
+#: code:addons/payment_momo/controllers/main.py:0
+#, python-format
+msgid "MoMo: Unrecognized error. Please contact your administrator."
+msgstr ""
+
+#. module: payment_momo
+#: code:addons/payment_momo/controllers/main.py:0
+#, python-format
+msgid "MoMo: Validation error occured. Please contact your administrator."
+msgstr ""
+
+#. module: payment_momo
+#: code:addons/payment_momo/models/payment_transaction.py:0
+#, python-format
+msgid ""
+"MoMo: received data with missing reference (%s) or request_id (%s) or "
+"trans_id (%s)"
+msgstr ""
+
+#. module: payment_momo
+#: model:ir.model,name:payment_momo.model_payment_acquirer
+msgid "Payment Acquirer"
+msgstr ""
+
+#. module: payment_momo
+#: model:ir.model,name:payment_momo.model_payment_transaction
+msgid "Payment Transaction"
+msgstr ""
+
+#. module: payment_momo
+#: model:ir.model.fields,field_description:payment_momo.field_payment_acquirer__provider
+msgid "Provider"
+msgstr ""
+
+#. module: payment_momo
+#: model:ir.model.fields,help:payment_momo.field_payment_acquirer__momo_secret_key
+msgid "Used to create digital signatures"
+msgstr ""
+
+#. module: payment_momo
+#: model:ir.model.fields,field_description:payment_momo.field_payment_acquirer__fees_dom_var
+msgid "Variable domestic fees (in percents)"
+msgstr ""
+
+#. module: payment_momo
+#: model:ir.model.fields,field_description:payment_momo.field_payment_acquirer__fees_int_var
+msgid "Variable international fees (in percents)"
+msgstr ""
+
+#. module: payment_momo
+#: model_terms:payment.acquirer,auth_msg:payment_momo.payment_acquirer_momo
+msgid "Your payment has been authorized."
+msgstr ""
+
+#. module: payment_momo
+#: model_terms:payment.acquirer,cancel_msg:payment_momo.payment_acquirer_momo
+msgid "Your payment has been cancelled."
+msgstr ""
+
+#. module: payment_momo
+#: model_terms:payment.acquirer,pending_msg:payment_momo.payment_acquirer_momo
+msgid ""
+"Your payment has been successfully processed but is waiting for approval."
+msgstr ""
+
+#. module: payment_momo
+#: model_terms:payment.acquirer,done_msg:payment_momo.payment_acquirer_momo
+msgid "Your payment has been successfully processed. Thank you!"
+msgstr ""

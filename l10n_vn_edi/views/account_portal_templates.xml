@@ -1,0 +1,17 @@
+<odoo>
+    <template id="portal_invoice_page" name="Portal Invoice : E-invoice portal link" inherit_id="account.portal_invoice_page" >
+    	<xpath expr="//t[@t-set='entries']/ul/li/div/div[./a[hasclass('o_portal_invoice_print')]]" position="after">
+    		<div t-if="invoice.einvoice_state != 'not_issued'">
+	    		<div class="btn-group flex-grow-1 ml-1 mb-1">
+					<a
+						class="btn btn-secondary btn-block o_print_btn o_portal_invoice_xml"
+						t-att-href="invoice.get_portal_url(report_type='xml', download=True)"
+						id="print_invoice_xml" title="XML" target="_blank">
+						<i class="fa fa-file-code-o" />
+						XML
+					</a>
+				</div>
+			</div>
+    	</xpath>
+    </template>
+</odoo>

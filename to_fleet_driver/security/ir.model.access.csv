@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_fleet_driver_license_base_group_user,fleet.driver.license.fleet_user,model_fleet_driver_license,base.group_user,1,0,0,0
+access_driver_license_class_base_group_user,driver.license.class.fleet_user,model_driver_license_class,base.group_user,1,0,0,0
+access_fleet_driver_license_fleet_group_manager,fleet.driver.license.fleet_manager,model_fleet_driver_license,fleet.fleet_group_manager,1,1,1,1
+access_driver_license_class_fleet_group_manager,driver.license.class.fleet_manager,model_driver_license_class,fleet.fleet_group_manager,1,1,1,1

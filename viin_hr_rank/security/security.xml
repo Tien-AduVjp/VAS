@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="hr_rank_comp_rule" model="ir.rule">
+			<field name="name">HR Rank - multi-company rule</field>
+			<field name="model_id" ref="model_hr_rank" />
+			<field eval="True" name="global" />
+			<field name="domain_force">['|',('company_id','=',False),('company_id','in',company_ids)]</field>
+		</record>
+		<record id="hr_job_rank_line_comp_rule" model="ir.rule">
+			<field name="name">HR Rank - multi-company rule</field>
+			<field name="model_id" ref="model_hr_job_rank_line" />
+			<field eval="True" name="global" />
+			<field name="domain_force">['|',('rank_id.company_id','=',False),('rank_id.company_id','in',company_ids)]</field>
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,53 @@
+<odoo>
+
+	<record id="res_partner_employee_size_view_tree" model="ir.ui.view">
+		<field name="name">res.partner.employee.size.tree</field>
+		<field name="model">res.partner.employee.size</field>
+		<field name="arch" type="xml">
+			<tree string="Employee Size List">
+				<field name="name" />
+			</tree>
+		</field>
+	</record>
+
+	<record id="res_partner_employee_size_view_form" model="ir.ui.view">
+		<field name="name">res.partner.employee.size.form</field>
+		<field name="model">res.partner.employee.size</field>
+		<field name="arch" type="xml">
+			<form string="Employee Size Form">
+				<sheet>
+					<group>
+						<group>
+						    <field name="name" />
+							<field name="description" />
+						</group>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<record id="res_partner_employee_size_view_search" model="ir.ui.view">
+		<field name="name">res.partner.employee.size.search</field>
+		<field name="model">res.partner.employee.size</field>
+		<field name="arch" type="xml">
+			<search string="Search Employee Size">
+				<field name="name" />
+			</search>
+		</field>
+	</record>
+
+	<record id="res_partner_employee_size_action" model="ir.actions.act_window">
+		<field name="name">Employee Size</field>
+		<field name="res_model">res.partner.employee.size</field>
+		<field name="view_mode">tree,form</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">Create a new Employee Size</p>
+		</field>
+	</record>
+
+	<menuitem id="res_partner_employee_size_menu"
+		name="Employee Size" action="res_partner_employee_size_action"
+		parent="contacts.res_partner_menu_config" sequence="18" />
+
+</odoo>

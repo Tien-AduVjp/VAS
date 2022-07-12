@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_wysiwyg" inherit_id="website.assets_wysiwyg">
+        <xpath expr="script[last()]" position="after">
+            <script type="text/javascript" src="/viin_website_blog_access_right/static/src/js/wysiwyg_multizone.js"/>
+        </xpath>
+    </template>
+</odoo>

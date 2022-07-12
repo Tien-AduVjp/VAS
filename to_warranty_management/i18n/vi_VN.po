@@ -1,0 +1,703 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_warranty_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-16 10:06+0000\n"
+"PO-Revision-Date: 2022-01-16 10:06+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_warranty_management
+#: model_terms:ir.ui.view,arch_db:to_warranty_management.action_confirm_wizard_form_view
+msgid ""
+"<br/>\n"
+"\t\t\t\t\t\t\t\tWarranty period of Product / Equipment is out of date or Warranty Status is not satisfactory.<br/><br/>\n"
+"\t\t\t\t\t\t\t\tClick Confirm if you want to Confirm Warranty."
+msgstr ""
+"<br/>\n"
+"\t\t\t\t\t\t\t\tSản phẩm / Thiết bị đã hết thời hạn bảo hành hoặc Tình trạng bảo hành không đạt yêu cầu.<br/><br/>\n"
+"\t\t\t\t\t\t\t\tNhấp vào Xác nhận nếu bạn muốn Xác nhận Bảo hành."
+
+#. module: to_warranty_management
+#: model_terms:ir.ui.view,arch_db:to_warranty_management.action_confirm_wizard_form_view
+msgid "<u>Warning:</u>"
+msgstr "Chú ý"
+
+#. module: to_warranty_management
+#: model:ir.model,name:to_warranty_management.model_action_confirm_wizard
+#: model_terms:ir.ui.view,arch_db:to_warranty_management.action_confirm_wizard_form_view
+msgid "Action Confirm Wizard"
+msgstr "Wizard xác nhận hành động"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__message_needaction
+msgid "Action Needed"
+msgstr "Cần có Hành động"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__activity_ids
+msgid "Activities"
+msgstr "Các hoạt động"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Sự trang trí ngoại lệ hoạt động"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__activity_state
+msgid "Activity State"
+msgstr "Trạng thái Hoạt động"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim_policy__apply_to
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_policy__apply_to
+msgid "Apply to"
+msgstr "Áp dụng cho"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__message_attachment_count
+msgid "Attachment Count"
+msgstr "Số đính kèm"
+
+#. module: to_warranty_management
+#: model_terms:ir.ui.view,arch_db:to_warranty_management.action_confirm_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:to_warranty_management.warranty_claim_form_view
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: to_warranty_management
+#: model:ir.model.fields.selection,name:to_warranty_management.selection__warranty_claim__state__cancelled
+msgid "Cancelled"
+msgstr "Đã hủy"
+
+#. module: to_warranty_management
+#: model_terms:ir.ui.view,arch_db:to_warranty_management.warranty_claim_tree_view
+msgid "Claim Tree"
+msgstr "Cây yêu cầu"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: to_warranty_management
+#: model_terms:ir.ui.view,arch_db:to_warranty_management.action_confirm_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:to_warranty_management.warranty_claim_form_view
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: to_warranty_management
+#: model:ir.model.fields.selection,name:to_warranty_management.selection__warranty_claim__state__confirmed
+#: model_terms:ir.ui.view,arch_db:to_warranty_management.warranty_claim_search_view
+msgid "Confirmed"
+msgstr "Đã được xác nhận"
+
+#. module: to_warranty_management
+#: model:ir.actions.act_window,name:to_warranty_management.action_warranty_claim_confirmed
+#: model:ir.ui.menu,name:to_warranty_management.warranty_claim_confirmed_menu
+msgid "Confirmed Claims"
+msgstr "Yêu cầu đã xác nhận"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_action_confirm_wizard__create_uid
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__create_uid
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim_policy__create_uid
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_policy__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_action_confirm_wizard__create_date
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__create_date
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim_policy__create_date
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_policy__create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim_policy__current_measurement
+msgid "Current Measurement"
+msgstr "Chỉ số hiện hành"
+
+#. module: to_warranty_management
+#: model:ir.model.fields.selection,name:to_warranty_management.selection__warranty_claim__type__customer
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__date_claim
+msgid "Date Claim"
+msgstr "Ngày tạo Yêu cầu Bảo hành"
+
+#. module: to_warranty_management
+#: model_terms:ir.ui.view,arch_db:to_warranty_management.warranty_claim_form_view
+msgid "Disclaim"
+msgstr "Từ chối"
+
+#. module: to_warranty_management
+#: model:ir.model.fields.selection,name:to_warranty_management.selection__warranty_claim__state__disclaimed
+#: model:ir.ui.menu,name:to_warranty_management.warranty_claim_disclaimed_menu
+#: model_terms:ir.ui.view,arch_db:to_warranty_management.warranty_claim_search_view
+msgid "Disclaimed"
+msgstr "Từ chối"
+
+#. module: to_warranty_management
+#: model:ir.actions.act_window,name:to_warranty_management.action_warranty_claim_disclaimed
+msgid "Disclaimed Claims"
+msgstr "Từ chối yêu cầu"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_action_confirm_wizard__display_name
+#: model:ir.model.fields,field_description:to_warranty_management.field_product_template__display_name
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__display_name
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim_policy__display_name
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_policy__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_warranty_management
+#: model:ir.model.fields.selection,name:to_warranty_management.selection__warranty_claim__state__done
+#: model_terms:ir.ui.view,arch_db:to_warranty_management.warranty_claim_search_view
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: to_warranty_management
+#: model:ir.actions.act_window,name:to_warranty_management.action_warranty_claim_done
+#: model:ir.ui.menu,name:to_warranty_management.warranty_claim_done_menu
+msgid "Done Claims"
+msgstr "Yêu cầu đã hoàn thành"
+
+#. module: to_warranty_management
+#: model:ir.model.fields.selection,name:to_warranty_management.selection__warranty_claim__state__draft
+#: model:ir.ui.menu,name:to_warranty_management.warranty_claim_draft_menu
+#: model_terms:ir.ui.view,arch_db:to_warranty_management.warranty_claim_search_view
+msgid "Draft"
+msgstr "Dự thảo"
+
+#. module: to_warranty_management
+#: model:ir.actions.act_window,name:to_warranty_management.action_warranty_claim_draft
+msgid "Draft Claims"
+msgstr "Yêu cầu Dự thảo"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__message_follower_ids
+msgid "Followers"
+msgstr "Theo dõi"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Người theo dõi (Các kênh)"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Người theo dõi (Các đối tác)"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,help:to_warranty_management.field_warranty_claim__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: to_warranty_management
+#: model_terms:ir.ui.view,arch_db:to_warranty_management.warranty_claim_search_view
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: to_warranty_management
+#: model:ir.module.category,description:to_warranty_management.module_category_warranty_management
+msgid "Helps you manage your product warranty policy and warranty claim."
+msgstr "Giúp bạn quản lý chính sách bảo hành sản phẩm và yêu cầu bảo hành."
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_action_confirm_wizard__id
+#: model:ir.model.fields,field_description:to_warranty_management.field_product_template__id
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__id
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim_policy__id
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_policy__id
+msgid "ID"
+msgstr ""
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__activity_exception_icon
+msgid "Icon"
+msgstr "Biểu tượng"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,help:to_warranty_management.field_warranty_claim__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Biểu tượng để chỉ ra một hoạt động ngoại lệ"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,help:to_warranty_management.field_warranty_claim__message_needaction
+#: model:ir.model.fields,help:to_warranty_management.field_warranty_claim__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Nếu đánh dấu chọn, các thông điệp mới yêu cầu sự có mặt của bạn."
+
+#. module: to_warranty_management
+#: model:ir.model.fields,help:to_warranty_management.field_warranty_claim__message_has_error
+#: model:ir.model.fields,help:to_warranty_management.field_warranty_claim__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Nếu được đánh dấu, thông điệp có lỗi về gửi tin."
+
+#. module: to_warranty_management
+#: model_terms:ir.ui.view,arch_db:to_warranty_management.warranty_claim_form_view
+msgid "Investigate"
+msgstr "Kiểm tra"
+
+#. module: to_warranty_management
+#: model:ir.model.fields.selection,name:to_warranty_management.selection__warranty_claim__state__investigation
+#: model:ir.ui.menu,name:to_warranty_management.warranty_claim_investigating_menu
+#: model_terms:ir.ui.view,arch_db:to_warranty_management.warranty_claim_search_view
+msgid "Investigating"
+msgstr "Đang kiểm tra"
+
+#. module: to_warranty_management
+#: model:ir.actions.act_window,name:to_warranty_management.action_warranty_claim_investigating
+msgid "Investigating Claims"
+msgstr "Yêu cầu đang kiểm tra"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__message_is_follower
+msgid "Is Follower"
+msgstr "Là người theo dõi"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_action_confirm_wizard____last_update
+#: model:ir.model.fields,field_description:to_warranty_management.field_product_template____last_update
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim____last_update
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim_policy____last_update
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_policy____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_action_confirm_wizard__write_uid
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__write_uid
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim_policy__write_uid
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_policy__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_action_confirm_wizard__write_date
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__write_date
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim_policy__write_date
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_policy__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Đính kèm chính"
+
+#. module: to_warranty_management
+#: model_terms:ir.ui.view,arch_db:to_warranty_management.warranty_claim_form_view
+msgid "Mark as done"
+msgstr "Hoàn thành"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__message_has_error
+msgid "Message Delivery error"
+msgstr "Có Lỗi Gửi Thông điệp"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__message_ids
+msgid "Messages"
+msgstr "Thông điệp"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim_policy__product_milestone_id
+msgid "Milestone"
+msgstr "Mốc bảo hành"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_policy__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Hạn chót lần hành động kế tiếp"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__activity_summary
+msgid "Next Activity Summary"
+msgstr "Tóm tắt hoạt động tiếp theo"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__activity_type_id
+msgid "Next Activity Type"
+msgstr "Kiểu hành động kế tiếp"
+
+#. module: to_warranty_management
+#: model:ir.model.fields.selection,name:to_warranty_management.selection__warranty_claim_policy__state__not_ok
+msgid "Not OK"
+msgstr "Không đồng ý"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__description
+#: model_terms:ir.ui.view,arch_db:to_warranty_management.warranty_claim_form_view
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Số lượng Hành động"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__message_has_error_counter
+msgid "Number of errors"
+msgstr "Số lỗi"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,help:to_warranty_management.field_warranty_claim__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Số thông điệp cần có hành động"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,help:to_warranty_management.field_warranty_claim__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Số lượng các thông điệp có lỗi về gửi tin"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,help:to_warranty_management.field_warranty_claim__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Số thông điệp chưa đọc"
+
+#. module: to_warranty_management
+#: model:ir.model.fields.selection,name:to_warranty_management.selection__warranty_claim_policy__state__ok
+msgid "OK"
+msgstr "Đồng ý"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim_policy__operation_end
+msgid "Operation End"
+msgstr "Chỉ số cuối"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim_policy__operation_start
+msgid "Operation Start"
+msgstr "Chỉ số ban đầu"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__name
+msgid "Order Reference"
+msgstr "Tham chiếu đơn hàng"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__partner_id
+#: model_terms:ir.ui.view,arch_db:to_warranty_management.warranty_claim_search_view
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__type
+msgid "Partner Type"
+msgstr "Kiểu Đối tác"
+
+#. module: to_warranty_management
+#: model:ir.model.constraint,message:to_warranty_management.constraint_warranty_claim_policy_policy_unique
+msgid "Policy must be unique!"
+msgstr "Chính sách phải là duy nhất!"
+
+#. module: to_warranty_management
+#: model_terms:ir.ui.view,arch_db:to_warranty_management.warranty_claim_search_view
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_policy__product_milestone_id
+msgid "Product Milestone"
+msgstr "Mốc bảo hành"
+
+#. module: to_warranty_management
+#: model:ir.model,name:to_warranty_management.model_product_template
+msgid "Product Template"
+msgstr "Mẫu Sản phẩm"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_policy__product_tmpl_id
+msgid "Product Tmpl"
+msgstr "Mẫu sản phẩm"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__product_id
+msgid "Products"
+msgstr "Sản phẩm"
+
+#. module: to_warranty_management
+#: model:ir.model.fields.selection,name:to_warranty_management.selection__warranty_claim_policy__apply_to__purchase
+#: model:ir.model.fields.selection,name:to_warranty_management.selection__warranty_policy__apply_to__purchase
+msgid "Purchase"
+msgstr "Mua hàng"
+
+#. module: to_warranty_management
+#: model:ir.actions.act_window,name:to_warranty_management.action_warranty_claim_purchase
+msgid "Purchase Order"
+msgstr "Đơn mua"
+
+#. module: to_warranty_management
+#: model_terms:ir.ui.view,arch_db:to_warranty_management.warranty_claim_search_view
+msgid "Reference"
+msgstr "Tham chiếu"
+
+#. module: to_warranty_management
+#: model:ir.ui.menu,name:to_warranty_management.warranty_claim_graph_report_menu
+msgid "Reporting"
+msgstr "Báo cáo"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__user_id
+msgid "Responsible"
+msgstr "Người phụ trách"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__activity_user_id
+msgid "Responsible User"
+msgstr "Người chịu trách nhiệm"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Có lỗi gửi SMS"
+
+#. module: to_warranty_management
+#: model:ir.model.fields.selection,name:to_warranty_management.selection__warranty_claim_policy__apply_to__sale
+#: model:ir.model.fields.selection,name:to_warranty_management.selection__warranty_policy__apply_to__sale
+msgid "Sale"
+msgstr "Bán hàng"
+
+#. module: to_warranty_management
+#: model:ir.actions.act_window,name:to_warranty_management.action_warranty_claim_sale
+msgid "Sale Order"
+msgstr "Đơn bán"
+
+#. module: to_warranty_management
+#: model_terms:ir.ui.view,arch_db:to_warranty_management.warranty_claim_search_view
+msgid "Search Warranty Claim"
+msgstr "Tìm Yêu cầu bảo hành"
+
+#. module: to_warranty_management
+#: model_terms:ir.ui.view,arch_db:to_warranty_management.warranty_claim_form_view
+msgid "Session Form"
+msgstr "Mẫu phiên"
+
+#. module: to_warranty_management
+#: model_terms:ir.ui.view,arch_db:to_warranty_management.warranty_claim_form_view
+msgid "Set to draft"
+msgstr "Đặt về Dự thảo"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim_policy__state
+msgid "State"
+msgstr "Trạng thái Bảo hành"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__state
+#: model_terms:ir.ui.view,arch_db:to_warranty_management.warranty_claim_tree_view
+msgid "Status"
+msgstr "Tình trạng"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,help:to_warranty_management.field_warranty_claim__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Trạng thái dựa trên hoạt động\n"
+"Quá hạn: Ngày đến hạn đã trôi qua\n"
+"Hôm nay: Hôm nay là ngày phải thực hiện\n"
+"Đã hoạch định: Các hoạt động trong tương lai."
+
+#. module: to_warranty_management
+#: code:addons/to_warranty_management/models/warranty_claim_policy.py:0
+#, python-format
+msgid "The Current Measurement cannot be less than the Operation Start."
+msgstr "Chỉ số hiện hành không được nhỏ hơn Chỉ số ban đầu."
+
+#. module: to_warranty_management
+#: model:ir.model.constraint,message:to_warranty_management.constraint_product_template_check_warranty_period_not_negative
+#: model:ir.model.constraint,message:to_warranty_management.constraint_warranty_claim_check_warranty_period_not_negative
+msgid "The warranty period cannot be a negative number"
+msgstr "Thời gian bảo hành không được là số âm"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,help:to_warranty_management.field_warranty_claim__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Loại hoạt động ngoại lệ trong bản ghi"
+
+#. module: to_warranty_management
+#: model:ir.model.fields.selection,name:to_warranty_management.selection__warranty_claim_policy__state__undefine
+msgid "Undefined"
+msgstr "Chưa xác định"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__message_unread
+msgid "Unread Messages"
+msgstr "Thông điệp chưa đọc"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Bộ đếm Thông điệp chưa đọc"
+
+#. module: to_warranty_management
+#: model:res.groups,comment:to_warranty_management.group_warranty_manager
+msgid "Users of this group have total control on this application"
+msgstr ""
+
+#. module: to_warranty_management
+#: model:res.groups,comment:to_warranty_management.group_warranty_user
+msgid ""
+"Users of this group will be granted with all access rights to Warranty "
+"Claims"
+msgstr ""
+
+#. module: to_warranty_management
+#: model:ir.model.fields.selection,name:to_warranty_management.selection__warranty_claim__type__vendor
+msgid "Vendor"
+msgstr "Nhà cung cấp"
+
+#. module: to_warranty_management
+#: model:ir.ui.menu,name:to_warranty_management.main_warranty_management_menu
+#: model_terms:ir.ui.view,arch_db:to_warranty_management.view_product_warranty_inherit
+msgid "Warranty"
+msgstr "Bảo hành"
+
+#. module: to_warranty_management
+#: model:ir.model,name:to_warranty_management.model_warranty_claim
+#: model:ir.model.fields,field_description:to_warranty_management.field_action_confirm_wizard__warranty_claim_id
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim_policy__warranty_claim_id
+#: model:ir.ui.menu,name:to_warranty_management.warranty_claim_menu
+msgid "Warranty Claim"
+msgstr "Yêu cầu Bảo hành"
+
+#. module: to_warranty_management
+#: model:ir.model,name:to_warranty_management.model_warranty_claim_policy
+msgid "Warranty Claim Policy"
+msgstr "Chính sách Bảo hành"
+
+#. module: to_warranty_management
+#: model:ir.actions.act_window,name:to_warranty_management.action_warranty_claim_report
+msgid "Warranty Claim Report"
+msgstr "Báo cáo Bảo hành"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__warranty_expiration_date
+msgid "Warranty Expiration Date"
+msgstr "Hết hạn Bảo hành"
+
+#. module: to_warranty_management
+#: model:ir.module.category,name:to_warranty_management.module_category_warranty_management
+msgid "Warranty Management"
+msgstr "Quản lý Bảo hành"
+
+#. module: to_warranty_management
+#: model:res.groups,name:to_warranty_management.group_warranty_manager
+msgid "Warranty Manager"
+msgstr "Quản lý Bảo hành"
+
+#. module: to_warranty_management
+#: model:ir.model,name:to_warranty_management.model_warranty_policy
+#: model:ir.model.fields,field_description:to_warranty_management.field_product_product__warranty_policy_ids
+#: model:ir.model.fields,field_description:to_warranty_management.field_product_template__warranty_policy_ids
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__warranty_claim_policy_ids
+#: model_terms:ir.ui.view,arch_db:to_warranty_management.view_product_warranty_inherit
+#: model_terms:ir.ui.view,arch_db:to_warranty_management.warranty_claim_form_view
+#: model_terms:ir.ui.view,arch_db:to_warranty_management.warranty_policy_form_view
+#: model_terms:ir.ui.view,arch_db:to_warranty_management.warranty_policy_tree_view
+msgid "Warranty Policy"
+msgstr "Chính sách Bảo hành"
+
+#. module: to_warranty_management
+#: model:ir.model.constraint,message:to_warranty_management.constraint_warranty_policy_warranty_policy_unique
+msgid "Warranty Policy must be unique!"
+msgstr "Chính sách bảo hành phải là duy nhất!"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__warranty_start_date
+msgid "Warranty Start Date"
+msgstr "Bắt đầu Bảo hành"
+
+#. module: to_warranty_management
+#: model:res.groups,name:to_warranty_management.group_warranty_user
+msgid "Warranty User"
+msgstr "Nhân viên Bảo hành"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_product_product__warranty_period
+#: model:ir.model.fields,field_description:to_warranty_management.field_product_template__warranty_period
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__warranty_period
+msgid "Warranty period (months)"
+msgstr "Thời gian Bảo hành"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,field_description:to_warranty_management.field_warranty_claim__website_message_ids
+msgid "Website Messages"
+msgstr "Thông điệp Website"
+
+#. module: to_warranty_management
+#: model:ir.model.fields,help:to_warranty_management.field_warranty_claim__website_message_ids
+msgid "Website communication history"
+msgstr "Lịch sử thông tin liên lạc website"
+
+#. module: to_warranty_management
+#: code:addons/to_warranty_management/models/warranty_claim.py:0
+#, python-format
+msgid ""
+"You can not confirm a warranty claim, which doesn't have warranty start "
+"date."
+msgstr ""
+"Bạn không thể xác nhận Yêu cầu bảo hành mà không có ngày bắt đầu bảo hành."
+
+#. module: to_warranty_management
+#: code:addons/to_warranty_management/models/product_template.py:0
+#: code:addons/to_warranty_management/models/warranty_claim.py:0
+#, python-format
+msgid ""
+"You can not create more milestone that have the same category with an "
+"existing milestone"
+msgstr ""
+"Bạn không thể tạo thêm Mốc bảo hành có cùng Nhóm đơn vị với Mốc bảo hành đã "
+"có"
+
+#. module: to_warranty_management
+#: code:addons/to_warranty_management/models/warranty_claim.py:0
+#, python-format
+msgid ""
+"You can not delete a warranty claim, which is not in draft or cancelled "
+"state."
+msgstr ""
+"Bạn không thể xóa Yêu cầu bảo hành mà trạng thái của nó không phải Dự thảo  "
+"hoặc Đã hủy."
+
+#. module: to_warranty_management
+#: model_terms:ir.ui.view,arch_db:to_warranty_management.view_product_warranty_inherit
+#: model_terms:ir.ui.view,arch_db:to_warranty_management.warranty_claim_form_view
+msgid "months"
+msgstr "Tháng"

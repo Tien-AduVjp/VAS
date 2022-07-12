@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<menuitem id="product_function_menu" name="Product Function"
+			groups="sales_team.group_sale_manager" parent="sale.product_menu_catalog"
+			action="to_product_function.product_function_action" />
+	</data>
+</odoo>

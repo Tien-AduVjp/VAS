@@ -1,0 +1,7 @@
+<odoo>
+	<record id="action_move_line_select_tax_audit" model="ir.actions.act_window">
+	   <field name="name">Journal Items for Tax Audit</field>
+	   <field name="res_model">account.move.line</field>
+	   <field name="view_id" ref="account.view_move_line_tax_audit_tree"/>
+	</record>
+</odoo>

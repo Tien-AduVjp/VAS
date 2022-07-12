@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="view_picking_form" model="ir.ui.view">
+		<field name="name">stock.picking.view.picking.form</field>
+		<field name="model">stock.picking</field>
+		<field name="inherit_id" ref="stock.view_picking_form" />
+		<field name="arch" type="xml">
+			<button name="action_assign" position="after">
+				<button name="action_new_quality_alert" type="object" string="Quality Alert" context="{'default_picking_id': active_id}" attrs="{'invisible': ['|',('check_ids', '=', []), '&amp;', ('quality_check_fail', '=', True), ('quality_alert_count', '=', 0)]}" />
+				<button name="action_new_quality_alert" type="object" string="Quality Alert" context="{'default_picking_id': active_id}" class="oe_highlight" attrs="{'invisible': ['|', ('quality_check_fail', '=', False), ('quality_alert_count', '!=', 0)]}" />
+				<button name="action_view_quality_check" type="object" string="Quality Checks" class="oe_highlight" attrs="{'invisible': ['|', ('quality_check_todo', '=', False), ('state', 'in', ('done', 'cancel'))]}" groups="to_quality.group_quality_user" />
+				<field name="check_ids" invisible="1" />
+				<field name="quality_check_todo" invisible="1" />
+				<field name="quality_check_fail" invisible="1" />
+			</button>
+			<div name="button_box" position="inside">
+				<button name="action_view_quality_alert_picking" type="object" class="oe_stat_button" icon="fa-bell" attrs="{'invisible': [('quality_alert_count', '=', 0)]}">
+					<div class="o_field_widget o_stat_info">
+						<span class="o_stat_value">
+							<field name="quality_alert_count" />
+						</span>
+						<span class="o_stat_text">Quality Alert</span>
+					</div>
+				</button>
+				<button name="action_view_quality_check_picking" attrs="{'invisible': [('check_ids', '=', [])]}" type="object" class="oe_stat_button" icon="fa-check">
+					<span class="o_stat_text text-success" attrs="{'invisible': [('quality_check_fail', '=', True)]}">Quality Checks</span>
+					<span class="o_stat_text text-danger" attrs="{'invisible': [('quality_check_fail', '!=', True)]}">Quality Checks</span>
+				</button>
+			</div>
+		</field>
+	</record>
+
+	<record id="quality_stock_picking_todo_action" model="ir.actions.act_window">
+		<field name="name">Stock Pickings To Do</field>
+		<field name="res_model">stock.picking</field>
+		<field name="view_mode">tree,form</field>
+		<field name="domain">[('quality_check_todo','=',False),('check_ids', '!=',False), ('state', '!=', 'done')]
+		</field>
+	</record>
+
+	<record id="quality_stock_picking_done_action" model="ir.actions.act_window">
+		<field name="name">Done Stock Pickings</field>
+		<field name="res_model">stock.picking</field>
+		<field name="view_mode">tree,form</field>
+		<field name="domain">['|',('state', '=', 'done'),'&amp;',('quality_check_todo','=',False),('check_ids', '!=',False)]</field>
+	</record>
+
+	<menuitem id="quality_stock_picking_to_do_menu" name="Stock Pickings To Do" action="quality_stock_picking_todo_action" parent="quality_stock_operation_menu" sequence="20" />
+	<menuitem id="quality_stock_picking_done_menu" name="Done Stock Pickings" action="quality_stock_picking_done_action" parent="quality_stock_operation_menu" sequence="21" />
+</odoo>

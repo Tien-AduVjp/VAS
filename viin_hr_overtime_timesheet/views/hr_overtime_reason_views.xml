@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="hr_overtime_reason_tree_view" model="ir.ui.view">
+		<field name="name">hr.overtime.reason.tree</field>
+		<field name="model">hr.overtime.reason</field>
+		<field name="inherit_id"
+			ref="viin_hr_overtime.hr_overtime_reason_tree_view" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='name']" position="after">
+				<field name="project_required" />
+			</xpath>
+		</field>
+	</record>
+
+	<record id="hr_overtime_reason_form_view" model="ir.ui.view">
+		<field name="name">hr.overtime.reason.form</field>
+		<field name="model">hr.overtime.reason</field>
+		<field name="inherit_id"
+			ref="viin_hr_overtime.hr_overtime_reason_form_view" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='company_id']" position="before">
+				<field name="project_required" />
+			</xpath>
+		</field>
+	</record>
+</odoo>

@@ -1,0 +1,217 @@
+<odoo>
+	<record id="employee_advance_view_tree" model="ir.ui.view">
+		<field name="name">employee.advance.tree</field>
+		<field name="model">employee.advance</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree decoration-info="state=='draft'" decoration-warning="state in ('confirm', 'validate1')" decoration-success="state=='validate'" decoration-muted="state=='done'" decoration-danger="state=='refuse'">
+				<field name="name" />
+				<field name="date" />
+				<field name="employee_id" />
+				<field name="job_id" />
+				<field name="department_id" />
+				<field name="amount" />
+				<field name="state" />
+				<field name="payment_state" widget="badge"
+				decoration-success="payment_state == 'paid'"
+				decoration-danger="payment_state == 'not_paid'"
+				decoration-warning="payment_state == 'partial'"/>
+			</tree>
+		</field>
+	</record>
+
+	<record id="employee_advance_view_form" model="ir.ui.view">
+		<field name="name">employee.advance.form</field>
+		<field name="model">employee.advance</field>
+		<field name="arch" type="xml">
+			<form string="Employee Advance">
+				<header>
+					<button name="action_confirm" type="object" states="draft" string="Confirm" class="oe_highlight" groups="base.group_user" />
+					<button name="action_approve" type="object" states="confirm" string="Approve" class="oe_highlight" groups="to_hr_employee_advance.group_employee_advance_approver" />
+					<button string="Validate" name="action_validate" states="validate1" type="object" class="oe_highlight" />
+					<button name="%(employee_advance_payment_action)d" type="action" string="Pay" class="oe_highlight"
+						groups="to_hr_employee_advance.group_employee_advance_manager, account.group_account_user"
+						context="{'default_emp_advance_id': active_id}"
+						attrs="{'invisible': ['|',('state', '!=', 'validate'),('balance', '=', 0)]}"/>
+					<button string="Refuse" name="action_refuse" states="confirm,validate,validate1" type="object" groups="to_hr_employee_advance.group_employee_advance_approver" />
+					<button name="action_draft" type="object" states="refuse,confirm" string="Set to Draft" class="oe_highlight" groups="base.group_user" />
+					<field name="state" readonly="1" statusbar_visible="draft,confirm,validate,done" widget="statusbar" />
+				</header>
+				<div groups="account.group_account_user"
+                     class="alert alert-info" role="alert" style="margin-bottom:0px;"
+                     attrs="{'invisible': [('has_outstanding_payment', '=', False)]}">
+                    You have <b>draft or cancelled payment</b> for this employee advance. You should <b>delete</b> or <b>post</b> them.
+                </div>
+                <field name="has_outstanding_payment" invisible="1"/>
+				<sheet>
+					<widget name="web_ribbon" title="Paid" attrs="{'invisible': [('payment_state', '!=', 'paid')]}"/>
+                    <widget name="web_ribbon" title="Partial" attrs="{'invisible': [('payment_state', '!=', 'partial')]}"/>
+                    <field name="balance" invisible="1"/>
+                    <field name="payment_state" invisible="1"/>
+					<div class="oe_title">
+						<h1>
+							<field name="name"/>
+						</h1>
+					</div>
+					<group>
+						<group>
+							<field name="name" />
+							<field name="employee_id" />
+							<field name="job_id" />
+							<field name="department_id" />
+						</group>
+						<group>
+							<field name="date" />
+							<field name="company_id" groups="base.group_multi_company" />
+							<field name="currency_id" groups="base.group_multi_currency" />
+							<field name="amount" />
+							<field name="journal_id" groups="account.group_account_user" />
+						</group>
+					</group>
+					<notebook>
+						<page string="Advance Lines">
+							<field name="lines" nolabel="1">
+								<tree string="Advance Lines" editable="bottom">
+									<field name="name" />
+									<field name="amount" />
+									<field name="currency_id" invisible="1" />
+								</tree>
+							</field>
+						</page>
+						<page string="Payments" groups="account.group_account_user">
+							<field name="payment_ids" edit="0" create="0" nolabel="1" groups="account.group_account_user">
+								<tree>
+									<field name="date" />
+									<field name="name" />
+									<field name="partner_id" />
+									<field name="journal_id" />
+									<field name="amount" />
+									<field name="state" />
+								</tree>
+							</field>
+						</page>
+					</notebook>
+				</sheet>
+				<div class="oe_chatter">
+					<field name="message_follower_ids" groups="base.group_user" />
+					<field name="activity_ids" />
+					<field name="message_ids" />
+				</div>
+			</form>
+		</field>
+	</record>
+
+	<record id="employee_advance_view_search" model="ir.ui.view">
+		<field name="name">employee.advance.search</field>
+		<field name="model">employee.advance</field>
+		<field name="arch" type="xml">
+			<search string="Search Employee Advance">
+				<field name="name" string="Reference" />
+				<field name="employee_id" />
+				<separator />
+				<filter name="my_request" string="My Request" domain="[('employee_id', '=', uid)]" />
+				<filter name="draft_request" string="Draft" domain="[('state','in', ('draft', 'refuse'))]" />
+				<filter name="confirm_request" string="Waiting Approved" domain="[('state','in', ('confirm', 'validate1'))]" />
+				<filter name="validate_request" string="Approved" domain="[('state','=', 'validate')]" />
+				<filter name="paid_request" string="Paid" domain="[('payment_state','=', 'paid')]" />
+				<separator />
+				<filter name="done_request" string="Reconciled" domain="[('state','=', 'done')]" />
+				<separator />
+				<group expand="0" string="Group By">
+					<filter string="Employee" domain="[]" name="grp_employee" context="{'group_by':'employee_id'}" />
+					<filter string="Advance Month" domain="[]" name="grp_date" context="{'group_by':'date'}" />
+				</group>
+			</search>
+		</field>
+	</record>
+
+	<record id="employee_advance_view_pivot" model="ir.ui.view">
+		<field name="name">employee.advance.pivot</field>
+		<field name="model">employee.advance</field>
+		<field name="arch" type="xml">
+			<pivot string="Employee Advance Pivot">
+				<field name="employee_id" type="row" />
+				<field name="date" type="col" />
+				<field name="amount" type="measure" />
+			</pivot>
+		</field>
+	</record>
+
+	<record id="employee_advance_view_graph" model="ir.ui.view">
+		<field name="name">employee.advance.graph</field>
+		<field name="model">employee.advance</field>
+		<field name="arch" type="xml">
+			<graph string="Employee Advance Graph">
+				<field name="employee_id" type="row" />
+				<field name="date" interval="month" type="col" />
+				<field name="amount" type="measure" />
+			</graph>
+		</field>
+	</record>
+
+	<record id="employee_advance_action_request" model="ir.actions.act_window">
+		<field name="name">Employee Advance Requests</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">employee.advance</field>
+		<field name="view_mode">tree,form</field>
+		<field name="context">{'search_default_draft_request':1}</field>
+	</record>
+
+	<record id="employee_advance_action_to_approve" model="ir.actions.act_window">
+		<field name="name">To Approve Requests</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">employee.advance</field>
+		<field name="view_mode">tree,form</field>
+		<field name="context">{'search_default_confirm_request':1}</field>
+	</record>
+
+	<record id="employee_advance_action_approved" model="ir.actions.act_window">
+		<field name="name">Approved Requests</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">employee.advance</field>
+		<field name="view_mode">tree,form</field>
+		<field name="context">{'search_default_validate_request':1}</field>
+	</record>
+
+	<record id="employee_advance_action_paid" model="ir.actions.act_window">
+		<field name="name">Paid Resquests</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">employee.advance</field>
+		<field name="view_mode">tree,form</field>
+		<field name="context">{'search_default_paid_request':1}</field>
+	</record>
+
+	<record id="employee_advance_action_reconciled" model="ir.actions.act_window">
+		<field name="name">Reconciled Requests</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">employee.advance</field>
+		<field name="view_mode">tree,form</field>
+		<field name="context">{'search_default_done_request':1}</field>
+	</record>
+
+	<record id="employee_advance_action_analysis" model="ir.actions.act_window">
+		<field name="name">Employee Advance Analysis</field>
+		<field name="res_model">employee.advance</field>
+		<field name="view_mode">pivot,graph</field>
+		<field name="view_id"></field>
+		<field name="context">{}</field>
+	</record>
+
+	<menuitem id="employee_advance_menu_request" name="Requests/Declarations"
+	parent="employee_advance_menu" action="employee_advance_action_request" sequence="1" />
+
+	<menuitem id="employee_advance_menu_to_approve" name="To Approve"
+	parent="employee_advance_menu" action="employee_advance_action_to_approve" sequence="2" />
+
+	<menuitem id="employee_advance_menu_approved" name="Approved"
+	parent="employee_advance_menu" action="employee_advance_action_approved" sequence="3" />
+
+	<menuitem id="employee_advance_menu_paid" name="Paid"
+	parent="employee_advance_menu" action="employee_advance_action_paid" sequence="4" />
+
+	<menuitem id="employee_advance_menu_reconciled" name="Reconciled"
+	parent="employee_advance_menu" action="employee_advance_action_reconciled" sequence="5" />
+
+	<menuitem id="employee_advance_menu_report" name="Reports" parent="employee_advance_menu_root" sequence="2"
+	action="employee_advance_action_analysis" groups="to_hr_employee_advance.group_employee_advance_manager" />
+</odoo>

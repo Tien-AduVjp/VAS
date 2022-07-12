@@ -1,0 +1,15 @@
+<odoo>
+	<data>
+		<menuitem id="helpdesk_menu" name="Helpdesk" sequence="100"
+			web_icon="viin_helpdesk,static/description/icon.png" />
+
+		<menuitem id="ticket_menu" name="Tickets" sequence="5" parent="helpdesk_menu"/>
+
+		<menuitem id="reporting_menu" name="Reporting" sequence="7"
+			parent="helpdesk_menu" groups="viin_helpdesk.group_helpdesk_manager" />
+
+		<menuitem id="configuration_menu" name="Configuration"
+			parent="helpdesk_menu" sequence="8" groups="viin_helpdesk.group_helpdesk_manager" />
+
+	</data>
+</odoo>

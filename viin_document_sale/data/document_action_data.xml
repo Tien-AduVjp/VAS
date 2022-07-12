@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+
+    <!-- Set Quotation to Expired -->
+
+    <record id="document_action_sale_quotation_expired" model="document.action">
+        <field name="name">Set Quotation to Expired</field>
+        <field name="done_document_activity" eval="True"/>
+    </record>
+
+    <record id="document_action_set_tag_sale_quotation_expired" model="document.action.set_tag">
+        <field name="action_type">replace</field>
+        <field name="category_id" ref="document_tag_category_sale"/>
+        <field name="tag_ids" eval="[(4, ref('document_tag_sale_expired'))]"/>
+        <field name="action_id" ref="document_action_sale_quotation_expired"/>
+    </record>
+
+</odoo>

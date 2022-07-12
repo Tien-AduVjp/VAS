@@ -1,0 +1,55 @@
+<odoo>
+	<data>
+
+		<record model="ir.ui.view" id="view_hr_rank_skill_description_form">
+			<field name="name">hr.rank.skill.description.form</field>
+			<field name="model">hr.rank.skill.description</field>
+			<field name="inherit_id"
+				ref="viin_hr_skill_framework.view_hr_skill_description_abstract_form" />
+			<field name="mode">primary</field>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='skill_type_id']" position="before">
+					<field name="rank_id" />
+				</xpath>
+				<xpath expr="//field[@name='skill_level_id']" position="after">
+					<field name="skill_description_id" />
+				</xpath>
+				<xpath expr="//sheet" position="after">
+					<div class="oe_chatter">
+						<field name="message_follower_ids" groups="base.group_user" />
+						<field name="activity_ids" />
+						<field name="message_ids" />
+					</div>
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="view_hr_rank_skill_description_list">
+			<field name="name">hr.rank.skill.description.list</field>
+			<field name="model">hr.rank.skill.description</field>
+			<field name="inherit_id"
+				ref="viin_hr_skill_framework.view_hr_skill_description_abstract_list" />
+			<field name="mode">primary</field>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='skill_type_id']" position="before">
+					<field name="rank_id" />
+				</xpath>
+				<xpath expr="//field[@name='skill_level_id']" position="after">
+					<field name="skill_description_id" />
+				</xpath>
+			</field>
+		</record>
+
+		<!-- actions opening views on models -->
+		<record model="ir.actions.act_window"
+			id="action_skill_requirement">
+			<field name="name">Skill Requirement</field>
+			<field name="res_model">hr.rank.skill.description</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem name="Skill Requirements"
+			id="menu_skill_requirement" parent="menu_configuration"
+			action="action_skill_requirement" sequence="30" />
+	</data>
+</odoo>

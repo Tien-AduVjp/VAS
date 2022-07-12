@@ -1,0 +1,24 @@
+<odoo>
+    <record id="authenticate_form" model="ir.ui.view">
+        <field name="name">git.authenticate.form</field>
+        <field name="model">git.authenticate</field>
+        <field name="arch" type="xml">
+            <form>
+                <div class="text-danger">
+                    Failed to connect to the remote repository over HTTP!. If the remote
+                    requires authentication, please input your username/password in here
+                    and try again.
+                </div>
+                <group>
+                    <field name="username"/>
+                    <field name="password" password="True"/>
+                </group>
+                <footer>
+                    <button string="Try Again" name="try_again" type="object"
+                            class="oe_highlight"/>
+                    <button string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

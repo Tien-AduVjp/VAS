@@ -1,0 +1,19 @@
+<odoo>
+	<data>
+		<!-- Top menu item -->
+		<menuitem name="Skills Framework" id="menu_root"
+			groups="base.group_user" sequence="10"
+			web_icon="viin_hr_skill_framework,static/description/icon.png" />
+		<menuitem name="Dashboard" id="menu_dashboard"
+			parent="menu_root" sequence="20" />
+		<menuitem name="Skills" id="menu_skills" parent="menu_root"
+			sequence="30" />
+		<menuitem id="menu_hr_employee" name="Employees"
+			parent="menu_root" sequence="50" />
+		<menuitem name="Reporting" id="menu_reporting"
+			parent="menu_root" sequence="90" />
+		<menuitem name="Configuration" id="menu_configuration"
+			parent="menu_root" sequence="100"
+			groups="viin_hr_skill_framework.group_skill_admin" />
+	</data>
+</odoo>

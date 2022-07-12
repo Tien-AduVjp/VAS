@@ -1,0 +1,53 @@
+$green-100: #28a745;
+.v_document_kanban {
+	cursor: pointer;
+	.v_document_kanban_record_checked {
+		position: absolute;
+		right: 4px;
+		top: 0;
+		padding: 4px;
+		z-index: 2;
+	}
+	.o_kanban_image {
+		background: $gray-200;
+		.o_attachment_image {
+			object-fit: cover;
+		}
+		.o_kanban_previewer{
+			cursor: zoom-in;
+		}
+	}
+	.oe_kanban_details {
+		height: 100%;
+		.o_kanban_details_wrapper {
+			padding: 4px 4px 25px 4px;
+			height: 100%;
+			position: relative;
+			.o_kanban_record_title {
+				overflow-wrap: break-word;
+				width: 90%;
+			}
+			.o_kanban_record_bottom{
+				position: absolute;
+				bottom: 4px;
+				width: 96%;
+			}
+		}
+	}
+	.document_url_inline .o_text_overflow{
+		max-width: 85%;
+	}
+}
+.v_document_kanban.border-success{
+	border-width: 1px!important;
+	box-shadow: 0 0 0 2px $green-100;
+}
+.label-limit-char span{
+	display: block;
+    width: 185px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+	font-size: 13px;
+	font-weight: bold;
+}

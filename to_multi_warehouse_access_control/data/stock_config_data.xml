@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+	<record model="res.config.settings" id="res_config_settings_multi_warehouse_access_control">
+		<field name="group_stock_multi_locations" eval="True" />
+	</record>
+
+	<function model="res.config.settings" name="execute">
+		<value eval="[ref('res_config_settings_multi_warehouse_access_control')]" />
+	</function>
+</odoo>

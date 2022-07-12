@@ -1,0 +1,21 @@
+<odoo>
+	<record id="hr_equipment_view_form" model="ir.ui.view">
+		<field name="name">equipment_maintenance_schedule</field>
+		<field name="model">maintenance.equipment</field>
+		<field name="inherit_id" ref="maintenance.hr_equipment_view_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//notebook" position="inside">
+				<page name="maintenance_schedule" string="Maintenance Schedule">
+					<field name="maintenance_schedule_ids">
+						<tree>
+							<field name="part" />
+							<field name="product_milestone_id" />
+							<field name="maintenance_action_id" />
+							<field name="product_id" />
+						</tree>
+					</field>
+				</page>
+			</xpath>
+		</field>
+	</record>
+</odoo>

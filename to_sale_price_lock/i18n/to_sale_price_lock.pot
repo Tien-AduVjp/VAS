@@ -1,0 +1,134 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_sale_price_lock
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-10 11:02+0000\n"
+"PO-Revision-Date: 2021-12-10 11:02+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_sale_price_lock
+#: model_terms:ir.ui.view,arch_db:to_sale_price_lock.res_config_settings_sale_price_lock
+msgid ""
+"Allows to lock order/quote sales prices to prevent certain people from "
+"modifying them."
+msgstr ""
+
+#. module: to_sale_price_lock
+#: model:ir.model,name:to_sale_price_lock.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: to_sale_price_lock
+#: model:ir.model,name:to_sale_price_lock.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: to_sale_price_lock
+#: model:ir.model,name:to_sale_price_lock.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: to_sale_price_lock
+#: model:ir.model.fields,field_description:to_sale_price_lock.field_res_company__display_name
+#: model:ir.model.fields,field_description:to_sale_price_lock.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:to_sale_price_lock.field_res_partner__display_name
+#: model:ir.model.fields,field_description:to_sale_price_lock.field_sale_order__display_name
+#: model:ir.model.fields,field_description:to_sale_price_lock.field_sale_order_line__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: to_sale_price_lock
+#: model:ir.model.fields,field_description:to_sale_price_lock.field_res_company__id
+#: model:ir.model.fields,field_description:to_sale_price_lock.field_res_config_settings__id
+#: model:ir.model.fields,field_description:to_sale_price_lock.field_res_partner__id
+#: model:ir.model.fields,field_description:to_sale_price_lock.field_sale_order__id
+#: model:ir.model.fields,field_description:to_sale_price_lock.field_sale_order_line__id
+msgid "ID"
+msgstr ""
+
+#. module: to_sale_price_lock
+#: model:ir.model.fields,help:to_sale_price_lock.field_res_company__lock_sales_prices
+#: model:ir.model.fields,help:to_sale_price_lock.field_res_config_settings__lock_sales_prices
+msgid ""
+"If checked, allows to lock order/quote sales prices to prevent certain "
+"people from modifying them"
+msgstr ""
+
+#. module: to_sale_price_lock
+#: model:ir.model.fields,help:to_sale_price_lock.field_sale_order__pricelist_id
+msgid "If you change the pricelist, only newly added lines will be affected."
+msgstr ""
+
+#. module: to_sale_price_lock
+#: model:ir.model.fields,field_description:to_sale_price_lock.field_res_company____last_update
+#: model:ir.model.fields,field_description:to_sale_price_lock.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:to_sale_price_lock.field_res_partner____last_update
+#: model:ir.model.fields,field_description:to_sale_price_lock.field_sale_order____last_update
+#: model:ir.model.fields,field_description:to_sale_price_lock.field_sale_order_line____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: to_sale_price_lock
+#: model:ir.model.fields,field_description:to_sale_price_lock.field_res_company__lock_sales_prices
+#: model:ir.model.fields,field_description:to_sale_price_lock.field_res_config_settings__lock_sales_prices
+#: model_terms:ir.ui.view,arch_db:to_sale_price_lock.res_config_settings_sale_price_lock
+msgid "Lock Sales Prices"
+msgstr ""
+
+#. module: to_sale_price_lock
+#: model:ir.model.fields,help:to_sale_price_lock.field_res_company__sales_price_modifying_group_id
+#: model:ir.model.fields,help:to_sale_price_lock.field_res_config_settings__sales_price_modifying_group_id
+#: model_terms:ir.ui.view,arch_db:to_sale_price_lock.res_config_settings_sale_price_lock
+msgid ""
+"Only users who are either in this group or in the groups that inherit this "
+"group will be able to modify sales price."
+msgstr ""
+
+#. module: to_sale_price_lock
+#: model:ir.model.fields,field_description:to_sale_price_lock.field_res_partner__property_product_pricelist
+#: model:ir.model.fields,field_description:to_sale_price_lock.field_res_users__property_product_pricelist
+#: model:ir.model.fields,field_description:to_sale_price_lock.field_sale_order__pricelist_id
+msgid "Pricelist"
+msgstr ""
+
+#. module: to_sale_price_lock
+#: model:ir.model.fields,field_description:to_sale_price_lock.field_res_company__sales_price_modifying_group_id
+#: model:ir.model.fields,field_description:to_sale_price_lock.field_res_config_settings__sales_price_modifying_group_id
+#: model_terms:ir.ui.view,arch_db:to_sale_price_lock.res_config_settings_sale_price_lock
+msgid "Sale Price Modifying Group"
+msgstr ""
+
+#. module: to_sale_price_lock
+#: model:ir.model,name:to_sale_price_lock.model_sale_order
+msgid "Sales Order"
+msgstr ""
+
+#. module: to_sale_price_lock
+#: model:ir.model,name:to_sale_price_lock.model_sale_order_line
+msgid "Sales Order Line"
+msgstr ""
+
+#. module: to_sale_price_lock
+#: model:ir.model.fields,help:to_sale_price_lock.field_res_partner__property_product_pricelist
+#: model:ir.model.fields,help:to_sale_price_lock.field_res_users__property_product_pricelist
+msgid ""
+"This pricelist will be used, instead of the default one, for sales to the "
+"current partner"
+msgstr ""
+
+#. module: to_sale_price_lock
+#: code:addons/to_sale_price_lock/models/sale_order_line.py:0
+#, python-format
+msgid ""
+"You are not allowed to change the price of the product '%s'. Only users in "
+"the group of '%s' are allowed to do it"
+msgstr ""

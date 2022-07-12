@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="stock_move_view_from_future_delivery" model="ir.ui.view">
+		<field name="name">sales.stock.move.form</field>
+		<field name="model">stock.move</field>
+		<field name="arch" type="xml">
+			<form string="Delivery Schedule" name="delivery_schedule"
+				create="False">
+				<field name="product_id" />
+				<field name="product_uom_qty" />
+				<field name="date_deadline" />
+				<field name="location_id" />
+				<field name="picking_partner_id" />
+				<field name="picking_id" />
+				<field name="origin" />
+				<field name="state" />
+                <field name="company_id" invisible="1"/>
+			</form>
+		</field>
+	</record>
+
+	<record id="stock_move_view_tree_future_delivery" model="ir.ui.view">
+		<field name="name">sales.stock.move.tree</field>
+		<field name="model">stock.move</field>
+		<field name="arch" type="xml">
+			<tree string="Delivery Schedules" name="delivery_schedule"
+				decoration-muted="state == 'cancel'" default_order="date_deadline, picking_id, sequence"
+				create="false" delete="false" editable="bottom">
+				<field name="date_deadline" widget="datetime" />
+				<field name="picking_id" string="Reference" attrs="{'readonly':True}" />
+				<field name="sequence" invisible="1" />
+				<field name="product_id" attrs="{'readonly':True}" />
+				<field name="product_uom_qty" attrs="{'readonly':True}" />
+				<field name="product_uom" options="{'no_open': True, 'no_create': True}"
+					string="Unit of Measure" groups="uom.group_uom" attrs="{'readonly':True}" />
+				<field name="location_id" attrs="{'readonly':True}" />
+				<field name="picking_partner_id" attrs="{'readonly':True}" />
+				<field name="origin" attrs="{'readonly':True}" />
+				<field name="location_dest_id" invisible="1" />
+				<field name="create_date" invisible="1" />
+				<field name="state" attrs="{'readonly':True}" />
+                <field name="company_id" invisible="1"/>
+                <field name="product_uom_category_id" invisible="1" />
+			</tree>
+		</field>
+	</record>
+
+	<record id="stock_move_view_pivot_future_delivery" model="ir.ui.view">
+		<field name="name">sales.stock.move.pivot</field>
+		<field name="model">stock.move</field>
+		<field name="arch" type="xml">
+			<pivot string="Delivery Schedules">
+				<field name="product_id" type="row" />
+				<field name="picking_partner_id" type="row" />
+				<field name="product_uom_qty" type="measure" />
+				<field name="date_deadline" interval="hour" type="col" />
+			</pivot>
+		</field>
+	</record>
+
+	<record id="stock_move_view_search_future_delivery" model="ir.ui.view">
+		<field name="name">sales.stock.move.search</field>
+		<field name="model">stock.move</field>
+		<field name="arch" type="xml">
+			<search string="Delivery Schedules">
+				<field name="origin"
+					filter_domain="['|', '|', ('origin', 'ilike', self), ('name', 'ilike', self), ('picking_id', 'ilike', self)]"
+					string="Reference" />
+				<field name="date" groups="base.group_no_one" />
+				<filter string="Ready" name="ready" domain="[('state','=','assigned')]"
+					help="Stock moves that are Available (Ready to process)" />
+				<filter string="To Do" name="future"
+					domain="[('state','in',('assigned','confirmed','waiting'))]" help="Stock moves that are Confirmed, Available or Waiting" />
+				<filter string="Done" name="done" domain="[('state','=','done')]"
+					help="Stock moves that have been processed" />
+				<separator />
+				<filter string="Today" name="today"
+					domain="[('date','&lt;=', datetime.datetime.combine(context_today(), datetime.time(23,59,59))), ('date','&gt;=', datetime.datetime.combine(context_today(), datetime.time(0,0,0)))]"
+					help="Orders processed Today or planned for Today" />
+				<field name="product_id" />
+				<field name="name" string="Location"
+					filter_domain="['|',('location_id','ilike',self),('location_dest_id','ilike',self)]" />
+				<field name="partner_id" string="Partner"
+					filter_domain="[('picking_id.partner_id','child_of',self)]" />
+				<group expand="0" string="Group By">
+					<filter string="Product" name="by_product" domain="[]"
+						context="{'group_by':'product_id'}" />
+					<filter string="Picking" name="groupby_picking_id" domain="[]"
+						context="{'group_by':'picking_id'}" />
+					<filter string="Source" name="groupby_location_id" domain="[]"
+						context="{'group_by':'location_id'}" groups="stock.group_stock_multi_locations" />
+					<filter string="Destination" name="groupby_dest_location_id"
+						domain="[]" context="{'group_by':'location_dest_id'}" groups="stock.group_stock_multi_locations" />
+					<filter string="Status" name="status" domain="[]" context="{'group_by':'state'}" />
+					<filter string="Creation" name="groupby_create_date"
+						domain="[]" context="{'group_by':'create_date'}" groups="base.group_no_one" />
+					<filter string="Scheduled by Days" name="groupby_date"
+						domain="[]" context="{'group_by':'date_deadline:day'}" />
+					<filter string="Scheduled by Hours" name="groupby_hour"
+						domain="[]" context="{'group_by':'date_deadline:hour'}" />
+					<filter string="Partner" name="groupby_picking_partner"
+						domain="[]" context="{'group_by':'picking_partner_id'}" />
+				</group>
+			</search>
+		</field>
+	</record>
+
+	<record id="stock_move_action_delivery" model="ir.actions.act_window">
+		<field name="name">Delivery Schedules</field>
+		<field name="res_model">stock.move</field>
+		<field name="view_mode">pivot,tree</field>
+		<field name="view_id" ref="stock_move_view_tree_future_delivery" />
+		<field name="search_view_id" ref="stock_move_view_search_future_delivery" />
+		<field name="domain">[('picking_id.picking_type_id.code','=','outgoing'),
+			('location_id.usage', '=', 'internal'),
+			('location_dest_id.usage','=','customer')]
+		</field>
+		<field name="context">{
+			'search_default_future':True
+			}
+		</field>
+	</record>
+
+	<menuitem id="delivery_control_menu" name="Delivery Controls"
+		parent="sale.sale_menu_root" sequence="3" groups="sales_team.group_sale_salesman" />
+	<menuitem id="delivery_schedule_menu" name="Delivery Schedules"
+		parent="delivery_control_menu" action="stock_move_action_delivery" />
+</odoo>

@@ -1,0 +1,114 @@
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="user_assignment_view_list">
+			<field name="name">user.assignment.list</field>
+			<field name="model">user.assignment</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="date_start" />
+					<field name="date_end" />
+					<field name="duration" string="Duration (Hr.)" />
+					<field name="user_id" />
+					<field name="assigned_by_user_id" />
+					<field name="model_id" />
+					<field name="res_name" />
+					<field name="company_id" groups="base.group_multi_company" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="user_assignment_view_form">
+			<field name="name">user.assignment.form</field>
+			<field name="model">user.assignment</field>
+			<field name="arch" type="xml">
+				<form string="User Assignment">
+					<group>
+						<group>
+							<field name="date_start" />
+							<field name="date_end" />
+							<field name="user_id" />
+							<field name="assigned_by_user_id" />
+							<label for="duration" />
+							<div class="o_row">
+								<field name="duration" />
+								<span>Hours</span>
+							</div>
+						</group>
+						<group>
+							<field name="model_id" />
+							<field name="res_model" />
+							<field name="res_id" />
+							<field name="resource_ref" />
+							<field name="company_id" groups="base.group_multi_company" />
+						</group>
+					</group>
+				</form>
+			</field>
+		</record>
+
+		<record id="user_assignment_view_pivot" model="ir.ui.view">
+			<field name="name">user.assignment.pivot</field>
+			<field name="model">user.assignment</field>
+			<field name="arch" type="xml">
+				<pivot string="User Assignment Pivot">
+					<field name="user_id" type="row" />
+					<field name="duration" type="measure"
+					string="Duration (Hr.)" />
+				</pivot>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="user_assignment_view_search">
+			<field name="name">user.assignment.search</field>
+			<field name="model">user.assignment</field>
+			<field name="arch" type="xml">
+				<search string="Search User Assignment">
+					<field name="model_id" />
+					<field name="res_name" />
+					<separator />
+					<field name="date_start" />
+					<field name="date_end" />
+					<separator />
+					<field name="user_id" />
+					<separator />
+					<field name="assigned_by_user_id" />
+					<separator groups="base.group_multi_company" />
+					<field name="company_id" groups="base.group_multi_company" />
+					<group expand="0" string="Group By">
+						<filter string="Model" name="grp_model_id" domain="[]"
+							context="{'group_by':'model_id'}" />
+						<separator />
+						<filter string="User" name="grp_user_id" domain="[]"
+							context="{'group_by':'user_id'}" />
+						<separator />
+						<filter string="Assigned By" name="grp_assigned_by_user_id"
+							domain="[]" context="{'group_by':'assigned_by_user_id'}" />
+						<separator />
+						<filter string="Assigned Date" name="grp_date_start"
+							domain="[]" context="{'group_by':'date_start'}" />
+						<filter string="Unassigned Date" name="grp_date_end"
+							domain="[]" context="{'group_by':'date_end'}" />
+						<separator />
+						<filter string="Company" name="grp_company_id" domain="[]"
+							context="{'group_by':'company_id'}"
+							groups="base.group_multi_company" />
+					</group>
+				</search>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window"
+			id="action_user_assignment">
+			<field name="name">User Assignments</field>
+			<field name="res_model">user.assignment</field>
+			<field name="view_mode">tree,form,pivot</field>
+		</record>
+
+		<menuitem name="User Assignment" sequence="2"
+			id="menu_user_assignment_root" parent="base.menu_custom" />
+
+		<menuitem name="Log" id="menu_user_assignment"
+			parent="menu_user_assignment_root" action="action_user_assignment" />
+
+	</data>
+</odoo>

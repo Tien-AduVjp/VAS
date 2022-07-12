@@ -1,0 +1,9 @@
+<odoo>
+    <data>
+        <menuitem name="Sales Regions"
+            id="sales_team_region_config"
+            parent="sale.menu_sale_config"
+            action="to_sales_team_advanced.sales_team_region_config_action"/>
+
+    </data>
+</odoo>

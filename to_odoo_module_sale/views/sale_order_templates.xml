@@ -1,0 +1,41 @@
+<odoo>
+	<data>
+		<template id="report_saleorder_document"
+			inherit_id="to_product_license_sale.report_saleorder_document">
+			<xpath expr="//t[@t-foreach='doc.product_license_version_ids']"
+				position="before">
+				<t
+					t-foreach="doc.odoo_module_version_ids.with_context(exclude_standard_odoo_modules=True).get_recursive_dependencies(incl_the_current=True)"
+					t-as="odoo_module_version">
+					<!-- Print app description of both the order and product allow it -->
+					<t
+						t-if="odoo_module_version.product_id.print_app_desc_on_sale_order and doc.print_app_desc_on_sale_order">
+						<div class="alert alert-info o_odoo_module_pdf_title">
+							<h1>
+								<span t-field="odoo_module_version.product_id.name" />
+								<small>
+									<div class="badge badge-info">
+										v
+										<span t-esc="odoo_module_version.version" />
+									</div>
+								</small>
+								<small>
+									<div class="o_odoo_module_version_info">
+										For Odoo
+										<div class="badge badge-info">
+											<span t-esc="odoo_module_version.odoo_version_id.name" />
+										</div>
+
+									</div>
+								</small>
+							</h1>
+						</div>
+						<div>
+							<span t-field="odoo_module_version.description_html" />
+						</div>
+					</t>
+				</t>
+			</xpath>
+		</template>
+	</data>
+</odoo>

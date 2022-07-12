@@ -1,0 +1,10 @@
+<odoo>
+	<menuitem id="employee_advance_menu_root" sequence="99" name="Employee Advance"
+	web_icon="to_hr_employee_advance,static/description/icon.png" groups="to_hr_employee_advance.group_employee_advance_user" />
+
+	<menuitem id="employee_advance_menu" sequence="0" name="Requests/Declarations"
+	parent="employee_advance_menu_root" />
+
+	<menuitem id="employee_advance_menu_accounting" sequence="1" name="Accounting"
+	parent="employee_advance_menu_root" />
+</odoo>

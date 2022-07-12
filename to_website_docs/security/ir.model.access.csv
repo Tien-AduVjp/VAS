@@ -1,0 +1,14 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_website_doc_tag_public,website.doc.tag.public,model_website_doc_tag,,1,0,0,0
+access_website_doc_tag_user,website.doc.tag.user,model_website_doc_tag,to_website_docs.group_website_doc_editor,1,1,1,1
+access_website_document_content_public,website.document.content.public,model_website_document_content,,1,0,0,0
+access_website_document_public,website.document.public,model_website_document,,1,0,0,0
+access_website_doc_category_public,website.doc.category.public,model_website_doc_category,,1,0,0,0
+access_docs_public_rule_public,docs.public.rule.public,model_docs_public_rule,,1,0,0,0
+access_website_document_editor,website.document.editor,model_website_document,to_website_docs.group_website_doc_editor,1,1,1,1
+access_website_document_content_editor,website.document.content.editor,model_website_document_content,to_website_docs.group_website_doc_editor,1,1,1,1
+access_website_doc_category_editor,website.doc.category.editor,model_website_doc_category,to_website_docs.group_website_doc_editor,1,0,0,0
+access_website_doc_category_reviewer,website.doc.category.reviewer,model_website_doc_category,to_website_docs.group_website_doc_reviewer,1,1,1,0
+access_website_doc_category_manager,website.doc.category.manager,model_website_doc_category,to_website_docs.group_website_doc_manager,1,1,1,1
+access_docs_public_rule_officer,docs.public.rule.officer,model_docs_public_rule,to_website_docs.group_website_doc_editor,1,1,1,1
+access_wizard_website_document_merge_user,wizard.website.document.merge,model_wizard_website_document_merge,to_website_docs.group_website_doc_editor,1,1,1,0

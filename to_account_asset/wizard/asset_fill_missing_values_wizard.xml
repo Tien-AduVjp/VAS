@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record model="ir.ui.view" id="asset_fill_missing_values_wizard_view_form">
+		<field name="name">asset.fill.missing.values.wizard.form</field>
+		<field name="model">asset.fill.missing.values.wizard</field>
+		<field name="priority" eval="8" />
+		<field name="arch" type="xml">
+			<form string="Fill missing values to Asset">
+                <div>
+                    <p>
+                        This wizard will fill missing values to asset.<br/>
+                    </p>
+                </div>
+				<group>
+					<group>
+						<field name="first_depreciation_date" />
+						<field name="analytic_account_id" />
+						<field name="analytic_tag_ids" widget="many2many_tags" />
+					</group>
+				</group>
+				<footer invisible="not context.get('edit', True)">
+					<button string="Fill" name="action_fill_missing_values" type="object" class="btn-primary" />
+					<button string="Cancel" class="btn-secondary" special="cancel" />
+				</footer>
+			</form>
+		</field>
+	</record>
+
+	<record id="fill_missing_values_to_asset_wizard_action" model="ir.actions.act_window">
+           <field name="name">Fill missing values to Asset</field>
+           <field name="res_model">asset.fill.missing.values.wizard</field>
+           <field name="view_mode">form</field>
+           <field name="target">new</field>
+           <field name="binding_model_id" ref="to_account_asset.model_account_asset_asset" />
+           <field name="view_id" ref="to_account_asset.asset_fill_missing_values_wizard_view_form" />
+       </record>
+</odoo>

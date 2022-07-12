@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+
+    <record id="document_tag_category_hr_recruitment" model="document.tag.category">
+        <field name="name">Recruitment</field>
+    </record>
+
+    <record id="document_tag_category_hr_recruitment_status" model="document.tag.category">
+        <field name="name">Recruitment Status</field>
+    </record>
+
+</odoo>

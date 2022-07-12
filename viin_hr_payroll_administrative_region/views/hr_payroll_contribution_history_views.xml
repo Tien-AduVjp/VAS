@@ -1,0 +1,21 @@
+<odoo>
+	<record id="hr_payroll_contribution_history_form_view" model="ir.ui.view">
+		<field name="name">Payroll Contribution History</field>
+			<field name="model">hr.payroll.contribution.history</field>
+		<field name="inherit_id" ref="to_hr_payroll.hr_payroll_contribution_history_form_view" />
+		<field name="arch" type="xml">
+			<xpath expr="//group[@name='grp_contribution']" position="inside">
+				<label for="max_contribution_employee"/>
+                <div class="o_row" name="max_contribution_employee">
+                    <field name="max_contribution_employee" nolabel="1"/>
+                    <span>/ month</span>
+                </div>
+                <label for="max_contribution_company"/>
+                <div class="o_row" name="max_contribution_company">
+                    <field name="max_contribution_company" nolabel="1"/>
+                    <span>/ month</span>
+                </div>
+			</xpath>
+		</field>
+	</record>
+</odoo>

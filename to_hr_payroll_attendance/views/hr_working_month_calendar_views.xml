@@ -1,0 +1,67 @@
+<odoo>
+	<data>
+		<record id="hr_working_month_calendar_tree_view"
+			model="ir.ui.view">
+			<field name="name">hr.working.month.calendar.tree</field>
+			<field name="model">hr.working.month.calendar</field>
+			<field name="inherit_id"
+				ref="to_hr_payroll.hr_working_month_calendar_tree_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='unpaid_leave_days']"
+					position="after">
+					<field name="total_attendance_hours" optional="hide" />
+					<field name="valid_attendance_hours" optional="hide" />
+					<field name="late_attendance_hours" optional="hide" />
+					<field name="early_leave_hours" optional="hide" />
+					<field name="late_attendance_count" optional="hide" />
+					<field name="early_leave_count" optional="hide" />
+					<field name="missing_checkout_count" optional="hide" />
+				</xpath>
+			</field>
+		</record>
+
+		<record id="hr_working_month_calendar_form_view"
+			model="ir.ui.view">
+			<field name="name">hr.working.month.calendar.form</field>
+			<field name="model">hr.working.month.calendar</field>
+			<field name="inherit_id"
+				ref="to_hr_payroll.hr_working_month_calendar_form_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//group[./group/field[@name='leave_hours']]"
+					position="after">
+					<group string="Attendance Summary">
+						<group>
+							<field name="total_attendance_hours" />
+							<field name="valid_attendance_hours" />
+						</group>
+						<group>
+							<field name="late_attendance_hours" />
+							<field name="early_leave_hours" />
+						</group>
+						<group>
+							<field name="late_attendance_count" />
+							<field name="early_leave_count" />
+							<field name="missing_checkout_count" />
+						</group>
+					</group>
+				</xpath>
+				<xpath expr="//field[@name='line_ids']/form/group/group[./field[@name='paid_rate']]"
+					position="after">
+					<group>
+						<field name="total_attendance_hours" />
+						<field name="valid_attendance_hours" />
+					</group>
+					<group>
+						<field name="late_attendance_hours" />
+						<field name="early_leave_hours" />
+					</group>
+					<group>
+						<field name="late_attendance_count" />
+						<field name="early_leave_count" />
+						<field name="missing_checkout_count" />
+					</group>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

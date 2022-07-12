@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="view_vehicle_log_services_allocation_wizard"
+			model="ir.ui.view">
+			<field name="name">Vehicle Service Distribution Wizard</field>
+			<field name="model">vehicle.log.services.distribution</field>
+			<field name="arch" type="xml">
+				<form string="Vehicle Service Distribution Wizard">
+					<group>
+						<field name="vehicle_ids" widget="many2many_tags" />
+					</group>
+					<separator string="Invoice Lines" />
+					<field name="invoice_line_ids" options="{'no_create': True}">
+						<tree name="invoice_line_ids">
+							<field name="product_id" />
+							<field name="name" />
+							<field name="ref" />
+							<field name="price_unit" />
+							<field name="price_subtotal" />
+							<field name="currency_id" />
+						</tree>
+					</field>
+					<separator string="Vehicle Service Distribution Board"
+						attrs="{'invisible':[('vehicle_log_services_distribution_line_ids','=',[])]}" />
+					<field name="vehicle_log_services_distribution_line_ids"
+						attrs="{'invisible':[('vehicle_log_services_distribution_line_ids','=',[])]}">
+						<tree name="vehicle_log_services_distribution_line_ids"
+							editable="true" create="false">
+							<field name="invoice_line_id" readonly="1" force_save="1" />
+							<field name="vehicle_id" />
+							<field name="currency_id" />
+							<field name="cost_subtype_id" />
+                            <field name="quantity" />
+							<field name="amount" />
+						</tree>
+					</field>
+
+					<footer>
+						<button name="create_vehicle_service"
+							string="Process" type="object" class="btn-primary" />
+						<button string="Cancel" class="btn-default"
+							special="cancel" />
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<record id="action_vehicle_log_services_allocation_wizard"
+			model="ir.actions.act_window">
+			<field name="name">Vehicle Service Distribution Wizard</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">vehicle.log.services.distribution</field>
+			<field name="view_mode">form</field>
+			<field name="target">new</field>
+			<field name="context">{'default_invoice_line_ids':active_ids}</field>
+		</record>
+	</data>
+</odoo>

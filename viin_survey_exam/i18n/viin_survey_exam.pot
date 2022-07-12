@@ -1,0 +1,669 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_survey_exam
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-30 03:10+0000\n"
+"PO-Revision-Date: 2021-10-30 03:10+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank_category__question_count
+msgid "# Questions"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model_terms:ir.ui.view,arch_db:viin_survey_exam.survey_question_bank_view_form
+msgid "<i class=\"fa fa-check-square-o fa-lg\"/> answer"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model_terms:ir.ui.view,arch_db:viin_survey_exam.survey_question_bank_view_form
+msgid "<i class=\"fa fa-circle-o  fa-lg\"/> answer"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model_terms:ir.ui.view,arch_db:viin_survey_exam.survey_question_bank_view_form
+msgid "<i class=\"fa fa-dot-circle-o fa-lg\"/> answer"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model_terms:ir.ui.view,arch_db:viin_survey_exam.survey_question_bank_view_form
+msgid "<i class=\"fa fa-square-o fa-lg\"/> answer"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model_terms:ir.ui.view,arch_db:viin_survey_exam.survey_question_bank_view_form
+msgid ""
+"<span attrs=\"{'invisible': [('is_time_limited', '=', False)]}\"> "
+"seconds</span>"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model_terms:ir.ui.view,arch_db:viin_survey_exam.survey_question_bank_category_view_form
+msgid "<span class=\"o_stat_text\"> Questions</span>"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,help:viin_survey_exam.field_survey_question_bank_answer__answer_score
+msgid ""
+"A positive score indicates a correct choice; a negative or null score "
+"indicates a wrong answer"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model_terms:ir.ui.view,arch_db:viin_survey_exam.survey_question_bank_view_form
+msgid "Allow Comments"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank_answer__value
+msgid "Answer value"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__answer_ids
+#: model_terms:ir.ui.view,arch_db:viin_survey_exam.survey_question_bank_view_form
+msgid "Answers"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model,name:viin_survey_exam.model_survey_question_bank_answer
+msgid "Answers for questions bank"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank_category__question_bank_ids
+msgid "Bank Survey Questions"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model_terms:ir.ui.view,arch_db:viin_survey_exam.survey_create_question_bank_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:viin_survey_exam.survey_import_question_wizard_form_view
+msgid "Cancel"
+msgstr ""
+
+#. module: viin_survey_exam
+#: code:addons/viin_survey_exam/models/survey_question.py:0
+#, python-format
+msgid ""
+"Cannot create question bank from question '%s'.\n"
+"You can only create with question type is Multiple choice: only one answer or Multiple choice: multiple answers allowed"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_create_question_bank_wizard__category_id
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__category_id
+#: model_terms:ir.ui.view,arch_db:viin_survey_exam.survey_question_bank_view_search
+msgid "Category"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model,name:viin_survey_exam.model_survey_question_bank_category
+msgid "Category of Survey Question Bank"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank_category__child_id
+msgid "Child Categories"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model_terms:ir.ui.view,arch_db:viin_survey_exam.survey_question_bank_view_form
+msgid "Choices"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__comment_count_as_answer
+msgid "Comment Field is an Answer Choice"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__comments_message
+msgid "Comment Message"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank_category__complete_name
+msgid "Complete Name"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model_terms:ir.ui.view,arch_db:viin_survey_exam.survey_question_bank_view_form
+msgid "Constraints"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.actions.act_window,name:viin_survey_exam.survey_create_question_bank_wizard_action
+#: model_terms:ir.ui.view,arch_db:viin_survey_exam.survey_create_question_bank_wizard_form_view
+msgid "Create Question Bank"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_create_question_bank_wizard__create_uid
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_import_question_wizard__create_uid
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__create_uid
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank_answer__create_uid
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank_category__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_create_question_bank_wizard__create_date
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_import_question_wizard__create_date
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__create_date
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank_answer__create_date
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank_category__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,help:viin_survey_exam.field_survey_question_bank__is_time_limited
+msgid "Currently only supported for live sessions."
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__description
+#: model_terms:ir.ui.view,arch_db:viin_survey_exam.survey_question_bank_view_form
+#: model_terms:ir.ui.view,arch_db:viin_survey_exam.survey_question_form
+msgid "Description"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model_terms:ir.ui.view,arch_db:viin_survey_exam.survey_question_bank_view_form
+msgid "Display"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_create_question_bank_wizard__display_name
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_import_question_wizard__display_name
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question__display_name
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_answer__display_name
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__display_name
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank_answer__display_name
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank_category__display_name
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_survey__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,help:viin_survey_exam.field_survey_question_bank__allow_value_image
+msgid ""
+"Display images in addition to answer label. Valid only for simple / multiple"
+" choice questions."
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__constr_error_msg
+msgid "Error message"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,help:viin_survey_exam.field_survey_question_bank__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model_terms:ir.ui.view,arch_db:viin_survey_exam.survey_question_bank_view_search
+msgid "Group By"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_create_question_bank_wizard__id
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_import_question_wizard__id
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question__id
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_answer__id
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__id
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank_answer__id
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank_category__id
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_survey__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,help:viin_survey_exam.field_survey_question_bank__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,help:viin_survey_exam.field_survey_question_bank__message_needaction
+#: model:ir.model.fields,help:viin_survey_exam.field_survey_question_bank__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,help:viin_survey_exam.field_survey_question_bank__message_has_error
+#: model:ir.model.fields,help:viin_survey_exam.field_survey_question_bank__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: viin_survey_exam
+#: code:addons/viin_survey_exam/models/survey_question_bank.py:0
+#, python-format
+msgid "If other, please specify:"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank_answer__value_image
+msgid "Image"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__allow_value_image
+msgid "Images on answers"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model_terms:ir.ui.view,arch_db:viin_survey_exam.survey_import_question_wizard_form_view
+msgid "Import"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.actions.act_window,name:viin_survey_exam.survey_import_question_wizard_action
+msgid "Import Questions"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model_terms:ir.ui.view,arch_db:viin_survey_exam.survey_form
+msgid "Import Questions Bank"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank_answer__is_correct
+msgid "Is a correct answer"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_create_question_bank_wizard____last_update
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_import_question_wizard____last_update
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question____last_update
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_answer____last_update
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank____last_update
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank_answer____last_update
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank_category____last_update
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_survey____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_create_question_bank_wizard__write_uid
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_import_question_wizard__write_uid
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__write_uid
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank_answer__write_uid
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank_category__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_create_question_bank_wizard__write_date
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_import_question_wizard__write_date
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__write_date
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank_answer__write_date
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank_category__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model_terms:ir.ui.view,arch_db:viin_survey_exam.survey_question_bank_view_form
+msgid "Live Sessions"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__constr_mandatory
+#: model_terms:ir.ui.view,arch_db:viin_survey_exam.survey_question_bank_view_form
+msgid "Mandatory Answer"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model_terms:ir.ui.view,arch_db:viin_survey_exam.survey_question_bank_view_form
+msgid "Multiple choice with multiple answers"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model_terms:ir.ui.view,arch_db:viin_survey_exam.survey_question_bank_view_form
+msgid "Multiple choice with one answer"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields.selection,name:viin_survey_exam.selection__survey_question_bank__question_type__multiple_choice
+msgid "Multiple choice: multiple answers allowed"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields.selection,name:viin_survey_exam.selection__survey_question_bank__question_type__simple_choice
+msgid "Multiple choice: only one answer"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank_category__name
+msgid "Name"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__column_nb
+#: model_terms:ir.ui.view,arch_db:viin_survey_exam.survey_question_bank_view_form
+msgid "Number of columns"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,help:viin_survey_exam.field_survey_question_bank__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,help:viin_survey_exam.field_survey_question_bank__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,help:viin_survey_exam.field_survey_question_bank__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model_terms:ir.ui.view,arch_db:viin_survey_exam.survey_question_bank_view_form
+msgid "Options"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank_category__parent_id
+msgid "Parent Category"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank_category__parent_path
+msgid "Parent Path"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__name
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank_answer__question_id
+msgid "Question"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.actions.act_window,name:viin_survey_exam.survey_question_bank_category_action
+#: model:ir.ui.menu,name:viin_survey_exam.survey_question_bank_category_menu
+msgid "Question Bank Categories"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model_terms:ir.ui.view,arch_db:viin_survey_exam.survey_question_bank_view_form
+msgid "Question Time Limit"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__question_type
+msgid "Question Type"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model_terms:ir.ui.view,arch_db:viin_survey_exam.survey_import_question_wizard_form_view
+msgid "Questions"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.actions.act_window,name:viin_survey_exam.survey_question_bank_action
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_import_question_wizard__question_ids
+#: model:ir.ui.menu,name:viin_survey_exam.survey_question_bank_menu
+msgid "Questions Bank"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank_answer__answer_score
+msgid "Score for this choice"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model_terms:ir.ui.view,arch_db:viin_survey_exam.survey_create_question_bank_wizard_form_view
+msgid "Select category to create question bank"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model_terms:ir.ui.view,arch_db:viin_survey_exam.survey_import_question_wizard_form_view
+msgid ""
+"Select questions from questions bank to generate questions to this survey"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank_answer__sequence
+msgid "Sequence order"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__comments_allowed
+msgid "Show Comments Field"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,help:viin_survey_exam.field_survey_question_bank__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model,name:viin_survey_exam.model_survey_survey
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_import_question_wizard__survey_id
+msgid "Survey"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:res.groups,name:viin_survey_exam.survey_exam_group_manager
+msgid "Survey Exam Manager"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model,name:viin_survey_exam.model_survey_question_answer
+msgid "Survey Label"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model,name:viin_survey_exam.model_survey_question
+msgid "Survey Question"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model,name:viin_survey_exam.model_survey_question_bank
+msgid "Survey Question Bank"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model_terms:ir.ui.view,arch_db:viin_survey_exam.survey_question_bank_category_view_tree
+msgid "Survey Question Bank Categories"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model_terms:ir.ui.view,arch_db:viin_survey_exam.survey_question_bank_view_tree
+msgid "Survey Question Categories"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,help:viin_survey_exam.field_survey_question_bank_category__question_count
+msgid ""
+"The number of questions under this category (Does not consider the children "
+"categories)"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__is_time_limited
+msgid "The question is limited in time"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,help:viin_survey_exam.field_survey_question_bank__column_nb
+msgid ""
+"These options refer to col-xx-[12|6|4|3|2] classes in Bootstrap for "
+"dropdown-based simple and multiple choice questions."
+msgstr ""
+
+#. module: viin_survey_exam
+#: code:addons/viin_survey_exam/models/survey_question_bank.py:0
+#, python-format
+msgid "This question requires an answer."
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__time_limit
+msgid "Time limit (seconds)"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,help:viin_survey_exam.field_survey_question_bank__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,help:viin_survey_exam.field_survey_question_bank__description
+msgid "Use this field to add additional explanations about your question"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,field_description:viin_survey_exam.field_survey_question_bank__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model.fields,help:viin_survey_exam.field_survey_question_bank__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model,name:viin_survey_exam.model_survey_create_question_bank_wizard
+msgid "Wizard Survey Create Questions Bank"
+msgstr ""
+
+#. module: viin_survey_exam
+#: model:ir.model,name:viin_survey_exam.model_survey_import_question_wizard
+msgid "Wizard Survey Import from Questions Bank"
+msgstr ""

@@ -1,0 +1,7 @@
+<odoo>
+    <template id="social_facebook_assets_backend" name="Social Facebook Assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" type="text/scss" href="/viin_social_facebook/static/src/scss/social_facebook.scss"/>
+        </xpath>
+    </template>
+</odoo>

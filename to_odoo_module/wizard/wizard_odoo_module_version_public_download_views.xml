@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record
+		id="wizard_odoo_module_version_public_download_form_view"
+		model="ir.ui.view">
+		<field name="name">wizard.odoo.module.version.public.download.form
+		</field>
+		<field name="model">wizard.odoo.module.version.public.download</field>
+		<field name="arch" type="xml">
+			<form string="Odoo App Public Download URL">
+				<sheet>
+					<field name="odoo_module_version_id" invisible="1" />
+					<field name="is_standard_odoo_module" invisible="1" />
+					<div
+						attrs="{'invisible':[('is_standard_odoo_module','=',False)]}"
+						class="text-danger">
+						You cannot download a standard Odoo module that comes along
+						with either Odoo CE or Odoo EE. Please select another one!
+					</div>
+					<div
+						attrs="{'invisible':[('is_standard_odoo_module','=',True)]}">
+						The below URL allows public users to download the app and its
+						dependencies without login.
+						<field name="public_download_url" widget="CopyClipboardChar"
+							options="{'string': 'Copy Link'}" />
+					</div>
+				</sheet>
+				<footer>
+					<button string="Close" class="oe_highlight" special="cancel" />
+				</footer>
+			</form>
+		</field>
+	</record>
+
+</odoo>

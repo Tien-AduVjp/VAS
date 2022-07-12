@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data noupdate="1">
+		<!-- After installation of the module, open the related menu -->
+		<record id="client_foreign_trade_menu_action" model="ir.actions.client">
+			<field name="name">Open Foreign Trade Menu</field>
+			<field name="tag">reload</field>
+			<field name="params" eval="{'menu_id': ref('menu_foreign_trade_root')}" />
+		</record>
+		<record id="base.open_menu" model="ir.actions.todo">
+			<field name="action_id" ref="client_foreign_trade_menu_action" />
+			<field name="state">open</field>
+		</record>
+	</data>
+
+	<data>
+		<record id="foreign_trade_configuration" model="ir.ui.view">
+			<field name="name">res.config.settings.view.form.foreign.trade</field>
+			<field name="model">res.config.settings</field>
+			<field name="priority" eval="1000" />
+			<field name="inherit_id"
+				ref="base.res_config_settings_view_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//div[hasclass('settings')]" position="inside">
+					<div class="app_settings_block"
+							data-string="Foreign Trade &amp; Logistics"
+							string="Foreign Trade &amp; Logistics"
+							data-key="viin_foreign_trade"
+							groups="viin_foreign_trade.group_foreign_trade_manager">
+                        <h2>Import/Export Taxes</h2>
+                        <div class="row mt16 o_settings_container">
+                           	<div class="col-xs-12 col-md-6 o_setting_box" title="These payment terms are set in any new custom declaration document.">
+                                <div class="o_setting_left_pane"></div>
+                                <div class="o_setting_right_pane">
+                                    <h4>Default Import/Export Tax Payment Term</h4>
+                                    <span class="fa fa-lg fa-building-o" title="Values set here are company-specific." groups="base.group_multi_company"/>
+                                    <div class="text-muted">
+                                        Default payment terms for taxes applied to taxes authorities
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="row mt16">
+                                            <label string="Import Tax Payment Term" for="import_tax_payment_term_id" class="col-md-3 o_light_label"/>
+                                            <field name="import_tax_payment_term_id" domain="[('company_id', '=', company_id)]"/>
+                                        </div>
+                                        <div class="row">
+                                            <label string="Export Tax Payment Term" for="export_tax_payment_term_id" class="col-md-3 o_light_label"/>
+                                            <field name="export_tax_payment_term_id" domain="[('company_id', '=', company_id)]"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-6 o_setting_box" id="rounding_method" title="Default Account Journal that will be used as the default for the  accounting entries related to import/export taxes.">
+                                <div class="o_setting_left_pane"/>
+                                <div class="o_setting_right_pane">
+                                    <h4>Import/Export Tax Journal</h4>
+                                    <div class="text-muted">
+                                        Default journal for account entries related to import/export taxes
+                                    </div>
+                                     <div class="content-group">
+                                        <field name="account_journal_custom_clearance" class="o_light_label mt16" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       <h2>Sequencing</h2>
+                        <div class="row mt16 o_settings_container">
+                        	<div class="col-xs-12 col-md-6 o_setting_box" title="These payment terms are set in any new custom declaration document.">
+                        		<div class="o_setting_left_pane"/>
+                                <div class="o_setting_right_pane">
+                                    <h4>Default Import/Export Tax Payment Term</h4>
+                                    <span class="fa fa-lg fa-building-o" title="Values set here are company-specific." groups="base.group_multi_company"/>
+                                    <div class="text-muted">
+                                        Sequencing for custom clearance documents
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="row mt16">
+                                            <label string="Import Custom Declaration Doc. Sequence" for="imp_custom_dec_sequence_id" class="col-md-3 o_light_label"/>
+                                            <field name="imp_custom_dec_sequence_id" />
+                                        </div>
+                                        <div class="row">
+                                            <label string="Export Custom Declaration Doc. Sequence" for="exp_custom_dec_sequence_id" class="col-md-3 o_light_label"/>
+                                            <field name="exp_custom_dec_sequence_id" />
+                                        </div>
+                                    </div>
+                                </div>
+							</div>
+                        </div>
+                    </div>
+                </xpath>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="res_config_settings_view_form">
+			<field name="name">res.config.settings.view.form.inherit.account
+			</field>
+			<field name="model">res.config.settings</field>
+			<field name="inherit_id"
+				ref="account.res_config_settings_view_form" />
+			<field name="arch" type="xml">
+				<xpath
+					expr="//t[@groups='account.group_account_user']"
+					position="after">
+					<h2>Foreign Trade Landed Cost</h2>
+                    <div class="row mt16 o_settings_container" id="landed_cost">
+                        <div class="col-xs-12 col-md-6 o_setting_box">
+                            <div class="o_setting_left_pane"/>
+                            <div class="o_setting_right_pane">
+                                <label for="landed_cost_journal_id"/>
+                                <div class="text-muted">
+                                    Default journal for account entries related to import landed cost taxes
+                                </div>
+                                <field name="landed_cost_journal_id"/>
+                            </div>
+                        </div>
+                    </div>
+				</xpath>
+			</field>
+		</record>
+
+		<record id="action_viin_foreign_trade_configuration" model="ir.actions.act_window">
+			<field name="name">Configure Foreign Trade</field>
+			<field name="res_model">res.config.settings</field>
+			<field name="view_mode">form</field>
+			<field name="target">inline</field>
+			<field name="context">{'module' : 'viin_foreign_trade'}</field>
+		</record>
+
+		<menuitem id="menu_viin_foreign_trade_global_settings" name="Settings"
+			parent="menu_foreign_trade_config_root" sequence="0"
+			action="action_viin_foreign_trade_configuration" />
+	</data>
+</odoo>

@@ -1,0 +1,11 @@
+<odoo noupdate="0">
+        <!-- notify all employees of module installation -->
+        <record id="module_install_notification" model="mail.message" context="{'mail_notify_noemail': True}">
+            <field name="model">mail.channel</field>
+            <field name="res_id" ref="mail.channel_all_employees"/>
+            <field name="message_type">notification</field>
+            <field name="subtype_id" ref="mail.mt_comment"/>
+            <field name="subject">Recruitment Request application installed!</field>
+            <field name="body"><![CDATA[<p>Manage your Recruitment Request, after validation by Recruitment Request managers, the requests will be posted to HR Recruitment Department for further steps.</p>]]></field>
+        </record>
+</odoo>

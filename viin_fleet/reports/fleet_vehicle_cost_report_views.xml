@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id='fleet_costs_report_view_search' model='ir.ui.view'>
+        <field name="name">fleet.vehicle.cost.report.search</field>
+        <field name="model">fleet.vehicle.cost.report</field>
+        <field name="inherit_id" ref="fleet.fleet_costs_report_view_search"/>
+        <field name="arch" type="xml">
+            <field name="driver_id" position="after">
+                <field name="vendor_id"/>
+                <field name="cost_type_id"/>
+            </field>
+            <filter name="driver" position="after">
+                <filter string="Vendor" name="vendor" context="{'group_by':'vendor_id'}"/>
+                <filter string="Service Type" name="cost_type" context="{'group_by':'cost_type_id'}"/>
+            </filter>
+        </field>
+    </record>
+
+</odoo>

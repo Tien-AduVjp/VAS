@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_survey_question_bank_category_manager,survey.question.bank.category.manager,model_survey_question_bank_category,survey_exam_group_manager,1,1,1,1
+access_survey_question_bank_answer_manager,survey.question.bank.answer.manager,model_survey_question_bank_answer,survey_exam_group_manager,1,1,1,1
+access_survey_question_answer_manager,survey.question.bank.manager,model_survey_question_bank,survey_exam_group_manager,1,1,1,1
+access_survey_create_question_bank_wizard,access.survey.create.question.bank.wizard,model_survey_create_question_bank_wizard,base.group_user,1,1,1,1
+access_survey_import_question_wizard,access.survey.import.question.wizard,model_survey_import_question_wizard,base.group_user,1,1,1,1

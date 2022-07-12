@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="document_workspace_view_tree" model="ir.ui.view">
+        <field name="name">document.workspace.view.tree</field>
+        <field name="model">document.workspace</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="complete_name"/>
+                <field name="parent_id"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="document_workspace_view_form" model="ir.ui.view">
+        <field name="name">document.workspace.view.form</field>
+        <field name="model">document.workspace</field>
+        <field name="arch" type="xml">
+            <form>
+            	<field name="active" invisible="1"/>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_documents" string="Documents"
+                            class="oe_stat_button" type="object" icon="fa-file-o"/>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="parent_id"/>
+                            <field name="unique_doc_name"/>
+                        </group>
+                        <group>
+                            <field name="tag_ids" widget="many2many_tags"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="actions" string="Actions">
+                            <field name="action_ids"/>
+                        </page>
+                        <page name="access_right" string="Access Right">
+                            <group>
+                                <group name="team_access_right" string="Teams">
+                                    <field name="write_team_ids" widget="many2many_tags"/>
+                                    <field name="read_team_ids" widget="many2many_tags"/>
+                                    <field name="specific_team_ids" widget="many2many_tags"/>
+                                </group>
+                                <group name="user_access_right" string="Users">
+                                    <field name="write_user_ids" widget="many2many_tags"/>
+                                    <field name="read_user_ids" widget="many2many_tags"/>
+                                    <field name="specific_user_ids" widget="many2many_tags"/>
+                                </group>
+                                <group name="group_access_right" string="Groups">
+                                    <field name="write_group_ids" widget="many2many_tags"/>
+                                    <field name="read_group_ids" widget="many2many_tags"/>
+                                    <field name="specific_group_ids" widget="many2many_tags"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page name="description" string="Description">
+                            <field name="description"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" />
+                    <field name="message_ids" />
+                    <field name="activity_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="document_workspace_view_search" model="ir.ui.view">
+        <field name="name">document.workspace.view.search</field>
+        <field name="model">document.workspace</field>
+        <field name="arch" type="xml">
+            <search string="Document Workspaces">
+                <field name="name" />
+                <field name="parent_id" />
+                <filter name="ftr_archived" string="Archived" domain="[('active', '=', False)]"/>
+                <group expand="1" string="Group By">
+                    <filter string="Parent Workspace" name="grp_parent_id" domain="[]" context="{'group_by':'parent_id'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="document_workspace_action" model="ir.actions.act_window">
+        <field name="name">Workspaces</field>
+        <field name="res_model">document.workspace</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="document_workspace_menu" parent="document_master_data_menu_root" action="document_workspace_action" sequence="10"/>
+
+</odoo>

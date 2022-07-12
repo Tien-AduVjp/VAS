@@ -1,0 +1,181 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* payment_vnpay
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-12 11:04+0000\n"
+"PO-Revision-Date: 2021-11-12 11:04+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: payment_vnpay
+#: model:ir.model.fields,field_description:payment_vnpay.field_payment_acquirer__display_name
+#: model:ir.model.fields,field_description:payment_vnpay.field_payment_transaction__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: payment_vnpay
+#: model:ir.model.fields,field_description:payment_vnpay.field_payment_acquirer__fees_dom_fixed
+msgid "Fixed domestic fees"
+msgstr ""
+
+#. module: payment_vnpay
+#: model:ir.model.fields,field_description:payment_vnpay.field_payment_acquirer__fees_int_fixed
+msgid "Fixed international fees"
+msgstr ""
+
+#. module: payment_vnpay
+#: model_terms:ir.ui.view,arch_db:payment_vnpay.acquirer_form_vnpay
+msgid "How to configure your VNPay account?"
+msgstr ""
+
+#. module: payment_vnpay
+#: model:ir.model.fields,field_description:payment_vnpay.field_payment_acquirer__id
+#: model:ir.model.fields,field_description:payment_vnpay.field_payment_transaction__id
+msgid "ID"
+msgstr ""
+
+#. module: payment_vnpay
+#: model:ir.model.fields,field_description:payment_vnpay.field_payment_acquirer____last_update
+#: model:ir.model.fields,field_description:payment_vnpay.field_payment_transaction____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: payment_vnpay
+#: model:ir.model,name:payment_vnpay.model_payment_acquirer
+msgid "Payment Acquirer"
+msgstr ""
+
+#. module: payment_vnpay
+#: model:ir.model,name:payment_vnpay.model_payment_transaction
+msgid "Payment Transaction"
+msgstr ""
+
+#. module: payment_vnpay
+#: model:ir.model.fields,field_description:payment_vnpay.field_payment_acquirer__provider
+msgid "Provider"
+msgstr ""
+
+#. module: payment_vnpay
+#: model:ir.model.fields,help:payment_vnpay.field_payment_acquirer__vnpay_hash_secret
+msgid "The Hash Secret provided by VNPay"
+msgstr ""
+
+#. module: payment_vnpay
+#: model:ir.model.fields,help:payment_vnpay.field_payment_acquirer__vnpay_tmn_code
+msgid "The Website Code provided by VNPay"
+msgstr ""
+
+#. module: payment_vnpay
+#: model:ir.model.fields.selection,name:payment_vnpay.selection__payment_acquirer__provider__vnpay
+#: model:payment.acquirer,name:payment_vnpay.payment_acquirer_vnpay
+msgid "VNPay"
+msgstr ""
+
+#. module: payment_vnpay
+#: model:ir.model.fields,field_description:payment_vnpay.field_payment_transaction__vnpay_card_type
+msgid "VNPay Card Type"
+msgstr ""
+
+#. module: payment_vnpay
+#: model:ir.model.fields,field_description:payment_vnpay.field_payment_acquirer__vnpay_hash_secret
+msgid "VNPay Hash Secret"
+msgstr ""
+
+#. module: payment_vnpay
+#: model:ir.model.fields,field_description:payment_vnpay.field_payment_acquirer__vnpay_payment_url
+msgid "VNPay Payment Url"
+msgstr ""
+
+#. module: payment_vnpay
+#: model:ir.model.fields,field_description:payment_vnpay.field_payment_acquirer__vnpay_tmn_code
+msgid "VNPay Website Code"
+msgstr ""
+
+#. module: payment_vnpay
+#: code:addons/payment_vnpay/controllers/main.py:0
+#, python-format
+msgid "VNPay: Could not find payment transaction matching reference #%s"
+msgstr ""
+
+#. module: payment_vnpay
+#: code:addons/payment_vnpay/controllers/main.py:0
+#, python-format
+msgid ""
+"VNPay: Error when payment validated. Please contact your administrator."
+msgstr ""
+
+#. module: payment_vnpay
+#: code:addons/payment_vnpay/controllers/main.py:0
+#, python-format
+msgid "VNPay: Invalid amount. Please contact your administrator."
+msgstr ""
+
+#. module: payment_vnpay
+#: code:addons/payment_vnpay/controllers/main.py:0
+#, python-format
+msgid "VNPay: No support for special characters in name or email."
+msgstr ""
+
+#. module: payment_vnpay
+#: code:addons/payment_vnpay/models/payment_transaction.py:0
+#, python-format
+msgid ""
+"VNPay: Received unrecognized status for VNPay payment %s: %s, set as error"
+msgstr ""
+
+#. module: payment_vnpay
+#: code:addons/payment_vnpay/controllers/main.py:0
+#, python-format
+msgid "VNPay: Unrecognized error. Please contact your administrator."
+msgstr ""
+
+#. module: payment_vnpay
+#: code:addons/payment_vnpay/controllers/main.py:0
+#, python-format
+msgid "VNPay: Validation error occured. Please contact your administrator."
+msgstr ""
+
+#. module: payment_vnpay
+#: code:addons/payment_vnpay/models/payment_transaction.py:0
+#, python-format
+msgid "VNPay: received data with missing reference (%s)"
+msgstr ""
+
+#. module: payment_vnpay
+#: model:ir.model.fields,field_description:payment_vnpay.field_payment_acquirer__fees_dom_var
+msgid "Variable domestic fees (in percents)"
+msgstr ""
+
+#. module: payment_vnpay
+#: model:ir.model.fields,field_description:payment_vnpay.field_payment_acquirer__fees_int_var
+msgid "Variable international fees (in percents)"
+msgstr ""
+
+#. module: payment_vnpay
+#: model_terms:payment.acquirer,auth_msg:payment_vnpay.payment_acquirer_vnpay
+msgid "Your payment has been authorized."
+msgstr ""
+
+#. module: payment_vnpay
+#: model_terms:payment.acquirer,cancel_msg:payment_vnpay.payment_acquirer_vnpay
+msgid "Your payment has been cancelled."
+msgstr ""
+
+#. module: payment_vnpay
+#: model_terms:payment.acquirer,pending_msg:payment_vnpay.payment_acquirer_vnpay
+msgid ""
+"Your payment has been successfully processed but is waiting for approval."
+msgstr ""
+
+#. module: payment_vnpay
+#: model_terms:payment.acquirer,done_msg:payment_vnpay.payment_acquirer_vnpay
+msgid "Your payment has been successfully processed. Thank you!"
+msgstr ""

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="custom_dec_payment_form" model="ir.ui.view">
+			<field name="name">custom.declaration.payment.form</field>
+			<field name="model">custom.declaration.payment</field>
+			<field name="arch" type="xml">
+				<form string="Taxes Payment">
+					<group>
+						<group>
+							<field name="custom_dec_import_id" invisible="1" />
+							<field name="custom_dec_export_id" invisible="1" />
+							<field name="available_partner_ids" invisible="1"/>
+							<field name="available_payment_method_ids" invisible="1"/>
+							<field name="partner_id" widget="selection" />
+							<field name="journal_id" />
+							<field name="hide_payment_method" invisible="1" />
+							<label for="amount" />
+							<div name="amount_div" class="o_row">
+								<field name="amount" />
+								<field name="currency_id"
+									groups="base.group_multi_currency" />
+							</div>
+						</group>
+						<group>
+							<field name="payment_date" />
+							<field name="payment_method_id" widget="radio"
+								attrs="{'invisible': [('hide_payment_method', '=', True)]}" />
+							<field name="communication" />
+						</group>
+					</group>
+					<footer>
+						<button name="action_pay" string="Pay" type="object"
+							class="oe_highlight" />
+						or
+						<button string="Cancel" class="oe_link" special="cancel" />
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window"
+			id="action_custom_dec_payment">
+			<field name="name">Taxes Payment</field>
+			<field name="res_model">custom.declaration.payment</field>
+			<field name="view_mode">tree,form</field>
+			<field name="view_id" ref="custom_dec_payment_form" />
+			<field name="target">new</field>
+		</record>
+
+	</data>
+</odoo>

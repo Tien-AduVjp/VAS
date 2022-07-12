@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="fleet_vehicle_log_services_view_form">
+            <field name="name">fleet.vehicle.log.services.form</field>
+            <field name="model">fleet.vehicle.log.services</field>
+            <field name="inherit_id" ref="fleet.fleet_vehicle_log_services_view_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//sheet/group" position="inside">
+                    <group name="trip">
+                        <field name="trip_id" attrs="{'invisible':[('trip_id','=', False)]}" />
+                        <field name="route_id" attrs="{'invisible':[('route_id','=', False)]}" />
+                        <field name="trip_section_id" />
+                        <field name="route_section_id" groups="base.group_no_one" />
+                        <field name="trip_waypoint_id" />
+                        <field name="address_id" groups="base.group_no_one" />
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="fleet_vehicle_log_services_view_search">
+            <field name="name">fleet.vehicle.log.services.search</field>
+            <field name="model">fleet.vehicle.log.services</field>
+            <field name="inherit_id" ref="fleet.fleet_vehicle_log_services_view_search" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='service_type_id']" position="after">
+                    <field name="trip_id" />
+                    <field name="route_id" />
+                    <field name="address_id" />
+                    <field name="route_section_id" />
+                </xpath>
+                <xpath expr="//filter[@name='inactive']" position="before">
+                    <filter name="has_address" domain="[('address_id','!=',False)]"
+                        string="Address/Location" help="The costs that concern addresses during the trips" />
+                    <filter name="has_route_section" domain="[('route_section_id','!=',False)]"
+                        string="Route Section" help="The costs that concern route sections during the trips" />
+                    <filter name="has_route" domain="[('route_id','!=',False)]"
+                        string="Route" help="The costs that concern routes during the trips." />
+                    <filter name="has_trip" domain="[('trip_id','!=',False)]"
+                        string="Trip" help="The costs that have been registered for trips." />
+                    <separator />
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

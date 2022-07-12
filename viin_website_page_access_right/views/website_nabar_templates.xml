@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- Add groups security group_website_publisher for New page-->
+	<template id="user_navbar" inherit_id="website.user_navbar">
+		<xpath expr="//div[a[@data-action='new_page']]" position="attributes">
+			<attribute name="groups" add="website.group_website_publisher" separator=","/>
+		</xpath>
+	</template>
+</odoo>

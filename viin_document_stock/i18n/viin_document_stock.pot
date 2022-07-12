@@ -1,0 +1,72 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_document_stock
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-22 10:08+0000\n"
+"PO-Revision-Date: 2022-02-22 10:08+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_document_stock
+#: model:document.tag,name:viin_document_stock.document_tag_stock_delivery
+msgid "Delivery"
+msgstr ""
+
+#. module: viin_document_stock
+#: model:document.tag,name:viin_document_stock.document_tag_stock_done
+msgid "Done"
+msgstr ""
+
+#. module: viin_document_stock
+#: model:document.tag.category,name:viin_document_stock.document_tag_category_inventory_status
+msgid "Inventory Status"
+msgstr ""
+
+#. module: viin_document_stock
+#: model:document.action,name:viin_document_stock.document_action_stock_mark_as_done
+msgid "Mark Picking as Done"
+msgstr ""
+
+#. module: viin_document_stock
+#: model:document.action,name:viin_document_stock.document_action_stock_mark_as_ready
+msgid "Mark Picking as Ready"
+msgstr ""
+
+#. module: viin_document_stock
+#: model:document.action,name:viin_document_stock.document_action_move_to_delivery_picking_demo
+msgid "Move to Delivery Picking"
+msgstr ""
+
+#. module: viin_document_stock
+#: model:document.action,name:viin_document_stock.document_action_move_to_receipt_picking_demo
+msgid "Move to Receipt Picking"
+msgstr ""
+
+#. module: viin_document_stock
+#: model:document.tag.category,name:viin_document_stock.document_tag_category_picking_type
+msgid "Picking Type"
+msgstr ""
+
+#. module: viin_document_stock
+#: model:document.tag,name:viin_document_stock.document_tag_stock_ready
+msgid "Ready"
+msgstr ""
+
+#. module: viin_document_stock
+#: model:document.tag,name:viin_document_stock.document_tag_stock_receipt
+msgid "Receipt"
+msgstr ""
+
+#. module: viin_document_stock
+#: model:document.action,name:viin_document_stock.document_action_stock_waiting
+#: model:document.tag,name:viin_document_stock.document_tag_stock_waiting_another_operation
+msgid "Waiting Another Operation"
+msgstr ""

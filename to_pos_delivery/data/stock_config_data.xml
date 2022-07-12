@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="1">
+		<record model="res.config.settings"
+			id="stock_config_settings_pos_delivery">
+			<field name="group_stock_multi_locations" eval="True" />
+		</record>
+
+		<function model="res.config.settings" name="execute">
+			<value eval="[ref('stock_config_settings_pos_delivery')]" />
+		</function>
+	</data>
+</odoo>

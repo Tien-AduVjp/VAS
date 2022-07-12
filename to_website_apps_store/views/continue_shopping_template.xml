@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="cart" name="Continue Apps Shopping Button"
+		inherit_id="website_sale.cart">
+
+		<xpath expr="//a[@href='/shop']" position="attributes">
+			<attribute name="t-if">'apps' not in referer and 'pricing' not in referer</attribute>
+		</xpath>
+
+		<xpath expr="//a[@href='/shop']" position="before">
+			<t t-set="referer" t-value="request.httprequest.headers.get('Referer','')" />
+			<a t-if="'apps' in referer" href="/apps" class="btn btn-secondary mb32">
+				<span class="fa fa-chevron-left" />
+				<span class="hidden-xs">Continue Apps Shopping</span>
+			</a>
+		</xpath>
+	</template>
+</odoo>

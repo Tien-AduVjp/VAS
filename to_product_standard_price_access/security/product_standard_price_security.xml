@@ -1,0 +1,10 @@
+<odoo>
+    <data>
+    	<record id="group_product_price_access" model="res.groups">
+	        <field name="name">Product Cost Access</field>
+	        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+	        <field name="users" eval="[(4, ref('base.user_root')),(4, ref('base.user_admin'))]"/>
+	        <field name="comment">the user will have access to see product cost.</field>
+    	</record>
+    </data>
+</odoo>

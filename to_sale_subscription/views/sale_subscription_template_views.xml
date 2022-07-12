@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="sale_subscription_template_view_tree" model="ir.ui.view">
+		<field name="name">sale.subscription.template.tree</field>
+		<field name="model">sale.subscription.template</field>
+		<field name="arch" type="xml">
+			<tree string="Subscription Templates">
+				<field name="code" />
+				<field name="name" />
+				<field name="recurring_rule_type" />
+				<field name="payment_mode" />
+			</tree>
+		</field>
+	</record>
+
+	<record id="sale_subscription_template_view_form" model="ir.ui.view">
+		<field name="name">sale.subscription.form.view</field>
+		<field name="model">sale.subscription.template</field>
+		<field name="arch" type="xml">
+			<form string="Subscription">
+				<sheet string="Subscription">
+					<div class="oe_button_box" name="button_box">
+						<button class="oe_stat_button" icon="fa-book"
+							name="%(product_template_action_all_subscription)d" type="action">
+							<field name="product_count" string="Products" widget="statinfo" />
+						</button>
+						<button class="oe_stat_button" icon="fa-book"
+							name="%(sale_subscription_action)d"
+							context="{'search_default_template_id': [active_id], 'default_template_id': active_id}"
+							type="action">
+							<field name="subscription_count" string="Subscriptions" widget="statinfo" />
+						</button>
+					</div>
+					<field name="active" invisible="1" />
+					<widget name="web_ribbon" title="Archived"
+						bg_color="bg-danger"
+						attrs="{'invisible': [('active', '=', True)]}" />
+					<div class="oe_title">
+						<h1>
+							<field name="name" placeholder="Template Name. E.g. Monthly Subscription" class="oe_edit_only" />
+						</h1>
+					</div>
+					<group name="config">
+						<group name="invoicing">
+							<label for="recurring_interval" string="Invoice" />
+							<div class="o_row">
+								<span class="mr-1">Every</span>
+								<field name="recurring_interval" required="1" />
+								<field name="recurring_rule_type" class="field_rule_type" />
+							</div>
+							<field name="invoice_mail_template_id"
+								attrs="{'invisible': [('payment_mode', 'not in', ['validate_send', 'validate_send_payment'])],
+                                        'required': [('payment_mode', 'in', ['validate_send', 'validate_send_payment'])]}" />
+						</group>
+						<group>
+							<field name="payment_mode" widget="radio" />
+						</group>
+					</group>
+					<notebook>
+						<page name="terms_and_conditions" string="Terms and Conditions" >
+							<field name="description" />
+						</page>
+						<page name="general_settings" string="General Settings">
+							<group>
+								<group>
+									<field name="journal_id" string="Journal" options="{'no_create': True}" groups="account.group_account_manager" />
+									<field name="analytic_tag_ids" widget="many2many_tags" options="{'color_field': 'color'}" />
+								</group>
+								<group>
+									<label for="closed_automatically_after" attrs="{'invisible': [('payment_mode', 'in', ['manual', 'draft_invoice'])]}" />
+									<div class="o_row" attrs="{'invisible': [('payment_mode', 'in', ['manual', 'draft_invoice'])]}">
+										<field name="closed_automatically_after" />
+										<span class="ml-1">days</span>
+									</div>
+								</group>
+							</group>
+						</page>
+					</notebook>
+				</sheet>
+				<div class="oe_chatter">
+					<field name="message_follower_ids"/>
+					<field name="message_ids"/>
+				</div>
+			</form>
+		</field>
+	</record>
+
+	<record id="sale_subscription_template_view_kanban" model="ir.ui.view">
+		<field name="name">sale.subscription.template.kanban</field>
+		<field name="model">sale.subscription.template</field>
+		<field name="arch" type="xml">
+			<kanban class="oe_background_grey o_kanban_dashboard o_viin_subscription_kanban">
+				<field name="name" />
+				<field name="code" />
+				<field name="recurring_rule_type" />
+				<field name="recurring_interval" />
+				<field name="subscription_count" />
+				<field name="payment_mode" />
+				<field name="color" />
+				<templates>
+					<t t-name="kanban-box">
+						<div
+							t-attf-class="#{kanban_color(record.color.raw_value)} oe_kanban_global_click">
+							<span class="oe_kanban_color_help"
+								t-attf-title="In #{kanban_getcolorname(record.color.raw_value)}"
+								role="img"
+								t-attf-aria-label="In #{kanban_getcolorname(record.color.raw_value)}" />
+							<div class="o_viin_subscription_kanban_main">
+								<div class="o_kanban_card_content">
+									<div class="o_kanban_primary_left">
+										<h3 class="mt0">
+											<strong>
+												<t t-if="record.code.value">
+													<t t-esc="record.code.value" />
+													-
+												</t>
+												<t t-esc="record.name.value" />
+											</strong>
+										</h3>
+										<div>
+											Recurrence:
+											<t t-esc="record.recurring_interval.value" />
+											&amp;nbsp;
+											<t t-esc="record.recurring_rule_type.value" />
+										</div>
+										<div>
+											<i class="fa fa-check" />
+											<t t-esc="record.payment_mode.value" />
+										</div>
+									</div>
+								</div>
+								<div class="o_kanban_card_manage_pane dropdown-menu"
+									role="menu">
+									<div
+										class="o_kanban_card_manage_section o_kanban_manage_reports">
+										<div role="menuitem">
+											<a type="edit">Settings</a>
+										</div>
+										<div role="menuitem">
+											<a name="%(sale_subscription_action_filtered)d"
+												type="action">Subscriptions</a>
+										</div>
+									</div>
+									<div role="menuitem" aria-haspopup="true"
+										t-if="widget.editable"
+										class="o_viin_subscription_kanban_colorpicker">
+										<ul role="menu" class="oe_kanban_colorpicker"
+											data-field="color" />
+									</div>
+								</div>
+								<div class="o_viin_subscription_kanban_manage">
+									<a class="o_kanban_manage_toggle_button" href="#">
+										<i class="fa fa-ellipsis-v" role="img" aria-label="Manage"
+											title="Manage" />
+									</a>
+								</div>
+							</div>
+							<div class="ml16">
+								<a name="%(sale_subscription_action_filtered)d" type="action">
+									<span>
+										<t t-esc="record.subscription_count.value" />
+									</span>
+									<span>Subscriptions</span>
+								</a>
+							</div>
+						</div>
+					</t>
+				</templates>
+			</kanban>
+		</field>
+	</record>
+
+	<record id="sale_subscription_template_view_search" model="ir.ui.view">
+		<field name="name">sale.subscription.template.search</field>
+		<field name="model">sale.subscription.template</field>
+		<field name="arch" type="xml">
+			<search string="Subscription Templates">
+				<field name="name"
+					filter_domain="['|', ('name','ilike',self),('code','ilike',self)]"
+					string="Template" />
+				<filter string="Archived" name="inactive"
+					domain="[('active','=',False)]" />
+			</search>
+		</field>
+	</record>
+
+	<record id="sale_subscription_template_action" model="ir.actions.act_window">
+		<field name="name">Subscription Templates</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">sale.subscription.template</field>
+		<field name="view_mode">tree,form,kanban</field>
+		<field name="help" type="html">
+			<p class="o_view_nocontent_smiling_face">
+				Create a new template of subscription
+			</p>
+		</field>
+	</record>
+
+	<menuitem id="menu_template_of_subscription"
+		parent="menu_sale_subscription_config"
+		action="sale_subscription_template_action"
+		groups="to_sale_subscription.group_sale_subscription_manager"
+		sequence="10"/>
+</odoo>

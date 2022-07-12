@@ -1,0 +1,309 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_loyalty_pos
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-29 07:02+0000\n"
+"PO-Revision-Date: 2022-04-29 07:02+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_loyalty_pos
+#. openerp-web
+#: code:addons/to_loyalty_pos/static/src/js/Screens/ProductScreen/ProductScreen.js:0
+#, python-format
+msgid "Cancel"
+msgstr "Huỷ"
+
+#. module: to_loyalty_pos
+#: code:addons/to_loyalty_pos/models/pos_config.py:0
+#, python-format
+msgid "Currency discrepancy between the PoS '%s' and the loyalty program '%s'"
+msgstr ""
+"Bất đồng tiền tệ giữa Điểm bán lẻ '%s' và chương trình khách hàng thân thiết"
+" '%s'"
+
+#. module: to_loyalty_pos
+#: model:ir.model.fields,field_description:to_loyalty_pos.field_loyalty_point__display_name
+#: model:ir.model.fields,field_description:to_loyalty_pos.field_loyalty_points_report__display_name
+#: model:ir.model.fields,field_description:to_loyalty_pos.field_loyalty_program__display_name
+#: model:ir.model.fields,field_description:to_loyalty_pos.field_loyalty_rule__display_name
+#: model:ir.model.fields,field_description:to_loyalty_pos.field_pos_config__display_name
+#: model:ir.model.fields,field_description:to_loyalty_pos.field_pos_order__display_name
+#: model:ir.model.fields,field_description:to_loyalty_pos.field_pos_order_line__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_loyalty_pos
+#: model:ir.model.fields,help:to_loyalty_pos.field_loyalty_rule__rule_type
+msgid "Does this rule affects products, or a category of products?"
+msgstr "Quy tắc này áp dụng cho sản phẩm, hay một nhóm các sản phẩm?"
+
+#. module: to_loyalty_pos
+#: model:ir.model.fields,field_description:to_loyalty_pos.field_loyalty_point__id
+#: model:ir.model.fields,field_description:to_loyalty_pos.field_loyalty_points_report__id
+#: model:ir.model.fields,field_description:to_loyalty_pos.field_loyalty_program__id
+#: model:ir.model.fields,field_description:to_loyalty_pos.field_loyalty_rule__id
+#: model:ir.model.fields,field_description:to_loyalty_pos.field_pos_config__id
+#: model:ir.model.fields,field_description:to_loyalty_pos.field_pos_order__id
+#: model:ir.model.fields,field_description:to_loyalty_pos.field_pos_order_line__id
+msgid "ID"
+msgstr "Định danh"
+
+#. module: to_loyalty_pos
+#: model:ir.model.fields,field_description:to_loyalty_pos.field_loyalty_point____last_update
+#: model:ir.model.fields,field_description:to_loyalty_pos.field_loyalty_points_report____last_update
+#: model:ir.model.fields,field_description:to_loyalty_pos.field_loyalty_program____last_update
+#: model:ir.model.fields,field_description:to_loyalty_pos.field_loyalty_rule____last_update
+#: model:ir.model.fields,field_description:to_loyalty_pos.field_pos_config____last_update
+#: model:ir.model.fields,field_description:to_loyalty_pos.field_pos_order____last_update
+#: model:ir.model.fields,field_description:to_loyalty_pos.field_pos_order_line____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_loyalty_pos
+#: model:ir.model,name:to_loyalty_pos.model_loyalty_point
+msgid "Loyalty Point"
+msgstr "Điểm thưởng"
+
+#. module: to_loyalty_pos
+#: model:ir.model.fields,field_description:to_loyalty_pos.field_pos_order__loyalty_points
+#: model:ir.model.fields,field_description:to_loyalty_pos.field_pos_order_line__loyalty_points
+msgid "Loyalty Points"
+msgstr "Điểm thưởng"
+
+#. module: to_loyalty_pos
+#: model:ir.actions.act_window,name:to_loyalty_pos.action_pos_loyalty_points
+msgid "Loyalty Points Analysis"
+msgstr "Thống kê Điểm thưởng"
+
+#. module: to_loyalty_pos
+#: model:ir.model,name:to_loyalty_pos.model_loyalty_points_report
+#: model:ir.ui.menu,name:to_loyalty_pos.menu_pos_loyalty_point_report
+msgid "Loyalty Points Report"
+msgstr "Báo cáo Điểm thưởng"
+
+#. module: to_loyalty_pos
+#: model:ir.model,name:to_loyalty_pos.model_loyalty_program
+#: model:ir.model.fields,field_description:to_loyalty_pos.field_pos_order_line__loyalty_program_id
+#: model_terms:ir.ui.view,arch_db:to_loyalty_pos.view_pos_config_form
+msgid "Loyalty Program"
+msgstr "Chương trình Khách hàng Thân thiết"
+
+#. module: to_loyalty_pos
+#: model:ir.model.fields,field_description:to_loyalty_pos.field_pos_config__loyalty_id
+msgid "Loyalty Program for the Point of Sale"
+msgstr "CT Khách hàng thân thiết cho Điểm bán lẻ"
+
+#. module: to_loyalty_pos
+#: model_terms:ir.ui.view,arch_db:to_loyalty_pos.view_pos_pos_form
+msgid "Loyalty Programs"
+msgstr "Chương trình khách hàng thân thiết"
+
+#. module: to_loyalty_pos
+#: model:ir.model,name:to_loyalty_pos.model_loyalty_rule
+msgid "Loyalty Rule"
+msgstr "Quy tắc Chương trình Khách hàng Thân thiết"
+
+#. module: to_loyalty_pos
+#. openerp-web
+#: code:addons/to_loyalty_pos/static/src/js/Screens/ProductScreen/ProductScreen.js:0
+#, python-format
+msgid "No Rewards Available"
+msgstr "Không có phần thưởng khả dụng"
+
+#. module: to_loyalty_pos
+#: model:ir.model.fields,field_description:to_loyalty_pos.field_loyalty_points_report__pos_order_id
+msgid "POS Order"
+msgstr "Đơn PoS"
+
+#. module: to_loyalty_pos
+#: model:ir.model.fields,field_description:to_loyalty_pos.field_loyalty_point__pos_order_line_id
+#: model:ir.model.fields,field_description:to_loyalty_pos.field_loyalty_points_report__pos_order_line_id
+msgid "POS Order Line"
+msgstr "Dòng Đơn PoS"
+
+#. module: to_loyalty_pos
+#. openerp-web
+#: code:addons/to_loyalty_pos/static/src/js/Screens/ProductScreen/ProductScreen.js:0
+#, python-format
+msgid "Please select a reward"
+msgstr "Chọn một phần thưởng"
+
+#. module: to_loyalty_pos
+#: model:ir.model.fields,field_description:to_loyalty_pos.field_loyalty_point__pos_order_id
+msgid "PoS Order"
+msgstr "Đơn PoS"
+
+#. module: to_loyalty_pos
+#: model:ir.model.fields,field_description:to_loyalty_pos.field_loyalty_point__session_id
+msgid "PoS Session"
+msgstr "Phiên PoS"
+
+#. module: to_loyalty_pos
+#: model:ir.model,name:to_loyalty_pos.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "Cấu hình Điểm bán lẻ"
+
+#. module: to_loyalty_pos
+#: model:ir.model,name:to_loyalty_pos.model_pos_order_line
+msgid "Point of Sale Order Lines"
+msgstr "Dòng đơn PoS"
+
+#. module: to_loyalty_pos
+#: model:ir.model,name:to_loyalty_pos.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Đơn Bán Điểm bán lẻ"
+
+#. module: to_loyalty_pos
+#. openerp-web
+#: code:addons/to_loyalty_pos/static/src/xml/Screen/ProductScreen/LoyaltyPoints.xml:0
+#, python-format
+msgid "Points"
+msgstr "Điểm thưởng"
+
+#. module: to_loyalty_pos
+#. openerp-web
+#: code:addons/to_loyalty_pos/static/src/xml/Screen/ReceiptScreen/OrderReceipt.xml:0
+#, python-format
+msgid "Points Spent:"
+msgstr "Điểm đã sử dụng:"
+
+#. module: to_loyalty_pos
+#. openerp-web
+#: code:addons/to_loyalty_pos/static/src/xml/Screen/ReceiptScreen/OrderReceipt.xml:0
+#, python-format
+msgid "Points Won:"
+msgstr "Điểm được nhận:"
+
+#. module: to_loyalty_pos
+#: model:ir.model.fields,field_description:to_loyalty_pos.field_loyalty_program__pos_config_ids
+msgid "Points of Sale"
+msgstr "Điểm bán Lẻ"
+
+#. module: to_loyalty_pos
+#: model:ir.model.fields,field_description:to_loyalty_pos.field_loyalty_rule__pos_category_id
+#: model:ir.model.fields.selection,name:to_loyalty_pos.selection__loyalty_rule__rule_type__pos_category
+msgid "Pos Category"
+msgstr "Danh mục sản phẩm PoS"
+
+#. module: to_loyalty_pos
+#: model:ir.model.fields,field_description:to_loyalty_pos.field_pos_order_line__price_total
+msgid "Price"
+msgstr "Giá"
+
+#. module: to_loyalty_pos
+#. openerp-web
+#: code:addons/to_loyalty_pos/static/src/js/Screens/ProductScreen/ProductScreen.js:0
+#, python-format
+msgid "Reward product is not available in POS"
+msgstr "Sản phẩm phần thưởng không có sẵn trong POS"
+
+#. module: to_loyalty_pos
+#: model:ir.model.fields,field_description:to_loyalty_pos.field_pos_order_line__refund_points
+msgid "Refund Points"
+msgstr "Điểm Hoàn trả"
+
+#. module: to_loyalty_pos
+#: model:ir.model.fields,field_description:to_loyalty_pos.field_pos_order_line__reward_id
+msgid "Reward"
+msgstr "Phần thưởng"
+
+#. module: to_loyalty_pos
+#. openerp-web
+#: code:addons/to_loyalty_pos/static/src/xml/Screen/ProductScreen/ProductScreen.xml:0
+#, python-format
+msgid "Rewards"
+msgstr "Quà tặng"
+
+#. module: to_loyalty_pos
+#: model:ir.model.fields,field_description:to_loyalty_pos.field_loyalty_points_report__session_id
+msgid "Session"
+msgstr "Phiên"
+
+#. module: to_loyalty_pos
+#: model:ir.model.fields,help:to_loyalty_pos.field_loyalty_rule__pos_category_id
+msgid "The Pos category affected by the rule"
+msgstr "Quy tắc áp dụng cho danh mục sản phẩm trên Pos"
+
+#. module: to_loyalty_pos
+#: model:ir.model.fields,help:to_loyalty_pos.field_pos_order_line__refund_points
+msgid "The amount of Loyalty points the customer lost with refund"
+msgstr "Tổng số Điểm thưởng khách hàng bị mất khi trả lại hàng"
+
+#. module: to_loyalty_pos
+#: model:ir.model.fields,help:to_loyalty_pos.field_pos_order__loyalty_points
+msgid "The amount of Loyalty points the customer won or lost with this order"
+msgstr "Số điểm khách hàng nhận được hoặc mất đi với đơn hàng này"
+
+#. module: to_loyalty_pos
+#: model:ir.model.fields,help:to_loyalty_pos.field_pos_order_line__loyalty_points
+msgid ""
+"The amount of Loyalty points the customer won or lost with this order line"
+msgstr ""
+"Số điểm khách hàng nhận được hoặc mất đi với dòng chi tiết đơn hàng này"
+
+#. module: to_loyalty_pos
+#: code:addons/to_loyalty_pos/models/loyalty_program.py:0
+#, python-format
+msgid ""
+"The loyalty program '%s' is currently referred by the PoS '%s' which has "
+"different currency. You would need to modify the PoS for another program "
+"before you could change the currency of this program."
+msgstr ""
+"Chương trình khách hàng thân thiết '%s' đang được sử dụng bởi Điểm bán lẻ "
+"'%s' mà có tiền tệ khác với tiền tệ của chương trình. Bạn cần phải thay thế "
+"chương trình cho điểm bán lẻ đó trước khi bạn có thể điều chỉnh tiền tệ của "
+"chương trình này."
+
+#. module: to_loyalty_pos
+#: model:ir.model.fields,help:to_loyalty_pos.field_pos_config__loyalty_id
+msgid "The loyalty program used by this point_of_sale"
+msgstr "Chương trình khách hàng thân thiết được sử dụng cho Pos này"
+
+#. module: to_loyalty_pos
+#: model:ir.model.fields,help:to_loyalty_pos.field_loyalty_program__pos_config_ids
+msgid "The points of sale that apply this program"
+msgstr "Các điểm bán lẻ mà áp dụng chương trình này"
+
+#. module: to_loyalty_pos
+#. openerp-web
+#: code:addons/to_loyalty_pos/static/src/js/Screens/ProductScreen/ProductScreen.js:0
+#, python-format
+msgid "Reward product is not available in PoS. Please get one configured or select another reward!"
+msgstr "Sản phẩm thưởng không khả dụng ở PoS. Vui lòng cấu hình một sản phẩm thưởng hoặc chọn một kiểu thưởng khác!"
+
+#. module: to_loyalty_pos
+#. openerp-web
+#: code:addons/to_loyalty_pos/static/src/js/Screens/ProductScreen/ProductScreen.js:0
+#, python-format
+msgid ""
+"There are no rewards available for this customer as part of the loyalty "
+"program"
+msgstr ""
+"Chương trình khách hàng thân thiết hiện không có phần thưởng nào khả dụng "
+"cho khách hàng này"
+
+#. module: to_loyalty_pos
+#: model:ir.model.fields,help:to_loyalty_pos.field_pos_order_line__reward_id
+msgid "This field is to indicate that the line is a reward line"
+msgstr "Trường này để chỉ báo rằng dòng này là một dòng phần thưởng"
+
+#. module: to_loyalty_pos
+#. openerp-web
+#: code:addons/to_loyalty_pos/static/src/xml/Screen/ReceiptScreen/OrderReceipt.xml:0
+#, python-format
+msgid "Total Points:"
+msgstr "Tổng điểm"
+
+#. module: to_loyalty_pos
+#: model:ir.model.fields,field_description:to_loyalty_pos.field_loyalty_rule__rule_type
+msgid "Type"
+msgstr "Kiểu"

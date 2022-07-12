@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="odoo_module_version_download_stat_graph_view"
+			model="ir.ui.view">
+			<field name="name">odoo.module.version.download.stat.graph</field>
+			<field name="model">odoo.module.version.download.stat</field>
+			<field name="arch" type="xml">
+				<graph string="Odoo Module Version Downloads Graph">
+					<field name="odoo_module_version_id" type="row" />
+					<field name="create_date" type="col" string="Date" />
+				</graph>
+			</field>
+		</record>
+
+		<record id="odoo_module_version_download_stat_pivot_view"
+			model="ir.ui.view">
+			<field name="name">odoo.module.version.download.stat.pivot</field>
+			<field name="model">odoo.module.version.download.stat</field>
+			<field name="arch" type="xml">
+				<pivot string="Odoo Module Version Downloads Pivot">
+					<field name="odoo_module_version_id" type="row" />
+					<field name="create_date" type="col" />
+				</pivot>
+			</field>
+		</record>
+
+		<record id="odoo_module_version_download_stat_search_view"
+			model="ir.ui.view">
+			<field name="name">odoo.module.version.download.stat.search</field>
+			<field name="model">odoo.module.version.download.stat</field>
+			<field name="arch" type="xml">
+				<search
+					string="Search Odoo Module Version Download Statistics">
+					<field name="odoo_module_version_id" />
+					<separator />
+					<field name="create_date" string="Download Date" />
+					<separator />
+					<field name="user_id" />
+					<filter name="ftr_free_downloads" string="Free Downloads"
+						domain="[('free_download','=',True),('by_internal_user','=',False)]" />
+					<filter name="ftr_paid_downloads" string="Paid Downloads"
+						domain="[('free_download','=',False),('by_internal_user','=',False)]" />
+					<filter name="ftr_paid_downloads"
+						string="Internal User Downloads"
+						domain="[('by_internal_user','=',True)]"
+						help="Show Download statistics made by internal users" />
+					<group expand="0" name="group_by" string="Group By">
+						<filter name="grp_module" string="Module" domain="[]"
+							context="{'group_by' : 'odoo_module_id'}" />
+						<filter name="grp_module_version" string="Module Version"
+							domain="[]" context="{'group_by' : 'odoo_module_version_id'}" />
+						<filter name="grp_user" string="Download User" domain="[]"
+							context="{'group_by' : 'user_id'}" />
+						<filter name="grp_create_date" string="Download Date"
+							domain="[]" context="{'group_by' : 'create_date'}" />
+					</group>
+				</search>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window"
+			id="odoo_module_version_download_stat_action">
+			<field name="name">Odoo Module Version Download Statistics</field>
+			<field name="res_model">odoo.module.version.download.stat</field>
+			<field name="view_mode">graph,pivot</field>
+			<field name="context">{'search_default_grp_module':True}</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">No download statistics.</p>
+			</field>
+		</record>
+
+		<menuitem id="download_stat_menu" sequence="50"
+			action="odoo_module_version_download_stat_action"
+			groups="to_odoo_module.odoo_module_manager"
+			name="Download Statistics" parent="reports_main_menu" />
+	</data>
+</odoo>

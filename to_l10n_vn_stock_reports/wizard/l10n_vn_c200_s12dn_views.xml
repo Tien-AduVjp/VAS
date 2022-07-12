@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<!-- STOCK CARD (S12-DN) -->
+
+		<record id="to_c200_s12dn_form" model="ir.ui.view">
+			<field name="name">C200 S12DN Form</field>
+			<field name="model">wizard.l10n_vn.c200_s12dn</field>
+			<field name="inherit_id"
+				ref="to_stock_report_common.wizard_stock_report_common_form"></field>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='warehouse_id']" position="before">
+					<field name="product_id" />
+				</xpath>
+				<xpath expr="//field[@name='location_id']" position="after">
+					<field name="opening_date" invisible="1" />
+				</xpath>
+			</field>
+		</record>
+
+		<record id="action_wizard_c200_s12dn"
+			model="ir.actions.act_window">
+			<field name="name">STOCK CARD (S12-DN)</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">wizard.l10n_vn.c200_s12dn</field>
+			<field name="view_mode">form</field>
+			<field name="view_id" ref="to_c200_s12dn_form" />
+			<field name="target">new</field>
+		</record>
+
+		<menuitem id="menu_wizard_c200_s12dn"
+			name="Stock Card (S12-DN)" parent="menu_l10n_vn_stock_legal_reports"
+			sequence="5" groups="stock.group_stock_manager"
+			action="action_wizard_c200_s12dn" />
+
+	</data>
+</odoo>

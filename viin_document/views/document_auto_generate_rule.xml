@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="document_auto_generate_rule_view_tree" model="ir.ui.view">
+        <field name="name">document.auto.generate.rule.view.tree</field>
+        <field name="model">document.auto.generate.rule</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="res_model_id"/>
+                <field name="res_model_name"/>
+                <field name="workspace_field_id"/>
+                <field name="parent_workspace_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="document_auto_generate_rule_view_form" model="ir.ui.view">
+        <field name="name">document.auto.generate.rule.view.form</field>
+        <field name="model">document.auto.generate.rule</field>
+        <field name="arch" type="xml">
+            <form>
+            	<field name="active" invisible="1"/>
+                <header>
+                    <button name="%(document_run_manual_rule_wizard_view_action)d" string="Run Manual" type="action"
+                        context="{'default_rule_id': id}"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="res_model_id"/>
+                            <field name="workspace_tag_ids" widget="many2many_tags"/>
+                        </group>
+                        <group>
+                             <field name="workspace_field_id" domain="[
+                                ('model_id', '=', res_model_id),
+                                ('ttype', 'in', ('many2one','selection','date','datetime','char'))]"/>
+                             <field name="parent_workspace_id"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="actions" string="Actions">
+                            <field name="workspace_action_ids"/>
+                        </page>
+                        <page name="access_right" string="Access Right">
+                            <group>
+                                <group name="team_access_right" string="Teams">
+                                    <field name="workspace_write_team_ids" widget="many2many_tags"/>
+                                    <field name="workspace_read_team_ids" widget="many2many_tags"/>
+                                    <field name="workspace_specific_team_ids" widget="many2many_tags"/>
+                                </group>
+                                <group name="user_access_right" string="Users">
+                                    <field name="workspace_write_user_ids" widget="many2many_tags"/>
+                                    <field name="workspace_read_user_ids" widget="many2many_tags"/>
+                                    <field name="workspace_specific_user_ids" widget="many2many_tags"/>
+                                </group>
+                                <group name="group_access_right" string="Groups">
+                                    <field name="workspace_write_group_ids" widget="many2many_tags"/>
+                                    <field name="workspace_read_group_ids" widget="many2many_tags"/>
+                                    <field name="workspace_specific_group_ids" widget="many2many_tags"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="document_auto_generate_rule_view_filter" model="ir.ui.view">
+        <field name="name">document.auto.generate.rule.view.search</field>
+        <field name="model">document.auto.generate.rule</field>
+        <field name="arch" type="xml">
+            <search string="Rules">
+            	<field name="res_model_id" />
+                <filter name="ftr_archived" string="Archived" domain="[('active', '=', False)]"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_server_generate_document_from_exist_attachment" model="ir.actions.server">
+		<field name="name">Generate Document</field>
+		<field name="type">ir.actions.server</field>
+		<field name="model_id" ref="model_document_auto_generate_rule" />
+		<field name="binding_model_id" ref="model_document_auto_generate_rule" />
+		<field name="state">code</field>
+		<field name="code">records.action_generate_document_by_attachment()</field>
+	</record>
+
+    <record id="document_auto_generate_rule_action" model="ir.actions.act_window">
+        <field name="name">Document Generation Rule</field>
+        <field name="res_model">document.auto.generate.rule</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="document_auto_generate_rule_menu" parent="document_config_menu_root" action="document_auto_generate_rule_action" sequence="50"/>
+
+</odoo>

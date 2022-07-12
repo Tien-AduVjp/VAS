@@ -1,0 +1,3858 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_product_license
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-29 07:17+0000\n"
+"PO-Revision-Date: 2021-10-29 07:17+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"&lt;one line to give the program's name and a brief idea of\n"
+"\t\t\t\t\twhat it does.&gt;\n"
+"\t\t\t\t\tCopyright (C) &lt;year&gt; &lt;name of author&gt;\n"
+"\n"
+"\t\t\t\t\tThis program is free software: you can redistribute it and/or\n"
+"\t\t\t\t\tmodify\n"
+"\t\t\t\t\tit under the terms of the GNU General Public License as\n"
+"\t\t\t\t\tpublished by\n"
+"\t\t\t\t\tthe Free Software Foundation, either version 3 of the\n"
+"\t\t\t\t\tLicense, or\n"
+"\t\t\t\t\t(at your option) any later version.\n"
+"\n"
+"\t\t\t\t\tThis program is\n"
+"\t\t\t\t\tdistributed in the hope that it will be useful,\n"
+"\t\t\t\t\tbut WITHOUT ANY\n"
+"\t\t\t\t\tWARRANTY; without even the implied warranty of\n"
+"\t\t\t\t\tMERCHANTABILITY or\n"
+"\t\t\t\t\tFITNESS FOR A PARTICULAR PURPOSE. See the\n"
+"\t\t\t\t\tGNU General Public License\n"
+"\t\t\t\t\tfor more details.\n"
+"\n"
+"\t\t\t\t\tYou should have received a copy of the GNU General\n"
+"\t\t\t\t\tPublic License\n"
+"\t\t\t\t\talong with this program. If not, see\n"
+"\t\t\t\t\t&lt;https://www.gnu.org/licenses/&gt;."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"&lt;program&gt; Copyright (C) &lt;year&gt; &lt;name of\n"
+"\t\t\t\t\tauthor&gt;\n"
+"\t\t\t\t\tThis program comes with ABSOLUTELY NO WARRANTY; for\n"
+"\t\t\t\t\tdetails type `show\n"
+"\t\t\t\t\tw'.\n"
+"\t\t\t\t\tThis is free software, and you are welcome to\n"
+"\t\t\t\t\tredistribute it\n"
+"\t\t\t\t\tunder certain conditions; type `show c' for details."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid "0. Definitions."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid "1. Source Code."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:ir.ui.view,arch_db:to_product_license.product_license_version_view_form
+msgid "1.0"
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid "10. Automatic Licensing of Downstream Recipients."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid "11. Patents."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid "12. No Surrender of Others' Freedom."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid "13. Use with the GNU Affero General Public License."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid "14. Revised Versions of this License."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid "15. Disclaimer of Warranty."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid "16. Limitation of Liability."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid "17. Interpretation of Sections 15 and 16."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid "2. Basic Permissions."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid "3. Protecting Users' Legal Rights From Anti-Circumvention Law."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid "4. Conveying Verbatim Copies."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid "5. Conveying Modified Source Versions."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid "6. Conveying Non-Source Forms."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid "7. Additional Terms."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid "8. Termination."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid "9. Acceptance Not Required for Having Copies."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"A compilation of a covered work with other separate and\n"
+"\t\t\t\t\tindependent\n"
+"\t\t\t\t\tworks, which are not by their nature extensions of the\n"
+"\t\t\t\t\tcovered work,\n"
+"\t\t\t\t\tand which are not combined with it such as to form a\n"
+"\t\t\t\t\tlarger program,\n"
+"\t\t\t\t\tin or on a volume of a storage or distribution\n"
+"\t\t\t\t\tmedium, is called an\n"
+"\t\t\t\t\t“aggregate” if the compilation and its\n"
+"\t\t\t\t\tresulting copyright are not\n"
+"\t\t\t\t\tused to limit the access or legal rights\n"
+"\t\t\t\t\tof the compilation's users\n"
+"\t\t\t\t\tbeyond what the individual works permit.\n"
+"\t\t\t\t\tInclusion of a covered\n"
+"\t\t\t\t\twork\n"
+"\t\t\t\t\tin an aggregate does not cause this\n"
+"\t\t\t\t\tLicense to apply to the other\n"
+"\t\t\t\t\tparts of the aggregate."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"A contributor's “essential patent claims” are all patent claims\n"
+"\t\t\t\t\towned or controlled by the contributor, whether already acquired or\n"
+"\t\t\t\t\thereafter acquired, that would be infringed by some manner,\n"
+"\t\t\t\t\tpermitted\n"
+"\t\t\t\t\tby this License, of making, using, or selling its\n"
+"\t\t\t\t\tcontributor\n"
+"\t\t\t\t\tversion,\n"
+"\t\t\t\t\tbut do not include claims that would be\n"
+"\t\t\t\t\tinfringed only as a\n"
+"\t\t\t\t\tconsequence of further modification of the\n"
+"\t\t\t\t\tcontributor version. For\n"
+"\t\t\t\t\tpurposes of this definition, “control”\n"
+"\t\t\t\t\tincludes the right to grant\n"
+"\t\t\t\t\tpatent sublicenses in a manner\n"
+"\t\t\t\t\tconsistent with the requirements of\n"
+"\t\t\t\t\tthis License."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"A patent license is “discriminatory” if it does not include\n"
+"\t\t\t\t\twithin\n"
+"\t\t\t\t\tthe scope of its coverage, prohibits the exercise of, or is\n"
+"\t\t\t\t\tconditioned on the non-exercise of one or more of the rights that\n"
+"\t\t\t\t\tare\n"
+"\t\t\t\t\tspecifically granted under this License. You may not convey a\n"
+"\t\t\t\t\tcovered\n"
+"\t\t\t\t\twork if you are a party to an arrangement with a third party\n"
+"\t\t\t\t\tthat is\n"
+"\t\t\t\t\tin the business of distributing software, under which you\n"
+"\t\t\t\t\tmake\n"
+"\t\t\t\t\tpayment\n"
+"\t\t\t\t\tto the third party based on the extent of your activity\n"
+"\t\t\t\t\tof conveying\n"
+"\t\t\t\t\tthe work, and under which the third party grants, to\n"
+"\t\t\t\t\tany of the\n"
+"\t\t\t\t\tparties who would receive the covered work from you, a\n"
+"\t\t\t\t\tdiscriminatory\n"
+"\t\t\t\t\tpatent license (a) in connection with copies of the\n"
+"\t\t\t\t\tcovered work\n"
+"\t\t\t\t\tconveyed by you (or copies made from those copies), or\n"
+"\t\t\t\t\t(b) primarily\n"
+"\t\t\t\t\tfor and in connection with specific products or\n"
+"\t\t\t\t\tcompilations that\n"
+"\t\t\t\t\tcontain the covered work, unless you entered into\n"
+"\t\t\t\t\tthat arrangement,\n"
+"\t\t\t\t\tor that patent license was granted, prior to 28\n"
+"\t\t\t\t\tMarch 2007."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"A separable portion of the object code, whose source code is\n"
+"\t\t\t\t\texcluded\n"
+"\t\t\t\t\tfrom the Corresponding Source as a System Library, need not\n"
+"\t\t\t\t\tbe\n"
+"\t\t\t\t\tincluded in conveying the object code work."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"A “Standard Interface” means an interface that either is an\n"
+"\t\t\t\t\tofficial\n"
+"\t\t\t\t\tstandard defined by a recognized standards body, or, in the\n"
+"\t\t\t\t\tcase of\n"
+"\t\t\t\t\tinterfaces specified for a particular programming language,\n"
+"\t\t\t\t\tone\n"
+"\t\t\t\t\tthat\n"
+"\t\t\t\t\tis widely used among developers working in that language."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"A “User Product” is either (1) a “consumer product”, which means\n"
+"\t\t\t\t\tany\n"
+"\t\t\t\t\ttangible personal property which is normally used for personal,\n"
+"\t\t\t\t\tfamily,\n"
+"\t\t\t\t\tor household purposes, or (2) anything designed or sold for\n"
+"\t\t\t\t\tincorporation\n"
+"\t\t\t\t\tinto a dwelling. In determining whether a product is a\n"
+"\t\t\t\t\tconsumer\n"
+"\t\t\t\t\tproduct,\n"
+"\t\t\t\t\tdoubtful cases shall be resolved in favor of\n"
+"\t\t\t\t\tcoverage. For a particular\n"
+"\t\t\t\t\tproduct received by a particular user,\n"
+"\t\t\t\t\t“normally used” refers to a\n"
+"\t\t\t\t\ttypical or common use of that class of\n"
+"\t\t\t\t\tproduct, regardless of the\n"
+"\t\t\t\t\tstatus\n"
+"\t\t\t\t\tof the particular user or of the\n"
+"\t\t\t\t\tway in which the particular user\n"
+"\t\t\t\t\tactually uses, or expects or is\n"
+"\t\t\t\t\texpected to use, the product. A\n"
+"\t\t\t\t\tproduct\n"
+"\t\t\t\t\tis a consumer product\n"
+"\t\t\t\t\tregardless of whether the product has\n"
+"\t\t\t\t\tsubstantial\n"
+"\t\t\t\t\tcommercial,\n"
+"\t\t\t\t\tindustrial or non-consumer uses, unless such uses represent\n"
+"\t\t\t\t\tthe only\n"
+"\t\t\t\t\tsignificant mode of use of the product."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"A “contributor” is a copyright holder who authorizes use under\n"
+"\t\t\t\t\tthis\n"
+"\t\t\t\t\tLicense of the Program or a work on which the Program is based.\n"
+"\t\t\t\t\tThe\n"
+"\t\t\t\t\twork thus licensed is called the contributor's “contributor\n"
+"\t\t\t\t\tversion”."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"A “covered work” means either the unmodified Program or a work\n"
+"\t\t\t\t\tbased\n"
+"\t\t\t\t\ton the Program."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:ir.ui.view,arch_db:to_product_license.product_license_view_form
+msgid "Abbreviation..."
+msgstr "Viết tắt..."
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__message_needaction
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__active
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__active
+#: model_terms:ir.ui.view,arch_db:to_product_license.product_license_search_view
+#: model_terms:ir.ui.view,arch_db:to_product_license.product_license_version_search_view
+msgid "Active"
+msgstr "Có hiệu lực"
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__activity_ids
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__activity_exception_decoration
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__activity_state
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__activity_type_icon
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"Additional terms, permissive or non-permissive, may be stated in\n"
+"\t\t\t\t\tthe\n"
+"\t\t\t\t\tform of a separately written license, or stated as exceptions;\n"
+"\t\t\t\t\tthe above requirements apply either way."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"All other non-permissive additional terms are considered “further\n"
+"\t\t\t\t\trestrictions” within the meaning of section 10. If the Program as\n"
+"\t\t\t\t\tyou\n"
+"\t\t\t\t\treceived it, or any part of it, contains a notice stating that\n"
+"\t\t\t\t\tit is\n"
+"\t\t\t\t\tgoverned by this License along with a term that is a further\n"
+"\t\t\t\t\trestriction, you may remove that term. If a license document\n"
+"\t\t\t\t\tcontains\n"
+"\t\t\t\t\ta further restriction but permits relicensing or conveying\n"
+"\t\t\t\t\tunder\n"
+"\t\t\t\t\tthis\n"
+"\t\t\t\t\tLicense, you may add to a covered work material governed\n"
+"\t\t\t\t\tby the terms\n"
+"\t\t\t\t\tof that license document, provided that the further\n"
+"\t\t\t\t\trestriction does\n"
+"\t\t\t\t\tnot survive such relicensing or conveying."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"All rights granted under this License are granted for the term of\n"
+"\t\t\t\t\tcopyright on the Program, and are irrevocable provided the stated\n"
+"\t\t\t\t\tconditions are met. This License explicitly affirms your unlimited\n"
+"\t\t\t\t\tpermission to run the unmodified Program. The output from running a\n"
+"\t\t\t\t\tcovered work is covered by this License only if the output, given\n"
+"\t\t\t\t\tits\n"
+"\t\t\t\t\tcontent, constitutes a covered work. This License acknowledges\n"
+"\t\t\t\t\tyour\n"
+"\t\t\t\t\trights of fair use or other equivalent, as provided by\n"
+"\t\t\t\t\tcopyright law."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"Also add information on how to contact you by electronic and\n"
+"\t\t\t\t\tpaper mail."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"An interactive user interface displays “Appropriate Legal\n"
+"\t\t\t\t\tNotices”\n"
+"\t\t\t\t\tto the extent that it includes a convenient and prominently\n"
+"\t\t\t\t\tvisible\n"
+"\t\t\t\t\tfeature that (1) displays an appropriate copyright notice,\n"
+"\t\t\t\t\tand (2)\n"
+"\t\t\t\t\ttells the user that there is no warranty for the work\n"
+"\t\t\t\t\t(except to\n"
+"\t\t\t\t\tthe\n"
+"\t\t\t\t\textent that warranties are provided), that licensees\n"
+"\t\t\t\t\tmay convey the\n"
+"\t\t\t\t\twork under this License, and how to view a copy of\n"
+"\t\t\t\t\tthis License. If\n"
+"\t\t\t\t\tthe interface presents a list of user commands or\n"
+"\t\t\t\t\toptions, such as a\n"
+"\t\t\t\t\tmenu, a prominent item in the list meets this\n"
+"\t\t\t\t\tcriterion."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"An “entity transaction” is a transaction transferring control of\n"
+"\t\t\t\t\tan\n"
+"\t\t\t\t\torganization, or substantially all assets of one, or subdividing\n"
+"\t\t\t\t\tan\n"
+"\t\t\t\t\torganization, or merging organizations. If propagation of a\n"
+"\t\t\t\t\tcovered\n"
+"\t\t\t\t\twork results from an entity transaction, each party to that\n"
+"\t\t\t\t\ttransaction who receives a copy of the work also receives whatever\n"
+"\t\t\t\t\tlicenses to the work the party's predecessor in interest had or\n"
+"\t\t\t\t\tcould\n"
+"\t\t\t\t\tgive under the previous paragraph, plus a right to possession\n"
+"\t\t\t\t\tof the\n"
+"\t\t\t\t\tCorresponding Source of the work from the predecessor in\n"
+"\t\t\t\t\tinterest,\n"
+"\t\t\t\t\tif\n"
+"\t\t\t\t\tthe predecessor has it or can get it with reasonable\n"
+"\t\t\t\t\tefforts."
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__message_attachment_count
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.constraint,message:to_product_license.constraint_product_license_version_name_license_id_unique
+msgid "Branch version must be unique per license!"
+msgstr "Các phiên bản của giấy phép không được trùng nhau!"
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__content
+#: model_terms:ir.ui.view,arch_db:to_product_license.product_license_version_view_form
+msgid "Content"
+msgstr "Nội dung"
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"Conveying under any other circumstances is permitted solely under\n"
+"\t\t\t\t\tthe conditions stated below. Sublicensing is not allowed; section\n"
+"\t\t\t\t\t10\n"
+"\t\t\t\t\tmakes it unnecessary."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"Corresponding Source conveyed, and Installation Information\n"
+"\t\t\t\t\tprovided,\n"
+"\t\t\t\t\tin accord with this section must be in a format that is\n"
+"\t\t\t\t\tpublicly\n"
+"\t\t\t\t\tdocumented (and with an implementation available to the\n"
+"\t\t\t\t\tpublic in\n"
+"\t\t\t\t\tsource code form), and must require no special password or\n"
+"\t\t\t\t\tkey for\n"
+"\t\t\t\t\tunpacking, reading or copying."
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__create_uid
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__create_uid
+msgid "Created by"
+msgstr "Tạo bởi"
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__create_date
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__create_date
+msgid "Created on"
+msgstr "Tạo vào lúc"
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__date_released
+msgid "Date Released"
+msgstr "Ngày phát hành"
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"Developers that use the GNU GPL protect your rights with two\n"
+"\t\t\t\t\tsteps:\n"
+"\t\t\t\t\t(1) assert copyright on the software, and (2) offer you this\n"
+"\t\t\t\t\tLicense\n"
+"\t\t\t\t\tgiving you legal permission to copy, distribute and/or\n"
+"\t\t\t\t\tmodify it."
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__display_name
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__display_name
+#: model:ir.model.fields,field_description:to_product_license.field_product_product__display_name
+#: model:ir.model.fields,field_description:to_product_license.field_product_template__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid "END OF TERMS AND CONDITIONS"
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"Each contributor grants you a non-exclusive, worldwide,\n"
+"\t\t\t\t\troyalty-free\n"
+"\t\t\t\t\tpatent license under the contributor's essential patent\n"
+"\t\t\t\t\tclaims, to\n"
+"\t\t\t\t\tmake, use, sell, offer for sale, import and otherwise\n"
+"\t\t\t\t\trun, modify and\n"
+"\t\t\t\t\tpropagate the contents of its contributor version."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"Each time you convey a covered work, the recipient automatically\n"
+"\t\t\t\t\treceives a license from the original licensors, to run, modify and\n"
+"\t\t\t\t\tpropagate that work, subject to this License. You are not\n"
+"\t\t\t\t\tresponsible\n"
+"\t\t\t\t\tfor enforcing compliance by third parties with this\n"
+"\t\t\t\t\tLicense."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"Each version is given a distinguishing version number. If the\n"
+"\t\t\t\t\tProgram specifies that a certain numbered version of the GNU\n"
+"\t\t\t\t\tGeneral\n"
+"\t\t\t\t\tPublic License “or any later version” applies to it, you\n"
+"\t\t\t\t\thave the\n"
+"\t\t\t\t\toption of following the terms and conditions either of that\n"
+"\t\t\t\t\tnumbered\n"
+"\t\t\t\t\tversion or of any later version published by the Free\n"
+"\t\t\t\t\tSoftware\n"
+"\t\t\t\t\tFoundation. If the Program does not specify a version\n"
+"\t\t\t\t\tnumber of the\n"
+"\t\t\t\t\tGNU General Public License, you may choose any version\n"
+"\t\t\t\t\tever\n"
+"\t\t\t\t\tpublished\n"
+"\t\t\t\t\tby the Free Software Foundation."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"Finally, every program is threatened constantly by software\n"
+"\t\t\t\t\tpatents.\n"
+"\t\t\t\t\tStates should not allow patents to restrict development and\n"
+"\t\t\t\t\tuse of\n"
+"\t\t\t\t\tsoftware on general-purpose computers, but in those that do,\n"
+"\t\t\t\t\twe\n"
+"\t\t\t\t\twish to\n"
+"\t\t\t\t\tavoid the special danger that patents applied to a free\n"
+"\t\t\t\t\tprogram could\n"
+"\t\t\t\t\tmake it effectively proprietary. To prevent this, the\n"
+"\t\t\t\t\tGPL assures\n"
+"\t\t\t\t\tthat\n"
+"\t\t\t\t\tpatents cannot be used to render the program\n"
+"\t\t\t\t\tnon-free."
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__first_released_date
+msgid "First Released"
+msgstr "Ngày phát hành đầu tiên"
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__first_version_id
+msgid "First Version"
+msgstr "Phiên bản đầu tiên"
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__message_follower_ids
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__message_channel_ids
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__message_partner_ids
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,help:to_product_license.field_product_license__activity_type_icon
+#: model:ir.model.fields,help:to_product_license.field_product_license_version__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"For example, if you distribute copies of such a program, whether\n"
+"\t\t\t\t\tgratis or for a fee, you must pass on to the recipients the same\n"
+"\t\t\t\t\tfreedoms that you received. You must make sure that they, too,\n"
+"\t\t\t\t\treceive\n"
+"\t\t\t\t\tor can get the source code. And you must show them these\n"
+"\t\t\t\t\tterms so\n"
+"\t\t\t\t\tthey\n"
+"\t\t\t\t\tknow their rights."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"For the developers' and authors' protection, the GPL clearly\n"
+"\t\t\t\t\texplains\n"
+"\t\t\t\t\tthat there is no warranty for this free software. For both\n"
+"\t\t\t\t\tusers' and\n"
+"\t\t\t\t\tauthors' sake, the GPL requires that modified versions be\n"
+"\t\t\t\t\tmarked as\n"
+"\t\t\t\t\tchanged, so that their problems will not be attributed\n"
+"\t\t\t\t\terroneously\n"
+"\t\t\t\t\tto\n"
+"\t\t\t\t\tauthors of previous versions."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_agpl_v3
+msgid ""
+"GNU AFFERO GENERAL PUBLIC LICENSE\n"
+"\t\t\t\t\tVersion 3, 19\n"
+"\t\t\t\t\tNovember 2007\n"
+"\n"
+"\t\t\t\t\tCopyright (C) 2007 Free Software Foundation, Inc.\n"
+"\t\t\t\t\t&lt;https://fsf.org/&gt;\n"
+"\t\t\t\t\tEveryone is permitted to copy and\n"
+"\t\t\t\t\tdistribute verbatim copies\n"
+"\t\t\t\t\tof this license document, but changing it\n"
+"\t\t\t\t\tis not allowed.\n"
+"\n"
+"\t\t\t\t\tPreamble\n"
+"\n"
+"\t\t\t\t\tThe GNU Affero General Public License is a\n"
+"\t\t\t\t\tfree, copyleft license for\n"
+"\t\t\t\t\tsoftware and other kinds of works,\n"
+"\t\t\t\t\tspecifically designed to ensure\n"
+"\t\t\t\t\tcooperation with the community in\n"
+"\t\t\t\t\tthe case of network server\n"
+"\t\t\t\t\tsoftware.\n"
+"\n"
+"\t\t\t\t\tThe licenses for most software\n"
+"\t\t\t\t\tand other practical works are designed\n"
+"\t\t\t\t\tto take away your freedom to\n"
+"\t\t\t\t\tshare and change the works. By\n"
+"\t\t\t\t\tcontrast,\n"
+"\t\t\t\t\tour General Public Licenses\n"
+"\t\t\t\t\tare intended to guarantee your freedom to\n"
+"\t\t\t\t\tshare and change all\n"
+"\t\t\t\t\tversions of a program--to make sure it remains\n"
+"\t\t\t\t\tfree\n"
+"\t\t\t\t\tsoftware for all\n"
+"\t\t\t\t\tits users.\n"
+"\n"
+"\t\t\t\t\tWhen we speak of free software, we are referring to\n"
+"\t\t\t\t\tfreedom, not\n"
+"\t\t\t\t\tprice. Our General Public Licenses are designed to make\n"
+"\t\t\t\t\tsure that you\n"
+"\t\t\t\t\thave the freedom to distribute copies of free software\n"
+"\t\t\t\t\t(and charge\n"
+"\t\t\t\t\tfor\n"
+"\t\t\t\t\tthem if you wish), that you receive source code or\n"
+"\t\t\t\t\tcan get it if you\n"
+"\t\t\t\t\twant it, that you can change the software or use\n"
+"\t\t\t\t\tpieces of it in\n"
+"\t\t\t\t\tnew\n"
+"\t\t\t\t\tfree programs, and that you know you can do these\n"
+"\t\t\t\t\tthings.\n"
+"\n"
+"\t\t\t\t\tDevelopers that use our General Public Licenses protect your\n"
+"\t\t\t\t\trights\n"
+"\t\t\t\t\twith two steps: (1) assert copyright on the software, and (2)\n"
+"\t\t\t\t\toffer\n"
+"\t\t\t\t\tyou this License which gives you legal permission to copy,\n"
+"\t\t\t\t\tdistribute\n"
+"\t\t\t\t\tand/or modify the software.\n"
+"\n"
+"\t\t\t\t\tA secondary benefit of\n"
+"\t\t\t\t\tdefending all users' freedom is that\n"
+"\t\t\t\t\timprovements made in alternate\n"
+"\t\t\t\t\tversions of the program, if they\n"
+"\t\t\t\t\treceive widespread use, become\n"
+"\t\t\t\t\tavailable for other developers to\n"
+"\t\t\t\t\tincorporate. Many developers of\n"
+"\t\t\t\t\tfree software are heartened and\n"
+"\t\t\t\t\tencouraged by the resulting\n"
+"\t\t\t\t\tcooperation. However, in the case of\n"
+"\t\t\t\t\tsoftware used on network\n"
+"\t\t\t\t\tservers, this result may fail to come\n"
+"\t\t\t\t\tabout.\n"
+"\t\t\t\t\tThe GNU General Public\n"
+"\t\t\t\t\tLicense permits making a modified version and\n"
+"\t\t\t\t\tletting the public\n"
+"\t\t\t\t\taccess it on a server without ever releasing its\n"
+"\t\t\t\t\tsource code to the\n"
+"\t\t\t\t\tpublic.\n"
+"\n"
+"\t\t\t\t\tThe GNU Affero General Public License is designed\n"
+"\t\t\t\t\tspecifically to\n"
+"\t\t\t\t\tensure that, in such cases, the modified source code\n"
+"\t\t\t\t\tbecomes\n"
+"\t\t\t\t\tavailable\n"
+"\t\t\t\t\tto the community. It requires the operator of a\n"
+"\t\t\t\t\tnetwork server to\n"
+"\t\t\t\t\tprovide the source code of the modified version\n"
+"\t\t\t\t\trunning there to\n"
+"\t\t\t\t\tthe\n"
+"\t\t\t\t\tusers of that server. Therefore, public use of a\n"
+"\t\t\t\t\tmodified version, on\n"
+"\t\t\t\t\ta publicly accessible server, gives the public\n"
+"\t\t\t\t\taccess to the source\n"
+"\t\t\t\t\tcode of the modified version.\n"
+"\n"
+"\t\t\t\t\tAn older license,\n"
+"\t\t\t\t\tcalled the Affero General Public License and\n"
+"\t\t\t\t\tpublished by Affero,\n"
+"\t\t\t\t\twas designed to accomplish similar goals. This\n"
+"\t\t\t\t\tis\n"
+"\t\t\t\t\ta different\n"
+"\t\t\t\t\tlicense, not a version of the Affero GPL, but Affero has\n"
+"\t\t\t\t\treleased a\n"
+"\t\t\t\t\tnew version of the Affero GPL which permits relicensing\n"
+"\t\t\t\t\tunder\n"
+"\t\t\t\t\tthis\n"
+"\t\t\t\t\tlicense.\n"
+"\n"
+"\t\t\t\t\tThe precise terms and conditions for copying, distribution\n"
+"\t\t\t\t\tand\n"
+"\t\t\t\t\tmodification follow.\n"
+"\n"
+"\t\t\t\t\tTERMS AND CONDITIONS\n"
+"\n"
+"\t\t\t\t\t0. Definitions.\n"
+"\n"
+"\t\t\t\t\t\"This\n"
+"\t\t\t\t\tLicense\" refers to version 3 of the GNU Affero General Public\n"
+"\t\t\t\t\tLicense.\n"
+"\n"
+"\t\t\t\t\t\"Copyright\" also means copyright-like laws that apply to\n"
+"\t\t\t\t\tother kinds of\n"
+"\t\t\t\t\tworks, such as semiconductor masks.\n"
+"\n"
+"\t\t\t\t\t\"The Program\"\n"
+"\t\t\t\t\trefers to any copyrightable work licensed under this\n"
+"\t\t\t\t\tLicense. Each\n"
+"\t\t\t\t\tlicensee is addressed as \"you\". \"Licensees\" and\n"
+"\t\t\t\t\t\"recipients\" may be\n"
+"\t\t\t\t\tindividuals or organizations.\n"
+"\n"
+"\t\t\t\t\tTo \"modify\" a work means to copy from\n"
+"\t\t\t\t\tor adapt all or part of the\n"
+"\t\t\t\t\twork\n"
+"\t\t\t\t\tin a fashion requiring copyright\n"
+"\t\t\t\t\tpermission, other than the making of\n"
+"\t\t\t\t\tan\n"
+"\t\t\t\t\texact copy. The resulting\n"
+"\t\t\t\t\twork is called a \"modified version\" of the\n"
+"\t\t\t\t\tearlier work or a work\n"
+"\t\t\t\t\t\"based on\" the earlier work.\n"
+"\n"
+"\t\t\t\t\tA \"covered work\" means either the\n"
+"\t\t\t\t\tunmodified Program or a work based\n"
+"\t\t\t\t\ton the Program.\n"
+"\n"
+"\t\t\t\t\tTo \"propagate\" a\n"
+"\t\t\t\t\twork means to do anything with it that, without\n"
+"\t\t\t\t\tpermission, would\n"
+"\t\t\t\t\tmake you directly or secondarily liable for\n"
+"\t\t\t\t\tinfringement under\n"
+"\t\t\t\t\tapplicable copyright law, except executing it on\n"
+"\t\t\t\t\ta\n"
+"\t\t\t\t\tcomputer or\n"
+"\t\t\t\t\tmodifying a private copy. Propagation includes copying,\n"
+"\t\t\t\t\tdistribution (with or without modification), making available to\n"
+"\t\t\t\t\tthe\n"
+"\t\t\t\t\tpublic, and in some countries other activities as well.\n"
+"\n"
+"\t\t\t\t\tTo\n"
+"\t\t\t\t\t\"convey\" a work means any kind of propagation that enables other\n"
+"\t\t\t\t\tparties to make or receive copies. Mere interaction with a user\n"
+"\t\t\t\t\tthrough\n"
+"\t\t\t\t\ta computer network, with no transfer of a copy, is not\n"
+"\t\t\t\t\tconveying.\n"
+"\n"
+"\t\t\t\t\tAn interactive user interface displays \"Appropriate Legal\n"
+"\t\t\t\t\tNotices\"\n"
+"\t\t\t\t\tto the extent that it includes a convenient and prominently\n"
+"\t\t\t\t\tvisible\n"
+"\t\t\t\t\tfeature that (1) displays an appropriate copyright notice,\n"
+"\t\t\t\t\tand (2)\n"
+"\t\t\t\t\ttells the user that there is no warranty for the work\n"
+"\t\t\t\t\t(except to\n"
+"\t\t\t\t\tthe\n"
+"\t\t\t\t\textent that warranties are provided), that licensees\n"
+"\t\t\t\t\tmay convey the\n"
+"\t\t\t\t\twork under this License, and how to view a copy of\n"
+"\t\t\t\t\tthis License. If\n"
+"\t\t\t\t\tthe interface presents a list of user commands or\n"
+"\t\t\t\t\toptions, such as a\n"
+"\t\t\t\t\tmenu, a prominent item in the list meets this\n"
+"\t\t\t\t\tcriterion.\n"
+"\n"
+"\t\t\t\t\t1. Source Code.\n"
+"\n"
+"\t\t\t\t\tThe \"source code\" for a work means the\n"
+"\t\t\t\t\tpreferred form of the work\n"
+"\t\t\t\t\tfor making modifications to it. \"Object\n"
+"\t\t\t\t\tcode\" means any non-source\n"
+"\t\t\t\t\tform of a work.\n"
+"\n"
+"\t\t\t\t\tA \"Standard Interface\"\n"
+"\t\t\t\t\tmeans an interface that either is an official\n"
+"\t\t\t\t\tstandard defined by a\n"
+"\t\t\t\t\trecognized standards body, or, in the case of\n"
+"\t\t\t\t\tinterfaces specified\n"
+"\t\t\t\t\tfor a particular programming language, one\n"
+"\t\t\t\t\tthat\n"
+"\t\t\t\t\tis widely used among\n"
+"\t\t\t\t\tdevelopers working in that language.\n"
+"\n"
+"\t\t\t\t\tThe \"System Libraries\" of an\n"
+"\t\t\t\t\texecutable work include anything, other\n"
+"\t\t\t\t\tthan the work as a whole,\n"
+"\t\t\t\t\tthat (a) is included in the normal form\n"
+"\t\t\t\t\tof\n"
+"\t\t\t\t\tpackaging a Major\n"
+"\t\t\t\t\tComponent, but which is not part of that Major\n"
+"\t\t\t\t\tComponent, and (b)\n"
+"\t\t\t\t\tserves only to enable use of the work with that\n"
+"\t\t\t\t\tMajor Component, or\n"
+"\t\t\t\t\tto implement a Standard Interface for which an\n"
+"\t\t\t\t\timplementation is\n"
+"\t\t\t\t\tavailable to the public in source code form. A\n"
+"\t\t\t\t\t\"Major Component\", in\n"
+"\t\t\t\t\tthis context, means a major essential\n"
+"\t\t\t\t\tcomponent\n"
+"\t\t\t\t\t(kernel, window\n"
+"\t\t\t\t\tsystem, and so on) of the specific operating system\n"
+"\t\t\t\t\t(if any) on\n"
+"\t\t\t\t\twhich the executable work runs, or a compiler used to\n"
+"\t\t\t\t\tproduce the\n"
+"\t\t\t\t\twork, or an object code interpreter used to run it.\n"
+"\n"
+"\t\t\t\t\tThe\n"
+"\t\t\t\t\t\"Corresponding Source\" for a work in object code form means all\n"
+"\t\t\t\t\tthe\n"
+"\t\t\t\t\tsource code needed to generate, install, and (for an executable\n"
+"\t\t\t\t\twork) run the object code and to modify the work, including scripts\n"
+"\t\t\t\t\tto\n"
+"\t\t\t\t\tcontrol those activities. However, it does not include the work's\n"
+"\t\t\t\t\tSystem Libraries, or general-purpose tools or generally available\n"
+"\t\t\t\t\tfree\n"
+"\t\t\t\t\tprograms which are used unmodified in performing those\n"
+"\t\t\t\t\tactivities\n"
+"\t\t\t\t\tbut\n"
+"\t\t\t\t\twhich are not part of the work. For example,\n"
+"\t\t\t\t\tCorresponding Source\n"
+"\t\t\t\t\tincludes interface definition files associated\n"
+"\t\t\t\t\twith source files\n"
+"\t\t\t\t\tfor\n"
+"\t\t\t\t\tthe work, and the source code for shared\n"
+"\t\t\t\t\tlibraries and dynamically\n"
+"\t\t\t\t\tlinked subprograms that the work is\n"
+"\t\t\t\t\tspecifically designed to\n"
+"\t\t\t\t\trequire,\n"
+"\t\t\t\t\tsuch as by intimate data\n"
+"\t\t\t\t\tcommunication or control flow between those\n"
+"\t\t\t\t\tsubprograms and other\n"
+"\t\t\t\t\tparts of the work.\n"
+"\n"
+"\t\t\t\t\tThe Corresponding Source need not include\n"
+"\t\t\t\t\tanything that users\n"
+"\t\t\t\t\tcan regenerate automatically from other parts of\n"
+"\t\t\t\t\tthe Corresponding\n"
+"\t\t\t\t\tSource.\n"
+"\n"
+"\t\t\t\t\tThe Corresponding Source for a work in\n"
+"\t\t\t\t\tsource code form is that\n"
+"\t\t\t\t\tsame work.\n"
+"\n"
+"\t\t\t\t\t2. Basic Permissions.\n"
+"\n"
+"\t\t\t\t\tAll rights\n"
+"\t\t\t\t\tgranted under this License are granted for the term of\n"
+"\t\t\t\t\tcopyright on\n"
+"\t\t\t\t\tthe Program, and are irrevocable provided the stated\n"
+"\t\t\t\t\tconditions are\n"
+"\t\t\t\t\tmet. This License explicitly affirms your unlimited\n"
+"\t\t\t\t\tpermission to\n"
+"\t\t\t\t\trun the unmodified Program. The output from running a\n"
+"\t\t\t\t\tcovered work\n"
+"\t\t\t\t\tis covered by this License only if the output, given\n"
+"\t\t\t\t\tits\n"
+"\t\t\t\t\tcontent,\n"
+"\t\t\t\t\tconstitutes a covered work. This License acknowledges your\n"
+"\t\t\t\t\trights of\n"
+"\t\t\t\t\tfair use or other equivalent, as provided by copyright law.\n"
+"\n"
+"\t\t\t\t\tYou may\n"
+"\t\t\t\t\tmake, run and propagate covered works that you do not\n"
+"\t\t\t\t\tconvey,\n"
+"\t\t\t\t\twithout conditions so long as your license otherwise remains\n"
+"\t\t\t\t\tin\n"
+"\t\t\t\t\tforce. You may convey covered works to others for the sole purpose\n"
+"\t\t\t\t\tof having them make modifications exclusively for you, or provide\n"
+"\t\t\t\t\tyou\n"
+"\t\t\t\t\twith facilities for running those works, provided that you\n"
+"\t\t\t\t\tcomply with\n"
+"\t\t\t\t\tthe terms of this License in conveying all material for\n"
+"\t\t\t\t\twhich you\n"
+"\t\t\t\t\tdo\n"
+"\t\t\t\t\tnot control copyright. Those thus making or running the\n"
+"\t\t\t\t\tcovered works\n"
+"\t\t\t\t\tfor you must do so exclusively on your behalf, under\n"
+"\t\t\t\t\tyour direction\n"
+"\t\t\t\t\tand control, on terms that prohibit them from making\n"
+"\t\t\t\t\tany copies of\n"
+"\t\t\t\t\tyour copyrighted material outside their relationship\n"
+"\t\t\t\t\twith you.\n"
+"\n"
+"\t\t\t\t\tConveying under any other circumstances is permitted\n"
+"\t\t\t\t\tsolely under\n"
+"\t\t\t\t\tthe conditions stated below. Sublicensing is not\n"
+"\t\t\t\t\tallowed; section\n"
+"\t\t\t\t\t10\n"
+"\t\t\t\t\tmakes it unnecessary.\n"
+"\n"
+"\t\t\t\t\t3. Protecting Users' Legal\n"
+"\t\t\t\t\tRights From Anti-Circumvention Law.\n"
+"\n"
+"\t\t\t\t\tNo covered work shall be deemed\n"
+"\t\t\t\t\tpart of an effective technological\n"
+"\t\t\t\t\tmeasure under any applicable law\n"
+"\t\t\t\t\tfulfilling obligations under\n"
+"\t\t\t\t\tarticle\n"
+"\t\t\t\t\t11 of the WIPO copyright treaty\n"
+"\t\t\t\t\tadopted on 20 December 1996, or\n"
+"\t\t\t\t\tsimilar laws prohibiting or\n"
+"\t\t\t\t\trestricting circumvention of such\n"
+"\t\t\t\t\tmeasures.\n"
+"\n"
+"\t\t\t\t\tWhen you convey a covered\n"
+"\t\t\t\t\twork, you waive any legal power to forbid\n"
+"\t\t\t\t\tcircumvention of\n"
+"\t\t\t\t\ttechnological measures to the extent such\n"
+"\t\t\t\t\tcircumvention\n"
+"\t\t\t\t\tis effected\n"
+"\t\t\t\t\tby exercising rights under this License with respect to\n"
+"\t\t\t\t\tthe covered\n"
+"\t\t\t\t\twork, and you disclaim any intention to limit operation\n"
+"\t\t\t\t\tor\n"
+"\t\t\t\t\tmodification of the work as a means of enforcing, against the\n"
+"\t\t\t\t\twork's\n"
+"\t\t\t\t\tusers, your or third parties' legal rights to forbid\n"
+"\t\t\t\t\tcircumvention of\n"
+"\t\t\t\t\ttechnological measures.\n"
+"\n"
+"\t\t\t\t\t4. Conveying Verbatim\n"
+"\t\t\t\t\tCopies.\n"
+"\n"
+"\t\t\t\t\tYou may convey verbatim copies of the Program's source code\n"
+"\t\t\t\t\tas you\n"
+"\t\t\t\t\treceive it, in any medium, provided that you conspicuously\n"
+"\t\t\t\t\tand\n"
+"\t\t\t\t\tappropriately publish on each copy an appropriate copyright\n"
+"\t\t\t\t\tnotice;\n"
+"\t\t\t\t\tkeep intact all notices stating that this License and any\n"
+"\t\t\t\t\tnon-permissive terms added in accord with section 7 apply to the\n"
+"\t\t\t\t\tcode;\n"
+"\t\t\t\t\tkeep intact all notices of the absence of any warranty; and\n"
+"\t\t\t\t\tgive all\n"
+"\t\t\t\t\trecipients a copy of this License along with the Program.\n"
+"\n"
+"\t\t\t\t\tYou may charge any price or no price for each copy that you convey,\n"
+"\t\t\t\t\tand you may offer support or warranty protection for a fee.\n"
+"\n"
+"\t\t\t\t\t5.\n"
+"\t\t\t\t\tConveying Modified Source Versions.\n"
+"\n"
+"\t\t\t\t\tYou may convey a work based on\n"
+"\t\t\t\t\tthe Program, or the modifications to\n"
+"\t\t\t\t\tproduce it from the Program, in\n"
+"\t\t\t\t\tthe form of source code under the\n"
+"\t\t\t\t\tterms of section 4, provided that\n"
+"\t\t\t\t\tyou also meet all of these\n"
+"\t\t\t\t\tconditions:\n"
+"\n"
+"\t\t\t\t\ta) The work must carry\n"
+"\t\t\t\t\tprominent notices stating that you modified\n"
+"\t\t\t\t\tit, and giving a\n"
+"\t\t\t\t\trelevant date.\n"
+"\n"
+"\t\t\t\t\tb) The work must carry prominent notices stating that\n"
+"\t\t\t\t\tit is\n"
+"\t\t\t\t\treleased under this License and any conditions added under\n"
+"\t\t\t\t\tsection\n"
+"\t\t\t\t\t7. This requirement modifies the requirement in section 4 to\n"
+"\t\t\t\t\t\"keep intact all notices\".\n"
+"\n"
+"\t\t\t\t\tc) You must license the entire work, as a\n"
+"\t\t\t\t\twhole, under this\n"
+"\t\t\t\t\tLicense to anyone who comes into possession of a\n"
+"\t\t\t\t\tcopy. This\n"
+"\t\t\t\t\tLicense will therefore apply, along with any applicable\n"
+"\t\t\t\t\tsection 7\n"
+"\t\t\t\t\tadditional terms, to the whole of the work, and all its\n"
+"\t\t\t\t\tparts,\n"
+"\t\t\t\t\tregardless of how they are packaged. This License gives no\n"
+"\t\t\t\t\tpermission to license the work in any other way, but it does not\n"
+"\t\t\t\t\tinvalidate such permission if you have separately received it.\n"
+"\n"
+"\t\t\t\t\td) If\n"
+"\t\t\t\t\tthe work has interactive user interfaces, each must display\n"
+"\t\t\t\t\tAppropriate Legal Notices; however, if the Program has interactive\n"
+"\t\t\t\t\tinterfaces that do not display Appropriate Legal Notices, your\n"
+"\t\t\t\t\twork\n"
+"\t\t\t\t\tneed not make them do so.\n"
+"\n"
+"\t\t\t\t\tA compilation of a covered work with other\n"
+"\t\t\t\t\tseparate and independent\n"
+"\t\t\t\t\tworks, which are not by their nature\n"
+"\t\t\t\t\textensions of the covered\n"
+"\t\t\t\t\twork,\n"
+"\t\t\t\t\tand which are not combined with it\n"
+"\t\t\t\t\tsuch as to form a larger program,\n"
+"\t\t\t\t\tin or on a volume of a storage or\n"
+"\t\t\t\t\tdistribution medium, is called an\n"
+"\t\t\t\t\t\"aggregate\" if the compilation and\n"
+"\t\t\t\t\tits resulting copyright are not\n"
+"\t\t\t\t\tused to limit the access or legal\n"
+"\t\t\t\t\trights of the compilation's users\n"
+"\t\t\t\t\tbeyond what the individual works\n"
+"\t\t\t\t\tpermit. Inclusion of a covered\n"
+"\t\t\t\t\twork\n"
+"\t\t\t\t\tin an aggregate does not cause\n"
+"\t\t\t\t\tthis License to apply to the other\n"
+"\t\t\t\t\tparts of the aggregate.\n"
+"\n"
+"\t\t\t\t\t6.\n"
+"\t\t\t\t\tConveying Non-Source Forms.\n"
+"\n"
+"\t\t\t\t\tYou may convey a covered work in object\n"
+"\t\t\t\t\tcode form under the terms\n"
+"\t\t\t\t\tof sections 4 and 5, provided that you\n"
+"\t\t\t\t\talso convey the\n"
+"\t\t\t\t\tmachine-readable Corresponding Source under the\n"
+"\t\t\t\t\tterms of this\n"
+"\t\t\t\t\tLicense,\n"
+"\t\t\t\t\tin one of these ways:\n"
+"\n"
+"\t\t\t\t\ta) Convey the object code\n"
+"\t\t\t\t\tin, or embodied in, a physical product\n"
+"\t\t\t\t\t(including a physical\n"
+"\t\t\t\t\tdistribution medium), accompanied by the\n"
+"\t\t\t\t\tCorresponding Source fixed\n"
+"\t\t\t\t\ton a durable physical medium\n"
+"\t\t\t\t\tcustomarily used for software\n"
+"\t\t\t\t\tinterchange.\n"
+"\n"
+"\t\t\t\t\tb) Convey the object code in, or embodied in, a\n"
+"\t\t\t\t\tphysical product\n"
+"\t\t\t\t\t(including a physical distribution medium),\n"
+"\t\t\t\t\taccompanied by a\n"
+"\t\t\t\t\twritten offer, valid for at least three years and\n"
+"\t\t\t\t\tvalid for as\n"
+"\t\t\t\t\tlong as you offer spare parts or customer support for\n"
+"\t\t\t\t\tthat product\n"
+"\t\t\t\t\tmodel, to give anyone who possesses the object code\n"
+"\t\t\t\t\teither (1) a\n"
+"\t\t\t\t\tcopy of the Corresponding Source for all the software\n"
+"\t\t\t\t\tin the\n"
+"\t\t\t\t\tproduct that is covered by this License, on a durable\n"
+"\t\t\t\t\tphysical\n"
+"\t\t\t\t\tmedium customarily used for software interchange, for a\n"
+"\t\t\t\t\tprice no\n"
+"\t\t\t\t\tmore than your reasonable cost of physically performing\n"
+"\t\t\t\t\tthis\n"
+"\t\t\t\t\tconveying of source, or (2) access to copy the\n"
+"\t\t\t\t\tCorresponding\n"
+"\t\t\t\t\tSource from a network server at no charge.\n"
+"\n"
+"\t\t\t\t\tc) Convey individual\n"
+"\t\t\t\t\tcopies of the object code with a copy of the\n"
+"\t\t\t\t\twritten offer to\n"
+"\t\t\t\t\tprovide the Corresponding Source. This\n"
+"\t\t\t\t\talternative is allowed only\n"
+"\t\t\t\t\toccasionally and noncommercially, and\n"
+"\t\t\t\t\tonly if you received the\n"
+"\t\t\t\t\tobject code with such an offer, in accord\n"
+"\t\t\t\t\twith subsection 6b.\n"
+"\n"
+"\t\t\t\t\td)\n"
+"\t\t\t\t\tConvey the object code by offering access from a designated\n"
+"\t\t\t\t\tplace\n"
+"\t\t\t\t\t(gratis or for a charge), and offer equivalent access to the\n"
+"\t\t\t\t\tCorresponding Source in the same way through the same place at no\n"
+"\t\t\t\t\tfurther charge. You need not require recipients to copy the\n"
+"\t\t\t\t\tCorresponding Source along with the object code. If the place to\n"
+"\t\t\t\t\tcopy the object code is a network server, the Corresponding Source\n"
+"\t\t\t\t\tmay be on a different server (operated by you or a third party)\n"
+"\t\t\t\t\tthat supports equivalent copying facilities, provided you maintain\n"
+"\t\t\t\t\tclear directions next to the object code saying where to find the\n"
+"\t\t\t\t\tCorresponding Source. Regardless of what server hosts the\n"
+"\t\t\t\t\tCorresponding Source, you remain obligated to ensure that it is\n"
+"\t\t\t\t\tavailable for as long as needed to satisfy these requirements.\n"
+"\n"
+"\t\t\t\t\te)\n"
+"\t\t\t\t\tConvey the object code using peer-to-peer transmission, provided\n"
+"\t\t\t\t\tyou inform other peers where the object code and Corresponding\n"
+"\t\t\t\t\tSource of the work are being offered to the general public at no\n"
+"\t\t\t\t\tcharge under subsection 6d.\n"
+"\n"
+"\t\t\t\t\tA separable portion of the object code,\n"
+"\t\t\t\t\twhose source code is\n"
+"\t\t\t\t\texcluded\n"
+"\t\t\t\t\tfrom the Corresponding Source as a\n"
+"\t\t\t\t\tSystem Library, need not be\n"
+"\t\t\t\t\tincluded in conveying the object code\n"
+"\t\t\t\t\twork.\n"
+"\n"
+"\t\t\t\t\tA \"User Product\" is either (1) a \"consumer product\", which\n"
+"\t\t\t\t\tmeans any\n"
+"\t\t\t\t\ttangible personal property which is normally used for\n"
+"\t\t\t\t\tpersonal,\n"
+"\t\t\t\t\tfamily,\n"
+"\t\t\t\t\tor household purposes, or (2) anything designed or\n"
+"\t\t\t\t\tsold for\n"
+"\t\t\t\t\tincorporation\n"
+"\t\t\t\t\tinto a dwelling. In determining whether a\n"
+"\t\t\t\t\tproduct is a consumer\n"
+"\t\t\t\t\tproduct,\n"
+"\t\t\t\t\tdoubtful cases shall be resolved in\n"
+"\t\t\t\t\tfavor of coverage. For a particular\n"
+"\t\t\t\t\tproduct received by a particular\n"
+"\t\t\t\t\tuser, \"normally used\" refers to a\n"
+"\t\t\t\t\ttypical or common use of that\n"
+"\t\t\t\t\tclass of product, regardless of the\n"
+"\t\t\t\t\tstatus\n"
+"\t\t\t\t\tof the particular user or\n"
+"\t\t\t\t\tof the way in which the particular user\n"
+"\t\t\t\t\tactually uses, or expects or\n"
+"\t\t\t\t\tis expected to use, the product. A\n"
+"\t\t\t\t\tproduct\n"
+"\t\t\t\t\tis a consumer product\n"
+"\t\t\t\t\tregardless of whether the product has\n"
+"\t\t\t\t\tsubstantial\n"
+"\t\t\t\t\tcommercial,\n"
+"\t\t\t\t\tindustrial or non-consumer uses, unless such uses represent\n"
+"\t\t\t\t\tthe only\n"
+"\t\t\t\t\tsignificant mode of use of the product.\n"
+"\n"
+"\t\t\t\t\t\"Installation Information\"\n"
+"\t\t\t\t\tfor a User Product means any methods,\n"
+"\t\t\t\t\tprocedures, authorization\n"
+"\t\t\t\t\tkeys, or other information required to install\n"
+"\t\t\t\t\tand execute modified\n"
+"\t\t\t\t\tversions of a covered work in that User Product\n"
+"\t\t\t\t\tfrom\n"
+"\t\t\t\t\ta modified\n"
+"\t\t\t\t\tversion of its Corresponding Source. The information must\n"
+"\t\t\t\t\tsuffice to\n"
+"\t\t\t\t\tensure that the continued functioning of the modified\n"
+"\t\t\t\t\tobject\n"
+"\t\t\t\t\tcode is\n"
+"\t\t\t\t\tin no case prevented or interfered with solely because\n"
+"\t\t\t\t\tmodification\n"
+"\t\t\t\t\thas been made.\n"
+"\n"
+"\t\t\t\t\tIf you convey an object code work under this section\n"
+"\t\t\t\t\tin, or with, or\n"
+"\t\t\t\t\tspecifically for use in, a User Product, and the\n"
+"\t\t\t\t\tconveying occurs\n"
+"\t\t\t\t\tas\n"
+"\t\t\t\t\tpart of a transaction in which the right of\n"
+"\t\t\t\t\tpossession and use of the\n"
+"\t\t\t\t\tUser Product is transferred to the\n"
+"\t\t\t\t\trecipient in perpetuity or for a\n"
+"\t\t\t\t\tfixed term (regardless of how the\n"
+"\t\t\t\t\ttransaction is characterized),\n"
+"\t\t\t\t\tthe\n"
+"\t\t\t\t\tCorresponding Source conveyed\n"
+"\t\t\t\t\tunder this section must be accompanied\n"
+"\t\t\t\t\tby the Installation\n"
+"\t\t\t\t\tInformation. But this requirement does not apply\n"
+"\t\t\t\t\tif neither you nor\n"
+"\t\t\t\t\tany third party retains the ability to install\n"
+"\t\t\t\t\tmodified object code\n"
+"\t\t\t\t\ton the User Product (for example, the work has\n"
+"\t\t\t\t\tbeen installed in\n"
+"\t\t\t\t\tROM).\n"
+"\n"
+"\t\t\t\t\tThe requirement to provide Installation Information does not\n"
+"\t\t\t\t\tinclude a\n"
+"\t\t\t\t\trequirement to continue to provide support service,\n"
+"\t\t\t\t\twarranty, or\n"
+"\t\t\t\t\tupdates\n"
+"\t\t\t\t\tfor a work that has been modified or installed\n"
+"\t\t\t\t\tby the recipient, or\n"
+"\t\t\t\t\tfor\n"
+"\t\t\t\t\tthe User Product in which it has been\n"
+"\t\t\t\t\tmodified or installed. Access to\n"
+"\t\t\t\t\ta\n"
+"\t\t\t\t\tnetwork may be denied when the\n"
+"\t\t\t\t\tmodification itself materially and\n"
+"\t\t\t\t\tadversely affects the operation\n"
+"\t\t\t\t\tof the network or violates the\n"
+"\t\t\t\t\trules and\n"
+"\t\t\t\t\tprotocols for communication\n"
+"\t\t\t\t\tacross the network.\n"
+"\n"
+"\t\t\t\t\tCorresponding Source conveyed, and Installation\n"
+"\t\t\t\t\tInformation provided,\n"
+"\t\t\t\t\tin accord with this section must be in a\n"
+"\t\t\t\t\tformat that is publicly\n"
+"\t\t\t\t\tdocumented (and with an implementation\n"
+"\t\t\t\t\tavailable to the public in\n"
+"\t\t\t\t\tsource code form), and must require no\n"
+"\t\t\t\t\tspecial password or key for\n"
+"\t\t\t\t\tunpacking, reading or copying.\n"
+"\n"
+"\t\t\t\t\t7.\n"
+"\t\t\t\t\tAdditional Terms.\n"
+"\n"
+"\t\t\t\t\t\"Additional permissions\" are terms that supplement\n"
+"\t\t\t\t\tthe terms of this\n"
+"\t\t\t\t\tLicense by making exceptions from one or more of\n"
+"\t\t\t\t\tits conditions.\n"
+"\t\t\t\t\tAdditional permissions that are applicable to the\n"
+"\t\t\t\t\tentire Program\n"
+"\t\t\t\t\tshall\n"
+"\t\t\t\t\tbe treated as though they were included in this\n"
+"\t\t\t\t\tLicense, to the\n"
+"\t\t\t\t\textent\n"
+"\t\t\t\t\tthat they are valid under applicable law. If\n"
+"\t\t\t\t\tadditional permissions\n"
+"\t\t\t\t\tapply only to part of the Program, that part\n"
+"\t\t\t\t\tmay be used separately\n"
+"\t\t\t\t\tunder those permissions, but the entire\n"
+"\t\t\t\t\tProgram remains governed by\n"
+"\t\t\t\t\tthis License without regard to the\n"
+"\t\t\t\t\tadditional permissions.\n"
+"\n"
+"\t\t\t\t\tWhen you convey a copy of a covered work,\n"
+"\t\t\t\t\tyou may at your option\n"
+"\t\t\t\t\tremove any additional permissions from that\n"
+"\t\t\t\t\tcopy, or from any part of\n"
+"\t\t\t\t\tit. (Additional permissions may be written\n"
+"\t\t\t\t\tto require their own\n"
+"\t\t\t\t\tremoval in certain cases when you modify the\n"
+"\t\t\t\t\twork.) You may place\n"
+"\t\t\t\t\tadditional permissions on material, added by\n"
+"\t\t\t\t\tyou to a covered work,\n"
+"\t\t\t\t\tfor which you have or can give appropriate\n"
+"\t\t\t\t\tcopyright permission.\n"
+"\n"
+"\t\t\t\t\tNotwithstanding any other provision of this\n"
+"\t\t\t\t\tLicense, for material\n"
+"\t\t\t\t\tyou\n"
+"\t\t\t\t\tadd to a covered work, you may (if\n"
+"\t\t\t\t\tauthorized by the copyright holders\n"
+"\t\t\t\t\tof\n"
+"\t\t\t\t\tthat material) supplement the\n"
+"\t\t\t\t\tterms of this License with terms:\n"
+"\n"
+"\t\t\t\t\ta) Disclaiming warranty or\n"
+"\t\t\t\t\tlimiting liability differently from the\n"
+"\t\t\t\t\tterms of sections 15 and 16\n"
+"\t\t\t\t\tof this License; or\n"
+"\n"
+"\t\t\t\t\tb) Requiring preservation of specified\n"
+"\t\t\t\t\treasonable legal notices or\n"
+"\t\t\t\t\tauthor attributions in that material or\n"
+"\t\t\t\t\tin the Appropriate Legal\n"
+"\t\t\t\t\tNotices displayed by works containing it;\n"
+"\t\t\t\t\tor\n"
+"\n"
+"\t\t\t\t\tc) Prohibiting misrepresentation of the origin of that material,\n"
+"\t\t\t\t\tor\n"
+"\t\t\t\t\trequiring that modified versions of such material be marked in\n"
+"\t\t\t\t\treasonable ways as different from the original version; or\n"
+"\n"
+"\t\t\t\t\td)\n"
+"\t\t\t\t\tLimiting the use for publicity purposes of names of licensors or\n"
+"\t\t\t\t\tauthors of the material; or\n"
+"\n"
+"\t\t\t\t\te) Declining to grant rights under\n"
+"\t\t\t\t\ttrademark law for use of some\n"
+"\t\t\t\t\ttrade names, trademarks, or service\n"
+"\t\t\t\t\tmarks; or\n"
+"\n"
+"\t\t\t\t\tf) Requiring indemnification of licensors and authors of\n"
+"\t\t\t\t\tthat\n"
+"\t\t\t\t\tmaterial by anyone who conveys the material (or modified\n"
+"\t\t\t\t\tversions\n"
+"\t\t\t\t\tof\n"
+"\t\t\t\t\tit) with contractual assumptions of liability to the\n"
+"\t\t\t\t\trecipient, for\n"
+"\t\t\t\t\tany liability that these contractual assumptions\n"
+"\t\t\t\t\tdirectly impose on\n"
+"\t\t\t\t\tthose licensors and authors.\n"
+"\n"
+"\t\t\t\t\tAll other\n"
+"\t\t\t\t\tnon-permissive additional terms are considered \"further\n"
+"\t\t\t\t\trestrictions\" within the meaning of section 10. If the Program as\n"
+"\t\t\t\t\tyou\n"
+"\t\t\t\t\treceived it, or any part of it, contains a notice stating that\n"
+"\t\t\t\t\tit is\n"
+"\t\t\t\t\tgoverned by this License along with a term that is a further\n"
+"\t\t\t\t\trestriction, you may remove that term. If a license document\n"
+"\t\t\t\t\tcontains\n"
+"\t\t\t\t\ta further restriction but permits relicensing or conveying\n"
+"\t\t\t\t\tunder\n"
+"\t\t\t\t\tthis\n"
+"\t\t\t\t\tLicense, you may add to a covered work material governed\n"
+"\t\t\t\t\tby the terms\n"
+"\t\t\t\t\tof that license document, provided that the further\n"
+"\t\t\t\t\trestriction does\n"
+"\t\t\t\t\tnot survive such relicensing or conveying.\n"
+"\n"
+"\t\t\t\t\tIf you\n"
+"\t\t\t\t\tadd terms to a covered work in accord with this section, you\n"
+"\t\t\t\t\tmust\n"
+"\t\t\t\t\tplace, in the relevant source files, a statement of the\n"
+"\t\t\t\t\tadditional\n"
+"\t\t\t\t\tterms that apply to those files, or a notice indicating\n"
+"\t\t\t\t\twhere to\n"
+"\t\t\t\t\tfind the applicable terms.\n"
+"\n"
+"\t\t\t\t\tAdditional terms, permissive or\n"
+"\t\t\t\t\tnon-permissive, may be stated in the\n"
+"\t\t\t\t\tform of a separately written\n"
+"\t\t\t\t\tlicense, or stated as exceptions;\n"
+"\t\t\t\t\tthe above requirements apply\n"
+"\t\t\t\t\teither way.\n"
+"\n"
+"\t\t\t\t\t8. Termination.\n"
+"\n"
+"\t\t\t\t\tYou may not propagate or modify a covered\n"
+"\t\t\t\t\twork except as expressly\n"
+"\t\t\t\t\tprovided under this License. Any attempt\n"
+"\t\t\t\t\totherwise to propagate or\n"
+"\t\t\t\t\tmodify it is void, and will automatically\n"
+"\t\t\t\t\tterminate your rights\n"
+"\t\t\t\t\tunder\n"
+"\t\t\t\t\tthis License (including any patent\n"
+"\t\t\t\t\tlicenses granted under the third\n"
+"\t\t\t\t\tparagraph of section 11).\n"
+"\n"
+"\t\t\t\t\tHowever,\n"
+"\t\t\t\t\tif you cease all violation of this License, then your\n"
+"\t\t\t\t\tlicense from a\n"
+"\t\t\t\t\tparticular copyright holder is reinstated (a)\n"
+"\t\t\t\t\tprovisionally, unless\n"
+"\t\t\t\t\tand until the copyright holder explicitly and\n"
+"\t\t\t\t\tfinally terminates\n"
+"\t\t\t\t\tyour license, and (b) permanently, if the\n"
+"\t\t\t\t\tcopyright\n"
+"\t\t\t\t\tholder fails to\n"
+"\t\t\t\t\tnotify you of the violation by some reasonable means\n"
+"\t\t\t\t\tprior to 60\n"
+"\t\t\t\t\tdays after the cessation.\n"
+"\n"
+"\t\t\t\t\tMoreover, your license from a particular\n"
+"\t\t\t\t\tcopyright holder is\n"
+"\t\t\t\t\treinstated permanently if the copyright holder\n"
+"\t\t\t\t\tnotifies you of the\n"
+"\t\t\t\t\tviolation by some reasonable means, this is the\n"
+"\t\t\t\t\tfirst time you have\n"
+"\t\t\t\t\treceived notice of violation of this License\n"
+"\t\t\t\t\t(for any work) from that\n"
+"\t\t\t\t\tcopyright holder, and you cure the\n"
+"\t\t\t\t\tviolation prior to 30 days after\n"
+"\t\t\t\t\tyour receipt of the notice.\n"
+"\n"
+"\t\t\t\t\tTermination of your rights under this section does not terminate\n"
+"\t\t\t\t\tthe\n"
+"\t\t\t\t\tlicenses of parties who have received copies or rights from you\n"
+"\t\t\t\t\tunder\n"
+"\t\t\t\t\tthis License. If your rights have been terminated and not\n"
+"\t\t\t\t\tpermanently\n"
+"\t\t\t\t\treinstated, you do not qualify to receive new licenses\n"
+"\t\t\t\t\tfor the same\n"
+"\t\t\t\t\tmaterial under section 10.\n"
+"\n"
+"\t\t\t\t\t9. Acceptance Not Required\n"
+"\t\t\t\t\tfor Having Copies.\n"
+"\n"
+"\t\t\t\t\tYou are not required to accept this License in\n"
+"\t\t\t\t\torder to receive or\n"
+"\t\t\t\t\trun a copy of the Program. Ancillary propagation\n"
+"\t\t\t\t\tof a covered work\n"
+"\t\t\t\t\toccurring solely as a consequence of using\n"
+"\t\t\t\t\tpeer-to-peer\n"
+"\t\t\t\t\ttransmission\n"
+"\t\t\t\t\tto receive a copy likewise does not require\n"
+"\t\t\t\t\tacceptance. However,\n"
+"\t\t\t\t\tnothing other than this License grants you\n"
+"\t\t\t\t\tpermission to propagate\n"
+"\t\t\t\t\tor\n"
+"\t\t\t\t\tmodify any covered work. These actions\n"
+"\t\t\t\t\tinfringe copyright if you do\n"
+"\t\t\t\t\tnot accept this License. Therefore, by\n"
+"\t\t\t\t\tmodifying or propagating a\n"
+"\t\t\t\t\tcovered work, you indicate your\n"
+"\t\t\t\t\tacceptance of this License to do\n"
+"\t\t\t\t\tso.\n"
+"\n"
+"\t\t\t\t\t10. Automatic Licensing of\n"
+"\t\t\t\t\tDownstream Recipients.\n"
+"\n"
+"\t\t\t\t\tEach time you convey a covered work, the\n"
+"\t\t\t\t\trecipient automatically\n"
+"\t\t\t\t\treceives a license from the original\n"
+"\t\t\t\t\tlicensors, to run, modify and\n"
+"\t\t\t\t\tpropagate that work, subject to this\n"
+"\t\t\t\t\tLicense. You are not\n"
+"\t\t\t\t\tresponsible\n"
+"\t\t\t\t\tfor enforcing compliance by third\n"
+"\t\t\t\t\tparties with this License.\n"
+"\n"
+"\t\t\t\t\tAn \"entity transaction\" is a transaction\n"
+"\t\t\t\t\ttransferring control of an\n"
+"\t\t\t\t\torganization, or substantially all assets\n"
+"\t\t\t\t\tof one, or subdividing an\n"
+"\t\t\t\t\torganization, or merging organizations. If\n"
+"\t\t\t\t\tpropagation of a covered\n"
+"\t\t\t\t\twork results from an entity transaction,\n"
+"\t\t\t\t\teach party to that\n"
+"\t\t\t\t\ttransaction who receives a copy of the work also\n"
+"\t\t\t\t\treceives whatever\n"
+"\t\t\t\t\tlicenses to the work the party's predecessor in\n"
+"\t\t\t\t\tinterest had or\n"
+"\t\t\t\t\tcould\n"
+"\t\t\t\t\tgive under the previous paragraph, plus a right\n"
+"\t\t\t\t\tto possession of the\n"
+"\t\t\t\t\tCorresponding Source of the work from the\n"
+"\t\t\t\t\tpredecessor in interest,\n"
+"\t\t\t\t\tif\n"
+"\t\t\t\t\tthe predecessor has it or can get it with\n"
+"\t\t\t\t\treasonable efforts.\n"
+"\n"
+"\t\t\t\t\tYou may not impose any further restrictions on\n"
+"\t\t\t\t\tthe exercise of the\n"
+"\t\t\t\t\trights granted or affirmed under this License.\n"
+"\t\t\t\t\tFor example, you may\n"
+"\t\t\t\t\tnot impose a license fee, royalty, or other\n"
+"\t\t\t\t\tcharge for exercise of\n"
+"\t\t\t\t\trights granted under this License, and you\n"
+"\t\t\t\t\tmay not initiate\n"
+"\t\t\t\t\tlitigation\n"
+"\t\t\t\t\t(including a cross-claim or counterclaim\n"
+"\t\t\t\t\tin a lawsuit) alleging that\n"
+"\t\t\t\t\tany patent claim is infringed by making,\n"
+"\t\t\t\t\tusing, selling, offering for\n"
+"\t\t\t\t\tsale, or importing the Program or any\n"
+"\t\t\t\t\tportion of it.\n"
+"\n"
+"\t\t\t\t\t11. Patents.\n"
+"\n"
+"\t\t\t\t\tA \"contributor\" is a copyright holder who\n"
+"\t\t\t\t\tauthorizes use under this\n"
+"\t\t\t\t\tLicense of the Program or a work on which\n"
+"\t\t\t\t\tthe Program is based. The\n"
+"\t\t\t\t\twork thus licensed is called the\n"
+"\t\t\t\t\tcontributor's \"contributor\n"
+"\t\t\t\t\tversion\".\n"
+"\n"
+"\t\t\t\t\tA contributor's \"essential\n"
+"\t\t\t\t\tpatent claims\" are all patent claims\n"
+"\t\t\t\t\towned or controlled by the\n"
+"\t\t\t\t\tcontributor, whether already acquired or\n"
+"\t\t\t\t\thereafter acquired, that\n"
+"\t\t\t\t\twould be infringed by some manner,\n"
+"\t\t\t\t\tpermitted\n"
+"\t\t\t\t\tby this License, of\n"
+"\t\t\t\t\tmaking, using, or selling its contributor\n"
+"\t\t\t\t\tversion,\n"
+"\t\t\t\t\tbut do not include\n"
+"\t\t\t\t\tclaims that would be infringed only as a\n"
+"\t\t\t\t\tconsequence of further\n"
+"\t\t\t\t\tmodification of the contributor version. For\n"
+"\t\t\t\t\tpurposes of this\n"
+"\t\t\t\t\tdefinition, \"control\" includes the right to grant\n"
+"\t\t\t\t\tpatent sublicenses\n"
+"\t\t\t\t\tin a manner consistent with the requirements of\n"
+"\t\t\t\t\tthis License.\n"
+"\n"
+"\t\t\t\t\tEach\n"
+"\t\t\t\t\tcontributor grants you a non-exclusive, worldwide, royalty-free\n"
+"\t\t\t\t\tpatent license under the contributor's essential patent claims, to\n"
+"\t\t\t\t\tmake, use, sell, offer for sale, import and otherwise run, modify\n"
+"\t\t\t\t\tand\n"
+"\t\t\t\t\tpropagate the contents of its contributor version.\n"
+"\n"
+"\t\t\t\t\tIn the\n"
+"\t\t\t\t\tfollowing three paragraphs, a \"patent license\" is any express\n"
+"\t\t\t\t\tagreement or commitment, however denominated, not to enforce a\n"
+"\t\t\t\t\tpatent\n"
+"\t\t\t\t\t(such as an express permission to practice a patent or\n"
+"\t\t\t\t\tcovenant not to\n"
+"\t\t\t\t\tsue for patent infringement). To \"grant\" such a\n"
+"\t\t\t\t\tpatent license to a\n"
+"\t\t\t\t\tparty means to make such an agreement or\n"
+"\t\t\t\t\tcommitment not to enforce\n"
+"\t\t\t\t\ta\n"
+"\t\t\t\t\tpatent against the party.\n"
+"\n"
+"\t\t\t\t\tIf you convey a\n"
+"\t\t\t\t\tcovered work, knowingly relying on a patent license,\n"
+"\t\t\t\t\tand the\n"
+"\t\t\t\t\tCorresponding Source of the work is not available for\n"
+"\t\t\t\t\tanyone\n"
+"\t\t\t\t\tto copy,\n"
+"\t\t\t\t\tfree of charge and under the terms of this License, through\n"
+"\t\t\t\t\ta\n"
+"\t\t\t\t\tpublicly available network server or other readily accessible\n"
+"\t\t\t\t\tmeans,\n"
+"\t\t\t\t\tthen you must either (1) cause the Corresponding Source to be\n"
+"\t\t\t\t\tso\n"
+"\t\t\t\t\tavailable, or (2) arrange to deprive yourself of the benefit of\n"
+"\t\t\t\t\tthe\n"
+"\t\t\t\t\tpatent license for this particular work, or (3) arrange, in a\n"
+"\t\t\t\t\tmanner\n"
+"\t\t\t\t\tconsistent with the requirements of this License, to extend\n"
+"\t\t\t\t\tthe patent\n"
+"\t\t\t\t\tlicense to downstream recipients. \"Knowingly relying\"\n"
+"\t\t\t\t\tmeans you\n"
+"\t\t\t\t\thave\n"
+"\t\t\t\t\tactual knowledge that, but for the patent license,\n"
+"\t\t\t\t\tyour conveying the\n"
+"\t\t\t\t\tcovered work in a country, or your recipient's\n"
+"\t\t\t\t\tuse of the covered\n"
+"\t\t\t\t\twork\n"
+"\t\t\t\t\tin a country, would infringe one or more\n"
+"\t\t\t\t\tidentifiable patents in that\n"
+"\t\t\t\t\tcountry that you have reason to believe\n"
+"\t\t\t\t\tare valid.\n"
+"\n"
+"\t\t\t\t\tIf, pursuant to or in connection with a single\n"
+"\t\t\t\t\ttransaction or\n"
+"\t\t\t\t\tarrangement, you convey, or propagate by procuring\n"
+"\t\t\t\t\tconveyance of, a\n"
+"\t\t\t\t\tcovered work, and grant a patent license to some of\n"
+"\t\t\t\t\tthe parties\n"
+"\t\t\t\t\treceiving the covered work authorizing them to use,\n"
+"\t\t\t\t\tpropagate,\n"
+"\t\t\t\t\tmodify\n"
+"\t\t\t\t\tor convey a specific copy of the covered work, then\n"
+"\t\t\t\t\tthe patent\n"
+"\t\t\t\t\tlicense\n"
+"\t\t\t\t\tyou grant is automatically extended to all\n"
+"\t\t\t\t\trecipients of the covered\n"
+"\t\t\t\t\twork and works based on it.\n"
+"\n"
+"\t\t\t\t\tA patent\n"
+"\t\t\t\t\tlicense is \"discriminatory\" if it does not include within\n"
+"\t\t\t\t\tthe scope\n"
+"\t\t\t\t\tof its coverage, prohibits the exercise of, or is\n"
+"\t\t\t\t\tconditioned on the\n"
+"\t\t\t\t\tnon-exercise of one or more of the rights that\n"
+"\t\t\t\t\tare\n"
+"\t\t\t\t\tspecifically\n"
+"\t\t\t\t\tgranted under this License. You may not convey a covered\n"
+"\t\t\t\t\twork if you\n"
+"\t\t\t\t\tare a party to an arrangement with a third party that is\n"
+"\t\t\t\t\tin the\n"
+"\t\t\t\t\tbusiness of distributing software, under which you make\n"
+"\t\t\t\t\tpayment\n"
+"\t\t\t\t\tto\n"
+"\t\t\t\t\tthe third party based on the extent of your activity of conveying\n"
+"\t\t\t\t\tthe work, and under which the third party grants, to any of the\n"
+"\t\t\t\t\tparties who would receive the covered work from you, a\n"
+"\t\t\t\t\tdiscriminatory\n"
+"\t\t\t\t\tpatent license (a) in connection with copies of the\n"
+"\t\t\t\t\tcovered work\n"
+"\t\t\t\t\tconveyed by you (or copies made from those copies), or\n"
+"\t\t\t\t\t(b) primarily\n"
+"\t\t\t\t\tfor and in connection with specific products or\n"
+"\t\t\t\t\tcompilations that\n"
+"\t\t\t\t\tcontain the covered work, unless you entered into\n"
+"\t\t\t\t\tthat arrangement,\n"
+"\t\t\t\t\tor that patent license was granted, prior to 28\n"
+"\t\t\t\t\tMarch 2007.\n"
+"\n"
+"\t\t\t\t\tNothing in this License shall be construed as excluding\n"
+"\t\t\t\t\tor limiting\n"
+"\t\t\t\t\tany implied license or other defenses to infringement\n"
+"\t\t\t\t\tthat may\n"
+"\t\t\t\t\totherwise be available to you under applicable patent law.\n"
+"\n"
+"\t\t\t\t\t12. No Surrender of Others' Freedom.\n"
+"\n"
+"\t\t\t\t\tIf conditions are imposed on\n"
+"\t\t\t\t\tyou (whether by court order, agreement\n"
+"\t\t\t\t\tor\n"
+"\t\t\t\t\totherwise) that contradict\n"
+"\t\t\t\t\tthe conditions of this License, they do not\n"
+"\t\t\t\t\texcuse you from the\n"
+"\t\t\t\t\tconditions of this License. If you cannot convey a\n"
+"\t\t\t\t\tcovered work so\n"
+"\t\t\t\t\tas to satisfy simultaneously your obligations under\n"
+"\t\t\t\t\tthis\n"
+"\t\t\t\t\tLicense and\n"
+"\t\t\t\t\tany other pertinent obligations, then as a consequence you may\n"
+"\t\t\t\t\tnot\n"
+"\t\t\t\t\tconvey it at all. For example, if you agree to terms that\n"
+"\t\t\t\t\tobligate\n"
+"\t\t\t\t\tyou\n"
+"\t\t\t\t\tto collect a royalty for further conveying from those to whom\n"
+"\t\t\t\t\tyou\n"
+"\t\t\t\t\tconvey\n"
+"\t\t\t\t\tthe Program, the only way you could satisfy both those\n"
+"\t\t\t\t\tterms and this\n"
+"\t\t\t\t\tLicense would be to refrain entirely from conveying\n"
+"\t\t\t\t\tthe Program.\n"
+"\n"
+"\t\t\t\t\t13. Remote Network Interaction; Use with the GNU\n"
+"\t\t\t\t\tGeneral Public\n"
+"\t\t\t\t\tLicense.\n"
+"\n"
+"\t\t\t\t\tNotwithstanding any other provision of this\n"
+"\t\t\t\t\tLicense, if you modify the\n"
+"\t\t\t\t\tProgram, your modified version must\n"
+"\t\t\t\t\tprominently offer all users\n"
+"\t\t\t\t\tinteracting with it remotely through a\n"
+"\t\t\t\t\tcomputer network (if your version\n"
+"\t\t\t\t\tsupports such interaction) an\n"
+"\t\t\t\t\topportunity to receive the\n"
+"\t\t\t\t\tCorresponding\n"
+"\t\t\t\t\tSource of your version by\n"
+"\t\t\t\t\tproviding access to the Corresponding Source\n"
+"\t\t\t\t\tfrom a network server\n"
+"\t\t\t\t\tat no charge, through some standard or\n"
+"\t\t\t\t\tcustomary\n"
+"\t\t\t\t\tmeans of\n"
+"\t\t\t\t\tfacilitating copying of software. This Corresponding Source\n"
+"\t\t\t\t\tshall\n"
+"\t\t\t\t\tinclude the Corresponding Source for any work covered by\n"
+"\t\t\t\t\tversion 3\n"
+"\t\t\t\t\tof the GNU General Public License that is incorporated pursuant to\n"
+"\t\t\t\t\tthe\n"
+"\t\t\t\t\tfollowing paragraph.\n"
+"\n"
+"\t\t\t\t\tNotwithstanding any other provision of this\n"
+"\t\t\t\t\tLicense, you have\n"
+"\t\t\t\t\tpermission to link or combine any covered work\n"
+"\t\t\t\t\twith a work licensed\n"
+"\t\t\t\t\tunder version 3 of the GNU General Public\n"
+"\t\t\t\t\tLicense into a single\n"
+"\t\t\t\t\tcombined work, and to convey the resulting\n"
+"\t\t\t\t\twork. The terms of this\n"
+"\t\t\t\t\tLicense will continue to apply to the part\n"
+"\t\t\t\t\twhich is the covered work,\n"
+"\t\t\t\t\tbut the work with which it is combined\n"
+"\t\t\t\t\twill remain governed by version\n"
+"\t\t\t\t\t3 of the GNU General Public License.\n"
+"\n"
+"\t\t\t\t\t14. Revised Versions of this License.\n"
+"\n"
+"\t\t\t\t\tThe Free Software Foundation\n"
+"\t\t\t\t\tmay publish revised and/or new versions\n"
+"\t\t\t\t\tof\n"
+"\t\t\t\t\tthe GNU Affero General\n"
+"\t\t\t\t\tPublic License from time to time. Such new\n"
+"\t\t\t\t\tversions\n"
+"\t\t\t\t\twill be similar\n"
+"\t\t\t\t\tin spirit to the present version, but may differ in\n"
+"\t\t\t\t\tdetail to\n"
+"\t\t\t\t\taddress new problems or concerns.\n"
+"\n"
+"\t\t\t\t\tEach version is given a\n"
+"\t\t\t\t\tdistinguishing version number. If the\n"
+"\t\t\t\t\tProgram specifies that a\n"
+"\t\t\t\t\tcertain numbered version of the GNU Affero\n"
+"\t\t\t\t\tGeneral\n"
+"\t\t\t\t\tPublic License \"or\n"
+"\t\t\t\t\tany later version\" applies to it, you have the\n"
+"\t\t\t\t\toption of following\n"
+"\t\t\t\t\tthe terms and conditions either of that numbered\n"
+"\t\t\t\t\tversion or of any\n"
+"\t\t\t\t\tlater version published by the Free Software\n"
+"\t\t\t\t\tFoundation. If the\n"
+"\t\t\t\t\tProgram does not specify a version number of the\n"
+"\t\t\t\t\tGNU Affero General\n"
+"\t\t\t\t\tPublic License, you may choose any version ever\n"
+"\t\t\t\t\tpublished\n"
+"\t\t\t\t\tby the Free\n"
+"\t\t\t\t\tSoftware Foundation.\n"
+"\n"
+"\t\t\t\t\tIf the Program specifies that a proxy can\n"
+"\t\t\t\t\tdecide which future\n"
+"\t\t\t\t\tversions of the GNU Affero General Public\n"
+"\t\t\t\t\tLicense can be used, that\n"
+"\t\t\t\t\tproxy's\n"
+"\t\t\t\t\tpublic statement of acceptance of a\n"
+"\t\t\t\t\tversion permanently authorizes you\n"
+"\t\t\t\t\tto choose that version for the\n"
+"\t\t\t\t\tProgram.\n"
+"\n"
+"\t\t\t\t\tLater license versions may give you additional or different\n"
+"\t\t\t\t\tpermissions. However, no additional obligations are imposed on any\n"
+"\t\t\t\t\tauthor or copyright holder as a result of your choosing to follow a\n"
+"\t\t\t\t\tlater version.\n"
+"\n"
+"\t\t\t\t\t15. Disclaimer of Warranty.\n"
+"\n"
+"\t\t\t\t\tTHERE IS NO WARRANTY FOR\n"
+"\t\t\t\t\tTHE PROGRAM, TO THE EXTENT PERMITTED BY\n"
+"\t\t\t\t\tAPPLICABLE LAW. EXCEPT WHEN\n"
+"\t\t\t\t\tOTHERWISE STATED IN WRITING THE\n"
+"\t\t\t\t\tCOPYRIGHT\n"
+"\t\t\t\t\tHOLDERS AND/OR OTHER\n"
+"\t\t\t\t\tPARTIES PROVIDE THE PROGRAM \"AS IS\" WITHOUT WARRANTY\n"
+"\t\t\t\t\tOF ANY KIND,\n"
+"\t\t\t\t\tEITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT\n"
+"\t\t\t\t\tLIMITED TO,\n"
+"\t\t\t\t\tTHE\n"
+"\t\t\t\t\tIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR\n"
+"\t\t\t\t\tPURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE\n"
+"\t\t\t\t\tPROGRAM\n"
+"\t\t\t\t\tIS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME\n"
+"\t\t\t\t\tTHE COST\n"
+"\t\t\t\t\tOF\n"
+"\t\t\t\t\tALL NECESSARY SERVICING, REPAIR OR CORRECTION.\n"
+"\n"
+"\t\t\t\t\t16.\n"
+"\t\t\t\t\tLimitation of Liability.\n"
+"\n"
+"\t\t\t\t\tIN NO EVENT UNLESS REQUIRED BY APPLICABLE\n"
+"\t\t\t\t\tLAW OR AGREED TO IN WRITING\n"
+"\t\t\t\t\tWILL ANY COPYRIGHT HOLDER, OR ANY OTHER\n"
+"\t\t\t\t\tPARTY WHO MODIFIES AND/OR\n"
+"\t\t\t\t\tCONVEYS\n"
+"\t\t\t\t\tTHE PROGRAM AS PERMITTED ABOVE, BE\n"
+"\t\t\t\t\tLIABLE TO YOU FOR DAMAGES,\n"
+"\t\t\t\t\tINCLUDING ANY\n"
+"\t\t\t\t\tGENERAL, SPECIAL, INCIDENTAL\n"
+"\t\t\t\t\tOR CONSEQUENTIAL DAMAGES ARISING OUT OF THE\n"
+"\t\t\t\t\tUSE OR INABILITY TO USE\n"
+"\t\t\t\t\tTHE PROGRAM (INCLUDING BUT NOT LIMITED TO\n"
+"\t\t\t\t\tLOSS OF\n"
+"\t\t\t\t\tDATA OR DATA BEING\n"
+"\t\t\t\t\tRENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR\n"
+"\t\t\t\t\tTHIRD\n"
+"\t\t\t\t\tPARTIES OR A\n"
+"\t\t\t\t\tFAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS),\n"
+"\t\t\t\t\tEVEN IF\n"
+"\t\t\t\t\tSUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE\n"
+"\t\t\t\t\tPOSSIBILITY OF\n"
+"\t\t\t\t\tSUCH DAMAGES.\n"
+"\n"
+"\t\t\t\t\t17. Interpretation of Sections 15 and 16.\n"
+"\n"
+"\t\t\t\t\tIf the\n"
+"\t\t\t\t\tdisclaimer of warranty and limitation of liability provided\n"
+"\t\t\t\t\tabove\n"
+"\t\t\t\t\tcannot be given local legal effect according to their terms,\n"
+"\t\t\t\t\treviewing courts shall apply local law that most closely\n"
+"\t\t\t\t\tapproximates\n"
+"\t\t\t\t\tan absolute waiver of all civil liability in connection\n"
+"\t\t\t\t\twith the\n"
+"\t\t\t\t\tProgram, unless a warranty or assumption of liability\n"
+"\t\t\t\t\taccompanies a\n"
+"\t\t\t\t\tcopy of the Program in return for a fee.\n"
+"\n"
+"\t\t\t\t\tEND OF TERMS\n"
+"\t\t\t\t\tAND CONDITIONS\n"
+"\n"
+"\t\t\t\t\tHow to Apply These Terms to Your New Programs\n"
+"\n"
+"\t\t\t\t\tIf you\n"
+"\t\t\t\t\tdevelop a new program, and you want it to be of the greatest\n"
+"\t\t\t\t\tpossible use to the public, the best way to achieve this is to make\n"
+"\t\t\t\t\tit\n"
+"\t\t\t\t\tfree software which everyone can redistribute and change under\n"
+"\t\t\t\t\tthese\n"
+"\t\t\t\t\tterms.\n"
+"\n"
+"\t\t\t\t\tTo do so, attach the following notices to the program.\n"
+"\t\t\t\t\tIt is safest\n"
+"\t\t\t\t\tto attach them to the start of each source file to most\n"
+"\t\t\t\t\teffectively\n"
+"\t\t\t\t\tstate the exclusion of warranty; and each file should\n"
+"\t\t\t\t\thave at least\n"
+"\t\t\t\t\tthe \"copyright\" line and a pointer to where the full\n"
+"\t\t\t\t\tnotice is\n"
+"\t\t\t\t\tfound.\n"
+"\n"
+"\t\t\t\t\t&lt;one line to give the program's name and a brief\n"
+"\t\t\t\t\tidea of what it\n"
+"\t\t\t\t\tdoes.&gt;\n"
+"\t\t\t\t\tCopyright (C) &lt;year&gt; &lt;name of\n"
+"\t\t\t\t\tauthor&gt;\n"
+"\n"
+"\t\t\t\t\tThis program is free software: you can redistribute it\n"
+"\t\t\t\t\tand/or modify\n"
+"\t\t\t\t\tit under the terms of the GNU Affero General Public\n"
+"\t\t\t\t\tLicense as\n"
+"\t\t\t\t\tpublished by\n"
+"\t\t\t\t\tthe Free Software Foundation, either version\n"
+"\t\t\t\t\t3 of the License, or\n"
+"\t\t\t\t\t(at your option) any later version.\n"
+"\n"
+"\t\t\t\t\tThis program\n"
+"\t\t\t\t\tis distributed in the hope that it will be useful,\n"
+"\t\t\t\t\tbut WITHOUT ANY\n"
+"\t\t\t\t\tWARRANTY; without even the implied warranty of\n"
+"\t\t\t\t\tMERCHANTABILITY or\n"
+"\t\t\t\t\tFITNESS FOR A PARTICULAR PURPOSE. See the\n"
+"\t\t\t\t\tGNU Affero General Public\n"
+"\t\t\t\t\tLicense for more details.\n"
+"\n"
+"\t\t\t\t\tYou should have received a copy of the GNU\n"
+"\t\t\t\t\tAffero General Public\n"
+"\t\t\t\t\tLicense\n"
+"\t\t\t\t\talong with this program. If not, see\n"
+"\t\t\t\t\t&lt;https://www.gnu.org/licenses/&gt;.\n"
+"\n"
+"\t\t\t\t\tAlso add information on how\n"
+"\t\t\t\t\tto contact you by electronic and paper\n"
+"\t\t\t\t\tmail.\n"
+"\n"
+"\t\t\t\t\tIf your software can\n"
+"\t\t\t\t\tinteract with users remotely through a computer\n"
+"\t\t\t\t\tnetwork, you should\n"
+"\t\t\t\t\talso make sure that it provides a way for users\n"
+"\t\t\t\t\tto\n"
+"\t\t\t\t\tget its source.\n"
+"\t\t\t\t\tFor example, if your program is a web application, its\n"
+"\t\t\t\t\tinterface\n"
+"\t\t\t\t\tcould display a \"Source\" link that leads users to an\n"
+"\t\t\t\t\tarchive\n"
+"\t\t\t\t\tof the\n"
+"\t\t\t\t\tcode. There are many ways you could offer source, and\n"
+"\t\t\t\t\tdifferent\n"
+"\t\t\t\t\tsolutions will be better for different programs; see section 13 for\n"
+"\t\t\t\t\tthe\n"
+"\t\t\t\t\tspecific requirements.\n"
+"\n"
+"\t\t\t\t\tYou should also get your employer (if you\n"
+"\t\t\t\t\twork as a programmer) or\n"
+"\t\t\t\t\tschool,\n"
+"\t\t\t\t\tif any, to sign a \"copyright\n"
+"\t\t\t\t\tdisclaimer\" for the program, if\n"
+"\t\t\t\t\tnecessary.\n"
+"\t\t\t\t\tFor more information on\n"
+"\t\t\t\t\tthis, and how to apply and follow the GNU\n"
+"\t\t\t\t\tAGPL, see\n"
+"\t\t\t\t\t&lt;https://www.gnu.org/licenses/&gt;."
+msgstr ""
+
+#. module: to_product_license
+#: model:product.license,name:to_product_license.license_agpl
+msgid "GNU Affero General Public License"
+msgstr ""
+
+#. module: to_product_license
+#: model:product.license,name:to_product_license.license_gpl
+msgid "GNU General Public License"
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_lgpl_v3
+msgid ""
+"GNU LESSER GENERAL PUBLIC LICENSE\n"
+"\t\t\t\t\tVersion 3, 29 June\n"
+"\t\t\t\t\t2007\n"
+"\n"
+"\t\t\t\t\tCopyright (C) 2007 Free Software Foundation, Inc.\n"
+"\t\t\t\t\t&lt;https://fsf.org/&gt;\n"
+"\t\t\t\t\tEveryone is permitted to copy and\n"
+"\t\t\t\t\tdistribute verbatim copies\n"
+"\t\t\t\t\tof this license document, but changing it\n"
+"\t\t\t\t\tis not allowed.\n"
+"\n"
+"\n"
+"\t\t\t\t\tThis version of the GNU Lesser General Public\n"
+"\t\t\t\t\tLicense incorporates\n"
+"\t\t\t\t\tthe terms and conditions of version 3 of the\n"
+"\t\t\t\t\tGNU General Public\n"
+"\t\t\t\t\tLicense, supplemented by the additional\n"
+"\t\t\t\t\tpermissions listed below.\n"
+"\n"
+"\t\t\t\t\t0. Additional Definitions.\n"
+"\n"
+"\t\t\t\t\tAs used herein,\n"
+"\t\t\t\t\t\"this License\" refers to version 3 of the GNU Lesser\n"
+"\t\t\t\t\tGeneral Public\n"
+"\t\t\t\t\tLicense, and the \"GNU GPL\" refers to version 3 of\n"
+"\t\t\t\t\tthe GNU\n"
+"\t\t\t\t\tGeneral\n"
+"\t\t\t\t\tPublic License.\n"
+"\n"
+"\t\t\t\t\t\"The Library\" refers to a covered work governed by\n"
+"\t\t\t\t\tthis License,\n"
+"\t\t\t\t\tother than an Application or a Combined Work as\n"
+"\t\t\t\t\tdefined below.\n"
+"\n"
+"\t\t\t\t\tAn \"Application\" is any work that makes use of an\n"
+"\t\t\t\t\tinterface provided\n"
+"\t\t\t\t\tby the Library, but which is not otherwise based\n"
+"\t\t\t\t\ton the Library.\n"
+"\t\t\t\t\tDefining a subclass of a class defined by the\n"
+"\t\t\t\t\tLibrary is deemed a\n"
+"\t\t\t\t\tmode\n"
+"\t\t\t\t\tof using an interface provided by the\n"
+"\t\t\t\t\tLibrary.\n"
+"\n"
+"\t\t\t\t\tA \"Combined Work\" is a work produced by combining or\n"
+"\t\t\t\t\tlinking an\n"
+"\t\t\t\t\tApplication with the Library. The particular version of\n"
+"\t\t\t\t\tthe Library\n"
+"\t\t\t\t\twith which the Combined Work was made is also called the\n"
+"\t\t\t\t\t\"Linked\n"
+"\t\t\t\t\tVersion\".\n"
+"\n"
+"\t\t\t\t\tThe \"Minimal Corresponding Source\" for a Combined\n"
+"\t\t\t\t\tWork means the\n"
+"\t\t\t\t\tCorresponding Source for the Combined Work, excluding\n"
+"\t\t\t\t\tany source\n"
+"\t\t\t\t\tcode\n"
+"\t\t\t\t\tfor portions of the Combined Work that, considered in\n"
+"\t\t\t\t\tisolation, are\n"
+"\t\t\t\t\tbased on the Application, and not on the Linked\n"
+"\t\t\t\t\tVersion.\n"
+"\n"
+"\t\t\t\t\tThe \"Corresponding Application Code\" for a Combined Work\n"
+"\t\t\t\t\tmeans the\n"
+"\t\t\t\t\tobject code and/or source code for the Application,\n"
+"\t\t\t\t\tincluding any\n"
+"\t\t\t\t\tdata\n"
+"\t\t\t\t\tand utility programs needed for reproducing the\n"
+"\t\t\t\t\tCombined Work from the\n"
+"\t\t\t\t\tApplication, but excluding the System\n"
+"\t\t\t\t\tLibraries of the Combined\n"
+"\t\t\t\t\tWork.\n"
+"\n"
+"\t\t\t\t\t1. Exception to Section 3 of the GNU\n"
+"\t\t\t\t\tGPL.\n"
+"\n"
+"\t\t\t\t\tYou may convey a covered work under sections 3 and 4 of this\n"
+"\t\t\t\t\tLicense\n"
+"\t\t\t\t\twithout being bound by section 3 of the GNU GPL.\n"
+"\n"
+"\t\t\t\t\t2. Conveying\n"
+"\t\t\t\t\tModified Versions.\n"
+"\n"
+"\t\t\t\t\tIf you modify a copy of the Library, and, in your\n"
+"\t\t\t\t\tmodifications, a\n"
+"\t\t\t\t\tfacility refers to a function or data to be\n"
+"\t\t\t\t\tsupplied by an\n"
+"\t\t\t\t\tApplication\n"
+"\t\t\t\t\tthat uses the facility (other than as an\n"
+"\t\t\t\t\targument passed when the\n"
+"\t\t\t\t\tfacility is invoked), then you may convey a\n"
+"\t\t\t\t\tcopy of the modified\n"
+"\t\t\t\t\tversion:\n"
+"\n"
+"\t\t\t\t\ta) under this License, provided that\n"
+"\t\t\t\t\tyou make a good faith effort to\n"
+"\t\t\t\t\tensure that, in the event an\n"
+"\t\t\t\t\tApplication does not supply the\n"
+"\t\t\t\t\tfunction or data, the facility still\n"
+"\t\t\t\t\toperates, and performs\n"
+"\t\t\t\t\twhatever part of its purpose remains\n"
+"\t\t\t\t\tmeaningful, or\n"
+"\n"
+"\t\t\t\t\tb) under the GNU GPL, with none of the additional\n"
+"\t\t\t\t\tpermissions of\n"
+"\t\t\t\t\tthis License applicable to that copy.\n"
+"\n"
+"\t\t\t\t\t3. Object Code\n"
+"\t\t\t\t\tIncorporating Material from Library Header Files.\n"
+"\n"
+"\t\t\t\t\tThe object code\n"
+"\t\t\t\t\tform of an Application may incorporate material from\n"
+"\t\t\t\t\ta header file\n"
+"\t\t\t\t\tthat is part of the Library. You may convey such\n"
+"\t\t\t\t\tobject\n"
+"\t\t\t\t\tcode under\n"
+"\t\t\t\t\tterms of your choice, provided that, if the incorporated\n"
+"\t\t\t\t\tmaterial is\n"
+"\t\t\t\t\tnot limited to numerical parameters, data structure\n"
+"\t\t\t\t\tlayouts and\n"
+"\t\t\t\t\taccessors, or small macros, inline functions and\n"
+"\t\t\t\t\ttemplates\n"
+"\t\t\t\t\t(ten or\n"
+"\t\t\t\t\tfewer lines in length), you do both of the following:\n"
+"\n"
+"\t\t\t\t\ta) Give\n"
+"\t\t\t\t\tprominent notice with each copy of the object code that the\n"
+"\t\t\t\t\tLibrary\n"
+"\t\t\t\t\tis used in it and that the Library and its use are\n"
+"\t\t\t\t\tcovered by this\n"
+"\t\t\t\t\tLicense.\n"
+"\n"
+"\t\t\t\t\tb) Accompany the object code with a copy of the GNU GPL and\n"
+"\t\t\t\t\tthis\n"
+"\t\t\t\t\tlicense\n"
+"\t\t\t\t\tdocument.\n"
+"\n"
+"\t\t\t\t\t4. Combined Works.\n"
+"\n"
+"\t\t\t\t\tYou may convey a Combined\n"
+"\t\t\t\t\tWork under terms of your choice that,\n"
+"\t\t\t\t\ttaken together, effectively do\n"
+"\t\t\t\t\tnot restrict modification of the\n"
+"\t\t\t\t\tportions of the Library contained\n"
+"\t\t\t\t\tin the Combined Work and reverse\n"
+"\t\t\t\t\tengineering for debugging such\n"
+"\t\t\t\t\tmodifications, if you also do each\n"
+"\t\t\t\t\tof\n"
+"\t\t\t\t\tthe following:\n"
+"\n"
+"\t\t\t\t\ta) Give prominent\n"
+"\t\t\t\t\tnotice with each copy of the Combined Work that\n"
+"\t\t\t\t\tthe Library is used\n"
+"\t\t\t\t\tin it and that the Library and its use are\n"
+"\t\t\t\t\tcovered by this License.\n"
+"\n"
+"\t\t\t\t\tb) Accompany the Combined Work with a copy of the GNU GPL and this\n"
+"\t\t\t\t\tlicense\n"
+"\t\t\t\t\tdocument.\n"
+"\n"
+"\t\t\t\t\tc) For a Combined Work that displays copyright\n"
+"\t\t\t\t\tnotices during\n"
+"\t\t\t\t\texecution, include the copyright notice for the\n"
+"\t\t\t\t\tLibrary among\n"
+"\t\t\t\t\tthese notices, as well as a reference directing the\n"
+"\t\t\t\t\tuser to the\n"
+"\t\t\t\t\tcopies of the GNU GPL and this license document.\n"
+"\n"
+"\t\t\t\t\td) Do\n"
+"\t\t\t\t\tone of the following:\n"
+"\n"
+"\t\t\t\t\t0) Convey the Minimal Corresponding Source\n"
+"\t\t\t\t\tunder the terms of this\n"
+"\t\t\t\t\tLicense, and the Corresponding Application\n"
+"\t\t\t\t\tCode in a form\n"
+"\t\t\t\t\tsuitable for, and under terms that permit, the user\n"
+"\t\t\t\t\tto\n"
+"\t\t\t\t\trecombine or relink the Application with a modified version of\n"
+"\t\t\t\t\tthe Linked Version to produce a modified Combined Work, in the\n"
+"\t\t\t\t\tmanner specified by section 6 of the GNU GPL for conveying\n"
+"\t\t\t\t\tCorresponding Source.\n"
+"\n"
+"\t\t\t\t\t1) Use a suitable shared library mechanism for\n"
+"\t\t\t\t\tlinking with the\n"
+"\t\t\t\t\tLibrary. A suitable mechanism is one that (a) uses\n"
+"\t\t\t\t\tat run time\n"
+"\t\t\t\t\ta copy of the Library already present on the user's\n"
+"\t\t\t\t\tcomputer\n"
+"\t\t\t\t\tsystem, and (b) will operate properly with a modified\n"
+"\t\t\t\t\tversion\n"
+"\t\t\t\t\tof the Library that is interface-compatible with the Linked\n"
+"\t\t\t\t\tVersion.\n"
+"\n"
+"\t\t\t\t\te) Provide Installation Information, but only if you would\n"
+"\t\t\t\t\totherwise\n"
+"\t\t\t\t\tbe required to provide such information under section 6 of\n"
+"\t\t\t\t\tthe\n"
+"\t\t\t\t\tGNU GPL, and only to the extent that such information is\n"
+"\t\t\t\t\tnecessary to install and execute a modified version of the\n"
+"\t\t\t\t\tCombined\n"
+"\t\t\t\t\tWork produced by recombining or relinking the\n"
+"\t\t\t\t\tApplication with a\n"
+"\t\t\t\t\tmodified version of the Linked Version. (If\n"
+"\t\t\t\t\tyou use option 4d0, the\n"
+"\t\t\t\t\tInstallation Information must accompany\n"
+"\t\t\t\t\tthe Minimal Corresponding\n"
+"\t\t\t\t\tSource and Corresponding Application\n"
+"\t\t\t\t\tCode. If you use option 4d1,\n"
+"\t\t\t\t\tyou must provide the Installation\n"
+"\t\t\t\t\tInformation in the manner\n"
+"\t\t\t\t\tspecified by section 6 of the GNU GPL\n"
+"\t\t\t\t\tfor conveying Corresponding\n"
+"\t\t\t\t\tSource.)\n"
+"\n"
+"\t\t\t\t\t5. Combined Libraries.\n"
+"\n"
+"\t\t\t\t\tYou may place library facilities that\n"
+"\t\t\t\t\tare a work based on the\n"
+"\t\t\t\t\tLibrary side by side in a single library\n"
+"\t\t\t\t\ttogether with other library\n"
+"\t\t\t\t\tfacilities that are not Applications and\n"
+"\t\t\t\t\tare not covered by this\n"
+"\t\t\t\t\tLicense, and convey such a combined library\n"
+"\t\t\t\t\tunder terms of your\n"
+"\t\t\t\t\tchoice, if you do both of the following:\n"
+"\n"
+"\t\t\t\t\ta)\n"
+"\t\t\t\t\tAccompany the combined library with a copy of the same work based\n"
+"\t\t\t\t\ton the Library, uncombined with any other library facilities,\n"
+"\t\t\t\t\tconveyed under the terms of this License.\n"
+"\n"
+"\t\t\t\t\tb) Give prominent notice\n"
+"\t\t\t\t\twith the combined library that part of it\n"
+"\t\t\t\t\tis a work based on the\n"
+"\t\t\t\t\tLibrary, and explaining where to find the\n"
+"\t\t\t\t\taccompanying uncombined\n"
+"\t\t\t\t\tform of the same work.\n"
+"\n"
+"\t\t\t\t\t6. Revised Versions of the GNU Lesser General\n"
+"\t\t\t\t\tPublic License.\n"
+"\n"
+"\t\t\t\t\tThe Free Software Foundation may publish revised\n"
+"\t\t\t\t\tand/or new versions\n"
+"\t\t\t\t\tof the GNU Lesser General Public License from\n"
+"\t\t\t\t\ttime to time. Such\n"
+"\t\t\t\t\tnew\n"
+"\t\t\t\t\tversions will be similar in spirit to the\n"
+"\t\t\t\t\tpresent version, but may\n"
+"\t\t\t\t\tdiffer in detail to address new problems or\n"
+"\t\t\t\t\tconcerns.\n"
+"\n"
+"\t\t\t\t\tEach version is given a distinguishing version number. If\n"
+"\t\t\t\t\tthe\n"
+"\t\t\t\t\tLibrary as you received it specifies that a certain numbered\n"
+"\t\t\t\t\tversion\n"
+"\t\t\t\t\tof the GNU Lesser General Public License \"or any later\n"
+"\t\t\t\t\tversion\"\n"
+"\t\t\t\t\tapplies to it, you have the option of following the terms\n"
+"\t\t\t\t\tand\n"
+"\t\t\t\t\tconditions either of that published version or of any later\n"
+"\t\t\t\t\tversion\n"
+"\t\t\t\t\tpublished by the Free Software Foundation. If the Library as\n"
+"\t\t\t\t\tyou\n"
+"\t\t\t\t\treceived it does not specify a version number of the GNU Lesser\n"
+"\t\t\t\t\tGeneral Public License, you may choose any version of the GNU\n"
+"\t\t\t\t\tLesser\n"
+"\t\t\t\t\tGeneral Public License ever published by the Free Software\n"
+"\t\t\t\t\tFoundation.\n"
+"\n"
+"\t\t\t\t\tIf the Library as you received it specifies that a proxy\n"
+"\t\t\t\t\tcan decide\n"
+"\t\t\t\t\twhether future versions of the GNU Lesser General Public\n"
+"\t\t\t\t\tLicense\n"
+"\t\t\t\t\tshall\n"
+"\t\t\t\t\tapply, that proxy's public statement of acceptance of\n"
+"\t\t\t\t\tany version is\n"
+"\t\t\t\t\tpermanent authorization for you to choose that\n"
+"\t\t\t\t\tversion for the\n"
+"\t\t\t\t\tLibrary."
+msgstr ""
+
+#. module: to_product_license
+#: model:product.license,name:to_product_license.license_lgpl
+msgid "GNU Lesser General Public License"
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:ir.ui.view,arch_db:to_product_license.product_license_version_search_view
+msgid "Group By"
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid "How to Apply These Terms to Your New Programs"
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"However, if you cease all violation of this License, then your\n"
+"\t\t\t\t\tlicense from a particular copyright holder is reinstated (a)\n"
+"\t\t\t\t\tprovisionally, unless and until the copyright holder explicitly and\n"
+"\t\t\t\t\tfinally terminates your license, and (b) permanently, if the\n"
+"\t\t\t\t\tcopyright\n"
+"\t\t\t\t\tholder fails to notify you of the violation by some\n"
+"\t\t\t\t\treasonable means\n"
+"\t\t\t\t\tprior to 60 days after the cessation."
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__id
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__id
+#: model:ir.model.fields,field_description:to_product_license.field_product_product__id
+#: model:ir.model.fields,field_description:to_product_license.field_product_template__id
+msgid "ID"
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN\n"
+"\t\t\t\t\tWRITING\n"
+"\t\t\t\t\tWILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MODIFIES\n"
+"\t\t\t\t\tAND/OR\n"
+"\t\t\t\t\tCONVEYS\n"
+"\t\t\t\t\tTHE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR\n"
+"\t\t\t\t\tDAMAGES,\n"
+"\t\t\t\t\tINCLUDING ANY\n"
+"\t\t\t\t\tGENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL\n"
+"\t\t\t\t\tDAMAGES ARISING OUT OF THE\n"
+"\t\t\t\t\tUSE OR INABILITY TO USE THE PROGRAM\n"
+"\t\t\t\t\t(INCLUDING BUT NOT LIMITED TO\n"
+"\t\t\t\t\tLOSS OF\n"
+"\t\t\t\t\tDATA OR DATA BEING RENDERED\n"
+"\t\t\t\t\tINACCURATE OR LOSSES SUSTAINED BY YOU OR\n"
+"\t\t\t\t\tTHIRD\n"
+"\t\t\t\t\tPARTIES OR A FAILURE\n"
+"\t\t\t\t\tOF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS),\n"
+"\t\t\t\t\tEVEN IF SUCH\n"
+"\t\t\t\t\tHOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE\n"
+"\t\t\t\t\tPOSSIBILITY OF\n"
+"\t\t\t\t\tSUCH\n"
+"\t\t\t\t\tDAMAGES."
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__activity_exception_icon
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__image
+msgid "Icon Image"
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,help:to_product_license.field_product_license__activity_exception_icon
+#: model:ir.model.fields,help:to_product_license.field_product_license_version__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,help:to_product_license.field_product_license__message_needaction
+#: model:ir.model.fields,help:to_product_license.field_product_license__message_unread
+#: model:ir.model.fields,help:to_product_license.field_product_license_version__message_needaction
+#: model:ir.model.fields,help:to_product_license.field_product_license_version__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,help:to_product_license.field_product_license__message_has_error
+#: model:ir.model.fields,help:to_product_license.field_product_license__message_has_sms_error
+#: model:ir.model.fields,help:to_product_license.field_product_license_version__message_has_error
+#: model:ir.model.fields,help:to_product_license.field_product_license_version__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"If conditions are imposed on you (whether by court order,\n"
+"\t\t\t\t\tagreement or\n"
+"\t\t\t\t\totherwise) that contradict the conditions of this\n"
+"\t\t\t\t\tLicense, they do not\n"
+"\t\t\t\t\texcuse you from the conditions of this License.\n"
+"\t\t\t\t\tIf you cannot convey a\n"
+"\t\t\t\t\tcovered work so as to satisfy simultaneously\n"
+"\t\t\t\t\tyour obligations under\n"
+"\t\t\t\t\tthis\n"
+"\t\t\t\t\tLicense and any other pertinent\n"
+"\t\t\t\t\tobligations, then as a consequence you may\n"
+"\t\t\t\t\tnot convey it at all. For\n"
+"\t\t\t\t\texample, if you agree to terms that\n"
+"\t\t\t\t\tobligate you\n"
+"\t\t\t\t\tto collect a royalty\n"
+"\t\t\t\t\tfor further conveying from those to whom you\n"
+"\t\t\t\t\tconvey\n"
+"\t\t\t\t\tthe Program, the\n"
+"\t\t\t\t\tonly way you could satisfy both those terms and this\n"
+"\t\t\t\t\tLicense would\n"
+"\t\t\t\t\tbe to refrain entirely from conveying the Program."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"If the Program specifies that a proxy can decide which future\n"
+"\t\t\t\t\tversions of the GNU General Public License can be used, that\n"
+"\t\t\t\t\tproxy's\n"
+"\t\t\t\t\tpublic statement of acceptance of a version permanently\n"
+"\t\t\t\t\tauthorizes you\n"
+"\t\t\t\t\tto choose that version for the Program."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"If the disclaimer of warranty and limitation of liability\n"
+"\t\t\t\t\tprovided\n"
+"\t\t\t\t\tabove cannot be given local legal effect according to their\n"
+"\t\t\t\t\tterms,\n"
+"\t\t\t\t\treviewing courts shall apply local law that most closely\n"
+"\t\t\t\t\tapproximates\n"
+"\t\t\t\t\tan absolute waiver of all civil liability in connection\n"
+"\t\t\t\t\twith the\n"
+"\t\t\t\t\tProgram, unless a warranty or assumption of liability\n"
+"\t\t\t\t\taccompanies a\n"
+"\t\t\t\t\tcopy of the Program in return for a fee."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"If the program does terminal interaction, make it output a short\n"
+"\t\t\t\t\tnotice like this when it starts in an interactive mode:"
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,help:to_product_license.field_product_license_version__active
+msgid ""
+"If unchecked, it will allow you to hide the license version without removing"
+" it."
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,help:to_product_license.field_product_license__active
+msgid ""
+"If unchecked, it will allow you to hide the license without removing it."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"If you add terms to a covered work in accord with this section,\n"
+"\t\t\t\t\tyou\n"
+"\t\t\t\t\tmust place, in the relevant source files, a statement of the\n"
+"\t\t\t\t\tadditional terms that apply to those files, or a notice indicating\n"
+"\t\t\t\t\twhere to find the applicable terms."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"If you convey a covered work, knowingly relying on a patent\n"
+"\t\t\t\t\tlicense,\n"
+"\t\t\t\t\tand the Corresponding Source of the work is not available\n"
+"\t\t\t\t\tfor anyone\n"
+"\t\t\t\t\tto copy, free of charge and under the terms of this\n"
+"\t\t\t\t\tLicense,\n"
+"\t\t\t\t\tthrough a\n"
+"\t\t\t\t\tpublicly available network server or other readily\n"
+"\t\t\t\t\taccessible means,\n"
+"\t\t\t\t\tthen you must either (1) cause the Corresponding\n"
+"\t\t\t\t\tSource to be so\n"
+"\t\t\t\t\tavailable, or (2) arrange to deprive yourself of the\n"
+"\t\t\t\t\tbenefit of the\n"
+"\t\t\t\t\tpatent license for this particular work, or (3)\n"
+"\t\t\t\t\tarrange, in a\n"
+"\t\t\t\t\tmanner\n"
+"\t\t\t\t\tconsistent with the requirements of this\n"
+"\t\t\t\t\tLicense, to extend the patent\n"
+"\t\t\t\t\tlicense to downstream recipients.\n"
+"\t\t\t\t\t“Knowingly relying” means you\n"
+"\t\t\t\t\thave\n"
+"\t\t\t\t\tactual knowledge that, but for the\n"
+"\t\t\t\t\tpatent license, your conveying the\n"
+"\t\t\t\t\tcovered work in a country, or\n"
+"\t\t\t\t\tyour recipient's use of the covered\n"
+"\t\t\t\t\twork\n"
+"\t\t\t\t\tin a country, would infringe\n"
+"\t\t\t\t\tone or more identifiable patents in that\n"
+"\t\t\t\t\tcountry that you have\n"
+"\t\t\t\t\treason to believe are valid."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"If you convey an object code work under this section in, or with,\n"
+"\t\t\t\t\tor\n"
+"\t\t\t\t\tspecifically for use in, a User Product, and the conveying occurs\n"
+"\t\t\t\t\tas\n"
+"\t\t\t\t\tpart of a transaction in which the right of possession and use of\n"
+"\t\t\t\t\tthe\n"
+"\t\t\t\t\tUser Product is transferred to the recipient in perpetuity or\n"
+"\t\t\t\t\tfor a\n"
+"\t\t\t\t\tfixed term (regardless of how the transaction is\n"
+"\t\t\t\t\tcharacterized),\n"
+"\t\t\t\t\tthe\n"
+"\t\t\t\t\tCorresponding Source conveyed under this section\n"
+"\t\t\t\t\tmust be accompanied\n"
+"\t\t\t\t\tby the Installation Information. But this\n"
+"\t\t\t\t\trequirement does not apply\n"
+"\t\t\t\t\tif neither you nor any third party\n"
+"\t\t\t\t\tretains the ability to install\n"
+"\t\t\t\t\tmodified object code on the User\n"
+"\t\t\t\t\tProduct (for example, the work has\n"
+"\t\t\t\t\tbeen installed in ROM)."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"If you develop a new program, and you want it to be of the\n"
+"\t\t\t\t\tgreatest\n"
+"\t\t\t\t\tpossible use to the public, the best way to achieve this is\n"
+"\t\t\t\t\tto make it\n"
+"\t\t\t\t\tfree software which everyone can redistribute and change\n"
+"\t\t\t\t\tunder these\n"
+"\t\t\t\t\tterms."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"If, pursuant to or in connection with a single transaction or\n"
+"\t\t\t\t\tarrangement, you convey, or propagate by procuring conveyance of, a\n"
+"\t\t\t\t\tcovered work, and grant a patent license to some of the parties\n"
+"\t\t\t\t\treceiving the covered work authorizing them to use, propagate,\n"
+"\t\t\t\t\tmodify\n"
+"\t\t\t\t\tor convey a specific copy of the covered work, then the\n"
+"\t\t\t\t\tpatent\n"
+"\t\t\t\t\tlicense\n"
+"\t\t\t\t\tyou grant is automatically extended to all recipients\n"
+"\t\t\t\t\tof the covered\n"
+"\t\t\t\t\twork and works based on it."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"In the following three paragraphs, a “patent license” is any\n"
+"\t\t\t\t\texpress\n"
+"\t\t\t\t\tagreement or commitment, however denominated, not to enforce\n"
+"\t\t\t\t\ta patent\n"
+"\t\t\t\t\t(such as an express permission to practice a patent or\n"
+"\t\t\t\t\tcovenant not to\n"
+"\t\t\t\t\tsue for patent infringement). To “grant” such a\n"
+"\t\t\t\t\tpatent license to a\n"
+"\t\t\t\t\tparty means to make such an agreement or\n"
+"\t\t\t\t\tcommitment not to enforce\n"
+"\t\t\t\t\ta\n"
+"\t\t\t\t\tpatent against the party."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:ir.ui.view,arch_db:to_product_license.product_license_search_view
+#: model_terms:ir.ui.view,arch_db:to_product_license.product_license_version_search_view
+msgid "Inactive"
+msgstr "Không hoạt động"
+
+#. module: to_product_license
+#: code:addons/to_product_license/models/product_license_version.py:0
+#, python-format
+msgid ""
+"Invalid version number %s. The version should be in the form of either 'x.y'"
+" or'x.y.z' where the x, y, z must be digits."
+msgstr "Số phiên bản %s không hợp lê. Phiên bản phải ở dạng 'x.y' hoặc'x.y.z 'trong đó x, y, z phải là các chữ số."
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__message_is_follower
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_oeel_v1
+msgid ""
+"It is forbidden to publish, distribute, sublicense, or sell\n"
+"\t\t\t\t\tcopies of\n"
+"\t\t\t\t\tthe Software or modified copies of the Software."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_opl_v1
+msgid ""
+"It is forbidden to publish, distribute, sublicense, or sell\n"
+"\t\t\t\t\tcopies of the\n"
+"\t\t\t\t\tSoftware or modified copies of the Software."
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license____last_update
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version____last_update
+#: model:ir.model.fields,field_description:to_product_license.field_product_product____last_update
+#: model:ir.model.fields,field_description:to_product_license.field_product_template____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__write_uid
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__write_date
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"Later license versions may give you additional or different\n"
+"\t\t\t\t\tpermissions. However, no additional obligations are imposed on any\n"
+"\t\t\t\t\tauthor or copyright holder as a result of your choosing to follow a\n"
+"\t\t\t\t\tlater version."
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__latest_released_date
+msgid "Latest Released"
+msgstr "Phát hành mới nhất"
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__latest_version_id
+msgid "Latest Version"
+msgstr "Phiên bản mới nhất"
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__license_id
+#: model:ir.ui.menu,name:to_product_license.license_menu
+#: model:ir.ui.menu,name:to_product_license.license_root_menu
+#: model_terms:ir.ui.view,arch_db:to_product_license.product_license_version_search_view
+#: model_terms:ir.ui.view,arch_db:to_product_license.product_template_form_view
+msgid "License"
+msgstr "Giấy phép sản phẩm"
+
+#. module: to_product_license
+#: model_terms:ir.ui.view,arch_db:to_product_license.product_license_version_view_form
+#: model_terms:ir.ui.view,arch_db:to_product_license.product_license_view_form
+msgid "License Form"
+msgstr ""
+
+#. module: to_product_license
+#: model:res.groups,name:to_product_license.group_license_manager
+msgid "License Manager"
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__name
+msgid "License Name"
+msgstr "Tên giấy phép"
+
+#. module: to_product_license
+#: model:ir.model,name:to_product_license.model_product_license_version
+#: model:ir.ui.menu,name:to_product_license.product_license_version_menu
+#: model_terms:ir.ui.view,arch_db:to_product_license.product_license_version_search_view
+msgid "License Version"
+msgstr "Phiên bản giấy phép"
+
+#. module: to_product_license
+#: model:ir.actions.act_window,name:to_product_license.product_license_version_action
+#: model:ir.model.fields,field_description:to_product_license.field_product_product__product_license_version_ids
+#: model:ir.model.fields,field_description:to_product_license.field_product_template__product_license_version_ids
+#: model_terms:ir.ui.view,arch_db:to_product_license.product_license_version_tree_view
+#: model_terms:ir.ui.view,arch_db:to_product_license.product_template_search_view
+msgid "License Versions"
+msgstr "Phiên bản giấy phép"
+
+#. module: to_product_license
+#: model:ir.actions.act_window,name:to_product_license.product_license_action
+#: model:ir.model.fields,field_description:to_product_license.field_product_product__product_license_ids
+#: model:ir.model.fields,field_description:to_product_license.field_product_template__product_license_ids
+#: model_terms:ir.ui.view,arch_db:to_product_license.product_license_tree_view
+#: model_terms:ir.ui.view,arch_db:to_product_license.product_normal_form_view
+#: model_terms:ir.ui.view,arch_db:to_product_license.product_template_only_form_view
+#: model_terms:ir.ui.view,arch_db:to_product_license.product_template_search_view
+msgid "Licenses"
+msgstr "Giấy phép"
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_product__product_licenses_count
+#: model:ir.model.fields,field_description:to_product_license.field_product_template__product_licenses_count
+msgid "Licenses Count"
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:ir.ui.view,arch_db:to_product_license.product_kanban_view
+#: model_terms:ir.ui.view,arch_db:to_product_license.product_template_kanban_view
+msgid "Licenses:"
+msgstr "Giấy phép:"
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__message_main_attachment_id
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__message_has_error
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__message_ids
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"Moreover, your license from a particular copyright holder is\n"
+"\t\t\t\t\treinstated permanently if the copyright holder notifies you of the\n"
+"\t\t\t\t\tviolation by some reasonable means, this is the first time you have\n"
+"\t\t\t\t\treceived notice of violation of this License (for any work) from\n"
+"\t\t\t\t\tthat\n"
+"\t\t\t\t\tcopyright holder, and you cure the violation prior to 30 days\n"
+"\t\t\t\t\tafter\n"
+"\t\t\t\t\tyour receipt of the notice."
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__my_activity_date_deadline
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__activity_date_deadline
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__activity_summary
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__activity_type_id
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"No covered work shall be deemed part of an effective\n"
+"\t\t\t\t\ttechnological\n"
+"\t\t\t\t\tmeasure under any applicable law fulfilling\n"
+"\t\t\t\t\tobligations under article\n"
+"\t\t\t\t\t11 of the WIPO copyright treaty adopted on\n"
+"\t\t\t\t\t20 December 1996, or\n"
+"\t\t\t\t\tsimilar laws prohibiting or restricting\n"
+"\t\t\t\t\tcircumvention of such\n"
+"\t\t\t\t\tmeasures."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"Nothing in this License shall be construed as excluding or\n"
+"\t\t\t\t\tlimiting\n"
+"\t\t\t\t\tany implied license or other defenses to infringement that\n"
+"\t\t\t\t\tmay\n"
+"\t\t\t\t\totherwise be available to you under applicable patent law."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"Notwithstanding any other provision of this License, for material\n"
+"\t\t\t\t\tyou\n"
+"\t\t\t\t\tadd to a covered work, you may (if authorized by the copyright\n"
+"\t\t\t\t\tholders\n"
+"\t\t\t\t\tof\n"
+"\t\t\t\t\tthat material) supplement the terms of this License with\n"
+"\t\t\t\t\tterms:"
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"Notwithstanding any other provision of this License, you have\n"
+"\t\t\t\t\tpermission to link or combine any covered work with a work licensed\n"
+"\t\t\t\t\tunder version 3 of the GNU Affero General Public License into a\n"
+"\t\t\t\t\tsingle\n"
+"\t\t\t\t\tcombined work, and to convey the resulting work. The terms of\n"
+"\t\t\t\t\tthis\n"
+"\t\t\t\t\tLicense will continue to apply to the part which is the covered\n"
+"\t\t\t\t\twork,\n"
+"\t\t\t\t\tbut the special requirements of the GNU Affero General Public\n"
+"\t\t\t\t\tLicense,\n"
+"\t\t\t\t\tsection 13, concerning interaction through a network will\n"
+"\t\t\t\t\tapply to\n"
+"\t\t\t\t\tthe\n"
+"\t\t\t\t\tcombination as such."
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__message_needaction_counter
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__message_has_error_counter
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,help:to_product_license.field_product_license__message_needaction_counter
+#: model:ir.model.fields,help:to_product_license.field_product_license_version__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,help:to_product_license.field_product_license__message_has_error_counter
+#: model:ir.model.fields,help:to_product_license.field_product_license_version__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,help:to_product_license.field_product_license__message_unread_counter
+#: model:ir.model.fields,help:to_product_license.field_product_license_version__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: to_product_license
+#: model:product.license,name:to_product_license.license_oeel
+msgid "Odoo Enterprise Edition License"
+msgstr ""
+
+#. module: to_product_license
+#: model:product.license,name:to_product_license.license_opl
+msgid "Odoo Proprietary License"
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid "Preamble"
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model,name:to_product_license.model_product_product
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__product_ids
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: to_product_license
+#: model:ir.model,name:to_product_license.model_product_license
+msgid "Product License"
+msgstr "Giấy phép sản phẩm"
+
+#. module: to_product_license
+#: model:ir.model,name:to_product_license.model_product_template
+msgid "Product Template"
+msgstr "Mẫu Sản phẩm"
+
+#. module: to_product_license
+#: model_terms:ir.ui.view,arch_db:to_product_license.product_license_version_view_form
+#: model_terms:ir.ui.view,arch_db:to_product_license.product_license_view_form
+msgid "Product(s)"
+msgstr "Sản phẩm"
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__product_ids
+msgid "Products"
+msgstr "Sản phẩm"
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__products_count
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__products_count
+msgid "Products Count"
+msgstr "Số lượng sản phẩm"
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__ref_url
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__ref_url
+msgid "Ref. URL"
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:ir.ui.view,arch_db:to_product_license.product_license_version_view_form
+#: model_terms:ir.ui.view,arch_db:to_product_license.product_license_view_form
+msgid "Reference URL"
+msgstr "URL tham chiếu"
+
+#. module: to_product_license
+#: model_terms:ir.ui.view,arch_db:to_product_license.product_license_version_search_view
+msgid "Release Date"
+msgstr "Ngày phát hành"
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__activity_user_id
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__message_has_sms_error
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:ir.ui.view,arch_db:to_product_license.product_license_search_view
+msgid "Search for License"
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__short_name
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__short_name
+msgid "Short Name"
+msgstr "Tên viết tắt"
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"Some devices are designed to deny users access to install or run\n"
+"\t\t\t\t\tmodified versions of the software inside them, although the\n"
+"\t\t\t\t\tmanufacturer\n"
+"\t\t\t\t\tcan do so. This is fundamentally incompatible with the\n"
+"\t\t\t\t\taim of\n"
+"\t\t\t\t\tprotecting users' freedom to change the software. The\n"
+"\t\t\t\t\tsystematic\n"
+"\t\t\t\t\tpattern of such abuse occurs in the area of products for\n"
+"\t\t\t\t\tindividuals to\n"
+"\t\t\t\t\tuse, which is precisely where it is most\n"
+"\t\t\t\t\tunacceptable. Therefore, we\n"
+"\t\t\t\t\thave designed this version of the GPL to\n"
+"\t\t\t\t\tprohibit the practice for\n"
+"\t\t\t\t\tthose\n"
+"\t\t\t\t\tproducts. If such problems arise\n"
+"\t\t\t\t\tsubstantially in other domains, we\n"
+"\t\t\t\t\tstand ready to extend this\n"
+"\t\t\t\t\tprovision to those domains in future versions\n"
+"\t\t\t\t\tof the GPL, as needed\n"
+"\t\t\t\t\tto protect the freedom of users."
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,help:to_product_license.field_product_license__activity_state
+#: model:ir.model.fields,help:to_product_license.field_product_license_version__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__summary
+#: model_terms:ir.ui.view,arch_db:to_product_license.product_license_view_form
+msgid "Summary"
+msgstr "Tóm lược"
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid "TERMS AND CONDITIONS"
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_oeel_v1
+msgid ""
+"THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\n"
+"\t\t\t\t\tEXPRESS\n"
+"\t\t\t\t\tOR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\n"
+"\t\t\t\t\tMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON\n"
+"\t\t\t\t\tINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\n"
+"\t\t\t\t\tLIABLE FOR ANY CLAIM,DAMAGES OR OTHER LIABILITY, WHETHER IN AN\n"
+"\t\t\t\t\tACTION OF CONTRACT, TORT OR OTHERWISE,ARISING FROM, OUT OF OR IN\n"
+"\t\t\t\t\tCONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\n"
+"\t\t\t\t\tSOFTWARE."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_opl_v1
+msgid ""
+"THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\n"
+"\t\t\t\t\tEXPRESS OR\n"
+"\t\t\t\t\tIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\n"
+"\t\t\t\t\tMERCHANTABILITY,\n"
+"\t\t\t\t\tFITNESS FOR A PARTICULAR PURPOSE AND\n"
+"\t\t\t\t\tNONINFRINGEMENT. IN NO EVENT\n"
+"\t\t\t\t\tSHALL THE\n"
+"\t\t\t\t\tAUTHORS OR COPYRIGHT HOLDERS\n"
+"\t\t\t\t\tBE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n"
+"\t\t\t\t\tLIABILITY, WHETHER IN AN\n"
+"\t\t\t\t\tACTION OF CONTRACT, TORT OR OTHERWISE,\n"
+"\t\t\t\t\tARISING\n"
+"\t\t\t\t\tFROM, OUT OF OR IN\n"
+"\t\t\t\t\tCONNECTION WITH THE SOFTWARE OR THE USE OR OTHER\n"
+"\t\t\t\t\tDEALINGS IN THE\n"
+"\t\t\t\t\tSOFTWARE."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY\n"
+"\t\t\t\t\tAPPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE\n"
+"\t\t\t\t\tCOPYRIGHT\n"
+"\t\t\t\t\tHOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS”\n"
+"\t\t\t\t\tWITHOUT WARRANTY\n"
+"\t\t\t\t\tOF ANY KIND, EITHER EXPRESSED OR IMPLIED,\n"
+"\t\t\t\t\tINCLUDING, BUT NOT\n"
+"\t\t\t\t\tLIMITED TO,\n"
+"\t\t\t\t\tTHE IMPLIED WARRANTIES OF\n"
+"\t\t\t\t\tMERCHANTABILITY AND FITNESS FOR A PARTICULAR\n"
+"\t\t\t\t\tPURPOSE. THE ENTIRE\n"
+"\t\t\t\t\tRISK AS TO THE QUALITY AND PERFORMANCE OF THE\n"
+"\t\t\t\t\tPROGRAM\n"
+"\t\t\t\t\tIS WITH YOU.\n"
+"\t\t\t\t\tSHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST\n"
+"\t\t\t\t\tOF\n"
+"\t\t\t\t\tALL\n"
+"\t\t\t\t\tNECESSARY SERVICING, REPAIR OR CORRECTION."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"Termination of your rights under this section does not terminate\n"
+"\t\t\t\t\tthe\n"
+"\t\t\t\t\tlicenses of parties who have received copies or rights from you\n"
+"\t\t\t\t\tunder\n"
+"\t\t\t\t\tthis License. If your rights have been terminated and not\n"
+"\t\t\t\t\tpermanently\n"
+"\t\t\t\t\treinstated, you do not qualify to receive new licenses\n"
+"\t\t\t\t\tfor the same\n"
+"\t\t\t\t\tmaterial under section 10."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"The\n"
+"\t\t\t\t\tGNU General Public License does not permit incorporating your\n"
+"\t\t\t\t\tprogram\n"
+"\t\t\t\t\tinto proprietary programs. If your program is a subroutine\n"
+"\t\t\t\t\tlibrary, you\n"
+"\t\t\t\t\tmay consider it more useful to permit linking\n"
+"\t\t\t\t\tproprietary\n"
+"\t\t\t\t\tapplications with\n"
+"\t\t\t\t\tthe library. If this is what you want\n"
+"\t\t\t\t\tto do, use the GNU Lesser\n"
+"\t\t\t\t\tGeneral\n"
+"\t\t\t\t\tPublic License instead of this\n"
+"\t\t\t\t\tLicense. But first, please read\n"
+"\t\t\t\t\t&lt;"
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"The Corresponding Source for a work in source code form is that\n"
+"\t\t\t\t\tsame work."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"The Corresponding Source need not include anything that users\n"
+"\t\t\t\t\tcan\n"
+"\t\t\t\t\tregenerate automatically from other parts of the Corresponding\n"
+"\t\t\t\t\tSource."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"The Free Software Foundation may publish revised and/or new\n"
+"\t\t\t\t\tversions of\n"
+"\t\t\t\t\tthe GNU General Public License from time to time. Such\n"
+"\t\t\t\t\tnew versions\n"
+"\t\t\t\t\twill\n"
+"\t\t\t\t\tbe similar in spirit to the present version, but\n"
+"\t\t\t\t\tmay differ in detail\n"
+"\t\t\t\t\tto\n"
+"\t\t\t\t\taddress new problems or concerns."
+msgstr ""
+
+#. module: to_product_license
+#: model:product.license,summary:to_product_license.license_agpl
+msgid ""
+"The GNU Affero General Public License is a free,\n"
+"\t\t\t\tcopyleft license published by the Free Software Foundation in\n"
+"\t\t\t\tNovember 2007, and based on the GNU General Public License, version\n"
+"\t\t\t\t3 and the Affero General Public License\n"
+"\t\t\t"
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"The GNU General Public License is a free, copyleft license for\n"
+"\t\t\t\t\tsoftware and other kinds of works."
+msgstr ""
+
+#. module: to_product_license
+#: model:product.license,summary:to_product_license.license_gpl
+msgid ""
+"The GNU General Public License is a widely used\n"
+"\t\t\t\tfree software license, which guarantees end users the freedom to\n"
+"\t\t\t\trun, study, share and modify the software\n"
+"\t\t\t"
+msgstr ""
+
+#. module: to_product_license
+#: model:product.license,summary:to_product_license.license_lgpl
+msgid ""
+"The GNU Lesser General Public License (LGPL) is a\n"
+"\t\t\t\tfree-software license published by the Free Software Foundation\n"
+"\t\t\t\t(FSF). The license allows developers and companies to use and\n"
+"\t\t\t\tintegrate a software component released under the LGPL into their\n"
+"\t\t\t\town (even proprietary) software without being required by the terms\n"
+"\t\t\t\tof a strong copyleft license to release the source code of their own\n"
+"\t\t\t\tcomponents.\n"
+"\t\t\t"
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_oeel_v1
+msgid ""
+"The above copyright notice and this permission notice must be\n"
+"\t\t\t\t\tincluded\n"
+"\t\t\t\t\tin all copies or substantial portions of the Software."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_opl_v1
+msgid ""
+"The above copyright notice and this permission notice must be\n"
+"\t\t\t\t\tincluded in\n"
+"\t\t\t\t\tall copies or substantial portions of the Software."
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,help:to_product_license.field_product_license_version__content
+msgid "The content of the license version"
+msgstr "Nội dung của phiên bản giấy phép"
+
+#. module: to_product_license
+#: model_terms:ir.ui.view,arch_db:to_product_license.product_license_view_form
+msgid "The full name of the license..."
+msgstr "Tên đầy đủ của giấy phép..."
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"The hypothetical commands `show w' and `show c' should show the\n"
+"\t\t\t\t\tappropriate\n"
+"\t\t\t\t\tparts of the General Public License. Of course, your\n"
+"\t\t\t\t\tprogram's commands\n"
+"\t\t\t\t\tmight be different; for a GUI interface, you\n"
+"\t\t\t\t\twould use an “about\n"
+"\t\t\t\t\tbox”."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"The licenses for most software and other practical works are\n"
+"\t\t\t\t\tdesigned\n"
+"\t\t\t\t\tto take away your freedom to share and change the works. By\n"
+"\t\t\t\t\tcontrast,\n"
+"\t\t\t\t\tthe GNU General Public License is intended to guarantee\n"
+"\t\t\t\t\tyour\n"
+"\t\t\t\t\tfreedom to\n"
+"\t\t\t\t\tshare and change all versions of a program--to make\n"
+"\t\t\t\t\tsure it remains free\n"
+"\t\t\t\t\tsoftware for all its users. We, the Free\n"
+"\t\t\t\t\tSoftware Foundation, use\n"
+"\t\t\t\t\tthe\n"
+"\t\t\t\t\tGNU General Public License for most of\n"
+"\t\t\t\t\tour software; it applies also\n"
+"\t\t\t\t\tto\n"
+"\t\t\t\t\tany other work released this way by\n"
+"\t\t\t\t\tits authors. You can apply it to\n"
+"\t\t\t\t\tyour programs, too."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"The precise terms and conditions for copying, distribution and\n"
+"\t\t\t\t\tmodification follow."
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,help:to_product_license.field_product_license_version__product_ids
+msgid "The products that are assigned with this license version"
+msgstr "Các sản phẩm được chỉ định với phiên bản giấy phép này"
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"The requirement to provide Installation Information does not\n"
+"\t\t\t\t\tinclude a\n"
+"\t\t\t\t\trequirement to continue to provide support service,\n"
+"\t\t\t\t\twarranty, or updates\n"
+"\t\t\t\t\tfor a work that has been modified or installed\n"
+"\t\t\t\t\tby the recipient, or\n"
+"\t\t\t\t\tfor\n"
+"\t\t\t\t\tthe User Product in which it has been\n"
+"\t\t\t\t\tmodified or installed. Access to\n"
+"\t\t\t\t\ta\n"
+"\t\t\t\t\tnetwork may be denied when the\n"
+"\t\t\t\t\tmodification itself materially and\n"
+"\t\t\t\t\tadversely affects the operation\n"
+"\t\t\t\t\tof the network or violates the\n"
+"\t\t\t\t\trules and\n"
+"\t\t\t\t\tprotocols for communication\n"
+"\t\t\t\t\tacross the network."
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,help:to_product_license.field_product_license_version__short_name
+msgid ""
+"The short name of the license version that help identify the license version"
+msgstr ""
+"Tên viết tắt của phiên bản giấy phép giúp xác định phiên bản giấy phép"
+
+#. module: to_product_license
+#: model:res.groups,comment:to_product_license.group_license_manager
+msgid ""
+"The user will have full access to all records of\n"
+"\t\t\t\tlicense management application.\n"
+"\t\t\t"
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"The “Corresponding Source” for a work in object code form means\n"
+"\t\t\t\t\tall\n"
+"\t\t\t\t\tthe source code needed to generate, install, and (for an\n"
+"\t\t\t\t\texecutable\n"
+"\t\t\t\t\twork) run the object code and to modify the work,\n"
+"\t\t\t\t\tincluding scripts\n"
+"\t\t\t\t\tto\n"
+"\t\t\t\t\tcontrol those activities. However, it does not\n"
+"\t\t\t\t\tinclude the work's\n"
+"\t\t\t\t\tSystem Libraries, or general-purpose tools or\n"
+"\t\t\t\t\tgenerally available free\n"
+"\t\t\t\t\tprograms which are used unmodified in\n"
+"\t\t\t\t\tperforming those activities\n"
+"\t\t\t\t\tbut\n"
+"\t\t\t\t\twhich are not part of the work. For\n"
+"\t\t\t\t\texample, Corresponding Source\n"
+"\t\t\t\t\tincludes interface definition files\n"
+"\t\t\t\t\tassociated with source files\n"
+"\t\t\t\t\tfor\n"
+"\t\t\t\t\tthe work, and the source code for\n"
+"\t\t\t\t\tshared libraries and dynamically\n"
+"\t\t\t\t\tlinked subprograms that the work is\n"
+"\t\t\t\t\tspecifically designed to\n"
+"\t\t\t\t\trequire,\n"
+"\t\t\t\t\tsuch as by intimate data\n"
+"\t\t\t\t\tcommunication or control flow between those\n"
+"\t\t\t\t\tsubprograms and other\n"
+"\t\t\t\t\tparts of the work."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"The “System Libraries” of an executable work include anything,\n"
+"\t\t\t\t\tother\n"
+"\t\t\t\t\tthan the work as a whole, that (a) is included in the normal\n"
+"\t\t\t\t\tform of\n"
+"\t\t\t\t\tpackaging a Major Component, but which is not part of that\n"
+"\t\t\t\t\tMajor\n"
+"\t\t\t\t\tComponent, and (b) serves only to enable use of the work with\n"
+"\t\t\t\t\tthat\n"
+"\t\t\t\t\tMajor Component, or to implement a Standard Interface for which\n"
+"\t\t\t\t\tan\n"
+"\t\t\t\t\timplementation is available to the public in source code form. A\n"
+"\t\t\t\t\t“Major Component”, in this context, means a major essential\n"
+"\t\t\t\t\tcomponent\n"
+"\t\t\t\t\t(kernel, window system, and so on) of the specific\n"
+"\t\t\t\t\toperating system\n"
+"\t\t\t\t\t(if any) on which the executable work runs, or a\n"
+"\t\t\t\t\tcompiler used to\n"
+"\t\t\t\t\tproduce the work, or an object code interpreter\n"
+"\t\t\t\t\tused to run it."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"The “source code” for a work means the preferred form of the work\n"
+"\t\t\t\t\tfor making modifications to it. “Object code” means any non-source\n"
+"\t\t\t\t\tform of a work."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_oeel_v1
+msgid ""
+"This software and associated files (the \"Software\") can only be\n"
+"\t\t\t\t\tused (executed, modified, executed after modifications) with a\n"
+"\t\t\t\t\tvalid Odoo Enterprise Subscription for the correct number of users."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_opl_v1
+msgid ""
+"This software and associated files (the \"Software\") may only be\n"
+"\t\t\t\t\tused\n"
+"\t\t\t\t\t(executed, modified, executed after modifications) if you have\n"
+"\t\t\t\t\tpurchased a\n"
+"\t\t\t\t\tvalid license from the authors, typically via Odoo Apps,\n"
+"\t\t\t\t\tor if you\n"
+"\t\t\t\t\thave\n"
+"\t\t\t\t\treceived a written agreement from the authors of the\n"
+"\t\t\t\t\tSoftware (see the\n"
+"\t\t\t\t\tCOPYRIGHT file)."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"To do so, attach the following notices to the program. It is\n"
+"\t\t\t\t\tsafest\n"
+"\t\t\t\t\tto attach them to the start of each source file to most\n"
+"\t\t\t\t\teffectively\n"
+"\t\t\t\t\tstate the exclusion of warranty; and each file should\n"
+"\t\t\t\t\thave at least\n"
+"\t\t\t\t\tthe “copyright” line and a pointer to where the full\n"
+"\t\t\t\t\tnotice is\n"
+"\t\t\t\t\tfound."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"To protect your rights, we need to prevent others from denying\n"
+"\t\t\t\t\tyou\n"
+"\t\t\t\t\tthese rights or asking you to surrender the rights. Therefore,\n"
+"\t\t\t\t\tyou have\n"
+"\t\t\t\t\tcertain responsibilities if you distribute copies of the\n"
+"\t\t\t\t\tsoftware,\n"
+"\t\t\t\t\tor if\n"
+"\t\t\t\t\tyou modify it: responsibilities to respect the\n"
+"\t\t\t\t\tfreedom of others."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"To “convey” a work means any kind of propagation that enables\n"
+"\t\t\t\t\tother\n"
+"\t\t\t\t\tparties to make or receive copies. Mere interaction with a\n"
+"\t\t\t\t\tuser through\n"
+"\t\t\t\t\ta computer network, with no transfer of a copy, is not\n"
+"\t\t\t\t\tconveying."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"To “modify” a work means to copy from or adapt all or part of the\n"
+"\t\t\t\t\twork\n"
+"\t\t\t\t\tin a fashion requiring copyright permission, other than the\n"
+"\t\t\t\t\tmaking of\n"
+"\t\t\t\t\tan\n"
+"\t\t\t\t\texact copy. The resulting work is called a “modified\n"
+"\t\t\t\t\tversion” of the\n"
+"\t\t\t\t\tearlier work or a work “based on” the earlier work."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"To “propagate” a work means to do anything with it that, without\n"
+"\t\t\t\t\tpermission, would make you directly or secondarily liable for\n"
+"\t\t\t\t\tinfringement under applicable copyright law, except executing it on\n"
+"\t\t\t\t\ta\n"
+"\t\t\t\t\tcomputer or modifying a private copy. Propagation includes\n"
+"\t\t\t\t\tcopying,\n"
+"\t\t\t\t\tdistribution (with or without modification), making\n"
+"\t\t\t\t\tavailable to\n"
+"\t\t\t\t\tthe\n"
+"\t\t\t\t\tpublic, and in some countries other activities as\n"
+"\t\t\t\t\twell."
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,help:to_product_license.field_product_license__activity_exception_decoration
+#: model:ir.model.fields,help:to_product_license.field_product_license_version__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__message_unread
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__message_unread_counter
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__name
+msgid "Version"
+msgstr "Phiên bản"
+
+#. module: to_product_license
+#: model_terms:ir.ui.view,arch_db:to_product_license.product_license_view_form
+msgid "Version(s)"
+msgstr "Phiên bản"
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__product_license_version_ids
+msgid "Versions"
+msgstr "Phiên bản"
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__versions_count
+msgid "Versions Count"
+msgstr "Số lượng phiên bản"
+
+#. module: to_product_license
+#: model:ir.model.fields,field_description:to_product_license.field_product_license__website_message_ids
+#: model:ir.model.fields,field_description:to_product_license.field_product_license_version__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: to_product_license
+#: model:ir.model.fields,help:to_product_license.field_product_license__website_message_ids
+#: model:ir.model.fields,help:to_product_license.field_product_license_version__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"When we speak of free software, we are referring to freedom, not\n"
+"\t\t\t\t\tprice. Our General Public Licenses are designed to make sure that\n"
+"\t\t\t\t\tyou\n"
+"\t\t\t\t\thave the freedom to distribute copies of free software (and\n"
+"\t\t\t\t\tcharge for\n"
+"\t\t\t\t\tthem if you wish), that you receive source code or can\n"
+"\t\t\t\t\tget it if\n"
+"\t\t\t\t\tyou\n"
+"\t\t\t\t\twant it, that you can change the software or use pieces\n"
+"\t\t\t\t\tof it in new\n"
+"\t\t\t\t\tfree programs, and that you know you can do these\n"
+"\t\t\t\t\tthings."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"When you convey a copy of a covered work, you may at your option\n"
+"\t\t\t\t\tremove any additional permissions from that copy, or from any part\n"
+"\t\t\t\t\tof\n"
+"\t\t\t\t\tit. (Additional permissions may be written to require their own\n"
+"\t\t\t\t\tremoval in certain cases when you modify the work.) You may place\n"
+"\t\t\t\t\tadditional permissions on material, added by you to a covered work,\n"
+"\t\t\t\t\tfor which you have or can give appropriate copyright permission."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"When you convey a covered work, you waive any legal power to\n"
+"\t\t\t\t\tforbid\n"
+"\t\t\t\t\tcircumvention of technological measures to the extent such\n"
+"\t\t\t\t\tcircumvention\n"
+"\t\t\t\t\tis effected by exercising rights under this License\n"
+"\t\t\t\t\twith respect to\n"
+"\t\t\t\t\tthe covered work, and you disclaim any intention to\n"
+"\t\t\t\t\tlimit operation\n"
+"\t\t\t\t\tor\n"
+"\t\t\t\t\tmodification of the work as a means of enforcing,\n"
+"\t\t\t\t\tagainst the work's\n"
+"\t\t\t\t\tusers, your or third parties' legal rights to\n"
+"\t\t\t\t\tforbid circumvention of\n"
+"\t\t\t\t\ttechnological measures."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:ir.ui.view,arch_db:to_product_license.product_template_search_view
+msgid "With License(s)"
+msgstr "Có giấy phép sản phẩm"
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_oeel_v1
+msgid ""
+"With a valid Partnership Agreement with Odoo S.A., the above\n"
+"\t\t\t\t\tpermissions are also granted, as long as the usage is limited to a\n"
+"\t\t\t\t\ttesting or development environment."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:ir.ui.view,arch_db:to_product_license.product_template_search_view
+msgid "Without License"
+msgstr "Không có giấy phép sản phẩm"
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"You\n"
+"\t\t\t\t\tshould also get your employer (if you work as a programmer) or\n"
+"\t\t\t\t\tschool,\n"
+"\t\t\t\t\tif any, to sign a “copyright disclaimer” for the program, if\n"
+"\t\t\t\t\tnecessary.\n"
+"\t\t\t\t\tFor more information on this, and how to apply and follow\n"
+"\t\t\t\t\tthe GNU GPL,\n"
+"\t\t\t\t\tsee\n"
+"\t\t\t\t\t&lt;"
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"You are not required to accept this License in order to receive\n"
+"\t\t\t\t\tor\n"
+"\t\t\t\t\trun a copy of the Program. Ancillary propagation of a covered\n"
+"\t\t\t\t\twork\n"
+"\t\t\t\t\toccurring solely as a consequence of using peer-to-peer\n"
+"\t\t\t\t\ttransmission\n"
+"\t\t\t\t\tto receive a copy likewise does not require acceptance.\n"
+"\t\t\t\t\tHowever,\n"
+"\t\t\t\t\tnothing other than this License grants you permission to\n"
+"\t\t\t\t\tpropagate\n"
+"\t\t\t\t\tor\n"
+"\t\t\t\t\tmodify any covered work. These actions infringe\n"
+"\t\t\t\t\tcopyright if you do\n"
+"\t\t\t\t\tnot accept this License. Therefore, by modifying\n"
+"\t\t\t\t\tor propagating a\n"
+"\t\t\t\t\tcovered work, you indicate your acceptance of this\n"
+"\t\t\t\t\tLicense to do\n"
+"\t\t\t\t\tso."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"You may charge any price or no price for each copy that you\n"
+"\t\t\t\t\tconvey,\n"
+"\t\t\t\t\tand you may offer support or warranty protection for a fee."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"You may convey a covered work in object code form under the terms\n"
+"\t\t\t\t\tof sections 4 and 5, provided that you also convey the\n"
+"\t\t\t\t\tmachine-readable Corresponding Source under the terms of this\n"
+"\t\t\t\t\tLicense,\n"
+"\t\t\t\t\tin one of these ways:"
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"You may convey a work based on the Program, or the modifications\n"
+"\t\t\t\t\tto\n"
+"\t\t\t\t\tproduce it from the Program, in the form of source code under the\n"
+"\t\t\t\t\tterms of section 4, provided that you also meet all of these\n"
+"\t\t\t\t\tconditions:"
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"You may convey verbatim copies of the Program's source code as\n"
+"\t\t\t\t\tyou\n"
+"\t\t\t\t\treceive it, in any medium, provided that you conspicuously and\n"
+"\t\t\t\t\tappropriately publish on each copy an appropriate copyright notice;\n"
+"\t\t\t\t\tkeep intact all notices stating that this License and any\n"
+"\t\t\t\t\tnon-permissive terms added in accord with section 7 apply to the\n"
+"\t\t\t\t\tcode;\n"
+"\t\t\t\t\tkeep intact all notices of the absence of any warranty; and\n"
+"\t\t\t\t\tgive all\n"
+"\t\t\t\t\trecipients a copy of this License along with the Program."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_oeel_v1
+msgid ""
+"You may develop Odoo modules based on the Software and distribute\n"
+"\t\t\t\t\tthem\n"
+"\t\t\t\t\tunder the license of your choice, provided that it is\n"
+"\t\t\t\t\tcompatible\n"
+"\t\t\t\t\twith the terms of the Odoo Enterprise Edition License\n"
+"\t\t\t\t\t(For example:\n"
+"\t\t\t\t\tLGPL, MIT, or proprietary licenses similar to this\n"
+"\t\t\t\t\tone)."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_opl_v1
+msgid ""
+"You may develop Odoo modules that use the Software as a library\n"
+"\t\t\t\t\t(typically\n"
+"\t\t\t\t\tby depending on it, importing it and using its\n"
+"\t\t\t\t\tresources), but\n"
+"\t\t\t\t\twithout\n"
+"\t\t\t\t\tcopying any source code or material from the\n"
+"\t\t\t\t\tSoftware. You may distribute\n"
+"\t\t\t\t\tthose modules under the license of your\n"
+"\t\t\t\t\tchoice, provided that this\n"
+"\t\t\t\t\tlicense\n"
+"\t\t\t\t\tis compatible with the terms of\n"
+"\t\t\t\t\tthe Odoo Proprietary License (For\n"
+"\t\t\t\t\texample:\n"
+"\t\t\t\t\tLGPL, MIT, or proprietary\n"
+"\t\t\t\t\tlicenses similar to this one)."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"You may make, run and propagate covered works that you do not\n"
+"\t\t\t\t\tconvey, without conditions so long as your license otherwise\n"
+"\t\t\t\t\tremains\n"
+"\t\t\t\t\tin force. You may convey covered works to others for the\n"
+"\t\t\t\t\tsole purpose\n"
+"\t\t\t\t\tof having them make modifications exclusively for you,\n"
+"\t\t\t\t\tor provide\n"
+"\t\t\t\t\tyou\n"
+"\t\t\t\t\twith facilities for running those works, provided that\n"
+"\t\t\t\t\tyou comply with\n"
+"\t\t\t\t\tthe terms of this License in conveying all material\n"
+"\t\t\t\t\tfor which you\n"
+"\t\t\t\t\tdo\n"
+"\t\t\t\t\tnot control copyright. Those thus making or running\n"
+"\t\t\t\t\tthe covered works\n"
+"\t\t\t\t\tfor you must do so exclusively on your behalf,\n"
+"\t\t\t\t\tunder your direction\n"
+"\t\t\t\t\tand control, on terms that prohibit them from\n"
+"\t\t\t\t\tmaking any copies of\n"
+"\t\t\t\t\tyour copyrighted material outside their\n"
+"\t\t\t\t\trelationship with you."
+msgstr ""
+
+#. module: to_product_license
+#: code:addons/to_product_license/models/product_license_version.py:0
+#, python-format
+msgid ""
+"You may not be able to change the license of the version '%s' while there is"
+" a product being refer to the license version"
+msgstr ""
+"Bản không thể thay đổi giấy phép sản của phiên bản '%s' khi cómột sản phẩm "
+"tham chiếu đến phiên bản giấy phép"
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"You may not impose any further restrictions on the exercise of\n"
+"\t\t\t\t\tthe\n"
+"\t\t\t\t\trights granted or affirmed under this License. For example, you\n"
+"\t\t\t\t\tmay\n"
+"\t\t\t\t\tnot impose a license fee, royalty, or other charge for exercise\n"
+"\t\t\t\t\tof\n"
+"\t\t\t\t\trights granted under this License, and you may not initiate\n"
+"\t\t\t\t\tlitigation\n"
+"\t\t\t\t\t(including a cross-claim or counterclaim in a lawsuit)\n"
+"\t\t\t\t\talleging that\n"
+"\t\t\t\t\tany patent claim is infringed by making, using,\n"
+"\t\t\t\t\tselling, offering for\n"
+"\t\t\t\t\tsale, or importing the Program or any portion\n"
+"\t\t\t\t\tof it."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"You may not propagate or modify a covered work except as\n"
+"\t\t\t\t\texpressly\n"
+"\t\t\t\t\tprovided under this License. Any attempt otherwise to\n"
+"\t\t\t\t\tpropagate or\n"
+"\t\t\t\t\tmodify it is void, and will automatically terminate\n"
+"\t\t\t\t\tyour rights under\n"
+"\t\t\t\t\tthis License (including any patent licenses\n"
+"\t\t\t\t\tgranted under the third\n"
+"\t\t\t\t\tparagraph of section 11)."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_oeel_v1
+msgid ""
+"You may use Odoo modules published under any license along with\n"
+"\t\t\t\t\tthe\n"
+"\t\t\t\t\tSoftware, provided that their license is compatible with the\n"
+"\t\t\t\t\tterms\n"
+"\t\t\t\t\tof the Odoo Enterprise License (Including, but not limited to,\n"
+"\t\t\t\t\tany\n"
+"\t\t\t\t\tmodule published on the Odoo Apps Store on odoo.com/apps)"
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"a) Convey the object code in, or embodied in, a physical\n"
+"\t\t\t\t\t\tproduct\n"
+"\t\t\t\t\t\t(including a physical distribution medium), accompanied by\n"
+"\t\t\t\t\t\tthe\n"
+"\t\t\t\t\t\tCorresponding Source fixed on a durable physical medium\n"
+"\t\t\t\t\t\tcustomarily used for software interchange."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"a) Disclaiming warranty or limiting liability differently from\n"
+"\t\t\t\t\t\tthe\n"
+"\t\t\t\t\t\tterms of sections 15 and 16 of this License; or"
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"a) The work must carry prominent notices stating that you\n"
+"\t\t\t\t\t\tmodified\n"
+"\t\t\t\t\t\tit, and giving a relevant date."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"b) Convey the object code in, or embodied in, a physical\n"
+"\t\t\t\t\t\tproduct\n"
+"\t\t\t\t\t\t(including a physical distribution medium), accompanied by\n"
+"\t\t\t\t\t\ta\n"
+"\t\t\t\t\t\twritten offer, valid for at least three years and valid for as\n"
+"\t\t\t\t\t\tlong as you offer spare parts or customer support for that product\n"
+"\t\t\t\t\t\tmodel, to give anyone who possesses the object code either (1) a\n"
+"\t\t\t\t\t\tcopy of the Corresponding Source for all the software in the\n"
+"\t\t\t\t\t\tproduct that is covered by this License, on a durable physical\n"
+"\t\t\t\t\t\tmedium customarily used for software interchange, for a price no\n"
+"\t\t\t\t\t\tmore than your reasonable cost of physically performing this\n"
+"\t\t\t\t\t\tconveying of source, or (2) access to copy the\n"
+"\t\t\t\t\t\tCorresponding Source\n"
+"\t\t\t\t\t\tfrom a network server at no charge."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"b) Requiring preservation of specified reasonable legal notices\n"
+"\t\t\t\t\t\tor\n"
+"\t\t\t\t\t\tauthor attributions in that material or in the Appropriate Legal\n"
+"\t\t\t\t\t\tNotices displayed by works containing it; or"
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"b) The work must carry prominent notices stating that it is\n"
+"\t\t\t\t\t\treleased under this License and any conditions added under section\n"
+"\t\t\t\t\t\t7. This requirement modifies the requirement in section 4 to\n"
+"\t\t\t\t\t\t“keep\n"
+"\t\t\t\t\t\tintact all notices”."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"c) Convey individual copies of the object code with a copy of\n"
+"\t\t\t\t\t\tthe\n"
+"\t\t\t\t\t\twritten offer to provide the Corresponding Source. This\n"
+"\t\t\t\t\t\talternative is allowed only occasionally and noncommercially, and\n"
+"\t\t\t\t\t\tonly if you received the object code with such an offer, in accord\n"
+"\t\t\t\t\t\twith subsection 6b."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"c) Prohibiting misrepresentation of the origin of that\n"
+"\t\t\t\t\t\tmaterial, or\n"
+"\t\t\t\t\t\trequiring that modified versions of such material be\n"
+"\t\t\t\t\t\tmarked in\n"
+"\t\t\t\t\t\treasonable ways as different from the original version;\n"
+"\t\t\t\t\t\tor"
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"c) You must license the entire work, as a whole, under this\n"
+"\t\t\t\t\t\tLicense to anyone who comes into possession of a copy. This\n"
+"\t\t\t\t\t\tLicense will therefore apply, along with any applicable section 7\n"
+"\t\t\t\t\t\tadditional terms, to the whole of the work, and all its parts,\n"
+"\t\t\t\t\t\tregardless of how they are packaged. This License gives no\n"
+"\t\t\t\t\t\tpermission to license the work in any other way, but it does not\n"
+"\t\t\t\t\t\tinvalidate such permission if you have separately received it."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"d) Convey the object code by offering access from a designated\n"
+"\t\t\t\t\t\tplace (gratis or for a charge), and offer equivalent access to the\n"
+"\t\t\t\t\t\tCorresponding Source in the same way through the same place at no\n"
+"\t\t\t\t\t\tfurther charge. You need not require recipients to copy the\n"
+"\t\t\t\t\t\tCorresponding Source along with the object code. If the place to\n"
+"\t\t\t\t\t\tcopy the object code is a network server, the Corresponding Source\n"
+"\t\t\t\t\t\tmay be on a different server (operated by you or a third party)\n"
+"\t\t\t\t\t\tthat supports equivalent copying facilities, provided you maintain\n"
+"\t\t\t\t\t\tclear directions next to the object code saying where to find the\n"
+"\t\t\t\t\t\tCorresponding Source. Regardless of what server hosts the\n"
+"\t\t\t\t\t\tCorresponding Source, you remain obligated to ensure that it is\n"
+"\t\t\t\t\t\tavailable for as long as needed to satisfy these requirements."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"d) If the work has interactive user interfaces, each must\n"
+"\t\t\t\t\t\tdisplay\n"
+"\t\t\t\t\t\tAppropriate Legal Notices; however, if the Program has\n"
+"\t\t\t\t\t\tinteractive\n"
+"\t\t\t\t\t\tinterfaces that do not display Appropriate Legal\n"
+"\t\t\t\t\t\tNotices, your\n"
+"\t\t\t\t\t\twork need not make them do so."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"d) Limiting the use for publicity purposes of names of\n"
+"\t\t\t\t\t\tlicensors or\n"
+"\t\t\t\t\t\tauthors of the material; or"
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"e) Convey the object code using peer-to-peer transmission,\n"
+"\t\t\t\t\t\tprovided\n"
+"\t\t\t\t\t\tyou inform other peers where the object code and\n"
+"\t\t\t\t\t\tCorresponding\n"
+"\t\t\t\t\t\tSource of the work are being offered to the general\n"
+"\t\t\t\t\t\tpublic at no\n"
+"\t\t\t\t\t\tcharge under subsection 6d."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"e) Declining to grant rights under trademark law for use of\n"
+"\t\t\t\t\t\tsome\n"
+"\t\t\t\t\t\ttrade names, trademarks, or service marks; or"
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"f) Requiring indemnification of licensors and authors of that\n"
+"\t\t\t\t\t\tmaterial by anyone who conveys the material (or modified versions\n"
+"\t\t\t\t\t\tof\n"
+"\t\t\t\t\t\tit) with contractual assumptions of liability to the recipient,\n"
+"\t\t\t\t\t\tfor\n"
+"\t\t\t\t\t\tany liability that these contractual assumptions directly\n"
+"\t\t\t\t\t\timpose\n"
+"\t\t\t\t\t\ton\n"
+"\t\t\t\t\t\tthose licensors and authors."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid "https://www.gnu.org/licenses/"
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid "https://www.gnu.org/licenses/why-not-lgpl.html"
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"“Additional permissions” are terms that supplement the terms of\n"
+"\t\t\t\t\tthis\n"
+"\t\t\t\t\tLicense by making exceptions from one or more of its\n"
+"\t\t\t\t\tconditions.\n"
+"\t\t\t\t\tAdditional permissions that are applicable to the entire\n"
+"\t\t\t\t\tProgram\n"
+"\t\t\t\t\tshall\n"
+"\t\t\t\t\tbe treated as though they were included in this\n"
+"\t\t\t\t\tLicense, to the\n"
+"\t\t\t\t\textent\n"
+"\t\t\t\t\tthat they are valid under applicable law. If\n"
+"\t\t\t\t\tadditional permissions\n"
+"\t\t\t\t\tapply only to part of the Program, that part\n"
+"\t\t\t\t\tmay be used separately\n"
+"\t\t\t\t\tunder those permissions, but the entire\n"
+"\t\t\t\t\tProgram remains governed by\n"
+"\t\t\t\t\tthis License without regard to the\n"
+"\t\t\t\t\tadditional permissions."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"“Copyright” also means copyright-like laws that apply to other\n"
+"\t\t\t\t\tkinds of\n"
+"\t\t\t\t\tworks, such as semiconductor masks."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"“Installation Information” for a User Product means any methods,\n"
+"\t\t\t\t\tprocedures, authorization keys, or other information required to\n"
+"\t\t\t\t\tinstall\n"
+"\t\t\t\t\tand execute modified versions of a covered work in that User\n"
+"\t\t\t\t\tProduct\n"
+"\t\t\t\t\tfrom\n"
+"\t\t\t\t\ta modified version of its Corresponding Source. The\n"
+"\t\t\t\t\tinformation must\n"
+"\t\t\t\t\tsuffice to ensure that the continued functioning of\n"
+"\t\t\t\t\tthe modified\n"
+"\t\t\t\t\tobject\n"
+"\t\t\t\t\tcode is in no case prevented or interfered with\n"
+"\t\t\t\t\tsolely because\n"
+"\t\t\t\t\tmodification has been made."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"“The Program” refers to any copyrightable work licensed under\n"
+"\t\t\t\t\tthis\n"
+"\t\t\t\t\tLicense. Each licensee is addressed as “you”. “Licensees” and\n"
+"\t\t\t\t\t“recipients” may be individuals or organizations."
+msgstr ""
+
+#. module: to_product_license
+#: model_terms:product.license.version,content:to_product_license.license_version_gpl_v3
+msgid ""
+"“This License” refers to version 3 of the GNU General Public\n"
+"\t\t\t\t\tLicense."
+msgstr ""

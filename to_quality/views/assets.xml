@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+    <template id="assets_backend" name="Quality Assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/to_quality/static/src/js/control_chart_model.js"/>
+            <script type="text/javascript" src="/to_quality/static/src/js/control_chart_renderer.js"/>
+            <script type="text/javascript" src="/to_quality/static/src/js/control_chart_view.js"/>
+        </xpath>
+    </template>
+</odoo>

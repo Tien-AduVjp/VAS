@@ -1,0 +1,358 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_helpdesk_timesheet
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-17 03:23+0000\n"
+"PO-Revision-Date: 2022-06-17 03:23+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model,name:viin_helpdesk_timesheet.model_account_analytic_line
+msgid "Analytic Line"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.helpdesk_ticket_form_view
+msgid "Archived"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_task2ticket_wizard__assign_to_me
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_ticket2task_wizard__assign_to_me
+msgid "Assign To Me"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.task2ticket_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.ticket2task_wizard_view_form
+msgid "Cancel"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: code:addons/viin_helpdesk_timesheet/wizards/task_to_ticket_wizard.py:0
+#, python-format
+msgid "Company of task '%s' must be the same as the helpdesk team!"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model,name:viin_helpdesk_timesheet.model_task2ticket_wizard
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.task2ticket_wizard_view_form
+msgid "Convert Task to Ticket"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model,name:viin_helpdesk_timesheet.model_ticket2task_wizard
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.ticket2task_wizard_view_form
+msgid "Convert Ticket to Task"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.helpdesk_ticket_form_view
+msgid "Convert to Task"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.actions.act_window,name:viin_helpdesk_timesheet.ticket2tasks_action
+msgid "Convert to Tasks"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.actions.act_window,name:viin_helpdesk_timesheet.action_task2ticket
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.project_task_view_form
+msgid "Convert to Ticket"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.actions.act_window,name:viin_helpdesk_timesheet.action_task2tickets
+msgid "Convert to Tickets"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.helpdesk_ticket_form_view
+msgid "Create Task"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.project_task_view_form
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.task2ticket_wizard_view_form
+msgid "Create Ticket"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.ticket2task_wizard_view_form
+msgid "Create task"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_task2ticket_wizard__create_uid
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_ticket2task_wizard__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_task2ticket_wizard__create_date
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_ticket2task_wizard__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_ticket2task_wizard__date_deadline
+msgid "Deadline"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_account_analytic_line__display_name
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_helpdesk_team__display_name
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_helpdesk_ticket__display_name
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_project_project__display_name
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_project_task__display_name
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_report_helpdesk_ticket__display_name
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_task2ticket_wizard__display_name
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_ticket2task_wizard__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.helpdesk_ticket_form_view
+msgid "Duration"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.helpdesk_ticket_form_view
+msgid "Duration (Hours)"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,help:viin_helpdesk_timesheet.field_helpdesk_ticket__use_helpdesk_timesheet
+msgid "Enable timesheeting on the project."
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model,name:viin_helpdesk_timesheet.model_helpdesk_team
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_project_project__helpdesk_team_id
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_task2ticket_wizard__team_id
+msgid "Helpdesk Team"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model,name:viin_helpdesk_timesheet.model_helpdesk_ticket
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_account_analytic_line__ticket_id
+msgid "Helpdesk Ticket"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_project_project__ticket_ids
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_project_task__ticket_ids
+msgid "Helpdesk Tickets"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_account_analytic_line__id
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_helpdesk_team__id
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_helpdesk_ticket__id
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_project_project__id
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_project_task__id
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_report_helpdesk_ticket__id
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_task2ticket_wizard__id
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_ticket2task_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,help:viin_helpdesk_timesheet.field_task2ticket_wizard__send_notification_email
+msgid ""
+"If set, then an email will be sent to the partner when the ticket changes "
+"stage."
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,help:viin_helpdesk_timesheet.field_helpdesk_team__project_id
+msgid ""
+"If specified, it will be the default project for the tickets of this team."
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_task2ticket_wizard__is_team_member
+msgid "Is Team Member"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_account_analytic_line____last_update
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_helpdesk_team____last_update
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_helpdesk_ticket____last_update
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_project_project____last_update
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_project_task____last_update
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_report_helpdesk_ticket____last_update
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_task2ticket_wizard____last_update
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_ticket2task_wizard____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_task2ticket_wizard__write_uid
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_ticket2task_wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_task2ticket_wizard__write_date
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_ticket2task_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_task2ticket_wizard__partner_id
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_ticket2task_wizard__partner_id
+msgid "Partner"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: code:addons/viin_helpdesk_timesheet/wizards/task_to_ticket_wizard.py:0
+#, python-format
+msgid "Please select more than one task."
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model,name:viin_helpdesk_timesheet.model_project_project
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_helpdesk_team__project_id
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_helpdesk_ticket__project_id
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_report_helpdesk_ticket__project_id
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_ticket2task_wizard__project_id
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.helpdesk_ticket_search_view
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.view_helpdesk_ticket_search
+msgid "Project"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.helpdesk_team_form_view
+msgid "Project & Timesheets"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,help:viin_helpdesk_timesheet.field_helpdesk_ticket__project_id
+msgid "Project which the helpdesk tickets and timesheets will be used."
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,help:viin_helpdesk_timesheet.field_ticket2task_wizard__project_id
+msgid "Project which the tasks and timesheets will be used."
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_task2ticket_wizard__send_notification_email
+msgid "Send Notification Email"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.helpdesk_team_form_view
+msgid ""
+"Specify a project to make\n"
+"\t\t\t\t\t\t\tit the default project for the tickets of this team so that the\n"
+"\t\t\t\t\t\t\tmembers will be able to link a ticket with a project task and log\n"
+"\t\t\t\t\t\t\ttimesheet (if timesheet is enabled on the project accordingly)."
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_ticket2task_wizard__tag_ids
+msgid "Tag"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_task2ticket_wizard__tag_ids
+msgid "Tags"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model,name:viin_helpdesk_timesheet.model_project_task
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_helpdesk_ticket__task_id
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_report_helpdesk_ticket__task_id
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.helpdesk_ticket_search_view
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.view_helpdesk_ticket_search
+msgid "Task"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,help:viin_helpdesk_timesheet.field_helpdesk_ticket__task_id
+msgid "Task which the helpdesk tickets and timesheets will be used."
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: code:addons/viin_helpdesk_timesheet/models/helpdesk_ticket.py:0
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_task2ticket_wizard__task_ids
+#, python-format
+msgid "Tasks"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,help:viin_helpdesk_timesheet.field_project_project__helpdesk_team_id
+msgid ""
+"The Helpdesk Team used by default for ticket that is created from this "
+"project."
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model,name:viin_helpdesk_timesheet.model_report_helpdesk_ticket
+msgid "Ticket Report"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_task2ticket_wizard__ticket_type_id
+msgid "Ticket Type"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: code:addons/viin_helpdesk_timesheet/models/project_task.py:0
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_project_project__tickets_count
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_project_task__tickets_count
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_ticket2task_wizard__ticket_ids
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.project_project_view_form
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.project_task_view_form
+#, python-format
+msgid "Tickets"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.helpdesk_ticket_form_view
+msgid "Timesheet Activities"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_helpdesk_ticket__use_helpdesk_timesheet
+msgid "Timesheet on Tickets"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,field_description:viin_helpdesk_timesheet.field_helpdesk_ticket__timesheet_ids
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.helpdesk_ticket_form_view
+msgid "Timesheets"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_timesheet.helpdesk_ticket_form_view
+msgid "Total hours"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,help:viin_helpdesk_timesheet.field_task2ticket_wizard__ticket_type_id
+msgid "Used to classify question type for customer"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,help:viin_helpdesk_timesheet.field_task2ticket_wizard__team_id
+msgid "Used to classify support group for customer"
+msgstr ""
+
+#. module: viin_helpdesk_timesheet
+#: model:ir.model.fields,help:viin_helpdesk_timesheet.field_task2ticket_wizard__partner_id
+#: model:ir.model.fields,help:viin_helpdesk_timesheet.field_ticket2task_wizard__partner_id
+msgid "You can choose a partner if you want them to follow this ticket."
+msgstr ""

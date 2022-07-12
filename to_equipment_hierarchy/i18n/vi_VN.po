@@ -1,0 +1,285 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_equipment_hierarchy
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-09 15:02+0000\n"
+"PO-Revision-Date: 2021-11-09 15:02+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,help:to_equipment_hierarchy.field_maintenance_request__parent_equipment_ids
+msgid ""
+"A maintenance of an equipment part is considered as a maintenance for all "
+"the other equipments that contain the equipment of the maintenance"
+msgstr "Bảo trì cho bộ phận có thể coi là bảo trì cho thiết bị chứa nó"
+
+#. module: to_equipment_hierarchy
+#: model_terms:ir.ui.view,arch_db:to_equipment_hierarchy.hr_equipment_view_form
+msgid "All Maintenance"
+msgstr "Tất cả bảo trì"
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,field_description:to_equipment_hierarchy.field_maintenance_equipment__recursive_maintenance_ids
+msgid "All Maintenances"
+msgstr "Tất cả bảo trì"
+
+#. module: to_equipment_hierarchy
+#: model_terms:ir.ui.view,arch_db:to_equipment_hierarchy.hr_equipment_view_form
+msgid "All Parts (recursively)"
+msgstr "Tất cả Bộ phận (đệ quy)"
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,help:to_equipment_hierarchy.field_maintenance_equipment__recursive_maintenance_ids
+msgid "All the maintenances of this equipment and its parts"
+msgstr "Toàn bộ Bảo trì của Thiết bị này và các bộ phận của nó"
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,field_description:to_equipment_hierarchy.field_maintenance_equipment__recursive_parent_ids
+msgid "Also apart of"
+msgstr "Cũng là bộ phận của"
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,field_description:to_equipment_hierarchy.field_maintenance_request__parent_equipment_ids
+msgid "Also for"
+msgstr "Cũng cho"
+
+#. module: to_equipment_hierarchy
+#: model_terms:ir.ui.view,arch_db:to_equipment_hierarchy.hr_equipment_view_search
+msgid "Assembly"
+msgstr "Lắp đặt"
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,field_description:to_equipment_hierarchy.field_maintenance_equipment__assign_date
+msgid "Assigned Date"
+msgstr "Ngày Giao"
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,field_description:to_equipment_hierarchy.field_maintenance_equipment__recursive_maintenances_open_count
+msgid "Current Maintenances"
+msgstr "Bảo trì hiện hành"
+
+#. module: to_equipment_hierarchy
+#: model_terms:ir.ui.view,arch_db:to_equipment_hierarchy.hr_equipment_view_form
+msgid "Direct Parts"
+msgstr "Bộ phận trực tiếp"
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,field_description:to_equipment_hierarchy.field_maintenance_equipment__parent_id
+msgid "Directly apart of"
+msgstr "Bộ phận trực tiếp của"
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,field_description:to_equipment_hierarchy.field_maintenance_equipment__display_name
+#: model:ir.model.fields,field_description:to_equipment_hierarchy.field_maintenance_request__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,help:to_equipment_hierarchy.field_maintenance_equipment__child_ids
+msgid ""
+"Equipments that are directly apart of this equipment, not including parts of"
+" parts"
+msgstr ""
+"Thiết bị mà là bộ phận trực tiếp của thiết bị này, không gồm các bộ phận của"
+" bộ phận"
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,help:to_equipment_hierarchy.field_maintenance_equipment__recursive_child_ids
+msgid ""
+"Equipments that are recursively apart of this equipments. For example, parts"
+" of parts"
+msgstr ""
+"Thiết bị mà là bộ phận của thiết bị này, bao gồm cả các bộ phận của bộ phận"
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,field_description:to_equipment_hierarchy.field_maintenance_equipment__id
+#: model:ir.model.fields,field_description:to_equipment_hierarchy.field_maintenance_request__id
+msgid "ID"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: code:addons/to_equipment_hierarchy/models/maintenance_equipment.py:0
+#, python-format
+msgid ""
+"It is impossible for the part '%s' to be put in a location other than the "
+"location of its parent ('%s')'s location"
+msgstr ""
+"Không thể đặt bộ phận/phụ kiện '%s' ở vị trí khác với vị trí "
+"thiết bị gốc ('%s') của nó"
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,field_description:to_equipment_hierarchy.field_maintenance_equipment____last_update
+#: model:ir.model.fields,field_description:to_equipment_hierarchy.field_maintenance_request____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,field_description:to_equipment_hierarchy.field_maintenance_equipment__location
+msgid "Location"
+msgstr "Địa điểm"
+
+#. module: to_equipment_hierarchy
+#: model:ir.model,name:to_equipment_hierarchy.model_maintenance_equipment
+msgid "Maintenance Equipment"
+msgstr "Thiết bị bảo trì"
+
+#. module: to_equipment_hierarchy
+#: model:ir.model,name:to_equipment_hierarchy.model_maintenance_request
+msgid "Maintenance Request"
+msgstr "Yêu cầu Bảo trì"
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,field_description:to_equipment_hierarchy.field_maintenance_equipment__recursive_maintenances_count
+#: model_terms:ir.ui.view,arch_db:to_equipment_hierarchy.hr_equipment_view_form
+msgid "Maintenances"
+msgstr "Bảo trì"
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,help:to_equipment_hierarchy.field_maintenance_equipment__child_maintenance_ids
+#: model_terms:ir.ui.view,arch_db:to_equipment_hierarchy.hr_equipment_view_form
+msgid ""
+"Maintenances of the equipment parts only, which does not include the "
+"maintenance of the current equipment"
+msgstr ""
+"Bảo trì của các bộ phận / phụ kiện, không bao gồm bảo trì của thiết bị này"
+
+#. module: to_equipment_hierarchy
+#: model_terms:ir.ui.view,arch_db:to_equipment_hierarchy.hr_equipment_view_tree
+msgid "Next maintenance time"
+msgstr "Ngày bảo trì kế tiếp"
+
+#. module: to_equipment_hierarchy
+#: model_terms:ir.ui.view,arch_db:to_equipment_hierarchy.hr_equipment_view_search
+msgid "No Parts"
+msgstr "Không gồm bộ phận"
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,field_description:to_equipment_hierarchy.field_maintenance_equipment__owner_user_id
+msgid "Owner"
+msgstr "Chủ sở hữu"
+
+#. module: to_equipment_hierarchy
+#: model_terms:ir.ui.view,arch_db:to_equipment_hierarchy.hr_equipment_view_search
+msgid "Parent Equipment"
+msgstr "Thiết bị cha"
+
+#. module: to_equipment_hierarchy
+#: model_terms:ir.ui.view,arch_db:to_equipment_hierarchy.hr_equipment_view_form
+msgid "Part Name"
+msgstr "Tên"
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,field_description:to_equipment_hierarchy.field_maintenance_equipment__child_ids
+msgid "Parts"
+msgstr "Thành phần"
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,field_description:to_equipment_hierarchy.field_maintenance_equipment__child_maintenances_open_count
+msgid "Parts Current Maintenances Count"
+msgstr "Bảo trì bộ phận hiện tại"
+
+#. module: to_equipment_hierarchy
+#: model_terms:ir.ui.view,arch_db:to_equipment_hierarchy.hr_equipment_view_form
+msgid "Parts Maintenances"
+msgstr "Bảo trì bộ phận/phụ kiện"
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,field_description:to_equipment_hierarchy.field_maintenance_equipment__child_maintenances_count
+msgid "Parts Maintenances Count"
+msgstr "Số lần bảo trì bộ phận"
+
+#. module: to_equipment_hierarchy
+#: model_terms:ir.ui.view,arch_db:to_equipment_hierarchy.hr_equipment_view_search
+msgid "Parts Only"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,field_description:to_equipment_hierarchy.field_maintenance_equipment__child_maintenance_ids
+msgid "Parts Only Maintenances"
+msgstr ""
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,field_description:to_equipment_hierarchy.field_maintenance_equipment__recursive_child_ids
+msgid "Recursive Parts"
+msgstr "Bộ phận đệ quy"
+
+#. module: to_equipment_hierarchy
+#: model_terms:ir.ui.view,arch_db:to_equipment_hierarchy.hr_equipment_view_search
+msgid "Show Equipments without their parts"
+msgstr "Hiển thị các thiết bị mà không hiển thị bộ phận của chúng"
+
+#. module: to_equipment_hierarchy
+#: model_terms:ir.ui.view,arch_db:to_equipment_hierarchy.hr_equipment_view_form
+msgid ""
+"Show all the maintenances of this equipment including its parts' "
+"maintenances"
+msgstr ""
+"Hiển thị tất cả các bảo trì của thiết bị này bao gồm cả bảo trì bộ phận"
+
+#. module: to_equipment_hierarchy
+#: model_terms:ir.ui.view,arch_db:to_equipment_hierarchy.hr_equipment_view_search
+msgid "Show equipments that are parts of others"
+msgstr "Hiển thị các thiết bị mà là bộ phận  của thiết bị khác"
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,field_description:to_equipment_hierarchy.field_maintenance_request__child_maintenance_ids
+msgid "Sub-maintenance"
+msgstr "Bảo trì phụ"
+
+#. module: to_equipment_hierarchy
+#: model_terms:ir.ui.view,arch_db:to_equipment_hierarchy.hr_equipment_request_view_form
+msgid "Sub-maintenances"
+msgstr "Bảo trì phụ"
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,help:to_equipment_hierarchy.field_maintenance_request__child_maintenance_ids
+msgid "The maintenances of the parts of the equipment of this maintenance"
+msgstr "Bảo trì của các bộ phận của thiết bị liên quan đến bảo trì này"
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,help:to_equipment_hierarchy.field_maintenance_equipment__recursive_parent_ids
+msgid ""
+"This field is to indicate that this equipment is apart of other equipments. "
+"For example, a cylinder is apart of its engine assembled in a car"
+msgstr ""
+"Trường này để chi báo rằng thiết bị này là một bộ phận của các thiết bị "
+"khác. Ví dụ, xi-lanh vừa là bộ phận của động cơ và cũng là bộ phận của chiếc"
+" xe lắp động cơ đó"
+
+#. module: to_equipment_hierarchy
+#: model:ir.model.fields,help:to_equipment_hierarchy.field_maintenance_equipment__parent_id
+msgid ""
+"This field is to indicate that this equipment is directly apart of another "
+"equipment"
+msgstr ""
+"Trường này để chỉ báo rằng thiết bị này là một bộ phận trực tiếp của một "
+"thiết bị khác"
+
+#. module: to_equipment_hierarchy
+#: code:addons/to_equipment_hierarchy/models/maintenance_equipment.py:0
+#, python-format
+msgid "You cannot create recursive region."
+msgstr "Bạn không thể tạo vùng đệ quy."
+
+#. module: to_equipment_hierarchy
+#: model_terms:ir.ui.view,arch_db:to_equipment_hierarchy.hr_equipment_request_view_form
+msgid "You could ignore if you may not want to."
+msgstr "Bạn có thể bỏ qua nếu không muốn"
+
+#. module: to_equipment_hierarchy
+#: model_terms:ir.ui.view,arch_db:to_equipment_hierarchy.hr_equipment_request_view_form
+msgid ""
+"You may want to carry out the following sub\n"
+"\t\t\t\t\t\tmaintenance(s) at the same time..."
+msgstr ""
+"Bạn có thể thực hiện (các) bảo trì phụ sau\n"
+"\t\t\t\t\t\tcùng một lúc..."

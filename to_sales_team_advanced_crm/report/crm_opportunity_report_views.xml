@@ -1,0 +1,20 @@
+<odoo>
+
+	<!-- Opportunities by user and team Search View -->
+ 	<record id="crm_opportunity_report_view_search"
+		model="ir.ui.view">
+		<field name="name">crm.opportunity.report.select</field>
+		<field name="model">crm.lead</field>
+		<field name="inherit_id"
+			ref="crm.crm_opportunity_report_view_search" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='team_id']" position="after">
+				<field name="crm_team_region_id" />
+			</xpath>
+			<xpath expr="//group[@expand='1']/filter[2]" position="after">
+				<filter string="Sales Region" name="grp_sales_region"
+					context="{'group_by':'crm_team_region_id'}" />
+			</xpath>
+		</field>
+	</record>
+</odoo>

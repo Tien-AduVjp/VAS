@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="project_task_view_form" model="ir.ui.view">
+       <field name="name">project.task.form</field>
+       <field name="model">project.task</field>
+       <field name="inherit_id" ref="project.view_task_form2"/>
+       <field name="arch" type="xml">
+           	<xpath expr="//button[@name='action_assign_to_me']" position="after">
+           		<button name="action_tickets_view" string="Create Ticket" type="object" class="oe_read_only"
+           				attrs="{'invisible': [('active', '=', False)]}"
+						context="{'create_new_ticket': True}"
+						groups="project.group_project_user"/>
+           		<button name="%(viin_helpdesk_timesheet.action_task2ticket)d" string="Convert to Ticket" type="action" help="Convert to Ticket"
+        		        attrs="{'invisible': [('active', '=', False)]}"
+        		        groups="project.group_project_user"/>
+           	</xpath>
+           	<xpath expr="//button[@name='action_subtask']" position="before">
+           		<button class="oe_stat_button" name="action_tickets_view" type="object" icon="fa-file-text-o">
+           			<field string="Tickets" name="tickets_count" widget="statinfo"/>
+                </button>
+           	</xpath>
+        </field>
+    </record>
+</odoo>

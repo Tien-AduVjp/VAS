@@ -1,0 +1,32 @@
+<odoo>
+	<record id="view_currency_rate_tree" model="ir.ui.view">
+		<field name="name">res.currency.rate.tree</field>
+		<field name="model">res.currency.rate</field>
+		<field name="inherit_id" ref="base.view_currency_rate_tree" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='name']" position="after">
+				<field name="bank_id" />
+				<field name="exchange_type" />
+			</xpath>
+		</field>
+	</record>
+
+	<record id="view_currency_rate_search" model="ir.ui.view">
+		<field name="name">res.currency.rate.search</field>
+		<field name="model">res.currency.rate</field>
+		<field name="inherit_id" ref="to_currency_rate.view_currency_rate_search" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='name']" position="after">
+				<field name="bank_id" />
+				<field name="exchange_type" />
+			</xpath>
+			<xpath expr="//group/filter[@name='grp_name_day']"
+				position="after">
+				<filter name="grp_bank" string="Bank"
+					context="{'group_by':'bank_id'}" />
+				<filter name="grp_exchange_type" string="Exchange Type"
+					context="{'group_by':'exchange_type'}" />
+			</xpath>
+		</field>
+	</record>
+</odoo>

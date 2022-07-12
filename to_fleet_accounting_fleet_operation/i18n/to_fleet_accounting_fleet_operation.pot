@@ -1,0 +1,270 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_fleet_accounting_fleet_operation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-29 10:52+0000\n"
+"PO-Revision-Date: 2022-06-29 10:52+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model,name:to_fleet_accounting_fleet_operation.model_account_analytic_line
+msgid "Analytic Line"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation.view_trip_fleet_vehicle_cost_invoicing_wizard
+msgid "Cancel"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation.view_trip_fleet_vehicle_cost_invoicing_wizard
+msgid "Costs to Invoice"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation.view_trip_fleet_vehicle_cost_invoicing_wizard
+msgid "Create Invoices"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation.view_trip_fleet_vehicle_cost_invoicing_wizard
+msgid "Create and View Invoices"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_trip_invoicing_cost_wizard__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_trip_invoicing_cost_wizard__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_account_analytic_line__display_name
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_fleet_trips_analysis__display_name
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_fleet_vehicle_log_services__display_name
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_fleet_vehicle_trip__display_name
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_trip_invoicing_cost_wizard__display_name
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_vehicle_log_services_distribution_line__display_name
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_vehicle_trip_register_cost_wizard__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation.fleet_trip_search
+msgid "Filter trips whose services have been fully invoiced."
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation.fleet_trip_search
+msgid "Filter trips whose services have not been fully invoiced."
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model,name:to_fleet_accounting_fleet_operation.model_fleet_vehicle_trip
+msgid "Fleet Trip"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model,name:to_fleet_accounting_fleet_operation.model_fleet_trips_analysis
+msgid "Fleet Trips Analysis"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_account_analytic_line__id
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_account_move_line__id
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_fleet_trips_analysis__id
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_fleet_vehicle_log_services__id
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_fleet_vehicle_trip__id
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_trip_invoicing_cost_wizard__id
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_vehicle_log_services_distribution_line__id
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_vehicle_trip_register_cost_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.actions.act_window,name:to_fleet_accounting_fleet_operation.action_trip_fleet_vehicle_cost_invoicing_wizard
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation.view_trip_fleet_vehicle_cost_invoicing_wizard
+msgid "Invoice Trips' Costs"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_vehicle_trip_register_cost_wizard__product_id
+msgid "Invoiceable Product"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation.view_trip_fleet_vehicle_cost_invoicing_wizard
+msgid ""
+"Invoices will be created in draft so that you can review\n"
+"\t\t\t\t\t\tthem before validation."
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model,name:to_fleet_accounting_fleet_operation.model_trip_invoicing_cost_wizard
+msgid "Invoicing Trip's Costs Wizard"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model,name:to_fleet_accounting_fleet_operation.model_account_move_line
+msgid "Journal Item"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_account_analytic_line____last_update
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_account_move_line____last_update
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_fleet_trips_analysis____last_update
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_fleet_vehicle_log_services____last_update
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_fleet_vehicle_trip____last_update
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_trip_invoicing_cost_wizard____last_update
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_vehicle_log_services_distribution_line____last_update
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_vehicle_trip_register_cost_wizard____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_trip_invoicing_cost_wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_trip_invoicing_cost_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_fleet_vehicle_trip__services_invoiced
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation.fleet_trip_search
+msgid "Services Invoiced"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation.fleet_trip_search
+msgid "Services Uninvoiced"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model,name:to_fleet_accounting_fleet_operation.model_fleet_vehicle_log_services
+msgid "Services for vehicles"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_trip_invoicing_cost_wizard__vehicle_service_ids
+msgid "Services to Invoice"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation.fleet_trip_form
+msgid "Show all vendor bills that have been issued for this trip"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,help:to_fleet_accounting_fleet_operation.field_vehicle_trip_register_cost_wizard__product_id
+msgid "The product that will be used when invoicing this cost"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,help:to_fleet_accounting_fleet_operation.field_trip_invoicing_cost_wizard__vehicle_service_ids
+msgid ""
+"The services having a vendor but have not been invoiced will be loaded here "
+"upon you change the trip(s)"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,help:to_fleet_accounting_fleet_operation.field_vehicle_log_services_distribution_line__trip_id
+msgid "The trip on which this amount is registered"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,help:to_fleet_accounting_fleet_operation.field_account_analytic_line__trip_id
+msgid "The trip that relates to this analytic line"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,help:to_fleet_accounting_fleet_operation.field_account_move_line__trip_id
+msgid "The trip that relates to this journal item"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: code:addons/to_fleet_accounting_fleet_operation/wizard/vehicle_trip_register_cost_wizard.py:0
+#, python-format
+msgid ""
+"There is a discrepancy between the product (%s) you selected and the product"
+" (%s) predefined for the service type %s"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,help:to_fleet_accounting_fleet_operation.field_fleet_vehicle_trip__services_invoiced
+msgid ""
+"This technical field is to indicate if all the trip's services have been "
+"fully invoiced. Note: this field takes True value when no service is "
+"registered for the trip"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_account_analytic_line__trip_id
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_account_move_line__trip_id
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_vehicle_log_services_distribution_line__trip_id
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation.view_account_analytic_line_filter
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation.view_account_move_line_filter
+msgid "Trip"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_vehicle_log_services_distribution_line__trip_section_id
+msgid "Trip Section"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_vehicle_log_services_distribution_line__trip_waypoint_id
+msgid "Trip Waypoint"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_trip_invoicing_cost_wizard__trip_ids
+msgid "Trips to Invoice"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model,name:to_fleet_accounting_fleet_operation.model_vehicle_log_services_distribution_line
+msgid "Vehicle Service Distribution Line"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model,name:to_fleet_accounting_fleet_operation.model_vehicle_trip_register_cost_wizard
+msgid "Vehicle Trip Register Cost Wizard"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_fleet_vehicle_trip__vendor_invoice_ids
+#: model_terms:ir.ui.view,arch_db:to_fleet_accounting_fleet_operation.fleet_trip_form
+msgid "Vendor Bills"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_fleet_vehicle_trip__vendor_invoices_count
+msgid "Vendor Bills Count"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: model:ir.model.fields,field_description:to_fleet_accounting_fleet_operation.field_fleet_vehicle_log_services__vendor_is_employee
+msgid "Vendor Is Employee"
+msgstr ""
+
+#. module: to_fleet_accounting_fleet_operation
+#: code:addons/to_fleet_accounting_fleet_operation/wizard/trip_invoicing_cost_wizard.py:0
+#, python-format
+msgid "You cannot create invoice the vehicle service of another trip"
+msgstr ""

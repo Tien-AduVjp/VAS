@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="group_mrp_backdate" model="res.groups">
+        <field name="name">Mrp Backdate Operations</field>
+        <field name="category_id" ref="base.module_category_manufacturing_manufacturing" />
+        <field name="implied_ids" eval="[(4, ref('mrp.group_mrp_user'))]"/>
+        <field name="comment">The user in this group will be able to do mrp backdate operations.</field>
+    </record>
+
+	<record id="mrp.group_mrp_manager" model="res.groups">
+		<field name="implied_ids" eval="[(4, ref('group_mrp_backdate'))]" />
+	</record>
+</odoo>

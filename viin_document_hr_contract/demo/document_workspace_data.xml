@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+
+    <record id="document_workspace_hr_contract_administration_demo" model="document.workspace">
+        <field name="name">Administration</field>
+        <field name="parent_id" ref="document_workspace_hr_contract"/>
+        <field name="tag_ids" eval="[
+            (4, ref('document_tag_hr_contract_contract')),
+            (4, ref('document_tag_hr_contract_running')),
+            (4, ref('document_tag_hr_contract_expired')),
+            (4, ref('document_tag_hr_contract_cancel')),
+            (4, ref('viin_document.document_tag_to_review')),
+            (4, ref('viin_document.document_tag_approve')),
+            (4, ref('viin_document.document_tag_deprecate'))]"/>
+        <field name="read_team_ids" eval="[(4, ref('document_team_hr_contract'))]"/>
+        <field name="write_group_ids" eval="[(4, ref('hr.group_hr_manager'))]"/>
+        <field name="read_group_ids" eval="[(4, ref('hr.group_hr_user'))]"/>
+        <field name="action_ids" eval="[
+            (4, ref('document_action_hr_contract_running')),
+            (4, ref('document_action_hr_contract_expired')),
+            (4, ref('viin_document.document_action_ask_to_review')),
+            (4, ref('viin_document.document_action_approve'))]"/>
+    </record>
+
+</odoo>

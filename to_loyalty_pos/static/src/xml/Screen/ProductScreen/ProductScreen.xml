@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="ProductScreen" t-inherit="point_of_sale.ProductScreen" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('subpads')]" position="before">
+            <t t-if="applyLoyaltyProgram">
+                <button class="button-rewards set-rewards" t-on-click="trigger('click-rewards')" t-att-class="{'selected-mode': hasRewards, 'disable-mode': !hasCustomer}">
+                    <i class='fa fa-star' />
+                    Rewards
+                </button>
+            </t>
+        </xpath>
+    </t>
+</templates>

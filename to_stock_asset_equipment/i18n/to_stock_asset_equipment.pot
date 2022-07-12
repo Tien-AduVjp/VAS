@@ -1,0 +1,175 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_stock_asset_equipment
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-14 09:05+0000\n"
+"PO-Revision-Date: 2021-10-14 09:05+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_stock_asset_equipment
+#: model:ir.model.fields,help:to_stock_asset_equipment.field_stock_picking__can_assign_equipment
+msgid "A technical field to show/hide assignment info."
+msgstr ""
+
+#. module: to_stock_asset_equipment
+#: model:ir.model.fields,field_description:to_stock_asset_equipment.field_maintenance_equipment__asset_status
+msgid "Asset Status"
+msgstr ""
+
+#. module: to_stock_asset_equipment
+#: model:ir.model,name:to_stock_asset_equipment.model_account_asset_asset
+msgid "Asset/Revenue Recognition"
+msgstr ""
+
+#. module: to_stock_asset_equipment
+#: model:ir.model,name:to_stock_asset_equipment.model_asset_asset_report
+msgid "Assets Analysis"
+msgstr ""
+
+#. module: to_stock_asset_equipment
+#: model:ir.model.fields,field_description:to_stock_asset_equipment.field_stock_picking__can_assign_equipment
+msgid "Can Assign Equipment"
+msgstr ""
+
+#. module: to_stock_asset_equipment
+#: model:ir.model.fields.selection,name:to_stock_asset_equipment.selection__maintenance_equipment__asset_status__close
+msgid "Close"
+msgstr ""
+
+#. module: to_stock_asset_equipment
+#: model:ir.model.fields,field_description:to_stock_asset_equipment.field_asset_asset_report__department_id
+#: model:ir.model.fields,field_description:to_stock_asset_equipment.field_stock_move_line__department_id
+#: model:ir.model.fields.selection,name:to_stock_asset_equipment.selection__stock_move_line__asset_assign_to__department
+#: model_terms:ir.ui.view,arch_db:to_stock_asset_equipment.asset_asset_report_search_view_inherited
+#: model_terms:ir.ui.view,arch_db:to_stock_asset_equipment.view_stock_move_line_detailed_operation_tree
+msgid "Department"
+msgstr ""
+
+#. module: to_stock_asset_equipment
+#: model:ir.model.fields,field_description:to_stock_asset_equipment.field_account_asset_asset__display_name
+#: model:ir.model.fields,field_description:to_stock_asset_equipment.field_account_move__display_name
+#: model:ir.model.fields,field_description:to_stock_asset_equipment.field_asset_asset_report__display_name
+#: model:ir.model.fields,field_description:to_stock_asset_equipment.field_maintenance_equipment__display_name
+#: model:ir.model.fields,field_description:to_stock_asset_equipment.field_stock_move__display_name
+#: model:ir.model.fields,field_description:to_stock_asset_equipment.field_stock_move_line__display_name
+#: model:ir.model.fields,field_description:to_stock_asset_equipment.field_stock_picking__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: to_stock_asset_equipment
+#: model:ir.model.fields.selection,name:to_stock_asset_equipment.selection__maintenance_equipment__asset_status__disposed
+msgid "Disposed"
+msgstr ""
+
+#. module: to_stock_asset_equipment
+#: model:ir.model.fields.selection,name:to_stock_asset_equipment.selection__maintenance_equipment__asset_status__draft
+msgid "Draft"
+msgstr ""
+
+#. module: to_stock_asset_equipment
+#: model:ir.model.fields,field_description:to_stock_asset_equipment.field_asset_asset_report__employee_id
+#: model:ir.model.fields,field_description:to_stock_asset_equipment.field_stock_move_line__employee_id
+#: model:ir.model.fields.selection,name:to_stock_asset_equipment.selection__stock_move_line__asset_assign_to__employee
+#: model_terms:ir.ui.view,arch_db:to_stock_asset_equipment.asset_asset_report_search_view_inherited
+#: model_terms:ir.ui.view,arch_db:to_stock_asset_equipment.view_stock_move_line_detailed_operation_tree
+msgid "Employee"
+msgstr ""
+
+#. module: to_stock_asset_equipment
+#: model:ir.model.fields,field_description:to_stock_asset_equipment.field_account_asset_asset__equipment_id
+#: model:ir.model.fields,field_description:to_stock_asset_equipment.field_asset_asset_report__equipment_id
+#: model_terms:ir.ui.view,arch_db:to_stock_asset_equipment.asset_asset_report_search_view_inherited
+msgid "Equipment"
+msgstr ""
+
+#. module: to_stock_asset_equipment
+#: code:addons/to_stock_asset_equipment/models/account_asset_asset.py:0
+#, python-format
+msgid "Equipment \"%s\" for asset exists."
+msgstr ""
+
+#. module: to_stock_asset_equipment
+#: model:ir.model.fields,field_description:to_stock_asset_equipment.field_account_asset_asset__id
+#: model:ir.model.fields,field_description:to_stock_asset_equipment.field_account_move__id
+#: model:ir.model.fields,field_description:to_stock_asset_equipment.field_asset_asset_report__id
+#: model:ir.model.fields,field_description:to_stock_asset_equipment.field_maintenance_equipment__id
+#: model:ir.model.fields,field_description:to_stock_asset_equipment.field_stock_move__id
+#: model:ir.model.fields,field_description:to_stock_asset_equipment.field_stock_move_line__id
+#: model:ir.model.fields,field_description:to_stock_asset_equipment.field_stock_picking__id
+msgid "ID"
+msgstr ""
+
+#. module: to_stock_asset_equipment
+#: model:ir.model,name:to_stock_asset_equipment.model_account_move
+msgid "Journal Entry"
+msgstr ""
+
+#. module: to_stock_asset_equipment
+#: model:ir.model.fields,field_description:to_stock_asset_equipment.field_account_asset_asset____last_update
+#: model:ir.model.fields,field_description:to_stock_asset_equipment.field_account_move____last_update
+#: model:ir.model.fields,field_description:to_stock_asset_equipment.field_asset_asset_report____last_update
+#: model:ir.model.fields,field_description:to_stock_asset_equipment.field_maintenance_equipment____last_update
+#: model:ir.model.fields,field_description:to_stock_asset_equipment.field_stock_move____last_update
+#: model:ir.model.fields,field_description:to_stock_asset_equipment.field_stock_move_line____last_update
+#: model:ir.model.fields,field_description:to_stock_asset_equipment.field_stock_picking____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: to_stock_asset_equipment
+#: model:ir.model,name:to_stock_asset_equipment.model_maintenance_equipment
+msgid "Maintenance Equipment"
+msgstr ""
+
+#. module: to_stock_asset_equipment
+#: model:ir.model.fields.selection,name:to_stock_asset_equipment.selection__stock_move_line__asset_assign_to__other
+msgid "Other"
+msgstr ""
+
+#. module: to_stock_asset_equipment
+#: model:ir.model,name:to_stock_asset_equipment.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr ""
+
+#. module: to_stock_asset_equipment
+#: model:ir.model.fields.selection,name:to_stock_asset_equipment.selection__maintenance_equipment__asset_status__open
+msgid "Running"
+msgstr ""
+
+#. module: to_stock_asset_equipment
+#: model:ir.model.fields.selection,name:to_stock_asset_equipment.selection__maintenance_equipment__asset_status__sold
+msgid "Sold"
+msgstr ""
+
+#. module: to_stock_asset_equipment
+#: model:ir.model,name:to_stock_asset_equipment.model_stock_move
+msgid "Stock Move"
+msgstr ""
+
+#. module: to_stock_asset_equipment
+#: model:ir.model.fields.selection,name:to_stock_asset_equipment.selection__maintenance_equipment__asset_status__stock_in
+msgid "Stock-In"
+msgstr ""
+
+#. module: to_stock_asset_equipment
+#: model:ir.model.fields,help:to_stock_asset_equipment.field_account_asset_asset__equipment_id
+msgid "The Equipment that refers to this lot for equipment movement tracking."
+msgstr ""
+
+#. module: to_stock_asset_equipment
+#: model:ir.model,name:to_stock_asset_equipment.model_stock_picking
+msgid "Transfer"
+msgstr ""
+
+#. module: to_stock_asset_equipment
+#: model:ir.model.fields,field_description:to_stock_asset_equipment.field_stock_move_line__asset_assign_to
+msgid "Used By"
+msgstr ""

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="odoo_version_form_view">
+			<field name="name">odoo_version.form</field>
+			<field name="model">odoo.version</field>
+			<field name="arch" type="xml">
+				<form string="Odoo Version Form">
+					<header>
+						<button name="%(launch_version_config_from_file_wizard)d"
+							type="action" string="Upload Config File" class="btn btn-primary"
+							groups="to_config_management.group_manager" />
+					</header>
+					<sheet>
+						<div class="oe_button_box" name="button_box"></div>
+						<div class="oe_title">
+							<h1>
+								<field name="name" />
+							</h1>
+						</div>
+						<group>
+							<group>
+								<field name="recommended" />
+								<field name="description" />
+							</group>
+							<group>
+								<field name="release_date" />
+								<field name="end_of_functional_support" />
+								<field name="end_of_life" />
+							</group>
+						</group>
+						<notebook>
+							<page name="default_config"
+								string="Default Config Directives">
+								<field name="config_ids">
+									<tree name="config_ids" editable="bottom">
+										<field name="section_id" required="1"
+											options="{'no_create':True}" />
+										<field name="name" />
+										<field name="value" />
+									</tree>
+								</field>
+							</page>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids"   />
+						<field name="message_ids"  />
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="odoo_version_tree_view">
+			<field name="name">os.version.tree</field>
+			<field name="model">odoo.version</field>
+			<field name="arch" type="xml">
+				<tree string="Odoo Versions Tree">
+					<field name="name" />
+					<field name="release_date" />
+					<field name="end_of_functional_support" />
+					<field name="end_of_life" />
+					<field name="description" />
+					<field name="recommended" widget="boolean_toggle" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="odoo_version_search_view">
+			<field name="name">odoo_version.search</field>
+			<field name="model">odoo.version</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" />
+				</search>
+			</field>
+		</record>
+
+
+		<record model="ir.actions.act_window" id="odoo_version_action">
+			<field name="name">Odoo Version</field>
+			<field name="res_model">odoo.version</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create a new Odoo version</p>
+			</field>
+		</record>
+
+	</data>
+</odoo>
+

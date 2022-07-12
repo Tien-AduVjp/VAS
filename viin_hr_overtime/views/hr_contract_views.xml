@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record model="ir.ui.view" id="hr_contract_view_form">
+		<field name="name">hr.contract.form</field>
+		<field name="model">hr.contract</field>
+		<field name="inherit_id" ref="hr_contract.hr_contract_view_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//header" position="after">
+				<div
+					attrs="{'invisible':[('mismatched_overtime_plan_ids','=',[])]}"
+					class="alert alert-danger border-0 rounded-0" role="status">
+					There are some overtime plans that mismatch this contract period.
+					Click the link here resolve them as soon as possible!
+					<button string="View mismatch overtime plans"
+						class="btn btn-link" type="object"
+						name="action_view_mismatched_overtime_plans" />
+				</div>
+			</xpath>
+			<xpath expr="//div[@name='button_box']" position="inside">
+				<button name="action_view_overtime_plans" type="object"
+					groups="viin_hr_overtime.group_overtime_officer"
+					class="oe_stat_button" icon="fa-clock-o">
+					<field name="overtime_plans_count" widget="statinfo"
+						string="OT Plans" />
+				</button>
+			</xpath>
+			<xpath expr="//div[./field[@name='resource_calendar_id']]"
+				position="after">
+				<field name="mismatched_overtime_plan_ids" invisible="1" />
+				<field name="overtime_recognition_mode" />
+			</xpath>
+			<xpath expr="//div[./field[@name='wage']]" position="after">
+				<label for="overtime_base_mode" />
+				<div class="o_row" name="overtime_base_mode">
+					<field name="overtime_base_mode" nolabel="1" />
+				</div>
+				<label for="overtime_base_amount" />
+				<div class="o_row" name="overtime_base_amount">
+					<field name="overtime_base_amount" force_save="1"
+						attrs="{'readonly':[('overtime_base_mode','!=','manual')],'required':[('overtime_base_mode','=','manual')]}" />
+					<span>/ month</span>
+				</div>
+			</xpath>
+		</field>
+	</record>
+</odoo>

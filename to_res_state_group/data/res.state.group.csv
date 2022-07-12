@@ -1,0 +1,67 @@
+id,name,country_id:id,parent_id:id,state_ids/id
+state_1,Northern Vietnam,base.vn,,
+state_2,Central Vietnam,base.vn,,
+state_3,Southern Vietnam,base.vn,,
+state_group_1,Northwest,base.vn,to_res_state_group.state_1,base.state_vn_VN-71
+,,,,base.state_vn_VN-14
+,,,,base.state_vn_VN-01
+,,,,base.state_vn_VN-02
+,,,,base.state_vn_VN-05
+,,,,base.state_vn_VN-06
+state_group_2,Northest,base.vn,to_res_state_group.state_1,base.state_vn_VN-54
+,,,,base.state_vn_VN-53
+,,,,base.state_vn_VN-04
+,,,,base.state_vn_VN-03
+,,,,base.state_vn_VN-09
+,,,,base.state_vn_VN-68
+,,,,base.state_vn_VN-13
+,,,,base.state_vn_VN-69
+,,,,base.state_vn_VN-07
+state_group_3,Red River Delta,base.vn,to_res_state_group.state_1,base.state_vn_VN-56
+,,,,base.state_vn_VN-63
+,,,,base.state_vn_VN-HN
+,,,,base.state_vn_VN-61
+,,,,base.state_vn_VN-HP
+,,,,base.state_vn_VN-66
+,,,,base.state_vn_VN-67
+,,,,base.state_vn_VN-18
+,,,,base.state_vn_VN-20
+,,,,base.state_vn_VN-70
+state_group_4,North Central,base.vn,to_res_state_group.state_2,base.state_vn_VN-23
+,,,,base.state_vn_VN-22
+,,,,base.state_vn_VN-24
+,,,,base.state_vn_VN-25
+,,,,base.state_vn_VN-21
+,,,,base.state_vn_VN-26
+state_group_5,South Central Coast,base.vn,to_res_state_group.state_2,base.state_vn_VN-31
+,,,,base.state_vn_VN-40
+,,,,base.state_vn_VN-DN
+,,,,base.state_vn_VN-34
+,,,,base.state_vn_VN-36
+,,,,base.state_vn_VN-32
+,,,,base.state_vn_VN-27
+,,,,base.state_vn_VN-29
+state_group_6,Central Highlands,base.vn,to_res_state_group.state_2,base.state_vn_VN-33
+,,,,base.state_vn_VN-72
+,,,,base.state_vn_VN-30
+,,,,base.state_vn_VN-28
+,,,,base.state_vn_VN-35
+state_group_7,Southeast,base.vn,to_res_state_group.state_3,base.state_vn_VN-43
+,,,,base.state_vn_VN-57
+,,,,base.state_vn_VN-58
+,,,,base.state_vn_VN-39
+,,,,base.state_vn_VN-SG
+,,,,base.state_vn_VN-37
+state_group_8,Mekong River Delta,base.vn,to_res_state_group.state_3,base.state_vn_VN-44
+,,,,base.state_vn_VN-50
+,,,,base.state_vn_VN-55
+,,,,base.state_vn_VN-59
+,,,,base.state_vn_VN-CT
+,,,,base.state_vn_VN-45
+,,,,base.state_vn_VN-73
+,,,,base.state_vn_VN-47
+,,,,base.state_vn_VN-41
+,,,,base.state_vn_VN-52
+,,,,base.state_vn_VN-46
+,,,,base.state_vn_VN-51
+,,,,base.state_vn_VN-49

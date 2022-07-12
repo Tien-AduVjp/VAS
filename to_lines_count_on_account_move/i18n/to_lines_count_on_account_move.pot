@@ -1,0 +1,60 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_lines_count_on_account_move
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-22 07:57+0000\n"
+"PO-Revision-Date: 2021-11-22 07:57+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_lines_count_on_account_move
+#: model:ir.model.fields,field_description:to_lines_count_on_account_move.field_account_move__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: to_lines_count_on_account_move
+#: model:ir.model.fields,field_description:to_lines_count_on_account_move.field_account_move__id
+msgid "ID"
+msgstr ""
+
+#. module: to_lines_count_on_account_move
+#: model:ir.model,name:to_lines_count_on_account_move.model_account_move
+msgid "Journal Entry"
+msgstr ""
+
+#. module: to_lines_count_on_account_move
+#: model:ir.model.fields,field_description:to_lines_count_on_account_move.field_account_bank_statement_line__lines_count
+#: model:ir.model.fields,field_description:to_lines_count_on_account_move.field_account_move__lines_count
+#: model:ir.model.fields,field_description:to_lines_count_on_account_move.field_account_payment__lines_count
+msgid "Journal Items Count"
+msgstr ""
+
+#. module: to_lines_count_on_account_move
+#: model_terms:ir.ui.view,arch_db:to_lines_count_on_account_move.view_account_move_filter
+msgid "Large Entries"
+msgstr ""
+
+#. module: to_lines_count_on_account_move
+#: model:ir.model.fields,field_description:to_lines_count_on_account_move.field_account_move____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: to_lines_count_on_account_move
+#: code:addons/to_lines_count_on_account_move/models/account_move.py:0
+#, python-format
+msgid "Unsupported operator"
+msgstr ""
+
+#. module: to_lines_count_on_account_move
+#: model_terms:ir.ui.view,arch_db:to_lines_count_on_account_move.view_account_move_filter
+msgid "Show Journal Entries having more than 100 journal items"
+msgstr ""
+

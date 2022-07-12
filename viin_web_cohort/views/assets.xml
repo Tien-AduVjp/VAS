@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="assets_backend" name="cohort assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/viin_web_cohort/static/src/js/viin_cohort_model.js" />
+            <script type="text/javascript" src="/viin_web_cohort/static/src/js/viin_cohort_renderer.js" />
+            <script type="text/javascript" src="/viin_web_cohort/static/src/js/viin_cohort_controller.js" />
+            <script type="text/javascript" src="/viin_web_cohort/static/src/js/viin_cohort_view.js" />
+            <link rel="stylesheet" type="text/scss" href="/viin_web_cohort/static/src/scss/viin_web_cohort.scss" />
+        </xpath>
+    </template>
+
+    <template id="qunit_suite" name="viiin web cohort tests" inherit_id="web.qunit_suite_tests">
+        <xpath expr="//script[last()]" position="after">
+            <script type="text/javascript" src="/viin_web_cohort/static/tests/helpers/test_utils_mock.js"/>
+            <script type="text/javascript" src="/viin_web_cohort/static/tests/helpers/test_utils_create.js"/>
+            <script type="text/javascript" src="/viin_web_cohort/static/tests/helpers/test_utils.js"/>
+            <script type="text/javascript" src="/viin_web_cohort/static/tests/helpers/sample_cohort_data.js"/>
+            <script type="text/javascript" src="/viin_web_cohort/static/tests/viin_cohort_test.js"/>
+        </xpath>
+    </template>
+
+</odoo>

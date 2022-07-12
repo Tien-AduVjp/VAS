@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="employee_document_form">
+			<field name="name">employee.document.form</field>
+			<field name="model">employee.document</field>
+			<field name="arch" type="xml">
+				<form string="Employee Document Form">
+					<header>
+						<button name="action_return_to_owner" string="Return to owner"
+							groups="hr.group_hr_user"
+							type="object" class="oe_highlight" help="This document is being kept by the company. Click here to set it back to the owner to keep."
+							attrs="{'invisible':['|', ('return_upon_termination', '=', False), ('kept_by','=','employee')]}"/>
+					</header>
+					<sheet>
+						<div class="oe_title">
+							<h1>
+								<field name="name" placeholder="Document number..." />
+							</h1>
+						</div>
+						<group>
+							<group>
+								<field name="type_id" placeholder="Document Type" />
+								<field name="kept_by" />
+								<field name="return_upon_termination"
+									   attrs="{'invisible':[('kept_by','=','employee')]}"/>
+								<field name="employee_id" />
+								<field name="user_id" />
+							</group>
+							<group>
+								<field name="issued_by" />
+								<field name="place_of_issue" />
+								<field name="issue_date" />
+								<field name="expire_date" />
+								<field name="days_to_notify"
+									attrs="{'invisible':[('expire_date','=',False)]}" />
+								<field name="date_to_notify"
+									attrs="{'invisible':[('expire_date','=',False)]}"
+									groups="base.group_no_one" />
+							</group>
+						</group>
+						<notebook>
+							<page name="scanned_docs" string="Scanned Docs">
+								<group>
+									<group>
+										<field name="image1" widget="image" nolabel="1" />
+									</group>
+									<group>
+										<field name="image2" widget="image" nolabel="1" />
+									</group>
+								</group>
+								<field name="pdf" widget="pdf_viewer" />
+							</page>
+							<page name="note" string="Notes">
+								<field name="notes" />
+							</page>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids"/>
+						<field name="activity_ids"/>
+						<field name="message_ids"/>
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="employee_document_tree">
+			<field name="name">employee.document.tree</field>
+			<field name="model">employee.document</field>
+			<field name="arch" type="xml">
+				<tree string="Employee Document Tree">
+					<field name="name" />
+					<field name="employee_id" />
+					<field name="type_id" />
+					<field name="expire_date" />
+					<field name="days_to_notify" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="employee_document_search">
+			<field name="name">employee.document.search</field>
+			<field name="model">employee.document</field>
+			<field name="arch" type="xml">
+				<search string="Search Employee">
+					<field name="name" />
+					<separator />
+					<field name="type_id" />
+					<separator />
+					<field name="employee_id" />
+					<separator />
+					<field name="issue_date" />
+					<field name="expire_date" />
+					<separator />
+					<filter name="ftr_non_expired" string="Non-Expiring"
+						domain="[('expire_date','=',False)]" />
+					<filter name="ftr_expired" string="Expired"
+						domain="[('expire_date','!=',False),('expire_date','&lt;=', datetime.datetime.combine(context_today(), datetime.time(0,0,0)))]" />
+					<filter name="ftr_expired" string="Expired Today"
+						domain="[('expire_date','!=',False),('expire_date','&gt;', datetime.datetime.combine(context_today(), datetime.time(0,0,0))),('expire_date','&lt;=', datetime.datetime.combine(context_today(), datetime.time(23,59,59.99999)))]" />
+					<filter name="ftr_expire_in_7days" string="Expire in 7 Days"
+						domain="[('expire_date','!=',False), ('expire_date','&gt;', datetime.datetime.combine(context_today(), datetime.time(0,0,0))), ('expire_date','&lt;=', ((context_today()+datetime.timedelta(days=7)).strftime('%Y-%m-%d')))]" />
+					<filter name="ftr_expire_in_30days"
+						string="Expire in 30 Days"
+						domain="[('expire_date','!=',False), ('expire_date','&gt;', datetime.datetime.combine(context_today(), datetime.time(0,0,0))), ('expire_date','&lt;=', ((context_today()+datetime.timedelta(days=30)).strftime('%Y-%m-%d')))]" />
+					<separator />
+					<filter name="ftr_has_scanned_doc" string="With Scanned Docs"
+						domain="[('has_scanned_doc','=',True)]" />
+					<filter name="ftr_no_scanned_doc" string="Without Scanned Docs"
+						domain="[('has_scanned_doc','=',False)]" />
+					<separator />
+					<filter name="ftr_national_id" string="National ID"
+						domain="[('type_id.type','=','national_id')]" />
+					<filter name="ftr_passport" string="Passport"
+						domain="[('type_id.type','=','passport')]" />
+					<filter name="ftr_hr_contract" string="Labor Contract"
+						domain="[('type_id.type','=','hr_contract')]" />
+					<filter name="ftr_other" string="Others"
+						domain="[('type_id.type','=','others')]" />
+					<separator />
+					<group string="Group By">
+						<filter name="grp_employee_id" string="Employee"
+							context="{'group_by': 'employee_id'}" />
+						<filter name="grp_type_id" string="Type"
+							context="{'group_by': 'type_id'}" />
+						<filter name="grp_issue_date" string="Issue Date"
+							context="{'group_by': 'issue_date'}" />
+						<filter name="grp_expire_date" string="Expiration Date"
+							context="{'group_by': 'expire_date'}" />
+					</group>
+				</search>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window"
+			id="action_employee_document">
+			<field name="name">Employee Document</field>
+			<field name="res_model">employee.document</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<record model="ir.actions.act_window"
+			id="action_employee_document_context">
+			<field name="name">Employee Document</field>
+			<field name="res_model">employee.document</field>
+			<field name="view_mode">tree,form</field>
+			<field name="search_view_id" ref="employee_document_search" />
+			<field name="context">{'search_default_employee_id': active_id, 'default_employee_id': active_id}</field>
+		</record>
+
+		<menuitem id="employee_document_menu"
+			name="Employee Documents" parent="hr.menu_hr_root"
+			groups="base.group_user" action="action_employee_document" />
+	</data>
+</odoo>

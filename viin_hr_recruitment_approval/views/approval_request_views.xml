@@ -1,0 +1,43 @@
+<odoo>
+    <record id="approval_request_view_form" model="ir.ui.view">
+        <field name="name">approval.request.form</field>
+        <field name="model">approval.request</field>
+        <field name="inherit_id" ref="to_approvals.approval_request_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='description']" position="after">
+                <group string="Recruitment Details" attrs="{'invisible': [('type', '!=', 'recruitment')]}">
+                      <group>
+                          <field name="can_change_demand_dept" invisible="1" />
+                          <field name="demand_department_id" attrs="{'readonly': ['|', ('can_change_demand_dept', '=', False), ('state', '!=', 'draft')], 'required': [('type', '=', 'recruitment')]}" />
+                          <field name="job_id" attrs="{'required': [('type', '=', 'recruitment')]}"/>
+                          <field name="job_tmp" invisible="1"/>
+                          <field name="employees_count" />
+                          <field name="recruited_employees" widget="progressbar"/>
+                      </group>
+                      <group>
+                          <field name="expected_employees" attrs="{'required': [('type', '=', 'recruitment')]}" />
+                          <field name="date_expected" attrs="{'required': [('type', '=', 'recruitment')]}" />
+                      </group>
+                </group>
+            </xpath>
+			<xpath expr="//page[@name='approval_user']" position="before">
+				<page string="Information" attrs="{'invisible': [('type', '!=', 'recruitment')]}">
+					<label for="description_job" />
+					<field name="description_job" attrs="{'required': [('type', '=', 'recruitment')]}" />
+					<label for="requirements" />
+					<field name="requirements" attrs="{'required': [('type', '=', 'recruitment')]}" />
+				</page>
+				<page string="Applicants" attrs="{'invisible': [('type', '!=', 'recruitment')]}">
+					<field name="applicant_ids" />
+				</page>
+				<page string="Recruited Employees" attrs="{'invisible': [('type', '!=', 'recruitment')]}">
+					<field name="employee_ids" />
+				</page>
+			</xpath>
+        </field>
+    </record>
+
+    <menuitem id="to_recruitment_approval_root_menu"
+        name="Recruitment Approvals"
+        parent="hr_recruitment.menu_hr_recruitment_root" sequence="90" />
+</odoo>

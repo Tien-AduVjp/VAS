@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="document_run_manual_rule_wizard_view_form" model="ir.ui.view">
+        <field name="name">document.run.manual.rule.wizard.form</field>
+        <field name="model">document.run.manual.rule.wizard</field>
+        <field name="priority" eval="8" />
+        <field name="arch" type="xml">
+            <form string="Document Run Manual Rule">
+                <p class="oe_grey">
+                    This action will generate documents from missing attachments corresponding to this rule.
+                </p>
+                <field name="rule_id" invisible="1"/>
+                <footer>
+                    <button string="Run Manual" name="action_run_manual" type="object" class="btn-primary" />
+                    <button string="Cancel" class="btn-secondary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="document_run_manual_rule_wizard_view_action" model="ir.actions.act_window">
+         <field name="name">Document Run Manual Rule</field>
+         <field name="res_model">document.run.manual.rule.wizard</field>
+         <field name="type">ir.actions.act_window</field>
+         <field name="view_mode">tree,form</field>
+         <field name="view_id" ref="document_run_manual_rule_wizard_view_form"/>
+         <field name="target">new</field>
+   </record>
+
+</odoo>

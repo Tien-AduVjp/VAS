@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_purchase_order_line_stock_own_document_user,purchase.order.line.stock.user_own_doc,purchase.model_purchase_order_line,to_multi_warehouse_access_control.group_stock_own_document_user,1,0,0,0
+access_purchase_order_stock_own_document_user,purchase.order.stock.user_own_doc,purchase.model_purchase_order,to_multi_warehouse_access_control.group_stock_own_document_user,1,0,0,0
+access_account_move_line_stock_own_document_user,account.move.line.stock.user_own_doc,account.model_account_move_line,to_multi_warehouse_access_control.group_stock_own_document_user,1,0,0,0

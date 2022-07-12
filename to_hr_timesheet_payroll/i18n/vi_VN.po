@@ -1,0 +1,332 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_hr_timesheet_payroll
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-25 04:47+0000\n"
+"PO-Revision-Date: 2021-10-25 04:47+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_hr_timesheet_payroll
+#: model_terms:ir.ui.view,arch_db:to_hr_timesheet_payroll.res_config_settings_view_form
+msgid "<span class=\"o_form_label\">General Overhead</span>"
+msgstr "<span class=\"o_form_label\">Hệ số chi phí</span>"
+
+#. module: to_hr_timesheet_payroll
+#: model:ir.model,name:to_hr_timesheet_payroll.model_account_analytic_line
+msgid "Analytic Line"
+msgstr "Phát sinh KT Quản trị"
+
+#. module: to_hr_timesheet_payroll
+#: model_terms:ir.ui.view,arch_db:to_hr_timesheet_payroll.hr_employee_view_form_inherit_timesheet
+msgid "Calculate Timesheet Cost"
+msgstr "Tính toán chi phí chấm công"
+
+#. module: to_hr_timesheet_payroll
+#: model_terms:ir.ui.view,arch_db:to_hr_timesheet_payroll.update_timesheet_cost_form_view
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: to_hr_timesheet_payroll
+#: model:ir.model,name:to_hr_timesheet_payroll.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: to_hr_timesheet_payroll
+#: model:ir.model,name:to_hr_timesheet_payroll.model_res_config_settings
+msgid "Config Settings"
+msgstr "Thiết lập Cấu hình"
+
+#. module: to_hr_timesheet_payroll
+#: model_terms:ir.ui.view,arch_db:to_hr_timesheet_payroll.update_timesheet_cost_form_view
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: to_hr_timesheet_payroll
+#: model:ir.model,name:to_hr_timesheet_payroll.model_hr_contract
+msgid "Contract"
+msgstr "Hợp đồng"
+
+#. module: to_hr_timesheet_payroll
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_timesheet_cost_update__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: to_hr_timesheet_payroll
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_timesheet_cost_update__create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: to_hr_timesheet_payroll
+#: model:ir.model.fields,help:to_hr_timesheet_payroll.field_hr_job__payroll_timesheet_enabled
+msgid "Default value for contracts of this job position"
+msgstr "Giá trị mặc định cho hợp đồng của vị trí công việc này"
+
+#. module: to_hr_timesheet_payroll
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_account_analytic_line__display_name
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_hr_contract__display_name
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_hr_job__display_name
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_hr_payroll_structure__display_name
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_hr_payslip__display_name
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_res_company__display_name
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_timesheet_cost_update__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_hr_timesheet_payroll
+#: model_terms:ir.ui.view,arch_db:to_hr_timesheet_payroll.update_timesheet_cost_form_view
+msgid "Do you want update time sheet cost?"
+msgstr "Bạn có muốn cập nhật chi phí chấm công?"
+
+#. module: to_hr_timesheet_payroll
+#: model:ir.model,name:to_hr_timesheet_payroll.model_hr_employee
+msgid "Employee"
+msgstr "Nhân viên"
+
+#. module: to_hr_timesheet_payroll
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_res_company__general_overhead
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_res_config_settings__general_overhead
+msgid "General Overhead"
+msgstr "Hệ số chi phí"
+
+#. module: to_hr_timesheet_payroll
+#: model_terms:ir.ui.view,arch_db:to_hr_timesheet_payroll.res_config_settings_view_form
+msgid "General management expense coefficient"
+msgstr "Hệ số chi phí quản lý chung"
+
+#. module: to_hr_timesheet_payroll
+#: code:addons/to_hr_timesheet_payroll/models/res_company.py:0
+#: code:addons/to_hr_timesheet_payroll/models/res_company.py:0
+#: code:addons/to_hr_timesheet_payroll/models/res_company.py:0
+#: model:hr.contribution.category,name:to_hr_timesheet_payroll.hr_contribution_category_timesheet
+#, python-format
+msgid "HR Timesheet"
+msgstr "Chấm công"
+
+#. module: to_hr_timesheet_payroll
+#: code:addons/to_hr_timesheet_payroll/models/res_company.py:0
+#, python-format
+msgid "HR Timesheet Amount"
+msgstr "Tổng tiền Chấm công"
+
+#. module: to_hr_timesheet_payroll
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_account_analytic_line__id
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_hr_contract__id
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_hr_employee__id
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_hr_job__id
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_hr_payroll_structure__id
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_hr_payslip__id
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_res_company__id
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_res_config_settings__id
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_timesheet_cost_update__id
+msgid "ID"
+msgstr ""
+
+#. module: to_hr_timesheet_payroll
+#: model:ir.model.fields,help:to_hr_timesheet_payroll.field_hr_contract__payroll_timesheet_enabled
+msgid ""
+"If enabled, the payslips of this contract will respect timesheet log of the "
+"corresponding employee. Payroll Manager may need to create salary rule(s) to"
+" process employees timesheet data for payslip computation"
+msgstr ""
+"Nếu kích hoạt, phiếu lương liên quan đến hợp đồng này sẽ có quan hệ với nhật ký chấm"
+" công của nhân viên tương ứng. Người Quản lý Lương có thể cần tạo quy tắc "
+"lương để xử lý dữ liệu bảng chấm công của nhân viên để tính toán phiếu lương"
+
+#. module: to_hr_timesheet_payroll
+#: model:ir.model.fields,help:to_hr_timesheet_payroll.field_hr_payroll_structure__update_employee_timesheet_cost
+msgid ""
+"If enabled, upon confirming a payslip, the following will updated to reflect the new computed timesheet cost based on payslip computation:\n"
+"- Employee Timesheet Cost: which is found in employee form view\n"
+"- Total Amount of all timesheet records within the payslip's period."
+msgstr ""
+"Nếu kích hoạt, ngay khi xác nhận phiếu lương, các thông tin sau đây sẽ được cập nhật theo để phản ánh chi phí cho bảng chấm công theo tính toán từ phiếu lương\n"
+"- Chi phí cho Bảng chấm công: trường trên hồ sơ nhân viên\n"
+"- Giá trị chi phí các bản ghi chấm công tương ứng với kỳ tính lương của phiếu lương."
+
+#. module: to_hr_timesheet_payroll
+#: model:ir.model,name:to_hr_timesheet_payroll.model_hr_job
+msgid "Job Position"
+msgstr "Chức vụ"
+
+#. module: to_hr_timesheet_payroll
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_account_analytic_line____last_update
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_hr_contract____last_update
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_hr_job____last_update
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_hr_payroll_structure____last_update
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_hr_payslip____last_update
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_res_company____last_update
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_timesheet_cost_update____last_update
+msgid "Last Modified on"
+msgstr "Sửa đổi lần cuối vào"
+
+#. module: to_hr_timesheet_payroll
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_timesheet_cost_update__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: to_hr_timesheet_payroll
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_timesheet_cost_update__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối"
+
+#. module: to_hr_timesheet_payroll
+#: model_terms:ir.ui.view,arch_db:to_hr_timesheet_payroll.view_hr_payslip_form
+msgid "Load Timesheets"
+msgstr "Cập nhật Chấm công"
+
+#. module: to_hr_timesheet_payroll
+#: model:ir.model,name:to_hr_timesheet_payroll.model_hr_payslip
+msgid "Pay Slip"
+msgstr "Phiếu lương"
+
+#. module: to_hr_timesheet_payroll
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_hr_contract__payroll_timesheet_enabled
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_hr_job__payroll_timesheet_enabled
+msgid "Payroll Timesheet Enabled"
+msgstr "Kích hoạt Bảng chấm công tính lương"
+
+#. module: to_hr_timesheet_payroll
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_timesheet_cost_update__payslip_ids
+msgid "Payslip"
+msgstr "Phiếu lương"
+
+#. module: to_hr_timesheet_payroll
+#: model:ir.model,name:to_hr_timesheet_payroll.model_hr_payroll_structure
+msgid "Salary Structure"
+msgstr "Cấu trúc lương"
+
+#. module: to_hr_timesheet_payroll
+#: model_terms:ir.ui.view,arch_db:to_hr_timesheet_payroll.view_hr_payslip_form
+msgid "Show timesheet logged for this payslip's period"
+msgstr ""
+"Hiển thị các dòng chấm công trong khoảng thời gian của phiếu lương này"
+
+#. module: to_hr_timesheet_payroll
+#: model:ir.model.fields,help:to_hr_timesheet_payroll.field_hr_payslip__timesheet_cost
+msgid ""
+"The cost for timesheet log which is calculated based on the following formula:\n"
+"timesheet_cost = (company_cost / duty_working_hours) * general_overhead * total_timesheet_hours"
+msgstr ""
+
+#. module: to_hr_timesheet_payroll
+#: model_terms:ir.ui.view,arch_db:to_hr_timesheet_payroll.hr_employee_view_form_inherit_timesheet
+msgid ""
+"This action calculate timesheet cost base on its payslip data and update the"
+" result into this field. Are you sure to proceed?"
+msgstr ""
+"Hành động này tính toán chi phí chấm công dựa trên dữ liệu phiếu lương và cập nhật kết quả vào trường này. Bạn có chắc chắn tiếp tục không? "
+
+#. module: to_hr_timesheet_payroll
+#: model_terms:ir.ui.view,arch_db:to_hr_timesheet_payroll.res_config_settings_view_form
+msgid ""
+"This action will update all the existing timesheet cost related to the "
+"payslips of all the employees of the company and the latest timesheet cost "
+"for for employees. Are you sure to proceed?"
+msgstr ""
+"Hành động này sẽ cập nhật tất cả chi phí chấm công hiện có liên quan đến "
+"bảng lương của tất cả nhân viên của công ty và chi phí bảng chấm công mới nhất cho nhân viên. "
+"Bạn có chắc chắn tiếp tục không?"
+
+#. module: to_hr_timesheet_payroll
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_hr_payslip__timesheet_line_ids
+#: model_terms:ir.ui.view,arch_db:to_hr_timesheet_payroll.view_hr_payslip_form
+msgid "Timesheet"
+msgstr "Bảng chấm công"
+
+#. module: to_hr_timesheet_payroll
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_hr_employee__timesheet_cost
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_hr_payslip__timesheet_cost
+msgid "Timesheet Cost"
+msgstr "Chi phí chấm công"
+
+#. module: to_hr_timesheet_payroll
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_hr_payslip__timesheet_lines_count
+msgid "Timesheet Lines Count"
+msgstr "Số lượng dòng chấm công"
+
+#. module: to_hr_timesheet_payroll
+#: model_terms:ir.ui.view,arch_db:to_hr_timesheet_payroll.res_config_settings_view_form
+msgid "Timesheets"
+msgstr "Chấm công"
+
+#. module: to_hr_timesheet_payroll
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_hr_payslip__total_timesheet_hours
+msgid "Total Timesheet Hours"
+msgstr "Tổng số giờ chấm công"
+
+#. module: to_hr_timesheet_payroll
+#: model:ir.model.fields,field_description:to_hr_timesheet_payroll.field_hr_payroll_structure__update_employee_timesheet_cost
+msgid "Update Employee Timesheet Cost"
+msgstr "Cập nhật Chi phí cho Bảng chấm công"
+
+#. module: to_hr_timesheet_payroll
+#: model_terms:ir.ui.view,arch_db:to_hr_timesheet_payroll.res_config_settings_view_form
+msgid "Update Employees Timesheet Cost"
+msgstr "Cập nhật chi phí chấm công nhân viên"
+
+#. module: to_hr_timesheet_payroll
+#: model:ir.actions.act_window,name:to_hr_timesheet_payroll.timesheet_cost_update_action
+msgid "Update Existing Timesheet Cost"
+msgstr "Cập nhật chi phí chấm công tồn tại"
+
+#. module: to_hr_timesheet_payroll
+#: model_terms:ir.ui.view,arch_db:to_hr_timesheet_payroll.update_timesheet_cost_form_view
+msgid "Update timesheet cost"
+msgstr "Cập nhật chi phí chấm công"
+
+#. module: to_hr_timesheet_payroll
+#: model:ir.model,name:to_hr_timesheet_payroll.model_timesheet_cost_update
+msgid "Update timesheet cost of Payslip"
+msgstr "Cập nhật chi phí chấm công của phiếu lương"
+
+#. module: to_hr_timesheet_payroll
+#: code:addons/to_hr_timesheet_payroll/models/hr_timesheet.py:0
+#, python-format
+msgid ""
+"You may not delete timesheet for the period %s - %s while the status of the "
+"corresponding payslip '%s' is neither Draft nor Cancelled. Please ask your "
+"Payroll Managers to set the payslip to either draft or cancelled first."
+msgstr ""
+"Bạn không thể xóa chấm công trong khoảng thời gian %s - %s trong khi trạng "
+"thái của phiếu lương '%s' tương ứng không phải Dự thảo cũng không phải Đã "
+"hủy. Vui lòng liên hệ với người quản lý phiếu lương của bạn để đặt trạng "
+"thái của phiếu lương về dự thảo hoặc đã hủy trước."
+
+#. module: to_hr_timesheet_payroll
+#: code:addons/to_hr_timesheet_payroll/models/hr_timesheet.py:0
+#, python-format
+msgid ""
+"You may not edit timesheet for the period %s - %s while the status of the "
+"corresponding payslip '%s' is neither Draft nor Cancelled. Please ask your "
+"Payroll Managers to set the payslip to either draft or cancelled first."
+msgstr ""
+"Bạn không thể sửa bảng chấm công trong khoảng thời gian %s - %s trong khi "
+"trạng thái của phiếu lương '%s' tương ứng không phải Dự thảo cũng không phải"
+" Đã hủy. Vui lòng liên hệ với người quản lý phiếu lương của bạn để đặt trạng"
+" thái của phiếu lương về dự thảo hoặc đã hủy trước."
+
+#. module: to_hr_timesheet_payroll
+#: code:addons/to_hr_timesheet_payroll/models/hr_timesheet.py:0
+#, python-format
+msgid ""
+"You may not log timesheet for the period %s - %s while the status of the "
+"corresponding payslip '%s' is neither Draft nor Cancelled. Please ask your "
+"Payroll Managers to set the payslip to either draft or cancelled first."
+msgstr ""
+"Bạn không thể chấm công trong khoảng thời gian %s - %s trong khi trạng thái "
+"của phiếu lương '%s' tương ứng không phải Dự thảo cũng không phải Đã hủy. "
+"Vui lòng liên hệ với người quản lý phiếu lương của bạn để đặt trạng thái của"
+" phiếu lương về dự thảo hoặc đã hủy trước."

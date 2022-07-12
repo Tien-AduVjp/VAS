@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<template id="report_payslip" inherit_id="to_hr_payroll.report_payslip">
+			<xpath expr="//table[hasclass('table') and hasclass('table-sm') and hasclass('table-bordered')]"
+				position="after">
+				<t t-if="len(o.vehicle_trip_ids)>0">
+					<h3>Details by Trips</h3>
+					<table class="table table-bordered">
+						<thead>
+							<tr>
+								<th>Vehicle</th>
+								<th>Route</th>
+								<th>Start Date</th>
+								<th>End Date</th>
+								<th>Fuel-Based Job Wage</th>
+								<th>Job Allowance</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr t-foreach="o.vehicle_trip_ids" t-as="trip">
+								<td>
+									<span t-field="trip.vehicle_id" />
+								</td>
+								<td>
+									<span t-field="trip.route_id" />
+								</td>
+								<td>
+									<span t-field="trip.start_date" />
+								</td>
+								<td>
+									<span t-field="trip.end_date" />
+								</td>
+								<td class="text-right">
+									<span t-field="trip.fuel_based_job_wage" />
+								</td>
+								<td class="text-right">
+									<span t-field="trip.job_allowance" />
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center" colspan="4">
+									<strong>Total</strong>
+								</td>
+								<td class="text-right">
+									<strong><span t-field="o.total_job_wage" /></strong>
+								</td>
+								<td class="text-right">
+									<strong><span t-field="o.total_allowance" /></strong>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</t>
+			</xpath>
+		</template>
+	</data>
+</odoo>

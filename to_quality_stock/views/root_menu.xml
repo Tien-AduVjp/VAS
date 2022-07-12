@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<menuitem id="quality_stock_operation_menu" name="Stock Operations"
+	   parent="to_quality.quality_control_menu" sequence="20"
+	   groups="to_quality.group_quality_user" />
+</odoo>

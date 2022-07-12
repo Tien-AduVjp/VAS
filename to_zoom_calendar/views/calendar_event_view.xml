@@ -1,0 +1,75 @@
+<odoo>
+	<data>
+		<record id="view_calendar_event_form" model="ir.ui.view">
+			<field name="name">calendar.event.form</field>
+			<field name="model">calendar.event</field>
+			<field name="inherit_id"
+				ref="calendar.view_calendar_event_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//notebook" position="before">
+					<field name="is_zoom_meeting" groups="to_zoom_calendar.group_user"/>
+					<label for="is_zoom_meeting" groups="to_zoom_calendar.group_user"/>
+				</xpath>
+				<xpath expr="//notebook" position="inside">
+					<page name="page_zoom_meeting" string="Zoom Meeting"
+						attrs="{'invisible': [('is_zoom_meeting', '=', False)]}">
+						<group>
+							<group>
+								<field name="is_owner_zoom" invisible="1" />
+								<field name="zoom_user_id"
+									attrs="{'readonly': [('is_owner_zoom', '=', False)], 'required': [('is_zoom_meeting', '=', True)]}"
+									options="{'no_create': True, 'no_open': True}" />
+								<field name="zoom_type"
+									attrs="{'readonly': [('is_owner_zoom', '=', False)], 'required': [('is_zoom_meeting', '=', True)]}" />
+							</group>
+							<group
+								attrs="{'invisible': [('zoom_meeting_id', '=', False)]}">
+								<field name="zoom_meeting_id" readonly="1"
+									attrs="{'invisible': [('is_owner_zoom', '=', False)]}" />
+								<field name="zoom_meeting_attendee_url" widget="url"
+									readonly="1" />
+								<field name="zoom_meeting_start_url" widget="url"
+									readonly="1"
+									attrs="{'invisible': [('is_owner_zoom', '=', False)]}" />
+							</group>
+						</group>
+						<group>
+							<group>
+								<field name="zoom_setting"
+									attrs="{'readonly': [('is_owner_zoom', '=', False)]}" />
+							</group>
+							<group
+								attrs="{'invisible': [('zoom_setting', '=', False)]}">
+								<field name="zoom_setting_join_before_host"
+									attrs="{'readonly': [('is_owner_zoom', '=', False)]}" />
+								<field name="zoom_setting_mute_upon_entry"
+									attrs="{'readonly': [('is_owner_zoom', '=', False)]}" />
+								<field name="zoom_setting_approval_type"
+									attrs="{'readonly': [('is_owner_zoom', '=', False)]}" />
+								<field name="zoom_setting_auto_recording"
+									attrs="{'readonly': [('is_owner_zoom', '=', False)]}" />
+							</group>
+
+
+						</group>
+						<group>
+						</group>
+					</page>
+				</xpath>
+			</field>
+		</record>
+
+		<record id="view_calendar_event_search" model="ir.ui.view">
+			<field name="name">calendar.event.search</field>
+			<field name="model">calendar.event</field>
+			<field name="inherit_id"
+				ref="calendar.view_calendar_event_search" />
+			<field name="arch" type="xml">
+				<xpath expr="//filter[@name='mymeetings']" position="after">
+					<filter string="Zoom Meetings" help="Zoom Meetings"
+						name="ftr_zoom_meetings" domain="[('is_zoom_meeting', '=', True), ('zoom_meeting_id', '!=', 'False')]" />
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

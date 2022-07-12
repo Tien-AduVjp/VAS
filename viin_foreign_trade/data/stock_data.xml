@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<!-- Stock Locations -->
+		<record id="to_stock_location_customers_export" model="stock.location">
+			<field name="name">Foreign Customer</field>
+			<field name="location_id" ref="stock.stock_location_customers" />
+			<field name="usage">customer</field>
+			<field name="company_id"></field>
+		</record>
+		<record id="route_warehouse0_import" model='stock.location.route'>
+			<field name="name">Buy - Foreign Import</field>
+			<field name="sequence">5</field>
+		</record>
+	</data>
+ 	<data noupdate="1">
+ 		<function model="stock.warehouse" name="update_existing_warehouses" />
+ 	</data>
+ 	<data noupdate="1">
+ 		<record model="res.config.settings" id="stock_config_settings_viin_foreign_trade">
+			<field name="group_stock_multi_locations" eval="1" />
+<!-- 			<field name="group_stock_multi_warehouses" eval="1" /> -->
+			<field name="group_stock_adv_location" eval="1" />
+		</record>
+
+		<function model="res.config.settings" name="execute">
+			<value eval="[ref('stock_config_settings_viin_foreign_trade')]" />
+		</function>
+ 	</data>
+</odoo>

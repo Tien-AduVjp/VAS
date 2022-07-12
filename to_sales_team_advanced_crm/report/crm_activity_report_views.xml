@@ -1,0 +1,18 @@
+<odoo>
+	<record id="crm_activity_report_view_search" model="ir.ui.view">
+		<field name="name">crm.activity.report.search</field>
+		<field name="model">crm.activity.report</field>
+		<field name="inherit_id"
+			ref="crm.crm_activity_report_view_search" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='team_id']" position="after">
+				<field name="crm_team_region_id" />
+			</xpath>
+			<xpath expr="//group/filter[@name='group_by_user_id']"
+				position="after">
+				<filter string="Sales Region" name="grp_sales_region"
+					context="{'group_by':'crm_team_region_id'}" />
+			</xpath>
+		</field>
+	</record>
+</odoo>

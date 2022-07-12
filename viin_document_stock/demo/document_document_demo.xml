@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="document_document_wh_out_0001_demo" model="document.document">
+        <field name="name">WH/OUT/0001</field>
+        <field name="datas" type="base64" file="viin_document_stock/demo/documents/WH_OUT_0001.pdf"/>
+        <field name="workspace_id" ref="document_workspace_delivery_picking_demo"/>
+        <field name="owner_id" ref="base.user_admin"/>
+        <field name="tag_ids" eval="[
+            (4, ref('document_tag_stock_delivery')),
+            (4, ref('document_tag_stock_ready'))]"/>
+    </record>
+
+    <record id="document_document_wh_in_0002_demo" model="document.document">
+        <field name="name">WH/IN/00002</field>
+        <field name="datas" type="base64" file="viin_document_stock/demo/documents/WH_IN_00002.pdf"/>
+        <field name="workspace_id" ref="document_workspace_receipt_picking_demo"/>
+        <field name="owner_id" ref="base.user_demo"/>
+        <field name="tag_ids" eval="[
+            (4, ref('document_tag_stock_receipt')),
+            (4, ref('document_tag_stock_done'))]"/>
+    </record>
+
+</odoo>

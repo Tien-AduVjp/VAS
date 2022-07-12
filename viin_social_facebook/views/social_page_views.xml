@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="social_page_view_form" model="ir.ui.view">
+        <field name="name">Social Page</field>
+        <field name="model">social.page</field>
+        <field name="inherit_id" ref="viin_social.social_page_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='description']" position="after">
+                <field name="facebook_page_about" attrs="{'invisible': [('social_provider','!=','facebook')]}"/>
+            </xpath>
+            <xpath expr="//field[@name='social_page_id']" position="after">
+                <field name="facebook_page_access_token" class="text-truncate" style="width:50%"
+                       attrs="{'invisible': [('social_provider','!=','facebook')]}"
+                       groups="viin_social.viin_social_group_admin"/>
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <field name="social_provider" invisible="1"/>
+
+                <page string="Reviews" attrs="{'invisible': [('social_provider', '!=', 'facebook')]}">
+                    <div>
+                        <button name='action_refresh_reviews' string='Refesh' type='object' class='btn btn-primary'/>
+                        <button name='action_view_all_reviews' string='View on Page' type='object'
+                                class='btn btn-primary ml-2'/>
+                        <button name='action_cacncel_subscrib_appp' string='Cancel Webhooks' type='object'
+                                invisible="1"/>
+                    </div>
+                    <br/>
+                    <field name='review_ids'>
+                        <tree>
+                            <field name='review_date'/>
+                            <field name='message'/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

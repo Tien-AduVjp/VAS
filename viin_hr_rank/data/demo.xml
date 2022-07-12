@@ -1,0 +1,58 @@
+<odoo>
+	<data noupdate="1">
+
+		<!-- Customer Support Specialist Ranks -->
+		<record id="rank_customer_support_intern" model="hr.rank">
+			<field name="department_id" ref="hr.dep_ps" />
+			<field name="role_id" ref="viin_hr_role.role_customer_support" />
+			<field name="grade_id" ref="to_hr_employee_grade.intern_grade" />
+		</record>
+		<record id="rank_customer_support_trainee" model="hr.rank">
+			<field name="department_id" ref="hr.dep_ps" />
+			<field name="role_id" ref="viin_hr_role.role_customer_support" />
+			<field name="grade_id" ref="to_hr_employee_grade.trainee_grade" />
+		</record>
+		<record id="rank_customer_support_junior" model="hr.rank">
+			<field name="department_id" ref="hr.dep_ps" />
+			<field name="role_id" ref="viin_hr_role.role_customer_support" />
+			<field name="grade_id" ref="to_hr_employee_grade.junior_grade" />
+		</record>
+		<record id="rank_customer_support_senior" model="hr.rank">
+			<field name="department_id" ref="hr.dep_ps" />
+			<field name="role_id" ref="viin_hr_role.role_customer_support" />
+			<field name="grade_id" ref="to_hr_employee_grade.senior_grade" />
+		</record>
+		<record id="rank_customer_support_expert" model="hr.rank">
+			<field name="department_id" ref="hr.dep_ps" />
+			<field name="role_id" ref="viin_hr_role.role_customer_support" />
+			<field name="grade_id" ref="to_hr_employee_grade.expert_grade" />
+		</record>
+
+		<!-- Consultant Ranks -->
+		<record id="rank_consultant_intern" model="hr.rank">
+			<field name="department_id" ref="hr.dep_ps" />
+			<field name="role_id" ref="viin_hr_role.role_consultant" />
+			<field name="grade_id" ref="to_hr_employee_grade.intern_grade" />
+		</record>
+		<record id="rank_consultant_trainee" model="hr.rank">
+			<field name="department_id" ref="hr.dep_ps" />
+			<field name="role_id" ref="viin_hr_role.role_consultant" />
+			<field name="grade_id" ref="to_hr_employee_grade.trainee_grade" />
+		</record>
+		<record id="rank_consultant_junior" model="hr.rank">
+			<field name="department_id" ref="hr.dep_ps" />
+			<field name="role_id" ref="viin_hr_role.role_consultant" />
+			<field name="grade_id" ref="to_hr_employee_grade.junior_grade" />
+		</record>
+		<record id="rank_consultant_senior" model="hr.rank">
+			<field name="department_id" ref="hr.dep_ps" />
+			<field name="role_id" ref="viin_hr_role.role_consultant" />
+			<field name="grade_id" ref="to_hr_employee_grade.senior_grade" />
+		</record>
+		<record id="rank_consultant_expert" model="hr.rank">
+			<field name="department_id" ref="hr.dep_ps" />
+			<field name="role_id" ref="viin_hr_role.role_consultant" />
+			<field name="grade_id" ref="to_hr_employee_grade.expert_grade" />
+		</record>
+	</data>
+</odoo>

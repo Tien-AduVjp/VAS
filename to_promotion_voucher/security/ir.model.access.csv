@@ -1,0 +1,15 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_voucher_voucher_user,voucher.voucher.user,model_voucher_voucher,group_promotion_voucher_user,1,0,0,0
+access_voucher_issue_order_user,voucher.issue.order.user,model_voucher_issue_order,group_promotion_voucher_user,1,1,1,1
+access_voucher_type_user,voucher.type.user,model_voucher_type,group_promotion_voucher_user,1,1,1,1
+access_voucher_voucher_manager,voucher.voucher.manager,model_voucher_voucher,group_promotion_voucher_manager,1,1,1,1
+access_voucher_issue_order_manager,voucher.issue.order.manager,model_voucher_issue_order,group_promotion_voucher_manager,1,1,1,1
+access_voucher_type_manager,voucher.type.manager,model_voucher_type,group_promotion_voucher_manager,1,1,1,1
+access_voucher_reports_manager,voucher.reports.manager,model_voucher_report,group_promotion_voucher_manager,1,0,0,0
+access_voucher_move_order_user,voucher.move.order.user,model_voucher_move_order,group_promotion_voucher_user,1,1,1,1
+access_voucher_move_order_manager,voucher.move.order.manager,model_voucher_move_order,group_promotion_voucher_manager,1,1,1,1
+access_product_template_voucher_mananger,product.template.voucher.manager,product.model_product_template,group_promotion_voucher_manager,1,1,1,1
+access_product_product_voucher_manager,product.product.voucher.manager,product.model_product_product,group_promotion_voucher_manager,1,1,1,1
+access_voucher_give_order_voucher_user,voucher.give.order.voucher_user,model_voucher_give_order,group_promotion_voucher_user,1,0,0,0
+access_voucher_give_order_voucher_manager,voucher.give.order.voucher_manager,model_voucher_give_order,group_promotion_voucher_manager,1,1,1,1
+access_extend_expired_vouchers,extend.expired.vouchers,model_extend_expired_vouchers,group_promotion_voucher_manager,1,1,1,0

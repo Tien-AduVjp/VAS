@@ -1,0 +1,7 @@
+<odoo>
+    <template id="assets_frontend" inherit_id="web.assets_frontend">
+        <xpath expr="script[last()]" position="after">
+            <script type="text/javascript" src="/payment_nganluong/static/src/js/payment_form.js"></script>
+        </xpath>
+    </template>
+</odoo>

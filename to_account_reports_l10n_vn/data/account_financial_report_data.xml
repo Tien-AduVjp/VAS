@@ -1,0 +1,64 @@
+<odoo>
+<!-- TODO: Set noupdate="1" when stable -->
+	<record id="af_dynamic_report_profitandloss_vn"
+		model="account.financial.dynamic.report">
+		<field name="name">Profit and Loss (B02-DN)</field>
+		<field name="debit_credit" eval="False" />
+		<field name="analytic" eval="True" />
+		<field name="unfold_all_filter" eval="True" />
+		<field name="show_journal_filter" eval="True" />
+		<field name="parent_id"
+			ref="l10n_vn.account_reports_vn_statements_menu" />
+		<field name="template_ref">Template B02-DN</field>
+		<field name="show_report_code" eval="True" />
+		<field name="show_report_note" eval="True" />
+		<field name="chart_template_id" ref="l10n_vn.vn_template"/>
+	</record>
+	<record id="af_dynamic_report_balancesheet_vn"
+		model="account.financial.dynamic.report">
+		<field name="name">Balance Sheet (B01-DN)</field>
+		<field name="debit_credit" eval="False" />
+		<field name="date_range" eval="False" />
+		<field name="analytic" eval="True" />
+		<field name="unfold_all_filter" eval="True" />
+		<field name="parent_id"
+			ref="l10n_vn.account_reports_vn_statements_menu" />
+		<field name="template_ref">Template B01-DN</field>
+		<field name="show_report_code" eval="True" />
+		<field name="show_report_note" eval="True" />
+		<field name="show_parent_line_first" eval="True" />
+		<field name="chart_template_id" ref="l10n_vn.vn_template"/>
+	</record>
+	<record id="af_dynamic_report_cashsummary_vn"
+		model="account.financial.dynamic.report">
+		<field name="name">Cash Flow Statement (B03-DN)</field>
+		<field name="unfold_all_filter" eval="True" />
+		<field name="parent_id"
+			ref="l10n_vn.account_reports_vn_statements_menu" />
+		<field name="template_ref">Template B03-DN</field>
+		<field name="show_report_code" eval="True" />
+		<field name="show_report_note" eval="True" />
+		<field name="chart_template_id" ref="l10n_vn.vn_template"/>
+	</record>
+	<record id="action_af_report_pnl_vn"
+		model="ir.actions.client">
+		<field name="name">Profit And Loss</field>
+		<field name="tag">af_report_generic</field>
+		<field name="context"
+			eval="{'model': 'account.financial.dynamic.report', 'id': ref('af_dynamic_report_profitandloss_vn')}" />
+	</record>
+	<record id="action_af_report_bs_vn"
+		model="ir.actions.client">
+		<field name="name">Balance Sheet</field>
+		<field name="tag">af_report_generic</field>
+		<field name="context"
+			eval="{'model': 'account.financial.dynamic.report', 'id': ref('af_dynamic_report_balancesheet_vn')}" />
+	</record>
+	<record id="action_af_report_cs_vn"
+		model="ir.actions.client">
+		<field name="name">Cash Flow Statement</field>
+		<field name="tag">af_report_generic</field>
+		<field name="context"
+			eval="{'model': 'account.financial.dynamic.report', 'id': ref('af_dynamic_report_cashsummary_vn')}" />
+	</record>
+</odoo>

@@ -1,0 +1,1003 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_zoom_calendar
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-25 03:15+0000\n"
+"PO-Revision-Date: 2021-11-25 03:15+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_zoom_calendar
+#: model:mail.template,subject:to_zoom_calendar.calendar_template_meeting_reminder
+msgid "${object.event_id.name} - Reminder"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:mail.template,subject:to_zoom_calendar.calendar_template_meeting_changedate
+msgid "${object.event_id.name}: Date updated"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.report_zoom_user
+msgid "<b>From Date:</b>"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.report_zoom_user
+msgid "<b>To Date:</b>"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.report_zoom_user
+msgid "<b>Total Meeting Minutes</b>"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.report_zoom_user
+msgid "<b>Total Meetings:</b>"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:mail.template,body_html:to_zoom_calendar.calendar_template_meeting_reminder
+msgid ""
+"<div>\n"
+"\t\t\t\t\t% set colors = {'needsAction': 'grey', 'accepted': 'green',\n"
+"\t\t\t\t\t'tentative': '#FFFF00', 'declined': 'red'}\n"
+"\t\t\t\t\t<!-- In a recurring event case, the object.event_id is always the first \n"
+"\t\t\t\t\t\tevent This makes the event date (and a lot of other information) incorrect -->\n"
+"\t\t\t\t\t% set event_id = ctx.get('force_event_id') or object.event_id\n"
+"\t\t\t\t\t<p>\n"
+"\t\t\t\t\t\tHello ${object.common_name},\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\tThis is a reminder for the below event :\n"
+"\t\t\t\t\t</p>\n"
+"\t\t\t\t\t<div style=\"text-align: center; margin: 16px 0px 16px 0px;\">\n"
+"\t\t\t\t\t\t<a href=\"/calendar/meeting/accept?db=${'dbname' in ctx and ctx['dbname'] or ''}&amp;token=${object.access_token}&amp;action=${'action_id' in ctx and ctx['action_id'] or ''}&amp;id=${object.event_id.id}\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">\n"
+"\t\t\t\t\t\t\tAccept\n"
+"\t\t\t\t\t\t</a>\n"
+"\t\t\t\t\t\t<a href=\"/calendar/meeting/decline?db=${'dbname' in ctx and ctx['dbname'] or '' }&amp;token=${object.access_token}&amp;action=${'action_id' in ctx and ctx['action_id'] or ''}&amp;id=${object.event_id.id}\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">\n"
+"\t\t\t\t\t\t\tDecline\n"
+"\t\t\t\t\t\t</a>\n"
+"\t\t\t\t\t\t<a href=\"/calendar/meeting/view?db=${'dbname' in ctx and ctx['dbname'] or ''}&amp;token=${object.access_token}&amp;action=${'action_id' in ctx and ctx['action_id'] or ''}&amp;id=${object.event_id.id}\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">\n"
+"\t\t\t\t\t\t\tView\n"
+"\t\t\t\t\t\t</a>\n"
+"\t\t\t\t\t</div>\n"
+"\t\t\t\t\t<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\">\n"
+"\t\t\t\t\t\t<tr>\n"
+"\t\t\t\t\t\t\t<td width=\"130px;\">\n"
+"\t\t\t\t\t\t\t\t<div style=\"border-top-left-radius: 3px; border-top-right-radius: 3px; font-size: 12px; border-collapse: separate; text-align: center; font-weight: bold; color: #ffffff; min-height: 18px; background-color: #875A7B; border: 1px solid #875A7B;\">\n"
+"\t\t\t\t\t\t\t\t\t${event_id.get_interval('dayname', tz=object.partner_id.tz if not event_id.allday else None)}\n"
+"\t\t\t\t\t\t\t\t</div>\n"
+"\t\t\t\t\t\t\t\t<div style=\"font-size: 48px; min-height: auto; font-weight: bold; text-align: center; color: #5F5F5F; background-color: #F8F8F8; border: 1px solid #875A7B;\">\n"
+"\t\t\t\t\t\t\t\t\t${event_id.get_interval('day', tz=object.partner_id.tz if not event_id.allday else None)}\n"
+"\t\t\t\t\t\t\t\t</div>\n"
+"\t\t\t\t\t\t\t\t<div style=\"font-size: 12px; text-align: center; font-weight: bold; color: #ffffff; background-color: #875A7B;\">\n"
+"\t\t\t\t\t\t\t\t\t${event_id.get_interval('month', tz=object.partner_id.tz if not event_id.allday else None)}\n"
+"\t\t\t\t\t\t\t\t</div>\n"
+"\t\t\t\t\t\t\t\t<div style=\"border-collapse: separate; color: #5F5F5F; text-align: center; font-size: 12px; border-bottom-right-radius: 3px; font-weight: bold; border: 1px solid #875A7B; border-bottom-left-radius: 3px;\">\n"
+"\t\t\t\t\t\t\t\t\t${not event_id.allday and event_id.get_interval('time',\n"
+"\t\t\t\t\t\t\t\t\ttz=object.partner_id.tz) or ''}\n"
+"\t\t\t\t\t\t\t\t</div>\n"
+"\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t\t<td width=\"20px;\"/>\n"
+"\t\t\t\t\t\t\t<td style=\"padding-top: 5px;\">\n"
+"\t\t\t\t\t\t\t\t<p>\n"
+"\t\t\t\t\t\t\t\t\t<strong>Details of the event</strong>\n"
+"\t\t\t\t\t\t\t\t</p>\n"
+"\t\t\t\t\t\t\t\t<ul>\n"
+"\t\t\t\t\t\t\t\t\t% if object.event_id.is_zoom_meeting:\n"
+"\t\t\t\t\t\t\t\t\t<li>Location: Online via Zoom</li>\n"
+"\t\t\t\t\t\t\t\t\t<li>\n"
+"\t\t\t\t\t\t\t\t\t\tAttendee URL:\n"
+"\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"${object.event_id.zoom_meeting_attendee_url}\">${object.event_id.zoom_meeting_attendee_url}</a>\n"
+"\t\t\t\t\t\t\t\t\t</li>\n"
+"\t\t\t\t\t\t\t\t\t% else:\n"
+"\t\t\t\t\t\t\t\t\t% if object.event_id.location:\n"
+"\t\t\t\t\t\t\t\t\t<li>\n"
+"\t\t\t\t\t\t\t\t\t\tLocation: ${object.event_id.location}\n"
+"\t\t\t\t\t\t\t\t\t\t(\n"
+"\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"http://maps.google.com/maps?oi=map&amp;q=${object.event_id.location}\">View Map</a>\n"
+"\t\t\t\t\t\t\t\t\t\t)\n"
+"\t\t\t\t\t\t\t\t\t</li>\n"
+"\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t\t% if object.event_id.description :\n"
+"\t\t\t\t\t\t\t\t\t<li>Description: ${object.event_id.description}</li>\n"
+"\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t\t% if not object.event_id.allday and object.event_id.duration\n"
+"\t\t\t\t\t\t\t\t\t<li>Duration: ${('%dH%02d' %\n"
+"\t\t\t\t\t\t\t\t\t\t(object.event_id.duration,(object.event_id.duration*60)%60))}\n"
+"\t\t\t\t\t\t\t\t\t</li>\n"
+"\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t\t<li>\n"
+"\t\t\t\t\t\t\t\t\t\tAttendees\n"
+"\t\t\t\t\t\t\t\t\t\t<ul>\n"
+"\t\t\t\t\t\t\t\t\t\t\t% for attendee in object.event_id.attendee_ids:\n"
+"\t\t\t\t\t\t\t\t\t\t\t<li>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<div style=\"display: inline-block; border-radius: 50%; width: 10px; height: 10px; background:${colors[attendee.state] or 'white'};\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t% if attendee.common_name != object.common_name:\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<span style=\"margin-left:5px\">${attendee.common_name}</span>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t% else:\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<span style=\"margin-left:5px\">You</span>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t\t\t\t</li>\n"
+"\t\t\t\t\t\t\t\t\t\t\t% endfor\n"
+"\t\t\t\t\t\t\t\t\t\t</ul>\n"
+"\t\t\t\t\t\t\t\t\t</li>\n"
+"\t\t\t\t\t\t\t\t</ul>\n"
+"\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t</tr>\n"
+"\t\t\t\t\t</table>\n"
+"\t\t\t\t\t<br/>\n"
+"\t\t\t\t\tThank you,\n"
+"\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t% if object.event_id.user_id and object.event_id.user_id.signature:\n"
+"\t\t\t\t\t${object.event_id.user_id.signature | safe}\n"
+"\t\t\t\t\t% endif\n"
+"\t\t\t\t</div>\n"
+"\t\t\t"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:mail.template,body_html:to_zoom_calendar.calendar_template_meeting_invitation
+msgid ""
+"<div>\n"
+"\t\t\t\t\t% set colors = {'needsAction': 'grey', 'accepted': 'green',\n"
+"\t\t\t\t\t'tentative': '#FFFF00', 'declined': 'red'}\n"
+"\t\t\t\t\t<p>\n"
+"\t\t\t\t\t\tHello ${object.common_name},\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t${object.event_id.user_id.partner_id.name} invited you for the\n"
+"\t\t\t\t\t\t${object.event_id.name} meeting of\n"
+"\t\t\t\t\t\t${object.event_id.user_id.company_id.name}.\n"
+"\t\t\t\t\t</p>\n"
+"\t\t\t\t\t<div style=\"text-align: center; margin: 16px 0px 16px 0px;\">\n"
+"\t\t\t\t\t\t<a href=\"/calendar/meeting/accept?db=${'dbname' in ctx and ctx['dbname'] or ''}&amp;token=${object.access_token}&amp;action=${'action_id' in ctx and ctx['action_id'] or ''}&amp;id=${object.event_id.id}\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">\n"
+"\t\t\t\t\t\t\tAccept\n"
+"\t\t\t\t\t\t</a>\n"
+"\t\t\t\t\t\t<a href=\"/calendar/meeting/decline?db=${'dbname' in ctx and ctx['dbname'] or '' }&amp;token=${object.access_token}&amp;action=${'action_id' in ctx and ctx['action_id'] or ''}&amp;id=${object.event_id.id}\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">\n"
+"\t\t\t\t\t\t\tDecline\n"
+"\t\t\t\t\t\t</a>\n"
+"\t\t\t\t\t\t<a href=\"/calendar/meeting/view?db=${'dbname' in ctx and ctx['dbname'] or ''}&amp;token=${object.access_token}&amp;action=${'action_id' in ctx and ctx['action_id'] or ''}&amp;id=${object.event_id.id}\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">\n"
+"\t\t\t\t\t\t\tView\n"
+"\t\t\t\t\t\t</a>\n"
+"\t\t\t\t\t</div>\n"
+"\t\t\t\t\t<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\">\n"
+"\t\t\t\t\t\t<tr>\n"
+"\t\t\t\t\t\t\t<td width=\"130px;\">\n"
+"\t\t\t\t\t\t\t\t<div style=\"border-top-left-radius: 3px; border-top-right-radius: 3px; font-size: 12px; border-collapse: separate; text-align: center; font-weight: bold; color: #ffffff; min-height: 18px; background-color: #875A7B; border: 1px solid #875A7B;\">\n"
+"\t\t\t\t\t\t\t\t\t${object.event_id.get_interval('dayname', tz=object.partner_id.tz if not object.event_id.allday else\n"
+"\t\t\t\t\t\t\t\t\tNone)}\n"
+"\t\t\t\t\t\t\t\t</div>\n"
+"\t\t\t\t\t\t\t\t<div style=\"font-size: 48px; min-height: auto; font-weight: bold; text-align: center; color: #5F5F5F; background-color: #F8F8F8; border: 1px solid #875A7B;\">\n"
+"\t\t\t\t\t\t\t\t\t${object.event_id.get_interval('day', tz=object.partner_id.tz if not object.event_id.allday else\n"
+"\t\t\t\t\t\t\t\t\tNone)}\n"
+"\t\t\t\t\t\t\t\t</div>\n"
+"\t\t\t\t\t\t\t\t<div style=\"font-size: 12px; text-align: center; font-weight: bold; color: #ffffff; background-color: #875A7B;\">\n"
+"\t\t\t\t\t\t\t\t\t${object.event_id.get_interval('month', tz=object.partner_id.tz if not object.event_id.allday else\n"
+"\t\t\t\t\t\t\t\t\tNone)}\n"
+"\t\t\t\t\t\t\t\t</div>\n"
+"\t\t\t\t\t\t\t\t<div style=\"border-collapse: separate; color: #5F5F5F; text-align: center; font-size: 12px; border-bottom-right-radius: 3px; font-weight: bold; border: 1px solid #875A7B; border-bottom-left-radius: 3px;\">\n"
+"\t\t\t\t\t\t\t\t\t${not object.event_id.allday and\n"
+"\t\t\t\t\t\t\t\t\tobject.event_id.get_interval('time', tz=object.partner_id.tz)\n"
+"\t\t\t\t\t\t\t\t\tor ''}\n"
+"\t\t\t\t\t\t\t\t</div>\n"
+"\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t\t<td width=\"20px;\"/>\n"
+"\t\t\t\t\t\t\t<td style=\"padding-top: 5px;\">\n"
+"\t\t\t\t\t\t\t\t<p>\n"
+"\t\t\t\t\t\t\t\t\t<strong>Details of the event</strong>\n"
+"\t\t\t\t\t\t\t\t</p>\n"
+"\t\t\t\t\t\t\t\t<ul>\n"
+"\t\t\t\t\t\t\t\t\t% if object.event_id.is_zoom_meeting:\n"
+"\t\t\t\t\t\t\t\t\t<li>Location: Online via Zoom</li>\n"
+"\t\t\t\t\t\t\t\t\t<li>\n"
+"\t\t\t\t\t\t\t\t\t\tAttendee URL:\n"
+"\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"${object.event_id.zoom_meeting_attendee_url}\">${object.event_id.zoom_meeting_attendee_url}</a>\n"
+"\t\t\t\t\t\t\t\t\t</li>\n"
+"\t\t\t\t\t\t\t\t\t% else:\n"
+"\t\t\t\t\t\t\t\t\t% if object.event_id.location:\n"
+"\t\t\t\t\t\t\t\t\t<li>\n"
+"\t\t\t\t\t\t\t\t\t\tLocation: ${object.event_id.location}\n"
+"\t\t\t\t\t\t\t\t\t\t(\n"
+"\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"http://maps.google.com/maps?oi=map&amp;q=${object.event_id.location}\">View Map</a>\n"
+"\t\t\t\t\t\t\t\t\t\t)\n"
+"\t\t\t\t\t\t\t\t\t</li>\n"
+"\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t\t% if object.event_id.description :\n"
+"\t\t\t\t\t\t\t\t\t<li>Description: ${object.event_id.description}</li>\n"
+"\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t\t% if not object.event_id.allday and object.event_id.duration\n"
+"\t\t\t\t\t\t\t\t\t<li>Duration: ${('%dH%02d' %\n"
+"\t\t\t\t\t\t\t\t\t\t(object.event_id.duration,round(object.event_id.duration*60)%60))}\n"
+"\t\t\t\t\t\t\t\t\t</li>\n"
+"\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t\t<li>\n"
+"\t\t\t\t\t\t\t\t\t\tAttendees\n"
+"\t\t\t\t\t\t\t\t\t\t<ul>\n"
+"\t\t\t\t\t\t\t\t\t\t\t% for attendee in object.event_id.attendee_ids:\n"
+"\t\t\t\t\t\t\t\t\t\t\t<li>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<div style=\"display: inline-block; border-radius: 50%; width: 10px; height: 10px; background:${colors[attendee.state] or 'white'};\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t% if attendee.common_name != object.common_name:\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<span style=\"margin-left:5px\">${attendee.common_name}</span>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t% else:\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<span style=\"margin-left:5px\">You</span>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t\t\t\t</li>\n"
+"\t\t\t\t\t\t\t\t\t\t\t% endfor\n"
+"\t\t\t\t\t\t\t\t\t\t</ul>\n"
+"\t\t\t\t\t\t\t\t\t</li>\n"
+"\t\t\t\t\t\t\t\t</ul>\n"
+"\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t</tr>\n"
+"\t\t\t\t\t</table>\n"
+"\t\t\t\t\t<br/>\n"
+"\t\t\t\t\tThank you,\n"
+"\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t% if object.event_id.user_id and object.event_id.user_id.signature:\n"
+"\t\t\t\t\t${object.event_id.user_id.signature | safe}\n"
+"\t\t\t\t\t% endif\n"
+"\t\t\t\t</div>\n"
+"\t\t\t"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:mail.template,body_html:to_zoom_calendar.calendar_template_meeting_changedate
+msgid ""
+"<div>\n"
+"\t\t\t\t\t% set colors = {'needsAction': 'grey', 'accepted': 'green',\n"
+"\t\t\t\t\t'tentative': '#FFFF00', 'declined': 'red'}\n"
+"\t\t\t\t\t<p>\n"
+"\t\t\t\t\t\tHello ${object.common_name},\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\tThe date of the meeting has been updated. The meeting\n"
+"\t\t\t\t\t\t${object.event_id.name} created by\n"
+"\t\t\t\t\t\t${object.event_id.user_id.partner_id.name} is now scheduled for\n"
+"\t\t\t\t\t\t${object.event_id.get_display_time_tz(tz=object.partner_id.tz)}.\n"
+"\t\t\t\t\t</p>\n"
+"\t\t\t\t\t<div style=\"text-align: center; margin: 16px 0px 16px 0px;\">\n"
+"\t\t\t\t\t\t<a href=\"/calendar/meeting/accept?db=${'dbname' in ctx and ctx['dbname'] or ''}&amp;token=${object.access_token}&amp;action=${'action_id' in ctx and ctx['action_id'] or ''}&amp;id=${object.event_id.id}\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">\n"
+"\t\t\t\t\t\t\tAccept\n"
+"\t\t\t\t\t\t</a>\n"
+"\t\t\t\t\t\t<a href=\"/calendar/meeting/decline?db=${'dbname' in ctx and ctx['dbname'] or '' }&amp;token=${object.access_token}&amp;action=${'action_id' in ctx and ctx['action_id'] or ''}&amp;id=${object.event_id.id}\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">\n"
+"\t\t\t\t\t\t\tDecline\n"
+"\t\t\t\t\t\t</a>\n"
+"\t\t\t\t\t\t<a href=\"/calendar/meeting/view?db=${'dbname' in ctx and ctx['dbname'] or ''}&amp;token=${object.access_token}&amp;action=${'action_id' in ctx and ctx['action_id'] or ''}&amp;id=${object.event_id.id}\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">\n"
+"\t\t\t\t\t\t\tView\n"
+"\t\t\t\t\t\t</a>\n"
+"\t\t\t\t\t</div>\n"
+"\t\t\t\t\t<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\">\n"
+"\t\t\t\t\t\t<tr>\n"
+"\t\t\t\t\t\t\t<td width=\"130px;\">\n"
+"\t\t\t\t\t\t\t\t<div style=\"border-top-left-radius: 3px; border-top-right-radius: 3px; font-size: 12px; border-collapse: separate; text-align: center; font-weight: bold; color: #ffffff; min-height: 18px; background-color: #875A7B; border: 1px solid #875A7B;\">\n"
+"\t\t\t\t\t\t\t\t\t${object.event_id.get_interval('dayname', tz=object.partner_id.tz if not object.event_id.allday else\n"
+"\t\t\t\t\t\t\t\t\tNone)}\n"
+"\t\t\t\t\t\t\t\t</div>\n"
+"\t\t\t\t\t\t\t\t<div style=\"font-size: 48px; min-height: auto; font-weight: bold; text-align: center; color: #5F5F5F; background-color: #F8F8F8; border: 1px solid #875A7B;\">\n"
+"\t\t\t\t\t\t\t\t\t${object.event_id.get_interval('day', tz=object.partner_id.tz if not object.event_id.allday else\n"
+"\t\t\t\t\t\t\t\t\tNone)}\n"
+"\t\t\t\t\t\t\t\t</div>\n"
+"\t\t\t\t\t\t\t\t<div style=\"font-size: 12px; text-align: center; font-weight: bold; color: #ffffff; background-color: #875A7B;\">\n"
+"\t\t\t\t\t\t\t\t\t${object.event_id.get_interval('month', tz=object.partner_id.tz if not object.event_id.allday else\n"
+"\t\t\t\t\t\t\t\t\tNone)}\n"
+"\t\t\t\t\t\t\t\t</div>\n"
+"\t\t\t\t\t\t\t\t<div style=\"border-collapse: separate; color: #5F5F5F; text-align: center; font-size: 12px; border-bottom-right-radius: 3px; font-weight: bold; border: 1px solid #875A7B; border-bottom-left-radius: 3px;\">\n"
+"\t\t\t\t\t\t\t\t\t${not object.event_id.allday and\n"
+"\t\t\t\t\t\t\t\t\tobject.event_id.get_interval('time', tz=object.partner_id.tz)\n"
+"\t\t\t\t\t\t\t\t\tor ''}\n"
+"\t\t\t\t\t\t\t\t</div>\n"
+"\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t\t<td width=\"20px;\"/>\n"
+"\t\t\t\t\t\t\t<td style=\"padding-top: 5px;\">\n"
+"\t\t\t\t\t\t\t\t<p>\n"
+"\t\t\t\t\t\t\t\t\t<strong>Details of the event</strong>\n"
+"\t\t\t\t\t\t\t\t</p>\n"
+"\t\t\t\t\t\t\t\t<ul>\n"
+"\t\t\t\t\t\t\t\t\t% if object.event_id.is_zoom_meeting:\n"
+"\t\t\t\t\t\t\t\t\t<li>Location: Online via Zoom</li>\n"
+"\t\t\t\t\t\t\t\t\t<li>\n"
+"\t\t\t\t\t\t\t\t\t\tAttendee URL:\n"
+"\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"${object.event_id.zoom_meeting_attendee_url}\">${object.event_id.zoom_meeting_attendee_url}</a>\n"
+"\t\t\t\t\t\t\t\t\t</li>\n"
+"\t\t\t\t\t\t\t\t\t% else:\n"
+"\t\t\t\t\t\t\t\t\t% if object.event_id.location:\n"
+"\t\t\t\t\t\t\t\t\t<li>\n"
+"\t\t\t\t\t\t\t\t\t\tLocation: ${object.event_id.location}\n"
+"\t\t\t\t\t\t\t\t\t\t(\n"
+"\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"http://maps.google.com/maps?oi=map&amp;q=${object.event_id.location}\">View Map</a>\n"
+"\t\t\t\t\t\t\t\t\t\t)\n"
+"\t\t\t\t\t\t\t\t\t</li>\n"
+"\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t\t% if object.event_id.description :\n"
+"\t\t\t\t\t\t\t\t\t<li>Description: ${object.event_id.description}</li>\n"
+"\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t\t% if not object.event_id.allday and object.event_id.duration\n"
+"\t\t\t\t\t\t\t\t\t<li>Duration: ${('%dH%02d' %\n"
+"\t\t\t\t\t\t\t\t\t\t(object.event_id.duration,round(object.event_id.duration*60)%60))}\n"
+"\t\t\t\t\t\t\t\t\t</li>\n"
+"\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t\t<li>\n"
+"\t\t\t\t\t\t\t\t\t\tAttendees\n"
+"\t\t\t\t\t\t\t\t\t\t<ul>\n"
+"\t\t\t\t\t\t\t\t\t\t\t% for attendee in object.event_id.attendee_ids:\n"
+"\t\t\t\t\t\t\t\t\t\t\t<li>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<div style=\"display: inline-block; border-radius: 50%; width: 10px; height: 10px; background: ${colors[attendee.state] or 'white'};\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t% if attendee.common_name != object.common_name:\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<span style=\"margin-left:5px\">${attendee.common_name}</span>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t% else:\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<span style=\"margin-left:5px\">You</span>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t\t\t\t</li>\n"
+"\t\t\t\t\t\t\t\t\t\t\t% endfor\n"
+"\t\t\t\t\t\t\t\t\t\t</ul>\n"
+"\t\t\t\t\t\t\t\t\t</li>\n"
+"\t\t\t\t\t\t\t\t</ul>\n"
+"\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t</tr>\n"
+"\t\t\t\t\t</table>\n"
+"\t\t\t\t\t<br/>\n"
+"\t\t\t\t\tThank you,\n"
+"\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t% if object.event_id.user_id and object.event_id.user_id.signature:\n"
+"\t\t\t\t\t${object.event_id.user_id.signature | safe}\n"
+"\t\t\t\t\t% endif\n"
+"\t\t\t\t</div>\n"
+"\t\t\t"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.res_config_settings_view_form
+msgid ""
+"<i class=\"fa fa-arrow-right\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\tGenerate your API Key &amp; Secret."
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.report_zoom_user
+msgid "<span class=\"ml-2\">Zoom Hosts Report</span>"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:mail.template,body_html:to_zoom_calendar.zoom_template_notif_empty_host
+msgid ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\">\n"
+"\t\t\t\t\t<tr>\n"
+"\t\t\t\t\t\t<td align=\"center\">\n"
+"\t\t\t\t\t\t\t<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"\t\t\t\t\t\t\t\t<tbody>\n"
+"\t\t\t\t\t\t\t\t\t<!-- HEADER -->\n"
+"\t\t\t\t\t\t\t\t\t<!-- CONTENT -->\n"
+"\t\t\t\t\t\t\t\t\t<tr>\n"
+"\t\t\t\t\t\t\t\t\t\t<td align=\"center\" style=\"min-width: 590px;\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<tr>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t<td valign=\"top\" style=\"font-size: 13px;\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t% set zoom_start_datetime = ctx.get('zoom_start_datetime')\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tDear ${object.name},\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAll Zoom Hosts have been used at ${zoom_start_datetime}.\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tPlease add the Zoom Host!\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tThanks,\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t${user.signature | safe}\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t</tr>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<tr>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t<td style=\"text-align:center;\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t</tr>\n"
+"\t\t\t\t\t\t\t\t\t\t\t</table>\n"
+"\t\t\t\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t\t\t\t</tr>\n"
+"\t\t\t\t\t\t\t\t\t<!-- FOOTER -->\n"
+"\t\t\t\t\t\t\t\t\t<tr>\n"
+"\t\t\t\t\t\t\t\t\t\t<td align=\"center\" style=\"min-width: 590px;\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; font-size: 11px; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<tr>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t<td valign=\"middle\" align=\"left\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t${object.company_id.name}\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t</tr>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t<tr>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t<td valign=\"middle\" align=\"left\" style=\"opacity: 0.7;\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t${object.company_id.phone}\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t% if object.company_id.email\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t|\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"'mailto:%s' % ${object.company_id.email}\" style=\"text-decoration:none; color: #454748;\">${object.company_id.email}</a>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t% if object.company_id.website\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t|\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"'%s' % ${object.company_id.website}\" style=\"text-decoration:none; color: #454748;\">\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t${object.company_id.website}\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t% endif\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t</tr>\n"
+"\t\t\t\t\t\t\t\t\t\t\t</table>\n"
+"\t\t\t\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t\t\t\t</tr>\n"
+"\t\t\t\t\t\t\t\t</tbody>\n"
+"\t\t\t\t\t\t\t</table>\n"
+"\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t</tr>\n"
+"\t\t\t\t\t<!-- POWERED BY -->\n"
+"\t\t\t\t\t<tr>\n"
+"\t\t\t\t\t\t<td align=\"center\" style=\"min-width: 590px;\">\n"
+"\t\t\t\t\t\t\t<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:separate;\">\n"
+"\t\t\t\t\t\t\t\t<tr>\n"
+"\t\t\t\t\t\t\t\t\t<td style=\"text-align: center; font-size: 13px;\">\n"
+"\t\t\t\t\t\t\t\t\t\tPowered by\n"
+"\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\" href=\"https://www.odoo.com?utm_source=db&amp;utm_medium=auth\" style=\"color: #875A7B;\">Odoo</a>\n"
+"\t\t\t\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t\t\t\t</tr>\n"
+"\t\t\t\t\t\t\t</table>\n"
+"\t\t\t\t\t\t</td>\n"
+"\t\t\t\t\t</tr>\n"
+"\t\t\t\t</table>\n"
+"\t\t\t"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,help:to_zoom_calendar.field_calendar_event__is_owner_zoom
+msgid "A technical field to show/hide Zoom meeting information."
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user__zoom_action
+msgid "Action"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:res.groups,name:to_zoom_calendar.group_admin
+msgid "Administrator"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,help:to_zoom_calendar.field_calendar_event__zoom_setting_join_before_host
+msgid ""
+"Allow participants to join the meeting before the host starts the meeting"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_calendar_event__zoom_setting_approval_type
+msgid "Approval Type"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_calendar_event__zoom_meeting_attendee_url
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.invitation_page_anonymous
+msgid "Attendee URL"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.invitation_page_anonymous
+msgid "Attendees"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields.selection,name:to_zoom_calendar.selection__zoom_user__zoom_action__autocreate
+msgid "Auto Create"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_calendar_event__zoom_setting_auto_recording
+msgid "Automatic Recording"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields.selection,name:to_zoom_calendar.selection__calendar_event__zoom_setting_approval_type__0
+msgid "Automatically approve"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields.selection,name:to_zoom_calendar.selection__zoom_user__zoom_user_type__1
+msgid "Basic"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model,name:to_zoom_calendar.model_calendar_attendee
+msgid "Calendar Attendee Information"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model,name:to_zoom_calendar.model_calendar_event
+msgid "Calendar Event"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.invitation_page_anonymous
+msgid "Calendar Invitation"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.view_zoom_user_report_form
+msgid "Close"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model,name:to_zoom_calendar.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user__company_id
+msgid "Company"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model,name:to_zoom_calendar.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.ui.menu,name:to_zoom_calendar.menu_zoom_configuration
+msgid "Configuration"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields.selection,name:to_zoom_calendar.selection__zoom_user__zoom_action__create
+msgid "Create"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user__create_uid
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user_report__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user__create_date
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user_report__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields.selection,name:to_zoom_calendar.selection__zoom_user__zoom_action__custcreate
+msgid "Cust Create"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.invitation_page_anonymous
+msgid "Date"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields.selection,name:to_zoom_calendar.selection__calendar_event__zoom_setting_auto_recording__none
+msgid "Disabled"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_calendar_attendee__display_name
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_calendar_event__display_name
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_report_to_zoom_calendar_report_zoom_user__display_name
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_res_company__display_name
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_apiv2__display_name
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user__display_name
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user_report__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.report_zoom_user
+msgid "Email"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_calendar_event__zoom_setting_join_before_host
+msgid "Enable join before host"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user_report__end_date
+msgid "End Date"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: code:addons/to_zoom_calendar/wizard/zoom_user_report.py:0
+#, python-format
+msgid "End Date cannot be set before Start Date."
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model,name:to_zoom_calendar.model_zoom_user_report
+msgid "Generate Zoom User Report"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.actions.act_window,name:to_zoom_calendar.act_open_user_report_view
+msgid "Generate Zoom Users Report"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_calendar_attendee__id
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_calendar_event__id
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_report_to_zoom_calendar_report_zoom_user__id
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_res_company__id
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_res_config_settings__id
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_apiv2__id
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user__id
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user_report__id
+msgid "ID"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields.selection,name:to_zoom_calendar.selection__calendar_event__zoom_type__1
+msgid "Instant meeting"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.invitation_page_anonymous
+msgid "Invitation for"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:mail.template,subject:to_zoom_calendar.calendar_template_meeting_invitation
+msgid "Invitation to ${object.event_id.name}"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_calendar_event__is_owner_zoom
+msgid "Is Owner Zoom"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_calendar_event__is_zoom_meeting
+msgid "Is Zoom Meeting?"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_calendar_attendee____last_update
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_calendar_event____last_update
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_report_to_zoom_calendar_report_zoom_user____last_update
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_res_company____last_update
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_apiv2____last_update
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user____last_update
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user_report____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user__write_uid
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user_report__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user__write_date
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user_report__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields.selection,name:to_zoom_calendar.selection__zoom_user__zoom_user_type__2
+msgid "Licensed"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.invitation_page_anonymous
+msgid "Location"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.invitation_page_anonymous
+msgid "Logo"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields.selection,name:to_zoom_calendar.selection__calendar_event__zoom_setting_approval_type__1
+msgid "Manually approve"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_calendar_event__zoom_type
+msgid "Meeting Type"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_calendar_event__zoom_setting_mute_upon_entry
+#: model:ir.model.fields,help:to_zoom_calendar.field_calendar_event__zoom_setting_mute_upon_entry
+msgid "Mute participants upon entry"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.invitation_page_anonymous
+msgid "No I'm not going."
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields.selection,name:to_zoom_calendar.selection__calendar_event__zoom_setting_approval_type__2
+msgid "No registration required"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields.selection,name:to_zoom_calendar.selection__zoom_user__zoom_user_type__3
+msgid "On-prem"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.invitation_page_anonymous
+msgid "Online via Zoom"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.view_zoom_user_report_form
+msgid "Print"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields.selection,name:to_zoom_calendar.selection__calendar_event__zoom_setting_auto_recording__cloud
+msgid "Record on cloud"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields.selection,name:to_zoom_calendar.selection__calendar_event__zoom_setting_auto_recording__local
+msgid "Record on local"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields.selection,name:to_zoom_calendar.selection__calendar_event__zoom_type__8
+msgid "Recurring meeting with fixed time"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields.selection,name:to_zoom_calendar.selection__calendar_event__zoom_type__3
+msgid "Recurring meeting with no fixed time"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.ui.menu,name:to_zoom_calendar.zoom_user_report_menu
+msgid "Reports"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields.selection,name:to_zoom_calendar.selection__zoom_user__zoom_action__ssocreate
+msgid "SSO Create"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields.selection,name:to_zoom_calendar.selection__calendar_event__zoom_type__2
+msgid "Scheduled"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: code:addons/to_zoom_calendar/wizard/zoom_user_report.py:0
+#, python-format
+msgid "Select date range for a month!"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.actions.act_window,name:to_zoom_calendar.action_zoom_config_settings
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_calendar_event__zoom_setting
+#: model:ir.ui.menu,name:to_zoom_calendar.menu_zoom_settings
+msgid "Settings"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,help:to_zoom_calendar.field_zoom_user__zoom_action
+msgid ""
+"Specify how to create the new user: \n"
+"\n"
+"                                    1. \"Create\" - User will get an email sent from Zoom. There is a confirmation link in this email. User will then need to click this link to activate their account to the Zoom service. The user can set or change their password in Zoom.\n"
+"                                    2. \"Auto Create\" - This action is provided for enterprise customer who has a managed domain. This feature is disabled by default because of the security risk involved in creating a user who does not belong to your domain without notifying the user.\n"
+"                                    3. \"Cust Create\" - This action is provided for API partner only. User created in this way has no password and is not able to log into the Zoom web site or client.\n"
+"                                    4. \"SSO Create\" - This action is provided for enabled “Pre-provisioning SSO User” option. User created in this way has no password. If it is not a basic user, will generate a Personal Vanity URL using user name (no domain) of the provisioning email. If user name or pmi is invalid or occupied, will use random number/random personal vanity URL."
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user_report__start_date
+msgid "Start Date"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_calendar_event__zoom_meeting_start_url
+msgid "Start URL"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,help:to_zoom_calendar.field_zoom_user__zoom_password_name
+msgid ""
+"The password has to have a minimum of 8 characters and maximum of 32 "
+"characters. By default (basic requirement), password must have at least one "
+"letter (a, b, c…), at least one number (1, 2, 3…) and include both uppercase"
+" and lowercase letters. It should not contain only one identical character "
+"repeatedly (‘11111111’ or ‘aaaaaaaa’) and it cannot contain consecutive "
+"characters (‘12345678’ or ‘abcdefgh’)."
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,help:to_zoom_calendar.field_calendar_event__zoom_user_id
+msgid "This is host ID for the meeting."
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.report_zoom_user
+msgid "Total Meeting Minutes"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.report_zoom_user
+msgid "Total Meetings"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,help:to_zoom_calendar.field_calendar_event__zoom_meeting_attendee_url
+msgid "URL to join the meeting"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,help:to_zoom_calendar.field_calendar_event__zoom_meeting_start_url
+msgid "URL to start the meeting"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:res.groups,name:to_zoom_calendar.group_user
+msgid "User"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user__zoom_email
+msgid "User Email Address"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user__zoom_password_name
+msgid "User Password"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user__zoom_user_type
+msgid "User Type"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user__zoom_first_name
+msgid "User's First Name"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_zoom_user__zoom_last_name
+msgid "User's Last Name"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.ui.menu,name:to_zoom_calendar.zoom_user_menu
+msgid "Users"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.invitation_page_anonymous
+msgid "Yes I'm going."
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.module.category,name:to_zoom_calendar.module_category_zoom_user
+#: model:ir.module.category,name:to_zoom_calendar.module_category_zoom_zoom
+#: model:ir.ui.menu,name:to_zoom_calendar.zoom_menu_root
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.res_config_settings_view_form
+msgid "Zoom"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model,name:to_zoom_calendar.model_zoom_apiv2
+msgid "Zoom API v2"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_res_company__zoom_api_key
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_res_config_settings__zoom_api_key
+msgid "Zoom Api Key"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_res_config_settings__module_to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.res_config_settings_view_form
+msgid "Zoom Integration"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.res_config_settings_view_form
+msgid "Zoom Integration."
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.view_calendar_event_form
+msgid "Zoom Meeting"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_calendar_event__zoom_user_id
+msgid "Zoom Meeting Host"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_calendar_event__zoom_meeting_id
+msgid "Zoom Meeting Id"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.actions.act_window,name:to_zoom_calendar.action_zoom_meeting
+#: model:ir.ui.menu,name:to_zoom_calendar.zoom_meeting_menu
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.view_calendar_event_search
+msgid "Zoom Meetings"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_res_company__zoom_secret_key
+#: model:ir.model.fields,field_description:to_zoom_calendar.field_res_config_settings__zoom_secret_key
+msgid "Zoom Secret Key"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model,name:to_zoom_calendar.model_zoom_user
+msgid "Zoom User"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.model,name:to_zoom_calendar.model_report_to_zoom_calendar_report_zoom_user
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.view_zoom_user_report_form
+msgid "Zoom User Report"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:ir.actions.act_window,name:to_zoom_calendar.action_list_user
+#: model:ir.actions.report,name:to_zoom_calendar.action_report_zoom_user
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.view_zoom_user_form
+#: model_terms:ir.ui.view,arch_db:to_zoom_calendar.view_zoom_user_tree
+msgid "Zoom Users"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: code:addons/to_zoom_calendar/models/calendar_event.py:0
+#, python-format
+msgid "Zoom meeting with forever repeat doesn't support!"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:mail.template,subject:to_zoom_calendar.zoom_template_notif_empty_host
+msgid "Zoom: All hosts have been used"
+msgstr ""
+
+#. module: to_zoom_calendar
+#: code:addons/to_zoom_calendar/models/calendar_event.py:0
+#, python-format
+msgid ""
+"Zoom: Host that you selected that have been used at %s. Please wait for the "
+"Administration to add the Host."
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:res.groups,comment:to_zoom_calendar.group_user
+msgid ""
+"the user will have access to all records of zoom user in the zoom "
+"application."
+msgstr ""
+
+#. module: to_zoom_calendar
+#: model:res.groups,comment:to_zoom_calendar.group_admin
+msgid ""
+"the user will have an access to the zoom configuration as well as statistic "
+"reports."
+msgstr ""

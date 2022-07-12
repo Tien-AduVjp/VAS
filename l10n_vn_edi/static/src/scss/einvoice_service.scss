@@ -1,0 +1,66 @@
+.o_kanban_view.o_kanban_einvoice_service {
+    &.o_kanban_ungrouped {
+        .o_kanban_record {
+            width: 500px;
+
+            .o_kanban_image {
+                float: right;
+
+                + div {
+                    padding-left: 0;
+                    padding-right: $o-kanban-image-width + $o-kanban-inside-hgutter;
+                }
+            }
+
+			.o_kaban_desc {
+				width: 97%;
+			}
+
+            .o_einvoice_service_desc {
+                margin-bottom: 28px;
+
+                i.fa {
+                    margin-right: 5px;
+
+                    &.fa-check {
+                        color: green;
+                    }
+                }
+            }
+
+            .o_einvoice_service_bottom {
+                > button {
+                    position: absolute;
+                    bottom: 8px;
+                    right: 8px;
+                }
+                > .label {
+                    position: absolute;
+                    bottom: 8px;
+                    left: 8px;
+                }
+            }
+        }
+    }
+}
+
+.o_form_view {
+    .o_einvoice_service_desc {
+        margin-top: 10px;
+        ul {
+            list-style-type: none;
+            padding: 0;
+
+            i.fa {
+                margin-right: 5px;
+
+                &.fa-check {
+                    color: green;
+                }
+            }
+        }
+    }
+    .o_warning_text {
+        color: #f0ad4e;
+    }
+}

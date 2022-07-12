@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="view_email_blacklist_rule_form">
+			<field name="name">email.blacklist.rule.form</field>
+			<field name="model">email.blacklist.rule</field>
+			<field name="arch" type="xml">
+				<form>
+					<sheet>
+						<group>
+							<group>
+								<field name="name" />
+								<field name="reason_id" />
+							</group>
+							<group>
+								<field name="active" />
+							</group>
+						</group>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids"   />
+						<field name="activity_ids"  />
+						<field name="message_ids"  />
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="view_email_blacklist_rule_tree">
+			<field name="name">email.blacklist.rule.list</field>
+			<field name="model">email.blacklist.rule</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="name" />
+					<field name="reason_id" />
+					<field name="active" widget="boolean_toggle" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window"
+			id="action_email_blacklist_rule">
+			<field name="name">Email Registration Blocking Rules</field>
+			<field name="res_model">email.blacklist.rule</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+	</data>
+</odoo>

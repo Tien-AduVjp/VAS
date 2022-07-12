@@ -1,0 +1,32 @@
+<templates id="template" xml:space="preserve">
+	<t t-inherit="point_of_sale.PaymentScreen" t-inherit-mode="extension">
+	    <xpath expr="//div[hasclass('payment-buttons')]" position="inside">
+   	        <div class='button'
+   	             title="You can't schedule for delivery because Pos orders are grouped into one delivery.
+   	             Please change the 'Inventory Management' value on POS setting to 'In real time' if you want to use this feature."
+   	             t-att-class="{ highlight: state.to_delivery, disabled: env.pos.update_stock_at_closing }"
+	             t-on-click="toggleToDelivery">
+                <i class='fa fa-truck' /> Delivery
+            </div>
+
+
+             <div class='input-delivery' t-att-class="{ hidden: !state.to_delivery}">
+            	<div class='delivery-method'>Delivery Method:</div>
+            	<select class='input-delivery-method needsclick' t-on-change="onChangeDeliveryMethod">
+                    <option value=''>None</option>
+                    <t t-foreach='env.pos.deliveries' t-as='method'>
+                        <option t-att-value='method.id'>
+                            <t t-esc='method.name'/>
+                        </option>
+                    </t>
+                </select>
+
+            	<div class='date-delivery'>Delivery Date:</div>
+            	<div>
+	            	<input type="date" t-att-value="state.inputDate" t-on-change="onChangeDate" class="input-date"/>
+                    <input type="time" t-att-value="state.inputTime" t-on-change="onChangeTime" class="input-time"/>
+            	</div>
+            </div>
+	    </xpath>
+	</t>
+</templates>

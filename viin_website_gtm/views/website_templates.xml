@@ -1,0 +1,14 @@
+<odoo>
+    <template id="layout" name="Main layout" inherit_id="web.frontend_layout">
+        <xpath expr="//head/meta[1]" position="before">
+            <t t-if="website and website.gtm_enable">
+                <t t-raw="website.gtm_script"/>
+            </t>
+        </xpath>
+        <xpath expr="//div[@id='wrapwrap']/header" position="before">
+            <t t-if="website and website.gtm_enable">
+                <t t-raw="website.gtm_noscript"/>
+            </t>
+        </xpath>
+    </template>
+</odoo>

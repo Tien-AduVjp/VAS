@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+
+    <record id="document_tag_category_hr_contract" model="document.tag.category">
+        <field name="name">HR Contract</field>
+    </record>
+
+    <record id="document_tag_category_hr_contract_status" model="document.tag.category">
+        <field name="name">HR Contract Status</field>
+    </record>
+
+</odoo>

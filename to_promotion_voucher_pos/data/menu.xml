@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data noupdate="1">
+		<record model="ir.ui.menu" id="to_promotion_voucher.menu_promotion_voucher_root">
+			<field name="groups_id" eval="[(4,ref('point_of_sale.group_pos_user'))]"/>
+		</record>
+		<record model="ir.ui.menu" id="to_promotion_voucher.menu_voucher_root">
+			<field name="groups_id" eval="[(4,ref('point_of_sale.group_pos_user'))]"/>
+		</record>
+	</data>
+</odoo>

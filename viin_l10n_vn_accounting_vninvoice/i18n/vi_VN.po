@@ -1,0 +1,605 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_l10n_vn_accounting_vninvoice
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-16 07:14+0000\n"
+"PO-Revision-Date: 2022-03-16 07:14+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"\n"
+"You will be able to find it in the tab E-Invoice of the invoice form view above."
+msgstr ""
+"\n"
+"Bạn có thể tìm nó trong tab E-invoice của form view hóa đơn phía trên."
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+" You might have not configured allowed IPs in your VN-invoice portal to "
+"grant access from your Odoo instance's IP. Or there could be something wrong"
+" with your VN-invoice's username and/or password."
+msgstr ""
+" Có thể bạn chưa cấu hình (hoặc cấu hình sai) các IP của hệ thống Odoo là IP"
+" được phép ở bên VN-Invoice để cho phép Odoo có thể kết nối với VN-Invoice. "
+"Hoặc có thể bạn thiết lập sai tên/mật khẩu cho VN-Invoice ở Cấu hình Kế "
+"toán."
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_accounting_vninvoice.portal_invoice_page
+msgid "/#!/portal/dashboard"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid "Approve and Sign of The invoice %s is failed. Error: %s"
+msgstr "Duyệt và ký hóa đơn %s bị thất bại. Lỗi: %s"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_accounting_vninvoice.view_move_form
+msgid "Cancel VN-Invoice"
+msgstr "Hủy hóa đơn điện tử"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: model:ir.actions.server,name:viin_l10n_vn_accounting_vninvoice.action_check_vninvoices_signed
+msgid "Check VN-invoice Signed"
+msgstr "Kiểm tra Hoá đơn điện tử đã ký"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Converted file of the invoice %s be downloaded unsuccessfully. Error: %s"
+msgstr "Hóa đơn chuyển đổi %s được tải không thành công. Lỗi: %s"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid "Could not cancel the E-invoice %s in VN-invoice system. Error: %s"
+msgstr "Không thể huỷ hoá đơn điện tử VN-Invoice %s. Lỗi: %s"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid "Could not cancel the VN-invoice %s."
+msgstr "Không thể huỷ của hoá đơn điện tử %s"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid "Could not issue the E-invoice %s in VN-invoice system. Error: %s"
+msgstr ""
+"Không thể phát hành hóa đơn điện tử %s trên hộ thống VN-invoice. Lỗi: %s"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_accounting_vninvoice.view_move_form
+msgid "Create E-invoice Error Notification"
+msgstr "Tạo thông báo sai sót hóa đơn điện tử"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid "Creating e-invoice error notification is successful"
+msgstr "Tạo thông báo sai sót hóa đơn điện tử thành công"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_accounting_vninvoice.view_move_form
+msgid "Delete E-invoice Error Notification"
+msgstr "Xóa thông báo sai sót hóa đơn điện tử"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid "Deleting e-invoice error notification is successful"
+msgstr "Xóa thông báo sai sót hóa đơn điện tử thành công"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_vninvoice.field_account_invoice_einvoice_cancel__display_name
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_vninvoice.field_account_move__display_name
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_vninvoice.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_vninvoice.field_einvoice_service__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: model:ir.model,name:viin_l10n_vn_accounting_vninvoice.model_account_invoice_einvoice_cancel
+msgid "E-Invoice Cancellation Wizard"
+msgstr "Hủy Hóa đơn điện tử"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: model:ir.model,name:viin_l10n_vn_accounting_vninvoice.model_einvoice_service
+msgid "E-Invoice Services"
+msgstr "Dịch vụ hóa đơn điện tử"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid "E-Invoice created on VN-Invoice: Invoice No: %s"
+msgstr "Hóa đơn điện tử đã được tạo trên hệ thống VN-Invoice. Số hóa đơn: %s"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid "E-Invoice has been approved and signed successfully"
+msgstr "Hóa đơn điện tử đã được duyệt và ký thành công"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_vninvoice.field_account_invoice_einvoice_cancel__id
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_vninvoice.field_account_move__id
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_vninvoice.field_account_move_line__id
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_vninvoice.field_einvoice_service__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move_line.py:0
+#, python-format
+msgid "Invoice line %s is not a reversal of any invoice line"
+msgstr ""
+"Dòng hóa đơn %s không phải là đảo ngược của bất kỳ dòng hóa đơn gốc nào"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: model:ir.model,name:viin_l10n_vn_accounting_vninvoice.model_account_move
+msgid "Journal Entry"
+msgstr "Phiếu kế toán"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: model:ir.model,name:viin_l10n_vn_accounting_vninvoice.model_account_move_line
+msgid "Journal Item"
+msgstr "Phát sinh Kế toán"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_vninvoice.field_account_invoice_einvoice_cancel____last_update
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_vninvoice.field_account_move____last_update
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_vninvoice.field_account_move_line____last_update
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_vninvoice.field_einvoice_service____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_accounting_vninvoice.portal_invoice_page
+msgid "Legal E-Invoice"
+msgstr "Hóa đơn điện tử hợp pháp"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/einvoice_service.py:0
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/einvoice_service.py:0
+#, python-format
+msgid "Log in VN-Invoice system unsuccessfully. Error: %s"
+msgstr "Đăng nhập vào hệ thống hóa đơn điện tử không thành công. Lỗi: %s"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/einvoice_service.py:0
+#, python-format
+msgid ""
+"Log in VN-Invoice system unsuccessfully. You should check the account "
+"configuration in setting"
+msgstr ""
+"Đăng nhập hệ thống VN-Invoice không thành công.Vui lòng kiểm tra lại cấu "
+"hình tài khoản trong phần thiết lập."
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"No converted file avaiable yet. Please wait for a few minutes before trying "
+"again!"
+msgstr ""
+"Không có tập tin chuyển đổi hoá đơn. Vui lòng chờ đợi ít phút trước khi thử "
+"lại!"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"No representation files avaiable yet. Please wait for a few minutes before "
+"trying again!"
+msgstr ""
+"Không có tập tin thể hiện hoá đơn. Vui lòng chờ đợi ít phút trước khi thử "
+"lại!"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid "Original invoice %s has not been signed."
+msgstr "Hóa đơn gốc %s chưa được ký."
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_accounting_vninvoice.portal_invoice_page
+msgid "Our Tax Identification Number:"
+msgstr "Mã số thuế của chúng tôi:"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move_line.py:0
+#, python-format
+msgid ""
+"Product %s don't have Unit of measure. VN-Invoice requires Unit of measure "
+"in every invoice line"
+msgstr ""
+"Sản phẩm %s không có Đơn vị đo lường. VN-Invoice yêu cầu Đơn vị đo lường "
+"trong mọi dòng hóa đơn"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_vninvoice.field_einvoice_service__provider
+msgid "Provider"
+msgstr "Nhà cung cấp"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_vninvoice.field_account_invoice_einvoice_cancel__reason
+msgid "Reason"
+msgstr "Lý do thu hồi hóa đơn"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Representation PDF file of the invoice %s be downloaded unsuccessfully. "
+"Error: %s"
+msgstr "Bản thể hiện (PDF) của hóa đơn %s Tải xuống không thành công.Lỗi:% s"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_accounting_vninvoice.portal_invoice_page
+msgid "Secret Code:"
+msgstr "Mã bí mật:"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_accounting_vninvoice.view_move_form
+msgid "Sign E-invoice Error Notification"
+msgstr "Ký thông báo sai sót hóa đơn điện tử"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_accounting_vninvoice.view_move_form
+msgid "Sign VN-invoice"
+msgstr "Ký hóa đơn VN-invoice"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid "Sign e-invoice error notification is successful"
+msgstr "Ký thông báo sai sót hóa đơn điện tử thành công"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Something went wrong when Creating E-Invoice Error Notification. Here is the debugging information:\n"
+"%s"
+msgstr ""
+"Đã xảy ra lỗi khi tạo Thông báo sai sót hóa đơn điện tử. Đây là thông tin gỡ lỗi: \n"
+"%s"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Something went wrong when approve and sign the E-Invoice %s. Here is the debugging information:\n"
+"%s"
+msgstr ""
+"Có lỗi gì đó xảy ra trong quá trình duyệt và ký hoá đơn điện tử %s. Đây là thông tin gỡ lỗi:\n"
+"%s"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Something went wrong when cancelling the E-Invoice %s. Here is the debugging information:\n"
+"%s"
+msgstr ""
+"Có lỗi gì đó xảy ra trong quá trình huỷ hoá đơn điện tử %s. Đây là thông tin gỡ lỗi:\n"
+"%s"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Something went wrong when checking Sign status of E-Invoice %s. Here is the debugging information:\n"
+"%s"
+msgstr ""
+"Đã xảy ra lỗi khi kiểm tra trạng thái Ký của Hóa đơn điện tử %s. Đây là thông tin gỡ lỗi: \n"
+"%s"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Something went wrong when deleting E-Invoice Error Notification. Here is the debugging information:\n"
+"%s"
+msgstr ""
+"Đã xảy ra lỗi khi xóa Hóa đơn điện tử %s. Đây là thông tin gỡ lỗi: \n"
+"%s"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Something went wrong when get invoice file of the E-Invoice %s. Here is the debugging information:\n"
+"%s"
+msgstr ""
+"Có lỗi gì đó xảy ra trong quá trình lấy hoá đơn điện tử %s. Đây là thông tin gỡ lỗi:\n"
+"%s"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Something went wrong when issuing E-Invoice. Here is the debugging information:\n"
+"%s"
+msgstr ""
+"Có lỗi gì đó xảy ra trong quá trình phát hành hoá đơn điện tử. Đây là thông tin gỡ lỗi:\n"
+"%s"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid "Something went wrong when issuing the E-Invoice: %s"
+msgstr "Có lỗi xảy ra khi phát hành hóa đơn điện tử: %s"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/einvoice_service.py:0
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/einvoice_service.py:0
+#, python-format
+msgid ""
+"Something went wrong when log in VN-Invoice system. Here is the debugging information:\n"
+"%s"
+msgstr ""
+"Đã xảy ra lỗi khi đăng nhập hệ thống VN-Invoice. Đây là thông tin debugging:\n"
+"%s"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Something went wrong when signing E-Invoice Error Notification. Here is the debugging information:\n"
+"%s"
+msgstr ""
+"Đã xảy ra lỗi khi ký Hóa đơn điện tử %s. Đây là thông tin gỡ lỗi: \n"
+"%s"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Something went wrong when synchronizing E-Invoice status. Here is the debugging information:\n"
+"%s"
+msgstr ""
+"Đã có lỗi xảy ra khi đồng bộ trạng thái hóa đơn điện tử. Đây là thông tin gỡ lỗi:\n"
+"%s"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Something went wrong when synchronizing status for E-Invoice %s. Here is the debugging information:\n"
+"%s"
+msgstr ""
+"Đã có lỗi xảy ra khi đồng bộ trạng thái cho hóa đơn điện tử %s. Đây là thông tin gỡ lỗi:\n"
+"%s"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid "Successfully downloaded the XML version of the VN-invoice %s."
+msgstr "Đã tải xuống thành công phiên bản XML của VN-invoice% s."
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid "Successfully downloaded the converted version of the VN-invoice %s."
+msgstr "Đã tải xuống thành công phiên bản chuyển đổi của VN-invoice% s."
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Successfully downloaded the representation version of the VN-invoice %s."
+msgstr "Đã tải xuống thành công phiên bản thể hiện của VN-invoice% s."
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: model:ir.model.fields,help:viin_l10n_vn_accounting_vninvoice.field_account_bank_statement_line__vninvoice_erpid
+#: model:ir.model.fields,help:viin_l10n_vn_accounting_vninvoice.field_account_move__vninvoice_erpid
+#: model:ir.model.fields,help:viin_l10n_vn_accounting_vninvoice.field_account_payment__vninvoice_erpid
+msgid ""
+"Technical field to store ERP ID that was returned by VN-Invoice after "
+"invoice creation."
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: model:ir.model.fields,help:viin_l10n_vn_accounting_vninvoice.field_account_bank_statement_line__vninvoice_recordid
+#: model:ir.model.fields,help:viin_l10n_vn_accounting_vninvoice.field_account_move__vninvoice_recordid
+#: model:ir.model.fields,help:viin_l10n_vn_accounting_vninvoice.field_account_payment__vninvoice_recordid
+msgid ""
+"Technical field to store record ID that was returned by VN-invoice after "
+"invoice creation."
+msgstr ""
+"Trường kỹ thuật để lưu trữ ID của bản ghi trên hệ thống VN-invoice sau khi "
+"lập hóa đơn."
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"The VN-invoice corresponding to the invoice %s could not be cancelled "
+"because it has not been issued or cancelled already."
+msgstr ""
+"Hoá đơn điện tử ứng với hoá đơn %s không thể bị huỷ với vì nó vẫn chưa được "
+"phát hành hoặc đã huỷ rồi."
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid "The legal E-Invoice %s has been cancelled on VN-invoice."
+msgstr "Hoá đơn Điện tử %s đã được huỷ ở hệ thống VN-Invoice."
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_accounting_vninvoice.portal_invoice_page
+msgid "The legal e-invoice numbered"
+msgstr "Hoá đơn điện tử số"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move_line.py:0
+#, python-format
+msgid ""
+"The line containing the product %s comes with more than one tax which is not supported by VN-incoice.\n"
+"            You may set some taxes to get their value included in the price to ensure that there is no more than one tax on a single line."
+msgstr ""
+"Dòng hoá đơn chưa sản phẩm %s có nhiều hơn một loại thuế và không được hỗ trợ bởi VN-Invoice.\n"
+"                Bạn có thể thiết lập một vài loại thuế sao cho giá trị của chúng đã bao gồm trong giá để đảm bảo sẽ không cần phải sử dụng nhiều hơn 1 loại thuế cho mỗi dòng."
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move_line.py:0
+#, python-format
+msgid "The line containing the product %s comes with no tax."
+msgstr "Dòng chứa sản phẩm %s không có thuế."
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_accounting_vninvoice.portal_invoice_page
+msgid "URL:"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: model:ir.model.fields.selection,name:viin_l10n_vn_accounting_vninvoice.selection__einvoice_service__provider__vninvoice
+msgid "VN-Invoice"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_vninvoice.field_account_bank_statement_line__vninvoice_erpid
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_vninvoice.field_account_move__vninvoice_erpid
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_vninvoice.field_account_payment__vninvoice_erpid
+msgid "VN-Invoice ERP ID"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_vninvoice.field_account_bank_statement_line__vninvoice_recordid
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_vninvoice.field_account_move__vninvoice_recordid
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_vninvoice.field_account_payment__vninvoice_recordid
+msgid "VN-Invoice ID"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: model:ir.actions.server,name:viin_l10n_vn_accounting_vninvoice.ir_cron_check_vninvoices_signed_ir_actions_server
+#: model:ir.cron,cron_name:viin_l10n_vn_accounting_vninvoice.ir_cron_check_vninvoices_signed
+#: model:ir.cron,name:viin_l10n_vn_accounting_vninvoice.ir_cron_check_vninvoices_signed
+msgid "VNInvoice: Check VN-invoice Signed"
+msgstr "VNInvoice: Kiểm tra Hoá đơn điện tử đã ký"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid "XML files of the invoice %s be downloaded unsuccessfully. Error: %s"
+msgstr "File XML của hóa đơn %s tải xuống không thành công. Lỗi: %s "
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"You cannot download the converted file of this invoice, because it's not "
+"signed"
+msgstr "Bạn không thể tải bản chuyển đổi của hóa đơn vì nó chưa được ký"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"You cannot issue VN-invoice for the invoice %s dated %s because Issued "
+"E-invoices with later invoice date are existing."
+msgstr ""
+"Bạn không thể xuất hóa đơn điện tử %s ngày %s bởi vì Có hóa đơn điện tử VN-"
+"Invoice đã được xuất với ngày muộn hơn đang tồn tại"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"You cannot issue this credit note because VN-invoice system only allow to "
+"issue one adjustment invoice for an original invoice. The original invoice "
+"of invoice %s has have one adjustment invoice %s."
+msgstr ""
+"Bạn không thể phát hành hóa đơn điều chỉnh giảm này vì hệ thống VN-invoice "
+"chỉ cho phép phát hành một hóa đơn điều chỉnh cho một hóa đơn gốc. Hóa đơn "
+"gốc của hóa đơn %s đã có một hóa đơn điều chỉnh %s."
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"You have to set E-invoice Template being only number, not include letter"
+msgstr "Bạn phải đặt Mẫu hóa đơn điện tử chỉ là số, không bao gồm chữ cái"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"You must create and sign the e-invoice error notification of invoice %s "
+"before issuing this adjustment invoice"
+msgstr ""
+"Bạn phải tạo và ký thông báo sai sót hóa đơn điện tử của hóa đơn %s trước "
+"khi phát hành hóa đơn điều chỉnh này"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"You must sign the e-invoice error notification of invoice %s before issuing "
+"this adjustment invoice"
+msgstr ""
+"Bạn phải ký thông báo sai sót hóa đơn điện tử của hóa đơn %s trước khi phát "
+"hành hóa đơn điều chỉnh này"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_accounting_vninvoice.portal_invoice_page
+msgid ""
+"has been issued to you with VN-Invoice. You can login VN-Invoice system for "
+"the original invoice:"
+msgstr ""
+"đã được phát hành thông qua VN-Invoice. Bạn có thể đăng nhập hệ thống VN-"
+"Invoice để tra cứu hoá đơn gốc:"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move_line.py:0
+#, python-format
+msgid ""
+"price unit %s of line %s must not greater than price unit %s of invoice line"
+" %s of original invoice %s"
+msgstr ""
+"Đơn vị giá %s của dòng %s không được lớn hơn đơn vị giá %s của dòng hóa đơn "
+"%s của hóa đơn gốc %s"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: code:addons/viin_l10n_vn_accounting_vninvoice/models/account_move_line.py:0
+#, python-format
+msgid ""
+"quantity %s of line %s must not greater than quantity %s of invoice line %s "
+"of original invoice %s"
+msgstr ""
+"Số lượng %s của dòng %s không được lớn hơn Số lượng %s của dòng hóa đơn %s "
+"của hóa đơn gốc %s"
+
+#. module: viin_l10n_vn_accounting_vninvoice
+#: model:ir.model.fields,help:viin_l10n_vn_accounting_vninvoice.field_account_invoice_einvoice_cancel__reason
+msgid ""
+"the reason of the agreement between you and your customer for the invoice "
+"cancellation."
+msgstr ""
+"Lý do của văn bản thoả thuận giữa bạn và khách hàng của bạn liên quan đến "
+"việc huỷ hoá đơn này."

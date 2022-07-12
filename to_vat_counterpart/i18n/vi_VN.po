@@ -1,0 +1,89 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_vat_counterpart
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-28 07:30+0000\n"
+"PO-Revision-Date: 2021-10-28 07:30+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_vat_counterpart
+#: model:ir.model.fields,field_description:to_vat_counterpart.field_account_tax__display_name
+#: model:ir.model.fields,field_description:to_vat_counterpart.field_account_tax_group__display_name
+#: model:ir.model.fields,field_description:to_vat_counterpart.field_account_tax_repartition_line__display_name
+#: model:ir.model.fields,field_description:to_vat_counterpart.field_account_tax_repartition_line_template__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_vat_counterpart
+#: model:ir.model.fields,field_description:to_vat_counterpart.field_account_tax__id
+#: model:ir.model.fields,field_description:to_vat_counterpart.field_account_tax_group__id
+#: model:ir.model.fields,field_description:to_vat_counterpart.field_account_tax_repartition_line__id
+#: model:ir.model.fields,field_description:to_vat_counterpart.field_account_tax_repartition_line_template__id
+msgid "ID"
+msgstr ""
+
+#. module: to_vat_counterpart
+#: model:ir.model.fields,help:to_vat_counterpart.field_account_tax_repartition_line__vat_ctp_account_id
+#: model:ir.model.fields,help:to_vat_counterpart.field_account_tax_repartition_line_template__vat_ctp_account_id
+msgid ""
+"In some cases where we do not have a counterpart account for a tax entry, the account set here as a counterpart account might help.\n"
+"For example, according to Vietnam Accounting Standards, the account code 33312 (VAT on imported goods) requires the account 1331 (VAT on purchase of goods and services - Deducted VAT) for a counterpart of its."
+msgstr ""
+
+#. module: to_vat_counterpart
+#: model:ir.model.fields,field_description:to_vat_counterpart.field_account_tax____last_update
+#: model:ir.model.fields,field_description:to_vat_counterpart.field_account_tax_group____last_update
+#: model:ir.model.fields,field_description:to_vat_counterpart.field_account_tax_repartition_line____last_update
+#: model:ir.model.fields,field_description:to_vat_counterpart.field_account_tax_repartition_line_template____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_vat_counterpart
+#: model:ir.model,name:to_vat_counterpart.model_account_tax
+msgid "Tax"
+msgstr "Thuế"
+
+#. module: to_vat_counterpart
+#: model:ir.model,name:to_vat_counterpart.model_account_tax_group
+msgid "Tax Group"
+msgstr "Nhóm Thuế"
+
+#. module: to_vat_counterpart
+#: model:ir.model,name:to_vat_counterpart.model_account_tax_repartition_line
+msgid "Tax Repartition Line"
+msgstr "Chi tiết phân bổ thuế"
+
+#. module: to_vat_counterpart
+#: model:ir.model,name:to_vat_counterpart.model_account_tax_repartition_line_template
+msgid "Tax Repartition Line Template"
+msgstr "Mẫu chi tiết phân bổ thuế"
+
+#. module: to_vat_counterpart
+#: model:ir.model.fields,help:to_vat_counterpart.field_account_tax_group__vat_ctp_account_id
+msgid ""
+"This provides default value for VAT Counterpart Account on the tax form"
+msgstr ""
+"Trường này cung cấp giá trị mặc định cho tài khoản đối ứng với tài khoản "
+"thuế GTGT trên form thuế (account.tax)"
+
+#. module: to_vat_counterpart
+#: code:addons/to_vat_counterpart/models/account_tax_repartition_line.py:0
+#, python-format
+msgid "This tax is not a VAT, hence, its counterpart account must be removed"
+msgstr "Thuế này không phải là GTGT, do đó tài khoản đối ứng của nó phải được xóa"
+
+#. module: to_vat_counterpart
+#: model:ir.model.fields,field_description:to_vat_counterpart.field_account_tax_group__vat_ctp_account_id
+#: model:ir.model.fields,field_description:to_vat_counterpart.field_account_tax_repartition_line__vat_ctp_account_id
+#: model:ir.model.fields,field_description:to_vat_counterpart.field_account_tax_repartition_line_template__vat_ctp_account_id
+msgid "VAT Counterpart Account"
+msgstr "Tài khoản Đối ứng Thuế GTGT"

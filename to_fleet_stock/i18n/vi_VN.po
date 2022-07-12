@@ -1,0 +1,171 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_fleet_stock
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-09 08:13+0000\n"
+"PO-Revision-Date: 2022-05-09 08:13+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_fleet_stock
+#: model:ir.model.fields,help:to_fleet_stock.field_stock_picking__fleet_service_type_id
+msgid ""
+"A service type of the fleet related to this stock picking. E.g. part "
+"replacement, refueling, etc."
+msgstr ""
+"Một kiểu dịch vụ phương tiện liên quan đến phiếu dịch chuyển kho này. Ví dụ,"
+" thay thế phụ tùng, nạp nhiên liệu, v.v."
+
+#. module: to_fleet_stock
+#: model_terms:ir.ui.view,arch_db:to_fleet_stock.stock_production_type_kanban
+msgid "Consumptions"
+msgstr "Tiêu thụ"
+
+#. module: to_fleet_stock
+#: model:ir.model.fields,field_description:to_fleet_stock.field_fleet_vehicle_log_contract__display_name
+#: model:ir.model.fields,field_description:to_fleet_stock.field_fleet_vehicle_log_services__display_name
+#: model:ir.model.fields,field_description:to_fleet_stock.field_stock_move__display_name
+#: model:ir.model.fields,field_description:to_fleet_stock.field_stock_picking__display_name
+#: model:ir.model.fields,field_description:to_fleet_stock.field_stock_picking_type__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_fleet_stock
+#: model_terms:ir.ui.view,arch_db:to_fleet_stock.view_move_form
+msgid "Fleet"
+msgstr "Đội Phương tiện"
+
+#. module: to_fleet_stock
+#: model:ir.model.fields.selection,name:to_fleet_stock.selection__stock_picking_type__code__fleet_consumption
+#: model:stock.picking.type,name:to_fleet_stock.picking_type_fleet_consumption
+msgid "Fleet Consumption"
+msgstr "Tiêu thụ cho Phương tiện"
+
+#. module: to_fleet_stock
+#: model:ir.model.fields,field_description:to_fleet_stock.field_fleet_vehicle_log_contract__id
+#: model:ir.model.fields,field_description:to_fleet_stock.field_fleet_vehicle_log_services__id
+#: model:ir.model.fields,field_description:to_fleet_stock.field_stock_move__id
+#: model:ir.model.fields,field_description:to_fleet_stock.field_stock_picking__id
+#: model:ir.model.fields,field_description:to_fleet_stock.field_stock_picking_type__id
+msgid "ID"
+msgstr ""
+
+#. module: to_fleet_stock
+#: model:ir.model.fields,field_description:to_fleet_stock.field_fleet_vehicle_log_contract____last_update
+#: model:ir.model.fields,field_description:to_fleet_stock.field_fleet_vehicle_log_services____last_update
+#: model:ir.model.fields,field_description:to_fleet_stock.field_stock_move____last_update
+#: model:ir.model.fields,field_description:to_fleet_stock.field_stock_picking____last_update
+#: model:ir.model.fields,field_description:to_fleet_stock.field_stock_picking_type____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_fleet_stock
+#: model:ir.model,name:to_fleet_stock.model_stock_picking_type
+msgid "Picking Type"
+msgstr "Kiểu giao nhận"
+
+#. module: to_fleet_stock
+#: model:ir.model,name:to_fleet_stock.model_fleet_vehicle_log_services
+msgid "Services for vehicles"
+msgstr "Các dịch vụ cho phương tiện"
+
+#. module: to_fleet_stock
+#: model:ir.model,name:to_fleet_stock.model_stock_move
+#: model:ir.model.fields,field_description:to_fleet_stock.field_fleet_vehicle_log_contract__created_from_stock_move_id
+#: model:ir.model.fields,field_description:to_fleet_stock.field_fleet_vehicle_log_services__created_from_stock_move_id
+msgid "Stock Move"
+msgstr "Dịch chuyển kho"
+
+#. module: to_fleet_stock
+#: model:ir.model.fields,field_description:to_fleet_stock.field_fleet_vehicle_log_contract__created_from_stock_stock_picking_id
+#: model:ir.model.fields,field_description:to_fleet_stock.field_fleet_vehicle_log_services__created_from_stock_stock_picking_id
+msgid "Stock Reference"
+msgstr "Phiếu Kho"
+
+#. module: to_fleet_stock
+#: model:ir.model.fields,help:to_fleet_stock.field_stock_move__fleet_service_type_id
+msgid "The service type of the fleet related to this stock move"
+msgstr "Dịch vụ phương tiện liên quan đến dịch chuyển kho này"
+
+#. module: to_fleet_stock
+#: model:ir.model.fields,help:to_fleet_stock.field_fleet_vehicle_log_contract__created_from_stock_stock_picking_id
+msgid ""
+"The source stock picking document that generated this vehicle contract."
+msgstr "Phiếu kho mà sinh ra hợp đồng này."
+
+#. module: to_fleet_stock
+#: model:ir.model.fields,help:to_fleet_stock.field_fleet_vehicle_log_services__created_from_stock_stock_picking_id
+msgid "The source stock picking document that generated this vehicle service."
+msgstr "Phiếu kho mà sinh ra dịch vụ này."
+
+#. module: to_fleet_stock
+#: model:ir.model.fields,help:to_fleet_stock.field_fleet_vehicle_log_contract__created_from_stock_move_id
+msgid ""
+"This field is to indicated that the contract was generated by a stock move."
+msgstr "Trường này để chi ra rằng hợp đồng này đã được sinh ra bởi một dịch chuyển kho."
+
+#. module: to_fleet_stock
+#: model:ir.model.fields,help:to_fleet_stock.field_fleet_vehicle_log_services__created_from_stock_move_id
+msgid ""
+"This field is to indicated that the service was generated by a stock move."
+msgstr "Trường này để chi ra rằng dịch vụ này đã được sinh ra bởi một dịch chuyển kho."
+
+#. module: to_fleet_stock
+#: model:ir.model.fields,help:to_fleet_stock.field_stock_move__vehicle_id
+msgid "This is to indicate that this move concerns a vehicle"
+msgstr ""
+"Trường này để chi ra rằng dịch chuyển này liên quan đến một phương tiện"
+
+#. module: to_fleet_stock
+#: model:ir.model,name:to_fleet_stock.model_stock_picking
+msgid "Transfer"
+msgstr "Dịch chuyển"
+
+#. module: to_fleet_stock
+#: model:ir.model.fields,field_description:to_fleet_stock.field_stock_picking_type__code
+msgid "Type of Operation"
+msgstr "Kiểu hoạt động"
+
+#. module: to_fleet_stock
+#: model:ir.model.fields,field_description:to_fleet_stock.field_stock_move__vehicle_id
+msgid "Vehicle"
+msgstr "Phương tiện"
+
+#. module: to_fleet_stock
+#: model:ir.model,name:to_fleet_stock.model_fleet_vehicle_log_contract
+msgid "Vehicle Contract"
+msgstr "Hợp đồng"
+
+#. module: to_fleet_stock
+#: model:ir.model.fields,field_description:to_fleet_stock.field_stock_move__fleet_service_type_id
+#: model:ir.model.fields,field_description:to_fleet_stock.field_stock_picking__fleet_service_type_id
+msgid "Vehicle Service"
+msgstr "Dịch vụ Phương tiện"
+
+#. module: to_fleet_stock
+#: code:addons/to_fleet_stock/models/stock_picking.py:0
+#, python-format
+msgid ""
+"You have input a vehicle in a move line in the Initial Demand tab but you "
+"have not specified a vehicle service for the picking."
+msgstr ""
+"Bạn đã nhập một phương tiện ở Nhu cầu ban đầu nhưng lại chưa chọn Dịch vụ "
+"Phương tiện."
+
+#. module: to_fleet_stock
+#: code:addons/to_fleet_stock/models/stock_picking.py:0
+#, python-format
+msgid ""
+"You have selected a fleet service for the picking while you have not "
+"specified a vehicle for all the move lines in the Initial Demand tab."
+msgstr ""
+"Bạn đã chọn một dịch vụ phương tiện nhưng lại chưa chọn phương tiện ở Nhu "
+"cầu Ban đầu."

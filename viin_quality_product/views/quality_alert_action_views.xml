@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="quality_alert_action_view_tree" model="ir.ui.view">
+		<field name="name">quality.alert.action.tree.inherit</field>
+		<field name="model">quality.alert.action</field>
+		<field name="inherit_id" ref="to_quality.quality_alert_action_view_tree"/>
+		<field name="arch" type="xml">
+			<field name="type_id" position="after">
+				<field name="product_tmpl_id" attrs="{'invisible': [('quality_type', '!=', 'product')]}"/>
+			</field>
+		</field>
+	</record>
+
+	<record id="quality_alert_action_view_search" model="ir.ui.view">
+		<field name="name">quality.alert.action.search.inherit</field>
+		<field name="model">quality.alert.action</field>
+		<field name="inherit_id" ref="to_quality.quality_alert_action_view_search"/>
+		<field name="arch" type="xml">
+			<field name="quality_action_id" position="after">
+				<field name="product_id" />
+			</field>
+			<xpath expr="//group/filter[@name='grp_quality_action_id']" position="before">
+				<filter string="Product" name="grp_product_id" domain="[]" context="{'group_by':'product_id'}" />
+			</xpath>
+		</field>
+	</record>
+
+</odoo>

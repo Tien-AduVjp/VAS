@@ -1,0 +1,22 @@
+.payment-screen .payment-buttons .hidden{
+	display: none
+}
+.payment-screen .payment-buttons .input-delivery{
+	font-size: 16px;
+	background: #e2e2e2;
+	line-height: 35px;
+	border: solid 1px rgb(200,200,200);
+	border-top-width: 0;
+	position: relative;
+	margin-bottom: 10px;
+	padding-left: 5px;
+	padding-bottom: 5px
+}
+.payment-screen .payment-buttons .disabled{
+	background: #C7C7C7;
+	cursor: auto;
+}
+
+.payment-screen .payment-buttons .disabled:active{
+	pointer-events: none;
+}

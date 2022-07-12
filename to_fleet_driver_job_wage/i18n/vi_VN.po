@@ -1,0 +1,436 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_fleet_driver_job_wage
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-23 06:34+0000\n"
+"PO-Revision-Date: 2021-08-23 06:48+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_fleet_driver_job_wage
+#: model_terms:ir.ui.view,arch_db:to_fleet_driver_job_wage.report_payslip
+#: model_terms:ir.ui.view,arch_db:to_fleet_driver_job_wage.report_payslipdetails
+msgid "<strong>Total</strong>"
+msgstr "<strong>Tổng</strong>"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_fuel_price__message_needaction
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_job_wage_definition__message_needaction
+msgid "Action Needed"
+msgstr "Cần có Hành động"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_job_wage_definition__allowance
+msgid "Allowance"
+msgstr "Phụ Cấp Chuyến"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,help:to_fleet_driver_job_wage.field_fleet_job_wage_definition__allowance
+msgid "Allowance for the driver of the trip on this route with this vehicle"
+msgstr "Phụ cấp chuyến cho lái xe mà đối với tuyến và xe được chọn ở đây"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,help:to_fleet_driver_job_wage.field_fleet_vehicle_trip__job_allowance
+msgid ""
+"Allowance for the driver of the trip which is computed job wage definitions "
+"upon confirming this trip"
+msgstr ""
+"Phụ cấp cho lái xe của chuyến được tính (khi xác nhận chuyến này) dựa trên "
+"số liệu Giá nhiên liệu và định mức khoán"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_fuel_price__message_attachment_count
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_job_wage_definition__message_attachment_count
+msgid "Attachment Count"
+msgstr "Số đính kèm"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_fuel_price__create_uid
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_job_wage_definition__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_fuel_price__create_date
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_job_wage_definition__create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_fuel_price__date
+msgid "Date"
+msgstr "Ngày"
+
+#. module: to_fleet_driver_job_wage
+#: model_terms:ir.ui.view,arch_db:to_fleet_driver_job_wage.report_payslip
+#: model_terms:ir.ui.view,arch_db:to_fleet_driver_job_wage.report_payslipdetails
+msgid "Details by Trips"
+msgstr "Chi tiết theo Chuyến"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_fuel_price__display_name
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_job_wage_definition__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_fleet_driver_job_wage
+#: model:fleet.service.type,name:to_fleet_driver_job_wage.fleet_driver_job_wage
+msgid "Driver Job Wage"
+msgstr "Lương khoán Lái xe"
+
+#. module: to_fleet_driver_job_wage
+#: model_terms:ir.ui.view,arch_db:to_fleet_driver_job_wage.report_payslip
+#: model_terms:ir.ui.view,arch_db:to_fleet_driver_job_wage.report_payslipdetails
+msgid "End Date"
+msgstr "Ngày kết thúc"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,help:to_fleet_driver_job_wage.field_fleet_job_wage_definition__consumption
+msgid ""
+"Estimated fuel consumption (in liters) for the selected vehicle on the "
+"selected route"
+msgstr ""
+"Định mức tiêu thụ nhiên liệu (tính bằng lít) cho phương tiện được chọn đối "
+"với tuyến được chọn"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.ui.menu,name:to_fleet_driver_job_wage.fleet1_main
+msgid "Fleet"
+msgstr "Đội Phương tiện"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model,name:to_fleet_driver_job_wage.model_fleet_fuel_price
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_vehicle_trip__fuel_price_id
+msgid "Fleet Fuel Price"
+msgstr "Giá Nhiên liệu"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model,name:to_fleet_driver_job_wage.model_fleet_job_wage_definition
+#: model_terms:ir.ui.view,arch_db:to_fleet_driver_job_wage.job_wage_definition_form
+msgid "Fleet Job Wage Definition"
+msgstr "Định mức Lương khoán Đội phương tiện"
+
+#. module: to_fleet_driver_job_wage
+#: model_terms:ir.ui.view,arch_db:to_fleet_driver_job_wage.job_wage_definition_tree
+msgid "Fleet Job Wage Definitions"
+msgstr "Định mức Lương khoán Đội phương tiện"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_job_wage_definition__fleet_service_type_id
+msgid "Fleet Service Type"
+msgstr "Kiểu Dịch vụ Phương tiện"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model,name:to_fleet_driver_job_wage.model_fleet_vehicle_trip
+msgid "Fleet Trip"
+msgstr "Chuyến"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_fuel_price__message_follower_ids
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_job_wage_definition__message_follower_ids
+msgid "Followers"
+msgstr "Người dõi theo"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_fuel_price__message_channel_ids
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_job_wage_definition__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Người theo dõi (Các kênh)"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_fuel_price__message_partner_ids
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_job_wage_definition__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Người theo dõi (Các đối tác)"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_vehicle_trip__fuel_based_job_wage
+msgid "Fuel Based Job Wage"
+msgstr "Lương khoán (Theo giá nhiên liệu)"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_job_wage_definition__consumption
+msgid "Fuel Consumption (l)"
+msgstr "Lượng tiêu thụ (Lít)"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.actions.act_window,name:to_fleet_driver_job_wage.fuel_price_action
+#: model:ir.ui.menu,name:to_fleet_driver_job_wage.fuel_price
+#: model_terms:ir.ui.view,arch_db:to_fleet_driver_job_wage.fuel_price_form
+msgid "Fuel Price"
+msgstr "Giá nhiên liệu"
+
+#. module: to_fleet_driver_job_wage
+#: model_terms:ir.actions.act_window,help:to_fleet_driver_job_wage.fuel_price_action
+msgid ""
+"Fuel Price is a model to store price of fuel for a\n"
+"\t\t\t\tgiven date which could be used in driver job wage computation in\n"
+"\t\t\t\tcase the job wage is based on the fuel price"
+msgstr ""
+"Giá nhiên liệu là một mô hình để lưu trữ giá của nhiên liệu \n"
+"\t\t\t\tcho một ngày nhất định mà có thể sử dụng để tính lương khoán lái xe \n"
+"\t\t\t\ttrong trường hợp lương khoán dựa trên giá nhiên liệu"
+
+#. module: to_fleet_driver_job_wage
+#: model_terms:ir.ui.view,arch_db:to_fleet_driver_job_wage.fuel_price_tree
+msgid "Fuel Prices"
+msgstr ""
+
+#. module: to_fleet_driver_job_wage
+#: model_terms:ir.ui.view,arch_db:to_fleet_driver_job_wage.report_payslip
+#: model_terms:ir.ui.view,arch_db:to_fleet_driver_job_wage.report_payslipdetails
+msgid "Fuel-Based Job Wage"
+msgstr "Lương khoán (Theo Giá nhiên liệu)"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_vehicle_trip__hr_payslip_id
+msgid "HR Payslip"
+msgstr "Phiếu Lương"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_fuel_price__id
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_job_wage_definition__id
+msgid "ID"
+msgstr ""
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,help:to_fleet_driver_job_wage.field_fleet_fuel_price__message_needaction
+#: model:ir.model.fields,help:to_fleet_driver_job_wage.field_fleet_fuel_price__message_unread
+#: model:ir.model.fields,help:to_fleet_driver_job_wage.field_fleet_job_wage_definition__message_needaction
+#: model:ir.model.fields,help:to_fleet_driver_job_wage.field_fleet_job_wage_definition__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Nếu đánh dấu kiểm, các thông điệp mới yêu cầu sự có mặt của bạn."
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,help:to_fleet_driver_job_wage.field_fleet_fuel_price__message_has_error
+#: model:ir.model.fields,help:to_fleet_driver_job_wage.field_fleet_fuel_price__message_has_sms_error
+#: model:ir.model.fields,help:to_fleet_driver_job_wage.field_fleet_job_wage_definition__message_has_error
+#: model:ir.model.fields,help:to_fleet_driver_job_wage.field_fleet_job_wage_definition__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_fuel_price__message_is_follower
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_job_wage_definition__message_is_follower
+msgid "Is Follower"
+msgstr "Là người theo dõi"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_vehicle_trip__job_allowance
+#: model_terms:ir.ui.view,arch_db:to_fleet_driver_job_wage.report_payslip
+#: model_terms:ir.ui.view,arch_db:to_fleet_driver_job_wage.report_payslipdetails
+msgid "Job Allowance"
+msgstr "Phụ cấp Chuyến"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.actions.act_window,name:to_fleet_driver_job_wage.job_wage_definition_action
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_vehicle_trip__job_wage_def_id
+msgid "Job Wage Definition"
+msgstr "Định mức Khoán Chuyến"
+
+#. module: to_fleet_driver_job_wage
+#: model_terms:ir.actions.act_window,help:to_fleet_driver_job_wage.job_wage_definition_action
+msgid ""
+"Job Wage Definition is a rule for you set a fix\n"
+"\t\t\t\twage for a trip of a specific vehicle on a specific route with a\n"
+"\t\t\t\tgiven fuel consumption. For example, US$500 could be a Job Wage for\n"
+"\t\t\t\ta trip from A to B using the vehicle X with estimated diesel\n"
+"\t\t\t\tconsumption of 100 liters"
+msgstr ""
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.ui.menu,name:to_fleet_driver_job_wage.job_wage_definition
+msgid "Job Wage Definitions"
+msgstr "Định mức Khoán Chuyến"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_fuel_price____last_update
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_job_wage_definition____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_fuel_price__write_uid
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_job_wage_definition__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_fuel_price__write_date
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_job_wage_definition__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_fuel_price__message_main_attachment_id
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_job_wage_definition__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Đính kèm chính"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_fuel_price__message_has_error
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_job_wage_definition__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_fuel_price__message_ids
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_job_wage_definition__message_ids
+msgid "Messages"
+msgstr "Thông điệp"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_fuel_price__message_needaction_counter
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_job_wage_definition__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Số lượng Hành động"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_fuel_price__message_has_error_counter
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_job_wage_definition__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,help:to_fleet_driver_job_wage.field_fleet_fuel_price__message_needaction_counter
+#: model:ir.model.fields,help:to_fleet_driver_job_wage.field_fleet_job_wage_definition__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Số thông điệp cần có hành động"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,help:to_fleet_driver_job_wage.field_fleet_fuel_price__message_has_error_counter
+#: model:ir.model.fields,help:to_fleet_driver_job_wage.field_fleet_job_wage_definition__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,help:to_fleet_driver_job_wage.field_fleet_fuel_price__message_unread_counter
+#: model:ir.model.fields,help:to_fleet_driver_job_wage.field_fleet_job_wage_definition__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Số thông điệp chưa đọc"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model,name:to_fleet_driver_job_wage.model_hr_payslip
+msgid "Pay Slip"
+msgstr "Phiếu lương"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_fuel_price__price_per_liter
+msgid "Price Per Liter"
+msgstr "Giá mỗi Lít"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_job_wage_definition__route_id
+#: model_terms:ir.ui.view,arch_db:to_fleet_driver_job_wage.report_payslip
+#: model_terms:ir.ui.view,arch_db:to_fleet_driver_job_wage.report_payslipdetails
+msgid "Route"
+msgstr "Tuyến đường"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_fuel_price__message_has_sms_error
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_job_wage_definition__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: to_fleet_driver_job_wage
+#: model_terms:ir.ui.view,arch_db:to_fleet_driver_job_wage.report_payslip
+#: model_terms:ir.ui.view,arch_db:to_fleet_driver_job_wage.report_payslipdetails
+msgid "Start Date"
+msgstr "Ngày bắt đầu"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,help:to_fleet_driver_job_wage.field_fleet_vehicle_trip__job_wage_def_id
+msgid ""
+"Technical Field to store matching Job Wage Definition during Job Wage "
+"computation"
+msgstr ""
+"Trường kỹ thuật để lưu trữ Định mức Khoán chuyến được sử dụng trong quá "
+"trình tính lương khoán"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,help:to_fleet_driver_job_wage.field_fleet_vehicle_trip__fuel_price_id
+msgid ""
+"Technical Field to store matching fuel price during Job Wage computation"
+msgstr ""
+"Trường kỹ thuật để lưu trữ Giá nhiên liệu được sử dụng trong quá trình tính "
+"lương khoán"
+
+#. module: to_fleet_driver_job_wage
+#: model_terms:ir.ui.view,arch_db:to_fleet_driver_job_wage.view_hr_payslip_form
+msgid "Total"
+msgstr "Tổng"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_hr_payslip__total_allowance
+#: model_terms:ir.ui.view,arch_db:to_fleet_driver_job_wage.view_hr_payslip_form
+msgid "Total Allowance"
+msgstr "Tổng Phụ cấp"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_hr_payslip__total_job_wage
+msgid "Total Job Wage"
+msgstr "Tổng Lương Khoán"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_fuel_price__message_unread
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_job_wage_definition__message_unread
+msgid "Unread Messages"
+msgstr "Thông điệp chưa đọc"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_fuel_price__message_unread_counter
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_job_wage_definition__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Bộ đếm Thông điệp chưa đọc"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_job_wage_definition__vehicle_id
+#: model_terms:ir.ui.view,arch_db:to_fleet_driver_job_wage.report_payslip
+#: model_terms:ir.ui.view,arch_db:to_fleet_driver_job_wage.report_payslipdetails
+msgid "Vehicle"
+msgstr "Phương tiện"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model,name:to_fleet_driver_job_wage.model_vehicle_trip_end_wizard
+msgid "Vehicle Trip End Wizard"
+msgstr "Đồ thuật Kết thúc Chuyến"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_hr_payslip__vehicle_trip_ids
+#: model_terms:ir.ui.view,arch_db:to_fleet_driver_job_wage.view_hr_payslip_form
+msgid "Vehicle Trips"
+msgstr "Các Chuyến"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,help:to_fleet_driver_job_wage.field_fleet_vehicle_trip__fuel_based_job_wage
+msgid ""
+"Wage for the driver of the trip which is computed from fuel price and job "
+"wage definitions upon confirming this trip"
+msgstr ""
+"Lương khoán cho lái xe của chuyến, được tính toán (khi xác nhận chuyến) dựa "
+"trên giá nhiên liệu và định mức khoán chuyến"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_fuel_price__website_message_ids
+#: model:ir.model.fields,field_description:to_fleet_driver_job_wage.field_fleet_job_wage_definition__website_message_ids
+msgid "Website Messages"
+msgstr "Thông điệp Website"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.fields,help:to_fleet_driver_job_wage.field_fleet_fuel_price__website_message_ids
+#: model:ir.model.fields,help:to_fleet_driver_job_wage.field_fleet_job_wage_definition__website_message_ids
+msgid "Website communication history"
+msgstr "Lịch sử thông tin liên lạc website"
+
+#. module: to_fleet_driver_job_wage
+#: model:ir.model.constraint,message:to_fleet_driver_job_wage.constraint_fleet_fuel_price_date_unique
+msgid "You cannot input fuel price more than once per day"
+msgstr "Bạn không thể nhập giá nhiên liệu nhiều hơn một lần mỗi ngày"

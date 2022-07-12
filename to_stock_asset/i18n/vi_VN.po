@@ -1,0 +1,527 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_stock_asset
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-02 07:19+0000\n"
+"PO-Revision-Date: 2021-11-02 07:19+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_stock_asset
+#: code:addons/to_stock_asset/models/stock_landed_cost.py:0
+#: code:addons/to_stock_asset/models/stock_landed_cost.py:0
+#: code:addons/to_stock_asset/models/stock_landed_cost.py:0
+#: code:addons/to_stock_asset/models/stock_landed_cost.py:0
+#, python-format
+msgid " already out"
+msgstr " đã xuất kho"
+
+#. module: to_stock_asset
+#: code:addons/to_stock_asset/models/account_asset_asset.py:0
+#, python-format
+msgid "%(name)s%(asset_name)s"
+msgstr ""
+
+#. module: to_stock_asset
+#: model:ir.model.fields,help:to_stock_asset.field_stock_location__usage
+msgid ""
+"* Vendor Location: Virtual location representing the source location for products coming from your vendors\n"
+"* View: Virtual location used to create a hierarchical structures for your warehouse, aggregating its child locations ; can't directly contain products\n"
+"* Internal Location: Physical locations inside your own warehouses,\n"
+"* Customer Location: Virtual location representing the destination location for products sent to your customers\n"
+"* Inventory Loss: Virtual location serving as counterpart for inventory operations used to correct stock levels (Physical inventories)\n"
+"* Production: Virtual counterpart location for production operations: this location consumes the components and produces finished products\n"
+"* Transit Location: Counterpart location that should be used in inter-company or inter-warehouses operations"
+msgstr ""
+"* Địa điểm nhà cung cấp: Vị trí ảo đại diện cho vị trí nguồn cho các sản phẩm đến từ các nhà cung cấp của bạn\n"
+"* Xem: Vị trí ảo được sử dụng để tạo cấu trúc phân cấp cho kho của bạn, tổng hợp các vị trí con của nó; không thể chứa sản phẩm trực tiếp\n"
+"* Địa điểm nội bộ: Vị trí thực tế trong kho của riêng bạn,\n"
+"* Địa điểm khách hàng: Vị trí ảo đại diện cho vị trí đích cho các sản phẩm được gửi cho khách hàng của bạn\n"
+"* Mất hàng tồn kho: Vị trí ảo đóng vai trò là đối ứng cho các hoạt động kiểm kê được sử dụng để điều chỉnh mức tồn kho(Địa điểm vật lý)\n"
+"* Sản xuất: Vị trí ảo đối ứng cho hoạt động sản xuất: vị trí này tiêu thụ các nguyên liệu và sản xuất thành phẩm\n"
+"* Địa điểm dịch chuyển: Vị trí đối ứng được sử dụng trong các hoạt động kho giữa các công ty hoặc giữa các kho"
+
+#. module: to_stock_asset
+#: model:ir.model.fields,help:to_stock_asset.field_stock_picking__is_asset_allocation
+msgid "A technical field to show/hide Assets button box."
+msgstr "Một trường kỹ thuật để ẩn / hiện Asset button box"
+
+#. module: to_stock_asset
+#: model:ir.model.fields,help:to_stock_asset.field_account_asset_asset__stock_input_account_id
+msgid ""
+"Accounts are used in the stock re-input action, to support different entries generation method upon asset.\n"
+"When no account is set here, the Stock Input Account on Asset Category will be used instead."
+msgstr ""
+"Tài khoản được sử dụng trong hành động nhập lại kho, để hỗ trợ tạo các bút toán trên tài sản.\n"
+"Khi tài khoản không được thiết lập ở đây, Tài khoản nhập kho trên Nhóm tài sản sẽ được sử dụng thay thế."
+
+#. module: to_stock_asset
+#: model:ir.model.fields,help:to_stock_asset.field_account_asset_category__stock_input_account_id
+msgid ""
+"Accounts are used in the stock re-input action, to support different entries generation method upon asset.\n"
+"When no account is set here, the Stock Input Account on Product Category will be used instead."
+msgstr ""
+"Tài khoản được sử dụng trong hành động nhập lại kho, để hỗ trợ tạo các bút toán trên tài sản.\n"
+"Khi tài khoản không được thiết lập ở đây, Tài khoản nhập kho trên Nhóm tài sản sẽ được sử dụng thay thế."
+
+#. module: to_stock_asset
+#: model:ir.model.fields,field_description:to_stock_asset.field_asset_stock_in_wizard__asset_id
+#: model:ir.model.fields,field_description:to_stock_asset.field_stock_move_line__account_asset_asset_id
+msgid "Asset"
+msgstr "Tài sản"
+
+#. module: to_stock_asset
+#: code:addons/to_stock_asset/models/stock_warehouse.py:0
+#: model:ir.model.fields.selection,name:to_stock_asset.selection__stock_location__usage__asset_allocation
+#: model:ir.model.fields.selection,name:to_stock_asset.selection__stock_picking_type__code__asset_allocation
+#, python-format
+msgid "Asset Allocation"
+msgstr "Phân bổ Tài sản"
+
+#. module: to_stock_asset
+#: model:ir.model.fields,field_description:to_stock_asset.field_stock_warehouse__asset_type_id
+msgid "Asset Allocation Type"
+msgstr "Kiểu Phân bổ Tài sản"
+
+#. module: to_stock_asset
+#: model:ir.model,name:to_stock_asset.model_account_asset_category
+#: model:ir.model.fields,field_description:to_stock_asset.field_account_move_line__asset_category_id
+#: model:ir.model.fields,field_description:to_stock_asset.field_stock_move__asset_category_id
+msgid "Asset Category"
+msgstr "Nhóm Tài sản"
+
+#. module: to_stock_asset
+#: model:ir.model,name:to_stock_asset.model_account_asset_depreciation_line
+msgid "Asset Depreciation Line"
+msgstr "Dòng Khấu hao Tài sản"
+
+#. module: to_stock_asset
+#: model:ir.model.fields,field_description:to_stock_asset.field_account_asset_asset__product_id
+msgid "Asset Product"
+msgstr "Sản phẩm"
+
+#. module: to_stock_asset
+#: model:ir.model,name:to_stock_asset.model_asset_stock_in_wizard
+msgid "Asset Stock In"
+msgstr "Nhập kho Tài sản"
+
+#. module: to_stock_asset
+#: model:ir.actions.act_window,name:to_stock_asset.asset_stock_in_action
+msgid "Asset Stock-in"
+msgstr "Nhập kho Tài sản"
+
+#. module: to_stock_asset
+#: model:ir.model,name:to_stock_asset.model_account_asset_asset
+msgid "Asset/Revenue Recognition"
+msgstr "Ghi nhận tài sản/Doanh thu"
+
+#. module: to_stock_asset
+#: model_terms:ir.ui.view,arch_db:to_stock_asset.stock_picking_view_form_inherited
+msgid "Assets"
+msgstr "Tài sản"
+
+#. module: to_stock_asset
+#: model:ir.model,name:to_stock_asset.model_asset_asset_report
+msgid "Assets Analysis"
+msgstr "Phân tích Tài sản"
+
+#. module: to_stock_asset
+#: model_terms:ir.ui.view,arch_db:to_stock_asset.asset_stock_in_wizard_view_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: to_stock_asset
+#: model:ir.model.fields.selection,name:to_stock_asset.selection__stock_production_lot__asset_status__close
+msgid "Close"
+msgstr "Đóng"
+
+#. module: to_stock_asset
+#: model:ir.model.fields,field_description:to_stock_asset.field_asset_stock_in_wizard__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: to_stock_asset
+#: model:ir.model.fields,field_description:to_stock_asset.field_asset_stock_in_wizard__create_date
+msgid "Created on"
+msgstr "Được tạo vào"
+
+#. module: to_stock_asset
+#: model:ir.model.fields,help:to_stock_asset.field_asset_stock_in_wizard__date
+msgid "Date at which the transfer has been processed or cancelled."
+msgstr "Ngày mà phiếu điều chuyển được xử lý hoặc hủy bỏ"
+
+#. module: to_stock_asset
+#: model:ir.model.fields,field_description:to_stock_asset.field_asset_stock_in_wizard__date
+msgid "Date of Transfer"
+msgstr "Ngày điều chuyển"
+
+#. module: to_stock_asset
+#: model:ir.model.fields,field_description:to_stock_asset.field_account_asset_asset__display_name
+#: model:ir.model.fields,field_description:to_stock_asset.field_account_asset_category__display_name
+#: model:ir.model.fields,field_description:to_stock_asset.field_account_asset_depreciation_line__display_name
+#: model:ir.model.fields,field_description:to_stock_asset.field_account_asset_revaluation_line__display_name
+#: model:ir.model.fields,field_description:to_stock_asset.field_account_move__display_name
+#: model:ir.model.fields,field_description:to_stock_asset.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:to_stock_asset.field_asset_asset_report__display_name
+#: model:ir.model.fields,field_description:to_stock_asset.field_asset_fill_missing_values_wizard__display_name
+#: model:ir.model.fields,field_description:to_stock_asset.field_asset_stock_in_wizard__display_name
+#: model:ir.model.fields,field_description:to_stock_asset.field_product_product__display_name
+#: model:ir.model.fields,field_description:to_stock_asset.field_stock_location__display_name
+#: model:ir.model.fields,field_description:to_stock_asset.field_stock_move__display_name
+#: model:ir.model.fields,field_description:to_stock_asset.field_stock_move_line__display_name
+#: model:ir.model.fields,field_description:to_stock_asset.field_stock_picking__display_name
+#: model:ir.model.fields,field_description:to_stock_asset.field_stock_picking_type__display_name
+#: model:ir.model.fields,field_description:to_stock_asset.field_stock_return_picking__display_name
+#: model:ir.model.fields,field_description:to_stock_asset.field_stock_valuation_adjustment_lines__display_name
+#: model:ir.model.fields,field_description:to_stock_asset.field_stock_warehouse__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_stock_asset
+#: code:addons/to_stock_asset/models/account_asset_asset.py:0
+#, python-format
+msgid ""
+"Emptying source location or destination location is not allowed when "
+"transfering!"
+msgstr ""
+"Địa điểm nguồn hoặc địa điểm đích không được phép để trống khi dịch chuyển!"
+
+#. module: to_stock_asset
+#: code:addons/to_stock_asset/wizard/asset_stock_in_wizard.py:0
+#, python-format
+msgid "Emptying the Lot/Serial Number is not allowed when transfering!"
+msgstr "Để trống Lô/Sê-ri Number là không được phép khi dịch chuyển!"
+
+#. module: to_stock_asset
+#: model:ir.model,name:to_stock_asset.model_asset_fill_missing_values_wizard
+msgid "Fill missing values to Asset"
+msgstr "Điền giá trị bị thiếu đến tài sản"
+
+#. module: to_stock_asset
+#: model:ir.model.fields,field_description:to_stock_asset.field_account_asset_asset__id
+#: model:ir.model.fields,field_description:to_stock_asset.field_account_asset_category__id
+#: model:ir.model.fields,field_description:to_stock_asset.field_account_asset_depreciation_line__id
+#: model:ir.model.fields,field_description:to_stock_asset.field_account_asset_revaluation_line__id
+#: model:ir.model.fields,field_description:to_stock_asset.field_account_move__id
+#: model:ir.model.fields,field_description:to_stock_asset.field_account_move_line__id
+#: model:ir.model.fields,field_description:to_stock_asset.field_asset_asset_report__id
+#: model:ir.model.fields,field_description:to_stock_asset.field_asset_fill_missing_values_wizard__id
+#: model:ir.model.fields,field_description:to_stock_asset.field_asset_stock_in_wizard__id
+#: model:ir.model.fields,field_description:to_stock_asset.field_product_product__id
+#: model:ir.model.fields,field_description:to_stock_asset.field_stock_location__id
+#: model:ir.model.fields,field_description:to_stock_asset.field_stock_move__id
+#: model:ir.model.fields,field_description:to_stock_asset.field_stock_move_line__id
+#: model:ir.model.fields,field_description:to_stock_asset.field_stock_picking__id
+#: model:ir.model.fields,field_description:to_stock_asset.field_stock_picking_type__id
+#: model:ir.model.fields,field_description:to_stock_asset.field_stock_return_picking__id
+#: model:ir.model.fields,field_description:to_stock_asset.field_stock_valuation_adjustment_lines__id
+#: model:ir.model.fields,field_description:to_stock_asset.field_stock_warehouse__id
+msgid "ID"
+msgstr ""
+
+#. module: to_stock_asset
+#: model:ir.model.fields,help:to_stock_asset.field_account_move_line__asset_category_id
+msgid ""
+"If set, it will automatically generate the corresponding assets if Product "
+"Type as Service / Consumable."
+msgstr ""
+"Nếu thiết lập, hệ thống sẽ tự động tạo ra tài sản tương ứng nếu Kiểu Sản "
+"phẩm là Dịch vụ / Tiêu dùng."
+
+#. module: to_stock_asset
+#: model:ir.model.fields,help:to_stock_asset.field_stock_move__asset_category_id
+msgid "If set, it will automatically generate the corresponding assets."
+msgstr "Nếu thiết lập, hệ thống sẽ tự động tạo ra tài sản tương ứng."
+
+#. module: to_stock_asset
+#: model:ir.model,name:to_stock_asset.model_stock_location
+msgid "Inventory Locations"
+msgstr "Địa điểm Kiểm kê"
+
+#. module: to_stock_asset
+#: model:ir.model.fields,field_description:to_stock_asset.field_stock_picking__is_asset_allocation
+msgid "Is Asset Allocation"
+msgstr "Là Phân bổ Tài sản"
+
+#. module: to_stock_asset
+#: model:ir.model,name:to_stock_asset.model_account_move
+msgid "Journal Entry"
+msgstr "Phiếu kế toán"
+
+#. module: to_stock_asset
+#: model:ir.model,name:to_stock_asset.model_account_move_line
+msgid "Journal Item"
+msgstr "Phát sinh bút toán"
+
+#. module: to_stock_asset
+#: model:ir.model.fields,field_description:to_stock_asset.field_account_asset_asset____last_update
+#: model:ir.model.fields,field_description:to_stock_asset.field_account_asset_category____last_update
+#: model:ir.model.fields,field_description:to_stock_asset.field_account_asset_depreciation_line____last_update
+#: model:ir.model.fields,field_description:to_stock_asset.field_account_asset_revaluation_line____last_update
+#: model:ir.model.fields,field_description:to_stock_asset.field_account_move____last_update
+#: model:ir.model.fields,field_description:to_stock_asset.field_account_move_line____last_update
+#: model:ir.model.fields,field_description:to_stock_asset.field_asset_asset_report____last_update
+#: model:ir.model.fields,field_description:to_stock_asset.field_asset_fill_missing_values_wizard____last_update
+#: model:ir.model.fields,field_description:to_stock_asset.field_asset_stock_in_wizard____last_update
+#: model:ir.model.fields,field_description:to_stock_asset.field_product_product____last_update
+#: model:ir.model.fields,field_description:to_stock_asset.field_stock_location____last_update
+#: model:ir.model.fields,field_description:to_stock_asset.field_stock_move____last_update
+#: model:ir.model.fields,field_description:to_stock_asset.field_stock_move_line____last_update
+#: model:ir.model.fields,field_description:to_stock_asset.field_stock_picking____last_update
+#: model:ir.model.fields,field_description:to_stock_asset.field_stock_picking_type____last_update
+#: model:ir.model.fields,field_description:to_stock_asset.field_stock_return_picking____last_update
+#: model:ir.model.fields,field_description:to_stock_asset.field_stock_valuation_adjustment_lines____last_update
+#: model:ir.model.fields,field_description:to_stock_asset.field_stock_warehouse____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_stock_asset
+#: model:ir.model.fields,field_description:to_stock_asset.field_asset_stock_in_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: to_stock_asset
+#: model:ir.model.fields,field_description:to_stock_asset.field_asset_stock_in_wizard__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối"
+
+#. module: to_stock_asset
+#: model:ir.model.fields,field_description:to_stock_asset.field_stock_location__usage
+msgid "Location Type"
+msgstr "Loại địa điểm"
+
+#. module: to_stock_asset
+#: model:ir.model.fields,field_description:to_stock_asset.field_account_asset_asset__production_lot_id
+#: model:ir.model.fields,field_description:to_stock_asset.field_asset_asset_report__lot_id
+#: model:ir.model.fields,field_description:to_stock_asset.field_asset_fill_missing_values_wizard__production_lot_id
+#: model_terms:ir.ui.view,arch_db:to_stock_asset.asset_asset_report_search_view_inherited
+msgid "Lot/Seria Number"
+msgstr "Số Lô/Sê-ri"
+
+#. module: to_stock_asset
+#: code:addons/to_stock_asset/models/account_asset_asset.py:0
+#, python-format
+msgid "Lot/Seria Number '%s' for asset exists."
+msgstr "Số Lô/Sê-ri \"%s\" đã tồn tại cho tài sản."
+
+#. module: to_stock_asset
+#: code:addons/to_stock_asset/models/stock_picking.py:0
+#, python-format
+msgid "No quantity available in stock with Lots/Serial Numbers '%s'!"
+msgstr "Số lượng trong kho không có sẵn với Lô/Số sê-ri \"%s\"!"
+
+#. module: to_stock_asset
+#: code:addons/to_stock_asset/models/stock_move.py:0
+#, python-format
+msgid "Only supports products tracked by a Lot/Serial number!"
+msgstr "Chỉ hỗ trợ sản phẩm được truy xuất theo số Lô/Số sê-ri!"
+
+#. module: to_stock_asset
+#: model:ir.model,name:to_stock_asset.model_stock_picking_type
+msgid "Picking Type"
+msgstr "Kiểu giao nhận"
+
+#. module: to_stock_asset
+#: code:addons/to_stock_asset/models/stock_picking.py:0
+#, python-format
+msgid "Please enable Product Traceability on %s product!"
+msgstr ""
+"Vui lòng kích hoạt chế độ Truy xuất nguồn gốc Sản phẩm trên sản phẩm %s!"
+
+#. module: to_stock_asset
+#: model:ir.model,name:to_stock_asset.model_product_product
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: to_stock_asset
+#: model_terms:ir.ui.view,arch_db:to_stock_asset.account_asset_asset_view_form_inherited
+msgid "Product Moves"
+msgstr "Truy vết"
+
+#. module: to_stock_asset
+#: model:ir.model,name:to_stock_asset.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "Chuyển sản phẩm (Chi tiết phiếu kho)"
+
+#. module: to_stock_asset
+#: model:ir.model,name:to_stock_asset.model_stock_return_picking
+msgid "Return Picking"
+msgstr "Trả hàng"
+
+#. module: to_stock_asset
+#: model:ir.model,name:to_stock_asset.model_account_asset_revaluation_line
+msgid "Revalution Line of Asset"
+msgstr "Dòng Đánh giá lại Tài sản"
+
+#. module: to_stock_asset
+#: code:addons/to_stock_asset/models/stock_warehouse.py:0
+#, python-format
+msgid "Sequence asset allocation"
+msgstr "Trình tự phân bổ tài sản"
+
+#. module: to_stock_asset
+#: code:addons/to_stock_asset/models/stock_picking.py:0
+#, python-format
+msgid ""
+"Source Location or Destination Location of the transfer with this operation "
+"type must be configured in Location Type 'Asset Allocation'."
+msgstr ""
+"Địa điểm nguồn hoặc Địa điểm đích của dịch chuyển với kiểu hoạt này phải "
+"được cấu hình trong Kiểu địa điểm 'Phân bổ Tài sản'."
+
+#. module: to_stock_asset
+#: model_terms:ir.ui.view,arch_db:to_stock_asset.account_asset_asset_view_form_inherited
+msgid "Stock In"
+msgstr "Nhập kho"
+
+#. module: to_stock_asset
+#: model:ir.model.fields,field_description:to_stock_asset.field_account_asset_asset__stock_input_account_id
+#: model:ir.model.fields,field_description:to_stock_asset.field_account_asset_category__stock_input_account_id
+msgid "Stock Input Account"
+msgstr "Tài khoản nhập kho"
+
+#. module: to_stock_asset
+#: model:ir.model,name:to_stock_asset.model_stock_move
+msgid "Stock Move"
+msgstr "Dịch chuyển kho"
+
+#. module: to_stock_asset
+#: model:ir.model.fields,field_description:to_stock_asset.field_account_asset_asset__stock_move_line_ids
+msgid "Stock Move Lines"
+msgstr "Chi tiết Phiếu kho"
+
+#. module: to_stock_asset
+#: model_terms:ir.ui.view,arch_db:to_stock_asset.asset_stock_in_wizard_view_form
+msgid "Stock-in"
+msgstr "Nhập kho"
+
+#. module: to_stock_asset
+#: model:ir.model.fields,field_description:to_stock_asset.field_asset_stock_in_wizard__location_id
+msgid "Stock-in Location"
+msgstr "Địa điểm Nhập kho"
+
+#. module: to_stock_asset
+#: code:addons/to_stock_asset/wizard/asset_stock_in_wizard.py:0
+#, python-format
+msgid ""
+"The Date of Transfer cannot be set before purchase date/stock input date!"
+msgstr "Ngày dịch chuyển không thể thiết lập trước ngày mua / nhập kho!"
+
+#. module: to_stock_asset
+#: code:addons/to_stock_asset/models/stock_picking.py:0
+#, python-format
+msgid "The Expected Date cannot be set before purchase date/stock input date!"
+msgstr ""
+"Ngày Hiệu lực không thể được thiết lập trước ngày mua / ngày nhập kho!"
+
+#. module: to_stock_asset
+#: code:addons/to_stock_asset/models/account_move.py:0
+#, python-format
+msgid "The date of journal entry %s (ID %s) cannot be set before purchase date/stock input date!"
+msgstr "Ngày của bút toán %s (ID %s) không thế thiết lập trước ngày mua / nhập kho!"
+
+#. module: to_stock_asset
+#: code:addons/to_stock_asset/models/account_asset_asset.py:0
+#, python-format
+msgid ""
+"The first depreciation date cannot be set before purchase date/stock input "
+"date!"
+msgstr "Ngày bắt đầu khấu hao không thế thiết lập trước ngày mua / nhập kho!"
+
+#. module: to_stock_asset
+#: code:addons/to_stock_asset/models/account_asset_asset.py:0
+#: code:addons/to_stock_asset/models/stock_move.py:0
+#: code:addons/to_stock_asset/models/stock_move.py:0
+#, python-format
+msgid ""
+"The following field on Asset Category or on Asset is invalid: Stock Input "
+"Account"
+msgstr ""
+"Trường sau trên Nhóm Tài sản hoặc trên Tài sản không hợp lệ: Tài khoản Nhập "
+"kho"
+
+#. module: to_stock_asset
+#: code:addons/to_stock_asset/models/stock_move.py:0
+#: code:addons/to_stock_asset/models/stock_move.py:0
+#: code:addons/to_stock_asset/models/stock_picking.py:0
+#, python-format
+msgid "The following field on Product is invalid: Asset Category"
+msgstr "Trường sau trên Sản phẩm không hợp lệ: Nhóm Tài sản"
+
+#. module: to_stock_asset
+#: code:addons/to_stock_asset/models/stock_picking.py:0
+#, python-format
+msgid ""
+"The product '%(product)s' of the transfer '%(picking)s' must be configured "
+"in automated valuation method!"
+msgstr ""
+"Sản phẩm '%(product)s' của phiếu '%(picking)s' phải được cấu hình với phương"
+" pháp định giá tự động!"
+
+#. module: to_stock_asset
+#: model:ir.model.fields,help:to_stock_asset.field_account_asset_asset__product_id
+msgid "The product that presents the asset"
+msgstr "Sản phẩm mà đại diện cho tài sản"
+
+#. module: to_stock_asset
+#: model_terms:ir.ui.view,arch_db:to_stock_asset.stock_picking_type_view_kanban_inherited
+msgid "To Process"
+msgstr "Chờ Xử lý"
+
+#. module: to_stock_asset
+#: model:ir.model,name:to_stock_asset.model_stock_picking
+msgid "Transfer"
+msgstr "Dịch chuyển"
+
+#. module: to_stock_asset
+#: model:ir.model.fields,field_description:to_stock_asset.field_stock_picking_type__code
+msgid "Type of Operation"
+msgstr "Kiểu giao nhận"
+
+#. module: to_stock_asset
+#: model:ir.model,name:to_stock_asset.model_stock_valuation_adjustment_lines
+msgid "Valuation Adjustment Lines"
+msgstr ""
+
+#. module: to_stock_asset
+#: model:ir.model,name:to_stock_asset.model_stock_warehouse
+msgid "Warehouse"
+msgstr "Kho"
+
+#. module: to_stock_asset
+#: code:addons/to_stock_asset/models/account_asset_asset.py:0
+#, python-format
+msgid "You cannot delete asset that is already linked to a stock move line!"
+msgstr "Bạn không thể xoá tài sản mà được liên kết với dịch chuyển kho!"
+
+#. module: to_stock_asset
+#: code:addons/to_stock_asset/wizard/stock_picking_return.py:0
+#, python-format
+msgid ""
+"You cannot return a stock picking that contains assets that has been set to "
+"'Open' state or 'Close' state."
+msgstr "Bạn không thể trả hàng mà chứa tài sản trong tình trạng Mở / Đóng."
+
+#. module: to_stock_asset
+#: code:addons/to_stock_asset/models/stock_move.py:0
+#, python-format
+msgid ""
+"You don't have any stock valuation account defined on your product category."
+" You must define one before processing this operation."
+msgstr ""
+"Bạn không có bất kỳ tài khoản định giá kho nào được thiết lập trên nhóm sản "
+"phẩm của mình. Bạn phải thiết lập một tài khoản khi thực hiện hành động này."
+
+#. module: to_stock_asset
+#: code:addons/to_stock_asset/wizard/asset_stock_in_wizard.py:0
+#, python-format
+msgid "You may only stock-in one asset at a time."
+msgstr "Bạn chỉ có thể nhập kho một tài sản tại một thời điểm."

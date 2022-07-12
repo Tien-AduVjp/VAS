@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="ir_ui_menu_chart_template_rule" model="ir.rule">
+	    <field name="name">Menu Items Following Account Chart Template</field>
+	    <field name="model_id" ref="model_ir_ui_menu"/>
+	    <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+	    <field name="domain_force">['|',('chart_template_id','=',False),('chart_template_id', '=', user.env.company.chart_template_id.id)]</field>
+	</record>
+</odoo>

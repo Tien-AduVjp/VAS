@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="project_task_form" model="ir.ui.view">
+			<field name="name">project.task.kanban</field>
+			<field name="model">project.task</field>
+			<field name="inherit_id" ref="project.view_task_kanban" />
+			<field name="arch" type="xml">
+				<field name="color" position="after">
+					<field name="color_stage"/>
+				</field>
+				<xpath expr="//div/field[@name='activity_ids']" position="after">
+					<span class="o_int_colorpicker">
+						<span t-attf-class="o_color_pill o_color_#{record.color_stage.value} active"
+					         t-att-data-val="pill_no"
+					         data-toggle="tooltip"
+					         data-placement="top"
+					         t-attf-title="#{record.stage_id.value}"
+				         />
+			         </span>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

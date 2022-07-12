@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="view_hr_job_form" model="ir.ui.view">
+			<field name="name">hr.job.form.inherited</field>
+			<field name="model">hr.job</field>
+			<field name="inherit_id" ref="viin_hr_rank.view_hr_job_form" />
+			<field name="arch" type="xml">
+	            <xpath expr="//sheet/div[@name='button_box']" position="inside">
+                    <button name="action_view_slide_channel" class="oe_stat_button"
+                        icon="fa-book" type="object">
+                        <field name="slide_channel_count" widget="statinfo"
+                            string="Courses" />
+                    </button>
+                </xpath>
+	            <xpath expr="//notebook" position="inside">
+		            <page name="courses" string="Courses">
+		                <field name="slide_channel_ids"
+		                groups="website_slides.group_website_slides_officer"/>
+		            </page>
+	            </xpath>
+			</field>
+		</record>
+
+		<record id="view_hr_job_tree" model="ir.ui.view">
+            <field name="name">hr.job.form.inherited</field>
+            <field name="model">hr.job</field>
+            <field name="inherit_id" ref="hr.view_hr_job_tree" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='state']" position="after">
+                    <field name="slide_channel_count"/>
+                </xpath>
+            </field>
+		</record>
+	</data>
+</odoo>

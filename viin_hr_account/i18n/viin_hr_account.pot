@@ -1,0 +1,196 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_hr_account
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-26 07:39+0000\n"
+"PO-Revision-Date: 2021-11-03 06:58+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_hr_account
+#: model_terms:ir.ui.view,arch_db:viin_hr_account.res_config_settings_view_form_accounting
+msgid "<span class=\"o_form_label\">General Employee Payable Account</span>"
+msgstr ""
+
+#. module: viin_hr_account
+#: model:ir.model.fields,help:viin_hr_account.field_res_company__general_employee_payable_account_id
+#: model:ir.model.fields,help:viin_hr_account.field_res_config_settings__general_employee_payable_account_id
+#: model_terms:ir.ui.view,arch_db:viin_hr_account.res_config_settings_view_form_accounting
+msgid ""
+"A payable account for encoding employee payable accounting entries (e.g. in "
+"payslip batch mode or in case no payable account specified for the related "
+"employee)"
+msgstr ""
+
+#. module: viin_hr_account
+#: model_terms:ir.ui.view,arch_db:viin_hr_account.view_department_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_account.view_employee_form
+msgid "Accounting"
+msgstr ""
+
+#. module: viin_hr_account
+#: model:ir.model.fields,field_description:viin_hr_account.field_hr_employee__property_advance_account_id
+msgid "Advance Account"
+msgstr ""
+
+#. module: viin_hr_account
+#: model:ir.model,name:viin_hr_account.model_account_analytic_account
+#: model:ir.model.fields,field_description:viin_hr_account.field_hr_department__analytic_account_id
+msgid "Analytic Account"
+msgstr ""
+
+#. module: viin_hr_account
+#: model:ir.model,name:viin_hr_account.model_account_analytic_tag
+#: model:ir.model.fields,field_description:viin_hr_account.field_hr_department__analytic_tag_ids
+msgid "Analytic Tags"
+msgstr ""
+
+#. module: viin_hr_account
+#: model:ir.model,name:viin_hr_account.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: viin_hr_account
+#: model:ir.model,name:viin_hr_account.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: viin_hr_account
+#: model:ir.model.fields,help:viin_hr_account.field_hr_department__account_expense_id
+msgid ""
+"Default Expense Account that will be used for encoding the department "
+"expenses into general accounting system (e.g. employee payroll expenses)."
+msgstr ""
+
+#. module: viin_hr_account
+#: model:ir.model.fields,help:viin_hr_account.field_hr_department__analytic_account_id
+msgid ""
+"Default analytic account to be used for encoding analytic items related to "
+"payslips of this contract when no analytic account defined on the salary "
+"rules that concern."
+msgstr ""
+
+#. module: viin_hr_account
+#: model:ir.model,name:viin_hr_account.model_hr_department
+msgid "Department"
+msgstr ""
+
+#. module: viin_hr_account
+#: model:ir.model.fields,field_description:viin_hr_account.field_account_analytic_account__display_name
+#: model:ir.model.fields,field_description:viin_hr_account.field_account_analytic_tag__display_name
+#: model:ir.model.fields,field_description:viin_hr_account.field_account_payment__display_name
+#: model:ir.model.fields,field_description:viin_hr_account.field_hr_department__display_name
+#: model:ir.model.fields,field_description:viin_hr_account.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:viin_hr_account.field_res_company__display_name
+#: model:ir.model.fields,field_description:viin_hr_account.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: viin_hr_account
+#: model:ir.model,name:viin_hr_account.model_hr_employee
+#: model:ir.model.fields,field_description:viin_hr_account.field_account_payment__employee_id
+#: model:ir.model.fields.selection,name:viin_hr_account.selection__account_payment__partner_type__employee
+msgid "Employee"
+msgstr ""
+
+#. module: viin_hr_account
+#: model:ir.model.fields,field_description:viin_hr_account.field_hr_department__account_expense_id
+msgid "Expense Account"
+msgstr ""
+
+#. module: viin_hr_account
+#: model:ir.model.fields,field_description:viin_hr_account.field_res_company__general_employee_payable_account_id
+#: model:ir.model.fields,field_description:viin_hr_account.field_res_config_settings__general_employee_payable_account_id
+msgid "General Employee Payable Account"
+msgstr ""
+
+#. module: viin_hr_account
+#: model_terms:ir.ui.view,arch_db:viin_hr_account.account_analytic_tag_form_view
+#: model_terms:ir.ui.view,arch_db:viin_hr_account.view_account_analytic_account_form
+msgid "HR"
+msgstr ""
+
+#. module: viin_hr_account
+#: model:ir.model.fields,field_description:viin_hr_account.field_account_analytic_account__department_id
+msgid "HR Department"
+msgstr ""
+
+#. module: viin_hr_account
+#: model:ir.model.fields,field_description:viin_hr_account.field_account_analytic_account__department_ids
+#: model:ir.model.fields,field_description:viin_hr_account.field_account_analytic_tag__department_ids
+msgid "HR Departments"
+msgstr ""
+
+#. module: viin_hr_account
+#: model:ir.model.fields,field_description:viin_hr_account.field_account_analytic_account__id
+#: model:ir.model.fields,field_description:viin_hr_account.field_account_analytic_tag__id
+#: model:ir.model.fields,field_description:viin_hr_account.field_account_payment__id
+#: model:ir.model.fields,field_description:viin_hr_account.field_hr_department__id
+#: model:ir.model.fields,field_description:viin_hr_account.field_hr_employee__id
+#: model:ir.model.fields,field_description:viin_hr_account.field_res_company__id
+#: model:ir.model.fields,field_description:viin_hr_account.field_res_config_settings__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_hr_account
+#: model:ir.model.fields,help:viin_hr_account.field_hr_employee__property_advance_account_id
+msgid ""
+"If specified, this account will be used for employee advance operations "
+"instead of the default receivable account of the related partner specified "
+"by the private address."
+msgstr ""
+
+#. module: viin_hr_account
+#: model:ir.model.fields,field_description:viin_hr_account.field_account_analytic_account____last_update
+#: model:ir.model.fields,field_description:viin_hr_account.field_account_analytic_tag____last_update
+#: model:ir.model.fields,field_description:viin_hr_account.field_account_payment____last_update
+#: model:ir.model.fields,field_description:viin_hr_account.field_hr_department____last_update
+#: model:ir.model.fields,field_description:viin_hr_account.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:viin_hr_account.field_res_company____last_update
+#: model:ir.model.fields,field_description:viin_hr_account.field_res_config_settings____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: viin_hr_account
+#: model:ir.model.fields,field_description:viin_hr_account.field_account_payment__partner_type
+msgid "Partner Type"
+msgstr ""
+
+#. module: viin_hr_account
+#: model:ir.model,name:viin_hr_account.model_account_payment
+msgid "Payments"
+msgstr ""
+
+#. module: viin_hr_account
+#: model_terms:ir.ui.view,arch_db:viin_hr_account.res_config_settings_view_form_accounting
+msgid "Payroll"
+msgstr ""
+
+#. module: viin_hr_account
+#: model:ir.model.fields,help:viin_hr_account.field_account_analytic_account__department_ids
+msgid "Technical field to link analytic account to HR departments."
+msgstr ""
+
+#. module: viin_hr_account
+#: code:addons/viin_hr_account/models/account_analytic_account.py:0
+#, python-format
+msgid ""
+"You may not be able to change the name of the account '%s' while it links to"
+" the HR department '%s'"
+msgstr ""
+
+#. module: viin_hr_account
+#: code:addons/viin_hr_account/models/account_analytic_account.py:0
+#, python-format
+msgid ""
+"You may not have a single analytic account that links to multiple HR "
+"departments."
+msgstr ""

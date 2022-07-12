@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="report_voucher_label" model="ir.actions.report">
+        	<field name="name">Voucher Labels</field>
+        	<field name="model">voucher.voucher</field>
+        	<field name="report_type">qweb-pdf</field>
+        	<field name="report_name">to_promotion_voucher.report_voucherlabel</field>
+        	<field name="report_file">to_promotion_voucher.report_voucherlabel</field>
+        	<field name="paperformat_id" ref="to_promotion_voucher.to_promotion_voucher_report_voucher_barcode" />
+        </record>
+    </data>
+</odoo>

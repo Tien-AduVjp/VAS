@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="view_task_form2_inherited" model="ir.ui.view">
+			<field name="name">project.task.form.inherited</field>
+			<field name="model">project.task</field>
+			<field name="inherit_id"
+				ref="hr_timesheet.view_task_form2_inherited" />
+			<field name="arch" type="xml">
+				<xpath expr="//button[@name='action_assign_to_me']"
+					position="after">
+					<button name="action_start" string="Log Timesheet"
+						type="object" class="oe_highlight"
+						attrs="{'invisible': ['|', ('allow_timesheets', '=', False), ('is_login_user_doing', '=', True)]}"
+						icon="fa-play" />
+					<button name="action_stop" string="Stop Timesheet Log"
+						type="object" class="oe_highlight"
+						attrs="{'invisible': ['|', ('allow_timesheets', '=', False), ('is_login_user_doing', '=', False)]}"
+						icon="fa-stop" />
+					<field name="start_moment"
+						widget="countup_timer"
+						attrs="{'invisible': ['|', ('allow_timesheets', '=', False), ('is_login_user_doing', '=', False)]}"
+						class="text-right"
+						style="font-size: 1.5rem;
+							font-weight: bold;
+							color: lightseagreen;
+							margin-left: 0.2em;
+							padding-top: 0.2em"/>
+					<field name="timesheet_wip" invisible="1" />
+					<field name="is_login_user_doing" invisible="1" />
+				</xpath>
+				<xpath
+					expr="//page[@id='timesheets_tab']/field[@name='timesheet_ids']/tree/field[@name='date']"
+					position="after">
+					<field name="time_start" widget="float_time" required="1" />
+					<field name="date_start" groups="base.group_no_one" />
+					<field name="date_end" groups="base.group_no_one" />
+				</xpath>
+				<xpath
+					expr="//page[@id='timesheets_tab']/field[@name='timesheet_ids']/form/sheet/group/field[@name='date']"
+					position="after">
+					<field name="time_start" widget="float_time" required="1" />
+					<field name="date_start" groups="base.group_no_one" />
+					<field name="date_end" groups="base.group_no_one" />
+				</xpath>
+			</field>
+		</record>
+
+		<record id="view_task_search_form" model="ir.ui.view">
+			<field name="name">project.task.search.form</field>
+			<field name="model">project.task</field>
+			<field name="inherit_id" ref="project.view_task_search_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//filter[@name='unassigned']" position="after">
+					<separator />
+					<filter string="My WIP Timesheet" name="ftr_timesheet_wip"
+						domain="[('timesheet_wip', '=', True)]"
+						help="Show tasks that have my work in progress timesheet entry" />
+					<filter string="All WIP Timesheet"
+						name="ftr_all_timesheet_wip"
+						domain="[('timesheet_wip', '=', True)]"
+						context="{'all_wip_timesheet':1}"
+						help="Show all tasks that have a work in progress timesheet entry" />
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

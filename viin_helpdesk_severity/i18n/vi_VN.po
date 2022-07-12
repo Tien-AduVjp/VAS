@@ -1,0 +1,129 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_helpdesk_severity
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-14 10:02+0000\n"
+"PO-Revision-Date: 2022-03-14 10:02+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_helpdesk_severity
+#: model:ir.model.fields.selection,name:viin_helpdesk_severity.selection__helpdesk_ticket__severity_level__critical
+#: model:ir.model.fields.selection,name:viin_helpdesk_severity.selection__report_helpdesk_ticket__severity_level__critical
+msgid "Critical"
+msgstr "Nghiêm trọng"
+
+#. module: viin_helpdesk_severity
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_severity.helpdesk_ticket_search_view
+msgid "Critical severity"
+msgstr "Mức độ nghiêm trọng"
+
+#. module: viin_helpdesk_severity
+#: model:ir.model.fields,field_description:viin_helpdesk_severity.field_helpdesk_ticket__display_name
+#: model:ir.model.fields,field_description:viin_helpdesk_severity.field_report_helpdesk_ticket__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: viin_helpdesk_severity
+#: model:ir.model,name:viin_helpdesk_severity.model_helpdesk_ticket
+msgid "Helpdesk Ticket"
+msgstr "Yêu cầu hỗ trợ"
+
+#. module: viin_helpdesk_severity
+#: model:ir.model.fields,field_description:viin_helpdesk_severity.field_helpdesk_ticket__id
+#: model:ir.model.fields,field_description:viin_helpdesk_severity.field_report_helpdesk_ticket__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_helpdesk_severity
+#: model:ir.model.fields,field_description:viin_helpdesk_severity.field_helpdesk_ticket____last_update
+#: model:ir.model.fields,field_description:viin_helpdesk_severity.field_report_helpdesk_ticket____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: viin_helpdesk_severity
+#: model:ir.model.fields.selection,name:viin_helpdesk_severity.selection__helpdesk_ticket__severity_level__low
+#: model:ir.model.fields.selection,name:viin_helpdesk_severity.selection__report_helpdesk_ticket__severity_level__low
+msgid "Low"
+msgstr "Thấp"
+
+#. module: viin_helpdesk_severity
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_severity.helpdesk_ticket_search_view
+msgid "Low severity"
+msgstr "Mức độ thấp"
+
+#. module: viin_helpdesk_severity
+#: model:ir.model.fields.selection,name:viin_helpdesk_severity.selection__helpdesk_ticket__severity_level__major
+#: model:ir.model.fields.selection,name:viin_helpdesk_severity.selection__report_helpdesk_ticket__severity_level__major
+msgid "Major"
+msgstr "Cao"
+
+#. module: viin_helpdesk_severity
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_severity.helpdesk_ticket_search_view
+msgid "Major severity"
+msgstr "Mức độ cao"
+
+#. module: viin_helpdesk_severity
+#: model:ir.model.fields.selection,name:viin_helpdesk_severity.selection__helpdesk_ticket__severity_level__minor
+#: model:ir.model.fields.selection,name:viin_helpdesk_severity.selection__report_helpdesk_ticket__severity_level__minor
+msgid "Minor/Medium"
+msgstr "Trung bình"
+
+#. module: viin_helpdesk_severity
+#: model_terms:ir.ui.view,arch_db:viin_helpdesk_severity.helpdesk_ticket_search_view
+msgid "Minor/Medium severity"
+msgstr "Mức độ trung bình"
+
+#. module: viin_helpdesk_severity
+#: model:ir.model.fields,field_description:viin_helpdesk_severity.field_helpdesk_ticket__severity_level
+#: model:ir.model.fields,field_description:viin_helpdesk_severity.field_report_helpdesk_ticket__severity_level
+msgid "Severity"
+msgstr "Mức độ nghiêm trọng"
+
+#. module: viin_helpdesk_severity
+#: model:ir.model.fields,help:viin_helpdesk_severity.field_helpdesk_ticket__severity_level
+msgid ""
+"Severity defines the extent to which a particular defect could create an impact on the application or system.\n"
+"* Critical: A defect that completely hampers or blocks testing of the product/ feature is a critical defect. An example "
+"would be in the case of UI testing where after going through a wizard, the UI just hangs in one pane or doesn’t "
+"go further to trigger the function. Or in some other cases, when the feature developed itself is "
+"missing from the build.\n"
+"* Major: Any major feature implemented that is not meeting its requirements/use case(s) and behaves differently than expected. A "
+"major defect occurs when the functionality is functioning grossly away from the expectations or not "
+"doing what it should be doing.\n"
+"* Minor/Medium: Any feature implemented that is not meeting its requirements/use case(s) and behaves differently than "
+"expected but the impact is negligible to some extent or it doesn’t have a major impact on the application. A moderate defect occurs when "
+"the product or application doesn’t meet certain criteria or still exhibits some unnatural behavior, however, the functionality "
+"as a whole is not impacted.\n"
+"* Low: Any cosmetic defects including spelling mistakes or alignment issues or font casing can be classified under Low "
+"Severity. A minor low severity bug occurs when there is almost no impact on the "
+"functionality but it is still a valid defect that should be corrected."
+msgstr ""
+"Mức độ nghiêm trọng xác định mức độ ảnh hưởng của một khiếm khuyết / sản phẩm lỗi / tính năng lỗi cụ thế có thể tạo ra tác động đến ứng dụng hoặc hệ thống.\n"
+"* Nghiêm trọng: Một khiếm khuyết cản trở hoàn toàn việc thử nghiệm sản phẩm / tính năng là một khiếm khuyết nghiêm trọng. "
+"Một ví dụ trong trường hợp kiểm tra giao diện người dùng, sau khi thực hiện các thao tác trên wizard, giao diện người dùng bị treo và không thể kích hoạt được các chức năng. "
+"Trong một số trường hợp khác, khi các tính năng được phát triển bị thiếu hoặc "
+"không hoạt động trong quá trình thử nghiệm sản phẩm / hệ thống.\n"
+"* Cao: Bất kỳ tính năng chính nào được thiết kế không đáp ứng được yêu cầu / mục đích sử dụng của nó và hoạt động khác với mong đợi. "
+"Một khiếm khuyết như vậy xảy ra khi có chức năng hoạt động hoàn toàn khác với mong đợi "
+"hoặc không thực hiện đúng những gì nó nên làm.\n"
+"* Thấp / Trung bình: Bất kỳ tính năng nào được triển khai không đáp ứng yêu cầu / mục đích sử dụng của nó và hoạt động khác với mong đợi "
+"nhưng tác động là không đáng kể ở một mức độ nào đó hoặc không có tác động lớn đến hệ thống. "
+"Một khiếm khuyết Thấp / Trung bình xảy ra khi sản phẩm hoặc hệ thống không đáp ứng được một số tiêu chí nhất định "
+"hoặc vẫn thể hiện một số hành vi không theo đúng logic, tuy nhiên, toàn bộ các chức năng không bị ảnh hưởng.\n"
+"* Thấp: Bất kỳ khiếm khuyết thẩm mỹ nào bao gồm lỗi chính tả hoặc các vấn đề về căn chỉnh hoặc "
+"cách viết hoa phông chữ đều có thể được phân loại ở mức độ nghiêm trọng thấp. "
+"Một lỗi có mức độ nghiêm trọng thấp xảy ra hầu như không gây lỗi đến chức năng nhưng nó vẫn là một lỗi hợp lệ cần được sửa chữa."
+
+#. module: viin_helpdesk_severity
+#: model:ir.model,name:viin_helpdesk_severity.model_report_helpdesk_ticket
+msgid "Ticket Report"
+msgstr "Báo cáo Yêu cầu hỗ trợ"

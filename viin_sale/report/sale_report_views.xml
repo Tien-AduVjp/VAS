@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="sale_report_view_search" model="ir.ui.view">
+			<field name="name">sale.report.view.search</field>
+			<field name="model">sale.report</field>
+			<field name="inherit_id" ref="sale.view_order_product_search" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='partner_id']" position="before">
+					<filter name="ftr_to_invoice" string="To Invoice"
+						domain="[('invoice_status', '=', 'to invoice')]" />
+					<filter name="ftr_fully_invoiced" string="Fully Invoiced"
+						domain="[('invoice_status', '=', 'invoiced')]" />
+				</xpath>
+			</field>
+		</record>
+
+		<record id="sale_report_view_pivot" model="ir.ui.view">
+			<field name="name">sale.report.pivot</field>
+			<field name="model">sale.report</field>
+			<field name="arch" type="xml">
+				<pivot string="Sales Analysis" disable_linking="True" display_quantity="true">
+					<field name="categ_id" type="row" />
+					<field name="order_id" type="measure" />
+					<field name="price_subtotal" type="measure" />
+					<field name="price_total" type="measure" />
+				</pivot>
+			</field>
+		</record>
+
+		<record id="sale_report_view_viin_cohort" model="ir.ui.view">
+            <field name="name">sale.report.view.viin_cohort</field>
+            <field name="model">sale.report</field>
+            <field name="arch" type="xml">
+                <viin_cohort string="Quotations/Orders" start_date="create_date" stop_date="date" interval="week" mode="churn"/>
+            </field>
+        </record>
+
+		<record id="sale_report_view_viin_dashboard" model="ir.ui.view">
+			<field name="name">sale.report.view.viin_dashboard</field>
+			<field name="model">sale.report</field>
+			<field name="mode">primary</field>
+			<field name="arch" type="xml">
+				<viin_dashboard>
+					<view type="graph" ref="sale.view_order_product_graph" />
+					<view type="pivot" ref="viin_sale.sale_report_view_pivot" />
+                    <view type="viin_cohort" ref="viin_sale.sale_report_view_viin_cohort"/>
+                    <group>
+                        <group>
+                            <aggregate name="customers" string="# Customers"
+                                field="partner_id" />
+                            <aggregate name="order_id_confirmed_orders"
+                                field="order_id" string="Orders" />
+                            <aggregate name="product_id_all_orders"
+                                field="product_id" string="Products" />
+                            <aggregate name="price_subtotal_all_orders"
+                                string="Total, Tax Excluded " field="price_subtotal" widget="monetary" />
+                            <aggregate name="price_subtotal_confirmed_orders"
+                                string="Total Sales" field="price_total"
+                                help="Total, Tax Included" widget="monetary" />
+                            <formula name="total" string="Average Order"
+                                value="record.price_subtotal_confirmed_orders / record.order_id_confirmed_orders"
+                                widget="monetary" />
+                            <aggregate name="days_to_confirm"
+                                string="Days to Confirm" field="days_to_confirm"
+                                group_operator="avg" value_label="days" />
+                            <aggregate name="lines" string="# Lines" field="nbr" />
+                        </group>
+                        <group>
+                            <widget name="pie_chart" title="Sales Teams" attrs="{'groupby': 'team_id'}" />
+                        </group>
+                    </group>
+				</viin_dashboard>
+			</field>
+		</record>
+
+		<record id="sale.action_order_report_so_salesteam" model="ir.actions.act_window">
+			<field name="view_mode">viin_dashboard</field>
+			<field name="view_id" ref="sale_report_view_viin_dashboard" />
+		</record>
+
+		<record id="sale_report_action_viin_dashboard" model="ir.actions.act_window">
+			<field name="name">Sales Analysis</field>
+			<field name="res_model">sale.report</field>
+			<field name="view_mode">viin_dashboard,pivot,graph</field>
+			<field name="search_view_id" ref="sale.view_order_product_search" />
+			<field name="context" eval="{'search_default_Sales': 1, 'time_ranges': {'field':'date_order', 'range':'last_30_days'}}" />
+		</record>
+
+		<record id="sale_report_action_viin_dashboard_viin_dashboard" model="ir.actions.act_window.view">
+			<field name="sequence" eval="10" />
+			<field name="view_mode">viin_dashboard</field>
+			<field name="view_id" ref="sale_report_view_viin_dashboard" />
+			<field name="act_window_id" ref="sale_report_action_viin_dashboard" />
+		</record>
+
+		<record id="sale_report_action_viin_dashboard_pivot" model="ir.actions.act_window.view">
+			<field name="sequence" eval="20" />
+			<field name="view_mode">pivot</field>
+			<field name="view_id" ref="viin_sale.sale_report_view_pivot" />
+			<field name="act_window_id" ref="sale_report_action_viin_dashboard" />
+		</record>
+
+		<record id="sale_report_action_viin_dashboard_graph" model="ir.actions.act_window.view">
+			<field name="sequence" eval="30" />
+			<field name="view_mode">graph</field>
+			<field name="view_id" ref="sale.view_order_product_graph" />
+			<field name="act_window_id" ref="sale_report_action_viin_dashboard" />
+		</record>
+
+		<menuitem id="menu_report_dashboard"
+            name="Dashboard"
+            action="sale_report_action_viin_dashboard"
+            parent="sale.menu_sale_report"
+            sequence="1"/>
+
+	</data>
+</odoo>

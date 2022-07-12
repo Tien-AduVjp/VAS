@@ -1,0 +1,3 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_fleet_vehicle_revenue_read,access_fleet_vehicle_revenue.read,model_fleet_vehicle_revenue,fleet_vehicle_revenue_group_read,1,0,0,0
+access_fleet_vehicle_revenue_fleet_manager,access_fleet_vehicle_revenue.fleet_manager,model_fleet_vehicle_revenue,fleet.fleet_group_manager,1,1,1,1

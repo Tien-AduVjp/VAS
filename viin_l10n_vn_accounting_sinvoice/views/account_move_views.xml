@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="view_move_form" model="ir.ui.view">
+			<field name="name">account.move.form</field>
+			<field name="model">account.move</field>
+			<field name="inherit_id" ref="l10n_vn_edi.view_move_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//button[@name='preview_invoice'][1]"
+					position="before">
+					<button name="action_sinvoice_paid" type="object"
+						string="Set S-Invoice as Paid" class="oe_highlight"
+						attrs="{'invisible': ['|','|','|','|','|',('einvoice_enabled','=',False),('einvoice_state', '!=', 'issued'),('state', '!=', 'posted'),('payment_state', '!=', 'paid'),('move_type', 'not in', ('out_invoice', 'out_refund')),('einvoice_provider', '!=', 'sinvoice')]}"
+						groups="account.group_account_invoice" />
+					<button name="action_sinvoice_unpaid" type="object"
+						string="Set S-Invoice as Unpaid" class="oe_highlight"
+						attrs="{'invisible': ['|','|','|','|','|',('einvoice_enabled','=',False),('einvoice_state', '!=', 'paid'), ('state', 'not in', ('posted','cancel')),('payment_state', '!=', 'not_paid'),('move_type', 'not in', ('out_invoice', 'out_refund')),('einvoice_provider', '!=', 'sinvoice')]}"
+						groups="account.group_account_invoice" />
+				</xpath>
+
+                <xpath expr="//button[@name='button_draft']"
+                    position="before">
+                    <button name="%(l10n_vn_edi.action_account_invoice_einvoice_cancel)d"
+                        type="action" string="Cancel S-Invoice"
+                        attrs="{'invisible': ['|','|','|', '|', '|',
+                            ('einvoice_enabled','=',False),
+                            ('einvoice_state', 'not in', ('issued','paid')),
+                            ('state', '!=', 'posted'),
+                            ('move_type', 'not in', ('out_invoice', 'out_refund')),
+                            ('einvoice_transactionid', '=', False),
+                            ('einvoice_provider', '!=', 'sinvoice')
+                            ]}"
+                        groups="account.group_account_invoice" />
+                </xpath>
+
+				<xpath expr="//page[@name='einvoice']/group/group[1]" position="after">
+					<group>
+						<field name="sinvoice_reservation_code" attrs="{'invisible':[('sinvoice_reservation_code','=',False)]}"/>
+						<field name="account_einvoice_serial_id" attrs="{'invisible':[('account_einvoice_serial_id','=',False)]}"/>
+						<field name="account_einvoice_template_id" attrs="{'invisible':[('account_einvoice_template_id','=',False)]}"/>
+						<field name="account_einvoice_type_id" attrs="{'invisible':[('account_einvoice_type_id','=',False)]}"/>
+					</group>
+				</xpath>
+
+			</field>
+		</record>
+	</data>
+</odoo>

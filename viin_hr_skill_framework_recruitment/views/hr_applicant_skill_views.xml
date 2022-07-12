@@ -1,0 +1,17 @@
+<odoo>
+    <record id="applicant_skill_view_form" model="ir.ui.view">
+        <field name="name">hr.applicant.skill.form</field>
+        <field name="model">hr.applicant.skill</field>
+        <field name="inherit_id" ref="to_hr_skills_recruitment.applicant_skill_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+	            <label for="skill_description"
+	                   attrs="{'invisible': ['|', ('skill_type_id', '=', False),
+	                                              '|', ('skill_id', '=', False), ('skill_level_id', '=', False)]}"/>
+	            <field name="skill_description"
+	                   attrs="{'invisible': ['|', ('skill_type_id', '=', False),
+	                                              '|', ('skill_id', '=', False), ('skill_level_id', '=', False)]}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

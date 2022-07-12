@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="res_config_settings_view_form" model="ir.ui.view">
+		<field name="name">res.config.settings.view.form.inherit.ticket</field>
+		<field name="model">res.config.settings</field>
+		<field name="inherit_id"
+			ref="base.res_config_settings_view_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//div[hasclass('settings')]" position="inside">
+				<div class="app_settings_block" data-string="Helpdesk" string="Helpdesk" data-key="viin_helpdesk">
+					<h2>Helpdesk Management</h2>
+					<div class="row mt16 o_settings_container" id="helpdesk_management">
+						<div class="col-12 col-lg-6 o_setting_box">
+							<div class="o_setting_right_pane">
+								<span class="o_form_label">Helpdesk Team</span>
+	                           	<div>
+	                               <div class="mt8 text-muted" title="The default helpdesk team that will be assigned to the ticket.">
+	                                   The default helpdesk team that will be assigned to the ticket.
+	                               </div>
+	                               <div class="mt8">
+	                                   <field name="helpdesk_team_id" class="oe_inline" required="1"/>
+	                               </div>
+	                           </div>
+	                       </div>
+                        </div>
+						<div class="col-12 col-lg-6 o_setting_box">
+							<div class="o_setting_left_pane">
+								<field name="group_helpdesk_rating" />
+							</div>
+							<div class="o_setting_right_pane">
+								<label for="group_helpdesk_rating" />
+								<div class="text-muted">
+									Track customer satisfaction on Helpdesk
+								</div>
+								<div class="content-group" attrs="{'invisible': [('group_helpdesk_rating', '=', False)]}">
+									<div class="mt8">
+										<button name="%(viin_helpdesk.helpdesk_stage_action)d"
+											icon="fa-arrow-right" type="action" string="Set Rating Email Template to Stages" class="btn-link">
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-12 col-lg-6 o_setting_box" id="viin_helpdesk_severity_setting">
+							<div class="o_setting_left_pane">
+								<field name="module_viin_helpdesk_severity" />
+							</div>
+							<div class="o_setting_right_pane">
+								<label for="module_viin_helpdesk_severity" string="Helpdesk Ticket Severity" />
+								<div class="text-muted">
+									Allows to set severity on the helpdesk ticket.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</xpath>
+		</field>
+	</record>
+
+	<record id="helpdesk_config_settings_action"
+		model="ir.actions.act_window">
+		<field name="name">Settings</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">res.config.settings</field>
+		<field name="view_mode">form</field>
+		<field name="target">inline</field>
+		<field name="context">{'module' : 'viin_helpdesk'}</field>
+	</record>
+
+	<menuitem id="helpdesk_config_settings_menu_action"
+		name="Settings" parent="viin_helpdesk.configuration_menu" sequence="0"
+		action="helpdesk_config_settings_action" groups="base.group_system" />
+</odoo>

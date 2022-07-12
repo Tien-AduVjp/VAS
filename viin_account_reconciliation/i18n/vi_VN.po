@@ -1,0 +1,816 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_account_reconciliation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-19 04:00+0000\n"
+"PO-Revision-Date: 2021-11-24 10:11+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_account_reconciliation
+#: model_terms:ir.ui.view,arch_db:viin_account_reconciliation.view_account_form
+msgid "-> Reconcile"
+msgstr "-> Đối soát"
+
+#. module: viin_account_reconciliation
+#: code:addons/viin_account_reconciliation/models/account_reconciliation_widget.py:0
+#, python-format
+msgid "A reconciliation must involve at least 2 move lines."
+msgstr "Một đối soát phải có ít nhất 2 phát sinh kế toán."
+
+#. module: viin_account_reconciliation
+#: code:addons/viin_account_reconciliation/models/account_bank_statement_line.py:0
+#: code:addons/viin_account_reconciliation/models/account_bank_statement_line.py:0
+#, python-format
+msgid "A selected move line was already reconciled."
+msgstr "Một phát sinh được chọn đã được đối soát."
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/js/reconciliation_renderer.js:0
+#: code:addons/viin_account_reconciliation/static/src/js/reconciliation_renderer.js:0
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#: model:ir.model,name:viin_account_reconciliation.model_account_account
+#, python-format
+msgid "Account"
+msgstr "Tài khoản"
+
+#. module: viin_account_reconciliation
+#: code:addons/viin_account_reconciliation/models/account_move_line.py:0
+#, python-format
+msgid ""
+"Account %s (%s) does not allow reconciliation. First change the "
+"configuration of this account to allow it."
+msgstr ""
+"Tài khoản %s (%s) không được phép đối soát. Vui lòng thay đổi cấu hình của "
+"tài khoản này để làm việc đó."
+
+#. module: viin_account_reconciliation
+#: model:ir.model,name:viin_account_reconciliation.model_account_reconciliation_widget
+msgid "Account Reconciliation widget"
+msgstr "Tính năng đối soát tài khoản"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid ""
+"All invoices and payments have been matched, your accounts' balances are "
+"clean."
+msgstr ""
+"Tất cả các hoá đơn và các khoản thanh toán đã được đối chiếu và khớp, bảng "
+"cân đối tài khoản của bạn đã sạch."
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Amount"
+msgstr "Tổng"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Analytic Acc."
+msgstr "TK KT Quản trị"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Analytic Tags."
+msgstr "Thẻ TK Quản trị"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/js/reconciliation_action.js:0
+#, python-format
+msgid "Bank Reconciliation"
+msgstr "Đối chiếu Ngân hàng"
+
+#. module: viin_account_reconciliation
+#: model:ir.model.fields,field_description:viin_account_reconciliation.field_res_company__account_bank_reconciliation_start
+#: model:ir.model.fields,field_description:viin_account_reconciliation.field_res_config_settings__account_bank_reconciliation_start
+msgid "Bank Reconciliation Threshold"
+msgstr "Ngưỡng Đối soát Ngân hàng"
+
+#. module: viin_account_reconciliation
+#: model:ir.model,name:viin_account_reconciliation.model_account_bank_statement
+msgid "Bank Statement"
+msgstr "Sao kê Ngân hàng"
+
+#. module: viin_account_reconciliation
+#: model:ir.model,name:viin_account_reconciliation.model_account_bank_statement_line
+msgid "Bank Statement Line"
+msgstr "Cho tiết Sao kê ngân hàng"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Check all"
+msgstr "Kiểm tra tất cả"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Check that you have no bank statement lines to"
+msgstr "Kiểm tra xem bạn còn dòng sao kê ngân hàng nào đang chờ"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Choose counterpart or Create Write-off"
+msgstr "Chọn đối tác hoặc tạo Write-off (xoá bỏ)"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Close"
+msgstr "Đóng"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Close statement"
+msgstr "Đóng thanh toán"
+
+#. module: viin_account_reconciliation
+#: model:ir.model,name:viin_account_reconciliation.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: viin_account_reconciliation
+#: model:ir.model,name:viin_account_reconciliation.model_res_config_settings
+msgid "Config Settings"
+msgstr "Thiết lập Cấu hình"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Congrats, you're all done!"
+msgstr "Chúc mừng, bạn đã hoàn tất!"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Create a counterpart"
+msgstr "Tạo một đối ứng"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Create model"
+msgstr "Tạo mô hình"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Customer/Vendor Matching"
+msgstr "Khớp Khách hàng/Nhà cung cấp"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Date"
+msgstr "Ngày"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Description"
+msgstr "Mô tả"
+
+#. module: viin_account_reconciliation
+#: model:ir.model.fields,field_description:viin_account_reconciliation.field_account_account__display_name
+#: model:ir.model.fields,field_description:viin_account_reconciliation.field_account_bank_statement__display_name
+#: model:ir.model.fields,field_description:viin_account_reconciliation.field_account_bank_statement_line__display_name
+#: model:ir.model.fields,field_description:viin_account_reconciliation.field_account_full_reconcile__display_name
+#: model:ir.model.fields,field_description:viin_account_reconciliation.field_account_journal__display_name
+#: model:ir.model.fields,field_description:viin_account_reconciliation.field_account_move__display_name
+#: model:ir.model.fields,field_description:viin_account_reconciliation.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:viin_account_reconciliation.field_account_reconciliation_widget__display_name
+#: model:ir.model.fields,field_description:viin_account_reconciliation.field_res_company__display_name
+#: model:ir.model.fields,field_description:viin_account_reconciliation.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Due Date"
+msgstr "Ngày đến hạn"
+
+#. module: viin_account_reconciliation
+#: code:addons/viin_account_reconciliation/models/account_move_line.py:0
+#, python-format
+msgid "Either pass both debit and credit or none."
+msgstr "Hoặc truyền cả giá trị nợ và có, hoặc không"
+
+#. module: viin_account_reconciliation
+#: code:addons/viin_account_reconciliation/models/account_move_line.py:0
+#, python-format
+msgid "Entries are not from the same account."
+msgstr "Bút toán không chung tài khoản."
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "External link"
+msgstr "Liên kết ngoài"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Filter on account, label, partner, amount,..."
+msgstr "Lọc theo tài khoản, nhãn, đối tác, số tiền, ..."
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "From now on, you may want to:"
+msgstr "Từ giờ, bạn có thể muốn:"
+
+#. module: viin_account_reconciliation
+#: model:ir.model,name:viin_account_reconciliation.model_account_full_reconcile
+msgid "Full Reconcile"
+msgstr "Đối soát Hoàn toàn"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Go to bank statement(s)"
+msgstr "Đến sao kê ngân hàng"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Good Job!"
+msgstr "Làm tốt!"
+
+#. module: viin_account_reconciliation
+#: model:ir.model.fields,field_description:viin_account_reconciliation.field_account_account__id
+#: model:ir.model.fields,field_description:viin_account_reconciliation.field_account_bank_statement__id
+#: model:ir.model.fields,field_description:viin_account_reconciliation.field_account_bank_statement_line__id
+#: model:ir.model.fields,field_description:viin_account_reconciliation.field_account_full_reconcile__id
+#: model:ir.model.fields,field_description:viin_account_reconciliation.field_account_journal__id
+#: model:ir.model.fields,field_description:viin_account_reconciliation.field_account_move__id
+#: model:ir.model.fields,field_description:viin_account_reconciliation.field_account_move_line__id
+#: model:ir.model.fields,field_description:viin_account_reconciliation.field_account_reconciliation_widget__id
+#: model:ir.model.fields,field_description:viin_account_reconciliation.field_res_company__id
+#: model:ir.model.fields,field_description:viin_account_reconciliation.field_res_config_settings__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_account_reconciliation
+#: code:addons/viin_account_reconciliation/models/account_move_line.py:0
+#, python-format
+msgid ""
+"It is mandatory to specify an account and a journal to create a write-off."
+msgstr ""
+"Bắt buộc phải chỉ ra một tài khoản kế toán và một sổ nhật ký để ghi nhận "
+"write-off."
+
+#. module: viin_account_reconciliation
+#: model_terms:ir.ui.view,arch_db:viin_account_reconciliation.account_journal_dashboard_kanban_view
+msgid "Items"
+msgstr "Hạng mục"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#: model:ir.model,name:viin_account_reconciliation.model_account_journal
+#, python-format
+msgid "Journal"
+msgstr "Sổ nhật ký"
+
+#. module: viin_account_reconciliation
+#: model:ir.model,name:viin_account_reconciliation.model_account_move
+msgid "Journal Entry"
+msgstr "Bút toán sổ nhật ký"
+
+#. module: viin_account_reconciliation
+#: model:ir.model.fields,field_description:viin_account_reconciliation.field_account_bank_statement_line__move_name
+msgid "Journal Entry Name"
+msgstr "Tên bút toán kế toán"
+
+#. module: viin_account_reconciliation
+#: model:ir.model,name:viin_account_reconciliation.model_account_move_line
+msgid "Journal Item"
+msgstr "Phát sinh Kế toán"
+
+#. module: viin_account_reconciliation
+#: code:addons/viin_account_reconciliation/models/account_reconciliation_widget.py:0
+#, python-format
+msgid "Journal Items"
+msgstr "Phát sinh Kế toán"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/js/reconciliation_action.js:0
+#: model:ir.actions.client,name:viin_account_reconciliation.action_manual_reconcile
+#, python-format
+msgid "Journal Items to Reconcile"
+msgstr "Các Phát sinh chờ đối soát"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/js/reconciliation_renderer.js:0
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Label"
+msgstr "Nhãn"
+
+#. module: viin_account_reconciliation
+#: model:ir.model.fields,field_description:viin_account_reconciliation.field_account_account____last_update
+#: model:ir.model.fields,field_description:viin_account_reconciliation.field_account_bank_statement____last_update
+#: model:ir.model.fields,field_description:viin_account_reconciliation.field_account_bank_statement_line____last_update
+#: model:ir.model.fields,field_description:viin_account_reconciliation.field_account_full_reconcile____last_update
+#: model:ir.model.fields,field_description:viin_account_reconciliation.field_account_journal____last_update
+#: model:ir.model.fields,field_description:viin_account_reconciliation.field_account_move____last_update
+#: model:ir.model.fields,field_description:viin_account_reconciliation.field_account_move_line____last_update
+#: model:ir.model.fields,field_description:viin_account_reconciliation.field_account_reconciliation_widget____last_update
+#: model:ir.model.fields,field_description:viin_account_reconciliation.field_res_company____last_update
+#: model:ir.model.fields,field_description:viin_account_reconciliation.field_res_config_settings____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Last Reconciliation:"
+msgstr "Đối soát Lần cuối:"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Load more"
+msgstr "Nạp thêm"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Load more... ("
+msgstr "Nạp thêm... ("
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Manual Operations"
+msgstr "Hoạt động Thủ công"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Match with entries that are not from receivable/payable accounts"
+msgstr ""
+"Khớp với các bút toán mà không phải là từ các tài khoản phải thu / phải trả"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Miscellaneous Matching"
+msgstr "Đối soát khác"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Modify models"
+msgstr "Sửa Mô hình"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "New"
+msgstr "Mới"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Nothing to do!"
+msgstr "Không có gì để làm!"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/js/reconciliation_model.js:0
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Open balance"
+msgstr "Số dư Đầu kỳ"
+
+#. module: viin_account_reconciliation
+#: code:addons/viin_account_reconciliation/models/account_bank_statement_line.py:0
+#, python-format
+msgid ""
+"Operation not allowed. Since your statement line already received a number "
+"(%s), you cannot reconcile it entirely with existing journal entries "
+"otherwise it would make a gap in the numbering. You should book an entry and"
+" make a regular revert of it in case you want to cancel it."
+msgstr ""
+"Hoạt động không được phép. Khi mà dòng sao kê đã được đánh số (cụ thể %s), "
+"bạn không thể đối soát nó với một bút toán sổ nhật ký. Nếu không, điều này "
+"sẽ tạo ra một khoảng trống trong việc đánh số. Bạn có thể vào sổ bút toán và"
+" tạo bút toán ngược nếu bạn muốn huỷ. Hoặc bạn có thể xoá dòng sao kê vào "
+"tạo lại nó."
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Pay your"
+msgstr "Thanh toán"
+
+#. module: viin_account_reconciliation
+#: model_terms:ir.ui.view,arch_db:viin_account_reconciliation.account_journal_dashboard_kanban_view
+msgid "Payments Matching"
+msgstr "Đối chiếu Thanh toán"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Presets config"
+msgstr "Cấu hình đặt trước"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#: model:ir.actions.client,name:viin_account_reconciliation.action_view_account_move_line_reconcile
+#: model_terms:ir.ui.view,arch_db:viin_account_reconciliation.account_journal_dashboard_kanban_view
+#: model_terms:ir.ui.view,arch_db:viin_account_reconciliation.view_bank_statement_form
+#, python-format
+msgid "Reconcile"
+msgstr "Đối soát"
+
+#. module: viin_account_reconciliation
+#: model:ir.actions.client,name:viin_account_reconciliation.action_manual_reconciliation
+#: model:ir.ui.menu,name:viin_account_reconciliation.menu_action_manual_reconciliation
+msgid "Reconciliation"
+msgstr "Đối soát"
+
+#. module: viin_account_reconciliation
+#: model:ir.model.fields,field_description:viin_account_reconciliation.field_account_full_reconcile__reconciliation_date
+#: model:ir.model.fields,field_description:viin_account_reconciliation.field_account_move_line__reconciliation_date
+msgid "Reconciliation Date"
+msgstr "Ngày đối chiếu"
+
+#. module: viin_account_reconciliation
+#: model:ir.actions.client,name:viin_account_reconciliation.action_bank_reconcile
+msgid "Reconciliation on Bank Statements"
+msgstr "Đối soát trên Sao kê ngân hàng"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Ref"
+msgstr "Tham chiếu"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Residual"
+msgstr "Còn lại"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Save and New"
+msgstr "Lưu và Tạo mới"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/js/reconciliation_renderer.js:0
+#, python-format
+msgid "Select Partner"
+msgstr "Chọn đối tác"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Select a partner or choose a counterpart"
+msgstr "Chọn một đối tác hoặc một đối ứng"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Settings"
+msgstr "Thiết lập"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Skip"
+msgstr "Bỏ qua"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/js/reconciliation_renderer.js:0
+#, python-format
+msgid "Some fields are undefined"
+msgstr "Vài thông tin cần điền đang trống"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Tax Included in Price"
+msgstr "Thuế đã nằm trong Giá"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Taxes"
+msgstr "Thuế"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "That's on average"
+msgstr "Đó là trung bình"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/js/reconciliation_model.js:0
+#, python-format
+msgid "The amount %s is not a valid partial amount"
+msgstr "Số tiền %s không phải là giá trị một phần hợp lệ"
+
+#. module: viin_account_reconciliation
+#: model:ir.model.fields,help:viin_account_reconciliation.field_res_company__account_bank_reconciliation_start
+msgid ""
+"The bank reconciliation widget won't ask to reconcile payments older than this date.\n"
+"                                                    This is useful if you install accounting after having used invoicing for some time and\n"
+"                                                    don't want to reconcile all the past payments with bank statements."
+msgstr ""
+
+#. module: viin_account_reconciliation
+#: model:ir.model.fields,help:viin_account_reconciliation.field_res_config_settings__account_bank_reconciliation_start
+msgid ""
+"The bank reconciliation widget won't ask to reconcile payments older than this date.\n"
+"               This is useful if you install accounting after having used invoicing for some time and\n"
+"               don't want to reconcile all the past payments with bank statements."
+msgstr ""
+"Tính năng đối chiếu ngân hàng sẽ không chạy đối chiếu các khoản thanh toán trước ngày này.\n"
+"               Điều này có ích nếu bạn cài đặt kế toán sau khi đã sử dụng hoá đơn một thời gian và\n"
+"               không muốn đối chiếu tất cả các khoản thanh toán trong quá khứ với báo cáo ngân hàng."
+
+#. module: viin_account_reconciliation
+#: model_terms:ir.ui.view,arch_db:viin_account_reconciliation.res_config_settings_view_form
+msgid ""
+"The payments which have not been matched with a bank statement will\n"
+"\t\t\t\t\t\t\t\tnot be shown in bank reconciliation data if they were made\n"
+"\t\t\t\t\t\t\t\tbefore this date"
+msgstr ""
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "There is nothing to reconcile."
+msgstr "Không có gì để đối soát."
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid ""
+"This page displays all the bank transactions that are to be reconciled and "
+"provides with a neat interface to do so."
+msgstr ""
+"Trang này hiển thị tất cả giao dịch ngân hàng mà được đối soát và cung cấp "
+"một giao diện thân thiên, dễ sử dụng."
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "This payment is registered but not reconciled."
+msgstr "Khoản thanh toán này đã được ghi nhận nhưng chưa đối soát."
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "To Check"
+msgstr "Chờ Kiểm tra"
+
+#. module: viin_account_reconciliation
+#: code:addons/viin_account_reconciliation/models/account_move_line.py:0
+#, python-format
+msgid "To reconcile the entries company should be the same for all entries."
+msgstr "Để đối soát các bút toán thì các bút toán này cần phải chung công ty."
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "To speed up reconciliation, define"
+msgstr "Để tăng tốc đối soát, quy định"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Transaction"
+msgstr "Giao dịch"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Validate"
+msgstr "Xác nhận"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Validate All"
+msgstr "Xác nhận tất cả"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Verify"
+msgstr "Thẩm định"
+
+#. module: viin_account_reconciliation
+#: code:addons/viin_account_reconciliation/models/account_move_line.py:0
+#: code:addons/viin_account_reconciliation/models/account_move_line.py:0
+#, python-format
+msgid "Write-Off"
+msgstr "Bỏ qua nợ xấu"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "Writeoff Date"
+msgstr "Ngày ghi cấn trừ"
+
+#. module: viin_account_reconciliation
+#: code:addons/viin_account_reconciliation/models/account_move_line.py:0
+#, python-format
+msgid "You are trying to reconcile some entries that are already reconciled."
+msgstr "Bạn đang cố đối soát 1 số bút toán đã được đối soát rồi."
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "You reconciled"
+msgstr "Bạn đã đối soát"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "and follow-up customers"
+msgstr "và theo sát khách hàng"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "have been reconciled automatically."
+msgstr "đã được đối soát tự động."
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "reconcile"
+msgstr "đối soát"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "reconciliation models"
+msgstr "mô hình đối soát"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "remaining)"
+msgstr "còn lại)"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "seconds per transaction."
+msgstr "giây mỗi giao dịch."
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "statement lines"
+msgstr "chi tiết giao dịch"
+
+#. module: viin_account_reconciliation
+#: model_terms:ir.ui.view,arch_db:viin_account_reconciliation.account_journal_dashboard_kanban_view
+msgid "to check"
+msgstr "cần kiểm tra"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "transactions in"
+msgstr "giao dịch ở"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "unpaid invoices"
+msgstr "hoá đơn chưa thanh toán"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "unreconciled entries"
+msgstr "bút toán chưa đối soát"
+
+#. module: viin_account_reconciliation
+#. openerp-web
+#: code:addons/viin_account_reconciliation/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "vendor bills"
+msgstr "hoá đơn nhà cung cấp"

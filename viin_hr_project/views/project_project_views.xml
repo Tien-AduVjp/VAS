@@ -1,0 +1,28 @@
+<odoo>
+	<record id="edit_project" model="ir.ui.view">
+		<field name="name">project.project.form</field>
+		<field name="model">project.project</field>
+		<field name="inherit_id" ref="project.edit_project"/>
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='user_id']" position="after">
+				<field name="department_id"/>
+				<field name="timesheet_ids" invisible="1"/>
+				<field name="associated_department_ids" attrs="{'invisible':[('timesheet_ids','=',[])]}" widget="many2many_tags" />
+			</xpath>
+		</field>
+	</record>
+
+	<record id="view_project_project_filter" model="ir.ui.view">
+		<field name="name">project.project.select</field>
+		<field name="model">project.project</field>
+		<field name="inherit_id" ref="project.view_project_project_filter"/>
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='partner_id']" position="after">
+				<field name="department_id" string="Department"/>
+			</xpath>
+			<xpath expr="//group//filter[@name='Manager']" position="after">
+				<filter string="Department" name="grp_department" context="{'group_by': 'department_id'}"/>
+			</xpath>
+		</field>
+	</record>
+</odoo>

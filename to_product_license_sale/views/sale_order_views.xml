@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record model="ir.ui.view" id="view_order_form">
+		<field name="name">sale.order.form</field>
+		<field name="model">sale.order</field>
+		<field name="inherit_id" ref="sale.view_order_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//header/button[@name='action_draft']"
+				position="after">
+				<button name="action_refresh_for_licenses"
+					string="Refresh for licenses" type="object" states="draft,sent"
+					groups="to_product_license.group_license_manager"
+					confirm="This will recompute all the order lines and apply the latest license configuration from the corresponding products. Are you sure to proceed?" />
+			</xpath>
+			<xpath expr="//button[@name='action_view_invoice']"
+				position="after">
+				<button name="action_view_license_versions" type="object"
+					class="oe_stat_button" icon="fa-certificate"
+					attrs="{'invisible': [('product_license_versions_count', '=', 0)]}">
+					<field name="product_license_versions_count"
+						widget="statinfo" string="Product License(s)" />
+					<field name="product_license_version_ids" invisible="1" />
+				</button>
+			</xpath>
+			<xpath
+				expr="//field[@name='order_line']/form/group/group[./field[@name='analytic_tag_ids']]"
+				position="after">
+				<label for="product_license_version_ids" />
+				<div>
+					<field name="product_license_version_ids"
+						widget="many2many_tags" />
+				</div>
+			</xpath>
+			<xpath
+				expr="//field[@name='order_line']/tree/field[@name='name']"
+				position="after">
+				<field name="product_license_version_ids"
+					widget="many2many_tags" optional="hide" />
+			</xpath>
+		</field>
+	</record>
+
+</odoo>

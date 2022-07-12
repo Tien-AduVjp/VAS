@@ -1,0 +1,16 @@
+<odoo>
+	<record id="digest_digest_view_form" model="ir.ui.view">
+		<field name="name">digest.digest.view.form.inherit.helpdesk.ticket</field>
+		<field name="model">digest.digest</field>
+		<field name="inherit_id" ref="digest.digest_digest_view_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//group[@name='kpi_general']" position="after">
+				<group name="kpi_helpdesk" string="Helpdesk"
+					groups="viin_helpdesk.group_helpdesk_user">
+					<field name="kpi_helpdesk_ticket_opened" />
+					<field name="kpi_helpdesk_ticket_closed" />
+				</group>
+			</xpath>
+		</field>
+	</record>
+</odoo>

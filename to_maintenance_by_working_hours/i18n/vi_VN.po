@@ -1,0 +1,94 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_maintenance_by_working_hours
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-16 07:42+0000\n"
+"PO-Revision-Date: 2022-02-16 07:42+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_maintenance_by_working_hours
+#: model:ir.model.fields,field_description:to_maintenance_by_working_hours.field_maintenance_equipment__ave_daily_working_hours
+msgid "Ave. Daily Working Hours"
+msgstr "Thời gian làm việc trung bình hàng ngày"
+
+#. module: to_maintenance_by_working_hours
+#: model:ir.model.constraint,message:to_maintenance_by_working_hours.constraint_maintenance_equipment_ave_daily_working_hoursn_check
+msgid "Ave. Daily Working Hours must be greater than or equal to zero!"
+msgstr "Số giờ làm việc trung bình hàng ngày phải lớn hơn hoặc bằng 0!"
+
+#. module: to_maintenance_by_working_hours
+#: model:ir.model.fields.selection,name:to_maintenance_by_working_hours.selection__maintenance_equipment__preventive_maintenance_mode__hour
+msgid "By Hour"
+msgstr "Theo giờ"
+
+#. module: to_maintenance_by_working_hours
+#: model:ir.model.fields,field_description:to_maintenance_by_working_hours.field_maintenance_equipment__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_maintenance_by_working_hours
+#: model:ir.model.fields,field_description:to_maintenance_by_working_hours.field_maintenance_equipment__id
+msgid "ID"
+msgstr ""
+
+#. module: to_maintenance_by_working_hours
+#: model:ir.model.fields,field_description:to_maintenance_by_working_hours.field_maintenance_equipment____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_maintenance_by_working_hours
+#: model:ir.model,name:to_maintenance_by_working_hours.model_maintenance_equipment
+msgid "Maintenance Equipment"
+msgstr "Thiết bị bảo trì"
+
+#. module: to_maintenance_by_working_hours
+#: code:addons/to_maintenance_by_working_hours/models/maintenance_equipment.py:0
+#, python-format
+msgid "Please select the maintenance team for the equipment '%s'"
+msgstr "Vui lòng lựa chọn nhóm bảo trì cho thiết bị '%s'"
+
+#. module: to_maintenance_by_working_hours
+#: model:ir.model.fields,field_description:to_maintenance_by_working_hours.field_maintenance_equipment__preventive_maintenance_mode
+msgid "Preventive Maintenance Mode"
+msgstr "Chế độ bảo trì phòng ngừa"
+
+#. module: to_maintenance_by_working_hours
+#: model:ir.model.fields,help:to_maintenance_by_working_hours.field_maintenance_equipment__ave_daily_working_hours
+msgid "The average daily working hours of the equipment"
+msgstr "Số giờ làm việc trung bình hàng ngày của thiết bị"
+
+#. module: to_maintenance_by_working_hours
+#: model:ir.model.fields,help:to_maintenance_by_working_hours.field_maintenance_equipment__working_hour_period
+msgid "The working hours of the equipment between each preventive maintenance"
+msgstr "Số giờ giữa 2 lần bảo trì phòng ngừa của thiết bị"
+
+#. module: to_maintenance_by_working_hours
+#: model:ir.model.fields,field_description:to_maintenance_by_working_hours.field_maintenance_equipment__working_hour_period
+msgid "Working Hours between each preventive maintenance"
+msgstr "Thời gian giữa các lần bảo trì"
+
+#. module: to_maintenance_by_working_hours
+#: model:ir.model.constraint,message:to_maintenance_by_working_hours.constraint_maintenance_equipment_working_hour_period_check
+msgid ""
+"Working Hours between each preventive maintenance must be greater than or "
+"equal to zero!"
+msgstr "Tần suất bảo trì phòng ngừa theo giờ phải lớn hơn hoặc bằng 0!"
+
+#. module: to_maintenance_by_working_hours
+#: model_terms:ir.ui.view,arch_db:to_maintenance_by_working_hours.hr_equipment_view_form
+msgid "hours"
+msgstr "giờ"
+
+#. module: to_maintenance_by_working_hours
+#: model_terms:ir.ui.view,arch_db:to_maintenance_by_working_hours.hr_equipment_view_form
+msgid "hours / day"
+msgstr "giờ / ngày"

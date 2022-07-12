@@ -1,0 +1,12 @@
+<odoo>
+	<data noupdate="1">
+		<record id="uom_uom_running_hour_id" model="uom.uom">
+			<field name="name">Running Hour</field>
+			<field name="category_id" ref="uom.uom_categ_wtime"/>
+			<field name="uom_type">smaller</field>
+			<field name="active">True</field>
+			<field name="rounding" eval="0.01" />
+			<field name="factor_inv" eval="24" />
+		</record>
+	</data>
+</odoo>

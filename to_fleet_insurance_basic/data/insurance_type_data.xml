@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="fleet_public_liability_insurance" model="fleet.insurance.type">
+			<field name="name">Public Liability Insurance</field>
+			<field name="period">12</field>
+			<field name="days_to_notify">7</field>
+		</record>
+		<record id="fleet_physical_damage_insurance" model="fleet.insurance.type">
+			<field name="name">Physical Damage Insurance</field>
+			<field name="period">12</field>
+			<field name="days_to_notify">7</field>
+		</record>
+   </data>
+</odoo>

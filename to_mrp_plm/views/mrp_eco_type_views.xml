@@ -1,0 +1,180 @@
+<odoo>
+    <record id="mrp_eco_type_view_tree" model="ir.ui.view">
+        <field name="name">mrp.eco.type.tree</field>
+        <field name="model">mrp.eco.type</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="nb_ecos"/>
+                <field name="nb_approvals"/>
+                <field name="nb_approvals_my"/>
+                <field name="nb_validation"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="mrp_eco_type_view_form" model="ir.ui.view">
+        <field name="name">mrp.eco.type.form</field>
+        <field name="model">mrp.eco.type</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                	<div class="oe_button_box" name="button_box" groups="base.group_user">
+                		<button class="oe_stat_button" type="action" name="%(mrp_eco_action)d" icon="fa-tasks">
+                            <field string="ECOs" name="nb_ecos" widget="statinfo" />
+                        </button>
+                        <button class="oe_stat_button" type="action" name="%(mrp_eco_action_approval)d" icon="fa-tasks" attrs="{'invisible': [('nb_approvals', '=', 0)]}">
+                            <field string="Waiting Approvals ECOs" name="nb_approvals" widget="statinfo" />
+                        </button>
+                        <button class="oe_stat_button" type="action" name="%(mrp_eco_action_approval_my)d" icon="fa-tasks" attrs="{'invisible': [('nb_approvals_my', '=', 0)]}">
+                            <field string="Waiting my Approvals ECOs" name="nb_approvals_my" widget="statinfo" />
+                        </button>
+                        <button class="oe_stat_button" type="action" name="%(mrp_eco_action_late)d" icon="fa-tasks" attrs="{'invisible': [('nb_validation', '=', 0)]}">
+                            <field string="To Apply ECOs" name="nb_validation" widget="statinfo"/>
+                        </button>
+                	</div>
+                	<div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="ECO Type Name"/>
+                        </h1>
+                    </div>
+                    <notebook>
+                        <page name="emails" string="Emails" attrs="{'invisible': [('alias_domain', '=', False)]}">
+                            <group name="group_alias">
+                                <label for="alias_name" string="Email Alias"/>
+                                <div name="alias_def">
+                                    <field name="alias_id" class="oe_read_only oe_inline" string="Email Alias" required="0"/>
+                                    <div class="oe_edit_only oe_inline" name="edit_alias" style="display: inline;">
+                                        <field name="alias_name" class="oe_inline"/>@<field name="alias_domain" class="oe_inline" readonly="1"/>
+                                    </div>
+                                </div>
+                                <field name="alias_contact" class="oe_inline oe_edit_only" string="Accept Emails From"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="mrp_eco_type_view_kanban" model="ir.ui.view">
+        <field name="name">mrp.eco.type.kanban</field>
+        <field name="model">mrp.eco.type</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_view o_kanban_dashboard o_mrp_plm_kanban" create="0">
+                <field name="name"/>
+                <field name="alias_id"/>
+                <field name="alias_name"/>
+                <field name="alias_domain"/>
+                <field name="nb_validation"/>
+                <field name="nb_approvals"/>
+                <field name="nb_approvals_my"/>
+                <field name="nb_ecos"/>
+                <field name="color"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_color_#{kanban_getcolor(record.color.raw_value)} oe_kanban_card">
+	                        <div class="o_kanban_card_header">
+	                        	<div class="o_kanban_card_header_title">
+	                            	<div class="o_primary">
+	                            		<b><field name="name"/></b>
+	                            	</div>
+	                                <div t-if="record.alias_name.value and record.alias_domain.value">
+	                                	<i class="fa fa-envelope-o"></i>&amp;nbsp; <field name="alias_id"/>
+	                                </div>
+	                            </div>
+	                            <div class="o_dropdown_kanban dropdown">
+
+                                    <a class="dropdown-toggle o-no-caret btn" role="button" data-toggle="dropdown" data-display="static" href="#" aria-label="Dropdown menu" title="Dropdown menu">
+                                        <span class="fa fa-ellipsis-v"/>
+                                    </a>
+                                    <div class="dropdown-menu" role="menu">
+                                        <t t-if="widget.editable"><a name="%(mrp_eco_action_form)d" type="action" class="dropdown-item">New ECO</a></t>
+                                        <t t-if="widget.editable"><a role="menuitem" type="edit" class="dropdown-item">Edit</a></t>
+                                        <t t-if="widget.deletable"><a role="menuitem" type="delete" class="dropdown-item">Delete</a></t>
+                                        <ul class="oe_kanban_colorpicker" data-field="color"/>
+                                    </div>
+                                </div>
+	                        </div>
+
+                            <div class="container o_kanban_card_content o_visible">
+                                <div class="row">
+                                    <div class="col-md-6 o_kanban_primary_left">
+                                        <button class="btn btn-primary" name="%(mrp_eco_action)d" type="action" >
+                                            <span><t t-esc="record.nb_ecos.value"/> Engineering Changes</span>
+                                        </button>
+                                    </div>
+                                    <div class="col-md-6 o_kanban_primary_right">
+                                        <div class="row">
+                                            <div class="col-md-9">
+                                                <a class="oe_kanban_stock_picking_type_list" name="%(mrp_eco_action_approval_my)d" type="action">
+                                                    Waiting my Approvals
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <field name="nb_approvals_my"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row" style="margin-top:10px">
+                                            <div class="col-md-9">
+                                                <a class="oe_kanban_stock_picking_type_list" name="%(mrp_eco_action_approval)d" type="action">
+                                                    Waiting Approvals
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <field name="nb_approvals"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row" style="margin-top:10px">
+                                            <div class="col-md-9">
+                                                <a class="oe_kanban_stock_picking_type_list" name="%(mrp_eco_action_late)d" type="action">
+                                                    To Apply
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <field name="nb_validation"/>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="mrp_eco_type_action_dashboard" model="ir.actions.act_window">
+        <field name="name">PLM Dashboard</field>
+        <field name="res_model">mrp.eco.type</field>
+        <field name="view_mode">kanban,form</field>
+        <field name="help" type="html">
+            <p>
+              Create a new ECO Types
+            </p>
+        </field>
+    </record>
+
+    <record id="mrp_eco_type_action" model="ir.actions.act_window">
+        <field name="name">ECO Types</field>
+        <field name="res_model">mrp.eco.type</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="help" type="html">
+            <p>
+              Create a new ECO Types
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="mrp_eco_type_menu_dashboard" name="Dashboard" parent="root_menu"
+        action="mrp_eco_type_action_dashboard" sequence="5"/>
+
+    <menuitem id="mrp_eco_type_menu" name="ECO Types" parent="configuration_menu"
+    	action="mrp_eco_type_action" sequence="10"/>
+
+</odoo>

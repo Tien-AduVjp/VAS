@@ -1,0 +1,237 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_promotion_voucher_pos
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-30 03:15+0000\n"
+"PO-Revision-Date: 2022-03-30 03:15+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_promotion_voucher_pos
+#: model:ir.model.fields,field_description:to_promotion_voucher_pos.field_pos_order__amount_paid_by_voucher
+msgid "Amount Paid by Voucher"
+msgstr "Số tiền thanh toán bằng phiếu khuyễn mãi"
+
+#. module: to_promotion_voucher_pos
+#. openerp-web
+#: code:addons/to_promotion_voucher_pos/static/src/js/Screens/PaymentScreen/PaymentScreen.js:0
+#, python-format
+msgid "Cancel"
+msgstr "Huỷ"
+
+#. module: to_promotion_voucher_pos
+#: model:ir.model.fields,field_description:to_promotion_voucher_pos.field_pos_order__display_name
+#: model:ir.model.fields,field_description:to_promotion_voucher_pos.field_pos_payment__display_name
+#: model:ir.model.fields,field_description:to_promotion_voucher_pos.field_pos_payment_method__display_name
+#: model:ir.model.fields,field_description:to_promotion_voucher_pos.field_voucher_report__display_name
+#: model:ir.model.fields,field_description:to_promotion_voucher_pos.field_voucher_voucher__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_promotion_voucher_pos
+#. openerp-web
+#: code:addons/to_promotion_voucher_pos/static/src/js/Screens/PaymentScreen/PaymentScreen.js:0
+#, python-format
+msgid "Error: Could not Save Changes"
+msgstr "Lỗi: Không thể lưu thay đổi"
+
+#. module: to_promotion_voucher_pos
+#: model:ir.model.fields,field_description:to_promotion_voucher_pos.field_pos_order__id
+#: model:ir.model.fields,field_description:to_promotion_voucher_pos.field_pos_payment__id
+#: model:ir.model.fields,field_description:to_promotion_voucher_pos.field_pos_payment_method__id
+#: model:ir.model.fields,field_description:to_promotion_voucher_pos.field_voucher_report__id
+#: model:ir.model.fields,field_description:to_promotion_voucher_pos.field_voucher_voucher__id
+msgid "ID"
+msgstr ""
+
+#. module: to_promotion_voucher_pos
+#: model:ir.model.fields,field_description:to_promotion_voucher_pos.field_pos_order____last_update
+#: model:ir.model.fields,field_description:to_promotion_voucher_pos.field_pos_payment____last_update
+#: model:ir.model.fields,field_description:to_promotion_voucher_pos.field_pos_payment_method____last_update
+#: model:ir.model.fields,field_description:to_promotion_voucher_pos.field_voucher_report____last_update
+#: model:ir.model.fields,field_description:to_promotion_voucher_pos.field_voucher_voucher____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_promotion_voucher_pos
+#. openerp-web
+#: code:addons/to_promotion_voucher_pos/static/src/js/Screens/PaymentScreen/PaymentScreen.js:0
+#, python-format
+msgid "OK"
+msgstr "Đồng ý"
+
+#. module: to_promotion_voucher_pos
+#: model:ir.model.fields,field_description:to_promotion_voucher_pos.field_voucher_report__partner_id
+#: model:ir.model.fields,field_description:to_promotion_voucher_pos.field_voucher_voucher__partner_id
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: to_promotion_voucher_pos
+#: model:ir.model.fields,help:to_promotion_voucher_pos.field_voucher_voucher__user_id
+msgid ""
+"Person who uses the cash register. It can be a reliever, a student or an "
+"interim employee."
+msgstr ""
+"Người sử dụng máy tính tiền. Có thể là người hỗ trợ, sinh viên hoặc nhân "
+"viên tạm thời."
+
+#. module: to_promotion_voucher_pos
+#. openerp-web
+#: code:addons/to_promotion_voucher_pos/static/src/js/Screens/PaymentScreen/PaymentScreen.js:0
+#, python-format
+msgid "Please input voucher code or scan its barcode"
+msgstr "Vui lòng nhập hoặc quét barcoder mã voucher"
+
+#. module: to_promotion_voucher_pos
+#: model:ir.model.fields,field_description:to_promotion_voucher_pos.field_voucher_report__pos_order_id
+msgid "PoS Order"
+msgstr "Đơn bán lẻ"
+
+#. module: to_promotion_voucher_pos
+#: model:ir.model.fields,field_description:to_promotion_voucher_pos.field_voucher_report__pos_session_id
+msgid "PoS Session"
+msgstr "Phiên bán lẻ"
+
+#. module: to_promotion_voucher_pos
+#: model:ir.model,name:to_promotion_voucher_pos.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Đơn Bán Điểm bán lẻ"
+
+#. module: to_promotion_voucher_pos
+#: model:ir.model,name:to_promotion_voucher_pos.model_pos_payment_method
+msgid "Point of Sale Payment Methods"
+msgstr "Phương thức thanh toán Điểm bán lẻ"
+
+#. module: to_promotion_voucher_pos
+#: model:ir.model,name:to_promotion_voucher_pos.model_pos_payment
+msgid "Point of Sale Payments"
+msgstr "Thanh toán Điểm bán lẻ"
+
+#. module: to_promotion_voucher_pos
+#: model:ir.model.fields,field_description:to_promotion_voucher_pos.field_voucher_report__pos_config_id
+msgid "Point of Sales"
+msgstr "Điểm bán lẻ"
+
+#. module: to_promotion_voucher_pos
+#: model:ir.model.fields,field_description:to_promotion_voucher_pos.field_voucher_voucher__pos_config_id
+msgid "Pos Config"
+msgstr "Cấu hinh PoS"
+
+#. module: to_promotion_voucher_pos
+#: model:ir.model.fields,field_description:to_promotion_voucher_pos.field_voucher_voucher__pos_order_id
+msgid "Pos Order"
+msgstr "Đơn bán lẻ"
+
+#. module: to_promotion_voucher_pos
+#: model:ir.model.fields,field_description:to_promotion_voucher_pos.field_voucher_voucher__pos_order_line_id
+msgid "Pos Order Line"
+msgstr "Chi tiết đơn hàng Pos"
+
+#. module: to_promotion_voucher_pos
+#: model:ir.model.fields,field_description:to_promotion_voucher_pos.field_voucher_voucher__pos_session_id
+msgid "Pos Session"
+msgstr "Phiên bán lẻ"
+
+#. module: to_promotion_voucher_pos
+#: model:ir.model,name:to_promotion_voucher_pos.model_voucher_voucher
+#: model:ir.model.fields,field_description:to_promotion_voucher_pos.field_pos_payment__voucher_id
+msgid "Promotion Voucher"
+msgstr "Voucher Khuyến mãi"
+
+#. module: to_promotion_voucher_pos
+#: model:ir.model.fields,field_description:to_promotion_voucher_pos.field_voucher_voucher__user_id
+msgid "Sale Person"
+msgstr "Nhân viên bán hàng"
+
+#. module: to_promotion_voucher_pos
+#: model:ir.model.fields,field_description:to_promotion_voucher_pos.field_voucher_report__user_id
+msgid "Sales Person"
+msgstr "Nhân viên bán hàng"
+
+#. module: to_promotion_voucher_pos
+#: model:ir.model.fields,field_description:to_promotion_voucher_pos.field_voucher_voucher__price
+msgid "Sold Price"
+msgstr "Giá được bán"
+
+#. module: to_promotion_voucher_pos
+#: model:ir.model.fields,help:to_promotion_voucher_pos.field_voucher_voucher__price
+msgid "The actual price when selling this promotion voucher"
+msgstr "Giá thực tế khi bán phiếu khuyến mãi này "
+
+#. module: to_promotion_voucher_pos
+#: model:ir.model.fields,help:to_promotion_voucher_pos.field_voucher_voucher__pos_config_id
+msgid "The physical point of sale you will use."
+msgstr "Điểm bán hàng vật lý bạn sẽ sử dụng."
+
+#. module: to_promotion_voucher_pos
+#. openerp-web
+#: code:addons/to_promotion_voucher_pos/static/src/js/Screens/PaymentScreen/PaymentScreen.js:0
+#, python-format
+msgid "This Voucher code is incorrect."
+msgstr "Mã Voucher này không hợp lệ"
+
+#. module: to_promotion_voucher_pos
+#. openerp-web
+#: code:addons/to_promotion_voucher_pos/models/voucher_voucher.py:0
+#: code:addons/to_promotion_voucher_pos/static/src/js/Screens/PaymentScreen/PaymentScreen.js:0
+#, python-format
+msgid "This Voucher has been used."
+msgstr "Voucher này đã được sử dụng. "
+
+#. module: to_promotion_voucher_pos
+#: code:addons/to_promotion_voucher_pos/models/voucher_voucher.py:0
+#, python-format
+msgid "This Voucher has not been activated."
+msgstr "Voucher này chưa được kích hoạt. "
+
+#. module: to_promotion_voucher_pos
+#: code:addons/to_promotion_voucher_pos/models/voucher_voucher.py:0
+#, python-format
+msgid "This Voucher is already expired."
+msgstr "Voucher này đã hết hạn. "
+
+#. module: to_promotion_voucher_pos
+#: code:addons/to_promotion_voucher_pos/models/voucher_voucher.py:0
+#, python-format
+msgid "This Voucher is still in your stock. Hence, it cannot be used.."
+msgstr ""
+"Voucher này vẫn còn trong kho của bạn. Do đó, nó không thể được sử dụng .. "
+
+#. module: to_promotion_voucher_pos
+#. openerp-web
+#: code:addons/to_promotion_voucher_pos/static/src/js/Screens/PaymentScreen/PaymentScreen.js:0
+#: code:addons/to_promotion_voucher_pos/static/src/js/Screens/PaymentScreen/PaymentScreen.js:0
+#: code:addons/to_promotion_voucher_pos/static/src/js/Screens/PaymentScreen/PaymentScreen.js:0
+#, python-format
+msgid "Voucher Invalid"
+msgstr "Voucher Không hợp lệ"
+
+#. module: to_promotion_voucher_pos
+#: model:ir.model.fields,field_description:to_promotion_voucher_pos.field_pos_payment_method__voucher_payment
+msgid "Voucher Payment method"
+msgstr "Phương thức thanh toán voucher"
+
+#. module: to_promotion_voucher_pos
+#: model:ir.model.fields,field_description:to_promotion_voucher_pos.field_pos_order__voucher_ids
+msgid "Vouchers"
+msgstr ""
+
+#. module: to_promotion_voucher_pos
+#: model:ir.model,name:to_promotion_voucher_pos.model_voucher_report
+msgid "Vouchers Report"
+msgstr "Báo cáo Voucher"
+
+#. module: to_promotion_voucher_pos
+#. openerp-web
+#: code:addons/to_promotion_voucher_pos/static/src/js/Screens/PaymentScreen/PaymentScreen.js:0
+#, python-format
+msgid "Your Internet connection is probably down."
+msgstr "Kết nối Internet của bạn có vấn đề"

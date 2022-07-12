@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <record id="mt_task_return" model="mail.message.subtype">
+            <field name="name">Task in progress</field>
+            <field name="res_model">project.task</field>
+            <field name="default" eval="False"/>
+            <field name="hidden" eval="True"/>
+            <field name="description">Task in progress</field>
+        </record>
+        <record id="mt_project_task_return" model="mail.message.subtype">
+            <field name="name">Task Return</field>
+            <field name="sequence">15</field>
+            <field name="res_model">project.project</field>
+            <field name="default" eval="False"/>
+            <field name="parent_id" ref="mt_task_return"/>
+            <field name="relation_field">project_id</field>
+        </record>
+</odoo>

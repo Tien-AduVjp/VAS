@@ -1,0 +1,278 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_invoice_line_summary
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-08 03:39+0000\n"
+"PO-Revision-Date: 2022-03-10 06:30+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_invoice_line_summary
+#: model_terms:ir.ui.view,arch_db:to_invoice_line_summary.report_invoice_line_summary_document
+msgid "<span>Description</span>"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model_terms:ir.ui.view,arch_db:to_invoice_line_summary.report_invoice_line_summary_document
+msgid "<span>Product Template</span>"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_invoice_line_summary__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_invoice_line_summary__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_invoice_line_summary__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_account_journal__invoice_display_mode
+msgid "Default Invoice Display Mode"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_account_journal__invoice_line_summary_group_mode
+msgid "Default Summary Line Mode"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_invoice_line_summary__discount
+msgid "Discount"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_account_journal__display_name
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_account_move__display_name
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_invoice_line_summary__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_account_journal__id
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_account_move__id
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_account_move_line__id
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_invoice_line_summary__id
+msgid "ID"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_invoice_line_summary__invoice_id
+msgid "Invoice"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_account_bank_statement_line__invoice_display_mode
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_account_move__invoice_display_mode
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_account_payment__invoice_display_mode
+msgid "Invoice Display Mode"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_invoice_line_summary__invoice_line_ids
+msgid "Invoice Line"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model.fields.selection,name:to_invoice_line_summary.selection__account_journal__invoice_display_mode__invoice_line_summary_lines
+#: model:ir.model.fields.selection,name:to_invoice_line_summary.selection__account_move__invoice_display_mode__invoice_line_summary_lines
+msgid "Invoice Line Summary Lines"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model.fields.selection,name:to_invoice_line_summary.selection__account_journal__invoice_display_mode__invoice_lines
+#: model:ir.model.fields.selection,name:to_invoice_line_summary.selection__account_move__invoice_display_mode__invoice_lines
+msgid "Invoice Lines"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model,name:to_invoice_line_summary.model_invoice_line_summary
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_account_move_line__invoice_line_summary_id
+#: model_terms:ir.ui.view,arch_db:to_invoice_line_summary.view_move_form
+msgid "Invoice Lines Summary"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_account_bank_statement_line__invoice_line_summary_group_mode
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_account_move__invoice_line_summary_group_mode
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_account_payment__invoice_line_summary_group_mode
+msgid "Invoice Summary Line Mode"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model_terms:ir.ui.view,arch_db:to_invoice_line_summary.view_account_journal_form
+msgid "Invoice display summary settings"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model,name:to_invoice_line_summary.model_account_journal
+msgid "Journal"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model,name:to_invoice_line_summary.model_account_move
+msgid "Journal Entry"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model,name:to_invoice_line_summary.model_account_move_line
+msgid "Journal Item"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_invoice_line_summary__name
+msgid "Label"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_account_journal____last_update
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_account_move____last_update
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_account_move_line____last_update
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_invoice_line_summary____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_invoice_line_summary__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_invoice_line_summary__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_invoice_line_summary__price_subtotal
+msgid "Price Subtotal"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_invoice_line_summary__price_total
+msgid "Price Total"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_invoice_line_summary__price_unit
+msgid "Price Unit"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_invoice_line_summary__product_id
+msgid "Product"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_invoice_line_summary__product_tmpl_id
+msgid "Product Template"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model.fields.selection,name:to_invoice_line_summary.selection__account_journal__invoice_line_summary_group_mode__product_template_tax_discount
+#: model:ir.model.fields.selection,name:to_invoice_line_summary.selection__account_move__invoice_line_summary_group_mode__product_template_tax_discount
+msgid "Product template, Tax, Discount"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model.fields.selection,name:to_invoice_line_summary.selection__account_journal__invoice_line_summary_group_mode__product_template_unit_price_tax_discount
+#: model:ir.model.fields.selection,name:to_invoice_line_summary.selection__account_move__invoice_line_summary_group_mode__product_template_unit_price_tax_discount
+msgid "Product template, Unit price, Tax, Discount"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model.fields.selection,name:to_invoice_line_summary.selection__account_journal__invoice_line_summary_group_mode__product_tax_discount
+#: model:ir.model.fields.selection,name:to_invoice_line_summary.selection__account_move__invoice_line_summary_group_mode__product_tax_discount
+msgid "Product, Tax, Discount"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model.fields.selection,name:to_invoice_line_summary.selection__account_journal__invoice_line_summary_group_mode__product_unit_price_tax_discount
+#: model:ir.model.fields.selection,name:to_invoice_line_summary.selection__account_move__invoice_line_summary_group_mode__product_unit_price_tax_discount
+msgid "Product, Unit price, Tax, Discount"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_invoice_line_summary__quantity
+msgid "Quantity"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model.fields,help:to_invoice_line_summary.field_account_bank_statement_line__invoice_display_mode
+#: model:ir.model.fields,help:to_invoice_line_summary.field_account_journal__invoice_display_mode
+#: model:ir.model.fields,help:to_invoice_line_summary.field_account_move__invoice_display_mode
+#: model:ir.model.fields,help:to_invoice_line_summary.field_account_payment__invoice_display_mode
+msgid ""
+"Select option invoice display mode, This change will change the all display "
+"\"invoice line\". for example: portal, pdf, preview ..."
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model.fields,help:to_invoice_line_summary.field_account_bank_statement_line__invoice_line_summary_group_mode
+#: model:ir.model.fields,help:to_invoice_line_summary.field_account_move__invoice_line_summary_group_mode
+#: model:ir.model.fields,help:to_invoice_line_summary.field_account_payment__invoice_line_summary_group_mode
+msgid "Select style option invoice line summary display mode"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_invoice_line_summary__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_account_bank_statement_line__invoice_line_summary_ids
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_account_move__invoice_line_summary_ids
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_account_payment__invoice_line_summary_ids
+msgid "Summary Lines"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model_terms:ir.ui.view,arch_db:to_invoice_line_summary.view_account_journal_form
+msgid "Summary settings"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_invoice_line_summary__invoice_line_tax_ids
+msgid "Taxes"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model.fields,help:to_invoice_line_summary.field_invoice_line_summary__invoice_id
+msgid "The move of this entry line."
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model.fields,help:to_invoice_line_summary.field_invoice_line_summary__price_total
+msgid "Total amount with taxes"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model.fields,help:to_invoice_line_summary.field_invoice_line_summary__price_subtotal
+msgid "Total amount without taxes"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model.fields,field_description:to_invoice_line_summary.field_invoice_line_summary__uom_id
+msgid "Unit of Measure"
+msgstr ""
+
+#. module: to_invoice_line_summary
+#: model:ir.model.fields,help:to_invoice_line_summary.field_account_journal__invoice_line_summary_group_mode
+msgid ""
+"if have an setting: create Billing will get default mode in journal else "
+"create Billing will get default mode in company"
+msgstr ""

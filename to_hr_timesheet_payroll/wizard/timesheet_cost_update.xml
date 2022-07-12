@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+	<record id="update_timesheet_cost_form_view" model="ir.ui.view">
+		<field name="name">timesheet.cost.update.form</field>
+		<field name="model">timesheet.cost.update</field>
+		<field name="arch" type="xml">
+			<form string="Update timesheet cost">
+				<group>
+					<h3>Do you want update time sheet cost?</h3>
+				</group>
+				<footer>
+					<button name="update_timesheet_cost" string="Confirm" type="object" class="btn-primary" />
+					<button string="Cancel" class="btn-default" special="cancel" />
+				</footer>
+			</form>
+		</field>
+	</record>
+
+	<record id="timesheet_cost_update_action" model="ir.actions.act_window">
+		<field name="name">Update Existing Timesheet Cost</field>
+		<field name="res_model">timesheet.cost.update</field>
+		<field name="view_mode">form</field>
+		<field name="binding_model_id" ref="to_hr_payroll.model_hr_payslip"/>
+		<field name="target">new</field>
+	</record>
+</odoo>

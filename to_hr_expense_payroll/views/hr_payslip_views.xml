@@ -1,0 +1,27 @@
+<odoo>
+	<data>
+		<record id="view_hr_payslip_form" model="ir.ui.view">
+			<field name="name">hr.payslip.form.payslip</field>
+			<field name="model">hr.payslip</field>
+			<field name="inherit_id" ref="to_hr_payroll.view_hr_payslip_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='worked_days_line_ids']"
+					position="after">
+					<separator string="HR Expenses"
+						attrs="{'invisible':[('hr_expense_ids','=',False)]}" />
+					<field name="hr_expense_ids" nolabel="1"
+						attrs="{'invisible':[('hr_expense_ids','=',False)]}">
+						<tree name="hr_expense_ids">
+							<field name="date" />
+							<field name="name" />
+							<field name="product_id" groups="base.group_no_one" />
+							<field name="total_amount" />
+							<field name="currency_id" invisible="1" />
+							<field name="state" />
+						</tree>
+					</field>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

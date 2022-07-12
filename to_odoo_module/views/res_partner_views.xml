@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="view_partner_form">
+			<field name="name">res.partner.form</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.view_partner_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//div[@name='button_box']"
+					position="inside">
+					<button name="action_view_sold_odoo_apps"
+						type="object"
+						attrs="{'invisible': [('paid_odoo_module_versions_count','&lt;=',0)]}"
+						groups="to_odoo_module.odoo_module_user" class="oe_stat_button"
+						icon="fa-cubes">
+						<field name="paid_odoo_module_versions_count"
+							string="Paid Odoo App Versions" widget="statinfo" />
+					</button>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

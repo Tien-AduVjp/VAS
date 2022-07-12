@@ -1,0 +1,54 @@
+<odoo>
+	<data>
+		<record id="helpdesk_ticket_form_view" model="ir.ui.view">
+			<field name="name">helpdesk.ticket.form</field>
+			<field name="model">helpdesk.ticket</field>
+			<field name="inherit_id"
+				ref="viin_helpdesk.helpdesk_ticket_form_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='active']" position="after">
+					<field name="sale_order_id" groups="sales_team.group_sale_salesman"/>
+				</xpath>
+			</field>
+		</record>
+
+		<record id="helpdesk_ticket_tree_view" model="ir.ui.view">
+			<field name="name">helpdesk.ticket.tree</field>
+			<field name="inherit_id"
+				ref="viin_helpdesk.helpdesk_ticket_tree_view" />
+			<field name="model">helpdesk.ticket</field>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='team_id']" position="after">
+					<field name="sale_order_id" groups="sales_team.group_sale_salesman"/>
+				</xpath>
+			</field>
+		</record>
+
+		<record id="helpdesk_ticket_search_view" model="ir.ui.view">
+			<field name="name">helpdesk.ticket.search</field>
+			<field name="inherit_id"
+				ref="viin_helpdesk.helpdesk_ticket_search_view" />
+			<field name="model">helpdesk.ticket</field>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='team_id']" position="after">
+					<field name="sale_order_id" groups="sales_team.group_sale_salesman"/>
+				</xpath>
+				<xpath expr="//filter[@name='grp_team_id']" position="after">
+					<filter string="Sale Order" name="grp_sale_order_id"
+						domain="[]" context="{'group_by':'sale_order_id'}" groups="sales_team.group_sale_salesman"/>
+				</xpath>
+			</field>
+		</record>
+
+		<record id="quick_create_helpdesk_ticket_form" model="ir.ui.view">
+			<field name="name">helpdesk.ticket.form.quick_create</field>
+			<field name="model">helpdesk.ticket</field>
+			<field name="inherit_id" ref="viin_helpdesk.quick_create_helpdesk_ticket_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='name']" position="after">
+					<field name="sale_order_id" groups="sales_team.group_sale_salesman"/>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data noupdate="1">
+		<record id="to_product_product_import_tax_cost" model="product.product">
+			<field name="name">Import Tax Cost</field>
+			<field name="categ_id" ref="product.product_category_all" />
+			<field name="landed_cost_ok" eval="True" />
+			<field name="type">service</field>
+			<field name="description">Product to import tax cost.</field>
+			<field name="company_id" eval="False" />
+		</record>
+	</data>
+</odoo>

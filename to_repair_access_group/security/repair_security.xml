@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    	<record id="group_repair_manager" model="res.groups">
+	        <field name="name">Repair Manager</field>
+	        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+	        <field name="users" eval="[(4, ref('base.user_root')),(4, ref('base.user_admin'))]"/>
+	        <field name="comment">the user will have access to all records in the repair application.</field>
+    	</record>
+
+	    <record id="repair.menu_repair_order" model="ir.ui.menu">
+	        <field name="groups_id" eval="[(4, ref('to_repair_access_group.group_repair_manager'))]"/>
+	    </record>
+	    <record id="repair.repair_menu_reporting" model="ir.ui.menu">
+	        <field name="groups_id" eval="[(4, ref('to_repair_access_group.group_repair_manager'))]"/>
+	    </record>
+	    <record id="repair.repair_menu_config" model="ir.ui.menu">
+	        <field name="groups_id" eval="[(4, ref('to_repair_access_group.group_repair_manager'))]"/>
+	    </record>
+    </data>
+</odoo>

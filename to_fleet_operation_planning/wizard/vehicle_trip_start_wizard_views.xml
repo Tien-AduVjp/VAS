@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="vehicle_strip_start_wizard_form_view" model="ir.ui.view">
+		<field name="name">vehicle.trip.start.wizard.form</field>
+		<field name="model">vehicle.trip.start.wizard</field>
+		<field name="arch" type="xml">
+			<form string="Trip Start Wizard">
+				<group>
+					<group name="starting">
+						<field name="trip_id" />
+						<field name="operation_start" />
+						<field name="expected_end_date" />
+					</group>
+					<group>
+						<field name="vehicle_id" />
+						<field name="odometer" />
+						<field name="driver_id" />
+						<field name="assistant_ids" widget="many2many_tags" />
+					</group>
+				</group>
+				<footer>
+					<button name="action_start" string="Start" type="object"
+						default_focus="1" class="oe_highlight" />
+					or
+					<button string="Cancel" class="oe_link" special="cancel" />
+				</footer>
+			</form>
+		</field>
+	</record>
+
+    <record id="launch_vehicle_strip_start_wizard" model="ir.actions.act_window">
+        <field name="name">Start Trip</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">vehicle.trip.start.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="vehicle_strip_start_wizard_form_view"/>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

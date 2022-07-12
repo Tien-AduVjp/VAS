@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+
+    <record id="document_tag_stock_delivery" model="document.tag">
+        <field name="name">Delivery</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_picking_type'))]"/>
+    </record>
+
+    <record id="document_tag_stock_receipt" model="document.tag">
+        <field name="name">Receipt</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_picking_type'))]"/>
+    </record>
+
+    <record id="document_tag_stock_waiting_another_operation" model="document.tag">
+        <field name="name">Waiting Another Operation</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_inventory_status'))]"/>
+    </record>
+
+    <record id="document_tag_stock_ready" model="document.tag">
+        <field name="name">Ready</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_inventory_status'))]"/>
+    </record>
+
+    <record id="document_tag_stock_done" model="document.tag">
+        <field name="name">Done</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_inventory_status'))]"/>
+    </record>
+
+</odoo>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="cost_revenue_deferral_tree" model="ir.ui.view">
+			<field name="name">cost.revenue.deferral.tree</field>
+			<field name="model">cost.revenue.deferral</field>
+			<field name="arch" type="xml">
+				<tree string="Cost Revenue Deferral">
+					<field name="name" />
+					<field name="type" invisible="1" />
+					<field name="deferral_category_id" />
+					<field name="date" />
+					<field name="value" />
+					<field name="value_residual" />
+					<field name="currency_id" groups="base.group_multi_currency" />
+					<field name="company_id" groups="base.group_multi_company" />
+					<field name="state" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="cost_revenue_deferral_form" model="ir.ui.view">
+			<field name="name">cost.revenue.deferral.form</field>
+			<field name="model">cost.revenue.deferral</field>
+			<field name="arch" type="xml">
+				<form string="Cost Revenue Deferral">
+					<header>
+						<button name="validate" states="draft" string="Confirm"
+							type="object" class="oe_highlight" />
+						<button name="compute_deferral_board" states="draft"
+							type="object" string="Compute" />
+						<button name="set_to_close" states="open"
+							string="Set to Close" type="object" class="oe_highlight" />
+						<button name="%(deferral_disposal_action)d" states="open"
+							string="Disposal" type="action" class="oe_highlight"
+							context="{'default_deferral_id': active_id}" />
+						<button name="set_to_draft" states="open"
+							string="Set to Draft" type="object" />
+						<field name="state" widget="statusbar"
+							statusbar_visible="draft,open" />
+					</header>
+					<sheet>
+						<div class="oe_button_box oe_right">
+							<button class="oe_inline oe_stat_button"
+								name="open_entries" type="object" icon="fa-pencil">
+								<field string="Journal Items" name="move_line_count"
+									widget="statinfo" />
+							</button>
+						</div>
+						<div class="oe_title">
+							<label for="name" class="oe_edit_only" />
+							<h1>
+								<field name="name" class="oe_inline" />
+							</h1>
+						</div>
+						<group>
+							<group>
+								<field name="type" invisible="1" />
+								<field name="deferral_category_id"
+									domain="[('type','=',type)]" context="{'default_type':type}" />
+							</group>
+							<group>
+								<field name="date" />
+								<field name="currency_id"
+									groups="base.group_multi_currency" />
+								<field name="company_id" widget="selection"
+									groups="base.group_multi_company" />
+							</group>
+						</group>
+						<notebook>
+							<page name="general" string="General">
+								<group>
+									<group>
+										<field name="value" widget="monetary"
+											options="{'currency_field': 'currency_id'}" />
+										<field name="salvage_value" widget="monetary"
+											options="{'currency_field': 'currency_id'}" />
+										<field name="value_residual" widget="monetary"
+											options="{'currency_field': 'currency_id'}" />
+										<field name="partner_id" />
+										<field name="auto_create_move" />
+									</group>
+									<group>
+										<field name="method" invisible="1" />
+										<field name="method_time" />
+										<field name="method_number"
+											attrs="{'invisible':[('method_time','=','end')], 'required':[('method_time','=','number')]}" />
+										<field name="method_period" />
+										<field name="method_end"
+											attrs="{'required': [('method_time','=','end')], 'invisible':[('method_time','=','number')]}" />
+									</group>
+								</group>
+							</page>
+							<page name="deferral" string="Deferral Board">
+								<field name="deferral_line_ids">
+									<tree string="Deferral Lines"
+										colors="blue:(move_check == False);black:(move_check == True)">
+										<field name="deferral_date" />
+										<field name="sequence" invisible="1" />
+										<field name="distributed_value" readonly="1" />
+										<field name="amount" />
+										<field name="remaining_value" readonly="1" />
+										<field name="move_check" />
+										<field name="move_posted_check" />
+										<field name="state" invisible="1" />
+										<button name="create_move" context="{'auto_post': False}"
+											attrs="{'invisible':['|',('move_check','!=',False),('state','!=','open')]}"
+											string="Create Move" type="object" class="oe_highlight btn-sm"/>
+									</tree>
+									<form string="Deferral Lines">
+										<group>
+											<group>
+												<field name="state" invisible="1" />
+												<field name="name" />
+												<field name="amount" />
+												<field name="move_id" />
+												<field name="move_check" />
+												<field name="state" invisible="1" />
+											</group>
+											<group>
+												<field name="sequence" />
+												<field name="deferral_date" />
+												<field name="distributed_value" />
+												<field name="remaining_value" />
+											</group>
+										</group>
+									</form>
+								</field>
+							</page>
+							<page name="note" string="Notes">
+								<field name="note"
+									placeholder="Add an internal note here..." />
+							</page>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids"/>
+						<field name="activity_ids"/>
+						<field name="message_ids"/>
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record id="cost_revenue_deferral_search" model="ir.ui.view">
+			<field name="name">cost.revenue.deferral.search</field>
+			<field name="model">cost.revenue.deferral</field>
+			<field name="arch" type="xml">
+				<search string="Cost Revenue Deferral">
+					<field name="name" />
+					<field name="date" />
+					<field name="deferral_category_id" />
+					<field name="partner_id"
+						filter_domain="[('partner_id','child_of',self)]" />
+					<filter name="ftr_current" string="Current"
+						domain="[('state','in', ('draft','open'))]" />
+					<filter name="ftr_closed" string="Closed"
+						domain="[('state','=', 'close')]" />
+				</search>
+			</field>
+		</record>
+
+		<!-- Cost Action -->
+
+		<record id="cost_deferral_action" model="ir.actions.act_window">
+			<field name="name">Cost Deferrals</field>
+			<field name="res_model">cost.revenue.deferral</field>
+			<field name="view_mode">tree,form</field>
+			<field name="domain">[('type','=','cost')]</field>
+			<field name="context">{'default_type':'cost'}</field>
+		</record>
+
+		<menuitem id="cost_deferral_menu" name="Cost Deferrals"
+			groups="account.group_account_user" action="cost_deferral_action"
+			parent="account.menu_finance_entries_management" sequence="102" />
+
+		<!-- Revenue Action -->
+
+		<record id="revenue_deferral_action"
+			model="ir.actions.act_window">
+			<field name="name">Revenue Deferrals</field>
+			<field name="res_model">cost.revenue.deferral</field>
+			<field name="view_mode">tree,form</field>
+			<field name="domain">[('type','=','revenue')]</field>
+			<field name="context">{'default_type':'revenue'}</field>
+		</record>
+
+		<menuitem id="revenue_deferral_menu" name="Revenue Deferrals"
+			groups="account.group_account_user" action="revenue_deferral_action"
+			parent="account.menu_finance_entries_management" sequence="103" />
+
+	</data>
+</odoo>

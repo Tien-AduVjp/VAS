@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_backend" name="document assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" type="text/scss" href="/viin_document/static/src/scss/document_kanban_view.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/viin_document/static/src/scss/document_right_sidebar_widget.scss"/>
+
+            <script type="text/javascript" src="/viin_document/static/src/js/document_document_viewer.js"/>
+            <script type="text/javascript" src="/viin_document/static/src/js/document_entity.js"/>
+            <script type="text/javascript" src="/viin_document/static/src/js/document_model.js"/>
+            <script type="text/javascript" src="/viin_document/static/src/js/document_kanban_model.js"/>
+            <script type="text/javascript" src="/viin_document/static/src/js/document_list_model.js"/>
+            <script type="text/javascript" src="/viin_document/static/src/js/document_controller_mixin.js"/>
+            <script type="text/javascript" src="/viin_document/static/src/js/document_tag_widget_owl.js"/>
+            <script type="text/javascript" src="/viin_document/static/src/js/document_right_sidebar_widget_owl.js"/>
+            <script type="text/javascript" src="/viin_document/static/src/js/document_list_renderer.js"/>
+            <script type="text/javascript" src="/viin_document/static/src/js/document_list_controller.js"/>
+            <script type="text/javascript" src="/viin_document/static/src/js/document_list_view.js"/>
+            <script type="text/javascript" src="/viin_document/static/src/js/document_kanban_controller.js"/>
+            <script type="text/javascript" src="/viin_document/static/src/js/document_kanban_record.js"/>
+            <script type="text/javascript" src="/viin_document/static/src/js/document_kanban_renderer.js"/>
+            <script type="text/javascript" src="/viin_document/static/src/js/document_kanban_view.js"/>
+            <script type="text/javascript" src="/viin_document/static/src/js/document_action_manager.js"/>
+            <script type="text/javascript" src="/viin_document/static/src/js/basic_fields.js"/>
+            <script type="text/javascript" src="/viin_document/static/src/js/relational_fields.js"/>
+            <script type="text/javascript" src="/viin_document/static/src/js/search_panel.js"/>
+        </xpath>
+    </template>
+    <template id="assets_frontend" name="document assets" inherit_id="web.assets_frontend">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" type="text/scss" href="/viin_document/static/src/scss/front_end.scss"/>
+        </xpath>
+    </template>
+</odoo>

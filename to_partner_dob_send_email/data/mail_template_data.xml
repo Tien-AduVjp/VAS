@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!--Email template -->
+        <record id="email_template_partner_happy_birthday" model="mail.template">
+            <field name="name">Partner's Happy Birthday - Send by Email</field>
+            <field name="email_from">${(user.company_id.email and '"%s" &lt;%s&gt;' % (user.company_id.name or '', user.company_id.email or '') or user.email_formatted)|safe}</field>
+            <field name="subject">Happy Birthday to ${object.name or 'You'})</field>
+            <field name="partner_to">${object.id}</field>
+            <field name="model_id" ref="to_partner_dob.model_res_partner" />
+            <field name="lang">${object.lang}</field>
+            <field name="auto_delete" eval="True"/>
+            <field name="body_html" type="html">
+<div style="padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777">
+    <table cellspacing="0" cellpadding="0" style="width:600px;background:inherit;color:inherit">
+        <tbody><tr>
+            <td valign="center" width="200" style="padding:10px 10px 10px 5px;font-size: 12px">
+                <img src="/logo.png" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${user.company_id.name}"/>
+            </td>
+        </tr></tbody>
+    </table>
+</div>
+<div style="padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777">
+	<h2 style="color:#800080">Happy Happy Birthday!</h2>
+	<div>
+		<p>
+		Have a million smiles today
+		<br/>
+		Let your heart be filled with love
+		<br/>
+		Chase all your cares away
+		<br/>
+		Have a little fun
+		</p>
+		<p>Dance to your favorite music
+		<br/>
+		Sing your favorite tune
+		<br/>
+		Laugh with all your heart,
+		<br/>
+		Share a silly joke or two
+		</p>
+		<p>Have a Happy Happy Birthday
+		<br/>
+		No matter what you do!</p>
+	</div>
+</div>
+<div style="padding:0px;width:600px;margin:auto; margin-top: 10px; background: #fff repeat top /100%;color:#777777">
+    ${user.signature | safe}
+    <p style="font-size: 11px; margin-top: 10px;">
+        <strong>Sent by ${user.company_id.name} using <a href="https://viindoo.com/" style=" color: #875A7B;">Viindoo</a></strong>
+    </p>
+</div>
+            </field>
+        </record>
+
+    </data>
+</odoo>

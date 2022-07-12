@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+
+    <record id="document_tag_general_notification" model="document.tag">
+        <field name="name">General Notification</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_general'))]"/>
+    </record>
+
+    <record id="document_tag_company_legal" model="document.tag">
+        <field name="name">Company Legal</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_general'))]"/>
+    </record>
+
+    <record id="document_tag_other" model="document.tag">
+        <field name="name">Other</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_general'))]"/>
+    </record>
+
+    <record id="document_tag_to_review" model="document.tag">
+        <field name="name">To Review</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_status'))]"/>
+    </record>
+
+    <record id="document_tag_approve" model="document.tag">
+        <field name="name">Approved</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_status'))]"/>
+    </record>
+
+    <record id="document_tag_deprecate" model="document.tag">
+        <field name="name">Deprecated</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_status'))]"/>
+    </record>
+
+</odoo>

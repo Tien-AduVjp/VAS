@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="quality_tag_view_tree" model="ir.ui.view">
+		<field name="name">quality.tag.tree</field>
+		<field name="model">quality.tag</field>
+		<field name="arch" type="xml">
+			<tree string="Quality Tags" editable="top">
+				<field name="name" />
+			</tree>
+		</field>
+	</record>
+
+	<record id="quality_tag_view_search" model="ir.ui.view">
+		<field name="name">quality.tag.search</field>
+		<field name="model">quality.tag</field>
+		<field name="arch" type="xml">
+			<search string="Quality Tags">
+				<field name="name" />
+			</search>
+		</field>
+	</record>
+
+	<record id="quality_tag_action" model="ir.actions.act_window">
+		<field name="name">Quality Tags</field>
+		<field name="res_model">quality.tag</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+	<!-- Menu structure -->
+	<menuitem id="quality_tag_menu" parent="quality_configuration_menu" action="quality_tag_action"
+			  groups="base.group_no_one" sequence="30" />
+
+</odoo>

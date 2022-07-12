@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<menuitem id="menu_product_return_reason"
+		parent="stock.menu_stock_inventory_control" sequence="99"
+		groups="to_product_return_reason.group_return_reason_manager" name="Products Return Reasons"
+		action="to_product_return_reason.action_product_return_reason" />
+</odoo>

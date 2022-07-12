@@ -1,0 +1,25 @@
+<odoo>
+	<record model="ir.ui.view" id="pos_config_inherit_view_form">
+		<field name="name">pos.config.inherit.form</field>
+		<field name="model">pos.config</field>
+		<field name="inherit_id" ref="to_pos_frontend_return.pos_config_view_form" />
+		<field name="arch" type="xml">
+			<div id="nod_return_product" position="after">
+                <div id="return_reason" class="col-12 col-lg-6 o_setting_box">
+                    <div class="o_setting_left_pane">
+                        <field name="allow_to_create_new_reason"/>
+                    </div>
+                    <div class="o_setting_right_pane">
+                        <label for="allow_to_create_new_reason"/>
+                        <div class="text-muted">
+                            Allow to create new return reason in front-end
+                        </div>
+                        <div class="content-group">
+                            <div class="mt16"></div>
+                        </div>
+                    </div>
+                </div>
+			</div>
+		</field>
+	</record>
+</odoo>

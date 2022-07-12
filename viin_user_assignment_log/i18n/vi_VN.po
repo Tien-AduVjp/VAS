@@ -1,0 +1,219 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_user_assignment_log
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-02-03 02:12+0000\n"
+"PO-Revision-Date: 2021-10-12 09:12+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_user_assignment_log
+#: model_terms:ir.ui.view,arch_db:viin_user_assignment_log.user_assignment_view_form
+msgid "<span>Hours</span>"
+msgstr "<span>Giờ</span>"
+
+#. module: viin_user_assignment_log
+#: model_terms:ir.ui.view,arch_db:viin_user_assignment_log.user_assignment_view_search
+msgid "Assigned By"
+msgstr "Phân công bởi"
+
+#. module: viin_user_assignment_log
+#: model:ir.model.fields,field_description:viin_user_assignment_log.field_user_assignment__date_start
+#: model_terms:ir.ui.view,arch_db:viin_user_assignment_log.user_assignment_view_search
+msgid "Assigned Date"
+msgstr "Ngày phân công"
+
+#. module: viin_user_assignment_log
+#: model:ir.model.fields,field_description:viin_user_assignment_log.field_user_assignment__assigned_by_user_id
+msgid "Assigned by"
+msgstr "Phân công bởi"
+
+#. module: viin_user_assignment_log
+#: model:ir.model.fields,field_description:viin_user_assignment_log.field_res_users__user_assignment_ids
+#: model_terms:ir.ui.view,arch_db:viin_user_assignment_log.view_users_form
+msgid "Assignments"
+msgstr "Phân công"
+
+#. module: viin_user_assignment_log
+#: model:ir.model.fields,field_description:viin_user_assignment_log.field_res_users__user_assignments_count
+msgid "Assignments Count"
+msgstr "Số lần phân công"
+
+#. module: viin_user_assignment_log
+#: model:ir.model,name:viin_user_assignment_log.model_base
+msgid "Base"
+msgstr "Cơ bản"
+
+#. module: viin_user_assignment_log
+#: model:ir.model.fields,field_description:viin_user_assignment_log.field_user_assignment__company_id
+#: model_terms:ir.ui.view,arch_db:viin_user_assignment_log.user_assignment_view_search
+msgid "Company"
+msgstr "Công ty"
+
+#. module: viin_user_assignment_log
+#: model:ir.model.fields,field_description:viin_user_assignment_log.field_user_assignment__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: viin_user_assignment_log
+#: model:ir.model.fields,field_description:viin_user_assignment_log.field_user_assignment__create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: viin_user_assignment_log
+#: model:ir.model.fields,field_description:viin_user_assignment_log.field_ir_model__display_name
+#: model:ir.model.fields,field_description:viin_user_assignment_log.field_res_users__display_name
+#: model:ir.model.fields,field_description:viin_user_assignment_log.field_user_assignment__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: viin_user_assignment_log
+#: model:ir.model.fields,help:viin_user_assignment_log.field_user_assignment__res_name
+msgid "Display name of the related document."
+msgstr "Tên hiển thị của tài liệu liên quan."
+
+#. module: viin_user_assignment_log
+#: model:ir.model.fields,field_description:viin_user_assignment_log.field_user_assignment__res_name
+msgid "Document Name"
+msgstr "Tên tài liệu"
+
+#. module: viin_user_assignment_log
+#: model:ir.model.fields,field_description:viin_user_assignment_log.field_user_assignment__duration
+msgid "Duration"
+msgstr "Thời lượng"
+
+#. module: viin_user_assignment_log
+#: model_terms:ir.ui.view,arch_db:viin_user_assignment_log.user_assignment_view_list
+#: model_terms:ir.ui.view,arch_db:viin_user_assignment_log.user_assignment_view_pivot
+msgid "Duration (Hr.)"
+msgstr "Thời lượng (Giờ)"
+
+#. module: viin_user_assignment_log
+#: model_terms:ir.ui.view,arch_db:viin_user_assignment_log.user_assignment_view_search
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: viin_user_assignment_log
+#: model:ir.model.fields,field_description:viin_user_assignment_log.field_ir_model__id
+#: model:ir.model.fields,field_description:viin_user_assignment_log.field_res_users__id
+#: model:ir.model.fields,field_description:viin_user_assignment_log.field_user_assignment__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_user_assignment_log
+#: model:ir.model.fields,field_description:viin_user_assignment_log.field_ir_model____last_update
+#: model:ir.model.fields,field_description:viin_user_assignment_log.field_res_users____last_update
+#: model:ir.model.fields,field_description:viin_user_assignment_log.field_user_assignment____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: viin_user_assignment_log
+#: model:ir.model.fields,field_description:viin_user_assignment_log.field_user_assignment__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: viin_user_assignment_log
+#: model:ir.model.fields,field_description:viin_user_assignment_log.field_user_assignment__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối"
+
+#. module: viin_user_assignment_log
+#: model:ir.ui.menu,name:viin_user_assignment_log.menu_user_assignment
+msgid "Log"
+msgstr "Lịch sử"
+
+#. module: viin_user_assignment_log
+#: model:ir.model.fields,field_description:viin_user_assignment_log.field_user_assignment__model_id
+#: model_terms:ir.ui.view,arch_db:viin_user_assignment_log.user_assignment_view_search
+msgid "Model"
+msgstr ""
+
+#. module: viin_user_assignment_log
+#: model:ir.model,name:viin_user_assignment_log.model_ir_model
+msgid "Models"
+msgstr "Mẫu"
+
+#. module: viin_user_assignment_log
+#: model:ir.model.fields,field_description:viin_user_assignment_log.field_user_assignment__res_id
+msgid "Record ID"
+msgstr "ID tài liệu"
+
+#. module: viin_user_assignment_log
+#: model:ir.model.fields,field_description:viin_user_assignment_log.field_user_assignment__resource_ref
+msgid "Record reference"
+msgstr "Tham chiếu tài liệu"
+
+#. module: viin_user_assignment_log
+#: model:ir.model.fields,field_description:viin_user_assignment_log.field_user_assignment__res_model
+msgid "Resource Model Name"
+msgstr "Mô hình gốc"
+
+#. module: viin_user_assignment_log
+#: model:ir.model.fields,field_description:viin_user_assignment_log.field_user_assignment__user_id
+msgid "Responsible"
+msgstr "Chịu trách nhiệm"
+
+#. module: viin_user_assignment_log
+#: model_terms:ir.ui.view,arch_db:viin_user_assignment_log.user_assignment_view_search
+msgid "Search User Assignment"
+msgstr "Tìm kiếm phân công người dùng"
+
+#. module: viin_user_assignment_log
+#: model:ir.model.fields,help:viin_user_assignment_log.field_user_assignment__duration
+msgid ""
+"The duration (in hours) counting from the assigned date to the unassigned "
+"date or the current date if the unassigned date is not specified."
+msgstr ""
+"Thời lượng (tính bằng giờ) tính từ ngày được phân công đến ngày bỏ phân công"
+" hoặc ngày hiện tại nếu ngày bỏ phân công không được xác định"
+
+#. module: viin_user_assignment_log
+#: model:ir.model.fields,field_description:viin_user_assignment_log.field_ir_model__track_user_assignment
+msgid "Track User Assignment"
+msgstr "Theo dõi sự phân công"
+
+#. module: viin_user_assignment_log
+#: model:ir.model.fields,field_description:viin_user_assignment_log.field_user_assignment__date_end
+#: model_terms:ir.ui.view,arch_db:viin_user_assignment_log.user_assignment_view_search
+msgid "Unassigned Date"
+msgstr "Ngày bỏ phân công"
+
+#. module: viin_user_assignment_log
+#: model:ir.model.fields,field_description:viin_user_assignment_log.field_user_assignment__unassigned_by_user_id
+msgid "Unassigned by"
+msgstr "Bỏ phân công bởi"
+
+#. module: viin_user_assignment_log
+#: model_terms:ir.ui.view,arch_db:viin_user_assignment_log.user_assignment_view_search
+msgid "User"
+msgstr "Người dùng"
+
+#. module: viin_user_assignment_log
+#: model:ir.model,name:viin_user_assignment_log.model_user_assignment
+#: model:ir.ui.menu,name:viin_user_assignment_log.menu_user_assignment_root
+#: model_terms:ir.ui.view,arch_db:viin_user_assignment_log.user_assignment_view_form
+msgid "User Assignment"
+msgstr "Phân công người dùng"
+
+#. module: viin_user_assignment_log
+#: model_terms:ir.ui.view,arch_db:viin_user_assignment_log.user_assignment_view_pivot
+msgid "User Assignment Pivot"
+msgstr ""
+
+#. module: viin_user_assignment_log
+#: model:ir.actions.act_window,name:viin_user_assignment_log.action_user_assignment
+msgid "User Assignments"
+msgstr "Phân công người dùng"
+
+#. module: viin_user_assignment_log
+#: model:ir.model,name:viin_user_assignment_log.model_res_users
+msgid "Users"
+msgstr "Người dùng"

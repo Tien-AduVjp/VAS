@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+
+    <record id="document_tag_project_srs_demo" model="document.tag">
+        <field name="name">SRS</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_project'))]"/>
+    </record>
+
+    <record id="document_tag_project_gap_demo" model="document.tag">
+        <field name="name">GAP Analysis</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_project'))]"/>
+    </record>
+
+</odoo>

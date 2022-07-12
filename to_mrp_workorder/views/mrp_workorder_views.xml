@@ -1,0 +1,204 @@
+<odoo>
+	<record id="mrp_production_workorder_form_view_inherit" model="ir.ui.view">
+		<field name="name">mrp.production.work.order.form</field>
+		<field name="model">mrp.workorder</field>
+		<field name="inherit_id" ref="mrp.mrp_production_workorder_form_view_inherit" />
+		<field name="arch" type="xml">
+			<xpath expr="//label[@for='date_planned_start']" position="before">
+				<field name="product_id" string="To Produce" />
+			</xpath>
+			<xpath expr="//page[@name='time_tracking']" position="before">
+				<page string="Components to Consume" name="components_to_consume">
+					<field name="move_raw_ids" readonly="1">
+						<tree>
+							<field name="product_id" />
+							<field name="should_consume_qty" />
+							<field name="reserved_availability"/>
+							<field name="quantity_done" />
+							<field name="product_qty"/>
+							<field name="product_uom_qty"/>
+							<field name="availability"/>
+							<field name="state" invisible="1" />
+						</tree>
+					</field>
+				</page>
+			</xpath>
+			<xpath expr="//sheet" position="after">
+				<div class="oe_chatter" groups="mrp.group_mrp_manager">
+					<field name="message_follower_ids"/>
+					<field name="activity_ids"/>
+					<field name="message_ids"/>
+				</div>
+			</xpath>
+		</field>
+	</record>
+
+    <record id="mrp_production_workorder_tree_editable_view" model="ir.ui.view">
+        <field name="name">mrp.production.work.order.tree.editable</field>
+        <field name="model">mrp.workorder</field>
+        <field name="inherit_id" ref="mrp.mrp_production_workorder_tree_editable_view" />
+        <field name="arch" type="xml">
+        	<button name="action_open_wizard" position="after">
+        		<button name="action_open_form" type="object" icon="fa-external-link-square" />
+        	</button>
+            <field name="json_popover" position="after">
+                <button string="Open" type="object" name="action_show_tablet_view" class="btn btn-primary" icon="fa-tablet" />
+            </field>
+        </field>
+	</record>
+
+    <record id="workcenter_line_kanban" model="ir.ui.view" >
+        <field name="name">mrp.production.work.order.kanban</field>
+        <field name="model">mrp.workorder</field>
+        <field name="inherit_id" ref="mrp.workcenter_line_kanban" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('o_kanban_record_bottom')]" position="after">
+                <div class="my-3 text-right">
+                    <button type="object" name="action_show_tablet_view" class="btn btn-lg btn-primary">
+                        <span><i class="fa fa-tablet" /> Open</span>
+                    </button>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="mrp_workorder_tablet_form" model="ir.ui.view">
+        <field name="name">mrp.workorder.tablet.form</field>
+        <field name="model">mrp.workorder</field>
+        <field name="arch" type="xml">
+            <form class="o_workorder_tablet_form d-flex flex-column h-100">
+                <field name="state" invisible="1" />
+                <field name="consumption" invisible="1"/>
+                <field name="company_id" invisible="1"/>
+                <field name="is_produced" invisible="1"/>
+                <field name="is_user_working" invisible="1"/>
+                <field name="product_uom_id" invisible="1" readonly="0"/>
+                <field name="production_state" invisible="1"/>
+                <field name="production_bom_id" invisible="1"/>
+                <field name="qty_producing" invisible="1"/>
+                <field name="time_ids" invisible="1"/>
+                <field name="working_state" invisible="1"/>
+                <field name="workcenter_id" invisible="1"/>
+                <field name="product_id" invisible="1"/>
+                <field name="product_tracking" invisible="1"/>
+                <field name="is_last_wo" invisible="1"/>
+                <field name="is_allowed_create_backorder" invisible="1" />
+
+                <div class="o_workorder_tablet d-flex flex-column h-100">
+                    <div class="o_workorder_tablet_nav">
+                        <div class="row">
+                            <div class="col-4 col-md-6 o_workorder_tablet_nav_left">
+                                <div>
+                                    <button class="o_workorder_tablet_button o_workorder_tablet_button_back btn btn-secondary oe_inline mr-2"
+                                            type="object" name="action_tablet_back" icon="fa-arrow-left" />
+                                    <span class="d-none d-md-inline align-middle">
+                                        <field name="production_id" readonly="True" /> /
+                                        <field class="oe_inline" name="product_id" readonly="True"/>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-8 col-md-6 o_workorder_tablet_nav_right">
+                                <div class="text-right">
+                                    <span class="d-none d-md-inline mr-2 align-middle">
+                                        <span>
+                                            <field class="mr-2" name="duration" widget="mrp_time_counter" readonly="True" />
+                                        </span>
+                                        <i class="fa fa-clock-o" />
+                                    </span>
+                                    <button
+                                        class="o_workorder_tablet_button o_workorder_tablet_button_done btn btn-primary"
+                                        string="Mark As Done" name="action_tablet_done" type="object"
+                                        attrs="{'invisible': ['|', '|', '|', ('production_state', 'in', ('draft', 'done', 'cancel')), ('working_state', '=', 'blocked'), ('is_user_working', '=', False), ('is_allowed_create_backorder', '=', True)]}"
+                                    />
+                                    <button
+                                        class="o_workorder_tablet_button o_workorder_tablet_button_record_production btn btn-primary"
+                                        string="Record Production" name="action_tablet_record_production" type="object"
+                                        attrs="{'invisible': ['|', '|', '|', ('production_state', 'in', ('draft', 'done', 'cancel')), ('working_state', '=', 'blocked'), ('is_user_working', '=', False), ('is_allowed_create_backorder', '=', False)]}"
+                                    />
+                                    <button
+                                        class="o_workorder_tablet_button o_workorder_tablet_button_done_validate btn btn-primary ml-2"
+                                        string="Done &amp; Validate MO" name="action_tablet_validate" type="object"
+                                        attrs="{'invisible': ['|', '|', '|', '|', ('production_state', 'in', ('draft', 'done', 'cancel')), ('working_state', '=', 'blocked'), ('is_user_working', '=', False), ('is_last_wo', '=', False), ('is_allowed_create_backorder', '=', True)]}"
+                                    />
+                                </div>
+                            </div>
+                            <div class="d-block d-md-none col-12">
+                                <div class="mt-4">
+                                    <field name="production_id" readonly="True" /> /
+                                    <field class="oe_inline" name="product_id" readonly="True"/> /
+                                    <span class="mr-1 align-middle">
+                                        <span>
+                                            <field class="mr-1" name="duration" widget="mrp_time_counter" readonly="True" />
+                                        </span>
+                                        <i class="fa fa-clock-o" />
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="o_workorder_tablet_main">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <group>
+                                    <label for="qty_production" string="Quantity"/>
+                                    <div class="o_row no-gutters d-flex">
+                                        <div class="o_row text-nowrap">
+                                            <field name="qty_producing" class="text-left" attrs="{'readonly': ['|', ('state', '=', 'draft'), ('product_tracking', 'not in', ('none', False))]}" />
+                                            /
+                                        </div>
+                                        <field name="qty_production" class="oe_inline text-left"/>
+                                        <field name="product_uom_category_id" invisible="1"/>
+                                        <field name="product_uom_id" options="{'no_open': True, 'no_create': True}" force_save="1" groups="uom.group_uom" class="oe_inline"/>
+                                    </div>
+                                </group>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <group>
+                                    <label for="finished_lot_id" attrs="{'invisible': ['|', ('state', '=', 'draft'), ('product_tracking', 'in', ('none', False))]}"/>
+                                    <div class="o_row d-flex" attrs="{'invisible': ['|', ('state', '=', 'draft'), ('product_tracking', 'in', ('none', False))]}">
+                                        <field name="finished_lot_id" context="{'default_product_id': product_id, 'default_company_id': company_id}"/>
+                                        <button name="action_tablet_generate_serial" type="object" class="btn btn-primary" icon="fa-plus-square-o" role="img" />
+                                    </div>
+                                </group>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="o_workorder_tablet_actions">
+                        <div class="row">
+                            <div class="col-12 col-md-8">
+                                <button class="o_workorder_tablet_button o_workorder_tablet_button_pause btn-warning oe_inline mr-2" string="Pause"
+                                    name="button_pending" type="object"
+                                    attrs="{'invisible': ['|', '|', ('production_state', 'in', ('draft', 'done', 'cancel')), ('working_state', '=', 'blocked'), ('is_user_working', '=', False)]}" />
+                                <button class="o_workorder_tablet_button o_workorder_tablet_button_resume btn-success oe_inline mr-2" string="Start"
+                                    name="button_start" type="object"
+                                    attrs="{'invisible': ['|', '|', '|', ('production_state','in', ('draft', 'done', 'cancel')), ('working_state', '=', 'blocked'), ('state', '=', 'done'), ('is_user_working', '!=', False)]}" />
+                                <button class="o_workorder_tablet_button o_workorder_tablet_button_block btn-danger oe_inline mr-2" string="Block"
+                                    name="%(mrp.act_mrp_block_workcenter_wo)d" type="action" context="{'default_workcenter_id': workcenter_id}"
+                                    attrs="{'invisible': ['|', ('production_state', 'in', ('draft', 'done', 'cancel')), ('working_state', '=', 'blocked')]}" />
+                                <button class="o_workorder_tablet_button o_workorder_tablet_button_unblock btn-danger oe_inline mr-2" string="Unblock"
+                                    name="button_unblock" type="object" context="{'default_workcenter_id': workcenter_id}"
+                                    attrs="{'invisible': ['|', ('production_state', 'in', ('draft', 'done', 'cancel')), ('working_state', '!=', 'blocked')]}"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="o_workorder_tablet_worksheet flex-grow-1">
+                        <field name="worksheet_type" invisible="1"/>
+                        <field name="worksheet" widget="pdf_viewer" attrs="{'invisible': [('worksheet_type', '!=', 'pdf')]}"/>
+                        <field name="worksheet_google_slide" widget="embed_viewer" attrs="{'invisible': [('worksheet_type', '!=', 'google_slide')]}"/>
+                        <field name="operation_note" attrs="{'invisible': [('worksheet_type', '!=', 'text')]}"/>
+                    </div>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="mrp_workorder_tablet_action" model="ir.actions.act_window">
+        <field name="name">Work Orders</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">mrp.workorder</field>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+        <field name="view_id" ref="mrp_workorder_tablet_form"/>
+    </record>
+
+</odoo>

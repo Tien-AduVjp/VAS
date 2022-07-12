@@ -1,0 +1,8 @@
+<odoo>
+    <template id="assets_backend" name="to_mrp_plm_assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/to_mrp_plm/static/src/js/set_cover_kanban.js"></script>
+            <link rel="stylesheet" type="text/scss" href="/to_mrp_plm/static/src/scss/to_mrp_plm_dashboard.scss"/>
+        </xpath>
+    </template>
+</odoo>

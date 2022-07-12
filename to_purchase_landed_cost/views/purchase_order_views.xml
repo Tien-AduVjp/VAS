@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="landed_cost_purchase_order_action" model="ir.actions.act_window">
+		<field name="name">Landed Costs Purchase Orders</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">purchase.order</field>
+		<field name="domain">[]</field>
+	</record>
+
+	<record id="po_landed_cost_action" model="ir.actions.act_window">
+		<field name="name">Landed Costs</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">stock.landed.cost</field>
+		<field name="domain">[]</field>
+	</record>
+
+	<record id="purchase_order_form" model="ir.ui.view">
+		<field name="name">purchase.order.form</field>
+		<field name="model">purchase.order</field>
+		<field name="inherit_id" ref="purchase.purchase_order_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//header" position="after">
+				<div groups="account.group_account_invoice"
+					class="alert alert-info" role="alert" style="margin-bottom:0px;"
+					attrs="{'invisible': ['|',('landed_costs_for_po_ids','=',[]), '&amp;', ('invoice_status','!=','to invoice'),('landed_costs_for_po_ids','!=',[])]}">
+					This order contains an item which is a landed cost for another order.
+					You may want to create a vendor bill for that and generate landed
+					costs from the bill.
+				</div>
+			</xpath>
+			<xpath expr="//div[@name='button_box']" position="inside">
+				<button type="object" name="action_view_landed_cost_po"
+					class="oe_stat_button" icon="fa-shopping-cart"
+					help="The Purchase orders that have been generated as landed costs for this purchase order"
+					attrs="{'invisible':[('landed_cost_po_ids','=',[])]}">
+					<field name="landed_cost_po_count" widget="statinfo" string="Landed Cost PO" />
+					<field name="landed_cost_po_ids" invisible="1" />
+				</button>
+				<button type="object" name="action_view_landed_costs"
+					class="oe_stat_button" icon="fa-cubes"
+					help="The posted landed costs for this purchase order"
+					attrs="{'invisible':[('landed_costs_count','=',0)]}">
+					<field name="landed_costs_count" widget="statinfo" string="Landed Costs" />
+				</button>
+			</xpath>
+			<xpath expr="//field[@name='origin']" position="after">
+				<field name="landed_costs_for_po_ids" widget="many2many_tags"
+					attrs="{'invisible':[('landed_costs_for_po_ids','=',[])]}" />
+			</xpath>
+			<xpath expr="//group/field[@name='date_planned']" position="after">
+				<field name="landed_cost_for_po_ids" widget="many2many_tags"
+					attrs="{'invisible':[('landed_cost_for_po_ids','=',[])]}" />
+			</xpath>
+			<xpath expr="//field[@name='order_line']/form/group/group//field[@name='date_planned']" position="after">
+				<field name="purchase_landed_cost_ids" widget="many2many_tags" groups="base.group_no_one"/>
+			</xpath>
+			<xpath expr="//sheet/notebook/page[1]" position="after">
+				<page name="purchase_landed_cost_ids" string="Purchase Landed Costs">
+					<field name="purchase_landed_cost_ids" context="{'default_date_order': date_order}">
+						<tree name="purchase_landed_cost_ids" string="Purchase Landed Costs"
+							editable="bottom">
+							<field name="product_id" domain="[('landed_cost_ok', '=', True)]"
+								context="{'default_landed_cost_ok': True, 'default_type': 'service', 'form_view_ref':'to_purchase_landed_cost.view_stock_landed_cost_type_form'}" />
+							<field name="date_order" />
+							<field name="product_uom_qty" />
+                            <field name="product_uom_category_id" invisible="1"/>
+							<field name="product_uom_id" />
+						</tree>
+					</field>
+
+					<field name="stock_valuation_adjustment_lines_ids"
+						attrs="{'invisible':[('stock_valuation_adjustment_lines_ids','=',[])]}">
+						<tree name="stock_valuation_adjustment_lines_ids" string="Landed Costs Adjustment">
+							<field name="name" />
+							<field name="product_id" groups="base.group_no_one" />
+							<field name="cost_id" />
+							<field name="move_id" />
+							<field name="invoice_id" />
+							<field name="former_cost" />
+							<field name="additional_landed_cost" />
+							<field name="final_cost" />
+						</tree>
+					</field>
+				</page>
+			</xpath>
+		</field>
+	</record>
+
+    <record id="purchase_order_view_form_inherit" model="ir.ui.view">
+        <field name="name">purchase.order.form.stock.inherit</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase_stock.purchase_order_view_form_inherit" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='move_ids']" position="after">
+                <label for="landed_cost_adjustment_line_ids" />
+                <field name="landed_cost_adjustment_line_ids">
+                    <tree string="Landed Cost Adjustments">
+                        <field name="name" />
+                        <field name="cost_id" />
+                        <field name="product_id" />
+                        <field name="former_cost" />
+                        <field name="additional_landed_cost" />
+                        <field name="final_cost" />
+                    </tree>
+                </field>
+            </xpath>
+        </field>
+    </record>
+
+	<record id="view_purchase_order_filter" model="ir.ui.view">
+		<field name="name">purchase.order.search.landed.cost</field>
+		<field name="model">purchase.order</field>
+		<field name="inherit_id" ref="purchase.view_purchase_order_filter" />
+		<field name="arch" type="xml">
+			<xpath expr="//filter[@name='to_approve']" position="after">
+				<separator />
+				<filter name="is_landed_cost" string="Landed Cost Orders"
+					domain="[('landed_costs_for_po_ids', '!=', False)]" />
+			</xpath>
+		</field>
+	</record>
+</odoo>

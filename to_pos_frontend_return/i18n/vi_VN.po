@@ -1,0 +1,227 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_pos_frontend_return
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-27 06:50+0000\n"
+"PO-Revision-Date: 2022-04-27 06:50+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_pos_frontend_return
+#: code:addons/to_pos_frontend_return/models/pos_order.py:0
+#, python-format
+msgid " REFUND"
+msgstr " HOÀN TRẢ"
+
+#. module: to_pos_frontend_return
+#. openerp-web
+#: code:addons/to_pos_frontend_return/static/src/js/Screens/ReturnOrder/ReturnOrderScreen.js:0
+#, python-format
+msgid "Are you sure that you want to return these items?"
+msgstr "Bạn có chắc chắn muốn trả lại những món đồ này không?"
+
+#. module: to_pos_frontend_return
+#. openerp-web
+#: code:addons/to_pos_frontend_return/static/src/xml/ReturnOrder/ReturnOrderScreen.xml:0
+#, python-format
+msgid "Back"
+msgstr "Quay lại"
+
+#. module: to_pos_frontend_return
+#: model:ir.model.fields,help:to_pos_frontend_return.field_product_product__pos_returnable
+#: model:ir.model.fields,help:to_pos_frontend_return.field_product_template__pos_returnable
+msgid "Check this field to make the product returnable in your Point of Sales"
+msgstr ""
+"Kiểm tra trường này để sản phẩm của bạn có thể trả lại trong điểm bán hàng "
+"của bạn"
+
+#. module: to_pos_frontend_return
+#. openerp-web
+#: code:addons/to_pos_frontend_return/static/src/xml/ReturnOrder/ReturnOrderScreen.xml:0
+#, python-format
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: to_pos_frontend_return
+#. openerp-web
+#: code:addons/to_pos_frontend_return/static/src/xml/ReturnOrder/ReturnOrderScreen.xml:0
+#, python-format
+msgid "Date Order"
+msgstr "Ngày đặt hàng"
+
+#. module: to_pos_frontend_return
+#: model:ir.model.fields,field_description:to_pos_frontend_return.field_pos_config__nod_return_product
+msgid "Days to Return Products"
+msgstr "Số ngày trả lại sản phẩm"
+
+#. module: to_pos_frontend_return
+#. openerp-web
+#: code:addons/to_pos_frontend_return/static/src/xml/ReturnOrder/ReturnOrderScreen.xml:0
+#, python-format
+msgid "Discount(%)"
+msgstr "Khấu trừ (%)"
+
+#. module: to_pos_frontend_return
+#: model:ir.model.fields,field_description:to_pos_frontend_return.field_pos_config__display_name
+#: model:ir.model.fields,field_description:to_pos_frontend_return.field_pos_order__display_name
+#: model:ir.model.fields,field_description:to_pos_frontend_return.field_pos_order_line__display_name
+#: model:ir.model.fields,field_description:to_pos_frontend_return.field_product_template__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_pos_frontend_return
+#: model:ir.model.fields,field_description:to_pos_frontend_return.field_pos_config__id
+#: model:ir.model.fields,field_description:to_pos_frontend_return.field_pos_order__id
+#: model:ir.model.fields,field_description:to_pos_frontend_return.field_pos_order_line__id
+#: model:ir.model.fields,field_description:to_pos_frontend_return.field_product_template__id
+msgid "ID"
+msgstr ""
+
+#. module: to_pos_frontend_return
+#: model:ir.model.fields,field_description:to_pos_frontend_return.field_pos_config____last_update
+#: model:ir.model.fields,field_description:to_pos_frontend_return.field_pos_order____last_update
+#: model:ir.model.fields,field_description:to_pos_frontend_return.field_pos_order_line____last_update
+#: model:ir.model.fields,field_description:to_pos_frontend_return.field_product_template____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: to_pos_frontend_return
+#. openerp-web
+#: code:addons/to_pos_frontend_return/static/src/js/Screens/ReturnOrder/ReturnOrderScreen.js:0
+#, python-format
+msgid "Please Confirm Return Products"
+msgstr "Vui lòng xác nhận lại sản phẩm"
+
+#. module: to_pos_frontend_return
+#: model:ir.model,name:to_pos_frontend_return.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "Cấu hình điểm bán lẻ"
+
+#. module: to_pos_frontend_return
+#: model:ir.model,name:to_pos_frontend_return.model_pos_order_line
+msgid "Point of Sale Order Lines"
+msgstr "Chi tiết dòng PoS"
+
+#. module: to_pos_frontend_return
+#: model:ir.model,name:to_pos_frontend_return.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Đơn hàng PoS"
+
+#. module: to_pos_frontend_return
+#. openerp-web
+#: code:addons/to_pos_frontend_return/static/src/xml/ReturnOrder/ReturnOrderScreen.xml:0
+#, python-format
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: to_pos_frontend_return
+#: model:ir.model,name:to_pos_frontend_return.model_product_template
+msgid "Product Template"
+msgstr "Mẫu Sản phẩm"
+
+#. module: to_pos_frontend_return
+#. openerp-web
+#: code:addons/to_pos_frontend_return/static/src/xml/ReturnOrder/ReturnOrderScreen.xml:0
+#, python-format
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: to_pos_frontend_return
+#. openerp-web
+#: code:addons/to_pos_frontend_return/static/src/js/Screens/ReturnOrder/ReturnOrderScreen.js:0
+#, python-format
+msgid "REFUND"
+msgstr "HOÀN TRẢ"
+
+#. module: to_pos_frontend_return
+#. openerp-web
+#: code:addons/to_pos_frontend_return/static/src/xml/OrderManagementScreen/ControlButtons/ReturnButton.xml:0
+#: code:addons/to_pos_frontend_return/static/src/xml/ReturnOrder/ReturnOrderScreen.xml:0
+#, python-format
+msgid "Return"
+msgstr "Trả lại"
+
+#. module: to_pos_frontend_return
+#: model_terms:ir.ui.view,arch_db:to_pos_frontend_return.pos_config_view_form
+msgid "Return Products"
+msgstr "Trả lại hàng"
+
+#. module: to_pos_frontend_return
+#. openerp-web
+#: code:addons/to_pos_frontend_return/static/src/js/Screens/OrderManagementScreen/ControlButtons/ReturnButton.js:0
+#, python-format
+msgid "Return order Error"
+msgstr "Trả hàng lỗi"
+
+#. module: to_pos_frontend_return
+#: model:ir.model.fields,field_description:to_pos_frontend_return.field_product_product__pos_returnable
+#: model:ir.model.fields,field_description:to_pos_frontend_return.field_product_template__pos_returnable
+msgid "Returnable in PoS"
+msgstr "Có thể trả lại trong PoS"
+
+#. module: to_pos_frontend_return
+#. openerp-web
+#: code:addons/to_pos_frontend_return/static/src/xml/ReturnOrder/ReturnOrderScreen.xml:0
+#, python-format
+msgid "Salesman"
+msgstr "Người bán hàng"
+
+#. module: to_pos_frontend_return
+#. openerp-web
+#: code:addons/to_pos_frontend_return/static/src/xml/ReturnOrder/ReturnOrderScreen.xml:0
+#, python-format
+msgid "Status"
+msgstr "Tình trạng"
+
+#. module: to_pos_frontend_return
+#. openerp-web
+#: code:addons/to_pos_frontend_return/static/src/xml/ReturnOrder/ReturnOrderScreen.xml:0
+#, python-format
+msgid "Subtotal"
+msgstr "Tổng phụ"
+
+#. module: to_pos_frontend_return
+#. openerp-web
+#: code:addons/to_pos_frontend_return/static/src/xml/ReturnOrder/ReturnOrderScreen.xml:0
+#, python-format
+msgid "Subtotal w/o Tax"
+msgstr "Tổng phụ thuế"
+
+#. module: to_pos_frontend_return
+#. openerp-web
+#: code:addons/to_pos_frontend_return/static/src/xml/ReturnOrder/ReturnOrderScreen.xml:0
+#, python-format
+msgid "Taxes"
+msgstr "Thuế"
+
+#. module: to_pos_frontend_return
+#: model:ir.model.fields,help:to_pos_frontend_return.field_pos_config__nod_return_product
+#: model_terms:ir.ui.view,arch_db:to_pos_frontend_return.pos_config_view_form
+msgid "The max number of days for returning sold product"
+msgstr "Số ngày tối đa để trả lại sản phẩm đã bán"
+
+#. module: to_pos_frontend_return
+#. openerp-web
+#: code:addons/to_pos_frontend_return/static/src/js/Screens/OrderManagementScreen/ControlButtons/ReturnButton.js:0
+#, python-format
+msgid ""
+"This order has exceeded the maximum number of days for return. Its return "
+"should have been done before %s"
+msgstr ""
+"Đơn đặt hàng này đã vượt quá số ngày cho phép trả hàng. Nó nên được thực "
+"hiện trước %s"
+
+#. module: to_pos_frontend_return
+#. openerp-web
+#: code:addons/to_pos_frontend_return/static/src/xml/ReturnOrder/ReturnOrderScreen.xml:0
+#, python-format
+msgid "Unit Price"
+msgstr "Đơn giá"

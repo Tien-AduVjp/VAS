@@ -1,0 +1,14 @@
+<odoo>
+	<data>
+		<record id="hr_equipment_request_view_form" model="ir.ui.view">
+			<field name="name">maintenance.request.inherit.form</field>
+			<field name="model">maintenance.request</field>
+			<field name="inherit_id" ref="maintenance.hr_equipment_request_view_form" />
+			<field name="arch" type="xml">
+				<field name="request_date" position="before">
+					<field name="approval_id" attrs="{'invisible': [('approval_id', '=', False)]}"/>
+				</field>
+			</field>
+		</record>
+	</data>
+</odoo>

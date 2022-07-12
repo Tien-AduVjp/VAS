@@ -1,0 +1,88 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_hr_overtime_approval_payroll
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-04 15:12+0000\n"
+"PO-Revision-Date: 2022-01-04 15:12+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_hr_overtime_approval_payroll
+#: model:ir.model,name:viin_hr_overtime_approval_payroll.model_approval_request
+msgid "Approval Request"
+msgstr ""
+
+#. module: viin_hr_overtime_approval_payroll
+#: model:ir.model.fields,field_description:viin_hr_overtime_approval_payroll.field_approval_request__display_name
+#: model:ir.model.fields,field_description:viin_hr_overtime_approval_payroll.field_hr_overtime_plan__display_name
+#: model:ir.model.fields,field_description:viin_hr_overtime_approval_payroll.field_hr_payslip__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: viin_hr_overtime_approval_payroll
+#: model:ir.model.fields,field_description:viin_hr_overtime_approval_payroll.field_approval_request__id
+#: model:ir.model.fields,field_description:viin_hr_overtime_approval_payroll.field_hr_overtime_plan__id
+#: model:ir.model.fields,field_description:viin_hr_overtime_approval_payroll.field_hr_payslip__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_hr_overtime_approval_payroll
+#: model:ir.model.fields,field_description:viin_hr_overtime_approval_payroll.field_approval_request____last_update
+#: model:ir.model.fields,field_description:viin_hr_overtime_approval_payroll.field_hr_overtime_plan____last_update
+#: model:ir.model.fields,field_description:viin_hr_overtime_approval_payroll.field_hr_payslip____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: viin_hr_overtime_approval_payroll
+#: model:ir.model,name:viin_hr_overtime_approval_payroll.model_hr_overtime_plan
+msgid "Overtime Plan"
+msgstr ""
+
+#. module: viin_hr_overtime_approval_payroll
+#: model:ir.model,name:viin_hr_overtime_approval_payroll.model_hr_payslip
+msgid "Pay Slip"
+msgstr ""
+
+#. module: viin_hr_overtime_approval_payroll
+#: code:addons/viin_hr_overtime_approval_payroll/models/approval_request.py:0
+#, python-format
+msgid ""
+"You cannot cancel an approval request '%s' while it still has a reference to"
+" the payslip '%s' which is not in draft status. Please have the payslip set "
+"to draft first."
+msgstr ""
+
+#. module: viin_hr_overtime_approval_payroll
+#: code:addons/viin_hr_overtime_approval_payroll/models/hr_overtime_plan.py:0
+#, python-format
+msgid ""
+"You cannot cancel an overtime plan '%s' while it still has a reference to "
+"the payslip '%s' which is not in draft status. Please have the payslip set "
+"to draft first."
+msgstr ""
+
+#. module: viin_hr_overtime_approval_payroll
+#: code:addons/viin_hr_overtime_approval_payroll/models/approval_request.py:0
+#, python-format
+msgid ""
+"You cannot refuse an approval request '%s' while it still has a reference to"
+" the payslip '%s' which is not in draft status. Please have the payslip set "
+"to draft first."
+msgstr ""
+
+#. module: viin_hr_overtime_approval_payroll
+#: code:addons/viin_hr_overtime_approval_payroll/models/hr_overtime_plan.py:0
+#, python-format
+msgid ""
+"You cannot refuse an overtime plan '%s' while it still has a reference to "
+"the payslip '%s' which is not in draft status. Please have the payslip set "
+"to draft first."
+msgstr ""

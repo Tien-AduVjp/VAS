@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<menuitem name="Documentation" id="menu_base_docs" groups="to_website_docs.group_website_doc_editor"
+			parent="website.menu_website_configuration" sequence="50" />
+	</data>
+</odoo>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="view_trip_fleet_vehicle_cost_invoicing_wizard"
+			model="ir.ui.view">
+			<field name="name">Invoice Trips' Costs</field>
+			<field name="model">trip.invoicing.cost.wizard</field>
+			<field name="arch" type="xml">
+				<form string="Invoice Trips' Costs">
+					<p class="oe_grey">
+						Invoices will be created in draft so that you can review
+						them before validation.
+					</p>
+					<group>
+						<field name="trip_ids" widget="many2many_tags"/>
+					</group>
+					<separator string="Costs to Invoice" />
+					<field name="vehicle_service_ids" widget="many2many_tags"
+						options="{'no_create':1}" />
+					<footer>
+						<button name="create_invoices" string="Create and View Invoices"
+							type="object"
+							context="{'open_invoices': True, 'created_from_vehicle_service': True, 'journal_type': 'purchase'}"
+							class="btn-primary" />
+						<button name="create_invoices" string="Create Invoices"
+							type="object" class="btn-primary"
+							context="{'created_from_vehicle_service': True, 'journal_type': 'purchase'}" />
+						<button string="Cancel" class="btn-default" special="cancel" />
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<record id="action_trip_fleet_vehicle_cost_invoicing_wizard"
+			model="ir.actions.act_window">
+			<field name="name">Invoice Trips' Costs</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trip.invoicing.cost.wizard</field>
+			<field name="view_mode">form</field>
+			<field name="target">new</field>
+			<field name="context">{'default_move_type':'in_invoice'}</field>
+			<field name="groups_id" eval="[(4,ref('account.group_account_invoice'))]" />
+			<field name="binding_model_id" ref="to_fleet_accounting_fleet_operation.model_fleet_vehicle_trip" />
+			<field name="binding_type">action</field>
+		</record>
+	</data>
+
+</odoo>

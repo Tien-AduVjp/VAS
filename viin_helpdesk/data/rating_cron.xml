@@ -1,0 +1,10 @@
+<odoo>
+	<record id="ir_cron_rating_ticket" model="ir.cron">
+        <field name="name">Ticket: Send rating</field>
+        <field name="model_id" ref="viin_helpdesk.model_helpdesk_ticket"/>
+        <field name="state">code</field>
+        <field name="code">model._cron_send_rating_ticket()</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+    </record>
+</odoo>

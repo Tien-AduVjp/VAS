@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+
+    <record id="document_auto_generate_rule_mrp_mo" model="document.auto.generate.rule" forcecreate="False">
+        <field name="res_model_id" ref="mrp.model_mrp_production"/>
+        <field name="parent_workspace_id" ref="document_workspace_mrp"/>
+        <field name="workspace_tag_ids" eval="[
+            (4, ref('document_tag_mrp_manufacturing_order')),
+            (4, ref('document_tag_mrp_bom')),
+            (4, ref('document_tag_mrp_mo_confirm')),
+            (4, ref('document_tag_mrp_mo_progress')),
+            (4, ref('document_tag_mrp_mo_done')),
+            (4, ref('viin_document.document_tag_to_review')),
+            (4, ref('viin_document.document_tag_approve')),
+            (4, ref('viin_document.document_tag_deprecate'))]"/>
+        <field name="workspace_read_team_ids" eval="[(4, ref('document_team_mrp'))]"/>
+        <field name="workspace_write_group_ids" eval="[(4, ref('mrp.group_mrp_manager'))]"/>
+        <field name="workspace_read_group_ids" eval="[(4, ref('mrp.group_mrp_user'))]"/>
+        <field name="workspace_action_ids" eval="[
+            (4, ref('document_action_mo_confirm')),
+            (4, ref('document_action_mo_progress')),
+            (4, ref('document_action_mo_done'))]"/>
+    </record>
+
+</odoo>

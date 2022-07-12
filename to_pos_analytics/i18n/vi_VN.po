@@ -1,0 +1,88 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_pos_analytics
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-19 04:32+0000\n"
+"PO-Revision-Date: 2021-11-19 04:32+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_pos_analytics
+#: model_terms:ir.ui.view,arch_db:to_pos_analytics.view_pos_config_form
+msgid "<span class=\"o_form_label\">Analytics Accounting</span>"
+msgstr "<span class=\"o_form_label\">Kế toán Quản trị</span>"
+
+#. module: to_pos_analytics
+#: model:ir.model.fields,field_description:to_pos_analytics.field_pos_config__analytics_account_id
+#: model_terms:ir.ui.view,arch_db:to_pos_analytics.view_pos_config_form
+msgid "Analytics Account"
+msgstr "Tài khoản KT Quản trị"
+
+#. module: to_pos_analytics
+#: model_terms:ir.ui.view,arch_db:to_pos_analytics.view_pos_config_form
+msgid "Analytics Accounting"
+msgstr "Kế toán Quản trị"
+
+#. module: to_pos_analytics
+#: model:ir.model.fields,help:to_pos_analytics.field_pos_config__auto_create_analytics_account
+msgid ""
+"Check this and leave the field Analytics Account empty to get a new "
+"Analytics Account created for this PoS."
+msgstr ""
+"Đánh dấu kiểm vào ô này và để trống trường Tài khoản KT Quản trị, Odoo sẽ tự"
+" động tạo một tài khoản kt quản trị cho Điểm bán lẻ này."
+
+#. module: to_pos_analytics
+#: model_terms:ir.ui.view,arch_db:to_pos_analytics.view_pos_config_form
+msgid "Configuration for analytics account of PoS orders"
+msgstr "Cấu hình tài khoản kế toán quản trị cho các đơn bán ở PoS"
+
+#. module: to_pos_analytics
+#: model:ir.model.fields,field_description:to_pos_analytics.field_pos_config__auto_create_analytics_account
+#: model_terms:ir.ui.view,arch_db:to_pos_analytics.view_pos_config_form
+msgid "Create Analytics Account"
+msgstr "Tạo Tài khoản KT Quản trị"
+
+#. module: to_pos_analytics
+#: model:ir.model.fields,field_description:to_pos_analytics.field_pos_config__display_name
+#: model:ir.model.fields,field_description:to_pos_analytics.field_pos_order__display_name
+#: model:ir.model.fields,field_description:to_pos_analytics.field_pos_session__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_pos_analytics
+#: model:ir.model.fields,field_description:to_pos_analytics.field_pos_config__id
+#: model:ir.model.fields,field_description:to_pos_analytics.field_pos_order__id
+#: model:ir.model.fields,field_description:to_pos_analytics.field_pos_session__id
+msgid "ID"
+msgstr ""
+
+#. module: to_pos_analytics
+#: model:ir.model.fields,field_description:to_pos_analytics.field_pos_config____last_update
+#: model:ir.model.fields,field_description:to_pos_analytics.field_pos_order____last_update
+#: model:ir.model.fields,field_description:to_pos_analytics.field_pos_session____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_pos_analytics
+#: model:ir.model,name:to_pos_analytics.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "Cấu hình Điểm bán lẻ"
+
+#. module: to_pos_analytics
+#: model:ir.model,name:to_pos_analytics.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Đơn Bán Điểm bán lẻ"
+
+#. module: to_pos_analytics
+#: model:ir.model,name:to_pos_analytics.model_pos_session
+msgid "Point of Sale Session"
+msgstr "Phiên Điểm bán lẻ"

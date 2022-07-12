@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="document_document_partnership_agreement_demo" model="document.document">
+        <field name="name">Partnership Agreement</field>
+        <field name="datas" type="base64" file="viin_document/demo/documents/partnership_agreement.pdf"/>
+        <field name="workspace_id" ref="document_workspace_general"/>
+        <field name="owner_id" ref="base.user_admin"/>
+        <field name="tag_ids" eval="[
+            (4, ref('document_tag_company_legal')),
+            (4, ref('document_tag_approve'))]"/>
+    </record>
+
+    <record id="document_document_image001_demo" model="document.document">
+        <field name="name">Viindooer</field>
+        <field name="datas" type="base64" file="viin_document/demo/documents/image001.jpg"/>
+        <field name="workspace_id" ref="document_workspace_general"/>
+        <field name="owner_id" ref="base.user_demo"/>
+        <field name="tag_ids" eval="[(4, ref('document_tag_other'))]"/>
+    </record>
+
+    <record id="document_document_image002_demo" model="document.document">
+        <field name="name">Working</field>
+        <field name="datas" type="base64" file="viin_document/demo/documents/image002.jpg"/>
+        <field name="workspace_id" ref="document_workspace_general"/>
+        <field name="owner_id" ref="base.user_admin"/>
+        <field name="tag_ids" eval="[(4, ref('document_tag_other'))]"/>
+    </record>
+
+    <record id="document_document_youtube001_demo" model="document.document">
+        <field name="name">Viindoo Sales</field>
+        <field name="workspace_id" ref="document_workspace_general"/>
+        <field name="type">url</field>
+        <field name="url">https://www.youtube.com/watch?v=5hJ5_pMsRU4</field>
+        <field name="owner_id" ref="base.user_admin"/>
+        <field name="tag_ids" eval="[(4, ref('document_tag_other'))]"/>
+    </record>
+
+</odoo>

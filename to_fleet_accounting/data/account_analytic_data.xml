@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="0">
+		<record id="analytic_group_vehicles"
+			model="account.analytic.group">
+			<field name="name">Vehicles</field>
+		</record>
+		<record id="analytic_tag_vehicle_log_services"
+			model="account.analytic.tag">
+			<field name="name">Vehicle Services (equal distribution)</field>
+			<field name="active_analytic_distribution" eval="True" />
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+	<record id="account_advance_payment_register_view_form" model="ir.ui.view">
+	    <field name="name">account.advance.payment.register.view.form</field>
+	    <field name="model">account.advance.payment.register</field>
+	    <field name="arch" type="xml">
+	        <form string="Register Advance Payment">
+	        	<!-- Invisible fields -->
+                <field name="line_ids" invisible="1"/>
+                <field name="payment_type" invisible="0" force_save="1"/>
+                <field name="source_amount" invisible="1" force_save="1"/>
+                <field name="source_amount_currency" invisible="1" force_save="1"/>
+                <field name="source_currency_id" invisible="1" force_save="1"/>
+                <field name="company_id" invisible="1" force_save="1"/>
+                <field name="partner_id" invisible="1" force_save="1"/>
+                <field name="company_currency_id" invisible="1"/>
+                <field name="destination_account_id" invisible="1" force_save="1"/>
+                <group>
+                	<group name="group1">
+                		<field name="journal_id" widget="selection" required="1"/>
+                		<field name="employee_id"/>
+                	</group>
+                	<group name="group2">
+                		<label for="amount"/>
+                        <div name="amount_div" class="o_row">
+                            <field name="amount"/>
+                            <field name="currency_id" options="{'no_create': True, 'no_open': True}"
+                            	groups="base.group_multi_currency"/>
+                        </div>
+                        <field name="payment_date"/>
+                        <field name="communication"/>
+                	</group>
+                	<group name="group3" attrs="{'invisible': [('payment_difference', '=', 0.0)]}"
+                    	groups="account.group_account_readonly">
+	                    <label for="payment_difference"/>
+	                    <div>
+	                        <field name="payment_difference"/>
+	                        <field name="payment_difference_handling" widget="radio" nolabel="1"/>
+	                        <div attrs="{'invisible': [('payment_difference_handling','=','open')]}">
+	                            <label for="writeoff_account_id" string="Post Difference In" class="oe_edit_only"/>
+	                            <field name="writeoff_account_id"
+	                                   string="Post Difference In"
+	                                   options="{'no_create': True}"
+	                                   attrs="{'required': [('payment_difference_handling', '=', 'reconcile')]}"/>
+	                            <label for="writeoff_label" class="oe_edit_only" string="Label"/>
+	                            <field name="writeoff_label" attrs="{'required': [('payment_difference_handling', '=', 'reconcile')]}"/>
+	                        </div>
+	                    </div>
+	                </group>
+               	</group>
+               	<footer>
+                    <button string="Create Advance Journal Entries" name="action_create_advance_journal_entries" type="object" class="oe_highlight"/>
+                    <button string="Cancel" class="btn btn-secondary" special="cancel"/>
+                </footer>
+	        </form>
+	    </field>
+	</record>
+
+</odoo>

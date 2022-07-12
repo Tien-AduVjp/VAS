@@ -1,0 +1,388 @@
+<odoo>
+	<data>
+		<record id="helpdesk_ticket_form_view" model="ir.ui.view">
+			<field name="name">helpdesk.ticket.form</field>
+			<field name="model">helpdesk.ticket</field>
+			<field name="arch" type="xml">
+				<form string="Helpdesk Ticket Form">
+					<header>
+						<field name="stage_id" widget="statusbar" options="{'clickable': '1'}" />
+					</header>
+					<sheet>
+						<div class="oe_button_box" name="button_box" groups="base.group_user">
+							<button name="action_view_all_rating" type="object" attrs="{'invisible': [('rating_count', '=', '0')]}" class="oe_stat_button oe_percent"
+								icon="fa-smile-o" groups="viin_helpdesk.group_helpdesk_rating">
+								<div class="o_field_widget o_stat_info">
+									<span class="o_stat_value">
+										<field name="rating_avg" nolabel="1" />
+									</span>
+									<span class="o_stat_text">
+										% On
+										<field readonly="1" name="rating_count" />
+										Feedbacks
+									</span>
+								</div>
+							</button>
+						</div>
+						<div class="oe_right">
+							<field name="kanban_state" class="oe_inline" widget="state_selection" />
+						</div>
+						<div class="oe_title">
+							<separator string="Title" class="oe_edit_only" />
+							<h1>
+								<field name="name" class="field_name" />
+							</h1>
+						</div>
+						<group>
+							<group>
+								<field name="id" invisible="1"/>
+								<field name="team_id" />
+								<field name="user_id" options="{'no_create': True}" />
+								<field name="ticket_type_id" />
+								<field name="priority_level" widget="priority" />
+								<field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+								<field name="company_id" groups="base.group_multi_company" options="{'no_create': True}" />
+							</group>
+							<group>
+								<field name="partner_id" />
+								<field name="contact_name" attrs="{'invisible': [('partner_id', '!=', False)]}"/>
+								<field name="email_from" />
+								<field name="send_notification_email"/>
+								<field name="create_uid" string="Created by" />
+								<field name="active" invisible="1" />
+							</group>
+						</group>
+						<notebook>
+							<page name="description" string="Description">
+								<field name="description" />
+							</page>
+							<page name="analysis_page" string="Analysis">
+								<group>
+									<field name="assign_date" />
+									<field name="end_date" />
+									<label for="assign_duration" string="Assign Duration"/>
+									<div>
+										<field name="assign_duration" class="oe_inline" widget="float_time"/> hours
+									</div>
+									<label for="resolved_duration" string="Resolved Duration"/>
+									<div>
+										<field name="resolved_duration" class="oe_inline" widget="float_time"/> hours
+									</div>
+									<label for="ticket_life" string="Ticket Life"/>
+									<div>
+										<field name="ticket_life" class="oe_inline" widget="float_time"/> hours
+									</div>
+								</group>
+							</page>
+							<page name="sla_status_page" string="SLA Status">
+								<field name="sla_line_ids">
+									<tree>
+										<field name="sla_id" />
+										<field name="deadline_datetime" />
+										<field name="reached_datetime" />
+										<field name="exceeded_days" />
+										<field name="status" />
+									</tree>
+								</field>
+							</page>
+							<page name="customer_ratings_page" string="Customer Ratings" groups="viin_helpdesk.group_helpdesk_rating">
+								<group>
+									<field name="rating_status" widget="radio" />
+									<field name="rating_status_period" class="oe_inline" attrs="{'required': [('rating_status','=','periodic')], 'invisible': [('rating_status','!=','periodic')]}" />
+									<field name="portal_show_rating" attrs="{'invisible': [('rating_status','==','no')]}" />
+								</group>
+							</page>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" options="{'post_refresh':True}" />
+						<field name="activity_ids" />
+						<field name="message_ids" />
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record id="helpdesk_ticket_tree_view" model="ir.ui.view">
+			<field name="name">helpdesk.ticket.tree</field>
+			<field name="model">helpdesk.ticket</field>
+			<field name="arch" type="xml">
+				<tree string="Helpdesk Ticket Tree">
+					<field name="sequence" widget="handle" />
+					<field name="name" />
+					<field name="partner_id" />
+					<field name="contact_name" optional="hide"/>
+					<field name="email_from" />
+					<field name="company_id" optional="hide" groups="base.group_multi_company" />
+					<field name="ticket_type_id" optional="hide"/>
+					<field name="create_uid" optional="hide"/>
+					<field name="team_id" />
+					<field name="priority_level" />
+					<field name="user_id" optional="hide"/>
+					<field name="stage_id" optional="hide"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="helpdesk_ticket_search_view" model="ir.ui.view">
+			<field name="name">helpdesk.ticket.search</field>
+			<field name="model">helpdesk.ticket</field>
+			<field name="arch" type="xml">
+				<search string="Helpdesk Ticket Tree">
+					<field name="id"/>
+					<field name="name" string="Ticket"/>
+					<field name="partner_id" />
+					<field name="user_id" />
+					<field name="ticket_type_id" />
+					<field name="team_id" />
+					<field name="priority_level" />
+					<field name="tag_ids" />
+					<separator />
+					<filter name="ftr_myticket" string="My Tickets" domain="[('create_uid','=', uid)]" help="Tickets that are created by me"/>
+					<filter name="ftr_assigned_to_me" string="Assigned to me" domain="[('user_id','=', uid)]" help="Tickets that are assigned to me"/>
+					<filter string="Unassigned" name="ftr_unassigned" domain="[('user_id', '=', False)]" help="Tickets that are not assigned"/>
+					<filter name="ftr_sla_failed" string="SLA Reached" domain="[('sla_line_ids.status','=','reached')]"/>
+					<filter name="ftr_sla_failed" string="SLA Ongoing" domain="[('sla_line_ids.status','=','ongoing')]"/>
+					<filter name="ftr_sla_failed" string="SLA Failed" domain="[('sla_line_ids.status','=','failed')]"/>
+					<separator />
+					<filter name="ftr_urgent_priority_level" string="Urgent Priority" domain="[('priority_level','=','3')]" />
+					<filter name="ftr_high_priority_level" string="High Priority" domain="[('priority_level','=','2')]" />
+					<filter name="ftr_low_priority_level" string="Low Priority" domain="[('priority_level','=','1')]" />
+					<filter name="ftr_none_priority" string="None Priority" domain="[('priority_level','=','0')]" />
+					<separator />
+					<filter string="Archived" name="ftr_inactive" domain="[('active', '=', False)]" />
+					<group expand="0" string="Group By">
+						<filter string="Ticket Type" name="grp_ticket_type_id" domain="[]" context="{'group_by':'ticket_type_id'}" />
+						<filter string="Stage" name="grp_stage_id" domain="[]" context="{'group_by':'stage_id'}" />
+						<filter string="Team" name="grp_team_id" domain="[]" context="{'group_by':'team_id'}" />
+						<separator />
+						<filter string="Priority" name="grp_priority_level" domain="[]" context="{'group_by':'priority_level'}" />
+						<separator />
+						<filter string="Partner" name="grp_partner_id" domain="[]" context="{'group_by':'partner_id'}" />
+						<filter string="Responsible" name="grp_user_id" domain="[]" context="{'group_by':'user_id'}" />
+						<separator />
+						<filter string="Creation Date" name="grp_create_date" context="{'group_by': 'create_date'}"/>
+						<separator />
+						<filter string="Company" name="grp_company_id" domain="[]" context="{'group_by':'company_id'}" groups="base.group_multi_company" />
+					</group>
+				</search>
+			</field>
+		</record>
+
+		<record id="quick_create_helpdesk_ticket_form" model="ir.ui.view">
+			<field name="name">helpdesk.ticket.form.quick_create</field>
+			<field name="model">helpdesk.ticket</field>
+			<field name="priority">1000</field>
+			<field name="arch" type="xml">
+				<form>
+					<group>
+						<field name="company_id" invisible="1"/>
+						<field name="name" string="Title" />
+						<field name="team_id" />
+						<field name="user_id" />
+						<field name="partner_id" />
+					</group>
+				</form>
+			</field>
+		</record>
+
+		<record id="helpdesk_ticket_kanban_view" model="ir.ui.view">
+			<field name="name">helpdesk.ticket.kanban</field>
+			<field name="model">helpdesk.ticket</field>
+			<field name="arch" type="xml">
+				<kanban default_group_by="stage_id" on_create="quick_create" class="oe_background_grey o_kanban_dashboard o_emphasize_colors o_helpdesk_team_kanban_main"
+					quick_create_view="viin_helpdesk.quick_create_helpdesk_ticket_form" examples="ticket">
+					<field name="color" />
+					<field name="partner_id" />
+					<field name="ticket_type_id" />
+					<field name="team_id" />
+					<field name="stage_id" />
+					<field name="priority_level" widget="priority" />
+					<field name="assign_date" />
+					<field name="end_date" />
+					<field name="user_id" />
+					<field name="assign_duration" />
+					<field name="resolved_duration" />
+					<field name="rating_avg" />
+					<field name="rating_status" />
+					<field name="sequence" />
+					<field name="legend_blocked"/>
+                    <field name="legend_normal"/>
+                    <field name="legend_done"/>
+                    <field name="activity_ids"/>
+                    <field name="activity_state"/>
+                    <field name="tag_ids"/>
+					<field name="company_id" groups="base.group_multi_company" />
+					<progressbar field="kanban_state" colors='{"done": "success", "blocked": "danger", "normal": "muted"}' />
+					<templates>
+						<t t-name="kanban-box">
+							<div t-attf-class="#{kanban_color(record.color.raw_value)} oe_kanban_global_click">
+								<div class="o_helpdesk_team_kanban_main">
+									<div class="o_kanban_card_content">
+										<div class="o_kanban_primary_left">
+											<div class="o_primary">
+												<div>
+													<strong class="o_wrap_text">
+														<field name="name"/> (#<field name="id"/>)
+													</strong>
+												</div>
+												<span groups="base.group_multi_company">
+                                                    <strong><field name="company_id"/></strong>
+                                                </span>
+                                                <br/>
+												<t t-if="record.partner_id.value">
+													<span>
+														<field name="partner_id" />
+													</span>
+												</t>
+												<t t-else="record.email_formatted.raw_value"><span><field name="email_formatted"/></span></t>
+												<br/>
+												<t t-if="record.user_id.value">
+													<span>
+														<field name="user_id" />
+													</span>
+												</t>
+												<br />
+												<t t-if="record.tag_ids.value">
+													<span>
+														<field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+													</span>
+												</t>
+												<t t-if="record.end_date">
+													<field name="end_date" />
+												</t>
+												<div t-if="record.rating_status.raw_value != 'no'" class="mt8 text-primary"
+													title="Percentage of happy ratings over the past 30 days. Get rating details from the More menu.">
+													<b>
+														<t t-if="record.rating_avg.value == -1">
+															<i class="fa fa-smile-o" />
+															No rating yet
+														</t>
+														<t t-if="record.rating_avg.value != -1">
+															<a name="action_view_all_rating" type="object">
+																<i class="fa fa-smile-o" role="img" aria-label="Percentage of satisfaction" title="Percentage of satisfaction" />
+																<t t-esc="record.rating_avg.value" />
+																%
+															</a>
+														</t>
+													</b>
+												</div>
+											</div>
+										</div>
+										<div class="o_dropdown_kanban dropdown" t-if="!selection_mode" groups="base.group_user">
+											<a role="button" class="dropdown-toggle o-no-caret btn" data-toggle="dropdown" data-display="static" href="#"
+												aria-label="Dropdown menu" title="Dropdown menu">
+												<span class="fa fa-ellipsis-v" />
+											</a>
+											<div class="dropdown-menu" role="menu">
+												<a t-if="widget.editable" role="menuitem" type="edit"
+													class="dropdown-item">Edit Ticket</a>
+												<a t-if="widget.deletable" role="menuitem" type="delete"
+													class="dropdown-item">Delete Ticket</a>
+												<t t-if="record.rating_status.raw_value != 'no'">
+													<a name="action_view_all_rating" type="object" class="dropdown-item">Customer Ratings</a>
+												</t>
+												<div role="separator" class="dropdown-divider"></div>
+												<ul class="oe_kanban_colorpicker" data-field="color" />
+											</div>
+										</div>
+									</div>
+									<div class="o_kanban_record_bottom" t-if="!selection_mode">
+										<div class="oe_kanban_bottom_left">
+											<field name="priority_level" widget="priority" />
+											<field name="activity_ids" widget="kanban_activity" />
+										</div>
+										<div class="oe_kanban_bottom_right" t-if="!selection_mode">
+											<field name="kanban_state" widget="state_selection" groups="base.group_user" invisible="context.get('fsm_mode', False)" />
+											<img
+												t-att-src="kanban_image('res.users', 'image_128', record.user_id.raw_value)"
+												t-att-title="record.user_id.value"
+												t-att-alt="record.user_id.value"
+												class="oe_kanban_avatar" />
+										</div>
+									</div>
+									<div class="oe_clear"></div>
+								</div>
+							</div>
+						</t>
+					</templates>
+				</kanban>
+			</field>
+		</record>
+
+		<record id="helpdesk_ticket_pivot_view" model="ir.ui.view">
+			<field name="name">helpdesk.ticket.pivot</field>
+			<field name="model">helpdesk.ticket</field>
+			<field name="arch" type="xml">
+				<pivot string="Helpdesk Ticket Pivot">
+					<field name="name" type="row" />
+					<field name="stage_id" type="col" />
+				</pivot>
+			</field>
+		</record>
+
+		<record id="helpdesk_ticket_calendar_view" model="ir.ui.view">
+			<field name="name">helpdesk.ticket.calendar</field>
+			<field name="model">helpdesk.ticket</field>
+			<field name="arch" type="xml">
+				<calendar date_start="end_date"
+					string="Helpdesk Ticket Calendar" mode="month"
+					color="user_id" event_limit="5" hide_time="true">
+					<field name="user_id" avatar_field="image_128" />
+					<field name="end_date" />
+					<field name="name" />
+					<field name="priority_level" widget="priority" />
+					<field name="stage_id" />
+				</calendar>
+			</field>
+		</record>
+
+		<record id="helpdesk_ticket_graph_view" model="ir.ui.view">
+			<field name="name">helpdesk.ticket.graph</field>
+			<field name="model">helpdesk.ticket</field>
+			<field name="arch" type="xml">
+				<graph string="Helpdesk Ticket Graph">
+					<field name="name" />
+					<field name="stage_id" />
+				</graph>
+			</field>
+		</record>
+
+		<record id="ticket_priority_kanban_view_from_team_kanban_action" model="ir.actions.act_window">
+			<field name="name">Tickets Priority</field>
+			<field name="res_model">helpdesk.ticket</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="view_mode">kanban,tree,form,pivot,calendar,graph</field>
+			<field name="context">{'default_team_id': active_id,}</field>
+        	<field name="domain">[('team_id', '=', active_id)]</field>
+		</record>
+
+		<record id="my_tickets_action" model="ir.actions.act_window">
+			<field name="name">My Tickets</field>
+			<field name="res_model">helpdesk.ticket</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="view_mode">kanban,tree,form,pivot,calendar,graph</field>
+			<field name="context">{'search_default_ftr_myticket': 1, 'search_default_ftr_assigned_to_me': 1}</field>
+		</record>
+
+		<record id="all_tickets_action" model="ir.actions.act_window">
+			<field name="name">All Tickets</field>
+			<field name="res_model">helpdesk.ticket</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="view_mode">kanban,tree,form,pivot,calendar,graph</field>
+		</record>
+
+        <menuitem id="my_tickets_menu"
+        		name="My Tickets"
+	        	parent="viin_helpdesk.ticket_menu"
+	        	action="my_tickets_action"
+	        	sequence="5"/>
+        <menuitem id="all_tickets_menu"
+        		name="All Tickets"
+		        parent="viin_helpdesk.ticket_menu"
+		        action="all_tickets_action"
+		        sequence="7"
+		        groups="viin_helpdesk.group_helpdesk_manager"/>
+
+	</data>
+</odoo>

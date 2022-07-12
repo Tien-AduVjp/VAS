@@ -1,0 +1,174 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_hr_training
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-23 09:33+0000\n"
+"PO-Revision-Date: 2022-05-23 09:33+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_hr_training
+#: model:ir.model,name:to_hr_training.model_hr_employee_base
+msgid "Basic Employee"
+msgstr ""
+
+#. module: to_hr_training
+#: model:ir.model.fields,help:to_hr_training.field_hr_job__slide_channel_ids
+msgid "Course's list related to this job position"
+msgstr ""
+
+#. module: to_hr_training
+#: model:ir.model.fields,help:to_hr_training.field_hr_skill_description__slide_channel_ids
+msgid "Course's list related to this skill level"
+msgstr ""
+
+#. module: to_hr_training
+#: model:ir.model.fields,field_description:to_hr_training.field_hr_job__slide_channel_ids
+#: model:ir.model.fields,field_description:to_hr_training.field_hr_skill_description__slide_channel_ids
+#: model_terms:ir.ui.view,arch_db:to_hr_training.view_hr_job_form
+#: model_terms:ir.ui.view,arch_db:to_hr_training.view_hr_skill_description_form
+msgid "Courses"
+msgstr ""
+
+#. module: to_hr_training
+#: model:ir.model.fields,field_description:to_hr_training.field_hr_job__slide_channel_count
+#: model:ir.model.fields,field_description:to_hr_training.field_hr_skill_description__slide_channel_count
+msgid "Courses Count"
+msgstr ""
+
+#. module: to_hr_training
+#: model:ir.model.fields,field_description:to_hr_training.field_hr_employee__slide_channel_for_current_rank_ids
+#: model:ir.model.fields,field_description:to_hr_training.field_hr_employee_base__slide_channel_for_current_rank_ids
+#: model:ir.model.fields,field_description:to_hr_training.field_hr_employee_public__slide_channel_for_current_rank_ids
+#: model:ir.model.fields,field_description:to_hr_training.field_hr_rank__slide_channel_for_current_rank_ids
+msgid "Courses for current rank"
+msgstr ""
+
+#. module: to_hr_training
+#: model:ir.model.fields,field_description:to_hr_training.field_hr_rank__slide_channel_for_next_targeted_rank_count
+msgid "Courses for next rank"
+msgstr ""
+
+#. module: to_hr_training
+#: model:ir.model.fields,field_description:to_hr_training.field_hr_employee__slide_channel_for_next_targeted_rank_ids
+#: model:ir.model.fields,field_description:to_hr_training.field_hr_employee_base__slide_channel_for_next_targeted_rank_ids
+#: model:ir.model.fields,field_description:to_hr_training.field_hr_employee_public__slide_channel_for_next_targeted_rank_ids
+#: model:ir.model.fields,field_description:to_hr_training.field_hr_rank__slide_channel_for_next_targeted_rank_ids
+msgid "Courses for next targeted rank"
+msgstr ""
+
+#. module: to_hr_training
+#: model_terms:ir.ui.view,arch_db:to_hr_training.hr_employee_public_view_form
+#: model_terms:ir.ui.view,arch_db:to_hr_training.view_employee_form
+#: model_terms:ir.ui.view,arch_db:to_hr_training.view_hr_rank_form
+msgid "Current Rank Courses"
+msgstr ""
+
+#. module: to_hr_training
+#: model:ir.model.fields,field_description:to_hr_training.field_hr_employee_base__display_name
+#: model:ir.model.fields,field_description:to_hr_training.field_hr_job__display_name
+#: model:ir.model.fields,field_description:to_hr_training.field_hr_rank__display_name
+#: model:ir.model.fields,field_description:to_hr_training.field_hr_skill_description__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: to_hr_training
+#: model:ir.model,name:to_hr_training.model_hr_rank
+msgid "HR Rank"
+msgstr ""
+
+#. module: to_hr_training
+#: model:ir.model.fields,field_description:to_hr_training.field_hr_employee_base__id
+#: model:ir.model.fields,field_description:to_hr_training.field_hr_job__id
+#: model:ir.model.fields,field_description:to_hr_training.field_hr_rank__id
+#: model:ir.model.fields,field_description:to_hr_training.field_hr_skill_description__id
+msgid "ID"
+msgstr ""
+
+#. module: to_hr_training
+#: model:ir.model,name:to_hr_training.model_hr_job
+msgid "Job Position"
+msgstr ""
+
+#. module: to_hr_training
+#: model:ir.model.fields,field_description:to_hr_training.field_hr_employee_base____last_update
+#: model:ir.model.fields,field_description:to_hr_training.field_hr_job____last_update
+#: model:ir.model.fields,field_description:to_hr_training.field_hr_rank____last_update
+#: model:ir.model.fields,field_description:to_hr_training.field_hr_skill_description____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: to_hr_training
+#: model_terms:ir.ui.view,arch_db:to_hr_training.hr_employee_public_view_form
+#: model_terms:ir.ui.view,arch_db:to_hr_training.view_employee_form
+#: model_terms:ir.ui.view,arch_db:to_hr_training.view_hr_rank_form
+msgid "Next Rank Courses"
+msgstr ""
+
+#. module: to_hr_training
+#: model:ir.model.fields,field_description:to_hr_training.field_hr_employee__slide_channel_for_current_rank_count
+#: model:ir.model.fields,field_description:to_hr_training.field_hr_employee_base__slide_channel_for_current_rank_count
+#: model:ir.model.fields,field_description:to_hr_training.field_hr_employee_public__slide_channel_for_current_rank_count
+msgid "Number of Courses for current rank"
+msgstr ""
+
+#. module: to_hr_training
+#: model:ir.model.fields,field_description:to_hr_training.field_hr_employee__slide_channel_for_next_targeted_rank_count
+#: model:ir.model.fields,field_description:to_hr_training.field_hr_employee_base__slide_channel_for_next_targeted_rank_count
+#: model:ir.model.fields,field_description:to_hr_training.field_hr_employee_public__slide_channel_for_next_targeted_rank_count
+msgid "Number of Courses for next rank"
+msgstr ""
+
+#. module: to_hr_training
+#: model:ir.model.fields,field_description:to_hr_training.field_hr_rank__slide_channel_for_current_rank_count
+msgid "Number of courses for current rank"
+msgstr ""
+
+#. module: to_hr_training
+#: model:ir.model.fields,help:to_hr_training.field_hr_employee__slide_channel_for_current_rank_count
+#: model:ir.model.fields,help:to_hr_training.field_hr_employee_base__slide_channel_for_current_rank_count
+#: model:ir.model.fields,help:to_hr_training.field_hr_employee_public__slide_channel_for_current_rank_count
+#: model:ir.model.fields,help:to_hr_training.field_hr_rank__slide_channel_for_current_rank_count
+msgid "Number of courses required for current rank"
+msgstr ""
+
+#. module: to_hr_training
+#: model:ir.model.fields,help:to_hr_training.field_hr_employee__slide_channel_for_next_targeted_rank_count
+#: model:ir.model.fields,help:to_hr_training.field_hr_employee_base__slide_channel_for_next_targeted_rank_count
+#: model:ir.model.fields,help:to_hr_training.field_hr_employee_public__slide_channel_for_next_targeted_rank_count
+#: model:ir.model.fields,help:to_hr_training.field_hr_rank__slide_channel_for_next_targeted_rank_count
+msgid "Number of courses required for next rank"
+msgstr ""
+
+#. module: to_hr_training
+#: model:ir.model.fields,help:to_hr_training.field_hr_job__slide_channel_count
+msgid "Number of courses required for this job position"
+msgstr ""
+
+#. module: to_hr_training
+#: model:ir.model.fields,help:to_hr_training.field_hr_skill_description__slide_channel_count
+msgid "Number of courses required for this this skill level"
+msgstr ""
+
+#. module: to_hr_training
+#: model_terms:ir.ui.view,arch_db:to_hr_training.slide_channel_view_search
+msgid "Published"
+msgstr ""
+
+#. module: to_hr_training
+#: model_terms:ir.ui.view,arch_db:to_hr_training.slide_channel_view_kanban
+msgid "Published:"
+msgstr ""
+
+#. module: to_hr_training
+#: model:ir.model,name:to_hr_training.model_hr_skill_description
+msgid "Skill Description"
+msgstr ""

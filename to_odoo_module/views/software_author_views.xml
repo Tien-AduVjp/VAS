@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="software_author_form_view">
+			<field name="name">software.author.form</field>
+			<field name="model">software.author</field>
+			<field name="arch" type="xml">
+				<form string="Software Author">
+					<header>
+					</header>
+					<sheet>
+						<div class="oe_button_box" name="button_box">
+							<button name="action_view_odoo_module_versions"
+								type="object" class="oe_stat_button" icon="fa-cubes"
+								context="{'default_author_ids': active_ids}"
+								help="Show the Odoo Module Versions related to this author">
+								<field name="odoo_module_versions_count" widget="statinfo"
+									string="Module Versions" />
+							</button>
+						</div>
+						<field name="image_512" widget="image" class="oe_avatar"
+							force_save="1" />
+						<div class="oe_title">
+							<label class="oe_edit_only" for="name" string="Name" />
+							<h1>
+								<field name="name" placeholder="Author Name" />
+							</h1>
+							<div name="options">
+								<div>
+									<field name="partner_id"
+										placeholder="Select a corresponding partner" />
+								</div>
+							</div>
+						</div>
+						<group>
+						</group>
+						<notebook>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids"   />
+						<field name="message_ids"  />
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="software-author_tree_view">
+			<field name="name">software.author.tree</field>
+			<field name="model">software.author</field>
+			<field name="arch" type="xml">
+				<tree string="Software Authors">
+					<field name="name" />
+					<field name="partner_id" />
+					<field name="odoo_module_versions_count" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id='software_author_search_view'>
+			<field name="name">software.author.search</field>
+			<field name="model">software.author</field>
+			<field name="arch" type="xml">
+				<search string="Search Software Author">
+					<field name="name" />
+					<field name="partner_id" />
+					<field name="odoo_module_version_ids" />
+				</search>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window"
+			id="software_author_action">
+			<field name="name">Software Authors</field>
+			<field name="res_model">software.author</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create a new Author</p>
+			</field>
+		</record>
+
+		<menuitem id="software_author_menu" name="Authors"
+			parent="root_odoo_module_menu" sequence="50"
+			action="software_author_action" />
+	</data>
+</odoo>

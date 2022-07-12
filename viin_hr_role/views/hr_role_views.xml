@@ -1,0 +1,179 @@
+<odoo>
+	<data>
+
+		<record model="ir.ui.view" id="view_hr_role_form">
+			<field name="name">hr.role.form</field>
+			<field name="model">hr.role</field>
+			<field name="arch" type="xml">
+				<form>
+					<sheet>
+                       <field name="active" invisible="1"/>
+                       <widget name="web_ribbon" title="Archived"
+                            bg_color="bg-danger"
+                            attrs="{'invisible': [('active', '=', True)]}"/>
+						<div name="button_box" class="oe_button_box">
+							<button name="action_view_employees" type="object"
+								class="oe_stat_button" icon="fa-users">
+								<field name="employees_count" widget="statinfo"
+									string="Employees" />
+							</button>
+						</div>
+						<div class="oe_title">
+							<label for="name" class="oe_edit_only" />
+							<h1>
+								<field name="name" required="True"
+									placeholder="Product Developer, Accountant, Consultant, etc" />
+							</h1>
+						</div>
+						<group>
+							<group>
+								<field name="department_id" />
+								<field name="company_id" groups="base.group_multi_company" />
+							</group>
+						</group>
+						<notebook>
+							<page name="description" string="Description">
+								<field name="description" />
+							</page>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" groups="base.group_user" />
+						<field name="activity_ids" />
+						<field name="message_ids" />
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="view_hr_role_list">
+			<field name="name">hr.role.list</field>
+			<field name="model">hr.role</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="name" />
+					<field name="description" />
+					<field name="department_id" />
+					<field name="employees_count" string="Employees" />
+					<field name="company_id" groups="base.group_multi_company" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="view_hr_role_kanban">
+			<field name="name">hr.role.kanban</field>
+			<field name="model">hr.role</field>
+			<field name="arch" type="xml">
+				<kanban
+					class="oe_background_grey o_kanban_dashboard o_hr_kanban">
+					<field name="name" />
+					<field name="employees_count" />
+					<field name="company_id" />
+					<field name="department_id" />
+					<field name="kanban_dashboard" />
+					<field name="color" />
+					<templates>
+						<t t-name="kanban-box">
+							<div
+								t-attf-class="#{!selection_mode ? kanban_color(record.color.raw_value) : ''}">
+								<t t-value="JSON.parse(record.kanban_dashboard.raw_value)"
+									t-set="dashboard" />
+								<div t-attf-class="o_kanban_card_header">
+									<div class="o_kanban_card_header_title">
+										<div class="o_primary">
+											<field name="name" />
+										</div>
+										<div class="o_secondary">
+											<field name="department_id" />
+										</div>
+										<div class="o_secondary">
+											<field name="company_id"
+												groups="base.group_multi_company" />
+										</div>
+									</div>
+									<div class="o_kanban_manage_button_section"
+										t-if="!selection_mode">
+										<a class="o_kanban_manage_toggle_button" href="#">
+											<i class="fa fa-ellipsis-v" role="img" aria-label="Manage"
+												title="Manage" />
+										</a>
+									</div>
+								</div>
+								<div class="container o_kanban_card_content"
+									t-if="!selection_mode">
+									<div class="row">
+										<div class="col-6 o_kanban_primary_left">
+											<button class="btn btn-primary"
+												name="action_view_employees" type="object">
+												<field name="employees_count" />
+												<t t-if="record.employees_count.value &gt; 1">Employees</t>
+												<t t-else="">Employee</t>
+											</button>
+										</div>
+										<div class="col-6 o_kanban_primary_right">
+                                        </div>
+									</div>
+								</div>
+								<div
+									class="container o_kanban_card_manage_pane dropdown-menu"
+									role="menu">
+									<div class="row">
+										<div role="menuitem"
+											class="col o_kanban_card_manage_section o_kanban_manage_reports">
+											<div class="o_kanban_card_manage_title">
+												<span>Reporting</span>
+											</div>
+										</div>
+									</div>
+									<div t-if="widget.editable"
+										class="o_kanban_card_manage_settings row">
+										<div role="menuitem" aria-haspopup="true" class="col-8">
+											<ul class="oe_kanban_colorpicker" data-field="color"
+												role="menu" />
+										</div>
+										<div class="col-4 text-right">
+											<a role="menuitem" type="edit">Settings</a>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</t>
+					</templates>
+				</kanban>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="view_hr_role_filter">
+			<field name="name">hr.role.list</field>
+			<field name="model">hr.role</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" />
+					<field name="description" />
+					<field name="department_id" />
+					<field name="employee_ids" string="Employees" />
+					<field name="company_id" groups="base.group_multi_company" />
+					<group expand="0" string="Group By">
+						<filter string="Department" name="grp_department"
+							domain="[]" context="{'group_by':'department_id'}" />
+						<filter string="Company" name="grp_company" domain="[]"
+							context="{'group_by':'company_id'}"
+							groups="base.group_multi_company" />
+					</group>
+				</search>
+			</field>
+		</record>
+
+		<!-- actions opening views on models -->
+		<record model="ir.actions.act_window" id="action_hr_role">
+			<field name="name">Roles</field>
+			<field name="res_model">hr.role</field>
+			<field name="view_mode">kanban,tree,form</field>
+		</record>
+
+		<menuitem name="Roles" id="menu_role"
+			parent="hr.menu_human_resources_configuration_employee"
+			action="action_hr_role" sequence="20" />
+	</data>
+</odoo>

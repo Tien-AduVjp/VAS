@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+	<t t-inherit="web.UserMenu.Actions" t-inherit-mode="extension">
+	   <xpath expr="//a[@data-menu='account']" position="replace">
+	       <a role="menuitem" href="#" data-menu="account" class="dropdown-item">My Viindoo.com account</a>
+	   </xpath>
+	</t>
+</templates>

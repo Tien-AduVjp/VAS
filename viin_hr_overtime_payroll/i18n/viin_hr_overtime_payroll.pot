@@ -1,0 +1,419 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_hr_overtime_payroll
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-02 09:54+0000\n"
+"PO-Revision-Date: 2021-11-02 09:54+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_hr_overtime_payroll
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_payroll.report_payslip
+msgid "Actual Hours"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_payroll.view_hr_payslip_form
+msgid "Below are some examples"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_payroll.hr_payslip_run_form
+msgid ""
+"Click here to recompute overtime entries for all the payslips of this batch."
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model:ir.model,name:viin_hr_overtime_payroll.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model:ir.model,name:viin_hr_overtime_payroll.model_hr_contract
+msgid "Contract"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model:ir.model.fields,field_description:viin_hr_overtime_payroll.field_hr_advantage_template__display_name
+#: model:ir.model.fields,field_description:viin_hr_overtime_payroll.field_hr_contract__display_name
+#: model:ir.model.fields,field_description:viin_hr_overtime_payroll.field_hr_contract_advantage__display_name
+#: model:ir.model.fields,field_description:viin_hr_overtime_payroll.field_hr_employee_overtime__display_name
+#: model:ir.model.fields,field_description:viin_hr_overtime_payroll.field_hr_overtime_plan__display_name
+#: model:ir.model.fields,field_description:viin_hr_overtime_payroll.field_hr_overtime_plan_line__display_name
+#: model:ir.model.fields,field_description:viin_hr_overtime_payroll.field_hr_payslip__display_name
+#: model:ir.model.fields,field_description:viin_hr_overtime_payroll.field_hr_payslip_run__display_name
+#: model:ir.model.fields,field_description:viin_hr_overtime_payroll.field_res_company__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model:ir.model,name:viin_hr_overtime_payroll.model_hr_employee_overtime
+msgid "Employee Overtime"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model:ir.model,name:viin_hr_overtime_payroll.model_hr_advantage_template
+msgid "Employee's Advantage Template"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model:ir.model,name:viin_hr_overtime_payroll.model_hr_contract_advantage
+msgid "Employee's Advantage on Contract"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_payroll.report_payslip
+msgid "End Date"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_payroll.view_hr_payslip_form
+msgid ""
+"For overtime extra pay (as non taxed):\n"
+"\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t<code>\n"
+"\t\t\t\t\t\t\t\tactual_overtime_pay =\n"
+"\t\t\t\t\t\t\t\tsum(payslip.overtime_plan_line_ids.mapped('actual_overtime_pay')))\n"
+"\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\tstandard_pay =\n"
+"\t\t\t\t\t\t\t\tsum(payslip.overtime_plan_line_ids.mapped('standard_pay')))\n"
+"\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\tresult = actual_overtime_pay - standard_pay\n"
+"\t\t\t\t\t\t\t</code>"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_payroll.view_hr_payslip_form
+msgid ""
+"For total overtime pay amount based on standard contract rate *\n"
+"\t\t\t\t\t\t\tovertime pay rate:\n"
+"\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t<code>\n"
+"\t\t\t\t\t\t\t\tresult=sum(payslip.overtime_plan_line_ids.mapped('actual_overtime_pay')))\n"
+"\t\t\t\t\t\t\t</code>"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_payroll.view_hr_payslip_form
+msgid ""
+"For total overtime pay amount based on standard contract rate:\n"
+"\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t<code>\n"
+"\t\t\t\t\t\t\t\tresult=sum(payslip.overtime_plan_line_ids.mapped('standard_pay')))\n"
+"\t\t\t\t\t\t\t</code>"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_payroll.view_hr_payslip_form
+msgid "Get Overtime Data"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model:ir.model.fields.selection,name:viin_hr_overtime_payroll.selection__hr_contract__overtime_base_mode__gross
+msgid "Gross Salary"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model:ir.model.fields,field_description:viin_hr_overtime_payroll.field_hr_advantage_template__id
+#: model:ir.model.fields,field_description:viin_hr_overtime_payroll.field_hr_contract__id
+#: model:ir.model.fields,field_description:viin_hr_overtime_payroll.field_hr_contract_advantage__id
+#: model:ir.model.fields,field_description:viin_hr_overtime_payroll.field_hr_employee_overtime__id
+#: model:ir.model.fields,field_description:viin_hr_overtime_payroll.field_hr_overtime_plan__id
+#: model:ir.model.fields,field_description:viin_hr_overtime_payroll.field_hr_overtime_plan_line__id
+#: model:ir.model.fields,field_description:viin_hr_overtime_payroll.field_hr_payslip__id
+#: model:ir.model.fields,field_description:viin_hr_overtime_payroll.field_hr_payslip_run__id
+#: model:ir.model.fields,field_description:viin_hr_overtime_payroll.field_res_company__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model:ir.model.fields,help:viin_hr_overtime_payroll.field_hr_contract_advantage__overtime_base_factor
+msgid ""
+"If enabled, This advantage amount will be added into the contract's Overtime"
+" Base Amount for overtime calculation."
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model:ir.model.fields,help:viin_hr_overtime_payroll.field_hr_advantage_template__overtime_base_factor
+msgid ""
+"If enabled, advantages of this template will be added into the contract's "
+"Overtime Base Amount for overtime calculation."
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_payroll.view_hr_employee_overtime_search
+msgid "Included in Payslips"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model:ir.model.fields,field_description:viin_hr_overtime_payroll.field_hr_advantage_template____last_update
+#: model:ir.model.fields,field_description:viin_hr_overtime_payroll.field_hr_contract____last_update
+#: model:ir.model.fields,field_description:viin_hr_overtime_payroll.field_hr_contract_advantage____last_update
+#: model:ir.model.fields,field_description:viin_hr_overtime_payroll.field_hr_employee_overtime____last_update
+#: model:ir.model.fields,field_description:viin_hr_overtime_payroll.field_hr_overtime_plan____last_update
+#: model:ir.model.fields,field_description:viin_hr_overtime_payroll.field_hr_overtime_plan_line____last_update
+#: model:ir.model.fields,field_description:viin_hr_overtime_payroll.field_hr_payslip____last_update
+#: model:ir.model.fields,field_description:viin_hr_overtime_payroll.field_hr_payslip_run____last_update
+#: model:ir.model.fields,field_description:viin_hr_overtime_payroll.field_res_company____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_payroll.view_hr_employee_overtime_search
+msgid "Not Included in Payslips"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: code:addons/viin_hr_overtime_payroll/models/res_company.py:0
+#: code:addons/viin_hr_overtime_payroll/models/res_company.py:0
+#: code:addons/viin_hr_overtime_payroll/models/res_company.py:0
+#, python-format
+msgid "Overtime"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model:ir.model.fields,field_description:viin_hr_overtime_payroll.field_hr_advantage_template__overtime_base_factor
+#: model:ir.model.fields,field_description:viin_hr_overtime_payroll.field_hr_contract_advantage__overtime_base_factor
+msgid "Overtime Base Factor"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model:ir.model.fields,field_description:viin_hr_overtime_payroll.field_hr_contract__overtime_base_mode
+msgid "Overtime Base Mode"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_payroll.view_hr_payslip_form
+msgid "Overtime Details"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_payroll.hr_payslip_run_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_payroll.view_hr_payslip_form
+msgid "Overtime Entries"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model:ir.model.fields,field_description:viin_hr_overtime_payroll.field_hr_payslip__overtime_plan_lines_count
+#: model:ir.model.fields,field_description:viin_hr_overtime_payroll.field_hr_payslip_run__overtime_plan_lines_count
+msgid "Overtime Entries Count"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_payroll.hr_payslip_run_form
+msgid ""
+"Overtime Entries that are included in this payslip batch for paying overtime"
+" work calculation."
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_payroll.view_hr_payslip_form
+msgid ""
+"Overtime Entries that are included in this payslip for paying overtime work "
+"calculation."
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_payroll.view_hr_payslip_form
+msgid "Overtime Hours"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model:ir.model,name:viin_hr_overtime_payroll.model_hr_overtime_plan
+msgid "Overtime Plan"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model:ir.model,name:viin_hr_overtime_payroll.model_hr_overtime_plan_line
+msgid "Overtime Plan Line"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model:ir.model.fields,field_description:viin_hr_overtime_payroll.field_hr_payslip__overtime_plan_line_ids
+#: model:ir.model.fields,field_description:viin_hr_overtime_payroll.field_hr_payslip_run__overtime_plan_line_ids
+msgid "Overtime Plan Lines"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_payroll.report_payslip
+msgid "Overtime Work Report"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_payroll.report_payslip
+msgid "Pay Rate (%)"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_payroll.view_hr_payslip_form
+msgid "Pay Rate (%s)"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model:ir.model,name:viin_hr_overtime_payroll.model_hr_payslip
+msgid "Pay Slip"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model:ir.model.fields,field_description:viin_hr_overtime_payroll.field_hr_overtime_plan_line__payslip_ids
+msgid "Pay Slips"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model:ir.model,name:viin_hr_overtime_payroll.model_hr_payslip_run
+msgid "Payslip Batches"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model:ir.model.fields,field_description:viin_hr_overtime_payroll.field_hr_employee_overtime__payslip_ref
+msgid "Payslip Ref."
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_payroll.report_payslip
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_payroll.view_hr_payslip_form
+msgid "Planned Hours"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_payroll.hr_payslip_run_form
+msgid "Recompute Overtime Entries"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_payroll.view_hr_payslip_form
+msgid "Standard Pay"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_payroll.report_payslip
+msgid "Start Date"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_payroll.report_payslip
+msgid "Sub Total"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_payroll.report_payslip
+msgid "Taxed Amount"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: code:addons/viin_hr_overtime_payroll/models/res_company.py:0
+#, python-format
+msgid "Taxed Overtime"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: code:addons/viin_hr_overtime_payroll/models/res_company.py:0
+#, python-format
+msgid "Taxed Overtime Work"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model:ir.model.fields,help:viin_hr_overtime_payroll.field_hr_contract__overtime_base_mode
+msgid ""
+"The overtime base mode for overtime pay computation.\n"
+"* Manual Input: you can define any base amount below manually;\n"
+"* Basic Wage: the base amount will be the contract's basic wage;\n"
+"* Gross Salary: the base amount will be the contract's Gross Salary;\n"
+"* Wage Plus Configurable Advantages: the base amount will be the contract's Wage plus the contract's advantages whose templates having Overtime Base Factor enabled;\n"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model:ir.model.fields,help:viin_hr_overtime_payroll.field_hr_overtime_plan_line__payslip_ids
+msgid "The payslips that take care of this entry"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_payroll.view_hr_payslip_form
+msgid "Total Overtime Hours"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_payroll.view_hr_payslip_form
+msgid "Total Overtime Pay"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_payroll.view_hr_payslip_form
+msgid "Total Planned Hours"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_payroll.report_payslip
+msgid "Total:"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_payroll.report_payslip
+msgid "Untaxed Amount"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: code:addons/viin_hr_overtime_payroll/models/res_company.py:0
+#, python-format
+msgid "Untaxed Overtime"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: code:addons/viin_hr_overtime_payroll/models/res_company.py:0
+#, python-format
+msgid "Untaxed Overtime Work"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model:ir.model.fields.selection,name:viin_hr_overtime_payroll.selection__hr_contract__overtime_base_mode__wage_and_advantages
+msgid "Wage Plus Configurable Advantages"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_payroll.view_hr_payslip_form
+msgid ""
+"You can access these values of the overtime entries in salary\n"
+"\t\t\t\t\trule's Python code as:"
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: code:addons/viin_hr_overtime_payroll/models/hr_contract.py:0
+#, python-format
+msgid ""
+"You may not be able to cancel the contract %s while its corresponding "
+"overtime plan line %s is still referred by the payslip '%s' which is not in "
+"draft state. Please have the payslip set to draft first."
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: code:addons/viin_hr_overtime_payroll/models/hr_overtime_plan_line.py:0
+#, python-format
+msgid ""
+"You may not be able to delete the overtime plan line %s while it is still "
+"referred by the payslip '%s' which is not in draft state. Please have the "
+"payslip set to draft first."
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: code:addons/viin_hr_overtime_payroll/models/hr_overtime_plan.py:0
+#, python-format
+msgid ""
+"You may not be able to resolve mismatch contract while overtime plan line %s"
+" still referred by the payslip '%s' which is not in draft state. Please have"
+" the payslip set to draft first."
+msgstr ""
+
+#. module: viin_hr_overtime_payroll
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_payroll.view_hr_payslip_form
+msgid ""
+"either\n"
+"\t\t\t\t\t\t\t<code>payslip.overtime_plan_line_ids</code>"
+msgstr ""

@@ -1,0 +1,59 @@
+<odoo>
+	<data>
+
+		<record id="approval_request_view_form" model="ir.ui.view">
+	        <field name="name">approval.request.form</field>
+	        <field name="model">approval.request</field>
+	        <field name="inherit_id" ref="to_approvals.approval_request_view_form" />
+	        <field name="arch" type="xml">
+                <xpath expr="//div[@name='button_box']" position="inside">
+                     <button name="action_view_procurement_groups"
+                        type="object" icon="fa-support" class="oe_stat_button"
+                        groups="stock.group_stock_user"
+                        attrs="{'invisible': ['|', ('procurement_group_ids', '=', False), ('type', '!=', 'stock_allocation')]}">
+	                    Procurement
+                      </button>
+                      <button name="action_view_stock_pickings" type="object"
+                        icon="fa-truck" class="oe_stat_button"
+                        groups="stock.group_stock_user"
+                        attrs="{'invisible': ['|', ('picking_count', '=', 0), ('type', '!=', 'stock_allocation')]}">
+                        <field name="picking_count" widget="statinfo"
+                            string="Picking" />
+                      </button>
+                </xpath>
+	            <xpath expr="//page[@name='approval_user']" position="before">
+	                <page name="stock_allocation" string="Stock Allocation" attrs="{'invisible': [('type', '!=', 'stock_allocation')]}">
+	                    <group>
+	                        <group>
+	                        	<field name="procurement_group_ids" invisible="1" />
+	                            <field name="warehouse_id" attrs="{'required': [('type', '=', 'stock_allocation')]}" />
+	                        </group>
+	                        <group>
+	                            <field name="scheduled_date" attrs="{'required': [('type', '=', 'stock_allocation')]}" />
+	                        </group>
+	                    </group>
+	                    <field name="allocation_request_line_ids" context="{'default_src_warehouse_id)]': warehouse_id}">
+	                        <tree editable="bottom" context="{'default_src_warehouse_id)]': warehouse_id}">
+	                            <field name="product_id" />
+	                            <field name="description" />
+	                            <field name="quantity" />
+	                            <field name="category_uom_id" invisible="1" />
+	                            <field name="warehouse_source_id" invisible="1" />
+	                            <field name="uom_id" />
+	                            <field name="warehouse_id" required="1" />
+	                            <field name="line_state" />
+	                            <field name="company_id" invisible="1" />
+                                <button name="action_refuse" type="object" string="Refuse"
+                                    attrs="{'invisible':[('line_state', 'not in', ['confirm', 'validate'])], 'column_invisible': [('parent.can_refuse', '=', False)]}"
+                                    class="btn btn-sm btn-primary" />
+                                <button name="action_cancel" type="object" string="Cancel"
+                                    attrs="{'invisible':[('line_state', 'not in', ['refuse', 'validate'])], 'column_invisible': [('parent.can_cancel', '=', False)]}"
+                                    class="btn btn-sm btn-primary" />
+	                        </tree>
+	                    </field>
+	                </page>
+	            </xpath>
+	        </field>
+	    </record>
+	</data>
+</odoo>

@@ -1,0 +1,2333 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_odoo_module
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-19 06:08+0000\n"
+"PO-Revision-Date: 2021-04-19 06:08+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.portal_my_apps
+msgid "# of Downloads"
+msgstr ""
+
+#. module: to_odoo_module
+#: code:addons/to_odoo_module/models/odoo_module_version.py:0
+#, python-format
+msgid "%s [%s] By %s"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_search_view
+msgid "10.0"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_search_view
+msgid "11.0"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_search_view
+msgid "12.0"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_search_view
+msgid "8.0"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_search_view
+msgid "9.0"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_kanban_view
+msgid ""
+"<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\tDownloads:"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.portal_my_apps
+msgid ""
+"<i class=\"fa fa-download\"/>\n"
+"\t\t\t\t\t\t\t\t\t\t\tDownload"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_kanban_view
+msgid ""
+"<i class=\"fa fa-ellipsis-v\" aria-label=\"Selection\" role=\"img\" "
+"title=\"Selection\"/>"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.res_config_settings_view_form
+msgid "<span>days</span>"
+msgstr ""
+
+#. module: to_odoo_module
+#: code:addons/to_odoo_module/models/odoo_module.py:0
+#, python-format
+msgid "A Module cannot belong to more than one git repository"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model,name:to_odoo_module.model_abstract_odoo_module_version_public_download_url
+msgid "Abstract Odoo Module Version Public Download URL"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__message_needaction
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__message_needaction
+#: model:ir.model.fields,field_description:to_odoo_module.field_software_author__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__active
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__active
+msgid "Active"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__activity_ids
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__activity_exception_decoration
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__activity_state
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_wizard_odoo_module_version_download__zip_all
+msgid "All Zipped"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__zip_all_filename
+#: model:ir.model.fields,field_description:to_odoo_module.field_wizard_odoo_module_version_download__zip_all_filename
+msgid "All Zipped File Name"
+msgstr ""
+
+#. module: to_odoo_module
+#: code:addons/to_odoo_module/models/odoo_module_version.py:0
+#, python-format
+msgid "An Odoo Version is required to create a new Odoo Module Version!"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.portal_my_apps
+msgid "App Icon"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_git_repository__app_product_templates_count
+msgid "App Product Templates Count"
+msgstr ""
+
+#. module: to_odoo_module
+#: code:addons/to_odoo_module/models/git_branch.py:0
+#, python-format
+msgid ""
+"App Products should not be generated when the branch is either Odoo EE "
+"source base or Odoo CE source base."
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model,name:to_odoo_module.model_ir_module_category
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__application
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_search_view
+msgid "Application"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.portal_my_home_menu_app
+msgid "Apps"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.actions.act_window,name:to_odoo_module.wizard_odoo_module_version_download_action
+msgid "Apps Download"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.wizard_odoo_module_version_download_form_view
+msgid ""
+"Apps Only\n"
+"\t\t\t\t\t\t\t<br/>"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.git_repository_view_form
+msgid "Apps Products"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.ui.menu,name:to_odoo_module.root_odoo_module_menu
+msgid "Apps Store"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.wizard_odoo_module_version_download_form_view
+msgid ""
+"Apps and their Dependencies\n"
+"\t\t\t\t\t\t\t<br/>"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.wizard_odoo_module_version_download_form_view
+msgid "Apps are ready for your downloads:"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_form_view
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_form_view
+msgid "Archived"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__message_attachment_count
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__message_attachment_count
+#: model:ir.model.fields,field_description:to_odoo_module.field_software_author__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.portal_my_apps
+msgid "Author"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.software_author_form_view
+msgid "Author Name"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__author_ids
+#: model:ir.ui.menu,name:to_odoo_module.software_author_menu
+msgid "Authors"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__authors
+msgid "Authors List"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_account_move__auto_load_app_dependencies
+msgid "Auto Load Apps Dependencies"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_git_branch__auto_module_discovery
+#: model:ir.model.fields,field_description:to_odoo_module.field_wizard_git_url_add__auto_module_discovery
+msgid "Auto Modules Discovery"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__auto_install
+msgid "Auto-install"
+msgstr ""
+
+#. module: to_odoo_module
+#: code:addons/to_odoo_module/models/product_product.py:0
+#, python-format
+msgid "By %s"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version_download_stat__by_internal_user
+msgid "By Internal User"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.filters,name:to_odoo_module.filter_odoo_module
+msgid "By Odoo Module"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.filters,name:to_odoo_module.filter_odoo_module_version
+msgid "By Odoo Module Version"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__by_third_party
+msgid "By Third Party"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__can_download
+msgid "Can Download"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.wizard_odoo_module_version_download_form_view
+msgid "Cancel"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__ir_module_category_id
+msgid "Category"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.wizard_odoo_module_version_public_download_form_view
+msgid "Close"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model,name:to_odoo_module.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__company_id
+msgid "Company"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__company_currency_id
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__company_currency_id
+msgid "Company Currency"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model,name:to_odoo_module.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.ui.menu,name:to_odoo_module.configuration_menu
+msgid "Configuration"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.actions.act_window,name:to_odoo_module.action_odoo_app_settings
+msgid "Configure Odoo Apps Management"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model,name:to_odoo_module.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: to_odoo_module
+#: code:addons/to_odoo_module/models/git_branch.py:0
+#: code:addons/to_odoo_module/models/git_branch.py:0
+#, python-format
+msgid ""
+"Could not find an Odoo Version that matches the git branch name '%s'. The "
+"branch name for Odoo Apps Discovery must be in the same form as the one of "
+"Odoo's versions (e.g. 9.0, 10.0, 11.0, 12.0, etc)"
+msgstr ""
+
+#. module: to_odoo_module
+#: code:addons/to_odoo_module/models/odoo_module_version.py:0
+#, python-format
+msgid "Could not find or create a new product for Odoo Module Version"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.actions.act_window,help:to_odoo_module.software_author_action
+msgid "Create a new Author"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.actions.act_window,help:to_odoo_module.odoo_module_action
+#: model_terms:ir.actions.act_window,help:to_odoo_module.odoo_module_version_action
+msgid "Create a new Odoo module"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__create_uid
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__create_uid
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version_download_stat__create_uid
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version_image__create_uid
+#: model:ir.model.fields,field_description:to_odoo_module.field_software_author__create_uid
+#: model:ir.model.fields,field_description:to_odoo_module.field_wizard_odoo_module_version_download__create_uid
+#: model:ir.model.fields,field_description:to_odoo_module.field_wizard_odoo_module_version_public_download__create_uid
+#: model:ir.model.fields,field_description:to_odoo_module.field_wizard_odoo_module_version_public_download_url__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__create_date
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__create_date
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version_download_stat__create_date
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version_image__create_date
+#: model:ir.model.fields,field_description:to_odoo_module.field_software_author__create_date
+#: model:ir.model.fields,field_description:to_odoo_module.field_wizard_odoo_module_version_download__create_date
+#: model:ir.model.fields,field_description:to_odoo_module.field_wizard_odoo_module_version_public_download__create_date
+#: model:ir.model.fields,field_description:to_odoo_module.field_wizard_odoo_module_version_public_download_url__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__currency_id
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__price_currency
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__price_currency
+msgid "Currency Price"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_kanban_view
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_kanban_view
+msgid "Currency Price:"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_download_stat_graph_view
+msgid "Date"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_res_company__vendor_app_comm_percent
+#: model:ir.model.fields,field_description:to_odoo_module.field_res_config_settings__vendor_app_comm_percent
+msgid "Default Apps Commission Percentage"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__depending_module_version_ids
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_form_view
+msgid "Dependencies"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.view_move_form
+msgid "Dependency"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__depends
+msgid "Depends"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__description
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_form_view
+msgid "Description"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__description_html
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__description_html
+msgid "Description HTML"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.git_branch_form_view
+msgid "Discover Odoo Modules"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_abstract_odoo_module_version_public_download_url__display_name
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__display_name
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__display_name
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version_download_stat__display_name
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version_image__display_name
+#: model:ir.model.fields,field_description:to_odoo_module.field_software_author__display_name
+#: model:ir.model.fields,field_description:to_odoo_module.field_wizard_odoo_module_version_download__display_name
+#: model:ir.model.fields,field_description:to_odoo_module.field_wizard_odoo_module_version_public_download__display_name
+#: model:ir.model.fields,field_description:to_odoo_module.field_wizard_odoo_module_version_public_download_url__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_download_stat_search_view
+msgid "Download Date"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__download_stat_ids
+msgid "Download Log"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.ui.menu,name:to_odoo_module.download_stat_menu
+msgid "Download Statistics"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_res_company__app_download_token_lifetime
+#: model:ir.model.fields,field_description:to_odoo_module.field_res_config_settings__app_download_token_lifetime
+msgid "Download Token Lifetime"
+msgstr ""
+
+#. module: to_odoo_module
+#: code:addons/to_odoo_module/models/res_company.py:0
+#, python-format
+msgid "Download Token Lifetime must be greater than or equal to zero"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_download_stat_search_view
+msgid "Download User"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_wizard_odoo_module_version_public_download_url__wizard_id
+msgid "Download Wizard"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_form_view
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_form_view
+msgid "Downloads"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_search_view
+msgid "EE Not Required"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__ee_required
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_search_view
+msgid "EE Required"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_kanban_view
+msgid "Edit"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_git_repository__exclude_dependencies_from_repo_ids
+msgid "Exclude Dependencies From"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__external_downloads_count
+msgid "External Downloads"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__filename
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version_image__filename
+#: model:ir.model.fields,field_description:to_odoo_module.field_wizard_odoo_module_version_download__filename
+msgid "File Name"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__message_follower_ids
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__message_follower_ids
+#: model:ir.model.fields,field_description:to_odoo_module.field_software_author__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__message_channel_ids
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__message_channel_ids
+#: model:ir.model.fields,field_description:to_odoo_module.field_software_author__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__message_partner_ids
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__message_partner_ids
+#: model:ir.model.fields,field_description:to_odoo_module.field_software_author__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_search_view
+msgid "Free"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version_download_stat__free_download
+msgid "Free Download"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_download_stat_search_view
+msgid "Free Downloads"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__full_version_str
+msgid "Full Version"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__full_version_str
+msgid ""
+"Full version which is computed by concatenating the Odoo Version and the "
+"Version"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_git_branch__generate_app_products
+#: model:ir.model.fields,field_description:to_odoo_module.field_wizard_git_url_add__generate_app_products
+msgid "Generate App Products"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_kanban_view
+msgid "Get Download URL"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model,name:to_odoo_module.model_git_branch
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__git_branch_id
+msgid "Git Branch"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__git_repository_ids
+msgid "Git Repositories"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model,name:to_odoo_module.model_git_repository
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__git_repository_id
+msgid "Git Repository"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model,name:to_odoo_module.model_wizard_git_url_add
+msgid "Git URL Adding Wizard"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_download_stat_search_view
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_search_view
+msgid "Group By"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__index_html
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_form_view
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_form_view
+msgid "HTML Description"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.module.category,description:to_odoo_module.module_category_odoo_module
+msgid "Help you manage your Odoo Modules/Apps."
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_abstract_odoo_module_version_public_download_url__id
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__id
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__id
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version_download_stat__id
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version_image__id
+#: model:ir.model.fields,field_description:to_odoo_module.field_software_author__id
+#: model:ir.model.fields,field_description:to_odoo_module.field_wizard_odoo_module_version_download__id
+#: model:ir.model.fields,field_description:to_odoo_module.field_wizard_odoo_module_version_public_download__id
+#: model:ir.model.fields,field_description:to_odoo_module.field_wizard_odoo_module_version_public_download_url__id
+msgid "ID"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__activity_exception_icon
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module__activity_exception_icon
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.res_config_settings_view_form
+msgid ""
+"If a positive value is set, download tokens will live\n"
+"\t\t\t\t\t\t\t\t\t\tfor that given days. Otherwise, they will never get expired."
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_git_branch__generate_app_products
+#: model:ir.model.fields,help:to_odoo_module.field_wizard_git_url_add__generate_app_products
+msgid ""
+"If checked, discovering Odoo modules from this branch will also generate app products repectively.\n"
+"Note: no matter this field is enabled or not, app products will NOT be generated if this branch contains either Odoo CE code base or Odoo Enterprise code base"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module__message_needaction
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module__message_unread
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__message_needaction
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__message_unread
+#: model:ir.model.fields,help:to_odoo_module.field_software_author__message_needaction
+#: model:ir.model.fields,help:to_odoo_module.field_software_author__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module__message_has_error
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module__message_has_sms_error
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__message_has_error
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__message_has_sms_error
+#: model:ir.model.fields,help:to_odoo_module.field_software_author__message_has_error
+#: model:ir.model.fields,help:to_odoo_module.field_software_author__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_account_move__auto_load_app_dependencies
+msgid ""
+"If checked, upon on changing of invoice lines, Odoo will check if any Odoo "
+"Module Dependency is needed to load. The dependecies that already bought "
+"before will not be loaded."
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_res_company__dedicated_app_download_token_lifetime
+#: model:ir.model.fields,help:to_odoo_module.field_res_config_settings__dedicated_app_download_token_lifetime
+msgid ""
+"If enabled, download token lifetime will be applied by the Download Token "
+"Lifetime specified below. Otherwise, the global Default Token Lifetime will "
+"be used."
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_git_branch__auto_module_discovery
+#: model:ir.model.fields,help:to_odoo_module.field_wizard_git_url_add__auto_module_discovery
+msgid ""
+"If enabled, scanning this branch will discover Odoo modules in the branch "
+"automatically."
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__active
+msgid ""
+"If unchecked, it will allow you to hide the odoo module version without "
+"removing it."
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module__active
+msgid ""
+"If unchecked, it will allow you to hide the odoo module without removing it."
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__image_1920
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version_image__image
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_kanban_view
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_form_view
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_kanban_view
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.product_template_form_view
+msgid "Image"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__image_1024
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__image_1024
+msgid "Image 1024"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__image_128
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__image_128
+#: model:ir.model.fields,field_description:to_odoo_module.field_software_author__image_128
+msgid "Image 128"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__image_256
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__image_256
+#: model:ir.model.fields,field_description:to_odoo_module.field_software_author__image_256
+msgid "Image 256"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__image_512
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__image_512
+#: model:ir.model.fields,field_description:to_odoo_module.field_software_author__image_512
+msgid "Image 512"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_image_form_views
+msgid "Image Name"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__icon
+msgid ""
+"Image here will be resized as a 64x64px image automatically. If this module "
+"is fetched from a Git Branch, the image static/description/img/icon.png will"
+" be filled here"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__image_ids
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_form_view
+msgid "Images"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__depended_module_version_ids
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_form_view
+msgid "Inheritances"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__installable
+msgid "Installable"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_download_stat_search_view
+msgid "Internal User Downloads"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model,name:to_odoo_module.model_account_invoice_report
+msgid "Invoices Statistics"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__message_is_follower
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__message_is_follower
+#: model:ir.model.fields,field_description:to_odoo_module.field_software_author__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_product_product__is_odoo_app
+#: model:ir.model.fields,field_description:to_odoo_module.field_product_template__is_odoo_app
+msgid "Is Odoo App"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__is_latest_version
+msgid "Is the latest version"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model,name:to_odoo_module.model_account_move
+msgid "Journal Entries"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model,name:to_odoo_module.model_account_move_line
+msgid "Journal Item"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_abstract_odoo_module_version_public_download_url____last_update
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module____last_update
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version____last_update
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version_download_stat____last_update
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version_image____last_update
+#: model:ir.model.fields,field_description:to_odoo_module.field_software_author____last_update
+#: model:ir.model.fields,field_description:to_odoo_module.field_wizard_odoo_module_version_download____last_update
+#: model:ir.model.fields,field_description:to_odoo_module.field_wizard_odoo_module_version_public_download____last_update
+#: model:ir.model.fields,field_description:to_odoo_module.field_wizard_odoo_module_version_public_download_url____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_git_branch__last_modules_discovery
+msgid "Last Module Discovery"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__write_uid
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__write_uid
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version_download_stat__write_uid
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version_image__write_uid
+#: model:ir.model.fields,field_description:to_odoo_module.field_software_author__write_uid
+#: model:ir.model.fields,field_description:to_odoo_module.field_wizard_odoo_module_version_download__write_uid
+#: model:ir.model.fields,field_description:to_odoo_module.field_wizard_odoo_module_version_public_download__write_uid
+#: model:ir.model.fields,field_description:to_odoo_module.field_wizard_odoo_module_version_public_download_url__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__write_date
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__write_date
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version_download_stat__write_date
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version_image__write_date
+#: model:ir.model.fields,field_description:to_odoo_module.field_software_author__write_date
+#: model:ir.model.fields,field_description:to_odoo_module.field_wizard_odoo_module_version_download__write_date
+#: model:ir.model.fields,field_description:to_odoo_module.field_wizard_odoo_module_version_public_download__write_date
+#: model:ir.model.fields,field_description:to_odoo_module.field_wizard_odoo_module_version_public_download_url__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__odoo_module_version_id
+msgid "Latest Version"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_search_view
+msgid "Latest Versions"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__license_id
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_search_view
+msgid "License"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model,name:to_odoo_module.model_product_license_version
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__license_version_id
+msgid "License Version"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__license_version_ids
+msgid "Licenses"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__included_dependency_ids
+msgid "List of None Odoo's standard Applications on which this depends"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__required_standard_odoo_app_ids
+msgid "List of Odoo's standard Applications on which this depends"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__depends
+msgid ""
+"List of depending modules (name's comma separator) on which this module "
+"depends"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__recursive_depending_module_version_ids
+msgid ""
+"List of module versions on which this module version recursively depends"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__recursive_depended_module_version_ids
+msgid ""
+"List of module versions that depends on this module version recursively"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__depending_module_version_ids
+msgid ""
+"List of modules on which this module directly depends. The list will be "
+"generated based on the values of the Depends field upon create/update"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__depended_module_version_ids
+msgid "List of modules that directly depends on this module"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__other_version_ids
+msgid "List of the Odoo Module Versions of the same Odoo Module"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__live_test_url
+msgid "Live Demo"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__message_main_attachment_id
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__message_main_attachment_id
+#: model:ir.model.fields,field_description:to_odoo_module.field_software_author__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__image_1920
+msgid "Main Screenshot"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:res.groups,name:to_odoo_module.odoo_module_manager
+msgid "Manager"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__message_has_error
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__message_has_error
+#: model:ir.model.fields,field_description:to_odoo_module.field_software_author__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__message_ids
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__message_ids
+#: model:ir.model.fields,field_description:to_odoo_module.field_software_author__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_res_company__vendor_app_min_payout
+#: model:ir.model.fields,field_description:to_odoo_module.field_res_config_settings__vendor_app_min_payout
+msgid "Min. Payout"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_download_stat_search_view
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_search_view
+msgid "Module"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_form_view
+msgid "Module Name"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_form_view
+msgid "Module Source Code Zip Archive"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_download_stat_search_view
+msgid "Module Version"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__icon
+msgid "Module Version Icon"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_form_view
+msgid "Module Version Images"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.software_author_form_view
+msgid "Module Versions"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_product_license__odoo_module_versions_count
+#: model:ir.model.fields,field_description:to_odoo_module.field_product_license_version__odoo_module_versions_count
+#: model:ir.model.fields,field_description:to_odoo_module.field_software_author__odoo_module_versions_count
+msgid "Module Versions Count"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.ui.menu,name:to_odoo_module.odoo_module_main_menu
+#: model:ir.ui.menu,name:to_odoo_module.odoo_module_menu
+msgid "Modules"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_git_branch__modules_discovered_once
+msgid "Modules Discovered"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.ui.menu,name:to_odoo_module.odoo_module_version_menu
+msgid "Modules Versions"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.portal_my_home_apps
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.portal_my_home_menu_app
+msgid "My Purchased Apps"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__name
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__name
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version_image__name
+#: model:ir.model.fields,field_description:to_odoo_module.field_software_author__name
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_form_view
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.portal_my_apps
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.software_author_form_view
+msgid "Name"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.constraint,message:to_odoo_module.constraint_odoo_module_version_check_price_currency_nagative
+msgid "Negative Currency Price makes no sense!"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__activity_date_deadline
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__activity_summary
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__activity_type_id
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.actions.act_window,help:to_odoo_module.odoo_module_version_download_stat_action
+msgid "No download statistics."
+msgstr ""
+
+#. module: to_odoo_module
+#: code:addons/to_odoo_module/models/odoo_module_version.py:0
+#, python-format
+msgid ""
+"No product attribute value that matches the Odoo version %s were found! "
+"Please create a new product attribute value that matches this Odoo version."
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.view_account_invoice_report_search
+msgid "Non Odoo Apps"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_search_view
+msgid "Non-Standard Odoo Modules"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_search_view
+msgid "None Application"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.product_template_search_view
+msgid "Not Odoo Apps"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__message_needaction_counter
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__message_needaction_counter
+#: model:ir.model.fields,field_description:to_odoo_module.field_software_author__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__message_has_error_counter
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__message_has_error_counter
+#: model:ir.model.fields,field_description:to_odoo_module.field_software_author__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module__message_needaction_counter
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__message_needaction_counter
+#: model:ir.model.fields,help:to_odoo_module.field_software_author__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module__message_has_error_counter
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__message_has_error_counter
+#: model:ir.model.fields,help:to_odoo_module.field_software_author__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module__message_unread_counter
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__message_unread_counter
+#: model:ir.model.fields,help:to_odoo_module.field_software_author__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_account_move_line__odoo_app_dependency
+msgid "Odoo App Dependencies"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.wizard_odoo_module_version_public_download_form_view
+msgid "Odoo App Public Download URL"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.git_branch_form_view
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.git_repository_view_form
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.product_template_form_view
+msgid "Odoo App Versions"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.module.category,name:to_odoo_module.module_category_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.git_repository_view_form
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.portal_my_apps
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.product_template_only_form_view
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.product_template_search_view
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.view_account_invoice_report_search
+msgid "Odoo Apps"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.wizard_odoo_module_version_download_form_view
+msgid "Odoo Apps Download Wizard"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.res_config_settings_view_form
+msgid "Odoo Apps Management"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.res_config_settings_view_form
+msgid "Odoo Apps Store"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:software.author,name:to_odoo_module.software_author_oca
+msgid "Odoo Community Association (OCA)"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model,name:to_odoo_module.model_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_account_invoice_report__odoo_module_id
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__module_id
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version_download_stat__odoo_module_id
+#: model:ir.model.fields,field_description:to_odoo_module.field_product_product__odoo_module_id
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_tree_view
+msgid "Odoo Module"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_form_view
+msgid "Odoo Module Form"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_product_product__odoo_module_version_image_ids
+#: model:ir.model.fields,field_description:to_odoo_module.field_product_template__odoo_module_version_image_ids
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.product_template_form_view
+msgid "Odoo Module Images"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model,name:to_odoo_module.model_odoo_module_version
+#: model:ir.model.fields,field_description:to_odoo_module.field_abstract_odoo_module_version_public_download_url__odoo_module_version_id
+#: model:ir.model.fields,field_description:to_odoo_module.field_account_invoice_report__odoo_module_version_id
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version_download_stat__odoo_module_version_id
+#: model:ir.model.fields,field_description:to_odoo_module.field_product_product__odoo_module_version_id
+#: model:ir.model.fields,field_description:to_odoo_module.field_wizard_odoo_module_version_public_download__odoo_module_version_id
+#: model:ir.model.fields,field_description:to_odoo_module.field_wizard_odoo_module_version_public_download_url__odoo_module_version_id
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_tree_embed_view
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_tree_view
+msgid "Odoo Module Version"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.actions.act_window,name:to_odoo_module.odoo_module_version_download_stat_action
+#: model:ir.model,name:to_odoo_module.model_odoo_module_version_download_stat
+msgid "Odoo Module Version Download Statistics"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_download_stat_graph_view
+msgid "Odoo Module Version Downloads Graph"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_download_stat_pivot_view
+msgid "Odoo Module Version Downloads Pivot"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_form_view
+msgid "Odoo Module Version Form"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model,name:to_odoo_module.model_odoo_module_version_image
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_image_form_views
+msgid "Odoo Module Version Image"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.actions.act_window,name:to_odoo_module.odoo_module_version_action
+#: model:ir.model.fields,field_description:to_odoo_module.field_account_move__odoo_module_version_ids
+#: model:ir.model.fields,field_description:to_odoo_module.field_account_move_line__odoo_module_version_id
+#: model:ir.model.fields,field_description:to_odoo_module.field_git_branch__odoo_module_version_ids
+#: model:ir.model.fields,field_description:to_odoo_module.field_git_repository__odoo_module_version_ids
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__odoo_module_version_ids
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_version__odoo_module_versions
+#: model:ir.model.fields,field_description:to_odoo_module.field_product_license__odoo_module_version_ids
+#: model:ir.model.fields,field_description:to_odoo_module.field_product_license_version__odoo_module_version_ids
+#: model:ir.model.fields,field_description:to_odoo_module.field_product_product__odoo_module_version_ids
+#: model:ir.model.fields,field_description:to_odoo_module.field_product_template__odoo_module_version_ids
+#: model:ir.model.fields,field_description:to_odoo_module.field_software_author__odoo_module_version_ids
+#: model:ir.model.fields,field_description:to_odoo_module.field_wizard_odoo_module_version_download__module_ids
+msgid "Odoo Module Versions"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_account_move__odoo_module_versions_count
+#: model:ir.model.fields,field_description:to_odoo_module.field_git_branch__odoo_module_versions_count
+#: model:ir.model.fields,field_description:to_odoo_module.field_git_repository__odoo_module_versions_count
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__odoo_module_versions_count
+#: model:ir.model.fields,field_description:to_odoo_module.field_product_product__odoo_module_versions_count
+#: model:ir.model.fields,field_description:to_odoo_module.field_product_template__odoo_module_versions_count
+msgid "Odoo Module Versions Count"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.actions.act_window,name:to_odoo_module.odoo_module_action
+#: model:ir.model.fields,field_description:to_odoo_module.field_git_repository__odoo_module_ids
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_version__odoo_module_ids
+#: model:ir.model.fields,field_description:to_odoo_module.field_product_product__odoo_module_ids
+#: model:ir.model.fields,field_description:to_odoo_module.field_product_template__odoo_module_ids
+msgid "Odoo Modules"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_git_repository__odoo_modules_count
+#: model:ir.model.fields,field_description:to_odoo_module.field_product_product__odoo_modules_count
+#: model:ir.model.fields,field_description:to_odoo_module.field_product_template__odoo_modules_count
+msgid "Odoo Modules Count"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:software.author,name:to_odoo_module.software_author_odoo_sa
+msgid "Odoo S.A."
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model,name:to_odoo_module.model_odoo_version
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__odoo_version_id
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_search_view
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.portal_my_apps
+msgid "Odoo Version"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__odoo_version_ids
+#: model:ir.ui.menu,name:to_odoo_module.menu_odoo_version
+msgid "Odoo Versions"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.wizard_odoo_module_version_download_form_view
+msgid "Ok"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__old_technical_name
+msgid "Old Technical Name"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_form_view
+msgid "Other Info"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__other_version_ids
+msgid "Other Versions"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_search_view
+msgid "Paid"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_download_stat_search_view
+msgid "Paid Downloads"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_res_partner__paid_odoo_app_product_ids
+#: model:ir.model.fields,field_description:to_odoo_module.field_res_users__paid_odoo_app_product_ids
+msgid "Paid Odoo App Products"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.view_partner_form
+msgid "Paid Odoo App Versions"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_res_partner__paid_odoo_module_version_ids
+#: model:ir.model.fields,field_description:to_odoo_module.field_res_users__paid_odoo_module_version_ids
+msgid "Paid Odoo Module Versions"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_ir_module_category__parent_id
+msgid "Parent Application"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_software_author__partner_id
+msgid "Partner"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__source_path
+msgid "Path to source code fetched by Git"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__old_technical_name
+msgid ""
+"Please specify the old technical name if this version's has changed. Please "
+"also make sure that the key 'old_technical_name' in the manifest file of the"
+" module source code has its proper value."
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__price
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__price
+msgid "Price"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_kanban_view
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_kanban_view
+msgid "Price:"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.wizard_odoo_module_version_download_form_view
+msgid "Proceed"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model,name:to_odoo_module.model_product_product
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__product_id
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version_download_stat__product_id
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version_image__product_id
+msgid "Product"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model,name:to_odoo_module.model_product_license
+msgid "Product License"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model,name:to_odoo_module.model_product_template
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__product_tmpl_id
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__product_tmpl_id
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version_download_stat__product_tmpl_id
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version_image__product_tmpl_id
+msgid "Product Template"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__product_id
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version_download_stat__product_id
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version_image__product_id
+msgid ""
+"Product for which this module version presents for accounting integration. "
+"Do not fill it if you don't sell this module (e.g. an Odoo standard module)"
+msgstr ""
+
+#. module: to_odoo_module
+#: code:addons/to_odoo_module/models/odoo_module_version.py:0
+#, python-format
+msgid ""
+"Programming Error! No Git Branch is passed into the context for the method "
+"`_create_odoo_module_if_not_exists()`"
+msgstr ""
+
+#. module: to_odoo_module
+#: code:addons/to_odoo_module/models/odoo_module_version.py:0
+#, python-format
+msgid ""
+"Programming Error! No Name is passed into the context for the method "
+"`_create_odoo_module_if_not_exists()`"
+msgstr ""
+
+#. module: to_odoo_module
+#: code:addons/to_odoo_module/models/odoo_module_version.py:0
+#, python-format
+msgid ""
+"Programming Error! No Odoo Version is passed into the context for the method"
+" `_create_odoo_module_if_not_exists()`"
+msgstr ""
+
+#. module: to_odoo_module
+#: code:addons/to_odoo_module/models/odoo_module_version.py:0
+#, python-format
+msgid ""
+"Programming Error! No Technical Name is passed into the context for the "
+"method `_create_odoo_module_if_not_exists()`"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_wizard_odoo_module_version_download__download_url_ids
+msgid "Public Download URLs"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_abstract_odoo_module_version_public_download_url__public_download_url
+#: model:ir.model.fields,field_description:to_odoo_module.field_wizard_odoo_module_version_public_download__public_download_url
+#: model:ir.model.fields,field_description:to_odoo_module.field_wizard_odoo_module_version_public_download_url__public_download_url
+msgid "Public Download Url"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__recursive_price_currency
+msgid "Recursive Currency Price"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__recursive_depending_module_version_ids
+msgid "Recursive Dependencies"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__recursive_depended_module_version_ids
+msgid "Recursive Inheritances"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__recursive_price
+msgid "Recursive Price"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.actions.server,name:to_odoo_module.action_server_odoo_module_rotate_token
+#: model:ir.actions.server,name:to_odoo_module.action_server_odoo_module_version_rotate_token
+msgid "Regenerate Tokens"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_product_template__odoo_module_id
+msgid "Related Odoo Module"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version_image__module_version_id
+msgid "Related Odoo Module Version"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.ui.menu,name:to_odoo_module.reports_main_menu
+msgid "Reports"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__git_repository_id
+msgid "Repository"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__included_dependency_ids
+msgid "Required None Standard Apps"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__required_standard_odoo_app_ids
+msgid "Required Standard Apps"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__activity_user_id
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_account_move__reversed_entry_ids
+msgid "Reversed Entries"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_form_view
+msgid "Rotate Token"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__rotating_token_id
+msgid "Rotating Token"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__description
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_form_view
+msgid "Rst. Description"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__doc_rst
+msgid "Rst. Doc"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_form_view
+msgid "Rst. Documentation"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__message_has_sms_error
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__message_has_sms_error
+#: model:ir.model.fields,field_description:to_odoo_module.field_software_author__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_search_view
+msgid "Search Odoo Module"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_search_view
+msgid "Search Odoo Module Version"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_download_stat_search_view
+msgid "Search Odoo Module Version Download Statistics"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.software_author_search_view
+msgid "Search Software Author"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__access_token
+msgid "Security Token"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_form_view
+msgid "Select a Module"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.software_author_form_view
+msgid "Select a corresponding partner"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.ui.menu,name:to_odoo_module.menu_odoo_app_settings
+msgid "Settings"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_download_stat_search_view
+msgid "Show Download statistics made by internal users"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_search_view
+msgid "Show module versions that do NOT require Odoo Enterprise Editions"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_search_view
+msgid "Show module versions that require Odoo Enterprise Editions"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_search_view
+msgid ""
+"Show non standard Odoo modules only. The modules that come along with either"
+" Odoo CE or Odoo EE will be excluded."
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_search_view
+msgid ""
+"Show only standard Odoo modules that come along with either Odoo CE or Odoo "
+"EE."
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.software_author_form_view
+msgid "Show the Odoo Module Versions related to this author"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_search_view
+msgid ""
+"Show the latest versions only. For example, only the version for Odoo 12.0 "
+"will be shown if the module has three versions for Odoo 10.0, 11.0, 12.0"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_form_view
+msgid "Show the versions of this module"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model,name:to_odoo_module.model_software_author
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.software_author_form_view
+msgid "Software Author"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.actions.act_window,name:to_odoo_module.software_author_action
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.software-author_tree_view
+msgid "Software Authors"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_res_partner__paid_odoo_module_versions_count
+#: model:ir.model.fields,field_description:to_odoo_module.field_res_users__paid_odoo_module_versions_count
+msgid "Sold Apps Count"
+msgstr ""
+
+#. module: to_odoo_module
+#: code:addons/to_odoo_module/models/git_branch.py:0
+#, python-format
+msgid ""
+"Sorry, you don't have the permission for this operation. This operation is allowed for the group: \n"
+"\t - Odoo Apps/User"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__source_path
+msgid "Source Path"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__is_standard_enterprise_module
+msgid "Standard Enterprise Module"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__is_standard_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_wizard_odoo_module_version_public_download__is_standard_odoo_module
+msgid "Standard Odoo Module"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_search_view
+msgid "Standard Odoo Modules"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_wizard_odoo_module_version_download__state
+msgid "State"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module__activity_state
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__summary
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__summary
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_form_view
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.portal_my_apps
+msgid "Summary"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__support
+msgid "Support"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__technical_name
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__technical_name
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_form_view
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_form_view
+msgid "Technical Name"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__zip_all_filename
+#: model:ir.model.fields,help:to_odoo_module.field_wizard_odoo_module_version_download__zip_all_filename
+msgid "Technical field for forming the file name of the All Zipped"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version_image__filename
+msgid "Technical field for forming the file name of the Image"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__filename
+#: model:ir.model.fields,help:to_odoo_module.field_wizard_odoo_module_version_download__filename
+msgid "Technical field for forming the file name of the Zipped Source Code"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__authors
+msgid "Technical field that store list of authors fetched from Git"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__can_download
+msgid ""
+"Technical field to indicate if this module version is downloadable by the "
+"current external user. This has no affect on internal users"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__rotating_token_id
+msgid ""
+"Technical field to store a rotating token record for access token "
+"computation"
+msgstr ""
+
+#. module: to_odoo_module
+#: code:addons/to_odoo_module/models/odoo_module.py:0
+#, python-format
+msgid ""
+"The Odoo Module %s is trying to create relation with the product template %s"
+" which is already in relation with the Odoo Module %s"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_product_product__odoo_module_id
+msgid "The Odoo module that is associated with this product"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module__odoo_version_ids
+msgid ""
+"The Odoo versions supported by this module. The versions here is "
+"automatically computed based on the module versions' Odoo versions related "
+"to this module"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__author_ids
+msgid "The author(s) of this module version"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.wizard_odoo_module_version_public_download_form_view
+msgid ""
+"The below URL allows public users to download the app and its\n"
+"\t\t\t\t\t\tdependencies without login."
+msgstr ""
+
+#. module: to_odoo_module
+#: code:addons/to_odoo_module/models/git_branch.py:0
+#, python-format
+msgid ""
+"The branch '%s' of the repository '%s' is not checked out. Please do "
+"checkout first!"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__company_id
+msgid "The company to which the module version belong."
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module__external_downloads_count
+msgid "The external downloads count of all the version of this module"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__git_branch_id
+msgid ""
+"The git branch that controls the source code of this Odoo module version"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_res_company__app_download_token_lifetime
+#: model:ir.model.fields,help:to_odoo_module.field_res_config_settings__app_download_token_lifetime
+msgid ""
+"The lifetime (in days) of app download tokens. Leave it zero for permanent "
+"tokens"
+msgstr ""
+
+#. module: to_odoo_module
+#: code:addons/to_odoo_module/wizard/wizard_odoo_module_version_download.py:0
+#, python-format
+msgid ""
+"The module version %s has no git branch specified, then there is no thing to"
+" download. Please exclude it from your download."
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module__currency_id
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__currency_id
+msgid ""
+"The original currency that is input by either the user or being fetch from "
+"the git repository."
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module__price_currency
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__price_currency
+msgid ""
+"The original price (in the Currency specified below) that is input by either"
+" the user or being fetch from the git repository."
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__vendor_id
+msgid "The partner who holds the copyright of this Odoo Module Version"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module__price
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__price
+msgid "The price that is converted to the company's currency"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module__product_tmpl_id
+msgid ""
+"The product template for which this module presents for accounting "
+"integration. Do not fill it if you don't sell this module (e.g. an Odoo "
+"standard module)"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_product_product__odoo_module_version_id
+msgid "The sole Odoo Module Version of this product"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__zipped_source_code
+msgid ""
+"The source code of the Odoo Module version in zip archive. If you have a git"
+" branch, you do NOT need to upload your module here"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_wizard_odoo_module_version_download__file
+msgid "The source code of the selected Odoo Module Versions in zip archive"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_wizard_odoo_module_version_download__zip_all
+msgid ""
+"The source code of the selected Odoo Module versions and their dependencies "
+"in zip archive"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__recursive_price_currency
+msgid ""
+"The total currency price of the module version including its recursive "
+"dependencies' price"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module__total_downloads_count
+msgid "The total downloads count of all the version of this module"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__recursive_price
+msgid ""
+"The total price of the module version including its recursive dependencies' "
+"price"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:res.groups,comment:to_odoo_module.odoo_module_user
+msgid ""
+"The user will have access rights to manage Odoo\n"
+"\t\t\t\tmodules, product licenses.\n"
+"\t\t\t"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:res.groups,comment:to_odoo_module.odoo_module_manager
+msgid ""
+"The user will have full access rights to the Odoo\n"
+"\t\t\t\tApps Management application.\n"
+"\t\t\t"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__version
+msgid ""
+"The version of the module, which is also declared in the module's "
+"__manifest__.py"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.portal_my_apps
+msgid "There are currently no Odoo Apps for your account."
+msgstr ""
+
+#. module: to_odoo_module
+#: code:addons/to_odoo_module/models/odoo_module.py:0
+#, python-format
+msgid ""
+"There is an error during latest version finding for the module %s. Here is the details:\n"
+"%s"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__is_standard_enterprise_module
+msgid ""
+"This field is to indicate if the module version is a standard Odoo module "
+"that is delivered in Odoo Enterprise source base."
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__is_standard_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_wizard_odoo_module_version_public_download__is_standard_odoo_module
+msgid ""
+"This field is to indicate if the module version is a standard Odoo module "
+"that is delivered in Odoo source base."
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__ee_required
+msgid ""
+"This field is to indicate if the module version requires Odoo Enterprise "
+"Edition"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_product_product__is_odoo_app
+#: model:ir.model.fields,help:to_odoo_module.field_product_template__is_odoo_app
+msgid "This field is to indicate if this product represents Odoo Apps"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_account_move_line__odoo_app_dependency
+msgid ""
+"This field is to indicate that the line is added as a dependency for other "
+"lines"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__description
+msgid ""
+"This field stores the content of the description key in the manifest file of"
+" the module and will be updated automatically each time the corresponding is"
+" discovered for Odoo modules"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__doc_rst
+msgid ""
+"This field stores the content of the document file (if exists in the "
+"module's doc/index.rst. This will be updated automatically each time the "
+"corresponding is discovered for Odoo modules"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__index_html
+msgid ""
+"This field stores the content of the index.html which is stored at the "
+"module's 'static/description/index.html' and will be updated automatically "
+"each time the corresponding is discovered for Odoo modules."
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version_download_stat__free_download
+msgid ""
+"This is True when the price is zero AND download is made by an external user"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version_download_stat__by_internal_user
+msgid "This marks if the download was done by an internal user"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_product_product__odoo_module_version_ids
+msgid "This never stores more than one Odoo module version"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_git_branch__modules_discovered_once
+msgid ""
+"This technical field is to indicate if this branch was discovered for Odoo "
+"modules"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_git_branch__last_modules_discovery
+msgid ""
+"This technical field is to indicate the recent date and time at which the "
+"branch was discovered for Odoo modules"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_form_view
+msgid ""
+"This will generate new token and delete the existing one. This will make the"
+" last public download link invalid. Are you sure?"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_form_view
+msgid "This will replace the existing token with a new one."
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.git_branch_form_view
+msgid ""
+"This will search for Odoo modules in the branch work tree and create (if not"
+" exists) or update (if exists) Odoo module records in your system"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.wizard_odoo_module_version_download_form_view
+msgid ""
+"This wizard will access the source code repository then\n"
+"\t\t\t\t\t\t\tprepare zip archives of all the related Odoo apps for your\n"
+"\t\t\t\t\t\t\tdownloads."
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__total_downloads_count
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__total_downloads_count
+msgid "Total Downloads"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__external_downloads_count
+msgid "Total External Downloads"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module__activity_exception_decoration
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__message_unread
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__message_unread
+#: model:ir.model.fields,field_description:to_odoo_module.field_software_author__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__message_unread_counter
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__message_unread_counter
+#: model:ir.model.fields,field_description:to_odoo_module.field_software_author__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.git_repository_view_form
+msgid ""
+"Update all the already checked out\n"
+"\t\t\t\t\t\tbranches of this repository. If such the branches are marked with\n"
+"\t\t\t\t\t\tAuto Modules Discovery, Odoo will discover for available Odoo\n"
+"\t\t\t\t\t\tmodules in the branch after pulling."
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_res_company__dedicated_app_download_token_lifetime
+#: model:ir.model.fields,field_description:to_odoo_module.field_res_config_settings__dedicated_app_download_token_lifetime
+msgid "Use Dedicated Apps Download Token Lifetime"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version_download_stat__user_id
+#: model:res.groups,name:to_odoo_module.odoo_module_user
+msgid "User"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__vendor_id
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_search_view
+msgid "Vendor"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__version
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.portal_my_apps
+msgid "Version"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_form_view
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_kanban_view
+msgid "Versions"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.view_move_form
+msgid "View Sold Modules"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_res_company__vendor_app_min_payout
+#: model:ir.model.fields,help:to_odoo_module.field_res_config_settings__vendor_app_min_payout
+msgid "We do not pay the vendor if total purchase amount is less than this"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__website
+msgid "Author Website"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module__website_message_ids
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__website_message_ids
+#: model:ir.model.fields,field_description:to_odoo_module.field_software_author__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module__website_message_ids
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__website_message_ids
+#: model:ir.model.fields,help:to_odoo_module.field_software_author__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_git_repository__exclude_dependencies_from_repo_ids
+msgid ""
+"When generating dependencies for the Odoo modules in the current repository,"
+" the Odoo modules from the excluded repositories specified here will be "
+"excluded also."
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_res_company__vendor_app_comm_percent
+#: model:ir.model.fields,help:to_odoo_module.field_res_config_settings__vendor_app_comm_percent
+msgid "When selling our vendors' Odoo Modules, we take this as our commission"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_search_view
+msgid "With Product"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_search_view
+msgid "With Vendor"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_search_view
+msgid "Without Product"
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.odoo_module_version_search_view
+msgid "Without Vendor"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model,name:to_odoo_module.model_wizard_odoo_module_version_download
+msgid "Wizard Odoo Module Version Download"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model,name:to_odoo_module.model_wizard_odoo_module_version_public_download_url
+msgid "Wizard Odoo Module Version Download URL"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model,name:to_odoo_module.model_wizard_odoo_module_version_public_download
+msgid "Wizard Odoo Module Version Public Download"
+msgstr ""
+
+#. module: to_odoo_module
+#: code:addons/to_odoo_module/models/odoo_module_version.py:0
+#, python-format
+msgid ""
+"You are trying to assign the product %s to the Odoo module version %s while "
+"the product has been assigned for the another Odoo module version which is "
+"%s."
+msgstr ""
+
+#. module: to_odoo_module
+#: model_terms:ir.ui.view,arch_db:to_odoo_module.wizard_odoo_module_version_public_download_form_view
+msgid ""
+"You cannot download a standard Odoo module that comes along\n"
+"\t\t\t\t\t\twith either Odoo CE or Odoo EE. Please select another one!"
+msgstr ""
+
+#. module: to_odoo_module
+#: code:addons/to_odoo_module/controllers/portal.py:0
+#, python-format
+msgid "You don't have permission to access the app %s"
+msgstr ""
+
+#. module: to_odoo_module
+#: code:addons/to_odoo_module/models/software_author.py:0
+#, python-format
+msgid ""
+"You may not be able to delete author %s while its has an Odoo module version"
+" being referred. Please delete all the related Odoo module versions first."
+msgstr ""
+
+#. module: to_odoo_module
+#: code:addons/to_odoo_module/wizard/wizard_odoo_module_version_download.py:0
+#, python-format
+msgid ""
+"You may not select apps in mutiple Odoo versions. Please do filter to ensure"
+" that all the selected belong to the same Odoo version"
+msgstr ""
+
+#. module: to_odoo_module
+#: code:addons/to_odoo_module/models/odoo_module_version.py:0
+#, python-format
+msgid ""
+"You must not have more than one Odoo module version of the same Odoo module "
+"and Odoo version. In other words, the Odoo module version '%s' has the same "
+"Odoo module and Odoo version as the existing Odoo module version %s's"
+msgstr ""
+
+#. module: to_odoo_module
+#: code:addons/to_odoo_module/models/odoo_module_version.py:0
+#, python-format
+msgid ""
+"You were trying to create a module version named '%s' that has the same "
+"version %s and Odoo version %s and of the same module %s as the existing one"
+" %s's"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,field_description:to_odoo_module.field_odoo_module_version__zipped_source_code
+#: model:ir.model.fields,field_description:to_odoo_module.field_wizard_odoo_module_version_download__file
+msgid "Zipped Source Code"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields.selection,name:to_odoo_module.selection__wizard_odoo_module_version_download__state__choose
+msgid "choose"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields.selection,name:to_odoo_module.selection__wizard_odoo_module_version_download__state__successful
+msgid "successful"
+msgstr ""
+
+#. module: to_odoo_module
+#: model:ir.model.fields,help:to_odoo_module.field_odoo_module_version__support
+msgid "support email / url"
+msgstr ""

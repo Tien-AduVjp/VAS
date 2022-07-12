@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="SaleOrder" owl="1">
+    	<div class="button js_sale_order" t-on-click="createSaleOrder">
+            <i class="fa fa-usd" /> Create Sales Order
+        </div>
+    </t>
+</templates>

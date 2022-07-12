@@ -1,0 +1,256 @@
+<odoo>
+    <record id="account_financial_report_l10n_vn" model="account.financial.dynamic.report">
+        <field name="name">VAT Declaration</field>
+        <field name='parent_id' ref='l10n_vn.account_reports_vn_statements_menu'/>
+        <field name="tax_report" eval="1"/>
+    </record>
+
+    <record id="account_financial_report_line_01_vn" model="account.financial.dynamic.report.line">
+    	<!-- HHDV mua vào -->
+        <field name="name">Taxed Purchase of Goods &amp; Services</field>
+        <field name="code">VNTAX_IN</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="0"/>
+        <field name="formulas">balance = VNTAX_IN_BALANCE.balance + VNTAX_IN_BASE.balance</field>
+        <field name="financial_report_id" ref="account_financial_report_l10n_vn"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_line_01_01_vn" model="account.financial.dynamic.report.line">
+    	<!-- Thuế GTGT HHDV mua vào -->
+        <field name="name">VAT on purchase of goods and services</field>
+        <field name="code">VNTAX_IN_BALANCE</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="1"/>
+        <field name="formulas">balance = VNTAX_IN_BALANCE_EXEMPTION.balance + VNTAX_IN_BALANCE_00.balance + VNTAX_IN_BALANCE_05.balance + VNTAX_IN_BALANCE_10.balance</field>
+        <field name="parent_id" ref="account_financial_report_line_01_vn"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_line_exemption_01_01_vn" model="account.financial.dynamic.report.line">
+    	<!-- Thuế GTGT HHDV mua vào không thuộc đối tượng chịu thuế -->
+        <field name="name">VAT Exemption on purchase of goods and services</field>
+        <field name="code">VNTAX_IN_BALANCE_EXEMPTION</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="account_financial_report_line_01_01_vn"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_01_01_01_vn" model="account.financial.dynamic.report.line">
+    	<!-- Thuế GTGT HHDV mua vào chịu thuế 0% -->
+        <field name="name">0% VAT on purchase of goods and services</field>
+        <field name="code">VNTAX_IN_BALANCE_00</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="account_financial_report_line_01_01_vn"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_line_02_01_01_vn" model="account.financial.dynamic.report.line">
+    	<!-- Thuế GTGT HHDV mua vào chịu thuế 5% -->
+        <field name="name">5% VAT on purchase of goods and services</field>
+        <field name="code">VNTAX_IN_BALANCE_05</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_tag_ids.tax_report_line_ids', 'in', [ref('l10n_vn.account_tax_report_line_02_01_01_vn')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="account_financial_report_line_01_01_vn"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_line_03_01_01_vn" model="account.financial.dynamic.report.line">
+    	<!-- Thuế GTGT HHDV mua vào chịu thuế 10% -->
+        <field name="name">10% VAT on purchase of goods and services</field>
+        <field name="code">VNTAX_IN_BALANCE_10</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_tag_ids.tax_report_line_ids', 'in', [ref('l10n_vn.account_tax_report_line_03_01_01_vn')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="account_financial_report_line_01_01_vn"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_line_02_01_vn" model="account.financial.dynamic.report.line">
+    	<!-- Giá trị HHDV mua vào -->
+        <field name="name">Untaxed Purchase of Goods &amp; Services</field>
+        <field name="code">VNTAX_IN_BASE</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="1"/>
+        <field name="formulas">balance = VNTAX_IN_BASE_EXEMPTION.balance + VNTAX_IN_BASE_00.balance + VNTAX_IN_BASE_05.balance + VNTAX_IN_BASE_10.balance</field>
+        <field name="parent_id" ref="account_financial_report_line_01_vn"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_line_exemption_02_01_vn" model="account.financial.dynamic.report.line">
+    	<!-- Giá trị HHDV mua vào không thuộc đối tượng chịu thuế -->
+        <field name="name">Untaxed Purchase of Goods &amp; Services taxed VAT Exemption</field>
+        <field name="code">VNTAX_IN_BASE_EXEMPTION</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_tag_ids.tax_report_line_ids', 'in', [ref('l10n_vn_common.account_tax_report_line_purchase_val_exemption')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="account_financial_report_line_02_01_vn"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_line_01_02_01_vn" model="account.financial.dynamic.report.line">
+    	<!-- Giá trị HHDV mua vào chịu thuế 0% -->
+        <field name="name">Untaxed Purchase of Goods &amp; Services taxed 0%</field>
+        <field name="code">VNTAX_IN_BASE_00</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_tag_ids.tax_report_line_ids', 'in', [ref('l10n_vn.account_tax_report_line_01_02_01_vn')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="account_financial_report_line_02_01_vn"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_line_02_02_01_vn" model="account.financial.dynamic.report.line">
+    	<!-- Giá trị HHDV mua vào chịu thuế 5% -->
+        <field name="name">Untaxed Purchase of Goods &amp; Services taxed 5%</field>
+        <field name="code">VNTAX_IN_BASE_05</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_tag_ids.tax_report_line_ids', 'in', [ref('l10n_vn.account_tax_report_line_02_02_01_vn')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="account_financial_report_line_02_01_vn"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_line_03_02_01_vn" model="account.financial.dynamic.report.line">
+    	<!-- Giá trị HHDV mua vào chịu thuế 10% -->
+        <field name="name">Untaxed Purchase of Goods &amp; Services taxed 10%</field>
+        <field name="code">VNTAX_IN_BASE_10</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_tag_ids.tax_report_line_ids', 'in', [ref('l10n_vn.account_tax_report_line_03_02_01_vn')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="account_financial_report_line_02_01_vn"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_02_vn" model="account.financial.dynamic.report.line">
+    	<!-- HHDV bán ra -->
+        <field name="name">Taxed Sales of Goods &amp; Services</field>
+        <field name="code">VNTAX_OUT</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="0"/>
+        <field name="formulas">balance = VNTAX_OUT_BALANCE.balance + VNTAX_OUT_BASE.balance</field>
+        <field name="financial_report_id" ref="account_financial_report_l10n_vn"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_line_01_02_vn" model="account.financial.dynamic.report.line">
+    	<!-- Thuế GTGT HHDV bán ra -->
+        <field name="name">Output VAT</field>
+        <field name="code">VNTAX_OUT_BALANCE</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="1"/>
+        <field name="formulas">balance = VNTAX_OUT_BALANCE_EXEMPTION.balance + VNTAX_OUT_BALANCE_00.balance + VNTAX_OUT_BALANCE_05.balance + VNTAX_OUT_BALANCE_10.balance</field>
+        <field name="parent_id" ref="account_financial_report_line_02_vn"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_line_exemption_01_02_vn" model="account.financial.dynamic.report.line">
+    	<!-- Thuế GTGT HHDV bán ra không thuộc đối tượng chịu thuế -->
+        <field name="name">Exemption Output VAT</field>
+        <field name="code">VNTAX_OUT_BALANCE_EXEMPTION</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_line_01_02_vn"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_line_01_01_02_vn" model="account.financial.dynamic.report.line">
+    	<!-- Thuế GTGT HHDV bán ra chịu thuế 0% -->
+        <field name="name">0% Output VAT</field>
+        <field name="code">VNTAX_OUT_BALANCE_00</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_line_01_02_vn"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_line_02_01_02_vn" model="account.financial.dynamic.report.line">
+    	<!-- Thuế GTGT HHDV bán ra chịu thuế 5% -->
+        <field name="name">5% Output VAT</field>
+        <field name="code">VNTAX_OUT_BALANCE_05</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_tag_ids.tax_report_line_ids', 'in', [ref('l10n_vn.account_tax_report_line_02_01_02_vn')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="account_financial_report_line_01_02_vn"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_line_03_01_02_vn" model="account.financial.dynamic.report.line">
+    	<!-- Thuế GTGT HHDV bán ra chịu thuế 10% -->
+        <field name="name">10% Output VAT</field>
+        <field name="code">VNTAX_OUT_BALANCE_10</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_tag_ids.tax_report_line_ids', 'in', [ref('l10n_vn.account_tax_report_line_03_01_02_vn')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="account_financial_report_line_01_02_vn"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_line_02_02_vn" model="account.financial.dynamic.report.line">
+    	<!-- Giá trị HHDV bán ra -->
+        <field name="name">Untaxed Sales of Goods &amp; Services</field>
+        <field name="code">VNTAX_OUT_BASE</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="1"/>
+        <field name="formulas">balance = VNTAX_OUT_BASE_EXEMPTION.balance + VNTAX_OUT_BASE_00.balance + VNTAX_OUT_BASE_05.balance + VNTAX_OUT_BASE_10.balance</field>
+        <field name="parent_id" ref="account_financial_report_line_02_vn"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_line_exemption_02_02_vn" model="account.financial.dynamic.report.line">
+    	<!-- Giá trị HHDV bán ra không thuộc đối tượng chịu thuế -->
+        <field name="name">Untaxed Sales of Goods &amp; Services taxed VAT Exemption</field>
+        <field name="code">VNTAX_OUT_BASE_EXEMPTION</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_tag_ids.tax_report_line_ids', 'in', [ref('l10n_vn_common.account_tax_report_line_sale_val_exemption')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="account_financial_report_line_02_02_vn"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_line_01_02_02_vn" model="account.financial.dynamic.report.line">
+    	<!-- Giá trị HHDV bán ra chịu thuế 0% -->
+        <field name="name">Untaxed Sales of Goods &amp; Services taxed 0%</field>
+        <field name="code">VNTAX_OUT_BASE_00</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_tag_ids.tax_report_line_ids', 'in', [ref('l10n_vn.account_tax_report_line_01_02_02_vn')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="account_financial_report_line_02_02_vn"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_line_02_02_02_vn" model="account.financial.dynamic.report.line">
+    	<!-- Giá trị HHDV bán ra chịu thuế 5% -->
+        <field name="name">Untaxed Sales of Goods &amp; Services taxed 5%</field>
+        <field name="code">VNTAX_OUT_BASE_05</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_tag_ids.tax_report_line_ids', 'in', [ref('l10n_vn.account_tax_report_line_02_02_02_vn')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="account_financial_report_line_02_02_vn"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_line_03_02_02_vn" model="account.financial.dynamic.report.line">
+    	<!-- Giá trị HHDV bán ra chịu thuế 10% -->
+        <field name="name">Untaxed Sales of Goods &amp; Services taxed 10%</field>
+        <field name="code">VNTAX_OUT_BASE_10</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_tag_ids.tax_report_line_ids', 'in', [ref('l10n_vn.account_tax_report_line_03_02_02_vn')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="account_financial_report_line_02_02_vn"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+</odoo>

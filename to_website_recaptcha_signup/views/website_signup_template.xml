@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="signup_form"
+              inherit_id="auth_signup.signup"
+              name="Signup Form Captcha">
+        <xpath expr="//button[@type='submit']" position="before">
+            <div class="o_website_recaptcha" />
+        </xpath>
+    </template>
+</odoo>

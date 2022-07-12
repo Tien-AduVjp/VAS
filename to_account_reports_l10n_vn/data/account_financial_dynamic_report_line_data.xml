@@ -1,0 +1,22 @@
+<odoo noupdate="0">
+	<!-- PROFIT AND LOSS -->
+	<record id="to_account_reports.pnl_af_report_dynamic_line_expense0"
+		model="account.financial.dynamic.report.line">
+		<field name="domain"
+				eval="[('account_id.user_type_id', '=', ref('account.data_account_type_expenses')),
+				('ctp_account_ids.user_type_id','not in', [ref('account.data_account_type_depreciation'), ref('account.data_unaffected_earnings')])]" />
+	</record>
+	
+	<record id="to_account_reports.bs_af_dynamic_report_line_current_year_earning0"
+		model="account.financial.dynamic.report.line">
+		<field name="domain" 
+			eval="[('account_id.user_type_id', 'in', [
+                ref('account.data_account_type_revenue'),
+                ref('to_account_income_deduct.account_account_type_revenue_deduct'),
+                ref('account.data_account_type_other_income'),
+                ref('to_account_financial_income.account_account_type_financial_income'),
+                ref('account.data_account_type_direct_costs'),
+                ref('account.data_account_type_expenses')]), 
+                ('ctp_account_ids.user_type_id','!=', ref('account.data_unaffected_earnings'))]" />
+	</record>
+</odoo>

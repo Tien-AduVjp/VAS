@@ -1,0 +1,15 @@
+<odoo>
+	<data noupdate="1">
+		<template id="mail_notification_light" inherit_id="mail.mail_notification_light">
+			<xpath expr="//tbody/tr/td/table/tr/td/span" position="replace">
+				<span style="font-size: 10px;"><t t-esc="model_description or 'document'"/></span>
+			</xpath>
+
+		</template>
+		<template id="mail_notification_paynow" inherit_id="mail.mail_notification_paynow">
+			<xpath expr="//tbody/tr/td/table/tr/td/span" position="replace">
+				<span style="font-size: 10px;"><t t-esc="model_description or 'document'"/></span>
+			</xpath>
+		</template>
+	</data>
+</odoo>

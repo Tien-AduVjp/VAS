@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="document_action_view_tree" model="ir.ui.view">
+        <field name="name">document.action.view.tree</field>
+        <field name="model">document.action</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="condition_type"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="document_action_view_form" model="ir.ui.view">
+        <field name="name">document.action.view.form</field>
+        <field name="model">document.action</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <field name="active" invisible="1"/>
+                    <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+                    <group>
+                        <group name="condition">
+                            <field name="name"/>
+                            <field name="condition_type"/>
+                        </group>
+                        <group name="standard_condition">
+                            <field name="included_tag_ids" widget="many2many_tags"
+                                domain="[('id','not in', excluded_tag_ids)]"
+                                attrs="{'invisible': [('condition_type', '!=', 'standard')]}"/>
+                            <field name="excluded_tag_ids" widget="many2many_tags"
+                                domain="[('id','not in', included_tag_ids)]"
+                                attrs="{'invisible': [('condition_type', '!=', 'standard')]}"/>
+                            <field name="owner_id" attrs="{'invisible': [('condition_type', '!=', 'standard')]}"/>
+                        </group>
+                    </group>
+                    <field name="domain" string="Filter Domain" nolabel="1" widget="domain" options="{'model':'document.document'}"
+                        attrs="{ 'invisible' : [('condition_type', '!=', 'domain')]}"/>
+                    <notebook>
+                        <page name="action" string="Action">
+                            <group>
+                                <group>
+                                    <field name="set_owner_id"/>
+                                    <field name="move_to_workspace_id"/>
+                                    <field name="show_create_model" invisible="1"/>
+                                    <field name="create_model" attrs="{'invisible': [('show_create_model', '=', False)]}"/>
+                                </group>
+                            </group>
+                            <separator name="set_tags" string="Set Tags"/>
+                            <field name="set_tag_ids">
+                                <tree editable="bottom">
+                                    <field name="action_type"/>
+                                    <field name="category_id"/>
+                                    <field name="tag_ids" widget="many2many_tags" domain="[('category_ids', 'in', category_id)]"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page name="activity" string="Schedule Activity">
+                            <group>
+                                <group>
+                                    <field name="create_document_activity"/>
+                                </group>
+                                <group>
+                                    <field name="done_document_activity"/>
+                                </group>
+                            </group>
+                            <group name="activity_info" attrs="{'invisible': [('create_document_activity', '=', False)]}">
+                                <group>
+                                    <field name="document_activity_type_id" options="{'no_create': True, 'no_open': True}"/>
+                                    <field name="document_activity_summary"/>
+                                </group>
+                                <group>
+                                    <label for="document_activity_due_date"/>
+                                    <div class="o_row">
+                                        <field name="document_activity_due_date"/>
+                                        <field name="document_activity_due_date_type"/>
+                                    </div>
+                                    <field name="document_activity_user_id"/>
+                                </group>
+                            </group>
+                            <separator name="document_activity_note" string="Note" attrs="{'invisible': [('create_document_activity', '=', False)]}"/>
+                            <field name="document_activity_note" attrs="{'invisible': [('create_document_activity', '=', False)]}"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" />
+                    <field name="message_ids" />
+                    <field name="activity_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="document_action_view_search" model="ir.ui.view">
+        <field name="name">document.action.view.search</field>
+        <field name="model">document.action</field>
+        <field name="arch" type="xml">
+            <search string="Document Actions">
+                <field name="name" />
+                <separator />
+                <filter name="ftr_archived" string="Archived" domain="[('active','=',False)]"/>
+                <group expand="1" string="Group By">
+                    <filter string="Condition Type" name="grp_condition_type" domain="[]" context="{'group_by':'condition_type'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="document_action_action" model="ir.actions.act_window">
+        <field name="name">Actions</field>
+        <field name="res_model">document.action</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="document_action_menu" parent="document_config_menu_root" action="document_action_action" sequence="30"/>
+
+</odoo>

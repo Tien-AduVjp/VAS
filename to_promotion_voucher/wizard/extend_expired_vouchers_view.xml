@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="extend_expired_vouchers_form" model="ir.ui.view">
+			<field name="name">extend.expired.vouchers.form</field>
+			<field name="model">extend.expired.vouchers</field>
+			<field name="arch" type="xml">
+				<form string="Extend Expired Vouchers">
+					<group>
+						<group>
+							<field name="valid_duration"/>
+						</group>
+						<group>
+						</group>
+					</group>
+					<separator string="Vouchers" />
+					<field name="voucher_ids" domain="[('state', '=', 'expired')]">
+						<tree name="voucher_ids">
+							<field name="name" />
+							<field name="product_id" />
+							<field name="lot_id" />
+							<field name="activated_date" />
+							<field name="expiry_date"/>
+						</tree>
+					</field>
+					<footer>
+						<button name="action_extend" string="Extend" type="object"
+							class="oe_highlight" />
+						or
+						<button string="Cancel" class="oe_link" special="cancel" />
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_extend_expired_vouchers">
+			<field name="name">Extend Expired Vouchers</field>
+			<field name="res_model">extend.expired.vouchers</field>
+			<field name="view_mode">tree,form</field>
+			<field name="view_id" ref="extend_expired_vouchers_form" />
+			<field name="target">new</field>
+		</record>
+
+		<menuitem action="action_extend_expired_vouchers" id="extend_expired_vouchers_menu"
+			parent="menu_operation_issue" sequence="10" />
+
+	</data>
+</odoo>

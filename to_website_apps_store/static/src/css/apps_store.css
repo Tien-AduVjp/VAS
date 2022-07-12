@@ -1,0 +1,155 @@
+.app_submenu {
+	background: white;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.apps_store_card_body {
+	overflow: hidden;
+	position: relative;
+}
+
+.ribbon {
+	position: absolute;
+	background: green;
+	font-size: 0.7rem;
+	color: #fff;
+	transform: rotate(45deg);
+	width: 50%;
+	right: -2rem;
+}
+
+.top_charts_title {
+	font-weight: 300;
+	line-height: 40px;
+}
+
+.module_app_top_cover {
+	padding-bottom: 50%;
+	width: 100%;
+	border-radius: 2px 2px 0 0;
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 0;
+	/* background: rgba(134,174,204,1);
+	background: -moz-linear-gradient(-45deg, rgba(134,174,204,1) 0%, rgba(134,174,204,1) 31%, rgba(212,228,239,1) 97%, rgba(212,228,239,1) 100%);
+	background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(134,174,204,1)), color-stop(31%, rgba(134,174,204,1)), color-stop(97%, rgba(212,228,239,1)), color-stop(100%, rgba(212,228,239,1)));
+	background: -webkit-linear-gradient(-45deg, rgba(134,174,204,1) 0%, rgba(134,174,204,1) 31%, rgba(212,228,239,1) 97%, rgba(212,228,239,1) 100%);
+	background: -o-linear-gradient(-45deg, rgba(134,174,204,1) 0%, rgba(134,174,204,1) 31%, rgba(212,228,239,1) 97%, rgba(212,228,239,1) 100%);
+	background: -ms-linear-gradient(-45deg, rgba(134,174,204,1) 0%, rgba(134,174,204,1) 31%, rgba(212,228,239,1) 97%, rgba(212,228,239,1) 100%);
+	background: linear-gradient(135deg, rgba(134,174,204,1) 0%, rgba(134,174,204,1) 31%, rgba(212,228,239,1) 97%, rgba(212,228,239,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#86aecc', endColorstr='#d4e4ef', GradientType=1 ); */
+	background: rgba(159, 191, 214, 1);
+	background: -moz-linear-gradient(-45deg, rgba(159, 191, 214, 1) 0%,
+		rgba(159, 191, 214, 1) 31%, rgba(208, 223, 232, 1) 97%,
+		rgba(208, 223, 232, 1) 100%);
+	background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(159, 191,
+		214, 1)), color-stop(31%, rgba(159, 191, 214, 1)),
+		color-stop(97%, rgba(208, 223, 232, 1)),
+		color-stop(100%, rgba(208, 223, 232, 1)));
+	background: -webkit-linear-gradient(-45deg, rgba(159, 191, 214, 1) 0%,
+		rgba(159, 191, 214, 1) 31%, rgba(208, 223, 232, 1) 97%,
+		rgba(208, 223, 232, 1) 100%);
+	background: -o-linear-gradient(-45deg, rgba(159, 191, 214, 1) 0%,
+		rgba(159, 191, 214, 1) 31%, rgba(208, 223, 232, 1) 97%,
+		rgba(208, 223, 232, 1) 100%);
+	background: -ms-linear-gradient(-45deg, rgba(159, 191, 214, 1) 0%,
+		rgba(159, 191, 214, 1) 31%, rgba(208, 223, 232, 1) 97%,
+		rgba(208, 223, 232, 1) 100%);
+	background: linear-gradient(135deg, rgba(159, 191, 214, 1) 0%,
+		rgba(159, 191, 214, 1) 31%, rgba(208, 223, 232, 1) 97%,
+		rgba(208, 223, 232, 1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9fbfd6',
+		endColorstr='#d0dfe8', GradientType=1);
+	background-size: 100%;
+}
+
+.module_app_top_cover .module_summary {
+	display: block;
+	padding: 8% 15px;
+	color: #fff;
+	text-shadow: 0 1px 0 black;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: 11;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 100%;
+	left: auto;
+	bottom: auto;
+	right: auto;
+	-webkit-transition: top 0.3s;
+	transition: top 0.3s;
+	word-wrap: break-word;
+	font-size: 0.9rem;
+}
+
+.module_app_top_cover:hover .module_summary {
+	top: 0;
+}
+
+.v_module_icon {
+	position: absolute;
+	width: 55px;
+    height: 55px;
+    display: block;
+	top: 10px;
+	border-radius: 5px;
+	left: 10px;
+	z-index: 10;
+	background: white;
+	overflow: hidden;
+}
+
+.module_app_top_cover .img-fluid {
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: auto;
+	bottom: auto;
+	right: 0;
+	z-index: 1;
+}
+
+.odoo_module_rating small {
+	color: #282F33;
+	margin-left: 5px;
+}
+
+.module_technical_specs .badge.disabled {
+	background: #6f7071;
+}
+
+.module_technical_specs tr {
+	border-bottom: 1px solid #dee2e6;
+}
+
+span.dependencies_list, a.dependending_list, a.dependencies_list {
+	width: 100%;
+	float: left;
+}
+.module_detail h1, .module_detail .module_price {
+	font-size: 1.5rem;
+}
+.module_item a,.module_item a:hover, a.module_author{
+	color: inherit;
+	text-decoration: none;
+}
+.loempia_app_table a{
+	text-decoration: none;
+}
+.module_item .card-body{
+	min-height: 9.5rem;
+}
+.module_item h5{
+	font-size: 0.9rem;
+	font-weight: bold;
+}
+.module_item .module_author{
+	font-size: 0.75rem;
+	font-weight: bold;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+

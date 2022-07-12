@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+
+    <record id="document_tag_account_customer_invoice" model="document.tag">
+        <field name="name">Customer Invoice</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_invoice_type'))]"/>
+    </record>
+
+    <record id="document_tag_account_vendor_bill" model="document.tag">
+        <field name="name">Vendor Bill</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_invoice_type'))]"/>
+    </record>
+
+    <record id="document_tag_account_expense" model="document.tag">
+        <field name="name">Expense</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_account_document'))]"/>
+    </record>
+
+    <record id="document_tag_account_vat" model="document.tag">
+        <field name="name">VAT</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_account_document'))]"/>
+    </record>
+
+    <record id="document_tag_account_financial" model="document.tag">
+        <field name="name">Financial</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_account_document'))]"/>
+    </record>
+
+    <record id="document_tag_fiscal_year_2022" model="document.tag">
+        <field name="name">Fiscal Year 2022</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_fiscal_year'))]"/>
+    </record>
+
+    <record id="document_tag_fiscal_year_2023" model="document.tag">
+        <field name="name">Fiscal Year 2023</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_fiscal_year'))]"/>
+    </record>
+
+    <record id="document_tag_fiscal_year_2024" model="document.tag">
+        <field name="name">Fiscal year 2024</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_fiscal_year'))]"/>
+    </record>
+
+</odoo>

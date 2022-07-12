@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_balance_carry_forward_rule_line_accountant,balance.carry.forward.rule.line.accountant,model_balance_carry_forward_rule_line,account.group_account_user,1,1,1,1
+access_balance_carry_forward_rule_accountant,balance.carry.forward.rule.accountant,model_balance_carry_forward_rule,account.group_account_user,1,0,0,0
+access_balance_carry_forward_rule_manager,balance.carry.forward.rule.manager,model_balance_carry_forward_rule,account.group_account_manager,1,1,1,1
+access_balance_carry_forward_accountant,balance.carry.forward.accountant,model_balance_carry_forward,account.group_account_user,1,1,1,1
+access_account_balance_carry_forward_wizard,account_balance_carry_forward_wizard.user,model_account_balance_carry_forward_wizard,account.group_account_user,1,1,1,0

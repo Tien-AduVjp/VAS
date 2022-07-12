@@ -1,0 +1,14 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_loyalty_program_employee,loyalty.program.employee,model_loyalty_program,base.group_user,1,0,0,0
+access_customer_level_employee,customer.level.user.employee,model_customer_level,base.group_user,1,0,0,0
+access_loyalty_point_employee,loyalty.point.employee,model_loyalty_point,base.group_user,1,0,0,0
+access_loyalty_program_manager,loyalty.program.manager,model_loyalty_program,group_loyalty_manager,1,1,1,1
+access_loyalty_rule,loyalty.rule.user,model_loyalty_rule,group_loyalty_user,1,0,0,0
+access_loyalty_rule_manager,loyalty.rule.manager,model_loyalty_rule,group_loyalty_manager,1,1,1,1
+access_loyalty_reward,loyalty.reward.user,model_loyalty_reward,group_loyalty_user,1,0,0,0
+access_loyalty_reward_manager,loyalty.reward.manager,model_loyalty_reward,group_loyalty_manager,1,1,1,1
+access_customer_level,customer.level.user,model_customer_level,group_loyalty_user,1,0,0,0
+access_customer_level_manager,customer.level.manager,model_customer_level,group_loyalty_manager,1,1,1,1
+access_loyalty_point,loyalty.point.user,model_loyalty_point,group_loyalty_user,1,0,1,0
+access_loyalty_point_manager,loyalty.point.manager,model_loyalty_point,group_loyalty_manager,1,1,1,1
+access_loyalty_point_reports_manager,loyalty.points.reports.manager,model_loyalty_points_report,group_loyalty_user,1,0,0,0

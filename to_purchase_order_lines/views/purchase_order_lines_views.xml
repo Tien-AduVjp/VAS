@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="purchase_order_line_graph" model="ir.ui.view">
+			<field name="name">purchase_order_line_graph</field>
+			<field name="model">purchase.order.line</field>
+			<field name="arch" type="xml">
+				<graph string="Purchase Order Lines Graph">
+					<field name="partner_id" type="row" />
+					<field name="price_unit"  type="measure"/>
+				</graph>
+			</field>
+		</record>
+		<record id="purchase_order_line_pivot" model="ir.ui.view">
+			<field name="name">purchase_order_line_pivot</field>
+			<field name="model">purchase.order.line</field>
+			<field name="arch" type="xml">
+				<pivot string="Purchase Order Lines Pivot">
+					<field name="product_id" type="row" />
+					<field name="date_planned" type="col" />
+					<field name="price_unit"  type="measure"/>
+					<field name="product_qty" type="measure"/>
+					<field name="price_subtotal" type="measure"/>
+				</pivot>
+			</field>
+		</record>
+
+		<record id="purchase_order_line_form2_inherit" model="ir.ui.view">
+			<field name="name">purchase.order.line.form2</field>
+			<field name="model">purchase.order.line</field>
+			<field name="inherit_id" ref="purchase.purchase_order_line_form2"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='order_id']" position="attributes">
+					<attribute name="readonly">1</attribute>
+				</xpath>
+				<xpath expr="//field[@name='price_unit']" position="attributes">
+					<attribute name="attrs">{'readonly': [('invoice_lines', '!=', [])]}</attribute>
+				</xpath>
+			</field>
+		</record>
+
+		<record id="action_purchase_line_product_tree" model="ir.actions.act_window">
+			<field name="name">Purchase Order Lines</field>
+			<field name="res_model">purchase.order.line</field>
+			<field name="view_mode">tree,form,graph,pivot</field>
+		</record>
+		<menuitem id="purchase_order_line" name="Purchase Order Lines"
+			parent="purchase.menu_procurement_management" action="action_purchase_line_product_tree" />
+	</data>
+</odoo>

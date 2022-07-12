@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+	<data>
+		<record id="social_media_linkedin" model="social.media">
+			<field name="name">Linkedin</field>
+			<field name="image" type="base64" file="viin_social_linkedin/static/img/linkedin.png"/>
+			<field name="description">Manage your Linkedin pages and posts</field>
+			<field name="social_provider">linkedin</field>
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+
+    <record id="document_auto_generate_rule_purchase_document" model="document.auto.generate.rule" forcecreate="False">
+        <field name="res_model_id" ref="purchase.model_purchase_order"/>
+        <field name="parent_workspace_id" ref="document_workspace_purchase"/>
+        <field name="workspace_tag_ids" eval="[
+            (4, ref('document_tag_rfq')),
+            (4, ref('document_tag_purchase_order')),
+            (4, ref('viin_document.document_tag_to_review')),
+            (4, ref('viin_document.document_tag_approve')),
+            (4, ref('viin_document.document_tag_deprecate'))]"/>
+        <field name="workspace_read_team_ids" eval="[(4, ref('document_team_purchase'))]"/>
+        <field name="workspace_write_group_ids" eval="[(4, ref('purchase.group_purchase_manager'))]"/>
+        <field name="workspace_read_group_ids" eval="[(4, ref('purchase.group_purchase_user'))]"/>
+        <field name="workspace_action_ids" eval="[
+            (4, ref('viin_document.document_action_ask_to_review')),
+            (4, ref('viin_document.document_action_approve'))]"/>
+    </record>
+
+</odoo>

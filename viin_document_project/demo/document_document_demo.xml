@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="document_document_srs1_demo" model="document.document">
+        <field name="name">Office Design SRS</field>
+        <field name="datas" type="base64" file="viin_document_project/demo/documents/srs1.doc"/>
+        <field name="workspace_id" ref="document_workspace_project_office_design_demo"/>
+        <field name="owner_id" ref="base.user_admin"/>
+        <field name="tag_ids" eval="[
+            (4, ref('document_tag_project_srs_demo')),
+            (4, ref('viin_document.document_tag_to_review'))]"/>
+    </record>
+
+    <record id="document_document_srs2_demo" model="document.document">
+        <field name="name">Research &amp; Development SRS</field>
+        <field name="datas" type="base64" file="viin_document_project/demo/documents/srs2.doc"/>
+        <field name="workspace_id" ref="document_workspace_project_r_and_d_demo"/>
+        <field name="owner_id" ref="base.user_demo"/>
+        <field name="tag_ids" eval="[
+            (4, ref('document_tag_project_srs_demo')),
+            (4, ref('viin_document.document_tag_approve'))]"/>
+    </record>
+
+    <record id="document_document_gap1_demo" model="document.document">
+        <field name="name">Office Design GAP Analysis</field>
+        <field name="datas" type="base64" file="viin_document_project/demo/documents/gap1.xlsx"/>
+        <field name="workspace_id" ref="document_workspace_project_office_design_demo"/>
+        <field name="owner_id" ref="base.user_admin"/>
+        <field name="tag_ids" eval="[
+            (4, ref('document_tag_project_gap_demo')),
+            (4, ref('viin_document.document_tag_approve'))]"/>
+    </record>
+
+    <record id="document_document_gap2_demo" model="document.document">
+        <field name="name">R &amp; D GAP Analysis</field>
+        <field name="datas" type="base64" file="viin_document_project/demo/documents/gap2.xlsx"/>
+        <field name="workspace_id" ref="document_workspace_project_r_and_d_demo"/>
+        <field name="owner_id" ref="base.user_demo"/>
+        <field name="tag_ids" eval="[
+            (4, ref('document_tag_project_gap_demo')),
+            (4, ref('viin_document.document_tag_to_review'))]"/>
+    </record>
+
+</odoo>

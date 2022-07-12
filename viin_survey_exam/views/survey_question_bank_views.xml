@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="survey_question_bank_view_tree" model="ir.ui.view">
+        <field name="name">survey.question.bank.tree</field>
+        <field name="model">survey.question.bank</field>
+        <field name="arch" type="xml">
+            <tree string="Survey Question Categories">
+                <field name="name"/>
+                <field name="category_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="survey_question_bank_view_form" model="ir.ui.view">
+        <field name="name">survey.question.bank.form</field>
+        <field name="model">survey.question.bank</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title" style="width: 100%;">
+                        <separator />
+                        <field name="name" colspan="4"/>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="category_id"/>
+                            <field name="question_type" widget="radio" />
+                        </group>
+                        <group>
+                            <div class="col-lg-6 offset-lg-3 o_preview_questions">
+                                <!-- Multiple choice: only one answer -->
+                                <div attrs="{'invisible': [('question_type', '!=', 'simple_choice')]}" role="img" aria-label="Multiple choice with one answer" title="Multiple choice with one answer">
+                                    <div class="row"><i class="fa fa-circle-o  fa-lg"/> answer</div>
+                                    <div class="row"><i class="fa fa-dot-circle-o fa-lg"/> answer</div>
+                                    <div class="row"><i class="fa fa-circle-o  fa-lg"/> answer</div>
+                                </div>
+                                <!-- Multiple choice: multiple answers allowed -->
+                                <div attrs="{'invisible': [('question_type', '!=', 'multiple_choice')]}" role="img" aria-label="Multiple choice with multiple answers" title="Multiple choice with multiple answers">
+                                    <div class="row"><i class="fa fa-square-o fa-lg"/> answer</div>
+                                    <div class="row"><i class="fa fa-check-square-o fa-lg"/> answer</div>
+                                    <div class="row"><i class="fa fa-square-o fa-lg"/> answer</div>
+                                </div>
+                            </div>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="answer" string="Answers">
+                            <field name="answer_ids">
+                                <tree editable="bottom">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="value" string="Choices"/>
+                                    <field name="is_correct" />
+                                    <field name="answer_score" />
+                                    <field name="value_image" options="{'accepted_file_extensions': 'image/*'}"
+                                            attrs="{'column_invisible': ['|', ('parent.allow_value_image', '=', False), ('parent.question_type', '=', 'matrix')]}"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page name="description" string="Description">
+                            <field name="description"/>
+                        </page>
+                        <page name="option" string="Options">
+                            <group string="Constraints">
+                                <group colspan="2" col="4">
+                                    <field name="constr_mandatory" string="Mandatory Answer"/>
+                                    <field name="constr_error_msg" attrs="{'invisible': [('constr_mandatory', '=', False)]}"/>
+                                </group>
+                            </group>
+                            <group string="Display" attrs="{'invisible':[('question_type','not in',['simple_choice', 'multiple_choice'])]}">
+                                <field name="column_nb" string="Number of columns"/>
+                                <field name="allow_value_image"/>
+                            </group>
+                            <group string="Allow Comments">
+                                <field name='comments_allowed' />
+                                <field name='comments_message' attrs="{'invisible': [('comments_allowed', '=', False)]}"/>
+                                <field name='comment_count_as_answer' attrs="{'invisible': [('comments_allowed', '=', False)]}" />
+                            </group>
+                            <group string="Live Sessions">
+                                <label for="is_time_limited" string="Question Time Limit"/>
+                                <div>
+                                    <field name="is_time_limited" nolabel="1"/>
+                                    <field name="time_limit" nolabel="1" class="oe_inline"
+                                        attrs="{'invisible': [('is_time_limited', '=', False)]}" />
+                                    <span attrs="{'invisible': [('is_time_limited', '=', False)]}"> seconds</span>
+                                </div>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"   />
+                    <field name="activity_ids"  />
+                    <field name="message_ids"  />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="survey_question_bank_view_search" model="ir.ui.view">
+        <field name="name">survey.question.bank.search</field>
+        <field name="model">survey.question.bank</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="category_id"/>
+                <group expand="0" string="Group By">
+                    <filter string="Category" name="grp_category_id" domain="[]" context="{'group_by':'category_id'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="survey_question_bank_action" model="ir.actions.act_window">
+        <field name="name">Questions Bank</field>
+        <field name="res_model">survey.question.bank</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="survey_question_bank_menu" parent="survey.survey_menu_questions" sequence="29"
+        action="survey_question_bank_action" groups="viin_survey_exam.survey_exam_group_manager" />
+
+</odoo>

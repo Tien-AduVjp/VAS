@@ -1,0 +1,66 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_website_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-17 07:27+0000\n"
+"PO-Revision-Date: 2022-01-17 07:27+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_website_base
+#: model:ir.model,name:to_website_base.model_abstract_website_doc
+msgid "Abstract Website Document"
+msgstr "Tài liệu trang web trừu tượng"
+
+#. module: to_website_base
+#: model:ir.model.fields,field_description:to_website_base.field_abstract_website_doc__author_id
+msgid "Author"
+msgstr "Tác giả"
+
+#. module: to_website_base
+#: model:ir.model.fields,field_description:to_website_base.field_abstract_website_doc__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_website_base
+#: model:ir.model.fields,field_description:to_website_base.field_abstract_website_doc__id
+msgid "ID"
+msgstr ""
+
+#. module: to_website_base
+#: model:ir.model.fields,field_description:to_website_base.field_abstract_website_doc____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_website_base
+#: model:ir.model.fields,help:to_website_base.field_abstract_website_doc__views
+msgid "Number of views from websites"
+msgstr "Số lượt xem từ các trang web"
+
+#. module: to_website_base
+#: model:ir.model.fields,help:to_website_base.field_abstract_website_doc__website_id
+msgid "Restrict publishing to this website."
+msgstr "Hạn chế xuất bản đến website này"
+
+#. module: to_website_base
+#: model:ir.model.fields,help:to_website_base.field_abstract_website_doc__author_id
+msgid "The partner who is the author of this document"
+msgstr "Tác giả của tài liệu này"
+
+#. module: to_website_base
+#: model:ir.model.fields,field_description:to_website_base.field_abstract_website_doc__views
+msgid "Views"
+msgstr "Giao diện"
+
+#. module: to_website_base
+#: model:ir.model.fields,field_description:to_website_base.field_abstract_website_doc__website_id
+msgid "Website"
+msgstr ""

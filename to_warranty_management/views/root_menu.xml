@@ -1,0 +1,9 @@
+<odoo>
+	<data>
+		<menuitem id="main_warranty_management_menu" name="Warranty"
+			web_icon="to_warranty_management,static/description/icon.png"
+			sequence="99" groups="group_warranty_user" />
+		<menuitem id="warranty_claim_menu" name="Warranty Claim"
+			parent="main_warranty_management_menu" sequence="1" />
+	</data>
+</odoo>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="viin_hr_overtime.group_overtime_team_approval"
+		model="res.groups">
+		<field name="implied_ids"
+			eval="[(4, ref('hr_timesheet.group_hr_timesheet_approver'))]" />
+	</record>
+
+	<record id="viin_hr_overtime.group_overtime_officer"
+		model="res.groups">
+		<field name="implied_ids"
+			eval="[(4, ref('hr_timesheet.group_timesheet_manager'))]" />
+	</record>
+
+</odoo>

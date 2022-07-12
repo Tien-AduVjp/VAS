@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="vehicle_trip_register_cost_wizard_view" model="ir.ui.view">
+			<field name="name">vehicle.trip.register.cost.wizard.form</field>
+			<field name="model">vehicle.trip.register.cost.wizard</field>
+			<field name="inherit_id"
+				ref="to_fleet_operation_planning.vehicle_trip_register_cost_wizard_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='service_type_id']" position="after">
+					<field name="product_id" options="{'no_create':True}" />
+				</xpath>
+			</field>
+		</record>
+
+	</data>
+</odoo>

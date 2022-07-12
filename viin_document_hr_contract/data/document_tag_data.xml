@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+
+    <record id="document_tag_hr_contract_contract" model="document.tag">
+        <field name="name">Contract</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_hr_contract'))]"/>
+    </record>
+
+    <record id="document_tag_hr_contract_running" model="document.tag">
+        <field name="name">Contract Running</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_hr_contract_status'))]"/>
+    </record>
+
+    <record id="document_tag_hr_contract_expired" model="document.tag">
+        <field name="name">Contract Expired</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_hr_contract_status'))]"/>
+    </record>
+
+    <record id="document_tag_hr_contract_cancel" model="document.tag">
+        <field name="name">Contract Cancelled</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_hr_contract_status'))]"/>
+    </record>
+
+</odoo>

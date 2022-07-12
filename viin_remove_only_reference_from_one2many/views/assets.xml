@@ -1,0 +1,7 @@
+<odoo>
+	<template id="assets_backend" name="viin_remove_only_reference_from_one2many assets" inherit_id="web.assets_backend">
+	    <xpath expr="." position="inside">
+	        <script type="text/javascript" src="/viin_remove_only_reference_from_one2many/static/src/js/base_model.js"></script>
+	    </xpath>
+	</template>
+</odoo>

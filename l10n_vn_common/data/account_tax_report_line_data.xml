@@ -1,0 +1,35 @@
+<odoo>
+	<!-- Purchase -->
+	<record id="account_tax_report_line_purchase_tax_val_exemption" model="account.tax.report.line">
+		<field name="name">VAT Exemption on purchase of goods and services</field>
+		<field name="tag_name">VAT Exemption on purchase of goods and services</field>
+		<field name="sequence" eval="0" />
+		<field name="report_id" ref="l10n_vn.tax_report" />
+		<field name="parent_id" ref="l10n_vn.account_tax_report_line_01_01_vn" />
+	</record>
+
+	<record id="account_tax_report_line_purchase_val_exemption" model="account.tax.report.line">
+		<field name="name">Untaxed Purchase of Goods &amp; Services taxed VAT Exemption</field>
+		<field name="tag_name">Untaxed Purchase of Goods &amp; Services taxed VAT Exemption</field>
+		<field name="sequence" eval="0" />
+		<field name="report_id" ref="l10n_vn.tax_report" />
+		<field name="parent_id" ref="l10n_vn.account_tax_report_line_02_01_vn" />
+	</record>
+
+	<!-- Sale -->
+	<record id="account_tax_report_line_sale_tax_val_exemption" model="account.tax.report.line">
+		<field name="name">Exemption Output VAT</field>
+		<field name="tag_name">Exemption Output VAT</field>
+		<field name="sequence" eval="0" />
+		<field name="report_id" ref="l10n_vn.tax_report" />
+		<field name="parent_id" ref="l10n_vn.account_tax_report_line_01_02_vn" />
+	</record>
+
+	<record id="account_tax_report_line_sale_val_exemption" model="account.tax.report.line">
+		<field name="name">Untaxed Sales of Goods &amp; Services taxed VAT Exemption</field>
+		<field name="tag_name">Untaxed Sales of Goods &amp; Services taxed VAT Exemption</field>
+		<field name="sequence" eval="0" />
+		<field name="report_id" ref="l10n_vn.tax_report" />
+		<field name="parent_id" ref="l10n_vn.account_tax_report_line_02_02_vn" />
+	</record>
+</odoo>

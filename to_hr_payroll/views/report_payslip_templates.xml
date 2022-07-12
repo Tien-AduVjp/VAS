@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="report_payslip">
+    <t t-call="web.html_container">
+        <t t-foreach="docs" t-as="o">
+            <t t-call="web.external_layout">
+                <div class="page">
+                    <h2>Pay Slip</h2>
+                    <p t-field="o.name"/>
+                    <!-- As normal employee may not have access rights to read some data in employee model,
+                    sudo is implemented here to avoid access error when the employee prints his own payslip
+                    -->
+                    <t t-set="employee" t-value="o.employee_id.sudo()" />
+                    <table name="tbl_contact" class="table table-sm table-bordered">
+                        <tr>
+                            <td><strong>Name</strong></td>
+                            <td><span t-field="o.employee_id"/></td>
+                            <td><strong>Job Position</strong></td>
+                            <td><span t-field="employee.job_id"/></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Address</strong></td>
+                            <td colspan="3">
+                                <div t-field="employee.address_home_id"
+                                    t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True, "phone_icons": True}'/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Email</strong></td>
+                            <td><span t-field="employee.work_email"/></td>
+                            <td><strong>Identification No</strong></td>
+                            <td><span t-field="employee.identification_id"/></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Reference</strong></td>
+                            <td><span t-field="o.number"/></td>
+                            <td><strong>Bank Account</strong></td>
+                            <td><span t-field="employee.bank_account_id"/></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Date From</strong></td>
+                            <td><span t-field="o.date_from"/></td>
+                            <td><strong>Date To</strong></td>
+                            <td><span t-field="o.date_to"/></td>
+                        </tr>
+                    </table>
+
+					<table name="tbl_work_calendar" class="table table-sm table-bordered">
+                        <thead>
+                            <tr>
+                                <t t-if="o.contract_id.sudo().salary_computation_mode=='hour_basis'">
+                                	<th class="text-right">Duty Working Hours</th>
+                                	<th class="text-right">Actual Worked Hours</th>
+                                	<th class="text-right">Total Leave Hours</th>
+                                	<th class="text-right">Total Unpaid Leave Hours</th>
+                               	</t>
+                               	<t t-else="">
+                               		<th class="text-right">Duty Working Days</th>
+                               		<th class="text-right">Actual Worked Days</th>
+                               		<th class="text-right">Total Leave Days</th>
+                               		<th class="text-right">Total Unpaid Leave Days</th>
+                               	</t>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        	<tr>
+                        		<t t-if="o.contract_id.sudo().salary_computation_mode=='hour_basis'">
+                        			<td class="text-right"><span t-field="o.duty_working_hours"/></td>
+                        			<td class="text-right"><span t-field="o.worked_hours"/></td>
+                        			<td class="text-right"><span t-field="o.leave_hours"/></td>
+                        			<td class="text-right"><span t-field="o.unpaid_leave_hours"/></td>
+                        		</t>
+                        		<t t-else="">
+	                        		<td class="text-right"><span t-field="o.duty_working_days"/></td>
+	                        		<td class="text-right"><span t-field="o.worked_days"/></td>
+	                        		<td class="text-right"><span t-field="o.leave_days"/></td>
+	                        		<td class="text-right"><span t-field="o.unpaid_leave_days"/></td>
+                        		</t>
+                        	</tr>
+
+                     	</tbody>
+                    </table>
+                    <h3>Salary Computation</h3>
+                    <table name="tbl_lines" class="table table-sm">
+                        <thead>
+                            <tr>
+                                <th>Code</th>
+                                <th>Name</th>
+                                <th class="text-right">Quantity/rate</th>
+                                <th class="text-right">Amount</th>
+                                <th class="text-right">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                <tr t-foreach="o.line_ids.filtered(lambda line: line.appears_on_payslip)" t-as="line">
+                                <td><span t-field="line.code"/></td>
+                                <td><span t-field="line.name"/></td>
+                                <td class="text-right"><span t-field="line.quantity"/></td>
+                                <td class="text-right"><span t-esc="line.amount"
+                                          t-options='{"widget": "monetary", "display_currency": o.currency_id}'/></td>
+                                <td class="text-right"><span t-esc="line.total"
+                                          t-options='{"widget": "monetary", "display_currency": o.currency_id}'/></td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p class="text-right"><strong>Authorized signature</strong></p>
+                </div>
+            </t>
+        </t>
+    </t>
+</template>
+</odoo>

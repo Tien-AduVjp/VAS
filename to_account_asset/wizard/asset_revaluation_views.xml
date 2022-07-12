@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="asset_revaluation_wizard_form">
+        <field name="name">asset.revaluation.wizard.form</field>
+        <field name="model">asset.revaluation.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Revaluation Asset">
+                <group col="4">
+                    <group colspan="2" col="2">
+                	    <field name="method"/>
+                        <field name="value"/>
+                    </group>
+                    <group colspan="2" col="2">
+                        <field name="revaluation_date"/>
+                        <field name="name"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="button_revaluation" string="Revaluation" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_asset_revaluation" model="ir.actions.act_window">
+         <field name="name">Revaluation Asset</field>
+         <field name="res_model">asset.revaluation.wizard</field>
+         <field name="type">ir.actions.act_window</field>
+         <field name="view_mode">tree,form</field>
+         <field name="view_id" ref="asset_revaluation_wizard_form"/>
+         <field name="target">new</field>
+   </record>
+
+</odoo>

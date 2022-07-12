@@ -1,0 +1,848 @@
+<odoo>
+<!-- TODO: Set noupdate="1" when stable -->
+	<!-- Cashflow Statement - Direct Method-->
+	<record id="account_financial_report_line_cf_70" model="account.financial.dynamic.report.line">
+		<!-- Tiền và tương đương tiền cuối kỳ (70 = 50 + 60 + 61) -->
+		<field name="name">Cash and cash equivalents, end of fiscal year (70 = 50 + 60 + 61)</field>
+		<field name="code">CFS70</field>
+		<field name="report_code">70</field>
+		<field name="formulas">balance = CFS50.balance + CFS60.balance + CFS61.balance</field>
+		<field name="sequence" eval="4" />
+		<field name="financial_report_id" ref="af_dynamic_report_cashsummary_vn" />
+		<field name="level" eval="0" />
+	</record>
+	<record id="account_financial_report_line_cf_50" model="account.financial.dynamic.report.line">
+		<!-- Lưu chuyển tiền thuần trong kỳ (50 = 20 + 30 + 40) -->
+		<field name="name">Net cash flows during the fiscal year (50 = 20+30+40)</field>
+		<field name="code">CFS50</field>
+		<field name="report_code">50</field>
+		<field name="formulas">balance = CFS20.balance + CFS30.balance + CFS40.balance</field>
+		<field name="sequence" eval="1" />
+		<field name="parent_id" ref="account_financial_report_line_cf_70" />
+		<field name="level" eval="1" />
+	</record>
+	<record id="account_financial_report_line_cf_60" model="account.financial.dynamic.report.line">
+		<!-- Tiền và tương đương tiền đầu kỳ -->
+		<field name="name">Cash and cash equivalents, beginning of fiscal year</field>
+		<field name="code">CFS60</field>
+		<field name="report_code">60</field>
+		<field name="formulas">balance = sum.balance</field>
+		<field name="domain" eval="['|',('account_id.internal_type','=','liquidity'),('account_id.code','=like','113%')]" />
+		<field name="groupby">account_id</field>
+		<field name="sequence" eval="2" />
+		<field name="parent_id" ref="account_financial_report_line_cf_70" />
+		<field name="level" eval="1" />
+		<field name="special_date_changer">to_beginning_of_period</field>
+	</record>
+	<record id="account_financial_report_line_cf_61" model="account.financial.dynamic.report.line">
+		<!-- Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ -->
+		<field name="name">Effect of exchange rate fluctuations</field>
+		<field name="code">CFS61</field>
+		<field name="report_code">61</field>
+		<field name="formulas">balance = sum.balance</field>
+		<field name="domain" eval="[('ctp_account_ids.code','=like','413%'),
+									'|',('account_id.internal_type', '=','liquidity'),
+										('account_id.code','=like','113%')]" />
+		<field name="sequence" eval="3" />
+		<field name="parent_id" ref="account_financial_report_line_cf_70" />
+		<field name="level" eval="1" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+	<record id="account_financial_report_line_cf_CFS20" model="account.financial.dynamic.report.line">
+		<!-- Lưu chuyển tiền thuần từ hoạt động kinh doanh -->
+		<field name="name">Net cash flows from operating activities</field>
+		<field name="code">CFS20</field>
+		<field name="report_code">20</field>
+		<field name="formulas">balance = CFS01.balance + CFS06.balance + CFS02.balance + CFS03.balance + CFS04.balance + CFS05.balance + CFS07.balance</field>
+		<field name="sequence" eval="1" />
+		<field name="parent_id" ref="account_financial_report_line_cf_50" />
+		<field name="level" eval="2" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+	<record id="account_financial_report_line_cf_CFSI" model="account.financial.dynamic.report.line">
+		<!-- Lưu chuyển tiền từ hoạt động kinh doanh -->
+		<field name="name">I. Cash flows from operating activities</field>
+		<field name="code">CFSI</field>
+		<field name="sequence" eval="1" />
+		<field name="parent_id" ref="account_financial_report_line_cf_CFS20" />
+		<field name="level" eval="3" />
+	</record>
+	<record id="account_financial_report_line_cf_01" model="account.financial.dynamic.report.line">
+		<!-- Tiền thu từ bán hàng, cung cấp dịch vụ và doanh thu khác -->
+		<field name="name">1. Proceeds from sales and services rendered and other revenues</field>
+		<field name="code">CFS01</field>
+		<field name="report_code">01</field>
+		<field name="formulas">balance = CFS01A.balance + CFS01B.balance</field>
+		<field name="groupby">account_id</field>
+		<field name="sequence" eval="2" />
+		<field name="parent_id" ref="account_financial_report_line_cf_CFS20" />
+		<field name="level" eval="3" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+	<record id="account_financial_report_line_cf_01a" model="account.financial.dynamic.report.line">
+		<!-- Tiền thu từ bán hàng, cung cấp dịch vụ và doanh thu khác (đối ứng trực tiếp 111/112) -->
+		<field name="name">1a. Proceeds from sales and services rendered and other revenues (Cash Direct)</field>
+		<field name="code">CFS01A</field>
+		<field name="report_code">01a</field>
+		<field name="formulas">balance = -sum.balance</field>
+		<field name="domain" eval="[('analytic_tag_ids','not in',[ref('l10n_vn_common.account_analytic_tag_fixed_assets'),ref('l10n_vn_common.account_analytic_tag_lending_loan'),ref('l10n_vn_common.account_analytic_tag_interests_dividends_distributed_profits')]),
+									'|',('account_id.user_type_id','in',[ref('account.data_account_type_revenue'),ref('to_account_financial_income.account_account_type_financial_income')]),
+										('ctp_aml_ids.ctp_account_ids.code','=like','121%'),
+									'|',('ctp_account_ids.internal_type','=','liquidity'),
+										('ctp_aml_ids.matched_credit_ids.credit_move_id.ctp_account_ids.internal_type','=','liquidity')]" />
+		<field name="groupby">account_id</field>
+		<field name="sequence" eval="3" />
+		<field name="parent_id" ref="account_financial_report_line_cf_01" />
+		<field name="level" eval="4" />
+		<field name="show_on_pdf" eval="False" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+	<record id="account_financial_report_line_cf_01b" model="account.financial.dynamic.report.line">
+		<!-- Tiền thu từ bán hàng, cung cấp dịch vụ và doanh thu khác (đối ứng gián tiếp 113) -->
+		<field name="name">1b. Proceeds from sales and services rendered and other revenues (via receivables)</field>
+		<field name="code">CFS01B</field>
+		<field name="report_code">01b</field>
+		<field name="formulas">balance = -sum.balance</field>
+		<field name="domain" eval="[('account_id.internal_type','=','receivable'),
+									('credit', '>', 0),
+									('ctp_aml_ids.matched_credit_ids.credit_move_id.ctp_account_ids.internal_type','=','liquidity'),
+									'|',('matched_debit_ids.debit_move_id.ctp_account_ids.code','=like','121%'),
+										('matched_debit_ids.debit_move_id.ctp_account_ids.user_type_id','in',[ref('account.data_account_type_revenue'),ref('to_account_financial_income.account_account_type_financial_income')]),
+    								('matched_debit_ids.debit_move_id.ctp_aml_ids.analytic_tag_ids','not in',[ref('l10n_vn_common.account_analytic_tag_fixed_assets'),ref('l10n_vn_common.account_analytic_tag_lending_loan'), ref('l10n_vn_common.account_analytic_tag_interests_dividends_distributed_profits')])
+    					]" />
+		<field name="groupby">account_id</field>
+		<field name="sequence" eval="4" />
+		<field name="parent_id" ref="account_financial_report_line_cf_01" />
+		<field name="level" eval="4" />
+		<field name="special_date_changer">strict_range</field>
+		<field name="show_on_pdf" eval="False" />
+	</record>
+
+	<record id="account_financial_report_line_cf_02" model="account.financial.dynamic.report.line">
+		<!-- Tiền chi trả cho người cung cấp hàng hóa, dịch vụ -->
+		<field name="name">2. Expenditures paid to suppliers</field>
+		<field name="code">CFS02</field>
+		<field name="report_code">02</field>
+		<field name="formulas">balance = CFS02a.balance + CFS02b.balance</field>
+		<field name="domain" eval="[]" />
+		<field name="groupby">partner_id</field>
+		<field name="sequence" eval="3" />
+		<field name="parent_id" ref="account_financial_report_line_cf_CFS20" />
+		<field name="level" eval="3" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+	<record id="account_financial_report_line_cf_02a" model="account.financial.dynamic.report.line">
+		<!-- Tiền chi trả cho người cung cấp hàng hóa, dịch vụ -->
+		<field name="name">2.a. Expenditures paid to suppliers (Cash Direct)</field>
+		<field name="code">CFS02a</field>
+		<field name="report_code">02a</field>
+		<field name="formulas">balance = -sum.balance</field>
+		<field name="domain" eval="[('debit','>',0),
+						'|',
+							'&amp;',('account_id.code','=like','15%'),
+									('ctp_aml_ids.matched_debit_ids.debit_move_id.ctp_account_ids.internal_type','=','liquidity'),
+							'&amp;',('account_id.code','=like','1331%'),
+									('ctp_aml_ids.matched_debit_ids.debit_move_id.ctp_account_ids.internal_type','=','liquidity')]" />
+		<field name="groupby">account_id</field>
+		<field name="sequence" eval="3" />
+		<field name="parent_id" ref="account_financial_report_line_cf_02" />
+		<field name="level" eval="4" />
+		<field name="show_on_pdf" eval="False" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+	<record id="account_financial_report_line_cf_02b" model="account.financial.dynamic.report.line">
+		<!-- Tiền chi trả cho người cung cấp hàng hóa, dịch vụ -->
+		<field name="name">2.b. Expenditures paid to suppliers (Via Payables)</field>
+		<field name="code">CFS02b</field>
+		<field name="report_code">02b</field>
+		<field name="formulas">balance = -sum.balance</field>
+		<field name="domain" eval="[('account_id.code','=like','%331%'),('debit','>',0),('matched_credit_ids.credit_move_id.ctp_aml_ids.analytic_tag_ids','not in',[ref('l10n_vn_common.account_analytic_tag_fixed_assets')]),
+    					'&amp;',
+   							'|','|','|','|',
+	   							('matched_credit_ids.credit_move_id.ctp_account_ids.code','=like','15%'),
+	   							('matched_credit_ids.credit_move_id.ctp_account_ids.code','=like','3388%'),
+	   							('matched_credit_ids.credit_move_id.ctp_account_ids.code','=like','133%'),
+	   							('matched_credit_ids.credit_move_id.ctp_account_ids.code','=like','242%'),
+	   							('matched_credit_ids.credit_move_id.ctp_account_ids.user_type_id','in',[ref('account.data_account_type_expenses')]),
+   							'&amp;',
+	   							('matched_credit_ids.credit_move_id.ctp_account_ids.code','not like','635%'),
+	   							('matched_credit_ids.credit_move_id.ctp_account_ids.code','not like','821%')]" />
+		<field name="groupby">account_id</field>
+		<field name="sequence" eval="4" />
+		<field name="parent_id" ref="account_financial_report_line_cf_02" />
+		<field name="level" eval="4" />
+		<field name="show_on_pdf" eval="False" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+	<record id="account_financial_report_line_cf_03" model="account.financial.dynamic.report.line">
+		<!-- Tiền chi trả cho người lao động -->
+		<field name="name">3. Expenditures paid to employees</field>
+		<field name="code">CFS03</field>
+		<field name="report_code">03</field>
+		<field name="formulas">balance = -sum.balance</field>
+		<field name="domain" eval="[('debit','>',0),('account_id.code','=like','334%'),
+					('ctp_aml_ids.matched_debit_ids.debit_move_id.ctp_account_ids.internal_type','=','liquidity')]" />
+		<!-- <field name="counterpart_accounts">('334')</field>-->
+		<field name="groupby">partner_id</field>
+		<field name="sequence" eval="4" />
+		<field name="parent_id" ref="account_financial_report_line_cf_CFS20" />
+		<field name="level" eval="3" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+	<record id="account_financial_report_line_cf_04" model="account.financial.dynamic.report.line">
+		<!-- Tiền lãi vay đã trả -->
+		<field name="name">4. Paid interests</field>
+		<field name="code">CFS04</field>
+		<field name="report_code">04</field>
+		<!-- Phân loại bằng thẻ quản trị Borrowing Loans để tránh nhầm lẫn sang hoạt động khác cũng hạch toán 635 (vd: lỗ tỷ giá)
+    		 -->
+		<field name="formulas">balance = -sum.balance</field>
+		<field name="domain" eval="[
+				'|',
+					'&amp;','&amp;','&amp;',('debit','>',0),('account_id.code','=like','331%'),
+	   					('matched_credit_ids.credit_move_id.ctp_aml_ids.analytic_tag_ids','in',[ref('l10n_vn_common.account_analytic_tag_borrowing_loan')]),
+	   					'|','|',
+	   						('matched_credit_ids.credit_move_id.ctp_account_ids.code','=like','635%'),
+	   						('matched_credit_ids.credit_move_id.ctp_account_ids.code','=like','335%'),
+	   						('ctp_account_ids.code','=like','242%'),
+					'&amp;','&amp;',('analytic_tag_ids','in',[ref('l10n_vn_common.account_analytic_tag_borrowing_loan')]),
+							('ctp_account_ids.internal_type','=','liquidity'),
+							'|',('account_id.code','=like','635%'),
+								('account_id.code','=like','335%')]" />
+		<field name="groupby">account_id</field>
+		<field name="sequence" eval="5" />
+		<field name="parent_id" ref="account_financial_report_line_cf_CFS20" />
+		<field name="level" eval="3" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+	<record id="account_financial_report_line_cf_05" model="account.financial.dynamic.report.line">
+		<!-- Thuế thu nhập doanh nghiệp đã nộp -->
+		<field name="name">5. Paid enterprise income tax</field>
+		<field name="code">CFS05</field>
+		<field name="report_code">05</field>
+		<field name="formulas">balance = -sum.balance</field>
+		<field name="domain" eval="[('account_id.code','=like','3334%'),('debit','>',0),
+							'|','|',('ctp_account_ids.internal_type','=','liquidity'),
+									('ctp_aml_ids.matched_debit_ids.debit_move_id.ctp_account_ids.internal_type','=','liquidity'),
+									('ctp_aml_ids.matched_debit_ids.debit_move_id.ctp_aml_ids.matched_debit_ids.debit_move_id.ctp_account_ids.internal_type','=','liquidity')]" />
+		<!-- <field name="counterpart_accounts">('3334')</field>-->
+		<field name="groupby">account_id</field>
+		<field name="sequence" eval="6" />
+		<field name="parent_id" ref="account_financial_report_line_cf_CFS20" />
+		<field name="level" eval="3" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+	<record id="account_financial_report_line_cf_06" model="account.financial.dynamic.report.line">
+		<!-- Tiền thu khác từ hoạt động kinh doanh -->
+		<field name="name">6. Other proceeds from operating activities</field>
+		<field name="code">CFS06</field>
+		<field name="report_code">06</field>
+		<field name="formulas">balance = CFS06a.balance - CFS06b.balance</field>
+		<field name="domain" eval="" />
+		<field name="groupby">account_id</field>
+		<field name="sequence" eval="7" />
+		<field name="parent_id" ref="account_financial_report_line_cf_CFS20" />
+		<field name="level" eval="3" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+	<record id="account_financial_report_line_cf_06a" model="account.financial.dynamic.report.line">
+		<!-- Tổng thu -->
+		<field name="name">6.a. Total Cash Received</field>
+		<field name="code">CFS06a</field>
+		<field name="report_code">06a</field>
+		<field name="formulas">balance = sum.balance</field>
+		<field name="domain" eval="[('debit','>',0),'|',('account_id.internal_type','=','liquidity'),('account_id.code','=like','113%')]" />
+		<field name="groupby">account_id</field>
+		<field name="sequence" eval="1" />
+		<field name="parent_id" ref="account_financial_report_line_cf_06" />
+		<field name="level" eval="4" />
+		<field name="special_date_changer">strict_range</field>
+		<field name="show_on_pdf" eval="False" />
+	</record>
+	<record id="account_financial_report_line_cf_06b" model="account.financial.dynamic.report.line">
+		<!-- Tổng thu -->
+		<field name="name">6.b. Total Cash Received which was classified into other items</field>
+		<field name="code">CFS06b</field>
+		<field name="report_code">06b</field>
+		<field name="formulas">balance = CFS01.balance + CFS22a.balance + CFS22b.balance + CFS24.balance + CFS26.balance + CFS27.balance + CFS31.balance + CFS33.balance</field>
+		<field name="domain" eval="" />
+		<field name="sequence" eval="2" />
+		<field name="parent_id" ref="account_financial_report_line_cf_06" />
+		<field name="level" eval="4" />
+		<field name="special_date_changer">strict_range</field>
+		<field name="show_on_pdf" eval="False" />
+	</record>
+	<record id="account_financial_report_line_cf_07" model="account.financial.dynamic.report.line">
+		<!-- Tiền chi khác cho hoạt động kinh doanh -->
+		<field name="name">7. Other expenditures on operating activities</field>
+		<field name="code">CFS07</field>
+		<field name="report_code">07</field>
+		<field name="formulas">balance = CFS07a.balance - CFS07b.balance</field>
+		<field name="domain" eval="" />
+		<field name="sequence" eval="8" />
+		<field name="parent_id" ref="account_financial_report_line_cf_CFS20" />
+		<field name="level" eval="3" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+	<record id="account_financial_report_line_cf_07a" model="account.financial.dynamic.report.line">
+		<!-- Tổng tiền chi -->
+		<field name="name">7.a. Total Cash Out</field>
+		<field name="code">CFS07a</field>
+		<field name="report_code">07a</field>
+		<field name="formulas">balance = sum.balance</field>
+		<field name="domain" eval="[('credit','>',0),'|',('account_id.user_type_id', '=', ref('account.data_account_type_liquidity')),('account_id.code','=like','113%')]" />
+		<field name="groupby">account_id</field>
+		<field name="sequence" eval="1" />
+		<field name="parent_id" ref="account_financial_report_line_cf_07" />
+		<field name="level" eval="4" />
+		<field name="special_date_changer">strict_range</field>
+		<field name="show_on_pdf" eval="False" />
+	</record>
+	<record id="account_financial_report_line_cf_07b" model="account.financial.dynamic.report.line">
+		<!-- Tổng tiền chi từ các hoạt động đã phân loại -->
+		<field name="name">7.b. Total Cash Out which was classified into other items</field>
+		<field name="code">CFS07b</field>
+		<field name="report_code">07b</field>
+		<field name="formulas">balance = CFS02.balance + CFS03.balance + CFS04.balance + CFS05.balance + CFS21.balance + CFS22c.balance + CFS22d.balance + CFS23.balance + CFS25.balance + CFS32.balance + CFS34.balance + CFS35.balance + CFS36.balance + CFS61.balance</field>
+		<field name="domain" eval="" />
+		<field name="sequence" eval="2" />
+		<field name="parent_id" ref="account_financial_report_line_cf_07" />
+		<field name="level" eval="4" />
+		<field name="special_date_changer">strict_range</field>
+		<field name="show_on_pdf" eval="False" />
+	</record>
+	<record id="account_financial_report_line_cf_30" model="account.financial.dynamic.report.line">
+		<!-- Lưu chuyển tiền thuần từ hoạt động đầu tư -->
+		<field name="name">Net cash flows from investing activities</field>
+		<field name="code">CFS30</field>
+		<field name="report_code">30</field>
+		<field name="formulas">balance = CFS22.balance + CFS21.balance + CFS23.balance + CFS24.balance + CFS25.balance + CFS26.balance + CFS27.balance</field>
+		<field name="sequence" eval="2" />
+		<field name="parent_id" ref="account_financial_report_line_cf_50" />
+		<field name="level" eval="2" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+	<record id="account_financial_report_line_cf_CFSII" model="account.financial.dynamic.report.line">
+		<!-- Lưu chuyển tiền từ hoạt động đầu tư -->
+		<field name="name">II. Cash flows from investing activities</field>
+		<field name="code">CFSII</field>
+		<field name="sequence" eval="1" />
+		<field name="parent_id" ref="account_financial_report_line_cf_30" />
+		<field name="level" eval="3" />
+	</record>
+	<record id="account_financial_report_line_cf_21" model="account.financial.dynamic.report.line">
+		<!-- Tiền chi để mua sắm, xây dựng TSCĐ và các tài sản dài hạn khác -->
+		<field name="name">1. Expenditures on purchase and construction of fixed assets and long-term assets</field>
+		<field name="code">CFS21</field>
+		<field name="report_code">21</field>
+		<field name="formulas">balance = CFS21a.balance + CFS21b.balance</field>
+		<field name="domain" eval="[]" />
+		<field name="groupby">account_id</field>
+		<field name="sequence" eval="2" />
+		<field name="parent_id" ref="account_financial_report_line_cf_30" />
+		<field name="level" eval="3" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+	<record id="account_financial_report_line_cf_21a" model="account.financial.dynamic.report.line">
+		<!-- Tiền chi để mua sắm, xây dựng TSCĐ và các tài sản dài hạn khác -->
+		<field name="name">1.a. Expenditures on purchase and construction of fixed assets and long-term assets (Cash Direct)</field>
+		<field name="code">CFS21a</field>
+		<field name="report_code">21a</field>
+		<field name="formulas">balance = -sum.balance</field>
+		<field name="domain" eval="[('debit','>',0.0),
+    						'&amp;',
+    							'|',('account_id.user_type_id','=',ref('account.data_account_type_fixed_assets')),
+    								('account_id.code','=ilike','241%'),
+    							'|',('ctp_account_ids.internal_type','=','liquidity'),
+    								('ctp_account_ids.code','=like','113%'),
+   							]" />
+		<field name="groupby">account_id</field>
+		<field name="sequence" eval="1" />
+		<field name="parent_id" ref="account_financial_report_line_cf_21" />
+		<field name="level" eval="4" />
+		<field name="show_on_pdf" eval="False" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+	<record id="account_financial_report_line_cf_21b" model="account.financial.dynamic.report.line">
+		<!-- Tiền chi để mua sắm, xây dựng TSCĐ và các tài sản dài hạn khác -->
+		<field name="name">1.b. Expenditures on purchase and construction of fixed assets and long-term assets (Via Payables)</field>
+		<field name="code">CFS21b</field>
+		<field name="report_code">21b</field>
+		<field name="formulas">balance = -sum.balance</field>
+		<field name="domain" eval="[('account_id.code','=like','%331%'),
+									('debit','>',0),
+									('ctp_aml_ids.matched_debit_ids.debit_move_id.ctp_account_ids.internal_type','=','liquidity'),
+			    					'|',
+		    							('matched_credit_ids.credit_move_id.ctp_account_ids.user_type_id','in',[ref('account.data_account_type_fixed_assets')]),
+		    							('matched_credit_ids.credit_move_id.ctp_account_ids.code','=ilike','241%')]" />
+		<field name="groupby">account_id</field>
+		<field name="sequence" eval="2" />
+		<field name="parent_id" ref="account_financial_report_line_cf_21" />
+		<field name="level" eval="4" />
+		<field name="show_on_pdf" eval="False" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+	<record id="account_financial_report_line_cf_22" model="account.financial.dynamic.report.line">
+		<!-- Tiền thu thanh lý, nhượng bán TSCĐ và các tài sản dài hạn khác -->
+		<field name="name">2. Proceeds from disposal or transfer of fixed assets and other long-term assets</field>
+		<field name="code">CFS22</field>
+		<field name="report_code">22</field>
+		<field name="formulas">balance = CFS22a.balance + CFS22b.balance + CFS22c.balance + CFS22d.balance</field>
+		<field name="domain" eval="[]" />
+		<field name="sequence" eval="3" />
+		<field name="parent_id" ref="account_financial_report_line_cf_30" />
+		<field name="level" eval="3" />
+		<field name="financial_report_id" eval="False" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+	<record id="account_financial_report_line_cf_22a" model="account.financial.dynamic.report.line">
+		<!-- Doanh thu thanh lý, nhượng bán TSCĐ và các tài sản dài hạn khác -->
+		<field name="name">2.a. Sales Revenue of fixed assets and other long-term assets (Cash Direct)</field>
+		<field name="code">CFS22a</field>
+		<field name="report_code">22a</field>
+		<field name="formulas">balance = -sum.balance</field>
+		<field name="domain" eval="[('analytic_tag_ids','in',[ref('l10n_vn_common.account_analytic_tag_fixed_assets')]),
+						'|',
+							'&amp;',('account_id.user_type_id','in',(ref('account.data_account_type_revenue'),ref('account.data_account_type_other_income'))),
+								'|',('ctp_account_ids.internal_type','=','liquidity'),
+									('ctp_aml_ids.matched_credit_ids.credit_move_id.ctp_account_ids.internal_type','=','liquidity'),
+							'&amp;','&amp;',('account_id.code','=like','333%'),
+									('ctp_aml_ids.ctp_account_ids.user_type_id','in',(ref('account.data_account_type_revenue'),ref('account.data_account_type_other_income'))),
+									('ctp_aml_ids.matched_credit_ids.credit_move_id.ctp_account_ids.internal_type','=','liquidity')]" />
+		<field name="groupby">account_id</field>
+		<field name="sequence" eval="1" />
+		<field name="parent_id" ref="account_financial_report_line_cf_22" />
+		<field name="level" eval="4" />
+		<field name="financial_report_id" eval="False" />
+		<field name="show_on_pdf" eval="False" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+	<record id="account_financial_report_line_cf_22b" model="account.financial.dynamic.report.line">
+		<!-- Doanh thu thanh lý, nhượng bán TSCĐ và các tài sản dài hạn khác -->
+		<field name="name">2.b. Sales Revenue of fixed assets and other long-term assets (Via Receivables)</field>
+		<field name="code">CFS22b</field>
+		<field name="report_code">22b</field>
+		<field name="formulas">balance = -sum.balance</field>
+		<field name="domain" eval="[('account_id.internal_type','=','receivable'),('credit','>',0),
+						('matched_debit_ids.debit_move_id.ctp_account_ids.user_type_id','in',(ref('account.data_account_type_revenue'),ref('account.data_account_type_other_income'))),
+						('ctp_aml_ids.matched_credit_ids.credit_move_id.ctp_account_ids.internal_type','=','liquidity'),
+						('matched_debit_ids.debit_move_id.ctp_aml_ids.analytic_tag_ids','in',[ref('l10n_vn_common.account_analytic_tag_fixed_assets')])]" />
+		<field name="groupby">account_id</field>
+		<field name="sequence" eval="2" />
+		<field name="parent_id" ref="account_financial_report_line_cf_22" />
+		<field name="level" eval="4" />
+		<field name="financial_report_id" eval="False" />
+		<field name="show_on_pdf" eval="False" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+	<record id="account_financial_report_line_cf_22c" model="account.financial.dynamic.report.line">
+		<!-- Chi phí thanh lý, nhượng bán TSCĐ và các tài sản dài hạn khác -->
+		<field name="name">2.c. Sales/Disposal Expenses of fixed assets and other long-term assets (Cash Direct)</field>
+		<field name="code">CFS22c</field>
+		<field name="report_code">22c</field>
+		<field name="formulas">balance = -sum.balance</field>
+		<field name="domain" eval="[('analytic_tag_ids','in',[ref('l10n_vn_common.account_analytic_tag_fixed_assets')]),
+						'|',
+							'&amp;',('account_id.user_type_id','=',ref('account.data_account_type_expenses')),
+								'|',('ctp_account_ids.internal_type','=','liquidity'),
+									('ctp_aml_ids.matched_debit_ids.debit_move_id.ctp_account_ids.internal_type','=','liquidity'),
+							'&amp;','&amp;',('account_id.code','=like','133%'),
+									('ctp_aml_ids.ctp_account_ids.user_type_id','=',ref('account.data_account_type_expenses')),
+									('ctp_aml_ids.matched_debit_ids.debit_move_id.ctp_account_ids.internal_type','=','liquidity')]" />
+		<field name="groupby">account_id</field>
+		<field name="sequence" eval="3" />
+		<field name="parent_id" ref="account_financial_report_line_cf_22" />
+		<field name="level" eval="4" />
+		<field name="financial_report_id" eval="False" />
+		<field name="show_on_pdf" eval="False" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+	<record id="account_financial_report_line_cf_22d" model="account.financial.dynamic.report.line">
+		<!-- Chi phí thanh lý, nhượng bán TSCĐ và các tài sản dài hạn khác -->
+		<field name="name">2.d. Sales/Disposal Expenses of fixed assets and other long-term assets (Via Payables)</field>
+		<field name="code">CFS22d</field>
+		<field name="report_code">22d</field>
+		<field name="formulas">balance = -sum.balance</field>
+		<field name="domain" eval="[('account_id.internal_type','=','payable'),('debit','>',0),
+						('matched_credit_ids.credit_move_id.ctp_account_ids.user_type_id','=',ref('account.data_account_type_expenses')),
+    					('matched_credit_ids.credit_move_id.ctp_aml_ids.analytic_tag_ids','!=',False),
+    					('matched_credit_ids.credit_move_id.ctp_aml_ids.analytic_tag_ids','in',[ref('l10n_vn_common.account_analytic_tag_fixed_assets')]),
+    					('ctp_aml_ids.matched_debit_ids.debit_move_id.ctp_account_ids.internal_type','=','liquidity'),
+    					'|',('matched_credit_ids.credit_move_id.ctp_account_ids.user_type_id','!=',ref('account.data_account_type_fixed_assets')),
+    						('matched_credit_ids.credit_move_id.ctp_account_ids.code','not ilike','241%')]" />
+		<field name="groupby">account_id</field>
+		<field name="sequence" eval="4" />
+		<field name="parent_id" ref="account_financial_report_line_cf_22" />
+		<field name="level" eval="4" />
+		<field name="financial_report_id" eval="False" />
+		<field name="show_on_pdf" eval="False" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+	<record id="account_financial_report_line_cf_23" model="account.financial.dynamic.report.line">
+		<!-- Tiền chi cho vay, mua các công cụ nợ của đơn vị khác -->
+		<field name="name">3. Expenditures on loans and purchase of  debt instruments from other entities</field>
+		<field name="code">CFS23</field>
+		<field name="report_code">23</field>
+		<field name="formulas">balance = -sum.balance</field>
+		<field name="domain" eval="[('debit','>',0),
+									'&amp;',
+				    					'|',('account_id.code','=like','128%'), 
+				    						'&amp;',('analytic_tag_ids','in',[ref('l10n_vn_common.account_analytic_tag_lending_loan')]),
+				    								('account_id.code','ilike','171%'),
+				    					'|','|',('ctp_aml_ids.matched_debit_ids.debit_move_id.ctp_aml_ids.matched_debit_ids.debit_move_id.ctp_account_ids.internal_type', '=','liquidity'),
+			    								('ctp_aml_ids.matched_debit_ids.debit_move_id.ctp_account_ids.internal_type','=','liquidity'),
+				    							('ctp_account_ids.internal_type','=','liquidity')]" />
+		<field name="groupby">account_id</field>
+		<field name="sequence" eval="6" />
+		<field name="parent_id" ref="account_financial_report_line_cf_30" />
+		<field name="level" eval="3" />
+		<field name="financial_report_id" eval="False" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+	<record id="account_financial_report_line_cf_24" model="account.financial.dynamic.report.line">
+		<!-- Tiền thu hồi cho vay, bán lại các công cụ nợ của đơn vị khác -->
+		<field name="name">4. Proceeds from lending or repurchase of debt instruments from other entities</field>
+		<field name="code">CFS24</field>
+		<field name="report_code">24</field>
+		<field name="formulas">balance = -sum.balance</field>
+		<field name="domain" eval="[('credit','>',0.0),
+    					'&amp;',
+    						'|',('account_id.code','=like','128%'),
+    							'&amp;',('analytic_tag_ids','in',[ref('l10n_vn_common.account_analytic_tag_lending_loan')]),
+    									('account_id.code','=like','171%'),
+    						'|','|',('ctp_aml_ids.matched_credit_ids.credit_move_id.ctp_aml_ids.matched_credit_ids.credit_move_id.ctp_account_ids.internal_type','=','liquidity'),
+   									('ctp_aml_ids.matched_credit_ids.credit_move_id.ctp_account_ids.internal_type','=','liquidity'),
+    								('ctp_account_ids.internal_type','=','liquidity')]" />
+		<field name="groupby">account_id</field>
+		<field name="sequence" eval="7" />
+		<field name="parent_id" ref="account_financial_report_line_cf_30" />
+		<field name="level" eval="3" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+	<record id="account_financial_report_line_cf_25" model="account.financial.dynamic.report.line">
+		<!-- Tiền chi đầu tư góp vốn vào đơn vị khác -->
+		<field name="name">5. Expenditures on equity investments in other entities</field>
+		<field name="code">CFS25</field>
+		<field name="report_code">25</field>
+		<field name="formulas">balance = CFS25a.balance + CFS25b.balance</field>
+		<field name="domain" eval="[]" />
+		<field name="groupby">account_id</field>
+		<field name="sequence" eval="8" />
+		<field name="parent_id" ref="account_financial_report_line_cf_30" />
+		<field name="level" eval="3" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+	<record id="account_financial_report_line_cf_25a" model="account.financial.dynamic.report.line">
+		<!-- Tiền chi đầu tư góp vốn vào đơn vị khác -->
+		<field name="name">5.a. Expenditures on equity investments in other entities (Cash Direct)</field>
+		<field name="code">CFS25a</field>
+		<field name="report_code">25a</field>
+		<field name="formulas">balance = -sum.balance</field>
+		<field name="domain" eval="[('debit','>',0.0),
+									'&amp;',
+										'|','|',('account_id.code','=like','221%'),
+												('account_id.code','=like','222%'),
+												('account_id.code','=like','2281%'),
+    									'|','|',('ctp_aml_ids.matched_debit_ids.debit_move_id.ctp_account_ids.internal_type','=','liquidity'),
+    											('ctp_account_ids.code','=ilike','113%'),
+    											('ctp_account_ids.internal_type','=','liquidity')]" />
+		<field name="groupby">account_id</field>
+		<field name="sequence" eval="8" />
+		<field name="parent_id" ref="account_financial_report_line_cf_25" />
+		<field name="level" eval="3" />
+		<field name="show_on_pdf" eval="False" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+	<record id="account_financial_report_line_cf_25b" model="account.financial.dynamic.report.line">
+		<!-- Tiền chi đầu tư góp vốn vào đơn vị khác -->
+		<field name="name">5.b. Expenditures on equity investments in other entities (Via Payables)</field>
+		<field name="code">CFS25b</field>
+		<field name="report_code">25b</field>
+		<field name="formulas">balance = -sum.balance</field>
+		<field name="domain" eval="[('debit','>',0),
+									('account_id.code','=like','331%'),
+									'|','|',('matched_credit_ids.credit_move_id.ctp_account_ids.code','=like','221%'),
+											('matched_credit_ids.credit_move_id.ctp_account_ids.code','=like','222%'),
+											('matched_credit_ids.credit_move_id.ctp_account_ids.code','=like','2281%'),
+									('ctp_aml_ids.matched_debit_ids.debit_move_id.ctp_account_ids.internal_type','=','liquidity')]" />
+		<field name="groupby">account_id</field>
+		<field name="sequence" eval="9" />
+		<field name="parent_id" ref="account_financial_report_line_cf_25" />
+		<field name="level" eval="3" />
+		<field name="show_on_pdf" eval="False" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+	<record id="account_financial_report_line_cf_26" model="account.financial.dynamic.report.line">
+		<!-- Tiền thu hồi đầu tư góp vốn vào đơn vị khác -->
+		<field name="name">6. Proceed from equity investments in other entities</field>
+		<field name="code">CFS26</field>
+		<field name="report_code">26</field>
+		<field name="formulas">balance = CFS26a.balance + CFS26b.balance</field>
+		<field name="domain" eval="[]" />
+		<field name="groupby">account_id</field>
+		<field name="sequence" eval="9" />
+		<field name="parent_id" ref="account_financial_report_line_cf_30" />
+		<field name="level" eval="3" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+	<record id="account_financial_report_line_cf_26a" model="account.financial.dynamic.report.line">
+		<!-- Tiền thu hồi đầu tư góp vốn vào đơn vị khác -->
+		<field name="name">6.a. Proceed from equity investments in other entities (Cash Direct)</field>
+		<field name="code">CFS26a</field>
+		<field name="report_code">26a</field>
+		<field name="formulas">balance = -sum.balance</field>
+		<field name="domain" eval="[('credit','>',0.0),
+									'|','|',('account_id.code','=like','221%'),
+												('account_id.code','=like','222%'),
+												('account_id.code','=like','2281%'),
+    								'|','|',('ctp_aml_ids.matched_debit_ids.debit_move_id.ctp_account_ids.internal_type','=','liquidity'),
+    										('ctp_account_ids.code','=ilike','113%'),
+    										('ctp_account_ids.internal_type','=','liquidity')]" />
+		<field name="groupby">account_id</field>
+		<field name="sequence" eval="9" />
+		<field name="parent_id" ref="account_financial_report_line_cf_26" />
+		<field name="level" eval="4" />
+		<field name="show_on_pdf" eval="False" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+	<record id="account_financial_report_line_cf_26b" model="account.financial.dynamic.report.line">
+		<!-- Tiền thu hồi đầu tư góp vốn vào đơn vị khác -->
+		<field name="name">6.b Proceed from equity investments in other entities (Via receivables)</field>
+		<field name="code">CFS26b</field>
+		<field name="report_code">26b</field>
+		<field name="formulas">balance = -sum.balance</field>
+		<field name="domain" eval="[('credit','>',0),
+									('account_id.code','=like','%131'),
+									'|','|',('matched_debit_ids.debit_move_id.ctp_account_ids.code','=like','221%'),
+											('matched_debit_ids.debit_move_id.ctp_account_ids.code','=like','222%'),
+											('matched_debit_ids.debit_move_id.ctp_account_ids.code','=like','2281%'),
+									('ctp_aml_ids.matched_credit_ids.credit_move_id.ctp_account_ids.internal_type','=','liquidity')]" />
+		<field name="groupby">account_id</field>
+		<field name="sequence" eval="10" />
+		<field name="parent_id" ref="account_financial_report_line_cf_26" />
+		<field name="level" eval="4" />
+		<field name="show_on_pdf" eval="False" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+	<record id="account_financial_report_line_cf_27" model="account.financial.dynamic.report.line">
+		<!-- Tiền thu lãi cho vay, cổ tức và lợi nhuận được chia -->
+		<field name="name">7. Proceed from interests, dividends and distributed profits</field>
+		<field name="code">CFS27</field>
+		<field name="report_code">27</field>
+		<field name="formulas">balance = CFS27a.balance + CFS27b.balance</field>
+		<field name="domain" eval="[]" />
+		<field name="groupby">account_id</field>
+		<field name="sequence" eval="10" />
+		<field name="parent_id" ref="account_financial_report_line_cf_30" />
+		<field name="level" eval="3" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+	<record id="account_financial_report_line_cf_27a" model="account.financial.dynamic.report.line">
+		<!-- Tiền thu lãi cho vay, cổ tức và lợi nhuận được chia -->
+		<field name="name">7.a. Proceed from interests, dividends and distributed profits (Cash Direct)</field>
+		<field name="code">CFS27a</field>
+		<field name="report_code">27a</field>
+		<field name="formulas">balance = -sum.balance</field>
+		<field name="domain" eval="[('analytic_tag_ids','in',[ref('l10n_vn_common.account_analytic_tag_interests_dividends_distributed_profits')]),
+					    			('account_id.user_type_id','=',ref('to_account_financial_income.account_account_type_financial_income')),
+					    			'|',('ctp_aml_ids.matched_credit_ids.credit_move_id.ctp_account_ids.internal_type','=','liquidity'),
+					    				('ctp_account_ids.internal_type','=','liquidity')]"/>
+		<field name="groupby">account_id</field>
+		<field name="sequence" eval="1" />
+		<field name="parent_id" ref="account_financial_report_line_cf_27" />
+		<field name="level" eval="3" />
+		<field name="show_on_pdf" eval="False" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+	<record id="account_financial_report_line_cf_27b" model="account.financial.dynamic.report.line">
+		<!-- Tiền thu lãi cho vay, cổ tức và lợi nhuận được chia -->
+		<field name="name">7.b. Proceed from interests, dividends and distributed profits (Via Receivables)</field>
+		<field name="code">CFS27b</field>
+		<field name="report_code">27b</field>
+		<field name="formulas">balance = -sum.balance + sum.amount_residual</field>
+		<field name="domain" eval="[('account_id.internal_type','=','receivable'),('credit','>',0),
+									('matched_debit_ids.debit_move_id.ctp_account_ids.user_type_id','=',ref('to_account_financial_income.account_account_type_financial_income')),
+									('matched_debit_ids.debit_move_id.ctp_aml_ids.analytic_tag_ids','in',[ref('l10n_vn_common.account_analytic_tag_interests_dividends_distributed_profits')]),
+									('ctp_aml_ids.matched_credit_ids.credit_move_id.ctp_account_ids.internal_type','=','liquidity'),]" />
+		<field name="groupby">account_id</field>
+		<field name="sequence" eval="2" />
+		<field name="parent_id" ref="account_financial_report_line_cf_27" />
+		<field name="level" eval="3" />
+		<field name="show_on_pdf" eval="False" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+	<record id="account_financial_report_line_cf_40" model="account.financial.dynamic.report.line">
+		<!-- Lưu chuyển tiền thuần từ hoạt động tài chính -->
+		<field name="name">Cash flows from financial activities</field>
+		<field name="code">CFS40</field>
+		<field name="report_code">40</field>
+		<field name="formulas">balance = CFS31.balance + CFS32.balance + CFS33.balance + CFS34.balance + CFS35.balance + CFS36.balance</field>
+		<field name="sequence" eval="3" />
+		<field name="parent_id" ref="account_financial_report_line_cf_50" />
+		<field name="level" eval="2" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+	<record id="account_financial_report_line_cf_CFSIII" model="account.financial.dynamic.report.line">
+		<!-- Lưu chuyển tiền từ hoạt động tài chính -->
+		<field name="name">III. Cash flows from financial activities</field>
+		<field name="code">CFSIII</field>
+		<field name="sequence" eval="1" />
+		<field name="parent_id" ref="account_financial_report_line_cf_40" />
+		<field name="level" eval="3" />
+	</record>
+	<record id="account_financial_report_line_cf_31" model="account.financial.dynamic.report.line">
+		<!-- Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu -->
+		<field name="name">1. Proceeds from issuance of shares and receipt of contributed capital</field>
+		<field name="code">CFS31</field>
+		<field name="report_code">31</field>
+		<field name="formulas">balance = -sum.balance</field>
+		<field name="domain" eval="[('credit','>',0.0),
+									'|',('account_id.code','=like','419%'),
+										'&amp;',('account_id.code','=like','411%'),
+												('account_id.code','not like','41112%'),
+    								'|','|','|',('ctp_aml_ids.matched_credit_ids.credit_move_id.ctp_account_ids.internal_type', '=','liquidity'),
+    											('ctp_aml_ids.matched_credit_ids.credit_move_id.ctp_aml_ids.matched_credit_ids.credit_move_id.ctp_account_ids.internal_type', '=','liquidity'),
+   												('ctp_account_ids.code','=like','113%'),
+   												('ctp_account_ids.internal_type','=','liquidity')]" />
+		<field name="groupby">account_id</field>
+		<field name="sequence" eval="2" />
+		<field name="parent_id" ref="account_financial_report_line_cf_40" />
+		<field name="level" eval="3" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+	<record id="account_financial_report_line_cf_32" model="account.financial.dynamic.report.line">
+		<!-- Tiền trả lại vốn góp cho các chủ sở hữu, mua lại cổ phiếu của doanh nghiệp đã phát hành -->
+		<field name="name">2. Repayment of contributed capital and repurchase of stock issued</field>
+		<field name="code">CFS32</field>
+		<field name="report_code">32</field>
+		<field name="formulas">balance = -sum.balance</field>
+		<field name="domain" eval="[('debit','>',0.0), 
+									'|',('account_id.code','=like','419%'),
+									'&amp;',('account_id.code','=like','411%'),('account_id.code','not like','41112%'),
+    								'|','|','|',('ctp_aml_ids.matched_debit_ids.debit_move_id.ctp_account_ids.internal_type','=','liquidity'),
+    											('ctp_aml_ids.matched_debit_ids.debit_move_id.ctp_aml_ids.matched_debit_ids.debit_move_id.ctp_account_ids.internal_type','=','liquidity'),
+    											('ctp_account_ids.code','=like','113%'),
+    											('ctp_account_ids.internal_type','=','liquidity')]" />
+		<field name="groupby">account_id</field>
+		<field name="sequence" eval="3" />
+		<field name="parent_id" ref="account_financial_report_line_cf_40" />
+		<field name="level" eval="3" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+	<record id="account_financial_report_line_cf_33" model="account.financial.dynamic.report.line">
+		<!-- Tiền thu từ đi vay -->
+		<field name="name">3. Proceeds from borrowings</field>
+		<field name="code">CFS33</field>
+		<field name="report_code">33</field>
+		<field name="formulas">balance = -sum.balance</field>
+		<field name="domain" eval="[('credit','>',0.0),
+									'&amp;',
+										'|','|','|','|',('account_id.code','=like','3411%'),
+													('account_id.code','=like','3431%'),
+													('account_id.code','=like','3432%'),
+													('account_id.code','=like','41112%'),
+													'&amp;',('account_id.code','=like','171%'),
+															('analytic_tag_ids','in',[ref('l10n_vn_common.account_analytic_tag_borrowing_loan')]),
+										'|','|','|',('ctp_aml_ids.matched_credit_ids.credit_move_id.ctp_account_ids.internal_type','=','liquidity'),
+													('ctp_aml_ids.matched_credit_ids.credit_move_id.ctp_aml_ids.matched_credit_ids.credit_move_id.ctp_account_ids.internal_type','=','liquidity'),
+													('ctp_account_ids.internal_type','=','liquidity'),
+													('ctp_account_ids.code','=like','113%'),
+									]" />
+		<field name="groupby">account_id</field>
+		<field name="sequence" eval="4" />
+		<field name="parent_id" ref="account_financial_report_line_cf_40" />
+		<field name="level" eval="3" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+	<record id="account_financial_report_line_cf_34" model="account.financial.dynamic.report.line">
+		<!-- Tiền chi trả nợ gốc vay -->
+		<field name="name">4. Repayment of principal</field>
+		<field name="code">CFS34</field>
+		<field name="report_code">34</field>
+		<field name="formulas">balance = -sum.balance</field>
+		<field name="domain" eval="[('debit','>',0.0),
+									'&amp;',
+										'|','|','|','|',('account_id.code','=like','3411%'),
+													('account_id.code','=like','3431%'),
+													('account_id.code','=like','3432%'),
+													('account_id.code','=like','41112%'),
+													'&amp;',('account_id.code','=like','171%'),
+															('analytic_tag_ids','in',[ref('l10n_vn_common.account_analytic_tag_borrowing_loan')]),
+										'|','|','|',('ctp_aml_ids.matched_debit_ids.debit_move_id.ctp_account_ids.internal_type','=','liquidity'),
+													('ctp_aml_ids.matched_debit_ids.debit_move_id.ctp_aml_ids.matched_debit_ids.debit_move_id.ctp_account_ids.internal_type','=','liquidity'),
+													('ctp_account_ids.internal_type','=','liquidity'),
+													('ctp_account_ids.code','=like','113%'),
+									]" />
+		<!-- <field name="counterpart_accounts">('311','3411','3431','3432','41112')</field>-->
+		<field name="groupby">account_id</field>
+		<field name="sequence" eval="5" />
+		<field name="parent_id" ref="account_financial_report_line_cf_40" />
+		<field name="level" eval="3" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+	<record id="account_financial_report_line_cf_35" model="account.financial.dynamic.report.line">
+		<!-- Tiền chi trả nợ thuê tài chính -->
+		<field name="name">5. Repayment of financial principal</field>
+		<field name="code">CFS35</field>
+		<field name="report_code">35</field>
+		<field name="formulas">balance = -sum.balance</field>
+		<field name="domain" eval="[('account_id.code','=like','3412%'),('debit','>',0.0),
+									'|','|','|',('ctp_aml_ids.matched_debit_ids.debit_move_id.ctp_account_ids.internal_type','=','liquidity'),
+												('ctp_aml_ids.matched_debit_ids.debit_move_id.ctp_aml_ids.matched_debit_ids.debit_move_id.ctp_account_ids.internal_type','=','liquidity'),
+												('ctp_account_ids.internal_type','=','liquidity'),
+												('ctp_account_ids.code','=like','113%')]" />
+		<!-- <field name="counterpart_accounts">('3412')</field>-->
+		<field name="groupby">account_id</field>
+		<field name="sequence" eval="6" />
+		<field name="parent_id" ref="account_financial_report_line_cf_40" />
+		<field name="level" eval="3" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+	<record id="account_financial_report_line_cf_36" model="account.financial.dynamic.report.line">
+		<!-- Cổ tức, lợi nhuận đã trả cho chủ sở hữu -->
+		<field name="name">6. Dividends and profits paid to owners</field>
+		<field name="code">CFS36</field>
+		<field name="report_code">36</field>
+		<field name="formulas">balance = CFS36a.balance + CFS36b.balance</field>
+		<field name="domain" eval="[]" />
+		<field name="groupby">account_id</field>
+		<field name="sequence" eval="7" />
+		<field name="parent_id" ref="account_financial_report_line_cf_40" />
+		<field name="level" eval="3" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+	<record id="account_financial_report_line_cf_36a" model="account.financial.dynamic.report.line">
+		<!-- Cổ tức, lợi nhuận đã trả cho chủ sở hữu -->
+		<field name="name">6.a. Dividends and profits paid to owners (Cash Direct)</field>
+		<field name="code">CFS36a</field>
+		<field name="report_code">36a</field>
+		<field name="formulas">balance = -sum.balance</field>
+		<field name="domain" eval="[('debit','>',0.0),('account_id.code','=like','421%'),
+    								'|','|',('ctp_aml_ids.matched_debit_ids.debit_move_id.ctp_account_ids.internal_type','=','liquidity'),
+    										('ctp_account_ids.code','=like','113%'),
+    										('ctp_account_ids.internal_type','=','liquidity')]" />
+		<field name="groupby">account_id</field>
+		<field name="sequence" eval="1" />
+		<field name="parent_id" ref="account_financial_report_line_cf_36" />
+		<field name="level" eval="4" />
+		<field name="show_on_pdf" eval="False" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+	<record id="account_financial_report_line_cf_36b" model="account.financial.dynamic.report.line">
+		<!-- Cổ tức, lợi nhuận đã trả cho chủ sở hữu -->
+		<field name="name">6.b. Dividends and profits paid to owners (Via Payables)</field>
+		<field name="code">CFS36b</field>
+		<field name="report_code">36b</field>
+		<field name="formulas">balance = -sum.balance</field>
+		<field name="domain" eval="[('debit','>',0.0),
+									('account_id.code','=like','338%'),
+									('matched_credit_ids.credit_move_id.ctp_account_ids.code','=like','421%'),
+			    					('ctp_aml_ids.matched_debit_ids.debit_move_id.ctp_account_ids.internal_type','=','liquidity')]" />
+		<field name="groupby">account_id</field>
+		<field name="sequence" eval="2" />
+		<field name="parent_id" ref="account_financial_report_line_cf_36" />
+		<field name="level" eval="4" />
+		<field name="show_on_pdf" eval="False" />
+		<field name="special_date_changer">strict_range</field>
+	</record>
+</odoo>

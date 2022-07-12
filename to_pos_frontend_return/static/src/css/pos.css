@@ -1,0 +1,94 @@
+
+.pos .orderlist-screen .window,
+.pos .orderlist-screen .full-content .subwindow{
+    display: block;
+}
+.pos .orderlist-screen .full-content .subwindow-container{
+    display: block;
+    height: 100%;
+}
+.pos .orderlist-screen .full-content .subwindow.collapsed,
+.pos .orderlist-screen .full-content .subwindow-container.collapsed{
+    height: auto;
+}
+
+/* RETURN SCREEN */
+.return-screen {
+    font-size: medium;
+}
+.return-screen .order-details-box{
+    position: relative;
+    font-size: 16px;
+    padding: 20px;
+}
+.order-details-box-left{
+    flex-grow: 1;
+    float: left;
+}
+.order-details-box-right{
+    flex-grow: 1;
+    float: right;
+}
+.order-details-item{
+    margin-bottom: 8px;
+}
+.order-details-item-label{
+	font-weight: bold;
+    display: inline-block;
+    width: 110px;
+    text-align: right;
+    margin-right: 8px;
+}
+.order-details-item-content{
+	 margin-right: 8px;
+}
+
+.pos .return-screen .order-lines{
+	margin-top: 15px;
+}
+.pos .return-screen .order-line{
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+	line-height: 30px;
+    transition: all 150ms linear;
+    background: rgb(230,230,230);
+    align-items: center;
+}
+.pos .return-screen .order-line:nth-child(odd){
+    transition: all 150ms linear;
+    background: rgb(247,247,247);
+}
+.pos .return-screen .order-line:nth-child(even){
+    transition: all 150ms linear;
+    background: rgb(230,230,230);
+}
+.pos .return-screen .header{
+    background: white;
+}
+
+.pos .return-screen .order-line .cell{
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 0px 8px;
+}
+.pos .return-screen .order-line .cell.line-product{
+    flex-grow: 2;
+}
+.pos .return-screen .order-line .cell.button-delete{
+    flex-grow: 0.3;
+}
+.pos .return-screen .order-line .cell .return-input
+{
+    padding: 4px;
+    border-radius: 3px;
+    border: solid 1px #cecbcb;
+    margin-bottom: 4px;
+    background: white;
+    font-family: "Lato","Lucida Grande", Helvetica, Verdana, Arial;
+    color: #555555;
+    font-size: 14px;
+    box-sizing: border-box;
+    width: 100%;
+}

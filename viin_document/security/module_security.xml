@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="document_group_user" model="res.groups">
+        <field name="name">Officer</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        <field name="category_id" ref="base.module_category_productivity_documents"/>
+    </record>
+
+    <record id="document_group_manager" model="res.groups">
+        <field name="name">Administrator</field>
+        <field name="category_id" ref="base.module_category_productivity_documents"/>
+        <field name="implied_ids" eval="[(4, ref('document_group_user'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+    </record>
+
+    <!-- Record Rules -->
+
+    <!-- Document Team -->
+
+    <record id="document_team_rule_multi_company" model="ir.rule">
+        <field name="name">Document Team: Multi-company</field>
+        <field name="model_id" ref="viin_document.model_document_team"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]</field>
+    </record>
+
+    <record id="document_team_rule_leader" model="ir.rule">
+        <field name="name">Document Team: leader</field>
+        <field name="model_id" ref="viin_document.model_document_team"/>
+        <field name="domain_force">[('leader_id', '=', user.id)]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        <field name="perm_read" eval="False" />
+		<field name="perm_write" eval="True" />
+		<field name="perm_create" eval="False" />
+		<field name="perm_unlink" eval="False" />
+    </record>
+
+    <record id="document_team_rule_manager" model="ir.rule">
+        <field name="name">Document Team: manager</field>
+        <field name="model_id" ref="viin_document.model_document_team" />
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="groups" eval="[(4, ref('viin_document.document_group_user'))]" />
+    </record>
+
+    <!-- Document Workspace -->
+
+    <record id="document_workspace_rule_multi_company" model="ir.rule">
+        <field name="name">Document Workspace: Multi-company</field>
+        <field name="model_id" ref="viin_document.model_document_workspace"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]</field>
+    </record>
+
+    <record id="document_workspace_readable_rule_internal_user" model="ir.rule">
+        <field name="name">Document Workspace: internal readable</field>
+        <field name="model_id" ref="viin_document.model_document_workspace"/>
+        <field name="domain_force">['|', '|', '|', '|', '|', '|', '|', '|',
+            ('write_team_ids.member_ids', 'in', [user.id]),
+            ('read_team_ids.member_ids', 'in', [user.id]),
+            ('specific_team_ids.member_ids', 'in', [user.id]),
+            ('write_user_ids', 'in', [user.id]),
+            ('read_user_ids', 'in', [user.id]),
+            ('specific_user_ids', 'in', [user.id]),
+            ('write_group_ids', 'in', user.groups_id.ids),
+            ('read_group_ids', 'in', user.groups_id.ids),
+            ('specific_group_ids', 'in', user.groups_id.ids)]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        <field name="perm_read" eval="True" />
+        <field name="perm_write" eval="False" />
+        <field name="perm_create" eval="False" />
+        <field name="perm_unlink" eval="False" />
+    </record>
+
+    <record id="document_workspace_recursive_readable_rule_internal_user" model="ir.rule">
+        <field name="name">Document Workspace: internal recursive readable</field>
+        <field name="model_id" ref="viin_document.model_document_workspace"/>
+        <field name="domain_force">['|', '|', '|', '|', '|', '|', '|', '|',
+            ('recursive_child_ids.write_team_ids.member_ids', 'in', [user.id]),
+            ('recursive_child_ids.read_team_ids.member_ids', 'in', [user.id]),
+            ('recursive_child_ids.specific_team_ids.member_ids', 'in', [user.id]),
+            ('recursive_child_ids.write_user_ids', 'in', [user.id]),
+            ('recursive_child_ids.read_user_ids', 'in', [user.id]),
+            ('recursive_child_ids.specific_user_ids', 'in', [user.id]),
+            ('recursive_child_ids.write_group_ids', 'in', user.groups_id.ids),
+            ('recursive_child_ids.read_group_ids', 'in', user.groups_id.ids),
+            ('recursive_child_ids.specific_group_ids', 'in', user.groups_id.ids)]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        <field name="perm_read" eval="True" />
+        <field name="perm_write" eval="False" />
+        <field name="perm_create" eval="False" />
+        <field name="perm_unlink" eval="False" />
+    </record>
+
+    <record id="document_workspace_writable_rule_internal_user" model="ir.rule">
+        <field name="name">Document Workspace: internal writable</field>
+        <field name="model_id" ref="viin_document.model_document_workspace"/>
+        <field name="domain_force">['|', '|',
+            ('write_team_ids.member_ids', 'in', [user.id]),
+            ('write_user_ids', 'in', [user.id]),
+            ('write_group_ids', 'in', user.groups_id.ids)]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        <field name="perm_read" eval="False" />
+        <field name="perm_write" eval="True" />
+        <field name="perm_create" eval="False" />
+        <field name="perm_unlink" eval="False" />
+    </record>
+
+    <record id="document_workspace_rule_document_user" model="ir.rule">
+        <field name="name">Document Workspace: document user</field>
+        <field name="model_id" ref="viin_document.model_document_workspace"/>
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="groups" eval="[(4, ref('viin_document.document_group_user'))]"/>
+        <field name="perm_read" eval="True" />
+        <field name="perm_write" eval="True" />
+        <field name="perm_create" eval="True" />
+        <field name="perm_unlink" eval="False" />
+    </record>
+
+    <!-- Document -->
+
+    <record id="document_document_rule_multi_company" model="ir.rule">
+        <field name="name">Document: Multi-company</field>
+        <field name="model_id" ref="viin_document.model_document_document"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]</field>
+    </record>
+
+    <record id="document_document_rule_internal_write" model="ir.rule">
+        <field name="name">Document Document: internal user writable</field>
+        <field name="model_id" ref="viin_document.model_document_document"/>
+        <field name="domain_force">['|', '|',
+            ('workspace_id.write_team_ids.member_ids', 'in', [user.id]),
+            ('workspace_id.write_user_ids', 'in', [user.id]),
+            ('workspace_id.write_group_ids', 'in', user.groups_id.ids)]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        <field name="perm_read" eval="True" />
+        <field name="perm_write" eval="True" />
+        <field name="perm_create" eval="True" />
+        <field name="perm_unlink" eval="True" />
+    </record>
+
+    <record id="document_document_rule_internal_read" model="ir.rule">
+        <field name="name">Document Document: internal user readable</field>
+        <field name="model_id" ref="viin_document.model_document_document"/>
+        <field name="domain_force">['|', '|',
+            ('workspace_id.read_team_ids.member_ids', 'in', [user.id]),
+            ('workspace_id.read_user_ids', 'in', [user.id]),
+            ('workspace_id.read_group_ids', 'in', user.groups_id.ids)]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        <field name="perm_read" eval="True" />
+        <field name="perm_write" eval="False" />
+        <field name="perm_create" eval="False" />
+        <field name="perm_unlink" eval="False" />
+    </record>
+
+    <record id="document_document_rule_internal_specific" model="ir.rule">
+        <field name="name">Document Document: internal user specific</field>
+        <field name="model_id" ref="viin_document.model_document_document"/>
+        <field name="domain_force">['&amp;',
+            ('owner_id', '=', user.id), '|', '|',
+            ('workspace_id.specific_team_ids.member_ids', 'in', [user.id]),
+            ('workspace_id.specific_user_ids', 'in', [user.id]),
+            ('workspace_id.specific_group_ids', 'in', user.groups_id.ids)]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        <field name="perm_read" eval="True" />
+        <field name="perm_write" eval="True" />
+        <field name="perm_create" eval="True" />
+        <field name="perm_unlink" eval="True" />
+    </record>
+
+    <record id="document_document_rule_user" model="ir.rule">
+        <field name="name">Document Document: document user</field>
+        <field name="model_id" ref="viin_document.model_document_document"/>
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="groups" eval="[(4, ref('viin_document.document_group_user'))]"/>
+        <field name="perm_read" eval="True" />
+        <field name="perm_write" eval="True" />
+        <field name="perm_create" eval="True" />
+        <field name="perm_unlink" eval="True" />
+    </record>
+
+</odoo>

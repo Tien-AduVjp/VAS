@@ -1,0 +1,20 @@
+<odoo>
+	<template id="create_ticket_from_portal" inherit_id="viin_helpdesk.create_ticket_from_portal">
+		<xpath expr="//input[@name='csrf_token']" position="after">
+			<input name="saleorder" t-att-value="saleorder" type="hidden"/>
+		</xpath>
+	</template>
+
+	<!-- Add Sale Order into Ticket Portal Detail -->
+
+	<template id="portal_my_ticket" inherit_id="viin_helpdesk.portal_my_ticket">
+		<xpath expr="//t[@t-set='card_body']//div/div/span[@t-field='ticket.ticket_type_id']" position="after">
+			<div>
+				<t t-if="ticket.sale_order_id">
+					<strong t-attf-class="#{'' if ticket.sale_order_id else 'd-none'}">Sale Order:</strong>
+					<span t-attf-class="#{'' if ticket.sale_order_id else 'd-none'}" t-field="ticket.sale_order_id" />
+				</t>
+			</div>
+		</xpath>
+	</template>
+</odoo>

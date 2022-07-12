@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+        <record id="report_vehicle_trip" model="ir.actions.report">
+            <field name="name">Trip Report</field>
+            <field name="model">fleet.vehicle.trip</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">to_fleet_operation_planning.report_vehicle_trip_view</field>
+            <field name="report_file">to_fleet_operation_planning.report_vehicle_trip</field>
+            <field name="print_report_name">'Trip - %s' % (object.name)</field>
+            <field name="binding_model_id" ref="model_fleet_vehicle_trip"/>
+            <field name="binding_type">report</field>
+        </record>
+
+		<template id="report_vehicle_trip_view_document">
+			<t t-call="web.external_layout">
+				<div class="page">
+					<h1>
+						Trip Number:
+						<span t-field="doc.name" />
+					</h1>
+					<t t-if="doc.route_id">
+						<h3>
+							Route:
+							<span t-field="doc.route_id.name" />
+						</h3>
+					</t>
+					<h3>
+						Vehicle:
+						<span t-field="doc.vehicle_id.name" />
+					</h3>
+					<h4>
+						Current Odometer:
+						<span t-field="doc.vehicle_id.odometer" />
+						<span t-field="doc.vehicle_id.odometer_unit" />
+					</h4>
+					<table name="summary" class="table table-bordered">
+						<tbody>
+							<tr>
+								<th class="text-right">Expected Start</th>
+								<td>
+									<span t-field="doc.expected_start_date" />
+								</td>
+								<th name="driver_id" class="text-right">Assigned Driver</th>
+								<td>
+									<span t-field="doc.driver_id.name" />
+								</td>
+							</tr>
+							<tr>
+								<th class="text-right">Expected End</th>
+								<td>
+									<span t-field="doc.expected_end_date" />
+								</td>
+								<th name="assistant_ids" rowspan="3" class="text-right">Assistants</th>
+								<td name="assistant_ids" rowspan="3">
+									<t t-if="doc.assistant_ids">
+										<t t-foreach="doc.assistant_ids" t-as="assistant">
+											<span t-field="assistant.name" />
+											<br />
+										</t>
+									</t>
+								</td>
+							</tr>
+							<tr>
+								<th class="text-right">Estimated Distance</th>
+								<td>
+									<span t-field="doc.est_distance" />
+									<span t-field="doc.odometer_unit" />
+								</td>
+							</tr>
+							<tr>
+								<th class="text-right">Estimated Duration</th>
+								<td>
+									<span t-field="doc.est_trip_time" />
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+
+					<h3>Waypoints</h3>
+					<table name="waypoints" class="table table-condensed">
+						<thead>
+							<tr>
+								<th name="sequence">#</th>
+								<th name="address">Address</th>
+								<th name="stop_duration" class="text-right">Stop Duration (Hr)</th>
+							</tr>
+						</thead>
+						<tbody name="trip_waypoints">
+							<t t-set="wp_sequence" t-value="1" />
+							<t t-foreach="doc.trip_waypoint_ids" t-as="waypoint">
+								<tr>
+									<td class="text-right">
+										<span t-esc="wp_sequence" />
+									</td>
+									<td name="address_id">
+										<div t-field="waypoint.address_id"
+											t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;], &quot;no_marker&quot;: True}" />
+									</td>
+									<td name="stop_duration" class="text-right">
+										<span t-field="waypoint.stop_duration" />
+									</td>
+								</tr>
+								<t t-set="wp_sequence" t-value="wp_sequence + 1" />
+							</t>
+						</tbody>
+					</table>
+
+					<h3>Sections</h3>
+					<table name="sections" class="table table-condensed">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>From</th>
+								<th>To</th>
+								<th class="text-right">Est. Distance (km)</th>
+								<th class="text-right">Ave. Speed (km/h)</th>
+								<th class="text-right">Est. Duration (hr)</th>
+							</tr>
+						</thead>
+						<tbody name="trip_sections">
+							<t t-set="sec_sequence" t-value="1" />
+							<t t-foreach="doc.trip_section_ids" t-as="section">
+								<tr>
+									<td class="text-right">
+										<span t-esc="sec_sequence" />
+									</td>
+									<td name="address_from_id">
+										<div t-field="section.address_from_id"
+											t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;], &quot;no_marker&quot;: True}" />
+									</td>
+									<td name="address_to_id">
+										<div t-field="section.address_to_id"
+											t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;], &quot;no_marker&quot;: True}" />
+									</td>
+									<td class="text-right">
+										<span t-field="section.distance" />
+									</td>
+									<td class="text-right">
+										<span t-field="section.ave_speed" />
+									</td>
+									<td class="text-right">
+										<span t-field="section.est_trip_time" />
+									</td>
+								</tr>
+								<t t-set="sec_sequence" t-value="sec_sequence + 1" />
+							</t>
+						</tbody>
+					</table>
+				</div>
+			</t>
+		</template>
+
+		<template id="report_vehicle_trip_view">
+			<t t-call="web.html_container">
+				<t t-foreach="docs" t-as="doc">
+					<t t-call="to_fleet_operation_planning.report_vehicle_trip_view_document"
+						t-lang="doc.driver_id.lang" />
+				</t>
+			</t>
+		</template>
+	</data>
+
+</odoo>

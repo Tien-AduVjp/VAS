@@ -1,0 +1,85 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_fleet_load_params
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-11 06:24+0000\n"
+"PO-Revision-Date: 2021-11-11 06:24+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_fleet_load_params
+#: model:ir.model.fields,field_description:to_fleet_load_params.field_fleet_vehicle__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_fleet_load_params
+#: model:ir.model.fields,field_description:to_fleet_load_params.field_fleet_vehicle__id
+msgid "ID"
+msgstr ""
+
+#. module: to_fleet_load_params
+#: model:ir.model.fields,field_description:to_fleet_load_params.field_fleet_vehicle____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_fleet_load_params
+#: model:ir.model.fields,field_description:to_fleet_load_params.field_fleet_vehicle__max_volume
+msgid "Max. Volume"
+msgstr "Dung tích Tối đa"
+
+#. module: to_fleet_load_params
+#: model:ir.model.fields,field_description:to_fleet_load_params.field_fleet_vehicle__max_weight
+msgid "Max. Weight Load"
+msgstr "Tải trọng Tối đa"
+
+#. module: to_fleet_load_params
+#: model:ir.model.fields,help:to_fleet_load_params.field_fleet_vehicle__max_volume
+msgid ""
+"The maximum volume can be loaded onto the vehicle, but not recommended."
+msgstr ""
+"Dung tích tối đa có thể chở bằng phương tiện này, nhưng không được chở quá "
+"dung tích này."
+
+#. module: to_fleet_load_params
+#: model:ir.model.fields,help:to_fleet_load_params.field_fleet_vehicle__max_weight
+msgid ""
+"The maximum weight can be loaded onto the vehicle, but not recommended."
+msgstr ""
+"Tải trọng tối đa có thể được chở bằng phương tiện này, nhưng không được chở "
+"quá tải trọng này."
+
+#. module: to_fleet_load_params
+#: model:ir.model.fields,help:to_fleet_load_params.field_fleet_vehicle__warning_volume
+msgid "The total volume can be safely loaded onto the vehicle."
+msgstr ""
+"Tổng dung tích có thể chở an toàn bằng phương tiện này. Không khuyến khích "
+"chở quá."
+
+#. module: to_fleet_load_params
+#: model:ir.model.fields,help:to_fleet_load_params.field_fleet_vehicle__warning_weight
+msgid "The total weight can be safely loaded onto the vehicle."
+msgstr ""
+"Tổng dung tích có thể chở bằng phương tiện này, nhưng không được chở quá."
+
+#. module: to_fleet_load_params
+#: model:ir.model,name:to_fleet_load_params.model_fleet_vehicle
+msgid "Vehicle"
+msgstr "Phương tiện"
+
+#. module: to_fleet_load_params
+#: model:ir.model.fields,field_description:to_fleet_load_params.field_fleet_vehicle__warning_volume
+msgid "Warning Volume"
+msgstr "Dung tích Cảnh báo"
+
+#. module: to_fleet_load_params
+#: model:ir.model.fields,field_description:to_fleet_load_params.field_fleet_vehicle__warning_weight
+msgid "Warning Weight Load"
+msgstr "Tải trọng Cảnh báo"

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_repairorder" inherit_id="repair.report_repairorder">
+        <xpath expr="//thead//t" position="attributes">
+			<attribute name="t-if">o.create_invoice</attribute>
+        </xpath>
+        <xpath expr="//t[@t-if='o.operations']//t" position="attributes">
+			<attribute name="t-if">line.repair_id.create_invoice</attribute>
+        </xpath>
+        <xpath expr="//t[@t-if='o.fees_lines']//t" position="attributes">
+			<attribute name="t-if">fees.repair_id.create_invoice</attribute>
+        </xpath>
+        <xpath expr="//div[@id='total']//t" position="attributes">
+			<attribute name="t-if">o.create_invoice</attribute>
+        </xpath>
+   </template>
+</odoo>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+
+    <record id="document_auto_generate_rule_hr_payslip" model="document.auto.generate.rule" forcecreate="False">
+        <field name="res_model_id" ref="to_hr_payroll.model_hr_payslip"/>
+        <field name="workspace_field_id" ref="to_hr_payroll.field_hr_payslip__department_id"/>
+        <field name="parent_workspace_id" ref="document_workspace_hr_payroll"/>
+        <field name="workspace_tag_ids" eval="[
+            (4, ref('document_tag_hr_payroll_payslip_batch')),
+            (4, ref('document_tag_hr_payroll_payslip')),
+            (4, ref('viin_document.document_tag_to_review')),
+            (4, ref('viin_document.document_tag_approve')),
+            (4, ref('viin_document.document_tag_deprecate'))]"/>
+        <field name="workspace_read_team_ids" eval="[(4, ref('document_team_hr_payroll'))]"/>
+        <field name="workspace_write_group_ids" eval="[(4, ref('to_hr_payroll.group_hr_payroll_manager'))]"/>
+        <field name="workspace_read_group_ids" eval="[(4, ref('to_hr_payroll.group_hr_payroll_user'))]"/>
+        <field name="workspace_action_ids" eval="[
+            (4, ref('viin_document.document_action_ask_to_review')),
+            (4, ref('viin_document.document_action_approve'))]"/>
+    </record>
+
+</odoo>

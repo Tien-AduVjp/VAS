@@ -1,0 +1,1647 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_document
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-27 04:06+0000\n"
+"PO-Revision-Date: 2022-04-27 04:06+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_document
+#: model_terms:ir.ui.view,arch_db:viin_document.document_share_layout
+msgid "<i class=\"fa fa-download\"/> Download All"
+msgstr ""
+
+#. module: viin_document
+#: model_terms:ir.ui.view,arch_db:viin_document.document_document_share_view_form
+#: model_terms:ir.ui.view,arch_db:viin_document.document_document_view_kanban
+msgid "<i class=\"fa fa-globe\" aria-label=\"Document url\"/>"
+msgstr ""
+
+#. module: viin_document
+#: model_terms:ir.ui.view,arch_db:viin_document.document_document_view_kanban
+msgid "<span class=\"v_document_kanban_record_checked\" title=\"Selected Document\"/>"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_document__mimetype
+msgid ""
+"A media type (also known as a Multipurpose Internet Mail Extensions or MIME "
+"type) indicates the nature and format of a document, file, or assortment of "
+"bytes (e.g. audio/aac, application/x-bzip, etc)"
+msgstr ""
+
+#. module: viin_document
+#: model_terms:ir.ui.view,arch_db:viin_document.document_auto_generate_rule_view_form
+#: model_terms:ir.ui.view,arch_db:viin_document.document_workspace_view_form
+msgid "Access Right"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action_set_tag__action_id
+#: model_terms:ir.ui.view,arch_db:viin_document.document_action_view_form
+msgid "Action"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__message_needaction
+#: model:ir.model.fields,field_description:viin_document.field_document_document__message_needaction
+#: model:ir.model.fields,field_description:viin_document.field_document_team__message_needaction
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action_set_tag__action_type
+msgid "Action Type"
+msgstr ""
+
+#. module: viin_document
+#. openerp-web
+#: code:addons/viin_document/static/src/xml/document_templates.xml:0
+#: model:ir.actions.act_window,name:viin_document.document_action_action
+#: model:ir.model.fields,field_description:viin_document.field_document_auto_generate_rule__workspace_action_ids
+#: model:ir.model.fields,field_description:viin_document.field_document_document__action_ids
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__action_ids
+#: model:ir.ui.menu,name:viin_document.document_action_menu
+#: model_terms:ir.ui.view,arch_db:viin_document.document_auto_generate_rule_view_form
+#: model_terms:ir.ui.view,arch_db:viin_document.document_workspace_view_form
+#, python-format
+msgid "Actions"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__active
+#: model:ir.model.fields,field_description:viin_document.field_document_auto_generate_rule__active
+#: model:ir.model.fields,field_description:viin_document.field_document_document__active
+#: model:ir.model.fields,field_description:viin_document.field_document_share__active
+#: model:ir.model.fields,field_description:viin_document.field_document_tag__active
+#: model:ir.model.fields,field_description:viin_document.field_document_tag_category__active
+#: model:ir.model.fields,field_description:viin_document.field_document_team__active
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__active
+msgid "Active"
+msgstr ""
+
+#. module: viin_document
+#: code:addons/viin_document/models/document_share.py:0
+#, python-format
+msgid "Actived"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__activity_ids
+#: model:ir.model.fields,field_description:viin_document.field_document_document__activity_ids
+#: model:ir.model.fields,field_description:viin_document.field_document_team__activity_ids
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__document_activity_user_id
+msgid "Activity Assigned To"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__document_activity_due_date_type
+msgid "Activity Due Date Type"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__activity_exception_decoration
+#: model:ir.model.fields,field_description:viin_document.field_document_document__activity_exception_decoration
+#: model:ir.model.fields,field_description:viin_document.field_document_team__activity_exception_decoration
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__document_activity_note
+msgid "Activity Note"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__activity_state
+#: model:ir.model.fields,field_description:viin_document.field_document_document__activity_state
+#: model:ir.model.fields,field_description:viin_document.field_document_team__activity_state
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__document_activity_summary
+msgid "Activity Summary"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__document_activity_type_id
+msgid "Activity Type"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__activity_type_icon
+#: model:ir.model.fields,field_description:viin_document.field_document_document__activity_type_icon
+#: model:ir.model.fields,field_description:viin_document.field_document_team__activity_type_icon
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: viin_document
+#. openerp-web
+#: code:addons/viin_document/static/src/xml/document_templates.xml:0
+#: model_terms:ir.ui.view,arch_db:viin_document.document_document_add_link_view_form
+#, python-format
+msgid "Add A Link"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields.selection,name:viin_document.selection__document_action_set_tag__action_type__add
+msgid "Add Tags"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.actions.act_window,name:viin_document.document_document_add_link_action
+msgid "Add a Link"
+msgstr ""
+
+#. module: viin_document
+#: model:res.groups,name:viin_document.document_group_manager
+msgid "Administrator"
+msgstr ""
+
+#. module: viin_document
+#: code:addons/viin_document/controller/main.py:0
+#, python-format
+msgid "All files uploaded"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_auto_generate_rule__workspace_specific_team_ids
+#: model:ir.model.fields,help:viin_document.field_document_workspace__specific_team_ids
+msgid ""
+"All members of teams can read, upload and edit its documents of which they "
+"are owner"
+msgstr ""
+
+#. module: viin_document
+#: model:document.action,name:viin_document.document_action_approve
+msgid "Approve"
+msgstr ""
+
+#. module: viin_document
+#: model:document.tag,name:viin_document.document_tag_approve
+msgid "Approved"
+msgstr ""
+
+#. module: viin_document
+#: model_terms:ir.ui.view,arch_db:viin_document.document_action_view_form
+#: model_terms:ir.ui.view,arch_db:viin_document.document_action_view_search
+#: model_terms:ir.ui.view,arch_db:viin_document.document_auto_generate_rule_view_filter
+#: model_terms:ir.ui.view,arch_db:viin_document.document_document_share_view_filter
+#: model_terms:ir.ui.view,arch_db:viin_document.document_document_view_search
+#: model_terms:ir.ui.view,arch_db:viin_document.document_tag_category_view_search
+#: model_terms:ir.ui.view,arch_db:viin_document.document_tag_view_form
+#: model_terms:ir.ui.view,arch_db:viin_document.document_tag_view_search
+#: model_terms:ir.ui.view,arch_db:viin_document.document_team_view_search
+#: model_terms:ir.ui.view,arch_db:viin_document.document_workspace_view_search
+msgid "Archived"
+msgstr ""
+
+#. module: viin_document
+#: model:document.action,name:viin_document.document_action_ask_to_review
+msgid "Ask to Review"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model,name:viin_document.model_ir_attachment
+#: model:ir.model.fields,field_description:viin_document.field_document_document__attachment_id
+msgid "Attachment"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__message_attachment_count
+#: model:ir.model.fields,field_description:viin_document.field_document_document__message_attachment_count
+#: model:ir.model.fields,field_description:viin_document.field_document_team__message_attachment_count
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: viin_document
+#: model_terms:ir.ui.view,arch_db:viin_document.document_team_view_form
+msgid "Avatar"
+msgstr ""
+
+#. module: viin_document
+#. openerp-web
+#: code:addons/viin_document/static/src/xml/document_templates.xml:0
+#, python-format
+msgid "Basic example"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_action__show_create_model
+msgid ""
+"Be default, create_model field is abstract, it created for other module inherit.\n"
+"So, we need invisible it if has not any module use it.\n"
+"This is a technical field to compute and show or disable 'create_model' field on views"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_action__description
+#: model:ir.model.fields,help:viin_document.field_document_tag__description
+#: model:ir.model.fields,help:viin_document.field_document_workspace__description
+msgid "Can be used to show tooltip on some views"
+msgstr ""
+
+#. module: viin_document
+#: model_terms:ir.ui.view,arch_db:viin_document.document_document_add_link_view_form
+#: model_terms:ir.ui.view,arch_db:viin_document.document_run_manual_rule_wizard_view_form
+msgid "Cancel"
+msgstr ""
+
+#. module: viin_document
+#: code:addons/viin_document/models/document_auto_generate_rule.py:0
+#, python-format
+msgid ""
+"Cannot create document auto generate rule for model because Workspace Field "
+"'%s'                                            does not belong to model "
+"'%s'"
+msgstr ""
+
+#. module: viin_document
+#: code:addons/viin_document/models/document_action_set_tag.py:0
+#, python-format
+msgid ""
+"Cannot set tags for action '%s' because category and tags does not match."
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_tag__category_ids
+msgid "Categories"
+msgstr ""
+
+#. module: viin_document
+#. openerp-web
+#: code:addons/viin_document/static/src/xml/document_templates.xml:0
+#, python-format
+msgid "Categorize, share and keep track of all your internal documents."
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action_set_tag__category_id
+msgid "Category"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__child_ids
+msgid "Child Workspaces"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model,name:viin_document.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_document__company_id
+#: model:ir.model.fields,field_description:viin_document.field_document_share__company_id
+#: model:ir.model.fields,field_description:viin_document.field_document_team__company_id
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__company_id
+msgid "Company"
+msgstr ""
+
+#. module: viin_document
+#: model:document.tag,name:viin_document.document_tag_company_legal
+msgid "Company Legal"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__complete_name
+msgid "Complete Name"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__condition_type
+#: model_terms:ir.ui.view,arch_db:viin_document.document_action_view_search
+msgid "Condition Type"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_action__condition_type
+msgid ""
+"Condition to run this action. Keep empty to ignore condition\n"
+"Standard condition: this action will be run if some conditions are matched, ex. match included/exclued tags, owner.\n"
+"Domain condition: this action will be run if a domain is matched.\n"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model,name:viin_document.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.ui.menu,name:viin_document.document_config_menu_root
+msgid "Configuration"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__create_model
+msgid "Create"
+msgstr ""
+
+#. module: viin_document
+#: model_terms:ir.actions.act_window,help:viin_document.document_tag_action
+msgid "Create new tag"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__create_uid
+#: model:ir.model.fields,field_description:viin_document.field_document_action_set_tag__create_uid
+#: model:ir.model.fields,field_description:viin_document.field_document_auto_generate_rule__create_uid
+#: model:ir.model.fields,field_description:viin_document.field_document_document__create_uid
+#: model:ir.model.fields,field_description:viin_document.field_document_run_manual_rule_wizard__create_uid
+#: model:ir.model.fields,field_description:viin_document.field_document_share__create_uid
+#: model:ir.model.fields,field_description:viin_document.field_document_tag__create_uid
+#: model:ir.model.fields,field_description:viin_document.field_document_tag_category__create_uid
+#: model:ir.model.fields,field_description:viin_document.field_document_team__create_uid
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__create_uid
+#: model_terms:ir.ui.view,arch_db:viin_document.document_document_view_search
+msgid "Created by"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__create_date
+#: model:ir.model.fields,field_description:viin_document.field_document_action_set_tag__create_date
+#: model:ir.model.fields,field_description:viin_document.field_document_auto_generate_rule__create_date
+#: model:ir.model.fields,field_description:viin_document.field_document_document__create_date
+#: model:ir.model.fields,field_description:viin_document.field_document_run_manual_rule_wizard__create_date
+#: model:ir.model.fields,field_description:viin_document.field_document_share__create_date
+#: model:ir.model.fields,field_description:viin_document.field_document_tag__create_date
+#: model:ir.model.fields,field_description:viin_document.field_document_tag_category__create_date
+#: model:ir.model.fields,field_description:viin_document.field_document_team__create_date
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields.selection,name:viin_document.selection__document_action__document_activity_due_date_type__day
+msgid "Days"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_res_company__unique_doc_name
+#: model:ir.model.fields,help:viin_document.field_res_config_settings__unique_doc_name
+msgid ""
+"Default value for new workspaces for document name unique violation checking"
+msgstr ""
+
+#. module: viin_document
+#: model:document.tag,name:viin_document.document_tag_deprecate
+msgid "Deprecated"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__description
+#: model:ir.model.fields,field_description:viin_document.field_document_tag__description
+#: model:ir.model.fields,field_description:viin_document.field_document_tag_category__description
+#: model:ir.model.fields,field_description:viin_document.field_document_team__description
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__description
+#: model_terms:ir.ui.view,arch_db:viin_document.document_tag_category_view_form
+#: model_terms:ir.ui.view,arch_db:viin_document.document_tag_view_form
+#: model_terms:ir.ui.view,arch_db:viin_document.document_team_view_form
+#: model_terms:ir.ui.view,arch_db:viin_document.document_workspace_view_form
+msgid "Description"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__display_name
+#: model:ir.model.fields,field_description:viin_document.field_document_action_set_tag__display_name
+#: model:ir.model.fields,field_description:viin_document.field_document_auto_generate_rule__display_name
+#: model:ir.model.fields,field_description:viin_document.field_document_document__display_name
+#: model:ir.model.fields,field_description:viin_document.field_document_run_manual_rule_wizard__display_name
+#: model:ir.model.fields,field_description:viin_document.field_document_share__display_name
+#: model:ir.model.fields,field_description:viin_document.field_document_tag__display_name
+#: model:ir.model.fields,field_description:viin_document.field_document_tag_category__display_name
+#: model:ir.model.fields,field_description:viin_document.field_document_team__display_name
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__display_name
+#: model:ir.model.fields,field_description:viin_document.field_ir_attachment__display_name
+#: model:ir.model.fields,field_description:viin_document.field_res_company__display_name
+#: model:ir.model.fields,field_description:viin_document.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model,name:viin_document.model_document_document
+#: model_terms:ir.ui.view,arch_db:viin_document.res_config_settings_view_form
+msgid "Document"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model,name:viin_document.model_document_action
+msgid "Document Action"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model,name:viin_document.model_document_action_set_tag
+msgid "Document Action Set Tag"
+msgstr ""
+
+#. module: viin_document
+#: model_terms:ir.ui.view,arch_db:viin_document.document_action_view_search
+msgid "Document Actions"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model,name:viin_document.model_document_auto_generate_rule
+msgid "Document Attachment Setting"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_run_manual_rule_wizard__rule_id
+msgid "Document Generate Rule"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.actions.act_window,name:viin_document.document_auto_generate_rule_action
+#: model:ir.ui.menu,name:viin_document.document_auto_generate_rule_menu
+msgid "Document Generation Rule"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.actions.act_window,name:viin_document.document_run_manual_rule_wizard_view_action
+#: model_terms:ir.ui.view,arch_db:viin_document.document_run_manual_rule_wizard_view_form
+msgid "Document Run Manual Rule"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model,name:viin_document.model_document_run_manual_rule_wizard
+msgid "Document Run Manual Rule Wizard"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model,name:viin_document.model_document_tag
+msgid "Document Tag"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model,name:viin_document.model_document_tag_category
+#: model_terms:ir.ui.view,arch_db:viin_document.document_tag_category_view_search
+msgid "Document Tag Category"
+msgstr ""
+
+#. module: viin_document
+#: model_terms:ir.ui.view,arch_db:viin_document.document_tag_view_search
+msgid "Document Tags"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model,name:viin_document.model_document_team
+msgid "Document Team"
+msgstr ""
+
+#. module: viin_document
+#: model_terms:ir.ui.view,arch_db:viin_document.document_team_view_search
+msgid "Document Teams"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__unique_doc_name
+#: model_terms:ir.ui.view,arch_db:viin_document.res_config_settings_view_form
+msgid "Document Unique Name"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model,name:viin_document.model_document_workspace
+#: model_terms:ir.ui.view,arch_db:viin_document.res_config_settings_view_form
+msgid "Document Workspace"
+msgstr ""
+
+#. module: viin_document
+#: model_terms:ir.ui.view,arch_db:viin_document.document_workspace_view_search
+msgid "Document Workspaces"
+msgstr ""
+
+#. module: viin_document
+#: code:addons/viin_document/models/document_document.py:0
+#, python-format
+msgid ""
+"Document name unique violation. The workspace '%s' already contains a "
+"document named '%s'"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.actions.act_window,name:viin_document.document_document_action
+#: model:ir.model.fields,field_description:viin_document.field_document_share__document_ids
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__document_ids
+#: model:ir.model.fields,field_description:viin_document.field_ir_attachment__document_ids
+#: model:ir.ui.menu,name:viin_document.document_document_menu
+#: model:ir.ui.menu,name:viin_document.document_menu_root
+#: model_terms:ir.ui.view,arch_db:viin_document.document_document_view_search
+#: model_terms:ir.ui.view,arch_db:viin_document.document_workspace_view_form
+msgid "Documents"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields.selection,name:viin_document.selection__document_action__condition_type__domain
+msgid "Domain"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__document_activity_due_date
+msgid "Due Date in"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__excluded_tag_ids
+msgid "Excluded Tags"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_share__expire_date
+msgid "Expire Date"
+msgstr ""
+
+#. module: viin_document
+#: code:addons/viin_document/models/document_share.py:0
+#, python-format
+msgid "Expired"
+msgstr ""
+
+#. module: viin_document
+#. openerp-web
+#: code:addons/viin_document/static/src/js/document_controller_mixin.js:0
+#, python-format
+msgid "Failed"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_document__favorited_user_ids
+msgid "Favorited Users"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_auto_generate_rule__workspace_field_id
+msgid ""
+"Field to create workspace. Ex. : With Project field of Project Task model. "
+"It will create document of task into Project workspace"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields.selection,name:viin_document.selection__document_document__type__binary
+#: model_terms:ir.ui.view,arch_db:viin_document.document_document_view_search
+msgid "File"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_document__datas
+msgid "File Content (base64)"
+msgstr ""
+
+#. module: viin_document
+#. openerp-web
+#: code:addons/viin_document/static/src/js/document_controller_mixin.js:0
+#, python-format
+msgid "File upload"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__domain
+#: model_terms:ir.ui.view,arch_db:viin_document.document_action_view_form
+msgid "Filter Domain"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__message_follower_ids
+#: model:ir.model.fields,field_description:viin_document.field_document_document__message_follower_ids
+#: model:ir.model.fields,field_description:viin_document.field_document_team__message_follower_ids
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__message_channel_ids
+#: model:ir.model.fields,field_description:viin_document.field_document_document__message_channel_ids
+#: model:ir.model.fields,field_description:viin_document.field_document_team__message_channel_ids
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__message_partner_ids
+#: model:ir.model.fields,field_description:viin_document.field_document_document__message_partner_ids
+#: model:ir.model.fields,field_description:viin_document.field_document_team__message_partner_ids
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_action__activity_type_icon
+#: model:ir.model.fields,help:viin_document.field_document_document__activity_type_icon
+#: model:ir.model.fields,help:viin_document.field_document_team__activity_type_icon
+#: model:ir.model.fields,help:viin_document.field_document_workspace__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_document__company_id
+#: model:ir.model.fields,help:viin_document.field_document_workspace__company_id
+msgid "For multi company"
+msgstr ""
+
+#. module: viin_document
+#: model:document.tag.category,name:viin_document.document_tag_category_general
+msgid "General"
+msgstr ""
+
+#. module: viin_document
+#: model:document.tag,name:viin_document.document_tag_general_notification
+msgid "General Notification"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.actions.server,name:viin_document.action_server_generate_document_from_exist_attachment
+msgid "Generate Document"
+msgstr ""
+
+#. module: viin_document
+#: model_terms:ir.ui.view,arch_db:viin_document.document_document_share_view_form
+msgid "Generate URL"
+msgstr ""
+
+#. module: viin_document
+#: model_terms:ir.ui.view,arch_db:viin_document.document_action_view_search
+#: model_terms:ir.ui.view,arch_db:viin_document.document_document_view_search
+#: model_terms:ir.ui.view,arch_db:viin_document.document_team_view_search
+#: model_terms:ir.ui.view,arch_db:viin_document.document_workspace_view_search
+msgid "Group By"
+msgstr ""
+
+#. module: viin_document
+#: model_terms:ir.ui.view,arch_db:viin_document.document_auto_generate_rule_view_form
+#: model_terms:ir.ui.view,arch_db:viin_document.document_workspace_view_form
+msgid "Groups"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_auto_generate_rule__workspace_specific_group_ids
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__specific_group_ids
+msgid "Groups Own Document Only"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_share__status
+msgid "Hidden Status"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__id
+#: model:ir.model.fields,field_description:viin_document.field_document_action_set_tag__id
+#: model:ir.model.fields,field_description:viin_document.field_document_auto_generate_rule__id
+#: model:ir.model.fields,field_description:viin_document.field_document_document__id
+#: model:ir.model.fields,field_description:viin_document.field_document_run_manual_rule_wizard__id
+#: model:ir.model.fields,field_description:viin_document.field_document_share__id
+#: model:ir.model.fields,field_description:viin_document.field_document_tag__id
+#: model:ir.model.fields,field_description:viin_document.field_document_tag_category__id
+#: model:ir.model.fields,field_description:viin_document.field_document_team__id
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__id
+#: model:ir.model.fields,field_description:viin_document.field_ir_attachment__id
+#: model:ir.model.fields,field_description:viin_document.field_res_company__id
+#: model:ir.model.fields,field_description:viin_document.field_res_config_settings__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__activity_exception_icon
+#: model:ir.model.fields,field_description:viin_document.field_document_document__activity_exception_icon
+#: model:ir.model.fields,field_description:viin_document.field_document_team__activity_exception_icon
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_action__activity_exception_icon
+#: model:ir.model.fields,help:viin_document.field_document_document__activity_exception_icon
+#: model:ir.model.fields,help:viin_document.field_document_team__activity_exception_icon
+#: model:ir.model.fields,help:viin_document.field_document_workspace__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_action__message_needaction
+#: model:ir.model.fields,help:viin_document.field_document_action__message_unread
+#: model:ir.model.fields,help:viin_document.field_document_document__message_needaction
+#: model:ir.model.fields,help:viin_document.field_document_document__message_unread
+#: model:ir.model.fields,help:viin_document.field_document_team__message_needaction
+#: model:ir.model.fields,help:viin_document.field_document_team__message_unread
+#: model:ir.model.fields,help:viin_document.field_document_workspace__message_needaction
+#: model:ir.model.fields,help:viin_document.field_document_workspace__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: viin_document
+#: model_terms:ir.ui.view,arch_db:viin_document.res_config_settings_view_form
+msgid ""
+"If checked, newly created workspaces will get their Document Unique Name "
+"enabled."
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_action__message_has_error
+#: model:ir.model.fields,help:viin_document.field_document_document__message_has_error
+#: model:ir.model.fields,help:viin_document.field_document_team__message_has_error
+#: model:ir.model.fields,help:viin_document.field_document_workspace__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_action__done_document_activity
+msgid ""
+"If checked, this action will be done all activities of a document as done"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_action__create_document_activity
+msgid "If checked, this action will be schedule a activity"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_workspace__unique_doc_name
+msgid ""
+"If enabled, a new document uploaded into this workspace will be checked if "
+"its name violates unique rule. In other words, documents in this workspace "
+"must have different names"
+msgstr ""
+
+#. module: viin_document
+#: model_terms:ir.ui.view,arch_db:viin_document.document_document_share_view_form
+#: model_terms:ir.ui.view,arch_db:viin_document.document_document_view_kanban
+msgid "Image is a link"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__included_tag_ids
+msgid "Included Tags"
+msgstr ""
+
+#. module: viin_document
+#: model_terms:ir.ui.view,arch_db:viin_document.document_team_kanban_view
+msgid "Info"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__message_is_follower
+#: model:ir.model.fields,field_description:viin_document.field_document_document__message_is_follower
+#: model:ir.model.fields,field_description:viin_document.field_document_team__message_is_follower
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action____last_update
+#: model:ir.model.fields,field_description:viin_document.field_document_action_set_tag____last_update
+#: model:ir.model.fields,field_description:viin_document.field_document_auto_generate_rule____last_update
+#: model:ir.model.fields,field_description:viin_document.field_document_document____last_update
+#: model:ir.model.fields,field_description:viin_document.field_document_run_manual_rule_wizard____last_update
+#: model:ir.model.fields,field_description:viin_document.field_document_share____last_update
+#: model:ir.model.fields,field_description:viin_document.field_document_tag____last_update
+#: model:ir.model.fields,field_description:viin_document.field_document_tag_category____last_update
+#: model:ir.model.fields,field_description:viin_document.field_document_team____last_update
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace____last_update
+#: model:ir.model.fields,field_description:viin_document.field_ir_attachment____last_update
+#: model:ir.model.fields,field_description:viin_document.field_res_company____last_update
+#: model:ir.model.fields,field_description:viin_document.field_res_config_settings____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__write_uid
+#: model:ir.model.fields,field_description:viin_document.field_document_action_set_tag__write_uid
+#: model:ir.model.fields,field_description:viin_document.field_document_auto_generate_rule__write_uid
+#: model:ir.model.fields,field_description:viin_document.field_document_document__write_uid
+#: model:ir.model.fields,field_description:viin_document.field_document_run_manual_rule_wizard__write_uid
+#: model:ir.model.fields,field_description:viin_document.field_document_share__write_uid
+#: model:ir.model.fields,field_description:viin_document.field_document_tag__write_uid
+#: model:ir.model.fields,field_description:viin_document.field_document_tag_category__write_uid
+#: model:ir.model.fields,field_description:viin_document.field_document_team__write_uid
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__write_date
+#: model:ir.model.fields,field_description:viin_document.field_document_action_set_tag__write_date
+#: model:ir.model.fields,field_description:viin_document.field_document_auto_generate_rule__write_date
+#: model:ir.model.fields,field_description:viin_document.field_document_document__write_date
+#: model:ir.model.fields,field_description:viin_document.field_document_run_manual_rule_wizard__write_date
+#: model:ir.model.fields,field_description:viin_document.field_document_share__write_date
+#: model:ir.model.fields,field_description:viin_document.field_document_tag__write_date
+#: model:ir.model.fields,field_description:viin_document.field_document_tag_category__write_date
+#: model:ir.model.fields,field_description:viin_document.field_document_team__write_date
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_team__leader_id
+#: model_terms:ir.ui.view,arch_db:viin_document.document_team_kanban_view
+#: model_terms:ir.ui.view,arch_db:viin_document.document_team_view_search
+msgid "Leader"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__message_main_attachment_id
+#: model:ir.model.fields,field_description:viin_document.field_document_document__message_main_attachment_id
+#: model:ir.model.fields,field_description:viin_document.field_document_team__message_main_attachment_id
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: viin_document
+#: model:document.action,name:viin_document.document_action_deprecated
+msgid "Mark As Deprecated"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__done_document_activity
+msgid "Mark all activities as done"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.ui.menu,name:viin_document.document_master_data_menu_root
+msgid "Master Data"
+msgstr ""
+
+#. module: viin_document
+#: model_terms:ir.ui.view,arch_db:viin_document.document_team_kanban_view
+msgid "Member"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_team__member_ids
+#: model_terms:ir.ui.view,arch_db:viin_document.document_team_view_form
+msgid "Members"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_team__count_member
+msgid "Members Count"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__message_has_error
+#: model:ir.model.fields,field_description:viin_document.field_document_document__message_has_error
+#: model:ir.model.fields,field_description:viin_document.field_document_team__message_has_error
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__message_ids
+#: model:ir.model.fields,field_description:viin_document.field_document_document__message_ids
+#: model:ir.model.fields,field_description:viin_document.field_document_team__message_ids
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_document__mimetype
+msgid "Mime Type"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_auto_generate_rule__res_model_id
+msgid "Model"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_auto_generate_rule__res_model_name
+msgid "Model Name"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields.selection,name:viin_document.selection__document_action__document_activity_due_date_type__month
+msgid "Month"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__move_to_workspace_id
+msgid "Move to Workspace"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__my_activity_date_deadline
+#: model:ir.model.fields,field_description:viin_document.field_document_document__my_activity_date_deadline
+#: model:ir.model.fields,field_description:viin_document.field_document_team__my_activity_date_deadline
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: viin_document
+#: model_terms:ir.ui.view,arch_db:viin_document.document_document_view_search
+msgid "My Documents"
+msgstr ""
+
+#. module: viin_document
+#. openerp-web
+#: code:addons/viin_document/static/src/xml/document_templates.xml:0
+#: model:ir.model.fields,field_description:viin_document.field_document_action__name
+#: model:ir.model.fields,field_description:viin_document.field_document_document__name
+#: model:ir.model.fields,field_description:viin_document.field_document_tag__name
+#: model:ir.model.fields,field_description:viin_document.field_document_tag_category__name
+#: model:ir.model.fields,field_description:viin_document.field_document_team__name
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__name
+#, python-format
+msgid "Name"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__activity_date_deadline
+#: model:ir.model.fields,field_description:viin_document.field_document_document__activity_date_deadline
+#: model:ir.model.fields,field_description:viin_document.field_document_team__activity_date_deadline
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__activity_summary
+#: model:ir.model.fields,field_description:viin_document.field_document_document__activity_summary
+#: model:ir.model.fields,field_description:viin_document.field_document_team__activity_summary
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__activity_type_id
+#: model:ir.model.fields,field_description:viin_document.field_document_document__activity_type_id
+#: model:ir.model.fields,field_description:viin_document.field_document_team__activity_type_id
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: viin_document
+#: model_terms:ir.ui.view,arch_db:viin_document.document_action_view_form
+msgid "Note"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__message_needaction_counter
+#: model:ir.model.fields,field_description:viin_document.field_document_document__message_needaction_counter
+#: model:ir.model.fields,field_description:viin_document.field_document_team__message_needaction_counter
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__message_has_error_counter
+#: model:ir.model.fields,field_description:viin_document.field_document_document__message_has_error_counter
+#: model:ir.model.fields,field_description:viin_document.field_document_team__message_has_error_counter
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_action__message_needaction_counter
+#: model:ir.model.fields,help:viin_document.field_document_document__message_needaction_counter
+#: model:ir.model.fields,help:viin_document.field_document_team__message_needaction_counter
+#: model:ir.model.fields,help:viin_document.field_document_workspace__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_action__message_has_error_counter
+#: model:ir.model.fields,help:viin_document.field_document_document__message_has_error_counter
+#: model:ir.model.fields,help:viin_document.field_document_team__message_has_error_counter
+#: model:ir.model.fields,help:viin_document.field_document_workspace__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_action__message_unread_counter
+#: model:ir.model.fields,help:viin_document.field_document_document__message_unread_counter
+#: model:ir.model.fields,help:viin_document.field_document_team__message_unread_counter
+#: model:ir.model.fields,help:viin_document.field_document_workspace__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: viin_document
+#: model:res.groups,name:viin_document.document_group_user
+msgid "Officer"
+msgstr ""
+
+#. module: viin_document
+#: model_terms:ir.ui.view,arch_db:viin_document.document_share_expired_layout
+msgid "Oops! This link is expired in"
+msgstr ""
+
+#. module: viin_document
+#: model_terms:ir.ui.view,arch_db:viin_document.document_share_invalid_token
+msgid "Oops! Token is in invalid"
+msgstr ""
+
+#. module: viin_document
+#: model_terms:ir.actions.act_window,help:viin_document.document_share_action
+msgid ""
+"Organize your documentations and share for internal, personal or customer."
+msgstr ""
+
+#. module: viin_document
+#: model:document.tag,name:viin_document.document_tag_other
+msgid "Other"
+msgstr ""
+
+#. module: viin_document
+#. openerp-web
+#: code:addons/viin_document/static/src/xml/document_templates.xml:0
+#: model:ir.model.fields,field_description:viin_document.field_document_action__owner_id
+#: model:ir.model.fields,field_description:viin_document.field_document_document__owner_id
+#: model_terms:ir.ui.view,arch_db:viin_document.document_document_view_search
+#, python-format
+msgid "Owner"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__parent_path
+msgid "Parent Path"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_auto_generate_rule__parent_workspace_id
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__parent_id
+#: model_terms:ir.ui.view,arch_db:viin_document.document_workspace_view_search
+msgid "Parent Workspace"
+msgstr ""
+
+#. module: viin_document
+#: model_terms:ir.ui.view,arch_db:viin_document.document_share_expired_layout
+msgid "Please contact the owner"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_auto_generate_rule__workspace_read_group_ids
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__read_group_ids
+msgid "Readable Groups"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_auto_generate_rule__workspace_read_team_ids
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__read_team_ids
+msgid "Readable Teams"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_auto_generate_rule__workspace_read_user_ids
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__read_user_ids
+msgid "Readable users"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__recursive_child_ids
+msgid "Recursive Child Workspaces"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields.selection,name:viin_document.selection__document_action_set_tag__action_type__remove
+msgid "Remove Tags"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields.selection,name:viin_document.selection__document_action_set_tag__action_type__replace
+msgid "Replace Tags"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_document__res_id
+msgid "Resource ID"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_document__res_model
+msgid "Resource Model"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__activity_user_id
+#: model:ir.model.fields,field_description:viin_document.field_document_document__activity_user_id
+#: model:ir.model.fields,field_description:viin_document.field_document_team__activity_user_id
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_share__rotating_token_id
+msgid "Rotating Token"
+msgstr ""
+
+#. module: viin_document
+#: model_terms:ir.ui.view,arch_db:viin_document.document_auto_generate_rule_view_filter
+msgid "Rules"
+msgstr ""
+
+#. module: viin_document
+#: model_terms:ir.ui.view,arch_db:viin_document.document_auto_generate_rule_view_form
+#: model_terms:ir.ui.view,arch_db:viin_document.document_run_manual_rule_wizard_view_form
+msgid "Run Manual"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__create_document_activity
+#: model_terms:ir.ui.view,arch_db:viin_document.document_action_view_form
+msgid "Schedule Activity"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_share__access_token
+msgid "Security Token"
+msgstr ""
+
+#. module: viin_document
+#: model:document.action,name:viin_document.document_action_send_to_legal
+msgid "Send to Legal"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__set_owner_id
+msgid "Set Owner"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__set_tag_ids
+#: model_terms:ir.ui.view,arch_db:viin_document.document_action_view_form
+msgid "Set Tags"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_action__document_activity_due_date
+msgid "Set due date for activity during create it"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.actions.act_window,name:viin_document.action_document_config
+#: model:ir.ui.menu,name:viin_document.menu_document_config
+msgid "Settings"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model,name:viin_document.model_document_share
+#: model_terms:ir.ui.view,arch_db:viin_document.document_document_share_view_form
+msgid "Share Document"
+msgstr ""
+
+#. module: viin_document
+#: model_terms:ir.ui.view,arch_db:viin_document.document_document_share_view_form
+msgid "Share Documents"
+msgstr ""
+
+#. module: viin_document
+#. openerp-web
+#: code:addons/viin_document/static/src/js/document_controller_mixin.js:0
+#, python-format
+msgid "Share Documents URL"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_share__url
+#: model_terms:ir.ui.view,arch_db:viin_document.document_document_share_view_filter
+msgid "Share URL"
+msgstr ""
+
+#. module: viin_document
+#: model_terms:ir.actions.act_window,help:viin_document.document_share_action
+msgid "Share documentations with everyone."
+msgstr ""
+
+#. module: viin_document
+#: model:ir.actions.act_window,name:viin_document.document_share_action
+#: model:ir.ui.menu,name:viin_document.document_share_menu
+msgid "Shared Links"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__show_create_model
+msgid "Show Create Model"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields.selection,name:viin_document.selection__document_action__condition_type__standard
+msgid "Standard"
+msgstr ""
+
+#. module: viin_document
+#: model:document.tag.category,name:viin_document.document_tag_category_status
+#: model:ir.model.fields,field_description:viin_document.field_document_share__show_status
+msgid "Status"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_action__activity_state
+#: model:ir.model.fields,help:viin_document.field_document_document__activity_state
+#: model:ir.model.fields,help:viin_document.field_document_team__activity_state
+#: model:ir.model.fields,help:viin_document.field_document_workspace__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: viin_document
+#: model:ir.actions.act_window,name:viin_document.document_tag_category_action
+#: model:ir.ui.menu,name:viin_document.document_tag_category_menu
+msgid "Tag Categories"
+msgstr ""
+
+#. module: viin_document
+#. openerp-web
+#: code:addons/viin_document/static/src/xml/document_templates.xml:0
+#: model:ir.actions.act_window,name:viin_document.document_tag_action
+#: model:ir.model.fields,field_description:viin_document.field_document_action_set_tag__tag_ids
+#: model:ir.model.fields,field_description:viin_document.field_document_auto_generate_rule__workspace_tag_ids
+#: model:ir.model.fields,field_description:viin_document.field_document_document__tag_ids
+#: model:ir.model.fields,field_description:viin_document.field_document_tag_category__tag_ids
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__tag_ids
+#: model:ir.ui.menu,name:viin_document.document_tag_menu
+#: model_terms:ir.ui.view,arch_db:viin_document.document_tag_category_view_form
+#, python-format
+msgid "Tags"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_action_set_tag__tag_ids
+msgid "Tags will be add or replace or remove"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.actions.act_window,name:viin_document.document_team_action
+#: model:ir.actions.act_window,name:viin_document.document_team_overview_action
+#: model:ir.ui.menu,name:viin_document.document_team_menu
+#: model:ir.ui.menu,name:viin_document.document_team_overview_menu
+#: model_terms:ir.ui.view,arch_db:viin_document.document_auto_generate_rule_view_form
+#: model_terms:ir.ui.view,arch_db:viin_document.document_workspace_view_form
+msgid "Teams"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_auto_generate_rule__workspace_specific_team_ids
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__specific_team_ids
+msgid "Teams Own Document Only"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_auto_generate_rule__workspace_read_team_ids
+#: model:ir.model.fields,help:viin_document.field_document_workspace__read_team_ids
+msgid "Teams can read only its documents"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_auto_generate_rule__workspace_write_team_ids
+#: model:ir.model.fields,help:viin_document.field_document_workspace__write_team_ids
+msgid "Teams can read, upload and edit its documents"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_share__rotating_token_id
+msgid ""
+"Technical field to store a rotating token record for access token "
+"computation"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_document__res_model
+msgid "The database object this attachment will be attached to."
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_share__expire_date
+msgid "The date and time at which this token will become expired."
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_action__document_activity_due_date_type
+msgid "The due date of activity in day or week or month"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_document__res_id
+msgid "The record id this is attached to."
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.constraint,message:viin_document.constraint_document_auto_generate_rule_res_model_id
+msgid "The resource model must be unique!"
+msgstr ""
+
+#. module: viin_document
+#. openerp-web
+#: code:addons/viin_document/static/src/js/document_controller_mixin.js:0
+#, python-format
+msgid "The selected file exceed the maximum file size of %s."
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_share__status
+msgid "The technical field used to set decoration on treeview"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.constraint,message:viin_document.constraint_document_share_access_token
+msgid "The token must be unique!"
+msgstr ""
+
+#. module: viin_document
+#: model_terms:ir.ui.view,arch_db:viin_document.document_share_invalid_token
+msgid "The token of this link is invalid"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_action__excluded_tag_ids
+msgid "This action run only if document exclude these tag"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_action__included_tag_ids
+msgid "This action run only if document include these tag"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_action__owner_id
+msgid "This action run only if document owned by this owner"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_action__domain
+msgid "This action run only if the domains are matched"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_action__create_model
+msgid "This action will be create a record of the model."
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_action__move_to_workspace_id
+msgid "This action will be move a document to the workspace after run."
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_action__document_activity_note
+msgid "This action will be set activity note during create it"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_action__document_activity_summary
+msgid "This action will be set activity summary during create it"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_action__document_activity_type_id
+msgid "This action will be set activity type during create it"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_action__document_activity_user_id
+msgid "This action will be set responsible of activity during create it"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_action__set_tag_ids
+msgid "This action will be set tags for a document after run."
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_action__set_owner_id
+msgid "This action will be set the owner for a document after run."
+msgstr ""
+
+#. module: viin_document
+#: model_terms:ir.ui.view,arch_db:viin_document.document_run_manual_rule_wizard_view_form
+msgid ""
+"This action will generate documents from missing attachments corresponding "
+"to this rule."
+msgstr ""
+
+#. module: viin_document
+#: model:document.tag,name:viin_document.document_tag_to_review
+#: model:mail.activity.type,name:viin_document.mail_activity_type_data_to_review
+msgid "To Review"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_share__token
+msgid "Token"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_share__document_count
+msgid "Total shared documents"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_document__type
+msgid "Type"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_action_set_tag__action_type
+msgid ""
+"Type of action to set tags after run action\n"
+"Add Tags: Tags will be add to a document.\n"
+"Replace Tags: Tags of a document will be replaced.\n"
+"Remove Tags: Tags of a document will be remove.\n"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_action__activity_exception_decoration
+#: model:ir.model.fields,help:viin_document.field_document_document__activity_exception_decoration
+#: model:ir.model.fields,help:viin_document.field_document_team__activity_exception_decoration
+#: model:ir.model.fields,help:viin_document.field_document_workspace__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_document__url
+#: model:ir.model.fields.selection,name:viin_document.selection__document_document__type__url
+#: model_terms:ir.ui.view,arch_db:viin_document.document_document_view_search
+msgid "URL"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_res_company__unique_doc_name
+#: model:ir.model.fields,field_description:viin_document.field_res_config_settings__unique_doc_name
+msgid "Unique Document Name"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__message_unread
+#: model:ir.model.fields,field_description:viin_document.field_document_document__message_unread
+#: model:ir.model.fields,field_description:viin_document.field_document_team__message_unread
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_action__message_unread_counter
+#: model:ir.model.fields,field_description:viin_document.field_document_document__message_unread_counter
+#: model:ir.model.fields,field_description:viin_document.field_document_team__message_unread_counter
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: viin_document
+#. openerp-web
+#: code:addons/viin_document/static/src/xml/document_templates.xml:0
+#, python-format
+msgid "Upload"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_auto_generate_rule__workspace_read_group_ids
+#: model:ir.model.fields,help:viin_document.field_document_workspace__read_group_ids
+msgid "User groups can read only its documents"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_auto_generate_rule__workspace_write_group_ids
+#: model:ir.model.fields,help:viin_document.field_document_workspace__write_group_ids
+msgid "User groups can read, upload and edit its documents"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_auto_generate_rule__workspace_specific_group_ids
+#: model:ir.model.fields,help:viin_document.field_document_workspace__specific_group_ids
+msgid ""
+"User groups can read, upload and edit its documents of which they are owner"
+msgstr ""
+
+#. module: viin_document
+#: model_terms:ir.ui.view,arch_db:viin_document.document_auto_generate_rule_view_form
+#: model_terms:ir.ui.view,arch_db:viin_document.document_workspace_view_form
+msgid "Users"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_auto_generate_rule__workspace_specific_user_ids
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__specific_user_ids
+msgid "Users Own Document Only"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_auto_generate_rule__workspace_read_user_ids
+#: model:ir.model.fields,help:viin_document.field_document_workspace__read_user_ids
+msgid "Users can read only its documents"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_auto_generate_rule__workspace_write_user_ids
+#: model:ir.model.fields,help:viin_document.field_document_workspace__write_user_ids
+msgid "Users can read, upload and edit its documents"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,help:viin_document.field_document_auto_generate_rule__workspace_specific_user_ids
+#: model:ir.model.fields,help:viin_document.field_document_workspace__specific_user_ids
+msgid "Users can read, upload and edit its documents of which they are owner"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields.selection,name:viin_document.selection__document_action__document_activity_due_date_type__week
+msgid "Week"
+msgstr ""
+
+#. module: viin_document
+#. openerp-web
+#: code:addons/viin_document/static/src/xml/document_templates.xml:0
+#: model:ir.model.fields,field_description:viin_document.field_document_document__workspace_id
+#, python-format
+msgid "Workspace"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_auto_generate_rule__workspace_field_id
+msgid "Workspace Field"
+msgstr ""
+
+#. module: viin_document
+#: code:addons/viin_document/models/document_auto_generate_rule.py:0
+#, python-format
+msgid ""
+"Workspace Field '%s' has type not supported.\n"
+"                                            Please select 'many2one', 'selection', 'date, or 'datetime' field"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.actions.act_window,name:viin_document.document_workspace_action
+#: model:ir.model.fields,field_description:viin_document.field_document_share__workspace_ids
+#: model:ir.ui.menu,name:viin_document.document_workspace_menu
+msgid "Workspaces"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_auto_generate_rule__workspace_write_group_ids
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__write_group_ids
+msgid "Writable Groups"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_auto_generate_rule__workspace_write_team_ids
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__write_team_ids
+msgid "Writable Teams"
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_auto_generate_rule__workspace_write_user_ids
+#: model:ir.model.fields,field_description:viin_document.field_document_workspace__write_user_ids
+msgid "Writable Users"
+msgstr ""
+
+#. module: viin_document
+#: code:addons/viin_document/models/document_workspace.py:0
+#, python-format
+msgid "You cannot create recursive workspaces."
+msgstr ""
+
+#. module: viin_document
+#: model:ir.model.fields,field_description:viin_document.field_document_document__ytb_video_id
+msgid "Youtube Video ID"
+msgstr ""
+
+#. module: viin_document
+#: model_terms:ir.ui.view,arch_db:viin_document.document_share_layout
+msgid "documents:"
+msgstr ""
+
+#. module: viin_document
+#. openerp-web
+#: code:addons/viin_document/static/src/xml/document_templates.xml:0
+#, python-format
+msgid "files selected"
+msgstr ""
+
+#. module: viin_document
+#: model_terms:ir.ui.view,arch_db:viin_document.document_share_expired_layout
+msgid "for more information."
+msgstr ""
+
+#. module: viin_document
+#: model_terms:ir.ui.view,arch_db:viin_document.document_share_layout
+msgid "shared"
+msgstr ""
+
+#. module: viin_document
+#. openerp-web
+#: code:addons/viin_document/static/src/js/document_controller_mixin.js:0
+#, python-format
+msgid "status code: %s </br> message: %s"
+msgstr ""
+
+#. module: viin_document
+#: model_terms:ir.ui.view,arch_db:viin_document.document_document_share_view_form
+#: model_terms:ir.ui.view,arch_db:viin_document.document_document_view_kanban
+msgid "youtube link"
+msgstr ""

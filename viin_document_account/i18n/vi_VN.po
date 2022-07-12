@@ -1,0 +1,81 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_document_account
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-22 09:58+0000\n"
+"PO-Revision-Date: 2022-02-22 09:58+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_document_account
+#: model:document.tag.category,name:viin_document_account.document_tag_category_account_document
+msgid "Accounting Document"
+msgstr "Tài liệu Kế toán"
+
+#. module: viin_document_account
+#: model:document.tag,name:viin_document_account.document_tag_account_customer_invoice
+msgid "Customer Invoice"
+msgstr "Hóa đơn Khách hàng"
+
+#. module: viin_document_account
+#: model:document.tag,name:viin_document_account.document_tag_account_expense
+msgid "Expense"
+msgstr "Chi tiêu"
+
+#. module: viin_document_account
+#: model:document.tag,name:viin_document_account.document_tag_account_financial
+msgid "Financial"
+msgstr "Tài chính"
+
+#. module: viin_document_account
+#: model:document.tag.category,name:viin_document_account.document_tag_category_fiscal_year
+msgid "Fiscal Year"
+msgstr "Năm Tài chính"
+
+#. module: viin_document_account
+#: model:document.tag,name:viin_document_account.document_tag_fiscal_year_2022
+msgid "Fiscal Year 2022"
+msgstr "Năm Tài chính 2002"
+
+#. module: viin_document_account
+#: model:document.tag,name:viin_document_account.document_tag_fiscal_year_2023
+msgid "Fiscal Year 2023"
+msgstr "Năm Tài chính 2023"
+
+#. module: viin_document_account
+#: model:document.tag,name:viin_document_account.document_tag_fiscal_year_2024
+msgid "Fiscal year 2024"
+msgstr "Năm Tài chính 2024"
+
+#. module: viin_document_account
+#: model:document.tag.category,name:viin_document_account.document_tag_category_invoice_type
+msgid "Invoice Type"
+msgstr "Loại Hóa đơn"
+
+#. module: viin_document_account
+#: model:document.action,name:viin_document_account.document_action_move_to_customer_invoice_demo
+msgid "Move to Customer Invoice"
+msgstr "Chuyển thành Hóa đơn Khách hàng"
+
+#. module: viin_document_account
+#: model:document.action,name:viin_document_account.document_action_move_to_vendor_bill_demo
+msgid "Move to Vendor Bill"
+msgstr "Chuyển thành Hóa đơn Nhà cung cấp"
+
+#. module: viin_document_account
+#: model:document.tag,name:viin_document_account.document_tag_account_vat
+msgid "VAT"
+msgstr "VAT"
+
+#. module: viin_document_account
+#: model:document.tag,name:viin_document_account.document_tag_account_vendor_bill
+msgid "Vendor Bill"
+msgstr "Hóa đơn Nhà cung cấp"

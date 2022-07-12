@@ -1,0 +1,37 @@
+<odoo>
+	<record id="employee_advance_reconcile_batch_view_form" model="ir.ui.view">
+		<field name="name">employee.advance.reconcile.batch.form</field>
+		<field name="model">employee.advance.reconcile.batch</field>
+		<field name="arch" type="xml">
+			<form string="Employee Advance Reconcile Batches">
+				<group>
+					<group>
+						<field name="journal_id" widget="selection" />
+					</group>
+					<group>
+						<field name="date" />
+					</group>
+				</group>
+				<separator string="Employees" />
+				<field name="employee_domain_ids" invisible="1"/>
+				<field name="employee_ids" domain="[('id', 'in', employee_domain_ids)]"/>
+				<footer>
+					<button name="action_create" string="Generate" type="object" class="oe_highlight" />
+					or
+					<button string="Cancel" class="oe_link" special="cancel" />
+				</footer>
+			</form>
+		</field>
+	</record>
+
+	<record id="employee_advance_reconcile_batch_action" model="ir.actions.act_window">
+		<field name="name">Reconcile Batches</field>
+		<field name="res_model">employee.advance.reconcile.batch</field>
+		<field name="view_mode">tree,form</field>
+		<field name="view_id" ref="employee_advance_reconcile_batch_view_form" />
+		<field name="target">new</field>
+	</record>
+
+	<menuitem id="employee_advance_reconcile_batch_menu" action="employee_advance_reconcile_batch_action"
+	parent="employee_advance_menu_accounting" groups="account.group_account_user" sequence="1" />
+</odoo>

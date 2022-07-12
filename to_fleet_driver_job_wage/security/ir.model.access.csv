@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_fleet_fuel_price_employee,fleet.fuel.price.employee,model_fleet_fuel_price,base.group_user,1,0,0,0
+access_fleet_fuel_price_accountant,fleet.fuel.price.accountant,model_fleet_fuel_price,account.group_account_user,1,1,1,0
+access_fleet_fuel_price_account_manager,fleet.fuel.price.account_manager,model_fleet_fuel_price,account.group_account_manager,1,1,1,1
+access_fleet_job_wage_definition_employee,fleet.job.wage.definition.employee,model_fleet_job_wage_definition,base.group_user,1,0,0,0
+access_fleet_job_wage_definition_accountant,fleet.job.wage.definition.accountant,model_fleet_job_wage_definition,account.group_account_user,1,1,1,0
+access_fleet_job_wage_definition_account_manager,fleet.job.wage.definition.account_manager,model_fleet_job_wage_definition,account.group_account_manager,1,1,1,1

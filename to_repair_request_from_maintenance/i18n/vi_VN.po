@@ -1,0 +1,66 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_repair_request_from_maintenance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-16 08:07+0000\n"
+"PO-Revision-Date: 2022-02-16 08:07+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_repair_request_from_maintenance
+#: model_terms:ir.ui.view,arch_db:to_repair_request_from_maintenance.claim_list_form_view
+msgid "Create Repair Order"
+msgstr "Tạo lệnh sửa chữa"
+
+#. module: to_repair_request_from_maintenance
+#: model:ir.model.fields,field_description:to_repair_request_from_maintenance.field_maintenance_request__display_name
+#: model:ir.model.fields,field_description:to_repair_request_from_maintenance.field_repair_order__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_repair_request_from_maintenance
+#: model:ir.model.fields,field_description:to_repair_request_from_maintenance.field_maintenance_request__id
+#: model:ir.model.fields,field_description:to_repair_request_from_maintenance.field_repair_order__id
+msgid "ID"
+msgstr ""
+
+#. module: to_repair_request_from_maintenance
+#: model:ir.model.fields,field_description:to_repair_request_from_maintenance.field_maintenance_request____last_update
+#: model:ir.model.fields,field_description:to_repair_request_from_maintenance.field_repair_order____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: to_repair_request_from_maintenance
+#: model:ir.model,name:to_repair_request_from_maintenance.model_maintenance_request
+#: model:ir.model.fields,field_description:to_repair_request_from_maintenance.field_repair_order__maintenance_request_id
+#: model_terms:ir.ui.view,arch_db:to_repair_request_from_maintenance.view_repair_order_form_filter
+msgid "Maintenance Request"
+msgstr "Yêu cầu Bảo trì"
+
+#. module: to_repair_request_from_maintenance
+#: model:ir.model.fields,field_description:to_repair_request_from_maintenance.field_maintenance_request__repair_count
+msgid "Repair Count"
+msgstr "Số lần sửa chữa"
+
+#. module: to_repair_request_from_maintenance
+#: model_terms:ir.ui.view,arch_db:to_repair_request_from_maintenance.claim_list_form_view
+msgid "Repair History"
+msgstr "Lịch sử sửa chữa"
+
+#. module: to_repair_request_from_maintenance
+#: model:ir.model,name:to_repair_request_from_maintenance.model_repair_order
+msgid "Repair Order"
+msgstr "Lệnh sữa chữa"
+
+#. module: to_repair_request_from_maintenance
+#: model:ir.model.fields,field_description:to_repair_request_from_maintenance.field_maintenance_request__repair_ids
+msgid "Repairs"
+msgstr "Sửa chữa"

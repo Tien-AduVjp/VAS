@@ -1,0 +1,28 @@
+<odoo>
+	<record id="view_hr_employee_overtime_search" model="ir.ui.view">
+		<field name="name">hr.employee.overtime.search</field>
+		<field name="model">hr.employee.overtime</field>
+		<field name="inherit_id" ref="viin_hr_overtime.view_hr_employee_overtime_search" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='company_id']" position="after">
+				<separator />
+				<filter name="ftr_draft" string="Draft"
+					domain="[('state','=','draft')]" />
+				<filter name="ftr_confirm" string="To Approve"
+					domain="[('state','=','confirm')]" />
+				<filter name="ftr_approved" string="Approved"
+					domain="[('state','=','validate')]" />
+				<filter name="ftr_done" string="Done"
+					domain="[('state','=','done')]" />
+				<filter name="ftr_refuse" string="Refused"
+					domain="[('state','=','refuse')]" />
+				<filter name="ftr_cancel" string="Cancelled"
+					domain="[('state','=','cancel')]" />
+			</xpath>
+		</field>
+	</record>
+
+	<record id="viin_hr_overtime.action_hr_employee_overtime_report" model="ir.actions.act_window">
+		<field name="context">{'search_default_grp_employee':1,'search_default_ftr_approved':1,'search_default_ftr_done':1}</field>
+	</record>
+</odoo>

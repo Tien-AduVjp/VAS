@@ -1,0 +1,18 @@
+<odoo>
+    <record id="vn_template_c133" model="account.chart.template">
+        <field name="property_account_receivable_id" ref="chart131"/>
+        <field name="property_account_payable_id" ref="chart331"/>
+        <field name="property_account_income_categ_id" ref="chart5111"/>
+        <field name="income_currency_exchange_account_id" ref="chart515"/>
+        <field name="expense_currency_exchange_account_id" ref="chart635"/>
+		<field name="property_account_expense_categ_id" ref="l10n_vn_c133.chart151" />
+		<field name="property_stock_account_input_categ_id" ref="l10n_vn_c133.chart151" />
+		<field name="property_stock_account_output_categ_id" ref="l10n_vn_c133.chart632" />
+		<field name="property_stock_valuation_account_id" ref="l10n_vn_c133.chart156" />
+		<field name="property_vat_ctp_account_id" ref="l10n_vn_c133.chart1331" />
+		<field name="default_pos_receivable_account_id" ref="l10n_vn_c133.chart131" />
+		<field name="default_cash_difference_income_account_id" ref="l10n_vn_c133.chart711" />
+		<field name="default_cash_difference_expense_account_id" ref="l10n_vn_c133.chart811" />
+		<field name="default_unemployment_insurance_account_id" ref="l10n_vn_c133.chart3385" />
+    </record>
+</odoo>

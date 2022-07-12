@@ -1,0 +1,28 @@
+<odoo>
+	<data>
+		<record id="view_warehouse_orderpoint_form" model="ir.ui.view">
+			<field name="name">stock.warehouse.orderpoint.form</field>
+			<field name="model">stock.warehouse.orderpoint</field>
+			<field name="inherit_id" ref="stock.view_warehouse_orderpoint_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//sheet" position="after">
+					<div class="oe_chatter">
+						<field name="message_follower_ids"   />
+						<field name="message_ids"  />
+					</div>
+				</xpath>
+			</field>
+		</record>
+
+		<record id="view_warehouse_orderpoint_tree_editable_config" model="ir.ui.view">
+			<field name="name">stock.warehouse.orderpoint.tree.editable.config</field>
+			<field name="model">stock.warehouse.orderpoint</field>
+			<field name="inherit_id" ref="stock.view_warehouse_orderpoint_tree_editable_config" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='qty_multiple']" position="after">
+					<button name="action_read_order_point" type="object" string="Setup" class="float-right btn-secondary"/>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

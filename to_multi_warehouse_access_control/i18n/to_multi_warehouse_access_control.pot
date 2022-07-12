@@ -1,0 +1,109 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_multi_warehouse_access_control
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-04 04:05+0000\n"
+"PO-Revision-Date: 2022-05-04 04:05+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_multi_warehouse_access_control
+#: model_terms:ir.ui.view,arch_db:to_multi_warehouse_access_control.view_location_form
+msgid "Access Control"
+msgstr ""
+
+#. module: to_multi_warehouse_access_control
+#: model:ir.model.fields,field_description:to_multi_warehouse_access_control.field_stock_location__access_user_ids
+#: model:ir.model.fields,field_description:to_multi_warehouse_access_control.field_stock_warehouse__access_user_ids
+msgid "Accessing Users"
+msgstr ""
+
+#. module: to_multi_warehouse_access_control
+#: model:ir.model.fields,field_description:to_multi_warehouse_access_control.field_stock_inventory__display_name
+#: model:ir.model.fields,field_description:to_multi_warehouse_access_control.field_stock_location__display_name
+#: model:ir.model.fields,field_description:to_multi_warehouse_access_control.field_stock_warehouse__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: to_multi_warehouse_access_control
+#: model:ir.model.fields,field_description:to_multi_warehouse_access_control.field_stock_inventory__id
+#: model:ir.model.fields,field_description:to_multi_warehouse_access_control.field_stock_location__id
+#: model:ir.model.fields,field_description:to_multi_warehouse_access_control.field_stock_warehouse__id
+msgid "ID"
+msgstr ""
+
+#. module: to_multi_warehouse_access_control
+#: model:ir.model,name:to_multi_warehouse_access_control.model_stock_inventory
+msgid "Inventory"
+msgstr ""
+
+#. module: to_multi_warehouse_access_control
+#: model:ir.model,name:to_multi_warehouse_access_control.model_stock_location
+msgid "Inventory Locations"
+msgstr ""
+
+#. module: to_multi_warehouse_access_control
+#: model:ir.model.fields,field_description:to_multi_warehouse_access_control.field_stock_inventory____last_update
+#: model:ir.model.fields,field_description:to_multi_warehouse_access_control.field_stock_location____last_update
+#: model:ir.model.fields,field_description:to_multi_warehouse_access_control.field_stock_warehouse____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: to_multi_warehouse_access_control
+#: model:ir.model.fields,help:to_multi_warehouse_access_control.field_stock_location__access_user_ids
+msgid ""
+"The users who have access to this location and do all stock operations "
+"concern this location"
+msgstr ""
+
+#. module: to_multi_warehouse_access_control
+#: model:ir.model.fields,help:to_multi_warehouse_access_control.field_stock_warehouse__access_user_ids
+msgid ""
+"The users who have access to this warehouse and the warehouse's concerning "
+"operations. If this field is left empty, all stock users will be able to do "
+"operations concerning this warehouse."
+msgstr ""
+
+#. module: to_multi_warehouse_access_control
+#: model:res.groups,name:to_multi_warehouse_access_control.group_stock_own_document_user
+msgid "Users: Own Documents"
+msgstr ""
+
+#. module: to_multi_warehouse_access_control
+#: model:ir.model,name:to_multi_warehouse_access_control.model_stock_warehouse
+msgid "Warehouse"
+msgstr ""
+
+#. module: to_multi_warehouse_access_control
+#: model:res.groups,name:to_multi_warehouse_access_control.group_warehouse_manager
+msgid "Warehouse Manager"
+msgstr ""
+
+#. module: stock
+#: model:res.groups,name:stock.group_stock_user
+msgid "All Warehouses Manager"
+msgstr ""
+
+#. module: to_multi_warehouse_access_control
+#: model:res.groups,comment:to_multi_warehouse_access_control.group_warehouse_manager
+msgid ""
+"Who can view and handle all stock documents related\n"
+"\t\t\t\tto stock locations and warehouse that they have access rights\n"
+"\t\t\t"
+msgstr ""
+
+#. module: to_multi_warehouse_access_control
+#: model:res.groups,comment:to_multi_warehouse_access_control.group_stock_own_document_user
+msgid ""
+"Who can view and handle stock documents related to\n"
+"\t\t\t\tstock locations and warehouse that they have access rights\n"
+"\t\t\t"
+msgstr ""

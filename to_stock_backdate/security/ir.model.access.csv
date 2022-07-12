@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_inventory_backdate_group_backdate,stock inventory backdate,model_stock_inventory_backdate_wizard,to_stock_picking_backdate.group_stock_backdate,1,1,1,1
+access_scrap_backdate_group_backdate,stock scrap backdate,model_stock_scrap_backdate_wizard,to_stock_picking_backdate.group_stock_backdate,1,1,1,1

@@ -1,0 +1,23 @@
+<odoo>
+	<data>
+		<record id="action_server_update_prod_tmpl_code"
+			model="ir.actions.server">
+			<field name="name">Update Product Code</field>
+			<field name="type">ir.actions.server</field>
+			<field name="model_id" ref="model_product_template" />
+			<field name="binding_model_id" ref="model_product_template" />
+			<field name="state">code</field>
+			<field name="code">records.update_default_code()</field>
+		</record>
+
+		<record id="action_server_update_prod_code"
+			model="ir.actions.server">
+			<field name="name">Update Product Code</field>
+			<field name="type">ir.actions.server</field>
+			<field name="model_id" ref="model_product_product" />
+			<field name="binding_model_id" ref="model_product_product" />
+			<field name="state">code</field>
+			<field name="code">records.update_default_code()</field>
+		</record>
+	</data>
+</odoo>

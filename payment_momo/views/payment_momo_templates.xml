@@ -1,0 +1,20 @@
+<odoo>
+	<data noupdate="0">
+		<template id="momo_form">
+			<div>
+				<input type="hidden" name="data_set" t-att-data-action-url="tx_url" data-remove-me="" />
+                <input type="hidden" name="partnerCode" t-att-value="partnerCode" />
+                <input type="hidden" name="accessKey" t-att-value="accessKey" />
+                <input type="hidden" name="requestId" t-att-value="requestId" />
+                <input type="hidden" name="amount" t-att-value="amount" />
+                <input type="hidden" name="orderId" t-att-value="orderId" />
+                <input type="hidden" name="orderInfo" t-att-value="orderInfo" />
+                <input type="hidden" name="returnUrl" t-att-value="returnUrl" />
+                <input type="hidden" name="notifyUrl" t-att-value="notifyUrl" />
+                <input type="hidden" name="requestType" t-att-value="requestType" />
+                <input type="hidden" name="signature" t-att-value="signature" />
+                <input type="hidden" name="extraData" t-att-value="extraData" />
+			</div>
+		</template>
+	</data>
+</odoo>

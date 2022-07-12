@@ -1,0 +1,14 @@
+<odoo>
+    <template id="to_web_thousand_sep.assets_backend" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/to_web_thousand_sep/static/src/js/number_widget.js"/>
+        </xpath>
+    </template>
+
+    <template id="to_web_thousand_sep.assets_common" inherit_id="web.assets_common">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/to_web_thousand_sep/static/src/js/utils.js" />
+            <script type="text/javascript" src="/to_web_thousand_sep/static/src/js/auto.js" />
+        </xpath>
+    </template>
+</odoo>

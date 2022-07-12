@@ -1,0 +1,25 @@
+<odoo>
+	<record id="equipment_form_view" model="ir.ui.view">
+		<field name="name">equipment_maintenance_schedule</field>
+		<field name="model">maintenance.equipment</field>
+		<field name="inherit_id" ref="maintenance.hr_equipment_view_form" />
+		<field name="arch" type="xml">
+		    <xpath expr="//group[@name='maintenance']/field[@name='next_action_date']" position="before">
+                <field name="resource_calendar_id" />
+            </xpath>
+			<xpath expr="//page[@name='maintenance']" position="inside">
+				<group string="Working Frequency" name="working_freq">
+					<field name="equipment_working_frequency_ids" nolabel="1">
+						<tree editable="bottom">
+							<field name="start_amount" />
+							<field name="working_amount" />
+							<field name="working_uom_id" />
+							<field name="period_time" />
+							<field name="total_working_amount" />
+						</tree>
+					</field>
+				</group>
+			</xpath>
+		</field>
+	</record>
+</odoo>

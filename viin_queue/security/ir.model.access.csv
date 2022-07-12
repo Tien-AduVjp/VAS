@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_method_call_manager,method.call.manager,model_method_call,base.group_erp_manager,1,1,0,0
+access_queue_manager,queue.manager,model_queue,base.group_erp_manager,1,1,0,0
+access_queue_job_manager,queue.job.manager,model_queue_job,base.group_erp_manager,1,1,0,0

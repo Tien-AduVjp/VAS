@@ -1,0 +1,259 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_orderpoint_mail_thread
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-05 10:44+0000\n"
+"PO-Revision-Date: 2021-11-05 10:44+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,field_description:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__message_needaction
+msgid "Action Needed"
+msgstr "Cần có Hành động"
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,field_description:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__active
+msgid "Active"
+msgstr "Hiệu lực"
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,field_description:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__message_attachment_count
+msgid "Attachment Count"
+msgstr "Số lượng đính kèm"
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,field_description:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,help:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__product_uom
+msgid "Default unit of measure used for all stock operations."
+msgstr "Đơn vị tính mặc định dùng cho tất cả hoạt động kho."
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,field_description:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,field_description:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__message_follower_ids
+msgid "Followers"
+msgstr "Người theo dõi"
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,field_description:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Người theo dõi (Kênh)"
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,field_description:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Người theo dõi (Đối tác)"
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,field_description:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__id
+msgid "ID"
+msgstr ""
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,help:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__message_needaction
+#: model:ir.model.fields,help:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Nếu đánh dấu kiểm, các thông điệp mới yêu cầu sự có mặt của bạn."
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,help:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__message_has_error
+#: model:ir.model.fields,help:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Nếu đánh dấu thì một số thông điệp có lỗi."
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,help:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__active
+msgid ""
+"If the active field is set to False, it will allow you to hide the "
+"orderpoint without removing it."
+msgstr ""
+"Nếu trường hiệu lực được đặt thành Sai, nó sẽ cho phép bạn ẩn điểm đặt hàng"
+" mà không xóa nó."
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,field_description:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__message_is_follower
+msgid "Is Follower"
+msgstr "Là người theo dõi"
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,field_description:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,field_description:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__location_id
+msgid "Location"
+msgstr "Địa điểm"
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,field_description:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Đính kèm chính"
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,field_description:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__product_max_qty
+msgid "Max Quantity"
+msgstr "Số lượng tối đa"
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,field_description:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__message_has_error
+msgid "Message Delivery error"
+msgstr "Thông báo gửi đi gặp lỗi"
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,field_description:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__message_ids
+msgid "Messages"
+msgstr "Tin nhắn"
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,field_description:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__product_min_qty
+msgid "Min Quantity"
+msgstr "Số lượng tối thiểu"
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model,name:to_orderpoint_mail_thread.model_stock_warehouse_orderpoint
+msgid "Minimum Inventory Rule"
+msgstr "Quy tắc Tồn kho Tối thiểu"
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,help:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__group_id
+msgid ""
+"Moves created through this orderpoint will be put in this procurement group."
+" If none is given, the moves generated by stock rules will be grouped into "
+"one big picking."
+msgstr ""
+"Những dịch chuyển được tạo thông qua điểm đặt hàng này sẽ được đưa vào trong"
+" nhóm cung ứng. Nếu không được đưa ra, các dịch chuyển được tạo ra bởi quy "
+"tắc kho sẽ được nhóm lại thành một phiếu điều chuyển. "
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,field_description:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__qty_multiple
+msgid "Multiple Quantity"
+msgstr "Hệ số cung ứng"
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,field_description:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,field_description:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Số lượng hành động"
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,field_description:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__message_has_error_counter
+msgid "Number of errors"
+msgstr "Số lượng lỗi"
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,help:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Số thông điệp cần có hành động"
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,help:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Số lượng tin gửi đi bị lỗi"
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,help:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Số thông điệp chưa đọc"
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,field_description:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__group_id
+msgid "Procurement Group"
+msgstr "Nhóm cung ứng"
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,field_description:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__product_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,field_description:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Lỗi gửi SMS"
+
+#. module: to_orderpoint_mail_thread
+#: model_terms:ir.ui.view,arch_db:to_orderpoint_mail_thread.view_warehouse_orderpoint_tree_editable_config
+msgid "Setup"
+msgstr "Thiết lập"
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,help:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__qty_multiple
+msgid ""
+"The procurement quantity will be rounded up to this multiple.  If it is 0, "
+"the exact quantity will be used."
+msgstr ""
+"Số lượng cung ứng sẽ được làm tròn lên đến bội số này. Nếu nó là 0, số lượng"
+" chính xác sẽ được sử dụng."
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,field_description:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__product_uom
+msgid "Unit of Measure"
+msgstr "Đơn vị tính"
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,field_description:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__message_unread
+msgid "Unread Messages"
+msgstr "Tin chưa đọc"
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,field_description:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Bộ đếm Thông điệp chưa đọc"
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,field_description:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__warehouse_id
+msgid "Warehouse"
+msgstr "Kho"
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,field_description:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__website_message_ids
+msgid "Website Messages"
+msgstr "Thông điệp Website"
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,help:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__website_message_ids
+msgid "Website communication history"
+msgstr "Lịch sử thông tin liên lạc website"
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,help:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__product_min_qty
+msgid ""
+"When the virtual stock equals to or goes below the Min Quantity specified "
+"for this field, Odoo generates a procurement to bring the forecasted "
+"quantity to the Max Quantity."
+msgstr ""
+"Khi lượng tồn kho khả dụng bằng hoặc nhỏ hơn Số lượng Tối thiểu được thiết "
+"lập ở trường này, Odoo sẽ sinh ra các yêu cầu cung ứng để làm cho số lượng "
+"dự báo bằng với Số lượng Tối đa."
+
+#. module: to_orderpoint_mail_thread
+#: model:ir.model.fields,help:to_orderpoint_mail_thread.field_stock_warehouse_orderpoint__product_max_qty
+msgid ""
+"When the virtual stock goes below the Min Quantity, Odoo generates a "
+"procurement to bring the forecasted quantity to the Quantity specified as "
+"Max Quantity."
+msgstr ""
+"Khi lượng tồn kho khả dụng xuống dưới mức giá trị thiết lập ở trường 'Số "
+"lượng tối thiểu', Hệ thống sẽ tự động tạo các nhu cầu cung ứng để làm cho số"
+" lượng dự kiến bằng với giá trị ở trường 'Số lượng tối đa'."

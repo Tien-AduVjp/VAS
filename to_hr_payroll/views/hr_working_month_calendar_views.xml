@@ -1,0 +1,110 @@
+<odoo>
+	<data>
+		<record id="hr_working_month_calendar_tree_view"
+			model="ir.ui.view">
+			<field name="name">hr.working.month.calendar.tree</field>
+			<field name="model">hr.working.month.calendar</field>
+			<field name="arch" type="xml">
+				<tree string="Working Month Calendar Tree">
+					<field name="month" />
+					<field name="payslip_id" />
+					<field name="duty_working_hours" />
+					<field name="duty_working_days" />
+					<field name="month_working_hours" />
+					<field name="month_working_days" />
+					<field name="leave_hours" />
+					<field name="leave_days" />
+					<field name="unpaid_leave_hours" />
+					<field name="unpaid_leave_days" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="hr_working_month_calendar_form_view"
+			model="ir.ui.view">
+			<field name="name">hr.working.month.calendar.form</field>
+			<field name="model">hr.working.month.calendar</field>
+			<field name="arch" type="xml">
+				<form string="Working Month Calendar Form">
+					<h1>
+						<field name="month" />
+					</h1>
+					<h2>
+						<field name="payslip_id" />
+					</h2>
+					<group>
+						<group string="Working Calendar">
+							<field name="duty_working_hours" />
+							<field name="duty_working_days" />
+						</group>
+						<group>
+							<field name="month_working_hours" />
+							<field name="month_working_days" />
+						</group>
+					</group>
+					<group string="Leaves Details">
+						<group>
+							<field name="leave_hours" />
+							<field name="leave_days" />
+						</group>
+						<group>
+							<field name="unpaid_leave_hours" />
+							<field name="unpaid_leave_days" />
+						</group>
+					</group>
+					<field name="line_ids">
+						<tree>
+							<field name="date_from" />
+							<field name="date_to" />
+							<field name="contract_id" />
+							<field name="resource_calendar_id" />
+							<field name="duty_working_hours" />
+							<field name="calendar_working_hours" />
+							<field name="duty_working_days" />
+							<field name="calendar_working_days" />
+							<field name="leave_days" />
+							<field name="leave_hours" />
+							<field name="unpaid_leave_days" />
+							<field name="unpaid_leave_hours" />
+							<field name="paid_rate" />
+							<field name="salary_computation_mode" />
+						</tree>
+						<form>
+							<group>
+								<group>
+									<field name="working_month_calendar_id" />
+									<field name="contract_id" />
+									<field name="resource_calendar_id" />
+								</group>
+								<group>
+									<field name="date_from" />
+									<field name="date_to" />
+								</group>
+								<group>
+									<field name="duty_working_hours" />
+									<field name="duty_working_days" />
+								</group>
+								<group>
+									<field name="calendar_working_hours" />
+									<field name="calendar_working_days" />
+								</group>
+								<group>
+									<field name="leave_days" />
+									<field name="leave_hours" />
+								</group>
+								<group>
+									<field name="unpaid_leave_days" />
+									<field name="unpaid_leave_hours" />
+								</group>
+								<group>
+									<field name="paid_rate" />
+								</group>
+							</group>
+						</form>
+					</field>
+
+				</form>
+			</field>
+		</record>
+	</data>
+</odoo>

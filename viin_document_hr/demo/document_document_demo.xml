@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="document_document_hr_cert01_demo" model="document.document">
+        <field name="name">Certificate of Employment 01</field>
+        <field name="datas" type="base64" file="viin_document_hr/demo/documents/certificate of employment 01.docx"/>
+        <field name="workspace_id" ref="document_workspace_hr_document"/>
+        <field name="owner_id" ref="base.user_admin"/>
+        <field name="tag_ids" eval="[
+            (4, ref('document_tag_hr_employee_document')),
+            (4, ref('document_tag_hr_certification'))]"/>
+    </record>
+
+</odoo>

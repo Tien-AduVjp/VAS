@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<menuitem id="menu_view_hr_employee_grade"
+			name="Grades" sequence="100"
+			action="to_hr_employee_grade.action_hr_employee_grade"
+			parent="menu_configuration" />
+
+	</data>
+</odoo>

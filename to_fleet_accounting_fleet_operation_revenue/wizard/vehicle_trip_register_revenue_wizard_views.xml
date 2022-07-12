@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="vehicle_trip_register_revenue_wizard_view" model="ir.ui.view">
+			<field name="name">vehicle.trip.register.revenue.wizard.form</field>
+			<field name="model">vehicle.trip.register.revenue.wizard</field>
+			<field name="arch" type="xml">
+				<form string="Trip Revenue Registration Wizard">
+					<field name="trip_id" invisible="1" />
+					<group>
+						<group name="starting">
+							<field name="customer_id" />
+							<field name="date" />
+							<field name="revenue_subtype_id" />
+							<field name="product_id" options="{'no_create':True}" />
+							<field name="amount" />
+							<field name="currency_id" groups="base.group_multi_currency"
+								options="{'no_create':True}" />
+						</group>
+						<group>
+							<field name="trip_waypoint_id" attrs="{'invisible':[('trip_section_id','!=',False)]}" />
+							<field name="trip_section_id" attrs="{'invisible':[('trip_waypoint_id','!=',False)]}" />
+							<field name="company_id" groups="base.group_multi_company" />
+						</group>
+					</group>
+					<footer>
+						<button name="action_register_revenue" string="Register"
+							type="object" default_focus="1" class="oe_highlight" />
+						or
+						<button string="Cancel" class="oe_link" special="cancel" />
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<act_window id="launch_vehicle_trip_register_revenue_wizard"
+			name="Trip Revenue Registration Wizard" res_model="vehicle.trip.register.revenue.wizard"
+			view_mode="form" target="new"/>
+
+	</data>
+</odoo>

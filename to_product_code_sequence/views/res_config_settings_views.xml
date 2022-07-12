@@ -1,0 +1,23 @@
+<odoo>
+	<record id="res_config_settings_view_form" model="ir.ui.view">
+		<field name="name">res.config.settings.form.inherit</field>
+		<field name="model">res.config.settings</field>
+		<field name="inherit_id" ref="base_setup.res_config_settings_view_form" />
+		<field name="arch" type="xml">
+            <xpath expr="//div[@id='product_general_settings']" position="inside">
+                <div class="col-12 col-lg-6 o_setting_box" title="Allows generating default product codes by product category">
+                    <div class="o_setting_left_pane">
+                        <field name="auto_product_default_code_generation"/>
+                    </div>
+                    <div class="o_setting_right_pane">
+                        <label for="auto_product_default_code_generation"/>
+                        <div class="text-muted">
+                            Automatically generate and update product codes based on product name or
+                            the defined product code prefix and product sequence in the product category.
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+		</field>
+	</record>
+</odoo>

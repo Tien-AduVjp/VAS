@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_account_move_line_ctp_employee,account.move.line.ctp.employee,model_account_move_line_ctp,base.group_user,1,0,0,0
+access_account_move_line_ctp_account_invoice,account.move.line.ctp.group_account_invoice,model_account_move_line_ctp,account.group_account_invoice,1,1,1,1
+access_wizard_account_counterpart_generator,account.wizard_account_counterpart_generator.group_account_user,model_wizard_account_counterpart_generator,account.group_account_user,1,1,1,0

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+
+    <record id="mail_activity_type_data_to_review" model="mail.activity.type">
+        <field name="name">To Review</field>
+        <field name="res_model_id" ref="viin_document.model_document_document"/>
+    </record>
+
+</odoo>

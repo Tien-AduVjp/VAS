@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="ReturnOrderLine" t-inherit="to_pos_frontend_return.ReturnOrderLine" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('cell') and hasclass('button-delete')]" position="before">
+            <div class="cell return-select">
+                <select t-on-change="onChangeReturnReason" class='select' style='width:150px;'>
+                    <option t-foreach="return_reasons" t-as="return_reason" t-att-value="return_reason.id">
+                        <t t-esc='return_reason.name' />
+                    </option>
+                </select>
+                <br />
+                <t t-if="showNewReason">
+                    <input class="select" t-on-keyup="updateOtherReason" style='width:140px;padding:3px' />
+                </t>
+            </div>
+        </xpath>
+    </t>
+
+</templates>

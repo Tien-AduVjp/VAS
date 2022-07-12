@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <record id="view_users_form_inherit" model="ir.ui.view">
+            <field name="name">res.users.form.inherit</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet" position="before">
+                    <field name="is_user_app_subscription" invisible="1" />
+                    <field name="is_trial_subscripion" invisible="1"/>
+                    <div class="container alert alert-warning text-center o_form_header mt-3 pb-0"
+                         role="status" attrs="{'invisible': ['|', '|', ('id', '!=', False), ('is_user_app_subscription', '=', False), ('is_trial_subscripion', '=', True)]}">
+                        Note that for each user that is <b>Internal User</b>, we will charge a monthly fee.
+                        <p class="">You can find more information about the pricing on <a href="https://viindoo.com/pricing" target="_blank" alt="https://viindoo.com/pricing">https://viindoo.com/pricing</a>.</p>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+</odoo>

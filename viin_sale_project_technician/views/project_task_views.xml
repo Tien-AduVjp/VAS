@@ -1,0 +1,26 @@
+<odoo>
+	<record id="edit_project" model="ir.ui.view">
+		<field name="name">project.project.form</field>
+		<field name="model">project.project</field>
+		<field name="inherit_id" ref="project.edit_project"/>
+		<field name="arch" type="xml">
+			<xpath expr="//notebook//page[@name='settings']//field[@name='user_id']" position="after">
+				<field name="user_technician_id"/>
+			</xpath>
+		</field>
+	</record>
+
+	<record id="view_project_project_filter" model="ir.ui.view">
+		<field name="name">project.project.select</field>
+		<field name="model">project.project</field>
+		<field name="inherit_id" ref="project.view_project_project_filter"/>
+		<field name="arch" type="xml">
+			<xpath expr="//search//field[@name='user_id']" position="after">
+				<field name="user_technician_id"/>
+			</xpath>
+			<xpath expr="//search//group//filter[@name='Manager']" position="after">
+				<filter name="grp_user_technician_id" string="Lead Technician" context="{'group_by': 'user_technician_id'}"/>
+			</xpath>
+		</field>
+	</record>
+</odoo>

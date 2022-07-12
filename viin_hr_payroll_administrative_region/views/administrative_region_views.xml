@@ -1,0 +1,23 @@
+<odoo>
+	<record id="administrative_region_view_tree" model="ir.ui.view">
+		<field name="name">administrative.region.tree</field>
+		<field name="model">administrative.region</field>
+		<field name="inherit_id" ref="viin_administrative_region.administrative_region_view_tree"/>
+		<field name="arch" type="xml">
+			<field name="name" position="after">
+				<field name="minimum_wage" />
+			</field>
+		</field>
+	</record>
+
+	<record id="administrative_region_view_form" model="ir.ui.view">
+		<field name="name">administrative.region.form</field>
+		<field name="model">administrative.region</field>
+		<field name="inherit_id" ref="viin_administrative_region.administrative_region_view_form"/>
+		<field name="arch" type="xml">
+			<field name="name" position="after">
+				<field name="minimum_wage" />
+			</field>
+		</field>
+	</record>
+</odoo>

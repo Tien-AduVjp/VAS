@@ -1,0 +1,394 @@
+<odoo>
+	<data>
+		<template id="picking_operation_external_layout">
+			<!-- Multicompany -->
+			<t t-if="not o and doc">
+				<t t-set="o" t-value="doc" />
+			</t>
+			<t t-if="o and 'company_id' in o">
+				<t t-set="company" t-value="o.company_id.sudo()" />
+			</t>
+			<t t-if="not o or not 'company_id' in o">
+				<t t-set="company" t-value="res_company" />
+			</t>
+			<div class="header">
+				<div class="row small">
+					<t
+						t-call="l10n_vn_common.accounting_external_header_left_layout" t-lang="printing_lang">
+						<t t-raw="0" />
+					</t>
+					<div class="col-5 text-center">
+						<strong>
+							<t t-if="o.picking_type_code=='incoming'">Mẫu số 01 - VT</t>
+							<t t-if="o.picking_type_code=='outgoing'">Mẫu số 02 - VT</t>
+						</strong>
+						<br />
+						<i>
+							(Ban hành theo Thông tư Số 200/2014/TT-BTC
+							<br />
+							Ngày 22/12/2014 của Bộ Tài chính)
+						</i>
+					</div>
+				</div>
+			</div>
+			<div class="article o_report_layout_standard">
+				<t t-raw="0" />
+			</div>
+			<div class="footer">
+				<t
+					t-call="l10n_vn_common.accounting_external_footer_layout" t-lang="printing_lang">
+					<t t-raw="0" />
+				</t>
+			</div>
+		</template>
+
+		<template id="report_picking_operation_template">
+			<t t-set="o" t-value="o.with_context(lang=printing_lang)"/>
+			<t t-call="web.html_container">
+				<t
+					t-call="to_l10n_vn_picking_operation.picking_operation_external_layout" t-lang="printing_lang">
+					<div class="page" style="font-size: 15px;">
+						<style>
+							.w5{width: 5%;}
+							.w10{width: 10%;}
+							.w15{width: 15%;}
+							.w20{width: 20%;}
+							.w17{width: 17%;}
+							.w28{width: 28%;}
+							table, th, td {padding: 2px; padding-left: 5px; border: 1px solid black;}
+						</style>
+						<div class="row">
+							<div class="col-4 offset-4 text-center">
+								<h3>
+									<strong>
+										<span t-if="o.picking_type_code=='incoming'">PHIẾU NHẬP KHO</span>
+										<span t-if="o.picking_type_code=='outgoing'">PHIẾU XUẤT KHO</span>
+									</strong>
+								</h3>
+							</div>
+
+							<div class="col-4 text-left">
+								<img
+									t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.name, 600, 100)"
+									style="width:300px;height:50px;" alt="Barcode" />
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-4 offset-4 text-center">
+								<i>
+									<span t-field="o.footer_date" />
+								</i>
+								<br />
+								Số:
+								<t t-if="o.name">
+									<span t-field="o.name" />
+								</t>
+								<t t-else="">....................</t>
+							</div>
+							<div class="col-3 offset-1">
+								Nợ:
+								<t t-if="o.debit_code">
+									<span t-field="o.debit_code" />
+								</t>
+								<t t-else="">....................</t>
+								<br />
+								Có:
+								<t t-if="o.credit_code">
+									<span t-field="o.credit_code" />
+								</t>
+								<t t-else="">...................</t>
+							</div>
+						</div>
+						<t t-if="o.picking_type_code=='outgoing'">
+							<div class="row">
+								<div class="col-6">
+									- Họ và tên người nhận hàng:
+									<t t-if="o.partner_id.name">
+										<span t-field="o.partner_id.name" />
+									</t>
+								</div>
+								<div class="col-6">
+									Địa chỉ:
+									<t t-if="o.partner_id.street and o.partner_id.street != ''">
+										<span t-esc="o.partner_id.street" />,
+									</t>
+									<t t-if="o.partner_id.street2 and o.partner_id.street2 != ''">
+										<span t-esc="o.partner_id.street2" />,
+									</t>
+									<t t-if="o.partner_id.city and o.partner_id.city != ''">
+										<span t-esc="o.partner_id.city" />,
+									</t>
+									<t t-if="o.partner_id.state_id and o.partner_id.state_id != ''">
+										<span t-esc="o.partner_id.state_id.name" />
+									</t>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12">
+									- Lý do xuất kho:
+									<t t-if="o.reason">
+										<span t-field="o.reason" />
+									</t>
+									<t t-else="">...................................................................................................................................................</t>
+									<br />
+								</div>
+							</div>
+							<div class="row" style="margin-bottom: 16px;">
+								<div class="col-6">
+									- Xuất tại kho (ngăn lô):
+									<span t-field="o.location_id.name" />
+								</div>
+								<div class="col-6">
+									Địa điểm:
+									<span t-field="o.location_id.warehouse_id.name" />
+								</div>
+							</div>
+						</t>
+						<t t-if="o.picking_type_code=='incoming'">
+							<div class="row">
+								<div class="col-12">
+									- Họ và tên người giao:
+									<t t-if="o.partner_id.name">
+										<span t-field="o.partner_id.name" />
+									</t>
+									<br />
+									<t t-if="o.reason">
+										-
+										<span t-field="o.reason" />
+										của
+										<span t-esc="o.partner_id.commercial_partner_id.name" />
+									</t>
+									<t t-else="">- Theo.......................số............ngày......tháng......năm.......của..............................................................................</t>
+									<br />
+								</div>
+							</div>
+							<div class="row" style="margin-bottom: 16px;">
+								<div class="col-6">
+									- Nhập tại kho:
+									<span t-field="o.location_dest_id.name" />
+								</div>
+								<div class="col-6">
+									Địa điểm:
+									<span t-field="o.location_dest_id.warehouse_id.name" />
+								</div>
+							</div>
+						</t>
+						<table>
+							<thead>
+								<tr>
+									<td style="border-bottom: none;"></td>
+									<td style="border-bottom: none;"></td>
+									<td style="border-bottom: none;"></td>
+									<td style="border-bottom: none;"></td>
+									<td colspan="2"
+										style="border-bottom: none; text-align: center;">Số lượng</td>
+									<td style="border-bottom: none;"></td>
+									<td style="border-bottom: none;"></td>
+								</tr>
+								<tr>
+									<td class="w5 text-center" rowspan="2"
+										style="border-top: none;">STT</td>
+									<td class="w28 text-center" rowspan="2"
+										style="border-top: none;">Tên, nhãn hiệu, quy cách, phẩm chất vật tư, dụng cụ, sản phẩm, hàng hóa</td>
+									<td class="w17 text-center" rowspan="2"
+										style="border-top: none;">Mã hàng</td>
+									<td class="w10 text-center" rowspan="2"
+										style="border-top: none;">Đơn vị tính</td>
+									<td class="w5 text-center" rowspan="2"
+										style="vertical-align: middle;">
+										<t t-if="o.picking_type_code=='outgoing'">Yêu cầu</t>
+										<t t-if="o.picking_type_code=='incoming'">Theo chứng từ</t>
+									</td>
+									<td class="w5 text-center" rowspan="2"
+										style="vertical-align: middle;">
+										<t t-if="o.picking_type_code=='outgoing'">Thực xuất</t>
+										<t t-if="o.picking_type_code=='incoming'">Thực nhập</t>
+									</td>
+									<td class="w15 text-center" rowspan="2"
+										style="border-top: none;">Đơn giá</td>
+									<td class="w15 text-center" rowspan="2"
+										style="border-top: none;">Thành tiền</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="text-center">A</td>
+									<td class="text-center">B</td>
+									<td class="text-center">C</td>
+									<td class="text-center">D</td>
+									<td class="text-center">1</td>
+									<td class="text-center">2</td>
+									<td class="text-center">3</td>
+									<td class="text-center">4</td>
+								</tr>
+								<t t-set="i" t-value="1" />
+								<tr t-foreach="o.mapped('move_lines')" t-as="move">
+									<t t-set="price_unit" t-value="move._get_price_unit_currency_conversion()"/>
+									<td class="text-center">
+										<span t-esc="i" />
+									</td>
+									<td class="text-left">
+										<span t-field="move.product_id.name" />
+									</td>
+									<td class="text-left">
+										<span t-field="move.product_id.default_code" />
+									</td>
+
+									<td class="text-left">
+										<span t-field="move.product_uom" />
+									</td>
+									<td class="text-right">
+										<span t-field="move.product_uom_qty" />
+									</td>
+									<t t-if="o.state == 'done'">
+										<td class="text-right">
+											<span t-field="move.quantity_done" />
+										</td>
+										<td class="text-right">
+											<span t-esc="abs(price_unit)"
+												t-options='{"widget": "monetary", "display_currency": o.currency_id}' />
+										</td>
+										<td class="text-right">
+											<span t-esc="abs(price_unit) * move.quantity_done"
+												t-options='{"widget": "monetary", "display_currency": o.currency_id}' />
+										</td>
+									</t>
+									<t t-else="">
+										<td class="text-right">0</td>
+										<td class="text-right">
+											<span t-esc="abs(price_unit)"
+												t-options='{"widget": "monetary", "display_currency": o.currency_id}' />
+										</td>
+										<td class="text-right">
+											<span
+												t-esc="abs(price_unit) * move.product_uom_qty"
+												t-options='{"widget": "monetary", "display_currency": o.currency_id}' />
+										</td>
+									</t>
+									<t t-set="i" t-value="i+1" />
+								</tr>
+
+								<tr>
+									<td></td>
+									<td class="text-center" style="vertical-align: middle;">
+										<strong>Cộng</strong>
+									</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="text-right" style="vertical-align: middle;">
+										<strong>
+											<span t-field="o.total_amount_untaxed" />
+										</strong>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="row" style="margin-top: 16px; margin-bottom: 16px;">
+							<div class="col-12">
+								- Tổng số tiền (viết bằng chữ):
+								<span t-field="o.total_amount_untaxed_in_words" />
+								<t t-if="o.currency_id.name=='VND'">
+									<span>đồng</span>
+									.
+								</t>
+								<t t-else="">
+									<span t-field="o.currency_id.currency_unit_label" />
+									.
+								</t>
+								<br />
+								- Số chứng từ gốc kèm theo:
+								<t t-if="o.attached_docs">
+									<span t-field="o.attached_docs" />
+								</t>
+								<t t-else="">........................................................................................................................................
+								</t>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-4 offset-8">
+								<i>
+									<span t-field="o.footer_date" />
+								</i>
+							</div>
+						</div>
+						<div class="row">
+							<t t-if="o.picking_type_code=='outgoing'">
+								<div class="w20 text-center">
+									<strong>Người lập phiếu</strong>
+									<br />
+									<i>(Ký, họ tên)</i>
+								</div>
+								<div class="w20 text-center">
+									<strong>Người nhận hàng</strong>
+									<br />
+									<i>(Ký, họ tên)</i>
+								</div>
+								<div class="w20 text-center">
+									<strong>Thủ kho</strong>
+									<br />
+									<i>(Ký, họ tên)</i>
+								</div>
+								<div class="w20 text-center">
+									<strong>Kế toán trưởng</strong>
+									<br />
+									<i>(Ký, họ tên)</i>
+								</div>
+								<div class="w20 text-center">
+									<strong>Giám đốc</strong>
+									<br />
+									<i>(Ký, họ tên)</i>
+								</div>
+							</t>
+							<t t-if="o.picking_type_code=='incoming'">
+								<div class="col-3 text-center">
+									<strong>Người lập phiếu</strong>
+									<br />
+									<i>(Ký, họ tên)</i>
+								</div>
+								<div class="col-3 text-center">
+									<strong>Người giao hàng</strong>
+									<br />
+									<i>(Ký, họ tên)</i>
+								</div>
+								<div class="col-3 text-center">
+									<strong>Thủ kho</strong>
+									<br />
+									<i>(Ký, họ tên)</i>
+								</div>
+								<div class="col-3 text-center">
+									<strong>Kế toán trưởng</strong>
+									<br />
+									<i>
+										(Hoặc bộ phận có nhu cầu nhập)
+										<br />
+										(Ký, họ tên)
+									</i>
+								</div>
+							</t>
+						</div>
+					</div>
+				</t>
+			</t>
+		</template>
+
+		<template id="report_picking_operation">
+			<t t-foreach="docs" t-as="o">
+				<t t-set="printing_lang" t-value="'vi_VN'"/>
+				<t t-call="to_l10n_vn_picking_operation.report_picking_operation_template" t-lang="printing_lang"/>
+			</t>
+		</template>
+
+		<record id="stock.action_report_picking" model="ir.actions.report">
+    		<field name="name">Picking Operations (to PDF)</field>
+			<field name="model">stock.picking</field>
+			<field name="report_type">qweb-pdf</field>
+		    <field name="report_name">to_l10n_vn_picking_operation.report_picking_operation</field>
+		    <field name="report_file">to_l10n_vn_picking_operation.report_picking_operation</field>
+		    <field name="binding_model_id" ref="model_stock_picking"/>
+		    <field name="binding_type">report</field>
+		</record>
+	</data>
+</odoo>

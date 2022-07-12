@@ -1,0 +1,25 @@
+.o_workorder_tablet {
+    .o_field_widget {
+        margin-bottom: 0;
+        height: 100%;
+        .o_pdfview_iframe, .o_embed_iframe {
+            height: 100%;
+        }
+        .o_pdfview_iframe {
+            margin-top: 0;
+        }
+    }
+}
+
+.o_workorder_tablet_worksheet {
+    margin-top: 1em;
+    padding: 0.5em;
+    border-bottom: 1px solid #ddd;
+    background: url(/web/static/src/img/form_sheetbg.png);
+}
+
+.o_workorder_tablet_button {
+    font-weight: bold;
+    padding: 0.4em 1em;
+    font-size: 1.1em;
+}

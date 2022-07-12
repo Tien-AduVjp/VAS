@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<odoo>
+	<record id="website_blog.menu_website_blog_root" model="ir.ui.menu">
+		<field name="groups_id" eval="[(6,0, [ref('website.group_website_publisher'), ref('website.group_website_designer')])]" />
+	</record>
+</odoo>

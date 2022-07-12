@@ -1,0 +1,163 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_product_odoo_version
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-30 04:48+0000\n"
+"PO-Revision-Date: 2021-10-30 04:48+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_product_odoo_version
+#: model:product.attribute.value,name:to_product_odoo_version.odoo_version_100
+msgid "10.0"
+msgstr ""
+
+#. module: to_product_odoo_version
+#: model:product.attribute.value,name:to_product_odoo_version.odoo_version_110
+msgid "11.0"
+msgstr ""
+
+#. module: to_product_odoo_version
+#: model:product.attribute.value,name:to_product_odoo_version.odoo_version_120
+msgid "12.0"
+msgstr ""
+
+#. module: to_product_odoo_version
+#: model:product.attribute.value,name:to_product_odoo_version.odoo_version_130
+msgid "13.0"
+msgstr ""
+
+#. module: to_product_odoo_version
+#: model:product.attribute.value,name:to_product_odoo_version.odoo_version_140
+msgid "14.0"
+msgstr ""
+
+#. module: to_product_odoo_version
+#: model:product.attribute.value,name:to_product_odoo_version.odoo_version_150
+msgid "15.0"
+msgstr ""
+
+#. module: to_product_odoo_version
+#: model:product.attribute.value,name:to_product_odoo_version.odoo_version_80
+msgid "8.0"
+msgstr ""
+
+#. module: to_product_odoo_version
+#: model:product.attribute.value,name:to_product_odoo_version.odoo_version_90
+msgid "9.0"
+msgstr ""
+
+#. module: to_product_odoo_version
+#: model:ir.model,name:to_product_odoo_version.model_product_attribute_value
+msgid "Attribute Value"
+msgstr ""
+
+#. module: to_product_odoo_version
+#: model:ir.model.fields,field_description:to_product_odoo_version.field_odoo_version__display_name
+#: model:ir.model.fields,field_description:to_product_odoo_version.field_product_attribute_value__display_name
+#: model:ir.model.fields,field_description:to_product_odoo_version.field_product_product__display_name
+#: model:ir.model.fields,field_description:to_product_odoo_version.field_product_template__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: to_product_odoo_version
+#: model:ir.model.fields,field_description:to_product_odoo_version.field_odoo_version__id
+#: model:ir.model.fields,field_description:to_product_odoo_version.field_product_attribute_value__id
+#: model:ir.model.fields,field_description:to_product_odoo_version.field_product_product__id
+#: model:ir.model.fields,field_description:to_product_odoo_version.field_product_template__id
+msgid "ID"
+msgstr ""
+
+#. module: to_product_odoo_version
+#: code:addons/to_product_odoo_version/models/product_attribute_value.py:0
+#, python-format
+msgid ""
+"Invalid version number %s. The version should be in the form of either 'x.y'"
+" or 'x.y.z' where the x, y, z must be digits."
+msgstr ""
+
+#. module: to_product_odoo_version
+#: model:ir.model.fields,field_description:to_product_odoo_version.field_odoo_version____last_update
+#: model:ir.model.fields,field_description:to_product_odoo_version.field_product_attribute_value____last_update
+#: model:ir.model.fields,field_description:to_product_odoo_version.field_product_product____last_update
+#: model:ir.model.fields,field_description:to_product_odoo_version.field_product_template____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: to_product_odoo_version
+#: model:ir.model,name:to_product_odoo_version.model_odoo_version
+#: model:ir.model.fields,field_description:to_product_odoo_version.field_product_attribute_value__odoo_version_id
+#: model:product.attribute,name:to_product_odoo_version.product_attribute_odoo_version
+msgid "Odoo Version"
+msgstr ""
+
+#. module: to_product_odoo_version
+#: model:ir.model.fields,field_description:to_product_odoo_version.field_product_attribute_value__odoo_version_ids
+#: model:ir.model.fields,field_description:to_product_odoo_version.field_product_product__odoo_version_ids
+#: model:ir.model.fields,field_description:to_product_odoo_version.field_product_template__odoo_version_ids
+#: model_terms:ir.ui.view,arch_db:to_product_odoo_version.product_template_form_view
+#: model_terms:ir.ui.view,arch_db:to_product_odoo_version.product_template_search_view
+#: model_terms:ir.ui.view,arch_db:to_product_odoo_version.product_variant_easy_edit_view
+msgid "Odoo Versions"
+msgstr ""
+
+#. module: to_product_odoo_version
+#: model:ir.model.fields,field_description:to_product_odoo_version.field_product_product__odoo_versions_count
+#: model:ir.model.fields,field_description:to_product_odoo_version.field_product_template__odoo_versions_count
+msgid "Odoo Versions Count"
+msgstr ""
+
+#. module: to_product_odoo_version
+#: model:ir.model,name:to_product_odoo_version.model_product_product
+msgid "Product"
+msgstr ""
+
+#. module: to_product_odoo_version
+#: model:ir.model.fields,field_description:to_product_odoo_version.field_odoo_version__product_attribute_value_id
+msgid "Product Attribute Value"
+msgstr ""
+
+#. module: to_product_odoo_version
+#: model:ir.model,name:to_product_odoo_version.model_product_template
+msgid "Product Template"
+msgstr ""
+
+#. module: to_product_odoo_version
+#: model:ir.model.fields,help:to_product_odoo_version.field_product_attribute_value__odoo_version_ids
+msgid ""
+"Technical field to help compute the sole Odoo version of this attribute "
+"value. This field never stores more than one Odoo Version"
+msgstr ""
+
+#. module: to_product_odoo_version
+#: model:ir.model.constraint,message:to_product_odoo_version.constraint_odoo_version_product_attribute_value_id_unique
+msgid ""
+"The Product Attribute Value must be unique! You must not have two or more "
+"Odoo versions refer to the same Product Attribute Value."
+msgstr ""
+
+#. module: to_product_odoo_version
+#: code:addons/to_product_odoo_version/models/product_attribute_value.py:0
+#, python-format
+msgid ""
+"The product attribute value %s that represents an Odoo version is not "
+"allowed to get modified after creation"
+msgstr ""
+
+#. module: to_product_odoo_version
+#: model_terms:ir.ui.view,arch_db:to_product_odoo_version.product_template_search_view
+msgid "With Odoo Versions"
+msgstr ""
+
+#. module: to_product_odoo_version
+#: model_terms:ir.ui.view,arch_db:to_product_odoo_version.product_template_search_view
+msgid "Without Odoo Versions"
+msgstr ""

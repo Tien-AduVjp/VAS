@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+
+    <!-- Move to Customer Invoice -->
+
+    <record id="document_action_move_to_customer_invoice_demo" model="document.action">
+        <field name="name">Move to Customer Invoice</field>
+    </record>
+
+    <record id="document_action_set_tag_move_to_customer_invoice_demo" model="document.action.set_tag">
+        <field name="action_type">replace</field>
+        <field name="category_id" ref="document_tag_category_invoice_type"/>
+        <field name="tag_ids" eval="[(4, ref('document_tag_account_customer_invoice'))]"/>
+        <field name="action_id" ref="document_action_move_to_customer_invoice_demo"/>
+    </record>
+
+    <!-- Move to Vendor Bill -->
+
+    <record id="document_action_move_to_vendor_bill_demo" model="document.action">
+        <field name="name">Move to Vendor Bill</field>
+    </record>
+
+    <record id="document_action_set_tag_move_to_vendor_bill_demo" model="document.action.set_tag">
+        <field name="action_type">replace</field>
+        <field name="category_id" ref="document_tag_category_invoice_type"/>
+        <field name="tag_ids" eval="[(4, ref('document_tag_account_vendor_bill'))]"/>
+        <field name="action_id" ref="document_action_move_to_vendor_bill_demo"/>
+    </record>
+
+</odoo>

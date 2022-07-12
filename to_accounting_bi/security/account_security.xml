@@ -1,0 +1,21 @@
+<odoo noupdate="1">
+
+	<record id="analytic_entries_report_comp_rule" model="ir.rule">
+		<field name="name">Analytic Entries Statistics multi-company</field>
+		<field name="model_id" ref="model_analytic_entries_report" />
+		<field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+	</record>
+
+	<record id="account_entries_analysis_comp_rule" model="ir.rule">
+		<field name="name">Journal Items Analysis multi-company</field>
+		<field name="model_id" ref="model_account_entries_analysis" />
+		<field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+	</record>
+
+	<record id="account_treasury_report_comp_rule" model="ir.rule">
+		<field name="name">Treasury Analysis multi-company</field>
+		<field name="model_id" ref="model_account_treasury_report" />
+		<field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+	</record>
+
+</odoo>

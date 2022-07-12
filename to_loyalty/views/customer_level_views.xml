@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="view_customer_level_form" model="ir.ui.view">
+		<field name="name">customer.level.form</field>
+		<field name="model">customer.level</field>
+		<field name="arch" type="xml">
+			<form string="Customer Level">
+				<sheet>
+					<div class="oe_button_box" name="button_box">
+						<button name="action_view_partners" type="object"
+							class="oe_stat_button" help="Show customers of this level"
+							icon="fa-users">
+							<field name="partner_ids_count" widget="statinfo"
+								string="Customers" />
+						</button>
+					</div>
+					<group>
+						<group>
+							<field name="name" string="Code" />
+							<field name="points" />
+						</group>
+						<group>
+							<field name="property_pricelist_id"
+								groups="product.group_sale_pricelist" />
+							<field name="property_sync_partner_pricelist"
+								groups="product.group_sale_pricelist" />
+						</group>
+					</group>
+				</sheet>
+				<div class="oe_chatter">
+					<field name="message_follower_ids"   />
+					<field name="activity_ids"  />
+					<field name="message_ids"  />
+				</div>
+			</form>
+		</field>
+	</record>
+
+	<record id="view_customer_level_tree" model="ir.ui.view">
+		<field name="name">customer.level.tree</field>
+		<field name="model">customer.level</field>
+		<field name="arch" type="xml">
+			<tree string="Customer Level">
+				<field name="name" />
+				<field name="points" />
+				<field name="partner_ids_count" string="# of Customers" />
+				<field name="property_pricelist_id"
+					groups="product.group_sale_pricelist" />
+			</tree>
+		</field>
+	</record>
+
+	<record id="action_customer_level_form"
+		model="ir.actions.act_window">
+		<field name="name">Customer Level</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">customer.level</field>
+		<field name="view_mode">tree,form</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">
+				Click to create a customer level.
+			</p>
+		</field>
+	</record>
+
+	<menuitem id="menu_loyalty_customer_level"
+		parent="menu_loyalty_config" action="action_customer_level_form"
+		sequence="10" />
+</odoo>

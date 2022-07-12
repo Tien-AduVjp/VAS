@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="fuel_price_form">
+			<field name="name">fleet.fuel.price.form</field>
+			<field name="model">fleet.fuel.price</field>
+			<field name="arch" type="xml">
+				<form string="Fuel Price">
+					<sheet>
+						<group>
+							<group>
+								<field name="date" />
+							</group>
+							<group>
+								<field name="price_per_liter" />
+							</group>
+						</group>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids"/>
+						<field name="message_ids"/>
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="fuel_price_tree">
+			<field name="name">fleet.fuel.price.tree</field>
+			<field name="model">fleet.fuel.price</field>
+			<field name="arch" type="xml">
+				<tree string="Fuel Prices">
+					<field name="date" />
+					<field name="price_per_liter" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="fuel_price_action">
+			<field name="name">Fuel Price</field>
+			<field name="res_model">fleet.fuel.price</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help">Fuel Price is a model to store price of fuel for a
+				given date which could be used in driver job wage computation in
+				case the job wage is based on the fuel price</field>
+		</record>
+
+		<menuitem id="fleet1_main" name="Fleet"
+			parent="to_hr_payroll.menu_hr_payroll_root" sequence="30" />
+		<menuitem id="fuel_price" name="Fuel Price"
+			parent="fleet1_main" action="fuel_price_action" />
+	</data>
+</odoo>

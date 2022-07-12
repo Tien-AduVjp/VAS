@@ -1,0 +1,12 @@
+<templates xml:space="preserve">
+
+    <t t-extend="reconciliation.line.mv_line.details">
+        <t t-jquery="tr:has(t[t-esc='line.label'])" t-operation="after">
+            <tr t-if="line.sales_orders_str">
+                <td>Sales Orders</td>
+                <td><t t-esc="line.sales_orders_str"/></td>
+            </tr>
+        </t>
+    </t>
+
+</templates>

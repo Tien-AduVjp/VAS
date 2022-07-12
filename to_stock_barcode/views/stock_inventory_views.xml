@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_inventory_form_inherit" model="ir.ui.view">
+            <field name="name">view.inventory.form.inherit</field>
+            <field name="model">stock.inventory</field>
+            <field name="inherit_id" ref="stock.view_inventory_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form" position="inside">
+                    <field name="_barcode_scanned" widget="barcode_handler"/>
+                </xpath>
+                <xpath expr="//button[@name='action_start']" position="attributes">
+                    <attribute name="barcode_trigger">validate</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_open_inventory_lines']" position="attributes">
+                    <attribute name="barcode_trigger">continue</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_validate']" position="attributes">
+                    <attribute name="barcode_trigger">validate</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_cancel_draft'][@states='cancel']" position="attributes">
+                    <attribute name="barcode_trigger">cancel</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_cancel_draft'][@states='confirm']" position="attributes">
+                    <attribute name="barcode_trigger">cancel</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="stock_inventory_line_tree" model="ir.ui.view">
+            <field name="name">stock.inventory.line.tree2.inherit</field>
+            <field name="model">stock.inventory.line</field>
+            <field name="inherit_id" ref="stock.stock_inventory_line_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="inside">
+                    <field name="product_barcode" invisible="1"/>
+                </xpath>
+<!--                <xpath expr="//field[@name='package_id']" position="after">-->
+<!--                    <field name="scan_location_id" readonly="1" attrs='{"invisible": [("state", "=", "draft")]}'/>-->
+<!--                </xpath>-->
+                <xpath expr="//field[@name='product_qty']" position="attributes">
+                    <attribute name="options">{'barcode_events': True}</attribute>
+                    <attribute name="widget">field_float_scannable</attribute>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

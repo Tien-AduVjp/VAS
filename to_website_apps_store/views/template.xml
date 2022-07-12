@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="assets_frontend"
+		inherit_id="website.assets_frontend" name="App Store Assets">
+		<xpath expr="." position="inside">
+			<link rel="stylesheet"
+				href="/to_website_apps_store/static/src/css/apps_store.css" />
+			<script rel="text/javascript"
+				src="/to_website_apps_store/static/src/js/apps_store.js" />
+		</xpath>
+	</template>
+	<!-- /apps product listing -->
+	<template id="apps" name="Apps">
+		<t t-call="website.layout">
+			<t t-set="additional_title">Apps Store</t>
+			<div id="wrap" class="js_sale oe_website_apps_store">
+				<div class="oe_structure" />
+				<t t-call="to_website_apps_store.apps_store_nav_bars" />
+				<div class="container mb32">
+						<t t-call="to_website_apps_store.top_charts" t-if="top_charts" />
+						<div class="hidden" id="products_grid_before"></div>
+						<div t-if="not top_charts" class="col-md-12"
+							id="products_grid">
+							<t t-if="module_versions"
+								t-call="to_website_apps_store.module_count" />
+							<div class="row">
+								<t t-if="module_versions"
+									t-call="to_website_apps_store.module_sort" />
+							</div>
+							<div class="row d-flex align-items-stretch">
+								<t t-foreach="module_versions" t-as="module_version">
+									<t t-call="to_website_apps_store.odoo_module_item">
+										<t t-set="odoo_module" t-value="module_version" />
+									</t>
+								</t>
+							</div>
+							<div class="row">
+								<t t-if="not module_versions">
+									<div class="text-center text-muted oe_product mt32">
+										<h3 class="css_editable_display">No app that matches your criteria was found.</h3>
+									</div>
+								</t>
+							</div>
+						</div>
+				</div>
+				<div t-if="pager"
+					class="products_pager form-inline justify-content-center mt-3">
+					<t t-call="website.pager" />
+				</div>
+				<div class="oe_structure mb32" />
+			</div>
+		</t>
+	</template>
+
+	<template id="top_charts" name="Top Charts">
+		<div class="container">
+			<h3 class="mb24 mt24 clearfix" t-if="top_ids">
+				<span class="fw_light float-left top_charts_title">Top Apps</span>
+				<a class="btn fw_medium btn-secondary float-right"
+					t-attf-href="/apps/browse/category/{{ slug(category) + '?order=Relevance' }}"
+					style="position: relative; overflow: hidden;">View all</a>
+			</h3>
+		</div>
+		<div class="container" t-if="top_ids">
+			<div class="row d-flex align-items-stretch">
+				<t t-foreach="top_ids" t-as="odoo_module">
+					<t t-call="to_website_apps_store.odoo_module_item" />
+				</t>
+			</div>
+		</div>
+		<div class="container">
+			<h3 class="mb24 mt24 clearfix" t-if="new_ids">
+				<span class="fw_light float-left top_charts_title">New Apps</span>
+				<a class="btn fw_medium btn-secondary float-right"
+					t-attf-href="/apps/browse/category/{{ slug(category) + '?order=Newest' }}"
+					style="position: relative; overflow: hidden;">View all</a>
+			</h3>
+		</div>
+		<div class="container" t-if="new_ids">
+			<div class="row d-flex align-items-stretch">
+				<t t-foreach="new_ids" t-as="odoo_module">
+					<t t-call="to_website_apps_store.odoo_module_item" />
+				</t>
+			</div>
+		</div>
+		<div class="container">
+			<h3 class="mb24 mt24 clearfix" t-if="most_download_ids">
+				<span class="fw_light float-left top_charts_title">Most Downloaded</span>
+				<a class="btn fw_medium btn-secondary float-right"
+					t-attf-href="/apps/browse/category/{{ slug(category) + '?order=Downloads' }}"
+					style="position: relative; overflow: hidden;">View all</a>
+			</h3>
+		</div>
+		<div class="container" t-if="most_download_ids">
+			<div class="row d-flex align-items-stretch">
+				<t t-foreach="most_download_ids" t-as="odoo_module">
+					<t t-call="to_website_apps_store.odoo_module_item" />
+				</t>
+			</div>
+		</div>
+	</template>
+
+	<template id="module_version_price">
+		<div t-if="app_store == 0" itemprop="offers" itemscope="itemscope"
+			itemtype="http://schema.org/Offer" class="product_price">
+			<h4 class="oe_price_h4 css_editable_mode_hidden">
+				<span
+					t-attf-class="text-danger oe_default_price {{'' if combination_info['has_discounted_price'] else 'd-none'}}"
+					style="text-decoration: line-through; white-space: nowrap;"
+					t-esc="combination_info['list_price']"
+					t-options="{'widget': 'monetary', 'display_currency': website.currency_id}" />
+				<b class="oe_price" style="white-space: nowrap;"
+					t-esc="combination_info['price']"
+					t-options="{'widget': 'monetary', 'display_currency': website.currency_id}" />
+				<span itemprop="price" style="display:none;"
+					t-esc="combination_info['price']" />
+				<span itemprop="priceCurrency" style="display:none;"
+					t-esc="website.currency_id.name" />
+			</h4>
+			<div class="css_non_editable_mode_hidden decimal_precision"
+				t-att-data-precision="str(odoo_module.currency_id.decimal_places)">
+				<span t-esc="combination_info['list_price']"
+					t-options='{"widget": "monetary", "display_currency": odoo_module.product_id.currency_id}' />
+			</div>
+		</div>
+		<div t-else="" itemprop="offers" itemscope="itemscope"
+			itemtype="http://schema.org/Offer"
+			class="d-flex flex-column align-items-end product_price">
+			<div class="oe_price_h4 css_editable_mode_hidden">
+				<span
+					t-attf-class="text-danger oe_default_price {{'' if combination_info['has_discounted_price'] else 'd-none'}}"
+					style="text-decoration: line-through; white-space: nowrap;"
+					t-esc="combination_info['list_price']"
+					t-options="{'widget': 'monetary', 'display_currency': website.currency_id}" />
+				<b class="oe_price" style="white-space: nowrap;"
+					t-esc="combination_info['price']"
+					t-options="{'widget': 'monetary', 'display_currency': website.currency_id}" />
+				<span itemprop="price" style="display:none;"
+					t-esc="combination_info['price']" />
+				<span itemprop="priceCurrency" style="display:none;"
+					t-esc="website.currency_id.name" />
+			</div>
+			<div class="css_non_editable_mode_hidden decimal_precision"
+				t-att-data-precision="str(odoo_module.currency_id.decimal_places)">
+				<span t-esc="combination_info['list_price']"
+					t-options='{
+						"widget": "monetary",
+						"display_currency": odoo_module.product_id.currency_id
+						}' />
+			</div>
+
+		</div>
+	</template>
+
+	<template id="app_top_cover_inner" name="App Top Cover">
+		<t t-if="odoo_module.summary">
+			<p class="module_summary" t-esc="odoo_module.summary" />
+		</t>
+		<t t-elif="odoo_module.description">
+			<p class="module_summary" t-esc="odoo_module.description[:150]" />
+		</t>
+		<t t-else="">
+			<p class="module_summary" />
+		</t>
+		<t t-if="not odoo_module.image_1920">
+			<div class="v_module_icon" t-if="odoo_module.icon"
+				t-field="odoo_module.icon"
+				t-options="{'widget': 'image', 'class': 'rounded-circle d-block mx-auto'}" />
+			<div class="img img-fluid" t-if="len(odoo_module.image_ids)"
+				t-field="odoo_module.image_ids[0].image"
+				t-options="{'widget': 'image', 'class': 'rounded-circle d-block mx-auto'}" />
+		</t>
+	</template>
+
+	<template id="odoo_module_item" name="Odoo Module Item">
+		<div
+			class="module_item col-12 col-sm-6 col-md-3 s_col_no_bgcolor pt16 pb16">
+			<div class="card bg-white test">
+				<a itemprop="url" t-att-href="odoo_module.website_url">
+					<t t-if="odoo_module.image_1920">
+						<div class="module_app_top_cover"
+							t-attf-style="background-image: url(/website/image/odoo.module.version/{{odoo_module.id}}/image_1920);">
+							<t t-call="to_website_apps_store.app_top_cover_inner" />
+						</div>
+					</t>
+					<t t-else="">
+						<div class="module_app_top_cover">
+							<t t-call="to_website_apps_store.app_top_cover_inner" />
+						</div>
+					</t>
+					<div class="card-body apps_store_card_body">
+						<t t-set="combination_info" t-value="odoo_module.with_context(partner=partner)._get_combination_info_variant()" />
+						<t t-if="combination_info['already_purchase']">
+							<div class="ribbon text-center">Purchased</div>
+						</t>
+						<h5 itemprop="name" class="card-title o_default_snippet_text"
+							t-att-content="combination_info['name']">
+							<span t-esc="combination_info['name']" />
+						</h5>
+						<p class="card-text o_default_snippet_text">
+							<div class="row">
+								<div class="col-6 module_author m-auto pr-0">
+									<strong>
+										<t t-set="authors" t-value="', '.join(odoo_module.author_ids.mapped('name'))"/>
+										<span t-att-title="authors" t-esc="authors" />
+									</strong>
+								</div>
+								<div class="col-6 h6 m-auto">
+									<t t-if="combination_info['price']">
+										<t t-call="to_website_apps_store.module_version_price" />
+									</t>
+									<t t-else="">
+										<div
+											class="d-flex flex-column align-items-end product_price">
+											<div class="oe_price_h4 css_editable_mode_hidden">FREE</div>
+										</div>
+									</t>
+								</div>
+							</div>
+							<div
+								class="container d-flex justify-content-between module_sale_info">
+								<div class="rating col-6 p-0">
+									<t t-call="to_website_apps_store.module_website_rating" />
+								</div>
+								<div class="sales_downloads col-6 text-right pr-0">
+									<t t-if="request.params.get('order', '') == 'Downloads'">
+										<span class="ml16 sale_info_tag" title="Downloads">
+											<i class="fa fa-download"></i>
+											<t t-esc="combination_info['external_downloads_count']" />
+										</span>
+									</t>
+									<t t-else="">
+										<span class="ml16 sale_info_tag" title="Purchases">
+											<i class="fa fa-shopping-cart"></i>
+											<t t-esc="int(combination_info['sales_count'])" />
+										</span>
+									</t>
+								</div>
+							</div>
+						</p>
+					</div>
+				</a>
+			</div>
+		</div>
+	</template>
+
+	<template id="categories_recursive" name="Category list">
+		<a class="dropdown-item"
+			t-att-href="keep((list_url if module_versions else chart_url)+'/category/' + slug(c), category=0)"
+			t-field="c.name"></a>
+		<div t-if="c.child_id"
+			class="nav nav-pills nav-stacked nav-hierarchy">
+			<t t-foreach="c.child_id" t-as="c">
+				<t t-call="to_website_apps_store.categories_recursive" />
+			</t>
+		</div>
+	</template>
+
+
+	<template id="module_sort" name="Show Sort by">
+		<t t-set="website_apps_sortable_current"
+			t-value="[sort for sort in website_apps_sortable if sort[1]==request.params.get('order', '')]" />
+		<div class="mb16 form-inline justify-content-end col-12 ">
+			<div class="dropdown btn-group dropdown_sorty_by mt16">
+				<a href="#" class="dropdown-toggle btn btn-secondary"
+					data-toggle="dropdown">
+					<t t-if='len(website_apps_sortable_current)'>
+						<span>
+							Sorting by:
+							<b t-raw='website_apps_sortable_current[0][0]' />
+						</span>
+					</t>
+					<t t-else='1'>
+						<span>Sort by</span>
+						<span class="caret"></span>
+					</t>
+				</a>
+				<div class="dropdown-menu dropdown-menu-right" role="menu">
+					<t t-foreach="website_apps_sortable" t-as="sortby">
+						<a class="dropdown-item"
+							t-att-href="keep(list_url+'/category/' + slug(category), category=0, order=sortby[1])">
+							<span t-raw="sortby[0]" />
+						</a>
+					</t>
+				</div>
+			</div>
+		</div>
+	</template>
+
+	<template id="unauthorized_rating">
+		<t t-call="website.layout">
+			<div id="wrap">
+				<div class="container">
+					<h1 class="mt32">403: Forbidden</h1>
+					<p>You may not be able to rate an app that you did not buy.</p>
+				</div>
+				<t t-if="editable">
+					<t t-call="http_routing.http_error_debug" />
+				</t>
+			</div>
+		</t>
+	</template>
+
+	<template id="module_website_rating"
+		name="Module Website Rating">
+		<t t-set="rating" t-value="odoo_module.get_website_rating()" />
+		<span t-if="rating['total'] and agg_rating" itemprop="aggregateRating" itemscope=""
+			itemtype="http://schema.org/AggregateRating">
+			<meta itemprop="ratingValue" t-att-content="rating['avg']" />
+			<meta itemprop="worstRating" content="1" />
+			<meta itemprop="bestRating" content="5" />
+			<meta itemprop="reviewCount" t-att-content="rating['total']" />
+			<meta itemprop="ratingCount" t-att-content="rating['total']" />
+		</span>
+		<span class="o_website_rating_static odoo_module_rating d-flex align-items-center"
+			t-if="rating['total']" t-att-title="str(rating['total']) + ' votes'">
+			<t t-foreach="range(rating['full'])" t-as="num">
+				<span class="fa fa-star rating_star_active"></span>
+			</t>
+			<t t-if="rating['half']">
+				<span class="fa fa-star-half-o rating_star_active"></span>
+			</t>
+			<t t-foreach="range(rating['empty'])" t-as="num">
+				<i class="fa fa-star-o"></i>
+			</t>
+			<b><small t-esc="rating['total']" /></b>
+		</span>
+	</template>
+
+	<template id="module_count" name="Module Count">
+		<div class="d-md-flex justify-content-between align-items-center mt-3 mb-2">
+			<div id="apps_category_name">
+				<h1 class="mt0 mb0 h3">
+					<t t-if="category" t-esc="category.name" />
+					<t t-if="category.name not in ['Apps', 'Themes', 'Odoo Apps']"
+						t-esc="root_categ.name" />
+				</h1>
+			</div>
+			<div id="apps_category_count">
+				<b class="fw_medium text-muted small">
+					<t t-esc="'{} {} '.format(module_count, root_categ.name) if module_count > 1 else '{} {} '.format(module_count,root_categ.name[:-1])" />
+					found.
+				</b>
+				<t t-if="category.with_context(lang='en_US').name not in ['Apps', 'Themes', 'Odoo Apps']">
+					<a class="badge deep-1 o-text-overflow-inline-block"
+						style="max-width: 240px"
+						t-attf-href="/apps/browse/category/{{ slug(root_categ) }}">
+						<small class="fw_medium">
+							Category: <t t-esc="category.name" />
+						</small>
+						<span id="turn-off-button">x</span>
+					</a>
+				</t>
+			</div>
+		</div>
+	</template>
+
+	<template id="app" name="App">
+		<t t-call="website.layout">
+			<t t-if="not odoo_module.website_published" t-set="head">
+				<meta name="robots" content="noindex, nofollow"/>
+			</t>
+
+			<div class="module_top_info oe_website_sale" itemscope="" itemtype="http://schema.org/SoftwareApplication">
+				<div class="container-fluid" style="background-color: #e9ecef;">
+					<div class="container d-flex justify-content-between align-items-center">
+						<div class="col-sm-6 mt16">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item" t-if="category">
+									<t t-if="category.parent_id">
+										<a t-if="category.parent_id == request.env.ref('to_website_apps_store.prod_public_categ_themes')"
+											t-att-href="keep(category=0)">
+											<i class="fa fa-paint-brush"></i> THEMES
+										</a>
+										<a t-else="" t-att-href="keep(category=0)">
+											<i class="fa fa-cube"></i> APPS
+										</a>
+									</t>
+									<t t-else="">
+										<a
+											t-att-href="keep('/apps/browse/category/%s' % slug(category), category=0)"
+											t-field="category.name" />
+									</t>
+								</li>
+								<li class="breadcrumb-item active">
+									<span class="mr-2" t-field="odoo_module.name" />
+									<span class="badge badge-primary" t-field="odoo_module.odoo_version_id.name"/>
+								</li>
+							</ol>
+						</div>
+						<div class="col-sm-3">
+							<t t-call="to_website_apps_store.search" />
+						</div>
+						<div class="col-sm-2">
+							<t t-call="to_website_apps_store.pricelist_list">
+								<t t-set="_classes">ml-2</t>
+							</t>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-7 col-xl-6 mb32">
+							<div itemprop="module_intro"
+								t-field="odoo_module.website_intro" class="oe_structure mt16"
+								id="module_website_intro" />
+							<t t-if="not odoo_module.website_intro">
+								<div id="o-carousel-product" class="carousel slide"
+									data-ride="carousel" data-interval="0">
+									<t t-set="image_ids" t-value="odoo_module.image_ids" />
+									<div class="carousel-outer">
+										<div class="carousel-inner">
+											<div class="carousel-item active"
+												t-field="odoo_module.image_1920"
+												t-options='{"widget": "image", "class": "module_detail_img", "alt-field": "name", "zoom": "image" }' />
+											<t t-if="len(image_ids)" t-foreach="image_ids" t-as="mimg">
+												<div class="carousel-item" t-field="mimg.image"
+													t-options='{"widget": "image", "class": "module_detail_img", "alt-field": "name", "zoom": "image" }' />
+											</t>
+										</div>
+
+										<t t-if="len(image_ids) or variant_img">
+											<a class="carousel-control-prev" href="#o-carousel-product" role="button" data-slide="prev">
+												<span class="fa fa-chevron-left p-2" role="img" aria-label="Previous" title="Previous"/>
+											</a>
+											<a class="carousel-control-next" href="#o-carousel-product" role="button" data-slide="next">
+												<span class="fa fa-chevron-right p-2" role="img" aria-label="Next" title="Next"/>
+											</a>
+										</t>
+									</div>
+								</div>
+							</t>
+						</div>
+						<div class="col-md-5 col-xl-6 mb32 module_detail">
+							<div class="row">
+								<div class="col-12">
+									<div class="d-flex justify-contents-end">
+										<div class="mr-1">
+											<img class="s_features_grid_icon"
+												t-attf-src="/website/image/odoo.module.version/{{odoo_module.id}}/icon/90x90"
+												t-att-alt="odoo_module.name" />
+											<div class="s_features_grid_content">
+											<t t-set="combination_info" t-value="odoo_module._get_combination_info_variant()" />
+												<h1 class="mt0 mb8" itemprop="name" t-esc="odoo_module.name" />
+												<meta itemprop="applicationCategory"
+													  t-att-content="odoo_module.ir_module_category_id.name"/>
+												<meta itemprop="operatingSystem" content="Linux, Windows, MacOS"/>
+												<t t-if="odoo_module.author_ids">
+													<p class="o_default_snippet_text">
+														<small>by</small>
+														<t t-foreach="odoo_module.author_ids" t-as="author">
+															<a class="module_author" href="#" t-esc="author.name" />
+														</t>
+													</p>
+												</t>
+												<p class="rating">
+													<t t-call="to_website_apps_store.module_website_rating">
+														<t t-set="agg_rating" t-value="True"/>
+													</t>
+												</p>
+											</div>
+										</div>
+										<div>
+											<div class="module_price">
+												<t t-if="combination_info['already_purchase']">
+													<div class="product_price">
+														<span class="badge badge-success">
+															<em>PURCHASED</em>
+														</span>
+													</div>
+												</t>
+												<t t-elif="combination_info['price']">
+													<t t-call="to_website_apps_store.module_version_price">
+														<t t-set="app_store" t-value="0" />
+													</t>
+												</t>
+												<t t-else="">
+													<div class="product_price">
+														<span class="badge badge-info">
+															<em>FREE</em>
+														</span>
+													</div>
+												</t>
+											</div>
+										</div>
+									</div>
+									<div class="module_sale_info col-12 mt8 mb8">
+										<div class="mb16">
+											<span class="badge badge-secondary sale_info_tag">
+												v
+												<span t-esc="odoo_module.odoo_version_id.name" />
+											</span>
+											<t t-if="odoo_module.by_third_party">
+												<span class="ml16 sale_info_tag">
+													<i class="fa fa-group"></i>
+													Third Party
+												</span>
+											</t>
+											<t t-if="request.params.get('order', '') == 'Downloads'">
+												<span class="ml16 sale_info_tag"
+													t-if="not odoo_module.price_currency" title="Downloads">
+													<i class="fa fa-download"></i>
+													<t t-esc="odoo_module.module_id.external_downloads_count" />
+												</span>
+											</t>
+											<t t-else="">
+												<span class="ml16 sale_info_tag" title="Purchases">
+													<i class="fa fa-shopping-cart"></i>
+													<t t-esc="int(odoo_module.module_id.sales_count)" />
+												</span>
+											</t>
+										</div>
+										<form action="/shop/cart/update" method="POST">
+											<input type="hidden" name="csrf_token"
+												t-att-value="request.csrf_token()" />
+											<div class="js_product js_main_product">
+												<t t-placeholder="select">
+													<input type="hidden" class="product_id"
+														name="product_id" t-att-value="odoo_module.product_id.id" />
+												</t>
+												<div>
+													<t
+														t-if="odoo_module.can_download or combination_info['already_purchase'] or user.has_group('to_odoo_module.odoo_module_user')">
+														<t
+															t-if="user_id._is_public() and not combination_info['lst_price']">
+															<a class="btn btn-primary mr16"
+																t-att-href="'/web/login?redirect=/apps/app/%s/%s' % (odoo_module.odoo_version_id.name, odoo_module.technical_name)"
+																t-att-title="'Download %s for Free' % odoo_module.display_name">
+																<i class="fa fa-download"></i>
+																Download
+															</a>
+														</t>
+														<t t-else="">
+															<a id="btn_module_download" class="btn btn-primary mr16"
+																t-att-href="'/my/apps/download/%s' % odoo_module.id"
+																t-att-title="'Download %s' % odoo_module.display_name">
+																<i class="fa fa-download"></i>
+																Download
+															</a>
+														</t>
+													</t>
+													<t t-else="">
+														<t t-if="odoo_module.website_published">
+															<button id="btn_module_add_to_cart" type="submit"
+																class="btn btn-primary mr16" title="Add to Cart">
+																<i class="fa fa-shopping-cart"></i>
+																Add to Cart
+															</button>
+														</t>
+														<t t-else="">
+															<button id="btn_module_add_to_cart" class="btn btn-primary mr16" disabled="True"
+																title="This module is not available for buying directly. It is usually included when you buy a module (listed in the Extensions) that requires this one.">
+																<i class="fa fa-shopping-cart"></i>
+																Add to Cart
+															</button>
+														</t>
+													</t>
+													<a id="live_demo" t-if="odoo_module.live_test_url"
+														target="_blank" class="btn btn-secondary"
+														t-att-href="odoo_module.live_test_url">
+														<i class="fa fa-eye-slash"></i>
+														Live Demo
+													</a>
+												</div>
+											</div>
+										</form>
+									</div>
+
+									<div class="module_technical_specs">
+										<table
+											class="loempia_app_table table table-sm small mt16">
+											<tbody>
+												<tr>
+													<td>
+														<b>Technical name</b>
+													</td>
+													<td>
+														<t t-esc="odoo_module.technical_name" />
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<b>License</b>
+													</td>
+													<td>
+														<t t-if="odoo_module.license_version_id"
+															t-esc="odoo_module.license_version_id.license_id.short_name + ' v' + odoo_module.license_version_id.name" />
+													</td>
+												</tr>
+												<tr t-if="odoo_module.website">
+													<td>
+														<b>Website</b>
+													</td>
+													<td>
+														<t t-esc="odoo_module.website" />
+													</td>
+												</tr>
+												<tr t-if="odoo_module.other_version_ids">
+													<td>
+														<b>Read description for</b>
+													</td>
+													<td>
+														<t t-foreach="odoo_module.other_version_ids"
+															t-as="module_version">
+															<t t-if="module_version.is_published">
+																<a class="badge badge-secondary mr8"
+																	t-att-href="module_version.website_url"
+																	t-att-title="module_version.anchor_title">
+																	v
+																	<span t-if="module_version != odoo_module"
+																		t-esc="module_version.odoo_version_id.name" />
+																</a>
+															</t>
+															<t t-else="">
+																<a class="badge badge-secondary disabled mr8"
+																	t-att-href="url_app_keep(module_version.website_url, force_show=1)"
+																	rel="nofollow" title="Unpublished">
+																	v
+																	<span t-if="module_version != odoo_module"
+																		t-esc="module_version.odoo_version_id.name" />
+																</a>
+															</t>
+														</t>
+													</td>
+												</tr>
+												<tr t-if="odoo_module.required_standard_odoo_app_ids">
+													<td>
+														<b>Required Apps</b>
+													</td>
+													<td>
+														<t
+															t-foreach="odoo_module.required_standard_odoo_app_ids"
+															t-as="module_version">
+															<span class="dependencies_list"
+																t-esc="module_version.name + ' (' + module_version.technical_name + ')'" />
+														</t>
+													</td>
+												</tr>
+												<tr t-if="odoo_module.included_dependency_ids">
+													<td>
+														<b>Included Dependencies</b>
+													</td>
+													<td>
+														<t t-foreach="odoo_module.included_dependency_ids"
+															t-as="module_version">
+															<t t-if="module_version.is_published">
+																<a t-att-href="module_version.website_url"
+																	class="dependencies_list" t-esc="module_version.name"/>
+															</t>
+															<t t-else="">
+																<a t-att-href="url_app_keep(module_version.website_url, force_show=1)"
+																	rel="nofollow" class="dependencies_list" t-esc="module_version.name"/>
+															</t>
+														</t>
+													</td>
+												</tr>
+												<tr t-if="odoo_module.depended_module_version_ids">
+													<td>
+														<b>Extensions</b>
+													</td>
+													<td>
+														<t t-foreach="odoo_module.depended_module_version_ids"
+															t-as="module_version">
+															<t t-if="module_version.is_published">
+																<a t-att-href="module_version.website_url"
+																	class="dependending_list" t-esc="module_version.name"/>
+															</t>
+															<t t-else="">
+																<a t-att-href="url_app_keep(module_version.website_url, force_show=1)"
+																	rel="nofollow" class="dependending_list" t-esc="module_version.name"/>
+															</t>
+														</t>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="module_full_description">
+						<ul class="nav nav-tabs justify-content-center" role="tablist">
+							<li class="nav-item">
+								<a class="nav-link active" href="#full_desc" data-toggle="tab"
+									role="tab" aria-controls="home" aria-selected="true">Description</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#license" data-toggle="tab"
+									role="tab" aria-controls="home" aria-selected="true">License</a>
+							</li>
+						</ul>
+						<div class="tab-content">
+							<div class="tab-pane container mt16 active" id="full_desc"
+								role="tabpanel">
+								<div itemprop="description"
+									t-field="odoo_module.description_html" class="oe_structure"
+									id="module_full_description" />
+							</div>
+							<div class="tab-pane container mt16" id="license"
+								role="tabpanel">
+								<t t-if="odoo_module.license_version_id"
+									t-raw="odoo_module.license_version_id.content" />
+							</div>
+						</div>
+					</div>
+
+					<div class="o_shop_discussion_rating">
+						<section class="container mt16 mb16">
+							<hr />
+							<div class="row">
+								<div class="col-md-8 col-md-offset-2">
+									<t t-call="portal.message_thread">
+										<t t-set="object" t-value="odoo_module" />
+										<t t-set="display_rating" t-value="True" />
+									</t>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</t>
+	</template>
+
+	<template id="cart_line_product_link"
+		inherit_id="website_sale.cart_line_product_link"
+		name="Custom Shopping Cart Line Product Link">
+		<xpath expr="//a" position="attributes">
+			<attribute name="t-if">not website.dedicate_apps_store or not line.product_id.is_odoo_app</attribute>
+		</xpath>
+		<xpath expr="//a" position="after">
+			<t t-else="">
+				<t t-if="line.product_id.odoo_module_version_id.is_published">
+					<a t-att-href="line.product_id.odoo_module_version_id.website_url">
+						<t t-raw="0"/>
+					</a>
+				</t>
+				<t t-else="">
+					<a t-att-href="'/apps/app/%s/%s?force_show=1' %(line.product_id.odoo_module_version_id.odoo_version_id.name, line.product_id.odoo_module_version_id.technical_name)">
+						<t t-raw="0"/>
+					</a>
+				</t>
+			</t>
+		</xpath>
+	</template>
+
+	<template id="product" inherit_id="website_sale.product" name="Product">
+		<xpath expr="//div[@id='product_details']" position="attributes">
+			<attribute name="t-if">not product.is_odoo_app</attribute>
+		</xpath>
+		<xpath expr="//div[@id='product_details']" position="after">
+			<div t-else="" class="col-md-6 col-xl-4" id="product_odoo_module_details">
+				<h1 itemprop="name" t-field="product.name">Product Name</h1>
+				<form t-if="product._is_add_to_cart_possible()" action="/shop/cart/update" method="POST">
+					<input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
+					<strong class="attribute_name">Odoo Version</strong>
+					<t t-set="first_combination_info" t-value="0" />
+					<t t-set="first_combination_omv_id" t-value="0" />
+					<t t-foreach="product.odoo_module_id.odoo_module_version_ids" t-as="odoo_module_version">
+						<t t-set="combination_info" t-value="odoo_module_version.with_context(partner=partner, product=odoo_module_version.product_id)._get_combination_info_variant()" />
+						<t t-if="odoo_module_version.odoo_version_id.name == combination.name">
+							<t t-set="first_combination_info" t-value="combination_info" />
+							<t t-set="first_combination_omv_id" t-value="odoo_module_version.id" />
+						</t>
+						<div class="form-check mt-2">
+							<label class="form-check-label">
+								<input class="form-check-input" type="radio" name="product_id"
+									t-att-data-purchase="'true' if not combination_info['lst_price'] else 'false'"
+									t-att-data-omv="odoo_module_version.id"
+									t-att-checked="odoo_module_version.odoo_version_id.name == combination.name"
+									t-att-id="odoo_module_version.odoo_version_id.name"
+									t-att-value="odoo_module_version.product_id.id" />
+								<span t-field="odoo_module_version.odoo_version_id.name" />
+								<t t-if="combination_info['already_purchase']">
+									<span class="badge badge-pill badge-primary">Purchased</span>
+								</t>
+								<t t-elif="not combination_info['already_purchase'] and combination_info['lst_price'] == 0">
+									<span class="badge badge-pill badge-info">Free</span>
+								</t>
+								<t t-else="">
+									<span class="badge badge-pill badge-secondary"
+										t-esc="combination_info['price']"
+										t-options="{'widget': 'monetary', 'display_currency': website.currency_id}" />
+								</t>
+							</label>
+						</div>
+					</t>
+					<t t-if="first_combination_info['already_purchase']">
+						<button class="btn btn-primary btn-lg mt16 d-none" id="addToCart">
+							<i class="fa fa-shopping-cart" /> Add to Cart
+						</button>
+						<a role="button" class="btn btn-primary btn-lg mt16" id="download" t-attf-href="/my/apps/download/{{first_combination_omv_id}}">
+							<i class="fa fa-download" /> Download
+						</a>
+					</t>
+					<t t-else="">
+						<button class="btn btn-primary btn-lg mt16" id="addToCart">
+							<i class="fa fa-shopping-cart" /> Add to Cart
+						</button>
+						<a role="button" class="btn btn-primary btn-lg mt16 d-none" id="download" href="#">
+							<i class="fa fa-download" /> Download
+						</a>
+					</t>
+					<a role="button" class="btn btn-primary btn-lg mt16" href="/apps-refund-policy">
+						Refund Policy
+					</a>
+				</form>
+			</div>
+		</xpath>
+		<xpath expr="//div[@id='product_full_description']" position="attributes">
+			<attribute name="class">container</attribute>
+		</xpath>
+	</template>
+
+	<template id="products_item" inherit_id="website_sale.products_item" name="Products item">
+		<xpath expr="//t[@t-set='combination_info']" position="attributes">
+			<attribute name="t-if">not product.is_odoo_app</attribute>
+		</xpath>
+		<xpath expr="//t[@t-set='combination_info']" position="after">
+			<t t-else="" t-set="combination_info"
+				t-value="product.odoo_module_id._get_combination_info()"/>
+		</xpath>
+		<xpath expr="//form/div[hasclass('oe_product_image')]/a/span" position="attributes">
+			<attribute name="t-if">not product.is_odoo_app</attribute>
+		</xpath>
+		<xpath expr="//form/div[hasclass('oe_product_image')]/a" position="inside">
+			<span t-else="" t-field="product.odoo_module_id.odoo_module_version_id.icon"
+				t-options="{'widget': 'image', 'class': 'rounded'}" />
+		</xpath>
+	</template>
+
+</odoo>

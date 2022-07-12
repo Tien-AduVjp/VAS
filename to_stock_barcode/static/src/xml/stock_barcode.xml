@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+
+    <t t-name="barcode_main_menu">
+        <div class="o_barcode_main_menu_container o_dashboard_background">
+            <div class="o_barcode_main_menu">
+                <h1>Barcode Scanning</h1>
+                <div t-if="widget.message_demo" class="message_demo alert alert-info alert-dismissible" role="alert">
+                    <button type="button" class="close">
+                        <span class="fa fa-times"></span>
+                    </button>
+                    We have created a few demo data for you to explore the features. Print the
+                    <a href="/to_stock_barcode/static/img/barcodes_demo.pdf" target="_blank">barcodes sheet</a>
+                    or the
+                    <a href="/to_stock_barcode/static/img/barcodes_actions.pdf" target="_blank">barcodes commands</a>
+                    to check out what this module can do!
+                </div>
+                <img class="mt16" src="/to_stock_barcode/static/img/barcode.png"/>
+                <p class="mt16">
+                    Scan a location to create a new transfer from this location.
+                    <br/>
+                    Scan a picking document to open it.
+                </p>
+                <button class="o_button_operations btn btn-primary btn-lg">Operations</button>
+                <button class="o_button_inventory btn btn-primary btn-lg">Inventory</button>
+                <div class="mt16">
+                    <a href="to_stock_barcode/static/img/barcodes_actions.pdf" class="btn btn-link" target="_blank">
+                        <i class="fa fa-print"/> Print barcode commands
+                    </a>
+                </div>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="InventoryLines.ScanLocation">
+        <div t-if="scan_location" class="ml8 d-inline-block align-middle scan-location">
+            <span class="text-muted">Scan Location:</span>
+            <span t-esc="scan_location"/>
+        </div>
+        <div t-else="scan_location" class="ml8 d-inline-block align-middle scan-location">
+            <span class="text-muted">Scan a location's barcode to change the source location</span>
+        </div>
+    </t>
+
+</templates>

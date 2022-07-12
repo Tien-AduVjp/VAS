@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record model="ir.ui.view" id="view_hr_payslip_inherit_form">
+            <field name="name">hr.payslip.inherit.form</field>
+            <field name="model">hr.payslip</field>
+            <field name="inherit_id" ref="to_hr_payroll.view_hr_payslip_form"/>
+            <field name="arch" type="xml">
+	            <xpath expr="//header" position="after">
+					<div class="alert alert-info border-0 rounded-0" role="alert"
+						style="margin-bottom:0px;"
+						attrs="{'invisible': [('non_private_address_alert', '=', '')]}">
+						<field name="non_private_address_alert" />
+					</div>
+				</xpath>
+                <field name="paid" position="after">
+                    <field name="date"/>
+                    <field name="journal_id" required="1"/>
+                    <field name="move_id" readonly="1"/>
+                </field>
+                <xpath expr="//page[@id='page_account']" position="attributes">
+                	<attribute name="groups" add="account.group_account_user" separator="," />
+                </xpath>
+            </field>
+        </record>
+</odoo>

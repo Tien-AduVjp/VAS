@@ -1,0 +1,29 @@
+<odoo>
+	<data>
+		<record id="view_order_form" model="ir.ui.view">
+			<field name="name">sale.order.form</field>
+			<field name="model">sale.order</field>
+			<field name="inherit_id" ref="sale.view_order_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='team_id']" position="after">
+					<field name="team_leader_id" groups="base.group_no_one" />
+					<field name="regional_manager_id" groups="base.group_no_one" />
+					<field name="crm_team_region_id" widget="selection" />
+				</xpath>
+			</field>
+		</record>
+
+        <record id="sales_order_view_form_inherit" model="ir.ui.view">
+             <field name="name">sale.order.form.security</field>
+             <field name="model">sale.order</field>
+             <field name="inherit_id" ref="view_order_form" />
+             <field name="groups_id" eval="[(6, 0, [ref('to_sales_team_advanced.group_sale_regional_manager')])]"/>
+             <field name="arch" type="xml">
+                  <xpath expr="//field[@name='crm_team_region_id']" position="attributes">
+                      <attribute name="readonly">0</attribute>
+                  </xpath>
+             </field>
+        </record>
+
+	</data>
+</odoo>

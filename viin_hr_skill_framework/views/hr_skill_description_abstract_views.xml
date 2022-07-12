@@ -1,0 +1,43 @@
+<odoo>
+	<data>
+
+		<record model="ir.ui.view" id="view_hr_skill_description_abstract_form">
+			<field name="name">hr.skill.description.abstract.form</field>
+			<field name="model">hr.skill.description.abstract</field>
+			<field name="arch" type="xml">
+				<form>
+					<sheet>
+						<group>
+							<group>
+								<field name="skill_type_id" />
+								<field name="skill_id" />
+							</group>
+							<group>
+								<field name="skill_level_id" />
+								<field name="level_progress" widget="progressbar"/>
+							</group>
+						</group>
+						<notebook>
+							<page name="desc" string="Description">
+								<field name="description" />
+							</page>
+						</notebook>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="view_hr_skill_description_abstract_list">
+			<field name="name">hr.skill.description.abstract.list</field>
+			<field name="model">hr.skill.description.abstract</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="skill_type_id" />
+					<field name="skill_id" />
+					<field name="skill_level_id" invisible="1" />
+					<field name="level_progress" widget="progressbar"/>
+				</tree>
+			</field>
+		</record>
+	</data>
+</odoo>

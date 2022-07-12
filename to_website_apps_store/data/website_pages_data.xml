@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="0">
+		<record id="website_apps_refund_policy_qweb_view"
+			model="ir.ui.view">
+			<field name="name">Apps Refund Policy</field>
+			<field name="key">to_website_apps_store.apps-refund-policy</field>
+			<field name="type">qweb</field>
+			<field name="mode">primary</field>
+			<field name="arch" type="xml">
+				<t name="Apps Refund Policy" priority="29"
+					t-name="to_website_apps_store.apps-refund-policy">
+					<t t-call="website.layout">
+						<div id="wrap">
+							<div class="oe_structure" />
+							<div class="container">
+								<div class="row">
+									<div class="col-lg-2">
+										<a t-if="website.dedicate_apps_store" t-attf-href="/apps" class="btn btn-secondary mt48">
+											<i class="fa fa-chevron-left"></i>
+											Back to Apps
+										</a>
+										<a t-else="" t-attf-href="{{request.httprequest.headers.get('Referer', {})}}" class="btn btn-secondary mt48">
+											<i class="fa fa-chevron-left"></i>
+											Back to Shop
+										</a>
+									</div>
+									<div class="col-lg-8 mt24">
+										<h1>Apps Refund Policy!</h1>
+										<p>Claims are allowed within the next two months after the
+											purchase.
+											The refund process is the following:
+										</p>
+
+										<ul>
+											<li>Customer requests the module publisher for support using
+												the
+												dedicated button on his order page
+											</li>
+											<li>Vendor has 15 days starting from the customer request to
+												settle
+												the claim, fix the issue and/or find an agreement
+											</li>
+											<li>If no agreement has been found between parties after 15
+												days,
+												either party can request the intervention of Odoo who
+												will
+												decide
+												to refund or not the customer.
+											</li>
+										</ul>
+
+										<p>In case the customer has several issues with a module,
+											every
+											one
+											of the issues should follow the above conditions.
+										</p>
+
+										<p>The customer will be refunded if one of these conditions is
+											met,
+											and if he agrees to not use the module and delete his
+											copies:
+										</p>
+
+										<ul>
+											<li>The issue concerns a bug, that has not been fixed
+												following
+												the
+												claim
+											</li>
+											<li>The module is lacking a feature that is advertised in the
+												app
+												description page
+											</li>
+											<li>The module does not install properly on the advertised
+												version
+											</li>
+											<li>The module infringe rules of the Vendor Apps Guidelines
+											</li>
+											<li>The module license is wrong</li>
+											<li>Fraud or stolen credit cards</li>
+										</ul>
+
+										<p>The conditions in which the customer will not be refunded:
+										</p>
+										<ul>
+											<li>The demand concerns a new feature, not advertised in the
+												description of the module, or in the communication with the
+												vendor
+											</li>
+											<li>The module had a bug that the publisher was able to fix
+												following the claim
+											</li>
+											<li>The modules works well, but is not satisfying the
+												customer’s
+												specific needs
+											</li>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</t>
+				</t>
+			</field>
+		</record>
+
+		<record id="website_app_refund_policy_website_page_view"
+			model="website.page">
+			<field name="view_id"
+				ref="website_apps_refund_policy_qweb_view" />
+			<field name="url">/apps-refund-policy</field>
+			<field name="is_published" eval="True" />
+			<field name="website_id" ref="website.default_website" />
+		</record>
+	</data>
+</odoo>

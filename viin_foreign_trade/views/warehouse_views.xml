@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+
+		<record id="view_warehouse" model="ir.ui.view">
+			<field name="name">stock.warehouse.form</field>
+			<field name="model">stock.warehouse</field>
+			<field name="inherit_id" ref="stock.view_warehouse" />
+			<field name="arch" type="xml">
+				<field name="in_type_id" position="after">
+					<field name="imp_type_id" readonly="1" />
+					<field name="imp_custom_zone_type_id" readonly="1" />
+				</field>
+				<field name="out_type_id" position="after">
+					<field name="exp_custom_zone_type_id" readonly="1" />
+					<field name="exp_type_id" readonly="1" />
+				</field>
+				<field name="wh_input_stock_loc_id" position="before">
+					<field name="imp_custom_zone_loc_id" readonly="1" />
+				</field>
+				<field name="wh_output_stock_loc_id" position="after">
+					<field name="exp_custom_zone_loc_id" readonly="1" />
+				</field>
+				<xpath expr="//group[./field[@name='in_type_id']]"
+					position="after">
+					<group string="Routes">
+						<field name="import_route_id" readonly="1" />
+						<field name="export_route_id" readonly="1" />
+					</group>
+					<group string="Procurement Rules">
+						<field name="buy_import_pull_id" readonly="1" />
+						<field name="foreign_mto_pull_id" readonly="1" />
+					</group>
+				</xpath>
+			</field>
+		</record>
+
+		<record id="view_warehouse_inherited" model="ir.ui.view">
+			<field name="name">Stock Warehouse Inherited</field>
+			<field name="model">stock.warehouse</field>
+			<field name="inherit_id"
+				ref="stock.view_warehouse" />
+			<field name="arch" type="xml">
+				<field name="delivery_steps" position="after">
+					<field name="import_to_resupply" />
+				</field>
+			</field>
+		</record>
+
+	</data>
+</odoo>

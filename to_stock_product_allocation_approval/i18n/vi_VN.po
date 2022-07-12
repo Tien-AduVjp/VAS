@@ -1,0 +1,331 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_stock_product_allocation_approval
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-15 08:14+0000\n"
+"PO-Revision-Date: 2022-02-15 08:14+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_stock_allocation_request_line__line_state
+msgid "Status"
+msgstr "Tình trạng"
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_stock_allocation_request_line__amount
+msgid "Amount"
+msgstr "Tổng"
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model,name:to_stock_product_allocation_approval.model_approval_request
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_stock_allocation_request_line__approval_id
+msgid "Approval Request"
+msgstr "Đề nghị phê duyệt"
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model,name:to_stock_product_allocation_approval.model_approval_request_type
+msgid "Approval Request Type"
+msgstr "Kiểu đề nghị phê duyệt"
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_stock_allocation_request_line__approval_state_exception
+msgid "Approval Status Exception"
+msgstr ""
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model.fields.selection,name:to_stock_product_allocation_approval.selection__stock_allocation_request_line__line_state__validate
+msgid "Approved"
+msgstr "Đã duyệt"
+
+#. module: to_stock_product_allocation_approval
+#: model_terms:ir.ui.view,arch_db:to_stock_product_allocation_approval.approval_request_view_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model.fields.selection,name:to_stock_product_allocation_approval.selection__stock_allocation_request_line__line_state__cancel
+msgid "Cancelled"
+msgstr "Đã hủy"
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_stock_allocation_request_line__category_uom_id
+msgid "Category"
+msgstr "Nhóm"
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model,name:to_stock_product_allocation_approval.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_stock_allocation_request_line__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model.fields,help:to_stock_product_allocation_approval.field_stock_allocation_request_line__category_uom_id
+msgid ""
+"Conversion between Units of Measure can only occur if they belong to the "
+"same category. The conversion will be made based on the ratios."
+msgstr ""
+"Việc chuyển đổi qua lại giữa các Đơn vị tính chỉ có thể xảy ra nếu chúng "
+"thuộc cùng một nhóm. Việc chuyển đổi sẽ dựa trên tỉ lệ."
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_stock_allocation_request_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_stock_allocation_request_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_stock_allocation_request_line__currency_id
+msgid "Currency"
+msgstr "Tiền tệ"
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_stock_allocation_request_line__description
+msgid "Description"
+msgstr "Miêu tả"
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_stock_allocation_request_line__warehouse_id
+msgid "Destination Warehouse"
+msgstr "Kho đích"
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_approval_request__display_name
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_approval_request_type__display_name
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_res_company__display_name
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_stock_allocation_request_line__display_name
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_stock_picking__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model.fields.selection,name:to_stock_product_allocation_approval.selection__stock_allocation_request_line__line_state__done
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model.fields.selection,name:to_stock_product_allocation_approval.selection__stock_allocation_request_line__line_state__draft
+msgid "Draft"
+msgstr "Dự thảo"
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_approval_request__id
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_approval_request_type__id
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_res_company__id
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_stock_allocation_request_line__id
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_stock_picking__id
+msgid "ID"
+msgstr ""
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_approval_request____last_update
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_approval_request_type____last_update
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_res_company____last_update
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_stock_allocation_request_line____last_update
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_stock_picking____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_stock_allocation_request_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_stock_allocation_request_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: to_stock_product_allocation_approval
+#: model_terms:ir.ui.view,arch_db:to_stock_product_allocation_approval.approval_request_view_form
+msgid "Picking"
+msgstr "Giao nhận"
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_approval_request__picking_count
+msgid "Pickings Count"
+msgstr "SL Lô hàng"
+
+#. module: to_stock_product_allocation_approval
+#: model_terms:ir.ui.view,arch_db:to_stock_product_allocation_approval.approval_request_view_form
+msgid "Procurement"
+msgstr "Lệnh cung ứng"
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.actions.act_window,name:to_stock_product_allocation_approval.action_procurement_group_view
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_approval_request__procurement_group_id
+msgid "Procurement Group"
+msgstr "Nhóm cung ứng"
+
+#. module: to_stock_product_allocation_approval
+#: model_terms:ir.ui.view,arch_db:to_stock_product_allocation_approval.procurement_group_tree_view
+msgid "Procurement group"
+msgstr "Nhóm cung ứng"
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_approval_request__product_id
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_stock_allocation_request_line__product_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_stock_allocation_request_line__quantity
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: to_stock_product_allocation_approval
+#: model_terms:ir.ui.view,arch_db:to_stock_product_allocation_approval.approval_request_view_form
+msgid "Refuse"
+msgstr "Từ chối"
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model.fields.selection,name:to_stock_product_allocation_approval.selection__stock_allocation_request_line__line_state__refuse
+msgid "Refused"
+msgstr "Bị từ chối"
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_approval_request__scheduled_date
+msgid "Scheduled Date"
+msgstr "Ngày Kế hoạch"
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_approval_request__warehouse_id
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_stock_allocation_request_line__warehouse_source_id
+msgid "Source Warehouse"
+msgstr "Kho nguồn"
+
+#. module: to_stock_product_allocation_approval
+#: code:addons/to_stock_product_allocation_approval/models/allocation_request_line.py:0
+#, python-format
+msgid "Source and Destination Warehouse cannot be the same : %s"
+msgstr "Kho nguồn và kho đích không thể giống nhau: %s"
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model.fields.selection,name:to_stock_product_allocation_approval.selection__approval_request_type__type__stock_allocation
+#: model_terms:ir.ui.view,arch_db:to_stock_product_allocation_approval.approval_request_view_form
+msgid "Stock Allocation"
+msgstr "Phân bổ kho"
+
+#. module: to_stock_product_allocation_approval
+#: code:addons/to_stock_product_allocation_approval/models/res_company.py:0
+#, python-format
+msgid "Stock Allocation Approval"
+msgstr "Phê duyệt phân bổ kho"
+
+#. module: to_stock_product_allocation_approval
+#: code:addons/to_stock_product_allocation_approval/models/allocation_request_line.py:0
+#, python-format
+msgid "Stock Allocation Request"
+msgstr "Yêu cầu phân bổ kho"
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model,name:to_stock_product_allocation_approval.model_stock_allocation_request_line
+msgid "Stock Allocation Request Line"
+msgstr "Dòng yêu cầu phân bổ kho"
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_approval_request__allocation_request_line_ids
+msgid "Stock Allocation Request Lines"
+msgstr "Dòng phê duyệt phân bổ kho"
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_stock_picking__approvals_id
+msgid "Stock Allocation Requests"
+msgstr "Yêu cầu phân bổ kho"
+
+#. module: to_stock_product_allocation_approval
+#: code:addons/to_stock_product_allocation_approval/models/allocation_request_line.py:0
+#, python-format
+msgid "The procurement group not found for the allocation request %s"
+msgstr "Không tìm thấy nhóm cung ứng cho đề nghị phân bổ %s"
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model.fields,help:to_stock_product_allocation_approval.field_stock_allocation_request_line__approval_id
+msgid "The related approval request of this record."
+msgstr "Đề nghị phê duyệt liên quan đến bản ghi này."
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model.fields,help:to_stock_product_allocation_approval.field_approval_request__warehouse_id
+#: model:ir.model.fields,help:to_stock_product_allocation_approval.field_stock_allocation_request_line__warehouse_source_id
+msgid "The warehouse for which the allocation is."
+msgstr "Kho nguồn cần thực hiện phân bổ"
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model.fields,help:to_stock_product_allocation_approval.field_stock_allocation_request_line__approval_state_exception
+msgid ""
+"This field indicates the status of this plan is an exception of its approval"
+" request. For example: when a plan of a requests' is cancelled/refused while"
+" others are not, the plan will be marked as `Approval Status Exception`."
+msgstr ""
+"Trường này chỉ báo tình trạng của kế hoạch này là một ngoại lệ của đơn đề "
+"nghị phê duyệt tương ứng. Ví dụ: khi một kế hoạch trong số các kế hoạch của "
+"đơn đề nghị phê duyệt bị hủy/từ chối trong khi các kế hoạch khác của cùng "
+"đơn thì không, kế hoạch này sẽ được đánh dấu là `Tình trạng phê duyệt ngoại "
+"lệ`."
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model.fields.selection,name:to_stock_product_allocation_approval.selection__stock_allocation_request_line__line_state__confirm
+msgid "To Approve"
+msgstr "Chờ duyệt"
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model,name:to_stock_product_allocation_approval.model_stock_picking
+msgid "Transfer"
+msgstr "Dịch chuyển"
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_approval_request__pickings_id
+msgid "Allocation Transfers"
+msgstr "Dịch chuyển Phân bổ kho"
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_approval_request_type__type
+msgid "Type"
+msgstr "Kiểu"
+
+#. module: to_stock_product_allocation_approval
+#: model:ir.model.fields,field_description:to_stock_product_allocation_approval.field_stock_allocation_request_line__uom_id
+msgid "Unit of Measure"
+msgstr "Đơn vị tính"
+
+#. module: to_stock_product_allocation_approval
+#: code:addons/to_stock_product_allocation_approval/models/approval_request.py:0
+#, python-format
+msgid "You cannot cancel a Stock Allocation Request which has done Transfers."
+msgstr ""
+"Bạn không thể hủy một yêu cầu phân bổ kho mà đã hoàn thành dịch chuyển kho."
+
+#. module: to_stock_product_allocation_approval
+#: code:addons/to_stock_product_allocation_approval/models/approval_request.py:0
+#, python-format
+msgid ""
+"You cannot done a Stock Allocation Request which has not done transfers."
+msgstr ""
+"Bạn không thể hoàn thành yêu cầu phân bổ kho, cái mà chưa hoàn thành dịch "
+"chuyển kho"
+
+#. module: to_stock_product_allocation_approval
+#: code:addons/to_stock_product_allocation_approval/models/approval_request.py:0
+#, python-format
+msgid ""
+"You must have at least one non-zero quantity line to submit for approval. "
+"Submitting a zero-quanity line does not make sense."
+msgstr ""
+"Bạn phải có ít nhất một dòng với số lượng khác không để có thể trình quản lý"
+" duyệt. Trình các dòng với số lượng bằng không không có ý nghĩa gì."

@@ -1,0 +1,8 @@
+<odoo>
+	<template id="assets" inherit_id="point_of_sale.assets">
+	  <xpath expr="." position="inside">
+  	      <link rel="stylesheet" href="/to_pos_note/static/src/css/note.css" />
+	      <script type="text/javascript" src="/to_pos_note/static/src/js/PosNoteOrder.js"/>
+	  </xpath>
+	</template>
+</odoo>

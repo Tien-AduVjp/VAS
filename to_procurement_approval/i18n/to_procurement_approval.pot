@@ -1,0 +1,406 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_procurement_approval
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-18 05:00+0000\n"
+"PO-Revision-Date: 2022-02-18 05:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,help:to_procurement_approval.field_procurement_request_line__type
+msgid ""
+"A storable product is a product for which you manage stock. The Inventory app has to be installed.\n"
+"A consumable product is a product for which stock is not managed.\n"
+"A service is a non-material product you provide."
+msgstr ""
+
+#. module: to_procurement_approval
+#: code:addons/to_procurement_approval/models/approval_request.py:0
+#, python-format
+msgid "All lines must be have product."
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_request_line__state
+msgid "Status"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_request_line__amount
+msgid "Amount"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model,name:to_procurement_approval.model_approval_request
+msgid "Approval Request"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model,name:to_procurement_approval.model_approval_request_type
+msgid "Approval Request Type"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_request_line__approval_state_exception
+msgid "Approval Status Exception"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_request_line__approval_id
+#: model:ir.model.fields,field_description:to_procurement_approval.field_stock_picking__approval_request_id
+msgid "Approval request"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields.selection,name:to_procurement_approval.selection__procurement_request_line__state__validate
+msgid "Approved"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model_terms:ir.ui.view,arch_db:to_procurement_approval.approval_request_view_form_inherit
+msgid "Cancel"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields.selection,name:to_procurement_approval.selection__procurement_request_line__state__cancel
+msgid "Cancelled"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_request_line__category_uom_id
+msgid "Category"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model,name:to_procurement_approval.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,help:to_procurement_approval.field_procurement_request_line__category_uom_id
+msgid ""
+"Conversion between Units of Measure can only occur if they belong to the "
+"same category. The conversion will be made based on the ratios."
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_request_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_request_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_request_line__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_request_line__description
+msgid "Description"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_approval_request__display_name
+#: model:ir.model.fields,field_description:to_procurement_approval.field_approval_request_type__display_name
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_group__display_name
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_request_line__display_name
+#: model:ir.model.fields,field_description:to_procurement_approval.field_res_company__display_name
+#: model:ir.model.fields,field_description:to_procurement_approval.field_stock_picking__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields.selection,name:to_procurement_approval.selection__procurement_request_line__state__done
+msgid "Done"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields.selection,name:to_procurement_approval.selection__procurement_request_line__state__draft
+msgid "Draft"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_approval_request__id
+#: model:ir.model.fields,field_description:to_procurement_approval.field_approval_request_type__id
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_group__id
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_request_line__id
+#: model:ir.model.fields,field_description:to_procurement_approval.field_res_company__id
+#: model:ir.model.fields,field_description:to_procurement_approval.field_stock_picking__id
+msgid "ID"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_approval_request____last_update
+#: model:ir.model.fields,field_description:to_procurement_approval.field_approval_request_type____last_update
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_group____last_update
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_request_line____last_update
+#: model:ir.model.fields,field_description:to_procurement_approval.field_res_company____last_update
+#: model:ir.model.fields,field_description:to_procurement_approval.field_stock_picking____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_request_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_request_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,help:to_procurement_approval.field_approval_request__procurement_group_ids
+msgid "List of procurement group associated to this procurement request"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,help:to_procurement_approval.field_approval_request__procurement_request_line_ids
+msgid "List of products associated to this procurement request"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,help:to_procurement_approval.field_approval_request__purchase_order_ids
+msgid "List of purchase orders associated to this procurement request"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,help:to_procurement_approval.field_approval_request__picking_ids
+msgid "List of transfers associated to this procurement request"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model_terms:ir.ui.view,arch_db:to_procurement_approval.approval_request_view_form_inherit
+msgid "Picking"
+msgstr ""
+
+#. module: to_procurement_approval
+#: code:addons/to_procurement_approval/models/approval_request.py:0
+#, python-format
+msgid "Please add some items to procurement."
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_request_line__route_ids
+msgid "Preferred Routes"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model_terms:ir.ui.view,arch_db:to_procurement_approval.approval_request_view_form_inherit
+msgid "Procurement"
+msgstr ""
+
+#. module: to_procurement_approval
+#: code:addons/to_procurement_approval/models/res_company.py:0
+#, python-format
+msgid "Procurement Approval"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.actions.act_window,name:to_procurement_approval.action_procurement_group_view
+#: model:ir.model,name:to_procurement_approval.model_procurement_group
+#: model:ir.model.fields,field_description:to_procurement_approval.field_approval_request__procurement_group_ids
+#: model_terms:ir.ui.view,arch_db:to_procurement_approval.approval_request_view_form_inherit
+msgid "Procurement Group"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_approval_request__procurement_groups_count
+msgid "Procurement Groups Count"
+msgstr ""
+
+#. module: to_procurement_approval
+#: code:addons/to_procurement_approval/models/procurement_request_line.py:0
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_group__approval_request_id
+#, python-format
+msgid "Procurement Request"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_approval_request__procurement_request_line_ids
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_group__procurement_request_line_ids
+msgid "Procurement Request Lines"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model_terms:ir.ui.view,arch_db:to_procurement_approval.procurement_group_tree_view
+msgid "Procurement group"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields.selection,name:to_procurement_approval.selection__approval_request_type__type__procurement
+msgid "Procurement request"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model,name:to_procurement_approval.model_procurement_request_line
+msgid "Procurement request line"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_request_line__procurement_group_id
+msgid "Procurment Group"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_request_line__product_id
+msgid "Product"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_approval_request__purchase_order_ids
+#: model_terms:ir.ui.view,arch_db:to_procurement_approval.approval_request_view_form_inherit
+msgid "Purchase Orders"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_approval_request__purchase_orders_count
+msgid "Purchase order count"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_request_line__quantity
+msgid "Quantity"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model_terms:ir.ui.view,arch_db:to_procurement_approval.approval_request_view_form_inherit
+msgid "Refuse"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields.selection,name:to_procurement_approval.selection__procurement_request_line__state__refuse
+msgid "Refused"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model_terms:ir.ui.view,arch_db:to_procurement_approval.approval_request_view_form_inherit
+msgid ""
+"Show all procurement groups that have been issued for this procurement "
+"request"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model_terms:ir.ui.view,arch_db:to_procurement_approval.approval_request_view_form_inherit
+msgid ""
+"Show all purchase orders that have been issued for this procurement request"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model_terms:ir.ui.view,arch_db:to_procurement_approval.approval_request_view_form_inherit
+msgid "Show all tranfers that have been issued for this procurement request"
+msgstr ""
+
+#. module: to_procurement_approval
+#: code:addons/to_procurement_approval/models/procurement_request_line.py:0
+#: model:ir.model.fields,help:to_procurement_approval.field_procurement_request_line__procurement_group_id
+#, python-format
+msgid ""
+"Technical field to store the procurement group generated automatically "
+"during procurement request approval."
+msgstr ""
+
+#. module: to_procurement_approval
+#: code:addons/to_procurement_approval/models/procurement_request_line.py:0
+#, python-format
+msgid "The procurement group not found for the procurement request line %s"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,help:to_procurement_approval.field_procurement_request_line__approval_id
+msgid "The related approval request of this record."
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,help:to_procurement_approval.field_procurement_request_line__warehouse_id
+msgid "The warehouse for which the procurement is."
+msgstr ""
+
+#. module: to_procurement_approval
+#: code:addons/to_procurement_approval/models/approval_request.py:0
+#, python-format
+msgid ""
+"There is no matching vendor price to generate the purchase order for product"
+" '%s' (no vendor defined, minimum quantity not reached, dates not valid, "
+"...). Go on the product form and complete the list of vendors."
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,help:to_procurement_approval.field_procurement_request_line__approval_state_exception
+msgid ""
+"This field indicates the status of this plan is an exception of its approval"
+" request. For example: when a plan of a requests' is cancelled/refused while"
+" others are not, the plan will be marked as `Approval Status Exception`."
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,help:to_procurement_approval.field_procurement_request_line__route_ids
+msgid ""
+"This is to override the routes set on the product. If no route selected, the"
+" routes specified for the product will be used."
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields.selection,name:to_procurement_approval.selection__procurement_request_line__state__confirm
+msgid "To Approve"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model,name:to_procurement_approval.model_stock_picking
+msgid "Transfer"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_approval_request__picking_ids
+msgid "Transfers"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_approval_request__pickings_count
+msgid "Transfers count"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_approval_request_type__type
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_request_line__type
+msgid "Type"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_request_line__uom_id
+msgid "Unit of Measure"
+msgstr ""
+
+#. module: to_procurement_approval
+#: model:ir.model.fields,field_description:to_procurement_approval.field_procurement_request_line__warehouse_id
+msgid "Warehouse"
+msgstr ""
+
+#. module: to_procurement_approval
+#: code:addons/to_procurement_approval/models/procurement_request_line.py:0
+#, python-format
+msgid ""
+"You cannot remove a line while its corresponding request is not in draft "
+"state."
+msgstr ""
+
+#. module: to_procurement_approval
+#: code:addons/to_procurement_approval/models/approval_request.py:0
+#, python-format
+msgid ""
+"You must have at least one non-zero quantity line to submit for approval '%s'. "
+"Submitting a zero-quanity line does not make sense."
+msgstr ""

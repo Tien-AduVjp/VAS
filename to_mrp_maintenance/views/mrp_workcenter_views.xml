@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mrp_workcenter_view_form" model="ir.ui.view">
+        <field name="name">mrp.workcenter.form</field>
+        <field name="model">mrp.workcenter</field>
+        <field name="inherit_id" ref="mrp.mrp_workcenter_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Equipment">
+                    <field name="equipment_ids" widget="many2many">
+                        <tree string="Equipments">
+                            <field name="name"/>
+                            <field name="technician_user_id"/>
+                            <field name="category_id"/>
+                            <field name="mtbf"/>
+                            <field name="mttr"/>
+							<field name="latest_failure_date" optional="hide"/>
+							<field name="expected_mtbf" optional="hide"/>
+                            <field name="estimated_next_failure" string="Est. Next Failure"/>
+							<field name="workcenter_id" optional="hide"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="mrp_workcenter_view_kanban" model="ir.ui.view">
+        <field name="name">mrp.workcenter.kanban</field>
+        <field name="model">mrp.workcenter</field>
+        <field name="inherit_id" ref="mrp.mrp_workcenter_kanban"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='plan_order']" position="after">
+                <div>
+                    <a name="%(maintenance.hr_equipment_request_action)d" type="action">Maintenance</a>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <menuitem id="menu_workcenter_tree" parent="maintenance.menu_equipment_form"
+        action="mrp.mrp_workcenter_action"
+        groups="mrp.group_mrp_routings"
+        sequence="1"/>
+
+</odoo>

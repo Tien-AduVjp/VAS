@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+	<data>
+		<record model="ir.ui.view" id="wizard_form_view">
+			<field name="name">Create Shift Schedule wizard</field>
+			<field name="model">shift.schedule.wizard</field>
+			<field name="arch" type="xml">
+				<form string="Shift Schedule Data">
+					<group>
+						<group>
+							<field name="year"/>
+						</group>
+						<group>
+							<field name="week_of_the_year"/>
+						</group>
+					</group>
+					<group>
+						<field name="load_employee" />
+						<field name="employee_ids" widget="many2many_tags" options="{'no_create_edit': True}" />
+					</group>
+					<footer>
+						<button name="create_shift_scheduling_lines" type="object"
+							string="Create" class="oe_highlight" />
+						<button special="cancel" string="Cancel" />
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<act_window id="action_create_shift_scheduling_line" name="Shift Scheduling"
+			res_model="shift.schedule.wizard" view_mode="form" target="new" />
+
+		<menuitem id="create_shift_scheduling_line_menu" parent="shift_rotation_menu_root"
+			name="Shift Scheduling Wizard" action="action_create_shift_scheduling_line" sequence="2"/>
+
+	</data>
+</odoo>

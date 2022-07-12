@@ -1,0 +1,13 @@
+.o_widgetbusbutton_cell .o_field_empty{
+	display: inline-block !important;
+}
+
+.o_field_widget .o_widgetbusbutton {
+    color: theme-color('danger');
+    &.o_has_vehicle_service {
+        color: theme-color('success');
+    }
+    &.o_no_vehicle_service {
+        color: theme-color('warning');
+    }
+}

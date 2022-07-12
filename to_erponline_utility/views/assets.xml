@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="assets_common" inherit_id="web.assets_common">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/to_erponline_utility/static/src/js/activation.js"></script>
+            <script type="text/javascript" src="/to_erponline_utility/static/src/js/user_menu.js"></script>
+        </xpath>
+        <xpath expr="//link[last()]" position="after">
+            <link rel="stylesheet" type="text/scss" href="/to_erponline_utility/static/src/css/to_erponline_utility.scss"/>
+        </xpath>
+    </template>
+</odoo>

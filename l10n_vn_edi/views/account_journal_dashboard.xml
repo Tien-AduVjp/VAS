@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="account_journal_dashboard_kanban_view" model="ir.ui.view">
+        <field name="name">account.journal.dashboard.kanban</field>
+        <field name="model">account.journal</field>
+        <field name="inherit_id" ref="account.account_journal_dashboard_kanban_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//t[@id='account.JournalBodySalePurchase']//div[hasclass('o_kanban_primary_right')]" position="inside">
+                <div class="row">
+                    <div class="col-8">
+                        <a type="object" t-if="journal_type == 'sale' and dashboard.einvoice_enabled==true" name="action_open_einvoice_to_issue_action">
+                            <t t-esc="dashboard.einvoice_to_issue_count"/> E-Invoices to Issue
+                        </a>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

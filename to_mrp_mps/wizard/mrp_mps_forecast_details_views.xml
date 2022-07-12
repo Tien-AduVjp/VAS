@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mrp_mps_forecast_details_form_view" model="ir.ui.view">
+        <field name="name">mrp.mps.forecast.details.form</field>
+        <field name="model">mrp.mps.forecast.details</field>
+        <field name="arch" type="xml">
+            <form>
+                <div class="oe_button_box" name="button_box">
+                    <button name="action_view_incoming_moves"
+                            type="object"
+                            class="oe_stat_button"
+                            icon="fa-exchange">
+                        <field name="moves_qty" widget="statinfo" string="Receipts"/>
+                    </button>
+                    <button name="action_view_rfqs"
+                            type="object"
+                            class="oe_stat_button"
+                            icon="fa-shopping-cart">
+                        <field name="rfq_qty" widget="statinfo" string="RFQs"/>
+                    </button>
+                    <button name="action_view_mo"
+                            type="object"
+                            class="oe_stat_button"
+                            icon="fa-cogs">
+                        <field name="manufacture_qty" widget="statinfo" string="MOs"/>
+                    </button>
+                </div>
+                <field name="move_ids" invisible="1"/>
+                <field name="purchase_order_line_ids" invisible="1"/>
+                <p class="text-center">Click one of the buttons above to view details.</p>
+                <footer>
+                    <button string="Close" class="btn btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

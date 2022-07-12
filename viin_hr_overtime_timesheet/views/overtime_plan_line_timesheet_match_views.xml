@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record
+		id="overtime_plan_line_timesheet_match_tree_view"
+		model="ir.ui.view">
+		<field name="name">overtime.plan.line.timesheet.match.tree</field>
+		<field name="model">overtime.plan.line.timesheet.match</field>
+		<field name="inherit_id"
+			ref="viin_hr_overtime.view_abstract_overtime_plan_line_match_tree" />
+		<field name="mode">primary</field>
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='overtime_plan_id']"
+				position="after">
+				<field name="timesheet_id" />
+			</xpath>
+		</field>
+	</record>
+
+	<record
+		id="overtime_plan_line_timesheet_match_form_view"
+		model="ir.ui.view">
+		<field name="name">overtime.plan.line.timesheet.match.form</field>
+		<field name="model">overtime.plan.line.timesheet.match</field>
+		<field name="inherit_id"
+			ref="viin_hr_overtime.view_abstract_overtime_plan_line_match_form" />
+		<field name="mode">primary</field>
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='overtime_plan_id']"
+				position="after">
+				<field name="timesheet_id" />
+			</xpath>
+		</field>
+	</record>
+
+	<record id="action_overtime_plan_line_timesheet_match"
+		model="ir.actions.act_window">
+		<field name="name">Overtime Planning Timesheet Match</field>
+		<field name="res_model">overtime.plan.line.timesheet.match</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+</odoo>

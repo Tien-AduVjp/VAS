@@ -1,0 +1,20 @@
+<odoo>
+	<record id="abstract_backdate_wizard_view_form"
+		model="ir.ui.view">
+		<field name="name">abstract.backdate.wizard.form</field>
+		<field name="model">abstract.backdate.wizard</field>
+		<field name="arch" type="xml">
+			<form string="Backdate Operation Wizard">
+				<group>
+					<group>
+						<field name="date" />
+					</group>
+				</group>
+				<footer>
+					<button name="process" string="Validate" type="object" class="btn-primary" />
+					<button string="Cancel" class="btn-default" special="cancel" />
+				</footer>
+			</form>
+		</field>
+	</record>
+</odoo>

@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_odoo_version_everyone,odoo.version.everyone,model_odoo_version,,1,0,0,0
+access_odoo_version_employee,odoo.version.employee,model_odoo_version,base.group_user,1,0,0,0
+access_odoo_version_config_employee,odoo.version.config.employee,model_odoo_version_config,base.group_user,1,0,0,0
+access_odoo_version_config_manager,odoo.version.config_manager,model_odoo_version,to_config_management.group_manager,1,1,1,0
+access_odoo_version_config_config_manager,odoo.version.config.config_manager,model_odoo_version_config,to_config_management.group_manager,1,1,1,0
+access_odoo_version_version_manager,odoo.version.employee,model_odoo_version,to_odoo_version.group_manager,1,1,1,1
+access_odoo_version_config_version_manager,odoo.version.config.employee,model_odoo_version_config,to_odoo_version.group_manager,1,1,1,1
+access_wizard_version_config_from_file,wizard.version.config.from.file,model_wizard_version_config_from_file,to_odoo_version.group_manager,1,1,1,1

@@ -1,0 +1,21 @@
+<odoo>
+	<data>
+		<record id="hr_expense_view_form" model="ir.ui.view">
+			<field name="name">hr.expense.form</field>
+			<field name="model">hr.expense</field>
+			<field name="inherit_id" ref="hr_expense.hr_expense_view_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//div[./field[@name='payment_mode']]"
+					position="after">
+					<label for="reimbursed_in_payslip"
+						attrs="{'invisible':[('payment_mode','!=','own_account')]}" />
+					<div
+						attrs="{'invisible':[('payment_mode','!=','own_account')]}">
+						<field name="reimbursed_in_payslip"
+							attrs="{'invisible':[('payment_mode','!=','own_account')]}" />
+					</div>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

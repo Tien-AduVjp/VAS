@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+	<record id="account_advance_payment_register_view_form" model="ir.ui.view">
+		<field name="name">account.advance.payment.register.form</field>
+		<field name="model">account.advance.payment.register</field>
+		<field name="inherit_id" ref="to_hr_employee_advance.account_advance_payment_register_view_form" />
+		<field name="arch" type="xml">
+			<field name="destination_account_id" position="after">
+				<field name="expense_sheet_id" invisible="1"/>
+			</field>
+		</field>
+	</record>
+
+</odoo>

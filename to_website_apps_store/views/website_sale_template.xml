@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<template id="cart_summary"
+		inherit_id="website_sale.cart_summary">
+		<xpath expr="//tbody/tr/td[hasclass('td-img')]"
+			position="inside">
+			<a t-if="line.product_id.odoo_module_version_id and website.dedicate_apps_store"
+				t-att-href="line.product_id.odoo_module_version_id.website_url">
+				<span t-field="line.product_id.image_128"
+					t-options="{'widget': 'image', 'class': 'rounded o_image_64_max'}" />
+			</a>
+			<a t-else=""
+				t-attf-href="/shop/product/#{ slug(line.product_id.product_tmpl_id) }">
+				<span t-field="line.product_id.image_128"
+					t-options="{'widget': 'image', 'class': 'rounded o_image_64_max'}" />
+			</a>
+		</xpath>
+
+		<xpath expr="//tbody/tr/td[hasclass('td-img')]/span"
+			position="attributes">
+			<attribute name="class">d-none</attribute>
+		</xpath>
+
+		<!-- some technical_name is too long to display inside table -->
+		<xpath
+			expr="//tbody/tr/td[hasclass('td-product_name')]/div/strong"
+			position="attributes">
+			<attribute name="t-if">not line.product_id.is_odoo_app</attribute>
+		</xpath>
+
+		<xpath expr="//tbody/tr/td[hasclass('td-product_name')]/div"
+			position="inside">
+			<strong t-else=""
+				t-esc="'%s (%s)' % (line.product_id.odoo_module_version_id.name, line.product_id.odoo_module_version_id.odoo_version_id.name)" />
+		</xpath>
+	</template>
+
+</odoo>

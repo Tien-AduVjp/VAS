@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="helpdesk_sla_tree_view" model="ir.ui.view">
+		<field name="name">helpdesk.sla.tree</field>
+		<field name="model">helpdesk.sla</field>
+		<field name="arch" type="xml">
+			<tree string="SLA Policy">
+				<field name="name" />
+				<field name="team_id" />
+				<field name="description" optional="hide"/>
+				<field name="minimum_priority" widget="priority" optional="hide"/>
+				<field name="ticket_type_ids" widget="many2many_tags" optional="hide"/>
+				<field name="tag_ids" widget="many2many_tags" optional="hide"/>
+				<field name="stage_id" optional="hide"/>
+				<field name="time_hours" widget="float_time" optional="hide"/>
+			</tree>
+		</field>
+	</record>
+	<record id="helpdesk_sla_form_view" model="ir.ui.view">
+		<field name="name">helpdesk.sla.form</field>
+		<field name="model">helpdesk.sla</field>
+		<field name="arch" type="xml">
+			<form string="Helpdesk SLA Policy">
+				<sheet>
+					<div class="oe_button_box" name="button_box">
+						<button name="action_open_tickets" class="o_stat_button" type="object" icon="fa-ticket">
+	 						<field name="tickets_count" string="Tickets"  widget="statinfo" />
+	 					</button>
+					</div>
+					<widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+					<div name="title" class="oe_title">
+						<label class="oe_edit_only" for="name" string="SLA Policy Name" />
+						<h1>
+							<field name="name" class="oe_title" placeholder="e.g. Close urgent ticket within 24 hours"/>
+						</h1>
+						<field name="description" placeholder="Description of the policy..." label="0"/>
+					</div>
+					<group>
+						<group name="apply" string="Apply on">
+							<field name="active" invisible="1"/>
+							<field name="team_id" />
+							<field name="minimum_priority" widget="priority" />
+							<field name="ticket_type_ids" widget="many2many_tags" />
+							<field name="tag_ids" widget="many2many_tags" />
+						</group>
+						<group name="target" string="Target">
+							<field name="stage_id"/>
+							<label for="time_hours" string="Reach In"/>
+                            <div class="o_row">
+                                <field name="time_hours" widget="float_time"/> hours<br/>
+                            </div>
+						</group>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<record id="helpdesk_sla_search_view" model="ir.ui.view">
+		<field name="name">helpdesk.sla.search</field>
+		<field name="model">helpdesk.sla</field>
+		<field name="arch" type="xml">
+			<search string="Helpdesk SLA Search">
+				<field name="id"/>
+				<field name="name"/>
+				<field name="ticket_type_ids" />
+				<field name="team_id" />
+				<field name="minimum_priority" />
+				<field name="tag_ids" />
+				<field name="stage_id" />
+				<separator />
+				<filter string="Archived" name="ftr_inactive" domain="[('active', '=', False)]" />
+				<group expand="0" string="Group By">
+					<filter string="Team" name="grp_team_id" domain="[]" context="{'group_by':'team_id'}" />
+				</group>
+			</search>
+		</field>
+	</record>
+
+	<record id="helpdesk_sla_action" model="ir.actions.act_window">
+		<field name="name">SLA Policy</field>
+		<field name="res_model">helpdesk.sla</field>
+		<field name="view_mode">tree,form</field>
+		<field name="view_id" ref="helpdesk_sla_tree_view" />
+	</record>
+
+	<menuitem id="helpdesk_sla_menu" name="SLA Policy"
+		parent="configuration_menu" action="helpdesk_sla_action"
+		sequence="30" />
+</odoo>

@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+
+		<record id="fleet_trip_tree" model="ir.ui.view">
+			<field name="name">fleet.trip.tree</field>
+			<field name="model">fleet.vehicle.trip</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Trips" decoration-info="state=='draft'"
+					decoration-muted="state=='cancelled'"
+					decoration-success="state=='done'">
+					<field name="name" />
+					<field name="vehicle_id" />
+					<field name="driver_id" />
+					<field name="route_id" />
+					<field name="est_distance" />
+					<field name="odometer_unit" />
+					<field name="expected_start_date" />
+					<field name="expected_end_date" />
+					<field name="time_deviation" />
+					<field name="state" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="fleet_trip_search" model="ir.ui.view">
+			<field name="name">fleet.vehicle.trip.search</field>
+			<field name="model">fleet.vehicle.trip</field>
+			<field name="type">search</field>
+			<field name="arch" type="xml">
+				<search string="Search Trips">
+					<field name="name" />
+					<field name="vehicle_id" />
+					<field name="route_id" />
+					<field name="start_date" />
+					<field name="end_date" />
+					<field name="state" />
+					<field name="driver_id" />
+					<field name="employee_id" />
+					<field name="assistant_ids" />
+					<field name="time_deviation" />
+					<filter string="Draft" name="draft"
+						domain="[('state','=','draft')]" />
+					<filter string="Confirmed" name="confirmed"
+						domain="[('state','=','confirmed')]" />
+					<filter string="In Operation" name="progress"
+						domain="[('state','=','progress')]" />
+					<filter string="Done" name="done"
+						domain="[('state','=','done')]" />
+					<filter string="Cancelled" name="cancelled"
+						domain="[('state','=','cancelled')]" />
+					<separator />
+					<filter string="Today" name="today_scheduled"
+						domain="[('start_date','&gt;=', datetime.datetime.combine(context_today(), datetime.time(0,0,0)))]"
+						help="Trips started today" />
+					<filter string="In Next 7 Days" name="next_seven_days"
+						domain="[('start_date','&gt;=',((context_today().strftime('%Y-%m-%d')))), ('start_date','&lt;=', ((context_today()+datetime.timedelta(days=7)).strftime('%Y-%m-%d')))]" />
+					<group string="Group By">
+						<filter string="Vehicle" name="vehicle" domain="[]"
+							context="{'group_by':'vehicle_id'}" />
+						<filter string="Driver" name="driver" domain="[]"
+							context="{'group_by':'driver_id'}" />
+						<filter string="Route" name="route" domain="[]"
+							context="{'group_by':'route_id'}" />
+						<filter string="Date Start" name="start_date" domain="[]"
+							context="{'group_by':'start_date'}" />
+						<filter string="Date End" name="end_date" domain="[]"
+							context="{'group_by':'end_date'}" />
+					</group>
+				</search>
+			</field>
+		</record>
+
+		<record id="fleet_trip_form" model="ir.ui.view">
+			<field name="name">fleet.vehicle.trip.form</field>
+			<field name="model">fleet.vehicle.trip</field>
+			<field name="arch" type="xml">
+				<form string="Trip">
+					<header>
+						<button name="action_confirm" states="draft"
+							string="Confirm Trip" type="object" class="oe_highlight" />
+						<button name="%(launch_vehicle_strip_start_wizard)d"
+							states="confirmed" string="Start Trip" type="action"
+							class="btn-primary" context="{'default_trip_id': active_id}" />
+						<button name="action_trip_report_send"
+							string="Send by Email" type="object" states="confirmed"
+							class="btn-primary" />
+						<button name="%(launch_vehicle_trip_register_cost_wizard)d"
+							states="progress" string="Log Service" type="action"
+							class="btn-primary" context="{'default_trip_id': active_id}" />
+						<button name="%(launch_vehicle_strip_end_wizard)d"
+							states="progress" string="Done" type="action"
+							class="oe_highlight" context="{'default_trip_id': active_id}" />
+						<button name="action_cancel"
+							states="confirmed,progress,done" string="Cancel Trip"
+							type="object"
+							groups="to_fleet_operation_planning.fleet_group_operator" />
+						<button name="action_draft" states="cancelled"
+							string="Set to Draft" type="object" class="oe_highlight" />
+						<field name="state" widget="statusbar"
+							statusbar_visible="draft,confirm,done" />
+					</header>
+					<sheet>
+						<div class="oe_button_box" name="button_box">
+							<button name="action_view_log_services"
+								type="object" class="oe_stat_button" icon="fa-usd"
+								help="Show all the services for this trip">
+								<field name="log_services_count" widget="statinfo"
+									string="Services" />
+							</button>
+						</div>
+						<div class="oe_title">
+							<label for="name" class="oe_edit_only" />
+							<h1>
+								<field name="name" />
+							</h1>
+						</div>
+						<group>
+							<group>
+								<field name="route_id" />
+								<field name="vehicle_id" />
+								<field name="driver_id" context="{
+                       			'default_type':'contact', 'default_is_driver':True, 'form_view_ref':'base.res_partner_view_form_private'}"
+								domain="[('is_driver','=',True)]" />
+								<field name="assistant_ids" widget="many2many_tags" context="{
+                       			'default_type':'contact', 'default_is_driver':True, 'form_view_ref':'base.res_partner_view_form_private'}" domain="[('is_driver','=',True)]"/>
+								<label for="est_distance" />
+								<div>
+									<field name="est_distance" />
+									<field name="odometer_unit" />
+								</div>
+							</group>
+							<group>
+								<separator string="Scheduled" colspan="2" />
+								<field name="start_date" invisible="1" />
+								<field name="expected_start_date" />
+								<field name="expected_end_date" />
+								<label for="est_trip_time" />
+								<div>
+									<field name="est_trip_time" class="oe_inline"
+										readonly="1" />
+									hours
+								</div>
+							</group>
+							<separator string="Actual" colspan="4"
+								attrs="{'invisible':[('state','in',('draft','confirmed','cancelled'))]}" />
+							<group
+								attrs="{'invisible':[('state','in',('draft','confirmed','cancelled'))]}">
+								<field name="operation_start"
+									attrs="{'invisible': [('state','not in',('progress','done'))]}" />
+								<field name="operation_end"
+									attrs="{'invisible': [('state','!=','done')]}" />
+								<label for="operation_duration"
+									attrs="{'invisible': [('state','not in',('done'))]}" />
+								<div attrs="{'invisible': [('state','!=','done')]}">
+									<field name="operation_duration" class="oe_inline" />
+									hours
+								</div>
+								<label for="time_deviation"
+									attrs="{'invisible': [('state','not in',('done'))]}" />
+								<div attrs="{'invisible': [('state','not in',('done'))]}">
+									<field name="time_deviation" class="oe_inline" />
+									hours
+								</div>
+							</group>
+							<group
+								attrs="{'invisible':[('state','in',('draft','confirmed','cancelled'))]}">
+								<label for="actual_distance"
+									attrs="{'invisible':[('state','!=','done')]}" />
+								<div>
+									<field name="actual_distance"
+										attrs="{'invisible':[('state','!=','done')]}" />
+									<field name="distance_unit"
+										attrs="{'invisible':[('state','!=','done')]}" />
+								</div>
+								<label for="distance_deviation"
+									attrs="{'invisible':[('state','!=','done')]}" />
+								<div>
+									<field name="distance_deviation"
+										attrs="{'invisible':[('state','!=','done')]}" />
+								</div>
+								<label for="fuel_consumption"
+									attrs="{'invisible':[('state','!=','done')]}" />
+								<div attrs="{'invisible':[('state','!=','done')]}">
+									<field name="fuel_consumption" />
+									liters
+								</div>
+								<label for="average_fuel_consumption_per_hundred"
+									attrs="{'invisible':[('state','!=','done')]}" />
+								<div attrs="{'invisible':[('state','!=','done')]}">
+									<field name="average_fuel_consumption_per_hundred" />
+									liters
+								</div>
+							</group>
+						</group>
+						<separator string="Description" />
+						<field name="description" />
+						<notebook>
+							<page string="Trip Waypoints" name="trip_waypoint_ids">
+								<field name="trip_waypoint_ids">
+									<tree string="Trip Waypoints" nolabel="1"
+										editable="bottom">
+										<field name="route_id" invisible="1" />
+										<field name="sequence" widget="handle" />
+										<field name="address_id" />
+										<field name="street" />
+										<field name="street2" />
+										<field name="city" />
+										<field name="state_id" />
+										<field name="stop_duration" />
+									</tree>
+								</field>
+							</page>
+							<page string="Route Sections" name="trip_section_ids">
+								<field name="trip_section_ids">
+									<tree string="Route Sections" nolabel="1"
+										editable="bottom" delete="false" create="false">
+										<field name="route_section_id" invisible="1" />
+										<field name="address_from_id" edit="false" readonly="1" force_save="1"/>
+										<field name="address_to_id" edit="false" readonly="1" force_save="1"/>
+										<field name="distance"
+											attrs="{'readonly':[('route_section_id','!=',False)]}" />
+										<field name="ave_speed"
+											attrs="{'readonly':[('route_section_id','!=',False)]}" />
+										<field name="est_trip_time"/>
+									</tree>
+								</field>
+							</page>
+							<page string="Other information" name="other_info">
+								<group>
+									<group>
+										<field name="operator_id" />
+									</group>
+								</group>
+							</page>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids"/>
+						<field name="activity_ids"/>
+						<field name="message_ids"/>
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record id="fleet_trip_pivot_view" model="ir.ui.view">
+			<field name="name">fleet.vehicle.trip.pivot</field>
+			<field name="model">fleet.vehicle.trip</field>
+			<field name="arch" type="xml">
+				<pivot string="Vehicle Trips">
+					<field name="vehicle_id" />
+					<field name="operation_duration" type="measure" />
+					<field name="time_deviation" type="measure" />
+				</pivot>
+			</field>
+		</record>
+
+		<record id="fleet_trip_calendar" model="ir.ui.view">
+			<field name="name">fleet.vehicle.trip.calendar</field>
+			<field name="model">fleet.vehicle.trip</field>
+			<field name="arch" type="xml">
+				<calendar color="vehicle_id" date_start="start_date"
+					date_stop="end_date" string="Fleet Trips" event_open_popup="true">
+					<field name="name" />
+					<field name="vehicle_id" />
+					<field name="driver_id" />
+					<field name="route_id" />
+				</calendar>
+			</field>
+		</record>
+
+
+		<record id="fleet_trip_confirmed_calendar" model="ir.ui.view">
+			<field name="name">fleet.vehicle.trip.confirmed.calendar</field>
+			<field name="model">fleet.vehicle.trip</field>
+			<field name="arch" type="xml">
+				<calendar color="vehicle_id" date_start="start_date"
+					date_stop="end_date" date_delay="est_trip_time"
+					string="Fleet Trips"
+					event_open_popup="%(to_fleet_operation_planning.fleet_trip_form)s">
+					<field name="vehicle_id" />
+					<field name="driver_id" />
+					<field name="route_id" />
+				</calendar>
+			</field>
+		</record>
+
+		<record id="fleet_trip_planning_calendar" model="ir.ui.view">
+			<field name="name">fleet.vehicle.trip.calendar</field>
+			<field name="model">fleet.vehicle.trip</field>
+			<field name="arch" type="xml">
+				<calendar color="vehicle_id"
+					date_start="expected_start_date" date_stop="end_date"
+					date_delay="est_trip_time" string="Fleet Trips" quick_add="False"
+					event_open_popup="true"
+					form_view_id="%(to_fleet_operation_planning.fleet_trip_form)s">
+					<field name="name" />
+					<field name="vehicle_id" />
+					<field name="driver_id" />
+					<field name="route_id" />
+				</calendar>
+			</field>
+		</record>
+
+		<record id="fleet_trip_dashboard_action"
+			model="ir.actions.act_window">
+			<field name="name">Vehicle Trips Dashboard</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">fleet.vehicle.trip</field>
+			<field name="view_mode">calendar,tree,form</field>
+			<field name="view_id" ref="fleet_trip_planning_calendar" />
+			<field name="context">{'search_default_draft':1,'search_default_confirmed':1,'search_default_progress':1,'default_name':'/'}
+			</field>
+		</record>
+
+		<record id="fleet_confirmed_trip_action"
+			model="ir.actions.act_window">
+			<field name="name">Confirmed/Planned Trips</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">fleet.vehicle.trip</field>
+			<field name="view_mode">tree,calendar,form</field>
+			<field name="view_id" ref="fleet_trip_tree" />
+			<field name="domain">[]</field>
+			<field name="context">{'search_default_confirmed':1,'default_name':'/'}</field>
+		</record>
+
+		<record id="fleet_in_operation_trip_action"
+			model="ir.actions.act_window">
+			<field name="name">Trips in Progress</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">fleet.vehicle.trip</field>
+			<field name="view_mode">tree,form</field>
+			<field name="view_id" ref="fleet_trip_tree" />
+			<field name="domain">[]</field>
+			<field name="context">{'search_default_progress':1}</field>
+		</record>
+
+		<record id="fleet_done_trips_action"
+			model="ir.actions.act_window">
+			<field name="name">Trips Done</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">fleet.vehicle.trip</field>
+			<field name="view_mode">tree,pivot,form</field>
+			<field name="view_id" ref="fleet_trip_tree" />
+			<field name="domain">[]</field>
+			<field name="context">{'search_default_done':1}</field>
+		</record>
+
+		<record id="fleet_trip_action" model="ir.actions.act_window">
+			<field name="name">Vehicle Trips</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">fleet.vehicle.trip</field>
+			<field name="view_mode">tree,calendar,form</field>
+			<field name="view_id" ref="fleet_trip_tree" />
+			<field name="context">{'search_default_draft':1,'default_name':'/'}
+			</field>
+		</record>
+
+		<menuitem id="fleet_trip_dashboard_menu"
+			parent="fleet_planning_menu" action="fleet_trip_dashboard_action"
+			name="Dashboard" sequence="0" />
+
+		<menuitem id="fleet_trip_menu" parent="fleet_operations_menu"
+			action="fleet_trip_action" name="Draft Trips" sequence="0" />
+
+		<menuitem id="fleet_operations_trips_confirmed_menu"
+			parent="fleet_operations_menu" action="fleet_confirmed_trip_action"
+			name="Trips Confirmed" sequence="1" />
+
+		<menuitem id="fleet_operations_trips_in_operation_menu"
+			parent="fleet_operations_menu"
+			action="fleet_in_operation_trip_action" name="Trips in Operation"
+			sequence="2" />
+
+		<menuitem id="fleet_operations_trips_done_menu"
+			parent="fleet_operations_menu" action="fleet_done_trips_action"
+			name="Trips Done" sequence="5" />
+
+	</data>
+</odoo>

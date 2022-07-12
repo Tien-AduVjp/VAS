@@ -1,0 +1,36 @@
+<odoo>
+	<record id="sale_order_user_project_technician" model="ir.rule">
+		<field name="name">Project Users (project technician): only Tech lead
+			is allowed to read the Sales Order
+		</field>
+		<field name="model_id" ref="sale.model_sale_order" />
+		<field name="groups"
+			eval="[(4, ref('project.group_project_user'))]" />
+		<field name="domain_force">[
+			'|',
+			'|',
+			('project_id.user_technician_id','in',[user.id]),
+			('order_line.project_id.user_technician_id','in',[user.id]),
+			('order_line.product_id.project_id.user_technician_id','in',[user.id])
+			]
+		</field>
+	</record>
+
+	<record id="sale_order_line_user_project_technician"
+		model="ir.rule">
+		<field name="name">Project Users (project technician): only Tech Lead
+			is allowed to read the Sales Order lines
+		</field>
+		<field name="model_id" ref="sale.model_sale_order_line" />
+		<field name="groups"
+			eval="[(4, ref('project.group_project_user'))]" />
+		<field name="domain_force">[
+			'|',
+			'|',
+			('order_id.project_id.user_technician_id','=',user.id),
+			('project_id.user_technician_id','=',user.id),
+			('product_id.project_id.user_technician_id','=',user.id)
+			]
+		</field>
+	</record>
+</odoo>

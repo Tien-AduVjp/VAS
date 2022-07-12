@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="asset_stock_in_wizard_view_form" model="ir.ui.view">
+        <field name="name">asset.stock.in.wizard.form</field>
+        <field name="model">asset.stock.in.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                	<field name="asset_id" options="{'no_create': True, 'no_open': True}"/>
+                	<field name="date" />
+                    <field name="location_id" options="{'no_create': True, 'no_open': True}"/>
+                </group>
+                <footer>
+                    <button name="create_asset_stock_in" string="Stock-in" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="asset_stock_in_action" model="ir.actions.act_window">
+         <field name="name">Asset Stock-in</field>
+         <field name="res_model">asset.stock.in.wizard</field>
+         <field name="type">ir.actions.act_window</field>
+         <field name="view_mode">tree,form</field>
+         <field name="view_id" ref="asset_stock_in_wizard_view_form"/>
+         <field name="target">new</field>
+    </record>
+</odoo>

@@ -1,0 +1,1351 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_approvals
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-01 06:20+0000\n"
+"PO-Revision-Date: 2022-06-01 06:20+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_approvals
+#: model:res.groups,comment:to_approvals.group_approval_officer
+msgid ""
+"\n"
+"\t\t\t\tA user that belongs to this group can approve their subordinates approval\n"
+"\t\t\t\trequests and the other requests that specify him as an approver"
+msgstr ""
+"\t\t\t\tNgười dùng thuộc nhóm này có thể duyệt các đề nghị phê duyệt của cấp dưới\n"
+"\t\t\t\tvà các đề nghị phê duyệt mà người đó được chỉ định duyệt"
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/request_approval_user_line.py:0
+#, python-format
+msgid "%s approved the approval request `%s`."
+msgstr "%s đã duyệt đề nghị phê duyệt `%s`"
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/request_approval_user_line.py:0
+#, python-format
+msgid "%s refused the approval request `%s`."
+msgstr "%s đã từ chối đề nghị phê duyệt `%s`"
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_type_form_view
+msgid "<span class=\"fa fa-warning\" title=\"Invalid minimum approvals\"/>"
+msgstr "<span class=\"fa fa-warning\" title=\"Số phê duyệt tối thiểu không hợp lệ\"/>"
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_type_view_kanban
+msgid "<span>Create Request</span>"
+msgstr "<span>Tạo Đề nghị</span>"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__message_needaction
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__message_needaction
+msgid "Action Needed"
+msgstr "Cần có hành động"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_mail_activity_type__category
+msgid "Action to Perform"
+msgstr "Hoạt động cần thực hiện"
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_mail_activity_type__category
+msgid ""
+"Actions may trigger specific behavior like opening calendar view or "
+"automatically mark as done when a document is uploaded or approve the "
+"related approval request."
+msgstr ""
+"Các hành động mà có thể khởi chạy các cách hành xử như mở giao diện lịch "
+"hoặc tự động đánh dấu hoàn thành khi một tài liệu được tải lên hoặc duyệt "
+"các đề nghị phê duyệt liên quan."
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__activity_ids
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__activity_ids
+msgid "Activities"
+msgstr "Hoạt động"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__activity_exception_decoration
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Ngoại lệ của hoạt động"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__activity_state
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__activity_state
+msgid "Activity State"
+msgstr "Trạng thái hoạt động"
+
+#. module: to_approvals
+#: model:ir.model,name:to_approvals.model_mail_activity_type
+msgid "Activity Type"
+msgstr "Kiểu hoạt động"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__activity_type_icon
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Kiểu biểu tượng hoạt động"
+
+#. module: to_approvals
+#: model:res.groups,name:to_approvals.group_approval_manager
+msgid "Administrator"
+msgstr "Quản trị viên"
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_type_view_kanban
+msgid "All"
+msgstr "Tất cả"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_abstract_approval_request_line__amount
+msgid "Amount"
+msgstr "Số lượng"
+
+#. module: to_approvals
+#: model:ir.model.fields.selection,name:to_approvals.selection__mail_activity_type__category__approval_request
+#: model:ir.ui.menu,name:to_approvals.approval_root_menu
+msgid "Approval"
+msgstr "Phê duyệt"
+
+#. module: to_approvals
+#: model:ir.actions.act_window,name:to_approvals.approval_request_type_kanban
+msgid "Approval Overview"
+msgstr "Tổng quan Phê duyệt"
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_type_form_view
+msgid "Approval Process"
+msgstr "Quy trình phê duyệt"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__progress
+msgid "Approval Progress"
+msgstr "Tiến trình phê duyệt"
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_view_kanban
+msgid "Approval Progress:"
+msgstr "Phê duyệt:"
+
+#. module: to_approvals
+#: model:ir.actions.act_window,name:to_approvals.approval_request_action
+#: model:ir.model,name:to_approvals.model_approval_request
+#: model:ir.model.fields,field_description:to_approvals.field_abstract_approval_request_line__approval_id
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__request_ids
+#: model:ir.ui.menu,name:to_approvals.request_root_menu
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_search_view
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_view_form
+msgid "Approval Request"
+msgstr "Đề nghị phê duyệt"
+
+#. module: to_approvals
+#: model:ir.model,name:to_approvals.model_abstract_approval_request_line
+msgid "Approval Request Line Abstract"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model,name:to_approvals.model_approval_request_type
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_type_form_view
+msgid "Approval Request Type"
+msgstr "Kiểu yêu cầu phê duyệt"
+
+#. module: to_approvals
+#: model:ir.actions.act_window,name:to_approvals.approval_request_type_action
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_type_tree_view
+msgid "Approval Request Types"
+msgstr "Kiểu đề nghị phê duyệt"
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_tree_view
+msgid "Approval Requests"
+msgstr "Đề nghị Phê duyệt"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__approval_type_id
+msgid "Approval Type"
+msgstr "Kiểu phê duyệt"
+
+#. module: to_approvals
+#: model:ir.ui.menu,name:to_approvals.approval_request_type_menu_configuration
+msgid "Approval Types"
+msgstr "Kiểu phê duyệt"
+
+#. module: to_approvals
+#: model:ir.model,name:to_approvals.model_abstract_approval_user_line
+msgid "Approval User Abstract"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_approval_request__progress
+msgid "Approval progress of the current request in percentages."
+msgstr "Tiến trình phê duyệt của đề nghị phê duyệt tính theo phần trăm."
+
+#. module: to_approvals
+#: model:mail.activity.type,name:to_approvals.mail_act_approval
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_view_form
+msgid "Approve"
+msgstr "Duyệt"
+
+#. module: to_approvals
+#: model:ir.model.fields.selection,name:to_approvals.selection__approval_request__my_state__approved
+#: model:ir.model.fields.selection,name:to_approvals.selection__approval_request__state__validate
+#: model:ir.model.fields.selection,name:to_approvals.selection__request_approval_user_line__state__approved
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_search_view
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_type_view_kanban
+msgid "Approved"
+msgstr "Được phê duyệt"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__approved_date
+msgid "Approved Date"
+msgstr "Ngày duyệt"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__approved_requests_count
+msgid "Approved Requests"
+msgstr "Đề nghị được duyệt"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_abstract_approval_user_line__user_id
+#: model:ir.model.fields,field_description:to_approvals.field_request_approval_user_line__user_id
+#: model:ir.model.fields,field_description:to_approvals.field_type_approval_user_line__user_id
+msgid "Approver"
+msgstr "Người phê duyệt"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__approver_ids
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__approver_ids
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_view_form
+msgid "Approvers"
+msgstr "Người phê duyệt"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__message_attachment_count
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__message_attachment_count
+msgid "Attachment Count"
+msgstr "Số lượng tập tin đính kèm"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__can_validate
+msgid "Can Approve"
+msgstr "Có thể duyệt"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__can_cancel
+msgid "Can Cancel"
+msgstr "Có thể hủy"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__can_confirm
+msgid "Can Confirm"
+msgstr "Có thể xác nhận"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__can_done
+msgid "Can Done"
+msgstr "Có thể hoàn thành"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__can_draft
+msgid "Can Draft"
+msgstr "Có thể đặt về Dự thảo"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__can_force_validate
+msgid "Can Force Approval"
+msgstr "Có thể buộc phê duyệt"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__can_refuse
+msgid "Can Refuse"
+msgstr "Có thể từ chối"
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_view_form
+msgid "Cancel"
+msgstr "Hủy bỏ"
+
+#. module: to_approvals
+#: model:ir.model.fields.selection,name:to_approvals.selection__approval_request__state__cancel
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_search_view
+msgid "Cancelled"
+msgstr "Đã hủy"
+
+#. module: to_approvals
+#: model:ir.model,name:to_approvals.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__company_id
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__company_id
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_search_view
+msgid "Company"
+msgstr "Công ty"
+
+#. module: to_approvals
+#: model:ir.ui.menu,name:to_approvals.approval_config_menu
+msgid "Configuration"
+msgstr "Cấu hình"
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_view_form
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_search_view
+msgid "Confirmed"
+msgstr "Được xác nhận"
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_approval_request_type__manager_approval
+msgid ""
+"Control how the manager of the employee gets involved in approval process of the requests of this type.\n"
+"* None: The manager will not involve.\n"
+"* Optional: The manager will be one of the approvers but he is not required to approve; The request still can get approved if all the required approvers approve it and the minimum approvals condition is met.\n"
+"* Required: The manager will be one of the required approvers of the request. It means that the request will not be able to get approved without the manager's approval.\n"
+"NOTE: An employee manager here mentioned here is a user who belongs to the group `Team Approver` and links to an employee that is either direct or indirect manager of the current employee. A manager that is not a member of Team Approver will not be able to approve requests."
+msgstr ""
+"Kiểm soát các thức người quản lý của nhân viên tham gia vào quá trình phê duyệt các đề nghị phê duyệt của kiểu này.\n"
+"* Không ai: Người quản lý của nhân viên sẽ không tham gia vào quá trình phê duyệt.\n"
+"* Tùy chọn: Người quản lý của nhân viên sẽ là một trong số những người phê duyệt nhưng không phải là người phê duyệt bắt buộc. Đề nghị vẫn có thể được duyệt nếu tất cả những người phê duyệt bắt buộc đã duyệt và thỏa mãn điều kiện tổng số người phê duyệt tối thiểu.\n"
+"* Bắt buộc: Người quản lý của nhân viên là một trong những người phê duyệt bắt buộc. Điều đó có nghĩa là nếu người quản lý không duyệt thì đề nghị sẽ không thể được duyệt.\n"
+"CHÚ Ý: Người quản lý đề cập ở đây là một người dùng thuộc nhóm `Duyệt cho Nhóm` và có liên kết đến một nhân viên mà là người quản lý trực tiếp hoặc gián tiếp đầu tiên của nhân viên. Người quản lý của nhân viên mà không có quyền Duyệt cho nhóm sẽ không được tính vào trong các đề nghị phê duyệt của nhân viên."
+
+#. module: to_approvals
+#: model_terms:ir.actions.act_window,help:to_approvals.approval_request_type_kanban
+msgid "Create a new approval request type"
+msgstr "Tạo một kiểu đề nghị phê duyệt mới"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__create_uid
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__create_uid
+#: model:ir.model.fields,field_description:to_approvals.field_request_approval_user_line__create_uid
+#: model:ir.model.fields,field_description:to_approvals.field_type_approval_user_line__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__create_date
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__create_date
+#: model:ir.model.fields,field_description:to_approvals.field_request_approval_user_line__create_date
+#: model:ir.model.fields,field_description:to_approvals.field_type_approval_user_line__create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_abstract_approval_request_line__currency_id
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__currency_id
+msgid "Currency"
+msgstr "Tiền tệ"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__days_to_approve
+msgid "Days to Approve"
+msgstr "Số ngày để Duyệt"
+
+#. module: to_approvals
+#: model:ir.model.constraint,message:to_approvals.constraint_approval_request_type_days_to_approve_check
+msgid "Days to approve must be greater than or equal to zero"
+msgstr "Số ngày để duyệt phải lớn hơn hoặc bằng 0"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__deadline
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_search_view
+msgid "Deadline"
+msgstr "Hạn chót"
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_view_kanban
+msgid "Deadline:"
+msgstr "Hạn chót:"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__department_id
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_search_view
+msgid "Department"
+msgstr "Phòng ban"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__description
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__description
+msgid "Description"
+msgstr "Mô tả"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_abstract_approval_request_line__display_name
+#: model:ir.model.fields,field_description:to_approvals.field_abstract_approval_user_line__display_name
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__display_name
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__display_name
+#: model:ir.model.fields,field_description:to_approvals.field_mail_activity_type__display_name
+#: model:ir.model.fields,field_description:to_approvals.field_request_approval_user_line__display_name
+#: model:ir.model.fields,field_description:to_approvals.field_res_company__display_name
+#: model:ir.model.fields,field_description:to_approvals.field_type_approval_user_line__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_approvals
+#: model_terms:ir.actions.act_window,help:to_approvals.action_approval_request_tree_waiting
+msgid ""
+"Display information about the number of pending requests for this type. \n"
+"\t\t\t\t\tWhen clicked, go to the list containing the corresponding requests"
+msgstr ""
+"Hiển thị thông tin số lượng đơn đề nghị đang chờ duyệt với kiểu này. \n"
+"\t\t\t\t\tKhi click vào, đi đến danh sách chứa các đơn đề nghị tương ứng"
+
+#. module: to_approvals
+#: model:ir.model.fields.selection,name:to_approvals.selection__approval_request__state__done
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: to_approvals
+#: model:ir.model.fields.selection,name:to_approvals.selection__approval_request__my_state__draft
+#: model:ir.model.fields.selection,name:to_approvals.selection__approval_request__state__draft
+#: model:ir.model.fields.selection,name:to_approvals.selection__request_approval_user_line__state__draft
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_search_view
+msgid "Draft"
+msgstr "Dự thảo"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__employee_id
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_search_view
+msgid "Employee"
+msgstr "Nhân viên"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__manager_approval
+msgid "Employee's Manager Required"
+msgstr "Yêu cầu có Quản lý của Nhân viên"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__message_follower_ids
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__message_follower_ids
+msgid "Followers"
+msgstr "Người theo dõi"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__message_channel_ids
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Người theo dõi (Các kênh)"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__message_partner_ids
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Người theo dõi (Các đối tác)"
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_approval_request__activity_type_icon
+#: model:ir.model.fields,help:to_approvals.field_approval_request_type__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_search_view
+msgid "For My Approval"
+msgstr "Chờ tôi duyệt"
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_view_form
+msgid "Force Approval"
+msgstr "Buộc phê duyệt"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__forcing_approver_id
+msgid "Forcing Approver"
+msgstr "Người buộc phê duyệt"
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/res_company.py:0
+#, python-format
+msgid "General"
+msgstr "Chung chung"
+
+#. module: to_approvals
+#: model:ir.model.fields.selection,name:to_approvals.selection__approval_request_type__type__generic
+msgid "Generic"
+msgstr "Chung"
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_search_view
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_search_view
+msgid "I approved"
+msgstr "Tôi đã duyệt"
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_search_view
+msgid "I refused"
+msgstr "Tôi đã từ chối"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_abstract_approval_request_line__id
+#: model:ir.model.fields,field_description:to_approvals.field_abstract_approval_user_line__id
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__id
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__id
+#: model:ir.model.fields,field_description:to_approvals.field_mail_activity_type__id
+#: model:ir.model.fields,field_description:to_approvals.field_request_approval_user_line__id
+#: model:ir.model.fields,field_description:to_approvals.field_res_company__id
+#: model:ir.model.fields,field_description:to_approvals.field_type_approval_user_line__id
+msgid "ID"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__activity_exception_icon
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__activity_exception_icon
+msgid "Icon"
+msgstr "Biểu tượng"
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_approval_request__activity_exception_icon
+#: model:ir.model.fields,help:to_approvals.field_approval_request_type__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Biểu tượng để chỉ ra một hoạt động ngoại lệ."
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_approval_request__message_needaction
+#: model:ir.model.fields,help:to_approvals.field_approval_request__message_unread
+#: model:ir.model.fields,help:to_approvals.field_approval_request_type__message_needaction
+#: model:ir.model.fields,help:to_approvals.field_approval_request_type__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Nếu đánh dấu chọn, các thông điệp mới yêu cầu sự có mặt của bạn."
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_approval_request__message_has_error
+#: model:ir.model.fields,help:to_approvals.field_approval_request__message_has_sms_error
+#: model:ir.model.fields,help:to_approvals.field_approval_request_type__message_has_error
+#: model:ir.model.fields,help:to_approvals.field_approval_request_type__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Nếu có đánh dấu, một số thông điệp có lỗi về việc gửi đi."
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_approval_request_type__sequential_approvals
+msgid ""
+"If enabled, approvers will be suggested to approve the requests of this type"
+" sequentially."
+msgstr ""
+"Nếu kích hoạt, những người phê duyệt sẽ được gợi ý phê duyệt các đề nghị "
+"duyệt của kiểu này một cách tuần tự."
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_abstract_approval_user_line__required
+#: model:ir.model.fields,help:to_approvals.field_request_approval_user_line__required
+#: model:ir.model.fields,help:to_approvals.field_type_approval_user_line__required
+msgid ""
+"If enabled, the related approval requests require this user to approve."
+msgstr ""
+"Nếu kích hoạt, các đề nghị phê duyệt liên quan yêu cầu bắt buộc người này "
+"duyệt."
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid ""
+"In case you want to force approval without others', please open the form "
+"view of the request and hit the button Force Approval."
+msgstr ""
+"Trong trường hợp bạn muốn buộc phê duyệt mà không quan tâm đến việc những "
+"người duyệt khác đã duyệt hay chưa, vui lòng mở giao diện form của đề nghị "
+"phê duyệt và bấm nút Buộc phê duyệt."
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid "Invalid status %s"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__involve_employee_ids
+msgid "Involving Employees"
+msgstr "Nhân viên liên quan"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__message_is_follower
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__message_is_follower
+msgid "Is Follower"
+msgstr "Là người theo dõi"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_request_approval_user_line__date
+msgid "Last Action Date"
+msgstr "Ngày hành động gần nhất"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__last_approver_id
+msgid "Last Approver"
+msgstr "Người đã duyệt gần đây nhất"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_abstract_approval_request_line____last_update
+#: model:ir.model.fields,field_description:to_approvals.field_abstract_approval_user_line____last_update
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request____last_update
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type____last_update
+#: model:ir.model.fields,field_description:to_approvals.field_mail_activity_type____last_update
+#: model:ir.model.fields,field_description:to_approvals.field_request_approval_user_line____last_update
+#: model:ir.model.fields,field_description:to_approvals.field_res_company____last_update
+#: model:ir.model.fields,field_description:to_approvals.field_type_approval_user_line____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__write_uid
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__write_uid
+#: model:ir.model.fields,field_description:to_approvals.field_request_approval_user_line__write_uid
+#: model:ir.model.fields,field_description:to_approvals.field_type_approval_user_line__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__write_date
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__write_date
+#: model:ir.model.fields,field_description:to_approvals.field_request_approval_user_line__write_date
+#: model:ir.model.fields,field_description:to_approvals.field_type_approval_user_line__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__message_main_attachment_id
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Đính kèm chính"
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_view_form
+msgid "Mark as Done"
+msgstr "Đánh dấu hoàn thành"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__message_has_error
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__message_has_error
+msgid "Message Delivery error"
+msgstr "Có Lỗi Gửi Thông điệp"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__message_ids
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__message_ids
+msgid "Messages"
+msgstr "Thông điệp"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__mimimum_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__mimimum_approvals
+msgid "Minimum Approvals"
+msgstr "Số lượt duyệt tối thiểu"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__mimimum_approvals_exceed_warning
+msgid "Minimum Approvals Exceed Warning"
+msgstr "Cảnh báo số lượt duyệt tối thiểu"
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request_type.py:0
+#, python-format
+msgid ""
+"Minimum approvals must be greater than or equal to the total number of "
+"required approvers."
+msgstr ""
+"Số lần duyệt tối thiểu phải lớn hơn hoặc bằng tổng số người duyệt bắt buộc."
+
+#. module: to_approvals
+#: model:ir.model.constraint,message:to_approvals.constraint_approval_request_type_mimimum_approvals_check
+msgid "Minimum approvals must be greater than zero"
+msgstr "Số lượt phê duyệt tối thiểu phải lớn hơn không."
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__my_activity_date_deadline
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Hạn hành động của tôi"
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_search_view
+msgid "My Approval Involvement"
+msgstr "Có sự tham gia duyệt của tôi"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__my_state
+msgid "My Approval Status"
+msgstr "Tình trạng tôi phê duyệt"
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_search_view
+msgid "My Requests"
+msgstr "Đề nghị của tôi"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid "New"
+msgstr ""
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__activity_date_deadline
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Hạn chót lần hành động kế tiếp"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__activity_summary
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__activity_summary
+msgid "Next Activity Summary"
+msgstr "Tóm tắt hoạt động tiếp theo"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__activity_type_id
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__activity_type_id
+msgid "Next Activity Type"
+msgstr "Kiểu hành động kế tiếp"
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_tree_view
+msgid "Next Activity by"
+msgstr "Hành động kế tiếp bởi"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__next_approver_id
+msgid "Next Approver"
+msgstr "Người phê duyệt tiếp theo"
+
+#. module: to_approvals
+#: model:ir.model.fields.selection,name:to_approvals.selection__approval_request_type__manager_approval__none
+msgid "None"
+msgstr "Không"
+
+#. module: to_approvals
+#: model:ir.model.fields.selection,name:to_approvals.selection__approval_request__my_state__none
+msgid "Not involved"
+msgstr "Không tham gia"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__message_needaction_counter
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Số lượng Hành động"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__message_has_error_counter
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__message_has_error_counter
+msgid "Number of errors"
+msgstr "Số lượng lỗi"
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_approval_request__message_needaction_counter
+#: model:ir.model.fields,help:to_approvals.field_approval_request_type__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Số thông điệp cần có hành động"
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_approval_request__message_has_error_counter
+#: model:ir.model.fields,help:to_approvals.field_approval_request_type__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Số lượng các thông điệp có lỗi về gửi tin"
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_approval_request__message_unread_counter
+#: model:ir.model.fields,help:to_approvals.field_approval_request_type__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Số thông điệp chưa đọc"
+
+#. module: to_approvals
+#: model:res.groups,name:to_approvals.group_approval_officer
+msgid "Officer"
+msgstr "Cán bộ"
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/type_approval_user_line.py:0
+#, python-format
+msgid ""
+"Only users that belong to the group Approval Officer can be added as an "
+"approver to approve approval requests. %s does not belong to that group."
+msgstr ""
+"Chỉ những người thuộc nhóm Cán bộ Phê duyệt mới có thể được thêm vào danh "
+"sách người phê duyệt. %s không thuộc nhóm này."
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_abstract_approval_user_line__user_id
+#: model:ir.model.fields,help:to_approvals.field_request_approval_user_line__user_id
+#: model:ir.model.fields,help:to_approvals.field_type_approval_user_line__user_id
+msgid ""
+"Only users that belong to the group Approval Officer can be added here."
+msgstr ""
+"Chỉ những người thuộc nhóm Cán bộ Phê duyệt mới có thể được thêm vào danh "
+"sách người phê duyệt."
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid ""
+"Only users who are members of the group `%s` can force approval. Please contact either of the following to get this approved anyway:\n"
+"%s"
+msgstr ""
+"Chỉ những người thuộc nhóm `%s` mới có thể buộc phê duyệt. Vui lòng liên hệ với một trong số những người sau đây để được duyệt mà không cần chờ đủ sự phê duyệt của tất cả người duyệt được yêu cầu:\n"
+"%s"
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid ""
+"Only users who are members of the group `%s` can force refusal. Please contact either of the following to get this approved anyway:\n"
+"%s"
+msgstr ""
+"Chỉ những người thuộc nhóm `%s` mới có thể buộc từ chối. Vui lòng liên hệ với một trong số những người sau đây để được buộc từ chối:\n"
+"%s"
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid "Operator `%s` not supported."
+msgstr "Toán tử `%s` không được hỗ trợ."
+
+#. module: to_approvals
+#: model:ir.model.fields.selection,name:to_approvals.selection__approval_request_type__manager_approval__optional
+msgid "Optional"
+msgstr "Tùy chọn"
+
+#. module: to_approvals
+#: model:ir.ui.menu,name:to_approvals.approval_request_type_menu
+msgid "Overview"
+msgstr "Tổng quan"
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_view_form
+msgid "Refuse"
+msgstr "Từ chối"
+
+#. module: to_approvals
+#: model:ir.model.fields.selection,name:to_approvals.selection__approval_request__my_state__refused
+#: model:ir.model.fields.selection,name:to_approvals.selection__approval_request__state__refuse
+#: model:ir.model.fields.selection,name:to_approvals.selection__request_approval_user_line__state__refused
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_search_view
+msgid "Refused"
+msgstr "Bị từ chối"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_request_approval_user_line__approval_id
+#: model:ir.ui.menu,name:to_approvals.approval_request_menu
+msgid "Request"
+msgstr "Đề nghị"
+
+#. module: to_approvals
+#: model:ir.model,name:to_approvals.model_request_approval_user_line
+msgid "Request Approval User"
+msgstr "Yêu cầu người duyệt"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__request_approval_user_line_ids
+msgid "Request Approvers"
+msgstr "Yêu cầu người duyệt"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__date
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_search_view
+msgid "Request Date"
+msgstr "Ngày đề nghị"
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_view_kanban
+msgid "Request Date:"
+msgstr "Ngày đề nghị"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_type_approval_user_line__request_type_id
+msgid "Request Type"
+msgstr "Kiểu yêu cầu"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__requests_count
+msgid "Requests Count"
+msgstr "SL Đề nghị"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_abstract_approval_user_line__required
+#: model:ir.model.fields,field_description:to_approvals.field_request_approval_user_line__required
+#: model:ir.model.fields,field_description:to_approvals.field_type_approval_user_line__required
+#: model:ir.model.fields.selection,name:to_approvals.selection__approval_request_type__manager_approval__required
+msgid "Required"
+msgstr "Bắt buộc"
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_view_form
+msgid "Reset to Draft"
+msgstr "Đặt về dự thảo"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__activity_user_id
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__activity_user_id
+msgid "Responsible User"
+msgstr "Người chịu trách nhiệm"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__message_has_sms_error
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Có lỗi gửi SMS"
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_approval_request__department_id
+msgid "Select a department of employee"
+msgstr "Chọn phòng ban của nhân viên"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_abstract_approval_user_line__sequence
+#: model:ir.model.fields,field_description:to_approvals.field_request_approval_user_line__sequence
+#: model:ir.model.fields,field_description:to_approvals.field_type_approval_user_line__sequence
+msgid "Sequence"
+msgstr "Thứ tự"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__sequential_approvals
+msgid "Sequential Approvals"
+msgstr "Duyệt theo trình tự"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__show_currency_field
+msgid "Show Currency"
+msgstr "Hiển thị tiền tệ"
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_search_view
+msgid "Show requests that are waiting for your approval."
+msgstr "Hiển thị các đề nghị mà đang chờ bạn phê duyệt."
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_search_view
+msgid "Show requests that have you involved as an approver."
+msgstr "Hiển thị các đề nghị mà có bạn tham gia vào quá trình phê duyệt."
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_approval_request_type__type_approval_user_line_ids
+msgid "Specify approvers for requests of this type."
+msgstr "Xác định người phê duyệt cho các đề nghị phê duyệt của kiểu này."
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__state
+#: model:ir.model.fields,field_description:to_approvals.field_request_approval_user_line__state
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_search_view
+msgid "Status"
+msgstr "Tình trạng"
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_approval_request__activity_state
+#: model:ir.model.fields,help:to_approvals.field_approval_request_type__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Trạng thái dựa trên hoạt động\n"
+"Quá hạn: Ngày đến hạn đã trôi qua\n"
+"Hôm nay: Hôm nay là ngày phải thực hiện\n"
+"Đã hoạch định: Các hoạt động trong tương lai."
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_approval_request__involve_employee_ids
+msgid "Store employees that involve the approval request."
+msgstr "Lưu trữ các nhân viên mà liên quan đến đề nghị phê duyệt."
+
+#. module: to_approvals
+#: model:res.groups,name:to_approvals.group_approval_team_leader
+msgid "Team Approver"
+msgstr "Duyệt cho Nhóm"
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid "The %s request created by %s was submitted for approval"
+msgstr "Đề nghị phê duyệt %s được tạo bởi %s đã được trình để chờ duyệt"
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid ""
+"The approval request '%s' must be in Draft state in order to get confirmed."
+msgstr "Đơn đề nghị '%s' phải ở trạng thái dự thảo trước khi được xác nhận"
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_approval_request__approved_date
+msgid "The date and time at which the request got fully approved."
+msgstr "Ngày giờ mà đề nghị này được duyệt hoàn toàn."
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_approval_request__deadline
+msgid "The date by which this request should get fully approved."
+msgstr "Ngày mà tính đến đó đề nghị này phải được phê duyệt đầy đủ."
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_request_approval_user_line__date
+msgid ""
+"The latest date and time at which the approver takes action of either "
+"refusing or approving the request."
+msgstr ""
+"Ngày giờ gần nhất mà người duyệt này có hành động duyệt hoặc từ chối đề nghị"
+" phê duyệt."
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid ""
+"The list of approvers for the approval request '%s' is empty which does not "
+"make sense for an approval request. You may need to reconfigure the "
+"corresponding approval type first."
+msgstr ""
+"Danh sách những người phê duyệt cho yêu cầu phê duyệt '%s' đang trống "
+"điều này không có ý nghĩa đối với một yêu cầu phê duyệt. "
+"Trước tiên, bạn có thể phải cần cấu hình lại kiểu phê duyệt tương ứng."
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_abstract_approval_request_line__approval_id
+msgid "The related approval request of this record."
+msgstr "Đề nghị trình duyệt liên quan của bản ghi này."
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid "The request '%s' must be 'Confirmed' in order to get approved."
+msgstr ""
+" Đề nghị trình duyệt '%s' phải có trạng thái là 'Được xác nhận' đề có thể "
+"được phê duyệt."
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid "The request '%s' must be cancelled prior to getting reset to draft."
+msgstr "Đề nghị '%s' phải được huỷ trước khi đặt về trạng thái dự thảo."
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid ""
+"The request '%s' must be either 'Confirmed' or 'Approved' in order to get "
+"refused."
+msgstr ""
+"Đề nghị duyệt '%s' phải có trạng thái 'Được xác nhận' hoặc 'Được duyệt' để "
+"có thể bị từ chối"
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid "The request '%s' must be fully approved in order to mark as done."
+msgstr ""
+"Đề nghị duyệt '%s' phải được duyệt hoàn toàn để có thể đánh dấu là hoàn "
+"thành"
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid ""
+"The request '%s' must be in a status of either Confirmed or Approved or "
+"Refused or Done in order to get cancelled."
+msgstr ""
+"Đề nghị duyệt '%s' phải có trạng thái 'Được xác nhận' hoặc 'Được duyệt' hoặc"
+" Từ chối hoặc Hoàn thành để có thể chuyển sang trạng thái hủy."
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid ""
+"The request '%s' was forced to be approved by %s whether other approvers did"
+" it or not."
+msgstr ""
+"Đề nghị duyệt '%s' đã được bắt buộc sang trạng thái phê duyệt đầy đủ bởi %s "
+"mà không quan tâm đến việc những người duyệt khác đã duyệt hay chưa."
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid "The request '%s' was fully approved."
+msgstr "Đề nghị duyệt '%s' đã được phê duyệt đầy đủ."
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid "The request '%s' was refused."
+msgstr "Đề nghị duyệt '%s' đã bị từ chối."
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid ""
+"The request `%s` requires sequential approvals while the previous approver "
+"was not take any action yet. You must wait until this gets either approved "
+"or refused by %s first."
+msgstr ""
+"Đề nghị duyệt `%s` yêu cầu quy trình phê duyệt tuần tự trong khi người duyệt"
+" trước vẫn chưa có hành động. Bạn cần phải đợi cho đến khi đề nghị này được "
+"duyệt hoặc bị từ chối bởi %s trước."
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid ""
+"The request `%s` requires sequential approvals. You must wait until this get"
+" approved / refused by %s first."
+msgstr ""
+"Đề nghị duyệt `%s` yêu cầu quy trình phê duyệt tuần tự. Bạn cần phải đợi cho"
+" đến khi  đề nghị này được duyệt / từ chối bởi %s trước."
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid ""
+"The request `%s` requires sequential approvals. You must wait until this get"
+" approved by %s first."
+msgstr ""
+"Đề nghị duyệt `%s` yêu cầu quy trình phê duyệt tuần tự. Bạn cần phải đợi cho"
+" đến khi  đề nghị này được duyệt bởi %s trước."
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_approval_request_type__days_to_approve
+msgid ""
+"The required number of days for approvers to approve the requests of this "
+"type. In other words, this number will be used to calculate approval "
+"deadline for the requests of this type."
+msgstr ""
+"Tổng số ngày yêu cầu cho những người phê duyệt để có thể duyệt các đề nghị "
+"của kiểu này. Nói cách khác, đây chính là số ngày dùng để tính ra hạn chót "
+"phê duyệt đối với các đề nghị phê duyệt của kiểu này."
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/abstract_approval_request_line.py:0
+#, python-format
+msgid ""
+"The state field has not been implemented for the model '%s' yet. Please "
+"define one"
+msgstr ""
+"Trường state vẫn chưa được triển khai cho model '%s'. Vui lòng khai báo "
+"trường này."
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#: code:addons/to_approvals/models/approval_request_type.py:0
+#, python-format
+msgid "The user `%s` was in the approvers list already."
+msgstr "Người dùng '%s' đã được thêm vào danh sách phê duyệt."
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_approval_request__forcing_approver_id
+msgid ""
+"The user who forced the request to be approved without waiting for others' "
+"action."
+msgstr ""
+"Người mà đã bắt buộc đề nghị này sang trạng thái được duyệt mà không đợi "
+"những người duyệt khác."
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_view_form
+msgid ""
+"This action will turn the request status to Approved without waiting for "
+"other approvers to approve the request. Your action will be logged too. Are "
+"you sure to proceed?"
+msgstr ""
+"Hành động này sẽ chuyển trạng thái của đề nghị này sang Phê duyệt mà không "
+"cần đợi những người khác duyệt đề nghị này. Hành động của bạn sẽ được ghi "
+"lại. Bạn có chắc muốn tiếp tục?"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__title
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__name
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_tree_view
+msgid "Title"
+msgstr "Tiêu đề"
+
+#. module: to_approvals
+#: model:ir.model.fields.selection,name:to_approvals.selection__approval_request__my_state__pending
+#: model:ir.model.fields.selection,name:to_approvals.selection__approval_request__state__confirm
+#: model:ir.model.fields.selection,name:to_approvals.selection__request_approval_user_line__state__pending
+msgid "To Approve"
+msgstr "Chờ duyệt"
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_search_view
+msgid "Today Request"
+msgstr "Đề nghị trong ngày hôm nay"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__type
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__type
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_search_view
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_tree_view
+msgid "Type"
+msgstr "Kiểu"
+
+#. module: to_approvals
+#: model:ir.model,name:to_approvals.model_type_approval_user_line
+msgid "Type Approval User Line"
+msgstr "Danh sách người phê duyệt"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__type_approval_user_line_ids
+msgid "Type Approvers"
+msgstr "Danh sách người phê duyệt"
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_approval_request__activity_exception_decoration
+#: model:ir.model.fields,help:to_approvals.field_approval_request_type__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Loại hoạt động ngoại lệ trên hồ sơ."
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__message_unread
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__message_unread
+msgid "Unread Messages"
+msgstr "Thông điệp chưa đọc"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__message_unread_counter
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Bộ đếm Thông điệp chưa đọc"
+
+#. module: to_approvals
+#: model:res.groups,comment:to_approvals.group_approval_team_leader
+msgid ""
+"Users belong to this group can approve their subordinates' approval requests"
+msgstr ""
+"Người dùng thuộc nhóm này có thể duyệt các đề nghị phê duyệt của cấp dưới."
+
+#. module: to_approvals
+#: model:res.groups,comment:to_approvals.group_approval_manager
+msgid "Users belong to this group have total control on this application"
+msgstr "Người dùng thuộc nhóm này sẽ có toàn quyền kiểm soát ứng dụng này"
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_type_view_kanban
+msgid "Waiting"
+msgstr "Chờ duyệt"
+
+#. module: to_approvals
+#: model:ir.actions.act_window,name:to_approvals.action_approval_request_tree_waiting
+msgid "Waiting Request"
+msgstr "Đề nghị chờ duyệt"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__waiting_requests_count
+msgid "Waiting Requests"
+msgstr "Đề nghị chờ duyệt"
+
+#. module: to_approvals
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request__website_message_ids
+#: model:ir.model.fields,field_description:to_approvals.field_approval_request_type__website_message_ids
+msgid "Website Messages"
+msgstr "Thông điệp Website"
+
+#. module: to_approvals
+#: model:ir.model.fields,help:to_approvals.field_approval_request__website_message_ids
+#: model:ir.model.fields,help:to_approvals.field_approval_request_type__website_message_ids
+msgid "Website communication history"
+msgstr "Lịch sử thông tin liên lạc website"
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/abstract_approval_request_line.py:0
+#, python-format
+msgid ""
+"You can not change state of the record '%s' which is not referred by any "
+"Approval Request."
+msgstr ""
+"Bạn không được phép thay đổi trạng thái của bản ghi '%s' vì nó KHÔNG được "
+"được liên kết đến một yêu cầu phê duyệt"
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid "You can only delete records which are in draft status."
+msgstr "Bạn chỉ có thể xóa các bản ghi trong trạng thái dự thảo."
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid "You do not have access right to approve the request '%s'"
+msgstr "Bạn không có quyền để phê duyệt trình duyệt '%s'"
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid "You do not have access right to cancel the request '%s'"
+msgstr "Bạn không có quyền để hủy đề nghị '%s'"
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid "You do not have access right to refuse the request '%s'"
+msgstr "Bạn không có quyền để từ chối đề nghị '%s'"
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/abstract_approval_request_line.py:0
+#, python-format
+msgid "You don't have appropriate permission to confirm the '%s'"
+msgstr "Bạn không có quyền phù hợp để xác nhận '%s'"
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/abstract_approval_request_line.py:0
+#, python-format
+msgid "You don't have appropriate permission to refuse the '%s'"
+msgstr "Bạn không có quyền phù hợp để từ chối '%s'"
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/abstract_approval_request_line.py:0
+#, python-format
+msgid "You don't have appropriate permission to validate the '%s'"
+msgstr "Bạn không có quyền phù hợp để duyệt lần hai '%s'"
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid "You may not have access right to mark the request '%s' as done."
+msgstr "Bạn không có quyền để đánh dấu hoàn thành đề nghị '%s'"
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid "You may not have access right to reset the request '%s' to Draft"
+msgstr "Bạn không có quyền để đặt lại đề nghị '%s'"
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request.py:0
+#, python-format
+msgid ""
+"You might not have access right to confirm the request '%s'. Or the request "
+"was in a status that could not get confirmed."
+msgstr ""
+"Bạnh có thể khộng có quyền đề xác nhận đề nghị `%s`. Hoặc đề nghị duyệt ở "
+"trạng thái không hợp lệ để có thể xác nhận."
+
+#. module: to_approvals
+#: code:addons/to_approvals/models/approval_request_type.py:0
+#, python-format
+msgid ""
+"Your minimum approval exceeds the total of default approvers. Please either "
+"reduce the Minimum Approvals or add more approvers."
+msgstr ""
+"Số lượt phê duyệt tối thiểu lớn hơn tổng số người phê duyệt mặc định trong "
+"danh sách người phê duyệt. Hãy giảm số lượt phê duyệt tối thiểu hoặc tăng số"
+" người trong danh sách phê duyệt."
+
+#. module: to_approvals
+#: model_terms:ir.ui.view,arch_db:to_approvals.approval_request_view_form
+msgid "e.g. Purchase new computer"
+msgstr "Ví dụ: Mua máy tính mới"

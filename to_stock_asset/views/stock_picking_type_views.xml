@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="stock_picking_type_view_kanban_inherited" model="ir.ui.view">
+		<field name="name">stock.picking.type.kanban.inherited</field>
+		<field name="model">stock.picking.type</field>
+		<field name="inherit_id" ref="stock.stock_picking_type_kanban" />
+		<field name="arch" type="xml">
+			<xpath expr="//kanban/templates/t/div" position="attributes">
+				<attribute name="t-if">['incoming', 'outgoing', 'internal', 'asset_allocation'].indexOf(record.code.raw_value) &gt; -1</attribute>
+			</xpath>
+			<xpath expr="//button[@name='get_action_picking_tree_ready']" position="inside">
+				<span t-if="record.code.raw_value =='asset_allocation'"><t t-esc="record.count_picking_ready.value"/> To Process</span>
+			</xpath>
+
+		</field>
+	</record>
+</odoo>

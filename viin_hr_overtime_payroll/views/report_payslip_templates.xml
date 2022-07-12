@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="report_payslip"
+		inherit_id="to_hr_payroll.report_payslip">
+		<xpath expr="//table[@name='tbl_work_calendar']"
+			position="after">
+			<h3 t-if="o.overtime_plan_line_ids">Overtime Work Report</h3>
+			<table t-if="o.overtime_plan_line_ids" name="tbl_overtime_plan_lines"
+				class="table table-sm table-bordered">
+				<thead>
+					<tr>
+						<th class="text-right">#</th>
+						<th class="text-right">Start Date</th>
+						<th class="text-right">End Date</th>
+						<th class="text-right">Planned Hours</th>
+						<th class="text-right">Actual Hours</th>
+						<th class="text-right">Untaxed Amount</th>
+						<th class="text-right">Pay Rate (%)</th>
+						<th class="text-right">Taxed Amount</th>
+						<th class="text-right">Sub Total</th>
+					</tr>
+				</thead>
+				<tbody>
+					<t t-set="number" t-value="0" />
+					<t t-set="total_standard_pay" t-value="0" />
+					<t t-set="total_extra_pay" t-value="0" />
+					<t t-set="total_actual_overtime_pay" t-value="0" />
+					<tr t-foreach="o.overtime_plan_line_ids" t-as="line">
+						<t t-set="number" t-value="number+1" />
+						<t t-set="total_standard_pay"
+							t-value="total_standard_pay + line.standard_pay" />
+						<t t-set="total_extra_pay"
+							t-value="total_extra_pay + line.extra_pay" />
+						<t t-set="total_actual_overtime_pay"
+							t-value="total_actual_overtime_pay + line.actual_overtime_pay" />
+						<td class="text-right">
+							<span t-esc="number" />
+						</td>
+						<td class="text-right">
+							<span t-field="line.date_start" />
+						</td>
+						<td class="text-right">
+							<span t-field="line.date_end" />
+						</td>
+						<td class="text-right">
+							<span t-field="line.planned_hours" />
+						</td>
+						<td class="text-right">
+							<span t-field="line.actual_hours" />
+						</td>
+						<td class="text-right">
+							<span t-field="line.standard_pay" />
+						</td>
+						<td class="text-right">
+							<span t-field="line.pay_rate" />
+						</td>
+						<td class="text-right">
+							<span t-field="line.extra_pay" />
+						</td>
+						<td class="text-right">
+							<span t-field="line.actual_overtime_pay" />
+						</td>
+					</tr>
+					<tr>
+						<td class="text-right" colspan="5">
+							Total:
+						</td>
+						<td class="text-right">
+							<span t-esc="total_standard_pay"
+								t-options='{"widget": "monetary", "display_currency": o.currency_id}' />
+						</td>
+						<td></td>
+						<td class="text-right">
+							<span t-esc="total_extra_pay"
+								t-options='{"widget": "monetary", "display_currency": o.currency_id}' />
+						</td>
+						<td class="text-right">
+							<span t-esc="total_actual_overtime_pay"
+								t-options='{"widget": "monetary", "display_currency": o.currency_id}' />
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</xpath>
+
+	</template>
+</odoo>

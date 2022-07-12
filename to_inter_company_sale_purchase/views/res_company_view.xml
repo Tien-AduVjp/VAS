@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="view_company_inter_change_inherit_form">
+			<field name="name">res.company.form.inherit</field>
+			<field name="inherit_id"
+				ref="to_inter_company_base.view_company_inter_change_inherit_form" />
+			<field name="model">res.company</field>
+			<field name="arch" type="xml">
+				<field name="intercompany_user_id" position="after">
+					<div colspan="2" class="mt8 ml16">
+						When a company validates a
+						<field name="applicable_on" class="oe_inline ml4 mr4" style="padding-right:8px" />
+						to this company,
+					</div>
+					<div colspan="2" class="mt8 ml16">
+						generate a
+						<field name="so_po_auto_validation" class="oe_inline ml4" style="padding-right:8px" />
+						<strong>
+							<span attrs="{'invisible': [('applicable_on','!=', 'purchase')]}"
+								class="ml4">Sale Order</span>
+							<span attrs="{'invisible': [('applicable_on','!=', 'sale')]}"
+								class="ml4">Purchase Order</span>
+							<span attrs="{'invisible':[('applicable_on','!=', 'sale_purchase')]}"
+								class="ml4"> Sale and Purchase Order</span>
+						</strong>
+						<!--
+						using
+						<field name="inter_comp_warehouse_id" class="ml8 oe_inline"
+							options="{'no_create': True, 'no_open': True}" />
+
+						 -->
+					</div>
+				</field>
+			</field>
+		</record>
+	</data>
+</odoo>

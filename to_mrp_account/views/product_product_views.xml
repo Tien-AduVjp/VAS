@@ -1,0 +1,27 @@
+<odoo>
+
+    <record id="cost_struct_product_template_action_report" model="ir.actions.report">
+        <field name="name">Cost Structure Analysis</field>
+        <field name="model">product.product</field>
+        <field name="report_type">qweb-html</field>
+        <field name="report_name">to_mrp_account.product_template_cost_structure</field>
+        <field name="report_file">to_mrp_account.product_template_cost_structure</field>
+        <field name="print_report_name">'Cost Structure Analysis - %s' % (object.name)</field>
+    </record>
+
+    <record id="product_product_inherit_form_view_cost_structure" model="ir.ui.view">
+        <field name="name">cost_structure_product_product_inherit</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="mrp.product_product_form_view_bom_button"/>
+        <field name="groups_id" eval="[(4, ref('mrp.group_mrp_user'))]"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_view_mos']" position="after">
+                <button name="action_cost_structure" type="object"
+                    class="oe_stat_button" icon="fa-dollar" string="Cost Analysis">
+                </button>
+                <!-- TODO: Restrict for MRP accounting group -->
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

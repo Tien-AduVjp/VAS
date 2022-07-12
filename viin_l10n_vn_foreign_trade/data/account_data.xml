@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+    	<record id="account_payment_term_275_net_days" model="account.payment.term">
+    		<field name="name">275 Net days</field>
+    		<field name="note">275 Net days</field>
+    		<field name="line_ids" eval="[(5, 0), (0, 0, {'value': 'balance', 'value_amount': 0.0, 'sequence': 500, 'days': 275, 'option': 'day_after_invoice_date'})]"/>
+    	</record>
+    </data>
+    <data noupdate="1">
+    	<function name="set_default_settings" model="res.company" />
+    </data>
+</odoo>

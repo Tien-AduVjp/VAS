@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="view_employee_filter" model="ir.ui.view">
+			<field name="name">hr.employee.search</field>
+			<field name="model">hr.employee</field>
+			<field name="inherit_id" ref="hr.view_employee_filter" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='job_id']" position="after">
+					<field name="dyob" />
+					<field name="mob" />
+					<field name="yob" />
+				</xpath>
+				<xpath expr="//filter[@name='inactive']" position="after">
+					<separator />
+					<!-- use method search "_search_birthday" filter  -->
+					<filter string="Birthdays this week"
+						name="ftr_birth_this_week"
+						domain="[('birthday_by_week', '=', 'this_week')]"/>
+					<filter string="Birthdays next week"
+						name="ftr_birth_next_week"
+						domain="[('birthday_by_week', '=', 'next_week')]"/>
+					<filter string="Birthdays last week"
+						name="ftr_birth_last_week"
+						domain="[('birthday_by_week', '=', 'last_week')]"/>
+					<filter string="Birthdays this month"
+						name="ftr_birth_this_mo"
+						domain="[('mob', '=', context_today().month)]" />
+					<filter string="Birthdays next month"
+						name="ftr_birth_next_mo"
+						domain="[('mob', '=', (context_today()+relativedelta(months=1)).month)]" />
+					<filter string="Birthdays last month"
+						name="ftr_birth_last_mo"
+						domain="[('mob', '=', (context_today()-relativedelta(months=1)).month)]" />
+				</xpath>
+				<xpath expr="//group" position="inside">
+					<filter name="dyob" string="Day of Birth" domain="[]" context="{'group_by' : 'dyob'}"/>
+		        	<filter name="mob" string="Month of Birth" domain="[]" context="{'group_by' : 'mob'}"/>
+		        	<filter name="yob" string="Year of Birth" domain="[]" context="{'group_by' : 'yob'}"/>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

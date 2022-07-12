@@ -1,0 +1,483 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_hr_payroll_timesheet_wfh
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-28 12:18+0000\n"
+"PO-Revision-Date: 2022-03-03 11:34+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_leave_view_form
+msgid "<span>Hours</span>"
+msgstr "<span>Giờ</span>"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_working_month_calendar_form_view
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_working_month_calendar_line_view_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.view_hr_payslip_form
+msgid "<span>days</span>"
+msgstr "<span>ngày</span>"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_working_month_calendar_form_view
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_working_month_calendar_line_view_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.view_hr_payslip_form
+msgid "<span>hours</span>"
+msgstr "<span>giờ</span>"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_leave_view_form
+msgid ""
+"<strong>Warning:</strong>\n"
+"                        The Time-off of the type"
+msgstr ""
+"<strong>Cảnh báo:</strong>\n"
+"                        Xin nghỉ với kiểu nghỉ"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model,name:viin_hr_payroll_timesheet_wfh.model_account_analytic_line
+msgid "Analytic Line"
+msgstr "Phát sinh KT Quản trị"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model,name:viin_hr_payroll_timesheet_wfh.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_account_analytic_line__display_name
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_leave__display_name
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_leave_type__display_name
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_payslip__display_name
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_working_month_calendar__display_name
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_working_month_calendar_line__display_name
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_res_company__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model,name:viin_hr_payroll_timesheet_wfh.model_hr_employee
+msgid "Employee"
+msgstr "Nhân viên"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: code:addons/viin_hr_payroll_timesheet_wfh/models/res_company.py:0
+#, python-format
+msgid "HR Timesheet"
+msgstr "Chấm công"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_account_analytic_line__id
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_employee__id
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_leave__id
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_leave_type__id
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_payslip__id
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_working_month_calendar__id
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_working_month_calendar_line__id
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_res_company__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model.fields,help:viin_hr_payroll_timesheet_wfh.field_hr_employee__pow_timesheet_required
+msgid ""
+"If checked, the employee will be required to log timesheet for PoW (proof of"
+" work) during time off of the time off types that require timesheet "
+"recording for PoW (e.g. Work from home, etc)."
+msgstr ""
+"Nếu được đánh dấu, nhân viên này sẽ được yêu cầu phải chấm công PoW (chứng "
+"minh có làm việc) trong quá trình nghỉ với kiểu nghỉ mà yêu cầu chấm công "
+"PoW (vd: Làm việc tại nhà, v.v)."
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_account_analytic_line____last_update
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_leave____last_update
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_leave_type____last_update
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_payslip____last_update
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_working_month_calendar____last_update
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_working_month_calendar_line____last_update
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_res_company____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_working_month_calendar_form_view
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_working_month_calendar_line_view_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.view_hr_payslip_form
+msgid "Missed"
+msgstr "Thiếu"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_payslip__missing_pow_days
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_working_month_calendar__missing_pow_days
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_working_month_calendar_line__missing_pow_days
+msgid "Missing PoW Days"
+msgstr "Số ngày PoW thiếu"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_payslip__missing_pow_hours
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_working_month_calendar__missing_pow_hours
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_working_month_calendar_line__missing_pow_hours
+msgid "Missing PoW Hours"
+msgstr "Số giờ PoW thiếu"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: code:addons/viin_hr_payroll_timesheet_wfh/models/res_company.py:0
+#, python-format
+msgid "Missing PoW Timesheet"
+msgstr "Chấm công PoW thiếu"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: code:addons/viin_hr_payroll_timesheet_wfh/models/hr_leave.py:0
+#, python-format
+msgid ""
+"Only users that are granted with the access group '%s' will be able to "
+"execute this action."
+msgstr ""
+"Chỉ người dùng được phân quyền vào nhóm quyền '%s' mới có thể thực hiện hành"
+" động này."
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model,name:viin_hr_payroll_timesheet_wfh.model_hr_payslip
+msgid "Pay Slip"
+msgstr "Phiếu lương"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.view_hr_holidays_filter
+msgid "PoW Not Required"
+msgstr "Không yêu cầu PoW"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.view_hr_holidays_filter
+msgid "PoW Required"
+msgstr "Yêu cầu PoW"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_payslip__pow_timesheet_ids
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_working_month_calendar__pow_timesheet_ids
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_working_month_calendar_line__pow_timesheet_ids
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_leave_view_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.view_hr_payslip_form
+msgid "PoW Timesheet"
+msgstr "Chấm công PoW"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_payslip__pow_timesheet_count
+msgid "PoW Timesheet Count"
+msgstr "Số bản ghi chấm công PoW"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_payslip__pow_timesheet_days
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_working_month_calendar__pow_timesheet_days
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_working_month_calendar_line__pow_timesheet_days
+msgid "PoW Timesheet Days"
+msgstr "Số ngày Chấm công PoW"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_leave__pow_timesheet_ids
+msgid "PoW Timesheet Entries"
+msgstr "Chấm công PoW"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_leave__pow_timesheet_hours
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_payslip__pow_timesheet_hours
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_working_month_calendar__pow_timesheet_hours
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_working_month_calendar_line__pow_timesheet_hours
+msgid "PoW Timesheet Hours"
+msgstr "Số giờ chấm công PoW"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.view_hr_holidays_filter
+msgid "PoW Timesheet Not Recorded"
+msgstr "Chưa Chấm công PoW"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_leave_view_form
+msgid "PoW Timesheet Not Required"
+msgstr "Không yêu cầu chấm công PoW"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.view_hr_holidays_filter
+msgid "PoW Timesheet Recorded"
+msgstr "Có chấm công PoW"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_employee__pow_timesheet_required
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_leave__pow_timesheet_required
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_leave_type__pow_timesheet_required
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_leave_view_form
+msgid "PoW Timesheet Required"
+msgstr "Bắt buộc chấm công PoW"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: code:addons/viin_hr_payroll_timesheet_wfh/models/hr_leave_type.py:0
+#, python-format
+msgid ""
+"PoW Timesheet Required option cannot be enabled for the time-off type '%s' "
+"while its Unpaid option is also enabled."
+msgstr ""
+"Tùy chọn Yêu cầu chấm công PoW không thể được kích hoạt cho Kiểu nghỉ '%s' "
+"khi nó là một kiểu nghỉ không lương (tùy chọn Không trả lương được đánh "
+"dấu)."
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_working_month_calendar_form_view
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_working_month_calendar_line_view_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.view_hr_payslip_form
+msgid "PoW Timesheet Summary"
+msgstr "Tổng hợp chấm công PoW"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_account_analytic_line__pow_for_timeoff_id
+msgid "PoW for Time-off"
+msgstr "PoW cho Nghỉ"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_payslip__pow_required_days
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_working_month_calendar__pow_required_days
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_working_month_calendar_line__pow_required_days
+msgid "PoW-Required Time-Off Days"
+msgstr "Số ngày nghỉ yêu cầu chấm công PoW"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_payslip__pow_required_hours
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_working_month_calendar__pow_required_hours
+#: model:ir.model.fields,field_description:viin_hr_payroll_timesheet_wfh.field_hr_working_month_calendar_line__pow_required_hours
+msgid "PoW-Required Time-Off Hours"
+msgstr "Số giờ nghỉ yêu cầu chấm công PoW"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_timesheet_line_search
+msgid "PoW-Required Time-off"
+msgstr "Nghỉ có yêu cầu chấm công PoW"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.view_hr_payslip_form
+msgid ""
+"Proof-of-Work timesheet entries for the related time-off records that "
+"require proof-of-work timesheet."
+msgstr ""
+"Các bản ghi chấm công liên quan đến các phiếu nghỉ mà yêu cầu phải có chấm "
+"công như là PoW (minh chứng làm việc)"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_working_month_calendar_form_view
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_working_month_calendar_line_view_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.view_hr_payslip_form
+msgid "Recorded"
+msgstr "Đã chấm công"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_working_month_calendar_form_view
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_working_month_calendar_line_view_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.view_hr_payslip_form
+msgid "Required"
+msgstr "Yêu cầu"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_leave_view_form
+msgid "Show Proof-of-Work timesheet candidates related to this time off."
+msgstr ""
+"Hiển thị các bản ghi chấm công mà có thể là bản ghi minh chứng làm việc cho "
+"phiếu nghỉ này"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_leave_view_form
+msgid "Show Proof-of-Work timesheet entries related to this time off."
+msgstr "Hiển thị các bản ghi chấm công liên quan đến phiếu nghỉ này"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model.fields,help:viin_hr_payroll_timesheet_wfh.field_account_analytic_line__pow_for_timeoff_id
+msgid "The Time-Off that requires proof of work timesheet records"
+msgstr "Phiếu nghỉ mà yêu cầu chấm công để minh chứng có làm việc"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model.fields,help:viin_hr_payroll_timesheet_wfh.field_hr_leave__pow_timesheet_ids
+msgid "The related timesheet entries for PoW (proof of work)."
+msgstr "Các bản ghi chấm công liên quan để minh chứng có làm việc."
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: code:addons/viin_hr_payroll_timesheet_wfh/models/hr_leave.py:0
+#, python-format
+msgid ""
+"The time off '%s' does not require proof of work timesheet as either its "
+"type or the employee setting does not require that. Please enable PoW "
+"Timesheet Required option for both of them first."
+msgstr ""
+"Phiếu nghỉ '%s' không yêu cầu phải chấm công PoW khi cấu hình kiểu nghỉ hoặc"
+" cấu hình nhân viên không yêu cầu điều đó. Vui lòng kích hoạt tùy chọn Yêu "
+"cầu chấm công PoW cho cả kiểu nghỉ và hồ sơ nhân viên trước."
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: code:addons/viin_hr_payroll_timesheet_wfh/models/hr_leave.py:0
+#, python-format
+msgid ""
+"The time off '%s' requires proof of work timesheet as both its type and the "
+"employee setting require that. Please disable PoW Timesheet Required option "
+"for either of them first."
+msgstr ""
+"Phiếu nghỉ '%s' yêu cầu phải chấm công PoW khi mà cả cấu hình kiểu nghỉ và "
+"cấu hình nhân viên đều yêu cầu điều đó. Vui lòng bỏ kích hoạt tùy chọn Yêu "
+"cầu chấm công PoW ở một trong hai chỗ này trước."
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: code:addons/viin_hr_payroll_timesheet_wfh/models/hr_timesheet.py:0
+#, python-format
+msgid ""
+"The timesheet entry `%s` was generated for the time-off `%s` during time-off"
+" validation and will not be able to be considered as proof of work"
+msgstr ""
+"Bản ghi chấm công `%s` đã được sinh tự động cho phiếu nghỉ `%s` trong quá "
+"trình duyệt nghỉ và sẽ không thể được coi là minh chứng làm việc."
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model.fields,help:viin_hr_payroll_timesheet_wfh.field_hr_leave__pow_timesheet_hours
+msgid ""
+"The total actual hours by timesheet recorded as proof of work for the time-"
+"off."
+msgstr ""
+"Tổng số giờ thực tế theo bảng chấm công được ghi nhận như là minh chứng làm "
+"việc cho phiếu nghỉ."
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_leave_view_form
+msgid ""
+"This action will set the time-off as being requiring proof of work. It also "
+"finds and matches all PoW timesheet candidates to be PoW timesheet. Are you "
+"sure?"
+msgstr ""
+"Hành động này sẽ thiết lập phiếu nghỉ yêu cầu nhân viên phải chấm công PoW. "
+"Việc này cũng tự động tìm và khớp các bản ghi chấm công đang có làm chấm "
+"công PoW cho phiếu nghỉ này. Bạn có muốn tiếp tục?"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_leave_view_form
+msgid ""
+"This action will set the time-off as not being requiring proof of work. It "
+"also resets all the related timesheet to be non-pow. Are you sure?"
+msgstr ""
+"Hành động này sẽ thiết lập phiếu nghỉ không yêu cầu nhân viên phải chấm công"
+" PoW. Việc này cũng tự động đặt tất cả các bản ghi chấm công PoW cho phiếu "
+"nghỉ này về trạng thái tự do, không phải chấm công PoW nữa. Bạn có muốn tiếp"
+" tục?"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: code:addons/viin_hr_payroll_timesheet_wfh/models/hr_timesheet.py:0
+#, python-format
+msgid ""
+"This could be a programming error when there is more than one "
+"resource.calendar.leaves in res_calendar_leaves"
+msgstr ""
+"Đây có thể là lỗi lập trình khi mà có nhiều hơn một bản ghi "
+"resource.calendar.leaves trong res_calendar_leaves."
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_leave_view_form
+msgid "This sets this time off a non-pow required one."
+msgstr ""
+"Nút này thiết lập phiếu nghỉ về tình trạng không yêu cầu chấm công PoW."
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_leave_view_form
+msgid "This sets this time off a pow required one."
+msgstr "Nút này thiết lập phiếu nghỉ về tình trạng bắt buộc chấm công PoW."
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model,name:viin_hr_payroll_timesheet_wfh.model_hr_leave
+msgid "Time Off"
+msgstr "Nghỉ"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model,name:viin_hr_payroll_timesheet_wfh.model_hr_leave_type
+msgid "Time Off Type"
+msgstr "Kiểu Nghỉ"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.actions.server,name:viin_hr_payroll_timesheet_wfh.action_server_toggle_pow_timesheet_required
+msgid "Toggle PoW Timesheet Requirement"
+msgstr "Bật/Tắt Yêu cầu chấm công PoW"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_leave_view_form
+msgid "View PoW Timesheet"
+msgstr "Xem Chấm công PoW"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_leave_view_form
+msgid "View PoW Timesheet Candidates"
+msgstr "Xem chấm công có thể là PoW"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model.fields,help:viin_hr_payroll_timesheet_wfh.field_hr_leave_type__pow_timesheet_required
+msgid ""
+"Whether or not Proof-Of-Work timesheet is required. If a time off of this type will be considered as working time (with Unpaid being unchecked, e.g. Work From Home), this field could be checked to require the corresponding time-off employees to record timesheet for proof of work.\n"
+"Note: this can be disabled for specific employees with the same option in the main Employee form view."
+msgstr ""
+"Có cần phải chấm công PoW (để minh chứng có làm việc) hay không. Nếu một phiếu nghỉ của kiểu này sẽ được coi là thời gian làm việc (với tùy chọn Không trả lương được bỏ chọn, v.v. Làm việc tại nhà), trường này có thể được đánh dấu để yêu cầu các nhân viên nghỉ tương ứng với kiểu nghỉ này phải chấm công để minh chứng có làm việc.\n"
+"Lưu ý: tính năng này có thể được vô hiệu cho một số nhân viên cụ thể với tùy chọn tương tự ở giao diện form chính trên Hồ sơ nhân viên."
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:hr.leave.type,name:viin_hr_payroll_timesheet_wfh.time_off_type_wfh
+msgid "Work From Home"
+msgstr "Làm việc tại nhà"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model,name:viin_hr_payroll_timesheet_wfh.model_hr_working_month_calendar
+msgid "Working Month Calendar"
+msgstr "Lịch làm việc tháng"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model:ir.model,name:viin_hr_payroll_timesheet_wfh.model_hr_working_month_calendar_line
+msgid "Working Month Calendar Line"
+msgstr "Dòng lịch tháng làm việc"
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: code:addons/viin_hr_payroll_timesheet_wfh/models/hr_timesheet.py:0
+#, python-format
+msgid ""
+"You may not be able to assign the timesheet entry `%s` as a proof of work "
+"for the Time-Off `%s` since its date `%s` is not valid for the time-off "
+"which is from `%s` to `%s`."
+msgstr ""
+"Bạn không thể gán bản ghi chấm công `%s` như là minh chứng làm việc cho "
+"phiếu nghỉ `%s` khi mà ngày của nó `%s` không hợp lệ cho phiếu nghỉ trong khoảng "
+"thời gian từ `%s` đến `%s`."
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: code:addons/viin_hr_payroll_timesheet_wfh/models/hr_timesheet.py:0
+#, python-format
+msgid ""
+"You may not be able to assign the timesheet record `%s` as proof of work for"
+" the Time-Off `%s` as it would make total PoW timesheet hours greater than "
+"the corresponding time-off duration of the day (%s time-off hours on %s). In"
+" other words, if the current timesheet hours is greater than or equal to the"
+" total time-off hours of the day, no more PoW timesheet of the same day is "
+"allowed."
+msgstr ""
+"Bạn không thể gán bản ghi chấm công `%s` như là minh chứng làm việc cho "
+"phiếu nghỉ `%s` vì nó sẽ làm cho tổng số giờ chấm công PoW lớn hơn thời gian"
+" nghỉ tương ứng trong ngày (%s giờ nghỉ vào %s). Nói cách khác, bạn chỉ có "
+"thể ghi nhận thêm chấm công PoW cho cùng một ngày nếu tổng thời gian chấm "
+"công PoW trước đó nhỏ hơn tổng số giờ nghỉ của ngày đó."
+
+#. module: viin_hr_payroll_timesheet_wfh
+#: model_terms:ir.ui.view,arch_db:viin_hr_payroll_timesheet_wfh.hr_leave_view_form
+msgid ""
+"is considered as work time and requires\n"
+"                        employees to record work timesheet for proof of\n"
+"                        work."
+msgstr ""
+"thì được coi là vẫn làm việc và yêu cầu\n"
+"                        phải có chấm công để làm bằng chứng ghi nhận PoW\n"
+"                        (Proof of Work, minh chứng làm việc)."

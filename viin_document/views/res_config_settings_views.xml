@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="res_config_settings_view_form" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.inherit.document</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="mail.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[hasclass('settings')]" position="inside">
+                    <div class="app_settings_block" data-string="Document" string="Document" data-key="viin_document" groups="viin_document.document_group_manager">
+                        <h2 id="document_feature">Document Workspace</h2>
+                        <div class="row mt16 o_settings_container" name="document_workspace_setting_container">
+                            <div class="col-12 col-lg-6 o_setting_box" id="document_feature_col1">
+                                <div class="o_setting_left_pane">
+                                    <field string="Document Unique Name" name="unique_doc_name"/>
+                                </div>
+                                <div class="o_setting_right_pane">
+                                    <label for="unique_doc_name"/>
+                                    <div class="text-muted">
+                                        If checked, newly created workspaces will get their Document Unique Name enabled.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="action_document_config" model="ir.actions.act_window">
+            <field name="name">Settings</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.config.settings</field>
+            <field name="view_id" ref="res_config_settings_view_form"/>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+            <field name="context">{'module' : 'viin_document', 'bin_size': False}</field>
+        </record>
+
+        <menuitem id="menu_document_config" name="Settings" parent="document_config_menu_root"
+            sequence="0" action="action_document_config" groups="base.group_system"/>
+    </data>
+</odoo>

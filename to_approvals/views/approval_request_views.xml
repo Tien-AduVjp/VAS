@@ -1,0 +1,278 @@
+<odoo>
+	<data>
+
+		<record id="approval_request_view_form" model="ir.ui.view">
+			<field name="name">approval.request.form</field>
+			<field name="model">approval.request</field>
+			<field name="arch" type="xml">
+				<form string="Approval Request">
+					<field name="can_validate" invisible="1" />
+					<field name="can_force_validate" invisible="1" />
+					<field name="can_done" invisible="1" />
+					<field name="can_refuse" invisible="1" />
+					<field name="can_confirm" invisible="1" />
+					<field name="can_cancel" invisible="1" />
+					<field name="can_draft" invisible="1" />
+					<header>
+						<button string="Confirm" name="action_confirm" type="object" class="oe_highlight"
+							attrs="{'invisible': ['|',('can_confirm', '=', False),('state','!=', 'draft')]}" />
+						<button string="Approve" name="action_validate" type="object" class="oe_highlight"
+							attrs="{'invisible': ['|', ('can_validate', '=', False), ('state', 'not in', ['confirm','refuse'])]}" />
+						<button string="Refuse" name="action_refuse"  type="object"
+							attrs="{'invisible': ['|', ('can_refuse', '=', False), ('state', 'not in', ['confirm','validate'])]}" />
+						<button string="Mark as Done" name="action_done" type="object" class="oe_highlight"
+							attrs="{'invisible': ['|', ('can_done', '=', False), ('state', '!=', 'validate')]}" />
+						<button string="Cancel" name="action_cancel" states="confirm,validate,refuse,done" type="object"
+							attrs="{'invisible': ['|', ('can_cancel', '=', False)]}" />
+						<button string="Reset to Draft" name="action_draft" type="object" states="cancel"
+							attrs="{'invisible': ['|', ('can_draft', '=', False), ('state', '!=', 'cancel')]}" />
+						<!-- This Force Approval button is shown on purpose to both authorized and
+							unauthorized users to let them know the feature is available -->
+						<button string="Force Approval" name="action_validate" type="object" states="confirm,refuse"
+							context="{'force_approval': 1}"
+							confirm="This action will turn the request status to Approved without waiting for other approvers to approve the request. Your action will be logged too. Are you sure to proceed?" />
+						<field name="state" widget="statusbar" statusbar_visible="draft,confirm,validate,done,refuse,cancel" />
+					</header>
+					<sheet>
+						<div name="button_box" class="oe_button_box" />
+						<div class="oe_title">
+							<label for="title" class="oe_edit_only"/>
+							<h1>
+								<field name="title" placeholder="e.g. Purchase new computer" />
+							</h1>
+						</div>
+						<group>
+							<group>
+								<field name="approval_type_id" />
+								<field name="type" invisible="1" />
+								<field name="employee_id" />
+								<field name="company_id" groups="base.group_multi_company" />
+								<field name="department_id"/>
+							</group>
+							<group>
+								<field name="currency_id" attrs="{'invisible':[('show_currency_field','=',False)]}" groups="base.group_multi_currency" />
+								<field name="show_currency_field" invisible="1" />
+								<field name="date" />
+								<field name="deadline" />
+								<field name="mimimum_approvals" />
+								<field name="progress" widget="progressbar"/>
+								<field name="approved_date" attrs="{'invisible':[('state','not in',['validate','done'])]}" />
+								<field name="my_state" groups="to_approvals.group_approval_team_leader" />
+								<field name="last_approver_id" />
+								<field name="next_approver_id" />
+								<field name="forcing_approver_id" />
+							</group>
+						</group>
+						<label for="description" />
+						<field name="description" />
+						<notebook>
+							<page name="approval_user" string="Approvers">
+								<field name="request_approval_user_line_ids" options="{'no_open': True}">
+									<tree
+										decoration-success="state=='approved'"
+										decoration-danger="state=='refused'"
+										decoration-warning="state=='pending'"
+										editable="bottom">
+										<field name="sequence" widget="handle" />
+										<field name="user_id"  options="{'no_create': True, 'no_create_edit': True}"/>
+										<field name="required" />
+										<field name="state"
+											attrs="{'column_invisible': [('parent.state','=','draft')]}" />
+										<field name="date"
+											attrs="{'column_invisible': [('parent.state','=','draft')]}" />
+									</tree>
+								</field>
+								<fiedl name="approver_ids" invisible="1" />
+							</page>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+ 						<field name="message_follower_ids"/>
+ 						<field name="activity_ids"/>
+						<field name="message_ids"/>
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record id="approval_request_view_kanban"
+			model="ir.ui.view">
+			<field name="name">approval.request.kanban</field>
+			<field name="model">approval.request</field>
+			<field name="arch" type="xml">
+				<kanban class="o_kanban_mobile" default_group_by="state" quick_create="0" group_create="false">
+					<field name="employee_id" />
+					<field name="activity_ids"/>
+					<field name="activity_state"/>
+                    <progressbar field="activity_state" colors='{"planned": "success", "today": "warning", "overdue": "danger"}'/>
+					<templates>
+						<t t-name="kanban-box">
+							<div t-attf-class="oe_kanban_content oe_kanban_global_click">
+								<div class="row">
+									<div class="col-8">
+										<strong>
+											<field name="display_name" />
+										</strong>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-12">
+										<field name="approval_type_id" />
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-12">
+										<span>
+											Request Date:
+											<field name="date" />
+										</span>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-6">
+										Approval Progress:
+									</div>
+									<div class="col-6">
+										<field name="progress" widget="progressbar" />
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-12">
+										<span>
+											Deadline:
+											<field name="deadline" />
+										</span>
+									</div>
+								</div>
+								<div class="o_kanban_record_bottom">
+									<div class="oe_kanban_bottom_left">
+										<field name="activity_ids" widget="kanban_activity"/>
+									</div>
+									<div class="oe_kanban_bottom_right">
+										<img t-att-src="kanban_image('hr.employee', 'image_128', record.employee_id.raw_value)" t-att-title="record.employee_id.value" t-att-alt="record.employee_id.value" width="24" height="24" class="oe_kanban_avatar float-right"/>
+									</div>
+								</div>
+							</div>
+						</t>
+					</templates>
+				</kanban>
+			</field>
+		</record>
+
+		<record id="approval_request_tree_view" model="ir.ui.view">
+			<field name="name">approval.request.tree</field>
+			<field name="model">approval.request</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Approval Requests"
+					decoration-bf="message_needaction==True"
+					decoration-muted="state in ['cancel', 'refuse']">
+					<field name="message_needaction" invisible="1" />
+					<field name="display_name" string="Title" />
+					<field name="approval_type_id" string="Type" />
+					<field name="employee_id" />
+					<field name="date" />
+					<field name="deadline" />
+					<field name="activity_ids" widget="list_activity"/>
+                    <field name="activity_user_id" optional="hide" string="Next Activity by" widget="many2one_avatar_user"/>
+					<field name="progress" widget="progressbar" />
+					<field name="state" />
+					<field name="my_state" groups="to_approvals.group_approval_team_leader" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="approval_request_search_view"
+			model="ir.ui.view">
+			<field name="name">approval.request.search</field>
+			<field name="model">approval.request</field>
+			<field name="arch" type="xml">
+				<search string="Approval Request">
+					<field name="name" filter_domain="['|', ('name', 'ilike', self), ('title', 'ilike', self)]"/>
+					<separator />
+					<field name="date" />
+					<separator />
+					<field name="employee_id" />
+					<field name="involve_employee_ids" />
+					<field name="department_id" />
+					<separator />
+					<field name="approval_type_id" />
+					<separator />
+					<filter name="ftr_my_request" string="My Requests"
+						domain="['|',('employee_id.user_id','=',uid),('create_uid','=',uid)]" />
+					<separator />
+					<filter name="ftr_for_my_approval" string="For My Approval"
+						domain="[('my_state','=','pending')]"
+						groups="to_approvals.group_approval_team_leader"
+						help="Show requests that are waiting for your approval." />
+					<filter name="ftr_my_involve" string="My Approval Involvement"
+						domain="[('request_approval_user_line_ids.user_id','in',[uid])]"
+						groups="to_approvals.group_approval_team_leader"
+						help="Show requests that have you involved as an approver." />
+					<separator groups="to_approvals.group_approval_team_leader" />
+					<filter name="ftr_my_approved" string="I approved"
+						domain="[('my_state','=','approved')]"
+						groups="to_approvals.group_approval_team_leader" />
+					<filter name="ftr_my_refuse" string="I refused"
+						domain="[('my_state','=','refused')]"
+						groups="to_approvals.group_approval_team_leader" />
+					<separator groups="to_approvals.group_approval_team_leader" />
+					<filter name="ftr_draft" string="Draft"
+						domain="[('state','=','draft')]" />
+					<filter name="ftr_confirmed" string="Confirmed"
+						domain="[('state','=', 'confirm')]" />
+					<filter name="ftr_validate" string="Approved"
+						domain="[('state','=', 'validate')]" />
+					<filter name="ftr_refused" string="Refused"
+						domain="[('state','=','refuse')]" />
+					<filter name="ftr_cancelled" string="Cancelled"
+						domain="[('state','=','cancel')]" />
+					<separator />
+					<filter	string="Today Request" name="today_request"
+							domain="[('date', '=', context_today().strftime('%Y-%m-%d'))]" />
+					<group expand="0" string="Group By">
+						<filter name="grp_type" string="Type" context="{'group_by':'approval_type_id'}" />
+						<separator/>
+						<filter name="grp_state" string="Status" context="{'group_by':'state'}" />
+						<separator/>
+						<filter name="grp_date" string="Request Date" context="{'group_by':'date'}" />
+						<filter name="grp_deadline" string="Deadline" context="{'group_by':'date'}" />
+						<separator/>
+						<filter name="grp_employee" string="Employee" context="{'group_by':'employee_id'}" />
+						<filter name="grp_department" string="Department" context="{'group_by':'department_id'}" />
+						<separator/>
+						<filter name="grp_company" string="Company" context="{'group_by':'company_id'}" groups="base.group_multi_company" />
+					</group>
+				</search>
+			</field>
+		</record>
+
+		<record id="approval_request_action"
+			model="ir.actions.act_window">
+			<field name="name">Approval Request</field>
+			<field name="res_model">approval.request</field>
+			<field name="view_mode">kanban,tree,form</field>
+			<field name="search_view_id" ref="approval_request_search_view"/>
+			<field name="context">{}</field>
+		</record>
+
+		<record id="action_approval_request_tree_waiting" model="ir.actions.act_window">
+			<field name="name">Waiting Request</field>
+			<field name="res_model">approval.request</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="view_mode">tree,form</field>
+			<field name="domain"></field>
+			<field name="search_view_id" ref="approval_request_search_view"/>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Display information about the number of pending requests for this type.
+					When clicked, go to the list containing the corresponding requests
+				</p>
+			</field>
+		</record>
+
+		<menuitem id="approval_request_menu" name="Request"
+			parent="request_root_menu" sequence="1"
+			action="approval_request_action" />
+	</data>
+</odoo>

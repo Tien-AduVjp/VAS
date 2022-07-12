@@ -1,0 +1,35 @@
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="warranty_claim_policy_tree_view">
+			<field name="name">warranty_claim_policy.tree</field>
+			<field name="model">warranty.claim.policy</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Warranty Claim Policy">
+					<field name="product_milestone_id" />
+					<field name="apply_to" />
+					<field name="current_measurement" />
+					<field name="state" />
+				</tree>
+			</field>
+		</record>
+		<record id="warranty_claim_policy_form_view" model="ir.ui.view">
+			<field name="name">warranty.claim.policy.form</field>
+			<field name="model">warranty.claim.policy</field>
+			<field name="arch" type="xml">
+				<form string="Warranty Claim Policy">
+					<sheet>
+						<group>
+							<group>
+								<field name="product_milestone_id" />
+								<field name="apply_to" />
+								<field name="current_measurement" />
+								<field name="state" />
+							</group>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+	</data>
+</odoo>

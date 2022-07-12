@@ -1,0 +1,649 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_account_counterpart
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-28 06:56+0000\n"
+"PO-Revision-Date: 2021-10-28 06:56+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_account_counterpart
+#: code:addons/to_account_counterpart/model/account_move_line.py:0
+#, python-format
+msgid " [Zero Value]"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model_terms:ir.ui.view,arch_db:to_account_counterpart.wizard_account_counterpart_generator_view_form
+msgid "<span>Journal Items</span>"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,help:to_account_counterpart.field_account_bank_statement_line__countered_status
+#: model:ir.model.fields,help:to_account_counterpart.field_account_move__countered_status
+#: model:ir.model.fields,help:to_account_counterpart.field_account_payment__countered_status
+msgid ""
+"A technical field to indicate that this journal entry has either countered "
+"fully or partially or not-yet-countered"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,help:to_account_counterpart.field_account_move_line__countered_status
+msgid ""
+"A technical field to indicate that this journal item has either countered "
+"fully or partially or not-yet-countered"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line_ctp__dr_account_id
+msgid "Account"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model,name:to_account_counterpart.model_wizard_account_counterpart_generator
+msgid "Account Counterpart Generating Wizard"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.actions.act_window,name:to_account_counterpart.action_counterpart_generator_form
+#: model_terms:ir.ui.view,arch_db:to_account_counterpart.wizard_account_counterpart_generator_view_form
+msgid "Account Counterparts Generator"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line_ctp__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: to_account_counterpart
+#: code:addons/to_account_counterpart/model/account_move_line.py:0
+#, python-format
+msgid ""
+"An Journal Item must not have both both credit and debit counterparts. It "
+"should have either only."
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line_ctp__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: to_account_counterpart
+#: code:addons/to_account_counterpart/model/account_move_line_ctp.py:0
+#, python-format
+msgid ""
+"Both the journal items of the same counterpart must be in the same account "
+"journal entry"
+msgstr ""
+
+#. module: to_account_counterpart
+#: code:addons/to_account_counterpart/model/account_move_line_ctp.py:0
+#, python-format
+msgid ""
+"Both the journal items of the same counterpart must have the journal entry "
+"defined"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model_terms:ir.ui.view,arch_db:to_account_counterpart.wizard_account_counterpart_generator_view_form
+msgid "Cancel"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line_ctp__company_currency_id
+msgid "Company Currency"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line__ctp_account_ids
+msgid "Countered Accounts"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line__countered_amt
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line_ctp__countered_amt
+msgid "Countered Amount"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line__countered_amt_currency
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line_ctp__countered_amt_currency
+msgid "Countered Amount Currency"
+msgstr ""
+
+#. module: to_account_counterpart
+#: code:addons/to_account_counterpart/model/account_move_line_ctp.py:0
+#, python-format
+msgid ""
+"Countered Amount for the Journal Item '%s' and the Journal Item '%s' must "
+"not be greater than %s"
+msgstr ""
+
+#. module: to_account_counterpart
+#: code:addons/to_account_counterpart/model/account_move_line_ctp.py:0
+#, python-format
+msgid ""
+"Countered Amount must not be bigger than the debit and credit amounts. Debugging information:\n"
+"Countered Amount: %s\n"
+"Debit Line: %s, Debit: %s\n"
+"Credit Line: %s, Credit: %s\n"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line__ctp_aml_ids
+msgid "Countered Journal Items"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_bank_statement_line__countered_status
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move__countered_status
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line__countered_status
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_payment__countered_status
+msgid "Countered Status"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model_terms:ir.ui.view,arch_db:to_account_counterpart.account_move_line_ctp_form_view
+msgid "Counterpart Matching"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line__ctp_ids
+#: model_terms:ir.ui.view,arch_db:to_account_counterpart.move_line_form_inherit_view
+msgid "Counterparts"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_bank_statement_line__ctp_ids
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move__ctp_ids
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_payment__ctp_ids
+#: model_terms:ir.ui.view,arch_db:to_account_counterpart.view_move_form
+msgid "Counterparts Mapping"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.actions.server,name:to_account_counterpart.ir_cron_scheduler_create_counterparts_ir_actions_server
+#: model:ir.cron,cron_name:to_account_counterpart.ir_cron_scheduler_create_counterparts
+#: model:ir.cron,name:to_account_counterpart.ir_cron_scheduler_create_counterparts
+msgid "Create Counterpart scheduler"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model_terms:ir.ui.view,arch_db:to_account_counterpart.view_move_form
+msgid "Create Counterparts"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line_ctp__create_uid
+#: model:ir.model.fields,field_description:to_account_counterpart.field_wizard_account_counterpart_generator__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line_ctp__create_date
+#: model:ir.model.fields,field_description:to_account_counterpart.field_wizard_account_counterpart_generator__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: to_account_counterpart
+#: code:addons/to_account_counterpart/model/account_move_line.py:0
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line_ctp__cr_aml_credit
+#: model_terms:ir.ui.view,arch_db:to_account_counterpart.account_move_line_ctp_form_view
+#, python-format
+msgid "Credit"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line_ctp__cr_account_id
+msgid "Credit Account"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line__cr_ctp_ids
+msgid "Credit Counterparts"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line_ctp__cr_aml_id
+msgid "Credit Move Line"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line_ctp__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: to_account_counterpart
+#: code:addons/to_account_counterpart/model/account_move_line.py:0
+#: model_terms:ir.ui.view,arch_db:to_account_counterpart.account_move_line_ctp_form_view
+#, python-format
+msgid "Debit"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line_ctp__dr_aml_debit
+msgid "Debit Account"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line__dr_ctp_ids
+msgid "Debit Counterparts"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line_ctp__dr_aml_id
+msgid "Debit Move Line"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.actions.server,name:to_account_counterpart.action_server_delete_counterparts
+msgid "Delete Counterparts"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move__display_name
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line_ctp__display_name
+#: model:ir.model.fields,field_description:to_account_counterpart.field_wizard_account_counterpart_generator__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line_ctp__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line_ctp__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line_ctp__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_wizard_account_counterpart_generator__from_date
+msgid "From Date"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields.selection,name:to_account_counterpart.selection__account_move__countered_status__fully
+#: model:ir.model.fields.selection,name:to_account_counterpart.selection__account_move_line__countered_status__fully
+#: model_terms:ir.ui.view,arch_db:to_account_counterpart.view_account_move_filter
+#: model_terms:ir.ui.view,arch_db:to_account_counterpart.view_account_move_line_filter
+msgid "Fully Countered"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.actions.server,name:to_account_counterpart.action_server_create_counterparts
+#: model:ir.ui.menu,name:to_account_counterpart.menu_action_counterpart_generator_form
+msgid "Generate Counterparts"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_wizard_account_counterpart_generator__type
+msgid "Generation Type"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move__id
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line__id
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line_ctp__id
+#: model:ir.model.fields,field_description:to_account_counterpart.field_wizard_account_counterpart_generator__id
+msgid "ID"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,help:to_account_counterpart.field_wizard_account_counterpart_generator__ignore_if_lines_count_larger_than
+msgid ""
+"If a positive is set, the Journal Entries having a number of Journal Items "
+"larger then this will be ignored. Set zero (0) to disable this feature"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,help:to_account_counterpart.field_account_move_line_ctp__message_needaction
+#: model:ir.model.fields,help:to_account_counterpart.field_account_move_line_ctp__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,help:to_account_counterpart.field_account_move_line_ctp__message_has_error
+#: model:ir.model.fields,help:to_account_counterpart.field_account_move_line_ctp__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_wizard_account_counterpart_generator__ignore_if_lines_count_larger_than
+msgid "Ignore if more than"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line_ctp__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model,name:to_account_counterpart.model_account_move
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line_ctp__move_id
+msgid "Journal Entry"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model,name:to_account_counterpart.model_account_move_line
+msgid "Journal Item"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model,name:to_account_counterpart.model_account_move_line_ctp
+msgid "Journal Item Counterpart"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model_terms:ir.ui.view,arch_db:to_account_counterpart.account_move_line_ctp_form_view
+msgid "Journal Items Counterpart"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.actions.act_window,name:to_account_counterpart.action_aml_counterpart
+#: model:ir.ui.menu,name:to_account_counterpart.menu_action_aml_counterpart
+#: model_terms:ir.ui.view,arch_db:to_account_counterpart.account_move_line_ctp_tree_view
+msgid "Journal Items Counterparts"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_wizard_account_counterpart_generator__journal_ids
+msgid "Journals"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move____last_update
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line____last_update
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line_ctp____last_update
+#: model:ir.model.fields,field_description:to_account_counterpart.field_wizard_account_counterpart_generator____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line_ctp__write_uid
+#: model:ir.model.fields,field_description:to_account_counterpart.field_wizard_account_counterpart_generator__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line_ctp__write_date
+#: model:ir.model.fields,field_description:to_account_counterpart.field_wizard_account_counterpart_generator__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_wizard_account_counterpart_generator__rec_limit
+msgid "Limit Number of Journal Entries"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line_ctp__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line_ctp__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line_ctp__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields.selection,name:to_account_counterpart.selection__wizard_account_counterpart_generator__type__missing_only
+msgid "Missing Only"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields.selection,name:to_account_counterpart.selection__account_move__countered_status__none
+#: model:ir.model.fields.selection,name:to_account_counterpart.selection__account_move_line__countered_status__none
+#: model_terms:ir.ui.view,arch_db:to_account_counterpart.view_account_move_filter
+#: model_terms:ir.ui.view,arch_db:to_account_counterpart.view_account_move_line_filter
+msgid "Not Countered"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line_ctp__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line_ctp__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,help:to_account_counterpart.field_account_move_line_ctp__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,help:to_account_counterpart.field_account_move_line_ctp__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,help:to_account_counterpart.field_account_move_line_ctp__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields.selection,name:to_account_counterpart.selection__account_move__countered_status__partially
+#: model:ir.model.fields.selection,name:to_account_counterpart.selection__account_move_line__countered_status__partially
+#: model_terms:ir.ui.view,arch_db:to_account_counterpart.view_account_move_filter
+#: model_terms:ir.ui.view,arch_db:to_account_counterpart.view_account_move_line_filter
+msgid "Partially Countered"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_wizard_account_counterpart_generator__recreate_for_the_partially
+msgid "Recreate for Partially Countered Entries"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields.selection,name:to_account_counterpart.selection__wizard_account_counterpart_generator__type__regeneration
+msgid "Regeneration"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model_terms:ir.ui.view,arch_db:to_account_counterpart.view_move_form
+msgid "Remove Counterparts"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line_ctp__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,help:to_account_counterpart.field_wizard_account_counterpart_generator__journal_ids
+msgid ""
+"Select one or more journals, or leave empty to generate counterparts for the"
+" whole accounting data available"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model_terms:ir.ui.view,arch_db:to_account_counterpart.view_account_move_filter
+msgid ""
+"Show Journal entries that have counterpart(s) but not fully countered yet"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model_terms:ir.ui.view,arch_db:to_account_counterpart.view_account_move_filter
+msgid "Show Journal entries that have fully countered"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model_terms:ir.ui.view,arch_db:to_account_counterpart.view_account_move_filter
+msgid "Show Journal entries that have no counterpart"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model_terms:ir.ui.view,arch_db:to_account_counterpart.view_account_move_line_filter
+msgid ""
+"Show Journal items that have counterpart(s) but not fully countered yet"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model_terms:ir.ui.view,arch_db:to_account_counterpart.view_account_move_line_filter
+msgid "Show Journal items that have fully countered"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model_terms:ir.ui.view,arch_db:to_account_counterpart.view_account_move_line_filter
+msgid "Show Journal items that have no counterpart"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model_terms:ir.ui.view,arch_db:to_account_counterpart.wizard_account_counterpart_generator_view_form
+msgid "Start"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,help:to_account_counterpart.field_account_move_line__cr_ctp_ids
+msgid "Technical field to link credit counterparts with this journal item"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,help:to_account_counterpart.field_account_move_line__dr_ctp_ids
+msgid "Technical field to link debit counterparts with this journal item"
+msgstr ""
+
+#. module: to_account_counterpart
+#: code:addons/to_account_counterpart/wizard/wizard_account_counterpart_generator.py:0
+#, python-format
+msgid "The 'From Date' must not be later than the 'To Date'"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,help:to_account_counterpart.field_account_move_line__ctp_account_ids
+msgid "The Accounts that are countered with the account of this Journal Item"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,help:to_account_counterpart.field_account_move_line__ctp_aml_ids
+msgid "The Journal Items that are countered with this Journal Item"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,help:to_account_counterpart.field_account_move_line_ctp__countered_amt
+msgid ""
+"The amount in company's currency that matches the two lines in a counterpart"
+" operation."
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,help:to_account_counterpart.field_account_move_line__countered_amt_currency
+msgid ""
+"The amount in the original currency that has been countered for this journal"
+" item"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,help:to_account_counterpart.field_account_move_line_ctp__countered_amt_currency
+msgid ""
+"The amount in the original currency that matches the two lines in a "
+"counterpart operation."
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,help:to_account_counterpart.field_account_move_line__countered_amt
+msgid "The amount that has been countered for this journal item"
+msgstr ""
+
+#. module: to_account_counterpart
+#: code:addons/to_account_counterpart/model/account_move_line_ctp.py:0
+#, python-format
+msgid "The credit move line in the Journal Item Counterpart has zero credit"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,help:to_account_counterpart.field_account_move_line_ctp__cr_aml_credit
+msgid "The credit value of the credit journal item"
+msgstr ""
+
+#. module: to_account_counterpart
+#: code:addons/to_account_counterpart/model/account_move_line_ctp.py:0
+#, python-format
+msgid "The debit move line in the Journal Item Counterpart has zero debit"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,help:to_account_counterpart.field_account_move_line_ctp__dr_aml_debit
+msgid "The debit value of the debit journal item"
+msgstr ""
+
+#. module: to_account_counterpart
+#: code:addons/to_account_counterpart/model/account_move_line.py:0
+#, python-format
+msgid "The journal item '%s' could not be countered with the journal item %s"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,help:to_account_counterpart.field_wizard_account_counterpart_generator__rec_limit
+msgid ""
+"This is to limit the number of journal entries to process to avoid CPU "
+"timeout"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model_terms:ir.ui.view,arch_db:to_account_counterpart.wizard_account_counterpart_generator_view_form
+msgid ""
+"This wizard may take long time for a system with large number\n"
+"\t\t\t\t\t\tof accounting journal items (e.g. a million item)..."
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_wizard_account_counterpart_generator__to_date
+msgid "To Date"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line_ctp__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line_ctp__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,field_description:to_account_counterpart.field_account_move_line_ctp__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: to_account_counterpart
+#: model:ir.model.fields,help:to_account_counterpart.field_account_move_line_ctp__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: to_account_counterpart
+#: code:addons/to_account_counterpart/model/account_move_line_ctp.py:0
+#: code:addons/to_account_counterpart/model/account_move_line_ctp.py:0
+#, python-format
+msgid ""
+"You cannot delete counterparts of a posted journal entry (%s). Please cancel"
+" the entry to get the counterparts deleted."
+msgstr ""
+
+#. module: to_account_counterpart
+#: model_terms:ir.ui.view,arch_db:to_account_counterpart.wizard_account_counterpart_generator_view_form
+msgid "or"
+msgstr ""

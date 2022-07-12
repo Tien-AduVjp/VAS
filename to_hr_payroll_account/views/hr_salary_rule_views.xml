@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="hr_salary_rule_list" model="ir.ui.view">
+		<field name="name">hr.salary.rule.list</field>
+		<field name="model">hr.salary.rule</field>
+		<field name="inherit_id" ref="to_hr_payroll.hr_salary_rule_list" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='register_id']" position="after">
+				<field name="generate_account_move_line" />
+				<field name="account_debit" optional="hide" />
+				<field name="account_credit" optional="hide" />
+				<field name="analytic_account_id" optional="hide"
+					groups="analytic.group_analytic_accounting" />
+				<field name="analytic_tag_ids" optional="hide"
+					widget="many2many_tags" groups="analytic.group_analytic_tags" />
+				<field name="anylytic_option" optional="hide"
+					groups="analytic.group_analytic_accounting,analytic.group_analytic_tags" />
+			</xpath>
+		</field>
+	</record>
+
+	<record id="hr_salary_rule_form_inherit" model="ir.ui.view">
+		<field name="name">hr.salary.rule.form.inherit</field>
+		<field name="model">hr.salary.rule</field>
+		<field name="inherit_id" ref="to_hr_payroll.hr_salary_rule_form" />
+		<field name="arch" type="xml">
+			<xpath expr="/form/sheet/notebook/page[@name='general']"
+				position="after">
+				<page string="Accounting">
+					<group colspan="4">
+						<field name="generate_account_move_line" />
+						<field name="employee_journal_item"
+							attrs="{'invisible':[('generate_account_move_line','=',False)]}" />
+						<field name="account_debit"
+							attrs="{'invisible':[('generate_account_move_line','=',False)]}" />
+						<field name="account_credit"
+							attrs="{'invisible':[('generate_account_move_line','=',False)]}" />
+						<field name="anylytic_option"
+							groups="analytic.group_analytic_accounting,analytic.group_analytic_tags"
+							attrs="{'invisible':[('generate_account_move_line','=',False)]}" />
+						<field name="analytic_account_id"
+							groups="analytic.group_analytic_accounting"
+							attrs="{'invisible':['|',('anylytic_option','=','none'),('generate_account_move_line','=',False)]}" />
+						<field name="analytic_tag_ids" widget="many2many_tags"
+							groups="analytic.group_analytic_tags"
+							attrs="{'invisible':['|',('anylytic_option','=','none'),('generate_account_move_line','=',False)]}" />
+						<field name="account_tax_id" />
+					</group>
+				</page>
+			</xpath>
+		</field>
+	</record>
+</odoo>

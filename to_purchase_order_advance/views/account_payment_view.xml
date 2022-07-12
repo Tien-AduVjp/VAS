@@ -1,0 +1,22 @@
+<odoo>
+    <data>
+
+        <record id="view_account_payment_form_inherit" model="ir.ui.view">
+            <field name="name">advance.payment.purchase.form.inherit</field>
+            <field name="model">account.payment</field>
+            <field name="inherit_id" ref="account.view_account_payment_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//label[@for='amount']" position="before">
+                    <label for="purchase_order_ids" attrs="{'invisible': [('partner_type', '!=', 'supplier')]}"/>
+                    <div name="purchase_order_ids" class="o_row" attrs="{'invisible': [('partner_type', '!=', 'supplier')]}">
+                        <field name="purchase_order_ids"
+                           widget="many2many_tags"
+                           attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        <button name="%(action_add_po_to_payment)d" type="action" string="Add" class="oe_inline" states="posted"/>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

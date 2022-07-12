@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_product_license_public,product.license.public,model_product_license,,1,0,0,0
+access_product_license_manager,product.license.manager,model_product_license,to_product_license.group_license_manager,1,1,1,1
+access_product_license_version_public,product.license.version.public,model_product_license_version,,1,0,0,0
+access_product_license_version_manager,product.license.version.manager,model_product_license_version,to_product_license.group_license_manager,1,1,1,1

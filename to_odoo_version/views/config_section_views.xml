@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="config_section_form_view">
+			<field name="name">config.section.form</field>
+			<field name="model">config.section</field>
+			<field name="inherit_id"
+				ref="to_config_management.config_section_form_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//notebook" position="inside">
+					<page name="odoo_version_config" string="Odoo Version Configs">
+						<field name="odoo_version_config_ids">
+							<tree name="odoo_version_config_ids">
+								<field name="name" />
+								<field name="odoo_version_id" />
+								<field name="value" />
+							</tree>
+						</field>
+					</page>
+				</xpath>
+
+			</field>
+		</record>
+	</data>
+</odoo>
+

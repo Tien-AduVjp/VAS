@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+
+    <record id="document_tag_mrp_manufacturing_order" model="document.tag">
+        <field name="name">Manufacturing Order</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_mrp'))]"/>
+    </record>
+
+    <record id="document_tag_mrp_bom" model="document.tag">
+        <field name="name">Bills of Materials</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_mrp'))]"/>
+    </record>
+
+    <record id="document_tag_mrp_mo_confirm" model="document.tag">
+        <field name="name">Confirmed</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_mrp_mo_status'))]"/>
+    </record>
+
+    <record id="document_tag_mrp_mo_progress" model="document.tag">
+        <field name="name">In Progress</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_mrp_mo_status'))]"/>
+    </record>
+
+    <record id="document_tag_mrp_mo_done" model="document.tag">
+        <field name="name">Done</field>
+        <field name="category_ids" eval="[(4, ref('document_tag_category_mrp_mo_status'))]"/>
+    </record>
+
+</odoo>

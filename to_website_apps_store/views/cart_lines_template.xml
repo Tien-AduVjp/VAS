@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<template id="cart_lines" name="Shopping Cart Lines"
+		inherit_id="website_sale.cart_lines">
+		<xpath
+			expr="//table[@id='cart_products']/thead/tr/th[hasclass('td-qty')]"
+			position="before">
+			<th>Dependency</th>
+		</xpath>
+
+		<xpath
+			expr="//table[@id='cart_products']/tbody/t/tr/td[hasclass('td-product_name')]"
+			position="after">
+			<td>
+				<label class="row justify-content-center">
+					<input type="checkbox" name="odoo_app_dependency"
+						t-att-value="line.id"
+						t-att-checked="'checked' if line.odoo_app_dependency else None"
+						disabled="1"
+						title="If checked, it means the the line is a dependence line and cannot be removed if its entension is ordered" />
+				</label>
+			</td>
+		</xpath>
+	</template>
+</odoo>

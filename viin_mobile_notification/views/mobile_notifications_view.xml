@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mobile_notification_view_form" model="ir.ui.view">
+        <field name="name">mobile.notification.form</field>
+        <field name="model">mobile.notification</field>
+        <field name="arch" type="xml">
+            <form string="Notification Detail" create="false" edit="false">
+                <header>
+                    <field name="state" widget="statusbar" />
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="title" />
+                        </h1>
+                        <group>
+                            <group>
+                                <field name="body" />
+                                <field name="create_date" />
+                                <field name="mail_message_id" />
+                            </group>
+                        </group>
+                        <field name="line_ids">
+                            <tree string="Notification Partner">
+                                <field name="partner_id" />
+                                <field name="state" />
+                                <field name="retried_count" />
+                                <field name="message_id" />
+                                <field name="error_message" />
+                            </tree>
+                        </field>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="mobile_notification_view_tree" model="ir.ui.view">
+        <field name="name">mobile.notification.tree</field>
+        <field name="model">mobile.notification</field>
+        <field name="arch" type="xml">
+            <tree string="Notifications" default_order="create_date desc" create="false">
+                <field name="title" />
+                <field name="state" />
+                <field name="create_date" />
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="mobile_notification_view_search" model="ir.ui.view">
+        <field name="name">mobile.notification.search</field>
+        <field name="model">mobile.notification</field>
+        <field name="arch" type="xml">
+            <search string="Search notifications">
+                <field name="title" />
+                <field name="body" />
+                <field name="state" />
+            </search>
+        </field>
+    </record>
+
+    <record id="mobile_notification_action_view" model="ir.actions.act_window">
+        <field name="name">Notifications</field>
+        <field name="res_model">mobile.notification</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+				List of notification will show here!
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_mobile_notification" name="Mobile Notification" parent="base.menu_custom" sequence="1" />
+    <menuitem id="menu_notification" parent="menu_mobile_notification" action="mobile_notification_action_view" sequence="1" />
+
+</odoo>

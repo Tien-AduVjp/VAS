@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="view_account_form" model="ir.ui.view">
+		<field name="name">account.account.form</field>
+		<field name="model">account.account</field>
+		<field name="inherit_id" ref="account.view_account_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='internal_group']" position="after">
+				<label for="reconcile"
+					attrs="{'invisible': ['|', ('internal_type','=','liquidity'), ('internal_group', '=', 'off_balance')]}" />
+				<div
+					attrs="{'invisible': ['|', ('internal_type','=','liquidity'), ('internal_group', '=', 'off_balance')]}">
+					<field name="reconcile" />
+					<button name="action_open_reconcile" class="oe_link"
+						type="object" string=" -> Reconcile"
+						attrs="{'invisible': [('reconcile', '=', False)]}" />
+				</div>
+			</xpath>
+
+		</field>
+	</record>
+
+	<!-- Manual reconciliation -->
+	<record id="action_manual_reconciliation"
+		model="ir.actions.client">
+		<field name="name">Reconciliation</field>
+		<field name="tag">manual_reconciliation_view</field>
+	</record>
+
+	<menuitem id="menu_action_manual_reconciliation"
+		parent="account.menu_finance_entries_actions"
+		action="action_manual_reconciliation" sequence="25" />
+</odoo>

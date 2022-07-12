@@ -1,0 +1,248 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_stock_age_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-29 06:54+0000\n"
+"PO-Revision-Date: 2022-03-29 06:54+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_stock_age_report
+#. openerp-web
+#: code:addons/to_stock_age_report/static/src/js/stock_age_reports.js:0
+#, python-format
+msgid "'Period Length' or 'Number of periods' value error"
+msgstr ""
+
+#. module: to_stock_age_report
+#: model_terms:ir.ui.view,arch_db:to_stock_age_report.main_template
+msgid "- Interval Days:"
+msgstr ""
+
+#. module: to_stock_age_report
+#: model_terms:ir.ui.view,arch_db:to_stock_age_report.search_template_period
+msgid "<span class=\"fa fa-calendar\"/> Period:"
+msgstr ""
+
+#. module: to_stock_age_report
+#: model_terms:ir.ui.view,arch_db:to_stock_age_report.search_template_multi_company
+msgid ""
+"<span class=\"fa fa-filter\"/>\n"
+"\t\t\t\tCompanies:"
+msgstr ""
+
+#. module: to_stock_age_report
+#: model_terms:ir.ui.view,arch_db:to_stock_age_report.search_template_warehouse_location
+msgid "<span class=\"fa fa-map-marker\"/> Warehouse and Location:"
+msgstr ""
+
+#. module: to_stock_age_report
+#: model_terms:ir.ui.view,arch_db:to_stock_age_report.search_template_product_filter
+msgid ""
+"<span class=\"fa fa-shopping-cart\" title=\"product\" aria-"
+"label=\"Product\"/> Product"
+msgstr ""
+
+#. module: to_stock_age_report
+#: model_terms:ir.ui.view,arch_db:to_stock_age_report.search_template_multi_company
+#: model_terms:ir.ui.view,arch_db:to_stock_age_report.search_template_product_filter
+#: model_terms:ir.ui.view,arch_db:to_stock_age_report.search_template_warehouse_location
+msgid "All"
+msgstr ""
+
+#. module: to_stock_age_report
+#: model_terms:ir.ui.view,arch_db:to_stock_age_report.search_template_period
+#: model_terms:ir.ui.view,arch_db:to_stock_age_report.search_template_product_filter
+#: model_terms:ir.ui.view,arch_db:to_stock_age_report.search_template_warehouse_location
+msgid "Apply"
+msgstr ""
+
+#. module: to_stock_age_report
+#: code:addons/to_stock_age_report/models/stock_report.py:0
+#, python-format
+msgid "As of %s"
+msgstr ""
+
+#. module: to_stock_age_report
+#. openerp-web
+#: code:addons/to_stock_age_report/static/src/js/stock_age_reports.js:0
+#, python-format
+msgid "Cancel"
+msgstr ""
+
+#. module: to_stock_age_report
+#: model_terms:ir.ui.view,arch_db:to_stock_age_report.main_template
+msgid "Companies:"
+msgstr ""
+
+#. module: to_stock_age_report
+#: code:addons/to_stock_age_report/models/stock_report.py:0
+#, python-format
+msgid "Company:"
+msgstr ""
+
+#. module: to_stock_age_report
+#. openerp-web
+#: code:addons/to_stock_age_report/static/src/js/stock_age_reports.js:0
+#, python-format
+msgid "Date cannot be empty"
+msgstr ""
+
+#. module: to_stock_age_report
+#: model:ir.model.fields,field_description:to_stock_age_report.field_stock_age_report__display_name
+#: model:ir.model.fields,field_description:to_stock_age_report.field_stock_report_abstract__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: to_stock_age_report
+#: code:addons/to_stock_age_report/models/stock_report.py:0
+#, python-format
+msgid "Export (XLSX)"
+msgstr ""
+
+#. module: to_stock_age_report
+#: code:addons/to_stock_age_report/models/stock_report.py:0
+#, python-format
+msgid "From %s <br/> to  %s"
+msgstr ""
+
+#. module: to_stock_age_report
+#: code:addons/to_stock_age_report/models/stock_report.py:0
+#, python-format
+msgid "General Report"
+msgstr ""
+
+#. module: to_stock_age_report
+#: model:ir.model.fields,field_description:to_stock_age_report.field_stock_age_report__id
+#: model:ir.model.fields,field_description:to_stock_age_report.field_stock_report_abstract__id
+msgid "ID"
+msgstr ""
+
+#. module: to_stock_age_report
+#: code:addons/to_stock_age_report/models/stock_report.py:0
+#, python-format
+msgid "Interval Days:"
+msgstr ""
+
+#. module: to_stock_age_report
+#: model:ir.model.fields,field_description:to_stock_age_report.field_stock_age_report____last_update
+#: model:ir.model.fields,field_description:to_stock_age_report.field_stock_report_abstract____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: to_stock_age_report
+#: model_terms:ir.ui.view,arch_db:to_stock_age_report.search_template_warehouse_location
+msgid "Location:"
+msgstr ""
+
+#. module: to_stock_age_report
+#: model_terms:ir.ui.view,arch_db:to_stock_age_report.search_template_period
+msgid "Number of periods:"
+msgstr ""
+
+#. module: to_stock_age_report
+#. openerp-web
+#: code:addons/to_stock_age_report/static/src/js/stock_age_reports.js:0
+#, python-format
+msgid "Odoo Warning"
+msgstr ""
+
+#. module: to_stock_age_report
+#: model_terms:ir.ui.view,arch_db:to_stock_age_report.search_template_period
+msgid "Period Length:"
+msgstr ""
+
+#. module: to_stock_age_report
+#: code:addons/to_stock_age_report/models/stock_report.py:0
+#, python-format
+msgid "Print PDF"
+msgstr ""
+
+#. module: to_stock_age_report
+#: code:addons/to_stock_age_report/models/stock_report.py:0
+#: model_terms:ir.ui.view,arch_db:to_stock_age_report.main_template
+#, python-format
+msgid "Product Category"
+msgstr ""
+
+#. module: to_stock_age_report
+#: model_terms:ir.ui.view,arch_db:to_stock_age_report.search_template_product_filter
+msgid "Product Category:"
+msgstr ""
+
+#. module: to_stock_age_report
+#: code:addons/to_stock_age_report/models/stock_report.py:0
+#: model_terms:ir.ui.view,arch_db:to_stock_age_report.main_template
+#, python-format
+msgid "Product Name"
+msgstr ""
+
+#. module: to_stock_age_report
+#: model_terms:ir.ui.view,arch_db:to_stock_age_report.search_template_product_filter
+msgid "Product:"
+msgstr ""
+
+#. module: to_stock_age_report
+#: code:addons/to_stock_age_report/models/stock_report.py:0
+#: model_terms:ir.ui.view,arch_db:to_stock_age_report.main_template
+#, python-format
+msgid "Q'ty On Hand"
+msgstr ""
+
+#. module: to_stock_age_report
+#. openerp-web
+#: code:addons/to_stock_age_report/static/src/js/stock_age_reports.js:0
+#, python-format
+msgid "Save"
+msgstr ""
+
+#. module: to_stock_age_report
+#: code:addons/to_stock_age_report/models/stock_age_report.py:0
+#: model:ir.actions.client,name:to_stock_age_report.action_stock_age_report
+#: model:ir.model,name:to_stock_age_report.model_stock_age_report
+#: model:ir.ui.menu,name:to_stock_age_report.menu_action_stock_age_report
+#, python-format
+msgid "Stock Age Report"
+msgstr ""
+
+#. module: to_stock_age_report
+#: model:ir.model,name:to_stock_age_report.model_stock_report_abstract
+msgid "Stock Report"
+msgstr ""
+
+#. module: to_stock_age_report
+#: model_terms:ir.ui.view,arch_db:to_stock_age_report.line_template
+msgid "Summary"
+msgstr ""
+
+#. module: to_stock_age_report
+#: code:addons/to_stock_age_report/models/stock_report.py:0
+#: model_terms:ir.ui.view,arch_db:to_stock_age_report.search_template_period
+#, python-format
+msgid "To Date:"
+msgstr ""
+
+#. module: to_stock_age_report
+#: model_terms:ir.ui.view,arch_db:to_stock_age_report.main_template
+msgid "To date:"
+msgstr ""
+
+#. module: to_stock_age_report
+#: code:addons/to_stock_age_report/models/stock_report.py:0
+#: model_terms:ir.ui.view,arch_db:to_stock_age_report.main_template
+#, python-format
+msgid "Valuation"
+msgstr ""
+
+#. module: to_stock_age_report
+#: model_terms:ir.ui.view,arch_db:to_stock_age_report.search_template_warehouse_location
+msgid "Warehouse:"
+msgstr ""

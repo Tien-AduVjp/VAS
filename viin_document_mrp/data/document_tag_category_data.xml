@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+
+    <record id="document_tag_category_mrp" model="document.tag.category">
+        <field name="name">Manufacturing</field>
+    </record>
+
+    <record id="document_tag_category_mrp_mo_status" model="document.tag.category">
+        <field name="name">MO Status</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="crm_lead_view_form" model="ir.ui.view">
+        <field name="name">crm.lead.form</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form" />
+        <field name="arch" type="xml">
+        	<xpath expr="//header/button[@name='toggle_active']" position="before">
+        		<button name="action_tickets_view" string="Create Ticket" type="object" help="Create Ticket"
+        		        attrs="{'invisible': ['|', ('type', '!=', 'opportunity'), ('active', '=', False)]}"
+                        context="{'create_new_ticket': True}"/>
+        		<button name="%(viin_helpdesk_crm.action_lead2ticket)d" string="Convert to Ticket" type="action" help="Convert to Ticket"
+        		        attrs="{'invisible': [('active', '=', False)]}"/>
+            </xpath>
+            <xpath expr="//button[@name='action_schedule_meeting']" position="after">
+            	<button name="action_tickets_view" type="object" class="oe_stat_button" icon="fa-calendar">
+                    <div class="o_stat_info">
+                        <field name="ticket_count" class="o_stat_value"/>
+                        <span class="o_stat_text"> Tickets</span>
+                    </div>
+                </button>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="crm_lead_lead_view_search" model="ir.ui.view">
+        <field name="name">crm.lead.lead.search</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.view_crm_case_leads_filter"/>
+        <field name="arch" type="xml">
+        	<xpath expr="//search/field[@name='team_id']" position="after">
+        		<field name="ticket_ids" string="Ticket" filter_domain="[('ticket_ids', 'ilike', self)]"/>
+        	</xpath>
+        	<xpath expr="//search/filter[@name='inactive']" position="after">
+        		<separator/>
+                <filter name="ftr_ticket_ids" string="Tickets" domain="[('ticket_ids', '!=', False), ('active', '=', False)]"/>
+                <separator/>
+        	</xpath>
+        </field>
+    </record>
+
+    <record id="crm_lead_opportunity_view_search" model="ir.ui.view">
+        <field name="name">crm.lead.opportunity.search</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.view_crm_case_opportunities_filter"/>
+        <field name="arch" type="xml">
+        	<xpath expr="//search/field[@name='team_id']" position="after">
+        		<field name="ticket_ids" string="Ticket" filter_domain="[('ticket_ids', 'ilike', self)]"/>
+        	</xpath>
+        	<xpath expr="//search/filter[@name='inactive']" position="after">
+        		<separator/>
+                <filter name="ftr_ticket_ids" string="Tickets" domain="[('ticket_ids', '!=', False)]"/>
+                <separator/>
+        	</xpath>
+        </field>
+    </record>
+
+    <record id="crm_lead_report_view_search" model="ir.ui.view">
+        <field name="name">crm.lead.report.search</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_opportunity_report_view_search" />
+        <field name="arch" type="xml">
+        	<xpath expr="//search/field[@name='user_id']" position="after">
+        		<field name="ticket_ids" string="Ticket" filter_domain="[('ticket_ids', 'ilike', self)]"/>
+        	</xpath>
+        </field>
+    </record>
+</odoo>

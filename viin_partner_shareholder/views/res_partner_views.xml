@@ -1,0 +1,20 @@
+<odoo>
+	<record id="view_partner_form" model="ir.ui.view">
+		 <field name="name">res.partner.form</field>
+		 <field name="model">res.partner</field>
+		 <field name="inherit_id" ref="base.view_partner_form" />
+		 <field name="arch" type="xml">
+		    	<xpath expr="//page[@name='internal_notes']" position="before">
+		    		<page name="shareholder" string="Shareholders" attrs="{'invisible': [('is_company', '=', False)]}">
+		    			<field name="shareholder_ids">
+		    				<tree string="Shareholders"  editable="bottom">
+		    					<field name="shareholder_id" domain="[('is_company', '=', False)]"/>
+		    					<field name="ownership_rate"/>
+		    					<field name="description"/>
+		    				</tree>
+		    			</field>
+		    		</page>
+		    	</xpath>
+		 </field>
+	</record>
+</odoo>

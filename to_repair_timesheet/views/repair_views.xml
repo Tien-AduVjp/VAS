@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <record id="view_order_form_inherit_repair_timesheet" model="ir.ui.view">
+            <field name="name">repair.form.timesheet</field>
+            <field name="model">repair.order</field>
+            <field name="inherit_id" ref="to_repair_supply.view_repair_order_form"/>
+            <field name="arch" type="xml">
+                <data>
+                   <xpath expr="//button[@name='action_view_delivery']" position="before">
+                       <button type="object"
+                           name="action_view_timesheet"
+                           class="oe_stat_button"
+                           icon="fa-clock-o"
+                           attrs="{'invisible': [('timesheet_count', '=', 0)]}"
+                           groups="hr_timesheet.group_hr_timesheet_user">
+                           <field name="timesheet_count" widget="statinfo" string="Timesheets"/>
+                       </button>
+                    </xpath>
+                    <xpath expr="//button[@name='action_view_delivery']" position="before">
+                       <button type="object"
+                           name="action_view_project_ids"
+                           class="oe_stat_button"
+                           icon="fa-puzzle-piece"
+                           string="Project(s) Overview"
+                           attrs="{'invisible': [('project_ids', '=', [])]}"
+                           groups="project.group_project_user">
+                          <field name="project_ids" invisible="1"/>
+                       </button>
+                    </xpath>
+                    <xpath expr="//button[@name='action_view_delivery']" position="before">
+                       <button type="object"
+                           name="action_view_task"
+                           class="oe_stat_button"
+                           icon="fa-tasks"
+                           attrs="{'invisible': [('tasks_count', '=', 0)]}"
+                           groups="project.group_project_user">
+                           <field name="tasks_count" widget="statinfo" string="Tasks"/>
+                       </button>
+                    </xpath>
+                    <xpath expr="//field[@name='fees_lines']/tree/field[@name='product_uom']" position="after">
+                    	<field name="qty_delivered"/>
+                    	<field name="qty_invoiced"/>
+                    	<field name="qty_to_invoice" invisible="1"/>
+                    </xpath>
+                    <xpath expr="//button[@name='action_created_invoice']" position="replace">
+                    	<button name="action_view_invoice"
+                            type="object"
+                            class="oe_stat_button"
+                            icon="fa-pencil-square-o"
+                            attrs="{'invisible': [('invoice_count', '=', 0)]}">
+                            <field name="invoice_count" widget="statinfo" string="Invoices"/>
+                        </button>
+                    </xpath>
+                    <field name="invoice_method" position="after">
+                    	<field name="invoice_status" invisible="1"/>
+                    	<field name="create_invoice"/>
+                    </field>
+                    <field name="invoice_method" position="attributes">
+                    	<attribute name="invisible">1</attribute>
+                    </field>
+                    <field name="partner_invoice_id" position="attributes">
+                    	<attribute name="attrs">{'invisible':[('create_invoice','=',False)]}</attribute>
+                    </field>
+                    <xpath expr="//button[@name='action_repair_invoice_create']" position="replace">
+	                    <button name="%(action_view_advance_payment_inv)d" string="Create Invoice"
+		                    type="action" class="btn-primary" attrs="{'invisible': [('invoice_status', '!=', 'to invoice')]}"/>
+                    </xpath>
+                </data>
+           </field>
+        </record>
+</odoo>

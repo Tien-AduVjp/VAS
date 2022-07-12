@@ -1,0 +1,26 @@
+<odoo>
+
+    <record id="cost_struct_mrp_production_report_action" model="ir.actions.report">
+	    <field name="name">Cost Analysis</field>
+	    <field name="model">mrp.production</field>
+	    <field name="report_type">qweb-html</field>
+	    <field name="report_name">to_mrp_account.mrp_cost_structure</field>
+	    <field name="report_file">to_mrp_account.mrp_cost_structure</field>
+	    <field name="print_report_name">'Cost Analysis - %s ' % (object.name)</field>
+    </record>
+
+    <record id="mrp_production_form_inherit_view6" model="ir.ui.view">
+        <field name="name">mrp.production.form.inherit</field>
+        <field name="model">mrp.production</field>
+        <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+        <field name="arch" type="xml">
+            <div name="button_box" position="inside">
+                <button name="%(to_mrp_account.cost_struct_mrp_production_report_action)d" type="action"
+                    class="oe_stat_button" icon="fa-circle-o" string="Cost Analysis" attrs="{'invisible': [('state', '!=', 'done')]}">
+                </button>
+                <!-- TODO: Restrict for MRP accounting group -->
+            </div>
+        </field>
+    </record>
+
+</odoo>

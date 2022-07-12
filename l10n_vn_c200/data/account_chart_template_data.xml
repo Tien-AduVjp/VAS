@@ -1,0 +1,15 @@
+<odoo>
+	<record id="l10n_vn.vn_template" model="account.chart.template">
+		<field name="name">VN - Chart of Accounts - Circular No. 200/2014/TT-BTC</field>
+		<field name="circular_code">c200</field>
+		<field name="property_account_expense_categ_id" ref="l10n_vn.chart151" />
+		<field name="property_stock_account_input_categ_id" ref="l10n_vn.chart151" />
+		<field name="property_stock_account_output_categ_id" ref="l10n_vn.chart632" />
+		<field name="property_stock_valuation_account_id" ref="l10n_vn.chart1561" />
+		<field name="property_vat_ctp_account_id" ref="l10n_vn.chart1331" />
+		<field name="default_pos_receivable_account_id" ref="l10n_vn.chart131" />
+		<field name="default_cash_difference_income_account_id" ref="l10n_vn.chart711" />
+		<field name="default_cash_difference_expense_account_id" ref="l10n_vn.chart811" />
+		<field name="default_unemployment_insurance_account_id" ref="l10n_vn.chart3386" />
+	</record>
+</odoo>

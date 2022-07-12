@@ -1,0 +1,79 @@
+<odoo>
+	<record id="employee1_user_demo" model="res.users">
+		<field name="name">Employee User 01</field>
+		<field name="login">employee1_user</field>
+		<field name="email">employee1_user@example.viindoo.com</field>
+		<field name="groups_id" eval="[(6, 0, [ref('base.group_user')])]" />
+	</record>
+
+	<record id="employee2_user_demo" model="res.users">
+		<field name="name">Employee User 02</field>
+		<field name="login">employee2_user</field>
+		<field name="email">employee2_user@example.viindoo.com</field>
+		<field name="groups_id" eval="[(6, 0, [ref('base.group_user')])]" />
+	</record>
+
+	<record id="employee3_user_demo" model="res.users">
+		<field name="name">Employee User 03</field>
+		<field name="login">employee3_user</field>
+		<field name="email">employee3_user@example.viindoo.com</field>
+		<field name="groups_id" eval="[(6, 0, [ref('base.group_user')])]" />
+	</record>
+
+	<record id="team_leader_user_01_demo" model="res.users">
+		<field name="name">Approval Teamleader 01</field>
+		<field name="login">approval_team_leader_01</field>
+		<field name="email">approval_team_leader_01@example.viindoo.com</field>
+		<field name="groups_id" eval="[(6, 0, [ref('to_approvals.group_approval_team_leader')])]" />
+	</record>
+
+	<record id="team_leader_user_02_demo" model="res.users">
+		<field name="name">Approval Teamleader 02</field>
+		<field name="login">team_leader_user_02</field>
+		<field name="email">approval_team_leader_02@example.viindoo.com</field>
+		<field name="groups_id" eval="[(6, 0, [ref('to_approvals.group_approval_team_leader')])]" />
+	</record>
+
+	<record id="department_manager_user_01_demo" model="res.users">
+		<field name="name">Approval department manager 01</field>
+		<field name="login">department_manager_01</field>
+		<field name="email">department_manager_01@example.viindoo.com</field>
+		<field name="groups_id" eval="[(6, 0, [ref('base.group_user')])]" />
+	</record>
+
+	<record id="parent_department_manager_user_01_demo"
+		model="res.users">
+		<field name="name">Approval parent department manager 01</field>
+		<field name="login">parent_department_manager_01</field>
+		<field name="email">parent_department_manager_01@example.viindoo.com</field>
+		<field name="groups_id" eval="[(6, 0, [ref('base.group_user')])]" />
+	</record>
+
+	<record id="approval_officer_user_demo" model="res.users">
+		<field name="name">Approval Officer</field>
+		<field name="login">team_leader</field>
+		<field name="email">team_leader@example.viindoo.com</field>
+		<field name="groups_id" eval="[(6, 0, [ref('to_approvals.group_approval_officer')])]" />
+	</record>
+
+	<record id="approval_officer_user_01_demo" model="res.users">
+		<field name="name">Approval Officer 01</field>
+		<field name="login">approval_officer_01</field>
+		<field name="email">approval_officer_01@example.viindoo.com</field>
+		<field name="groups_id" eval="[(6, 0, [ref('to_approvals.group_approval_officer')])]" />
+	</record>
+
+	<record id="approval_officer_user_02_demo" model="res.users">
+		<field name="name">Approval Officer 02</field>
+		<field name="login">approval_officer_02</field>
+		<field name="email">approval_officer_02@example.viindoo.com</field>
+		<field name="groups_id" eval="[(6, 0, [ref('to_approvals.group_approval_officer')])]" />
+	</record>
+
+	<record id="approval_officer_user_03_demo" model="res.users">
+		<field name="name">Approval Officer 03</field>
+		<field name="login">approval_officer_03</field>
+		<field name="email">approval_officer_03@example.viindoo.com</field>
+		<field name="groups_id" eval="[(6, 0, [ref('to_approvals.group_approval_officer')])]" />
+	</record>
+</odoo>

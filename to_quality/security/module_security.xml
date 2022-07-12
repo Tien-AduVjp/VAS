@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<!-- Quality category -->
+		<record model="ir.module.category" id="base.module_category_operations_quality_control">
+			<field name="name">Quality</field>
+			<field name="sequence">5</field>
+			<field name="description">Manage your quality alerts and quality checks.</field>
+		</record>
+
+		<record id="group_quality_user" model="res.groups">
+			<field name="name">User</field>
+			<field name="category_id" ref="base.module_category_operations_quality_control" />
+			<field name="implied_ids" eval="[(4, ref('base.group_user'))]" />
+			<field name="comment">Use the quality process</field>
+		</record>
+
+		<record id="group_quality_manager" model="res.groups">
+			<field name="name">Administrator</field>
+			<field name="category_id" ref="base.module_category_operations_quality_control" />
+			<field name="implied_ids"
+				eval="[(4, ref('to_quality.group_quality_user'))]" />
+			<field name="users"
+				eval="[(4, ref('base.user_root')),(4, ref('base.user_admin'))]" />
+			<field name="comment">Manage the quality process</field>
+		</record>
+	</data>
+
+	<!-- Rules -->
+	<data>
+
+        <!-- Internal User -->
+        <record id="quality_check_rule_base_read" model="ir.rule">
+            <field name="name">Quality Check: Internal users see own assigned or followed</field>
+            <field name="model_id" ref="model_quality_check"/>
+            <field name="domain_force">[
+                '|',
+                ('user_id', '=', user.id),
+                ('message_partner_ids', 'in', [user.partner_id.id]),
+            ]</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="0"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <record id="quality_check_rule_base_write" model="ir.rule">
+            <field name="name">Quality Check: Internal users can edit own assigned</field>
+            <field name="model_id" ref="model_quality_check"/>
+            <field name="domain_force">[
+                ('user_id', '=', user.id),
+            ]</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+            <field name="perm_read" eval="0"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <record id="quality_alert_rule_base" model="ir.rule">
+            <field name="name">Quality Alert: Internal users see own assigned or followed</field>
+            <field name="model_id" ref="model_quality_alert"/>
+            <field name="domain_force">[
+                '|',
+                ('user_id', '=', user.id),
+                ('message_partner_ids', 'in', [user.partner_id.id]),
+            ]</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="0"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <record id="quality_alert_corrective_action_rule_base" model="ir.rule">
+            <field name="name">Quality Alert Corrective Action: Internal users see own assigned or followed</field>
+            <field name="model_id" ref="model_quality_alert_corrective_action"/>
+            <field name="domain_force">[
+                '|',
+                ('user_id', '=', user.id),
+                ('message_partner_ids', 'in', [user.partner_id.id]),
+            ]</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="0"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <record id="quality_alert_preventive_action_rule_base" model="ir.rule">
+            <field name="name">Quality Alert Preventive Action: Internal users see own assigned or followed</field>
+            <field name="model_id" ref="model_quality_alert_preventive_action"/>
+            <field name="domain_force">[
+                '|',
+                ('user_id', '=', user.id),
+                ('message_partner_ids', 'in', [user.partner_id.id]),
+            ]</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="0"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <!-- Quality User -->
+        <record id="quality_check_rule_user" model="ir.rule">
+            <field name="name">Quality Check: Quality Users access all</field>
+            <field name="model_id" ref="model_quality_check"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('group_quality_user'))]"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+
+        <record id="quality_alert_rule_user" model="ir.rule">
+            <field name="name">Quality Alert: Quality Users access all</field>
+            <field name="model_id" ref="model_quality_alert"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('group_quality_user'))]"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+
+        <record id="quality_alert_corrective_action_rule_user" model="ir.rule">
+            <field name="name">Quality Alert Corrective Action: Quality Users access all</field>
+            <field name="model_id" ref="model_quality_alert_corrective_action"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('group_quality_user'))]"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+
+        <record id="quality_alert_preventive_action_rule_user" model="ir.rule">
+            <field name="name">Quality Alert Preventive Action: Quality Users access all</field>
+            <field name="model_id" ref="model_quality_alert_preventive_action"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('group_quality_user'))]"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+
+        <!-- Multi-companies rules -->
+		<record id="quality_alert_comp_rule" model="ir.rule">
+			<field name="name">Quality alert multi-company rule</field>
+			<field name="model_id" ref="model_quality_alert" />
+			<field name="global" eval="True" />
+			<field name="domain_force">['|',('company_id','=',False),('company_id','in',company_ids)]
+			</field>
+		</record>
+
+		<record id="quality_check_comp_rule" model="ir.rule">
+			<field name="name">Quality check multi-company rule</field>
+			<field name="model_id" ref="model_quality_check" />
+			<field name="global" eval="True" />
+			<field name="domain_force">['|',('company_id','=',False),('company_id','in',company_ids)]
+			</field>
+		</record>
+
+		<record id="control_point_comp_rule" model="ir.rule">
+			<field name="name">Control point multi-company rule</field>
+			<field name="model_id" ref="model_quality_point" />
+			<field name="global" eval="True" />
+			<field name="domain_force">['|',('company_id','=',False),('company_id','in',company_ids)]
+			</field>
+		</record>
+
+		<record id="quality_team_comp_rule" model="ir.rule">
+			<field name="name">Quality Team multi-company rule</field>
+			<field name="model_id" ref="model_quality_alert_team" />
+			<field name="domain_force">['|',('company_id','=',False),('company_id','in',company_ids)]
+			</field>
+		</record>
+	</data>
+</odoo>

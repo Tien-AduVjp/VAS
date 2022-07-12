@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="report_payslip"
+		inherit_id="to_hr_payroll.report_payslip">
+		<xpath expr="//table[@name='tbl_work_calendar']"
+			position="after">
+			<h3>Attendance Report</h3>
+			<table name="tbl_overtime_plan_lines"
+				class="table table-sm table-bordered">
+				<thead>
+					<tr>
+						<th class="text-right">#</th>
+						<th class="text-right">Attendance Number</th>
+						<th class="text-right">Total Attendance Hours</th>
+						<th class="text-right">Late Coming Hours</th>
+						<th class="text-right">Early Leave Hours</th>
+						<th class="text-right">Valid Attendance Hours</th>
+						<th class="text-right">Late Comings</th>
+						<th class="text-right">Early Leaves</th>
+						<th class="text-right">Missing Check-outs</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr t-foreach="o.working_month_calendar_ids" t-as="line">
+						<td class="text-right">
+							<span t-field="line.month" />
+						</td>
+						<td class="text-right">
+							<span t-field="line.attendance_count" />
+						</td>
+						<td class="text-right">
+							<span t-field="line.total_attendance_hours"
+								t-options="{'widget':'float_time'}" />
+						</td>
+						<td class="text-right">
+							<span t-field="line.late_attendance_hours"
+								t-options="{'widget':'float_time'}" />
+						</td>
+						<td class="text-right">
+							<span t-field="line.early_leave_hours"
+								t-options="{'widget':'float_time'}" />
+						</td>
+						<td class="text-right">
+							<span t-field="line.valid_attendance_hours"
+								t-options="{'widget':'float_time'}" />
+						</td>
+						<td class="text-right">
+							<span t-field="line.late_attendance_count" />
+						</td>
+						<td class="text-right">
+							<span t-field="line.early_leave_count" />
+						</td>
+						<td class="text-right">
+							<span t-field="line.missing_checkout_count" />
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</xpath>
+
+	</template>
+</odoo>

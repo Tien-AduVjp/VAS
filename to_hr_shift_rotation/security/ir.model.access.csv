@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_shift_scheduling_line_employee,shift.scheduling.line.employee,model_shift_scheduling_line,base.group_user,1,0,0,0
+access_shift_rotation_rule_employee,shift.rotation.rule.employee,model_shift_rotation_rule,base.group_user,1,0,0,0
+access_shift_rotation_rule_line_employee,shift.rotation.rule.line.employee,model_shift_rotation_rule_line,base.group_user,1,0,0,0
+access_shift_scheduling_line_hr_user,shift.scheduling.line.hr_user,model_shift_scheduling_line,hr.group_hr_user,1,1,1,1
+access_shift_rotation_rule_hr_user,shift.rotation.rule.hr_user,model_shift_rotation_rule,hr.group_hr_user,1,0,0,0
+access_shift_rotation_rule_line_hr_user,shift.rotation.rule.line.hr_user,model_shift_rotation_rule_line,hr.group_hr_user,1,0,0,0
+access_shift_rotation_rule_employee,shift.rotation.rule.employee,model_shift_rotation_rule,hr.group_hr_manager,1,1,1,1
+access_shift_rotation_rule_line_employee,shift.rotation.rule.line.employee,model_shift_rotation_rule_line,hr.group_hr_manager,1,1,1,1

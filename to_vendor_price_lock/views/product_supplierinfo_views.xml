@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="product_supplierinfo_form_view" model="ir.ui.view">
+			<field name="name">product.supplierinfo.form.view</field>
+			<field name="model">product.supplierinfo</field>
+			<field name="inherit_id" ref="product.product_supplierinfo_form_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//form" position="replace">
+					<form string="Vendor Information">
+						<header>
+							<button name="action_lock" type="object" string="Lock"
+								attrs="{'invisible': [('state','=','locked')]}" class="oe_highlight"
+								groups="purchase.group_purchase_manager" />
+							<button name="action_unlock" type="object" string="Unlock"
+								attrs="{'invisible': [('state','=','confirmed')]}" class="oe_highlight"
+								groups="purchase.group_purchase_manager" />
+							<field name="state" widget="statusbar" statusbar_visible="locked,confirmed" readonly="1"/>
+						</header>
+						<sheet>
+							<group>
+								<group string="Vendor">
+									<field name="name"
+										context="{'default_customer': 0, 'search_default_supplier': 1, 'default_supplier': 1}" />
+									<field name="product_name" />
+									<field name="product_code" />
+									<field name="product_id" domain="[('product_tmpl_id', '=', product_tmpl_id)]"
+										invisible="1" />
+									<label for="delay" />
+									<div>
+										<field name="delay" class="oe_inline" />
+										days
+									</div>
+								</group>
+								<group string="Price List">
+									<field name="product_tmpl_id" string="Product"
+										invisible="context.get('visible_product_tmpl_id', True)" />
+									<label for="min_qty" />
+									<div>
+										<field name="min_qty" class="oe_inline" />
+										<field name="product_uom" class="oe_inline" groups="uom.group_uom" />
+									</div>
+									<label for="price" />
+									<div>
+										<field name="price" class="oe_inline" />
+										<field name="currency_id" class="oe_inline"
+											groups="base.group_multi_currency" />
+									</div>
+									<label for="date_start" string="Validity" />
+									<div>
+										<field name="date_start" class="oe_inline" />
+										to
+										<field name="date_end" class="oe_inline" />
+									</div>
+								</group>
+								<group string="Other Information" groups="base.group_multi_company">
+									<field name="company_id" options="{'no_create': True}" />
+								</group>
+							</group>
+						</sheet>
+						<div class="oe_chatter">
+							<field name="message_follower_ids"   />
+							<field name="activity_ids" />
+							<field name="message_ids"  />
+						</div>
+					</form>
+				</xpath>
+			</field>
+		</record>
+
+		<record id="product_supplierinfo_tree_view" model="ir.ui.view">
+			<field name="name">product.supplierinfo.tree.view</field>
+			<field name="model">product.supplierinfo</field>
+			<field name="inherit_id" ref="product.product_supplierinfo_tree_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='date_end']" position="after">
+					<field name='state' />
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

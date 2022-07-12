@@ -1,0 +1,42 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_vn_edi_summary
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-14 06:14+0000\n"
+"PO-Revision-Date: 2022-04-14 06:14+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_vn_edi_summary
+#: code:addons/l10n_vn_edi_summary/models/invoice_line_summary.py:0
+#, python-format
+msgid "All the invoice lines must belong to the same invoice."
+msgstr ""
+
+#. module: l10n_vn_edi_summary
+#: model:ir.model.fields,field_description:l10n_vn_edi_summary.field_invoice_line_summary__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: l10n_vn_edi_summary
+#: model:ir.model.fields,field_description:l10n_vn_edi_summary.field_invoice_line_summary__id
+msgid "ID"
+msgstr ""
+
+#. module: l10n_vn_edi_summary
+#: model:ir.model,name:l10n_vn_edi_summary.model_invoice_line_summary
+msgid "Invoice Lines Summary"
+msgstr ""
+
+#. module: l10n_vn_edi_summary
+#: model:ir.model.fields,field_description:l10n_vn_edi_summary.field_invoice_line_summary____last_update
+msgid "Last Modified on"
+msgstr ""

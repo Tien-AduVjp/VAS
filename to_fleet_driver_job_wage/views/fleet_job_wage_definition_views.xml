@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="job_wage_definition_form">
+			<field name="name">fleet.job.wage.definition.form</field>
+			<field name="model">fleet.job.wage.definition</field>
+			<field name="arch" type="xml">
+				<form string="Fleet Job Wage Definition">
+					<sheet>
+						<group>
+							<group>
+								<field name="vehicle_id" />
+								<field name="route_id" />
+								<field name="fleet_service_type_id" />
+							</group>
+							<group>
+								<field name="consumption" />
+								<field name="allowance" />
+							</group>
+						</group>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids"/>
+						<field name="message_ids"/>
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="job_wage_definition_tree">
+			<field name="name">fleet.job.wage.definition.tree</field>
+			<field name="model">fleet.job.wage.definition</field>
+			<field name="arch" type="xml">
+				<tree string="Fleet Job Wage Definitions">
+					<field name="vehicle_id" />
+					<field name="route_id" />
+					<field name="consumption" />
+					<field name="allowance" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window"
+			id="job_wage_definition_action">
+			<field name="name">Job Wage Definition</field>
+			<field name="res_model">fleet.job.wage.definition</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help">Job Wage Definition is a rule for you set a fix
+				wage for a trip of a specific vehicle on a specific route with a
+				given fuel consumption. For example, US$500 could be a Job Wage for
+				a trip from A to B using the vehicle X with estimated diesel
+				consumption of 100 liters
+			</field>
+		</record>
+
+
+		<menuitem id="job_wage_definition"
+			name="Job Wage Definitions" parent="fleet1_main"
+			action="job_wage_definition_action" />
+	</data>
+</odoo>

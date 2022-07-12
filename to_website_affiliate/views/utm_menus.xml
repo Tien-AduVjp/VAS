@@ -1,0 +1,5 @@
+<odoo>
+    <menuitem id="menu_utm_affiliate" name="UTMs" parent="to_affiliate.menu_affiliate_config"/>
+    <menuitem id="menu_utm_source_affiliate" action="utm.utm_source_action" parent="menu_utm_affiliate" />
+    <menuitem id="menu_utm_medium_affiliate" action="utm.utm_medium_action" parent="menu_utm_affiliate" />
+</odoo>

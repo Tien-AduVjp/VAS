@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<template id="vn_einvoice_templates">
+			<inv:invoice xmlns:inv="http://laphoadon.gdt.gov.vn/2014/09/invoicexml/v1"
+						 xmlns:ns1="http://www.w3.org/2000/09/xmldsig#">
+				<inv:invoiceData id="data">
+					<inv:invoiceAppRecordId t-esc="invoice.access_token"/>
+					<inv:invoiceType t-esc="invoice._get_account_einvoice_type_name()"/>
+					<inv:templateCode t-esc="invoice._get_einvoice_template_name()"/>
+					<inv:invoiceSeries t-esc="invoice._get_account_einvoice_serial_name()"/>
+					<inv:invoiceNumber t-esc="invoice.name"/>
+					<inv:invoiceName t-esc="invoice.name"/>
+					<inv:invoiceIssuedDate t-esc="invoice._get_einvoice_date().strftime('%Y-%m-%dT%H:%M:%S.%f%z')"/>
+					<inv:currencyCode t-esc="invoice.currency_id.name"/>
+					<inv:exchangeRate t-esc="exchangeRate"/>
+					<inv:adjustmentType>1</inv:adjustmentType>
+					<inv:sellerLegalName t-esc="invoice._prepare_einvoice_seller_legal_name()"/>
+					<inv:sellerTaxCode t-esc="company.vat or ''"/>
+					<inv:sellerAddressLine t-esc="company.partner_id._einvoice_display_address()"/>
+					<inv:sellerEmail t-esc="company.email and company.email.strip() or ''"/>
+					<inv:sellerPhoneNumber t-esc="company.phone or ''"/>
+					<inv:sellerBankAccName/>
+					<inv:sellerBankName/>
+					<inv:sellerBankAccount/>
+					<inv:sellerContactPersonName/>
+					<inv:sellerSignedPersonName/>
+					<inv:sellerSubmittedPersonName/>
+					<inv:buyerDisplayName t-esc="partner.name or ''"/>
+					<inv:buyerLegalName t-esc="partner.name"/>
+					<inv:buyerTaxCode t-esc="partner.vat or ''"/>
+					<inv:BuyerCode/>
+					<inv:buyerAddressLine t-esc="invoice._get_cusomter_invoice_address()._einvoice_display_address()"/>
+					<inv:buyerPhoneNumber t-esc="invoice.commercial_partner_id.phone and invoice._phone_format(invoice.commercial_partner_id.phone) or ''"/>
+					<inv:buyerEmail t-esc="invoice.commercial_partner_id.email or ''"/>
+					<inv:buyerBankName/>
+					<inv:buyerBankAccount/>
+					<inv:payments>
+						<inv:payment>
+							<inv:paymentMethodName>TM/CK</inv:paymentMethodName>
+							<inv:paymentNote/>
+						</inv:payment>
+					</inv:payments>
+					<inv:items>
+						<t t-call="l10n_vn_edi.vn_einvoice_invoice_lines"
+						   t-foreach="invoice_lines"
+						   t-as="item"/>
+					</inv:items>
+					<inv:invoiceTaxBreakdowns>
+						<t t-call="l10n_vn_edi.vn_einvoice_tax_lines"
+						   t-foreach="tax_lines"
+						   t-as="tax_line"/>
+					</inv:invoiceTaxBreakdowns>
+					<inv:totalAmountWithoutVAT t-esc="invoice.amount_untaxed"/>
+					<inv:totalVATAmount t-esc="invoice.amount_tax"/>
+					<inv:totalAmountWithVAT t-esc="invoice.amount_total"/>
+					<inv:totalAmountWithVATFrn>0</inv:totalAmountWithVATFrn>
+					<inv:totalAmountWithVATInWords t-esc="invoice.total_in_word"/>
+				</inv:invoiceData>
+
+<!--				TO DO: need to improve e-signature-->
+				<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+					<SignedInfo>
+						<CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+						<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+						<Reference URI="#data">
+							<Transforms>
+								<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+								<Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+							</Transforms>
+							<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+							<DigestValue/>
+						</Reference>
+					</SignedInfo>
+					<SignatureValue/>
+					<KeyInfo>
+						<X509Data>
+							<X509SubjectName/>
+							<X509Certificate/>
+						</X509Data>
+					</KeyInfo>
+				</Signature>
+			</inv:invoice>
+		</template>
+
+		<template id="vn_einvoice_invoice_lines">
+			<inv:invoice xmlns:inv="http://laphoadon.gdt.gov.vn/2014/09/invoicexml/v1"
+						 xmlns:ns1="http://www.w3.org/2000/09/xmldsig#">
+				<inv:item>
+					<inv:lineNumber t-esc="item['lineNumber']"/>
+					<inv:itemName t-esc="item['itemName']"/>
+					<inv:selection t-esc="item['selection']"/>
+					<t t-if="item['selection'] != 2">
+						<inv:itemCode t-esc="item['itemCode']"/>
+						<inv:unitName t-esc="item['unitName']"/>
+						<inv:unitPrice t-esc="item['unitPrice']"/>
+						<inv:quantity t-esc="item['quantity']"/>
+						<inv:itemTotalAmountWithoutVat t-esc="item['itemTotalAmountWithoutVat']"/>
+						<inv:itemTotalAmountWithVat t-esc="item['itemTotalAmountWithVat']"/>
+						<inv:vatPercentage t-esc="item['vatPercentage']"/>
+						<inv:vatAmount t-esc="item['vatAmount']"/>
+					</t>
+				</inv:item>
+			</inv:invoice>
+		</template>
+
+		<template id="vn_einvoice_tax_lines">
+			<inv:invoice xmlns:inv="http://laphoadon.gdt.gov.vn/2014/09/invoicexml/v1"
+						 xmlns:ns1="http://www.w3.org/2000/09/xmldsig#">
+				<inv:invoiceTaxBreakdown>
+					<inv:vatPercentage t-esc="tax_line['vatPercentage']"/>
+					<inv:vatTaxableAmount t-esc="tax_line['vatTaxableAmount']"/>
+					<inv:vatTaxAmount t-esc="tax_line['vatTaxAmount']"/>
+				</inv:invoiceTaxBreakdown>
+			</inv:invoice>
+		</template>
+	</data>
+</odoo>

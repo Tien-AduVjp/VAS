@@ -1,0 +1,2072 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_hr_overtime
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-30 01:23+0000\n"
+"PO-Revision-Date: 2021-10-30 01:23+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/report/hr_employee_overtime.py:0
+#, python-format
+msgid "%s from %s to %s"
+msgstr "%s từ %s đến %s"
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.res_config_settings_view_form
+msgid ""
+"<span class=\"o_form_label\">Overtime Recognition Mode</span>\n"
+"\t\t\t\t\t\t\t\t\t<span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-specific.\" aria-label=\"Values set here are company-specific.\" groups=\"base.group_multi_company\" role=\"img\"/>"
+msgstr ""
+"<span class=\"o_form_label\">Chế độ nhận diện tăng ca</span>\n"
+"\t\t\t\t\t\t\t\t\t<span class=\"fa fa-lg fa-building-o\" title=\"Giá trị thiết lập ở đây mang đặc trưng công ty.\" aria-label=\"Giá trị thiết lập ở đây mang đặc trưng công ty.\" groups=\"base.group_multi_company\" role=\"img\"/>"
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.hr_contract_view_form
+msgid "<span>/ month</span>"
+msgstr "<span>/ Tháng</span>"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_plan_line__global_leave_id
+msgid ""
+"A global leave specified on the corresponding Working Schedule that matches "
+"this plan line."
+msgstr ""
+"Nghỉ toàn cục được thiết lập ở Lịch làm việc tương ứng mà khớp với dòng kế "
+"hoạch này."
+
+#. module: viin_hr_overtime
+#: model:ir.model,name:viin_hr_overtime.model_abstract_overtime_plan_line_match
+msgid "Abstract Overtime Plan Line Match"
+msgstr ""
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__message_needaction
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule__message_needaction
+msgid "Action Needed"
+msgstr "Cần có Hành động"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_reason__active
+msgid "Active"
+msgstr "Hiệu lực"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__activity_ids
+msgid "Activities"
+msgstr "Hoạt động"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__activity_state
+msgid "Activity State"
+msgstr "Trạng thái hoạt động"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Biểu tượng kiểu hoạt động"
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_overtime_plan_form
+msgid "Actual"
+msgstr "Thực tế"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee_overtime__actual_hours
+msgid "Actual Hours"
+msgstr "Số Giờ Thực tế"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__actual_hours
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan_line__actual_hours
+msgid "Actual Overtime Hours"
+msgstr "Số Giờ Tăng ca Thực tế"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee_overtime__actual_overtime_pay
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__actual_overtime_pay
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan_line__actual_overtime_pay
+msgid "Actual Overtime Pay"
+msgstr "Tiền Tăng ca Thực tế"
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_overtime_plan_form
+msgid "Actual Pay"
+msgstr "Tiền tăng ca Thực tế"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_abstract_overtime_plan_line_match__unmatched_hours
+msgid "Actual worked hours that did NOT match the planned."
+msgstr "Số giờ làm việc thực tế mà KHÔNG khớp với kế hoạch."
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_abstract_overtime_plan_line_match__matched_hours
+msgid "Actual worked hours that match the planned."
+msgstr "Số giờ làm việc thực tế mà khớp với kế hoạch."
+
+#. module: viin_hr_overtime
+#: model:res.groups,name:viin_hr_overtime.group_overtime_admin
+msgid "Administrator"
+msgstr "Quản trị viên"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__message_attachment_count
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule__message_attachment_count
+msgid "Attachment Count"
+msgstr "SL Đính kèm"
+
+#. module: viin_hr_overtime
+#: model:ir.model,name:viin_hr_overtime.model_hr_employee_base
+msgid "Basic Employee"
+msgstr "Người dùng cơ bản"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields.selection,name:viin_hr_overtime.selection__hr_contract__overtime_base_mode__wage
+msgid "Basic Wage"
+msgstr "Lương Cơ bản"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields.selection,name:viin_hr_overtime.selection__hr_overtime_request_mass__mode__company
+msgid "By Company"
+msgstr "Theo Công ty"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields.selection,name:viin_hr_overtime.selection__hr_overtime_request_mass__mode__department
+msgid "By Department"
+msgstr "Theo Phòng ban"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields.selection,name:viin_hr_overtime.selection__hr_overtime_request_mass__mode__employee
+msgid "By Employee"
+msgstr "Theo Nhân viên"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields.selection,name:viin_hr_overtime.selection__hr_contract__overtime_recognition_mode__none
+#: model:ir.model.fields.selection,name:viin_hr_overtime.selection__hr_employee_overtime__recognition_mode__none
+#: model:ir.model.fields.selection,name:viin_hr_overtime.selection__hr_overtime_plan__recognition_mode__none
+#: model:ir.model.fields.selection,name:viin_hr_overtime.selection__hr_overtime_plan_line__recognition_mode__none
+#: model:ir.model.fields.selection,name:viin_hr_overtime.selection__hr_overtime_reason__recognition_mode__none
+#: model:ir.model.fields.selection,name:viin_hr_overtime.selection__res_company__overtime_recognition_mode__none
+msgid "By Plan"
+msgstr "Theo Kế hoạch"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__can_recognize
+msgid "Can Recognize"
+msgstr "Có thể Nhận diện"
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_overtime_request_mass_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule__code
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule_code__name
+msgid "Code"
+msgstr "Mã"
+
+#. module: viin_hr_overtime
+#: model:ir.model,name:viin_hr_overtime.model_res_company
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_request_mass__company_ids
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee_overtime__company_id
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__company_id
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_reason__company_id
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule__company_id
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_employee_overtime_search
+msgid "Company"
+msgstr "Công ty"
+
+#. module: viin_hr_overtime
+#: model:ir.model,name:viin_hr_overtime.model_res_config_settings
+msgid "Config Settings"
+msgstr "Thiết lập Cấu hình"
+
+#. module: viin_hr_overtime
+#: model:ir.ui.menu,name:viin_hr_overtime.hr_overtime_config_menu
+msgid "Configuration"
+msgstr "Cấu hình"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_contract__mismatched_overtime_plan_ids
+msgid ""
+"Contains the overtime plans that have date range outside the current "
+"contract."
+msgstr ""
+"Chứa các kế hoạch làm ngoài giờ mà có phạm vi thời gian nằm ngoài thời hạn "
+"hiệu lực hợp đồng."
+
+#. module: viin_hr_overtime
+#: model:ir.model,name:viin_hr_overtime.model_hr_contract
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee_overtime__contract_id
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan_line__contract_id
+msgid "Contract"
+msgstr "Hợp đồng"
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_overtime_plan_search
+msgid "Contract Mismatch"
+msgstr "Không khớp hợp đồng"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_plan_line__currency_id
+msgid "Contract's currency"
+msgstr "Tiền tệ Hợp đồng"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__contract_ids
+msgid "Contracts"
+msgstr "Hợp đồng"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee_overtime__contracts_count
+msgid "Contracts Count"
+msgstr "SL Hợp đồng"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__create_uid
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan_line__create_uid
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_reason__create_uid
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_request_mass__create_uid
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_request_mass_line__create_uid
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule__create_uid
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule_code__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__create_date
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan_line__create_date
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_reason__create_date
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_request_mass__create_date
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_request_mass_line__create_date
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule__create_date
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule_code__create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee_overtime__currency_id
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__currency_id
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan_line__currency_id
+msgid "Currency"
+msgstr "Tiền tệ"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan_line__currency_rate
+msgid "Currency Rate"
+msgstr "Tỷ giá"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__date
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_request_mass_line__date
+msgid "Date"
+msgstr "Ngày"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule__weekday
+msgid "Day of Week"
+msgstr "Ngày trong tuần"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee_overtime__department_id
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_employee_overtime_search
+msgid "Department"
+msgstr "Phòng Ban"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_request_mass__department_ids
+msgid "Departments"
+msgstr "Phòng ban"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_reason__description
+msgid "Description"
+msgstr "Mô tả"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_abstract_overtime_plan_line_match__display_name
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_contract__display_name
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee_base__display_name
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee_overtime__display_name
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__display_name
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan_line__display_name
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_reason__display_name
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_request_mass__display_name
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_request_mass_line__display_name
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule__display_name
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule_code__display_name
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_res_company__display_name
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_resource_calendar__display_name
+msgid "Display Name"
+msgstr "Tên Hiển thị"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/hr_overtime_plan.py:0
+#, python-format
+msgid "Duplicating an overtime plan is not allowed."
+msgstr "Nhân bản một kế hoạch tăng ca thì không được phép."
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/hr_overtime_plan_line.py:0
+#, python-format
+msgid "Duplicating an overtime plan line is not allowed."
+msgstr "Nhân bản một dòng kế hoạch tăng ca thì không được phép."
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.res_config_settings_view_form
+msgid "Either manual or automatic actual overtime recognition"
+msgstr "Chế độ nhận diện giờ tăng ca tự động hoặc thủ công"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee_overtime__employee_id
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__employee_id
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan_line__employee_id
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_employee_overtime_search
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_overtime_plan_line_search
+msgid "Employee"
+msgstr "Nhân viên"
+
+#. module: viin_hr_overtime
+#: model:ir.model,name:viin_hr_overtime.model_hr_employee_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_employee_overtime_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_employee_overtime_tree
+msgid "Employee Overtime"
+msgstr "Tăng ca Nhân viên"
+
+#. module: viin_hr_overtime
+#: model:ir.actions.act_window,name:viin_hr_overtime.action_hr_employee_overtime_report
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_employee_overtime_graph
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_employee_overtime_pivot
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_employee_overtime_search
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_overtime_plan_line_pivot
+msgid "Employee Overtime Analysis"
+msgstr "Phân tích Tăng ca Nhân viên"
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_overtime_plan_line_search
+msgid "Employee Overtime Plan Line"
+msgstr "Dòng kế hoạch tăng ca nhân viên"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_request_mass__employee_ids
+msgid "Employees"
+msgstr "Nhân viên"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee_overtime__employees_count
+msgid "Employees Count"
+msgstr "SL Nhân viên"
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.res_config_settings_view_form
+msgid ""
+"Enable you to get your employee's overtime recognized by attendance data "
+"that matches overtime plan."
+msgstr ""
+"Cho phép nhận diện tự động giờ tăng ca thực tế dựa trên dữ liệu vào/ra mà "
+"khớp với kế hoạch tăng ca."
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.res_config_settings_view_form
+msgid ""
+"Enable you to get your employee's overtime recognized by timesheet entries "
+"that matches overtime plan."
+msgstr ""
+"Cho phép bạn nhận diện từ động giờ làm việc ngoài giờ thực tế dựa trên dữ "
+"liệu chấm công mà khớp với kế hoạch tăng ca."
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.res_config_settings_view_form
+msgid "Enable you to get your overtime plans approved by authorized persons"
+msgstr ""
+"Kích hoạt quy trình phê duyệt các kế hoạch tăng ca bởi người có thẩm quyền"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_abstract_overtime_plan_line_match__date_end
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee_overtime__date_end
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__date_end
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan_line__date_end
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_employee_overtime_search
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_overtime_plan_line_search
+msgid "End Date"
+msgstr "Ngày Kết thúc"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__time_end
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_request_mass_line__time_end
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule__hour_to
+msgid "End Time"
+msgstr "Giờ Kết thúc"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_rule__hour_to
+msgid "End time of overtime working"
+msgstr "Giờ kết thúc thời gian làm việc tăng ca"
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_employee_overtime_search
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_overtime_plan_line_search
+msgid "Extended Filters"
+msgstr "Bộ lọc mở rộng"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan_line__extra_pay
+msgid "Extra Pay"
+msgstr "Chi trả bổ sung"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__message_follower_ids
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule__message_follower_ids
+msgid "Followers"
+msgstr "Đối tượng theo dõi"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__message_channel_ids
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Người theo dõi (Kênh)"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__message_partner_ids
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Người theo dõi (Đối tác)"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_plan__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__recognition_mode
+msgid "Force Recognition Mode"
+msgstr "Cưỡng bức chế độ nhận diện"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields.selection,name:viin_hr_overtime.selection__hr_overtime_rule__weekday__4
+msgid "Friday"
+msgstr "Thứ Sáu"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Friday Daytime"
+msgstr "Thứ Sáu (ban ngày)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Friday Early Morning"
+msgstr "Thứ Sáu (sáng sớm)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Friday Evening"
+msgstr "Thứ Sáu (tối)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Friday Night"
+msgstr "Thứ Sáu (đêm)"
+
+#. module: viin_hr_overtime
+#: model:hr.overtime.reason,name:viin_hr_overtime.hr_overtime_reason_general
+msgid "General"
+msgstr "Chung chung"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan_line__global_leave_id
+msgid "Global/Holiday Leave"
+msgstr "Nghỉ toàn cục/Nghỉ lễ"
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_employee_overtime_search
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_overtime_plan_line_search
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: viin_hr_overtime
+#: model:ir.model,name:viin_hr_overtime.model_hr_overtime_request_mass_line
+msgid "HR Overtime Request Mass Line"
+msgstr ""
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_request_mass__line_ids
+msgid "HR Overtime Request Mass Lines"
+msgstr ""
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule__holiday
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule_code__holiday
+msgid "Holiday"
+msgstr "Nghỉ lễ"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Holiday - Friday Daytime"
+msgstr "Nghỉ lễ - Thứ Sáu (ban ngày)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Holiday - Friday Early Morning"
+msgstr "Nghỉ lễ - Thứ Sáu (sáng sớm)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Holiday - Friday Evening"
+msgstr "Nghỉ lễ - Thứ Sáu (tối)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Holiday - Friday Night"
+msgstr "Nghỉ lễ - Thứ Sáu (đêm)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Holiday - Monday Daytime"
+msgstr "Nghỉ lễ - Thứ Hai (ban ngày)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Holiday - Monday Early Morning"
+msgstr "Nghỉ lễ - Thứ Hai (sáng sớm)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Holiday - Monday Evening"
+msgstr "Nghỉ lễ - Thứ Hai (tối)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Holiday - Monday Night"
+msgstr "Nghỉ lễ - Thứ Hai (đêm)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Holiday - Saturday Afternoon"
+msgstr "Nghỉ lễ - Thứ Bảy (chiều)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Holiday - Saturday Early Morning"
+msgstr "Nghỉ lễ - Thứ Bảy (sáng sớm)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Holiday - Saturday Evening"
+msgstr "Nghỉ lễ - Thứ Bảy (tối)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Holiday - Saturday Morning"
+msgstr "Nghỉ lễ - Thứ Bảy (sáng)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Holiday - Saturday Night"
+msgstr "Nghỉ lễ - Thứ Bảy (đêm)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Holiday - Sunday Afternoon"
+msgstr "Nghỉ lễ - Chủ nhật (chiều)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Holiday - Sunday Early Morning"
+msgstr "Nghỉ lễ - Chủ nhật (sáng sớm)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Holiday - Sunday Evening"
+msgstr "Nghỉ lễ - Chủ nhật (tối)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Holiday - Sunday Morning"
+msgstr "Nghỉ lễ - Chủ nhật (sáng)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Holiday - Sunday Night"
+msgstr "Nghỉ lễ - Chủ nhật (đêm)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Holiday - Thursday Daytime"
+msgstr "Nghỉ lễ - Thứ Năm (ban ngày)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Holiday - Thursday Early Morning"
+msgstr "Nghỉ lễ - Thứ Năm (sáng sớm)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Holiday - Thursday Evening"
+msgstr "Nghỉ lễ - Thứ Năm (tối)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Holiday - Thursday Night"
+msgstr "Nghỉ lễ - Thứ Năm (đếm)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Holiday - Tuesday Daytime"
+msgstr "Nghỉ lễ - Thứ Ba (ban ngày)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Holiday - Tuesday Early Morning"
+msgstr "Nghỉ lễ - Thứ Ba (sáng sớm)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Holiday - Tuesday Evening"
+msgstr "Nghỉ lễ - Thứ Ba (tối)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Holiday - Tuesday Night"
+msgstr "Nghỉ lễ - Thứ Ba (đêm)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Holiday - Wednesday Daytime"
+msgstr "Nghỉ lễ - Thứ Tư (ban ngày)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Holiday - Wednesday Early Morning"
+msgstr "Nghỉ lễ - Thứ Tư (sáng sớm)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Holiday - Wednesday Evening"
+msgstr "Nghỉ lễ - Thứ Tư (tối)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Holiday - Wednesday Night"
+msgstr "Nghỉ lễ - Thứ Tư (đêm)"
+
+#. module: viin_hr_overtime
+#: model:ir.model.constraint,message:viin_hr_overtime.constraint_hr_overtime_rule_hour_from_check
+msgid "Hour From must be greater than or equal to 0 and less than 24"
+msgstr "Giờ bắt đầu phải lớn hoặc hoặc bằng 0 và nhỏ hơn 24"
+
+#. module: viin_hr_overtime
+#: model:ir.model.constraint,message:viin_hr_overtime.constraint_hr_overtime_rule_hour_to_check
+msgid "Hour To must be greater than 0 and less than or equal to 24"
+msgstr "Giờ kết thúc phải lớn hơn 0 và nhỏ hơn hoặc bằng 24"
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.hr_overtime_rule_form_view
+msgid "Hours"
+msgstr "Giờ"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee_overtime__diff_hours
+msgid "Hours Difference"
+msgstr "Lệch giờ"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_abstract_overtime_plan_line_match__id
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_contract__id
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee_base__id
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee_overtime__id
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__id
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan_line__id
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_reason__id
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_request_mass__id
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_request_mass_line__id
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule__id
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule_code__id
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_res_company__id
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_res_config_settings__id
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_resource_calendar__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_plan__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Biểu tượng để chỉ ra một hoạt động ngoại lệ."
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_rule__company_id
+msgid ""
+"If a company is set, this rule will be valid for the selected company only"
+msgstr ""
+"Nếu một công ty được thiết lập, quy tắc này sẽ chỉ hợp lệ đối với công ty đó"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_plan__message_needaction
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_plan__message_unread
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_rule__message_needaction
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_rule__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Nếu đánh dấu, thông điệp yêu cầu sự có mặt của bạn."
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_plan__message_has_error
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_plan__message_has_sms_error
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_rule__message_has_error
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_rule__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_rule_code__holiday
+msgid "If enabled, this indicates the rule code is for overtime in holidays"
+msgstr ""
+"Nếu kích hoạt, điều này cho phép mã quy tắc được nhận diện cho việc tăng ca "
+"vào ngày lễ (nghỉ toàn cục)"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_rule__holiday
+msgid "If enabled, this indicates the rule is for overtime in holidays"
+msgstr ""
+"Nếu kích hoạt, điều này cho phép quy tắc được nhận diện cho việc tăng ca vào"
+" ngày lễ (nghỉ toàn cục)"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_reason__active
+msgid ""
+"If the active field is set to false, it will allow you to hide the reason "
+"without removing it."
+msgstr ""
+"Nếu trường hiệu lực đặt về false sẽ cho phép bạn ẩn lý do mà không cần phải "
+"xóa nó"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__has_non_draft_payslips
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan_line__has_non_draft_payslips
+msgid "Included in Non-Draft Payslip"
+msgstr "Đã tính trong phiếu lương không phải dự thảo"
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_overtime_plan_form
+msgid "Included in Payslips"
+msgstr "Đã tính trong phiếu lương"
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.res_config_settings_view_form
+msgid "Install More Modes"
+msgstr "Cài thêm các chế độ"
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.res_config_settings_view_form
+msgid "Integrate Payroll with Overtime"
+msgstr "Tích hợp Bảng lương với Tăng ca"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__message_is_follower
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule__message_is_follower
+msgid "Is Follower"
+msgstr "Là người dõi theo"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee_overtime__job_id
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_employee_overtime_search
+msgid "Job Position"
+msgstr "Chức danh"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_abstract_overtime_plan_line_match____last_update
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_contract____last_update
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee_base____last_update
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee_overtime____last_update
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan____last_update
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan_line____last_update
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_reason____last_update
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_request_mass____last_update
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_request_mass_line____last_update
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule____last_update
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule_code____last_update
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_res_company____last_update
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_resource_calendar____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__write_uid
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan_line__write_uid
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_reason__write_uid
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_request_mass__write_uid
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_request_mass_line__write_uid
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule__write_uid
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule_code__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__write_date
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan_line__write_date
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_reason__write_date
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_request_mass__write_date
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_request_mass_line__write_date
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule__write_date
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule_code__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__message_main_attachment_id
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Đính kèm chính"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields.selection,name:viin_hr_overtime.selection__hr_contract__overtime_base_mode__manual
+msgid "Manual Input"
+msgstr "Nhập thủ công"
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_overtime_request_mass_form
+msgid "Mass Overtime Planning"
+msgstr "Lập kế hoạch tăng ca hàng loạt"
+
+#. module: viin_hr_overtime
+#: model:ir.model,name:viin_hr_overtime.model_hr_overtime_request_mass
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_request_mass_line__overtime_request_mass_id
+msgid "Mass Overtime Request Wizard"
+msgstr "Đồ thuật Lập kế hoạch tăng ca hàng loạt"
+
+#. module: viin_hr_overtime
+#: model:ir.ui.menu,name:viin_hr_overtime.menu_hr_overtime_request_mass
+msgid "Mass Schedule"
+msgstr "Lập kế hoạch hàng loạt"
+
+#. module: viin_hr_overtime
+#: model:ir.actions.act_window,name:viin_hr_overtime.action_hr_overtime_request_mass_window
+msgid "Massive Overtime Planning"
+msgstr "Lập kế hoạch tăng ca hàng loạt"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_abstract_overtime_plan_line_match__matched_hours
+msgid "Match Hours"
+msgstr "Giờ hợp lệ"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee_overtime__global_leave_id
+msgid "Matched Global/Holiday Leave"
+msgstr "Nghỉ toàn cục / nghỉ lễ được khớp"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__message_has_error
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__message_ids
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule__message_ids
+msgid "Messages"
+msgstr "Thông điệp"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__mismatched_contract_ids
+msgid "Mismatched Contracts"
+msgstr "Hợp đồng không khớp"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_contract__mismatched_overtime_plan_ids
+msgid "Mismatched Overtime Plans"
+msgstr "Kế hoạch làm ngoài giờ không khớp"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_request_mass__mode
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.res_config_settings_view_form
+msgid "Mode"
+msgstr "Chế độ"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields.selection,name:viin_hr_overtime.selection__hr_overtime_rule__weekday__0
+msgid "Monday"
+msgstr "Thứ Hai"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Monday Daytime"
+msgstr "Thứ Hai (ban ngày)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Monday Early Morning"
+msgstr "Thứ Hai (sáng sớm)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Monday Evening"
+msgstr "Thứ Hai (tối)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Monday Night"
+msgstr "Thứ Hai (đêm)"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Hạn chót hoạt động của tôi"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Thời hạn hoạt động tiếp theo"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__activity_summary
+msgid "Next Activity Summary"
+msgstr "Tóm tắt hoạt động tiếp theo"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__activity_type_id
+msgid "Next Activity Type"
+msgstr "Loại hoạt động tiếp theo"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__no_contract_warning_text
+msgid "No Contract Warning Text"
+msgstr "Chữ cảnh báo không có hợp đồng"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/wizard/hr_overtime_request_mass.py:0
+#, python-format
+msgid "No schedule given. Please input schedule first."
+msgstr "Chưa có dòng kế hoạch nào được nhập. Vui lòng nhập kế hoạch trước."
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/hr_overtime_plan.py:0
+#, python-format
+msgid ""
+"No valid contracts (that are either running or expired) found for the given "
+"overtime period, causing this plan become useless!"
+msgstr ""
+"Không tìm thấy một hợp đồng hơp lệ (đang chạy hoặc hết hạn) ứng với khoảng "
+"thời gian tăng ca. Điều này làm cho kế hoạch này trở nên vô nghĩa!"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__message_needaction_counter
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__message_has_error_counter
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_plan__message_needaction_counter
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_rule__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_plan__message_has_error_counter
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_rule__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_plan__message_unread_counter
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_rule__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.hr_contract_view_form
+msgid "OT Plans"
+msgstr "Kế hoạch Tăng ca"
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_employee_overtime_search
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_overtime_plan_line_search
+msgid "OT Rule"
+msgstr "Quy tắc Tăng ca"
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_employee_overtime_search
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_overtime_plan_line_search
+msgid "OT Rule Code"
+msgstr "Mã Quy tắc Tăng ca"
+
+#. module: viin_hr_overtime
+#: model:res.groups,name:viin_hr_overtime.group_overtime_officer
+msgid "Officer"
+msgstr "Cán bộ"
+
+#. module: viin_hr_overtime
+#: model:ir.actions.act_window,name:viin_hr_overtime.open_overtime_modules
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee__employee_overtime_ids
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee_base__employee_overtime_ids
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee_public__employee_overtime_ids
+#: model:ir.ui.menu,name:viin_hr_overtime.overtime_root_menu
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.res_config_settings_view_form
+msgid "Overtime"
+msgstr "Tăng ca"
+
+#. module: viin_hr_overtime
+#: model:ir.ui.menu,name:viin_hr_overtime.menu_hr_employee_overtime
+msgid "Overtime Analysis"
+msgstr "Phân tích Tăng ca"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_contract__overtime_base_amount
+msgid "Overtime Base Amount"
+msgstr "Số tiền cơ sở tính tăng ca"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_contract__overtime_base_mode
+msgid "Overtime Base Mode"
+msgstr "Chế độ tiền cơ sở tính tăng ca"
+
+#. module: viin_hr_overtime
+#: model:ir.actions.act_window,name:viin_hr_overtime.action_hr_overtime_rule_codes
+#: model:ir.ui.menu,name:viin_hr_overtime.hr_overtime_rule_code_menu
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.hr_overtime_rule_code_tree_view
+msgid "Overtime Codes"
+msgstr "Mã tăng ca"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee__employee_overtime_count
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee_base__employee_overtime_count
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee_public__employee_overtime_count
+msgid "Overtime Count"
+msgstr "SL Bản ghi Tăng ca"
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_employee_form
+msgid "Overtime Entries"
+msgstr "Bản ghi tăng ca"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_res_config_settings__module_viin_hr_overtime_payroll
+msgid "Overtime Payroll"
+msgstr "Tiền lương Tăng ca"
+
+#. module: viin_hr_overtime
+#: model:ir.actions.act_window,name:viin_hr_overtime.action_hr_overtime_plan
+#: model:ir.model,name:viin_hr_overtime.model_hr_overtime_plan
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_abstract_overtime_plan_line_match__overtime_plan_id
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee_overtime__overtime_plan_id
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan_line__overtime_plan_id
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_employee_overtime_calendar
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_overtime_plan_calendar
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_overtime_plan_line_calendar
+msgid "Overtime Plan"
+msgstr "Kế hoạch Tăng ca"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_res_config_settings__module_viin_hr_overtime_approval
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.res_config_settings_view_form
+msgid "Overtime Plan Approval"
+msgstr "Phê duyệt Kế hoạch Tăng ca"
+
+#. module: viin_hr_overtime
+#: model:ir.actions.act_window,name:viin_hr_overtime.action_hr_overtime_plan_line
+#: model:ir.model,name:viin_hr_overtime.model_hr_overtime_plan_line
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_abstract_overtime_plan_line_match__overtime_plan_line_id
+msgid "Overtime Plan Line"
+msgstr "Dòng Kế hoạch Tăng ca"
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_abstract_overtime_plan_line_match_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_abstract_overtime_plan_line_match_tree
+msgid "Overtime Plan Line Match"
+msgstr "Bản Khớp Dòng Kế hoạch Tăng ca"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_contract__overtime_plan_line_ids
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee__overtime_plan_line_ids
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee_base__overtime_plan_line_ids
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee_public__overtime_plan_line_ids
+msgid "Overtime Plan Lines"
+msgstr "Dòng Kế hoạch Tăng ca"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee__overtime_plan_ids
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee_base__overtime_plan_ids
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee_public__overtime_plan_ids
+msgid "Overtime Plans"
+msgstr "Kế hoạch Tăng ca"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_contract__overtime_plans_count
+msgid "Overtime Plans Count"
+msgstr "SL Kế hoạch tăng ca"
+
+#. module: viin_hr_overtime
+#: model:ir.actions.act_window,name:viin_hr_overtime.action_hr_overtime_reason
+#: model:ir.model,name:viin_hr_overtime.model_hr_overtime_reason
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.hr_overtime_reason_form_view
+msgid "Overtime Reason"
+msgstr "Lý do Tăng ca"
+
+#. module: viin_hr_overtime
+#: model:ir.ui.menu,name:viin_hr_overtime.hr_overtime_reason_menu
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.hr_overtime_reason_tree_view
+msgid "Overtime Reasons"
+msgstr "Lý do Tăng ca"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_contract__overtime_recognition_mode
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_res_company__overtime_recognition_mode
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_res_config_settings__overtime_recognition_mode
+msgid "Overtime Recognition Mode"
+msgstr "Chế độ nhận diện giờ tăng ca"
+
+#. module: viin_hr_overtime
+#: model:ir.model,name:viin_hr_overtime.model_hr_overtime_rule
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee_overtime__hr_overtime_rule_id
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan_line__hr_overtime_rule_id
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.hr_overtime_rule_form_view
+msgid "Overtime Rule"
+msgstr "Quy tắc Tăng ca"
+
+#. module: viin_hr_overtime
+#: model:ir.model,name:viin_hr_overtime.model_hr_overtime_rule_code
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee_overtime__rule_code_id
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan_line__rule_code_id
+msgid "Overtime Rule Code"
+msgstr "Mã Quy tắc Tăng ca"
+
+#. module: viin_hr_overtime
+#: model:ir.actions.act_window,name:viin_hr_overtime.action_hr_overtime_rules
+#: model:ir.ui.menu,name:viin_hr_overtime.hr_overtime_rule_menu
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.hr_overtime_rule_tree_view
+msgid "Overtime Rules"
+msgstr "Quy tắc Tăng ca"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_res_config_settings__module_viin_hr_overtime_timesheet
+msgid "Overtime Timesheet"
+msgstr "Chấm công Tăng ca"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_res_config_settings__module_viin_hr_overtime_attendance
+msgid "Overtime with Attendance"
+msgstr "Tăng ca bằng Có mặt"
+
+#. module: viin_hr_overtime
+#: model:ir.actions.server,name:viin_hr_overtime.cron_recognize_overtime_ir_actions_server
+#: model:ir.cron,cron_name:viin_hr_overtime.cron_recognize_overtime
+#: model:ir.cron,name:viin_hr_overtime.cron_recognize_overtime
+msgid "Overtime: Recognize Overtime"
+msgstr "Tăng ca: Nhận diện tăng ca"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee_overtime__pay_rate
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan_line__pay_rate
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule__pay_rate
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule_code__pay_rate
+msgid "Pay Rate"
+msgstr "Tỷ lệ chi trả"
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_overtime_plan_line_tree_simple
+msgid "Pay Rate (%)"
+msgstr "Tỷ lệ chi trả (%)"
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_overtime_plan_form
+msgid "Period"
+msgstr "Khoảng thời gian"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__line_ids
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_overtime_plan_form
+msgid "Plan Lines"
+msgstr "Dòng Kế hoạch"
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_overtime_plan_form
+msgid "Planned"
+msgstr "Kế hoạch"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee_overtime__planned_hours
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__planned_hours
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan_line__planned_hours
+msgid "Planned Hours"
+msgstr "Số Giờ Kế hoạch"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee_overtime__planned_overtime_pay
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__planned_overtime_pay
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan_line__planned_overtime_pay
+msgid "Planned Overtime Pay"
+msgstr "Chi trả Tăng ca theo Kế hoạch"
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_overtime_plan_form
+msgid "Planned Pay"
+msgstr "Chi trả theo Kế hoạch"
+
+#. module: viin_hr_overtime
+#: model:ir.ui.menu,name:viin_hr_overtime.hr_overtime_planning
+#: model:ir.ui.menu,name:viin_hr_overtime.menu_hr_overtime_plan
+msgid "Planning"
+msgstr "Lập kế hoạch"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee_overtime__plans_count
+msgid "Plans Count"
+msgstr "SL Kế hoạch"
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_overtime_plan_search
+msgid "Positive Actual Hours"
+msgstr "Có giờ tăng ca thực tế"
+
+#. module: viin_hr_overtime
+#: model:hr.overtime.reason,name:viin_hr_overtime.hr_overtime_reason_project
+msgid "Project Deadline"
+msgstr "Đến hạn Dự án"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__readonly
+msgid "Readonly"
+msgstr "Chỉ đọc"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee_overtime__reason_id
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__reason_id
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan_line__reason_id
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_request_mass__reason_id
+msgid "Reason"
+msgstr "Lý do"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee_overtime__recognition_mode
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan_line__recognition_mode
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_reason__recognition_mode
+msgid "Recognition Mode"
+msgstr "Chế độ Nhận diện"
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_overtime_plan_form
+msgid "Recognize Overtime"
+msgstr "Nhận diện Tăng ca"
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.res_config_settings_view_form
+msgid ""
+"Recognize employee overtime automatically with\n"
+"\t\t\t\t\t\t\t\t\t\tattendance"
+msgstr ""
+"Tự động nhận diện làm việc ngoài giờ sử dụng\n"
+"\t\t\t\t\t\t\t\t\t\tthời gian có mặt"
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.res_config_settings_view_form
+msgid ""
+"Recognize employee overtime automatically with\n"
+"\t\t\t\t\t\t\t\t\t\ttimesheet"
+msgstr ""
+"Tự động nhận diện làm việc ngoài giờ sử dụng\n"
+"\t\t\t\t\t\t\t\t\t\tchấm công"
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_overtime_plan_form
+msgid "Reload"
+msgstr "Nạp lại"
+
+#. module: viin_hr_overtime
+#: model:ir.ui.menu,name:viin_hr_overtime.menu_hr_overtime_report_main
+msgid "Reports"
+msgstr "Báo cáo"
+
+#. module: viin_hr_overtime
+#: model:ir.actions.server,name:viin_hr_overtime.action_server_resolve_contract_mismatch
+msgid "Resolve Contract Mismatch"
+msgstr "Khớp hợp đồng"
+
+#. module: viin_hr_overtime
+#: model:ir.model,name:viin_hr_overtime.model_resource_calendar
+msgid "Resource Working Time"
+msgstr "Lịch làm việc của nguồn lực"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__activity_user_id
+msgid "Responsible User"
+msgstr "Người chịu phụ trách"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule__code_id
+msgid "Rule Code"
+msgstr "Mã Quy tắc"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__message_has_sms_error
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields.selection,name:viin_hr_overtime.selection__hr_overtime_rule__weekday__5
+msgid "Saturday"
+msgstr "Thứ Bảy"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Saturday Afternoon"
+msgstr "Thứ Bảy (chiều)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Saturday Early Morning"
+msgstr "Thứ Bảy (sáng sớm)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Saturday Evening"
+msgstr "Thứ Bảy (tối)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Saturday Morning"
+msgstr "Thứ Bảy (sáng)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Saturday Night"
+msgstr "Thứ Bảy (đêm)"
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_overtime_request_mass_form
+msgid "Schedule"
+msgstr "Ấn định"
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_overtime_request_mass_form
+msgid "Scheduling"
+msgstr "Lập kế hoạch"
+
+#. module: viin_hr_overtime
+#: model:ir.actions.act_window,name:viin_hr_overtime.action_overtime_config
+#: model:ir.ui.menu,name:viin_hr_overtime.menu_overtime_config
+msgid "Settings"
+msgstr "Thiết lập"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee_overtime__standard_pay
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan_line__standard_pay
+msgid "Standard Pay"
+msgstr "Chi theo giờ tiêu chuẩn"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan_line__standard_hour_pay
+msgid "Standard Pay per Hour"
+msgstr "Chi tiêu chuẩn mỗi giờ"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_abstract_overtime_plan_line_match__date_start
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee_overtime__date_start
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__date_start
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan_line__date_start
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_employee_overtime_search
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_overtime_plan_line_search
+msgid "Start Date"
+msgstr "Ngày bắt đầu"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__time_start
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_request_mass_line__time_start
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule__hour_from
+msgid "Start Time"
+msgstr "Giờ bắt đầu"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_rule__hour_from
+msgid "Start time of overtime working"
+msgstr "Thời gian bắt đầu làm việc tăng ca"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_plan__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Trạng thái dựa trên hoạt động\n"
+"Quá hạn: Ngày đến hạn đã trôi qua\n"
+"Hôm nay: Hôm nay là ngày phải thực hiện\n"
+"Đã hoạch định: Các hoạt động trong tương lai."
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_plan__line_ids
+msgid ""
+"Store the detail plan lines that generated by this plan according to the "
+"affected contracts and the predefined overtime rules"
+msgstr ""
+"Chứa các dòng chiết được sinh ra bởi kế hoạch này theo các hợp đồng liên "
+"quan và các quy tắc tăng ca được định trước"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields.selection,name:viin_hr_overtime.selection__hr_overtime_rule__weekday__6
+msgid "Sunday"
+msgstr "Chủ nhật"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Sunday Afternoon"
+msgstr "Chủ nhật (chiều)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Sunday Early Morning"
+msgstr "Chủ nhật (sáng sớm)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Sunday Evening"
+msgstr "Chủ nhật (tối)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Sunday Morning"
+msgstr "Chủ nhật (sáng)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Sunday Night"
+msgstr "Chủ nhật (đêm)"
+
+#. module: viin_hr_overtime
+#: model:res.groups,name:viin_hr_overtime.group_overtime_team_approval
+msgid "Team Approval"
+msgstr "Duyệt cho đội của mình"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_plan__readonly
+msgid "Technical field to compute readonly state for the views"
+msgstr "Trường kỹ thuật để tính toán trạng thái chỉ đọc với các giao diện"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_plan__can_recognize
+msgid ""
+"Technical field to indicate if this plan can get actual overtime recognized "
+"when it contains a line having overtime work to be measured with either "
+"attendance or timesheet."
+msgstr ""
+"Trường kỹ thuật để chỉ báo là kế hoạch tăng ca này có thể nhận diện tự động "
+"giờ thực tế không, dựa trên các dòng có thể được đo lường bằng chấm công "
+"hoặc vào/ra."
+
+#. module: viin_hr_overtime
+#: model:ir.model.constraint,message:viin_hr_overtime.constraint_hr_overtime_plan_time_start_check
+#: model:ir.model.constraint,message:viin_hr_overtime.constraint_hr_overtime_request_mass_line_time_start_check
+msgid "The End Time must be greater than 0 and less than or equal to 24."
+msgstr "Giờ kết thúc phải lớn hơn 0 và nhỏ hơn hoặc bằng 24."
+
+#. module: viin_hr_overtime
+#: model:ir.model.constraint,message:viin_hr_overtime.constraint_hr_overtime_plan_date_check
+#: model:ir.model.constraint,message:viin_hr_overtime.constraint_hr_overtime_plan_line_date_check
+msgid "The Start Date must be anterior to the End Date."
+msgstr "Ngày bắt đầu phải trước Ngày kết thúc"
+
+#. module: viin_hr_overtime
+#: model:ir.model.constraint,message:viin_hr_overtime.constraint_hr_overtime_plan_times_check
+#: model:ir.model.constraint,message:viin_hr_overtime.constraint_hr_overtime_request_mass_line_times_check
+#: model:ir.model.constraint,message:viin_hr_overtime.constraint_hr_overtime_rule_date_check
+msgid "The Start Time must be anterior to the End Time."
+msgstr "Giờ bắt đầu phải trước Giờ kết thúc."
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_plan__actual_overtime_pay
+msgid ""
+"The actual overtime cost that is computed automatically based on the actual "
+"recognized overtime hours."
+msgstr ""
+"Chi trả tăng ca thực tế được tính tự động dựa trên giờ tăng ca thực tế được "
+"ghi nhận."
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_plan__actual_hours
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_plan_line__actual_hours
+msgid ""
+"The actual overtime hours recognized by selected Recognition Mode (e.g. By "
+"Plan, Attendance, etc). If 'By Plan' is selected, the actual overtime hours "
+"will be the planned hours. Otherwise, the actual overtime hours will be "
+"recognized by the affected mode accordingly."
+msgstr ""
+"Giờ tăng ca thực tế được ghi nhận theo Chế độ Nhận diện (vd: Theo Kế hoạch, "
+"Vào/Ra, v.v.). Nếu 'Theo Kế hoạch' được chọn, giờ tăng ca thực tế chính là "
+"giờ tăng ca theo kế hoạch. Ngoài ra, giờ tăng ca sẽ được ghi nhận tùy theo "
+"chế độ được chọn."
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_plan_line__standard_pay
+msgid ""
+"The actual overtime pay amount (according to the actual overtime hours) that"
+" is calculated as: `Standard Pay per Hour * Actual Overtime Hours`. Pay Rate"
+" is ignored."
+msgstr ""
+"Số tiền chi trả tăng ca thực tế (dựa trên giờ tăng ca thực tế) mà được tính "
+"bằng công thức: `Chi tiêu chuẩn mỗi giờ * Số Giờ Tăng ca Thực tế`. Tỷ lệ chi"
+" trả bị bỏ qua."
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_plan_line__actual_overtime_pay
+msgid ""
+"The actual overtime pay amount (according to the actual overtime hours) that"
+" is calculated as: `Standard Pay per Hour * Pay Rate * Actual Overtime "
+"Hours`."
+msgstr ""
+"Số tiền chi trả tăng ca thực tế (dựa trên giờ tăng ca thực tế) mà được tính "
+"bằng công thức: `Chi tiêu chuẩn mỗi giờ * Tỷ lệ chi trả * Số Giờ Tăng ca "
+"Thực tế`."
+
+#. module: viin_hr_overtime
+#: model:ir.model.constraint,message:viin_hr_overtime.constraint_hr_overtime_rule_code_name_unique
+msgid "The code must be unique"
+msgstr "Mã phải là duy nhất"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_plan__date_end
+msgid "The date and time at which the overtime work ends."
+msgstr "Thời gian mà tăng ca kết thúc"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_plan__date_start
+msgid "The date and time at which the overtime work starts."
+msgstr "Thời gian mà tăng ca bắt đầu"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_plan__date
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_request_mass_line__date
+msgid "The date on which the overtime work happens."
+msgstr "Ngày mà việc tăng ca diễn ra"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_employee_overtime__diff_hours
+msgid "The difference between the planned hours and the actual hours."
+msgstr "Chênh lệch giữa số giờ kế hoạch và số giờ thực tế."
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_plan_line__contract_id
+msgid ""
+"The employee's affected contract applied to the interval of the Start Date "
+"and the End Date."
+msgstr ""
+"Hợp đồng nhân viên liên qua mà có hiệu lực cho khoảng thời gian từ Ngày bắt "
+"đầu đến Ngày kết thúc."
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_rule_code__pay_rate
+msgid ""
+"The extra pay in percentage (of basic wage, for example) which can be used "
+"in payroll computation."
+msgstr ""
+"Tỷ lệ chi trả bổ sung theo phần trăm (vd, của lương cơ bản) mà được sử dụng "
+"trong việc tính toán lương."
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_contract__overtime_base_amount
+msgid "The monthly base amount that will be used in overtime pay computation."
+msgstr ""
+"Số tiền cơ sở theo tháng mà sẽ được sử dụng để tính toán chi trả tăng ca."
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_contract__overtime_base_mode
+msgid ""
+"The overtime base mode for overtime pay computation.\n"
+"* Manual Input: you can define any base amount below manually;\n"
+"* Basic Wage: the base amount will be the contract's basic wage;\n"
+msgstr ""
+"Chế độ tiền cơ sở tăng ca để tính toán tiền tăng ca.\n"
+"* Nhập thủ công: Bạn có thể định nghĩa một số tiền cơ sở thủ công dưới đây;\n"
+"* Lương cơ bản: số tiền cơ sở để tính toán sẽ là lương cơ bản trên hợp đồng;\n"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/hr_overtime_plan.py:0
+#, python-format
+msgid "The overtime plan `%s` overlaps an existing one which is `%s`"
+msgstr "Kế hoạch tăng ca `%s` chồng lên một kế hoạch đã có (`%s`)"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_plan_line__overtime_plan_id
+msgid "The overtime plan that generates this plan line."
+msgstr "Kế hoạch tăng ca mà sinh ra dòng này."
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/hr_overtime_rule.py:0
+#, python-format
+msgid ""
+"The overtime start date must be earlier than the overtime end date. This "
+"could be a programming error that produced %s and %s"
+msgstr ""
+"Ngày bắt đầu tăng ca phải trước ngày kết thúc tăng ca. Đây có thể là lỗi lập"
+" trình mà đã tạo ra %s và %s"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_employee_overtime__standard_pay
+msgid ""
+"The pay amount for the actual overtime hours based on the formula `Standard "
+"Pay per Hour * Actual Overtime Hours`."
+msgstr ""
+"Số tiền chi trả cho số giờ tăng ca thực tế dựa theo công thức `Chi tiêu "
+"chuẩn mỗi giờ * Số Giờ Tăng ca Thực tế`."
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_overtime_plan_form
+msgid "The period of overtime work for the date specified above"
+msgstr "Khoảng thời gian làm việc tăng ca cho ngày được nhập ở trên"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_plan__planned_overtime_pay
+msgid ""
+"The planned overtime cost that is computed automatically based on the "
+"planned overtime hours."
+msgstr ""
+"Chi trả tăng ca theo kế hoạch, được tính tự động dựa trên số giờ theo kế "
+"hoạch."
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_plan_line__planned_overtime_pay
+msgid ""
+"The planned overtime pay amount (according to the the planned hours) that is"
+" calculated as: `Standard Pay per Hour * Pay Rate * Planned Hours`"
+msgstr ""
+"Chi trả tăng ca theo kế hoạch, được tính tự động dựa trên số giờ theo kế "
+"hoạch: `Chi tiêu chuẩn mỗi giờ * Tỷ lệ Chi trả * Số Giờ Kế hoạch`"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_rule__code_id
+msgid "The predefined code to be used in overtime payroll computation"
+msgstr "Mã định sẵn được sử dụng trong việc tính toán lương tăng ca"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_plan_line__pay_rate
+msgid ""
+"The rate that will be used for overtime pay amount calculation. For example:"
+" `Actual Overtime Amount = Standard Pay per Hour * Pay Rate * Actual "
+"Overtime Hours`"
+msgstr ""
+"Tỷ lệ mà sẽ được sử dụng để tính toán chi trả tăng ca. Ví dụ: `Tổng tiền "
+"tăng ca = Chi tiêu chuẩn mỗi giờ * Tỷ lệ Chi trả * Số Giờ Tăng ca Thực tế`."
+
+#. module: viin_hr_overtime
+#: model:ir.model.constraint,message:viin_hr_overtime.constraint_hr_overtime_reason_name_unique
+msgid "The reason title must be unique"
+msgstr "Tiêu đề của lý do phải là duy nhất"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_plan__contract_ids
+msgid ""
+"The related employee contracts that match the Start Date and the End Date."
+msgstr ""
+"Các hợp đồng nhân viên liên qua mà khớp với Ngày bắt đầu và Ngày kết thúc."
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_plan_line__standard_hour_pay
+msgid ""
+"The standard pay amount per hour based on the corresponding contract's wage,"
+" or other contract's factors depending on the Overtime Base Mode specified "
+"on the corresponding contract."
+msgstr ""
+"Số tiền chi trả tiêu chuẩn theo giờ dựa trên lương cơ bản hoặc các chỉ tiêu "
+"khác cấu hình được trên hợp đồng, tùy theo Chế độ tiền cơ sở tính tăng ca "
+"được thiết lập trên hợp đồng tương ứng."
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_plan__time_end
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_request_mass_line__time_end
+msgid ""
+"The time on the date specified in the Date at which the overtime work ends."
+msgstr "Giờ của ngày được chọn ở trường Ngày mà tại đó tăng ca kết thúc."
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_plan__time_start
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_request_mass_line__time_start
+msgid ""
+"The time on the date specified in the Date at which the overtime work "
+"starts."
+msgstr "Giờ của ngày được chọn ở trường Ngày mà tại đó tăng ca bắt đầu."
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_plan_line__planned_hours
+msgid "The total hours between the Start Date and the End Date."
+msgstr "Tổng số giờ giữa Ngày bắt đầu và Ngày kết thúc."
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_rule__code
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_rule_code__name
+msgid ""
+"The unique code to be used in conjunction with Overtime Rule for overtime "
+"payroll computation"
+msgstr ""
+"Mã duy nhất được sử dụng với quy tắc tăng ca để phục vụ tính lương tăng ca "
+"sau này"
+
+#. module: viin_hr_overtime
+#: model:res.groups,comment:viin_hr_overtime.group_overtime_admin
+msgid ""
+"The user will have all rights to do anything within\n"
+"\t\t\tthis application.\n"
+"\t\t"
+msgstr ""
+"Người dùng sẽ có tất cả các quyền để thực hiện bất kỳ điều gì trong\n"
+"\t\t\tứng dụng này.\ n"
+"\t\t"
+
+#. module: viin_hr_overtime
+#: model:res.groups,comment:viin_hr_overtime.group_overtime_officer
+msgid ""
+"The user will have the right to overtime planning\n"
+"\t\t\tand registration\n"
+"\t\t"
+msgstr ""
+"Người dùng sẽ có quyền lập kế hoạch làm thêm giờ\n"
+"\t\t\tvà đăng ký\n"
+"\t\t"
+
+#. module: viin_hr_overtime
+#: model:res.groups,comment:viin_hr_overtime.group_overtime_team_approval
+msgid ""
+"The user will have the right to plan overtime for the subordinate that she "
+"or he manages"
+msgstr ""
+"Người dùng sẽ có quyền lập kế hoạch làm thêm giờ cho cấp dưới mà cô ấy "
+"hoặc anh ấy quản lý"
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.hr_contract_view_form
+msgid ""
+"There are some overtime plans that mismatch this contract period.\n"
+"\t\t\t\t\tClick the link here resolve them as soon as possible!"
+msgstr ""
+"Có kế hoạch làm ngoài giờ mà không khớp với thời hạn của hợp đồng này.\n"
+"\t\t\t\t\tBấm vào liên kế này để xử lý chúng càng sớm càng tốt!"
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_overtime_plan_form
+msgid ""
+"This action will recompute related contracts and remove existing lines "
+"before generating new ones for the table below. Are you sure to proceed?"
+msgstr ""
+"Hành động này sẽ tính toán lại trường hợp đồng và xóa bỏ các dòng kế hoạch "
+"hiện có trước khi sinh ra các dòng mới ở bảng dưới đây. Bạn có chắc bạn muốn"
+" tiếp tục?"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_plan__has_non_draft_payslips
+msgid "This indicates if there is a non-draft payslip reffering to this plan."
+msgstr ""
+"Trường này chỉ báo có phiếu lương không ở trạng thái dự thảo liên kế đến kế "
+"hoạch này hay không."
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_res_company__overtime_recognition_mode
+#: model:ir.model.fields,help:viin_hr_overtime.field_res_config_settings__overtime_recognition_mode
+msgid ""
+"This indicates mode to recognize actual overtime against the plan which "
+"could be either By Plan or Attendance or Timesheet. Bridging modules will be"
+" required to have full options accordingly."
+msgstr ""
+"Trường này chỉ báo chế độ nhận diện giờ tăng ca thực tế so với kế hoạch. Giá"
+" trị của nó có thể là Theo Kế hoạch hoặc Vào/Ra hoặc Chấm công. Các module "
+"cầu nối được yêu cầu để có đầy đủ các tùy chọn này."
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_contract__overtime_recognition_mode
+msgid ""
+"This indicates mode to recognize actual overtime against the plan which could be either By Plan or Attendance or Timesheet. Bridging modules will be required to have full options accordingly.\n"
+"If this field is left empty, the value will be taken from the corresponding company's settings."
+msgstr ""
+"Trường này chỉ báo chế độ nhận diện giờ tăng ca thực tế so với kế hoạch. Giá trị của nó có thể là Theo Kế hoạch hoặc Vào/Ra hoặc Chấm công. Các module cầu nối được yêu cầu để có đầy đủ các tùy chọn này.\n"
+"Nếu để trống, giá trị sẽ được lấy từ cấu hình của công ty tương ứng."
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_plan__recognition_mode
+msgid ""
+"This indicates mode to recognize actual overtime against the plan which could be either By Plan or Attendance or Timesheet. Bridging modules will be required to have full options accordingly.\n"
+"Note: If not specified, the setting from the corresponding contract or company will be taken into account."
+msgstr ""
+"Trường này chỉ báo chế độ nhận diện giờ tăng ca thực tế so với kế hoạch. Giá trị của nó có thể là Theo Kế hoạch hoặc Vào/Ra hoặc Chấm công. Các module cầu nối được yêu cầu để có đầy đủ các tùy chọn này.\n"
+"Lưu ý: nếu không được thiết lập ở đây, thiết lập ở hợp đồng hoặc thiết lập chung cho công ty sẽ được áp dụng."
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_plan__mismatched_contract_ids
+msgid "This technical field stores contracts that mismatch this plan."
+msgstr "Trường kỹ thuật chứa các hợp dồng mà không khớp kế hoạch này."
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_overtime_request_mass_form
+msgid ""
+"This wizard helps you\n"
+"\t\t\t\t\t\t\tgenerate overtime plans for massive employees or entire\n"
+"\t\t\t\t\t\t\tdepartments or companies based on the mode you choose below."
+msgstr ""
+"Đồ thuật này trợ giúp bạn\n"
+"\t\t\t\t\t\t\ttạo kế hoạch tăng ca hàng loạt cho nhân viên hay cho toàn bộ\n"
+"\t\t\t\t\t\t\tphòng ban hoặc công ty dựa trên chế độ mà bạn chọn dưới đây."
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields.selection,name:viin_hr_overtime.selection__hr_overtime_rule__weekday__3
+msgid "Thursday"
+msgstr "Thứ Năm"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Thursday Daytime"
+msgstr "Thứ Năm (ban ngày)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Thursday Early Morning"
+msgstr "Thứ Năm (sáng sớm)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Thursday Evening"
+msgstr "Thứ Năm (tối)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Thursday Night"
+msgstr "Thứ Năm (đêm)"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee_overtime__tz
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan_line__tz
+msgid "Timezone"
+msgstr "Múi giờ"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_reason__name
+msgid "Title"
+msgstr "Tiêu đề"
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_overtime_plan_line_tree_simple
+msgid "Total Actual Hours"
+msgstr "Tổng giờ thực tế"
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_overtime_plan_line_tree_simple
+msgid "Total Planned Hours"
+msgstr "Tổng giờ kế hoạch"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_plan__planned_hours
+msgid "Total planned hours for overtime registration"
+msgstr "Tổng giờ kế hoạch đã đăng ký tăng ca"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields.selection,name:viin_hr_overtime.selection__hr_overtime_rule__weekday__1
+msgid "Tuesday"
+msgstr "Thứ Ba"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Tuesday Daytime"
+msgstr "Thứ Ba (ban ngày)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Tuesday Early Morning"
+msgstr "Thứ Ba (sáng sớm)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Tuesday Evening"
+msgstr "Thứ Ba (tối)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Tuesday Night"
+msgstr "Thứ Ba (đêm)"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_plan__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_abstract_overtime_plan_line_match__unmatched_hours
+msgid "Unmatched Hours"
+msgstr "Số Giờ không hợp lệ"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__message_unread
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule__message_unread
+msgid "Unread Messages"
+msgstr "Thông điệp chưa đọc"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__message_unread_counter
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.hr_contract_view_form
+msgid "View mismatch overtime plans"
+msgstr "Xem các kế hoạch không khớp"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan__website_message_ids
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_rule__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_plan__website_message_ids
+#: model:ir.model.fields,help:viin_hr_overtime.field_hr_overtime_rule__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields.selection,name:viin_hr_overtime.selection__hr_overtime_rule__weekday__2
+msgid "Wednesday"
+msgstr "Thứ Tư"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Wednesday Daytime"
+msgstr "Thứ Tư (ban ngày)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Wednesday Early Morning"
+msgstr "Thứ Tư (sáng sớm)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Wednesday Evening"
+msgstr "Thứ Tư (tối)"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/res_company.py:0
+#, python-format
+msgid "Wednesday Night"
+msgstr "Thứ Tư (đêm)"
+
+#. module: viin_hr_overtime
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_employee_overtime__resource_calendar_id
+#: model:ir.model.fields,field_description:viin_hr_overtime.field_hr_overtime_plan_line__resource_calendar_id
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_employee_overtime_search
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_overtime_plan_line_search
+msgid "Working Schedule"
+msgstr "Lịch làm việc"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/hr_overtime_rule.py:0
+#, python-format
+msgid ""
+"You have entered an interval that is overlapping the interval of an existing"
+" rule (%s)!"
+msgstr ""
+"Bạn đã nhập một khoảng thời gian chồng lấn lên một khoảng thời gian của một "
+"quy tắc đã tồn tại (%s)!"
+
+#. module: viin_hr_overtime
+#: code:addons/viin_hr_overtime/models/hr_overtime_plan_line.py:0
+#, python-format
+msgid ""
+"You may not be able to delete an overtime plan line manually. You should "
+"handle it from the corresponding overtime plan."
+msgstr ""
+"Bạn không thể xóa thủ công một dòng kế hoạch tăng ca. Bạn hãy thực hiện ở kế"
+" hoạch tăng ca tương ứng"
+
+#. module: viin_hr_overtime
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_overtime_plan_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime.view_hr_overtime_plan_line_form
+msgid "hours"
+msgstr "giờ"

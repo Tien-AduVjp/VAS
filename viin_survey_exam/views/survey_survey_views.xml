@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="survey_form" model="ir.ui.view">
+        <field name="name">survey.survey.form.inherit</field>
+        <field name="model">survey.survey</field>
+        <field name="inherit_id" ref="survey.survey_form" />
+        <field name="arch" type="xml">
+            <button name="action_open" position="after">
+                <button name="action_import_question_bank" string="Import Questions Bank" type="object"
+                    attrs="{'invisible': [('id', '=', False)]}"
+                    groups="viin_survey_exam.survey_exam_group_manager"/>
+            </button>
+        </field>
+    </record>
+
+</odoo>

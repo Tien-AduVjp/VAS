@@ -1,0 +1,177 @@
+<odoo>
+	<data>
+		<record id="approval_request_type_form_view" model="ir.ui.view">
+			<field name="name">approval.request.type.form</field>
+			<field name="model">approval.request.type</field>
+			<field name="arch" type="xml">
+				<form string="Approval Request Type">
+					<sheet>
+						<h1>
+							<field name="name" />
+						</h1>
+						<group>
+							<group>
+								<field name="type" />
+								<field name="company_id" groups="base.group_multi_company" />
+							</group>
+							<group string="Approval Process" name="process">
+								<field name="manager_approval" />
+								<field name="type_approval_user_line_ids">
+									<tree editable="bottom">
+										<field name="sequence" widget="handle" />
+										<field name="user_id" />
+										<field name="required" />
+									</tree>
+								</field>
+								<field name="sequential_approvals" />
+								<field name="days_to_approve" />
+								<field name="approver_ids" invisible="1" />
+								<field name="mimimum_approvals" />
+								<div class="alert alert-warning" role="alert" colspan="2"
+									attrs="{'invisible': [('mimimum_approvals_exceed_warning', '=', False)]}">
+									<span class="fa fa-warning"
+										title="Invalid minimum approvals" />
+									<field name="mimimum_approvals_exceed_warning"
+										nolabel="1" />
+								</div>
+							</group>
+						</group>
+						<label for="description" />
+						<field name="description" />
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" />
+						<field name="activity_ids" />
+						<field name="message_ids" />
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record id="approval_request_type_view_kanban"
+			model="ir.ui.view">
+			<field name="name">approval.request.type.kanban</field>
+			<field name="model">approval.request.type</field>
+			<field name="arch" type="xml">
+				<kanban
+					class="oe_background_grey o_kanban_dashboard o_emphasize_colors o_approval_request_kanban"
+					create="0" group_create="false">
+					<templates>
+						<t t-name="kanban-box">
+							<div>
+								<div t-attf-class="o_kanban_card_header">
+									<div class="o_kanban_card_header_title">
+										<div class="o_primary" t-if="!selection_mode">
+											<a type="object" name="get_action_approval_request_type">
+												<field name="name" />
+											</a>
+										</div>
+										<div class="o_primary" t-if="selection_mode">
+											<field name="name" />
+										</div>
+										<div>
+											<field name="company_id"
+												groups="base.group_multi_company" />
+										</div>
+									</div>
+								</div>
+
+								<div class="container o_kanban_card_content"
+									t-if="!selection_mode">
+									<div class="row">
+										<div class="col-6 o_kanban_primary_left">
+											<button class="btn btn-primary"
+												name="get_approval_request_form_views" type="object">
+												<span>Create Request</span>
+											</button>
+										</div>
+
+										<div class="col-6 o_kanban_primary_right">
+											<div t-if="record.waiting_requests_count.raw_value > 0"
+												class="row">
+												<div class="col-9">
+													<a name="action_view_waiting_requests" type="object">
+														Waiting
+													</a>
+												</div>
+												<div class="col-3">
+													<field name="waiting_requests_count" />
+												</div>
+											</div>
+											<div t-if="record.approved_requests_count.raw_value > 0"
+												class="row">
+												<div class="col-9">
+													<a name="action_view_approved_requests" type="object">
+														Approved
+													</a>
+												</div>
+												<div class="col-3">
+													<field name="approved_requests_count" />
+												</div>
+											</div>
+											<div t-if="record.requests_count.raw_value > 0"
+												class="row">
+												<div class="col-9">
+													<a name="action_view_requests" type="object">
+														All
+													</a>
+												</div>
+												<div class="col-3">
+													<field name="requests_count" />
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</t>
+					</templates>
+				</kanban>
+			</field>
+		</record>
+		<record id="approval_request_type_tree_view" model="ir.ui.view">
+			<field name="name">approval.request.type.tree</field>
+			<field name="model">approval.request.type</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Approval Request Types">
+					<field name="name" />
+					<field name="type" />
+					<field name="requests_count" />
+					<field name="approved_requests_count" />
+					<field name="waiting_requests_count" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="approval_request_type_action"
+			model="ir.actions.act_window">
+			<field name="name">Approval Request Types</field>
+			<field name="res_model">approval.request.type</field>
+			<field name="view_mode">tree,form</field>
+			<field name="context">{}</field>
+		</record>
+
+		<record id="approval_request_type_kanban"
+			model="ir.actions.act_window">
+			<field name="name">Approval Overview</field>
+			<field name="res_model">approval.request.type</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="view_mode">kanban,form</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Create a new approval request type
+				</p>
+			</field>
+		</record>
+
+		<menuitem id="approval_request_type_menu" name="Overview"
+			action="approval_request_type_kanban" parent="approval_root_menu"
+			sequence="0" />
+
+		<menuitem id="approval_request_type_menu_configuration"
+			name="Approval Types" parent="approval_config_menu"
+			action="approval_request_type_action" groups="group_approval_manager"
+			sequence="1" />
+	</data>
+</odoo>

@@ -1,0 +1,271 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_loyalty_sales
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-28 15:23+0000\n"
+"PO-Revision-Date: 2022-03-28 15:23+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields.selection,name:to_loyalty_sales.selection__res_company__loyalty_points_reward_policy__order
+msgid "By Ordered quantities"
+msgstr "Theo Số lượng Đặt hàng"
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,help:to_loyalty_sales.field_res_company__loyalty_points_reward_policy
+#: model:ir.model.fields,help:to_loyalty_sales.field_res_config_settings__loyalty_points_reward_policy
+msgid ""
+"By Ordered quantities: customers are rewarded with loyalty points as soon as"
+" their orders are validated\n"
+msgstr ""
+"Theo Số lượng Đặt hàng: điểm thưởng sẽ được tặng cho khách hàng ngay khi đơn"
+" hàng được xác nhận\n"
+
+#. module: to_loyalty_sales
+#: model_terms:ir.ui.view,arch_db:to_loyalty_sales.reward_wizard_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: to_loyalty_sales
+#: model_terms:ir.ui.view,arch_db:to_loyalty_sales.reward_wizard_form
+msgid "Choose"
+msgstr "Chọn"
+
+#. module: to_loyalty_sales
+#: model:ir.model,name:to_loyalty_sales.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: to_loyalty_sales
+#: model:ir.model,name:to_loyalty_sales.model_res_config_settings
+msgid "Config Settings"
+msgstr "Thiết lập Cấu hình"
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_reward_wizard__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_reward_wizard__create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_sale_order__customer_level_id
+msgid "Customer Level"
+msgstr "Cấp độ Khách hàng"
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_loyalty_point__display_name
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_loyalty_points_report__display_name
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_res_company__display_name
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_reward_wizard__display_name
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_sale_order__display_name
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_sale_order_line__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_loyalty_sales
+#: model_terms:ir.ui.view,arch_db:to_loyalty_sales.res_config_settings_view_form
+msgid "How you reward your customers with loyalty points"
+msgstr "Cách bạn thưởng điểm cho khách hàng thân thiết của bạn"
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_loyalty_point__id
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_loyalty_points_report__id
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_res_company__id
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_res_config_settings__id
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_reward_wizard__id
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_sale_order__id
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_sale_order_line__id
+msgid "ID"
+msgstr "Định danh"
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_loyalty_point____last_update
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_loyalty_points_report____last_update
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_res_company____last_update
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_reward_wizard____last_update
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_sale_order____last_update
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_sale_order_line____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_reward_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_reward_wizard__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối"
+
+#. module: to_loyalty_sales
+#: model:ir.model,name:to_loyalty_sales.model_loyalty_point
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_sale_order_line__loyalty_point_ids
+msgid "Loyalty Point"
+msgstr "Điểm thưởng"
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_sale_order__loyalty_point_ids
+msgid "Loyalty Point Entries"
+msgstr "Bút toán điểm thưởng"
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_sale_order__loyalty_points
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_sale_order_line__loyalty_points
+msgid "Loyalty Points"
+msgstr "Điểm thưởng"
+
+#. module: to_loyalty_sales
+#: model:ir.actions.act_window,name:to_loyalty_sales.action_sale_loyalty_points
+msgid "Loyalty Points Analysis"
+msgstr "Thống kê Điểm thưởng"
+
+#. module: to_loyalty_sales
+#: model:ir.model,name:to_loyalty_sales.model_loyalty_points_report
+#: model:ir.ui.menu,name:to_loyalty_sales.menu_sale_loyalty_point_report
+msgid "Loyalty Points Report"
+msgstr "Báo cáo Điểm thưởng"
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_res_company__loyalty_points_reward_policy
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_res_config_settings__loyalty_points_reward_policy
+msgid "Loyalty Points Reward Policy"
+msgstr "Chính sách Tặng điểm Trung thành"
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_sale_order__loyalty_id
+msgid "Loyalty Program"
+msgstr "Chương trình Khách hàng Thân thiết"
+
+#. module: to_loyalty_sales
+#: model_terms:ir.ui.view,arch_db:to_loyalty_sales.view_sale_order_form
+msgid "Loyalty Programs"
+msgstr "Chương trình khách hàng thân thiết"
+
+#. module: to_loyalty_sales
+#: code:addons/to_loyalty_sales/models/sale_order.py:0
+#: code:addons/to_loyalty_sales/wizard/reward_wizard.py:0
+#, python-format
+msgid "Loyalty points of customer not enough for these rewards."
+msgstr "Điểm thưởng của khách hàng không đủ để được nhận các phần thưởng này."
+
+#. module: to_loyalty_sales
+#: code:addons/to_loyalty_sales/wizard/reward_wizard.py:0
+#, python-format
+msgid "Loyalty program %s haven't reward %s"
+msgstr "Chương trình chăm sóc khách hàng %s không có quà tặng %s"
+
+#. module: to_loyalty_sales
+#: code:addons/to_loyalty_sales/wizard/reward_wizard.py:0
+#, python-format
+msgid "Max. {0}% Discount"
+msgstr "Giảm giá tối đa {0}%"
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_sale_order__reward_count
+msgid "Number of Rewards"
+msgstr "Số lượng phần thưởng"
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_sale_order_line__reward_id
+msgid "Reward"
+msgstr "Phần thưởng"
+
+#. module: to_loyalty_sales
+#: model:ir.actions.act_window,name:to_loyalty_sales.action_reward_popup
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_reward_wizard__reward_id
+#: model_terms:ir.ui.view,arch_db:to_loyalty_sales.reward_wizard_form
+#: model_terms:ir.ui.view,arch_db:to_loyalty_sales.view_sale_order_form
+#: model_terms:ir.ui.view,arch_db:to_loyalty_sales.view_sales_order_auto_done_setting
+msgid "Rewards"
+msgstr "Phần thưởng"
+
+#. module: to_loyalty_sales
+#: model:ir.model,name:to_loyalty_sales.model_reward_wizard
+msgid "Rewards Wizard"
+msgstr "Phần thưởng"
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_loyalty_points_report__sale_order_line_id
+msgid "Sale Line"
+msgstr "Dòng Đơn Bán"
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_loyalty_point__sale_order_id
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_loyalty_points_report__sale_order_id
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_reward_wizard__sale_order_id
+msgid "Sale Order"
+msgstr "Đơn Bán"
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_loyalty_point__sale_order_line_id
+msgid "Sale Order Line"
+msgstr "Chi tiết đơn bán"
+
+#. module: to_loyalty_sales
+#: model:ir.model,name:to_loyalty_sales.model_sale_order
+msgid "Sales Order"
+msgstr "Đơn bán"
+
+#. module: to_loyalty_sales
+#: model:ir.model,name:to_loyalty_sales.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Chi tiết Đơn bán"
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,field_description:to_loyalty_sales.field_sale_order__spendable_points
+msgid "Spendable Points"
+msgstr "Số điểm khả dụng"
+
+#. module: to_loyalty_sales
+#: code:addons/to_loyalty_sales/wizard/reward_wizard.py:0
+#, python-format
+msgid "The customer's point need bigger than point cost"
+msgstr "Điểm của khách hàng cần lớn hơn chi phí điểm"
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,help:to_loyalty_sales.field_sale_order__loyalty_id
+msgid ""
+"The loyalty program used by this sales order. A program could be "
+"automatically selected here when there is one specified either for the "
+"corresponding customer or the sales team."
+msgstr ""
+"Chương trình Khách hàng Thân thiết được áp dụng cho đơn bán này. Chương "
+"trình sẽ tự động được điền vào đây nếu như nó được khai báo ở Đội / Kênh bán"
+" hàng tương ứng."
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,help:to_loyalty_sales.field_sale_order__loyalty_points
+msgid "The number of Loyalty points the customer won or lost with this order"
+msgstr "Số điểm khách hàng nhận được hoặc mất đi với đơn hàng này"
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,help:to_loyalty_sales.field_sale_order_line__loyalty_points
+msgid ""
+"The number of Loyalty points the customer won or lost with this order line"
+msgstr "Số điểm khách hàng nhận được hoặc mất đi với dòng đơn bán này"
+
+#. module: to_loyalty_sales
+#: model:ir.model.fields,help:to_loyalty_sales.field_sale_order_line__reward_id
+msgid "This field is to indicate that the line is a reward line"
+msgstr "Trường này để chỉ báo rằng dòng này là một dòng phần thưởng"
+
+#. module: to_loyalty_sales
+#: model_terms:ir.ui.view,arch_db:to_loyalty_sales.reward_wizard_form
+msgid "or"
+msgstr "hoặc"

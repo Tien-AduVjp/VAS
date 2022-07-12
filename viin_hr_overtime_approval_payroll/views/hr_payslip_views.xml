@@ -1,0 +1,15 @@
+<odoo>
+
+	<record id="view_hr_payslip_form" model="ir.ui.view">
+		<field name="name">hr.payslip.form</field>
+		<field name="model">hr.payslip</field>
+		<field name="inherit_id" ref="viin_hr_overtime_payroll.view_hr_payslip_form" />
+		<field name="arch" type="xml">
+			<xpath
+				expr="//field[@name='overtime_plan_line_ids']/tree/field[@name='hr_overtime_rule_id']"
+				position="after">
+				<field name="approval_id" />
+			</xpath>
+		</field>
+	</record>
+</odoo>

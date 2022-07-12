@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="hr_leave_view_form">
+            <field name="name">hr.leave.form</field>
+            <field name="model">hr.leave</field>
+            <field name="inherit_id"
+                ref="hr_holidays.hr_leave_view_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='action_draft']"
+                    position="after">
+                    <button string="View PoW Timesheet"
+                        name="action_view_pow_timesheet" type="object"
+                        help="Show Proof-of-Work timesheet entries related to this time off."
+                        attrs="{'invisible': ['|',('state', '!=', 'validate'),('pow_timesheet_required', '=', False)]}" />
+                    <button
+                        string="View PoW Timesheet Candidates"
+                        name="action_view_pow_timesheet_candidates"
+                        type="object"
+                        help="Show Proof-of-Work timesheet candidates related to this time off."
+                        attrs="{'invisible': ['|',('state', '!=', 'validate'),('pow_timesheet_required', '=', False)]}" />
+                    <button string="PoW Timesheet Not Required"
+                        name="action_toggle_pow_timesheet_required"
+                        type="object"
+                        groups="hr_holidays.group_hr_holidays_user"
+                        help="This sets this time off a non-pow required one."
+                        confirm="This action will set the time-off as not being requiring proof of work. It also resets all the related timesheet to be non-pow. Are you sure?"
+                        attrs="{'invisible': ['|',('state', '!=', 'validate'),('pow_timesheet_required', '=', False)]}" />
+                    <button string="PoW Timesheet Required"
+                        name="action_toggle_pow_timesheet_required"
+                        type="object"
+                        groups="hr_holidays.group_hr_holidays_user"
+                        help="This sets this time off a pow required one."
+                        confirm="This action will set the time-off as being requiring proof of work. It also finds and matches all PoW timesheet candidates to be PoW timesheet. Are you sure?"
+                        attrs="{'invisible': ['|',('state', '!=', 'validate'),('pow_timesheet_required', '=', True)]}" />
+                </xpath>
+                <xpath expr="//field[@name='tz_mismatch']"
+                    position="before">
+                    <div class="alert alert-warning" role="alert"
+                        attrs="{'invisible': [('pow_timesheet_required', '=', False)]}">
+                        <strong>Warning:</strong>
+                        The Time-off of the type
+                        <field name="holiday_status_id"
+                            readonly="True" force_save="1" />
+                        is considered as work time and requires
+                        employees to record work timesheet for proof of
+                        work.
+                    </div>
+                    <field name="pow_timesheet_required"
+                        invisible="1" />
+                </xpath>
+                <xpath
+                    expr="//div[./div/div/field[@name='number_of_hours_text']]"
+                    position="after">
+                    <label for="pow_timesheet_hours"
+                        string="PoW Timesheet"
+                        attrs="{'invisible': ['|',('state', '!=', 'validate'),('pow_timesheet_required', '=', False)]}" />
+                    <div class="o_row"
+                        attrs="{'invisible': ['|',('state', '!=', 'validate'),('pow_timesheet_required', '=', False)]}">
+                        <field name="pow_timesheet_hours"
+                            nolabel="1" class="oe_inline" />
+                        <span>Hours</span>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="hr_leave_view_tree">
+            <field name="name">hr.leave.view.tree</field>
+            <field name="model">hr.leave</field>
+            <field name="inherit_id"
+                ref="hr_holidays.hr_leave_view_tree" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='duration_display']"
+                    position="after">
+                    <field name="pow_timesheet_hours"
+                        optional="hide" />
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_hr_holidays_filter">
+            <field name="name">hr.leave.filter</field>
+            <field name="model">hr.leave</field>
+            <field name="inherit_id"
+                ref="hr_holidays.view_hr_holidays_filter" />
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='validated']"
+                    position="after">
+                    <separator />
+                    <filter string="PoW Required"
+                        domain="[('pow_timesheet_required', '=', True)]"
+                        name="ftr_pow" />
+                    <filter string="PoW Not Required"
+                        domain="[('pow_timesheet_required', '=', False)]"
+                        name="ftr_not_pow" />
+                    <separator />
+                    <filter string="PoW Timesheet Recorded"
+                        domain="[('pow_timesheet_ids', '!=', False)]"
+                        name="ftr_pow_ts_rec" />
+                    <filter string="PoW Timesheet Not Recorded"
+                        domain="[('pow_timesheet_ids', '=', False)]"
+                        name="ftr_pow_ts_not_rec" />
+                </xpath>
+            </field>
+        </record>
+
+        <record id="action_server_toggle_pow_timesheet_required"
+            model="ir.actions.server">
+            <field name="name">Toggle PoW Timesheet Requirement</field>
+            <field name="type">ir.actions.server</field>
+            <field name="model_id" ref="model_hr_leave" />
+            <field name="binding_model_id" ref="model_hr_leave" />
+            <field name="state">code</field>
+            <field name="code">records.action_toggle_pow_timesheet_required()</field>
+            <field name="groups_id"
+                eval="[(4,ref('hr_holidays.group_hr_holidays_manager'))]" />
+        </record>
+    </data>
+</odoo>

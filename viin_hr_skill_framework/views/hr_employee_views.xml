@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+
+		<record id="view_employee_form" model="ir.ui.view">
+			<field name="name">hr.employee.form</field>
+			<field name="model">hr.employee</field>
+			<field name="inherit_id"
+				ref="viin_hr_rank.view_employee_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//div[@name='button_box']" position="inside">
+					<button name="action_view_skill_reports"
+						class="oe_stat_button" icon="fa-book" type="object">
+						<field name="skills_report_entries_count" widget="statinfo"
+							string="Skills Report" />
+					</button>
+					<button name="action_view_unmet_skill_report"
+						class="oe_stat_button" icon="fa-times" type="object">
+						<field name="unmet_skills_report_entries_count"
+							widget="statinfo" string="Unmet Skills" />
+					</button>
+                    <button name="action_view_qualifying_skill_report"
+                        class="oe_stat_button" icon="fa-check" type="object">
+                        <field name="qualifying_skills_report_entries_count"
+                            widget="statinfo" string="Qualified Skills" />
+                    </button>
+				</xpath>
+				<xpath expr="//field[@name='next_rank_id']" position="after">
+					<field name="job_position_skills_required" />
+				</xpath>
+			</field>
+		</record>
+
+		<menuitem id="menu_hr_employee_user" name="Employees"
+			action="hr.open_view_employee_list_my" parent="menu_hr_employee"
+			groups="hr.group_hr_user" sequence="10" />
+	</data>
+</odoo>

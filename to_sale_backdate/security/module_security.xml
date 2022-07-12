@@ -1,0 +1,15 @@
+<odoo>
+    <record id="group_sale_backdate" model="res.groups">
+        <field name="name">Sale Backdate Operations</field>
+        <field name="category_id" ref="base.module_category_usability" />
+        <field name="implied_ids" eval="[(4, ref('sales_team.group_sale_salesman'))]"/>
+        <field name="comment">The user in this group will be able to do sale stock backdate
+            operations
+        </field>
+    </record>
+
+    <record id="sales_team.group_sale_salesman_all_leads" model="res.groups">
+        <field name="implied_ids"
+            eval="[(4, ref('group_sale_backdate'))]" />
+    </record>
+</odoo>

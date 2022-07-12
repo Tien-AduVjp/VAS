@@ -1,0 +1,127 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_partner_shareholder
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-18 06:13+0000\n"
+"PO-Revision-Date: 2021-11-18 06:13+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_partner_shareholder
+#: code:addons/viin_partner_shareholder/models/res_partner.py:0
+#, python-format
+msgid ""
+"As an individual, '%s' cannot have shareholders. Only companies can have "
+"shareholders"
+msgstr ""
+
+#. module: viin_partner_shareholder
+#: code:addons/viin_partner_shareholder/models/res_partner_shareholder.py:0
+#, python-format
+msgid ""
+"As an individual, the partner '%s' cannot have shareholders. Only company "
+"can have shareholders."
+msgstr ""
+
+#. module: viin_partner_shareholder
+#: model:ir.model,name:viin_partner_shareholder.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: viin_partner_shareholder
+#: model:ir.model.fields,field_description:viin_partner_shareholder.field_res_partner_shareholder__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: viin_partner_shareholder
+#: model:ir.model.fields,field_description:viin_partner_shareholder.field_res_partner_shareholder__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: viin_partner_shareholder
+#: model:ir.model.fields,field_description:viin_partner_shareholder.field_res_partner_shareholder__description
+msgid "Description"
+msgstr ""
+
+#. module: viin_partner_shareholder
+#: model:ir.model.fields,field_description:viin_partner_shareholder.field_res_partner__display_name
+#: model:ir.model.fields,field_description:viin_partner_shareholder.field_res_partner_shareholder__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: viin_partner_shareholder
+#: model:ir.model.fields,field_description:viin_partner_shareholder.field_res_partner__id
+#: model:ir.model.fields,field_description:viin_partner_shareholder.field_res_partner_shareholder__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_partner_shareholder
+#: model:ir.model.fields,field_description:viin_partner_shareholder.field_res_partner____last_update
+#: model:ir.model.fields,field_description:viin_partner_shareholder.field_res_partner_shareholder____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: viin_partner_shareholder
+#: model:ir.model.fields,field_description:viin_partner_shareholder.field_res_partner_shareholder__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: viin_partner_shareholder
+#: model:ir.model.fields,field_description:viin_partner_shareholder.field_res_partner_shareholder__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: viin_partner_shareholder
+#: model:ir.model.fields,field_description:viin_partner_shareholder.field_res_partner_shareholder__ownership_rate
+msgid "Ownership Rate"
+msgstr ""
+
+#. module: viin_partner_shareholder
+#: model:ir.model.fields,field_description:viin_partner_shareholder.field_res_partner_shareholder__partner_id
+msgid "Partner"
+msgstr ""
+
+#. module: viin_partner_shareholder
+#: model:ir.model,name:viin_partner_shareholder.model_res_partner_shareholder
+msgid "Partner Shareholder"
+msgstr ""
+
+#. module: viin_partner_shareholder
+#: model:ir.model.fields,field_description:viin_partner_shareholder.field_res_partner_shareholder__shareholder_id
+msgid "Shareholder"
+msgstr ""
+
+#. module: viin_partner_shareholder
+#: model:ir.model.fields,field_description:viin_partner_shareholder.field_res_partner__shareholder_ids
+#: model:ir.model.fields,field_description:viin_partner_shareholder.field_res_users__shareholder_ids
+#: model_terms:ir.ui.view,arch_db:viin_partner_shareholder.view_partner_form
+msgid "Shareholders"
+msgstr ""
+
+#. module: viin_partner_shareholder
+#: model:ir.model.fields,help:viin_partner_shareholder.field_res_partner_shareholder__ownership_rate
+msgid "The ownership rate (in percentage) of the shareholder in the company"
+msgstr ""
+
+#. module: viin_partner_shareholder
+#: model:ir.model.constraint,message:viin_partner_shareholder.constraint_res_partner_shareholder_check_ownership_rate
+msgid ""
+"The ownership rate of a shareholder should be greater than 0 and not greater"
+" than 100."
+msgstr ""
+
+#. module: viin_partner_shareholder
+#: code:addons/viin_partner_shareholder/models/res_partner_shareholder.py:0
+#, python-format
+msgid ""
+"The total shareholder ownership rate of the partner `%s` must not be greater"
+" than 100 percentage. Please choose another number."
+msgstr ""

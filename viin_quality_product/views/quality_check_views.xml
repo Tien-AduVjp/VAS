@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="quality_check_view_tree" model="ir.ui.view">
+		<field name="name">quality.check.tree.inherit</field>
+		<field name="model">quality.check</field>
+		<field name="inherit_id" ref="to_quality.quality_check_view_tree"/>
+		<field name="arch" type="xml">
+			<field name="team_id" position="before">
+				<field name="product_id" attrs="{'invisible': [('quality_type', '!=', 'product')]}"/>
+			</field>
+		</field>
+	</record>
+
+	<record id="quality_check_view_form" model="ir.ui.view">
+		<field name="name">quality.check.form.inherit</field>
+		<field name="model">quality.check</field>
+		<field name="inherit_id" ref="to_quality.quality_check_view_form"/>
+		<field name="arch" type="xml">
+			<field name="point_id" position="after">
+				<field name="product_id" attrs="{'invisible': [('quality_type', '!=', 'product')], 'required': [('quality_type', '=', 'product')]}"/>
+				<label for="quantity_to_check" attrs="{'invisible': [('quality_type', '!=', 'product')]}"/>
+				<div class="o_row" attrs="{'invisible':[('quality_type', '!=', 'product')]}">
+					<field name="quantity_to_check"/>
+					%
+				</div>
+				<label for="checked_quantity" attrs="{'invisible': [('quality_type', '!=', 'product')]}"/>
+				<div class="o_row" attrs="{'invisible':[('quality_type', '!=', 'product')]}">
+					<field name="checked_quantity" attrs="{'readonly':[('quality_state','!=','none')]}"/>
+					%
+				</div>
+				<label for="checked_qty_deviation" attrs="{'invisible':['|',('quality_state','=','none'),('quality_type', '!=', 'product')]}" />
+				<div class="o_row" attrs="{'invisible':['|',('quality_state','=','none'),('quality_type', '!=', 'product')]}">
+					<field name="checked_qty_deviation" />
+					%
+				</div>
+			</field>
+		</field>
+	</record>
+
+	<record id="quality_check_view_form_small" model="ir.ui.view">
+		<field name="name">quality.check.form.small.inherit</field>
+		<field name="model">quality.check</field>
+		<field name="inherit_id" ref="to_quality.quality_check_view_form_small"/>
+		<field name="arch" type="xml">
+			<xpath expr="//h2/span/field[@name='name']" position="before">
+				<span attrs="{'invisible': [('quality_type', '!=', 'product')]}">
+					<field name="product_id" readonly="1" options="{'no_open': True}"/>
+					:
+				</span>
+			</xpath>
+			<xpath expr="//div[hasclass('o_row')]" position="after">
+				<label for="quantity_to_check" attrs="{'invisible': [('quality_type', '!=', 'product')]}"/>
+				<div class="o_row" attrs="{'invisible': [('quality_type', '!=', 'product')]}">
+					<field name="quantity_to_check"/>
+					%
+				</div>
+				<label for="checked_quantity" attrs="{'invisible': [('quality_type', '!=', 'product')]}"/>
+				<div class="o_row" attrs="{'invisible': [('quality_type', '!=', 'product')]}">
+					<field name="checked_quantity"/>
+					%
+				</div>
+			</xpath>
+		</field>
+	</record>
+
+	<record id="quality_check_view_kanban" model="ir.ui.view">
+		<field name="name">quality.check.kanban.inherit</field>
+		<field name="model">quality.check</field>
+		<field name="inherit_id" ref="to_quality.quality_check_view_kanban"/>
+		<field name="arch" type="xml">
+			<field name="control_date" position="after">
+				<field name="product_id" />
+			</field>
+			<xpath expr="//div[hasclass('oe_kanban_bottom_right')]" positon="before">
+				<div class="row text-muted" attrs="{'invisible': [('quality_type', '!=', 'product')]}">
+					<div class="col-8">
+						<span>
+							<t t-esc="record.product_id.value" />
+						</span>
+					</div>
+				</div>
+			</xpath>
+		</field>
+	</record>
+
+	<record id="quality_check_view_search" model="ir.ui.view">
+		<field name="name">quality.check.search.inherit</field>
+		<field name="model">quality.check</field>
+		<field name="inherit_id" ref="to_quality.quality_check_view_search"/>
+		<field name="arch" type="xml">
+			<field name="team_id" position="after">
+				<separator />
+				<field name="product_id" />
+			</field>
+			<xpath expr="//group/filter[@name='grp_user_id']" position="after">
+				<filter name="grp_product_id" string="Product" context="{'group_by': 'product_id'}" />
+			</xpath>
+		</field>
+	</record>
+
+</odoo>

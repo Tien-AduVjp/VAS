@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="document_document_mrp_mo1_demo" model="document.document">
+        <field name="name">Production Order - WH_MO_00001</field>
+        <field name="datas" type="base64" file="viin_document_mrp/demo/documents/MO_00001.pdf"/>
+        <field name="workspace_id" ref="document_workspace_mrp"/>
+        <field name="owner_id" ref="base.user_admin"/>
+        <field name="tag_ids" eval="[
+            (4, ref('document_tag_mrp_manufacturing_order')),
+            (4, ref('document_tag_mrp_mo_confirm'))]"/>
+    </record>
+
+    <record id="document_document_mrp_bom1_demo" model="document.document">
+        <field name="name">Bom Structure - [FURN_9666] Table</field>
+        <field name="datas" type="base64" file="viin_document_mrp/demo/documents/BOM001.pdf"/>
+        <field name="workspace_id" ref="document_workspace_mrp"/>
+        <field name="owner_id" ref="base.user_demo"/>
+        <field name="tag_ids" eval="[
+            (4, ref('document_tag_mrp_bom')),
+            (4, ref('document_tag_mrp_mo_done'))]"/>
+    </record>
+
+</odoo>

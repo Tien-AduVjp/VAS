@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<odoo>
+    <record model="ir.cron" id="ir_cron_resend_notiftication">
+        <field name="name">Resend notification</field>
+        <field name="model_id" ref="viin_mobile_notification.model_mobile_notification" />
+        <field name="state">code</field>
+        <field name="code">model._resend()</field>
+        <field name="interval_number">30</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+    </record>
+    <record id="ir_cron_delete_mobile_notification" model="ir.cron">
+        <field name="name">Mobile Notification: Delete Notifications older than 7 Days</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False"/>
+        <field name="model_id" ref="viin_mobile_notification.model_mobile_notification"/>
+        <field name="code">model._gc_mobile_notifications(max_age_days=7)</field>
+        <field name="state">code</field>
+    </record>
+</odoo>

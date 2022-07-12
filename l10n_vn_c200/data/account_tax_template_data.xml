@@ -1,0 +1,167 @@
+<odoo>
+	<!-- For Purchase -->
+	<record id="account_tax_template_purchase_vat_exemption" model="account.tax.template">
+		<field name="chart_template_id" ref="l10n_vn.vn_template" />
+		<field name="name">VAT Exemption</field>
+		<field name="description">VAT Exemption</field>
+		<field name="amount" eval="0" />
+		<field name="amount_type">percent</field>
+		<field name="type_tax_use">purchase</field>
+		<field name="analytic" eval="1" />
+		<field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+                'plus_report_line_ids': [ref('l10n_vn_common.account_tax_report_line_purchase_val_exemption')],
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+            }),]" />
+		<field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+                'minus_report_line_ids': [ref('l10n_vn_common.account_tax_report_line_purchase_val_exemption')],
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+            }),]" />
+		<field name="tax_group_id" ref="l10n_vn_common.account_tax_group_exemption" />
+	</record>
+
+	<!-- For Sale -->
+	<record id="account_tax_template_sale_vat_exemption" model="account.tax.template">
+		<field name="chart_template_id" ref="l10n_vn.vn_template" />
+		<field name="name">VAT Exemption</field>
+		<field name="description">VAT Exemption</field>
+		<field name="amount" eval="0" />
+		<field name="amount_type">percent</field>
+		<field name="type_tax_use">sale</field>
+		<field name="analytic" eval="1" />
+		<field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+       (0,0, {
+           'factor_percent': 100,
+           'repartition_type': 'base',
+           'plus_report_line_ids': [ref('l10n_vn_common.account_tax_report_line_sale_val_exemption')],
+       }),
+       (0,0, {
+           'factor_percent': 100,
+           'repartition_type': 'tax',
+       }),]" />
+		<field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+       (0,0, {
+           'factor_percent': 100,
+           'repartition_type': 'base',
+           'minus_report_line_ids': [ref('l10n_vn_common.account_tax_report_line_sale_val_exemption')],
+       }),
+       (0,0, {
+           'factor_percent': 100,
+           'repartition_type': 'tax',
+       }),]" />
+		<field name="tax_group_id" ref="l10n_vn_common.account_tax_group_exemption" />
+	</record>
+
+	<!-- For Purchase -->
+	<record id="account_tax_template_importing_vat10" model="account.tax.template">
+		<field name="chart_template_id" ref="l10n_vn.vn_template" />
+		<field name="name">VAT on imported goods 10%</field>
+		<field name="description">VAT on imported goods 10%</field>
+		<field name="amount" eval="10" />
+		<field name="amount_type">percent</field>
+		<field name="type_tax_use">purchase</field>
+		<field name="analytic" eval="1" />
+		<field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+       (0,0, {
+           'factor_percent': 100,
+           'repartition_type': 'base',
+           'plus_report_line_ids': [ref('l10n_vn.account_tax_report_line_03_02_01_vn')],
+       }),
+       (0,0, {
+           'factor_percent': 100,
+           'repartition_type': 'tax',
+           'account_id': ref('l10n_vn.chart33312'),
+           'plus_report_line_ids': [ref('l10n_vn.account_tax_report_line_03_01_01_vn')],
+       }),]" />
+		<field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+       (0,0, {
+           'factor_percent': 100,
+           'repartition_type': 'base',
+           'minus_report_line_ids': [ref('l10n_vn.account_tax_report_line_03_02_01_vn')],
+       }),
+       (0,0, {
+           'factor_percent': 100,
+           'repartition_type': 'tax',
+           'account_id': ref('l10n_vn.chart33312'),
+           'minus_report_line_ids': [ref('l10n_vn.account_tax_report_line_03_01_01_vn')],
+       }),]" />
+		<field name="tax_group_id" ref="l10n_vn.tax_group_10" />
+	</record>
+
+	<record id="account_tax_template_importing_vat5" model="account.tax.template">
+		<field name="chart_template_id" ref="l10n_vn.vn_template" />
+		<field name="name">VAT on imported goods 5%</field>
+		<field name="description">VAT on imported goods 5%</field>
+		<field name="amount" eval="5" />
+		<field name="amount_type">percent</field>
+		<field name="type_tax_use">purchase</field>
+		<field name="analytic" eval="1" />
+		<field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+       (0,0, {
+           'factor_percent': 100,
+           'repartition_type': 'base',
+           'plus_report_line_ids': [ref('l10n_vn.account_tax_report_line_02_02_01_vn')],
+       }),
+       (0,0, {
+           'factor_percent': 100,
+           'repartition_type': 'tax',
+           'account_id': ref('l10n_vn.chart33312'),
+           'plus_report_line_ids': [ref('l10n_vn.account_tax_report_line_02_01_01_vn')],
+       }),]" />
+		<field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+       (0,0, {
+           'factor_percent': 100,
+           'repartition_type': 'base',
+           'minus_report_line_ids': [ref('l10n_vn.account_tax_report_line_02_02_01_vn')],
+       }),
+       (0,0, {
+           'factor_percent': 100,
+           'repartition_type': 'tax',
+           'account_id': ref('l10n_vn.chart33312'),
+           'minus_report_line_ids': [ref('l10n_vn.account_tax_report_line_02_01_01_vn')],
+       }),]" />
+		<field name="tax_group_id" ref="l10n_vn.tax_group_5" />
+	</record>
+
+	<record id="account_tax_template_importing_vat0" model="account.tax.template">
+		<field name="chart_template_id" ref="l10n_vn.vn_template" />
+		<field name="name">VAT on imported goods 0%</field>
+		<field name="description">VAT on imported goods 0%</field>
+		<field name="amount" eval="0" />
+		<field name="amount_type">percent</field>
+		<field name="type_tax_use">purchase</field>
+		<field name="analytic" eval="1" />
+		<field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+       (0,0, {
+           'factor_percent': 100,
+           'repartition_type': 'base',
+           'plus_report_line_ids': [ref('l10n_vn.account_tax_report_line_01_02_01_vn')],
+       }),
+       (0,0, {
+           'factor_percent': 100,
+           'repartition_type': 'tax',
+       }),]" />
+		<field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+       (0,0, {
+           'factor_percent': 100,
+           'repartition_type': 'base',
+           'minus_report_line_ids': [ref('l10n_vn.account_tax_report_line_01_02_01_vn')],
+       }),
+       (0,0, {
+           'factor_percent': 100,
+           'repartition_type': 'tax',
+       }),]" />
+		<field name="tax_group_id" ref="l10n_vn.tax_group_0" />
+	</record>
+</odoo>

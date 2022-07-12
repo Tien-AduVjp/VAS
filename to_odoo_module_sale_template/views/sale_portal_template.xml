@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<template id="sale_order_portal_content_inherit_sale_quotation_builder_inherit"
+		inherit_id="sale_quotation_builder.sale_order_portal_content_inherit_sale_quotation_builder">
+		<xpath expr="//div[@t-field='line.website_description']" position="attributes">
+			<attribute name="t-if">line.product_id.print_app_desc_on_sale_order and line.order_id.print_app_desc_on_sale_order</attribute>
+		</xpath>
+	</template>
+
+</odoo>

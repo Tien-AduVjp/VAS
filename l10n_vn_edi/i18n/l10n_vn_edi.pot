@@ -1,0 +1,2056 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_vn_edi
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-05 07:05+0000\n"
+"PO-Revision-Date: 2022-05-05 07:05+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_vn_edi
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.portal_invoice_page
+msgid ""
+"<i class=\"fa fa-file-code-o\"/>\n"
+"\t\t\t\t\t\tXML"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.res_config_settings_view_form
+msgid ""
+"<span class=\"o_form_label\">API Version</span>\n"
+"\t\t\t\t\t\t\t\tYou should check the version of your e-invoice service before choosing versions here"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__api_url
+msgid "API URL"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_line__einvoice_api_version
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_move__einvoice_api_version
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_payment__einvoice_api_version
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__api_version
+msgid "API Version"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields.selection,name:l10n_vn_edi.selection__einvoice_service__api_version__v1
+msgid "API v1"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields.selection,name:l10n_vn_edi.selection__einvoice_service__api_version__v2
+msgid "API v2"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__access_token
+msgid "Access Token"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model,name:l10n_vn_edi.model_account_einvoice_template
+msgid "Account E-Invoice Type"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_error_notification__action
+msgid "Action"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__message_needaction
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_template__message_needaction
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_type__message_needaction
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__activity_ids
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_template__activity_ids
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_type__activity_ids
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__activity_exception_decoration
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_template__activity_exception_decoration
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_type__activity_exception_decoration
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__activity_state
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_template__activity_state
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_type__activity_state
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__activity_type_icon
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_template__activity_type_icon
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_type__activity_type_icon
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.view_move_form
+msgid "Add Vietnamese Invoice Line Description"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields.selection,name:l10n_vn_edi.selection__account_move__einvoice_state__adjusted
+msgid "Adjusted"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields.selection,name:l10n_vn_edi.selection__account_einvoice_error_notification__action__2
+msgid "Adjustment"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_line__adjustment_record
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_invoice_einvoice_adjustment__adjustment_record
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_move__adjustment_record
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_payment__adjustment_record
+msgid "Adjustment File Agreement (PDF)"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_line__adjustment_record_name
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_invoice_einvoice_adjustment__adjustment_record_name
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_move__adjustment_record_name
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_payment__adjustment_record_name
+msgid "Adjustment File Name"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/account_move_line.py:0
+#, python-format
+msgid "Adjustment Line %s is not a reversal of any original invoice line"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/account_move_line.py:0
+#, python-format
+msgid "All the invoice lines must belong to the same invoice."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_res_company__einvoice_exchange_file_as_attachment
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_res_config_settings__einvoice_exchange_file_as_attachment
+msgid "Attach Invoice Converted Version"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_res_company__einvoice_representation_file_as_attachment
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_res_config_settings__einvoice_representation_file_as_attachment
+msgid "Attach Invoice Repensentation Version"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__message_attachment_count
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_template__message_attachment_count
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_type__message_attachment_count
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_import_journal_creation__einvoice_auto_issue
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_line__einvoice_auto_issue
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_journal__einvoice_auto_issue
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_move__einvoice_auto_issue
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_payment__einvoice_auto_issue
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_res_company__einvoice_auto_issue
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_res_config_settings__einvoice_auto_issue
+msgid "Auto Issue"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.actions.server,name:l10n_vn_edi.ir_cron_auto_issue_einvoice_ir_actions_server
+#: model:ir.cron,cron_name:l10n_vn_edi.ir_cron_auto_issue_einvoice
+#: model:ir.cron,name:l10n_vn_edi.ir_cron_auto_issue_einvoice
+msgid "Auto Issue E-invoices"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_bank_statement_import_journal_creation__send_mail_einvoice_disabled
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_journal__send_mail_einvoice_disabled
+msgid ""
+"By default, Odoo will replace it's standard invoice PDF with E-Invoice PDF "
+"when E-Invoice is enabled for the invoice. By checking this, you will be "
+"able to disable such behaviour for invoices of this journal to fallback to "
+"the standard behaviour"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields.selection,name:l10n_vn_edi.selection__account_einvoice_error_notification__action__1
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.account_einvoice_error_notification_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.account_invoice_einvoice_adjusment_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.view_account_invoice_einvoice_cancel
+msgid "Cancel"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_invoice_einvoice_cancel__additional_reference_date
+msgid "Cancellation Date"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/wizard/account_invoice_einvoice_adjustment.py:0
+#, python-format
+msgid ""
+"Cannot issue e-invoice because the original invoice %s is not in '%s' "
+"e-invoice state"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/wizard/account_invoice_einvoice_adjustment.py:0
+#, python-format
+msgid ""
+"Cannot issue e-invoice because this invoice is not a reversal of any "
+"customer invoice"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_line__check_einvoice_approved_and_signed
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_move__check_einvoice_approved_and_signed
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_payment__check_einvoice_approved_and_signed
+msgid "Check Einvoice Approved And Signed"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_einvoice_service__mode
+msgid "Choose Sandbox mode for testing before switch it to Production"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_bank_statement_import_journal_creation__einvoice_send_mail_option
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_journal__einvoice_send_mail_option
+msgid ""
+"Choose which version of E-Invoice will be available for mail sending and "
+"download and print from customer portal."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_type__name
+msgid "Code"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model,name:l10n_vn_edi.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__company_id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__company_id
+msgid "Company"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model,name:l10n_vn_edi.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.einvoice_service_view_form
+msgid "Configuration"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.account_einvoice_error_notification_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.account_invoice_einvoice_adjusment_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.view_account_invoice_einvoice_cancel
+msgid "Confirm"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model,name:l10n_vn_edi.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields.selection,name:l10n_vn_edi.selection__account_journal__einvoice_send_mail_option__converted
+msgid "Converted Version"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__module_id
+msgid "Corresponding Module"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/account_move.py:0
+#, python-format
+msgid ""
+"Could not download E-invoice as the invoice %s is not a customer invoice"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/account_move.py:0
+#, python-format
+msgid ""
+"Could not issue E-Invoice for the invoice %s. Here is the debugging "
+"information: %s"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model_terms:ir.actions.act_window,help:l10n_vn_edi.einvoice_service_action
+msgid "Create a new e-invoice service"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_error_notification__create_uid
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__create_uid
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_template__create_uid
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_type__create_uid
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_invoice_einvoice_adjustment__create_uid
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_invoice_einvoice_cancel__create_uid
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_error_notification__create_date
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__create_date
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_template__create_date
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_type__create_date
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_invoice_einvoice_adjustment__create_date
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_invoice_einvoice_cancel__create_date
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__deprecated
+msgid "Deprecated"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__description
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_template__description
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_type__description
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__description
+msgid "Description"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_import_journal_creation__send_mail_einvoice_disabled
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_journal__send_mail_einvoice_disabled
+msgid "Disable Send E-Invoice PDF by email"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_edi_format__display_name
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_error_notification__display_name
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__display_name
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_template__display_name
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_type__display_name
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_invoice_einvoice_adjustment__display_name
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_invoice_einvoice_cancel__display_name
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_journal__display_name
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_move__display_name
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__display_name
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_ir_actions_report__display_name
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_mail_compose_message__display_name
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_product_product__display_name
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_res_company__display_name
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_res_partner__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields.selection,name:l10n_vn_edi.selection__account_journal__einvoice_send_mail_option__display
+msgid "Display Version"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.view_move_form
+msgid "Download E-Invoice Converted"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.view_move_form
+msgid "Download E-Invoice Display Version"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.view_move_form
+msgid "Download the invoice file converted from the electronic invoice."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields.selection,name:l10n_vn_edi.selection__account_move__einvoice_error_notif_state__draft
+msgid "Draft"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.ui.menu,name:l10n_vn_edi.menu_einvoice
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.view_account_journal_form
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.view_move_form
+msgid "E-Invoice"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.actions.act_window,name:l10n_vn_edi.account_invoice_einvoice_cancel_action
+#: model:ir.model,name:l10n_vn_edi.model_account_invoice_einvoice_adjustment
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.account_invoice_einvoice_adjusment_view_form
+msgid "E-Invoice Adjustment Wizard"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_line__einvoice_cancellation_date
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_move__einvoice_cancellation_date
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_payment__einvoice_cancellation_date
+msgid "E-Invoice Cancellation Date"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.actions.act_window,name:l10n_vn_edi.action_account_invoice_einvoice_cancel
+#: model:ir.model,name:l10n_vn_edi.model_account_invoice_einvoice_cancel
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.view_account_invoice_einvoice_cancel
+msgid "E-Invoice Cancellation Wizard"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_import_journal_creation__einvoice_disabled
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_journal__einvoice_disabled
+msgid "E-Invoice Disabled"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_import_journal_creation__einvoice_enabled
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_line__einvoice_enabled
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_journal__einvoice_enabled
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_move__einvoice_enabled
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_payment__einvoice_enabled
+msgid "E-Invoice Enabled"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.actions.act_window,name:l10n_vn_edi.account_einvoice_error_notification_action
+#: model:ir.model,name:l10n_vn_edi.model_account_einvoice_error_notification
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.account_einvoice_error_notification_view_form
+msgid "E-Invoice Error Notification Wizard"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.view_account_journal_form
+msgid "E-Invoice Integration"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_line__einvoice_issue_user_id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_move__einvoice_issue_user_id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_payment__einvoice_issue_user_id
+msgid "E-Invoice Issue User"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.view_account_invoice_filter
+msgid "E-Invoice Issued"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.view_account_invoice_filter
+msgid "E-Invoice Issued But Cancelled"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_line__einvoice_invoice_date
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_move__einvoice_invoice_date
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_payment__einvoice_invoice_date
+msgid "E-Invoice Issued Date"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_import_journal_creation__einvoice_item_name
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_journal__einvoice_item_name
+msgid "E-Invoice Item"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/account_journal.py:0
+#, python-format
+msgid ""
+"E-Invoice Item must be required for journal %s. Please input E-Invoice Item "
+"for journal %s. or Disable E-Invoice"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.view_account_invoice_filter
+msgid "E-Invoice Not Issued"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.view_account_invoice_filter
+msgid "E-Invoice Paid"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_import_journal_creation__einvoice_send_mail_option
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_journal__einvoice_send_mail_option
+msgid "E-Invoice Send Mail/Portal option"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/account_journal.py:0
+#, python-format
+msgid ""
+"E-Invoice Send Mail/Portal option must be required for journal %s. Please "
+"input E-Invoice Send Mail/Portal option for journal %s. or Disable E-Invoice"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.actions.act_window,name:l10n_vn_edi.action_einvoice_serial
+#: model:ir.model,name:l10n_vn_edi.model_account_einvoice_serial
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_import_journal_creation__account_einvoice_serial_id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_line__account_einvoice_serial_id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_journal__account_einvoice_serial_id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_move__account_einvoice_serial_id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_payment__account_einvoice_serial_id
+#: model:ir.ui.menu,name:l10n_vn_edi.menu_action_einvoice_serial
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.account_einvoice_serial_form
+msgid "E-Invoice Serial"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_import_journal_creation__einvoice_service_id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__einvoice_service_id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_journal__einvoice_service_id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_res_company__einvoice_service_id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_res_config_settings__einvoice_service_id
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.einvoice_service_view_kanban
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.einvoice_service_view_search
+msgid "E-Invoice Service"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.res_config_settings_view_form
+msgid "E-Invoice Service will be applied to this company."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.actions.act_window,name:l10n_vn_edi.einvoice_service_action
+#: model:ir.model,name:l10n_vn_edi.model_einvoice_service
+#: model:ir.ui.menu,name:l10n_vn_edi.einvoice_service_menu
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.einvoice_service_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.einvoice_service_view_tree
+msgid "E-Invoice Services"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.res_config_settings_view_form
+msgid "E-Invoice Settings"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_line__einvoice_state
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_move__einvoice_state
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_payment__einvoice_state
+msgid "E-Invoice Status"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_import_journal_creation__account_einvoice_template_id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_line__account_einvoice_template_id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__template_id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_journal__account_einvoice_template_id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_move__account_einvoice_template_id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_payment__account_einvoice_template_id
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.account_einvoice_template_form
+msgid "E-Invoice Template"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.actions.act_window,name:l10n_vn_edi.action_einvoice_template
+#: model:ir.ui.menu,name:l10n_vn_edi.menu_einvoice_template
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.account_einvoice_template_tree
+msgid "E-Invoice Templates"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model,name:l10n_vn_edi.model_account_einvoice_type
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_import_journal_creation__account_einvoice_type_id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_line__account_einvoice_type_id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__type_id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_template__type_id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_journal__account_einvoice_type_id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_move__account_einvoice_type_id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_payment__account_einvoice_type_id
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.account_einvoice_type_form
+msgid "E-Invoice Type"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.actions.act_window,name:l10n_vn_edi.action_einvoice_type
+#: model:ir.ui.menu,name:l10n_vn_edi.menu_einvoice_type
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.account_einvoice_type_tree
+msgid "E-Invoice Types"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/account_move.py:0
+#, python-format
+msgid "E-Invoice for the invoice %s has been issued already!"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.account_journal_dashboard_kanban_view
+msgid "E-Invoices to Issue"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_import_journal_creation__einvoice_display_bank_account
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_journal__einvoice_display_bank_account
+msgid "E-invoice Bank Info."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_line__einvoice_converted_file
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_move__einvoice_converted_file
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_payment__einvoice_converted_file
+msgid "E-invoice Converted File"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_line__einvoice_converted_filename
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_move__einvoice_converted_filename
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_payment__einvoice_converted_filename
+msgid "E-invoice Converted Filename"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_line__einvoice_representation_pdf
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_move__einvoice_representation_pdf
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_payment__einvoice_representation_pdf
+msgid "E-invoice Representation File (PDF)"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_line__einvoice_official_representation
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_move__einvoice_official_representation
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_payment__einvoice_official_representation
+msgid "E-invoice Representation File (Zip/XML)"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_line__einvoice_representation_pdf_filename
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_move__einvoice_representation_pdf_filename
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_payment__einvoice_representation_pdf_filename
+msgid "E-invoice Representation Filename (PDF)"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_line__einvoice_official_representation_filename
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_move__einvoice_official_representation_filename
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_payment__einvoice_official_representation_filename
+msgid "E-invoice Representation Filename (Zip/XML)"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_line__einvoice_service_id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_move__einvoice_service_id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_payment__einvoice_service_id
+msgid "E-invoice Service"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_line__einvoice_transactionid
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_move__einvoice_transactionid
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_payment__einvoice_transactionid
+msgid "E-invoice Transaction ID"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_import_journal_creation__einvoice_item_name_limit
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_journal__einvoice_item_name_limit
+msgid "E-invoice item name limit"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/account_journal.py:0
+#, python-format
+msgid ""
+"E-invoice item name limit must be required for journal %s. Please input "
+"E-invoice item name limit for journal %s. or Disable Send E-Invoice PDF by "
+"email"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_import_journal_creation__einvoice_item_name_new_line_replacement
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_journal__einvoice_item_name_new_line_replacement
+msgid "E-invoice item name new line replacement "
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model,name:l10n_vn_edi.model_account_edi_format
+msgid "EDI format"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_line__einvoice_error_notif_state
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_move__einvoice_error_notif_state
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_payment__einvoice_error_notif_state
+msgid "Einvoice Error Notif State"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model,name:l10n_vn_edi.model_mail_compose_message
+msgid "Email composition wizard"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.actions.server,name:l10n_vn_edi.ir_cron_ensure_download_einvoice_file_ir_actions_server
+#: model:ir.cron,cron_name:l10n_vn_edi.ir_cron_ensure_download_einvoice_file
+#: model:ir.cron,name:l10n_vn_edi.ir_cron_ensure_download_einvoice_file
+msgid "Ensure Download E-invoice Files"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__expiration
+msgid "Expiration"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields.selection,name:l10n_vn_edi.selection__account_einvoice_error_notification__action__4
+msgid "Explanation"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:account.einvoice.type,description:l10n_vn_edi.einvoice_type_06HDXK
+msgid "Exporting Invoice"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_line__cancellation_record_name
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_invoice_einvoice_cancel__cancellation_record_name
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_move__cancellation_record_name
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_payment__cancellation_record_name
+msgid "File Name"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__message_follower_ids
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_template__message_follower_ids
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_type__message_follower_ids
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__message_channel_ids
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_template__message_channel_ids
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_type__message_channel_ids
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__message_partner_ids
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_template__message_partner_ids
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_type__message_partner_ids
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_serial__activity_type_icon
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_template__activity_type_icon
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_type__activity_type_icon
+#: model:ir.model.fields,help:l10n_vn_edi.field_einvoice_service__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.einvoice_service_view_search
+msgid "Group By"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:account.einvoice.type,description:l10n_vn_edi.einvoice_type_07KPTQ
+msgid "Hóa đơn Bán Hàng (dành cho tổ chức cá nhân trong khu phí thuế quan)"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_edi_format__id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_error_notification__id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_template__id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_type__id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_invoice_einvoice_adjustment__id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_invoice_einvoice_cancel__id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_journal__id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_move__id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_move_line__id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_ir_actions_report__id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_mail_compose_message__id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_product_product__id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_res_company__id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_res_config_settings__id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_res_partner__id
+msgid "ID"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__activity_exception_icon
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_template__activity_exception_icon
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_type__activity_exception_icon
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_serial__activity_exception_icon
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_template__activity_exception_icon
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_type__activity_exception_icon
+#: model:ir.model.fields,help:l10n_vn_edi.field_einvoice_service__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_bank_statement_import_journal_creation__einvoice_disabled
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_journal__einvoice_disabled
+msgid ""
+"If checked, E-Invoice integration will be disabled for all the invoices of "
+"this journal no matter it is enabled at company level or not."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.res_config_settings_view_form
+msgid ""
+"If checked, during issuing a new E-Invoice, Odoo\n"
+"\t\t\t\t\t\t\t\twill check to validate if there is an existing unissued invoice\n"
+"\t\t\t\t\t\t\t\tthe invoice date of which is earlier than the current one's and\n"
+"\t\t\t\t\t\t\t\tlater than the date specified below. If there is, Odoo will stop\n"
+"\t\t\t\t\t\t\t\tyou from issuing E-Invoice for the current one and ask you to do\n"
+"\t\t\t\t\t\t\t\tfor the earlier one priorily."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_res_company__einvoice_issue_earliest_invoice_first
+#: model:ir.model.fields,help:l10n_vn_edi.field_res_config_settings__einvoice_issue_earliest_invoice_first
+msgid ""
+"If checked, during issuing a new E-Invoice, Odoo will check to validate if "
+"there is an existing invoice the invoice date of which is earlier than the "
+"current one's. If there is, Odoo will stop you from issuing E-Invoice for "
+"the current one and ask you to do for the earlier one priorily."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.res_config_settings_view_form
+msgid ""
+"If checked, invoice's legal number will be locked\n"
+"\t\t\t\t\t\t\t\tafter E-Invoice will be issued."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_bank_statement_line__lock_legal_number
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_move__lock_legal_number
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_payment__lock_legal_number
+#: model:ir.model.fields,help:l10n_vn_edi.field_res_company__einvoice_lock_legal_number
+#: model:ir.model.fields,help:l10n_vn_edi.field_res_config_settings__einvoice_lock_legal_number
+msgid ""
+"If checked, invoice's legal number will be locked after E-Invoice will be "
+"issued."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_serial__message_needaction
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_serial__message_unread
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_template__message_needaction
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_template__message_unread
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_type__message_needaction
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_type__message_unread
+#: model:ir.model.fields,help:l10n_vn_edi.field_einvoice_service__message_needaction
+#: model:ir.model.fields,help:l10n_vn_edi.field_einvoice_service__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_serial__message_has_error
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_serial__message_has_sms_error
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_template__message_has_error
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_template__message_has_sms_error
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_type__message_has_error
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_type__message_has_sms_error
+#: model:ir.model.fields,help:l10n_vn_edi.field_einvoice_service__message_has_error
+#: model:ir.model.fields,help:l10n_vn_edi.field_einvoice_service__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_bank_statement_import_journal_creation__einvoice_auto_issue
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_bank_statement_line__einvoice_auto_issue
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_journal__einvoice_auto_issue
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_move__einvoice_auto_issue
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_payment__einvoice_auto_issue
+#: model:ir.model.fields,help:l10n_vn_edi.field_res_company__einvoice_auto_issue
+#: model:ir.model.fields,help:l10n_vn_edi.field_res_config_settings__einvoice_auto_issue
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.res_config_settings_view_form
+msgid "If checked, the system automatically issue e-invoices."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/account_journal.py:0
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_bank_statement_import_journal_creation__einvoice_display_bank_account
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_journal__einvoice_display_bank_account
+#, python-format
+msgid ""
+"If checked, this bank account information will be displayed on E-Invoice"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.res_config_settings_view_form
+msgid ""
+"If checked, when generating the converted version\n"
+"\t\t\t\t\t\t\t\tof the E-Invoice, Odoo will also generate a corresponding\n"
+"\t\t\t\t\t\t\t\tattachment and attach it to the invoice."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_res_company__einvoice_exchange_file_as_attachment
+#: model:ir.model.fields,help:l10n_vn_edi.field_res_config_settings__einvoice_exchange_file_as_attachment
+msgid ""
+"If checked, when generating the converted version of the E-Invoice, Odoo "
+"will also generate a corresponding attachment and attach it to the invoice."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.res_config_settings_view_form
+msgid ""
+"If checked, when generating the representation\n"
+"\t\t\t\t\t\t\t\tversion of the E-Invoice, Odoo will also generate a\n"
+"\t\t\t\t\t\t\t\tcorresponding attachment and attach it to the invoice."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_res_company__einvoice_representation_file_as_attachment
+#: model:ir.model.fields,help:l10n_vn_edi.field_res_config_settings__einvoice_representation_file_as_attachment
+msgid ""
+"If checked, when generating the representation version of the E-Invoice, "
+"Odoo will also generate a corresponding attachment and attach it to the "
+"invoice."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__image_128
+msgid "Image"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_line__total_in_word
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_move__total_in_word
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_payment__total_in_word
+msgid "In words"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.einvoice_service_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.einvoice_service_view_kanban
+msgid "Install"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__module_state
+msgid "Installation State"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.einvoice_service_view_search
+msgid "Installed"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/res_company.py:0
+#, python-format
+msgid ""
+"Integrates with VNPT's VN-Invoice service to issue legal E-Invoice. This "
+"service uses API version 1, which supporting Circulars No.32/2011/TT-BTC."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/res_company.py:0
+#, python-format
+msgid ""
+"Integrates with VNPT's VN-Invoice service to issue legal E-Invoice. This "
+"service uses API version 2, which supporting Circulars No.78/2021/TT-BTC."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/res_company.py:0
+#, python-format
+msgid ""
+"Integrates with Viettel's S-Invoice service to issue legal E-Invoice. This "
+"service uses API version 1, which supporting both Circulars No.32/2011/TT-"
+"BTC and Circulars No.78/2021/TT-BTC."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/res_company.py:0
+#, python-format
+msgid ""
+"Integrates with Viettel's S-Invoice service to issue legal E-Invoice. This "
+"service uses API version 2, which supporting both Circulars No.32/2011/TT-"
+"BTC and Circulars No.78/2021/TT-BTC. This version has been added some more "
+"security features than version 1."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_error_notification__invoice_id
+msgid "Invoice"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/account_move.py:0
+#, python-format
+msgid "Invoice - %s"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__invoice_count
+msgid "Invoice Count"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields.selection,name:l10n_vn_edi.selection__account_journal__einvoice_item_name__invoice_line_name
+msgid "Invoice Line Description"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_invoice_einvoice_adjustment__invoice_id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_invoice_einvoice_cancel__invoice_id
+msgid "Invoice to Cancel"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__invoice_ids
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_template__invoice_ids
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_type__invoice_ids
+msgid "Invoices"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.view_account_invoice_filter
+msgid "Is E-Invoice"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__message_is_follower
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_template__message_is_follower
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_type__message_is_follower
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.view_account_invoice_filter
+msgid "Is NOT E-Invoice"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.view_move_form
+msgid "Issue E-Invoice"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_res_company__einvoice_issue_earliest_invoice_first
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_res_config_settings__einvoice_issue_earliest_invoice_first
+msgid "Issue Earlier Invoice First"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields.selection,name:l10n_vn_edi.selection__account_move__einvoice_state__issued
+msgid "Issued and not Paid"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields.selection,name:l10n_vn_edi.selection__account_move__einvoice_state__cancelled
+msgid "Issued but Cancelled"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/account_move_line.py:0
+#, python-format
+msgid ""
+"It seems that your product name/description in invoice lines was too long "
+"for E-Invoice. You should shorten your product name/description to less than"
+" %s characters"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model,name:l10n_vn_edi.model_account_journal
+msgid "Journal"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model,name:l10n_vn_edi.model_account_move
+msgid "Journal Entry"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model,name:l10n_vn_edi.model_account_move_line
+msgid "Journal Item"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_edi_format____last_update
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_error_notification____last_update
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial____last_update
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_template____last_update
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_type____last_update
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_invoice_einvoice_adjustment____last_update
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_invoice_einvoice_cancel____last_update
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_journal____last_update
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_move____last_update
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_move_line____last_update
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service____last_update
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_ir_actions_report____last_update
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_mail_compose_message____last_update
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_product_product____last_update
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_res_company____last_update
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_res_partner____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_error_notification__write_uid
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__write_uid
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_template__write_uid
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_type__write_uid
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_invoice_einvoice_adjustment__write_uid
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_invoice_einvoice_cancel__write_uid
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_error_notification__write_date
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__write_date
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_template__write_date
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_type__write_date
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_invoice_einvoice_adjustment__write_date
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_invoice_einvoice_cancel__write_date
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_line__lock_legal_number
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_move__lock_legal_number
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_payment__lock_legal_number
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_res_company__einvoice_lock_legal_number
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_res_config_settings__einvoice_lock_legal_number
+msgid "Lock Legal Number"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__message_main_attachment_id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_template__message_main_attachment_id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_type__message_main_attachment_id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_bank_statement_import_journal_creation__einvoice_item_name_limit
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_journal__einvoice_item_name_limit
+msgid "Maximum number of characters for E-Invoice item name."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__message_has_error
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_template__message_has_error
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_type__message_has_error
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__message_ids
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_template__message_ids
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_type__message_ids
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__mode
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.einvoice_service_view_search
+msgid "Mode"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/account_move.py:0
+#, python-format
+msgid ""
+"Multiple taxes on a single invoice line is not supported by einvoice "
+"provider %s"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__my_activity_date_deadline
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_template__my_activity_date_deadline
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_type__my_activity_date_deadline
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_template__name
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__name
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.einvoice_service_view_form
+msgid "Name"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__activity_date_deadline
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_template__activity_date_deadline
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_type__activity_date_deadline
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__activity_summary
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_template__activity_summary
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_type__activity_summary
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__activity_type_id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_template__activity_type_id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_type__activity_type_id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/controllers/portal.py:0
+#, python-format
+msgid "No XML files available yet. Please try again later!"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields.selection,name:l10n_vn_edi.selection__account_move__einvoice_error_notif_state__none
+#: model:ir.model.fields.selection,name:l10n_vn_edi.selection__einvoice_service__provider__none
+msgid "None"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields.selection,name:l10n_vn_edi.selection__account_move__einvoice_state__not_issued
+msgid "Not Issued"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__message_needaction_counter
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_template__message_needaction_counter
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_type__message_needaction_counter
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__message_has_error_counter
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_template__message_has_error_counter
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_type__message_has_error_counter
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_serial__message_needaction_counter
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_template__message_needaction_counter
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_type__message_needaction_counter
+#: model:ir.model.fields,help:l10n_vn_edi.field_einvoice_service__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_serial__message_has_error_counter
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_template__message_has_error_counter
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_type__message_has_error_counter
+#: model:ir.model.fields,help:l10n_vn_edi.field_einvoice_service__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_serial__message_unread_counter
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_template__message_unread_counter
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_type__message_unread_counter
+#: model:ir.model.fields,help:l10n_vn_edi.field_einvoice_service__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/wizard/account_invoice_einvoice_adjustment.py:0
+#: code:addons/l10n_vn_edi/wizard/account_invoice_einvoice_cancel.py:0
+#, python-format
+msgid "Only allow upload PDF file"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/account_move.py:0
+#, python-format
+msgid "Only customer invoices can generate E-Invoice!"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/account_move.py:0
+#, python-format
+msgid "Only users in the group %s can do this action"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields.selection,name:l10n_vn_edi.selection__account_move__einvoice_state__paid
+msgid "Paid"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__password
+msgid "Password"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:account.einvoice.type,description:l10n_vn_edi.sinvoice_type_04HGDL
+msgid "Phiếu xuất kho gửi bán hàng đại lý"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:account.einvoice.type,description:l10n_vn_edi.einvoice_type_03XKNB
+msgid "Phiếu xuất kho kiêm vận chuyển hàng hóa nội bộ"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.view_account_invoice_einvoice_cancel
+msgid ""
+"Please note that, once cancelled, you will not be\n"
+"\t\t\t\t\t\table to modify or change it any more."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/account_move.py:0
+#, python-format
+msgid "Please specify a country for the customer %s."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/account_move.py:0
+#, python-format
+msgid "Please specify address for the customer %s."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/account_move.py:0
+#, python-format
+msgid "Please specify your company address before you can issue an E-Invoice"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model,name:l10n_vn_edi.model_product_product
+msgid "Product"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields.selection,name:l10n_vn_edi.selection__account_journal__einvoice_item_name__invoice_line_product
+msgid "Product Name"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields.selection,name:l10n_vn_edi.selection__einvoice_service__mode__production
+msgid "Production"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_line__einvoice_provider
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_invoice_einvoice_cancel__einvoice_provider
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_move__einvoice_provider
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_payment__einvoice_provider
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__provider
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.einvoice_service_view_search
+msgid "Provider"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_error_notification__reason
+msgid "Reason"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_invoice_einvoice_adjustment__additional_reference_desc
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_invoice_einvoice_cancel__additional_reference_desc
+msgid "Reference"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__refresh_token
+msgid "Refresh Token"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields.selection,name:l10n_vn_edi.selection__account_einvoice_error_notification__action__3
+msgid "Replace"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model,name:l10n_vn_edi.model_ir_actions_report
+msgid "Report Action"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__activity_user_id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_template__activity_user_id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_type__activity_user_id
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_line__reversed_entry_einvoice_state
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_move__reversed_entry_einvoice_state
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_payment__reversed_entry_einvoice_state
+msgid "Reversed E-invoice State"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/res_company.py:0
+#, python-format
+msgid "S-Invoice API v1"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/res_company.py:0
+#, python-format
+msgid "S-Invoice API v2"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__message_has_sms_error
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_template__message_has_sms_error
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_type__message_has_sms_error
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:account.einvoice.type,description:l10n_vn_edi.einvoice_type_02GTTT
+msgid "Sales Invoice"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields.selection,name:l10n_vn_edi.selection__einvoice_service__mode__sandbox
+msgid "Sandbox"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__sandbox_api_url
+msgid "Sandbox API URL"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__sandbox_password
+msgid "Sandbox Password"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__sandbox_username
+msgid "Sandbox Username"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__name
+msgid "Serial"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.view_account_invoice_filter
+msgid "Show invoices that are not issuable with E-Invoice"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.view_account_invoice_filter
+msgid "Show invoices that were issued or are issuable with E-Invoice"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.view_account_invoice_filter
+msgid "Show invoices the E-Invoice status which is Cancelled"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.view_account_invoice_filter
+msgid "Show invoices the E-Invoice status which is Issued"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.view_account_invoice_filter
+msgid "Show invoices the E-Invoice status which is Paid"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.view_account_invoice_filter
+msgid "Show invoices the E-Invoice status which is other than Not Issued"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields.selection,name:l10n_vn_edi.selection__account_move__einvoice_error_notif_state__signed
+msgid "Signed"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__start_date
+msgid "Start Date"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_serial__activity_state
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_template__activity_state
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_type__activity_state
+#: model:ir.model.fields,help:l10n_vn_edi.field_einvoice_service__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.actions.server,name:l10n_vn_edi.action_server_sync_einvoice_status
+msgid "Synchronize Einvoice Status"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.vn_einvoice_templates
+msgid "TM/CK"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_bank_statement_import_journal_creation__einvoice_enabled
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_journal__einvoice_enabled
+msgid ""
+"Technical field to indicate if E-Invoice is enabled for invoices of this "
+"journal"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_bank_statement_line__einvoice_transactionid
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_move__einvoice_transactionid
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_payment__einvoice_transactionid
+msgid ""
+"Technical field to store transaction ID that was returned by E-invoice after"
+" invoice creation."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.einvoice_service_view_form
+msgid "Test Mode"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/wizard/account_invoice_einvoice_cancel.py:0
+#, python-format
+msgid ""
+"The Cancellation Date must not be earlier than the issue date which is %s"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/wizard/account_invoice_einvoice_cancel.py:0
+#, python-format
+msgid "The Cancellation Date must not be in the future"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_type__name
+msgid "The E-Invoice type's code that provided by provider."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/account_move.py:0
+#, python-format
+msgid ""
+"The E-invoice corresponding to the invoice %s could not be downloaded "
+"because it has not been issued."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_bank_statement_line__einvoice_cancellation_date
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_move__einvoice_cancellation_date
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_payment__einvoice_cancellation_date
+msgid ""
+"The cancellation date of the E-Invoice which may differ from the date on "
+"which the cancel request was sent to E-Invoice."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_bank_statement_import_journal_creation__einvoice_item_name_new_line_replacement
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_journal__einvoice_item_name_new_line_replacement
+msgid ""
+"The character(s) with which the new line character(s) in the E-Invoice item "
+"name will be replaced."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.constraint,message:l10n_vn_edi.constraint_account_einvoice_type_name_unique
+msgid "The code must be unique!"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_bank_statement_line__einvoice_invoice_date
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_move__einvoice_invoice_date
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_payment__einvoice_invoice_date
+msgid "The date and time at which the E-Invoice was issued."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_serial__expiration
+msgid ""
+"The date and time at which this serial becomes expired and will not be able "
+"to used"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_invoice_einvoice_cancel__additional_reference_date
+msgid ""
+"The date and time of the agreement between you and your customer for the "
+"invoice cancellation."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_einvoice_service__start_date
+msgid ""
+"The date from which your company announced the start of using E-Invoice."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_bank_statement_line__einvoice_representation_pdf
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_move__einvoice_representation_pdf
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_payment__einvoice_representation_pdf
+msgid "The display version of the E-invoice in PDF format"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_bank_statement_line__einvoice_official_representation
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_move__einvoice_official_representation
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_payment__einvoice_official_representation
+msgid "The display version of the E-invoice in XML format."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_bank_statement_line__adjustment_record
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_invoice_einvoice_adjustment__adjustment_record
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_move__adjustment_record
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_payment__adjustment_record
+msgid ""
+"The file of the agreement between you and your customer for adjustment "
+"invoice."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_bank_statement_line__cancellation_record
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_invoice_einvoice_cancel__cancellation_record
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_move__cancellation_record
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_payment__cancellation_record
+msgid ""
+"The file of the agreement between you and your customer for the invoice "
+"cancellation."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/account_move.py:0
+#, python-format
+msgid ""
+"The invoice %s has no legal number. This could be a data inconsitant "
+"problem. Please contact your service provider for help"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_bank_statement_import_journal_creation__account_einvoice_type_id
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_journal__account_einvoice_type_id
+msgid ""
+"The invoice type provided by E-Invoice provider. Leave it empty to use the one specified in the global Settings.\n"
+"Note: If this is not set, Odoo will use the one specified in the global Settings"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_template__invoice_ids
+msgid "The invoices associated with this E-Invoice template"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_type__invoice_ids
+msgid "The invoices associated with this invoice type"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_serial__invoice_ids
+msgid "The invoices associated with this serial"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/account_move_line.py:0
+#, python-format
+msgid ""
+"The line containing the product %s comes with more than one tax which is not"
+" supported by E-Invoice. You may set some taxes to get their value included "
+"in the price to ensure that there is no more than one tax on a single line."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/account_move_line.py:0
+#, python-format
+msgid "The line containing the product %s comes with no tax."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/account_move_line.py:0
+#, python-format
+msgid ""
+"The line containing the product %s comes with tax has 'Tax Computation' is "
+"not 'Percentage of Price' which is not supported by E-Invoice.You may set "
+"some taxes to get their value included in the price to ensure that their "
+"'Tax Computation' is 'Percentage of Price'."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/account_move.py:0
+#, python-format
+msgid "The minutes of invoice withdrawal  must be PDF file."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_bank_statement_line__cancellation_record
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_invoice_einvoice_cancel__cancellation_record
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_move__cancellation_record
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_payment__cancellation_record
+msgid "The minutes of invoice withdrawal (PDF)"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/res_partner.py:0
+#, python-format
+msgid "The model %s has no field name for displaying address on E-Invoice"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_template__name
+msgid "The name of the invoice template that provided by provider."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.constraint,message:l10n_vn_edi.constraint_account_einvoice_template_name_unique
+msgid "The name of the template must be unique!"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_invoice_einvoice_adjustment__additional_reference_desc
+msgid ""
+"The name/reference of the agreement between you and your customer for the "
+"invoice adjustment."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_invoice_einvoice_cancel__additional_reference_desc
+msgid ""
+"The name/reference of the agreement between you and your customer for the "
+"invoice cancellation."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_bank_statement_import_journal_creation__account_einvoice_serial_id
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_journal__account_einvoice_serial_id
+msgid ""
+"The prefix (e.g. AA/16E, AA/17E, etc) of the invoice number that must be registered with E-Invoice priorily. See the Circular No. 39/2014/TT-BTC dated March 31, 2014 by The Ministry of Finance of Vietnam.\n"
+"Note: If this is not set, Odoo will use the one specified in the global Settings"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_serial__name
+msgid ""
+"The prefix (e.g. AA/16E, AA/17E, etc) of the invoice number that must be "
+"registered with E-Invoice priority. See the Circular No. 39/2014/TT-BTC "
+"dated March 31, 2014 by The Ministry of Finance of Vietnam."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_bank_statement_import_journal_creation__account_einvoice_template_id
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_journal__account_einvoice_template_id
+msgid ""
+"The template that you have registered with E-Invoice provider for rendering your invoices of this template.\n"
+"Note: If this is not set, Odoo will use the one specified in the global Settings"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_bank_statement_line__einvoice_issue_user_id
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_move__einvoice_issue_user_id
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_payment__einvoice_issue_user_id
+msgid "The user who issued the E-Invoice for this invoice"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/wizard/account_einvoice_error_notification.py:0
+#, python-format
+msgid ""
+"This action has not been integrated in the system. We will update them in "
+"later versions"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.view_move_form
+msgid ""
+"This action will prepend sale description in Vietnamese of the products to "
+"the corresponding invoice lines' label.                         Please note "
+"that this will not check duplication. So, don't do it multiple times."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.view_move_form
+msgid ""
+"This action will prepend sale description in Vietnamese of the products to "
+"the corresponding invoice lines' label.       Please note that this will not"
+" check duplication. So, don't do it multiple times."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_bank_statement_line__check_einvoice_approved_and_signed
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_move__check_einvoice_approved_and_signed
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_payment__check_einvoice_approved_and_signed
+msgid ""
+"This field is to check whether the invoice is signed or not. In the case "
+"that api to sign is failed, a button will appear after issuing the invoiceto"
+" sign the invoice again"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_bank_statement_import_journal_creation__einvoice_item_name
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_journal__einvoice_item_name
+msgid ""
+"This option allows you to choose between product name and invoice line description for issuing E-Invoice:\n"
+"- Invoice Line Description: the description of Odoo's invoice lines will be sent to E-Invoice system for items name;\n"
+"- Product Name: the name of Odoo's invoice line product will be sent to E-Invoice system for items name;\n"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_bank_statement_line__einvoice_enabled
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_move__einvoice_enabled
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_payment__einvoice_enabled
+msgid ""
+"This technical field is to indicate if E-Invoice service is available for "
+"this invoice"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.view_account_invoice_einvoice_cancel
+msgid ""
+"This will connect E-Invoice then cancel it. Are you\n"
+"\t\t\t\t\t\tsure you want to proceed?"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.view_move_form
+msgid ""
+"This will connect E-Invoice then generates a legal invoice for you. Please "
+"ensure the customer has correct information set (e.g. legal name, "
+"billing/registered address, tax identification number, country, language, "
+"etc). Are you sure you want to proceed?"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__token_validity
+msgid "Token Validity"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_serial__activity_exception_decoration
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_template__activity_exception_decoration
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_type__activity_exception_decoration
+#: model:ir.model.fields,help:l10n_vn_edi.field_einvoice_service__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__message_unread
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_template__message_unread
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_type__message_unread
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__message_unread_counter
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_template__message_unread_counter
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_type__message_unread_counter
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__username
+msgid "Username"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/res_company.py:0
+#, python-format
+msgid "VN-Invoice API v1"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/res_company.py:0
+#, python-format
+msgid "VN-Invoice API v2"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:account.einvoice.template,description:l10n_vn_edi.einvoice_template_01GTKT0_001
+#: model:account.einvoice.type,description:l10n_vn_edi.einvoice_type_01GTKT
+msgid "Value Added Tax Invoice"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_bank_statement_line__einvoice_api_version
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_move__einvoice_api_version
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_payment__einvoice_api_version
+#: model:ir.model.fields,help:l10n_vn_edi.field_einvoice_service__api_version
+msgid ""
+"Versions corresponding to laws of rule in VietNam:\n"
+"With Vietel S-Invoice Provider:\n"
+"- V1 and V2 both support Circulars No.32/2011/TT-BTC and Circulars No.78/2021/TT-BTC\n"
+"With VNPT VN-Invoice Provider:\n"
+"- V1 supports Circulars No.32/2011/TT-BTC\n"
+"- V2 supports Circulars No.78/2021/TT-BTC\n"
+"You should check the version of your e-invoice services before choosing versions here"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_serial__website_message_ids
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_template__website_message_ids
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_account_einvoice_type__website_message_ids
+#: model:ir.model.fields,field_description:l10n_vn_edi.field_einvoice_service__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_serial__website_message_ids
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_template__website_message_ids
+#: model:ir.model.fields,help:l10n_vn_edi.field_account_einvoice_type__website_message_ids
+#: model:ir.model.fields,help:l10n_vn_edi.field_einvoice_service__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: model_terms:ir.ui.view,arch_db:l10n_vn_edi.portal_invoice_page
+msgid "XML"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/account_move.py:0
+#, python-format
+msgid ""
+"You cannot change state of the invoice '%s' while it was issuing.You can "
+"cancel the einvoice in provider 's system first, then try again later."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/account_move.py:0
+#, python-format
+msgid ""
+"You cannot generate E-Invoice from the software invoice %s while the invoice"
+" status is not Posted."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/account_move.py:0
+#, python-format
+msgid ""
+"You cannot issue E-Invoice for the invoices %s that has invoice date earlier than the company's E-Invoice Start Date (%s). If you still want to do it, you could either:\n"
+"* Change the date of the invoice to a date that is later than or equal to %s;\n"
+"* Or, go to Accounting > Configuration > Settings and change E-Invoice Start Date to a date that is earlier than or equal to %s."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/account_move.py:0
+#, python-format
+msgid ""
+"You cannot issue this adjustment invoice because of the currency difference "
+"between original invoice %s and it"
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/account_einvoice_type.py:0
+#, python-format
+msgid ""
+"You cannot modify the Code of the invoice type %s to %s while it is referred"
+" by the invoice %s. You should either delete all the related invoices or "
+"create another invoice type."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/account_einvoice_template.py:0
+#, python-format
+msgid ""
+"You cannot modify the Name of the template %s to %s while it is referred by "
+"the invoice %s. You should either delete all the related invoices or create "
+"another template."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/account_einvoice_serial.py:0
+#, python-format
+msgid ""
+"You cannot modify the Serial %s to %s while it is referred by the invoice "
+"%s. You should either delete all the related invoices or create another "
+"serial."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/account_move.py:0
+#, python-format
+msgid "You have not configured Tax Identication Number for your company %s."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/account_move.py:0
+#, python-format
+msgid ""
+"You may not be able issue e-invoices for the invoice '%s' with invoice date "
+"different from the current date.This is inconsistent with the current "
+"provisions of the law."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/account_move.py:0
+#, python-format
+msgid "You must provide Tax Identication Number of the customer %s."
+msgstr ""
+
+#. module: l10n_vn_edi
+#: code:addons/l10n_vn_edi/models/account_move.py:0
+#, python-format
+msgid ""
+"You should issue E-Invoice for the invoice %s dated %s before issuing "
+"E-Invoice for the current one %s dated %s. Or, you could go to Accounting > "
+"Configuration > Settings to disable this verification although you are not "
+"recommended to do that unless you know what you do."
+msgstr ""

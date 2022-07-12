@@ -1,0 +1,19 @@
+<odoo noupdate="1">
+	<record id="hr_meal_type_alert_lunch" model="hr.meal.type.alert">
+		<field name="name">Lunch</field>
+		<field name="scheduled_hour" eval="12" />
+		<field name="message">Lunch must be ordered before 10:30 AM</field>
+	</record>
+
+	<record id="hr_meal_type_alert_dinner" model="hr.meal.type.alert">
+		<field name="name">Dinner</field>
+		<field name="scheduled_hour" eval="19" />
+		<field name="message">Dinner must be ordered before 16:30 PM</field>
+	</record>
+
+	<record id="hr_meal_type_alert_night_meal" model="hr.meal.type.alert">
+		<field name="name">Night Meal</field>
+		<field name="scheduled_hour" eval="22" />
+		<field name="message">Night Meal must be ordered before 16:30 PM</field>
+	</record>
+</odoo>

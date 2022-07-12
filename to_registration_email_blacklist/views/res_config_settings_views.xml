@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="res_config_settings_view_form" model="ir.ui.view">
+		<field name="name">res.config.settings.view.form.inherit.auth.signup
+		</field>
+		<field name="model">res.config.settings</field>
+		<field name="inherit_id"
+			ref="base_setup.res_config_settings_view_form" />
+		<field name="arch" type="xml">
+			<xpath
+				expr="//div[hasclass('o_setting_box')][./div/field[@name='module_base_import']]"
+				position="before">
+				<div class="col-12 col-lg-6 o_setting_box"
+					 attrs="{'invisible': [('auth_signup_uninvited','=','b2b')]}">
+					<div class="o_setting_left_pane">
+						<field name="block_blacklisted_registration_emails" />
+					</div>
+					<div class="o_setting_right_pane">
+						<label string="Block Blacklisted Email Registration"
+							for="block_blacklisted_registration_emails" />
+						<div class="text-muted">
+							Prevent user account registration with a
+							blacklisted email.
+						</div>
+						<div class="content-group"
+							attrs="{'invisible': [('block_blacklisted_registration_emails','=',False)]}">
+							<button type="object"
+								name="open_email_blacklist_rule_rules"
+								string="Blacklisted Email Rules" icon="fa-arrow-right"
+								class="btn-link" />
+						</div>
+						<div class="content-group"
+							attrs="{'invisible': [('block_blacklisted_registration_emails','=',False)]}">
+							<button type="object"
+								name="open_block_reason"
+								string="Block Registration Reasons" icon="fa-arrow-right"
+								class="btn-link" />
+						</div>
+					</div>
+				</div>
+			</xpath>
+		</field>
+	</record>
+
+</odoo>

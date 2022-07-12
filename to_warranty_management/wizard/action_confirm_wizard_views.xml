@@ -1,0 +1,26 @@
+<odoo>
+	<data>
+		<record id="action_confirm_wizard_form_view" model="ir.ui.view">
+			<field name="name">action.confirm.wizard.form</field>
+			<field name="model">action.confirm.wizard</field>
+			<field name="arch" type="xml">
+				<form string="Action Confirm Wizard">
+					<sheet>
+						<h1 style="text-align: left; color: #804080; "><u>Warning:</u></h1>
+							<h5>
+							<br></br>
+								Warranty period of Product / Equipment is out of date or Warranty Status is not satisfactory.<br/><br/>
+								Click Confirm if you want to Confirm Warranty.
+							</h5>
+							<br></br>
+						<footer>
+							<button string="Confirm" type="object" name="write_state_to_confirm"
+								class="oe_highlight" />
+							<button string="Cancel" class="btn-default" special="cancel" />
+						</footer>
+					</sheet>
+				</form>
+			</field>
+		</record>
+	</data>
+</odoo>

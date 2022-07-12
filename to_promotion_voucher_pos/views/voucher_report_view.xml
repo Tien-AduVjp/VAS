@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="to_promotion_voucher.view_voucher_graph" model="ir.ui.view">
+		<field name="name">voucher.graph</field>
+		<field name="model">voucher.report</field>
+		<field name="arch" type="xml">
+			<graph string="Vouchers Analysis">
+				<field name="pos_config_id" type="row"/>
+				<field name="issue_date" type="col" />
+				<field name="value" type="measure" />
+			</graph>
+		</field>
+	</record>
+
+	<record id="to_promotion_voucher.view_voucher_pivot" model="ir.ui.view">
+		<field name="name">voucher.pivot</field>
+		<field name="model">voucher.report</field>
+		<field name="arch" type="xml">
+			<pivot string="Vouchers Analysis">
+				<field name="issue_order_id" type="row" />
+				<field name="issue_date" type="col" />
+				<field name="value" type="measure" />
+			</pivot>
+		</field>
+	</record>
+
+	<record id="voucher_report_search_view" model="ir.ui.view">
+		<field name="name">voucher.report.search</field>
+		<field name="model">voucher.report</field>
+		<field name="inherit_id" ref="to_promotion_voucher.voucher_report_search_view" />
+		<field name="arch" type="xml">
+			<field name="state" position="after">
+				<field name="pos_order_id"/>
+				<field name="pos_config_id"/>
+				<field name="pos_session_id"/>
+				<field name="user_id"/>
+				<field name="date_payment"/>
+			</field>
+		</field>
+	</record>
+</odoo>

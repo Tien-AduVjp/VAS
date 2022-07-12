@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+
+		<!-- Inherit Purchase Order -->
+		<record id="custom_dec_po_create_action"
+			model="ir.actions.act_window">
+			<field name="name">Create Import Custom Clearance Request</field>
+			<field name="res_model">custom.declaration.import</field>
+			<field name="view_mode">tree,form</field>
+			<field name="view_id" eval="custom_declaration_import_form" />
+			<field name="context">{'default_purchase_order_ids': [active_id]}</field>
+		</record>
+
+		<record id="purchase_order_inherit_form" model="ir.ui.view">
+			<field name="name">purchase.order.inherit.form</field>
+			<field name="model">purchase.order</field>
+			<field name="inherit_id" ref="purchase.purchase_order_form" />
+			<field name="arch" type="xml">
+				<field name="partner_id" position="after">
+					<field name="foreign_trade" />
+				</field>
+				<field name="company_id" position="after">
+					<!-- <field name="custom_dec_count" invisible="1"/> -->
+					<field name="available_pk_type_ids" invisible="1"/>
+				</field>
+				<field name="picking_type_id" position="attributes">
+                   	<attribute name="domain">[('id', 'in', available_pk_type_ids)]</attribute>
+                </field>
+				<button name="action_rfq_send" position="before">
+					<button name="%(custom_dec_po_create_action)d"
+						string="Create Custom Clearance Request" type="action"
+						class="oe_highlight"
+						groups="viin_foreign_trade.group_foreign_trade_user"
+						attrs="{'invisible': ['|','|',('custom_dec_count', '>', 0),('foreign_trade', '=', False),('state', 'not in', ['purchase','done'])]}" />
+				</button>
+				<div name="button_box" position="inside">
+					<button name="action_view_custom_declarations" type="object"
+						class="oe_stat_button" icon="fa-file-o"
+						attrs="{'invisible': [('custom_dec_count', '=', 0)]}"
+						groups="viin_foreign_trade.group_foreign_trade_user">
+						<field name="custom_dec_count" widget="statinfo"
+							string="Custom Declaration" />
+					</button>
+				</div>
+			</field>
+		</record>
+
+		<record id="purchase_order_inherit_filter" model="ir.ui.view">
+			<field name="name">purchase.order.inherit.filter</field>
+			<field name="model">purchase.order</field>
+			<field name="inherit_id"
+				ref="purchase.view_purchase_order_filter" />
+			<field name="arch" type="xml">
+				<filter name="approved" position="after">
+					<filter name="import" string="Import Orders"
+						domain="[('foreign_trade','=',True)]" />
+				</filter>
+			</field>
+		</record>
+
+	</data>
+</odoo>

@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_website_menu_publisher,Web Menu,website.model_website_menu,website.group_website_publisher,1,0,1,0
+access_website_page_publisher,Web Page Manager,website.model_website_page,website.group_website_publisher,1,1,1,1
+access_website_ir_ui_view_publisher,access_website_ir_ui_view,website.model_ir_ui_view,website.group_website_publisher,1,1,1,1
+

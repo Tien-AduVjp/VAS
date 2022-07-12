@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<!-- TỔNG CỘNG TÀI SẢN (200 = 110 + 120 + 130 + 140 + 150 + 160 + 170 + 180) -->
+		<record id="account_financial_report_line_bs_200_c133" model="account.financial.dynamic.report.line">
+			<field name="name">TOTAL ASSETS (200 = 110 + 120 + 130 + 140 + 150 + 160 + 170 + 180)</field>
+			<field name="code">BS200_C133</field>
+			<field name="report_code">200</field>
+			<field name="formulas">balance = BS110_C133.balance + BS120_C133.balance + BS130_C133.balance + BS140_C133.balance + BS150_C133.balance + BS160_C133.balance + BS170_C133.balance + BS180_C133.balance</field>
+			<field name="sequence" eval="1"/>
+			<field name="financial_report_id" ref="af_dynamic_report_balancesheet_vn_c133" />
+			<field name="level" eval="0" />
+		</record>
+
+		<!-- TÀI SẢN -->
+		<record id="account_financial_report_line_bs_100_c133" model="account.financial.dynamic.report.line">
+			<field name="name">ASSETS</field>
+			<field name="sequence" eval="1" />
+			<field name="parent_id" ref="account_financial_report_line_bs_200_c133" />
+			<field name="level" eval="1" />
+		</record>
+		<!--
+		I. Tiền và các khoản tương đương tiền (110)
+		 -->
+		 <record id="account_financial_report_line_bs_110_c133" model="account.financial.dynamic.report.line">
+		 	<field name="name">I. Cash and Cash Equivalents</field>
+		 	<field name="code">BS110_C133</field>
+		 	<field name="report_code">110</field>
+		 	<field name="formulas">balance = BS110A_C133.balance + BS110B_C133.balance</field>
+		 	<field name="sequence" eval="2"/>
+		 	<field name="parent_id" ref="account_financial_report_line_bs_200_c133"/>
+		 	<field name="level" eval="2" />
+		 </record>
+		 <record id="account_financial_report_line_bs_110a_c133" model="account.financial.dynamic.report.line">
+		 	<field name="name">1. Cash</field>
+		 	<field name="code">BS110A_C133</field>
+		 	<field name="formulas">balance = sum.balance</field>
+		 	<field name="domain" eval="[('account_id.user_type_id', '=', ref('account.data_account_type_liquidity'))]" />
+		 	<field name="groupby">account_id</field>
+		 	<field name="sequence" eval="1"/>
+		 	<field name="parent_id" ref="account_financial_report_line_bs_110_c133"/>
+		 	<field name="level" eval="3" />
+		 	<field name="show_on_pdf" eval="False"/>
+		 </record>
+		 <record id="account_financial_report_line_bs_110b_c133" model="account.financial.dynamic.report.line">
+		 	<field name="name">2. Cash Equivalents</field>
+		 	<field name="code">BS110B_C133</field>
+		 	<field name="formulas">balance = sum.balance</field>
+		 	<field name="domain" eval="['|', ('account_id.code','=like','1281%'), ('account_id.code','=like','1288%')]" />
+		 	<field name="groupby">account_id</field>
+		 	<field name="sequence" eval="2"/>
+		 	<field name="parent_id" ref="account_financial_report_line_bs_110_c133"/>
+		 	<field name="level" eval="3" />
+    		<field name="duration_term">duration_3m_orless</field>
+    		<field name="duration_term_date_field">date_maturity</field>
+    		<field name="duration_term_direction">future</field>
+    		<field name="duration_term_base_on">all</field>
+    		<field name="show_on_pdf" eval="False"/>
+		 </record>
+
+    	<!--
+    	II. Đầu tư tài chính (120 = 121 + 122 + 123)
+    	 -->
+    	<record id="account_financial_report_line_bs_120_c133" model="account.financial.dynamic.report.line">
+    		<field name="name">II. Cash flows from investing activities (120 = 121 + 122 + 123 + 124)</field>
+    		<field name="code">BS120_C133</field>
+    		<field name="report_code">120</field>
+    		<field name="formulas">balance = BS121_C133.balance + BS122_C133.balance + BS123_C133.balance + BS124_C133.balance</field>
+    		<field name="sequence" eval="3"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_200_c133"/>
+    		<field name="level" eval="2" />
+    	</record>
+
+    	<record id="account_financial_report_line_bs_121_c133" model="account.financial.dynamic.report.line">
+    		<!-- Chứng khoán kinh doanh -->
+    		<field name="name">1. Trading securities</field>
+    		<field name="code">BS121_C133</field>
+    		<field name="report_code">121</field>
+    		<field name="formulas">balance = sum.balance</field>
+    		<field name="domain" eval="[('account_id.code','=like','121%')]" />
+    		<field name="groupby">account_id</field>
+    		<field name="sequence" eval="1"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_120_c133"/>
+    		<field name="level" eval="3" />
+    	</record>
+    	<record id="account_financial_report_line_bs_122_c133" model="account.financial.dynamic.report.line">
+    		<!-- Đầu tư nắm giữ đến ngày đáo hạn -->
+    		<field name="name">2. Held to maturity investments</field>
+    		<field name="code">BS122_C133</field>
+    		<field name="report_code">122</field>
+    		<field name="formulas">balance = sum.balance</field>
+    		<field name="domain" 
+    			eval="['|',('account_id.code','=like','1281%'),
+    					'&amp;', ('account_id.code','=like','1288%'), ('analytic_tag_ids','not in',[ref('l10n_vn_common.account_analytic_tag_lending_loan')])]" />
+    		<field name="groupby">account_id</field>
+    		<field name="sequence" eval="2"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_120_c133"/>
+    		<field name="level" eval="3" />
+    		<field name="financial_report_id" eval="False"/>
+    		<field name="duration_term">duration_more_3mo</field>
+    		<field name="duration_term_date_field">date_maturity</field>
+    		<field name="duration_term_direction">future</field>
+    		<field name="duration_term_base_on">all</field>
+    	</record>
+    	<record id="account_financial_report_line_bs_123_c133" model="account.financial.dynamic.report.line">
+    		<!-- Đầu tư góp vốn vào đơn vị khác -->
+    		<field name="name">3. Equipty investment in other entity</field>
+    		<field name="code">BS123_C133</field>
+    		<field name="report_code">123</field>
+    		<field name="formulas">balance = sum.balance</field>
+    		<field name="domain" eval="[('account_id.code','=like','228%')]" />
+    		<field name="groupby">account_id</field>
+    		<field name="sequence" eval="3"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_120_c133"/>
+    		<field name="level" eval="3" />
+    	</record>
+    	<record id="account_financial_report_line_bs_124_c133" model="account.financial.dynamic.report.line">
+    		<!-- Dự phòng tổn thất đầu tư tài chính -->
+    		<field name="name">4. Allowance for diminution in the value of financial investments (*)</field>
+    		<field name="code">BS124_C133</field>
+    		<field name="report_code">124</field>
+    		<field name="formulas">balance = sum.balance</field>
+    		<field name="domain" eval="['|',('account_id.code','=like','2291%'),('account_id.code','=like','2292%')]" />
+    		<field name="groupby">account_id</field>
+    		<field name="sequence" eval="4"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_120_c133"/>
+    		<field name="level" eval="3" />
+    	</record>
+
+    	<!--
+    	III. Các khoản phải thu (130 = 131 + 132 + 133 + 134 + 135 + 136 + 137 + 139)
+    	 -->
+    	<record id="account_financial_report_line_bs_130_c133" model="account.financial.dynamic.report.line">
+    		<field name="name">III. Receivables (130 = 131 + 132 + 133 + 134 + 135 + 136)</field>
+    		<field name="code">BS130_C133</field>
+    		<field name="report_code">130</field>
+    		<field name="formulas">balance = BS131_C133.balance + BS132_C133.balance + BS133_C133.balance + BS134_C133.balance + BS135_C133.balance + BS136_C133.balance</field>
+    		<field name="sequence" eval="4"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_200_c133"/>
+    		<field name="level" eval="2" />
+    	</record>
+    	<record id="account_financial_report_line_bs_131_c133" model="account.financial.dynamic.report.line">
+    		<!-- Phải thu của khách hàng -->
+    		<field name="name">1. Trade receivables</field>
+    		<field name="code">BS131_C133</field>
+    		<field name="report_code">131</field>
+    		<field name="formulas">balance = sum_if_pos.balance</field>
+    		<field name="domain" eval="[('account_id.code', '=like', '131%')]" />
+    		<field name="groupby">partner_id</field>
+    		<field name="sequence" eval="1"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_130_c133"/>
+    		<field name="level" eval="3" />
+    	</record>
+    	<record id="account_financial_report_line_bs_132_c133" model="account.financial.dynamic.report.line">
+    		<!-- Trả trước cho người bán -->
+    		<field name="name">2. Prepayments to suppliers</field>
+    		<field name="code">BS132_C133</field>
+    		<field name="report_code">132</field>
+    		<field name="formulas">balance = sum_if_pos.balance</field>
+    		<field name="domain" eval="[('account_id.code','=like','331%')]" />
+    		<field name="groupby">partner_id</field>
+    		<field name="sequence" eval="2"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_130_c133"/>
+    		<field name="level" eval="3" />
+    		<field name="duration_term_date_field">date_maturity</field>
+    		<field name="duration_term_direction">future</field>
+    		<field name="duration_term_base_on">liquidity</field>
+    	</record>
+    	<record id="account_financial_report_line_bs_133_c133" model="account.financial.dynamic.report.line">
+    		<!-- Vốn kinh doanh ở đơn vị trực thuộc -->
+    		<field name="name">3. Working capital provided to sub-units</field>
+    		<field name="code">BS133_C133</field>
+    		<field name="report_code">133</field>
+    		<field name="formulas">balance = sum.balance</field>
+    		<field name="domain" eval="[('account_id.code','=like','1361%')]" />
+    		<field name="groupby">account_id</field>
+    		<field name="sequence" eval="3"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_130_c133"/>
+    		<field name="level" eval="3" />
+    	</record>
+    	<record id="account_financial_report_line_bs_134_c133" model="account.financial.dynamic.report.line">
+    		<!-- Phải thu khác -->
+    		<field name="name">4. Other receivables</field>
+    		<field name="code">BS134_C133</field>
+    		<field name="report_code">134</field>
+    		<field name="formulas">balance = sum_if_pos.balance</field>
+    		<field name="domain"
+    			eval="['|','|','|','|','|','|','&amp;',('account_id.code','=like','1288%'),('analytic_tag_ids','in',[ref('l10n_vn_common.account_analytic_tag_lending_loan')]),('account_id.code','=like','1368%'),
+    						('account_id.code','=like','1386%'),('account_id.code','=like','1388%'),
+    						('account_id.code','=like','334%'),('account_id.code','=like','338%'),
+    						('account_id.code','=like','141%')
+    					]"/>
+    		<field name="groupby">account_id</field>
+    		<field name="sequence" eval="4"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_130_c133"/>
+    		<field name="level" eval="3" />
+		</record>
+    	<record id="account_financial_report_line_bs_135_c133" model="account.financial.dynamic.report.line">
+    		<!-- Tài sản thiếu chờ xử lý -->
+    		<field name="name">5. Shortage of assets awaiting resolution</field>
+    		<field name="code">BS135_C133</field>
+    		<field name="report_code">135</field>
+    		<field name="formulas">balance = sum_if_pos.balance</field>
+    		<field name="domain" eval="[('account_id.code','=','1381')]" />
+    		<field name="groupby">account_id</field>
+    		<field name="sequence" eval="5"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_130_c133"/>
+    		<field name="level" eval="3" />
+    		<field name="duration_term_base_on">not_liquidity</field>
+    	</record>
+    	<record id="account_financial_report_line_bs_136_c133" model="account.financial.dynamic.report.line">
+    		<!-- Dự phòng phải thu khó đòi -->
+    		<field name="name">6. Allowances for doubtful debts</field>
+    		<field name="code">BS136_C133</field>
+    		<field name="report_code">136</field>
+    		<field name="formulas">balance = sum.balance</field>
+    		<field name="domain" eval="[('account_id.code','=like','2293%')]" />
+    		<field name="groupby">account_id</field>
+    		<field name="sequence" eval="6"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_130_c133"/>
+    		<field name="level" eval="3" />
+    		<field name="duration_term_date_field">date_maturity</field>
+    		<field name="duration_term_direction">future</field>
+    		<field name="duration_term_base_on">all</field>
+    	</record>
+    	<!-- IV. Hàng tồn kho (140 = 141 + 142) -->
+    	<record id="account_financial_report_line_bs_140_c133" model="account.financial.dynamic.report.line">
+    		<field name="name">IV. Inventories (140 = 141 + 142)</field>
+    		<field name="code">BS140_C133</field>
+    		<field name="report_code">140</field>
+    		<field name="formulas">balance = BS141_C133.balance + BS142_C133.balance</field>
+    		<field name="sequence" eval="5"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_200_c133"/>
+    		<field name="level" eval="2" />
+    	</record>
+    	<record id="account_financial_report_line_bs_141_c133" model="account.financial.dynamic.report.line">
+    		<!-- Tất cả Hàng tồn kho-->
+    		<field name="name">1. Inventories</field>
+    		<field name="code">BS141_C133</field>
+    		<field name="report_code">141</field>
+    		<field name="formulas">balance = sum.balance</field>
+    		<field name="domain" eval="[('account_id.code','=like','15%')]"/>
+    		<field name="groupby">account_id</field>
+    		<field name="sequence" eval="1"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_140_c133"/>
+    		<field name="level" eval="3" />
+    	</record>
+    	<record id="account_financial_report_line_bs_142_c133" model="account.financial.dynamic.report.line">
+    		<!-- Dự phòng giảm giá hàng tồn kho (*) -->
+    		<field name="name">2. Allowances for decline in value of inventories</field>
+    		<field name="code">BS142_C133</field>
+    		<field name="report_code">142</field>
+    		<field name="formulas">balance = sum.balance</field>
+    		<field name="domain" eval="[('account_id.code','=like','2294%')]" />
+    		<field name="groupby">account_id</field>
+    		<field name="sequence" eval="2"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_140_c133"/>
+    		<field name="level" eval="3" />
+    	</record>
+		<!-- V. Tài sản cố định (150 = 151 + 152) -->
+    	<record id="account_financial_report_line_bs_150_c133" model="account.financial.dynamic.report.line">
+    		<field name="name">V. Fixed assets (150 = 151 + 152)</field>
+    		<field name="code">BS150_C133</field>
+    		<field name="report_code">150</field>
+    		<field name="formulas">balance = BS151_C133.balance + BS152_C133.balance</field>
+    		<field name="sequence" eval="6"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_200_c133"/>
+    		<field name="level" eval="2" />
+    	</record>
+    	<record id="account_financial_report_line_bs_151_c133" model="account.financial.dynamic.report.line">
+    		<!-- Nguyên giá -->
+    		<field name="name">- Historical costs</field>
+    		<field name="code">BS151_C133</field>
+    		<field name="report_code">151</field>
+    		<field name="formulas">balance = sum.balance</field>
+    		<field name="domain" eval="[('account_id.code','=like','211%')]" />
+    		<field name="groupby">account_id</field>
+    		<field name="sequence" eval="1"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_150_c133"/>
+    		<field name="level" eval="3" />
+    	</record>
+    	<record id="account_financial_report_line_bs_152_c133" model="account.financial.dynamic.report.line">
+    		<!-- Giá trị hao mòn lũy kế (*) -->
+    		<field name="name">- Accumulated depreciation</field>
+    		<field name="code">BS152_C133</field>
+    		<field name="report_code">152</field>
+    		<field name="formulas">balance = sum.balance</field>
+    		<field name="domain" eval="[('account_id.code','=like','214%'),('account_id.code','not like','2147%')]" />
+    		<field name="groupby">account_id</field>
+    		<field name="sequence" eval="2"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_150_c133"/>
+    		<field name="level" eval="3" />
+    	</record>
+    	<!-- VI. Bất động sản đầu tư (160 = 161 + 162) -->
+    	<record id="account_financial_report_line_bs_160_c133" model="account.financial.dynamic.report.line">
+    		<field name="name">VI. Investment properties (160 = 161 + 162)</field>
+    		<field name="code">BS160_C133</field>
+    		<field name="report_code">160</field>
+    		<field name="formulas">balance = BS161_C133.balance + BS162_C133.balance</field>
+    		<field name="sequence" eval="7"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_200_c133"/>
+    		<field name="level" eval="2" />
+    	</record>
+    	<record id="account_financial_report_line_bs_161_c133" model="account.financial.dynamic.report.line">
+    		<!-- Nguyên giá -->
+    		<field name="name">- Historical costs</field>
+    		<field name="code">BS161_C133</field>
+    		<field name="report_code">161</field>
+    		<field name="formulas">balance = sum.balance</field>
+    		<field name="domain" eval="[('account_id.code','=like','217%')]" />
+    		<field name="groupby">account_id</field>
+    		<field name="sequence" eval="1"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_160_c133"/>
+    		<field name="level" eval="3" />
+    	</record>
+    	<record id="account_financial_report_line_bs_162_c133" model="account.financial.dynamic.report.line">
+    		<!-- Giá trị hao mòn lũy kế (*) -->
+    		<field name="name">- Accumulated depreciation</field>
+    		<field name="code">BS162_C133</field>
+    		<field name="report_code">162</field>
+    		<field name="formulas">balance = sum.balance</field>
+    		<field name="domain" eval="[('account_id.code','=like','2147%')]" />
+    		<field name="groupby">account_id</field>
+    		<field name="sequence" eval="2"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_160_c133"/>
+    		<field name="level" eval="3" />
+    	</record>
+		<!-- VII. Xây dựng cơ bản dở dang -->
+    	<record id="account_financial_report_line_bs_170_c133" model="account.financial.dynamic.report.line">
+    		<!-- Xây dựng cơ bản dở dang -->
+    		<field name="name">VII. Construction in progress</field>
+    		<field name="code">BS170_C133</field>
+    		<field name="report_code">170</field>
+    		<field name="formulas">balance = sum.balance</field>
+    		<field name="domain" eval="[('account_id.code','=like','241%')]" />
+    		<field name="groupby">account_id</field>
+    		<field name="sequence" eval="8"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_200_c133"/>
+    		<field name="level" eval="2" />
+    	</record>
+    	<!-- VIII. Tài sản khác (180 = 181 + 182) -->
+    	<record id="account_financial_report_line_bs_180_c133" model="account.financial.dynamic.report.line">
+    		<field name="name">VIII. Other assets (180 = 181 + 182)</field>
+    		<field name="code">BS180_C133</field>
+    		<field name="report_code">180</field>
+    		<field name="formulas">balance = BS181_C133.balance + BS182_C133.balance</field>
+    		<field name="sequence" eval="9"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_200_c133"/>
+    		<field name="level" eval="2" />
+    	</record>
+    	<record id="account_financial_report_line_bs_181_c133" model="account.financial.dynamic.report.line">
+    		<!-- Thuế GTGT được khấu trừ -->
+    		<field name="name">1. Deductible VAT</field>
+    		<field name="code">BS181_C133</field>
+    		<field name="report_code">181</field>
+    		<field name="formulas">balance = sum.balance</field>
+    		<field name="domain" eval="[('account_id.code','=like','133%')]" />
+    		<field name="groupby">account_id</field>
+    		<field name="sequence" eval="1"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_180_c133"/>
+    		<field name="level" eval="3" />
+    	</record>
+    	<record id="account_financial_report_line_bs_182_c133" model="account.financial.dynamic.report.line">
+    		<!-- Tài sản khác -->
+    		<field name="name">2. Other assets</field>
+    		<field name="code">BS182_C133</field>
+    		<field name="report_code">182</field>
+    		<field name="formulas">balance = sum_if_pos.balance</field>
+    		<field name="domain" eval="[
+			'|',
+				'|', '|', '|', ('account_id.code', '=like', '242%'), ('account_id.code', '=like', '333%'),('account_id.code', '=like', '111%-0%'),('account_id.code', '=like', '112%-0%'),
+				'&amp;',
+				'&amp;',
+					'|', ('account_id.code', '=like', '111%'), ('account_id.code', '=like', '112%'),
+				('account_id.user_type_id', '=', ref('account.data_account_type_current_assets')),
+				('account_id.reconcile', '=', False)]" />
+    		<field name="groupby">account_id</field>
+    		<field name="sequence" eval="2"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_180_c133"/>
+    		<field name="level" eval="3" />
+    	</record>
+
+		<!-- NGUỒN VỐN -->
+    	<record id="account_financial_report_line_bs_500_c133" model="account.financial.dynamic.report.line">
+    		<!-- TỔNG CỘNG NGUỒN VỐN (500 = 300 + 400) -->
+    		<field name="name">TOTAL EQUITY (500 = 300 + 400)</field>
+    		<field name="code">BS500_C133</field>
+    		<field name="report_code">500</field>
+    		<field name="formulas">balance = BS300_C133.balance + BS400_C133.balance</field>
+    		<field name="sequence" eval="2"/>
+    		<field name="financial_report_id" ref="af_dynamic_report_balancesheet_vn_c133"/>
+    		<field name="level" eval="0" />
+   		</record>
+
+		<record id="account_financial_report_line_bs_340_c133" model="account.financial.dynamic.report.line">
+			<field name="name">EQUITY</field>
+			<field name="sequence" eval="1" />
+			<field name="parent_id" ref="account_financial_report_line_bs_500_c133" />
+			<field name="level" eval="1" />
+		</record>
+
+   		<!-- NỢ PHẢI TRẢ (300 = 311 + 312 + 313 + 314 + 315 + 316 + 317 + 318 + 319 + 320) -->
+    	<record id="account_financial_report_line_bs_300_c133" model="account.financial.dynamic.report.line">
+    		<field name="name">I. Liabilities (300 = 311 + 312 + 313 + 314 + 315 + 316 + 317 + 318 + 319 + 320)</field>
+    		<field name="code">BS300_C133</field>
+    		<field name="report_code">300</field>
+    		<field name="formulas">balance = BS311_C133.balance + BS312_C133.balance + BS313_C133.balance + BS314_C133.balance + BS315_C133.balance + BS316_C133.balance + BS317_C133.balance + BS318_C133.balance + BS319_C133.balance + BS320_C133.balance</field>
+    		<field name="sequence" eval="2"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_500_c133"/>
+    		<field name="level" eval="2" />
+    	</record>
+    	<record id="account_financial_report_line_bs_311_c133" model="account.financial.dynamic.report.line">
+    		<!-- Phải trả người bán -->
+    		<field name="name">1. Trade payables</field>
+    		<field name="code">BS311_C133</field>
+    		<field name="report_code">311</field>
+    		<field name="formulas">balance = -sum_if_neg.balance</field>
+    		<field name="domain" eval="[('account_id.code','=like','331%')]" />
+    		<field name="groupby">partner_id</field>
+    		<field name="sequence" eval="1"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_300_c133"/>
+    		<field name="level" eval="3" />
+    		<field name="duration_term_date_field">date_maturity</field>
+    		<field name="duration_term_direction">future</field>
+    		<field name="duration_term_base_on">not_liquidity</field>
+    	</record>
+    	<record id="account_financial_report_line_bs_312_c133" model="account.financial.dynamic.report.line">
+    		<!-- Người mua trả tiền trước -->
+    		<field name="name">2. Prepayments from customers</field>
+    		<field name="code">BS312_C133</field>
+    		<field name="report_code">312</field>
+    		<field name="formulas">balance = -sum_if_neg.balance</field>
+    		<field name="domain" eval="[('account_id.code','=like','131%')]" />
+    		<field name="groupby">partner_id</field>
+    		<field name="sequence" eval="2"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_300_c133"/>
+    		<field name="level" eval="3" />
+    		<field name="duration_term_date_field">date_maturity</field>
+    		<field name="duration_term_direction">future</field>
+    		<field name="duration_term_base_on">liquidity</field>
+    	</record>
+    	<record id="account_financial_report_line_bs_313_c133" model="account.financial.dynamic.report.line">
+    		<!-- Thuế và các khoản phải nộp nhà nước -->
+    		<field name="name">3. Taxes and other payables to government budget</field>
+    		<field name="code">BS313_C133</field>
+    		<field name="report_code">313</field>
+    		<field name="formulas">balance = -sum_if_neg.balance</field>
+    		<field name="domain" eval="[('account_id.code','=like','333%')]" />
+    		<field name="groupby">account_id</field>
+    		<field name="sequence" eval="3"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_300_c133"/>
+    		<field name="level" eval="3" />
+    		<field name="duration_term_base_on">not_liquidity</field>
+    	</record>
+    	<record id="account_financial_report_line_bs_314_c133" model="account.financial.dynamic.report.line">
+    		<!-- Phải trả người lao động -->
+    		<field name="name">4. Payables to employees</field>
+    		<field name="code">BS314_C133</field>
+    		<field name="report_code">314</field>
+    		<field name="formulas">balance = -sum_if_neg.balance</field>
+    		<field name="domain" eval="[('account_id.code','=like','334%')]" />
+    		<field name="groupby">partner_id</field>
+    		<field name="sequence" eval="4"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_300_c133"/>
+    		<field name="level" eval="3" />
+    		<field name="duration_term_base_on">not_liquidity</field>
+    	</record>
+
+    	<record id="account_financial_report_line_bs_315_c133" model="account.financial.dynamic.report.line">
+    		<!-- Phải trả khác -->
+    		<field name="name">5. Other payables</field>
+    		<field name="code">BS315_C133</field>
+    		<field name="report_code">315</field>
+    		<field name="formulas">balance = -sum_if_neg.balance</field>
+    		<field name="domain" eval="['|', '|', '|', '|', '|', ('account_id.code','=like','335%'), 
+    															('account_id.code','=like','3368%'), 
+    															('account_id.code','=like','338%'), 
+    															('account_id.code','=like','1388%'), 
+    															('account_id.code','=','138'),
+    															('account_id.code','=like','141%')]" />
+    		<field name="groupby">account_id</field>
+    		<field name="sequence" eval="5"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_300_c133"/>
+    		<field name="level" eval="3" />
+    	</record>
+    	<record id="account_financial_report_line_bs_316_c133" model="account.financial.dynamic.report.line">
+    		<!-- Vay và nợ thuê tài chính -->
+    		<field name="name">6. Borrowings and finance lease liabilities</field>
+    		<field name="code">BS316_C133</field>
+    		<field name="report_code">316</field>
+    		<field name="formulas">balance = -sum.balance</field>
+    		<field name="domain" eval="['|',('account_id.code','=like','341%'),'&amp;',('account_id.code','=like','4111%'),('analytic_tag_ids','in',[ref('l10n_vn_common.account_analytic_tag_liabilities')])]" />
+    		<field name="groupby">account_id</field>
+    		<field name="sequence" eval="6"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_300_c133"/>
+    		<field name="level" eval="3" />
+    	</record>
+    	<record id="account_financial_report_line_bs_317_c133" model="account.financial.dynamic.report.line">
+    		<!-- Phải trả nội bộ về vốn kinh doanh -->
+    		<field name="name">7. Intra-company payables for operating capital received</field>
+    		<field name="code">BS317_C133</field>
+    		<field name="report_code">317</field>
+    		<field name="formulas">balance = -sum.balance</field>
+    		<field name="domain" eval="[('account_id.code','=like','3361%')]" />
+    		<field name="groupby">account_id</field>
+    		<field name="sequence" eval="7"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_300_c133"/>
+    		<field name="level" eval="3" />
+    	</record>
+    	<record id="account_financial_report_line_bs_318_c133" model="account.financial.dynamic.report.line">
+    		<!-- Dự phòng phải trả -->
+    		<field name="name">8. Provisions</field>
+    		<field name="code">BS318_C133</field>
+    		<field name="report_code">318</field>
+    		<field name="formulas">balance = -sum.balance</field>
+    		<field name="domain" eval="[('account_id.code','=like','352%')]" />
+    		<field name="groupby">account_id</field>
+    		<field name="sequence" eval="8"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_300_c133"/>
+    		<field name="level" eval="3" />
+    		<field name="duration_term_date_field">date_maturity</field>
+    		<field name="duration_term_direction">future</field>
+    		<field name="duration_term_base_on">all</field>
+    	</record>
+    	<record id="account_financial_report_line_bs_319_c133" model="account.financial.dynamic.report.line">
+    		<!-- Quỹ khen thưởng, phúc lợi -->
+    		<field name="name">9. Bonus and welfare fund</field>
+    		<field name="code">BS319_C133</field>
+    		<field name="report_code">319</field>
+    		<field name="formulas">balance = -sum.balance</field>
+    		<field name="domain" eval="[('account_id.code','=like','353%')]" />
+    		<field name="groupby">account_id</field>
+    		<field name="sequence" eval="9"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_300_c133"/>
+    		<field name="level" eval="3" />
+    	</record>
+   		<record id="account_financial_report_line_bs_320_c133" model="account.financial.dynamic.report.line">
+    		<!-- Quỹ phát triển khoa học và công nghệ -->
+    		<field name="name">10. Science and technology development fund</field>
+    		<field name="code">BS320_C133</field>
+    		<field name="report_code">320</field>
+    		<field name="formulas">balance = -sum.balance</field>
+    		<field name="domain" eval="[('account_id.code','=like','356%')]" />
+    		<field name="groupby">account_id</field>
+    		<field name="sequence" eval="10"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_300_c133"/>
+    		<field name="level" eval="3" />
+    	</record>
+
+    	<!-- II. VỐN CHỦ SỞ HỮU (400 = 410 + 430) -->
+    	<record id="account_financial_report_line_bs_400_c133" model="account.financial.dynamic.report.line">
+    		<field name="name">II. OWNER’S EQUITY (400 = 411 + 412 + 413 + 414 + 415 + 416 + 417)</field>
+    		<field name="code">BS400_C133</field>
+    		<field name="report_code">400</field>
+    		<field name="formulas">balance = BS411_C133.balance + BS412_C133.balance + BS413_C133.balance + BS414_C133.balance + BS415_C133.balance + BS416_C133.balance + BS417_C133.balance</field>
+    		<field name="sequence" eval="3"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_500_c133"/>
+    		<field name="level" eval="2" />
+    	</record>
+    	<record id="account_financial_report_line_bs_411_c133" model="account.financial.dynamic.report.line">
+    		<!-- Vốn góp của chủ sở hữu -->
+    		<field name="name">1. Contributed capital</field>
+    		<field name="code">BS411_C133</field>
+    		<field name="report_code">411</field>
+    		<field name="formulas">balance = -sum.balance</field>
+    		<field name="domain" eval="[('account_id.code','=like','4111%')]" />
+    		<field name="groupby">account_id</field>
+    		<field name="sequence" eval="1"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_400_c133"/>
+    		<field name="level" eval="3" />
+    	</record>
+    	<record id="account_financial_report_line_bs_412_c133" model="account.financial.dynamic.report.line">
+    		<!-- Thặng dư vốn cổ phần -->
+    		<field name="name">2. Capital surplus</field>
+    		<field name="code">BS412_C133</field>
+    		<field name="report_code">412</field>
+    		<field name="formulas">balance = -sum.balance</field>
+    		<field name="domain" eval="[('account_id.code','=like','4112%')]" />
+    		<field name="groupby">account_id</field>
+    		<field name="sequence" eval="2"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_400_c133"/>
+    		<field name="level" eval="3" />
+    	</record>
+    	<record id="account_financial_report_line_bs_413_c133" model="account.financial.dynamic.report.line">
+    		<!-- Vốn khác của chủ sở hữu -->
+    		<field name="name">3. Other capital</field>
+    		<field name="code">BS413_C133</field>
+    		<field name="report_code">413</field>
+    		<field name="formulas">balance = -sum.balance</field>
+    		<field name="domain" eval="[('account_id.code','=like','4118%')]" />
+    		<field name="groupby">account_id</field>
+    		<field name="sequence" eval="3"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_400_c133"/>
+    		<field name="level" eval="3" />
+    	</record>
+    	<record id="account_financial_report_line_bs_414_c133" model="account.financial.dynamic.report.line">
+    		<!-- Cổ phiếu quỹ -->
+    		<field name="name">4. Treasury shares</field>
+    		<field name="code">BS414_C133</field>
+    		<field name="report_code">414</field>
+    		<field name="formulas">balance = -sum.balance</field>
+    		<field name="domain" eval="[('account_id.code','=like','419%')]" />
+    		<field name="groupby">account_id</field>
+    		<field name="sequence" eval="4"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_400_c133"/>
+    		<field name="level" eval="3" />
+    	</record>
+    	<record id="account_financial_report_line_bs_415_c133" model="account.financial.dynamic.report.line">
+    		<!-- Chênh lệch tỷ giá hối đoái -->
+    		<field name="name">5. Exchange rate differences</field>
+    		<field name="code">BS415_C133</field>
+    		<field name="report_code">415</field>
+    		<field name="formulas">balance = -sum.balance</field>
+    		<field name="domain" eval="[('account_id.code','=like','413%')]" />
+    		<field name="groupby">account_id</field>
+    		<field name="sequence" eval="5"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_400_c133"/>
+    		<field name="level" eval="3" />
+    	</record>
+    	<record id="account_financial_report_line_bs_416_c133" model="account.financial.dynamic.report.line">
+    		<!-- Các quỹ thuộc vốn chủ sở hữu -->
+    		<field name="name">6. Equity funds</field>
+    		<field name="code">BS416_C133</field>
+    		<field name="report_code">416</field>
+    		<field name="formulas">balance = -sum.balance</field>
+    		<field name="domain" eval="[('account_id.code','=like','418%')]" />
+    		<field name="groupby">account_id</field>
+    		<field name="sequence" eval="6"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_400_c133"/>
+    		<field name="level" eval="3" />
+    	</record>
+    	<record id="account_financial_report_line_bs_417_c133" model="account.financial.dynamic.report.line">
+    		<!-- Lợi nhuận sau thuế chưa phân phối -->
+    		<field name="name">7. Undistributed profit after tax</field>
+    		<field name="code">BS417_C133</field>
+    		<field name="report_code">417</field>
+    		<field name="formulas">balance = -sum.balance</field>
+    		<field name="domain" eval="[('account_id.code','=like','421%')]" />
+    		<field name="groupby">account_id</field>
+    		<field name="sequence" eval="7"/>
+    		<field name="parent_id" ref="account_financial_report_line_bs_400_c133"/>
+    		<field name="level" eval="3" />
+    	</record>
+	</data>
+</odoo>

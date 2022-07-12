@@ -1,0 +1,101 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* to_odoo_module_sale_project
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-04-19 14:08+0000\n"
+"PO-Revision-Date: 2019-04-19 14:08+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_odoo_module_sale_project
+#: model:ir.model.fields,field_description:to_odoo_module_sale_project.field_project_task__odoo_module_version_id
+#: model_terms:ir.ui.view,arch_db:to_odoo_module_sale_project.view_task_form2
+msgid "Developed Odoo Modules"
+msgstr "Module được Phát triển"
+
+#. module: to_odoo_module_sale_project
+#: model:ir.model,name:to_odoo_module_sale_project.model_git_branch
+msgid "Git Branch"
+msgstr "Nhánh Git"
+
+#. module: to_odoo_module_sale_project
+#: model:ir.model,name:to_odoo_module_sale_project.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "Chi tiết Hoá đơn"
+
+#. module: to_odoo_module_sale_project
+#: model:ir.model,name:to_odoo_module_sale_project.model_odoo_module_version
+msgid "Odoo Module Version"
+msgstr "Phiên bản Module Odoo"
+
+#. module: to_odoo_module_sale_project
+#: model:ir.model.fields,field_description:to_odoo_module_sale_project.field_project_project__odoo_module_versions_count
+msgid "Odoo Module Versions Count"
+msgstr "SL Phiên bản Odoo Module"
+
+#. module: to_odoo_module_sale_project
+#: model:ir.model.fields,field_description:to_odoo_module_sale_project.field_project_project__odoo_module_version_ids
+msgid "Odoo Modules"
+msgstr ""
+
+#. module: to_odoo_module_sale_project
+#: model:ir.model,name:to_odoo_module_sale_project.model_project_project
+msgid "Project"
+msgstr "Dự án"
+
+#. module: to_odoo_module_sale_project
+#: model:ir.model.fields,field_description:to_odoo_module_sale_project.field_odoo_module_version__project_ids
+msgid "Projects"
+msgstr "Dự án"
+
+#. module: to_odoo_module_sale_project
+#: model:ir.model.fields,field_description:to_odoo_module_sale_project.field_odoo_module_version__projects_count
+msgid "Projects Count"
+msgstr "SL Dự án"
+
+#. module: to_odoo_module_sale_project
+#: model:ir.model,name:to_odoo_module_sale_project.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Chi tiết Đơn Bán"
+
+#. module: to_odoo_module_sale_project
+#: model:ir.model,name:to_odoo_module_sale_project.model_project_task
+msgid "Task"
+msgstr "Nhiệm vụ"
+
+#. module: to_odoo_module_sale_project
+#: model:ir.model.fields,field_description:to_odoo_module_sale_project.field_odoo_module_version__task_ids
+#: model_terms:ir.ui.view,arch_db:to_odoo_module_sale_project.odoo_module_version_form_view
+msgid "Tasks"
+msgstr "Nhiệm vụ"
+
+#. module: to_odoo_module_sale_project
+#: model:ir.model.fields,field_description:to_odoo_module_sale_project.field_odoo_module_version__tasks_count
+msgid "Tasks Count"
+msgstr "SL Nhiệm vụ"
+
+#. module: to_odoo_module_sale_project
+#: model:ir.model.fields,help:to_odoo_module_sale_project.field_project_task__odoo_module_version_ids
+msgid "The modules that have been developed according to this task.\n"
+"Note that, if this task is related to a sale order line, the corresponding customer will be able to download the module for his customer portal, only when the related invoice is paid."
+msgstr "Các module mà được phát triển theo Nhiệm vụ này.\n"
+"Cần lưu ý rằng, nếu nhiệm vụ này mà liên quan đến một dòng đơn bán, khách hàng tương ứng sẽ có thể tải về các module liên quan đến nhiệm vụ này từ cổng thông tin khách hàng nếu hoá đơn liên quan đã được thanh toán."
+
+#. module: to_odoo_module_sale_project
+#: model:ir.model.fields,help:to_odoo_module_sale_project.field_project_project__odoo_module_version_ids
+msgid "The modules that have been developed for this project."
+msgstr "Các module mà được phát triển cho dự án này."
+
+#. module: to_odoo_module_sale_project
+#: model:ir.model.fields,help:to_odoo_module_sale_project.field_odoo_module_version__task_ids
+msgid "The tasks related to this module version"
+msgstr "Các nhiệm vụ liên quan đến phiên bản module này"
+

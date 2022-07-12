@@ -1,0 +1,66 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_l10n_vn_accounting_vninvoice_summary
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-14 06:10+0000\n"
+"PO-Revision-Date: 2022-04-14 06:10+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_l10n_vn_accounting_vninvoice_summary
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_vninvoice_summary.field_account_move__display_name
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_vninvoice_summary.field_invoice_line_summary__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_vninvoice_summary
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_vninvoice_summary.field_account_move__id
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_vninvoice_summary.field_invoice_line_summary__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_vninvoice_summary
+#: model:ir.model,name:viin_l10n_vn_accounting_vninvoice_summary.model_invoice_line_summary
+msgid "Invoice Lines Summary"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_vninvoice_summary
+#: model:ir.model,name:viin_l10n_vn_accounting_vninvoice_summary.model_account_move
+msgid "Journal Entry"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_vninvoice_summary
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_vninvoice_summary.field_account_move____last_update
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_vninvoice_summary.field_invoice_line_summary____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_vninvoice_summary
+#: code:addons/viin_l10n_vn_accounting_vninvoice_summary/models/invoice_line_summary.py:0
+#, python-format
+msgid ""
+"Product %s don't have Unit of measure. VN-Invoice requires Unit of measure "
+"in every invoice line"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_vninvoice_summary
+#: code:addons/viin_l10n_vn_accounting_vninvoice_summary/models/invoice_line_summary.py:0
+#, python-format
+msgid ""
+"The line containing the product %s comes with more than one tax which is not supported by VN-incoice.\n"
+"You may set some taxes to get their value included in the price to ensure that there is no more than one tax on a single line."
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_vninvoice_summary
+#: code:addons/viin_l10n_vn_accounting_vninvoice_summary/models/invoice_line_summary.py:0
+#, python-format
+msgid "The line containing the product %s comes with no tax."
+msgstr ""

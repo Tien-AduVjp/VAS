@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="fleet_vehicle_service_types_view_tree">
+			<field name="name">fleet.service.type.tree</field>
+			<field name="model">fleet.service.type</field>
+			<field name="inherit_id" ref="fleet.fleet_vehicle_service_types_view_tree" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='category']" position="after">
+					<field name="product_id" />
+				</xpath>
+			</field>
+		</record>
+
+	</data>
+</odoo>

@@ -1,0 +1,35 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_quality_alert_team,quality.alert.team,model_quality_alert_team,base.group_user,1,0,0,0
+access_quality_check,quality.check,model_quality_check,base.group_user,1,1,0,0
+access_quality_alert,quality.alert,model_quality_alert,base.group_user,1,0,0,0
+access_quality_reason,quality.reason,model_quality_reason,base.group_user,1,0,0,0
+access_quality_tag,quality.tag,model_quality_tag,base.group_user,1,0,0,0
+access_quality_alert_stage,quality.alert.stage,model_quality_alert_stage,base.group_user,1,0,0,0
+access_quality_point,quality.point,model_quality_point,base.group_user,1,0,0,0
+access_quality_action,quality.action,model_quality_action,base.group_user,1,0,0,0
+access_quality_alert_action,quality.alert.action,model_quality_alert_action,base.group_user,1,0,0,0
+access_quality_alert_corrective_action,quality.alert.corrective.action,model_quality_alert_corrective_action,base.group_user,1,0,0,0
+access_quality_alert_preventive_action,quality.alert.preventive.action,model_quality_alert_preventive_action,base.group_user,1,0,0,0
+access_quality_point_test_type,quality.point.test_type,model_quality_point_test_type,base.group_user,1,0,0,0
+access_quality_type,quality.type,model_quality_type,base.group_user,1,0,0,0
+
+access_quality_check_user,quality.check,model_quality_check,to_quality.group_quality_user,1,1,1,0
+access_quality_alert_user,quality.alert,model_quality_alert,to_quality.group_quality_user,1,1,1,0
+access_quality_point_manager,quality.point,model_quality_point,to_quality.group_quality_manager,1,1,1,1
+access_quality_alert_team_manager,quality.alert.team,model_quality_alert_team,to_quality.group_quality_manager,1,1,1,1
+access_quality_check_manager,quality.check,model_quality_check,to_quality.group_quality_manager,1,1,1,1
+access_quality_alert_manager,quality.alert,model_quality_alert,to_quality.group_quality_manager,1,1,1,1
+access_quality_reason_manager,quality.reason,model_quality_reason,to_quality.group_quality_manager,1,1,1,1
+access_quality_tag_manager,quality.tag,model_quality_tag,to_quality.group_quality_manager,1,1,1,1
+access_quality_alert_stage_manager,quality.alert.stage,model_quality_alert_stage,to_quality.group_quality_manager,1,1,1,1
+access_quality_action_user,quality.action user,model_quality_action,to_quality.group_quality_user,1,1,1,0
+access_quality_action_manager,quality.action manager,model_quality_action,to_quality.group_quality_manager,1,1,1,1
+access_quality_alert_action_user,quality.alert.action.user,model_quality_alert_action,to_quality.group_quality_user,1,1,1,0
+access_quality_alert_action_manager,quality.alert.action.manager,model_quality_alert_action,to_quality.group_quality_manager,1,1,1,1
+access_quality_alert_corrective_action_user,quality.alert.corrective.action.user,model_quality_alert_corrective_action,to_quality.group_quality_user,1,1,1,0
+access_quality_alert_corrective_action_manager,quality.alert.corrective.action.manager,model_quality_alert_corrective_action,to_quality.group_quality_manager,1,1,1,1
+access_quality_alert_preventive_action_user,quality.alert.preventive.action.user,model_quality_alert_preventive_action,to_quality.group_quality_user,1,1,1,0
+access_quality_alert_preventive_action_manager,quality.alert.preventive.action.manager,model_quality_alert_preventive_action,to_quality.group_quality_manager,1,1,1,1
+access_quality_point_test_type_manager,quality.point.test_type.quality_manager,model_quality_point_test_type,to_quality.group_quality_manager,1,1,1,1
+access_quality_type_manager,quality.type.manager,model_quality_type,to_quality.group_quality_manager,1,1,1,1

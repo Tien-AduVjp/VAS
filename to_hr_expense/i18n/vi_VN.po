@@ -1,0 +1,331 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_hr_expense
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-04 07:18+0000\n"
+"PO-Revision-Date: 2022-06-04 07:18+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_hr_expense
+#: model:ir.model,name:to_hr_expense.model_account_chart_template
+msgid "Account Chart Template"
+msgstr "Mẫu Hệ thống Tài khoản"
+
+#. module: to_hr_expense
+#: model:ir.model.fields,help:to_hr_expense.field_hr_expense__reference
+msgid ""
+"Allow user to input bill reference. Paid by employee, expenses with the same"
+" vendor and reference will be created in the same invoice if they are on the"
+" same expense sheet."
+msgstr ""
+"Cho phép người dùng nhập hóa đơn tham chiếu. Thanh toán bởi nhân viên, chi tiêu"
+" cùng nhà cung cấp và cùng tham chiếu sẽ được tạo trong cùng hóa đơn nếu chúng cùng"
+" nằm trong một bảng kê."
+
+#. module: to_hr_expense
+#: model:ir.model.fields,field_description:to_hr_expense.field_hr_expense__amount_residual
+#: model:ir.model.fields,field_description:to_hr_expense.field_hr_expense_sheet__amount_residual
+msgid "Amount Due"
+msgstr "Số tiền đến hạn"
+
+#. module: to_hr_expense
+#: model:ir.model.fields.selection,name:to_hr_expense.selection__hr_expense_sheet__state__approve
+msgid "Approved"
+msgstr "Được Duyệt"
+
+#. module: to_hr_expense
+#: model:ir.model.fields,field_description:to_hr_expense.field_hr_expense__reference
+msgid "Bill Reference"
+msgstr "Mã/Số hoá đơn"
+
+#. module: to_hr_expense
+#: model_terms:ir.ui.view,arch_db:to_hr_expense.view_hr_expense_sheet_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: to_hr_expense
+#: model:ir.model,name:to_hr_expense.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: to_hr_expense
+#: model:ir.model.fields,field_description:to_hr_expense.field_hr_expense__to_invoice
+msgid "Create Invoice?"
+msgstr "Tạo Hóa Đơn?"
+
+#. module: to_hr_expense
+#: model:ir.model.fields,field_description:to_hr_expense.field_account_chart_template__display_name
+#: model:ir.model.fields,field_description:to_hr_expense.field_account_move__display_name
+#: model:ir.model.fields,field_description:to_hr_expense.field_account_payment__display_name
+#: model:ir.model.fields,field_description:to_hr_expense.field_account_payment_register__display_name
+#: model:ir.model.fields,field_description:to_hr_expense.field_hr_expense__display_name
+#: model:ir.model.fields,field_description:to_hr_expense.field_hr_expense_sheet__display_name
+#: model:ir.model.fields,field_description:to_hr_expense.field_res_company__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: hr_expense
+#: model:ir.model.fields.selection,name:hr_expense.selection__hr_expense_sheet__state__done
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: to_hr_expense
+#: model:ir.model.fields.selection,name:to_hr_expense.selection__hr_expense_sheet__state__draft
+msgid "Draft"
+msgstr "Dự thảo"
+
+#. module: to_hr_expense
+#: code:addons/to_hr_expense/models/hr_expense_sheet.py:0
+#, python-format
+msgid ""
+"Expenditures must be set to the same 'Create Invoice?' value (either billed "
+"or invoiced)"
+msgstr ""
+"Các chi tiêu phải cùng được thiết lập 'Tạo hóa đơn' hoặc cùng không được "
+"thiết lập."
+
+#. module: to_hr_expense
+#: model:ir.model,name:to_hr_expense.model_hr_expense
+#: model_terms:ir.ui.view,arch_db:to_hr_expense.view_account_invoice_filter
+#: model_terms:ir.ui.view,arch_db:to_hr_expense.view_account_move_filter
+#: model_terms:ir.ui.view,arch_db:to_hr_expense.view_account_move_line_filter
+msgid "Expense"
+msgstr "Chi tiêu"
+
+#. module: to_hr_expense
+#: code:addons/to_hr_expense/models/res_company.py:0
+#: model:ir.model.fields,field_description:to_hr_expense.field_hr_expense_sheet__journal_id
+#, python-format
+msgid "Expense Journal"
+msgstr "Sổ nhật ký Chi tiêu"
+
+#. module: to_hr_expense
+#: model:ir.model,name:to_hr_expense.model_hr_expense_sheet
+#: model:ir.model.fields,field_description:to_hr_expense.field_account_payment__expense_sheet_id
+#: model:ir.model.fields,field_description:to_hr_expense.field_account_payment_register__expense_sheet_id
+msgid "Expense Report"
+msgstr "Kê khai Chi tiêu"
+
+#. module: to_hr_expense
+#: model:ir.model.fields,help:to_hr_expense.field_hr_expense_sheet__state
+msgid "Expense Report State"
+msgstr "Trạng thái"
+
+#. module: to_hr_expense
+#: model_terms:ir.ui.view,arch_db:to_hr_expense.hr_expense_sheet_view_search
+msgid "Expense Sheet has invoice"
+msgstr "Bảng kê có hóa đơn"
+
+#. module: to_hr_expense
+#: model:ir.model.fields,field_description:to_hr_expense.field_account_bank_statement_line__hr_expense_sheet_id
+#: model:ir.model.fields,field_description:to_hr_expense.field_account_move__hr_expense_sheet_id
+#: model:ir.model.fields,field_description:to_hr_expense.field_account_payment__hr_expense_sheet_id
+#: model_terms:ir.ui.view,arch_db:to_hr_expense.view_account_invoice_filter
+#: model_terms:ir.ui.view,arch_db:to_hr_expense.view_account_move_filter
+msgid "HR Expense"
+msgstr "Chi tiêu HR"
+
+#. module: to_hr_expense
+#: model_terms:ir.ui.view,arch_db:to_hr_expense.view_move_form
+msgid "HR Expenses"
+msgstr "Chi tiêu HR"
+
+#. module: to_hr_expense
+#: model:ir.model.fields,field_description:to_hr_expense.field_hr_expense_sheet__has_invoice
+#: model_terms:ir.ui.view,arch_db:to_hr_expense.hr_expense_sheet_view_search
+msgid "Has Invoice"
+msgstr "Có hóa đơn"
+
+#. module: to_hr_expense
+#: model:ir.model.fields,field_description:to_hr_expense.field_account_chart_template__id
+#: model:ir.model.fields,field_description:to_hr_expense.field_account_move__id
+#: model:ir.model.fields,field_description:to_hr_expense.field_account_payment__id
+#: model:ir.model.fields,field_description:to_hr_expense.field_account_payment_register__id
+#: model:ir.model.fields,field_description:to_hr_expense.field_hr_expense__id
+#: model:ir.model.fields,field_description:to_hr_expense.field_hr_expense_sheet__id
+#: model:ir.model.fields,field_description:to_hr_expense.field_res_company__id
+msgid "ID"
+msgstr ""
+
+#. module: to_hr_expense
+#: model:ir.model.fields,help:to_hr_expense.field_hr_expense__to_invoice
+msgid ""
+"If checked, field Vendor is required, and this expense will be the input "
+"invoice"
+msgstr ""
+"Nếu được đánh dấu, Trường Nhà cung cấp là bắt buộc và chi tiêu này sẽ được "
+"xuất hóa đơn"
+
+#. module: to_hr_expense
+#: model:ir.model.fields,help:to_hr_expense.field_hr_expense_sheet__aggregate_payments
+msgid ""
+"If checked, in case this expense sheet was paid by company, all expense "
+"lines of this sheet will be paid by one single payment."
+msgstr ""
+
+#. module: to_hr_expense
+#: model_terms:ir.ui.view,arch_db:to_hr_expense.view_hr_expense_sheet_form_payment_state_ribbon
+msgid "In Payment"
+msgstr "Chờ thanh toán"
+
+#. module: to_hr_expense
+#: model:ir.model.fields,field_description:to_hr_expense.field_hr_expense_sheet__is_paid
+msgid "Is Paid"
+msgstr "Đã thanh toán"
+
+#. module: to_hr_expense
+#: model:ir.actions.act_window,name:to_hr_expense.expense_entry_action
+#: model:ir.model.fields,field_description:to_hr_expense.field_hr_expense_sheet__move_ids
+#: model_terms:ir.ui.view,arch_db:to_hr_expense.view_hr_expense_sheet_form
+msgid "Journal Entries"
+msgstr "Bút toán"
+
+#. module: to_hr_expense
+#: model:ir.model.fields,field_description:to_hr_expense.field_hr_expense_sheet__move_count
+msgid "Journal Entries Count"
+msgstr "Bút toán"
+
+#. module: to_hr_expense
+#: model:ir.model,name:to_hr_expense.model_account_move
+msgid "Journal Entry"
+msgstr "Bút toán sổ nhật ký"
+
+#. module: to_hr_expense
+#: code:addons/to_hr_expense/models/account_move.py:0
+#, python-format
+msgid "Journal Entry was set to draft"
+msgstr "Bút toán đã chuyển về trạng thái dự thảo"
+
+#. module: to_hr_expense
+#: model:ir.model.fields,field_description:to_hr_expense.field_account_chart_template____last_update
+#: model:ir.model.fields,field_description:to_hr_expense.field_account_move____last_update
+#: model:ir.model.fields,field_description:to_hr_expense.field_account_payment____last_update
+#: model:ir.model.fields,field_description:to_hr_expense.field_account_payment_register____last_update
+#: model:ir.model.fields,field_description:to_hr_expense.field_hr_expense____last_update
+#: model:ir.model.fields,field_description:to_hr_expense.field_hr_expense_sheet____last_update
+#: model:ir.model.fields,field_description:to_hr_expense.field_res_company____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_hr_expense
+#: model:ir.model.fields,field_description:to_hr_expense.field_hr_expense_sheet__aggregate_payments
+msgid "Lump-sum Payment?"
+msgstr ""
+
+#. module: to_hr_expense
+#: model:ir.model.fields.selection,name:to_hr_expense.selection__hr_expense_sheet__payment_state__not_paid
+msgid "Not Paid"
+msgstr "Chưa thanh toán"
+
+#. module: to_hr_expense
+#: model:ir.model.fields.selection,name:to_hr_expense.selection__hr_expense_sheet__payment_state__paid
+#: model_terms:ir.ui.view,arch_db:to_hr_expense.view_hr_expense_sheet_form_payment_state_ribbon
+msgid "Paid"
+msgstr "Đã thanh toán"
+
+#. module: to_hr_expense
+#: model_terms:ir.ui.view,arch_db:to_hr_expense.view_hr_expense_sheet_form_payment_state_ribbon
+msgid "Partial"
+msgstr "Thanh toán một phần"
+
+#. module: to_hr_expense
+#: model:ir.model.fields.selection,name:to_hr_expense.selection__hr_expense_sheet__payment_state__partial
+msgid "Partially Paid"
+msgstr "Thanh toán một phần"
+
+#. module: to_hr_expense
+#: model:ir.model.fields,field_description:to_hr_expense.field_hr_expense_sheet__payment_state
+msgid "Payment Status"
+msgstr "Tình trạng Thanh toán"
+
+#. module: to_hr_expense
+#: model:ir.model,name:to_hr_expense.model_account_payment
+#: model:ir.model.fields,field_description:to_hr_expense.field_hr_expense_sheet__payment_ids
+#: model_terms:ir.ui.view,arch_db:to_hr_expense.view_hr_expense_sheet_form
+msgid "Payments"
+msgstr "Thanh toán"
+
+#. module: to_hr_expense
+#: model:ir.model.fields,field_description:to_hr_expense.field_hr_expense_sheet__payments_count
+msgid "Payments Count"
+msgstr "Số lần thanh toán"
+
+#. module: to_hr_expense
+#: model:ir.model.fields.selection,name:to_hr_expense.selection__hr_expense_sheet__state__post
+msgid "Posted"
+msgstr "Đã vào sổ"
+
+#. module: to_hr_expense
+#: model:ir.model.fields.selection,name:to_hr_expense.selection__hr_expense_sheet__state__cancel
+msgid "Refused"
+msgstr "Bị từ chối"
+
+#. module: to_hr_expense
+#: model:ir.model,name:to_hr_expense.model_account_payment_register
+msgid "Register Payment"
+msgstr "Thanh toán"
+
+#. module: to_hr_expense
+#: model_terms:ir.ui.view,arch_db:to_hr_expense.view_hr_expense_sheet_form_payment_state_ribbon
+msgid "Reversed"
+msgstr ""
+
+#. module: to_hr_expense
+#: model:ir.model.fields,field_description:to_hr_expense.field_hr_expense_sheet__state
+msgid "Status"
+msgstr "Tình trạng"
+
+#. module: to_hr_expense
+#: model:ir.model.fields.selection,name:to_hr_expense.selection__hr_expense_sheet__state__submit
+msgid "Submitted"
+msgstr "Đã Trình"
+
+#. module: to_hr_expense
+#: model:ir.model.fields,help:to_hr_expense.field_hr_expense_sheet__is_paid
+msgid "Technical field is used to show/hide button Payment"
+msgstr "Trường kỹ thuật dùng để ẩn/hiện nút Thanh toán"
+
+#. module: to_hr_expense
+#: model:ir.model.fields,help:to_hr_expense.field_hr_expense_sheet__journal_id
+msgid "The journal used when the expense is done."
+msgstr "Sổ nhật ký được sử dụng khi chi tiêu hoàn thành."
+
+#. module: to_hr_expense
+#: model:ir.model.fields,help:to_hr_expense.field_hr_expense_sheet__vendor_bill_journal_id
+msgid "The journal used when the expense sheet has invoice."
+msgstr "Sổ nhật ký được sử dụng khi Kê khai có hóa đơn"
+
+#. module: to_hr_expense
+#: model:ir.model.fields,field_description:to_hr_expense.field_hr_expense__vendor_id
+msgid "Vendor"
+msgstr "Nhà cung cấp"
+
+#. module: to_hr_expense
+#: model:ir.model.fields,field_description:to_hr_expense.field_hr_expense_sheet__vendor_bill_journal_id
+msgid "Vendor Bill Journal"
+msgstr "Sổ nhật ký Hóa đơn"
+
+#. module: to_hr_expense
+#: code:addons/to_hr_expense/models/hr_expense_sheet.py:0
+#, python-format
+msgid "You cannot delete the expense '%s' which has been posted once entry !"
+msgstr "Bạn không thể xoá chi tiêu '%s' đã từng được vào sổ."
+
+#. module: to_hr_expense
+#: code:addons/to_hr_expense/models/hr_expense_sheet.py:0
+#, python-format
+msgid ""
+"You must cancel all invoices and payments of the expense sheet, before you "
+"reset to draft or cancel that expense sheet '%s'"
+msgstr ""
+"Bạn phải hủy tất cả các hóa đơn và thanh toán của bảng kê, trước khi bạn đặt"
+" bảng kê '%s' về trạng thái dự thảo hoặc hủy nó"

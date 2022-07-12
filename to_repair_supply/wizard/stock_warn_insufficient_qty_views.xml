@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="stock_warn_insufficient_qty_repair_form_view" model="ir.ui.view">
+        <field name="name">stock.warn.insufficient.qty.repair</field>
+        <field name="model">stock.warn.insufficient.qty.repair</field>
+        <field name="inherit_id" ref="repair.stock_warn_insufficient_qty_repair_form_view"/>
+        <field name="arch" type="xml">
+        	<field name="quantity" position="after">
+        		<field name="reserved_quantity"></field>
+        	</field>
+            <xpath expr="//div[last()-1]" position="after">
+            	<div>
+	                <strong>Select Current Location: </strong>
+	                <field name="src_location_id"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

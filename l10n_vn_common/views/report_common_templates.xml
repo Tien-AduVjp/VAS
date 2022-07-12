@@ -1,0 +1,38 @@
+<odoo>
+	<template id="signature_block">
+		<div class="row">
+			<div class="col-12 text-right" style="padding-right:40px;">
+					On........Month.......Year........
+				</div>
+		</div>
+		<div class="row">
+			<div class="col-4">
+				<p class="text-center">
+					<strong>
+							Prepared By
+						</strong>
+					<br />
+					(Signature, Full Name)
+				</p>
+			</div>
+			<div class="col-4">
+				<p class="text-center">
+					<strong>
+							Chief Accountant
+						</strong>
+					<br />
+					(Signature, Full Name)
+				</p>
+			</div>
+			<div class="col-4">
+				<p class="text-center">
+					<strong>
+							Director/CEO
+						</strong>
+					<br />
+					(Signature, Full Name, Job Title)
+				</p>
+			</div>
+		</div>
+	</template>
+</odoo>

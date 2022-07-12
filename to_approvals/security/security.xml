@@ -1,0 +1,147 @@
+<odoo>
+	<data>
+		<record model="ir.module.category"
+			id="base.module_category_human_resources_approvals">
+			<field name="description">Helps you manage your employee approval requests.</field>
+			<field name="sequence">10</field>
+		</record>
+		<record id="group_approval_team_leader" model="res.groups">
+			<field name="name">Team Approver</field>
+			<field name="implied_ids" eval="[(4, ref('base.group_user'))]" />
+			<field name="category_id" ref="base.module_category_human_resources_approvals" />
+			<field name="comment">Users belong to this group can approve their subordinates' approval requests</field>
+		</record>
+		<record id="group_approval_officer" model="res.groups">
+			<field name="name">Officer</field>
+			<field name="implied_ids" eval="[(4, ref('group_approval_team_leader'))]" />
+			<field name="category_id" ref="base.module_category_human_resources_approvals" />
+			<field name="comment">
+				A user that belongs to this group can approve their subordinates approval
+				requests and the other requests that specify him as an approver</field>
+		</record>
+		<record id="group_approval_manager" model="res.groups">
+			<field name="name">Administrator</field>
+			<field name="implied_ids" eval="[(4, ref('group_approval_officer'))]" />
+			<field name="category_id" ref="base.module_category_human_resources_approvals" />
+			<field name="comment">Users belong to this group have total control on this application</field>
+			<field name="users" eval="[(4, ref('base.user_root')),(4, ref('base.user_admin'))]"/>
+		</record>
+	</data>
+	<!-- Access Rules -->
+	<data>
+		<!-- approval.request -->
+		<record id="approval_request_follower_rule" model="ir.rule">
+			<field name="name">Followers Read Only</field>
+			<field name="model_id" ref="model_approval_request"/>
+			<field name="domain_force">[('message_partner_ids', 'in', [user.partner_id.id])]</field>
+			<field name="perm_read" eval="1" />
+			<field name="perm_write" eval="0" />
+			<field name="perm_create" eval="0" />
+			<field name="perm_unlink" eval="0" />
+			<field name="groups" eval="[(4, ref('base.group_user'))]"/>
+		</record>
+
+		<record id="approval_request_employee_rule" model="ir.rule">
+			<field name="name">Personal Approval Requests</field>
+			<field name="model_id" ref="model_approval_request"/>
+	        <field name="domain_force">[('employee_id.user_id', '=', user.id)]</field>
+			<field name="perm_read" eval="1" />
+			<field name="perm_write" eval="1" />
+			<field name="perm_create" eval="1" />
+			<field name="perm_unlink" eval="1" />
+			<field name="groups" eval="[(4, ref('base.group_user'))]"/>
+		</record>
+
+		<record id="approval_request_employee_manager_rule" model="ir.rule">
+			<field name="name">Employee Manager - Subordinates Approval Requests</field>
+			<field name="model_id" ref="model_approval_request"/>
+	        <field name="domain_force">[
+            	('employee_id.parent_ids', 'in', (user.employee_id | user.employee_ids).ids),
+            	]</field>
+			<field name="perm_read" eval="1" />
+			<field name="perm_write" eval="0" />
+			<field name="perm_create" eval="0" />
+			<field name="perm_unlink" eval="0" />
+			<field name="groups" eval="[(4, ref('base.group_user'))]"/>
+		</record>
+
+		<record id="team_approver_user_rule" model="ir.rule">
+			<field name="name">Team Approval</field>
+			<field name="model_id" ref="model_approval_request"/>
+			<field name="domain_force">[
+				('employee_id.parent_ids', 'in', (user.employee_id | user.employee_ids).ids),
+				('request_approval_user_line_ids.user_id','in',[user.id])
+				]</field>
+			<field name="perm_read" eval="1" />
+			<field name="perm_write" eval="0" />
+			<field name="perm_create" eval="0" />
+			<field name="perm_unlink" eval="0" />
+	        <field name="groups" eval="[(4, ref('to_approvals.group_approval_team_leader'))]"/>
+	    </record>
+
+	    <record id="approver_officer_rule" model="ir.rule">
+			<field name="name">Officer</field>
+			<field name="model_id" ref="model_approval_request"/>
+			<field name="domain_force">[
+				('request_approval_user_line_ids.user_id','in',[user.id])
+				]</field>
+			<field name="perm_read" eval="1" />
+			<field name="perm_write" eval="0" />
+			<field name="perm_create" eval="0" />
+			<field name="perm_unlink" eval="0" />
+	        <field name="groups" eval="[(4, ref('to_approvals.group_approval_officer'))]"/>
+	    </record>
+
+	    <record id="approval_manager_rule" model="ir.rule">
+			<field name="name">Administrators - Full access rights</field>
+			<field name="model_id" ref="model_approval_request"/>
+			<field name="domain_force">[(1, '=', 1)]</field>
+			<field name="perm_read" eval="1" />
+			<field name="perm_write" eval="1" />
+			<field name="perm_create" eval="1" />
+			<field name="perm_unlink" eval="1" />
+	        <field name="groups" eval="[(4, ref('to_approvals.group_approval_manager'))]"/>
+	    </record>
+
+		<!-- request.approval.user.line -->
+	    <record id="request_approval_user_line_admin" model="ir.rule">
+			<field name="name">Request Approval User - Admin</field>
+			<field name="model_id" ref="model_request_approval_user_line"/>
+			<field name="domain_force">[(1,'=',1)]</field>
+			<field name="perm_read" eval="1" />
+			<field name="perm_write" eval="1" />
+			<field name="perm_create" eval="1" />
+			<field name="perm_unlink" eval="1" />
+	        <field name="groups" eval="[(4, ref('to_approvals.group_approval_manager'))]"/>
+	    </record>
+
+		<!-- multi comp rules -->
+		<record id="approval_comp_rule" model="ir.rule">
+	        <field name="name">Approval - Multi-company rule</field>
+	        <field name="model_id" ref="model_approval_request"/>
+	        <field name="global" eval="True"/>
+	        <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+	    </record>
+
+		<record id="approval_type_comp_rule" model="ir.rule">
+			<field name="name">Approval Type Multi-company rule</field>
+			<field name="model_id" ref="model_approval_request_type"/>
+			<field name="global" eval="True"/>
+			<field name="domain_force">['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]</field>
+		</record>
+
+		<record id="request_approval_user_line_comp_rule" model="ir.rule">
+			<field name="name">Request Approval User Line - Multi-company rule</field>
+			<field name="model_id" ref="model_request_approval_user_line"/>
+			<field name="global" eval="True"/>
+			<field name="domain_force">['|', ('approval_id.company_id', '=', False), ('approval_id.company_id', 'in', company_ids)]</field>
+		</record>
+
+		<record id="type_approval_user_line_comp_rule" model="ir.rule">
+			<field name="name">Type Approval User Line - Multi-company rule</field>
+			<field name="model_id" ref="model_type_approval_user_line"/>
+			<field name="global" eval="True"/>
+			<field name="domain_force">['|', ('request_type_id.company_id', '=', False), ('request_type_id.company_id', 'in', company_ids)]</field>
+		</record>
+	</data>
+</odoo>

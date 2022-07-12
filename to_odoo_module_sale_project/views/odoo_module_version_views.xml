@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="odoo_module_version_form_view">
+			<field name="name">odoo.module.version.form</field>
+			<field name="model">odoo.module.version</field>
+			<field name="inherit_id"
+				ref="to_odoo_module.odoo_module_version_form_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//button[@name='action_view_download_stats']"
+					position="before">
+					<button name="action_view_tasks" type="object"
+						class="oe_stat_button" icon="fa-tasks"
+						attrs="{'invisible': [('tasks_count', '=', 0)]}"
+						groups="project.group_project_user">
+						<field name="tasks_count" string="Tasks" widget="statinfo" />
+					</button>
+				</xpath>
+			</field>
+		</record>
+
+	</data>
+</odoo>

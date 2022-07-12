@@ -1,0 +1,72 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_l10n_vn_foreign_trade
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-12 02:52+0000\n"
+"PO-Revision-Date: 2021-11-12 02:52+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_l10n_vn_foreign_trade
+#: model:account.payment.term,name:viin_l10n_vn_foreign_trade.account_payment_term_275_net_days
+#: model:account.payment.term,note:viin_l10n_vn_foreign_trade.account_payment_term_275_net_days
+msgid "275 Net days"
+msgstr "275 Ngày kể từ ngày thông quan"
+
+#. module: viin_l10n_vn_foreign_trade
+#: model:ir.model,name:viin_l10n_vn_foreign_trade.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: viin_l10n_vn_foreign_trade
+#: model:ir.model.fields,field_description:viin_l10n_vn_foreign_trade.field_res_company__export_tax_payment_term_id
+msgid "Default Export Tax Payment Term"
+msgstr "Điều khoản Thanh toán Thuế Xuất khẩu mặc định"
+
+#. module: viin_l10n_vn_foreign_trade
+#: model:ir.model.fields,field_description:viin_l10n_vn_foreign_trade.field_res_company__import_tax_payment_term_id
+msgid "Default Import Tax Payment Term"
+msgstr "Điều khoản Thanh toán Thuế Nhập khẩu mặc định"
+
+#. module: viin_l10n_vn_foreign_trade
+#: model:ir.model.fields,field_description:viin_l10n_vn_foreign_trade.field_res_company__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: viin_l10n_vn_foreign_trade
+#: model:ir.model.fields,field_description:viin_l10n_vn_foreign_trade.field_res_company__export_vat_ctp_account_id
+msgid "Exporting VAT Counter Part Account"
+msgstr "Tài khoản đối ứng thuế GTGT Xuất khẩu"
+
+#. module: viin_l10n_vn_foreign_trade
+#: model:ir.model.fields,field_description:viin_l10n_vn_foreign_trade.field_res_company__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_l10n_vn_foreign_trade
+#: model:ir.model.fields,field_description:viin_l10n_vn_foreign_trade.field_res_company__import_vat_ctp_account_id
+msgid "Importing VAT Counter Part Account"
+msgstr "Tài khoản đối ứng thuế GTGT Nhập khẩu"
+
+#. module: viin_l10n_vn_foreign_trade
+#: model:ir.model.fields,field_description:viin_l10n_vn_foreign_trade.field_res_company____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: viin_l10n_vn_foreign_trade
+#: model:ir.model.fields,help:viin_l10n_vn_foreign_trade.field_res_company__export_vat_ctp_account_id
+msgid "The counter account for Exporting VAT"
+msgstr "Tài khoản đối ứng với Thuế GTGT hàng Xuất khẩu"
+
+#. module: viin_l10n_vn_foreign_trade
+#: model:ir.model.fields,help:viin_l10n_vn_foreign_trade.field_res_company__import_vat_ctp_account_id
+msgid "The counter account for Importing VAT"
+msgstr "Tài khoản đối ứng với Thuế GTGT hàng Nhập khẩu"

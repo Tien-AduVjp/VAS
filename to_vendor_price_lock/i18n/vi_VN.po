@@ -1,0 +1,484 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_vendor_price_lock
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-17 03:02+0000\n"
+"PO-Revision-Date: 2021-11-17 03:02+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,help:to_vendor_price_lock.field_product_supplierinfo__sequence
+msgid "Assigns the priority to the list of product vendor."
+msgstr "Thiết lập mức độ ưu tiên cho danh mục các nhà cung cấp sản phẩm."
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields.selection,name:to_vendor_price_lock.selection__product_supplierinfo__state__confirmed
+msgid "Confirmed"
+msgstr "Đã xác nhận"
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,help:to_vendor_price_lock.field_product_supplierinfo__state
+msgid ""
+"Confirmed: The pricelist is confirmed and active. The price will be loaded into purchase order lines but still can be changed on the lines\n"
+"Locked: the pricelist is locked and cannot be changed on purchase order lines if the user is not a purchase manager"
+msgstr ""
+"Xác nhận: Bảng giá được xác nhận và hoạt động. Giá sẽ được tải vào chi tiết đơn đặt hàng nhưng vẫn có thể được thay đổi trong chi tiết\n"
+"Đã khóa: bảng giá bị khóa và không thể thay đổi trong chi tiết đơn đặt hàng nếu người dùng không phải là người quản lý mua hàng"
+
+#. module: to_vendor_price_lock
+#: code:addons/to_vendor_price_lock/models/product_supplierinfo.py:0
+#, python-format
+msgid ""
+"Creating a new vendor pricelist for product '%s' from the vendor '%s' is forbidden while such an existing record is locked.\n"
+" Please contact your Purchase Manager to ask him to unlock all records corresponding to the product and the vendor before you can create a new one. Or just ask him to do the job for you!"
+msgstr ""
+"Tạo bảng giá mới cho sản phẩm '%s' từ nhà cung cấp '%s' bị cấm khi mà bảng giá hiện tại cho sản phẩm này ứng với nhà cung cấp này đang tồn tại và bị khoá.\n"
+" Hãy liên hệ với người Quản lý Mua sắm để đề nghị mở khoá cho sản phẩm ứng với nhà cung cấp này trước khi bạn có thể tảo bảng giá mới. Hoặc đơn giản là hãy nhờ người đó cập nhật lại bảng giá hiện có mà đang bị khoá!"
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__currency_id
+msgid "Currency"
+msgstr "Tiền tệ"
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__delay
+msgid "Delivery Lead Time"
+msgstr "Thời gian giao hàng"
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__display_name
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_purchase_order_line__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__date_end
+msgid "End Date"
+msgstr "Ngày kết thúc"
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,help:to_vendor_price_lock.field_product_supplierinfo__date_end
+msgid "End date for this vendor price"
+msgstr "Ngày kết thúc đối với giá nhà cung cấp này"
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,help:to_vendor_price_lock.field_product_supplierinfo__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__id
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_purchase_order_line__id
+msgid "ID"
+msgstr ""
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,help:to_vendor_price_lock.field_product_supplierinfo__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,help:to_vendor_price_lock.field_product_supplierinfo__message_needaction
+#: model:ir.model.fields,help:to_vendor_price_lock.field_product_supplierinfo__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,help:to_vendor_price_lock.field_product_supplierinfo__message_has_error
+#: model:ir.model.fields,help:to_vendor_price_lock.field_product_supplierinfo__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,help:to_vendor_price_lock.field_product_supplierinfo__product_id
+msgid ""
+"If not set, the vendor price will apply to all variants of this product."
+msgstr ""
+"Nếu không chọn, giá nhà cung cấp sẽ áp dụng cho tất cả các biến thể của sản "
+"phẩm."
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo____last_update
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_purchase_order_line____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,help:to_vendor_price_lock.field_product_supplierinfo__delay
+msgid ""
+"Lead time in days between the confirmation of the purchase order and the "
+"receipt of the products in your warehouse. Used by the scheduler for "
+"automatic computation of the purchase order planning."
+msgstr ""
+"Thời gian được tính theo ngày mà Nhà cung cấp hứa sẽ giao hàng từ lúc xác "
+"nhận đơn hàng đến lúc nhận hàng. Được sử dụng bởi bộ đặt lịch cho việc tính "
+"toán tự động của đơn hàng."
+
+#. module: to_vendor_price_lock
+#: model_terms:ir.ui.view,arch_db:to_vendor_price_lock.product_supplierinfo_form_view
+msgid "Lock"
+msgstr "Khoá"
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields.selection,name:to_vendor_price_lock.selection__product_supplierinfo__state__locked
+msgid "Locked"
+msgstr "Khoá"
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,help:to_vendor_price_lock.field_product_supplierinfo__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,help:to_vendor_price_lock.field_product_supplierinfo__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,help:to_vendor_price_lock.field_product_supplierinfo__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: to_vendor_price_lock
+#: code:addons/to_vendor_price_lock/models/product_supplierinfo.py:0
+#, python-format
+msgid "Only Purchase Manager can edit locked vendor pricelist"
+msgstr ""
+"Chỉ người Quản lý ở phân hệ Mua sắm mới có quyền sửa Bảng giá đang bị khoá"
+
+#. module: to_vendor_price_lock
+#: model_terms:ir.ui.view,arch_db:to_vendor_price_lock.product_supplierinfo_form_view
+msgid "Other Information"
+msgstr "Thông tin khác"
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__price
+msgid "Price"
+msgstr "Giá"
+
+#. module: to_vendor_price_lock
+#: model_terms:ir.ui.view,arch_db:to_vendor_price_lock.product_supplierinfo_form_view
+msgid "Price List"
+msgstr "Bảng giá"
+
+#. module: to_vendor_price_lock
+#: model_terms:ir.ui.view,arch_db:to_vendor_price_lock.product_supplierinfo_form_view
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__product_tmpl_id
+msgid "Product Template"
+msgstr "Mẫu sản phẩm"
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__product_id
+msgid "Product Variant"
+msgstr "Biến thể Sản phẩm"
+
+#. module: to_vendor_price_lock
+#: model:ir.model,name:to_vendor_price_lock.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "Chi tiết Đơn Mua"
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__min_qty
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__sequence
+msgid "Sequence"
+msgstr "Trình tự"
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__date_start
+msgid "Start Date"
+msgstr "Ngày bắt đầu"
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,help:to_vendor_price_lock.field_product_supplierinfo__date_start
+msgid "Start date for this vendor price"
+msgstr "Ngày hiệu lực đối với giá nhà cung cấp này"
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__state
+msgid "Status"
+msgstr "Tình trạng"
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,help:to_vendor_price_lock.field_product_supplierinfo__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: to_vendor_price_lock
+#: model:ir.model,name:to_vendor_price_lock.model_product_supplierinfo
+msgid "Supplier Pricelist"
+msgstr "Bảng giá nhà cung cấp"
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,help:to_vendor_price_lock.field_product_supplierinfo__price
+msgid "The price to purchase a product"
+msgstr "Giá để mua một sản phẩm"
+
+#. module: to_vendor_price_lock
+#: code:addons/to_vendor_price_lock/models/purchase_order_line.py:0
+#, python-format
+msgid ""
+"The pricelist for product '%s' from the vendor '%s' is currently locked "
+"against non purchase manager users. Please contact your Purchase Manager in "
+"case you want to update the vendor's pricelist"
+msgstr ""
+"Bảng giá cho sản phẩm '%s' từ nhà cung cấp '%s' hiện đang bị khoá đối với "
+"người dùng không phải là người Quản lý của phân hệ Mua sắm. Vui lòng liên hệ"
+" với người Quản lý nếu bạn muốn thay đổi bảng giá nhà cung cấp"
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,help:to_vendor_price_lock.field_product_supplierinfo__min_qty
+msgid ""
+"The quantity to purchase from this vendor to benefit from the price, "
+"expressed in the vendor Product Unit of Measure if not any, in the default "
+"unit of measure of the product otherwise."
+msgstr ""
+"Số lượng mua từ nhà cung cấp này để được hưởng lợi từ giá, "
+"được thể hiện trong Đơn vị đo lường sản phẩm của nhà cung cấp nếu không có, trong đơn vị "
+"đo lường mặc định của sản phẩm nếu không."
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,help:to_vendor_price_lock.field_product_supplierinfo__product_uom
+msgid "This comes from the product form."
+msgstr "Lấy từ form sản phẩm"
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,help:to_vendor_price_lock.field_product_supplierinfo__product_code
+msgid ""
+"This vendor's product code will be used when printing a request for "
+"quotation. Keep empty to use the internal one."
+msgstr ""
+"Mã sản phẩm của nhà cung cấp này sẽ được sử dụng khi in một yêu cầu báo giá."
+" Để trống để sử dụng mã sản phẩm nội bộ của bạn."
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,help:to_vendor_price_lock.field_product_supplierinfo__product_name
+msgid ""
+"This vendor's product name will be used when printing a request for "
+"quotation. Keep empty to use the internal one."
+msgstr ""
+"Tên sản phẩm của nhà cung cấp này sẽ được sử dụng khi in một yêu cầu báo "
+"giá. Để trống để sử dụng tên sản phẩm nội bộ của bạn."
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,help:to_vendor_price_lock.field_product_supplierinfo__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_purchase_order_line__price_unit_lock
+msgid "Unit Price Lock"
+msgstr "Khoá Đơn giá"
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__product_uom
+msgid "Unit of Measure"
+msgstr "Đơn vị tính"
+
+#. module: to_vendor_price_lock
+#: model_terms:ir.ui.view,arch_db:to_vendor_price_lock.product_supplierinfo_form_view
+msgid "Unlock"
+msgstr "Thôi khoá"
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: to_vendor_price_lock
+#: model_terms:ir.ui.view,arch_db:to_vendor_price_lock.product_supplierinfo_form_view
+msgid "Validity"
+msgstr "Ngày hợp lệ"
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__name
+#: model_terms:ir.ui.view,arch_db:to_vendor_price_lock.product_supplierinfo_form_view
+msgid "Vendor"
+msgstr "Nhà cung cấp"
+
+#. module: to_vendor_price_lock
+#: model_terms:ir.ui.view,arch_db:to_vendor_price_lock.product_supplierinfo_form_view
+msgid "Vendor Information"
+msgstr "Thông tin Nhà cung cấp"
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__product_code
+msgid "Vendor Product Code"
+msgstr "Mã Sản phẩm phía Nhà cung cấp"
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__product_name
+msgid "Vendor Product Name"
+msgstr "Tên Sản phẩm phía Nhà cung cấp"
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,help:to_vendor_price_lock.field_product_supplierinfo__name
+msgid "Vendor of this product"
+msgstr "Nhà cung cấp của Sản phẩm này"
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,field_description:to_vendor_price_lock.field_product_supplierinfo__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: to_vendor_price_lock
+#: model:ir.model.fields,help:to_vendor_price_lock.field_product_supplierinfo__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: to_vendor_price_lock
+#: code:addons/to_vendor_price_lock/models/product_supplierinfo.py:0
+#, python-format
+msgid ""
+"You are not allowed to delete a pricelist which is in locked state. Here are some information for the pricelist that cannot be deleted:\n"
+"Vendor: %s\n"
+"Product: %s\n"
+msgstr ""
+"Bạn không được phép xoá một bảng giá mà ở trong trạng thái Khoá. Đây là các thông tin liên quan đến bảng giá mà không thể xoá được này:\n"
+"Nhà cung cấp: %s\n"
+"Sản phẩm: %s\n"
+
+#. module: to_vendor_price_lock
+#: model_terms:ir.ui.view,arch_db:to_vendor_price_lock.product_supplierinfo_form_view
+msgid "days"
+msgstr "ngày"
+
+#. module: to_vendor_price_lock
+#: model_terms:ir.ui.view,arch_db:to_vendor_price_lock.product_supplierinfo_form_view
+msgid "to"
+msgstr "đến"

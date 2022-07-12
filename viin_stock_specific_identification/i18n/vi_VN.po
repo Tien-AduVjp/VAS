@@ -1,0 +1,143 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_stock_specific_identification
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-15 10:53+0000\n"
+"PO-Revision-Date: 2021-11-15 10:53+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_stock_specific_identification
+#: code:addons/viin_stock_specific_identification/models/stock_move.py:0
+#: code:addons/viin_stock_specific_identification/models/stock_move.py:0
+#, python-format
+msgid "Correction of %s (modification of past move)"
+msgstr "Sự điều chỉnh của %s (sửa đổi của dịch chuyển trước đó)"
+
+#. module: viin_stock_specific_identification
+#: model:ir.model.fields,field_description:viin_stock_specific_identification.field_product_category__property_cost_method
+msgid "Costing Method"
+msgstr "Phương pháp giá vốn"
+
+#. module: viin_stock_specific_identification
+#: code:addons/viin_stock_specific_identification/models/product_template.py:0
+#, python-format
+msgid ""
+"Costing method of category 'Specific Identification' only available for "
+"product tracking by a lot/serial number. Please change costing method of "
+"category or set tracking for product."
+msgstr ""
+"Phương pháp định giá tồn kho 'Thực tế đích danh' chỉ có thể thiết lập cho "
+"sản phẩm truy vết theo lô/sê-ri. Hãy chuyển sang phương pháp khác hoặc thiết"
+" lập truy vết cho sản phẩm."
+
+#. module: viin_stock_specific_identification
+#: model:ir.model.fields,field_description:viin_stock_specific_identification.field_stock_valuation_layer__lot_id
+msgid "Lot/Serial Number"
+msgstr "Số Lô/Sê-ri"
+
+#. module: viin_stock_specific_identification
+#: model:ir.model,name:viin_stock_specific_identification.model_product_product
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: viin_stock_specific_identification
+#: model:ir.model,name:viin_stock_specific_identification.model_product_category
+msgid "Product Category"
+msgstr "Nhóm Sản phẩm"
+
+#. module: viin_stock_specific_identification
+#: model:ir.model,name:viin_stock_specific_identification.model_product_template
+msgid "Product Template"
+msgstr "Mẫu Sản phẩm"
+
+#. module: viin_stock_specific_identification
+#: model:ir.model,name:viin_stock_specific_identification.model_stock_quant
+msgid "Quants"
+msgstr "Số lượng"
+
+#. module: viin_stock_specific_identification
+#: model:ir.model.fields.selection,name:viin_stock_specific_identification.selection__product_category__property_cost_method__specific_identification
+msgid "Specific Identification"
+msgstr "Thực tế Đích danh"
+
+#. module: viin_stock_specific_identification
+#: model:ir.model.fields,help:viin_stock_specific_identification.field_product_category__property_cost_method
+msgid ""
+"Standard Price: The products are valued at their standard cost defined on the product.\n"
+"        Average Cost (AVCO): The products are valued at weighted average cost.\n"
+"        First In First Out (FIFO): The products are valued supposing those that enter the company first will also leave it first.\n"
+"        Specific Identification: The products are valued at their identified cost.\n"
+"        "
+msgstr ""
+"Giá tiêu chuẩn: Sản phẩm được định giá theo giá tiêu chuẩn khai báo trên form sản phẩm.\n"
+"        Giá Trung bình (AVCO): Sản phẩm được định giá theo phương pháp bình quân.\n"
+"        Nhập trước Xuất trước (FIFO): Sản phẩm được định giá theo phương pháp thực tế với giả định nhập trước xuất trước.\n"
+"        Thực tế Đích danh: Sản phẩm được định giá theo chi phí thực tế của nó.\n"
+"        "
+
+#. module: viin_stock_specific_identification
+#: model:ir.model,name:viin_stock_specific_identification.model_stock_move
+msgid "Stock Move"
+msgstr "Dịch chuyển kho"
+
+#. module: viin_stock_specific_identification
+#: model:ir.model,name:viin_stock_specific_identification.model_stock_valuation_layer
+msgid "Stock Valuation Layer"
+msgstr "Lớp giá trị kho"
+
+#. module: viin_stock_specific_identification
+#: code:addons/viin_stock_specific_identification/models/product_category.py:0
+#, python-format
+msgid ""
+"Tracking by a lot/serial number must be applied for product '%s' that "
+"belongs to category '%s'!"
+msgstr ""
+"Theo dõi bởi số lô/sê-ri phải được áp dụng cho sản phẩm '%s' thuộc nhóm "
+"'%s'!"
+
+#. module: viin_stock_specific_identification
+#: code:addons/viin_stock_specific_identification/models/stock_picking.py:0
+#, python-format
+msgid ""
+"Tracking by a lot/serial number must be applied for product '%s' with "
+"specific identification costing method!"
+msgstr ""
+"Theo dõi bởi số lô/sê-ri phải được áp dụng cho sản phẩm '%s' sử dụng phương "
+"pháp thực tế đích danh!"
+
+#. module: viin_stock_specific_identification
+#: model:ir.model,name:viin_stock_specific_identification.model_stock_picking
+msgid "Transfer"
+msgstr "Dịch chuyển"
+
+#. module: viin_stock_specific_identification
+#: code:addons/viin_stock_specific_identification/models/product_category.py:0
+#, python-format
+msgid ""
+"You cannot change costing method of product category '%s' to 'Specific Identification'.\n"
+"Because quantity of product '%s' still in stock.\n"
+"Please follow the instructions below: \n"
+"1. Set inventory valuation as Manual in this product category to avoid recording your inventory valuation in your accounting books.\n"
+"2. Using the inventory adjustment to set product quantity to zero before changing.\n"
+"3. Changing costing method to 'Specific Identification'.\n"
+"4. Using the inventory adjustment to recreate product quantity.\n"
+"5. Set inventory valuation as Automated in this product category if you need."
+msgstr ""
+"Bạn không thể thay đổi phương pháp giá vốn của nhóm sản phẩm '%s' sang 'Thực tế Đích danh'.\n"
+"Bởi vì số lượng của sản phẩm '%s' vẫn còn trong kho.\n"
+"Vui lòng làm theo hướng dẫn dưới đây: \n"
+"1. Thiết lập định giá tồn kho của nhóm sản phẩm về thủ công để tránh ghi lại giá trị hàng tồn kho của bạn trong sổ kế toán.\n"
+"2. Sử dụng tính năng điều chỉnh kho để đặt số lượng sản phẩm về 0 trước khi chuyển.\n"
+"3. Chuyển phương pháp định giá tồn kho thành 'Thực tế đích danh'.\n"
+"4. Sử dụng tính năng điều chỉnh kho đề kiểm kê lại số lượng trước khi chuyển phương pháp.\n"
+"5. Thiết lập lại định giá tồn kho của nhóm sản phẩm thành tự động nếu cần."
+

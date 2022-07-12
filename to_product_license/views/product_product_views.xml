@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="product_normal_form_view">
+			<field name="name">product.product.form</field>
+			<field name="model">product.product</field>
+			<field name="inherit_id" ref="product.product_normal_form_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//page[last()]" position="before">
+					<page name="license" string="Licenses">
+						<field name="product_license_version_ids" nolabel="True">
+							<tree name="product_license_version_ids">
+								<field name="license_id" />
+								<field name="name" />
+								<field name="date_released" />
+								<field name="ref_url" />
+							</tree>
+						</field>
+					</page>
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="product_kanban_view">
+			<field name="name">Product Kanban</field>
+			<field name="model">product.product</field>
+			<field name="inherit_id"
+				ref="product.product_kanban_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='lst_price']"
+					position="after">
+					<field name="product_license_version_ids" />
+					<field name="product_licenses_count"/>
+				</xpath>
+				<xpath expr="//ul/li[1]"
+					position="after">
+					<t t-if="record.product_licenses_count.value &gt; 1">
+						<li>
+							Licenses:
+							<field name="product_license_version_ids"
+								widget="many2many_tags" />
+						</li>
+					</t>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

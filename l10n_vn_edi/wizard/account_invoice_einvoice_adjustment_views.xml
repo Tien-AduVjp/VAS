@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record id="account_invoice_einvoice_adjusment_view_form"
+				model="ir.ui.view">
+			<field name="name">E-Invoice Adjustment Wizard</field>
+			<field name="model">account.invoice.einvoice.adjustment</field>
+			<field name="arch" type="xml">
+				<form string="E-Invoice Adjustment Wizard">
+					<group>
+						<field name="invoice_id" invisible="1"/>
+						<field name="additional_reference_desc"/>
+						<field name="adjustment_record" filename="adjustment_record_name" required="1"/>
+						<field name="adjustment_record_name" invisible="1"/>
+					</group>
+					<footer>
+						<button name="action_adjust_einvoice" string="Confirm"
+								type="object" class="btn-primary o_safe_confirm_button"/>
+						<button string="Cancel" class="btn-default"
+								special="cancel"/>
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<record id="account_invoice_einvoice_cancel_action"
+				model="ir.actions.act_window">
+			<field name="name">E-Invoice Adjustment Wizard</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">account.invoice.einvoice.adjustment</field>
+			<field name="view_mode">form</field>
+			<field name="target">new</field>
+			<field name="context">{'default_invoice_id': active_id}</field>
+		</record>
+	</data>
+</odoo>

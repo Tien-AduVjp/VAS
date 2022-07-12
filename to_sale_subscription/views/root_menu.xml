@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- Menuitems -->
+	<menuitem id="menu_sale_subscription_root"
+		name="Subscriptions" sequence="20"
+		web_icon="to_sale_subscription,static/description/icon.png"
+		groups="to_sale_subscription.group_sale_subscription_view" />
+
+	<menuitem id="menu_sale_subscription" name="Subscriptions"
+		parent="menu_sale_subscription_root" sequence="10" />
+
+    <menuitem id="menu_sale_subscription_report" name="Reporting"
+        parent="menu_sale_subscription_root" sequence="20" />
+
+	<menuitem id="menu_sale_subscription_config"
+		name="Configuration" sequence="30"
+		parent="menu_sale_subscription_root" />
+</odoo>

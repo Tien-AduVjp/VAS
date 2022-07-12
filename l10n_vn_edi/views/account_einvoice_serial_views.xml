@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="account_einvoice_serial_form" model="ir.ui.view">
+			<field name="name">account.einvoice.serial.form</field>
+			<field name="model">account.einvoice.serial</field>
+			<field name="arch" type="xml">
+				<form string="E-Invoice Serial">
+					<sheet>
+						<group>
+							<group>
+								<field name="name" />
+								<field name="description" />
+								<field name="deprecated" widget="boolean_toggle"/>
+								<field name="company_id" groups="base.group_multi_company"/>
+							</group>
+							<group>
+								<field name="einvoice_service_id"/>
+								<field name="template_id"/>
+								<field name="type_id"/>
+							</group>
+						</group>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" groups="base.group_user"/>
+						<field name="activity_ids"/>
+						<field name="message_ids"/>
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record id="account_einvoice_template_tree" model="ir.ui.view">
+			<field name="name">account.einvoice.serial.tree</field>
+			<field name="model">account.einvoice.serial</field>
+			<field name="arch" type="xml">
+				<tree string="E-Invoice Serial">
+					<field name="name" />
+					<field name="einvoice_service_id"/>
+					<field name="template_id"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="action_einvoice_serial"
+			model="ir.actions.act_window">
+			<field name="name">E-Invoice Serial</field>
+			<field name="res_model">account.einvoice.serial</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem action="action_einvoice_serial"
+			id="menu_action_einvoice_serial" parent="menu_einvoice"
+			groups="account.group_account_manager" sequence="20" />
+	</data>
+</odoo>

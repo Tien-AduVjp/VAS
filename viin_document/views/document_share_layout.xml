@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="document_share_layout" name="Share Files">
+        <t t-call="portal.frontend_layout">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h6 class="pt-4 pb-2"><img class="v-avatar-circle-md mr-2" t-attf-src="/document/avatar/#{owner_id}/#{share_token}" /><t t-esc="owner"/> <i>shared <t t-esc="len(documents)"/> documents:</i></h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div t-foreach="documents" t-as="doc" class="col-md-6 col-sm-12 mt-2">
+                        <div class="card share-item d-flex flex-row o_kanban_previewer">
+                            <img t-if="doc['webimage']" width="100" t-attf-src="/document/share/content/#{doc['id']}/#{share_token}" t-att-alt="doc['name']"/>
+                            <img t-elif="doc['ytb_video_id']" width="100" t-attf-src="https://img.youtube.com/vi/#{doc['ytb_video_id']}/0.jpg" t-att-alt="doc['name']" />
+                            <div class="image_thumb_flex" t-else="" >
+                                <div class="o_image" t-att-data-mimetype="doc['mimetype']"/>
+                            </div>
+                            <div class="p-2 document-share-info">
+                                <h6 class="o_text_overflow" t-esc="doc['name']"/>
+                                <div class="date-and-size"><span class="mr-1" t-esc="doc['create_date']"/>(<span t-esc="doc['file_size']"/>)</div>
+                            </div>
+                            <div class="p-2 right-pos">
+                                <div>
+                                    <img class="v-avatar-circle-sm" t-attf-src="/document/avatar/#{doc['owner_id'][0]}/#{share_token}" />
+                                </div>
+                                <div>
+                                    <a t-if="doc['type']=='url'" t-attf-href="#{doc['url']}" target="new"><i class="fa fa-external-link"></i></a>
+                                    <a t-else="" t-attf-href="/document/share/content/#{doc['id']}/#{share_token}?download=true"><i class="fa fa-download mt-2"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="p-3">
+                        <a class="btn btn-primary" t-attf-href="/document/share/download_all/#{share_token}"><i class="fa fa-download"></i> Download All</a>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="document_share_expired_layout">
+        <t t-call="portal.frontend_layout">
+        <div class="container mt-5">
+            <h5>Oops! This link is expired in <t t-esc="expired_date"/></h5>
+            <p>Please contact the owner <b><u><t t-esc="owner"/></u></b> for more information.</p>
+        </div>
+        </t>
+    </template>
+
+    <template id="document_share_invalid_token">
+        <t t-call="portal.frontend_layout">
+        <div class="container mt-5">
+            <h5>Oops! Token is in invalid</h5>
+            <p>The token of this link is invalid</p>
+        </div>
+        </t>
+    </template>
+</odoo>

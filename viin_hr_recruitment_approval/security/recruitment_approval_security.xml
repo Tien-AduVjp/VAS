@@ -1,0 +1,49 @@
+<odoo>
+    <record id="to_approvals.group_approval_officer" model="res.groups">
+        <field name="implied_ids" eval="[(4, ref('hr_recruitment.group_hr_recruitment_user'))]" />
+    </record>
+    <record id="property_rule_hr_applicant_group_base_user" model="ir.rule">
+            <field name="name">HR Applicant Base Group User Rule</field>
+            <field name="model_id" ref="model_hr_applicant" />
+            <field name="domain_force">['|', '|', ('approval_id.employee_id.user_id','=',user.id),
+                                        ('department_id.manager_id.user_id','=',user.id),
+                                        ('job_id.department_id.manager_id.user_id','=',user.id)]</field>
+            <field name="groups"
+                eval="[(4, ref('base.group_user'))]" />
+    </record>
+    <record id="property_rule_hr_applicant_recruitment_user" model="ir.rule">
+            <field name="name">HR Applicant Recruitment Officer</field>
+            <field name="model_id" ref="model_hr_applicant" />
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups"
+                eval="[(4, ref('hr_recruitment.group_hr_recruitment_user'))]" />
+    </record>
+    <record id="property_rule_hr_applicant_skill_group_base_user" model="ir.rule">
+            <field name="name">HR Applicant Skill Base Group User Rule</field>
+            <field name="model_id" ref="to_hr_skills_recruitment.model_hr_applicant_skill" />
+            <field name="domain_force">['|', '|', ('hr_applicant_id.approval_id.employee_id.user_id','=',user.id),
+                                        ('hr_applicant_id.department_id.manager_id.user_id','=',user.id),
+                                        ('hr_applicant_id.job_id.department_id.manager_id.user_id','=',user.id)]</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]" />
+    </record>
+    <record id="property_rule_hr_applicant_skill_officer" model="ir.rule">
+            <field name="name">HR Applicant Skill Officer Rule</field>
+            <field name="model_id" ref="to_hr_skills_recruitment.model_hr_applicant_skill" />
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('hr_recruitment.group_hr_recruitment_user'))]" />
+    </record>
+    <record id="property_rule_hr_applicant_resume_line_group_base_user" model="ir.rule">
+            <field name="name">HR Applicant Resume Line Base Group User Rule</field>
+            <field name="model_id" ref="to_hr_skills_recruitment.model_hr_applicant_resume_line" />
+            <field name="domain_force">['|', '|', ('hr_applicant_id.approval_id.employee_id.user_id','=',user.id),
+                                        ('hr_applicant_id.department_id.manager_id.user_id','=',user.id),
+                                        ('hr_applicant_id.job_id.department_id.manager_id.user_id','=',user.id)]</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]" />
+    </record>
+    <record id="property_rule_hr_applicant_resume_line_officer" model="ir.rule">
+            <field name="name">HR Applicant Resume Line Officer Rule</field>
+            <field name="model_id" ref="to_hr_skills_recruitment.model_hr_applicant_resume_line" />
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('hr_recruitment.group_hr_recruitment_user'))]" />
+    </record>
+</odoo>

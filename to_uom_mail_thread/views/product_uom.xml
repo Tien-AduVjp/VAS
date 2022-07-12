@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="product_uom_form_view" model="ir.ui.view">
+			<field name="name">uom.uom.form</field>
+			<field name="model">uom.uom</field>
+			<field name="inherit_id" ref="uom.product_uom_form_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//form" position="replace">
+					<form string="Units of Measure">
+						<sheet>
+							<group>
+								<group name="uom_details">
+									<field name="name" />
+									<field name="category_id" />
+									<field name="uom_type" />
+									<field name="factor" digits="[42,5]"
+										attrs="{'invisible':[('uom_type','!=','smaller')], 'readonly':[('uom_type','=','bigger')]}" />
+									<field name="factor_inv" string="Ratio" digits="[42,5]"
+										attrs="{'invisible':[('uom_type','!=','bigger')], 'readonly':[('uom_type','!=','bigger')]}" />
+									<p attrs="{'invisible':[('uom_type','!=','smaller')]}"
+										class="oe_grey" colspan="2">
+										e.g: 1 * (reference unit) = ratio * (this unit)
+									</p>
+									<p attrs="{'invisible':[('uom_type','!=','bigger')]}"
+										class="oe_grey" colspan="2">
+										e.g: 1 * (this unit) = ratio * (reference unit)
+									</p>
+								</group>
+								<group>
+									<field name="active" />
+									<field name="rounding" digits="[42, 6]" />
+								</group>
+							</group>
+						</sheet>
+						<div class="oe_chatter">
+							<field name="message_follower_ids"   />
+							<field name="message_ids"  />
+						</div>
+					</form>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

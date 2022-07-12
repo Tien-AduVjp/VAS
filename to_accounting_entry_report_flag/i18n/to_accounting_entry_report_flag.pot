@@ -1,0 +1,105 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_accounting_entry_report_flag
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-28 07:20+0000\n"
+"PO-Revision-Date: 2021-10-28 07:20+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_accounting_entry_report_flag
+#: model:res.groups,name:to_accounting_entry_report_flag.group_accounting_report_flag_manager
+msgid "Accounting Report Flag Manager"
+msgstr ""
+
+#. module: to_accounting_entry_report_flag
+#: model:ir.model.fields,field_description:to_accounting_entry_report_flag.field_account_move__display_name
+#: model:ir.model.fields,field_description:to_accounting_entry_report_flag.field_account_move_line__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: to_accounting_entry_report_flag
+#: model:ir.model.fields,field_description:to_accounting_entry_report_flag.field_account_bank_statement_line__legal_report_off
+#: model:ir.model.fields,field_description:to_accounting_entry_report_flag.field_account_move__legal_report_off
+#: model:ir.model.fields,field_description:to_accounting_entry_report_flag.field_account_move_line__legal_report_off
+#: model:ir.model.fields,field_description:to_accounting_entry_report_flag.field_account_payment__legal_report_off
+#: model_terms:ir.ui.view,arch_db:to_accounting_entry_report_flag.view_account_move_line_filter
+msgid "Excluded in Legal Reports"
+msgstr ""
+
+#. module: to_accounting_entry_report_flag
+#: model:ir.actions.server,name:to_accounting_entry_report_flag.action_server_account_move_report_flag_off
+#: model:ir.actions.server,name:to_accounting_entry_report_flag.action_server_aml_report_flag_off
+msgid "Flag Report Off"
+msgstr ""
+
+#. module: to_accounting_entry_report_flag
+#: model:ir.actions.server,name:to_accounting_entry_report_flag.action_server_account_move_report_flag_on
+#: model:ir.actions.server,name:to_accounting_entry_report_flag.action_server_aml_report_flag_on
+msgid "Flag Report On"
+msgstr ""
+
+#. module: to_accounting_entry_report_flag
+#: model:ir.model.fields,field_description:to_accounting_entry_report_flag.field_account_move__id
+#: model:ir.model.fields,field_description:to_accounting_entry_report_flag.field_account_move_line__id
+msgid "ID"
+msgstr ""
+
+#. module: to_accounting_entry_report_flag
+#: model:ir.model,name:to_accounting_entry_report_flag.model_account_move
+msgid "Journal Entry"
+msgstr ""
+
+#. module: to_accounting_entry_report_flag
+#: model:ir.model,name:to_accounting_entry_report_flag.model_account_move_line
+msgid "Journal Item"
+msgstr ""
+
+#. module: to_accounting_entry_report_flag
+#: model:ir.model.fields,field_description:to_accounting_entry_report_flag.field_account_move____last_update
+#: model:ir.model.fields,field_description:to_accounting_entry_report_flag.field_account_move_line____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: to_accounting_entry_report_flag
+#: model_terms:ir.ui.view,arch_db:to_accounting_entry_report_flag.view_account_move_line_filter
+msgid "Legal Report On"
+msgstr ""
+
+#. module: to_accounting_entry_report_flag
+#: model_terms:ir.ui.view,arch_db:to_accounting_entry_report_flag.view_move_line_form
+msgid "Legal Reports"
+msgstr ""
+
+#. module: to_accounting_entry_report_flag
+#: model:res.groups,comment:to_accounting_entry_report_flag.group_accounting_report_flag_manager
+msgid ""
+"Member of this group will have access rights to the field Excluded in Legal "
+"Reports of journal entries and journal items."
+msgstr ""
+
+#. module: to_accounting_entry_report_flag
+#: model_terms:ir.ui.view,arch_db:to_accounting_entry_report_flag.view_account_move_line_filter
+msgid "Show journal items that are flagged with Excluded in Legal Reports"
+msgstr ""
+
+#. module: to_accounting_entry_report_flag
+#: model_terms:ir.ui.view,arch_db:to_accounting_entry_report_flag.view_account_move_line_filter
+msgid "Show journal items that are not flagged with Excluded in Legal Reports"
+msgstr ""
+
+#. module: to_accounting_entry_report_flag
+#: model:ir.model.fields,help:to_accounting_entry_report_flag.field_account_bank_statement_line__legal_report_off
+#: model:ir.model.fields,help:to_accounting_entry_report_flag.field_account_move__legal_report_off
+#: model:ir.model.fields,help:to_accounting_entry_report_flag.field_account_move_line__legal_report_off
+#: model:ir.model.fields,help:to_accounting_entry_report_flag.field_account_payment__legal_report_off
+msgid "This field is for filtering in some legal reports"
+msgstr ""

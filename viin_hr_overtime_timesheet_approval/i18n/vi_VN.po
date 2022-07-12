@@ -1,0 +1,95 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_hr_overtime_timesheet_approval
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-13 09:33+0000\n"
+"PO-Revision-Date: 2021-08-31 09:03+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_hr_overtime_timesheet_approval
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet_approval.field_approval_request__approval_await_timesheet_ids
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet_approval.field_hr_overtime_plan__approval_await_timesheet_ids
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet_approval.field_hr_overtime_plan_line__approval_await_timesheet_ids
+msgid "Approval Await Timesheet Entries"
+msgstr "Phát sinh chấm công chờ duyệt"
+
+#. module: viin_hr_overtime_timesheet_approval
+#: model:ir.model,name:viin_hr_overtime_timesheet_approval.model_approval_request
+msgid "Approval Request"
+msgstr "Đề nghị phê duyệt"
+
+#. module: viin_hr_overtime_timesheet_approval
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet_approval.field_approval_request__need_timesheets_approval
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet_approval.field_hr_overtime_plan__need_timesheets_approval
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet_approval.field_hr_overtime_plan_line__need_timesheets_approval
+msgid "Need Timesheets Approval"
+msgstr "Cần duyệt Chấm công"
+
+#. module: viin_hr_overtime_timesheet_approval
+#: model:ir.model,name:viin_hr_overtime_timesheet_approval.model_hr_overtime_plan
+msgid "Overtime Plan"
+msgstr "Kế hoạch Tăng ca"
+
+#. module: viin_hr_overtime_timesheet_approval
+#: model:ir.model,name:viin_hr_overtime_timesheet_approval.model_hr_overtime_plan_line
+msgid "Overtime Plan Line"
+msgstr "Dòng Kế hoạch Tăng ca"
+
+#. module: viin_hr_overtime_timesheet_approval
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_timesheet_approval.approval_request_view_form
+msgid ""
+"There could be timesheet entries that match this overtime plan\n"
+"\t\t\t\t\t\trequest\n"
+"\t\t\t\t\t\tbut have not been approved yet. Hence, they will not be taken into\n"
+"\t\t\t\t\t\taccount during calculation of actual overtime. Please get them\n"
+"\t\t\t\t\t\tapproved first."
+msgstr ""
+"Có các phát sinh chấm công khớp với đề nghị phê duyệt tăng ca\n"
+"\t\t\t\t\t\tnày\n"
+"\t\t\t\t\t\tnhưng vẫn chưa được phê duyệt. Vì vậy, chúng sẽ không được xem xét\n"
+"\t\t\t\t\t\ttrong quá trình toán toán giờ tăng ca thực tế. Vui lòng trình duyệt\n"
+"\t\t\t\t\t\tcác phát sinh chấm công trước."
+
+#. module: viin_hr_overtime_timesheet_approval
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_timesheet_approval.view_hr_overtime_plan_form
+msgid ""
+"There could be timesheet entries that match this overtime plan\n"
+"\t\t\t\t\tbut have not been approved yet. Hence, they will not be taken into\n"
+"\t\t\t\t\taccount during calculation of actual overtime. Please get them\n"
+"\t\t\t\t\tapproved first."
+msgstr ""
+"Có các phát sinh chấm công khớp với kế hoạch tăng ca\n"
+"\t\t\t\t\t\tnày\n"
+"\t\t\t\t\t\tnhưng vẫn chưa được phê duyệt. Vì vậy, chúng sẽ không được xem xét\n"
+"\t\t\t\t\t\ttrong quá trình toán toán giờ tăng ca thực tế. Vui lòng trình duyệt\n"
+"\t\t\t\t\t\tcác phát sinh chấm công trước."
+
+#. module: viin_hr_overtime_timesheet_approval
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_timesheet_approval.view_hr_overtime_plan_line_form
+msgid ""
+"There could be timesheet entries that match this overtime plan line\n"
+"\t\t\t\t\tbut have not been approved yet. Hence, they will not be taken into\n"
+"\t\t\t\t\taccount during calculation of actual overtime. Please get them\n"
+"\t\t\t\t\tapproved first."
+msgstr ""
+"Có các phát sinh chấm công khớp với dòng kế hoạch tăng ca\n"
+"\t\t\t\t\t\tnày\n"
+"\t\t\t\t\t\tnhưng vẫn chưa được phê duyệt. Vì vậy, chúng sẽ không được xem xét\n"
+"\t\t\t\t\t\ttrong quá trình toán toán giờ tăng ca thực tế. Vui lòng trình duyệt\n"
+"\t\t\t\t\t\tcác phát sinh chấm công trước."
+
+#. module: viin_hr_overtime_timesheet_approval
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_timesheet_approval.approval_request_view_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_timesheet_approval.view_hr_overtime_plan_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_overtime_timesheet_approval.view_hr_overtime_plan_line_form
+msgid "View approval await entries"
+msgstr "Xem các phát sinh chấm công chờ duyệt"

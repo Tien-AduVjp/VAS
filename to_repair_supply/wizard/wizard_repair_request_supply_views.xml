@@ -1,0 +1,42 @@
+<odoo>
+    <record id="wizard_repair_request_supply_view_form" model="ir.ui.view">
+        <field name="name">wizard.repair.request.supply.form</field>
+        <field name="model">wizard.repair.request.supply</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="order_id" invisible="1" />
+                <field name="location_id" invisible="1" />
+                <label for="name"/>
+                <h1>
+                    <field name="name"/>
+                </h1>
+                <separator string="Input request products and quantities to supply" />
+                <field name="line_ids" context="{'default_location_id': location_id}">
+                    <tree editable="bottom">
+                        <field name="product_id"/>
+                        <field name="name"/>
+                        <field name="lot_id" groups="stock.group_production_lot"/>
+                        <field name="src_location_id"/>
+                        <field name="location_id"/>
+                        <field name="location_dest_id"/>
+                        <field name="product_uom_qty"/>
+                        <field name="product_uom" groups="uom.group_uom"/>
+                        <field name="product_uom_category_id" invisible="1"/>
+                    </tree>
+                </field>
+                <footer>
+                    <button string="Request" name="action_request"
+                        type="object" class="oe_highlight" />
+                    <button string="Cancel" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="wizard_repair_request_supply_action" model="ir.actions.act_window">
+        <field name="name">Request Supply</field>
+        <field name="res_model">wizard.repair.request.supply</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

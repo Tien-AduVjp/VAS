@@ -1,0 +1,797 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="0">
+
+		<template id="document_security"
+			name="Document - Security Description">
+			<t t-set="perms" t-value="category.get_perms()" />
+			<div id="docsSecurity" t-if="not perms.write"
+				class="alert badge-warning docs-security" contentEditable="false">
+				<p t-field="category.description_private"></p>
+			</div>
+			<div id="docsSecurity" t-if="perms.write"
+				class="alert badge-warning docs-security">
+				<p t-field="category.description_private"></p>
+			</div>
+		</template>
+
+		<template id="document_header"
+			name="Document - Content Header">
+			<div class="docs-tags">
+				<t t-if="not show_less and perms.write">
+					<span t-foreach="document_content.document_id.tag_ids" t-as="item"
+						class="pull-left docs-tag docs-tag-editor">
+						<a class="badge badge-info" t-att-href="item.website_url">
+							<span t-esc="item.name" />
+							<i class="fa fa-remove" t-att-data-tag="item.id"></i>
+						</a>
+					</span>
+					<span t-if="not search"
+						class="pull-left docs-tag docs-tag-editor docs-tag-input badge badge-info oe_autocomplete">
+						<input id="txtTags" type="text"
+							placeholder="Enter a tag name..." t-att-data-id="document_content.document_id.id"
+							t-att-data-category="int(is_category or False) or 0" />
+					</span>
+				</t>
+				<t t-else="">
+					<a class="pull-left docs-tag badge badge-info"
+						t-foreach="document_content.document_id.tag_ids" t-as="item" t-esc="item.name"
+						t-att-href="item.website_url"></a>
+				</t>
+				<div class="clearfix"></div>
+			</div>
+			<div class="docs-info">
+				<span class="pull-left">
+					<i class="fa fa-user"></i>
+					<span t-esc="document_content.sudo().author_id.name"></span>
+				</span>
+				<t t-set="parent_doc"
+					t-value="document_content.document_id.category_id if not show_hash else False" />
+			 	<span t-if="parent_doc" class="pull-left">
+					<i class="fa fa-folder"></i>
+					<a class="text-muted" t-att-href="parent_doc.website_url"
+						t-esc="parent_doc.name"></a>
+				</span>
+				<span class="pull-left">
+
+					<i class="fa fa-calendar"></i>
+					<t t-if="document_content.website_published and document_content.date_published">
+						<span class="js-public">Published:</span>
+						<span t-field="document_content.date_published"
+							t-options='{"format":"short"}' />
+					</t>
+					<t t-if="not document_content.website_published">
+						<span class="js-public">Not Published</span>
+					</t>
+				</span>
+				<span class="pull-left">
+					<i class="fa fa-eye"></i>
+					<span>Hits:</span>
+					<span t-field="document_content.document_id.views"></span>
+				</span>
+				<div class="clearfix"></div>
+			</div>
+			<t t-if="not show_less and not search">
+				<t t-call="to_website_docs.social" />
+			</t>
+		</template>
+
+		<template id="document_footer"
+			name="Document - Content Footer">
+			<t t-if="category and category.document_type != 'hash'">
+				<t t-call="to_website_docs.social" />
+			</t>
+		</template>
+	</data>
+
+	<data>
+		<template id="nav" name="Document - Search &amp; Breadcrumb">
+			<div id="scrollDocsBreadcrumb"></div>
+			<nav id="docsBreadcrumb"
+				class="navbar navbar-expand-md navbar-light">
+				<div class="container">
+
+					<ul class="navbar-nav mr-auto docs-breadcrumb">
+						<li class="breadcrumb-item">
+							<a href="/docs">Docs</a>
+						</li>
+						<t t-if="category">
+							<t t-set="recursive_categories"
+								t-value="category.get_recursive_parents()" />
+							<li t-foreach="recursive_categories" t-as="item"
+								class="breadcrumb-item">
+								<a t-att-href="item.website_url" t-esc="item.name"></a>
+							</li>
+						</t>
+						<li t-if="document" class="breadcrumb-item">
+							<a t-att-href="document.website_url" t-esc="document.name"></a>
+						</li>
+						<li t-if="tag" class="breadcrumb-item">
+							<a t-att-href="tag.website_url" t-esc="tag.name"></a>
+						</li>
+					</ul>
+					<div class="navbar-nav ml-auto">
+						<!-- <li t-foreach="subjects" t-as="item" class="nav-item">
+							<a t-att-href="item.website_url" t-esc="item.name"
+								class="nav-link"></a>
+						</li> -->
+						<form class="form-inline my-2 my-lg-0 search-box" action="/docs/search" type="get">
+							<input id="txtSearch" name="search" type="text" class="form-control" />
+							<i class="fa fa-search" />
+						</form>
+					</div>
+				</div>
+			</nav>
+		</template>
+
+		<template id="docs" name="Documentation - Main Page">
+			<t t-call="website.layout">
+				<t t-call="to_website_docs.nav"></t>
+
+				<t t-if="category">
+					<t t-call="to_website_docs.summary" />
+				</t>
+				<div t-else="" id="docsSummary" class="docs-summary grid">
+					<div class="container">
+						<div class="figure effect-selena">
+						<figure class="figure">
+			                        <img src="/to_website_docs/static/src/img/devices.gif" class="figure-img img-fluid rounded img-thumbnail padding-large o_we_selected_image" />
+			                    </figure>
+							<div class="caption root-page-caption">
+								<div class="container">
+									<div class="row">
+										<div class="col-sm-12">
+											<h4 class="docs-summary-title">Documentation</h4>
+											<p>Description</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<t t-if="tag">
+					<t t-call="to_website_docs.tag"></t>
+				</t>
+				<t t-elif="document">
+					<t t-call="to_website_docs.document"></t>
+				</t>
+				<t t-elif="category and category.document_type == 'hash'">
+					<t t-call="to_website_docs.document">
+						<t t-set="show_hash" t-value="True" />
+					</t>
+				</t>
+				<t t-elif="category and category.type == 'category'">
+					<t t-call="to_website_docs.document"></t>
+				</t>
+				<t t-elif="categories">
+					<div class="container docs-categories mb32">
+						<t t-if="not category">
+							<a t-if="website_helper.is_website_doc_manager()"
+								id="btnDocsCreateSubject" class="btn btn-primary"
+								title="Create new Subject" href="#">
+								<i class="fa fa-plus" />
+							</a>
+						</t>
+						<t t-elif="category.type == 'subject'">
+							<a t-if="website_helper.is_website_doc_manager()"
+								id="btnDocsCreateSection" class="btn btn-primary"
+								title="Create new Section" href="#">
+								<i class="fa fa-plus" />
+							</a>
+						</t>
+						<div class="row">
+							<t t-call="to_website_docs.categories">
+								<t t-set="skip_action" t-value="True" />
+							</t>
+						</div>
+					</div>
+				</t>
+				<t t-elif="search">
+					<t t-call="to_website_docs.search"></t>
+				</t>
+ 				<t t-else="">
+					<t t-call="to_website_docs.no_category">
+						<t t-if="not category">
+							<a t-if="website_helper.is_website_doc_manager()"
+								id="btnDocsCreateSubject" class="btn btn-primary no-content"
+								href="#"> Click here to create new
+								subject
+							</a>
+						</t>
+						<t t-elif="category.type == 'subject'">
+							<a t-if="website_helper.is_website_doc_manager()"
+								id="btnDocsCreateSection" class="btn btn-primary no-content"
+								href="#"> Click here to create new
+								section
+							</a>
+						</t>
+					</t>
+				</t>
+				<div class="oe_structure oe_empty">
+				</div>
+			</t>
+		</template>
+		<template id="search" name="search">
+			<div class="container mt-5 docs-details">
+			   <t t-if="docs">
+			   <t t-set="show_less" t-value="show_less or False" />
+			   	   <div class="mt-5">
+				      <h2> Search result</h2>
+				   </div>
+				   <ul class="list-group">
+				   	<t t-foreach="docs" t-as="doc">
+				   	  <li class="list-group-item">
+					         <h3 class="docs-body-title">
+					            <a t-att-href="doc.get_website_url()" t-esc="doc.document_id.name"> </a>
+					         </h3>
+					         <div class="clearfix"></div>
+							<t t-call="to_website_docs.document_header">
+							<t t-set="document_content" t-value="doc" />
+				   			<t t-set="document" t-value="doc.document_id" />
+								<t t-set="perms" t-value="doc.get_perms()" />
+							</t>
+					         <div t-field="doc.introtext"
+							class="docs-body-desc oe_structure oe_empty"></div>
+					         <a class="btn btn-link" t-att-href="doc.get_website_url()">
+					         <i class="fa fa-chevron-right"></i>
+					         Read more ...
+					         </a>
+					      </li>
+					  </t>
+				   </ul>
+				</t>
+				<t t-else="">
+					<h4> No matching results </h4>
+				</t>
+			</div>
+
+		</template>
+		<template id="body_layout" name="Document - Body Layout">
+			<div class="container docs-details">
+				<main class="container-fluid">
+					<t t-raw="0" />
+				</main>
+			</div>
+		</template>
+
+		<template id="no_category" name="Document - No Content">
+			<t t-call="to_website_docs.body_layout">
+				<div style="padding: 16px">
+					<h3>There is no category!</h3>
+					<t t-raw="0" />
+				</div>
+			</t>
+		</template>
+
+		<template id="summary"
+			name="Document - Category Header Summary">
+			<t t-set="perms"
+				t-value="category and category.get_perms() or False" />
+			<t t-if="category">
+				<input id="docsCategory" type="hidden"
+					t-att-value="category.id" />
+			</t>
+			<span t-if="perms and perms.write" class="docs-summary-btns">
+				<span t-att-id="'docsActionItem-c%s' % str(category.id)"
+					style="margin-right: 5px;" class="pull-left cat-editable"
+					t-att-data-id="category.id" t-att-data-type="category.type"
+					t-att-data-position="'bottom'"
+					t-att-data-publish="category.get_published()"
+					t-att-data-name="category.name"
+					t-att-data-role="role_type"
+					t-att-data-document-type="category.document_type">
+					<i class="fa fa-cog badge badge-info"></i>
+				</span>
+				<a href="#"><span id="btnDocsChangeCover" style="margin-right:5px;"
+					class="badge badge-info pull-left" title="Change cover">
+					<i class="fa fa-picture-o"></i>
+				</span></a>
+				<span id="btnDocsChangeBg" class="pull-left"
+					title="Change background color">
+					<t t-set="color" t-value="category.color_cover or '#ffffff'" />
+					<input id="evol-colorpicker"
+						class="colorPicker evo-cp0 d-none" t-att-value="color"></input>
+				</span>
+				<div class="clearfix"></div>
+			</span>
+			<div id="docsSummary" class="docs-summary grid">
+				<div class="container">
+					<div class="figure effect-selena">
+						<div id="colorSummary" class="oe_custom_bg"
+							t-att-style="'background-color: %s' % (category and category.color_cover and category.get_color() or '')"></div>
+						<img id="imgSummary"
+							t-att-src="category and category.image_cover or '/to_website_docs/static/src/img/devices.gif'"
+							alt="Docs BG" t-att-data-id="int(category or False)" />
+						<div class="caption">
+							<div class="container">
+								<div class="row">
+									<div class="col-sm-12">
+										<h4 class="docs-summary-title">
+											<t t-if="category">
+												<a t-att-href="category.website_url" itemprop="url"
+													t-esc="category.name"></a>
+											</t>
+											<t t-if="tag" t-esc="tag.name" />
+											<t t-if="not category and not tag">Documentation</t>
+										</h4>
+										<p t-if="category" t-esc="category.description"></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</template>
+
+		<template id="category" name="Document - Category Item">
+			<t t-set="perms" t-value="item.get_perms()" />
+			<span t-if="perms.write"
+				t-att-id="'docsActionItem-c%s' % str(item.id)"
+				class="grid docs-category cat-editable" t-att-data-id="item.id"
+				t-att-data-type="item.type" t-att-data-name="item.name"
+				t-att-data-publish="item.get_published()"
+				t-att-data-role="role_type"
+				t-att-data-document-type="item.document_type">
+				<i class="fa fa-cog btn btn-primary btn-sm"></i>
+				<a t-att-href="item.website_url">
+					<div t-att-class="'figure %s' % (class_name or 'effect-sarah')">
+						<img t-att-src="item.get_image()" t-att-alt="item.name" />
+						<div class="caption">
+							<h4>
+								<span t-esc="item.name"></span>
+							</h4>
+							<p t-esc="item.description"></p>
+						</div>
+					</div>
+				</a>
+			</span>
+			<a t-if="not perms.write" class="grid docs-category"
+				t-att-href="item.website_url">
+				<div t-att-class="'figure %s' % (class_name or 'effect-sarah')">
+					<img t-att-src="item.get_image()" t-att-alt="item.name" />
+					<div class="caption">
+						<h4>
+							<span t-esc="item.name"></span>
+						</h4>
+						<p t-esc="item.description or item.name"></p>
+					</div>
+				</div>
+			</a>
+		</template>
+
+		<template id="categories" name="Document - Category List">
+			<t t-set="perms"
+				t-value="category and category.get_perms() or False" />
+			<t t-set="skip_action" t-value="skip_action or False" />
+			<t t-set="is_section"
+				t-value="category and category.type == 'section' or False" />
+			<t t-set="css_class"
+				t-value="is_section and category.css_section_item or 'col-md-4'" />
+			<t t-if="is_section">
+				<div class="col-sm-12">
+					<h4 class="section-title" t-esc="category.name"></h4>
+					<span t-if="not skip_action and perms and perms.write"
+						t-att-id="'docsActionItem-c%s' % str(category.id)"
+						t-att-class="'cat-%s cat-editable' % category.type"
+						t-att-data-id="category.id" t-att-data-name="category.name"
+						t-att-data-type="category.type"
+						t-att-data-publish="category.get_published()"
+						t-att-data-role="role_type"
+						t-att-data-document-type="category.document_type">
+						<i class="fa fa-cog btn btn-primary btn-sm" />
+					</span>
+					<div class="clearfix"></div>
+					<hr class="mt16 mb16" />
+				</div>
+			</t>
+			<t t-else="">
+				<span t-if="not skip_action and perms and perms.write"
+					t-att-id="'docsActionItem-c%s' % str(category.id)"
+					t-att-class="'cat-%s cat-editable' % category.type"
+					t-att-data-id="category.id" t-att-data-name="category.name"
+					t-att-data-type="category.type"
+					t-att-data-publish="category.get_published()"
+					t-att-data-role="role_type"
+					t-att-data-document-type="category.document_type">
+					<i class="fa fa-cog btn btn-primary btn-sm" />
+				</span>
+			</t>
+			<t t-foreach="categories" t-as="item">
+				<t t-if="item.get_public_rule() != '0'">
+					<t t-if="item.type == 'subject'">
+						<div t-att-class="css_class" id="subject-id">
+							<t t-call="to_website_docs.category">
+								<t t-set="item" t-value="item" />
+							</t>
+						</div>
+					</t>
+					<t t-elif="item.type == 'section'">
+						<div t-att-class="'%s category-section' % item.css_section">
+							<div class="row">
+								<t t-call="to_website_docs.categories">
+									<t t-set="category" t-value="item" />
+									<t t-set="categories"
+										t-value="item.with_context(website_id=request.website.id).get_child_for_website()" />
+									<t t-set="skip_action" t-value="False" />
+								</t>
+							</div>
+						</div>
+					</t>
+					<t t-else="">
+						<div t-att-class="'category-item %s' % css_class">
+							<t t-call="to_website_docs.category">
+								<t t-set="item" t-value="item" />
+							</t>
+						</div>
+					</t>
+				</t>
+			</t>
+		</template>
+
+		<template id="left_nav_item" name="Document - Left Nav Item">
+			<t t-foreach="documents" t-as="item">
+				<t t-set="perms_docs" t-value="item.get_perms(category=category)" />
+				<t t-set="child_documents" t-value="item.get_content_index()" />
+				<t t-set="active_cls"
+					t-value="item == document and ' active' or ''" />
+				<t t-set="editable_cls"
+					t-value="perms_docs.write and ' docs-sortable docs-editable' or ''" />
+				<li t-att-id="'docs-%s' % str(item.id)" t-att-data-id="item.id"
+					t-att-data-name="item.name" t-att-data-state="item.state"
+					t-att-data-publish="item.get_published()" t-att-data-parent="0"
+					t-att-data-approve="int(perms_docs.approve)"
+					t-att-data-write="int(perms_docs.write)"
+					t-att-data-unlink="int(perms_docs.unlink)"
+					t-att-class="'docs-item%s%s' % (active_cls, editable_cls)">
+					<a t-att-id="'docsItem-%s' % str(item.id)"
+						t-att-data-id="item.id" t-att-data-parent="0"
+						t-att-href="item.website_url">
+						<!-- <t t-if="perms_docs.write">
+							<i t-att-class="'docs-status docs-%s' % str(item.state)"></i>
+						</t>-->
+						<span t-esc="item.name"></span>
+					</a>
+					<t t-if="perms_docs.write">
+						<i class="fa fa-cog"></i>
+					</t>
+					<t t-if="child_documents">
+						<i class="docs-arrow fa fa-angle-right"></i>
+						<ul class="docs-nav-sub">
+							<li t-foreach="child_documents" t-as="child" class="docs-item">
+								<t t-if="category and category.document_type == 'hash'">
+									<a t-att-href="'#'+child['id']">
+										<span t-esc="child['name']"></span>
+									</a>
+								</t>
+								<t t-else="">
+									<a t-att-href="item.website_url+'#'+child['id']">
+										<span t-esc="child['name']"></span>
+									</a>
+								</t>
+								<t t-if="child['childs']">
+									<i class="docs-arrow fa fa-angle-right"></i>
+									<ul class="docs-nav-sub">
+										<li t-foreach="child['childs']" t-as="schild"
+											class="docs-item">
+											<a t-att-href="item.website_url+'#'+schild['id']">
+												<span t-esc="schild['name']"></span>
+											</a>
+										</li>
+									</ul>
+								</t>
+							</li>
+						</ul>
+					</t>
+
+				</li>
+			</t>
+		</template>
+
+		<template id="document" name="Document - Content">
+			<t t-set="show_hash" t-value="show_hash or False" />
+			<t t-set="perms_docs" t-value="category.document_ids.get_perms()"/>
+			<t t-set="public_rule"
+				t-value="int(category.get_public_rule()) if not is_website_doc_editor else 100" />
+			<t t-set="documents"
+				t-value="category.with_context(website_id=request.website.id).search_document() or document" />
+			<t t-call="to_website_docs.body_layout">
+				<div t-if="documents and perms_docs.create" class="docs-btns">
+					<a id="btnDocsCreate" class="btn btn-primary"
+						title="Click here to create new document" href="#">
+						<i class="fa fa-plus"></i>
+					</a>
+				</div>
+				<div
+					t-att-class="'docs-left %s' % ('d-none' if not documents else '')">
+					<ul id="docsLeft" class="docs-nav">
+						<t t-call="to_website_docs.left_nav_item" />
+					</ul>
+				</div>
+				<article id="docsBody" class="docs-body">
+					<t t-if="not documents and not document">
+						<h3>There is no document</h3>
+						<a id="btnDocsCreate" class="btn btn-primary"
+							t-if="perms_docs.create" href="#">Click here to create new document</a>
+					</t>
+					<t t-elif="document">
+						<t t-set="perms_docs"
+							t-value="document.get_perms(category=category)" />
+						<t t-set="document_content" t-value="content or document.get_content()" />
+						<div t-if="not perms_docs.write"
+							t-attf-id="docsItemContent-{{document_content.id}}"
+							contentEditable="false">
+							<t t-call="to_website_docs.document_detail" />
+						</div>
+						<div t-if="perms_docs.write"
+							t-attf-id="docsItemContent-{{document_content.id}}">
+							<t t-call="to_website_docs.document_detail" />
+						</div>
+					</t>
+					<t t-elif="show_hash">
+						<t t-call="to_website_docs.category_detail">
+							<t t-set="perms_docs" t-value="documents.get_perms()" />
+						</t>
+					</t>
+					<t t-else="">
+						<t t-foreach="documents" t-as="item">
+							<t t-set="perms_docs"
+								t-value="item.get_perms(category=category)" />
+							<div t-attf-id="docsItemContent-{{item.id}}" t-att-contentEditable="false if not perms_docs.write else False">
+								<t t-call="to_website_docs.document_readmore">
+									<t t-set="document" t-value="item" />
+									<t t-set="show_less" t-value="True" />
+								</t>
+							</div>
+						</t>
+					</t>
+				</article>
+				<div class="clearfix"></div>
+			</t>
+		</template>
+
+		<template id="document_button_action"
+			name="Document - Action Button">
+			<t t-set="btn_cls" t-value="btn_cls or ''" />
+			<div class="docs-action">
+				<t t-set="perms_docs" t-value="document.get_perms()"/>
+				<a t-att-id="'docsActionItem-%s' % str(document_content.id)"
+					class="docs-content-editable" t-att-data-publish="document_content.get_published()"
+					t-att-data-name="document.name" t-att-data-state="document_content.state"
+					t-att-data-parent="0" t-att-data-id="document_content.id"
+					t-att-data-approve="int(perms_docs.approve)"
+					t-att-data-write="int(perms_docs.write)"
+					t-att-data-unlink="int(perms_docs.unlink)" data-position="bottom">
+					<i
+						t-att-class="'fa fa-cog btn btn-primary %s docs-status docs-%s' % (btn_cls, str(document_content.state))" />
+				</a>
+			</div>
+		</template>
+
+		<template id="document_heading" name="Document Heading">
+			<h1 class="docs-anchor-title pull-left">
+				<a t-att-href="document.website_url" t-field="document.name"></a>
+			</h1>
+		</template>
+
+		<template id="anchor_detail" name="Document - Anchor Content">
+			<t t-set="perms" t-value="item.get_perms(category=category)" />
+			<t t-set="document_content" t-value="document.get_content()" />
+			<t t-if="perms.write">
+				<div t-att-data-id="document.id"
+					t-att-id="'anchor-%s' % str(document.id)" class="docs-anchor">
+					<t t-call="to_website_docs.document_heading" />
+					<t id="document_button_action"
+						t-call="to_website_docs.document_button_action">
+						<t t-set="btn_cls" t-value="'btn-sm'" />
+					</t>
+					<div class="clearfix"></div>
+					<div t-field="document_content.fulltext"
+						class="docs-anchor-content oe_structure oe_empty"></div>
+					<hr class="oe_sep_docs d-none" />
+				</div>
+			</t>
+			<t t-if="not perms.write">
+				<div contentEditable="false">
+					<div t-att-data-id="document.id"
+						t-att-id="'anchor-%s' % str(document.id)" class="docs-anchor">
+						<t t-call="to_website_docs.document_heading" />
+						<div class="clearfix"></div>
+						<div t-field="document_content.fulltext"
+							class="docs-anchor-content oe_structure oe_empty"></div>
+						<hr class="oe_sep_docs d-none" />
+					</div>
+				</div>
+			</t>
+			<t t-call="to_website_docs.document_header">
+				<t t-set="perms" t-value="document_content.get_perms()"/>
+				<t t-set="document_content" t-value="document_content" />
+				<t t-set="is_category" t-value="True" />
+				<t t-set="social_url" t-value="category.website_url" />
+			</t>
+		</template>
+
+		<template id="category_body"
+			name="Document - Content by Category Detail">
+			<h3 class="docs-body-title">
+				<a t-att-href="category.website_url" itemprop="url"
+					t-esc="category.name"></a>
+			</h3>
+			<div class="clearfix"></div>
+			<div class="docs-body-sep"></div>
+			<div t-field="category.description" class="docs-body-desc"></div>
+		</template>
+
+		<template id="category_detail"
+			name="Document - Content by Category Detail">
+			<t t-set="show_less" t-value="show_less or False" />
+			<t t-if="perms_docs.write">
+				<t t-call="to_website_docs.category_body"></t>
+			</t>
+			<t t-else="">
+				<div contentEditable="false">
+					<t t-call="to_website_docs.category_body"></t>
+				</div>
+			</t>
+			<t t-if="not show_less">
+				<hr class="oe_sep_docs d-none" />
+				<t t-if="public_rule == 0">
+					<t t-call="to_website_docs.document_security"></t>
+				</t>
+				<t t-elif="public_rule &gt;= 100">
+					<div class="docs-anchors">
+						<t t-foreach="documents" t-as="item">
+							<t t-call="to_website_docs.anchor_detail">
+								<t t-set="document" t-value="item" />
+							</t>
+						</t>
+					</div>
+				</t>
+				<t t-else="">
+					<t t-set="max_index"
+						t-value="category.get_max_index_by_rule(documents, public_rule)" />
+					<div class="docs-anchors">
+						<t t-foreach="documents" t-as="item">
+							<t t-if="item_index &lt; max_index">
+								<t t-call="to_website_docs.anchor_detail">
+									<t t-set="document" t-value="item" />
+								</t>
+							</t>
+						</t>
+					</div>
+					<t t-call="to_website_docs.document_security"></t>
+				</t>
+				<t t-call="to_website_docs.document_footer">
+					<t t-set="document" t-value="category" />
+					<t t-set="social_url" t-value="category.website_url" />
+				</t>
+			</t>
+			<t t-if="show_less">
+				<a class="btn btn-link" t-att-href="document.website_url"
+					itemprop="url">
+					<i class="fa fa-chevron-right"></i>
+					Read more ...
+				</a>
+				<hr />
+			</t>
+		</template>
+
+		<template id="document_readmore"
+			name="Document - Content Detail">
+			<t t-set="show_less" t-value="show_less or False" />
+			<t t-set="document_content" t-value="document.get_content()" />
+			<h3 class="docs-body-title">
+				<a t-att-href="document.website_url" itemprop="url"
+					t-esc="document.name"></a>
+			</h3>
+			<t t-if="not show_less and perms_docs.write">
+				<t t-call="to_website_docs.document_button_action"></t>
+			</t>
+			<div class="clearfix"></div>
+			<div class="docs-body-sep"></div>
+			<t t-call="to_website_docs.document_header">
+				<t t-set="perms" t-value="perms_docs" />
+			</t>
+			<div t-field="document_content.introtext"
+				class="docs-body-desc oe_structure oe_empty"></div>
+			<hr class="oe_sep_docs d-none" />
+			<t t-if="show_less">
+				<a class="btn btn-link" t-att-href="document.website_url"
+					itemprop="url">
+					<i class="fa fa-chevron-right"></i>
+					Read more ...
+				</a>
+				<hr />
+			</t>
+		</template>
+
+		<template id="document_detail"
+			name="Document - Content Detail">
+			<t t-set="show_less" t-value="show_less or False" />
+			<t t-set="document_content" t-value="content or document.get_content()" />
+			<t t-set="document_index" t-value="document.get_content_index()" />
+			<h1 class="docs-body-title">
+				<a t-att-href="document.website_url" itemprop="url"
+					t-esc="document.name"></a>
+			</h1>
+			<t t-if="not show_less and perms_docs.write">
+				<t t-call="to_website_docs.document_button_action"></t>
+			</t>
+			<div class="clearfix"></div>
+			<div class="docs-body-sep"></div>
+			<t t-call="to_website_docs.document_header">
+				<t t-set="perms" t-value="perms_docs" />
+			</t>
+			<!-- <div t-field="document_content.introtext" class="docs-body-desc oe_structure
+				oe_empty"></div> -->
+			<hr class="oe_sep_docs d-none" />
+			<t t-if="not show_less">
+				<t t-if="public_rule == 0">
+					<t t-call="to_website_docs.document_security"></t>
+				</t>
+				<t t-elif="public_rule &gt;= 100">
+					<div t-field="document_content.fulltext"
+						class="docs-body-content oe_structure oe_empty"></div>
+					<hr class="oe_sep_docs d-none" />
+				</t>
+				<t t-else="">
+					<t t-if="len(documents) &gt; 0">
+						<div t-field="document_content.fulltext"
+							class="docs-body-content oe_structure oe_empty"></div>
+						<hr class="oe_sep_docs d-none" />
+					</t>
+					<t t-set="max_index"
+						t-value="category.get_max_index_by_rule(documents, public_rule)" />
+					<t t-call="to_website_docs.document_security"></t>
+				</t>
+				<t t-call="to_website_docs.document_footer"></t>
+			</t>
+		</template>
+
+		<template id="social" name="Document - Content Social">
+			<div class="oe_social" id="js-init-socials">
+				<t t-set="document_content" t-value="document_content or False" />
+				<t t-set="social_url"
+					t-value="social_url or (website_helper.base_url + (document.website_url if document else category.website_url))" />
+				<div class="fb-like" t-att-data-href="social_url"
+					data-layout="button_count" data-action="like" data-size="small"
+					data-show-faces="false" data-share="false"></div>
+				<div class="g-plusone" data-size="medium" data-href="social_url"></div>
+				<i class="oe_social_share fa fa-share-alt-square" title="Share"></i>
+				<div class="clearfix"></div>
+			</div>
+		</template>
+
+		<template id="tag" name="Document - Tag Page">
+			<t t-call="to_website_docs.body_layout">
+				<article id="docsBody" class="docs-body docs-body-full">
+					<t t-if="not documents and not categories">
+						<h3>There is no document</h3>
+					</t>
+					<t t-foreach="categories" t-as="item">
+						<t t-set="perms_docs" t-value="item.get_perms()" />
+						<t t-call="to_website_docs.category_detail">
+							<t t-set="category" t-value="item" />
+							<t t-set="document" t-value="item" />
+							<t t-set="show_less" t-value="True" />
+							<t t-set="show_hash" t-value="True" />
+						</t>
+					</t>
+					<t t-foreach="documents" t-as="item">
+						<t t-set="perms_docs" t-value="item.get_perms()" />
+						<div t-attf-id="docsItemContent-{{item.id}}" t-att-contentEditable="false if not perms_docs.write else False">
+							<t t-call="to_website_docs.document_readmore">
+								<t t-set="category" t-value="item.category_id" />
+								<t t-set="document" t-value="item" />
+								<t t-set="show_less" t-value="True" />
+							</t>
+						</div>
+					</t>
+				</article>
+				<div class="clearfix"></div>
+			</t>
+		</template>
+	</data>
+</odoo>

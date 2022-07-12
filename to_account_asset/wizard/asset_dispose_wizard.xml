@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record model="ir.ui.view" id="asset_dispose_wizard_view_form">
+		<field name="name">asset.dispose.wizard.form</field>
+		<field name="model">asset.dispose.wizard</field>
+		<field name="priority" eval="8" />
+		<field name="arch" type="xml">
+			<form string="Asset Dispose">
+				<group>
+					<field name="asset_id" options="{'no_create': True, 'no_open': True}"/>
+					<field name="disposed_date" />
+				</group>
+				<footer invisible="not context.get('edit', True)">
+					<button string="Dispose" name="action_dispose" type="object" class="btn-primary" />
+					<button string="Cancel" class="btn-secondary" special="cancel" />
+				</footer>
+			</form>
+		</field>
+	</record>
+
+	<record id="action_asset_dispose" model="ir.actions.act_window">
+         <field name="name">Asset Dispose</field>
+         <field name="res_model">asset.dispose.wizard</field>
+         <field name="type">ir.actions.act_window</field>
+         <field name="view_mode">tree,form</field>
+         <field name="view_id" ref="asset_dispose_wizard_view_form"/>
+         <field name="target">new</field>
+   </record>
+</odoo>

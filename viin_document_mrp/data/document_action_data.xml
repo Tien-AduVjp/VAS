@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+
+    <!-- MO Comfirmed -->
+
+    <record id="document_action_mo_confirm" model="document.action">
+        <field name="name">MO Confirmed</field>
+        <field name="done_document_activity" eval="True"/>
+    </record>
+
+    <record id="document_action_set_tag_mo_confirm" model="document.action.set_tag">
+        <field name="action_type">replace</field>
+        <field name="category_id" ref="document_tag_category_mrp_mo_status"/>
+        <field name="tag_ids" eval="[(4, ref('document_tag_mrp_mo_confirm'))]"/>
+        <field name="action_id" ref="document_action_mo_confirm"/>
+    </record>
+
+    <!-- MO In Progress -->
+
+    <record id="document_action_mo_progress" model="document.action">
+        <field name="name">Mark as MO In Progress</field>
+        <field name="done_document_activity" eval="True"/>
+    </record>
+
+    <record id="document_action_set_tag_mo_progress" model="document.action.set_tag">
+        <field name="action_type">replace</field>
+        <field name="category_id" ref="document_tag_category_mrp_mo_status"/>
+        <field name="tag_ids" eval="[(4, ref('document_tag_mrp_mo_progress'))]"/>
+        <field name="action_id" ref="document_action_mo_progress"/>
+    </record>
+
+    <!-- MO Done -->
+
+    <record id="document_action_mo_done" model="document.action">
+        <field name="name">Done MO</field>
+        <field name="done_document_activity" eval="True"/>
+    </record>
+
+    <record id="document_action_set_tag_mo_done" model="document.action.set_tag">
+        <field name="action_type">replace</field>
+        <field name="category_id" ref="document_tag_category_mrp_mo_status"/>
+        <field name="tag_ids" eval="[(4, ref('document_tag_mrp_mo_done'))]"/>
+        <field name="action_id" ref="document_action_mo_done"/>
+    </record>
+
+</odoo>

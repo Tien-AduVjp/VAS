@@ -1,0 +1,1043 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_git
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-01 06:25+0000\n"
+"PO-Revision-Date: 2021-11-01 06:25+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_tree_view
+msgid "# of Branches"
+msgstr "SL Nhánh"
+
+#. module: to_git
+#: code:addons/to_git/models/git_repository.py:0
+#, python-format
+msgid "Access denied! Only Git Managers can reinitialize the git repository"
+msgstr ""
+"Truy cập bị từ chối! Chỉ người được phân quyền Quản lý ở ứng dụng Quản lý "
+"Git mới có thể Tái khởi tại Kho Git"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__message_needaction
+#: model:ir.model.fields,field_description:to_git.field_git_repository__message_needaction
+msgid "Action Needed"
+msgstr "Cần có Hành động"
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.wizard_git_url_add_form_view
+msgid "Add"
+msgstr "Thêm"
+
+#. module: to_git
+#: model:ir.ui.menu,name:to_git.git_url_add_menu
+msgid "Add Custom Branch URL"
+msgstr "Thêm URL Nhánh git"
+
+#. module: to_git
+#: model:ir.actions.act_window,name:to_git.action_wizard_git_url_add
+msgid "Add Custom Git Branch URL"
+msgstr "Thêm URL Nhánh git"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__message_attachment_count
+#: model:ir.model.fields,field_description:to_git.field_git_repository__message_attachment_count
+msgid "Attachment Count"
+msgstr "Số đính kèm"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__auto_scan
+msgid "Auto Scan"
+msgstr "Quét Tự động"
+
+#. module: to_git
+#: model:ir.model.constraint,message:to_git.constraint_git_branch_name_repository_id_unique
+msgid "Branch name must be unique per repository!"
+msgstr "Tên nhánh phải là duy nhất cho mỗi kho git!"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_repository__branch_ids
+#: model:ir.ui.menu,name:to_git.git_branches_menu
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_view_form
+msgid "Branches"
+msgstr "Nhánh"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_repository__branches_count
+msgid "Branches Count"
+msgstr "SL Nhánh"
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.authenticate_form
+#: model_terms:ir.ui.view,arch_db:to_git.wizard_git_url_add_form_view
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__checked_out
+msgid "Checked Out"
+msgstr "Đã Checkout"
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_branch_search_view
+msgid "Checked out"
+msgstr "Đã checkout"
+
+#. module: to_git
+#: model:ir.actions.server,name:to_git.action_server_branches_checkout
+#: model_terms:ir.ui.view,arch_db:to_git.checkout_commit_view_form
+#: model_terms:ir.ui.view,arch_db:to_git.git_branch_form_view
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_view_form
+msgid "Checkout"
+msgstr ""
+
+#. module: to_git
+#: model:ir.actions.act_window,name:to_git.git_branch_action_checkout_commit
+#: model_terms:ir.ui.view,arch_db:to_git.checkout_commit_view_form
+#: model_terms:ir.ui.view,arch_db:to_git.git_branch_form_view
+msgid "Checkout a Commit"
+msgstr "Checkout một Commit"
+
+#. module: to_git
+#: model:ir.model,name:to_git.model_git_branch_checkout_commit
+msgid "Checkout a Commit Wizard"
+msgstr "Đồ thuật Checkout một Commit"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch_checkout_commit__commit_hash
+#: model_terms:ir.ui.view,arch_db:to_git.checkout_commit_view_form
+msgid "Commit Hash"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__company_id
+#: model:ir.model.fields,field_description:to_git.field_git_repository__company_id
+#: model_terms:ir.ui.view,arch_db:to_git.git_branch_search_view
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_search_view
+msgid "Company"
+msgstr "Công ty"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_authenticate__create_uid
+#: model:ir.model.fields,field_description:to_git.field_git_branch__create_uid
+#: model:ir.model.fields,field_description:to_git.field_git_branch_checkout_commit__create_uid
+#: model:ir.model.fields,field_description:to_git.field_git_commit__create_uid
+#: model:ir.model.fields,field_description:to_git.field_git_repository__create_uid
+#: model:ir.model.fields,field_description:to_git.field_wizard_git_url_add__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_authenticate__create_date
+#: model:ir.model.fields,field_description:to_git.field_git_branch__create_date
+#: model:ir.model.fields,field_description:to_git.field_git_branch_checkout_commit__create_date
+#: model:ir.model.fields,field_description:to_git.field_git_commit__create_date
+#: model:ir.model.fields,field_description:to_git.field_git_repository__create_date
+#: model:ir.model.fields,field_description:to_git.field_wizard_git_url_add__create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__is_default
+msgid "Default"
+msgstr "Mặc định"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch_checkout_commit__detached_head
+msgid "Detached HEAD"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__detached_head
+msgid "Detached Head"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_authenticate__display_name
+#: model:ir.model.fields,field_description:to_git.field_git_branch__display_name
+#: model:ir.model.fields,field_description:to_git.field_git_branch_checkout_commit__display_name
+#: model:ir.model.fields,field_description:to_git.field_git_commit__display_name
+#: model:ir.model.fields,field_description:to_git.field_git_repository__display_name
+#: model:ir.model.fields,field_description:to_git.field_res_users__display_name
+#: model:ir.model.fields,field_description:to_git.field_wizard_git_url_add__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_git
+#: code:addons/to_git/models/git_branch.py:0
+#, python-format
+msgid "Failed to checkout the branch '%s'!"
+msgstr "Checkout nhánh '%s' đã thất bại!"
+
+#. module: to_git
+#: code:addons/to_git/models/git_branch.py:0
+#, python-format
+msgid "Failed to checkout the commit!"
+msgstr "Checkout commit đã thất bại!"
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.authenticate_form
+msgid ""
+"Failed to connect to the remote repository over HTTP!. If the remote\n"
+"                    requires authentication, please input your username/password in here\n"
+"                    and try again."
+msgstr ""
+"Kết nối đến kho git từ xa thất bại!. Nếu kho yêu cầu xác thực,\n"
+"                    vui lòng nhập username/password ở đây và\n"
+"                    thử lại lần nữa."
+
+#. module: to_git
+#: code:addons/to_git/models/git_branch.py:0
+#: code:addons/to_git/models/git_branch.py:0
+#: code:addons/to_git/models/git_repository.py:0
+#, python-format
+msgid ""
+"Failed to fetch data from the remote!\n"
+"Please make sure that you have a working network connection, the repository exists and you have the correct access rights."
+msgstr ""
+"Tải (fetch) dữ liệu từ xa thất bại!\n"
+"Hãy chắc rằng bạn Odoo của bạn có kết nối mạng bình thường, kho git có tồn tại và bạn có quyền truy cập phù hợp."
+
+#. module: to_git
+#: code:addons/to_git/models/git_branch.py:0
+#, python-format
+msgid "Failed to get recent commits!"
+msgstr "Thất bại trong việc cập nhật các commit gần đây!"
+
+#. module: to_git
+#: code:addons/to_git/models/git_branch.py:0
+#, python-format
+msgid "Failed to remove the working tree of the branch!"
+msgstr "Thất bại trong việc xoá working tree của nhánh!"
+
+#. module: to_git
+#: code:addons/to_git/models/git_branch.py:0
+#, python-format
+msgid "Failed to reset the branches: "
+msgstr "Thất bại khi reset nhánh: "
+
+#. module: to_git
+#: code:addons/to_git/models/git_branch.py:0
+#, python-format
+msgid "Failed to reset to HEAD for the branches: "
+msgstr "Thất bại khi reset nhánh về HEAD: "
+
+#. module: to_git
+#: code:addons/to_git/models/git_branch.py:0
+#, python-format
+msgid "Failed to update the working tree!"
+msgstr "Thất bại khi cập nhật working tree!"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__message_follower_ids
+#: model:ir.model.fields,field_description:to_git.field_git_repository__message_follower_ids
+msgid "Followers"
+msgstr "Người dõi theo"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__message_channel_ids
+#: model:ir.model.fields,field_description:to_git.field_git_repository__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Người theo dõi (Các kênh)"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__message_partner_ids
+#: model:ir.model.fields,field_description:to_git.field_git_repository__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Người theo dõi (Các đối tác)"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_repository__parent_id
+msgid "Forked From"
+msgstr "Được fork từ"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_repository__child_ids
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_tree_view
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_view_form
+msgid "Forks"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_repository__forks_count
+msgid "Forks Count"
+msgstr "SL Fork"
+
+#. module: to_git
+#: model:ir.ui.menu,name:to_git.git_main_menu
+#: model:ir.ui.menu,name:to_git.git_root_menu
+msgid "Git"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model,name:to_git.model_git_branch
+msgid "Git Branch"
+msgstr "Nhánh Git"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_wizard_git_url_add__git_branch_name
+#: model_terms:ir.ui.view,arch_db:to_git.git_branch_form_view
+msgid "Git Branch Name"
+msgstr "Tên Nhánh Git"
+
+#. module: to_git
+#: model:ir.actions.act_window,name:to_git.git_branch_action_window
+msgid "Git Branches"
+msgstr "Nhánh Git"
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_branch_search_view
+#: model_terms:ir.ui.view,arch_db:to_git.git_branch_tree_view
+msgid "Git Branches"
+msgstr "Nhánh Git"
+
+#. module: to_git
+#: model:ir.model,name:to_git.model_git_commit
+msgid "Git Commit"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model,name:to_git.model_git_authenticate
+msgid "Git Remote Authenticate"
+msgstr "Xác thực Git Từ xa"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_wizard_git_url_add__git_repo_remote_url
+msgid "Git Repo Remote Url"
+msgstr ""
+
+#. module: to_git
+#: model:ir.actions.act_window,name:to_git.git_repository_action
+#: model:ir.model,name:to_git.model_git_repository
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_tree_view
+msgid "Git Repository"
+msgstr "Kho Git"
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_view_form
+msgid "Git Repository Form"
+msgstr "Mẫu Kho Git"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_wizard_git_url_add__url
+msgid "Git URL"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model,name:to_git.model_wizard_git_url_add
+msgid "Git URL Adding Wizard"
+msgstr ""
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_branch_form_view
+msgid "Git branch Form"
+msgstr "Mẫu Nhánh Git"
+
+#. module: to_git
+#: model:ir.actions.server,name:to_git.cron_scan_branches_ir_actions_server
+#: model:ir.cron,cron_name:to_git.cron_scan_branches
+#: model:ir.cron,name:to_git.cron_scan_branches
+msgid "Git: Scan Branches"
+msgstr "Git: Cập nhật các Nhánh"
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_branch_search_view
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_search_view
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: to_git
+#: model:ir.model.fields.selection,name:to_git.selection__git_repository__scheme__http
+msgid "HTTP"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields.selection,name:to_git.selection__git_repository__scheme__https
+msgid "HTTPS"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_commit__hash
+msgid "Hash"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__head_commit
+msgid "Head Commit"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_authenticate__id
+#: model:ir.model.fields,field_description:to_git.field_git_branch__id
+#: model:ir.model.fields,field_description:to_git.field_git_branch_checkout_commit__id
+#: model:ir.model.fields,field_description:to_git.field_git_commit__id
+#: model:ir.model.fields,field_description:to_git.field_git_repository__id
+#: model:ir.model.fields,field_description:to_git.field_res_users__id
+#: model:ir.model.fields,field_description:to_git.field_wizard_git_url_add__id
+msgid "ID"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_branch__message_needaction
+#: model:ir.model.fields,help:to_git.field_git_branch__message_unread
+#: model:ir.model.fields,help:to_git.field_git_repository__message_needaction
+#: model:ir.model.fields,help:to_git.field_git_repository__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Nếu đánh dấu chọn, các thông điệp mới yêu cầu sự có mặt của bạn."
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_branch__message_has_error
+#: model:ir.model.fields,help:to_git.field_git_repository__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Nếu được đánh dấu, thông điệp có lỗi về gửi tin."
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_branch__auto_scan
+msgid "If checked, this branch will be regularly scanned for updates"
+msgstr ""
+"Nếu đánh dấu, nhánh này sẽ được quét định kỳ để cập nhật các commit mới"
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_wizard_git_url_add__checkout
+msgid ""
+"If enabled, the git branch specified in the URL will be checkout "
+"immediately."
+msgstr ""
+"Nếu kích hoạt, nhánh git khai báo ở URL sẽ được checkout ngay lập tức."
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_wizard_git_url_add__checkout
+msgid "Immediate Checkout"
+msgstr "Checkout Ngay"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__message_is_follower
+#: model:ir.model.fields,field_description:to_git.field_git_repository__message_is_follower
+msgid "Is Follower"
+msgstr "Trở thành người theo dõi"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_authenticate____last_update
+#: model:ir.model.fields,field_description:to_git.field_git_branch____last_update
+#: model:ir.model.fields,field_description:to_git.field_git_branch_checkout_commit____last_update
+#: model:ir.model.fields,field_description:to_git.field_git_commit____last_update
+#: model:ir.model.fields,field_description:to_git.field_git_repository____last_update
+#: model:ir.model.fields,field_description:to_git.field_res_users____last_update
+#: model:ir.model.fields,field_description:to_git.field_wizard_git_url_add____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_authenticate__write_uid
+#: model:ir.model.fields,field_description:to_git.field_git_branch__write_uid
+#: model:ir.model.fields,field_description:to_git.field_git_branch_checkout_commit__write_uid
+#: model:ir.model.fields,field_description:to_git.field_git_commit__write_uid
+#: model:ir.model.fields,field_description:to_git.field_git_repository__write_uid
+#: model:ir.model.fields,field_description:to_git.field_wizard_git_url_add__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_authenticate__write_date
+#: model:ir.model.fields,field_description:to_git.field_git_branch__write_date
+#: model:ir.model.fields,field_description:to_git.field_git_branch_checkout_commit__write_date
+#: model:ir.model.fields,field_description:to_git.field_git_commit__write_date
+#: model:ir.model.fields,field_description:to_git.field_git_repository__write_date
+#: model:ir.model.fields,field_description:to_git.field_wizard_git_url_add__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối"
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_branch_checkout_commit__recent_commits
+msgid "List of recent commits"
+msgstr "Danh sách các commit gần đây"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__message_main_attachment_id
+#: model:ir.model.fields,field_description:to_git.field_git_repository__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Đính kèm chính"
+
+#. module: to_git
+#: model:res.groups,name:to_git.group_to_git_manager
+msgid "Manager"
+msgstr "Quản lý"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_commit__message
+msgid "Message"
+msgstr "Thông điệp"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__message_has_error
+#: model:ir.model.fields,field_description:to_git.field_git_repository__message_has_error
+msgid "Message Delivery error"
+msgstr "Thông báo gửi đi gặp lỗi"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__message_ids
+#: model:ir.model.fields,field_description:to_git.field_git_repository__message_ids
+msgid "Messages"
+msgstr "Thông điệp"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__name
+#: model:ir.model.fields,field_description:to_git.field_git_commit__name
+#: model:ir.model.fields,field_description:to_git.field_git_repository__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_branch__name
+msgid "Name of the git branch"
+msgstr "Tên của Nhánh Git"
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_repository__name
+msgid "Name of the repository"
+msgstr "Tên của Kho Git"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_repository__netloc
+msgid "Net Location"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_repository__netpath
+#: model:ir.model.fields,field_description:to_git.field_wizard_git_url_add__git_net_path
+msgid "Net Path"
+msgstr ""
+
+#. module: to_git
+#: code:addons/to_git/wizard/wizard_git_url_add.py:0
+#, python-format
+msgid ""
+"No Net Location found in your given URL. A net location should follow a "
+"standardized format: git@github.com, where `git` is the user who has access "
+"to the git repository and `github.com` is a domain to what your git repo "
+"belongs."
+msgstr "Không tìm thấy Net Location trong URL. Net Location phải tuân theo định dạng: "
+"git@github.com, trong đó `git` là người dùng có quyền truy cập vào kho git và "
+"`github.com` là tên miền mà kho git của bạn thuộc về."
+
+#. module: to_git
+#: code:addons/to_git/wizard/wizard_git_url_add.py:0
+#, python-format
+msgid ""
+"No git branch found in your URL. You must specify a git branch after the # "
+"letter in the URL. For example: "
+"ssh://git@github.com/odoo/odoo.git#git_branch_name."
+msgstr "Không tìm thấy nhánh git trong URL. Bạn phải chỉ định một nhánh sau ký tự '#' "
+"trong URL. Ví dụ: "
+"ssh://git@github.com/odoo/odoo.git#git_branch_name."
+
+#. module: to_git
+#: code:addons/to_git/wizard/wizard_git_url_add.py:0
+#, python-format
+msgid ""
+"No netpath found in your given URL. A netpath is a path of an URL appending "
+"to the domain name of the URL. For example: '/odoo/odoo.git' is the netpath "
+"of the URL 'ssh://git@github.com/odoo/odoo.git#8.0'."
+msgstr ""
+"Không tìm thấy netpath trong URL. Netpath là một đường dẫn của một URL nối với"
+"tên miền của URL. Ví dụ '/odoo/odoo.git' là nethpath "
+"của URL 'ssh://git@github.com/odoo/odoo.git#8.0'."
+
+#. module: to_git
+#: code:addons/to_git/wizard/wizard_git_url_add.py:0
+#, python-format
+msgid ""
+"No scheme found in your given URL. You must specify either HTTP/HTTPs or SSH"
+" scheme."
+msgstr "Không tìm thấy scheme trong URL. Bạn phải chỉ định scheme HTTP/HTTPs hoặc SSH"
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_branch_search_view
+msgid "Not Checked out"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__message_needaction_counter
+#: model:ir.model.fields,field_description:to_git.field_git_repository__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Số lượng Hành động"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__message_has_error_counter
+#: model:ir.model.fields,field_description:to_git.field_git_repository__message_has_error_counter
+msgid "Number of errors"
+msgstr "Số lượng lỗi"
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_branch__message_needaction_counter
+#: model:ir.model.fields,help:to_git.field_git_repository__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Số thông điệp cần có hành động"
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_branch__message_has_error_counter
+#: model:ir.model.fields,help:to_git.field_git_repository__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Số lượng các thông điệp có lỗi về gửi tin"
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_branch__message_unread_counter
+#: model:ir.model.fields,help:to_git.field_git_repository__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Số thông điệp chưa đọc"
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_view_form
+msgid "Other Info"
+msgstr "Thông tin khác"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_authenticate__password
+msgid "Password"
+msgstr "Mật khẩu"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_repository__path
+msgid "Path"
+msgstr "Đường dẫn"
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_repository__path
+msgid "Path to the repository"
+msgstr "Đường dẫn đến kho git"
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_branch__working_tree
+msgid "Path to the working tree of the branch."
+msgstr "Đường dẫn đến working tree của nhánh."
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_branch_form_view
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_view_form
+msgid ""
+"Please make sure that you set enough memory when fetching a large\n"
+"\t\t\t\t\t\t\tgit repository. For example, Odoo's git repo may require the\n"
+"\t\t\t\t\t\t\tfollowing memory settings in your Odoo startup configuration."
+msgstr ""
+"Vui lòng đảm bảo rằng bạn đặt đủ bộ nhớ khi tìm nạp một kho git lớn.\n"
+"Ví dụ: Kho git của Odoo có thể yêu cầu cài đặt bộ nhớ như sau trong cấu hình chạy odoo của bạn:"
+
+#. module: to_git
+#: model:ir.actions.server,name:to_git.action_server_branches_pull
+#: model:ir.actions.server,name:to_git.action_server_repository_pull
+#: model_terms:ir.ui.view,arch_db:to_git.git_branch_form_view
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_view_form
+msgid "Pull"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch_checkout_commit__recent_commits
+#: model_terms:ir.ui.view,arch_db:to_git.checkout_commit_view_form
+msgid "Recent Commits"
+msgstr "Commit gần đây"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__recent_pull_time
+msgid "Recent Pull Time"
+msgstr "Pull lần cuối"
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_view_form
+msgid "Reinitialize"
+msgstr "Tái khởi tạo"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_repository__domain_name
+msgid "Remote Domain Name"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_repository__remote_url
+msgid ""
+"Remote URL of the repository. For examples:\n"
+"ssh://[user@]host.xz[:port]/path/to/repo.git/\n"
+"http[s]://[user:password@]host.xz[:port]/path/to/repo.git/\n"
+"[user@]host.xz:path/to/repo.git/"
+msgstr ""
+"Địa chỉ URL của kho git. Ví dụ:\n"
+"ssh://[user@]host.xz[:port]/path/to/repo.git/\n"
+"http[s]://[user:password@]host.xz[:port]/path/to/repo.git/\n"
+"[user@]host.xz:path/to/repo.git/"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_repository__remote_url
+msgid "Remote Url"
+msgstr "URL"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__repository_id
+#: model:ir.ui.menu,name:to_git.git_repo_menu
+#: model_terms:ir.ui.view,arch_db:to_git.git_branch_search_view
+msgid "Repository"
+msgstr "Kho Git"
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_view_form
+msgid "Reset all the checked out branches to their HEADs"
+msgstr "Đặt lại toàn bộ các nhánh đã checkout về HEAD của chúng"
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_view_form
+msgid "Reset to HEAD"
+msgstr "Reset về HEAD"
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.checkout_commit_view_form
+msgid "Reset to default"
+msgstr "Reset về mặt định"
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_branch_checkout_commit__commit_hash
+msgid "SHA-1 checksum of a commit, in abbreviated or full form"
+msgstr "SHA-1 checksum của commit, dạng viết tắt hoặc đầy đủ"
+
+#. module: to_git
+#: model:ir.model.fields.selection,name:to_git.selection__git_repository__scheme__ssh
+msgid "SSH"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_repository__ssh_key_id
+msgid "SSH Key"
+msgstr ""
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_view_form
+msgid "Scan for Branches"
+msgstr "Quét tìm các Nhánh"
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_view_form
+msgid "Scan for Branches and Checkout"
+msgstr "Quét tìm các Nhánh và Checkout"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_repository__scheme
+msgid "Scheme"
+msgstr ""
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_search_view
+msgid "Search Git Repository"
+msgstr "Tìm kiếm Kho Git"
+
+#. module: to_git
+#: model:ir.actions.server,name:to_git.checkout_commit_action_select
+msgid "Select a commit"
+msgstr "Chọn một commit"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__sequence
+#: model:ir.model.fields,field_description:to_git.field_git_repository__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_branch_form_view
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_view_form
+msgid "System Requirements"
+msgstr "Yêu cầu Hệ thống"
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_repository__with_credential
+msgid ""
+"Technical field to indicate if the repository requires credential. We assume"
+" all new repositories require credential"
+msgstr ""
+"Trường kỹ thuật để chỉ báo nếu kho git cần phải xác thực. Chúng ta giả định "
+"rằng tất cả các kho mới tạo đều yêu cầu xác thực"
+
+#. module: to_git
+#: code:addons/to_git/models/git_branch.py:0
+#, python-format
+msgid ""
+"The branch name %s you've entered is not available in the remote repository "
+"%s."
+msgstr "Tên nhánh %s mà bạn vừa nhập không tồn tại trên kho git từ xa %s."
+
+#. module: to_git
+#: code:addons/to_git/models/git_branch.py:0
+#, python-format
+msgid "The commit does not exist!"
+msgstr "Commit không tồn tại!"
+
+#. module: to_git
+#: code:addons/to_git/models/git_branch.py:0
+#, python-format
+msgid "The commit is not in this branch!"
+msgstr "Commit không thuộc về nhánh này!"
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_branch__company_id
+msgid "The company to which the branch belong."
+msgstr "Công ty mà nhánh này thuộc về."
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_repository__company_id
+msgid ""
+"The company to which the repository belong. Leave this field empty to make "
+"this available to all the companies in the system."
+msgstr ""
+"Công ty mà kho git này thuộc về. Nếu để trống trường này, kho git sẽ khả "
+"dụng đối với tất cả các công ty trong hệ thống."
+
+#. module: to_git
+#: model:ir.model.constraint,message:to_git.constraint_git_repository_name_unique
+msgid "The git repository name must be unique!"
+msgstr "Tên kho git phải là duy nhất!"
+
+#. module: to_git
+#: model:ir.model.constraint,message:to_git.constraint_git_repository_remote_url_unique
+msgid "The git repository url must be unique!"
+msgstr "URL kho git phải là duy nhất!"
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_repository__netloc
+msgid "The location of the resource. For example, 'github.com'."
+msgstr "Vị trí của tài nguyên. Ví dụ: 'github.com'."
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_branch__vendor_id
+msgid "The partner who holds the copyright of this branch's repository"
+msgstr "Đối tác mà nắm giữ bản quyền của kho git mà nhánh này thuộc về"
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_repository__vendor_id
+#: model:ir.model.fields,help:to_git.field_wizard_git_url_add__vendor_id
+msgid ""
+"The partner who holds the copyright of this repository. Leave it empty if "
+"this is a repository of your company's."
+msgstr ""
+"Đối tác mà nắm giữ bản quyền của kho này. Đề trống nếu đây là kho git của "
+"chính công ty bạn."
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_repository__netpath
+#: model:ir.model.fields,help:to_git.field_wizard_git_url_add__git_net_path
+msgid "The path of the resource. For example, '/odoo/odoo'."
+msgstr "Đường dẫn của tài nguyên. Ví dụ: '/ odoo / odoo'."
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_wizard_git_url_add__url
+msgid ""
+"The provided url should follow a standardized format: "
+"ssh://git@github.com/odoo/odoo.git#git_branch_name. The url of your "
+"repository might then be modified in order to respect this standard."
+msgstr ""
+
+#. module: to_git
+#: code:addons/to_git/models/git_repository.py:0
+#, python-format
+msgid "The repository %s cannot be a fork of itselves."
+msgstr "Kho git %s không thể là một fork của chính nó."
+
+#. module: to_git
+#: code:addons/to_git/models/git_repository.py:0
+#, python-format
+msgid "The repository %s%s already exsits"
+msgstr "Kho %s%s đã tồn tại"
+
+#. module: to_git
+#: code:addons/to_git/wizard/wizard_git_url_add.py:0
+#, python-format
+msgid "The scheme %s is not supported. Please use either HTTP/HTTPS or SSH."
+msgstr "Scheme %s không được hỗ trợ. Vui lòng sử dụng HTTP/HTTPS hoặc SSh."
+
+#. module: to_git
+#: model:res.groups,comment:to_git.group_to_git_user
+msgid ""
+"The user will have access to all records of git\n"
+"\t\t\t\tapplication.\n"
+"\t\t\t"
+msgstr ""
+"Người dùng thuộc nhóm này có quyền truy cập đến tất cả các bản ghi của ứng dụng\n"
+"\t\t\t\tgit.\n"
+"\t\t\t"
+
+#. module: to_git
+#: model:res.groups,comment:to_git.group_to_git_manager
+msgid ""
+"The user will have access to git application plus\n"
+"\t\t\t\tgit configuration and settings sections as well as all statistics\n"
+"\t\t\t\tand reports.\n"
+"\t\t\t"
+msgstr ""
+"Người dùng thuộc nhóm này có toàn quyền truy cập đến ứng dụng quản lý git\n"
+"\t\t\t\tbao gồm cả cấu hình và thiết lập cũng như truy cập đến các báo cáo\n"
+"\t\t\t\tvà thống kê liên quan.\n"
+"\t\t\t"
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_branch_form_view
+msgid ""
+"This action will delete all the branch's content (i.e. files and folders) "
+"from the working tree. Are you sure?"
+msgstr ""
+"Hành động này sẽ xoá toàn bộ nội dung của nhánh (cụ thể: các tập tin và thư "
+"mục trên đĩa) ra khỏi working tree. Bạn có chắc?"
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_repository__parent_id
+msgid ""
+"This field is to indicate the parent repository from which this repository "
+"was forked."
+msgstr "Trường này để chỉ ra kho git mẹ mà từ đó kho git này đã fork."
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_branch__sequence
+#: model:ir.model.fields,help:to_git.field_git_repository__sequence
+msgid "This help prior the auto scanning."
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_branch__is_default
+msgid "This is to indicate that the branch is the default in the repository"
+msgstr "Trường này để chỉ ra rằng nhánh này là nhánh mặc định của kho git"
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_view_form
+msgid ""
+"This will delete all the git content from disk and re-Initialize the git "
+"repository"
+msgstr ""
+"Hành động này sẽ xoá toàn bộ nội dung git khỏi đĩa lưu trữ và Tái Khởi tại "
+"kho git"
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_view_form
+msgid ""
+"This will delete all the git content from disk and reinitialize the git "
+"repository. Although this does not touch to any record in your Odoo "
+"database, it may affect some git operations (e.g. zip and download files "
+"from git repository). Are you sure to preceed anyway?"
+msgstr ""
+"Hành động này sẽ xoá toàn bộ nội dung git khỏi đĩa lưu trữ và Tái Khởi tại "
+"kho git. Mặc dù điều này không tác động đến bất kỳ bản ghi dữ liệu nào trong"
+" cơ sở dữ liệu Odoo của bạn nhưng nó có thể ảnh hưởng đến các hoạt động liên"
+" quan đến git (vd: nén và tải các file từ kho git). Bạn có chắc chắn muốn "
+"thực hiện điều này?"
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.authenticate_form
+msgid "Try Again"
+msgstr "Thử lại"
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_branch_form_view
+msgid "UnCheckout"
+msgstr "Thôi Checkout"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__message_unread
+#: model:ir.model.fields,field_description:to_git.field_git_repository__message_unread
+msgid "Unread Messages"
+msgstr "Thông điệp chưa đọc"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__message_unread_counter
+#: model:ir.model.fields,field_description:to_git.field_git_repository__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Bộ đếm Thông điệp chưa đọc"
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_view_form
+msgid "Update all the already checked out branches of this repository"
+msgstr "Cập nhật tất cả các nhánh đã checkout của kho git này"
+
+#. module: to_git
+#: model:res.groups,name:to_git.group_to_git_user
+msgid "User"
+msgstr "Người dùng"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_authenticate__username
+msgid "Username"
+msgstr "Tên đăng nhập"
+
+#. module: to_git
+#: model:ir.model,name:to_git.model_res_users
+msgid "Users"
+msgstr "Người dùng"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__vendor_id
+#: model:ir.model.fields,field_description:to_git.field_git_repository__vendor_id
+#: model:ir.model.fields,field_description:to_git.field_wizard_git_url_add__vendor_id
+#: model_terms:ir.ui.view,arch_db:to_git.git_branch_search_view
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_search_view
+msgid "Vendor"
+msgstr "Nhà cung cấp"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_repository__with_credential
+msgid "With Credential"
+msgstr "Yêu cầu Xác thực"
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__working_tree
+msgid "Working Tree"
+msgstr ""
+
+#. module: to_git
+#: code:addons/to_git/models/git_branch.py:0
+#, python-format
+msgid ""
+"You can not mark Auto Scan for the branch %s of the repository %s while the repository may require credential. Please consider to use SSH protocol with SSH Key for the repositories that you want to get auto scanned.\n"
+"If you are sure that there is no credential to be required, please:\n"
+"1. Refesh your browser (press Command + R if you are on Mac, or F5 if you are on Windows/Linux),\n"
+"2. Checkout or pull the branch,\n"
+"3. Set Auto Scan again."
+msgstr ""
+"Bạn không thể đánh dấu Quét Tự động cho nhánh %s của kho %s trong khi kho có thể yêu cầu xác thực. Hãy xem xét sử dụng giao thức SSH với SSH Key cho các kho git mà bạn có Quét Tự động.\n"
+"Nếu bạn chắc chắn rằng kho git không cần xác thực, vui lòng:\n"
+"1. Làm tươi lại trình duyệt (bấm Command + R nếu bạn sử dụng máy Mac, hoặc F5 nếu bạn sử dụng Windows/Linux),\n"
+"2. Checkout hoặck pull nhánh,\n"
+"3. Đánh dấu Quét Tự động lại một lần nữa."
+
+#. module: to_git
+#: code:addons/to_git/models/git_branch.py:0
+#, python-format
+msgid "You must check out the branch before you can set auto scan"
+msgstr "Bạn phải checkout nhánh trước khi bạn có thể thiết lập Quét Tự động"
+
+#. module: to_git
+#: code:addons/to_git/wizard/wizard_git_url_add.py:0
+#, python-format
+msgid ""
+"You should not give any param or query in your URL. Please follow a "
+"standardized format: ssh://git@github.com/odoo/odoo.git#git_branch_name."
+msgstr "Bạn không nên cung cấp bất kì một tham số hoặc truy vấn trong URL. Vui lòng làm theo "
+"định đạng chuẩn: ssh://git@github.com/odoo/odoo.git#git_branch_name."
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_branch_form_view
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_view_form
+msgid ""
+"limit_memory_soft = 4294967296\n"
+"\t\t\t\t\t\t\t\tlimit_memory_hard = 5368709120"
+msgstr ""
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_view_form
+msgid "ssh://git@github.com/odoo/odoo.git"
+msgstr ""
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.wizard_git_url_add_form_view
+msgid "ssh://git@github.com/odoo/odoo.git#12.0"
+msgstr ""

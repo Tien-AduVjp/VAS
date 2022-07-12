@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="survey_question_bank_category_view_tree" model="ir.ui.view">
+        <field name="name">survey.question.bank.category.tree</field>
+        <field name="model">survey.question.bank.category</field>
+        <field name="arch" type="xml">
+            <tree string="Survey Question Bank Categories">
+                <field name="display_name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="survey_question_bank_category_view_form" model="ir.ui.view">
+        <field name="name">survey.question.bank.category.form</field>
+        <field name="model">survey.question.bank.category</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" name="open_questions_bank"
+                            icon="fa-th-list" type="object">
+                            <div class="o_field_widget o_stat_info">
+                                <span class="o_stat_value"><field name="question_count"/></span>
+                                <span class="o_stat_text"> Questions</span>
+                            </div>
+                        </button>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <field name="parent_id" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="survey_question_bank_category_action" model="ir.actions.act_window">
+        <field name="name">Question Bank Categories</field>
+        <field name="res_model">survey.question.bank.category</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="survey_question_bank_category_menu" parent="survey.survey_menu_questions" sequence="30"
+        action="survey_question_bank_category_action" groups="viin_survey_exam.survey_exam_group_manager" />
+
+</odoo>

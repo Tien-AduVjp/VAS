@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="view_hr_employee_overtime_search" model="ir.ui.view">
+		<field name="name">hr.employee.overtime.search</field>
+		<field name="model">hr.employee.overtime</field>
+		<field name="inherit_id"
+			ref="viin_hr_overtime.view_hr_employee_overtime_search" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='company_id']" position="after">
+				<separator />
+				<filter name="ftr_incl_payslip" string="Included in Payslips"
+					domain="[('payslip_ref','!=',False)]" />
+				<filter name="ftr_incl_payslip"
+					string="Not Included in Payslips"
+					domain="[('payslip_ref','=',False)]" />
+			</xpath>
+		</field>
+	</record>
+</odoo>

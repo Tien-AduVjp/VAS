@@ -1,0 +1,335 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_l10n_vn_payment_print
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-16 07:41+0000\n"
+"PO-Revision-Date: 2021-11-16 07:41+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_l10n_vn_payment_print
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_payment_print.report_account_move_document
+msgid "(In Words):"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_payment_print.report_account_move_document
+msgid ""
+"<br/>\n"
+"\t\t\t\t\t\t\t(Sign, Full Name)"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_payment_print.report_account_move_document
+msgid ""
+"<br/>\n"
+"\t\t\t\t\t\t\tAddress:"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_payment_print.report_account_move_document
+msgid ""
+"<br/>\n"
+"\t\t\t\t\t\t\tCredit:"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_payment_print.report_account_move_document
+msgid ""
+"<br/>\n"
+"\t\t\t\t\t\t\tDebit:"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_payment_print.report_account_move_document
+msgid ""
+"<br/>\n"
+"\t\t\t\t\t\t\tTotal Amount:"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_payment_print.report_account_move_document
+msgid ""
+"<strong>Cashier</strong>\n"
+"\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t(Sign, Full Name)"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_payment_print.report_account_move_document
+msgid ""
+"<strong>Chief Accountant</strong>\n"
+"\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t(Sign, Full Name)"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_payment_print.report_account_move_document
+msgid ""
+"<strong>Director/CEO</strong>\n"
+"\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t(Sign, Full Name, Stamp)"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_payment_print.report_account_move_document
+msgid ""
+"<strong>Prepared By</strong>\n"
+"\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t(Sign, Full Name)"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model:ir.model,name:viin_l10n_vn_payment_print.model_report_viin_l10n_vn_payment_print_report_account_move
+msgid "Account Move Report"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model:ir.model,name:viin_l10n_vn_payment_print.model_report_viin_l10n_vn_payment_print_report_account_payment
+msgid "Account Payment Report"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_payment_print.report_account_move_document
+msgid "Attached:"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_payment_print.report_account_move_document
+msgid "Attached: ... source document(s)."
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_payment_print.report_account_move_document
+msgid "CREDIT NOTE"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_payment_print.report_account_move_document
+msgid "Company:"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_payment_print.report_account_move_document
+msgid "DEBIT NOTE"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_payment_print.report_account_move_document
+msgid "Date:"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model:ir.model.fields,field_description:viin_l10n_vn_payment_print.field_account_move__display_name
+#: model:ir.model.fields,field_description:viin_l10n_vn_payment_print.field_account_payment__display_name
+#: model:ir.model.fields,field_description:viin_l10n_vn_payment_print.field_report_viin_l10n_vn_payment_print_report_account_move__display_name
+#: model:ir.model.fields,field_description:viin_l10n_vn_payment_print.field_report_viin_l10n_vn_payment_print_report_account_payment__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_payment_print.view_account_payment_form
+msgid "For Receipt Printing"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model:ir.model.fields,field_description:viin_l10n_vn_payment_print.field_account_move__id
+#: model:ir.model.fields,field_description:viin_l10n_vn_payment_print.field_account_payment__id
+#: model:ir.model.fields,field_description:viin_l10n_vn_payment_print.field_report_viin_l10n_vn_payment_print_report_account_move__id
+#: model:ir.model.fields,field_description:viin_l10n_vn_payment_print.field_report_viin_l10n_vn_payment_print_report_account_payment__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model:ir.model.fields.selection,name:viin_l10n_vn_payment_print.selection__account_move__in_out_payment__in
+msgid "In"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model:ir.model,name:viin_l10n_vn_payment_print.model_account_move
+msgid "Journal Entry"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model:ir.model.fields,field_description:viin_l10n_vn_payment_print.field_account_move____last_update
+#: model:ir.model.fields,field_description:viin_l10n_vn_payment_print.field_account_payment____last_update
+#: model:ir.model.fields,field_description:viin_l10n_vn_payment_print.field_report_viin_l10n_vn_payment_print_report_account_move____last_update
+#: model:ir.model.fields,field_description:viin_l10n_vn_payment_print.field_report_viin_l10n_vn_payment_print_report_account_payment____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_payment_print.report_account_move_document
+msgid ""
+"Log #:..............\n"
+"\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\tNumber:"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_payment_print.report_account_move_document
+msgid "Name of Payment Applicant:"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_payment_print.report_account_move_document
+msgid "Name of Payment Receiver:"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model:ir.model.fields,field_description:viin_l10n_vn_payment_print.field_account_payment__no_of_origin
+msgid "No. of Origin"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model:ir.model.fields,help:viin_l10n_vn_payment_print.field_account_payment__no_of_origin
+msgid ""
+"Number of the origin documents (e.g. Purchase Voucher number, Invoice "
+"Number, etc), to be displayed on the PDF printed version of this document."
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_payment_print.report_account_move_document
+msgid "On........Month.......Year........"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: code:addons/viin_l10n_vn_payment_print/reports/account_move_report.py:0
+#, python-format
+msgid "Only payments could be printed."
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model:ir.model.fields.selection,name:viin_l10n_vn_payment_print.selection__account_move__in_out_payment__out
+msgid "Out"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_payment_print.report_account_move_document
+msgid "PAYMENT RECEIPT"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_payment_print.report_account_move_document
+msgid "PAYMENT VOUCHER"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_payment_print.view_account_payment_form
+msgid "Payer"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_payment_print.report_account_move_document
+msgid "Payment Applicant"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model:ir.model.fields,field_description:viin_l10n_vn_payment_print.field_account_bank_statement_line__in_out_payment
+#: model:ir.model.fields,field_description:viin_l10n_vn_payment_print.field_account_move__in_out_payment
+#: model:ir.model.fields,field_description:viin_l10n_vn_payment_print.field_account_payment__in_out_payment
+msgid "Payment In/Out"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_payment_print.report_account_move_document
+msgid "Payment Reason:"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model:ir.actions.report,name:viin_l10n_vn_payment_print.act_report_account_move
+#: model:ir.actions.report,name:viin_l10n_vn_payment_print.act_report_account_payment
+msgid "Payment Receipt (Template 01-TT/02-TT)"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_payment_print.report_account_move_document
+msgid "Payment Receiver"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model:ir.model,name:viin_l10n_vn_payment_print.model_account_payment
+msgid "Payments"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_payment_print.report_account_move_document
+msgid "Receipt Reason:"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_payment_print.report_account_move_document
+msgid ""
+"Received Amount (in words):\n"
+"\t\t\t\t\t\t\t\t\t.......................................................................................................\n"
+"\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t+ Foreign Exchange Rate (or Gold Currency):\n"
+"\t\t\t\t\t\t\t\t\t...........................................................................\n"
+"\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t+ Conversion Amount:\n"
+"\t\t\t\t\t\t\t\t\t................................................................................................................."
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_payment_print.view_account_payment_form
+msgid "Recipient"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model:ir.model.fields,field_description:viin_l10n_vn_payment_print.field_account_payment__recipient_payer
+msgid "Recipient / Payer"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model:ir.model.fields,help:viin_l10n_vn_payment_print.field_account_payment__recipient_payer
+msgid ""
+"The name of the person who pay/receive the payment. If empty, the "
+"corresponding partner name will be used instead."
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: code:addons/viin_l10n_vn_payment_print/reports/account_move_report.py:0
+#, python-format
+msgid ""
+"There are a few Journal Entries not in state Posted. You can post it and try"
+" again."
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: code:addons/viin_l10n_vn_payment_print/reports/account_payment_report.py:0
+#, python-format
+msgid ""
+"There are a few Payments not in state Validated or Reconciled. You can post "
+"it and try again."
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model:ir.model.fields,help:viin_l10n_vn_payment_print.field_account_bank_statement_line__in_out_payment
+#: model:ir.model.fields,help:viin_l10n_vn_payment_print.field_account_move__in_out_payment
+#: model:ir.model.fields,help:viin_l10n_vn_payment_print.field_account_payment__in_out_payment
+msgid ""
+"This is technical field, use to specify this move is payment in or payment "
+"out."
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_payment_print.report_account_move_document
+msgid ""
+"[\n"
+"\t\t\t\t\t\t\t\t\t<span class=\"fa fa-warning\" style=\"color: red;\"/>\n"
+"\t\t\t\t\t\t\t\t\tYou have not specified currency unit (e.g. Dollars, Vietnam\n"
+"\t\t\t\t\t\t\t\t\t\t\tDong, etc) for the corresponding currency"
+msgstr ""
+
+#. module: viin_l10n_vn_payment_print
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_payment_print.report_account_move_document
+msgid "source document(s)."
+msgstr ""

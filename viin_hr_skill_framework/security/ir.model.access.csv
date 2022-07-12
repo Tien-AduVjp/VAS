@@ -1,0 +1,15 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_skill_description_employee,hr.skill.description.employee,model_hr_skill_description,base.group_user,1,0,0,0
+access_hr_skill_description_hr_officer,hr.skill.description.hr_officer,model_hr_skill_description,hr.group_hr_user,1,1,1,1
+access_hr_skill_description_skill_officer,hr.skill.description.skill_officer,model_hr_skill_description,viin_hr_skill_framework.group_skill_officer,1,1,1,1
+access_hr_rank_skill_description_employee,hr.rank.skill.description.employee,model_hr_rank_skill_description,base.group_user,1,0,0,0
+access_hr_rank_skill_description_hr_officer,hr.rank.skill.description.hr_officer,model_hr_rank_skill_description,hr.group_hr_user,1,1,1,1
+access_hr_rank_skill_description_skill_officer,hr.rank.skill.description.skill_officer,model_hr_rank_skill_description,viin_hr_skill_framework.group_skill_officer,1,1,1,1
+access_rank_line_skill_officer,hr.job.rank.line.skill_officer,model_hr_job_rank_line,viin_hr_skill_framework.group_skill_officer,1,1,1,1
+access_hr_employee_grade_skill_officer,hr.employee.grade.skill_officer,to_hr_employee_grade.model_hr_employee_grade,viin_hr_skill_framework.group_skill_officer,1,1,1,1
+access_rank_skill_officer,hr.rank.skill_officer,model_hr_rank,viin_hr_skill_framework.group_skill_officer,1,1,1,1
+access_role_skill_officer,hr.role.skill_officer,model_hr_role,viin_hr_skill_framework.group_skill_officer,1,1,1,1
+access_hr_skill_type_skill_officer,hr.skill.type.skill_officer,model_hr_skill_type,viin_hr_skill_framework.group_skill_officer,1,1,1,1
+access_hr_skill_level_skill_officer,hr.skill.level.skill_officer,hr_skills.model_hr_skill_level,viin_hr_skill_framework.group_skill_officer,1,1,1,1
+access_hr_skill_skill_officer,hr.skill.skill_officer,model_hr_skill,viin_hr_skill_framework.group_skill_officer,1,1,1,1
+access_hr_employee_skill_report_employee,hr.employee.skill.report.employee,model_hr_employee_skill_report,base.group_user,1,0,0,0

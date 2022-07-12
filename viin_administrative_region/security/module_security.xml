@@ -1,0 +1,7 @@
+<odoo>
+     <record model="res.groups" id="group_administrative_region_manager">
+         <field name="name">Administrative Region Creation</field>
+         <field name="category_id" ref="base.module_category_usability"/>
+         <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+     </record>
+</odoo>

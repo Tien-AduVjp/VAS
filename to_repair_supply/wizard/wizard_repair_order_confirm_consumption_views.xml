@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="wizard_repair_order_confirm_consumption_view_form" model="ir.ui.view">
+        <field name="name">wizard.repair.order.confirm.consumption.form</field>
+        <field name="model">wizard.repair.order.confirm.consumption</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                	<field name="repair_id" invisible="1" />
+                    <p>
+                        There are some parts, which not consumed.
+                    </p>
+                    <p class="text-muted">
+                        Create consumption if you expect to consume the remaining
+                        parts. Do not create consumption if you expect will not
+                        consume the remaining parts.
+                    </p>
+                </group>
+                <footer>
+                    <button name="process_with_consumption" string="Create Consumption" type="object" class="oe_highlight"/>
+                    <button name="process_without_consumption" string="No Consumption" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

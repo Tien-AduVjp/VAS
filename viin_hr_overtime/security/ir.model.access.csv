@@ -1,0 +1,12 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_overtime_plan_line_employee,hr.overtime.plan.line.employee,model_hr_overtime_plan_line,base.group_user,1,1,1,1
+access_hr_overtime_plan_employee,hr.overtime.plan.employee,model_hr_overtime_plan,base.group_user,1,1,1,1
+access_hr_overtime_rule_employee,hr.overtime.rule.employee,model_hr_overtime_rule,base.group_user,1,0,0,0
+access_hr_overtime_rule_ot_admin,hr.overtime.rule.hr_overtime_manager,model_hr_overtime_rule,viin_hr_overtime.group_overtime_admin,1,1,1,1
+access_hr_overtime_rule_code_employee,hr.overtime.rule.code.employee,model_hr_overtime_rule_code,base.group_user,1,0,0,0
+access_hr_overtime_rule_code_ot_admin,hr.overtime.rule.code.hr_overtime_manager,model_hr_overtime_rule_code,viin_hr_overtime.group_overtime_admin,1,1,1,1
+access_hr_overtime_reason_employee,hr.overtime.reason.employee,model_hr_overtime_reason,base.group_user,1,0,0,0
+access_hr_overtime_reason_ot_admin,hr.overtime.reason.hr_overtime_manager,model_hr_overtime_reason,viin_hr_overtime.group_overtime_admin,1,1,1,1
+access_hr_employee_overtime_employee,hr.employee.overtime.employee,model_hr_employee_overtime,base.group_user,1,0,0,0
+access_hr_overtime_request_mass_admin,hr.overtime.request.mass,model_hr_overtime_request_mass,viin_hr_overtime.group_overtime_team_approval,1,1,1,1
+access_hr_overtime_request_mass_line_admin,hr.overtime.request.mass_line,model_hr_overtime_request_mass_line,viin_hr_overtime.group_overtime_team_approval,1,1,1,1

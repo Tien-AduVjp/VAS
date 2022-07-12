@@ -1,0 +1,28 @@
+<odoo>
+	<record id="pos_order_view_form" model="ir.ui.view">
+		<field name="name">pos.order.form</field>
+		<field name="model">pos.order</field>
+		<field name="inherit_id" ref="point_of_sale.view_pos_pos_form" />
+		<field name="arch" type="xml">
+			<field name="user_id" position="after">
+				<field name="crm_team_id" />
+			</field>
+		</field>
+	</record>
+
+	<record id="view_pos_order_filter" model="ir.ui.view">
+		<field name="name">pos.order.list.select</field>
+		<field name="model">pos.order</field>
+		<field name="inherit_id"
+			ref="point_of_sale.view_pos_order_filter" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='partner_id']" position="before">
+				<field name="crm_team_id" />
+			</xpath>
+			<xpath expr="//group" position="inside">
+				<filter name="grp_sales_channel" string="Sales Channel"
+					domain="[]" context="{'group_by':'crm_team_id'}" />
+			</xpath>
+		</field>
+	</record>
+</odoo>

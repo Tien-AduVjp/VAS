@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+
+    <record id="document_workspace_general" model="document.workspace">
+        <field name="name">General</field>
+        <field name="read_group_ids" eval="[(4, ref('base.group_user'))]"/>
+        <field name="tag_ids" eval="[
+            (4, ref('document_tag_general_notification')),
+            (4, ref('document_tag_company_legal')),
+            (4, ref('document_tag_other')),
+            (4, ref('document_tag_to_review')),
+            (4, ref('document_tag_approve')),
+            (4, ref('document_tag_deprecate'))]"/>
+        <field name="write_team_ids" eval="[(4, ref('document_team_bod'))]"/>
+        <field name="action_ids" eval="[
+            (4, ref('document_action_ask_to_review')),
+            (4, ref('document_action_approve')),
+            (4, ref('document_action_send_to_legal')),
+            (4, ref('document_action_deprecated'))]"/>
+    </record>
+
+</odoo>

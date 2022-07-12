@@ -1,0 +1,17 @@
+<odoo>
+	<data>
+		<record id="group_warranty_user_read_purchase" model="res.groups">
+			<field name="name">Warranty User Purchase</field>
+			<field name="implied_ids" eval="[(4, ref('to_warranty_management.group_warranty_user'))]" />
+			<field name="comment">Users of this group will be granted with all access rights to Warranty Claims and Purchase Order</field>
+		</record>
+
+		<record id="to_warranty_management.group_warranty_manager" model="res.groups">
+			<field name="implied_ids" eval="[(4,ref('to_warranty_purchase.group_warranty_user_read_purchase'))]" />
+		</record>
+
+		<record id="purchase.group_purchase_user" model="res.groups">
+			<field name="implied_ids" eval="[(4,ref('to_warranty_purchase.group_warranty_user_read_purchase'))]" />
+		</record>
+	</data>
+</odoo>

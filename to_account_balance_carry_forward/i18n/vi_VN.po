@@ -1,0 +1,930 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_account_balance_carry_forward
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-28 07:27+0000\n"
+"PO-Revision-Date: 2021-10-28 07:27+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.actions.act_window,name:to_account_balance_carry_forward.action_account_balance_carry_forward_view
+#: model:ir.ui.menu,name:to_account_balance_carry_forward.account_balance_carry_forward_menu
+msgid "Account Balance Carry Forward"
+msgstr "Kết chuyển số dư tài khoản"
+
+#. module: to_account_balance_carry_forward
+#: model_terms:ir.ui.view,arch_db:to_account_balance_carry_forward.account_balance_carry_forward_form_view
+msgid "Account Balance Carry Forward Form"
+msgstr "Kết chuyển số dư tài khoản dạng Form"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model,name:to_account_balance_carry_forward.model_account_chart_template
+msgid "Account Chart Template"
+msgstr "Mẫu Hệ thống Tài khoản"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,help:to_account_balance_carry_forward.field_balance_carry_forward__date
+msgid "Accounting Date for this operation"
+msgstr "Ngày kế toán cho hoạt động này"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__message_needaction
+msgid "Action Needed"
+msgstr "Cần có Hành động"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_account_balance_carry_forward_wizard__active_move_line_ids
+msgid "Active Move Line"
+msgstr ""
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__activity_ids
+msgid "Activities"
+msgstr "Các hoạt động"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__activity_state
+msgid "Activity State"
+msgstr "Trạng thái Hoạt động"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: to_account_balance_carry_forward
+#: code:addons/to_account_balance_carry_forward/wizard/account_balance_carry_forward.py:0
+#, python-format
+msgid "All lines must be from the same company."
+msgstr "Tất cả các phát sinh phải thuộc cùng một công ty."
+
+#. module: to_account_balance_carry_forward
+#: model_terms:ir.ui.view,arch_db:to_account_balance_carry_forward.account_balance_carry_forward_wizard_form_view
+msgid "Amount"
+msgstr "Giá trị"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__message_attachment_count
+msgid "Attachment Count"
+msgstr "Số đính kèm"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields.selection,name:to_account_balance_carry_forward.selection__balance_carry_forward_rule__forward_type__auto
+msgid "Auto"
+msgstr "Tự động"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model,name:to_account_balance_carry_forward.model_balance_carry_forward
+#: model_terms:ir.ui.view,arch_db:to_account_balance_carry_forward.view_move_line_form
+msgid "Balance Carry Forward"
+msgstr "Kết chuyển số dư"
+
+#. module: to_account_balance_carry_forward
+#: code:addons/to_account_balance_carry_forward/models/res_company.py:0
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_res_company__balance_carry_forward_journal_id
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_res_config_settings__balance_carry_forward_journal_id
+#, python-format
+msgid "Balance Carry Forward Journal"
+msgstr "Sổ Nhật ký Kết chuyển Số dư"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model,name:to_account_balance_carry_forward.model_balance_carry_forward_rule
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_account_move_line__forward_rule_id
+msgid "Balance Carry Forward Rule"
+msgstr "Quy tắc kết chuyển số dư"
+
+#. module: to_account_balance_carry_forward
+#: model_terms:ir.ui.view,arch_db:to_account_balance_carry_forward.account_balance_carry_forward_tree_view
+msgid "Balance Carry Forward Tree"
+msgstr "Cây Kết chuyển Số dư"
+
+#. module: to_account_balance_carry_forward
+#: code:addons/to_account_balance_carry_forward/wizard/account_balance_carry_forward.py:0
+#, python-format
+msgid "Balance Carry Forward can only be used on journal items"
+msgstr "Kết chuyển số dư chỉ có thể được sử dụng ở các phát sinh kế toán"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_account_move_line__balance_carry_forward_id
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward_rule_line__forward_id
+msgid "Balance Forward Document"
+msgstr "Tài liệu kết chuyển số dư tài khoản"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_account_move_line__forward_line_id
+msgid "Balance Forward Line"
+msgstr "Chi tiết kết chuyển số dư"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model,name:to_account_balance_carry_forward.model_balance_carry_forward_rule_line
+msgid "Balance carry Forward Rule Line"
+msgstr "Chi tiết quy tắc kết chuyển số dư"
+
+#. module: to_account_balance_carry_forward
+#: model_terms:ir.ui.view,arch_db:to_account_balance_carry_forward.view_account_move_line_filter
+msgid "Balance forwarded"
+msgstr "Số dư đã kết chuyển"
+
+#. module: to_account_balance_carry_forward
+#: model_terms:ir.ui.view,arch_db:to_account_balance_carry_forward.view_account_move_line_filter
+msgid "Balance not forwarded"
+msgstr "Số dư chưa kết chuyển"
+
+#. module: to_account_balance_carry_forward
+#: code:addons/to_account_balance_carry_forward/models/account_move_line.py:0
+#, python-format
+msgid ""
+"Because either debit or credit has been modified, the following journal "
+"entries should be updated accordingly since they are balance carry forward "
+"entries for the current entry.<br />%s"
+msgstr ""
+
+#. module: to_account_balance_carry_forward
+#: model_terms:ir.ui.view,arch_db:to_account_balance_carry_forward.account_balance_carry_forward_wizard_form_view
+msgid "Cancel"
+msgstr "Huỷ"
+
+#. module: to_account_balance_carry_forward
+#: model_terms:ir.ui.view,arch_db:to_account_balance_carry_forward.account_balance_carry_forward_form_view
+msgid "Cancel Entry"
+msgstr "Hủy bút toán"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields.selection,name:to_account_balance_carry_forward.selection__balance_carry_forward__state__cancelled
+msgid "Cancelled"
+msgstr "Đã hủy"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.actions.act_window,name:to_account_balance_carry_forward.account_balance_carry_forward_wizard_action
+#: model:ir.actions.server,name:to_account_balance_carry_forward.action_balance_carry_forward_entry
+#: model:ir.model,name:to_account_balance_carry_forward.model_account_balance_carry_forward_wizard
+msgid "Carry Balance Forward"
+msgstr "Kết chuyển số dư"
+
+#. module: to_account_balance_carry_forward
+#: model_terms:ir.ui.view,arch_db:to_account_balance_carry_forward.account_balance_carry_forward_rule_form_view
+#: model_terms:ir.ui.view,arch_db:to_account_balance_carry_forward.account_balance_carry_forward_rule_tree_view
+msgid "Carry Forward Rule"
+msgstr "Quy tắc Kết chuyển"
+
+#. module: to_account_balance_carry_forward
+#: model_terms:ir.ui.view,arch_db:to_account_balance_carry_forward.account_balance_carry_forward_rule_line_form_view
+#: model_terms:ir.ui.view,arch_db:to_account_balance_carry_forward.account_balance_carry_forward_rule_line_tree_view
+msgid "Carry Forward Rule Line"
+msgstr "Dòng kết chuyển số dư"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.actions.act_window,name:to_account_balance_carry_forward.action_account_balance_carry_forward_rule_view
+#: model:ir.ui.menu,name:to_account_balance_carry_forward.account_balance_carry_forward_rule_menu
+msgid "Carry Forward Rules"
+msgstr "Các quy tắc kết chuyển"
+
+#. module: to_account_balance_carry_forward
+#: code:addons/to_account_balance_carry_forward/models/account_move_line.py:0
+#: code:addons/to_account_balance_carry_forward/models/account_move_line.py:0
+#, python-format
+msgid "Closing Account: %s"
+msgstr "Đóng tài khoản: %s"
+
+#. module: to_account_balance_carry_forward
+#: model_terms:ir.ui.view,arch_db:to_account_balance_carry_forward.view_account_move_line_filter
+msgid "Closing Items"
+msgstr "Phát sinh đóng / kết chuyển"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_account_move_line__forwarded_from_aml_ids
+msgid "Closing for"
+msgstr "Đóng cho"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model,name:to_account_balance_carry_forward.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_account_balance_carry_forward_wizard__company_id
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__company_id
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward_rule__company_id
+#: model_terms:ir.ui.view,arch_db:to_account_balance_carry_forward.account_balance_carry_forward_rule_search_view
+msgid "Company"
+msgstr "Công ty"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model,name:to_account_balance_carry_forward.model_res_config_settings
+msgid "Config Settings"
+msgstr "Thiết lập Cấu hình"
+
+#. module: to_account_balance_carry_forward
+#: model_terms:ir.ui.view,arch_db:to_account_balance_carry_forward.account_balance_carry_forward_form_view
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields.selection,name:to_account_balance_carry_forward.selection__balance_carry_forward__state__confirmed
+msgid "Confirmed"
+msgstr "Đã xác nhận"
+
+#. module: to_account_balance_carry_forward
+#: model_terms:ir.ui.view,arch_db:to_account_balance_carry_forward.account_balance_carry_forward_wizard_form_view
+msgid "Create Balance Carry Forward Entry"
+msgstr "Tạo bút toán kết chuyển số dư"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_account_balance_carry_forward_wizard__create_uid
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__create_uid
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward_rule__create_uid
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward_rule_line__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_account_balance_carry_forward_wizard__create_date
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__create_date
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward_rule__create_date
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward_rule_line__create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields.selection,name:to_account_balance_carry_forward.selection__balance_carry_forward_rule__forward_type__cr_db
+msgid "Credit -> Debit"
+msgstr "Có -> Nợ"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_account_balance_carry_forward_wizard__company_currency_id
+msgid "Currency"
+msgstr "Tiền tệ"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_account_balance_carry_forward_wizard__date
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__date
+msgid "Date"
+msgstr "Ngày"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields.selection,name:to_account_balance_carry_forward.selection__balance_carry_forward_rule__forward_type__db_cr
+msgid "Debit -> Credit"
+msgstr "Nợ -> Có"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_account_balance_carry_forward_wizard__dest_account_id
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward_rule__dest_account_id
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward_rule_line__dest_account_id
+#: model_terms:ir.ui.view,arch_db:to_account_balance_carry_forward.account_balance_carry_forward_rule_search_view
+msgid "Destination Account"
+msgstr "Tài khoản Đích"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_account_balance_carry_forward_wizard__display_name
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_account_chart_template__display_name
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_account_move__display_name
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__display_name
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward_rule__display_name
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward_rule_line__display_name
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_res_company__display_name
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields.selection,name:to_account_balance_carry_forward.selection__balance_carry_forward__state__draft
+msgid "Draft"
+msgstr "Dự thảo"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward_rule__name
+msgid "Entry Name"
+msgstr "Tên bút toán"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__message_follower_ids
+msgid "Followers"
+msgstr "Người dõi theo"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Người theo dõi (Các kênh)"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Người theo dõi (Các đối tác)"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,help:to_account_balance_carry_forward.field_balance_carry_forward__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_account_move_line__forward_aml_id
+msgid "Forward Journal Item"
+msgstr "Phát sinh kết chuyển"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward_rule__forward_type
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward_rule_line__forward_type
+msgid "Forward Method"
+msgstr "Phương thức kết chuyển"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__forward_rule_ids
+msgid "Forward Rules"
+msgstr "Quy tắc Kết chuyển"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__forward_rule_line_ids
+msgid "Forward Rules Lines"
+msgstr "Chi tiết Quy tắc Kết chuyển"
+
+#. module: to_account_balance_carry_forward
+#: code:addons/to_account_balance_carry_forward/models/account_move_line.py:0
+#, python-format
+msgid "Forward balance from %s to %s"
+msgstr "Kết chuyển số dư từ %s sang %s"
+
+#. module: to_account_balance_carry_forward
+#: code:addons/to_account_balance_carry_forward/wizard/account_balance_carry_forward.py:0
+#, python-format
+msgid "Generated Entries"
+msgstr ""
+
+#. module: to_account_balance_carry_forward
+#: model_terms:ir.ui.view,arch_db:to_account_balance_carry_forward.account_balance_carry_forward_rule_search_view
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_account_balance_carry_forward_wizard__id
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_account_chart_template__id
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_account_move__id
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_account_move_line__id
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__id
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward_rule__id
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward_rule_line__id
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_res_company__id
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_res_config_settings__id
+msgid "ID"
+msgstr ""
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__activity_exception_icon
+msgid "Icon"
+msgstr "Biểu tượng"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,help:to_account_balance_carry_forward.field_balance_carry_forward__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Biểu tượng để chỉ một hoạt động ngoại lệ."
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,help:to_account_balance_carry_forward.field_balance_carry_forward__message_needaction
+#: model:ir.model.fields,help:to_account_balance_carry_forward.field_balance_carry_forward__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Nếu đánh dấu kiểm, các thông điệp mới yêu cầu sự có mặt của bạn."
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,help:to_account_balance_carry_forward.field_balance_carry_forward__message_has_error
+#: model:ir.model.fields,help:to_account_balance_carry_forward.field_balance_carry_forward__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Nếu đánh dấu kiểm, sẽ hiển thị thông báo lỗi"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__message_is_follower
+msgid "Is Follower"
+msgstr "Là người theo dõi"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_account_balance_carry_forward_wizard__journal_id
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__journal_id
+msgid "Journal"
+msgstr "Sổ nhật ký"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__account_move_ids
+#: model_terms:ir.ui.view,arch_db:to_account_balance_carry_forward.account_balance_carry_forward_form_view
+msgid "Journal Entries"
+msgstr "Bút toán Sổ nhật ký"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__account_moves_count
+msgid "Journal Entries Count"
+msgstr "Số lượng Bút toán Sổ nhật ký"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model,name:to_account_balance_carry_forward.model_account_move
+msgid "Journal Entry"
+msgstr "Bút toán sổ nhật ký"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model,name:to_account_balance_carry_forward.model_account_move_line
+msgid "Journal Item"
+msgstr "Phát sinh Kế toán"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__aml_ids
+#: model_terms:ir.ui.view,arch_db:to_account_balance_carry_forward.account_balance_carry_forward_form_view
+msgid "Journal Items"
+msgstr "Phát sinh Kế toán"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__aml_count
+msgid "Journal Items Count"
+msgstr "Số lượng Phát sinh Kế toán"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_account_balance_carry_forward_wizard____last_update
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_account_chart_template____last_update
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_account_move____last_update
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_account_move_line____last_update
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward____last_update
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward_rule____last_update
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward_rule_line____last_update
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_res_company____last_update
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_res_config_settings____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_account_balance_carry_forward_wizard__write_uid
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__write_uid
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward_rule__write_uid
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward_rule_line__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_account_balance_carry_forward_wizard__write_date
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__write_date
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward_rule__write_date
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward_rule_line__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,help:to_account_balance_carry_forward.field_balance_carry_forward__company_id
+#: model:ir.model.fields,help:to_account_balance_carry_forward.field_balance_carry_forward_rule__company_id
+msgid ""
+"Leave this empty so that the rule is applicable to all the available "
+"companies."
+msgstr "Để trống trường này để quy tắc áp dụng cho tất cả các công ty."
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Đính kèm chính"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__message_has_error
+msgid "Message Delivery error"
+msgstr "Thông báo lỗi"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__message_ids
+msgid "Messages"
+msgstr "Thông điệp"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__name
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward_rule_line__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Hạn chót lần hành động kế tiếp"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__activity_summary
+msgid "Next Activity Summary"
+msgstr "Tóm tắt hoạt động tiếp theo"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__activity_type_id
+msgid "Next Activity Type"
+msgstr "Kiểu hành động kế tiếp"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Số lượng Hành động"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__message_has_error_counter
+msgid "Number of errors"
+msgstr "Số lượng lỗi"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,help:to_account_balance_carry_forward.field_balance_carry_forward__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Số thông điệp cần có hành động"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,help:to_account_balance_carry_forward.field_balance_carry_forward__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Số thông điệp gửi đi bị lỗi"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,help:to_account_balance_carry_forward.field_balance_carry_forward__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Số thông điệp chưa đọc"
+
+#. module: to_account_balance_carry_forward
+#: model_terms:ir.ui.view,arch_db:to_account_balance_carry_forward.account_balance_carry_forward_form_view
+msgid "Post"
+msgstr "Vào sổ"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields.selection,name:to_account_balance_carry_forward.selection__balance_carry_forward__state__posted
+msgid "Posted"
+msgstr "Đã vào sổ"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward_rule__preceding_rule_ids
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward_rule_line__preceding_rule_line_ids
+msgid "Preceding Rules"
+msgstr "Quy tắc thực hiện trước"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward_rule__profit_loss
+msgid "Profit/Loss"
+msgstr "Lãi/lỗ"
+
+#. module: to_account_balance_carry_forward
+#: code:addons/to_account_balance_carry_forward/models/account_move_line.py:0
+#, python-format
+msgid ""
+"Programming error in the method `_prepare_balance_carry_forward_move_data`."
+msgstr ""
+
+#. module: to_account_balance_carry_forward
+#: model_terms:ir.ui.view,arch_db:to_account_balance_carry_forward.account_balance_carry_forward_wizard_form_view
+msgid "Recognize on"
+msgstr "Xác lập vào"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__activity_user_id
+msgid "Responsible User"
+msgstr "Người chịu trách nhiệm"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward_rule_line__rule_id
+msgid "Rule"
+msgstr "Quy tắc"
+
+#. module: to_account_balance_carry_forward
+#: model_terms:ir.ui.view,arch_db:to_account_balance_carry_forward.account_balance_carry_forward_form_view
+msgid "Rules"
+msgstr "Quy tắc"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Lỗi gửi SMS"
+
+#. module: to_account_balance_carry_forward
+#: model_terms:ir.ui.view,arch_db:to_account_balance_carry_forward.account_balance_carry_forward_rule_search_view
+msgid "Search Carry Forward Rule"
+msgstr "Tìm kiếm quy tắc kết chuyển"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward_rule__sequence
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward_rule_line__sequence
+msgid "Sequence"
+msgstr "Trình tự"
+
+#. module: to_account_balance_carry_forward
+#: model_terms:ir.ui.view,arch_db:to_account_balance_carry_forward.account_balance_carry_forward_form_view
+msgid "Set to Draft"
+msgstr "Đặt về dự thảo"
+
+#. module: to_account_balance_carry_forward
+#: model_terms:ir.ui.view,arch_db:to_account_balance_carry_forward.view_account_move_line_filter
+msgid "Show journal items that are holding balance carried forward)"
+msgstr "Hiển thị các phát sinh kế toán chứa kết chuyển số dư"
+
+#. module: to_account_balance_carry_forward
+#: model_terms:ir.ui.view,arch_db:to_account_balance_carry_forward.view_account_move_line_filter
+msgid "Show journal items the balance of which is NOT yet forwarded"
+msgstr "Hiển thị các phát sinh kế toán mà có số dư CHƯA kết chuyển"
+
+#. module: to_account_balance_carry_forward
+#: model_terms:ir.ui.view,arch_db:to_account_balance_carry_forward.view_account_move_line_filter
+msgid "Show journal items the balance of which is already forwarded"
+msgstr "Hiển thị các phát sinh kế toán mà có số dư đã kết chuyển"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward_rule_line__source_account_id
+msgid "Source Account"
+msgstr "Tài khoản nguồn"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward_rule_line__balance
+msgid "Source Account Balance"
+msgstr "Số dư tài khoản nguồn"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward_rule__source_account_type_categ_id
+msgid "Source Account Type"
+msgstr "Kiểu tài khoản nguồn"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward_rule__source_account_ids
+msgid "Source Accounts"
+msgstr "Tài khoản nguồn"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward_rule_line__source_aml_ids
+msgid "Source Journal Items"
+msgstr "Phát sinh nguồn"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__state
+msgid "Status"
+msgstr "Tình trạng"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,help:to_account_balance_carry_forward.field_balance_carry_forward__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Trạng thái dựa trên hoạt động\n"
+"Quá hạn: Ngày đến hạn đã trôi qua\n"
+"Hôm nay: Hôm nay là ngày phải thực hiện\n"
+"Đã hoạch định: Các hoạt động trong tương lai."
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward_rule__succeeding_rule_id
+msgid "Succeeding Rule"
+msgstr "Quy tắc Tiếp sau"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward_rule_line__succeeding_rule_line_ids
+msgid "Succeeding Rules"
+msgstr "Quy tắc kế tiếp"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,help:to_account_balance_carry_forward.field_account_move_line__forward_rule_id
+msgid "The Balance Carry Forward Rule that created this journal item"
+msgstr "Quy tắc kết chuyển số dư đã tạo ra phát sinh kế toán này"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,help:to_account_balance_carry_forward.field_balance_carry_forward_rule__forward_type
+#: model:ir.model.fields,help:to_account_balance_carry_forward.field_balance_carry_forward_rule_line__forward_type
+msgid ""
+"The balance of an account is computed by debit sum - credit sum (of all the journal items) of an account.\n"
+"Auto: If the balance of the Source Account is greater than zero, a new journal item will be created to DEBIT the balance into the Destimation Account and CREDIT the same amount into the Source Account. If the balance is less than zero, the entry will be reversed.\n"
+"Credit -> Debit: CREDIT the Destimation Account and DEBIT the Source Account with the Credit Balance of the source account. If the source account has Debit Balance instead, an exception will be raised.\n"
+"Debit -> Credit: The reverse way of the method 'Credit -> Debit'.\n"
+"In general, 'Auto' is the most suitable method for account that may have positive balance a time and negative one another time. 'Credit -> Debit' is the method to ensure that the SOURCE account must have NEGATIVE balance to be able to get carried forward. 'Debit -> Credit' is the method to ensure that the SOURCE account must have POSITIVE balance to be able to get carried forward.\n"
+"If you are not sure about these, please choose 'Auto'."
+msgstr ""
+" Số dư của một tài khoản được tính bằng tổng nợ - tổng có (của tất cả phát sinh kế toán) của một tài khoản.\n"
+"Tự động: Nếu số dư của tài khoản nguồn lớn hơn không, một phát sinh kế toán sẽ được tạo tới số dư bên nợ của tài khoản đích và bên có một số tương tự trong tài khoản nguồn. Nếu số dư tài khoản nhỏ hơn không, bút toán sẽ đảo ngược.\n"
+"Có -> Nợ: Ghi có tài khoản đích và nợ tài khoản nguồn với số dư có tài khoản nguồn. Nếu tài khoản nguồn có số dư nợ thay vào đó, một ngoại lệ sẽ được bắn ra.\n"
+"Nợ -> Có: Các ngược lại với phương thức 'Có -> Nợ'.\n"
+"Nói chung, 'Tự động' là phương pháp thích hợp nhất cho tài khoản có thể có số dư âm hoặc dương. 'Có -> Nợ' là phương pháp đảm bảo rằng đó là tài khoản nguồn phải số dư âm để có thể kết chuyển. 'Nợ -> Có'  là phương phát đảm bảo rằng đó là tài khoản nguồn phải có số dư dương để có thể kết chuyển.\n"
+"Nếu bạn không chắc chắn về những điều này, vui lòng chọn 'Tự động'."
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,help:to_account_balance_carry_forward.field_balance_carry_forward_rule_line__balance
+msgid ""
+"The balance summary of the accounts of the source journal items which is "
+"computed as debit sum - credit sum"
+msgstr ""
+
+#. module: to_account_balance_carry_forward
+#: model_terms:ir.ui.view,arch_db:to_account_balance_carry_forward.res_config_settings_view_form
+msgid "The default journal for balance carry forward entries encoding"
+msgstr "Sổ nhật ký mặc định cho các bút toán kết chuyển số dư"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,help:to_account_balance_carry_forward.field_balance_carry_forward_rule__dest_account_id
+msgid ""
+"The destination account to which the balance of the Source Account will be "
+"carried forward."
+msgstr "Tài khoản đích mà số tư tài khoản nguồn sẽ kết chuyển tới."
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,help:to_account_balance_carry_forward.field_balance_carry_forward_rule_line__dest_account_id
+msgid ""
+"The destination account to which the balance of the source account is "
+"brought"
+msgstr "Tài khoản đích mà số tư tài khoản nguồn được mang đến"
+
+#. module: to_account_balance_carry_forward
+#: code:addons/to_account_balance_carry_forward/models/balance_carry_forward_rule_line.py:0
+#, python-format
+msgid "The entry was generated from the %s"
+msgstr "Bút toán đã được sinh ra từ %s"
+
+#. module: to_account_balance_carry_forward
+#: code:addons/to_account_balance_carry_forward/models/balance_carry_forward.py:0
+#, python-format
+msgid "The following Journal Entries has been posted: %s"
+msgstr "Các bút toán sổ nhật ký sau đây đã được vào sổ: %s"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,help:to_account_balance_carry_forward.field_res_company__balance_carry_forward_journal_id
+#: model:ir.model.fields,help:to_account_balance_carry_forward.field_res_config_settings__balance_carry_forward_journal_id
+msgid "The journal that stores account balance carry forward journal entries"
+msgstr "Sổ nhật ký mà lưu trữ các bút toán kết chuyển số dư"
+
+#. module: to_account_balance_carry_forward
+#: code:addons/to_account_balance_carry_forward/models/balance_carry_forward.py:0
+#, python-format
+msgid "The related journal entries have been cancelled and deleted"
+msgstr "Các bút toán sổ nhật ký liên quan đã hủy và xóa"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,help:to_account_balance_carry_forward.field_balance_carry_forward_rule__succeeding_rule_id
+msgid "The rule that requires result from this rule"
+msgstr "Quy tắc yêu cầu kết quả từ quy tắc này"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,help:to_account_balance_carry_forward.field_balance_carry_forward_rule__preceding_rule_ids
+#: model:ir.model.fields,help:to_account_balance_carry_forward.field_balance_carry_forward_rule_line__preceding_rule_line_ids
+msgid "The rules required to be excecuted and done before executing this rule"
+msgstr ""
+"Các quy tắc yêu cầu phải thực hiện và hoàn thành trước khi thực hiện quy tắc"
+" này"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,help:to_account_balance_carry_forward.field_balance_carry_forward_rule__source_account_ids
+#: model:ir.model.fields,help:to_account_balance_carry_forward.field_balance_carry_forward_rule_line__source_account_id
+msgid "The source account from which the balance will be carried forward."
+msgstr "Tài khoản nguồn mà từ đố số dư sẽ được kết chuyển."
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,help:to_account_balance_carry_forward.field_balance_carry_forward_rule__source_account_type_categ_id
+msgid ""
+"The source account type of which the accounts' balance will be carried "
+"forward to the Destination Account."
+msgstr ""
+"Kiểu tài khoản nguồn mà từ đố số dư các tài khoản tương ứng sẽ được kết "
+"chuyển sang Tài khoản đích."
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,help:to_account_balance_carry_forward.field_account_move_line__forwarded_from_aml_ids
+msgid ""
+"The technical field that stores all the journal items whose balance is "
+"carried forward this journal item"
+msgstr ""
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,help:to_account_balance_carry_forward.field_account_move_line__forward_aml_id
+msgid ""
+"The technical field that stores the journal item which holds the balance "
+"carried from this journal item"
+msgstr ""
+
+#. module: to_account_balance_carry_forward
+#: code:addons/to_account_balance_carry_forward/models/balance_carry_forward.py:0
+#, python-format
+msgid ""
+"There is no balance for forwarding in the document '%s'. You may need to "
+"change the Date to a later one"
+msgstr ""
+"Không có số dư cho kết chuyển trong tài liệu '%s'. Bạn có thể cần thay đổi "
+"ngày tới một ngày sau đó"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_account_balance_carry_forward_wizard__total_amount
+msgid "Total Amount"
+msgstr ""
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,help:to_account_balance_carry_forward.field_balance_carry_forward__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Loại hoạt động ngoại lệ trên bản ghi."
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__message_unread
+msgid "Unread Messages"
+msgstr "Thông điệp chưa đọc"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Bộ đếm Thông điệp chưa đọc"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,field_description:to_account_balance_carry_forward.field_balance_carry_forward__website_message_ids
+msgid "Website Messages"
+msgstr "Thông điệp Website"
+
+#. module: to_account_balance_carry_forward
+#: model:ir.model.fields,help:to_account_balance_carry_forward.field_balance_carry_forward__website_message_ids
+msgid "Website communication history"
+msgstr "Lịch sử thông tin liên lạc website"
+
+#. module: to_account_balance_carry_forward
+#: code:addons/to_account_balance_carry_forward/models/balance_carry_forward_rule.py:0
+#, python-format
+msgid "You can not forward the balance to the same account %s"
+msgstr "Bạn không thể kết chuyển số số dư tới cùng một tài khoản %s"
+
+#. module: to_account_balance_carry_forward
+#: code:addons/to_account_balance_carry_forward/wizard/account_balance_carry_forward.py:0
+#, python-format
+msgid ""
+"You can only forward the balance for items the balance of which are not yet "
+"forwarded."
+msgstr ""
+"Bạn chỉ có thể kết chuyển số dư cho các phát sinh mà só dư của chúng vẫn "
+"chưa được kết chuyển"
+
+#. module: to_account_balance_carry_forward
+#: code:addons/to_account_balance_carry_forward/wizard/account_balance_carry_forward.py:0
+#, python-format
+msgid "You can only forward the balance for posted journal items."
+msgstr "Bạn chỉ có thể kết chuyển số dư của các bút toán đã vào sổ."
+
+#. module: to_account_balance_carry_forward
+#: code:addons/to_account_balance_carry_forward/models/balance_carry_forward.py:0
+#, python-format
+msgid "You cannot delete an entry which is not in the draft state."
+msgstr "Bạn không thể xóa một bút toán khi nó không ở trạng thái dự thảo."
+
+#. module: to_account_balance_carry_forward
+#: code:addons/to_account_balance_carry_forward/models/balance_carry_forward_rule.py:0
+#, python-format
+msgid "You cannot forward balance for accounts in different companies"
+msgstr ""
+"Bạn không thể kết chuyển số dư cho các tài khoản trong các công ty khác nhau"
+
+#. module: to_account_balance_carry_forward
+#: code:addons/to_account_balance_carry_forward/wizard/account_balance_carry_forward.py:0
+#, python-format
+msgid ""
+"You cannot forward balance to the same account. Please select another "
+"destination account or deselect journal items of the account %s"
+msgstr ""
+
+#. module: to_account_balance_carry_forward
+#: code:addons/to_account_balance_carry_forward/models/account_move.py:0
+#, python-format
+msgid "You may need to set to draft the balances carry forward %s first."
+msgstr "Bạn cần phải đặt về dự thảo các kết chuyển số dư %s trước tiên."
+
+#. module: to_account_balance_carry_forward
+#: code:addons/to_account_balance_carry_forward/models/balance_carry_forward.py:0
+#, python-format
+msgid ""
+"You may not be able to confirm the closing document '%s' while its state is "
+"not Draft."
+msgstr ""
+"Bạn không thể xác nhận tài liệu đóng '%s' trong khi trạng thái của nó không "
+"phải dự thảo."
+
+#. module: to_account_balance_carry_forward
+#: code:addons/to_account_balance_carry_forward/models/balance_carry_forward.py:0
+#, python-format
+msgid ""
+"You may not be able to post the closing document '%s' while its state is not"
+" Confirmed."
+msgstr ""
+"Bạn không thể vào sổ tài liệu đóng '%s' trong khi trạng thái của nó không "
+"phải là đã xác nhận."
+
+#. module: to_account_balance_carry_forward
+#: code:addons/to_account_balance_carry_forward/models/account_move_line.py:0
+#, python-format
+msgid ""
+"You must specify a date which is later than or equal to %s, which is the "
+"date of the latest journal item %s."
+msgstr ""
+
+#. module: to_account_balance_carry_forward
+#: code:addons/to_account_balance_carry_forward/models/balance_carry_forward_rule.py:0
+#, python-format
+msgid ""
+"You've tried to create a new rule that overlaps an exiting rule '%s' on "
+"source accounts. The overlapped account is '%s'"
+msgstr ""
+"Bạn đã cố gắng tạo một quy tắc mới chồng lên quy tắc đã tồn tại '%s' trên "
+"các tài khoản nguồn. Tài khoản bị chồng lên là '%s'"

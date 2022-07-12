@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+	<record model="res.config.settings" id="to_stock_equipment_res_config_settings">
+		<field name="group_stock_production_lot" eval="1" />
+	</record>
+
+	<function model="res.config.settings" name="execute">
+		<value eval="[ref('to_stock_equipment_res_config_settings')]" />
+	</function>
+</odoo>

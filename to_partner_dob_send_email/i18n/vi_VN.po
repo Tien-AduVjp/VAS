@@ -1,0 +1,193 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_partner_dob_send_email
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-25 14:31+0000\n"
+"PO-Revision-Date: 2021-10-25 14:31+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_partner_dob_send_email
+#: model:mail.template,body_html:to_partner_dob_send_email.email_template_partner_happy_birthday
+msgid ""
+"<div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"    <table cellspacing=\"0\" cellpadding=\"0\" style=\"width:600px;background:inherit;color:inherit\">\n"
+"        <tbody><tr>\n"
+"            <td valign=\"center\" width=\"200\" style=\"padding:10px 10px 10px 5px;font-size: 12px\">\n"
+"                <img src=\"/logo.png\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${user.company_id.name}\"/>\n"
+"            </td>\n"
+"        </tr></tbody>\n"
+"    </table>\n"
+"</div>\n"
+"<div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"\t<h2 style=\"color:#800080\">Happy Happy Birthday!</h2>\n"
+"\t<div>\n"
+"\t\t<p>\n"
+"\t\tHave a million smiles today\n"
+"\t\t<br/>\n"
+"\t\tLet your heart be filled with love\n"
+"\t\t<br/>\n"
+"\t\tChase all your cares away\n"
+"\t\t<br/>\n"
+"\t\tHave a little fun\n"
+"\t\t</p>\n"
+"\t\t<p>Dance to your favorite music\n"
+"\t\t<br/>\n"
+"\t\tSing your favorite tune\n"
+"\t\t<br/>\n"
+"\t\tLaugh with all your heart,\n"
+"\t\t<br/>\n"
+"\t\tShare a silly joke or two\n"
+"\t\t</p>\n"
+"\t\t<p>Have a Happy Happy Birthday\n"
+"\t\t<br/>\n"
+"\t\tNo matter what you do!</p>\n"
+"\t</div>\n"
+"</div>\n"
+"<div style=\"padding:0px;width:600px;margin:auto; margin-top: 10px; background: #fff repeat top /100%;color:#777777\">\n"
+"    ${user.signature | safe}\n"
+"    <p style=\"font-size: 11px; margin-top: 10px;\">\n"
+"        <strong>Sent by ${user.company_id.name} using <a href=\"www.odoo.com\" style=\" color: #875A7B;\">Odoo</a></strong>\n"
+"    </p>\n"
+"</div>\n"
+"            "
+msgstr ""
+
+#. module: to_partner_dob_send_email
+#: model_terms:ir.ui.view,arch_db:to_partner_dob_send_email.res_config_settings_view_form
+msgid ""
+"<span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-"
+"specific.\" aria-label=\"Values set here are company-specific.\" "
+"groups=\"base.group_multi_company\" role=\"img\"/>"
+msgstr ""
+
+#. module: to_partner_dob_send_email
+#: model_terms:ir.ui.view,arch_db:to_partner_dob_send_email.res_config_settings_view_form
+msgid ""
+"Automatically Send Happy Birthday Email to your\n"
+"\t\t\t\t\t\t\t\t\tpartners"
+msgstr ""
+"Tự động gửi thư chúc mừng sinh nhật đến đối tác của bạn\n"
+
+#. module: to_partner_dob_send_email
+#: model:ir.model,name:to_partner_dob_send_email.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: to_partner_dob_send_email
+#: model:ir.model,name:to_partner_dob_send_email.model_res_config_settings
+msgid "Config Settings"
+msgstr "Thiết lập Cấu hình"
+
+#. module: to_partner_dob_send_email
+#: model_terms:ir.ui.view,arch_db:to_partner_dob_send_email.res_config_settings_view_form
+msgid ""
+"Configure company rules to automatically send Happy Birthday Email to your "
+"partners."
+msgstr ""
+"Cấu hình quy tắc công ty để tự động gửi Email Chúc mừng Sinh nhật đến các "
+"đối tác của bạn."
+
+#. module: to_partner_dob_send_email
+#: model:ir.model,name:to_partner_dob_send_email.model_res_partner
+msgid "Contact"
+msgstr "Danh bạ"
+
+#. module: to_partner_dob_send_email
+#: model_terms:ir.ui.view,arch_db:to_partner_dob_send_email.res_config_settings_view_form
+msgid "Default Email Templates"
+msgstr "Mẫu Email Mặc định"
+
+#. module: to_partner_dob_send_email
+#: model:ir.model.fields,field_description:to_partner_dob_send_email.field_res_company__display_name
+#: model:ir.model.fields,field_description:to_partner_dob_send_email.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:to_partner_dob_send_email.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_partner_dob_send_email
+#: model:ir.model.fields,field_description:to_partner_dob_send_email.field_res_company__hdb_email_template_id
+#: model:ir.model.fields,field_description:to_partner_dob_send_email.field_res_config_settings__hdb_email_template_id
+#: model:ir.model.fields,field_description:to_partner_dob_send_email.field_res_partner__property_hbd_email_template_id
+#: model:ir.model.fields,field_description:to_partner_dob_send_email.field_res_users__property_hbd_email_template_id
+#: model_terms:ir.ui.view,arch_db:to_partner_dob_send_email.res_config_settings_view_form
+msgid "Happy Birthday Email Template"
+msgstr "Mẫu Email Chúc mừng Sinh nhật"
+
+#. module: to_partner_dob_send_email
+#: model:mail.template,subject:to_partner_dob_send_email.email_template_partner_happy_birthday
+msgid "Happy Birthday to ${object.name or 'You'})"
+msgstr "Chúc mừng Sinh nhật đến ${object.name or 'bạn'})"
+
+#. module: to_partner_dob_send_email
+#: model:ir.model.fields,field_description:to_partner_dob_send_email.field_res_company__id
+#: model:ir.model.fields,field_description:to_partner_dob_send_email.field_res_config_settings__id
+#: model:ir.model.fields,field_description:to_partner_dob_send_email.field_res_partner__id
+msgid "ID"
+msgstr ""
+
+#. module: to_partner_dob_send_email
+#: model:ir.model.fields,field_description:to_partner_dob_send_email.field_res_partner__property_last_hbd_email_sent
+#: model:ir.model.fields,field_description:to_partner_dob_send_email.field_res_users__property_last_hbd_email_sent
+msgid "Last Happy Birthday Email Sent"
+msgstr "Ngày gần nhất gửi thư mừng sinh nhật"
+
+#. module: to_partner_dob_send_email
+#: model:ir.model.fields,field_description:to_partner_dob_send_email.field_res_company____last_update
+#: model:ir.model.fields,field_description:to_partner_dob_send_email.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:to_partner_dob_send_email.field_res_partner____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_partner_dob_send_email
+#: model:ir.model.fields,field_description:to_partner_dob_send_email.field_res_config_settings__send_hbd_email
+msgid "Send Happy Birthday Email"
+msgstr "Gửi thư chúc mừng sinh nhật"
+
+#. module: to_partner_dob_send_email
+#: model:ir.model.fields,field_description:to_partner_dob_send_email.field_res_company__send_hbd_email
+#: model:ir.model.fields,field_description:to_partner_dob_send_email.field_res_partner__property_send_hbd_email
+#: model:ir.model.fields,field_description:to_partner_dob_send_email.field_res_users__property_send_hbd_email
+#: model_terms:ir.ui.view,arch_db:to_partner_dob_send_email.res_config_settings_view_form
+msgid "Send Happy Birthday Email"
+msgstr "Gửi thư chúc mừng sinh nhật"
+
+#. module: to_partner_dob_send_email
+#: model:ir.actions.server,name:to_partner_dob_send_email.ir_cron_scheduler_sync_attendance_ir_actions_server
+#: model:ir.cron,cron_name:to_partner_dob_send_email.ir_cron_scheduler_sync_attendance
+#: model:ir.cron,name:to_partner_dob_send_email.ir_cron_scheduler_sync_attendance
+msgid "Send Happy Birthday Email to Partner"
+msgstr "Gửi thư chúc mừng sinh nhật đến đối tác"
+
+#. module: to_partner_dob_send_email
+#: model_terms:ir.ui.view,arch_db:to_partner_dob_send_email.res_config_settings_view_form
+msgid "Template"
+msgstr "Mẫu thư"
+
+#. module: to_partner_dob_send_email
+#: model:ir.model.fields,help:to_partner_dob_send_email.field_res_partner__property_last_hbd_email_sent
+#: model:ir.model.fields,help:to_partner_dob_send_email.field_res_users__property_last_hbd_email_sent
+msgid ""
+"The technical field to store the date on which the last Happy Birthday Email"
+" was sent to this partner"
+msgstr ""
+"Trường kỹ thuật để lưu trữ ngày mà Email chúc mừng sinh nhật cuối cùng được "
+"gửi cho đối tác này"
+
+#. module: to_partner_dob_send_email
+#: model_terms:ir.ui.view,arch_db:to_partner_dob_send_email.res_config_settings_view_form
+msgid ""
+"This template will use as a default template when\n"
+"\t\t\t\t\t\t\t\t\tyou sending a Happy Birthday Email message to the partner."
+msgstr ""
+
+"Mẫu này sẽ sử dụng làm mẫu mặc định khi\n"
+"\t\t\t\t\t\t\t\t\tbạn gửi Email Chúc mừng Sinh nhật đến đối tác."

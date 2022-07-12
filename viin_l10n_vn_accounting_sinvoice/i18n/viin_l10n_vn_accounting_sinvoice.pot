@@ -1,0 +1,537 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_l10n_vn_accounting_sinvoice
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-19 13:54+0000\n"
+"PO-Revision-Date: 2022-04-19 13:54+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"\n"
+"You will be able to find it in the tab S-Invoice of the invoice form view above."
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"\n"
+"You will be able to find the in the tab S-Invoice of the invoice form view above."
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid " Error: %s"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+" Here is the debugging information:\n"
+"%s %s"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+" You might have not configured allowed IPs in your S-Invoice portal to grant"
+" access from your Odoo instance's IP. Or there could be something wrong with"
+" your S-Invoice's username and/or password."
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"An invoice line has no name / description. If you were sending product "
+"description to SInvoice, you may either reconfigure your corresponding "
+"journal to use product name instead, or enter a description for this "
+"product."
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_accounting_sinvoice.view_move_form
+msgid "Cancel S-Invoice"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid "Could not cancel the E-invoice %s in S-Invoice system. Error: %s"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid "Could not cancel the S-Invoice %s %s."
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Could not download S-Invoice Converted file.\n"
+"Error Code: %s\n"
+"Error Description: %s"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Could not issue S-Invoice from the invoice %s due to the error code `%s`.\n"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid "Could not set the S-Invoice %s as Issued and not Paid."
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid "Could not set the S-Invoice %s as Paid."
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Could not set the corresponding S-Invoice as Issued and not Paid. Error Code: %s.\n"
+"Error Description: %s"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Could not set the corresponding S-Invoice as Paid. Error Code: %s.\n"
+"Error Description: %s"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_sinvoice.field_account_invoice_einvoice_cancel__display_name
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_sinvoice.field_account_move__display_name
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_sinvoice.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_sinvoice.field_einvoice_service__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model:ir.model,name:viin_l10n_vn_accounting_sinvoice.model_account_invoice_einvoice_cancel
+msgid "E-Invoice Cancellation Wizard"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model:ir.model,name:viin_l10n_vn_accounting_sinvoice.model_einvoice_service
+msgid "E-Invoice Services"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid "E-Invoice created on S-Invoice: Invoice No: %s"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_sinvoice.field_account_invoice_einvoice_cancel__id
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_sinvoice.field_account_move__id
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_sinvoice.field_account_move_line__id
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_sinvoice.field_einvoice_service__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model:ir.model.fields,help:viin_l10n_vn_accounting_sinvoice.field_einvoice_service__sinvoice_synch_payment_status
+msgid ""
+"If checked, having invoice paid in Odoo will also get the sinvoice paid. "
+"Having a paid invoice reopened in Odoo will also get the sinvoice reopened "
+"accordingly."
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model:ir.model.fields,help:viin_l10n_vn_accounting_sinvoice.field_einvoice_service__sinvoice_conversion_user_id
+msgid ""
+"If specified, during conversion, Odoo will use this user as the conversion "
+"user instead the one who actually converts the invoice."
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid "Invalid customer phone number %s"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"It seems that your product name/description was too long for SInvoice. You "
+"should shorten your product name/description to less than %s characters. "
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model:ir.model,name:viin_l10n_vn_accounting_sinvoice.model_account_move
+msgid "Journal Entry"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model:ir.model,name:viin_l10n_vn_accounting_sinvoice.model_account_move_line
+msgid "Journal Item"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_sinvoice.field_account_invoice_einvoice_cancel____last_update
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_sinvoice.field_account_move____last_update
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_sinvoice.field_account_move_line____last_update
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_sinvoice.field_einvoice_service____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_accounting_sinvoice.portal_invoice_page
+msgid "Legal E-Invoice"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_sinvoice.field_einvoice_service__sinvoice_max_len_bank_account
+msgid "Length limit bank account"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_sinvoice.field_einvoice_service__sinvoice_max_len_bank_name
+msgid "Length limit bank name"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/einvoice_service.py:0
+#, python-format
+msgid ""
+"Log in S-Invoice system unsuccessfully. You should check the account "
+"configuration in setting"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Max length bank name or bank account are greater than allowed values "
+"(settings/accounting/sinvoice)"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"No converted file avaiable yet. Please wait for a few minutes before trying "
+"again!"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"No representation files avaiable yet. Please wait for a few minutes before "
+"trying again!"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_accounting_sinvoice.portal_invoice_page
+msgid "Our Tax Identification Number:"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_sinvoice.field_einvoice_service__sinvoice_synch_payment_status
+msgid "Payment Status Synchronization"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_sinvoice.field_einvoice_service__provider
+msgid "Provider"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_accounting_sinvoice.einvoice_service_view_form
+msgid "S-Invoice Bank Settings"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_sinvoice.field_account_bank_statement_line__sinvoice_reservation_code
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_sinvoice.field_account_move__sinvoice_reservation_code
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_sinvoice.field_account_payment__sinvoice_reservation_code
+msgid "S-Invoice Secret Code"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_sinvoice.field_einvoice_service__sinvoice_conversion_user_id
+msgid "SInvoice Force Conversion User"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_accounting_sinvoice.portal_invoice_page
+msgid "Secret Code:"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_accounting_sinvoice.view_move_form
+msgid "Set S-Invoice as Paid"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_accounting_sinvoice.view_move_form
+msgid "Set S-Invoice as Unpaid"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model:ir.model.fields,help:viin_l10n_vn_accounting_sinvoice.field_einvoice_service__sinvoice_max_len_bank_account
+msgid "Set if you want to receive length warning of the bank account"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model:ir.model.fields,help:viin_l10n_vn_accounting_sinvoice.field_einvoice_service__sinvoice_max_len_bank_name
+msgid "Set if you want to receive length warning of the bank name"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Something went wrong when cancelling the E-Invoice %s. Here is the debugging information:\n"
+"%s"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Something went wrong when issuing E-Invoice. Here is the debugging information:\n"
+"%s %s"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid "Something went wrong when issuing the E-Invoice: %s"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/einvoice_service.py:0
+#, python-format
+msgid ""
+"Something went wrong when log in S-Invoice system. Here is the debugging information:\n"
+"%s"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Something went wrong when set the E-Invoice %s as Paid. Here is the debugging information:\n"
+"%s"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Something went wrong when set the E-Invoice %s as Unpaid. Here is the debugging information:\n"
+"%s"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Something went wrong when synchronizing status for the E-Invoice %s. Here is the debugging information:\n"
+"%s"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Something went wrong while downloading S-Invoice Exchange/Converted invoice. Here is debugging information:\n"
+"%s %s"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Something went wrong while downloading the Representation version of the S-Invoice. Here is the debugging information:\n"
+"%s"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Something went wrong while downloading the Representation version of the S-Invoice. Here is the debugging information:\n"
+"%s %s"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Successfully downloaded representation versions of the S-Invoice from the "
+"S-Invoice system."
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Successfully downloaded the converted version of the S-Invoice from the "
+"S-Invoice system."
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"The Invoice %s was not found for conversion. If the invoice has just been "
+"issued, you may need to wait for a few minutes for the S-Invoice system to "
+"get it available for your query."
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid "The S-Invoice %s has been set as Paid in S-Invoice system already."
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"The S-Invoice corresponding to the invoice %s could not be cancelled because"
+" it has not been issued or cancelled aready."
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"The S-Invoice seemed to be turned into the status Issued and not Paid previously. Error Code: %s.\n"
+"Error Description: %s"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"The corresponding S-Invoice %s has been set as Paid in S-Invoice system."
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"The corresponding S-Invoice %s has been set as Unpaid in S-Invoice system."
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"The filetype for S-Invoice representation file %s is not supported. It should be either:\n"
+"%s"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"The invoice date %s is invalid. Probably this date is earlier than the issue"
+" date of a previously issued invoice. You may fix this by modifying the "
+"invoice date to a later one."
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"The invoice date must not be in the future. If you find it as the current "
+"date, this could be a problem in your timezone settings. You may fix this by"
+" modifying the invoice date to a date that is less than or equal to %s, or "
+"fixing your timezone."
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid "The legal E-Invoice %s has been cancelled on S-Invoice."
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_accounting_sinvoice.portal_invoice_page
+msgid "The legal e-invoice numbered"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"The possibility could be either:\n"
+"1. The S-Invoice template is not relevant to the S-Invoice Serial\n"
+"2. You have run out of your registered range of invoice numbers. You may need to contact your Viettel S-Invoice agent for help."
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"The template is invalid. Please specify a right S-Invoice template for the "
+"journal %s or the company %s. You may need to register a template in "
+"S-Invoice system priorily."
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_accounting_sinvoice.portal_invoice_page
+msgid "URL:"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model:ir.model.fields.selection,name:viin_l10n_vn_accounting_sinvoice.selection__einvoice_service__provider__sinvoice
+msgid "Viettel S-Invoice"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Your S-Invoice account has been disabled or you don't have enough "
+"permission. Please contact your Viettel S-Invoice agent for help."
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_accounting_sinvoice.portal_invoice_page
+msgid ""
+"has been issued to you with S-Invoice. You can login S-Invoice system for "
+"the original invoice:"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_accounting_sinvoice.portal_invoice_page
+msgid "https://sinvoice.viettel.vn/tracuuhoadon"
+msgstr ""

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data noupdate="1">
+		<record id="einvoice_type_01GTKT" model="account.einvoice.type">
+			<field name="name">01GTKT</field>
+			<field name="description">Value Added Tax Invoice</field>
+		</record>
+		<record id="einvoice_type_02GTTT" model="account.einvoice.type">
+			<field name="name">02GTTT</field>
+			<field name="description">Sales Invoice</field>
+		</record>
+		<record id="einvoice_type_03XKNB" model="account.einvoice.type">
+			<field name="name">03XKNB</field>
+			<field name="description">Phiếu xuất kho kiêm vận chuyển hàng hóa nội bộ</field>
+		</record>
+		<record id="sinvoice_type_04HGDL" model="account.einvoice.type">
+			<field name="name">04HGDL</field>
+			<field name="description">Phiếu xuất kho gửi bán hàng đại lý</field>
+		</record>
+		<record id="einvoice_type_06HDXK" model="account.einvoice.type">
+			<field name="name">06HDXK</field>
+			<field name="description">Exporting Invoice</field>
+		</record>
+		<record id="einvoice_type_07KPTQ" model="account.einvoice.type">
+			<field name="name">07KPTQ</field>
+			<field name="description">Hóa đơn Bán Hàng (dành cho tổ chức cá nhân trong khu phí thuế quan)</field>
+		</record>
+	</data>
+</odoo>

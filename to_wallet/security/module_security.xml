@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    	<record id="group_wallet_manager" model="res.groups">
+	        <field name="name">eWallet Manager</field>
+	        <field name="category_id" ref="base.module_category_usability" />
+	        <field name="comment">The users in this group will be able to manage partner's ewallets.</field>
+    	</record>
+
+    	<record id="account.group_account_invoice" model="res.groups">
+	        <field name="implied_ids" eval="[(4, ref('group_wallet_manager'))]"/>
+	    </record>
+    </data>
+</odoo>

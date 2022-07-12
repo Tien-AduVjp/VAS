@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_email_blacklist_rule_everyone,email.blacklist.rule.everyone,model_email_blacklist_rule,,1,0,0,0
+access_block_reason_everyone,block.reason.everyone,model_block_reason,,1,0,0,0
+access_email_blacklist_rule_block_email_user,email.blacklist.rule.block_email_user,model_email_blacklist_rule,group_email_reg_blacklist,1,1,1,1
+access_block_reason_block_email_user,block.reason.block_email_user,model_block_reason,group_email_reg_blacklist,1,1,1,1

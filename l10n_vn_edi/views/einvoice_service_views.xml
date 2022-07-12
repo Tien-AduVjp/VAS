@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="einvoice_service_view_form" model="ir.ui.view">
+			<field name="name">einvoice.service.form</field>
+			<field name="model">einvoice.service</field>
+			<field name="arch" type="xml">
+				<form string="E-Invoice Services">
+					<sheet>
+						<field name="module_id" invisible="1"/>
+                        <field name="module_state" invisible="1"/>
+                        <field name="image_128" widget="image" class="oe_avatar"/>
+                        <widget name="web_ribbon" title="Test Mode" bg_color="bg-warning" attrs="{'invisible': [('mode', '!=', 'sandbox')]}"/>
+                        <div class="oe_title">
+                            <h1><field name="name" placeholder="Name"/></h1>
+                            <div attrs="{'invisible': ['|', ('module_state', '=', 'installed'), ('module_id', '=', False)]}">
+                                <button type="object" class="btn btn-primary" name="button_immediate_install" string="Install"/>
+                            </div>
+                        </div>
+                        <div attrs="{'invisible': ['|', ('module_state', '=', 'installed'), ('module_id', '=', False)]}">
+                            <div>
+                                <field name="description"/>
+                            </div>
+                        </div>
+						<group name="service_information">
+							<field name="provider" groups="base.group_no_one" attrs="{'invisible': [('module_id', '!=', False), ('module_state', '!=', 'installed')]}"/>
+                               <field name="mode" widget="radio" attrs="{'invisible': [('module_state', '=', 'uninstalled')]}"/>
+                               <field name="company_id" groups="base.group_multi_company" options='{"no_open":True}'/>
+							<field name="start_date"/>
+						</group>
+						<notebook attrs="{'invisible': ['&amp;', ('module_id', '!=', False), ('module_state', '!=', 'installed')]}">
+                            <page string="Configuration" name="configuration">
+                                <group name="service_config">
+                                	<group>
+                                		<field name="api_version"/>
+                                		<field name="api_url" attrs="{'invisible': [('mode', '!=', 'production')]}"/>
+                                		<field name="sandbox_api_url" attrs="{'invisible': [('mode', '!=', 'sandbox')]}"/>
+                                	</group>
+                                    <group name="api_production" attrs="{'invisible': [('mode', '!=', 'production')]}">
+										<field name="username"/>
+										<field name="password"/>
+									</group>
+									<group name="api_sandbox" attrs="{'invisible': [('mode', '!=', 'sandbox')]}">
+										<field name="sandbox_username"/>
+										<field name="sandbox_password"/>
+									</group>
+                                </group>
+                            </page>
+                        </notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids"/>
+						<field name="activity_ids"/>
+						<field name="message_ids"/>
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record id="einvoice_service_view_kanban" model="ir.ui.view">
+            <field name="name">einvoice.service.kanban</field>
+            <field name="model">einvoice.service</field>
+            <field name="arch" type="xml">
+                <kanban quick_create="false" create="true" class="o_kanban_einvoice_service o_kanban_dashboard">
+                    <field name="id"/>
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="provider"/>
+                    <field name="module_id"/>
+                    <field name="module_state"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <t t-set="installed" t-value="!record.module_id.value || (record.module_id.value &amp;&amp; record.module_state.raw_value === 'installed')"/>
+                            <div t-attf-class="oe_kanban_global_click">
+                                <div class="o_einvoice_service_desc">
+                                    <div class="o_kanban_image">
+                                        <img type="open" t-att-src="kanban_image('einvoice.service', 'image_128', record.id.raw_value)" alt="E-Invoice Service"/>
+                                    </div>
+                                    <div class="o_kaban_desc">
+	                                    <h3 class="mt4"><t t-esc="record.name.value"/></h3>
+	                                    <t t-if="record.description.raw_value" t-raw="record.description.raw_value"/>
+                                    </div>
+                                </div>
+                                <div class="o_einvoice_service_bottom">
+                                    <t t-if="installed">
+                                        <field name="mode" widget="label_selection" options="{'classes': {'production': 'success', 'sandbox': 'warning''}}"/>
+                                    </t>
+                                    <button t-if="!installed and !selection_mode" type="object" class="btn btn-secondary float-right" name="button_immediate_install">Install</button>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+		<record id="einvoice_service_view_tree" model="ir.ui.view">
+			<field name="name">einvoice.service.tree</field>
+			<field name="model">einvoice.service</field>
+			<field name="arch" type="xml">
+				<tree string="E-Invoice Services">
+					<field name="name"/>
+					<field name="provider"/>
+					<field name="start_date"/>
+					<field name="mode"/>
+					<field name="company_id" groups="base.group_multi_company"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="einvoice_service_view_search" model="ir.ui.view">
+            <field name="name">einvoice.service.search</field>
+            <field name="model">einvoice.service</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name" string="E-Invoice Service" filter_domain="['|', ('name','ilike',self), ('description','ilike',self)]"/>
+                    <field name="provider"/>
+                    <field name="mode"/>
+                    <filter name="einvoice_service_installed" string="Installed" domain="[('provider', '!=', 'none')]"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Provider" name="provider" domain="[]" context="{'group_by': 'provider'}"/>
+                        <filter string="Mode" name="mode" domain="[]" context="{'group_by': 'mode'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+		<record id="einvoice_service_action" model="ir.actions.act_window">
+			<field name="name">E-Invoice Services</field>
+			<field name="res_model">einvoice.service</field>
+			<field name='view_mode'>kanban,tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new e-invoice service
+                </p>
+            </field>
+		</record>
+
+		<menuitem action="einvoice_service_action"
+				  id="einvoice_service_menu" parent="menu_einvoice"
+				  groups="account.group_account_manager" sequence="10"/>
+	</data>
+</odoo>

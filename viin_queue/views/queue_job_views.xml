@@ -1,0 +1,102 @@
+<odoo>
+	<record id="queue_job_view_tree" model="ir.ui.view">
+		<field name="name">queue.job.view.tree</field>
+		<field name="model">queue.job</field>
+		<field name="arch" type="xml">
+			<tree decoration-danger="state == 'failed'" decoration-success="state == 'done'">
+				<field name="queue_id" />
+				<field name="model" />
+				<field name="method" />
+				<field name="state" />
+				<field name="create_date" />
+				<field name="last_execution" />
+			</tree>
+		</field>
+	</record>
+
+	<record id="queue_job_view_form" model="ir.ui.view">
+		<field name="name">queue.job.view.form</field>
+		<field name="model">queue.job</field>
+		<field name="arch" type="xml">
+			<form edit="0">
+				<header>
+					<field name="state" widget="statusbar" statusbar_visible="queued,done" />
+				</header>
+				<sheet>
+					<group>
+						<group>
+							<field name="queue_id" />
+							<field name="depend_keys" />
+						</group>
+						<group>
+							<field name="create_date" />
+							<field name="last_execution" />
+						</group>
+					</group>
+					<notebook>
+						<page string="Method" name="method">
+							<group>
+								<field name="model" />
+								<field name="record_ids" />
+								<field name="method" />
+								<field name="args" widget="ace" options="{'mode': 'python'}" />
+								<field name="kwargs" widget="ace" options="{'mode': 'python'}" />
+							</group>
+						</page>
+						<page string="Environment" name="env">
+							<group>
+								<field name="user_id" />
+								<field name="su" />
+								<field name="context" widget="ace" options="{'mode': 'python'}" />
+							</group>
+						</page>
+						<page string="Result" name="result">
+							<group>
+								<field name="error" />
+								<field name="exception" />
+							</group>
+						</page>
+					</notebook>
+				</sheet>
+				<div class="oe_chatter">
+					<field name="message_follower_ids"   />
+					<field name="message_ids"  />
+				</div>
+			</form>
+		</field>
+	</record>
+
+	<record id="queue_job_view_search" model="ir.ui.view">
+		<field name="name">queue.job.view.search</field>
+		<field name="model">queue.job</field>
+		<field name="arch" type="xml">
+			<search>
+				<field name="method" />
+				<field name="model" />
+				<separator />
+				<filter string="Queued" name="ftr_queued" domain="[('state', '=', 'queued')]" />
+				<filter string="Done" name="ftr_done" domain="[('state', '=', 'done')]" />
+				<filter string="Failed" name="ftr_failed" domain="[('state', '=', 'failed')]" />
+				<separator />
+				<filter string="Archived" name="inactive" domain="[('active', '=', False)]" />
+				<group expand="1" string="Group By">
+					<filter string="Queue" name="grp_queue" context="{'group_by': 'queue_id'}" />
+					<filter string="Model" name="grp_model" context="{'group_by': 'model'}" />
+					<filter string="Method" name="grp_method" context="{'group_by': 'method'}" />
+				</group>
+			</search>
+		</field>
+	</record>
+
+	<record id="queue_job_action" model="ir.actions.act_window">
+		<field name="name">Queue Jobs</field>
+		<field name="res_model">queue.job</field>
+		<field name="view_mode">tree,form</field>
+		<field name="context">{'search_default_ftr_queued': 1, 'search_default_ftr_failed': 1}</field>
+	</record>
+
+	<menuitem id="menu_queue_jobs"
+		name="Queue Jobs"
+		parent="menu_queue"
+		action="queue_job_action" />
+</odoo>

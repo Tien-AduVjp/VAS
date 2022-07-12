@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="pos_order_form_view">
+			<field name="name">pos.order.form</field>
+			<field name="model">pos.order</field>
+			<field name="inherit_id" ref="point_of_sale.view_pos_pos_form" />
+			<field name="arch" type="xml">
+				<field name="tax_ids" position="after">
+					<field name="return_reason_id" />
+				</field>
+			</field>
+		</record>
+	</data>
+</odoo>

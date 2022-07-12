@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+        <record id="group_fleet_vehicle_log_services_read" model="res.groups">
+            <field name="name">View Fleet Vehicle Service Log</field>
+            <field name="category_id" ref="base.module_category_usability" />
+        </record>
+	</data>
+</odoo>

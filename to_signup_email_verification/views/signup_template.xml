@@ -1,0 +1,14 @@
+<odoo>
+
+    <template id="signup_fields_inherit" inherit_id="auth_signup.fields">
+        <xpath expr="//div[hasclass('field-password')]"
+               position="attributes">
+            <attribute name="t-if">only_passwords</attribute>
+        </xpath>
+        <xpath expr="//div[hasclass('field-confirm_password')]"
+               position="attributes">
+            <attribute name="t-if">only_passwords</attribute>
+        </xpath>
+    </template>
+
+</odoo>

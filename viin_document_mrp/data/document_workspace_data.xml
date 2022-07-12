@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+
+    <record id="document_workspace_mrp" model="document.workspace">
+        <field name="name">Manufacturing</field>
+        <field name="tag_ids" eval="[
+            (4, ref('document_tag_mrp_manufacturing_order')),
+            (4, ref('document_tag_mrp_bom')),
+            (4, ref('document_tag_mrp_mo_confirm')),
+            (4, ref('document_tag_mrp_mo_progress')),
+            (4, ref('document_tag_mrp_mo_done')),
+            (4, ref('viin_document.document_tag_to_review')),
+            (4, ref('viin_document.document_tag_approve')),
+            (4, ref('viin_document.document_tag_deprecate'))]"/>
+        <field name="read_team_ids" eval="[(4, ref('document_team_mrp'))]"/>
+        <field name="write_group_ids" eval="[(4, ref('mrp.group_mrp_manager'))]"/>
+        <field name="read_group_ids" eval="[(4, ref('mrp.group_mrp_user'))]"/>
+        <field name="action_ids" eval="[
+            (4, ref('document_action_mo_confirm')),
+            (4, ref('document_action_mo_progress')),
+            (4, ref('document_action_mo_done'))]"/>
+    </record>
+
+</odoo>

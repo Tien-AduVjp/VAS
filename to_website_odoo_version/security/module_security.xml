@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="website.group_website_publisher" model="res.groups">
+			<field name="implied_ids"
+				eval="[(4,ref('to_odoo_version.group_manager'))]" />
+		</record>
+	</data>
+</odoo>

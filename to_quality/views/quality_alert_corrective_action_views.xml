@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="quality_alert_corrective_action_view_tree" model="ir.ui.view">
+		<field name="name">quality.alert.corrective.action.tree</field>
+		<field name="model">quality.alert.corrective.action</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="sequence" invisible="1" />
+				<field name="quality_action_id" />
+				<field name="user_id" />
+				<field name="deadline" />
+				<field name="quality_alert_id" />
+				<field name="type_id" />
+				<field name="quality_type" invisible="1"/>
+			</tree>
+		</field>
+	</record>
+
+	<record id="quality_alert_corrective_action_view_form" model="ir.ui.view">
+		<field name="name">quality.alert.corrective.action.form</field>
+		<field name="model">quality.alert.corrective.action</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group name="quality">
+						<group name="quality_action">
+							<field name="quality_action_id" />
+							<field name="user_id" />
+							<field name="type_id" />
+							<field name="quality_type" invisible="1" />
+						</group>
+						<group name="quality_alert">
+							<field name="quality_alert_id" />
+							<field name="deadline" />
+							<field name="action_done" />
+						</group>
+					</group>
+					<group name="other">
+						<group>
+							<field name="type" />
+							<field name="check_id" />
+						</group>
+						<group>
+						<field name="priority" />
+						</group>
+					</group>
+					<div>
+						<label for="description" />
+						<div>
+							<field name="description" />
+						</div>
+					</div>
+				</sheet>
+				<div class="oe_chatter">
+					<field name="message_follower_ids"/>
+					<field name="message_ids"/>
+				</div>
+			</form>
+		</field>
+	</record>
+
+	<record id="quality_alert_corrective_action_action" model="ir.actions.act_window">
+		<field name="name">Corrective Actions</field>
+		<field name="res_model">quality.alert.corrective.action</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+	<menuitem id="alert_corrective_action_menu" parent="quality_alerts_menu" action="quality_alert_corrective_action_action" sequence="60" />
+
+</odoo>

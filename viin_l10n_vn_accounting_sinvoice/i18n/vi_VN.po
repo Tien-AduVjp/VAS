@@ -1,0 +1,633 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_l10n_vn_accounting_sinvoice
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-19 13:54+0000\n"
+"PO-Revision-Date: 2022-04-19 13:54+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"\n"
+"You will be able to find it in the tab S-Invoice of the invoice form view above."
+msgstr ""
+"\n"
+"Bạn có thể tìm thấy nó ở tab S-Invoice trên giao diện form của hoá đơn."
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"\n"
+"You will be able to find the in the tab S-Invoice of the invoice form view above."
+msgstr ""
+"\n"
+"Bạn có thể tìm thấy chúng ở tab S-Invoice trên giao diện form của hoá đơn."
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid " Error: %s"
+msgstr " Lỗi: %s"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+" Here is the debugging information:\n"
+"%s %s"
+msgstr ""
+" Đây là thông tin gỡ lỗi:\n"
+"%s %s"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+" You might have not configured allowed IPs in your S-Invoice portal to grant"
+" access from your Odoo instance's IP. Or there could be something wrong with"
+" your S-Invoice's username and/or password."
+msgstr ""
+" Có thể bạn chưa cấu hình (hoặc cấu hình sai) các IP của hệ thống Odoo là IP"
+" được phép ở bên S-Invoice để cho phép Odoo có thể kết nối với S-Invoice. "
+"Hoặc có thể bạn thiết lập sai tên/mật khẩu cho S-Invoice ở Cấu hình Kế toán."
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"An invoice line has no name / description. If you were sending product "
+"description to SInvoice, you may either reconfigure your corresponding "
+"journal to use product name instead, or enter a description for this "
+"product."
+msgstr ""
+"Một dòng hóa đơn trên hóa đơn không có tên / mô tả. Có thể bạn đang gửi mô "
+"tả sản phẩm tới hệ thống S-invoice. Bạn có thể cấu hình lại sổ nhật ký tương"
+" ứng của bạn để sử dụng tên sản phẩm thay vì mô tả, hoặc thêm mô tả cho sản "
+"phẩm đó."
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_accounting_sinvoice.view_move_form
+msgid "Cancel S-Invoice"
+msgstr "Hủy hóa đơn điện tử"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid "Could not cancel the E-invoice %s in S-Invoice system. Error: %s"
+msgstr "Không thể huỷ hoá đơn điện tử SInvoice %s. Lỗi: %s"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid "Could not cancel the S-Invoice %s %s."
+msgstr "Không thể huỷ của hoá đơn điện tử %s %s."
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Could not download S-Invoice Converted file.\n"
+"Error Code: %s\n"
+"Error Description: %s"
+msgstr ""
+"Không thể tải bản chuyển đổi từ S-Invoice.\n"
+"Mã Lỗi: %s\n"
+"Mô tả: %s"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Could not issue S-Invoice from the invoice %s due to the error code `%s`.\n"
+msgstr ""
+"Không thể phát hành hoá đơn S-Invoice từ hoá đơn %s do lỗi có mã số `%s`.\n"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid "Could not set the S-Invoice %s as Issued and not Paid."
+msgstr ""
+"Không thể thiết lập hoá đơn S-Invoice %s sang trạng thái Đã phát hành và "
+"chưa thanh toán."
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid "Could not set the S-Invoice %s as Paid."
+msgstr ""
+"Không thể thiết lập hoá đơn S-Invoice %s sang trạng thái Đã thanh toán."
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Could not set the corresponding S-Invoice as Issued and not Paid. Error Code: %s.\n"
+"Error Description: %s"
+msgstr ""
+"Không thể thiết lập hoá đơn S-Invoice về trạng thái Đã phát hành và chưa thanh toán. Mã lỗi: %s.\n"
+"Mô tả lỗi: %s"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Could not set the corresponding S-Invoice as Paid. Error Code: %s.\n"
+"Error Description: %s"
+msgstr ""
+"Không thể thiết lập hoá đơn S-Invoice về trạng thái Đã thanh toán. Mã lỗi: %s.\n"
+"Mô tả lỗi: %s"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_sinvoice.field_account_invoice_einvoice_cancel__display_name
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_sinvoice.field_account_move__display_name
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_sinvoice.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_sinvoice.field_einvoice_service__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model:ir.model,name:viin_l10n_vn_accounting_sinvoice.model_account_invoice_einvoice_cancel
+msgid "E-Invoice Cancellation Wizard"
+msgstr "Hủy Hóa đơn điện tử"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model:ir.model,name:viin_l10n_vn_accounting_sinvoice.model_einvoice_service
+msgid "E-Invoice Services"
+msgstr "Dịch vụ hóa đơn điện tử"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid "E-Invoice created on S-Invoice: Invoice No: %s"
+msgstr "Hóa đơn điện tử đã được tạo trên hệ thống S-Invoice. Số hóa đơn: %s"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_sinvoice.field_account_invoice_einvoice_cancel__id
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_sinvoice.field_account_move__id
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_sinvoice.field_account_move_line__id
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_sinvoice.field_einvoice_service__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model:ir.model.fields,help:viin_l10n_vn_accounting_sinvoice.field_einvoice_service__sinvoice_synch_payment_status
+msgid ""
+"If checked, having invoice paid in Odoo will also get the sinvoice paid. "
+"Having a paid invoice reopened in Odoo will also get the sinvoice reopened "
+"accordingly."
+msgstr ""
+"Nếu đánh dấu, thanh toán hết hoá đơn ở Odoo sẽ đồng thời chuyển hoá đơn "
+"S-Invoice sang trạng thái đã thanh toán (đã phát hành). Khi mở lại (chuyển "
+"về trạng thái mở) hoá đơn đã thanh toán ở Odoo thì cũng đồng thời đặt lại "
+"hoá đơn S-Invoice về trạng thái chưa thanh toán."
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model:ir.model.fields,help:viin_l10n_vn_accounting_sinvoice.field_einvoice_service__sinvoice_conversion_user_id
+msgid ""
+"If specified, during conversion, Odoo will use this user as the conversion "
+"user instead the one who actually converts the invoice."
+msgstr ""
+"Nếu được thiết lập, trong quá trình chuyển đổi hoá đơn, Odoo sẽ sử dụng "
+"người dùng này là người chuyển đổi hoá đơn thay vì người thực tế thực hiện "
+"thao tác chuyển đổi."
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid "Invalid customer phone number %s"
+msgstr "Số điện thoại khách hàng %s không hợp lệ"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"It seems that your product name/description was too long for SInvoice. You "
+"should shorten your product name/description to less than %s characters. "
+msgstr ""
+"Có vẻ như tên/mô tả sản phẩm của bạn quá dài đối với SInvoice. Nếu bạn đang "
+"gửi mô tả sản phẩm tới SInvoice. Bạn nên rút ngắn tên/mô tả sản phẩm của bạn"
+" xuống dưới %s ký tự."
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model:ir.model,name:viin_l10n_vn_accounting_sinvoice.model_account_move
+msgid "Journal Entry"
+msgstr "Phiếu kế toán"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model:ir.model,name:viin_l10n_vn_accounting_sinvoice.model_account_move_line
+msgid "Journal Item"
+msgstr "Phát sinh Kế toán"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_sinvoice.field_account_invoice_einvoice_cancel____last_update
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_sinvoice.field_account_move____last_update
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_sinvoice.field_account_move_line____last_update
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_sinvoice.field_einvoice_service____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_accounting_sinvoice.portal_invoice_page
+msgid "Legal E-Invoice"
+msgstr "Hoá đơn Điện tử"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_sinvoice.field_einvoice_service__sinvoice_max_len_bank_account
+msgid "Length limit bank account"
+msgstr "Độ dài giới hạn của tài khoản ngân hàng"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_sinvoice.field_einvoice_service__sinvoice_max_len_bank_name
+msgid "Length limit bank name"
+msgstr "Độ dài giới hạn của tên ngân hàng"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/einvoice_service.py:0
+#, python-format
+msgid ""
+"Log in S-Invoice system unsuccessfully. You should check the account "
+"configuration in setting"
+msgstr ""
+"Đăng nhập hệ thống S-Invoice thất bại. Xin hãy kiểm tra tài khoản "
+"trong phần thiết lập"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Max length bank name or bank account are greater than allowed values "
+"(settings/accounting/sinvoice)"
+msgstr ""
+"Tên ngân hàng hoặc tài khoản ngân hàng có độ dài tối đa lớn hơn giá trị cho "
+"phép(settings/accounting/sinvoice)"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"No converted file avaiable yet. Please wait for a few minutes before trying "
+"again!"
+msgstr ""
+"Không có file chuyển đổi khả dụng. Vui lòng đợi trong giây lát trước khi thử lại!"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"No representation files avaiable yet. Please wait for a few minutes before "
+"trying again!"
+msgstr ""
+"Không có file thể hiện khả dụng. Vui lòng đợi trong giây lát trước khi thử lại!"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_accounting_sinvoice.portal_invoice_page
+msgid "Our Tax Identification Number:"
+msgstr "Mã số thuế của chúng tôi:"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_sinvoice.field_einvoice_service__sinvoice_synch_payment_status
+msgid "Payment Status Synchronization"
+msgstr "Đồng bộ tình trạng thanh toán"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_sinvoice.field_einvoice_service__provider
+msgid "Provider"
+msgstr "Nhà cung cấp"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_accounting_sinvoice.einvoice_service_view_form
+msgid "S-Invoice Bank Settings"
+msgstr "Cài đặt ngân hàng S-Invoice"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_sinvoice.field_account_bank_statement_line__sinvoice_reservation_code
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_sinvoice.field_account_move__sinvoice_reservation_code
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_sinvoice.field_account_payment__sinvoice_reservation_code
+msgid "S-Invoice Secret Code"
+msgstr "Mã Bí mật S-Invoice"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model:ir.model.fields,field_description:viin_l10n_vn_accounting_sinvoice.field_einvoice_service__sinvoice_conversion_user_id
+msgid "SInvoice Force Conversion User"
+msgstr "Người dùng Chuyển đổi Hoá đơn"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_accounting_sinvoice.portal_invoice_page
+msgid "Secret Code:"
+msgstr "Mã số bí mật:"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_accounting_sinvoice.view_move_form
+msgid "Set S-Invoice as Paid"
+msgstr "Đặt S-Invoice thành Đã thanh toán"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_accounting_sinvoice.view_move_form
+msgid "Set S-Invoice as Unpaid"
+msgstr "Đặt S-Invoice thành Chưa Thanh toán"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model:ir.model.fields,help:viin_l10n_vn_accounting_sinvoice.field_einvoice_service__sinvoice_max_len_bank_account
+msgid "Set if you want to receive length warning of the bank account"
+msgstr ""
+"Thiết lập nếu bạn muốn nhận được cảnh báo về độ dài của tài khoản ngân hàng"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model:ir.model.fields,help:viin_l10n_vn_accounting_sinvoice.field_einvoice_service__sinvoice_max_len_bank_name
+msgid "Set if you want to receive length warning of the bank name"
+msgstr "Thiết lập nếu bạn muốn nhận được cảnh báo về độ dài của tên ngân hàng"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Something went wrong when cancelling the E-Invoice %s. Here is the debugging information:\n"
+"%s"
+msgstr ""
+"Đã có lỗi xảy ra khi hủy hóa đơn điện tử %s. Đây là thông tin gỡ lỗi:\n"
+"%s"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Something went wrong when issuing E-Invoice. Here is the debugging information:\n"
+"%s %s"
+msgstr ""
+"Đã có lỗi xảy ra khi phát hành hóa đơn điện tử. Đây là thông tin gỡ lỗi:\n"
+"%s %s"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid "Something went wrong when issuing the E-Invoice: %s"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/einvoice_service.py:0
+#, python-format
+msgid ""
+"Something went wrong when log in S-Invoice system. Here is the debugging information:\n"
+"%s"
+msgstr ""
+"Đã có lỗi xảy ra đăng nhập hệ thống S-Invoice. Đây là thông tin gỡ lỗi:\n"
+"%s"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Something went wrong when set the E-Invoice %s as Paid. Here is the debugging information:\n"
+"%s"
+msgstr ""
+"Có lỗi gì đó khi thiết lập S-Invoice thành Đã thanh toán. Đây là thông tin gỡ lỗi:\n"
+"%s"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Something went wrong when set the E-Invoice %s as Unpaid. Here is the debugging information:\n"
+"%s"
+msgstr ""
+"Có lỗi gì đó khi thiết lập E-Invoice %s thành Chưa thanh toán. Đây là thông tin gỡ lỗi:\n"
+"%s"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Something went wrong when synchronizing status for the E-Invoice %s. Here is the debugging information:\n"
+"%s"
+msgstr ""
+"Đã có lỗi xảy ra khi đồng bộ trạng thái cho hóa đơn điện tử %s. Đây là thông tin gỡ lỗi:\n"
+"%s"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Something went wrong while downloading S-Invoice Exchange/Converted invoice. Here is debugging information:\n"
+"%s %s"
+msgstr ""
+"Đã có lỗi gì đó xảy ra trong quá trình tài về bản chuyển đổi hoá đơn. Đây là thông tin gỡ lỗi:\n"
+"%s %s"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Something went wrong while downloading the Representation version of the S-Invoice. Here is the debugging information:\n"
+"%s"
+msgstr ""
+"Xảy ra lỗi trong quá trình tải hóa đơn bản thể hiện. Đây là thông tin gỡ lỗi:\n"
+"%s"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Something went wrong while downloading the Representation version of the S-Invoice. Here is the debugging information:\n"
+"%s %s"
+msgstr ""
+"Xảy ra lỗi trong quá trình tải hóa đơn bản thể hiện. Đây là thông tin gỡ lỗi:\n"
+"%s %s"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Successfully downloaded representation versions of the S-Invoice from the "
+"S-Invoice system."
+msgstr ""
+"Bản thể hiện của hoá đơn điện tử S-Invoice đã được tải xuống thành công từ "
+"hệ thống S-Invoice."
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Successfully downloaded the converted version of the S-Invoice from the "
+"S-Invoice system."
+msgstr ""
+"Bản chuyển đổi của hoá đơn điện tử S-Invoice đã được tải xuống thành công từ"
+" hệ thống S-Invoice."
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"The Invoice %s was not found for conversion. If the invoice has just been "
+"issued, you may need to wait for a few minutes for the S-Invoice system to "
+"get it available for your query."
+msgstr ""
+"Không tìm thấy hoá đơn %s để chuyển đổi. Nếu hoá đơn vừa mới được phát hành,"
+" bạn có thể cần chờ ít phút để nó khả dụng ở trên hệ thống S-Invoice để bạn "
+"có thể lấy về sau đó."
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid "The S-Invoice %s has been set as Paid in S-Invoice system already."
+msgstr ""
+"Hoá đơn S-Invoice %s đã được thiết lập là Đã thanh toán ở hệ thống S-Invoice"
+" rồi."
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"The S-Invoice corresponding to the invoice %s could not be cancelled because"
+" it has not been issued or cancelled aready."
+msgstr ""
+"Hoá đơn điện tử ứng với hoá đơn %s không thể bị huỷ với vì nó vẫn chưa được "
+"phát hành hoặc đã huỷ rồi."
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"The S-Invoice seemed to be turned into the status Issued and not Paid previously. Error Code: %s.\n"
+"Error Description: %s"
+msgstr ""
+"Hoá đơn S-Invoice dường như đã được chuyển sang trạng thái Chưa thanh toán trước đó rồi. Mã lỗi: %s.\n"
+"Mô tả lỗi: %s"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"The corresponding S-Invoice %s has been set as Paid in S-Invoice system."
+msgstr ""
+"Hoá đơn S-Invoice %s đã được thiết lập sang trạng thái Đã thanh toán trên hệ"
+" thống S-Invoice."
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"The corresponding S-Invoice %s has been set as Unpaid in S-Invoice system."
+msgstr ""
+"Hoá đơn S-Invoice %s đã được thiết lập sang trạng thái Chưa thanh toán trên "
+"hệ thống S-Invoice."
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"The filetype for S-Invoice representation file %s is not supported. It should be either:\n"
+"%s"
+msgstr ""
+"Kiểu tập tin đối với bản thể hiện S-Invoice %s không được hỗ trợ. Định dạng phải là:\n"
+"%s"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"The invoice date %s is invalid. Probably this date is earlier than the issue"
+" date of a previously issued invoice. You may fix this by modifying the "
+"invoice date to a later one."
+msgstr ""
+"Ngày hoá đơn %s thì không hợp lệ. Có thể ngày này sớm hơn ngày phát hành của"
+" một hoá đơn mà bạn đã phát hành trước đó. Bạn có thể xử lý vấn đề này bằng "
+"cách sửa lại ngày hoá đơn thành một ngày muộn hơn."
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"The invoice date must not be in the future. If you find it as the current "
+"date, this could be a problem in your timezone settings. You may fix this by"
+" modifying the invoice date to a date that is less than or equal to %s, or "
+"fixing your timezone."
+msgstr ""
+"Ngày hoá đơn không thể là một ngày trong tương lai. Nếu bạn đã thấy nó là "
+"ngày hiện hành hoặc sớm hơn thì có thể có vấn đề về thiết lập múi giờ. Bạn "
+"có thể xử lý vấn đề này bằng cách sửa lại ngày hoá đơn thành một ngày nhỏ "
+"hơn hoặc bằng %s, hoặc điểu chỉnh lại múi giờ của bạn."
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid "The legal E-Invoice %s has been cancelled on S-Invoice."
+msgstr "Hoá đơn Điện tử %s đã được huỷ ở hệ thống S-Invoice."
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_accounting_sinvoice.portal_invoice_page
+msgid "The legal e-invoice numbered"
+msgstr "Hoá đơn điện tử số"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"The possibility could be either:\n"
+"1. The S-Invoice template is not relevant to the S-Invoice Serial\n"
+"2. You have run out of your registered range of invoice numbers. You may need to contact your Viettel S-Invoice agent for help."
+msgstr ""
+"Lý do có thể là:\n"
+"1. Mẫu hoá đơn S-Invoice thì không tương ứng với Ký hiệu hoá đơn S-Invoice\n"
+"2. Bạn đã hết dải số hoá đơn mà bạn đã đăng ký với S-Invoice. Bạn cần liên hệ với đại diện S-Invoice của bạn để được trợ giúp."
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"The template is invalid. Please specify a right S-Invoice template for the "
+"journal %s or the company %s. You may need to register a template in "
+"S-Invoice system priorily."
+msgstr ""
+"Mẫu hoá đơn không hợp lệ. Vui lòng chỉ định một mẫu hoá đơn S-Invoice phù "
+"hợp cho sổ nhật ký %s hoặc công ty %s. Bạn có thể cần phải đăng ký mẫu với "
+"S-Invoice trước đó."
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_accounting_sinvoice.portal_invoice_page
+msgid "URL:"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model:ir.model.fields.selection,name:viin_l10n_vn_accounting_sinvoice.selection__einvoice_service__provider__sinvoice
+msgid "Viettel S-Invoice"
+msgstr ""
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: code:addons/viin_l10n_vn_accounting_sinvoice/models/account_move.py:0
+#, python-format
+msgid ""
+"Your S-Invoice account has been disabled or you don't have enough "
+"permission. Please contact your Viettel S-Invoice agent for help."
+msgstr ""
+"Tài khoản S-Invoice của bạn đã bị vô hiệu hoặc bạn không có đủ quyền để thực"
+" hiện hành động này. Vui lòng liên hệ với đại diện của Viettel S-Invoice để "
+"được trợ giúp."
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_accounting_sinvoice.portal_invoice_page
+msgid ""
+"has been issued to you with S-Invoice. You can login S-Invoice system for "
+"the original invoice:"
+msgstr ""
+"đã được phát hành thông qua S-Invoice. Bạn có thể đăng nhập hệ thống "
+"S-Invoice để tra cứu hoá đơn gốc:"
+
+#. module: viin_l10n_vn_accounting_sinvoice
+#: model_terms:ir.ui.view,arch_db:viin_l10n_vn_accounting_sinvoice.portal_invoice_page
+msgid "https://sinvoice.viettel.vn/tracuuhoadon"
+msgstr ""

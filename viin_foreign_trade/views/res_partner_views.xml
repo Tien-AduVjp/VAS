@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+    	<!-- Inherit Partner -->
+
+		<record id="res_partner_inherit_form" model="ir.ui.view">
+			<field name="name">res.partner.inherit.form</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.view_partner_form" />
+			<field name="arch" type="xml">
+				<group name="container_row_2" position="after">
+					<group name="foreign_trade" string="Foreign Trade">
+						<group>
+							<field name="same_company_country" invisible="1"/>
+							<field name="property_foreign_trade_partner"/>
+						</group>
+					</group>
+				</group>
+			</field>
+		</record>
+
+    </data>
+</odoo>

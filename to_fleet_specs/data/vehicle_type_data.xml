@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="1">
+		<!-- Vehicle Type List -->
+		<record id="vehicle_type_truck" model="vehicle.type">
+			<field name="name">Truck</field>
+			<field name="type">truck</field>
+		</record>
+
+		<record id="vehicle_type_bus" model="vehicle.type">
+			<field name="name">Bus</field>
+			<field name="type">bus</field>
+		</record>
+
+		<record id="vehicle_type_car" model="vehicle.type">
+			<field name="name">Car</field>
+			<field name="type">car</field>
+		</record>
+	</data>
+</odoo>

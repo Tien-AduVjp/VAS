@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="product.product_product_27" model="product.product">
+            <field name="barcode">9873031254663</field> <!-- Laptop Customize -->
+        </record>
+        <record id="mrp.product_product_computer_desk_head" model="product.product">
+            <field name="barcode">7845854641328</field> <!-- Table Head -->
+            <field name="tracking">lot</field>
+        </record>
+        <record id="mrp.product_product_computer_desk" model="product.product">
+            <field name="barcode">8798465112398</field> <!-- Computer Desk -->
+        </record>
+        <record id="mrp.lot_product_27_0" model="stock.production.lot">
+            <field name="name">LOT-000003</field>
+            <field name="ref">LOT-000003</field>
+        </record>
+    </data>
+</odoo>

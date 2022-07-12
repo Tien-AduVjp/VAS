@@ -1,0 +1,18 @@
+<odoo>
+	<data>
+		<record id="view_helpdesk_ticket_search" model="ir.ui.view">
+			<field name="name">report.helpdesk.ticket.search</field>
+			<field name="model">report.helpdesk.ticket</field>
+			<field name="inherit_id" ref="viin_helpdesk.view_helpdesk_ticket_search"/>
+			<field name="arch" type="xml">
+				<xpath expr="//search/field[@name='priority_level']" position="before">
+					<field name="severity_level" />
+				</xpath>
+				<xpath expr="//group/field[@name='priority_level']" position="before">
+					<field name="severity_level" />
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>
+

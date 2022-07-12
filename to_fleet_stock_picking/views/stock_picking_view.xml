@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="stock_picking_inherit_form" model="ir.ui.view">
+			<field name="name">stock.picking.inherit.form</field>
+			<field name="model">stock.picking</field>
+			<field name="inherit_id" ref="stock.view_picking_form" />
+			<field name="arch" type="xml">
+				<field name="origin" position="after">
+					<field name="total_weight" />
+					<field name="total_volume" />
+					<field name="total_stowage_volume" />
+					<field name="ready_for_fleet_picking"
+						attrs="{'invisible':[('fleet_delivery_address_id', '=', False)]}" />
+				</field>
+                <xpath expr="//group[@name='other_infos']" position="after">
+                    <group string="Fleet" name="fleet" groups="base.group_no_one">
+                        <field name="fleet_picking_address_id" />
+                        <field name="fleet_delivery_address_id" />
+                        <field name="trip_id" />
+                        <field name="vehicle_id" />
+                        <field name="driver_id" />
+                        <field name="trip_waypoint_id" />
+                    </group>
+                </xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

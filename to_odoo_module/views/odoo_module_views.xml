@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="odoo_module_form_view">
+			<field name="name">odoo.module.form</field>
+			<field name="model">odoo.module</field>
+			<field name="arch" type="xml">
+				<form string="Odoo Module Form">
+					<header>
+					</header>
+					<sheet>
+						<div class="oe_button_box" name="button_box">
+							<button name="action_view_odoo_module_versions"
+								type="object" class="oe_stat_button" icon="fa-cubes"
+								context="{'default_module_id': active_id}"
+								help="Show the versions of this module">
+								<field name="odoo_module_versions_count" widget="statinfo"
+									string="Versions" />
+							</button>
+							<button name="action_view_download_stats" type="object"
+								groups="to_odoo_module.odoo_module_user" class="oe_stat_button"
+								icon="fa-bar-chart-o">
+								<field name="total_downloads_count"
+									groups="to_odoo_module.odoo_module_user" string="Downloads"
+									widget="statinfo" />
+							</button>
+						</div>
+						<field name="active" invisible="1" />
+						<widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+						<field name="image_128" widget="image" class="oe_avatar" />
+						<div class="oe_title">
+							<label class="oe_edit_only" for="name" string="Module Name" />
+							<h1>
+								<field name="name" placeholder="Module Name" />
+							</h1>
+							<h4>
+								<field name="technical_name" placeholder="Technical Name" />
+							</h4>
+						</div>
+						<group>
+							<group>
+								<field name="product_tmpl_id" />
+								<field name="odoo_module_version_id" />
+								<field name="odoo_version_ids" widget="many2many_tags" />
+							</group>
+						</group>
+						<notebook>
+							<page name="desc_html" string="HTML Description">
+								<field name="description_html" />
+							</page>
+							<page name="desc" string="Description">
+								<field name="description" />
+							</page>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids"   />
+						<field name="activity_ids"  />
+						<field name="message_ids"  />
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="odoo_module_tree_view">
+			<field name="name">odoo.module.tree</field>
+			<field name="model">odoo.module</field>
+			<field name="arch" type="xml">
+				<tree string="Odoo Module">
+					<field name="name" />
+					<field name="technical_name" />
+					<field name="product_tmpl_id" />
+					<field name="odoo_version_ids" widget="many2many_tags" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="odoo_module_kanban_view">
+			<field name="name">odoo.module.kanban</field>
+			<field name="model">odoo.module</field>
+			<field name="arch" type="xml">
+				<kanban>
+					<field name="id" />
+					<field name="image_128" />
+					<field name="summary" />
+					<field name="odoo_module_versions_count" />
+					<field name="price_currency" />
+					<field name="price" />
+					<field name="currency_id" />
+					<field name="company_currency_id" />
+					<field name="odoo_version_ids" />
+					<field name="license_version_ids" />
+					<templates
+						class="oe_background_grey o_kanban_dashboard o_odoo_module_kanban">
+						<t t-name="kanban-box">
+							<div class="oe_kanban_global_click">
+								<div class="o_kanban_image">
+									<img
+										t-att-src="kanban_image('odoo.module', 'image_128', record.id.raw_value)"
+										alt="Image" />
+								</div>
+								<div class="oe_kanban_details">
+									<strong class="o_kanban_record_title">
+										<field name="name" />
+										<code t-if="record.technical_name.value">
+											<field name="technical_name" />
+										</code>
+									</strong>
+									<div t-if="record.odoo_module_versions_count.value &gt; 1">
+										<strong>
+											<t t-esc="record.odoo_module_versions_count.value" />
+											Versions
+										</strong>
+									</div>
+									<ul>
+										<li>
+											Price:
+											<field name="price" widget="monetary"
+												options="{'currency_field': 'company_currency_id', 'field_digits': True}" />
+										</li>
+										<li>
+											Currency Price:
+											<field name="price_currency" widget="monetary"
+												options="{'currency_field': 'currency_id', 'field_digits': True}" />
+										</li>
+									</ul>
+									<field name="odoo_version_ids" widget="many2many_tags" />
+									<field name="license_version_ids" widget="many2many_tags" />
+								</div>
+							</div>
+						</t>
+					</templates>
+				</kanban>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id='odoo_module_search_view'>
+			<field name="name">odoo.module.search</field>
+			<field name="model">odoo.module</field>
+			<field name="arch" type="xml">
+				<search string="Search Odoo Module">
+					<field name="name"
+						filter_domain="['|',('name','ilike',self),('technical_name','ilike',self)]" />
+					<field name="technical_name" />
+					<field name="product_tmpl_id" />
+					<field name="odoo_version_ids" />
+				</search>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="odoo_module_action">
+			<field name="name">Odoo Modules</field>
+			<field name="res_model">odoo.module</field>
+			<field name="view_mode">kanban,tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create a new Odoo module</p>
+			</field>
+		</record>
+
+		<record id="action_server_odoo_module_rotate_token"
+			model="ir.actions.server">
+			<field name="name">Regenerate Tokens</field>
+			<field name="type">ir.actions.server</field>
+			<field name="model_id" ref="model_odoo_module" />
+			<field name="binding_model_id" ref="model_odoo_module" />
+			<field name="state">code</field>
+			<field name="code">records.action_rotate_token()</field>
+		</record>
+
+		<menuitem id="odoo_module_menu" name="Modules"
+			parent="odoo_module_main_menu" sequence="20"
+			action="odoo_module_action" />
+	</data>
+</odoo>

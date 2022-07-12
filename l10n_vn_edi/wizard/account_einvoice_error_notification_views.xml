@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record id="account_einvoice_error_notification_view_form"
+				model="ir.ui.view">
+			<field name="name">E-Invoice Error Notification Wizard</field>
+			<field name="model">account.einvoice.error.notification</field>
+			<field name="arch" type="xml">
+				<form string="E-Invoice Error Notification Wizard">
+					<group>
+						<field name="reason"/>
+						<field name="action"/>
+					</group>
+					<footer>
+						<button name="action_notif_einvoice_error" string="Confirm"
+								type="object" class="btn-primary o_safe_confirm_button"/>
+						<button string="Cancel" class="btn-default"
+								special="cancel"/>
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<record id="account_einvoice_error_notification_action"
+				model="ir.actions.act_window">
+			<field name="name">E-Invoice Error Notification Wizard</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">account.einvoice.error.notification</field>
+			<field name="view_mode">form</field>
+			<field name="target">new</field>
+			<field name="context">{'default_invoice_id': active_id}</field>
+		</record>
+	</data>
+</odoo>

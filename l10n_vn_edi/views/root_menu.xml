@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<menuitem id="menu_einvoice" name="E-Invoice"
+			parent="account.menu_finance_configuration" sequence="15"
+			groups="account.group_account_manager" />
+	</data>
+</odoo>

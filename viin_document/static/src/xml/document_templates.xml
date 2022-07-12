@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+
+    <div t-name="DocumentView.buttons">
+        <button type="button" class="btn btn-primary viin_document_upload">
+            Upload
+        </button>
+        <button type="button" class="btn btn-secondary viin_document_add_ink">
+            Add A Link
+        </button>
+    </div>
+
+    <div t-name="DocumentTagWidget" owl="1">
+        <div>
+            <label t-foreach="state.tags" t-as="tag" t-key="tag" class="badge badge-pill badge-info">
+                <span t-esc="tag.display_name" /><i t-att-data-tag-id="tag.id" class="fa fa-times ml-1" t-on-click="_removeTag"></i>
+            </label>
+        </div>
+        <div class="v_input_document_tag" />
+    </div>
+
+    <div class="v_document_right_sidebar_widget card" t-name="DocumentRightSideBarWidget" owl="1">
+        <div t-if="state.countSelectedDocument > 0" class="document-detail">
+            <div class="wrapper">
+                <div t-if="state.countSelectedDocument == 1">
+                     <button class="btn btn-secondary btn-lg rounded-circle v_comment_button" t-on-click="_onToggleChatter">
+                        <i class="fa fa-comments"/>
+                    </button>
+                </div>
+                <div class="kanban-record">
+                    <div
+                        t-on-click="_onPreviewDocument"
+                        t-att-data-doc-id="doc.doc_id"
+                        t-att-data-doc-mimetype="doc.mimetype"
+                        class="v_thumb_preview m-2"
+                        t-foreach="state.previewDocuments" t-as="doc">
+                        <t t-set="binaryPreviewable" t-value="regexPreviewable.test(doc.mimetype)"/>
+                        <t t-set="webimage" t-value="regexWebimage.test(doc.mimetype)"/>
+                        <div t-att-class="(webimage or binaryPreviewable or doc.ytb_video_id) ? 'pointer-preview' : ''">
+                            <div t-if="webimage or doc.ytb_video_id">
+                                <t t-set="img_src" t-value="doc.ytb_video_id ? `https://img.youtube.com/vi/${doc.ytb_video_id}/0.jpg` : `/web/image/${doc.attachment_id.id}`"/>
+                                <img t-att-data-ytb-video-id="doc.ytb_video_id" t-if="state.previewDocuments.length == 1" t-att-src="img_src" t-att-alt="doc.display_name" style="max-width:100%"/>
+                                <img t-else="" t-att-data-ytb-video-id="doc.ytb_video_id" t-att-src="img_src" t-att-alt="doc.display_name" width="auto" height="70" />
+                            </div>
+                            <div  t-else="" class="thumb_image_wrapper">
+                                <div class="o_image o_image_thumbnail" t-att-data-mimetype="doc.mimetype"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <b>
+                    <i class="txt-selected-file"><span t-esc="state.countSelectedDocument"/> files selected</i>
+                </b>
+            </div>
+            <div class="card-body">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button t-on-click="_onDownloadDocument" type="button" class="btn btn-secondary v_action_download">
+                        <i class="fa fa-download"></i>
+                    </button>
+                    <button t-if="isDocManager" t-on-click="_onShareDocument" type="button" class="btn btn-secondary v_action_share">
+                        <i class="fa fa-share-alt-square"></i>
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <div t-if="state.countSelectedDocument === 1" class="form-group row">
+                        <label for="staticName" class="col-sm-4 col-form-label">Name</label>
+                        <div class="col-sm-8">
+                            <input t-att-value="state.displayNameDoc" type="text" t-on-focusout="_onChangeDocumentName" class="v_classic_input"/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="staticOwner" class="col-sm-4 col-form-label">Owner</label>
+                        <div class="col-sm-8">
+                            <div class="v_document_owner_field"></div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="staticWorkspace" class="col-sm-4 col-form-label">
+                            <i class="fa fa-folder mr-2"></i>Workspace</label>
+                        <div class="col-sm-8">
+                            <div class="v_document_workspace_field"></div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">
+                            <i class="fa fa-tags  mr-2"></i>Tags</label>
+                        <div class="col-sm-8">
+                            <DocumentTagWidgetOwl />
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <label>Actions</label>
+                    <ul class="m-0 p-0">
+                        <li t-foreach="state.actions" t-as="action" t-key="action">
+                            <button t-on-click="_onHandleAction" t-att-data-action-id="action.id" type="button" class="btn btn-secondary">
+                                <i class="fa fa-play mr-2"></i><t t-esc="action.display_name"/></button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div t-else="">
+            <div class="wrapper">
+                <p class="p-3">
+                    Categorize, share and keep track of all your internal documents.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <t t-name="DocumentActionFieldMany2ManyTag">
+        <ul class="list-unstyled">
+            <li t-foreach="elements" t-as="el">
+                <button type="button" class="action-handler btn btn-secondary btn-sm mb-1" t-att-data-action-id="el.id" >
+                    <i class="fa fa-play mr-2"></i><t t-esc="el.display_name"/>
+                </button>
+            </li>
+        </ul>
+    </t>
+
+</templates>

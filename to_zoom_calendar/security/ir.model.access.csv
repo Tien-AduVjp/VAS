@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_zoom_user_group_user,access_zoom_user_group_user,model_zoom_user,to_zoom_calendar.group_user,1,0,0,0
+access_zoom_user_group_admin,access_zoom_user_group_admin,model_zoom_user,to_zoom_calendar.group_admin,1,1,1,1
+access_zoom_user_report_group_admin,access_zoom_user_report_group_admin,model_zoom_user_report,to_zoom_calendar.group_admin,1,1,1,1

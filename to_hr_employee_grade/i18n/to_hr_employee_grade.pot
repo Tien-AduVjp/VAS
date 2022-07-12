@@ -1,0 +1,367 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_hr_employee_grade
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-07-04 08:50+0000\n"
+"PO-Revision-Date: 2022-07-04 08:50+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee_grade__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee_grade__active
+msgid "Active"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_grade.hr_employee_grade_view_search
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_grade.view_hr_employee_grade_form
+msgid "Archived"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee_grade__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model,name:to_hr_employee_grade.model_hr_employee_base
+msgid "Basic Employee"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee_grade__company_id
+msgid "Company"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee_grade__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee_grade__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model,name:to_hr_employee_grade.model_hr_department
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee_grade__department_id
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_grade.hr_employee_grade_view_search
+msgid "Department"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: code:addons/to_hr_employee_grade/models/hr_employee.py:0
+#, python-format
+msgid ""
+"Department Inconsistency! The grade '%s' is applicable to the employees of "
+"the department '%s' only while the employee '%s' belongs to the department "
+"'%s'. Please change either the grade or the employee department or revise "
+"the grade's applicable department."
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,help:to_hr_employee_grade.field_hr_employee_grade__recursive_child_ids
+msgid "Direct and indirect children"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,help:to_hr_employee_grade.field_hr_employee_grade__recursive_parent_ids
+msgid "Direct and indirect parents"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_department__display_name
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee_base__display_name
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee_grade__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model,name:to_hr_employee_grade.model_hr_employee
+msgid "Employee"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.actions.act_window,name:to_hr_employee_grade.action_hr_employee_grade
+#: model:ir.model,name:to_hr_employee_grade.model_hr_employee_grade
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_grade.view_hr_employee_grade_form
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_grade.view_hr_employee_grade_tree
+msgid "Employee Grade"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_grade.hr_employee_grade_view_search
+msgid "Employee Grade Search"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee_grade__employee_ids
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_grade.view_hr_employee_grade_form
+msgid "Employees"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee_grade__employees_count
+msgid "Employees Count"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:hr.employee.grade,name:to_hr_employee_grade.expert_grade
+msgid "Expert"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee_grade__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee_grade__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee_grade__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:hr.employee.grade,name:to_hr_employee_grade.trainee_grade
+msgid "Fresher"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee__grade_id
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee_base__grade_id
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee_public__grade_id
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_grade.hr_employee_public_view_search
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_grade.view_employee_filter
+msgid "Grade"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee_grade__description
+msgid "Grade Description"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_department__grade_ids
+#: model:ir.ui.menu,name:to_hr_employee_grade.menu_view_hr_employee_grade
+msgid "Grades"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_department__grades_count
+msgid "Grades Count"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_grade.hr_employee_grade_view_search
+msgid "Group By"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_department__id
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee__id
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee_base__id
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee_grade__id
+msgid "ID"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,help:to_hr_employee_grade.field_hr_employee_grade__message_needaction
+#: model:ir.model.fields,help:to_hr_employee_grade.field_hr_employee_grade__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,help:to_hr_employee_grade.field_hr_employee_grade__message_has_error
+#: model:ir.model.fields,help:to_hr_employee_grade.field_hr_employee_grade__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:hr.employee.grade,name:to_hr_employee_grade.intern_grade
+msgid "Intern"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee_grade__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:hr.employee.grade,name:to_hr_employee_grade.junior_grade
+msgid "Junior"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_department____last_update
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee_base____last_update
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee_grade____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee_grade__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee_grade__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee_grade__child_ids
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_grade.view_hr_employee_grade_form
+msgid "Lower Grade"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee_grade__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee_grade__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee_grade__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee_grade__name
+msgid "Name"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee_grade__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,help:to_hr_employee_grade.field_hr_employee_grade__employees_count
+msgid "Number of employees currently occupying this grade."
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee_grade__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,help:to_hr_employee_grade.field_hr_employee_grade__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,help:to_hr_employee_grade.field_hr_employee_grade__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,help:to_hr_employee_grade.field_hr_employee_grade__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee_grade__parent_id
+msgid "Parent"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee_grade__parent_path
+msgid "Parent Path"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee_grade__recursive_child_ids
+msgid "Recursive Children"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee_grade__recursive_parent_ids
+msgid "Recursive Parents"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee_grade__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:hr.employee.grade,name:to_hr_employee_grade.senior_grade
+msgid "Senior"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee_grade__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,help:to_hr_employee_grade.field_hr_department__grade_ids
+msgid "The grades that are dedicated for this department."
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.constraint,message:to_hr_employee_grade.constraint_hr_employee_grade_name_uniq
+msgid "The name of the grade must be unique per department in company!"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: code:addons/to_hr_employee_grade/models/hr_employee_grade.py:0
+#, python-format
+msgid "The parent grade must be in the same department with this grade: %s"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee_grade__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee_grade__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,field_description:to_hr_employee_grade.field_hr_employee_grade__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model:ir.model.fields,help:to_hr_employee_grade.field_hr_employee_grade__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: code:addons/to_hr_employee_grade/models/hr_employee_grade.py:0
+#, python-format
+msgid "You cannot create recursive grades."
+msgstr ""
+
+#. module: to_hr_employee_grade
+#: model_terms:ir.ui.view,arch_db:to_hr_employee_grade.view_hr_employee_grade_form
+msgid "e.g. Junior"
+msgstr ""

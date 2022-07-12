@@ -1,0 +1,30 @@
+<odoo>
+
+	<record id="view_partner_form" model="ir.ui.view">
+		<field name="name">res.partner.form.inherit</field>
+		<field name="model">res.partner</field>
+		<field name="inherit_id" ref="base.view_partner_form" />
+		<field name="arch" type="xml">
+			<field name="vat" position="before">
+				<field name="employee_size_id"
+					attrs="{'invisible': [('company_type', '!=', 'company')]}" />
+			</field>
+		</field>
+	</record>
+
+	<record id="view_res_partner_filter" model="ir.ui.view">
+		<field name="name">res.partner.view.search.inherit</field>
+		<field name="model">res.partner</field>
+		<field name="inherit_id" ref="base.view_res_partner_filter" />
+		<field name="arch" type="xml">
+			<field name="category_id" position="after">
+				<field name="employee_size_id" />
+			</field>
+			<filter name="salesperson" position="after">
+				<filter name="ftr_employee_size_id" string="Employee Size"
+					context="{'group_by': 'employee_size_id'}" />
+			</filter>
+		</field>
+	</record>
+
+</odoo>

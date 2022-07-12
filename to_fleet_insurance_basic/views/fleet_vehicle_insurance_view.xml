@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="fleet_vehicle_insurance_form_view" model="ir.ui.view">
+			<field name="name">fleet.vehicle.insurance.form</field>
+			<field name="model">fleet.vehicle.insurance</field>
+			<field name="arch" type="xml">
+				<form string="Vehicle Insurance">
+					<header>
+						<button name="action_confirm" type="object" string="Confirm"
+							states="draft" class="oe_highlight" />
+						<button name="action_cancel" type="object" string="Cancel"
+							states="confirmed" />
+						<button name="action_set_draft" type="object" string="Set to Draft"
+							states="confirmed,cancelled" />
+						<button name="action_set_expire" type="object" string="Set to Expired"
+							states="confirmed" />
+						<field name="state" widget="statusbar"
+							statusbar_visible="draft,confirmed,cancelled,expired" />
+					</header>
+					<sheet>
+						<div class="oe_button_box" name="button_box">
+						</div>
+						<group>
+							<group>
+								<field name="name" />
+								<field name="vehicle_id" />
+								<field name="fleet_insurance_type_id" />
+								<field name="date_start" />
+								<field name="date_end" />
+							</group>
+							<group>
+								<field name="days_to_notify" />
+							</group>
+						</group>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids"/>
+						<field name="activity_ids"/>
+						<field name="message_ids"/>
+					</div>
+
+				</form>
+			</field>
+		</record>
+
+		<record id="fleet_vehicle_insurance_tree_view" model="ir.ui.view">
+			<field name="name">fleet.vehicle.insurance.tree</field>
+			<field name="model">fleet.vehicle.insurance</field>
+			<field name="arch" type="xml">
+				<tree string="Vehicle Insurance">
+					<field name="name" />
+					<field name="vehicle_id" />
+					<field name="fleet_insurance_type_id" />
+					<field name="date_start" />
+					<field name="date_end" />
+					<field name="state" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="fleet_vehicle_insurance_search_view" model="ir.ui.view">
+			<field name="name">fleet.vehicle.insurance.search</field>
+			<field name="model">fleet.vehicle.insurance</field>
+			<field name="arch" type="xml">
+				<search string="Search Vehicle Insurance">
+					<field name="name" />
+					<field name="fleet_insurance_type_id" />
+					<field name="vehicle_id" />
+					<field name="date_start" />
+					<field name="date_end" />
+					<separator />
+					<filter name="draft" string="Draft" domain="[('state','=','draft')]" />
+					<filter name="confirmed" string="Confirmed"
+						domain="[('state','=','confirmed')]" />
+					<filter name="expired" string="Expired" domain="[('state','=','expired')]" />
+					<filter name="cancelled" string="Cancelled"
+						domain="[('state','=','cancelled')]" />
+					<group expand="0" string="Group By...">
+						<filter string="Vehicle" name="vehicle_id" context="{'group_by': 'vehicle_id'}" />
+						<filter string="Type" name="fleet_insurance_type_id"
+							context="{'group_by': 'fleet_insurance_type_id'}" />
+						<filter string="Expiry Date" name="date_end"
+							context="{'group_by': 'date_end'}" />
+					</group>
+				</search>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_fleet_vehicle_insurance">
+			<field name="name">Fleet Vehicle Insurance</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">fleet.vehicle.insurance</field>
+			<field name="view_mode">tree,form</field>
+			<field name="domain">[]</field>
+			<field name="context">{}</field>
+		</record>
+
+
+		<menuitem action="action_fleet_vehicle_insurance" id="fleet_vehicle_insurance_menu"
+			name="Vehicle Insurance" parent="fleet_insurance_menu_root" sequence="1" />
+
+	</data>
+</odoo>

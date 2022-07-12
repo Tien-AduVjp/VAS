@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_backend" name="assets backend" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+        	<script type="text/javascript" src="/to_sale_subscription/static/src/js/tour.js"></script>
+            <link rel='stylesheet' href='/to_sale_subscription/static/src/scss/sale_subscription_backend.scss'/>
+        </xpath>
+    </template>
+    <template id="assets_frontend" name="assets frontend" inherit_id="web.assets_frontend">
+      <xpath expr="." position="inside">
+          <link rel='stylesheet' href='/to_sale_subscription/static/src/scss/sale_subscription_portal_form.scss'/>
+          <link rel='stylesheet' href='/to_sale_subscription/static/src/scss/portal_rating.scss'/>
+          <script type="text/javascript" src="/to_sale_subscription/static/src/js/sale_subscription_portal_form.js"></script>
+          <script type="text/javascript" src="/to_sale_subscription/static/src/js/portal_rating.js"></script>
+      </xpath>
+    </template>
+</odoo>

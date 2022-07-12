@@ -1,0 +1,36 @@
+<odoo>
+	<record id="view_order_form" model="ir.ui.view">
+		<field name="name">sale.order.form</field>
+		<field name="model">sale.order</field>
+		<field name="inherit_id" ref="sale.view_order_form" />
+		<field name="arch" type="xml">
+			<xpath
+				expr="//page[@name='order_lines']/field[@name='order_line']"
+				position="before">
+				<div class="alert alert-warning" role="alert"
+					attrs="{'invisible':['|',('product_duplication_warning','=',False),('state','not in',['draft','sent'])]}">
+					<p>
+						<field name="product_duplication_warning" />
+					</p>
+					<p>You could ignore this warning if it is what you want.</p>
+				</div>
+			</xpath>
+		</field>
+	</record>
+
+	<record id="view_sales_order_filter" model="ir.ui.view">
+		<field name="name">sale.order.search.inherit.sale</field>
+		<field name="model">sale.order</field>
+		<field name="inherit_id" ref="sale.view_sales_order_filter" />
+		<field name="arch" type="xml">
+			<xpath expr="//filter[@name='my_sale_orders_filter']"
+				position="after">
+				<separator />
+				<filter name="ftr_with_duplicated_products"
+					string="With Duplicated Products"
+					domain="[('duplicated_product','=',True)]"
+					help="Show the orders having a product that appears more than one time in the same orders." />
+			</xpath>
+		</field>
+	</record>
+</odoo>

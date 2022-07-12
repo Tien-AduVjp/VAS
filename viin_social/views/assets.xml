@@ -1,0 +1,21 @@
+<odoo>
+	<template id="social_assets_backend" name="Social Assets" inherit_id="web.assets_backend">
+		<xpath expr="." position="inside">
+ 			<link rel="stylesheet" type="text/scss" href="/viin_social/static/src/scss/social.scss"/>
+ 			<link rel="stylesheet" type="text/scss" href="/viin_social/static/src/scss/social_post_detail.scss"/>
+			<script type="text/javascript" src="/viin_social/static/src/js/post_attachments_carousel.js"></script>
+			<script type="text/javascript" src="/viin_social/static/src/js/social_post_detail.js"></script>
+			<script type="text/javascript" src="/viin_social/static/src/js/social_post_comment.js"></script>
+			<script type="text/javascript" src="/viin_social/static/src/js/social_emojis_mixin.js"></script>
+			<script type="text/javascript" src="/viin_social/static/src/js/social_text_emojis_field.js"></script>
+			<script type="text/javascript" src="/viin_social/static/src/js/social_post_preview_field.js"></script>
+ 			<script type="text/javascript" src="/viin_social/static/src/js/social_post_synchronize_view_button.js"></script>
+ 			<script type="text/javascript" src="/viin_social/static/src/js/social_notice_read_all_notice.js"></script>
+
+			<script type="text/javascript" src="/viin_social/static/src/models/messaging_initializer/messaging_initializer.js" />
+			<script type="text/javascript" src="/viin_social/static/src/components/discuss_sidebar/discuss_sidebar.js" />
+			<script type="text/javascript" src="/viin_social/static/src/components/discuss_sidebar_item/discuss_sidebar_item.js" />
+			<script type="text/javascript" src="/viin_social/static/src/js/attachment_preview.js" />
+ 		</xpath>
+	</template>
+</odoo>

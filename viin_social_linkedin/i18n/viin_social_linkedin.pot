@@ -1,0 +1,318 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_social_linkedin
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-04 04:02+0000\n"
+"PO-Revision-Date: 2021-12-04 04:02+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_social_linkedin
+#: model_terms:ir.ui.view,arch_db:viin_social_linkedin.linkedin_preview
+msgid "<b>LinkedIn Page</b>"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model_terms:ir.ui.view,arch_db:viin_social_linkedin.social_post_view_kanban
+msgid "<i class=\"fa fa-mouse-pointer\" title=\"Clicks\"/>"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model_terms:ir.ui.view,arch_db:viin_social_linkedin.social_post_view_kanban
+msgid ""
+"<i class=\"fa fa-percent\" title=\"Engagement Rate (Rate of total likes + "
+"comments + shares + clicks compared to views)\"/>"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: code:addons/viin_social_linkedin/controllers/main.py:0
+#, python-format
+msgid "A user"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model_terms:ir.ui.view,arch_db:viin_social_linkedin.res_config_settings_view_form
+msgid "App ID"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model_terms:ir.ui.view,arch_db:viin_social_linkedin.res_config_settings_view_form
+msgid "App Secret"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: code:addons/viin_social_linkedin/models/social_media.py:0
+#: code:addons/viin_social_linkedin/models/social_media.py:0
+#, python-format
+msgid "Cannot sync because Linkedin Access Token has no value."
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model:ir.model,name:viin_social_linkedin.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model:ir.model,name:viin_social_linkedin.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model_terms:ir.ui.view,arch_db:viin_social_linkedin.social_media_view_form
+msgid "Create Webhook Subcriptions"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model_terms:ir.ui.view,arch_db:viin_social_linkedin.social_media_view_form
+msgid ""
+"Create Webhook Subscriptions to receive notifications about Linkedin page "
+"posts"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: code:addons/viin_social_linkedin/models/social_media.py:0
+#, python-format
+msgid "Create webhook subscriptions successful."
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_article__display_linkedin_preview
+msgid "Display LinkedIn Preview"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_res_company__display_name
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_article__display_name
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_linkedin_api__display_name
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_media__display_name
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_notice__display_name
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_page__display_name
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_post__display_name
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_post_action_edit_post__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model:ir.model,name:viin_social_linkedin.model_social_post_action_edit_post
+msgid "Edit Post"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_post__rate_engagement
+msgid "Engagement Rate"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model:ir.model.fields,help:viin_social_linkedin.field_social_media__linkedin_refresh_date_expired
+msgid "Expiration date of refresh access token"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_res_company__id
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_res_config_settings__id
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_article__id
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_linkedin_api__id
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_media__id
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_notice__id
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_page__id
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_post__id
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_post_action_edit_post__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_res_company____last_update
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_article____last_update
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_linkedin_api____last_update
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_media____last_update
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_notice____last_update
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_page____last_update
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_post____last_update
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_post_action_edit_post____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model:ir.model.fields.selection,name:viin_social_linkedin.selection__social_media__social_provider__linkedin
+msgid "LinkedIn"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_media__linkedin_access_token
+msgid "LinkedIn Access Token"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: code:addons/viin_social_linkedin/models/social_article.py:0
+#, python-format
+msgid "LinkedIn Page: Please select video with size <200Mb"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: code:addons/viin_social_linkedin/models/social_article.py:0
+#, python-format
+msgid "LinkedIn Page: You cannot post both photos and videos to Linkedin"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: code:addons/viin_social_linkedin/models/social_article.py:0
+#, python-format
+msgid "LinkedIn Page: You cannot post multiple videos on Linkedin"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: code:addons/viin_social_linkedin/models/social_article.py:0
+#, python-format
+msgid ""
+"LinkedIn Page: You need to choose the right file format: *png, *jpeg, *mp4"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_article__linkedin_preview
+msgid "LinkedIn Preview"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_media__linkedin_refresh_token
+msgid "LinkedIn Refresh Token"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_page__linkedin_page_admin_urn
+msgid "LinkedIn organization Admin"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_page__linkedin_page_urn
+msgid "LinkedIn organization URN"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model_terms:ir.ui.view,arch_db:viin_social_linkedin.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:viin_social_linkedin.social_article_view_search
+#: model_terms:ir.ui.view,arch_db:viin_social_linkedin.social_post_view_search
+msgid "Linkedin"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model:ir.model.fields,help:viin_social_linkedin.field_social_media__linkedin_developer_application
+msgid ""
+"Linkedin 'developerApplication'. Get the value from the url of the app in "
+"the developer application portal"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_res_company__linkedin_app_id
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_res_config_settings__linkedin_app_id
+msgid "Linkedin App ID"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_res_company__linkedin_client_secret
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_res_config_settings__linkedin_client_secret
+msgid "Linkedin Client Secret"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_media__linkedin_developer_application
+msgid "Linkedin Developer Application ID"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_notice__linkedin_notification_id
+msgid "Linkedin Notification Id"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: code:addons/viin_social_linkedin/models/social_article.py:0
+#, python-format
+msgid "Linkedin does not support post scheduling!"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model:ir.model,name:viin_social_linkedin.model_social_notice
+msgid "Notice from Users on the Page"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model_terms:ir.ui.view,arch_db:viin_social_linkedin.linkedin_preview
+msgid "Post Image"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model:ir.model.fields,help:viin_social_linkedin.field_social_post__rate_engagement
+msgid "Rate of total likes, comments, shares, clicks compared to views"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_media__linkedin_refresh_date_expired
+msgid "Refresh Expired Date"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model:ir.model,name:viin_social_linkedin.model_social_article
+msgid "Social Article"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model:ir.model,name:viin_social_linkedin.model_social_linkedin_api
+msgid "Social Linkedin Api"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model:ir.model,name:viin_social_linkedin.model_social_media
+msgid "Social Media"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model:ir.model,name:viin_social_linkedin.model_social_page
+msgid "Social Page"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model:ir.model,name:viin_social_linkedin.model_social_post
+msgid "Social Post"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_media__social_provider
+msgid "Social Provider"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model_terms:ir.ui.view,arch_db:viin_social_linkedin.social_article_view_search
+msgid "State"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model:ir.model.constraint,message:viin_social_linkedin.constraint_social_notice_linkedin_notification_id_unique
+msgid "The linkedin_notification_id must be unique!"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model:ir.model.fields,field_description:viin_social_linkedin.field_social_post__click_count
+msgid "Total Clicks"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: code:addons/viin_social_linkedin/models/social_media.py:0
+#, python-format
+msgid ""
+"You must enter a value for the 'Linkedin Developer Application ID' field "
+"first"
+msgstr ""
+
+#. module: viin_social_linkedin
+#: model_terms:ir.ui.view,arch_db:viin_social_linkedin.linkedin_preview
+msgid "image"
+msgstr ""

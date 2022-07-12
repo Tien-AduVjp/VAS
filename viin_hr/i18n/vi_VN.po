@@ -1,0 +1,178 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_hr
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-14 01:27+0000\n"
+"PO-Revision-Date: 2022-03-14 01:27+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_hr
+#: model:ir.model,name:viin_hr.model_hr_employee_base
+msgid "Basic Employee"
+msgstr "Nhân viên Cơ sở"
+
+#. module: viin_hr
+#: model:ir.model.fields,help:viin_hr.field_res_partner__employee
+#: model:ir.model.fields,help:viin_hr.field_res_users__employee
+msgid "Check this box if this contact is an Employee."
+msgstr "Đánh dấu nếu liên hệ là một nhân viên."
+
+#. module: viin_hr
+#: model:ir.model,name:viin_hr.model_res_partner
+msgid "Contact"
+msgstr "Liên hệ"
+
+#. module: viin_hr
+#: model:ir.model,name:viin_hr.model_hr_department
+msgid "Department"
+msgstr "Phòng/Ban"
+
+#. module: viin_hr
+#: model:ir.model.fields,field_description:viin_hr.field_hr_department__name
+msgid "Department Name"
+msgstr "Tên phòng/ban"
+
+#. module: viin_hr
+#: model:ir.model.fields,field_description:viin_hr.field_hr_employee__parent_all_count
+#: model:ir.model.fields,field_description:viin_hr.field_hr_employee_base__parent_all_count
+#: model:ir.model.fields,field_description:viin_hr.field_hr_employee_public__parent_all_count
+msgid "Direct & Indirect Managers Count"
+msgstr "SL Quản lý Trực tiếp & Gián tiếp"
+
+#. module: viin_hr
+#: model:ir.model.fields,help:viin_hr.field_hr_department__recursive_child_ids
+msgid "Direct and Indirect Child Departments"
+msgstr "Phòng ban cấp dưới trực tiếp và gián tiếp"
+
+#. module: viin_hr
+#: model:ir.model.fields,help:viin_hr.field_hr_department__manager_ids
+#: model:ir.model.fields,help:viin_hr.field_hr_employee__parent_ids
+#: model:ir.model.fields,help:viin_hr.field_hr_employee_public__parent_ids
+msgid "Direct and indirect managers"
+msgstr "Quản lý Trực tiếp & Gián tiếp"
+
+#. module: viin_hr
+#: model:ir.model.fields,field_description:viin_hr.field_hr_department__display_name
+#: model:ir.model.fields,field_description:viin_hr.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:viin_hr.field_hr_employee_base__display_name
+#: model:ir.model.fields,field_description:viin_hr.field_hr_employee_public__display_name
+#: model:ir.model.fields,field_description:viin_hr.field_res_partner__display_name
+#: model:ir.model.fields,field_description:viin_hr.field_res_users__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: viin_hr
+#: model:ir.model,name:viin_hr.model_hr_employee
+#: model:ir.model.fields,field_description:viin_hr.field_res_partner__employee
+#: model:ir.model.fields,field_description:viin_hr.field_res_users__employee
+#: model_terms:ir.ui.view,arch_db:viin_hr.view_res_partner_filter
+msgid "Employee"
+msgstr "Nhân viên"
+
+#. module: viin_hr
+#: model:ir.model.fields,field_description:viin_hr.field_hr_department__id
+#: model:ir.model.fields,field_description:viin_hr.field_hr_employee__id
+#: model:ir.model.fields,field_description:viin_hr.field_hr_employee_base__id
+#: model:ir.model.fields,field_description:viin_hr.field_hr_employee_public__id
+#: model:ir.model.fields,field_description:viin_hr.field_res_partner__id
+#: model:ir.model.fields,field_description:viin_hr.field_res_users__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_hr
+#: model:ir.model.fields,field_description:viin_hr.field_hr_employee__is_department_manager
+#: model:ir.model.fields,field_description:viin_hr.field_hr_employee_base__is_department_manager
+#: model:ir.model.fields,field_description:viin_hr.field_hr_employee_public__is_department_manager
+msgid "Is Department Manager"
+msgstr "Là Quản lý Phòng/Ban"
+
+#. module: viin_hr
+#: model:ir.model.fields,field_description:viin_hr.field_hr_department____last_update
+#: model:ir.model.fields,field_description:viin_hr.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:viin_hr.field_hr_employee_base____last_update
+#: model:ir.model.fields,field_description:viin_hr.field_hr_employee_public____last_update
+#: model:ir.model.fields,field_description:viin_hr.field_res_partner____last_update
+#: model:ir.model.fields,field_description:viin_hr.field_res_users____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: viin_hr
+#: code:addons/viin_hr/models/hr_org_chart_mixin.py:0
+#, python-format
+msgid "Operation not supported"
+msgstr "Hoạt động không được hỗ trợ"
+
+#. module: viin_hr
+#: model:ir.model.fields,field_description:viin_hr.field_hr_employee__vat
+msgid "Personal Tax Code"
+msgstr "Mã số Thuế Cá nhân"
+
+#. module: viin_hr
+#: model_terms:ir.ui.view,arch_db:viin_hr.view_employee_form
+msgid ""
+"Please specify Private Address before you can set Personal\n"
+"\t\t\t\t\t\tTax Code"
+msgstr ""
+"Vui lòng thiết lập Địa chỉ trước khi bạn có thể thiết lập Mã số\n"
+"\t\t\t\t\t\tthuế cá nhân"
+
+#. module: viin_hr
+#: model:ir.model,name:viin_hr.model_hr_employee_public
+msgid "Public Employee"
+msgstr "Nhân viên"
+
+#. module: viin_hr
+#: model:ir.model.fields,field_description:viin_hr.field_hr_department__recursive_child_ids
+msgid "Recursive Child Departments"
+msgstr "Tất cả phòng ban cấp dưới"
+
+#. module: viin_hr
+#: model:ir.model.fields,field_description:viin_hr.field_res_partner__employee_ids
+msgid "Related Employees"
+msgstr "Nhân viên liên quan"
+
+#. module: viin_hr
+#: model:ir.model.fields,field_description:viin_hr.field_hr_department__manager_ids
+#: model:ir.model.fields,field_description:viin_hr.field_hr_employee__parent_ids
+#: model:ir.model.fields,field_description:viin_hr.field_hr_employee_public__parent_ids
+msgid "Superiors"
+msgstr "Cấp trên"
+
+#. module: viin_hr
+#: model:ir.model.fields,help:viin_hr.field_res_partner__tmp_employee_ids
+#: model:ir.model.fields,help:viin_hr.field_res_users__tmp_employee_ids
+msgid ""
+"Technical field that stores the employees using this partner as its private "
+"address."
+msgstr ""
+"Trường kỹ thuật để lưu nhân viên mà sử dụng đối tác này làm địa chỉ riêng "
+"tư."
+
+#. module: viin_hr
+#: model:ir.model.fields,field_description:viin_hr.field_res_partner__tmp_employee_ids
+#: model:ir.model.fields,field_description:viin_hr.field_res_users__tmp_employee_ids
+msgid "Temporary Employees"
+msgstr ""
+
+#. module: viin_hr
+#: model:ir.model.fields,help:viin_hr.field_hr_employee__vat
+msgid ""
+"The tax identification number that is related to the corresponding partner "
+"record specified in the field Private Address"
+msgstr ""
+"Mã số thuế mà tương ứng (đồng bộ) với mã số thuế của đối tác được thiết lập "
+"ở Địa chỉ Cá Nhân"
+
+#. module: viin_hr
+#: model:ir.model,name:viin_hr.model_res_users
+msgid "Users"
+msgstr "Người dùng"

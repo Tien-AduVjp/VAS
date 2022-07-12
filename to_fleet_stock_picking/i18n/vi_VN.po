@@ -1,0 +1,416 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_fleet_stock_picking
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-24 04:10+0000\n"
+"PO-Revision-Date: 2022-05-24 04:10+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_fleet_stock_picking
+#: model_terms:ir.ui.view,arch_db:to_fleet_stock_picking.add_stock_picking_view_form
+msgid "Add"
+msgstr "Thêm"
+
+#. module: to_fleet_stock_picking
+#: model:ir.model,name:to_fleet_stock_picking.model_add_stock_picking
+#: model_terms:ir.ui.view,arch_db:to_fleet_stock_picking.add_stock_picking_view_form
+msgid "Add Stock Picking"
+msgstr "Thêm Lô hàng"
+
+#. module: to_fleet_stock_picking
+#: model:ir.actions.act_window,name:to_fleet_stock_picking.add_stock_picking_action
+#: model_terms:ir.ui.view,arch_db:to_fleet_stock_picking.fleet_trip_form
+msgid "Add Stock Pickings"
+msgstr "Thêm Lô hàng"
+
+#. module: to_fleet_stock_picking
+#: model_terms:ir.ui.view,arch_db:to_fleet_stock_picking.add_stock_picking_view_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: to_fleet_stock_picking
+#: model_terms:ir.ui.view,arch_db:to_fleet_stock_picking.fleet_trip_form
+msgid "Cancel picking"
+msgstr "Huỷ nhập/xuất"
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,help:to_fleet_stock_picking.field_stock_picking__ready_for_fleet_picking
+msgid ""
+"Check this field to indicate that this picking is ready for your fleet to "
+"pick"
+msgstr ""
+"Đánh dấu vào trường này để chỉ ra rằng phiếu giao nhận này sẵn sàng cho đội "
+"phương tiện"
+
+#. module: to_fleet_stock_picking
+#: model_terms:ir.ui.view,arch_db:to_fleet_stock_picking.fleet_trip_form
+msgid "Confirm picking"
+msgstr "Xác nhận nhập/xuất"
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_add_stock_picking__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_add_stock_picking__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_fleet_vehicle_trip_waypoint__stock_picking_ids
+msgid "Delivered Pickings"
+msgstr "Lô hàng Giao"
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_stock_picking__trip_waypoint_id
+msgid "Delivering Trip Waypoint"
+msgstr "Điểm tham chiếu chuyến"
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_add_stock_picking__display_name
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_fleet_vehicle_trip__display_name
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_fleet_vehicle_trip_waypoint__display_name
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_stock_move__display_name
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_stock_picking__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_stock_move__driver_id
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_stock_picking__driver_id
+msgid "Driver"
+msgstr "Tài xế"
+
+#. module: to_fleet_stock_picking
+#: model_terms:ir.ui.view,arch_db:to_fleet_stock_picking.stock_picking_inherit_form
+msgid "Fleet"
+msgstr "Phương tiện"
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_stock_picking__fleet_delivery_address_id
+msgid "Fleet Delivery Address"
+msgstr "Địa chỉ Giao hàng của Đội phương tiện"
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_stock_picking__fleet_picking_address_id
+msgid "Fleet Picking Address"
+msgstr "Địa chỉ Nhận hàng của Đội phương tiện"
+
+#. module: to_fleet_stock_picking
+#: model:ir.model,name:to_fleet_stock_picking.model_fleet_vehicle_trip
+msgid "Fleet Trip"
+msgstr "Chuyến"
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_add_stock_picking__id
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_fleet_vehicle_trip__id
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_fleet_vehicle_trip_waypoint__id
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_stock_move__id
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_stock_picking__id
+msgid "ID"
+msgstr ""
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_add_stock_picking____last_update
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_fleet_vehicle_trip____last_update
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_fleet_vehicle_trip_waypoint____last_update
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_stock_move____last_update
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_stock_picking____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_add_stock_picking__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_add_stock_picking__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,help:to_fleet_stock_picking.field_fleet_vehicle_trip__stock_picking_ids
+msgid "List of stock pickings associated to this trip"
+msgstr "Danh mục các lô hàng liên quan đến chuyến này"
+
+#. module: to_fleet_stock_picking
+#: code:addons/to_fleet_stock_picking/models/fleet_vehicle_trip.py:0
+#, python-format
+msgid "Nothing to print."
+msgstr "Không có gì để in."
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_fleet_vehicle_trip_waypoint__picked_stock_picking_ids
+msgid "Picked Pickings"
+msgstr "Lô hàng cần nhận"
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_stock_picking__pick_trip_waypoint_id
+msgid "Picking Trip Waypoint"
+msgstr "Điểm Nhận hàng"
+
+#. module: to_fleet_stock_picking
+#: model_terms:ir.ui.view,arch_db:to_fleet_stock_picking.fleet_trip_form
+msgid "Print Pickings"
+msgstr "In Phiếu hàng"
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_stock_picking__ready_for_fleet_picking
+msgid "Ready for Fleet Picking"
+msgstr "Sẵn sàng cho Đội phương tiện"
+
+#. module: to_fleet_stock_picking
+#: model:ir.model,name:to_fleet_stock_picking.model_stock_move
+msgid "Stock Move"
+msgstr "Dịch chuyển kho"
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_add_stock_picking__stock_picking_ids
+msgid "Stock Picking"
+msgstr ""
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_fleet_vehicle_trip__stock_picking_ids
+#: model_terms:ir.ui.view,arch_db:to_fleet_stock_picking.add_stock_picking_view_form
+#: model_terms:ir.ui.view,arch_db:to_fleet_stock_picking.fleet_trip_form
+#: model_terms:ir.ui.view,arch_db:to_fleet_stock_picking.report_vehicle_trip_view_document
+msgid "Stock Pickings"
+msgstr "In Phiếu Hàng"
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,help:to_fleet_stock_picking.field_stock_picking__fleet_delivery_address_id
+msgid "Technical field to provide delivery address for the fleet"
+msgstr "Trường kỹ thuật để cung cấp địa chỉ giao hàng cho đội phương tiện"
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,help:to_fleet_stock_picking.field_stock_picking__fleet_picking_address_id
+msgid "Technical field to provide picking address for the fleet"
+msgstr "Trường kỹ thuật để cung cấp địa chỉ lấy hàng cho đội phương tiện"
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,help:to_fleet_stock_picking.field_stock_move__driver_id
+#: model:ir.model.fields,help:to_fleet_stock_picking.field_stock_picking__driver_id
+msgid "The driver who carried out this transfer"
+msgstr "Lái xe mà đã thực hiện chuyển lô hàng này"
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,help:to_fleet_stock_picking.field_fleet_vehicle_trip_waypoint__picked_stock_picking_ids
+#: model:ir.model.fields,help:to_fleet_stock_picking.field_fleet_vehicle_trip_waypoint__stock_picking_ids
+msgid "The pickings that will be delivered at this trip waypoints"
+msgstr "Lô hàng mà sẽ được giao tại điểm này"
+
+#. module: to_fleet_stock_picking
+#: code:addons/to_fleet_stock_picking/models/fleet_vehicle_trip.py:0
+#, python-format
+msgid ""
+"The transfer %s did not find its proper delivery waypoint from the Waypoints"
+" list of the trip. Please either change the route or add a waypoint in the "
+"Waypoints tab or remove the transfer from the trip"
+msgstr ""
+"Lô hàng %s không tìm thấy một điểm phù hợp để giao hàng trong danh sách các "
+"điểm trong chuyến. Vui lòng đổi tuyến đường, hoặc thêm điểm vào chuyến hay "
+"gỡ bỏ lô hàng này khỏi chuyến"
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,help:to_fleet_stock_picking.field_stock_picking__trip_waypoint_id
+msgid "The trip waypoint at which this stock transfer is delivered"
+msgstr "Điểm trong chuyến mà tại đó lô hàng này được giao"
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,help:to_fleet_stock_picking.field_stock_picking__pick_trip_waypoint_id
+msgid "The trip waypoint at which this stock transfer is picked"
+msgstr "Điểm trong chuyến mà tại đó lô hàng này được nhận"
+
+#. module: to_fleet_stock_picking
+#: code:addons/to_fleet_stock_picking/models/stock_move.py:0
+#, python-format
+msgid ""
+"The vehicle of stock move '%s' must be the same as the vehicle of picking "
+"'%s'"
+msgstr ""
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,help:to_fleet_stock_picking.field_stock_picking__vehicle_id
+msgid "The vehicle that carried this transfer"
+msgstr "Phương tiện mà đã vận chuyển lô hàng này"
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,help:to_fleet_stock_picking.field_stock_move__vehicle_id
+msgid "This is to indicate that this move concerns a vehicle"
+msgstr ""
+"Trường này để chi ra rằng dịch chuyển này liên quan đến một phương tiện"
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_fleet_vehicle_trip__total_stowage_volume
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_fleet_vehicle_trip_waypoint__total_stowage_volume
+msgid "Total Stowage Volume"
+msgstr "Dung tích Xếp dỡ"
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_stock_picking__total_stowage_volume
+msgid "Total Stowage Volume (m3)"
+msgstr "Dung tích Xếp dỡ (m3)"
+
+#. module: to_fleet_stock_picking
+#: code:addons/to_fleet_stock_picking/models/fleet_vehicle_trip.py:0
+#, python-format
+msgid "Total Stowage Volume Warning!"
+msgstr "Cảnh báo Dung tích Xếp dỡ!"
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,help:to_fleet_stock_picking.field_fleet_vehicle_trip__total_stowage_volume
+msgid "Total Stowage Volume in m3"
+msgstr "Tổng Thể tích tính bằng m3"
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,help:to_fleet_stock_picking.field_fleet_vehicle_trip_waypoint__total_stowage_volume
+msgid ""
+"Total Stowage Volume in m3 of all the pickings that will be picked or "
+"delivered at this trip waypoint."
+msgstr ""
+"Tổng Dung tích xếp dỡ bằng m3 của tất cả các lô hàng sẽ được giao hoặc lấy "
+"tại điểm này."
+
+#. module: to_fleet_stock_picking
+#: code:addons/to_fleet_stock_picking/models/fleet_vehicle_trip.py:0
+#, python-format
+msgid "Total Stowage Volume is greater than %s. Are you sure to continue?"
+msgstr "Tổng Dung tích Xếp dỡ lớn hơn %s. Bạn có chắc chắn muốn tiếp tục?"
+
+#. module: to_fleet_stock_picking
+#: code:addons/to_fleet_stock_picking/models/fleet_vehicle_trip.py:0
+#, python-format
+msgid ""
+"Total Stowage Volume of all the transfers must be less than the max allowed "
+"Volume of the vehicle %s which is %s."
+msgstr ""
+"Tổng dung tích xếp dỡ của tất cả các lô hàng phải phải nhỏ hơn tổng dung "
+"tích cho phép của phương tiện %s (%s)."
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,help:to_fleet_stock_picking.field_stock_picking__total_stowage_volume
+msgid ""
+"Total Stowage Volume of the available products (which are ready to "
+"transfer), not of the whole products in the stock picking"
+msgstr ""
+"Tổng dung tích xếp dỡ của các sản phẩm khả dụng (mà sẵn sàng để dịch "
+"chuyển), không phải là toàn bộ sản phẩm trong phiếu giao nhận"
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_stock_picking__total_volume
+msgid "Total Volume (m3)"
+msgstr "Tổng Dung tích (m3)"
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,help:to_fleet_stock_picking.field_stock_picking__total_volume
+msgid ""
+"Total Volume of the available products (which are ready to transfer), not of"
+" the whole products in the stock picking"
+msgstr ""
+"Tổng dung tích của các sản phẩm khả dụng (mà sẵn sàng để dịch chuyển), không"
+" phải là toàn bộ sản phẩm trong phiếu giao nhận"
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_fleet_vehicle_trip__total_weight
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_fleet_vehicle_trip_waypoint__total_weight
+msgid "Total Weight"
+msgstr "Tổng Khối lượng"
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_stock_picking__total_weight
+msgid "Total Weight (kg)"
+msgstr "Tổng Khối lượng (kg)"
+
+#. module: to_fleet_stock_picking
+#: code:addons/to_fleet_stock_picking/models/fleet_vehicle_trip.py:0
+#, python-format
+msgid "Total Weight Warning!"
+msgstr "Cảnh báo Tổng Khối lượng!"
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,help:to_fleet_stock_picking.field_fleet_vehicle_trip__total_weight
+msgid "Total Weight in Kg"
+msgstr "Tổng Khối lượng tính bằng Kg"
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,help:to_fleet_stock_picking.field_fleet_vehicle_trip_waypoint__total_weight
+msgid ""
+"Total Weight in Kg of all the pickings that will be picked or delivered at "
+"this trip waypoint."
+msgstr ""
+"Tổng khối lượng của tất cả các lô hàng sẽ được giao hoặc lấy tại địa điểm "
+"này."
+
+#. module: to_fleet_stock_picking
+#: code:addons/to_fleet_stock_picking/models/fleet_vehicle_trip.py:0
+#, python-format
+msgid "Total Weight is greater than %s. Are you sure to continue?"
+msgstr "Tổng Khối lượng lớn hơn %s. Bạn có chắc chắn muốn tiếp tục?"
+
+#. module: to_fleet_stock_picking
+#: code:addons/to_fleet_stock_picking/models/fleet_vehicle_trip.py:0
+#, python-format
+msgid ""
+"Total Weight of all the transfers must be less than the max allowed weight "
+"of the vehicle %s which is %s."
+msgstr ""
+"Tổng Khối lượng của các lô hàng phải phải nhỏ hơn tải trọng tối đa được phép"
+" của phương tiện %s (%s)."
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,help:to_fleet_stock_picking.field_stock_picking__total_weight
+msgid ""
+"Total Weight of the available products (which are ready to transfer), not of"
+" the whole products in the stock picking"
+msgstr ""
+"Tổng Khối lượng của các sản phẩm khả dụng (mà sẵn sàng để dịch chuyển), "
+"không phải là toàn bộ sản phẩm trong phiếu giao nhận"
+
+#. module: to_fleet_stock_picking
+#: model:ir.model,name:to_fleet_stock_picking.model_stock_picking
+msgid "Transfer"
+msgstr "Dịch chuyển"
+
+#. module: to_fleet_stock_picking
+#: model:ir.model,name:to_fleet_stock_picking.model_fleet_vehicle_trip_waypoint
+msgid "Trip Waypoint"
+msgstr "Địa điểm"
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_stock_move__vehicle_id
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_stock_picking__vehicle_id
+msgid "Vehicle"
+msgstr "Phương tiện"
+
+#. module: to_fleet_stock_picking
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_stock_move__trip_id
+#: model:ir.model.fields,field_description:to_fleet_stock_picking.field_stock_picking__trip_id
+msgid "Vehicle Trip"
+msgstr "Chuyến"
+
+#. module: to_fleet_stock_picking
+#: code:addons/to_fleet_stock_picking/wizards/add_stock_picking.py:0
+#, python-format
+msgid "You must select stock picking to add to trip."
+msgstr "Bạn phải chọn lô hàng để thêm vào chuyến đi"
+
+#. module: to_fleet_stock_picking
+#: model_terms:ir.ui.view,arch_db:to_fleet_stock_picking.fleet_trip_form
+msgid "kg"
+msgstr ""
+
+#. module: to_fleet_stock_picking
+#: model_terms:ir.ui.view,arch_db:to_fleet_stock_picking.fleet_trip_form
+msgid "m3"
+msgstr ""

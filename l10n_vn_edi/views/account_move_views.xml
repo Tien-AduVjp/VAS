@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+	<data>
+		<record id="view_move_form" model="ir.ui.view">
+			<field name="name">account.move.form</field>
+			<field name="model">account.move</field>
+			<field name="inherit_id" ref="account.view_move_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//button[@name='action_invoice_sent'][1]"
+					position="before">
+					<field name="reversed_entry_einvoice_state" invisible="1"/>
+					<button name="%(l10n_vn_edi.account_invoice_einvoice_cancel_action)d"
+							type="action" string="Issue E-Invoice" class="oe_highlight"
+							attrs="{'invisible': ['|','|','|', '|', '|',
+								('einvoice_enabled','=',False),
+								('einvoice_state', '!=', 'not_issued'),
+								('state', 'not in', ('posted')),
+								('move_type', 'not in', ('out_invoice', 'out_refund')),
+								('reversed_entry_id', '=', False),
+								('reversed_entry_einvoice_state', 'not in', ('issued', 'paid', 'adjusted')),
+							]}"
+							groups="account.group_account_invoice"/>
+					<button name="action_issue_einvoices" type="object"
+						string="Issue E-Invoice" class="oe_highlight"
+						attrs="{'invisible': ['|','|','|',('einvoice_enabled','=',False),('einvoice_state', '!=', 'not_issued'), ('state', 'not in', ('posted')), ('move_type', '!=', 'out_invoice')]}"
+						confirm="This will connect E-Invoice then generates a legal invoice for you. Please ensure the customer has correct information set (e.g. legal name, billing/registered address, tax identification number, country, language, etc). Are you sure you want to proceed?"
+						groups="account.group_account_invoice" />
+					<button name="action_prepend_vietnamese_description_to_invoice_lines" type="object"
+						string="Add Vietnamese Invoice Line Description" class="oe_highlight"
+						attrs="{'invisible': ['|','|',
+						  ('einvoice_state', '!=', 'not_issued'),
+                          ('state', '!=', 'draft'),
+						  ('move_type', 'not in', ('out_invoice', 'out_refund'))]}"
+						confirm="This action will prepend sale description in Vietnamese of the products to the corresponding invoice lines' label.
+						Please note that this will not check duplication. So, don't do it multiple times."
+						groups="account.group_account_invoice" />
+                    <button name="action_prepend_vietnamese_description_to_invoice_lines" type="object"
+                        string="Add Vietnamese Invoice Line Description"
+                        attrs="{'invisible': ['|','|',
+                            ('einvoice_state', '!=', 'not_issued'),
+                            ('state', '!=', 'posted'),
+                            ('move_type', 'not in', ('out_invoice', 'out_refund'))]}"
+                        confirm="This action will prepend sale description in Vietnamese of the products to the corresponding invoice lines' label.
+                        Please note that this will not check duplication. So, don't do it multiple times."
+                        groups="account.group_account_invoice" />
+				</xpath>
+
+				<xpath expr="//button[@name='button_draft']"
+					position="after">
+					<button name="get_einvoice_representation_files"
+						type="object" string="Download E-Invoice Display Version"
+						attrs="{'invisible': ['|','|',('einvoice_enabled','=',False),('einvoice_state', '=', 'not_issued'),('move_type', 'not in', ('out_invoice', 'out_refund'))]}"
+						context="{'log_einvoice_message':1}"
+						groups="account.group_account_invoice" />
+					<button name="get_einvoice_converted_files" type="object"
+						string="Download E-Invoice Converted"
+						help="Download the invoice file converted from the electronic invoice."
+						attrs="{'invisible': ['|','|',('einvoice_enabled','=',False),('einvoice_state', '=', 'not_issued'),('move_type', 'not in', ('out_invoice', 'out_refund'))]}"
+						context="{'log_einvoice_message':1}"
+						groups="account.group_account_invoice" />
+				</xpath>
+
+				<xpath expr="//group[@id='header_right_group']" position="inside">
+					<field name="einvoice_provider"
+						attrs="{'invisible': ['|',('einvoice_provider','=','none'),('move_type', '!=', 'out_invoice')]}"/>
+					<field name="einvoice_state"
+						attrs="{'invisible': ['|',('einvoice_provider','=','none'),('move_type', 'not in', ('out_invoice', 'out_refund'))]}"/>
+					<field name="einvoice_enabled" invisible="1" />
+					<field name="einvoice_api_version" invisible="1"/>
+					<field name="einvoice_transactionid" invisible="1"/>
+				</xpath>
+				<xpath expr="//page[@name='other_info']" position="after">
+					<page name="einvoice" string="E-Invoice"
+						attrs="{'invisible': ['|',('einvoice_provider','=','none'),('move_type', 'not in', ('out_invoice', 'out_refund'))]}">
+						<group>
+							<group>
+								<field name="einvoice_invoice_date" />
+								<!-- Converted file -->
+								<field name="einvoice_converted_filename" invisible="1" />
+								<field name="einvoice_converted_file"
+									filename="einvoice_converted_filename" attrs="{'invisible':[('einvoice_converted_file','=',False)]}"/>
+
+								<!-- PDF exchange file -->
+								<field name="einvoice_representation_pdf_filename"
+									invisible="1" />
+								<field name="einvoice_representation_pdf"
+									filename="einvoice_representation_pdf_filename" attrs="{'invisible':[('einvoice_representation_pdf','=',False)]}"/>
+
+								<!-- ZIP exchange file -->
+								<field name="einvoice_official_representation_filename"
+									invisible="1" />
+								<field name="einvoice_official_representation"
+									filename="einvoice_official_representation_filename" attrs="{'invisible':[('einvoice_official_representation','=',False)]}"/>
+								<field name="einvoice_issue_user_id"
+									attrs="{'invisible': [('einvoice_issue_user_id','=',False)]}" />
+								<field name="cancellation_record" attrs="{'invisible':[('move_type', 'not in', ('out_invoice', 'out_refund'))]}" filename="cancellation_record_name"/>
+								<field name="cancellation_record_name" invisible="1"/>
+								<field name="adjustment_record" filename="adjustment_record_name" attrs="{'invisible':[('move_type', '!=', 'out_refund')]}"/>
+								<field name="adjustment_record_name" invisible="1"/>
+							</group>
+						</group>
+					</page>
+				</xpath>
+
+			</field>
+		</record>
+
+		<record id="view_invoice_tree" model="ir.ui.view">
+			<field name="name">account.invoice.tree</field>
+			<field name="model">account.move</field>
+			<field name="inherit_id" ref="account.view_invoice_tree" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='state']" position="after">
+					<field name="einvoice_enabled" invisible="1" />
+					<field name="einvoice_state"
+                        optional="hide"/>
+				</xpath>
+			</field>
+		</record>
+
+		<record id="view_account_invoice_filter" model="ir.ui.view">
+			<field name="name">account.invoice.tree</field>
+			<field name="model">account.move</field>
+			<field name="inherit_id"
+				ref="account.view_account_invoice_filter" />
+			<field name="arch" type="xml">
+				<xpath expr="//filter[@name='late']" position="after">
+					<separator />
+					<filter name="ftr_sinv" string="Is E-Invoice"
+						domain="['|',('einvoice_state','!=','not_issued'),('einvoice_enabled','=',True)]"
+						help="Show invoices that were issued or are issuable with E-Invoice" />
+					<filter name="ftr__non_sinv" string="Is NOT E-Invoice"
+						domain="[('einvoice_state','=','not_issued'),('einvoice_enabled','=',False)]"
+						help="Show invoices that are not issuable with E-Invoice" />
+					<separator />
+					<filter name="ftr_sinv_not_issued"
+						string="E-Invoice Not Issued"
+						help="Show invoices the E-Invoice status which is other than Not Issued"
+						domain="[('einvoice_state','=','not_issued')]" />
+					<filter name="ftr_sinv_issued" string="E-Invoice Issued"
+						help="Show invoices the E-Invoice status which is Issued"
+						domain="[('einvoice_state', '=', 'issued')]" />
+					<filter name="ftr_sinv_paid" string="E-Invoice Paid"
+						help="Show invoices the E-Invoice status which is Paid"
+						domain="[('einvoice_state', '=', 'paid')]" />
+					<filter name="ftr_sinv_cancelled"
+						string="E-Invoice Issued But Cancelled"
+						help="Show invoices the E-Invoice status which is Cancelled"
+						domain="[('einvoice_state', '=', 'cancelled')]" />
+				</xpath>
+			</field>
+		</record>
+
+		<record id="invoice_form_legal_number" model="ir.ui.view">
+			<field name="name">account.move.form</field>
+			<field name="model">account.move</field>
+			<field name="inherit_id"
+				ref="to_legal_invoice_number.view_move_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='invoice_date_due']" position="after">
+					<field name="lock_legal_number" invisible="1" />
+				</xpath>
+				<xpath expr="//field[@name='legal_number']"
+					position="attributes">
+					<attribute name="attrs">{'readonly':[('lock_legal_number','=',True)]}</attribute>
+				</xpath>
+			</field>
+		</record>
+
+		<record id="action_server_sync_einvoice_status"
+			model="ir.actions.server">
+			<field name="name">Synchronize Einvoice Status</field>
+			<field name="type">ir.actions.server</field>
+			<field name="model_id" ref="model_account_move" />
+			<field name="binding_model_id" ref="model_account_move" />
+			<field name="state">code</field>
+			<field name="code">records.action_sync_einvoice_status()</field>
+		</record>
+	</data>
+</odoo>

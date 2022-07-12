@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="product_template_form_view">
+			<field name="name">product.template.common.form</field>
+			<field name="model">product.template</field>
+			<field name="inherit_id"
+				ref="to_odoo_module.product_template_form_view" />
+			<field name="arch" type="xml">
+				<xpath
+					expr="//page[@name='sales']/group[@name='sale']/group[last()]"
+					position="after">
+					<group name="app_sales">
+						<field name="print_app_desc_on_sale_order"
+							groups="sales_team.group_sale_salesman"
+							attrs="{'invisible': [('odoo_module_versions_count','&lt;=',0)]}" />
+					</group>
+				</xpath>
+
+			</field>
+		</record>
+	</data>
+</odoo>

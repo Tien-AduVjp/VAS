@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><?xml-stylesheet type="text/xsl" href="invoice.xsl"?>
+<inv:invoice xmlns:inv="http://laphoadon.gdt.gov.vn/2014/09/invoicexml/v1"
+			 xmlns:ns1="http://www.w3.org/2000/09/xmldsig#">
+	<inv:invoiceData id="data">
+		<inv:invoiceType>01GTKT</inv:invoiceType>
+		<inv:templateCode>01GTKT0/001</inv:templateCode>
+		<inv:invoiceSeries>AA/20E</inv:invoiceSeries>
+		<inv:invoiceNumber>0000406</inv:invoiceNumber>
+		<inv:invoiceName>HÓA ĐƠN GIÁ TRỊ GIA TĂNG</inv:invoiceName>
+		<inv:invoiceIssuedDate>2021-08-24T00:00:00+07:00</inv:invoiceIssuedDate>
+		<inv:invoiceSignedDate>2021-08-24T00:00:00+07:00</inv:invoiceSignedDate>
+		<inv:currencyCode>VND</inv:currencyCode>
+		<inv:adjustmentType>1</inv:adjustmentType>
+		<inv:seller>
+			<inv:sellerCode/>
+			<inv:sellerLegalName>YourCompany</inv:sellerLegalName>
+			<inv:sellerTaxCode>0201994665</inv:sellerTaxCode>
+			<inv:sellerAddressLine>250 Executive Park Blvd, Suite 3400, 94134, San Francisco, California, United
+				States
+			</inv:sellerAddressLine>
+			<inv:sellerPhoneNumber>+1 (650) 555-0111</inv:sellerPhoneNumber>
+			<inv:sellerFaxNumber/>
+			<inv:sellerEmail>info@yourcompany.example.com</inv:sellerEmail>
+			<inv:sellerBankName/>
+			<inv:sellerBankAccount/>
+			<inv:sellerContactPersonName/>
+			<inv:sellerContactPersonPhoneNumber/>
+			<inv:sellerContactPersonEmail/>
+			<inv:sellerWebsite>http://www.example.com</inv:sellerWebsite>
+			<inv:sellerBusinessLicenseNo>0201994665</inv:sellerBusinessLicenseNo>
+			<inv:sellerRepresentative/>
+			<inv:sellerBankAccountOwner/>
+			<inv:sellerRepresentativeIdType>1</inv:sellerRepresentativeIdType>
+			<inv:sellerSearchInvoiceLink/>
+			<inv:sellerRepresentativeIdNo>12345678</inv:sellerRepresentativeIdNo>
+		</inv:seller>
+		<inv:buyer>
+			<inv:buyerCode/>
+			<inv:buyerDisplayName/>
+			<inv:buyerLegalName>Azure Interior</inv:buyerLegalName>
+			<inv:buyerTaxCode/>
+			<inv:buyerAddressLine>4557 De Silva St, 94538, Fremont, California, United States</inv:buyerAddressLine>
+			<inv:buyerPostalCode/>
+			<inv:buyerCityName>Fremont</inv:buyerCityName>
+			<inv:buyerCountryCode>US</inv:buyerCountryCode>
+			<inv:buyerPhoneNumber>8709310505</inv:buyerPhoneNumber>
+			<inv:buyerFaxNumber/>
+			<inv:buyerEmail>azure.Interior24@example.com</inv:buyerEmail>
+			<inv:buyerBankName/>
+			<inv:buyerBankAccount/>
+			<inv:buyerIdType/>
+			<inv:buyerIdNo/>
+		</inv:buyer>
+		<inv:items>
+			<inv:item>
+				<inv:lineNumber>1</inv:lineNumber>
+				<inv:itemCode>DESK0004</inv:itemCode>
+				<inv:itemName>[DESK0004] 160x80cm, with large legs. (160x80cm, with large legs.)</inv:itemName>
+				<inv:unitName>Units
+					(Units)
+				</inv:unitName>
+				<inv:unitPrice>800.4</inv:unitPrice>
+				<inv:quantity>1</inv:quantity>
+				<inv:selection>1</inv:selection>
+				<inv:itemTotalAmountWithoutVat>800</inv:itemTotalAmountWithoutVat>
+				<inv:itemTotalAmountWithVat>880</inv:itemTotalAmountWithVat>
+				<inv:vatPercentage>10</inv:vatPercentage>
+				<inv:vatAmount>80</inv:vatAmount>
+				<inv:discount>0</inv:discount>
+				<inv:itemDiscount>0</inv:itemDiscount>
+			</inv:item>
+		</inv:items>
+		<inv:discountItems/>
+		<inv:invoiceTaxBreakdowns>
+			<inv:invoiceTaxBreakdowns>
+				<inv:vatPercentage>10</inv:vatPercentage>
+				<inv:vatTaxableAmount>800</inv:vatTaxableAmount>
+				<inv:vatTaxAmount>80</inv:vatTaxAmount>
+			</inv:invoiceTaxBreakdowns>
+		</inv:invoiceTaxBreakdowns>
+		<inv:payments>
+			<inv:payment>
+				<inv:paymentMethodName>CK</inv:paymentMethodName>
+			</inv:payment>
+		</inv:payments>
+		<inv:sumOfTotalLineAmountWithoutVAT>800</inv:sumOfTotalLineAmountWithoutVAT>
+		<inv:totalAmountWithoutVAT>800</inv:totalAmountWithoutVAT>
+		<inv:totalVATAmount>80</inv:totalVATAmount>
+		<inv:totalAmountWithVAT>880</inv:totalAmountWithVAT>
+		<inv:totalAmountWithVATInWords>Tám trăm tám mươi đồng</inv:totalAmountWithVATInWords>
+		<inv:discountAmount>0</inv:discountAmount>
+		<inv:userDefines>&lt;reservationCode&gt;85ZMSNLEBA&lt;/reservationCode&gt;</inv:userDefines>
+		<inv:customDefines>
+			<inv:reservationCode>85ZMSNLEBA</inv:reservationCode>
+		</inv:customDefines>
+		<inv:userName>Mitchell Admin</inv:userName>
+		<inv:transactionUuid>1ba5ea62-eae6-429d-8489-e3260fedc4b8</inv:transactionUuid>
+	</inv:invoiceData>
+	<Barcode>0201994665|01GTKT0/001|1|AA/20E0000406||24/08/2021|880.0</Barcode>
+	<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="seller">
+		<SignedInfo>
+			<CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+			<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+			<Reference URI="">
+				<Transforms>
+					<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+				</Transforms>
+				<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+				<DigestValue>9u1rnLCYKBEVqfomGuFDvxK1Q2Q=</DigestValue>
+			</Reference>
+		</SignedInfo>
+		<SignatureValue>QaKS4HKGVzS+OHTEPdCZrQfH4L7YmjkxZMd0/v1ihXBHAMQNJW7nr43Nq3ddS6ykyzRP5CELadM4
+			ztl2Yxe7vyRpAypdTtz6KR0NYayf9OplOX0fc/WEEXcF7knc5NMt+8oZoM3jViJG9mY4ToR0BuSC
+			wkh91pK5mKVxNX2XbEQ=
+		</SignatureValue>
+		<KeyInfo>
+			<X509Data>
+				<X509SubjectName>C=VN,L=HÀ NỘI,CN=TẬP ĐOÀN CÔNG NGHIỆP - VIỄN THÔNG QUÂN
+					ĐỘI,UID=MST:0100109106,1.2.840.113549.1.9.1=#161368616e74407669657474656c2e636f6d2e766e
+				</X509SubjectName>
+				<X509Certificate>MIIELTCCAxWgAwIBAgIQVAT//rcDP7MW1nIgG4O3CzANBgkqhkiG9w0BAQUFADBOMQswCQYDVQQG
+					EwJWTjESMBAGA1UEBwwJSMOgIE7hu5lpMRYwFAYDVQQKEw1WaWV0dGVsIEdyb3VwMRMwEQYDVQQD
+					EwpWaWV0dGVsLUNBMB4XDTIwMDkxMTAzNTkyMFoXDTI0MDUxMzEyMDUxMlowgagxIjAgBgkqhkiG
+					9w0BCQEWE2hhbnRAdmlldHRlbC5jb20udm4xHjAcBgoJkiaJk/IsZAEBDA5NU1Q6MDEwMDEwOTEw
+					NjFBMD8GA1UEAww4VOG6rFAgxJBPw4BOIEPDlE5HIE5HSEnhu4ZQIC0gVknhu4ROIFRIw5RORyBR
+					VcOCTiDEkOG7mEkxEjAQBgNVBAcMCUjDgCBO4buYSTELMAkGA1UEBhMCVk4wgZ8wDQYJKoZIhvcN
+					AQEBBQADgY0AMIGJAoGBAKfUcj8BT+HdDCHBOubQCiUGRVqMGMHZnA4DbptaSeQMsQtnalaEgT4y
+					HEpzu01/nyIfc5QxjP6Sk86K0BZ0qXtGTVoBGawlk8twROYVhoNUwxYdDDaENuZjongefNr66UR3
+					EXD5lyfETxwkKABU23seFwoqmvD+Gg21F5KPn51fAgMBAAGjggEuMIIBKjA1BggrBgEFBQcBAQQp
+					MCcwJQYIKwYBBQUHMAGGGWh0dHA6Ly9vY3NwLnZpZXR0ZWwtY2Eudm4wHQYDVR0OBBYEFGLU6Z6g
+					jX+aZa6YyFD8YQXIPSmEMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAU/stBFOldp9kyDeSyCFzx
+					XOy2srUwgZIGA1UdHwSBijCBhzCBhKAuoCyGKmh0dHA6Ly9jcmwudmlldHRlbC1jYS52bi9WaWV0
+					dGVsLUNBLXYzLmNybKJSpFAwTjETMBEGA1UEAwwKVmlldHRlbC1DQTEWMBQGA1UECgwNVmlldHRl
+					bCBHcm91cDESMBAGA1UEBwwJSMOgIE7hu5lpMQswCQYDVQQGEwJWTjAOBgNVHQ8BAf8EBAMCB4Aw
+					DQYJKoZIhvcNAQEFBQADggEBAHpR6c257X8P4wSFoHrV5wXuvQwzVRU8jJhKxF26HnxnSnWNkUut
+					BYARgkj3jEjz8Cf6nUYCPbpfpqUZWmYgA980EQTAlgk5bBJH/i3LWwBvqQMJ8ZYxCgHZ83izXw8U
+					gl/I5FjNGcO+QYUdoALHyHYdBFXcB2PGiDvgBBsyYdPp9G487YeNe169jPrMnK/fHydTlRoYQ3Vx
+					vfAZWH3nzaK7ozHXqr0qUkgWIznQjsq6o5ZBcUVWJecOLwMy98DhdPia+/5Hy/E51/rZTh/lZtLK
+					wNlLnrwcIYwytMKSylo/tAgGIWYroIcxrW1dz9QBuPJo5KalP5igia+dxngEzb4=
+				</X509Certificate>
+			</X509Data>
+			<KeyValue>
+				<RSAKeyValue>
+					<Modulus>p9RyPwFP4d0MIcE65tAKJQZFWowYwdmcDgNum1pJ5AyxC2dqVoSBPjIcSnO7TX+fIh9zlDGM/pKT
+						zorQFnSpe0ZNWgEZrCWTy3BE5hWGg1TDFh0MNoQ25mOieB582vrpRHcRcPmXJ8RPHCQoAFTbex4X
+						Ciqa8P4aDbUXko+fnV8=
+					</Modulus>
+					<Exponent>AQAB</Exponent>
+				</RSAKeyValue>
+			</KeyValue>
+		</KeyInfo>
+	</Signature>
+</inv:invoice>

@@ -1,0 +1,282 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_hr_payroll_attendance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-05 11:12+0000\n"
+"PO-Revision-Date: 2021-12-05 11:12+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_hr_payroll_attendance
+#: model_terms:ir.ui.view,arch_db:to_hr_payroll_attendance.view_hr_payslip_form
+msgid "<span>hours</span>"
+msgstr ""
+
+#. module: to_hr_payroll_attendance
+#: model_terms:ir.ui.view,arch_db:to_hr_payroll_attendance.view_hr_payslip_form
+msgid "<span>times</span>"
+msgstr ""
+
+#. module: to_hr_payroll_attendance
+#: model:ir.actions.act_window,name:to_hr_payroll_attendance.hr_attendance_action_pivot
+msgid "Attendance Analysis"
+msgstr ""
+
+#. module: to_hr_payroll_attendance
+#: model:ir.model.fields.selection,name:to_hr_payroll_attendance.selection__hr_contract__salary_attendance_computation_mode__attendance
+#: model_terms:ir.ui.view,arch_db:to_hr_payroll_attendance.hr_payslip_run_form
+#: model_terms:ir.ui.view,arch_db:to_hr_payroll_attendance.view_hr_payslip_form
+msgid "Attendance Entries"
+msgstr ""
+
+#. module: to_hr_payroll_attendance
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_payslip__attendance_count
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_payslip_run__attendance_count
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_working_month_calendar__attendance_count
+msgid "Attendance Entries Count"
+msgstr ""
+
+#. module: to_hr_payroll_attendance
+#: model_terms:ir.ui.view,arch_db:to_hr_payroll_attendance.hr_payslip_run_form
+msgid "Attendance Entries that match the period of this payslip batch."
+msgstr ""
+
+#. module: to_hr_payroll_attendance
+#: model_terms:ir.ui.view,arch_db:to_hr_payroll_attendance.view_hr_payslip_form
+msgid "Attendance Entries that match the period of this payslip."
+msgstr ""
+
+#. module: to_hr_payroll_attendance
+#: model_terms:ir.ui.view,arch_db:to_hr_payroll_attendance.report_payslip
+msgid "Attendance Number"
+msgstr ""
+
+#. module: to_hr_payroll_attendance
+#: model_terms:ir.ui.view,arch_db:to_hr_payroll_attendance.report_payslip
+msgid "Attendance Report"
+msgstr ""
+
+#. module: to_hr_payroll_attendance
+#: model_terms:ir.ui.view,arch_db:to_hr_payroll_attendance.hr_working_month_calendar_form_view
+#: model_terms:ir.ui.view,arch_db:to_hr_payroll_attendance.view_hr_payslip_form
+msgid "Attendance Summary"
+msgstr ""
+
+#. module: to_hr_payroll_attendance
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_payslip__attendance_ids
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_payslip_run__attendance_ids
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_working_month_calendar__attendance_ids
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_working_month_calendar_line__attendance_ids
+msgid "Attendances"
+msgstr ""
+
+#. module: to_hr_payroll_attendance
+#: model:ir.model,name:to_hr_payroll_attendance.model_hr_contract
+msgid "Contract"
+msgstr ""
+
+#. module: to_hr_payroll_attendance
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_contract__display_name
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_payslip__display_name
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_payslip_contribution_line__display_name
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_payslip_run__display_name
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_working_month_calendar__display_name
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_working_month_calendar_line__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: to_hr_payroll_attendance
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_working_month_calendar__early_leave_count
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_working_month_calendar_line__early_leave_count
+msgid "Early Leave Count"
+msgstr ""
+
+#. module: to_hr_payroll_attendance
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_payslip__early_leave_hours
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_working_month_calendar_line__early_leave_hours
+#: model_terms:ir.ui.view,arch_db:to_hr_payroll_attendance.report_payslip
+msgid "Early Leave Hours"
+msgstr ""
+
+#. module: to_hr_payroll_attendance
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_payslip__early_leave_count
+#: model_terms:ir.ui.view,arch_db:to_hr_payroll_attendance.hr_working_month_calendar_line_view_form
+#: model_terms:ir.ui.view,arch_db:to_hr_payroll_attendance.hr_working_month_calendar_line_view_tree
+#: model_terms:ir.ui.view,arch_db:to_hr_payroll_attendance.report_payslip
+msgid "Early Leaves"
+msgstr ""
+
+#. module: to_hr_payroll_attendance
+#: model:ir.model.fields,help:to_hr_payroll_attendance.field_hr_contract__salary_attendance_computation_mode
+msgid ""
+"How the employee worked hours would be computed in salary rules, based on either Time-Off registration or attendance data (depending on the availability of the module `to_hr_payroll_attendance`):\n"
+"* Time-Off Registration: worked hours (and days) and the paid rate will be computed correspondingly based on the formulas `Duty Working Hours (or Days) - Leave Hours (or Days)` and `(Duty Working Hours (or Days) - Unpaid Leave Hours (or Days)) / Calendar Working Hours (or Days) in Full Month`;\n"
+"* Attendance Entries: worked hours will be the total valid attendance hours and the paid rate will be computed as: Valid Attendance Hours / Calendar Working Hours in Full Month."
+msgstr ""
+
+#. module: to_hr_payroll_attendance
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_contract__id
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_payslip__id
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_payslip_contribution_line__id
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_payslip_run__id
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_working_month_calendar__id
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_working_month_calendar_line__id
+msgid "ID"
+msgstr ""
+
+#. module: to_hr_payroll_attendance
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_contract____last_update
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_payslip____last_update
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_payslip_contribution_line____last_update
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_payslip_run____last_update
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_working_month_calendar____last_update
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_working_month_calendar_line____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: to_hr_payroll_attendance
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_working_month_calendar__late_attendance_count
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_working_month_calendar_line__late_attendance_count
+msgid "Late Coming Count"
+msgstr ""
+
+#. module: to_hr_payroll_attendance
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_payslip__late_attendance_hours
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_working_month_calendar_line__late_attendance_hours
+#: model_terms:ir.ui.view,arch_db:to_hr_payroll_attendance.report_payslip
+msgid "Late Coming Hours"
+msgstr ""
+
+#. module: to_hr_payroll_attendance
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_payslip__late_attendance_count
+#: model_terms:ir.ui.view,arch_db:to_hr_payroll_attendance.hr_working_month_calendar_line_view_form
+#: model_terms:ir.ui.view,arch_db:to_hr_payroll_attendance.hr_working_month_calendar_line_view_tree
+#: model_terms:ir.ui.view,arch_db:to_hr_payroll_attendance.report_payslip
+msgid "Late Comings"
+msgstr ""
+
+#. module: to_hr_payroll_attendance
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_working_month_calendar__missing_checkout_count
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_working_month_calendar_line__missing_checkout_count
+msgid "Missing Check-out"
+msgstr ""
+
+#. module: to_hr_payroll_attendance
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_payslip__missing_checkout_count
+#: model_terms:ir.ui.view,arch_db:to_hr_payroll_attendance.hr_working_month_calendar_line_view_form
+#: model_terms:ir.ui.view,arch_db:to_hr_payroll_attendance.hr_working_month_calendar_line_view_tree
+#: model_terms:ir.ui.view,arch_db:to_hr_payroll_attendance.report_payslip
+msgid "Missing Check-outs"
+msgstr ""
+
+#. module: to_hr_payroll_attendance
+#: model:ir.model.fields,help:to_hr_payroll_attendance.field_hr_working_month_calendar__missing_checkout_count
+#: model:ir.model.fields,help:to_hr_payroll_attendance.field_hr_working_month_calendar_line__missing_checkout_count
+msgid ""
+"Number of attendance entries that have missing checkout or auto-checkout"
+msgstr ""
+
+#. module: to_hr_payroll_attendance
+#: model:ir.model.fields,help:to_hr_payroll_attendance.field_hr_payslip__missing_checkout_count
+msgid ""
+"Number of attendance entries that have missing checkout or auto-checkout "
+"(filled automatically by the software)"
+msgstr ""
+
+#. module: to_hr_payroll_attendance
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_working_month_calendar__paid_rate
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_working_month_calendar_line__paid_rate
+msgid "Paid Rate"
+msgstr ""
+
+#. module: to_hr_payroll_attendance
+#: model:ir.model,name:to_hr_payroll_attendance.model_hr_payslip
+msgid "Pay Slip"
+msgstr ""
+
+#. module: to_hr_payroll_attendance
+#: model:ir.model,name:to_hr_payroll_attendance.model_hr_payslip_run
+msgid "Payslip Batches"
+msgstr ""
+
+#. module: to_hr_payroll_attendance
+#: model:ir.model,name:to_hr_payroll_attendance.model_hr_payslip_contribution_line
+msgid "Payslip Contribution Line"
+msgstr ""
+
+#. module: to_hr_payroll_attendance
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_contract__salary_attendance_computation_mode
+msgid "Salary Attendance Computation Mode"
+msgstr ""
+
+#. module: to_hr_payroll_attendance
+#: model:ir.model.fields,help:to_hr_payroll_attendance.field_hr_working_month_calendar__paid_rate
+msgid ""
+"The rate which is computed by the following formula:\n"
+"* If contract is on day rate basis: (Duty Working Days - Unpaid Leave Days) / Working Days in Full Month;\n"
+"* If contract is on hour rate basis: (Duty Working Hours - Unpaid Leave Hours) / Working Hours in Full Month;\n"
+"* If contract is on attendance entries and day basis: (Valid Attendance Hours / 8) / Working Days in Full Month;\n"
+"* If contract is on attendance entries and hours basis: Valid Attendance Hours / Working Hours in Full Month"
+msgstr ""
+
+#. module: to_hr_payroll_attendance
+#: model:ir.model.fields,help:to_hr_payroll_attendance.field_hr_working_month_calendar_line__paid_rate
+msgid ""
+"The rate which is computed by the following formula:\n"
+"* If contract is on day rate basis: (Duty Working Days - Unpaid Leave Days) / Working Days in Full Month;\n"
+"* If contract is on hour rate basis: (Duty Working Hours - Unpaid Leave Hours) / Working Hours in Full Month;\n"
+"* If contract is on attendance entries and day basis: (Valid Attendance Hours / Average Hour per Day) / Working Days in Full Month;\n"
+"* If contract is on attendance entries and hours basis: Valid Attendance Hours / Working Hours in Full Month"
+msgstr ""
+
+#. module: to_hr_payroll_attendance
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_payslip__total_attendance_hours
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_working_month_calendar__total_attendance_hours
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_working_month_calendar_line__total_attendance_hours
+#: model_terms:ir.ui.view,arch_db:to_hr_payroll_attendance.hr_working_month_calendar_line_view_tree
+#: model_terms:ir.ui.view,arch_db:to_hr_payroll_attendance.report_payslip
+msgid "Total Attendance Hours"
+msgstr ""
+
+#. module: to_hr_payroll_attendance
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_working_month_calendar__early_leave_hours
+#: model_terms:ir.ui.view,arch_db:to_hr_payroll_attendance.hr_working_month_calendar_line_view_tree
+msgid "Total Early Leave Hours"
+msgstr ""
+
+#. module: to_hr_payroll_attendance
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_working_month_calendar__late_attendance_hours
+#: model_terms:ir.ui.view,arch_db:to_hr_payroll_attendance.hr_working_month_calendar_line_view_tree
+msgid "Total Late Coming Hours"
+msgstr ""
+
+#. module: to_hr_payroll_attendance
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_working_month_calendar__valid_attendance_hours
+#: model_terms:ir.ui.view,arch_db:to_hr_payroll_attendance.hr_working_month_calendar_line_view_tree
+msgid "Total Valid Attendance Hours"
+msgstr ""
+
+#. module: to_hr_payroll_attendance
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_payslip__valid_attendance_hours
+#: model:ir.model.fields,field_description:to_hr_payroll_attendance.field_hr_working_month_calendar_line__valid_attendance_hours
+#: model_terms:ir.ui.view,arch_db:to_hr_payroll_attendance.report_payslip
+msgid "Valid Attendance Hours"
+msgstr ""
+
+#. module: to_hr_payroll_attendance
+#: model:ir.model,name:to_hr_payroll_attendance.model_hr_working_month_calendar
+msgid "Working Month Calendar"
+msgstr ""
+
+#. module: to_hr_payroll_attendance
+#: model:ir.model,name:to_hr_payroll_attendance.model_hr_working_month_calendar_line
+msgid "Working Month Calendar Line"
+msgstr ""

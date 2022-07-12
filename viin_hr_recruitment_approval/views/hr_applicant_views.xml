@@ -1,0 +1,29 @@
+<odoo>
+	<record id="crm_case_form_view_job" model="ir.ui.view">
+	    <field name="name">Jobs - Recruitment Form</field>
+	    <field name="model">hr.applicant</field>
+	    <field name="inherit_id"
+	        ref="hr_recruitment.hr_applicant_view_form" />
+	    <field name="arch" type="xml">
+	        <xpath expr="//field[@name='source_id']" position="after">
+	            <field name="approval_id" />
+	        </xpath>
+	    </field>
+	</record>
+
+	<record id="hr_applicant_view_search" model="ir.ui.view">
+	    <field name="name">hr.applicant.search</field>
+	    <field name="model">hr.applicant</field>
+	    <field name="inherit_id"
+	        ref="hr_recruitment.hr_applicant_view_search" />
+	    <field name="arch" type="xml">
+	        <xpath expr="//filter[@name='refused']" position="after">
+	            <separator />
+	            <filter string="With Recruitment Requests"
+	                name="ftr_with_approvals" domain="[('approval_id', '!=', False)]" />
+	            <filter string="Without Recruitment Requests"
+	                name="ftr_without_approvals" domain="[('approval_id', '=', False)]" />
+	        </xpath>
+	    </field>
+	</record>
+</odoo>

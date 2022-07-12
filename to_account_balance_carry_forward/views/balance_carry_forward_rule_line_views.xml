@@ -1,0 +1,53 @@
+<odoo>
+	<data>
+		<record id="account_balance_carry_forward_rule_line_tree_view"
+			model="ir.ui.view">
+			<field name="name">balance.carry.forward.rule.line.tree</field>
+			<field name="model">balance.carry.forward.rule.line</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Carry Forward Rule Line">
+					<field name="source_account_id" />
+					<field name="source_aml_ids" invisible="1" limit="0"/>
+					<field name="balance" />
+					<field name="dest_account_id" />
+					<field name="forward_type" />
+					<field name="rule_id" groups="base.group_no_one" />
+					<field name="succeeding_rule_line_ids"
+						groups="base.group_no_one" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="account_balance_carry_forward_rule_line_form_view"
+			model="ir.ui.view">
+			<field name="name">balance.carry.forward.rule.line.form</field>
+			<field name="model">balance.carry.forward.rule.line</field>
+			<field name="arch" type="xml">
+				<form string="Carry Forward Rule Line">
+					<sheet>
+						<group>
+							<group>
+								<field name="name" />
+								<field name="forward_id" />
+								<field name="rule_id" />
+								<field name="forward_type" />
+							</group>
+							<group>
+								<field name="source_account_id" />
+								<field name="dest_account_id" />
+								<field name="preceding_rule_line_ids" widget="many2many_tags"/>
+								<field name="succeeding_rule_line_ids" widget="many2many_tags"/>
+								<field name="balance" />
+							</group>
+						</group>
+						<label for="source_aml_ids" />
+						<field name="source_aml_ids" />
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+
+	</data>
+</odoo>

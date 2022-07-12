@@ -1,0 +1,56 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_document_hr_contract
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-23 07:20+0000\n"
+"PO-Revision-Date: 2022-02-23 07:20+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_document_hr_contract
+#: model:document.tag,name:viin_document_hr_contract.document_tag_hr_contract_contract
+msgid "Contract"
+msgstr "Hợp đồng lao động"
+
+#. module: viin_document_hr_contract
+#: model:document.tag,name:viin_document_hr_contract.document_tag_hr_contract_cancel
+msgid "Contract Cancelled"
+msgstr "Hợp đồng Bị hủy"
+
+#. module: viin_document_hr_contract
+#: model:document.tag,name:viin_document_hr_contract.document_tag_hr_contract_expired
+msgid "Contract Expired"
+msgstr "Hợp đồng Hết hạn"
+
+#. module: viin_document_hr_contract
+#: model:document.tag,name:viin_document_hr_contract.document_tag_hr_contract_running
+msgid "Contract Running"
+msgstr "Hợp đồng Đang thực hiện"
+
+#. module: viin_document_hr_contract
+#: model:document.tag.category,name:viin_document_hr_contract.document_tag_category_hr_contract
+msgid "HR Contract"
+msgstr "Hợp đồng lao động"
+
+#. module: viin_document_hr_contract
+#: model:document.tag.category,name:viin_document_hr_contract.document_tag_category_hr_contract_status
+msgid "HR Contract Status"
+msgstr "Trạng thái Hợp đồng lao động"
+
+#. module: viin_document_hr_contract
+#: model:document.action,name:viin_document_hr_contract.document_action_hr_contract_expired
+msgid "Mark as Expired"
+msgstr "Đánh dấu Hết hạn"
+
+#. module: viin_document_hr_contract
+#: model:document.action,name:viin_document_hr_contract.document_action_hr_contract_running
+msgid "Mark as Running"
+msgstr "Đánh dấu Đang thực hiện"

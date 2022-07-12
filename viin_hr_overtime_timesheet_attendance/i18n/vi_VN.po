@@ -1,0 +1,160 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_hr_overtime_timesheet_attendance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-26 07:10+0000\n"
+"PO-Revision-Date: 2021-11-26 07:10+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_hr_overtime_timesheet_attendance
+#: model:ir.model.fields.selection,name:viin_hr_overtime_timesheet_attendance.selection__hr_contract__overtime_recognition_mode__attendance_and_timesheet
+#: model:ir.model.fields.selection,name:viin_hr_overtime_timesheet_attendance.selection__hr_overtime_plan__recognition_mode__attendance_and_timesheet
+#: model:ir.model.fields.selection,name:viin_hr_overtime_timesheet_attendance.selection__hr_overtime_plan_line__recognition_mode__attendance_and_timesheet
+#: model:ir.model.fields.selection,name:viin_hr_overtime_timesheet_attendance.selection__hr_overtime_reason__recognition_mode__attendance_and_timesheet
+#: model:ir.model.fields.selection,name:viin_hr_overtime_timesheet_attendance.selection__res_company__overtime_recognition_mode__attendance_and_timesheet
+msgid "Attendance and Timesheet"
+msgstr "Có mặt và Có chấm công"
+
+#. module: viin_hr_overtime_timesheet_attendance
+#: model:ir.model.fields.selection,name:viin_hr_overtime_timesheet_attendance.selection__hr_contract__overtime_recognition_mode__attendance_or_timesheet
+#: model:ir.model.fields.selection,name:viin_hr_overtime_timesheet_attendance.selection__hr_overtime_plan__recognition_mode__attendance_or_timesheet
+#: model:ir.model.fields.selection,name:viin_hr_overtime_timesheet_attendance.selection__hr_overtime_plan_line__recognition_mode__attendance_or_timesheet
+#: model:ir.model.fields.selection,name:viin_hr_overtime_timesheet_attendance.selection__hr_overtime_reason__recognition_mode__attendance_or_timesheet
+#: model:ir.model.fields.selection,name:viin_hr_overtime_timesheet_attendance.selection__res_company__overtime_recognition_mode__attendance_or_timesheet
+msgid "Attendance or Timesheet"
+msgstr "Có mặt hoặc Có chấm công"
+
+#. module: viin_hr_overtime_timesheet_attendance
+#: model:ir.model,name:viin_hr_overtime_timesheet_attendance.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: viin_hr_overtime_timesheet_attendance
+#: model:ir.model,name:viin_hr_overtime_timesheet_attendance.model_hr_contract
+msgid "Contract"
+msgstr "Hợp đồng"
+
+#. module: viin_hr_overtime_timesheet_attendance
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet_attendance.field_hr_contract__display_name
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet_attendance.field_hr_overtime_plan__display_name
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet_attendance.field_hr_overtime_plan_line__display_name
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet_attendance.field_hr_overtime_reason__display_name
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet_attendance.field_res_company__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: viin_hr_overtime_timesheet_attendance
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet_attendance.field_hr_overtime_plan__recognition_mode
+msgid "Force Recognition Mode"
+msgstr "Cưỡng bức chế độ nhận diện"
+
+#. module: viin_hr_overtime_timesheet_attendance
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet_attendance.field_hr_contract__id
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet_attendance.field_hr_overtime_plan__id
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet_attendance.field_hr_overtime_plan_line__id
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet_attendance.field_hr_overtime_reason__id
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet_attendance.field_res_company__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_hr_overtime_timesheet_attendance
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet_attendance.field_hr_contract____last_update
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet_attendance.field_hr_overtime_plan____last_update
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet_attendance.field_hr_overtime_plan_line____last_update
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet_attendance.field_hr_overtime_reason____last_update
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet_attendance.field_res_company____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: viin_hr_overtime_timesheet_attendance
+#: model:ir.model,name:viin_hr_overtime_timesheet_attendance.model_hr_overtime_plan
+msgid "Overtime Plan"
+msgstr "Kế hoạch Tăng ca"
+
+#. module: viin_hr_overtime_timesheet_attendance
+#: model:ir.model,name:viin_hr_overtime_timesheet_attendance.model_hr_overtime_plan_line
+msgid "Overtime Plan Line"
+msgstr "Dòng Kế hoạch Tăng ca"
+
+#. module: viin_hr_overtime_timesheet_attendance
+#: model:ir.model,name:viin_hr_overtime_timesheet_attendance.model_hr_overtime_reason
+msgid "Overtime Reason"
+msgstr "Lý do Tăng ca"
+
+#. module: viin_hr_overtime_timesheet_attendance
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet_attendance.field_hr_contract__overtime_recognition_mode
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet_attendance.field_res_company__overtime_recognition_mode
+msgid "Overtime Recognition Mode"
+msgstr "Chế độ Nhân diện Giờ tăng ca"
+
+#. module: viin_hr_overtime_timesheet_attendance
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet_attendance.field_hr_overtime_plan_line__recognition_mode
+#: model:ir.model.fields,field_description:viin_hr_overtime_timesheet_attendance.field_hr_overtime_reason__recognition_mode
+msgid "Recognition Mode"
+msgstr "Chế độ Nhận diện"
+
+#. module: viin_hr_overtime_timesheet_attendance
+#: model:ir.model.fields,help:viin_hr_overtime_timesheet_attendance.field_hr_overtime_plan_line__recognition_mode
+#: model:ir.model.fields,help:viin_hr_overtime_timesheet_attendance.field_hr_overtime_reason__recognition_mode
+#: model:ir.model.fields,help:viin_hr_overtime_timesheet_attendance.field_res_company__overtime_recognition_mode
+msgid ""
+"This indicates mode to recognize actual overtime against the plan:\n"
+"* By Plan: No recognition will be required. All the planned overtime duration will be considered as actual;\n"
+"* Attendance: Actual overtime will be calculated based on attendance entries that match the planned overtime;\n"
+"* Timesheet: Actual overtime will be calculated based on recorded timesheet entries that match the planned overtime;\n"
+"* Attendance or Timesheet: Actual overtime will be calculated based on EITHER attendance entries OR recorded timesheet entries that match the planned overtime. Attendance takes the priority;\n"
+"* Attendance and Timesheet: Actual overtime will be calculated based on BOTH attendance entries AND recorded timesheet entries that match the planned overtime."
+msgstr ""
+"Trường này chỉ báo chế độ nhận diện thời gian tăng ca thực tế so với kế hoạch:\n"
+"* Theo Kế hoạch: Giờ tăng ca thực tế được ghi nhận theo kế hoạch mà không cần nhận diện;\n"
+"* Có mặt: Giờ tăng ca thực tế sẽ được tính toán dựa trên các bản ghi có mặt mà khớp với kế hoặc tăng ca;\n"
+"* Chấm công: Giờ tăng ca thực tế sẽ được tính toán dựa trên các bản ghi chấm công mà khớp với kế hoặc tăng ca;\n"
+"* Có mặt hoặc Có chấm công: giờ tăng ca thực tế sẽ được tính toán dựa trên HOẶC các bản ghi có mặt HOẶC các bản ghi chấm công mà khớp với kế hoạch tăng ca. Có mặt sẽ được ưu tiên trong trường hợp có cả 2 loại dữ liệu này;\n"
+"* Có mặt và Có chấm công: giờ tăng ca thực tế sẽ được tính toán dựa trên CẢ các bản ghi có mặt VÀ các bản ghi chấm công mà khớp với kế hoạch tăng ca."
+
+#. module: viin_hr_overtime_timesheet_attendance
+#: model:ir.model.fields,help:viin_hr_overtime_timesheet_attendance.field_hr_contract__overtime_recognition_mode
+msgid ""
+"This indicates mode to recognize actual overtime against the plan:\n"
+"* By Plan: No recognition will be required. All the planned overtime duration will be considered as actual;\n"
+"* Attendance: Actual overtime will be calculated based on attendance entries that match the planned overtime;\n"
+"* Timesheet: Actual overtime will be calculated based on recorded timesheet entries that match the planned overtime;\n"
+"* Attendance or Timesheet: Actual overtime will be calculated based on EITHER attendance entries OR recorded timesheet entries that match the planned overtime. Attendance takes the priority;\n"
+"* Attendance and Timesheet: Actual overtime will be calculated based on BOTH attendance entries AND recorded timesheet entries that match the planned overtime.\n"
+"NOTE: If this field is left empty, the value will be taken from the corresponding company's settings."
+msgstr ""
+"Trường này chỉ báo chế độ nhận diện thời gian tăng ca thực tế so với kế hoạch:\n"
+"* Theo Kế hoạch: Giờ tăng ca thực tế được ghi nhận theo kế hoạch mà không cần nhận diện;\n"
+"* Có mặt: Giờ tăng ca thực tế sẽ được tính toán dựa trên các bản ghi có mặt mà khớp với kế hoặc tăng ca;\n"
+"* Chấm công: Giờ tăng ca thực tế sẽ được tính toán dựa trên các bản ghi chấm công mà khớp với kế hoặc tăng ca;\n"
+"* Có mặt hoặc Có chấm công: giờ tăng ca thực tế sẽ được tính toán dựa trên HOẶC các bản ghi có mặt HOẶC các bản ghi chấm công mà khớp với kế hoạch tăng ca. Có mặt sẽ được ưu tiên trong trường hợp có cả 2 loại dữ liệu này;\n"
+"* Có mặt và Có chấm công: giờ tăng ca thực tế sẽ được tính toán dựa trên CẢ các bản ghi có mặt VÀ các bản ghi chấm công mà khớp với kế hoạch tăng ca.\n"
+"Lưu ý: nếu không được thiết lập ở đây, thiết lập ở hợp đồng hoặc thiết lập chung cho công ty sẽ được áp dụng."
+
+#. module: viin_hr_overtime_timesheet_attendance
+#: model:ir.model.fields,help:viin_hr_overtime_timesheet_attendance.field_hr_overtime_plan__recognition_mode
+msgid ""
+"This indicates mode to recognize actual overtime against the plan:\n"
+"* By Plan: No recognition will be required. All the planned overtime duration will be considered as actual;\n"
+"* Attendance: Actual overtime will be calculated based on attendance entries that match the planned overtime;\n"
+"* Timesheet: Actual overtime will be calculated based on recorded timesheet entries that match the planned overtime;\n"
+"* Attendance or Timesheet: Actual overtime will be calculated based on EITHER attendance entries OR recorded timesheet entries that match the planned overtime. Attendance takes the priority;\n"
+"* Attendance and Timesheet: Actual overtime will be calculated based on BOTH attendance entries AND recorded timesheet entries that match the planned overtime.\n"
+"Note: If not specified, the setting from the corresponding contract or company will be taken into account."
+msgstr ""
+"Trường này chỉ báo chế độ nhận diện thời gian tăng ca thực tế so với kế hoạch:\n"
+"* Theo Kế hoạch: Giờ tăng ca thực tế được ghi nhận theo kế hoạch mà không cần nhận diện;\n"
+"* Có mặt: Giờ tăng ca thực tế sẽ được tính toán dựa trên các bản ghi có mặt mà khớp với kế hoặc tăng ca;\n"
+"* Chấm công: Giờ tăng ca thực tế sẽ được tính toán dựa trên các bản ghi chấm công mà khớp với kế hoặc tăng ca;\n"
+"* Có mặt hoặc Có chấm công: giờ tăng ca thực tế sẽ được tính toán dựa trên HOẶC các bản ghi có mặt HOẶC các bản ghi chấm công mà khớp với kế hoạch tăng ca. Có mặt sẽ được ưu tiên trong trường hợp có cả 2 loại dữ liệu này;\n"
+"* Có mặt và Có chấm công: giờ tăng ca thực tế sẽ được tính toán dựa trên CẢ các bản ghi có mặt VÀ các bản ghi chấm công mà khớp với kế hoạch tăng ca.\n"
+"Lưu ý: nếu không được thiết lập ở đây, thiết lập ở hợp đồng hoặc thiết lập chung cho công ty sẽ được áp dụng."

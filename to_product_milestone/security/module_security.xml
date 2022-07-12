@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="group_product_milestone_manager" model="res.groups">
+			<field name="name">Product Milestone Manager</field>
+			<field name="comment">Users of to this group will be granted with all access rights to Product Milestones</field>
+			<field name="users"
+				eval="[(4, ref('base.user_root')),(4, ref('base.user_admin'))]" />
+		</record>
+	</data>
+</odoo>

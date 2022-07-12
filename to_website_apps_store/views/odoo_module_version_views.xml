@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="odoo_module_version_form_view">
+			<field name="name">odoo.module.version.form</field>
+			<field name="model">odoo.module.version</field>
+			<field name="inherit_id"
+				ref="to_odoo_module.odoo_module_version_form_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='ir_module_category_id']"
+					position="after">
+					<field name="public_categ_ids" widget="many2many_tags" />
+				</xpath>
+				<xpath expr="//div[@name='button_box']" position="inside">
+					<button class="oe_stat_button" name="website_publish_button"
+						type="object" icon="fa-globe"
+						groups="website.group_website_publisher,to_odoo_module.odoo_module_manager">
+						<field name="is_published" widget="website_publish_button" />
+					</button>
+				</xpath>
+			</field>
+
+
+		</record>
+
+		<record model="ir.ui.view" id="odoo_module_version_tree_view">
+			<field name="name">odoo.module.version.tree</field>
+			<field name="model">odoo.module.version</field>
+			<field name="inherit_id"
+				ref="to_odoo_module.odoo_module_version_tree_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='other_version_ids']"
+					position="after">
+					<field name="public_categ_ids" widget="many2many_tags" />
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="odoo_module_version_search_view">
+			<field name="name">odoo.module.version.search</field>
+			<field name="model">odoo.module.version</field>
+			<field name="inherit_id"
+				ref="to_odoo_module.odoo_module_version_search_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='vendor_id']" position="after">
+					<field name="public_categ_ids" />
+				</xpath>
+
+			</field>
+		</record>
+	</data>
+</odoo>

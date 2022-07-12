@@ -1,0 +1,72 @@
+<odoo>
+	<data>
+		<record id="helpdesk_ticket_form_view" model="ir.ui.view">
+			<field name="name">helpdesk.ticket.form</field>
+			<field name="model">helpdesk.ticket</field>
+			<field name="inherit_id" ref="viin_helpdesk.helpdesk_ticket_form_view"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='priority_level']" position="before">
+					<field name="severity_level" />
+				</xpath>
+			</field>
+		</record>
+
+		<record id="helpdesk_ticket_tree_view" model="ir.ui.view">
+			<field name="name">helpdesk.ticket.tree</field>
+			<field name="model">helpdesk.ticket</field>
+			<field name="inherit_id" ref="viin_helpdesk.helpdesk_ticket_tree_view"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='priority_level']" position="before">
+					<field name="severity_level" />
+				</xpath>
+			</field>
+		</record>
+
+		<record id="helpdesk_ticket_search_view" model="ir.ui.view">
+			<field name="name">helpdesk.ticket.search</field>
+			<field name="model">helpdesk.ticket</field>
+			<field name="inherit_id" ref="viin_helpdesk.helpdesk_ticket_search_view"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='priority_level']" position="before">
+					<field name="severity_level" />
+				</xpath>
+				<xpath expr="//filter[@name='ftr_urgent_priority_level']" position="before">
+					<filter name="ftr_critical_severity_level" string="Critical severity" domain="[('severity_level','=','critical')]" />
+					<filter name="ftr_major_severity_level" string="Major severity" domain="[('severity_level','=','major')]" />
+					<filter name="ftr_medium_severity_level" string="Minor/Medium severity" domain="[('severity_level','=','minor')]" />
+					<filter name="ftr_low_severity_level" string="Low severity" domain="[('severity_level','=','low')]" />
+					<separator />
+				</xpath>
+			</field>
+		</record>
+
+		<record id="helpdesk_ticket_kanban_view" model="ir.ui.view">
+			<field name="name">helpdesk.ticket.kanban</field>
+			<field name="model">helpdesk.ticket</field>
+			<field name="inherit_id" ref="viin_helpdesk.helpdesk_ticket_kanban_view"/>
+			<field name="arch" type="xml">
+				<xpath expr="//kanban/field[@name='priority_level']" position="before">
+					<field name="severity_level" />
+				</xpath>
+				<xpath expr="//t[@t-if='record.end_date']" position="before">
+					<t t-if="record.severity_level">
+						<field name="severity_level" />
+					</t>
+				</xpath>
+			</field>
+		</record>
+
+		<record id="helpdesk_ticket_calendar_view" model="ir.ui.view">
+			<field name="name">helpdesk.ticket.calendar</field>
+			<field name="model">helpdesk.ticket</field>
+			<field name="inherit_id" ref="viin_helpdesk.helpdesk_ticket_calendar_view"/>
+			<field name="arch" type="xml">
+				<xpath expr="//calendar/field[@name='priority_level']" position="before">
+					<field name="severity_level" />
+				</xpath>
+			</field>
+		</record>
+
+	</data>
+</odoo>
+

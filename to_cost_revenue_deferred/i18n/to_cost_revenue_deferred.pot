@@ -1,0 +1,922 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_cost_revenue_deferred
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-31 04:46+0000\n"
+"PO-Revision-Date: 2022-03-31 04:46+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__move_line_count
+msgid "# Deferral Entries"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_deferral_category_form
+msgid "A prepaid expense account"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_deferral_confirm__date
+msgid "Account Date"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_deferral_category_form
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.revenue_deferral_category_form
+msgid "Accounting"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_revenue_deferral_form
+msgid "Add an internal note here..."
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_deferral_category_form
+msgid "Additional Options"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: code:addons/to_cost_revenue_deferred/models/deferral_line.py:0
+#, python-format
+msgid "Amount"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_line__distributed_value
+msgid "Amount Already Distributed"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_deferral_category_form
+msgid "An account to store recognition moves. It is usually a cost account"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.revenue_deferral_category_form
+msgid "An account to store recognition moves. It is usually an income account"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.revenue_deferral_category_form
+msgid "An unearn revenue account"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__analytic_tag_ids
+msgid "Analytic Tags"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__account_analytic_id
+msgid "Analytic account"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__auto_create_move
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__auto_create_move
+msgid "Auto-Posted Deferral"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.deferral_confirm_form
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.deferral_disposal_form
+msgid "Cancel"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,help:to_cost_revenue_deferred.field_cost_revenue_deferral_category__auto_create_move
+msgid ""
+"Check this if you want to automatically generate the deferral lines of "
+"running deferral and posted this category."
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,help:to_cost_revenue_deferred.field_cost_revenue_deferral__auto_create_move
+msgid ""
+"Check this if you want to automatically generate the deferral lines of "
+"running deferral and posted this deferral."
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,help:to_cost_revenue_deferred.field_deferral_confirm__date
+msgid ""
+"Choose the period for which you want to automatically post the deferral "
+"lines of running deferral"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields.selection,name:to_cost_revenue_deferred.selection__cost_revenue_deferral__state__close
+msgid "Close"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_revenue_deferral_search
+msgid "Closed"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__company_id
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__company_id
+msgid "Company"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__method
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__method
+msgid "Computation Method"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_revenue_deferral_form
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.deferral_confirm_form
+msgid "Compute"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.deferral_confirm_form
+msgid "Compute Cost / Revenue Deferral"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.actions.act_window,name:to_cost_revenue_deferred.deferral_confirm_action
+#: model:ir.ui.menu,name:to_cost_revenue_deferred.menu_deferral_confirm
+msgid "Compute Cost/Revenue Deferral"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_revenue_deferral_form
+msgid "Confirm"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields.selection,name:to_cost_revenue_deferred.selection__cost_revenue_deferral__type__cost
+#: model:ir.model.fields.selection,name:to_cost_revenue_deferred.selection__cost_revenue_deferral_category__type__cost
+msgid "Cost"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model,name:to_cost_revenue_deferred.model_deferral_confirm
+msgid "Cost / Revenue Deferral Confirm"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.actions.act_window,name:to_cost_revenue_deferred.cost_deferral_category_action
+#: model:ir.ui.menu,name:to_cost_revenue_deferred.cost_deferral_category_menu
+msgid "Cost Deferral Categories"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_product_product__cost_deferral_category_id
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_product_template__cost_deferral_category_id
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_deferral_category_form
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_deferral_category_tree
+msgid "Cost Deferral Category"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.actions.act_window,name:to_cost_revenue_deferred.cost_deferral_action
+#: model:ir.ui.menu,name:to_cost_revenue_deferred.cost_deferral_menu
+msgid "Cost Deferrals"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model,name:to_cost_revenue_deferred.model_cost_revenue_deferral
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_revenue_deferral_form
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_revenue_deferral_search
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_revenue_deferral_tree
+msgid "Cost Revenue Deferral"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model,name:to_cost_revenue_deferred.model_cost_revenue_deferral_category
+msgid "Cost Revenue Deferral Category"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model,name:to_cost_revenue_deferred.model_cost_revenue_deferral_line
+msgid "Cost Revenue Deferral Lines"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.actions.server,name:to_cost_revenue_deferred.ir_cron_create_move_deferral_ir_actions_server
+#: model:ir.cron,cron_name:to_cost_revenue_deferred.ir_cron_create_move_deferral
+#: model:ir.cron,name:to_cost_revenue_deferred.ir_cron_create_move_deferral
+msgid ""
+"Cost Revenue Deferred: Auto-posted the deferral lines of running deferral"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_revenue_deferral_form
+msgid "Create Move"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: code:addons/to_cost_revenue_deferred/wizard/deferral_confirm.py:0
+#, python-format
+msgid "Created Cost / Revenue Deferral Moves"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__create_uid
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__create_uid
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_line__create_uid
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_deferral_confirm__create_uid
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_deferral_disposal__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__create_date
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__create_date
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_line__create_date
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_deferral_confirm__create_date
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_deferral_disposal__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: code:addons/to_cost_revenue_deferred/models/deferral_line.py:0
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__currency_id
+#, python-format
+msgid "Currency"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_revenue_deferral_search
+msgid "Current"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_line__amount
+msgid "Current Deferral"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_deferral_disposal__date
+msgid "Date"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_account_move_line__deferral_id
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_line__deferral_id
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_deferral_disposal__deferral_id
+msgid "Deferral"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_revenue_deferral_form
+msgid "Deferral Board"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__deferral_category_id
+msgid "Deferral Category"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_line__deferral_date
+msgid "Deferral Date"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model,name:to_cost_revenue_deferred.model_deferral_disposal
+msgid "Deferral Disposal"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_line__move_id
+msgid "Deferral Entry"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_account_bank_statement_line__asset_deferral_line_ids
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_account_move__asset_deferral_line_ids
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_account_payment__asset_deferral_line_ids
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__deferral_line_ids
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_revenue_deferral_form
+msgid "Deferral Lines"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_deferral_category_form
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.revenue_deferral_category_form
+msgid "Deferral Method"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__type
+msgid "Deferral Type"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: code:addons/to_cost_revenue_deferred/models/deferral_line.py:0
+#, python-format
+msgid "Deferral line posted."
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__deferred_account_id
+msgid "Deferred Account"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields.selection,name:to_cost_revenue_deferred.selection__cost_revenue_deferral__method__degressive
+#: model:ir.model.fields.selection,name:to_cost_revenue_deferred.selection__cost_revenue_deferral_category__method__degressive
+msgid "Degressive"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_account_move__display_name
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__display_name
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__display_name
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_line__display_name
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_deferral_confirm__display_name
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_deferral_disposal__display_name
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_product_product__display_name
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_product_template__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_revenue_deferral_form
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.deferral_disposal_form
+msgid "Disposal"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__account_disposal_deferral_id
+msgid "Disposal Account"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.actions.act_window,name:to_cost_revenue_deferred.deferral_disposal_action
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.deferral_disposal_form
+msgid "Dispose Deferral"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: code:addons/to_cost_revenue_deferred/models/deferral_line.py:0
+#, python-format
+msgid "Document closed."
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields.selection,name:to_cost_revenue_deferred.selection__cost_revenue_deferral__state__draft
+msgid "Draft"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__method_end
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__method_end
+#: model:ir.model.fields.selection,name:to_cost_revenue_deferred.selection__cost_revenue_deferral__method_time__end
+#: model:ir.model.fields.selection,name:to_cost_revenue_deferred.selection__cost_revenue_deferral_category__method_time__end
+msgid "Ending Date"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__account_move_line_ids
+msgid "Entries"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__date
+msgid "Entry Date"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,help:to_cost_revenue_deferred.field_cost_revenue_deferral__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,help:to_cost_revenue_deferred.field_cost_revenue_deferral_category__analytic_tag_ids
+msgid "For analytic distributions"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_revenue_deferral_form
+msgid "General"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.deferral_confirm_form
+msgid ""
+"Generate journal entries for cost/revenue deferral lines by the selected "
+"date."
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_account_move__id
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_account_move_line__id
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__id
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__id
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_line__id
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_deferral_confirm__id
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_deferral_disposal__id
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_product_product__id
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_product_template__id
+msgid "ID"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,help:to_cost_revenue_deferred.field_cost_revenue_deferral__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,help:to_cost_revenue_deferred.field_cost_revenue_deferral__message_needaction
+#: model:ir.model.fields,help:to_cost_revenue_deferred.field_cost_revenue_deferral__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,help:to_cost_revenue_deferred.field_cost_revenue_deferral__message_has_error
+#: model:ir.model.fields,help:to_cost_revenue_deferred.field_cost_revenue_deferral__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__journal_id
+msgid "Journal"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model,name:to_cost_revenue_deferred.model_account_move
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_line__move_check
+msgid "Journal Entry"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model,name:to_cost_revenue_deferred.model_account_move_line
+msgid "Journal Item"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: code:addons/to_cost_revenue_deferred/models/deferral.py:0
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_revenue_deferral_form
+#, python-format
+msgid "Journal Items"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_account_move____last_update
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_account_move_line____last_update
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral____last_update
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category____last_update
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_line____last_update
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_deferral_confirm____last_update
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_deferral_disposal____last_update
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_product_product____last_update
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_product_template____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__write_uid
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__write_uid
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_line__write_uid
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_deferral_confirm__write_uid
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_deferral_disposal__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__write_date
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__write_date
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_line__write_date
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_deferral_confirm__write_date
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_deferral_disposal__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields.selection,name:to_cost_revenue_deferred.selection__cost_revenue_deferral__method__linear
+#: model:ir.model.fields.selection,name:to_cost_revenue_deferred.selection__cost_revenue_deferral_category__method__linear
+msgid "Linear"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__name
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__name
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_line__name
+msgid "Name"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_line__remaining_value
+msgid "Next Deferral Period"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__note
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__note
+msgid "Note"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_deferral_category_form
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_revenue_deferral_form
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.revenue_deferral_category_form
+msgid "Notes"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__method_number
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__method_number
+#: model:ir.model.fields.selection,name:to_cost_revenue_deferred.selection__cost_revenue_deferral__method_time__number
+#: model:ir.model.fields.selection,name:to_cost_revenue_deferred.selection__cost_revenue_deferral_category__method_time__number
+msgid "Number of Deferrals"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__method_period
+msgid "Number of Months in a Period"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,help:to_cost_revenue_deferred.field_cost_revenue_deferral__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,help:to_cost_revenue_deferred.field_cost_revenue_deferral__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,help:to_cost_revenue_deferred.field_cost_revenue_deferral__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,help:to_cost_revenue_deferred.field_product_product__cost_deferral_category_id
+#: model:ir.model.fields,help:to_cost_revenue_deferred.field_product_template__cost_deferral_category_id
+msgid ""
+"Once specified, Odoo will try to add some default values when this product "
+"gets billed by your vendors. I.e., analytic account, analytic tags"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,help:to_cost_revenue_deferred.field_product_product__revenue_deferral_category_id
+#: model:ir.model.fields,help:to_cost_revenue_deferred.field_product_template__revenue_deferral_category_id
+msgid ""
+"Once specified, Odoo will try to add some default values when this product "
+"gets invoiced to your customers. I.e., analytic account, analytic tags"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__method_period
+msgid "One Entry Every"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: code:addons/to_cost_revenue_deferred/models/deferral_line.py:0
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__partner_id
+#, python-format
+msgid "Partner"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_deferral_category_form
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.revenue_deferral_category_form
+msgid "Periodicity"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_line__move_posted_check
+msgid "Posted"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model,name:to_cost_revenue_deferred.model_product_product
+msgid "Product"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model,name:to_cost_revenue_deferred.model_product_template
+msgid "Product Template"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_deferral_disposal__reason
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.deferral_disposal_form
+msgid "Reason"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__recognition_account_id
+msgid "Recognition Account"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_deferral_disposal__name
+msgid "Reference"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__value_residual
+msgid "Residual Value"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields.selection,name:to_cost_revenue_deferred.selection__cost_revenue_deferral__type__revenue
+#: model:ir.model.fields.selection,name:to_cost_revenue_deferred.selection__cost_revenue_deferral_category__type__revenue
+msgid "Revenue"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.actions.act_window,name:to_cost_revenue_deferred.revenue_deferral_category_action
+#: model:ir.ui.menu,name:to_cost_revenue_deferred.revenue_deferral_category_menu
+msgid "Revenue Deferral Categories"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_product_product__revenue_deferral_category_id
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_product_template__revenue_deferral_category_id
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.revenue_deferral_category_form
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.revenue_deferral_category_tree
+msgid "Revenue Deferral Category"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.actions.act_window,name:to_cost_revenue_deferred.revenue_deferral_action
+#: model:ir.ui.menu,name:to_cost_revenue_deferred.revenue_deferral_menu
+msgid "Revenue Deferrals"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields.selection,name:to_cost_revenue_deferred.selection__cost_revenue_deferral__state__open
+msgid "Running"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__salvage_value
+msgid "Salvage Value"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_line__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_revenue_deferral_form
+msgid "Set to Close"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_revenue_deferral_form
+msgid "Set to Draft"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__state
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_line__state
+msgid "Status"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,help:to_cost_revenue_deferred.field_cost_revenue_deferral__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: code:addons/to_cost_revenue_deferred/models/deferral.py:0
+#, python-format
+msgid ""
+"The type of the deferral must be the same as the one of the corresponding "
+"category."
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__method_time
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__method_time
+msgid "Time Method"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral_category__type
+msgid "Type"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,help:to_cost_revenue_deferred.field_cost_revenue_deferral__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__value
+msgid "Value"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,field_description:to_cost_revenue_deferred.field_cost_revenue_deferral__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model:ir.model.fields,help:to_cost_revenue_deferred.field_cost_revenue_deferral__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: code:addons/to_cost_revenue_deferred/models/deferral_line.py:0
+#, python-format
+msgid ""
+"You cannot delete cost deferral lines while its journal entries status is "
+"not Cancel."
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: code:addons/to_cost_revenue_deferred/models/deferral_line.py:0
+#, python-format
+msgid ""
+"You cannot delete revenue deferral lines while its journal entries status is"
+" not Cancel."
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: code:addons/to_cost_revenue_deferred/wizard/deferral_disposal.py:0
+#, python-format
+msgid ""
+"You cannot dispose the deferral %s while it has no deferral line that the "
+"Deferral Date of which is earlier than or equal to '%s'."
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: code:addons/to_cost_revenue_deferred/wizard/deferral_disposal.py:0
+#, python-format
+msgid ""
+"You cannot dispose the deferral %s while it has the deferral line after the "
+"date '%s' has the journal entry."
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: code:addons/to_cost_revenue_deferred/wizard/deferral_disposal.py:0
+#, python-format
+msgid ""
+"You cannot dispose the deferral %s while it has the deferral line earlier or"
+" equal to date '%s' without the journal entry."
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: code:addons/to_cost_revenue_deferred/wizard/deferral_disposal.py:0
+#, python-format
+msgid ""
+"You cannot dispose the deferral %s while its all deferral lines already have"
+" journal entries."
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: code:addons/to_cost_revenue_deferred/models/deferral.py:0
+#, python-format
+msgid "You need to cancel all journal entries of the deferral '%s' first."
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.cost_deferral_category_form
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.revenue_deferral_category_form
+msgid "months"
+msgstr ""
+
+#. module: to_cost_revenue_deferred
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.deferral_confirm_form
+#: model_terms:ir.ui.view,arch_db:to_cost_revenue_deferred.deferral_disposal_form
+msgid "or"
+msgstr ""

@@ -1,0 +1,993 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_git
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-01 06:24+0000\n"
+"PO-Revision-Date: 2021-11-01 06:24+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_tree_view
+msgid "# of Branches"
+msgstr ""
+
+#. module: to_git
+#: code:addons/to_git/models/git_repository.py:0
+#, python-format
+msgid "Access denied! Only Git Managers can reinitialize the git repository"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__message_needaction
+#: model:ir.model.fields,field_description:to_git.field_git_repository__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.wizard_git_url_add_form_view
+msgid "Add"
+msgstr ""
+
+#. module: to_git
+#: model:ir.ui.menu,name:to_git.git_url_add_menu
+msgid "Add Custom Branch URL"
+msgstr ""
+
+#. module: to_git
+#: model:ir.actions.act_window,name:to_git.action_wizard_git_url_add
+msgid "Add Custom Git Branch URL"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__message_attachment_count
+#: model:ir.model.fields,field_description:to_git.field_git_repository__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__auto_scan
+msgid "Auto Scan"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.constraint,message:to_git.constraint_git_branch_name_repository_id_unique
+msgid "Branch name must be unique per repository!"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_repository__branch_ids
+#: model:ir.ui.menu,name:to_git.git_branches_menu
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_view_form
+msgid "Branches"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_repository__branches_count
+msgid "Branches Count"
+msgstr ""
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.authenticate_form
+#: model_terms:ir.ui.view,arch_db:to_git.wizard_git_url_add_form_view
+msgid "Cancel"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__checked_out
+msgid "Checked Out"
+msgstr ""
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_branch_search_view
+msgid "Checked out"
+msgstr ""
+
+#. module: to_git
+#: model:ir.actions.server,name:to_git.action_server_branches_checkout
+#: model_terms:ir.ui.view,arch_db:to_git.checkout_commit_view_form
+#: model_terms:ir.ui.view,arch_db:to_git.git_branch_form_view
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_view_form
+msgid "Checkout"
+msgstr ""
+
+#. module: to_git
+#: model:ir.actions.act_window,name:to_git.git_branch_action_checkout_commit
+#: model_terms:ir.ui.view,arch_db:to_git.checkout_commit_view_form
+#: model_terms:ir.ui.view,arch_db:to_git.git_branch_form_view
+msgid "Checkout a Commit"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model,name:to_git.model_git_branch_checkout_commit
+msgid "Checkout a Commit Wizard"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch_checkout_commit__commit_hash
+#: model_terms:ir.ui.view,arch_db:to_git.checkout_commit_view_form
+msgid "Commit Hash"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__company_id
+#: model:ir.model.fields,field_description:to_git.field_git_repository__company_id
+#: model_terms:ir.ui.view,arch_db:to_git.git_branch_search_view
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_search_view
+msgid "Company"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_authenticate__create_uid
+#: model:ir.model.fields,field_description:to_git.field_git_branch__create_uid
+#: model:ir.model.fields,field_description:to_git.field_git_branch_checkout_commit__create_uid
+#: model:ir.model.fields,field_description:to_git.field_git_commit__create_uid
+#: model:ir.model.fields,field_description:to_git.field_git_repository__create_uid
+#: model:ir.model.fields,field_description:to_git.field_wizard_git_url_add__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_authenticate__create_date
+#: model:ir.model.fields,field_description:to_git.field_git_branch__create_date
+#: model:ir.model.fields,field_description:to_git.field_git_branch_checkout_commit__create_date
+#: model:ir.model.fields,field_description:to_git.field_git_commit__create_date
+#: model:ir.model.fields,field_description:to_git.field_git_repository__create_date
+#: model:ir.model.fields,field_description:to_git.field_wizard_git_url_add__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__is_default
+msgid "Default"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch_checkout_commit__detached_head
+msgid "Detached HEAD"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__detached_head
+msgid "Detached Head"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_authenticate__display_name
+#: model:ir.model.fields,field_description:to_git.field_git_branch__display_name
+#: model:ir.model.fields,field_description:to_git.field_git_branch_checkout_commit__display_name
+#: model:ir.model.fields,field_description:to_git.field_git_commit__display_name
+#: model:ir.model.fields,field_description:to_git.field_git_repository__display_name
+#: model:ir.model.fields,field_description:to_git.field_res_users__display_name
+#: model:ir.model.fields,field_description:to_git.field_wizard_git_url_add__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: to_git
+#: code:addons/to_git/models/git_branch.py:0
+#, python-format
+msgid "Failed to checkout the branch '%s'!"
+msgstr ""
+
+#. module: to_git
+#: code:addons/to_git/models/git_branch.py:0
+#, python-format
+msgid "Failed to checkout the commit!"
+msgstr ""
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.authenticate_form
+msgid ""
+"Failed to connect to the remote repository over HTTP!. If the remote\n"
+"                    requires authentication, please input your username/password in here\n"
+"                    and try again."
+msgstr ""
+
+#. module: to_git
+#: code:addons/to_git/models/git_branch.py:0
+#: code:addons/to_git/models/git_branch.py:0
+#: code:addons/to_git/models/git_repository.py:0
+#, python-format
+msgid ""
+"Failed to fetch data from the remote!\n"
+"Please make sure that you have a working network connection, the repository exists and you have the correct access rights."
+msgstr ""
+
+#. module: to_git
+#: code:addons/to_git/models/git_branch.py:0
+#, python-format
+msgid "Failed to get recent commits!"
+msgstr ""
+
+#. module: to_git
+#: code:addons/to_git/models/git_branch.py:0
+#, python-format
+msgid "Failed to remove the working tree of the branch!"
+msgstr ""
+
+#. module: to_git
+#: code:addons/to_git/models/git_branch.py:0
+#, python-format
+msgid "Failed to reset the branches: "
+msgstr ""
+
+#. module: to_git
+#: code:addons/to_git/models/git_branch.py:0
+#, python-format
+msgid "Failed to reset to HEAD for the branches: "
+msgstr ""
+
+#. module: to_git
+#: code:addons/to_git/models/git_branch.py:0
+#, python-format
+msgid "Failed to update the working tree!"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__message_follower_ids
+#: model:ir.model.fields,field_description:to_git.field_git_repository__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__message_channel_ids
+#: model:ir.model.fields,field_description:to_git.field_git_repository__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__message_partner_ids
+#: model:ir.model.fields,field_description:to_git.field_git_repository__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_repository__parent_id
+msgid "Forked From"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_repository__child_ids
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_tree_view
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_view_form
+msgid "Forks"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_repository__forks_count
+msgid "Forks Count"
+msgstr ""
+
+#. module: to_git
+#: model:ir.ui.menu,name:to_git.git_main_menu
+#: model:ir.ui.menu,name:to_git.git_root_menu
+msgid "Git"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model,name:to_git.model_git_branch
+msgid "Git Branch"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_wizard_git_url_add__git_branch_name
+#: model_terms:ir.ui.view,arch_db:to_git.git_branch_form_view
+msgid "Git Branch Name"
+msgstr ""
+
+#. module: to_git
+#: model:ir.actions.act_window,name:to_git.git_branch_action_window
+msgid "Git Branches"
+msgstr ""
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_branch_search_view
+#: model_terms:ir.ui.view,arch_db:to_git.git_branch_tree_view
+msgid "Git Branches"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model,name:to_git.model_git_commit
+msgid "Git Commit"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model,name:to_git.model_git_authenticate
+msgid "Git Remote Authenticate"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_wizard_git_url_add__git_repo_remote_url
+msgid "Git Repo Remote Url"
+msgstr ""
+
+#. module: to_git
+#: model:ir.actions.act_window,name:to_git.git_repository_action
+#: model:ir.model,name:to_git.model_git_repository
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_tree_view
+msgid "Git Repository"
+msgstr ""
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_view_form
+msgid "Git Repository Form"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_wizard_git_url_add__url
+msgid "Git URL"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model,name:to_git.model_wizard_git_url_add
+msgid "Git URL Adding Wizard"
+msgstr ""
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_branch_form_view
+msgid "Git branch Form"
+msgstr ""
+
+#. module: to_git
+#: model:ir.actions.server,name:to_git.cron_scan_branches_ir_actions_server
+#: model:ir.cron,cron_name:to_git.cron_scan_branches
+#: model:ir.cron,name:to_git.cron_scan_branches
+msgid "Git: Scan Branches"
+msgstr ""
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_branch_search_view
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_search_view
+msgid "Group By"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields.selection,name:to_git.selection__git_repository__scheme__http
+msgid "HTTP"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields.selection,name:to_git.selection__git_repository__scheme__https
+msgid "HTTPS"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_commit__hash
+msgid "Hash"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__head_commit
+msgid "Head Commit"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_authenticate__id
+#: model:ir.model.fields,field_description:to_git.field_git_branch__id
+#: model:ir.model.fields,field_description:to_git.field_git_branch_checkout_commit__id
+#: model:ir.model.fields,field_description:to_git.field_git_commit__id
+#: model:ir.model.fields,field_description:to_git.field_git_repository__id
+#: model:ir.model.fields,field_description:to_git.field_res_users__id
+#: model:ir.model.fields,field_description:to_git.field_wizard_git_url_add__id
+msgid "ID"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_branch__message_needaction
+#: model:ir.model.fields,help:to_git.field_git_branch__message_unread
+#: model:ir.model.fields,help:to_git.field_git_repository__message_needaction
+#: model:ir.model.fields,help:to_git.field_git_repository__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_branch__message_has_error
+#: model:ir.model.fields,help:to_git.field_git_repository__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_branch__auto_scan
+msgid "If checked, this branch will be regularly scanned for updates"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_wizard_git_url_add__checkout
+msgid ""
+"If enabled, the git branch specified in the URL will be checkout "
+"immediately."
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_wizard_git_url_add__checkout
+msgid "Immediate Checkout"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__message_is_follower
+#: model:ir.model.fields,field_description:to_git.field_git_repository__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_authenticate____last_update
+#: model:ir.model.fields,field_description:to_git.field_git_branch____last_update
+#: model:ir.model.fields,field_description:to_git.field_git_branch_checkout_commit____last_update
+#: model:ir.model.fields,field_description:to_git.field_git_commit____last_update
+#: model:ir.model.fields,field_description:to_git.field_git_repository____last_update
+#: model:ir.model.fields,field_description:to_git.field_res_users____last_update
+#: model:ir.model.fields,field_description:to_git.field_wizard_git_url_add____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_authenticate__write_uid
+#: model:ir.model.fields,field_description:to_git.field_git_branch__write_uid
+#: model:ir.model.fields,field_description:to_git.field_git_branch_checkout_commit__write_uid
+#: model:ir.model.fields,field_description:to_git.field_git_commit__write_uid
+#: model:ir.model.fields,field_description:to_git.field_git_repository__write_uid
+#: model:ir.model.fields,field_description:to_git.field_wizard_git_url_add__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_authenticate__write_date
+#: model:ir.model.fields,field_description:to_git.field_git_branch__write_date
+#: model:ir.model.fields,field_description:to_git.field_git_branch_checkout_commit__write_date
+#: model:ir.model.fields,field_description:to_git.field_git_commit__write_date
+#: model:ir.model.fields,field_description:to_git.field_git_repository__write_date
+#: model:ir.model.fields,field_description:to_git.field_wizard_git_url_add__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_branch_checkout_commit__recent_commits
+msgid "List of recent commits"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__message_main_attachment_id
+#: model:ir.model.fields,field_description:to_git.field_git_repository__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: to_git
+#: model:res.groups,name:to_git.group_to_git_manager
+msgid "Manager"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_commit__message
+msgid "Message"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__message_has_error
+#: model:ir.model.fields,field_description:to_git.field_git_repository__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__message_ids
+#: model:ir.model.fields,field_description:to_git.field_git_repository__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__name
+#: model:ir.model.fields,field_description:to_git.field_git_commit__name
+#: model:ir.model.fields,field_description:to_git.field_git_repository__name
+msgid "Name"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_branch__name
+msgid "Name of the git branch"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_repository__name
+msgid "Name of the repository"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_repository__netloc
+msgid "Net Location"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_repository__netpath
+#: model:ir.model.fields,field_description:to_git.field_wizard_git_url_add__git_net_path
+msgid "Net Path"
+msgstr ""
+
+#. module: to_git
+#: code:addons/to_git/wizard/wizard_git_url_add.py:0
+#, python-format
+msgid ""
+"No Net Location found in your given URL. A net location should follow a "
+"standardized format: git@github.com, where `git` is the user who has access "
+"to the git repository and `github.com` is a domain to what your git repo "
+"belongs."
+msgstr ""
+
+#. module: to_git
+#: code:addons/to_git/wizard/wizard_git_url_add.py:0
+#, python-format
+msgid ""
+"No git branch found in your URL. You must specify a git branch after the # "
+"letter in the URL. For example: "
+"ssh://git@github.com/odoo/odoo.git#git_branch_name."
+msgstr ""
+
+#. module: to_git
+#: code:addons/to_git/wizard/wizard_git_url_add.py:0
+#, python-format
+msgid ""
+"No netpath found in your given URL. A netpath is a path of an URL appending "
+"to the domain name of the URL. For example: '/odoo/odoo.git' is the netpath "
+"of the URL 'ssh://git@github.com/odoo/odoo.git#8.0'."
+msgstr ""
+
+#. module: to_git
+#: code:addons/to_git/wizard/wizard_git_url_add.py:0
+#, python-format
+msgid ""
+"No scheme found in your given URL. You must specify either HTTP/HTTPs or SSH"
+" scheme."
+msgstr ""
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_branch_search_view
+msgid "Not Checked out"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__message_needaction_counter
+#: model:ir.model.fields,field_description:to_git.field_git_repository__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__message_has_error_counter
+#: model:ir.model.fields,field_description:to_git.field_git_repository__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_branch__message_needaction_counter
+#: model:ir.model.fields,help:to_git.field_git_repository__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_branch__message_has_error_counter
+#: model:ir.model.fields,help:to_git.field_git_repository__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_branch__message_unread_counter
+#: model:ir.model.fields,help:to_git.field_git_repository__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_view_form
+msgid "Other Info"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_authenticate__password
+msgid "Password"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_repository__path
+msgid "Path"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_repository__path
+msgid "Path to the repository"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_branch__working_tree
+msgid "Path to the working tree of the branch."
+msgstr ""
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_branch_form_view
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_view_form
+msgid ""
+"Please make sure that you set enough memory when fetching a large\n"
+"\t\t\t\t\t\t\tgit repository. For example, Odoo's git repo may require the\n"
+"\t\t\t\t\t\t\tfollowing memory settings in your Odoo startup configuration."
+msgstr ""
+
+#. module: to_git
+#: model:ir.actions.server,name:to_git.action_server_branches_pull
+#: model:ir.actions.server,name:to_git.action_server_repository_pull
+#: model_terms:ir.ui.view,arch_db:to_git.git_branch_form_view
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_view_form
+msgid "Pull"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch_checkout_commit__recent_commits
+#: model_terms:ir.ui.view,arch_db:to_git.checkout_commit_view_form
+msgid "Recent Commits"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__recent_pull_time
+msgid "Recent Pull Time"
+msgstr ""
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_view_form
+msgid "Reinitialize"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_repository__domain_name
+msgid "Remote Domain Name"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_repository__remote_url
+msgid ""
+"Remote URL of the repository. For examples:\n"
+"ssh://[user@]host.xz[:port]/path/to/repo.git/\n"
+"http[s]://[user:password@]host.xz[:port]/path/to/repo.git/\n"
+"[user@]host.xz:path/to/repo.git/"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_repository__remote_url
+msgid "Remote Url"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__repository_id
+#: model:ir.ui.menu,name:to_git.git_repo_menu
+#: model_terms:ir.ui.view,arch_db:to_git.git_branch_search_view
+msgid "Repository"
+msgstr ""
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_view_form
+msgid "Reset all the checked out branches to their HEADs"
+msgstr ""
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_view_form
+msgid "Reset to HEAD"
+msgstr ""
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.checkout_commit_view_form
+msgid "Reset to default"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_branch_checkout_commit__commit_hash
+msgid "SHA-1 checksum of a commit, in abbreviated or full form"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields.selection,name:to_git.selection__git_repository__scheme__ssh
+msgid "SSH"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_repository__ssh_key_id
+msgid "SSH Key"
+msgstr ""
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_view_form
+msgid "Scan for Branches"
+msgstr ""
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_view_form
+msgid "Scan for Branches and Checkout"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_repository__scheme
+msgid "Scheme"
+msgstr ""
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_search_view
+msgid "Search Git Repository"
+msgstr ""
+
+#. module: to_git
+#: model:ir.actions.server,name:to_git.checkout_commit_action_select
+msgid "Select a commit"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__sequence
+#: model:ir.model.fields,field_description:to_git.field_git_repository__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_branch_form_view
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_view_form
+msgid "System Requirements"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_repository__with_credential
+msgid ""
+"Technical field to indicate if the repository requires credential. We assume"
+" all new repositories require credential"
+msgstr ""
+
+#. module: to_git
+#: code:addons/to_git/models/git_branch.py:0
+#, python-format
+msgid ""
+"The branch name %s you've entered is not available in the remote repository "
+"%s."
+msgstr ""
+
+#. module: to_git
+#: code:addons/to_git/models/git_branch.py:0
+#, python-format
+msgid "The commit does not exist!"
+msgstr ""
+
+#. module: to_git
+#: code:addons/to_git/models/git_branch.py:0
+#, python-format
+msgid "The commit is not in this branch!"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_branch__company_id
+msgid "The company to which the branch belong."
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_repository__company_id
+msgid ""
+"The company to which the repository belong. Leave this field empty to make "
+"this available to all the companies in the system."
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.constraint,message:to_git.constraint_git_repository_name_unique
+msgid "The git repository name must be unique!"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.constraint,message:to_git.constraint_git_repository_remote_url_unique
+msgid "The git repository url must be unique!"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_repository__netloc
+msgid "The location of the resource. For example, 'github.com'."
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_branch__vendor_id
+msgid "The partner who holds the copyright of this branch's repository"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_repository__vendor_id
+#: model:ir.model.fields,help:to_git.field_wizard_git_url_add__vendor_id
+msgid ""
+"The partner who holds the copyright of this repository. Leave it empty if "
+"this is a repository of your company's."
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_repository__netpath
+#: model:ir.model.fields,help:to_git.field_wizard_git_url_add__git_net_path
+msgid "The path of the resource. For example, '/odoo/odoo'."
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_wizard_git_url_add__url
+msgid ""
+"The provided url should follow a standardized format: "
+"ssh://git@github.com/odoo/odoo.git#git_branch_name. The url of your "
+"repository might then be modified in order to respect this standard."
+msgstr ""
+
+#. module: to_git
+#: code:addons/to_git/models/git_repository.py:0
+#, python-format
+msgid "The repository %s cannot be a fork of itselves."
+msgstr ""
+
+#. module: to_git
+#: code:addons/to_git/models/git_repository.py:0
+#, python-format
+msgid "The repository %s%s already exsits"
+msgstr ""
+
+#. module: to_git
+#: code:addons/to_git/wizard/wizard_git_url_add.py:0
+#, python-format
+msgid "The scheme %s is not supported. Please use either HTTP/HTTPS or SSH."
+msgstr ""
+
+#. module: to_git
+#: model:res.groups,comment:to_git.group_to_git_user
+msgid ""
+"The user will have access to all records of git\n"
+"\t\t\t\tapplication.\n"
+"\t\t\t"
+msgstr ""
+
+#. module: to_git
+#: model:res.groups,comment:to_git.group_to_git_manager
+msgid ""
+"The user will have access to git application plus\n"
+"\t\t\t\tgit configuration and settings sections as well as all statistics\n"
+"\t\t\t\tand reports.\n"
+"\t\t\t"
+msgstr ""
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_branch_form_view
+msgid ""
+"This action will delete all the branch's content (i.e. files and folders) "
+"from the working tree. Are you sure?"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_repository__parent_id
+msgid ""
+"This field is to indicate the parent repository from which this repository "
+"was forked."
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_branch__sequence
+#: model:ir.model.fields,help:to_git.field_git_repository__sequence
+msgid "This help prior the auto scanning."
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,help:to_git.field_git_branch__is_default
+msgid "This is to indicate that the branch is the default in the repository"
+msgstr ""
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_view_form
+msgid ""
+"This will delete all the git content from disk and re-Initialize the git "
+"repository"
+msgstr ""
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_view_form
+msgid ""
+"This will delete all the git content from disk and reinitialize the git "
+"repository. Although this does not touch to any record in your Odoo "
+"database, it may affect some git operations (e.g. zip and download files "
+"from git repository). Are you sure to preceed anyway?"
+msgstr ""
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.authenticate_form
+msgid "Try Again"
+msgstr ""
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_branch_form_view
+msgid "UnCheckout"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__message_unread
+#: model:ir.model.fields,field_description:to_git.field_git_repository__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__message_unread_counter
+#: model:ir.model.fields,field_description:to_git.field_git_repository__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_view_form
+msgid "Update all the already checked out branches of this repository"
+msgstr ""
+
+#. module: to_git
+#: model:res.groups,name:to_git.group_to_git_user
+msgid "User"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_authenticate__username
+msgid "Username"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model,name:to_git.model_res_users
+msgid "Users"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__vendor_id
+#: model:ir.model.fields,field_description:to_git.field_git_repository__vendor_id
+#: model:ir.model.fields,field_description:to_git.field_wizard_git_url_add__vendor_id
+#: model_terms:ir.ui.view,arch_db:to_git.git_branch_search_view
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_search_view
+msgid "Vendor"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_repository__with_credential
+msgid "With Credential"
+msgstr ""
+
+#. module: to_git
+#: model:ir.model.fields,field_description:to_git.field_git_branch__working_tree
+msgid "Working Tree"
+msgstr ""
+
+#. module: to_git
+#: code:addons/to_git/models/git_branch.py:0
+#, python-format
+msgid ""
+"You can not mark Auto Scan for the branch %s of the repository %s while the repository may require credential. Please consider to use SSH protocol with SSH Key for the repositories that you want to get auto scanned.\n"
+"If you are sure that there is no credential to be required, please:\n"
+"1. Refesh your browser (press Command + R if you are on Mac, or F5 if you are on Windows/Linux),\n"
+"2. Checkout or pull the branch,\n"
+"3. Set Auto Scan again."
+msgstr ""
+
+#. module: to_git
+#: code:addons/to_git/models/git_branch.py:0
+#, python-format
+msgid "You must check out the branch before you can set auto scan"
+msgstr ""
+
+#. module: to_git
+#: code:addons/to_git/wizard/wizard_git_url_add.py:0
+#, python-format
+msgid ""
+"You should not give any param or query in your URL. Please follow a "
+"standardized format: ssh://git@github.com/odoo/odoo.git#git_branch_name."
+msgstr ""
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_branch_form_view
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_view_form
+msgid ""
+"limit_memory_soft = 4294967296\n"
+"\t\t\t\t\t\t\t\tlimit_memory_hard = 5368709120"
+msgstr ""
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.git_repository_view_form
+msgid "ssh://git@github.com/odoo/odoo.git"
+msgstr ""
+
+#. module: to_git
+#: model_terms:ir.ui.view,arch_db:to_git.wizard_git_url_add_form_view
+msgid "ssh://git@github.com/odoo/odoo.git#12.0"
+msgstr ""

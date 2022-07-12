@@ -1,0 +1,1886 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_fleet_operation_planning
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-29 10:46+0000\n"
+"PO-Revision-Date: 2022-06-29 10:46+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_fleet_operation_planning
+#: model:mail.template,body_html:to_fleet_operation_planning.email_template_trip_schedule
+msgid ""
+"\n"
+"                \n"
+"                    <p>Dear ${object.driver_id.name},</p>\n"
+"                    <p>The trip <strong>${object.name}</strong> has been confirmed assigning you as the driver.</p>\n"
+"                    <p>Please find attached the printed report on the trip's details</p>\n"
+"                    <p>You can reply to this email if you have any questions.</p>\n"
+"                    <p>Thank you,</p>\n"
+"\n"
+"                    <p style=\"color:#eeeeee;\">\n"
+"                    % if object.operator_id and object.operator_id.signature:\n"
+"                        ${object.operator_id.signature | safe}\n"
+"                    % endif\n"
+"                    </p>\n"
+"                \n"
+"            "
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:mail.template,report_name:to_fleet_operation_planning.email_template_trip_schedule
+msgid ""
+"${(object.name or '').replace('/','_')}${object.state == 'draft' and "
+"'_draft' or ''}"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.actions.report,print_report_name:to_fleet_operation_planning.report_vehicle_trip
+msgid "'Trip - %s' % (object.name)"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/models/fleet_vehicle_trip.py:0
+#, python-format
+msgid "- Route Name: %s; Route ID: %s\n"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.route_waypoint_form_view
+msgid "<span>hours</span>"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model,name:to_fleet_operation_planning.model_abstract_vehicle_trip_wizard
+msgid "Abstract model to share business logics between vehicle trip wizards"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle__access_partner_ids
+msgid "Access Partner"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_form
+msgid "Actual"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis__actual_distance
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__actual_distance
+msgid "Actual Distance"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis__operation_duration
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__operation_duration
+msgid "Actual Duration"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_waypoint__address_id
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.report_vehicle_trip_view_document
+msgid "Address"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_log_services__address_id
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_vehicle_log_services_view_search
+msgid "Address/Location"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields.selection,name:to_fleet_operation_planning.selection__wizard_generate_routes__type__all_trips
+msgid "All Trips"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__amount
+msgid "Amount"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.report_vehicle_trip_view_document
+msgid "Assigned Driver"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_res_partner__assistant_done_trip_ids
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_res_users__assistant_done_trip_ids
+msgid "Assistant Trips"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_res_partner__assistant_done_trip_count
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_res_users__assistant_done_trip_count
+msgid "Assistant Trips Count"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__assistant_ids
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_start_wizard__assistant_ids
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.report_vehicle_trip_view_document
+msgid "Assistants"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__average_fuel_consumption_per_hundred
+msgid "Ave. Fuel Consumption per Hundred"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_section__ave_speed
+msgid "Ave. Speed"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.report_vehicle_trip_view_document
+msgid "Ave. Speed (km/h)"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_res_partner__ave_stop_duration
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_res_users__ave_stop_duration
+msgid "Average Stop Duration"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.generate_routes_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.vehicle_strip_end_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.vehicle_strip_start_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.vehicle_trip_register_cost_wizard_view
+msgid "Cancel"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_form
+msgid "Cancel Trip"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields.selection,name:to_fleet_operation_planning.selection__fleet_vehicle_trip__state__cancelled
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_search
+msgid "Cancelled"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_wizard_generate_routes__raise_error_if_dupplication_routes_found
+msgid ""
+"Check this if you want to be warned when routes duplication found. In such "
+"the case, Odoo just tries to warn you if it find duplication. Routes will be"
+" generated only if no such the duplication found."
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_waypoint__city
+msgid "City"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__company_id
+msgid "Company"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_form
+msgid "Confirm Trip"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields.selection,name:to_fleet_operation_planning.selection__fleet_vehicle_trip__state__confirmed
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_search
+msgid "Confirmed"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.actions.act_window,name:to_fleet_operation_planning.fleet_confirmed_trip_action
+msgid "Confirmed/Planned Trips"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model,name:to_fleet_operation_planning.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis__sum_cost
+msgid "Cost"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_waypoint__country_id
+msgid "Country"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.vehicle_trip_register_cost_wizard_view
+msgid "Create"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__create_uid
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_section__create_uid
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_waypoint__create_uid
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_end_wizard__create_uid
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__create_uid
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_start_wizard__create_uid
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_wizard_generate_routes__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__create_date
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_section__create_date
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_waypoint__create_date
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_end_wizard__create_date
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__create_date
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_start_wizard__create_date
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_wizard_generate_routes__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.constraint,message:to_fleet_operation_planning.constraint_vehicle_trip_register_cost_wizard_zero_amount_check
+msgid "Creating cost of zero amount does not make sense!"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.report_vehicle_trip_view_document
+msgid "Current Odometer:"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.ui.menu,name:to_fleet_operation_planning.fleet_trip_dashboard_menu
+msgid "Dashboard"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__date
+msgid "Date"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_search
+msgid "Date End"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_search
+msgid "Date Start"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle__address_id
+msgid "Default Address"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_res_partner__default_stop_duration
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_res_users__default_stop_duration
+msgid "Default Stop Duration"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__description
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_form
+msgid "Description"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_abstract_vehicle_trip_wizard__display_name
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis__display_name
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle__display_name
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_log_services__display_name
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_odometer__display_name
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__display_name
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_section__display_name
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_waypoint__display_name
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_res_partner__display_name
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_route_route__display_name
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_route_section__display_name
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_route_waypoint__display_name
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_end_wizard__display_name
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__display_name
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_start_wizard__display_name
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_wizard_generate_routes__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_section__distance
+msgid "Distance"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis__distance_deviation
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__distance_deviation
+msgid "Distance Deviation"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__distance_unit
+msgid "Distance Unit"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields.selection,name:to_fleet_operation_planning.selection__fleet_trips_analysis__state__done
+#: model:ir.model.fields.selection,name:to_fleet_operation_planning.selection__fleet_vehicle_trip__state__done
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_analysis_search
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_form
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_search
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.vehicle_strip_end_wizard_form_view
+msgid "Done"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.actions.act_window,name:to_fleet_operation_planning.employee_fleet_done_trip_action
+#: model:ir.actions.act_window,name:to_fleet_operation_planning.fleet_done_trip_action
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_driver_view_form
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.view_employee_form
+msgid "Done Trips"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields.selection,name:to_fleet_operation_planning.selection__fleet_vehicle_trip__state__draft
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_search
+msgid "Draft"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.ui.menu,name:to_fleet_operation_planning.fleet_trip_menu
+msgid "Draft Trips"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis__driver_id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__driver_id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_start_wizard__driver_id
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_analysis_search
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_search
+msgid "Driver"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_res_partner__driver_done_trip_ids
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_res_users__driver_done_trip_ids
+msgid "Driver Trips"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_res_partner__driver_done_trip_count
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_res_users__driver_done_trip_count
+msgid "Driver Trips Count"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/models/fleet_vehicle_trip.py:0
+#, python-format
+msgid ""
+"Driver and Assistant must not be the same person. Please either change the "
+"driver or remove him from assistant tag box."
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.mail_template_data_notification_email_fleet_vehicle_trip
+msgid "ERPOnline"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model,name:to_fleet_operation_planning.model_hr_employee
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis__employee_id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__employee_id
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_analysis_search
+msgid "Employee"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis__end_date
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__end_date
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_end_wizard__operation_end
+msgid "End Date"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_analysis_search
+msgid "Ending Month"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis__est_distance
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__est_distance
+msgid "Est. Distance"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.report_vehicle_trip_view_document
+msgid "Est. Distance (km)"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis__est_trip_time
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__est_trip_time
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_section__est_trip_time
+msgid "Est. Duration"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.report_vehicle_trip_view_document
+msgid "Est. Duration (hr)"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.report_vehicle_trip_view_document
+msgid "Estimated Distance"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.report_vehicle_trip_view_document
+msgid "Estimated Duration"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.report_vehicle_trip_view_document
+msgid "Expected End"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.report_vehicle_trip_view_document
+msgid "Expected Start"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_analysis_search
+msgid "Extended Filters..."
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.ui.menu,name:to_fleet_operation_planning.fleet_planning_menu
+msgid "Fleet Operations"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model,name:to_fleet_operation_planning.model_fleet_vehicle_trip
+msgid "Fleet Trip"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_calendar
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_confirmed_calendar
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_planning_calendar
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.view_partner_form
+msgid "Fleet Trips"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.actions.act_window,name:to_fleet_operation_planning.fleet_trip_analysis_action_window
+#: model:ir.model,name:to_fleet_operation_planning.model_fleet_trips_analysis
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_analysis_graph
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_analysis_pivot_view
+msgid "Fleet Trips Analysis"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_section__address_from_id
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.report_vehicle_trip_view_document
+msgid "From"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.actions.act_window,help:to_fleet_operation_planning.fleet_trip_analysis_action_window
+msgid ""
+"From this view, have an analysis of your different\n"
+"\t\t\t\ttrips against different vehicles over the time."
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis__fuel_consumption
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__fuel_consumption
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_end_wizard__fuel_consumption
+msgid "Fuel Consumption"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__fuel_consumption
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_vehicle_trip_end_wizard__fuel_consumption
+msgid ""
+"Fuel consumption (in liters) during the whole trip. This information is just"
+" another figure beside fleet vehicle fuel logs"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.ui.menu,name:to_fleet_operation_planning.route_generator_menu
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.generate_routes_wizard_form_view
+msgid "Generate Routes"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.actions.act_window,name:to_fleet_operation_planning.launch_generate_routes_wizard
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.generate_routes_wizard_form_view
+msgid "Generate Routes from Trips"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_analysis_search
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_search
+msgid "Group By"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_abstract_vehicle_trip_wizard__id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis__id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle__id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_log_services__id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_odometer__id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_section__id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_waypoint__id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_hr_employee__id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_res_partner__id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_route_route__id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_route_section__id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_route_waypoint__id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_end_wizard__id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_start_wizard__id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_wizard_generate_routes__id
+msgid "ID"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_vehicle_view_search
+msgid "Idle Today"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_vehicle_view_search
+msgid "Idle in Seven Days"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_vehicle_view_search
+msgid "Idle in Three Days"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_vehicle_view_search
+msgid "Idle in Two Days"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__message_needaction
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__message_has_error
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_wizard_generate_routes__update_trip
+msgid "If checked, the routes selected below will be updated with new route."
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_search
+msgid "In Next 7 Days"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields.selection,name:to_fleet_operation_planning.selection__fleet_trips_analysis__state__progress
+#: model:ir.model.fields.selection,name:to_fleet_operation_planning.selection__fleet_vehicle_trip__state__progress
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_search
+msgid "In Operation"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_analysis_search
+msgid "In progress"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_res_partner__default_stop_duration
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_res_users__default_stop_duration
+msgid ""
+"In vehicle trip planning, this is the duration of stop time (in hours) that "
+"the vehicle usually takes when staying at this address"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields.selection,name:to_fleet_operation_planning.selection__fleet_trips_analysis__odometer_unit__kilometers
+msgid "Kilometers"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_abstract_vehicle_trip_wizard____last_update
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis____last_update
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle____last_update
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_log_services____last_update
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_odometer____last_update
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip____last_update
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_section____last_update
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_waypoint____last_update
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_res_partner____last_update
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_route_route____last_update
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_route_section____last_update
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_route_waypoint____last_update
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_end_wizard____last_update
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard____last_update
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_start_wizard____last_update
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_wizard_generate_routes____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__write_uid
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_section__write_uid
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_waypoint__write_uid
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_end_wizard__write_uid
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__write_uid
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_start_wizard__write_uid
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_wizard_generate_routes__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__write_date
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_section__write_date
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_waypoint__write_date
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_end_wizard__write_date
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__write_date
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_start_wizard__write_date
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_wizard_generate_routes__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_analysis_search
+msgid "Last Year"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_form
+msgid "Log Service"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields.selection,name:to_fleet_operation_planning.selection__fleet_trips_analysis__odometer_unit__miles
+msgid "Miles"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle__next_scheduled_trip_id
+msgid "Next Scheduled Trip"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle__next_scheduled_trip_date
+msgid "Next Trip Date"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__odometer_ids
+msgid "Odometer"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis__odometer_unit
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__odometer_unit
+msgid "Odometer Unit"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_abstract_vehicle_trip_wizard__odometer
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis__odometer_value
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_end_wizard__odometer
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__odometer
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_start_wizard__odometer
+msgid "Odometer Value"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model,name:to_fleet_operation_planning.model_fleet_vehicle_odometer
+msgid "Odometer log for a vehicle"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_abstract_vehicle_trip_wizard__odometer
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_vehicle_trip_end_wizard__odometer
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__odometer
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_vehicle_trip_start_wizard__odometer
+msgid "Odometer measure of the vehicle at the moment of this log"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/models/route_route.py:0
+#, python-format
+msgid ""
+"Only Fleet Managers can cancel routes those are have existing trips linked!"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/wizard/vehicle_trip_register_cost_wizard.py:0
+#, python-format
+msgid ""
+"Only Fleet Managers can create negative costs (amount < 0). If you really "
+"want to create a nagative cost (to correct your previous mistake), please "
+"ask the managers for help"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/models/fleet_vehicle_trip.py:0
+#, python-format
+msgid ""
+"Only users with Operator access rights can cancel a trip that is in either "
+"In Operation or Done state!"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle__operation_distance
+msgid "Operation Distance"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__operation_end
+msgid "Operation End Date"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle__operation_hours
+msgid "Operation Hours"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__operation_start
+msgid "Operation Start Date"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.ui.menu,name:to_fleet_operation_planning.fleet_operations_menu
+msgid "Operations"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__operator_id
+#: model:res.groups,name:to_fleet_operation_planning.fleet_group_operator
+msgid "Operator"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_form
+msgid "Other information"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/models/fleet_vehicle_trip.py:0
+#, python-format
+msgid ""
+"Overlapping! You cannot confirm this trip for driver \"%s\" since there is\n"
+" another trip \"%s\" has been confirmed and scheduled for this driver at the time frame which is %s and %s."
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/models/fleet_vehicle_trip.py:0
+#, python-format
+msgid ""
+"Overlapping! You cannot confirm this trip for vehicle \"%s\" since there is\n"
+" another trip \"%s\" has been confirmed and scheduled for this vehicle at the time frame which is %s and %s."
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.mail_template_data_notification_email_fleet_vehicle_trip
+msgid "Powered by"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__quantity
+msgid "Quantity"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.constraint,message:to_fleet_operation_planning.constraint_vehicle_trip_register_cost_wizard_check_quantity
+msgid "Quantity of a service must be positive!"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_wizard_generate_routes__raise_error_if_dupplication_routes_found
+msgid "Raise Error if Routes Duplication found"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__name
+msgid "Reference"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.ui.menu,name:to_fleet_operation_planning.menu_fleet_trip_reporting
+msgid "Reports"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model,name:to_fleet_operation_planning.model_route_route
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis__route_id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_log_services__route_id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__route_id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_waypoint__route_id
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_analysis_search
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_search
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_vehicle_log_services_view_search
+msgid "Route"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model,name:to_fleet_operation_planning.model_wizard_generate_routes
+msgid "Route Generator Wizard"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model,name:to_fleet_operation_planning.model_route_section
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_vehicle_log_services_view_search
+msgid "Route Section"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.ui.menu,name:to_fleet_operation_planning.geo_route_section_line_menu
+msgid "Route Section Lines"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.ui.menu,name:to_fleet_operation_planning.geo_route_section_menu
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_form
+msgid "Route Sections"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model,name:to_fleet_operation_planning.model_route_waypoint
+msgid "Route Waypoint"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.report_vehicle_trip_view_document
+msgid "Route:"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.ui.menu,name:to_fleet_operation_planning.geo_route_menu
+msgid "Routes"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.ui.menu,name:to_fleet_operation_planning.fleet_trip_config_menu
+msgid "Routes & Waypoints"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle__scheduled_trips_count
+msgid "Schedule Trips Count"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:mail.template,subject:to_fleet_operation_planning.email_template_trip_schedule
+msgid "Schedule for Trip ${object.name or 'n/a' } has been confirmed"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_form
+msgid "Scheduled"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__expected_end_date
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_start_wizard__expected_end_date
+msgid "Scheduled End Date"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__expected_start_date
+msgid "Scheduled Start Date"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_vehicle_view_form
+msgid "Scheduled Trips"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_search
+msgid "Search Trips"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_analysis_search
+msgid "Search Trips Analysis"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_log_services__route_section_id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_section__route_section_id
+msgid "Section"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.report_vehicle_trip_view_document
+msgid "Sections"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields.selection,name:to_fleet_operation_planning.selection__wizard_generate_routes__type__selected
+msgid "Selected Trips"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_form
+msgid "Send by Email"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_section__sequence
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_waypoint__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_form
+msgid "Services"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__log_services_ids
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_section__log_services_ids
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_waypoint__log_services_ids
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_route_section__log_services_ids
+msgid "Services Logs"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__log_services_count
+msgid "Services Logs Count"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_route_section__log_services_ids
+msgid "Services for vehicle"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model,name:to_fleet_operation_planning.model_fleet_vehicle_log_services
+msgid "Services for vehicles"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_form
+msgid "Set to Draft"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_form
+msgid "Show all the services for this trip"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.vehicle_strip_start_wizard_form_view
+msgid "Start"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis__start_date
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__start_date
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_start_wizard__operation_start
+msgid "Start Date"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.actions.act_window,name:to_fleet_operation_planning.launch_vehicle_strip_start_wizard
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_form
+msgid "Start Trip"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_analysis_search
+msgid "Starting Month"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_waypoint__state_id
+msgid "State"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis__state
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__state
+msgid "Status"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_waypoint__stop_duration
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_route_waypoint__stop_duration
+msgid "Stop Duration"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.report_vehicle_trip_view_document
+msgid "Stop Duration (Hr)"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_waypoint__street
+msgid "Street"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_waypoint__street2
+msgid "Street 2"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.constraint,message:to_fleet_operation_planning.constraint_res_partner_stop_duration_positive_check
+msgid "The Default Stop Duration must not be negative!"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/models/fleet_vehicle_trip.py:0
+#, python-format
+msgid "The Operation End Date must be greater than the Operation Start Date."
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip_waypoint__route_id
+msgid "The Route to which the waypoint belongs"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/models/fleet_vehicle_trip.py:0
+#, python-format
+msgid "The Start Date must be prior to the End Date"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.constraint,message:to_fleet_operation_planning.constraint_fleet_vehicle_trip_waypoint_stop_duration_positive_check
+#: model:ir.model.constraint,message:to_fleet_operation_planning.constraint_route_waypoint_stop_duration_positive_check
+msgid "The Stop Duration must not be negative!"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/wizard/vehicle_trip_register_cost_wizard.py:0
+#, python-format
+msgid ""
+"The Trip Section '%s' you've selected does not belong to this trip '%s'"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/wizard/vehicle_trip_register_cost_wizard.py:0
+#, python-format
+msgid ""
+"The Trip Waypoint '%s' you've selected does not belong to this trip '%s'"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_res_partner__driver_done_trip_ids
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_res_users__driver_done_trip_ids
+msgid ""
+"The Trips that have been done by this partner as the role of the driver"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle__trip_ids
+msgid "The Trips that refer to this vehicle"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__actual_distance
+msgid ""
+"The actual Distance of the trip which is computed by the start odometer and "
+"end odometer"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__operation_end
+msgid ""
+"The actual end date of the trip which is automatically recorded when Done "
+"button is pressed."
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__operation_duration
+msgid ""
+"The actual operation duration (in hours) which is computed from the "
+"Operation Start Date and the Operation End Date"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__operation_start
+msgid ""
+"The actual start date of the trip which is automatically recorded when Start"
+" Trip button is pressed."
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_res_partner__ave_stop_duration
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_res_users__ave_stop_duration
+msgid ""
+"The average duration is computed using average method from the past trips' "
+"stop time. In case no past trips, the Default Stop Duration will be used. In"
+" case the computed average duration is 30% less than the Default Stop "
+"Duration or 30% greater than the Default Stop Duration, the Default Stop "
+"Duration will be used instead of average method"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip_section__ave_speed
+msgid "The average speed in kilometer/hour that you can reach on this section"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_vehicle_log_services_view_search
+msgid "The costs that concern addresses during the trips"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_vehicle_log_services_view_search
+msgid "The costs that concern route sections during the trips"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_vehicle_log_services_view_search
+msgid "The costs that concern routes during the trips."
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_vehicle_log_services_view_search
+msgid "The costs that have been registered for trips."
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle__address_id
+msgid "The default address of the vechile (e.g. garage, station, etc)"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__distance_deviation
+msgid ""
+"The distance deviation between the actual operation distance and the planned"
+" distance"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip_section__distance
+msgid "The distance in kilometers between the From and To"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__driver_id
+msgid "The driver, that can be changed upon starting the trip"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip_waypoint__stop_duration
+msgid "The duration of stop time (in hours) that the vehicle usually takes"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__employee_id
+msgid "The employee who acts as the driver for the trip"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_route_waypoint__stop_duration
+msgid ""
+"The estimated duration of stop time (in hours) that the vehicle usually "
+"takes"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__est_trip_time
+msgid ""
+"The estimated time in hours spent to go through the route (including stop "
+"duration)"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip_section__est_trip_time
+msgid "The estimated time in hours spent to go through the section"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__expected_start_date
+msgid "The expected / planned start date of the trip"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__expected_end_date
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_vehicle_trip_start_wizard__expected_end_date
+msgid ""
+"The expected end date of the trip which is automatically computed based on the total estimated time going through the selected route and on either the Operation Start date (actual start date)\n"
+" or the Scheduled Start Date in case the trip is not started yet."
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/wizard/vehicle_trip_end_wizard.py:0
+#, python-format
+msgid ""
+"The number of odometer at the end of a trip must not be less than the number"
+" of odometer when starting"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/wizard/vehicle_trip_end_wizard.py:0
+#: code:addons/to_fleet_operation_planning/wizard/vehicle_trip_start_wizard.py:0
+#, python-format
+msgid "The odometer number cannot be negative"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__operator_id
+msgid "The operation user who takes the responsibility for this trip"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle__access_partner_ids
+msgid ""
+"The partners who has access to this vehicle which is computed how the "
+"partners are set as the driver for the trips of this vehicle. For example. "
+"assume Mr. A is set as the driver for a trip of this vehicle. He will have "
+"access to the vehicle information as long as the trip is either in Confirmed"
+" or in In-Operation state"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_log_services__route_id
+msgid ""
+"The route on which the service was logged, computed based on the route of "
+"the corresponding trip."
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__route_id
+msgid ""
+"The route through which the vehicle of this trip will go. Leave this empty "
+"and specify waypoints in the section below will automatically select a "
+"matched route (if exists) or create a new route containing the waypoints you"
+" specify"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__trip_section_id
+msgid "The section of the trip for which the cost is registered"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_log_services__trip_section_id
+msgid "The section of the trip's route for which the service was logged."
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__time_deviation
+msgid ""
+"The time deviation (in hours) between actual operation duration planned "
+"duration which is computed by Actual Duration minus Est. Duration."
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle__operation_distance
+msgid ""
+"The total operation distance of the vehicle which is computed by summary of "
+"the total actual distance of the done trips with the vehicle"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle__operation_hours
+msgid ""
+"The total operation hours of the vehicle which is computed by summary of the"
+" total hours of the done trips with the vehicle"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_log_services__trip_id
+msgid ""
+"The trip on which the service was logged. This field is automatically "
+"computed base on the Trip Section and the Trip Waypoint"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_res_partner__assistant_done_trip_ids
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_res_users__assistant_done_trip_ids
+msgid "The trips on which this one take the assistant role"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__vehicle_id
+msgid "The vehicle, which can be changed upon starting the trip"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/models/fleet_vehicle_trip.py:0
+#, python-format
+msgid ""
+"The waypoint %s seems to be as the same as the preceding one. You cannot "
+"have same waypoints those are adjacent to each other. I.e. A->B->B->C must "
+"be either A->B->C or A->B->C->B."
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__trip_waypoint_id
+msgid "The waypoint of the trip for where the cost is registered"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_log_services__trip_waypoint_id
+msgid "The waypoint of the trip's route for which the service was logged."
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/models/fleet_vehicle_log_services.py:0
+#, python-format
+msgid ""
+"There is discrepancy between the selected trip and the trip section! The "
+"trip section %s belong to the trip %s"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/models/fleet_vehicle_log_services.py:0
+#, python-format
+msgid ""
+"There is discrepancy between the selected trip and the trip waypoint! The "
+"trip waypoint %s belong to the trip %s"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_analysis_search
+msgid "This Year"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__end_date
+msgid ""
+"This is the Scheduled End Date when the operation is not been done. "
+"Otherwise, it will be Operation End Date"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__start_date
+msgid ""
+"This is the Scheduled Start Date when the operation is not been started. "
+"Otherwise, it will be Operation Start Date"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis__time_deviation
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__time_deviation
+msgid "Time Deviation"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_section__address_to_id
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.report_vehicle_trip_view_document
+msgid "To"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_search
+msgid "Today"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_hr_employee__assitant_done_trip_ids
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_hr_employee__driver_done_trip_ids
+msgid "Total trips that employee takes as the role of driver"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_abstract_vehicle_trip_wizard__trip_id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis__trip_id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_log_services__trip_id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_section__trip_id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_waypoint__trip_id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_end_wizard__trip_id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__trip_id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_start_wizard__trip_id
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_form
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_vehicle_log_services_view_search
+msgid "Trip"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.actions.act_window,name:to_fleet_operation_planning.launch_vehicle_strip_end_wizard
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.vehicle_strip_end_wizard_form_view
+msgid "Trip Ending Wizard"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.report_vehicle_trip_view_document
+msgid "Trip Number:"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.actions.report,name:to_fleet_operation_planning.report_vehicle_trip
+msgid "Trip Report"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_log_services__trip_section_id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__trip_section_id
+msgid "Trip Section"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__trip_section_ids
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_route_section__trip_section_ids
+msgid "Trip Sections"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.actions.act_window,name:to_fleet_operation_planning.launch_vehicle_trip_register_cost_wizard
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.vehicle_trip_register_cost_wizard_view
+msgid "Trip Service Logging Wizard"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.vehicle_strip_start_wizard_form_view
+msgid "Trip Start Wizard"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model,name:to_fleet_operation_planning.model_fleet_vehicle_trip_waypoint
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_log_services__trip_waypoint_id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__trip_waypoint_id
+msgid "Trip Waypoint"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_res_partner__trip_waypoint_ids
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_res_users__trip_waypoint_ids
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_form
+msgid "Trip Waypoints"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle__trip_ids
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_hr_employee__driver_done_trip_ids
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_route_route__trip_ids
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_wizard_generate_routes__trip_ids
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_tree
+msgid "Trips"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.ui.menu,name:to_fleet_operation_planning.fleet_trip_analysis_menu
+msgid "Trips Analysis"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.ui.menu,name:to_fleet_operation_planning.fleet_operations_trips_confirmed_menu
+msgid "Trips Confirmed"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_hr_employee__driver_done_trips_count
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_route_route__trips_count
+msgid "Trips Count"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.actions.act_window,name:to_fleet_operation_planning.fleet_done_trips_action
+#: model:ir.ui.menu,name:to_fleet_operation_planning.fleet_operations_trips_done_menu
+msgid "Trips Done"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_hr_employee__assitant_done_trip_ids
+msgid "Trips Done (as Assistant)"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_hr_employee__assitant_done_trips_count
+msgid "Trips Done (as Assistant) Count"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_analysis_search
+msgid "Trips End Date by Month"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_analysis_search
+msgid "Trips Start Date by Month"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.generate_routes_wizard_form_view
+msgid "Trips for Routes Generation"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.ui.menu,name:to_fleet_operation_planning.fleet_operations_trips_in_operation_menu
+msgid "Trips in Operation"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.actions.act_window,name:to_fleet_operation_planning.fleet_in_operation_trip_action
+msgid "Trips in Progress"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_analysis_search
+msgid "Trips started and ended last year"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_search
+msgid "Trips started today"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_analysis_search
+msgid "Trips started within this year"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__service_type_id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_wizard_generate_routes__type
+msgid "Type"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__price_unit
+msgid "Unit Price"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__distance_unit
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__odometer_unit
+msgid "Unit of the odometer "
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_wizard_generate_routes__update_trip
+msgid "Update Trips"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model,name:to_fleet_operation_planning.model_fleet_vehicle
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis__vehicle_id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__vehicle_id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_start_wizard__vehicle_id
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_analysis_search
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_search
+msgid "Vehicle"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_odometer__trip_id
+msgid "Vehicle Trip"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model,name:to_fleet_operation_planning.model_vehicle_trip_end_wizard
+msgid "Vehicle Trip End Wizard"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model,name:to_fleet_operation_planning.model_vehicle_trip_register_cost_wizard
+msgid "Vehicle Trip Register Cost Wizard"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model,name:to_fleet_operation_planning.model_fleet_vehicle_trip_section
+msgid "Vehicle Trip Section"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model,name:to_fleet_operation_planning.model_vehicle_trip_start_wizard
+msgid "Vehicle Trip Start Wizard"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.actions.act_window,name:to_fleet_operation_planning.fleet_trip_action
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_pivot_view
+msgid "Vehicle Trips"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.actions.act_window,name:to_fleet_operation_planning.fleet_trip_dashboard_action
+msgid "Vehicle Trips Dashboard"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.report_vehicle_trip_view_document
+msgid "Vehicle:"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__vendor_id
+msgid "Vendor"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.ui.menu,name:to_fleet_operation_planning.waypoint_area_menu
+msgid "Waypoint Areas"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__trip_waypoint_ids
+#: model:ir.ui.menu,name:to_fleet_operation_planning.route_waypoint_menu
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.report_vehicle_trip_view_document
+msgid "Waypoints"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/models/fleet_vehicle_trip.py:0
+#, python-format
+msgid ""
+"We found same routes in your data. Here is the information for your debugging:\n"
+"%s\n"
+"You must delete %s of those routes before you can proceeding further"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/models/fleet_vehicle_trip.py:0
+#, python-format
+msgid ""
+"You cannot confirm a trip which has no waypoint. Please add one before you "
+"can confirm the trip."
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/models/fleet_vehicle_trip.py:0
+#, python-format
+msgid ""
+"You cannot set-to-draft a trip that is in either In Operation or Done state!"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/models/fleet_vehicle_log_services.py:0
+#, python-format
+msgid ""
+"You may register a service log for either a Trip Section or a Trip Waypoint."
+" Not for both!"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/wizard/vehicle_trip_register_cost_wizard.py:0
+#, python-format
+msgid ""
+"You must assign the cost either for a trip section or trip waypoint. You "
+"cannot leave both empty!"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/wizard/vehicle_trip_register_cost_wizard.py:0
+#, python-format
+msgid "You must select a trip to register a cost for it."
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/wizard/wizard_generate_routes.py:0
+#, python-format
+msgid "You must select at least one trip to proceed..."
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_form
+msgid "hours"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_form
+msgid "liters"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.generate_routes_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.vehicle_strip_end_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.vehicle_strip_start_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.vehicle_trip_register_cost_wizard_view
+msgid "or"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_vehicle_view_form
+msgid "show the trips that have been scheduled for this vehicle"
+msgstr ""

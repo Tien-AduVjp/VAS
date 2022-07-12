@@ -1,0 +1,174 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_hr_contract_actions
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-28 07:22+0000\n"
+"PO-Revision-Date: 2021-10-28 07:22+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_hr_contract_actions
+#: model_terms:ir.ui.view,arch_db:to_hr_contract_actions.hr_contract_view_form
+msgid "Cancel"
+msgstr ""
+
+#. module: to_hr_contract_actions
+#: model_terms:ir.ui.view,arch_db:to_hr_contract_actions.hr_contract_view_form
+msgid "Click here to cancel the contract"
+msgstr ""
+
+#. module: to_hr_contract_actions
+#: model_terms:ir.ui.view,arch_db:to_hr_contract_actions.hr_contract_view_form
+msgid "Click here to set contract to New"
+msgstr ""
+
+#. module: to_hr_contract_actions
+#: model_terms:ir.ui.view,arch_db:to_hr_contract_actions.hr_contract_view_form
+msgid ""
+"Click here to set the contract as Expired. The contract will also be closed "
+"automatically when its End Date or its employee's Visa Expire Date is "
+"earlier or equal to tomorrow."
+msgstr ""
+
+#. module: to_hr_contract_actions
+#: model_terms:ir.ui.view,arch_db:to_hr_contract_actions.hr_contract_view_form
+msgid ""
+"Click here to start the contract so that it can be available in other "
+"business processes"
+msgstr ""
+
+#. module: to_hr_contract_actions
+#: model_terms:ir.ui.view,arch_db:to_hr_contract_actions.hr_contract_view_form
+msgid "Close"
+msgstr ""
+
+#. module: to_hr_contract_actions
+#: model:ir.model,name:to_hr_contract_actions.model_hr_contract
+msgid "Contract"
+msgstr ""
+
+#. module: to_hr_contract_actions
+#: model:ir.model.fields,field_description:to_hr_contract_actions.field_hr_contract__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: to_hr_contract_actions
+#: model:ir.model.fields,field_description:to_hr_contract_actions.field_hr_contract__id
+msgid "ID"
+msgstr ""
+
+#. module: to_hr_contract_actions
+#: code:addons/to_hr_contract_actions/models/hr_contract.py:0
+#, python-format
+msgid "Invalid status %s"
+msgstr ""
+
+#. module: to_hr_contract_actions
+#: model:ir.model.fields,field_description:to_hr_contract_actions.field_hr_contract____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: to_hr_contract_actions
+#: model_terms:ir.ui.view,arch_db:to_hr_contract_actions.hr_contract_view_form
+msgid "Renew"
+msgstr ""
+
+#. module: to_hr_contract_actions
+#: model_terms:ir.ui.view,arch_db:to_hr_contract_actions.hr_contract_view_form
+msgid "Set as To Renew"
+msgstr ""
+
+#. module: to_hr_contract_actions
+#: model_terms:ir.ui.view,arch_db:to_hr_contract_actions.hr_contract_view_form
+msgid ""
+"Set the contract status as 'To Renew'. Or, the contract will be set to 'To "
+"Renew' automatically when its End Date is between tomorrow and the next 7 "
+"days, OR its employee's Visa Expire Date is between tomorrow and the next 60"
+" days."
+msgstr ""
+
+#. module: to_hr_contract_actions
+#: model_terms:ir.ui.view,arch_db:to_hr_contract_actions.hr_contract_view_form
+msgid "Set to New"
+msgstr ""
+
+#. module: to_hr_contract_actions
+#: model_terms:ir.ui.view,arch_db:to_hr_contract_actions.hr_contract_view_form
+msgid "Start"
+msgstr ""
+
+#. module: to_hr_contract_actions
+#: model:ir.model.fields,field_description:to_hr_contract_actions.field_hr_contract__state
+msgid "Status"
+msgstr ""
+
+#. module: to_hr_contract_actions
+#: model:ir.model.fields,help:to_hr_contract_actions.field_hr_contract__state
+msgid ""
+"The Status of the contract which is either:\n"
+"New: The contract is a draft contract which may not visible in payslip.\n"
+"Running: the contract is valid and running. It will be available in other processes in the system.\n"
+"To Renew: the contract will be set to this status automatically when its End Date is between tomorrow and the next 7 days, OR its employee's Visa Expire Date is between tomorrow and the next 60 days\n"
+"Expired: The contract will be set to this status automatically when its End Date or its employee's Visa Expire Date is earlier or equal to tomorrow."
+msgstr ""
+
+#. module: to_hr_contract_actions
+#: code:addons/to_hr_contract_actions/models/hr_contract.py:0
+#, python-format
+msgid "The contract of %s is about to expire."
+msgstr ""
+
+#. module: to_hr_contract_actions
+#: code:addons/to_hr_contract_actions/models/hr_contract.py:0
+#, python-format
+msgid ""
+"You may not be able to cancel the contract %s while its status is neither "
+"Running nor To Renew nor Expired."
+msgstr ""
+
+#. module: to_hr_contract_actions
+#: code:addons/to_hr_contract_actions/models/hr_contract.py:0
+#, python-format
+msgid ""
+"You may not be able to renew the contract %s while its status is neither To "
+"Renew nor Expired"
+msgstr ""
+
+#. module: to_hr_contract_actions
+#: code:addons/to_hr_contract_actions/models/hr_contract.py:0
+#, python-format
+msgid ""
+"You may not be able to set expired the contract %s while its status is "
+"neither Running nor To Renew"
+msgstr ""
+
+#. module: to_hr_contract_actions
+#: code:addons/to_hr_contract_actions/models/hr_contract.py:0
+#, python-format
+msgid ""
+"You may not be able to set the contract %s as To Renew while its status is "
+"not Running"
+msgstr ""
+
+#. module: to_hr_contract_actions
+#: code:addons/to_hr_contract_actions/models/hr_contract.py:0
+#, python-format
+msgid ""
+"You may not be able to set to draft the contract %s while its status is not "
+"Cancelled"
+msgstr ""
+
+#. module: to_hr_contract_actions
+#: code:addons/to_hr_contract_actions/models/hr_contract.py:0
+#, python-format
+msgid ""
+"You may not be able to start the contract %s while its status is not New"
+msgstr ""

@@ -1,0 +1,59 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_stock_equipment_hierarchy
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-24 01:11+0000\n"
+"PO-Revision-Date: 2021-11-24 01:11+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_stock_equipment_hierarchy
+#: model:ir.model.fields,help:to_stock_equipment_hierarchy.field_stock_production_lot__recursive_maintenance_ids
+msgid "All the maintenances of this equipment and its parts"
+msgstr "Toàn bộ Bảo trì của Thiết bị này và các bộ phận của nó"
+
+#. module: to_stock_equipment_hierarchy
+#: model:ir.model.fields,field_description:to_stock_equipment_hierarchy.field_stock_production_lot__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_stock_equipment_hierarchy
+#: model:ir.model.fields,field_description:to_stock_equipment_hierarchy.field_stock_production_lot__id
+msgid "ID"
+msgstr ""
+
+#. module: to_stock_equipment_hierarchy
+#: model:ir.model.fields,field_description:to_stock_equipment_hierarchy.field_stock_production_lot____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_stock_equipment_hierarchy
+#: model:ir.model,name:to_stock_equipment_hierarchy.model_stock_production_lot
+msgid "Lot/Serial"
+msgstr "Lô/Sê-ri"
+
+#. module: to_stock_equipment_hierarchy
+#: model:ir.model.fields,field_description:to_stock_equipment_hierarchy.field_stock_production_lot__recursive_maintenances_count
+msgid "Maintenances Count"
+msgstr "SL Bảo trì"
+
+#. module: to_stock_equipment_hierarchy
+#: model:ir.model.fields,field_description:to_stock_equipment_hierarchy.field_stock_production_lot__recursive_maintenance_ids
+msgid "Recursive Maintenances"
+msgstr "Tất cả bảo trì"
+
+#. module: to_stock_equipment_hierarchy
+#: model_terms:ir.ui.view,arch_db:to_stock_equipment_hierarchy.view_production_lot_form
+msgid ""
+"Show all the maintenances of this equipment including its parts' "
+"maintenances"
+msgstr ""
+"Hiển thị tất cả các bảo trì của thiết bị này bao gồm cả bảo trì bộ phận"

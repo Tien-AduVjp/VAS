@@ -1,0 +1,76 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_sales_unlink_stock
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-20 03:46+0000\n"
+"PO-Revision-Date: 2022-06-20 03:46+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_sales_unlink_stock
+#: model:ir.model,name:viin_sales_unlink_stock.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: viin_sales_unlink_stock
+#: model:ir.model,name:viin_sales_unlink_stock.model_res_config_settings
+msgid "Config Settings"
+msgstr "Thiết lập Cấu hình"
+
+#. module: viin_sales_unlink_stock
+#: model:ir.model.fields,field_description:viin_sales_unlink_stock.field_res_company__prevent_unlink_sales_having_pickings
+#: model:ir.model.fields,field_description:viin_sales_unlink_stock.field_res_config_settings__prevent_unlink_sales_having_pickings
+msgid "Disallow to unlink SO having Stock Transfers"
+msgstr "Không cho phép xóa đơn bán có Phiếu dịch chuyển kho"
+
+#. module: viin_sales_unlink_stock
+#: model_terms:ir.ui.view,arch_db:viin_sales_unlink_stock.res_config_settings_view_form
+msgid ""
+"Disallows the deletion of sales orders if they have referenced stock "
+"transfers"
+msgstr "Không cho phép xóa Đơn bán nếu có liên kết đến Phiếu dịch chuyển kho"
+
+#. module: viin_sales_unlink_stock
+#: model:ir.model.fields,field_description:viin_sales_unlink_stock.field_res_company__display_name
+#: model:ir.model.fields,field_description:viin_sales_unlink_stock.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:viin_sales_unlink_stock.field_sale_order__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: viin_sales_unlink_stock
+#: model:ir.model.fields,field_description:viin_sales_unlink_stock.field_res_company__id
+#: model:ir.model.fields,field_description:viin_sales_unlink_stock.field_res_config_settings__id
+#: model:ir.model.fields,field_description:viin_sales_unlink_stock.field_sale_order__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_sales_unlink_stock
+#: model:ir.model.fields,field_description:viin_sales_unlink_stock.field_res_company____last_update
+#: model:ir.model.fields,field_description:viin_sales_unlink_stock.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:viin_sales_unlink_stock.field_sale_order____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: viin_sales_unlink_stock
+#: model:ir.model,name:viin_sales_unlink_stock.model_sale_order
+msgid "Sales Order"
+msgstr "Đơn bán"
+
+#. module: viin_sales_unlink_stock
+#: code:addons/viin_sales_unlink_stock/models/sale_order.py:0
+#, python-format
+msgid ""
+"You cannot delete the sale order '%s' while it is still referred by the stock transfer '%s'!\n"
+"\n"
+"You may cancel the order instead."
+msgstr ""
+"Bạn không thể xoá đơn bán '%s' đang có phiếu kho liên quan, '%s'! Thay vào "
+"đó, bạn có thể huỷ đơn bán."

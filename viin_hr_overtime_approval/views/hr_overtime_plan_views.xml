@@ -1,0 +1,67 @@
+<odoo>
+	<record id="view_hr_overtime_plan_form" model="ir.ui.view">
+		<field name="name">hr.overtime.plan.form</field>
+		<field name="model">hr.overtime.plan</field>
+		<field name="inherit_id" ref="viin_hr_overtime.view_hr_overtime_plan_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//header" position="inside">
+				<field name="state" widget="statusbar"
+					statusbar_visible="draft,confirm,validate,done,refuse,cancel" />
+			</xpath>
+			<xpath expr="//field[@name='company_id']" position="before">
+				<field name="approval_id"
+					attrs="{'readonly':[('readonly','=',True)]}" />
+				<field name="approval_state_exception" attrs="{'invisible':[('approval_id','=',False)]}"/>
+			</xpath>
+			<xpath expr="//button[@name='action_recompute_plan_lines']"
+				position="attributes">
+				<attribute name="attrs">{'invisible':[('state','in',['confirm','validate','done','refuse','cancel'])]}</attribute>
+			</xpath>
+		</field>
+	</record>
+
+	<record id="view_hr_overtime_plan_tree" model="ir.ui.view">
+		<field name="name">hr.overtime.plan.tree</field>
+		<field name="model">hr.overtime.plan</field>
+		<field name="inherit_id" ref="viin_hr_overtime.view_hr_overtime_plan_tree" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='currency_id']" position="after">
+				<field name="state" />
+				<field name="approval_state_exception" />
+			</xpath>
+		</field>
+	</record>
+
+	<record id="view_hr_overtime_plan_search" model="ir.ui.view">
+		<field name="name">hr.overtime.plan.tree</field>
+		<field name="model">hr.overtime.plan</field>
+		<field name="inherit_id" ref="viin_hr_overtime.view_hr_overtime_plan_search" />
+		<field name="arch" type="xml">
+			<xpath expr="//filter[@name='ftr_actual_hours']"
+				position="after">
+				<separator />
+				<filter name="ftr_draft" string="Draft"
+					domain="[('state','=','draft')]" />
+				<filter name="ftr_confirmed" string="To Approve"
+					domain="[('state','=','confirm')]" />
+				<filter name="ftr_approved" string="Approved"
+					domain="['|',('state','=','validate'),('state','=',False)]" />
+				<filter name="ftr_done" string="Done"
+					domain="['|',('state','=','done'),('state','=',False)]" />
+				<filter name="ftr_refused" string="Refused"
+					domain="[('state','=','refuse')]" />
+				<filter name="ftr_cancel" string="Cancelled"
+					domain="[('state','=','cancel')]" />
+			</xpath>
+		</field>
+	</record>
+
+	<record id="action_server_hr_overtime_plan_cancel" model="ir.actions.server">
+		<field name="name">Cancel</field>
+		<field name="type">ir.actions.server</field>
+		<field name="model_id" ref="model_hr_overtime_plan" />
+		<field name="binding_model_id" ref="model_hr_overtime_plan" />
+		<field name="state">code</field>
+		<field name="code">records.action_cancel()</field>
+	</record>
+</odoo>

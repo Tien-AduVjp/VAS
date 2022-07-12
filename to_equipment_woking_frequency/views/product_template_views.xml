@@ -1,0 +1,14 @@
+<odoo>
+	<record id="view_product_to_stock_equipment_form" model="ir.ui.view">
+		<field name="name">product.template.equipment.form</field>
+		<field name="model">product.template</field>
+		<field name="inherit_id" ref="to_stock_equipment.view_product_to_stock_equipment_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//group[@name='equipment_info']" position="after">
+				<group name="equipment_frequency_info">
+				    <field name="working_frequency_template_ids" widget="many2many_tags" options="{'no_quick_create': True}"/>
+				</group>
+			</xpath>
+		</field>
+	</record>
+</odoo>

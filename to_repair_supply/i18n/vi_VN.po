@@ -1,0 +1,672 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_repair_supply
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-16 08:13+0000\n"
+"PO-Revision-Date: 2022-02-16 08:13+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_repair_supply
+#: code:addons/to_repair_supply/models/repair_line.py:0
+#: code:addons/to_repair_supply/models/repair_order.py:0
+#: code:addons/to_repair_supply/wizard/wizard_repair_line_consumption.py:0
+#, python-format
+msgid " A serial number should only be linked to a single product."
+msgstr "Số sê-ri chỉ liên kết đến một sản phẩm"
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_repair_order__picking_ids
+msgid " Stock Pickings"
+msgstr "Dịch chuyển kho"
+
+#. module: to_repair_supply
+#: model:ir.model.fields,help:to_repair_supply.field_repair_order__state
+msgid ""
+"* The 'Draft' status is used when a user is encoding a new and unconfirmed repair order.\n"
+"* The 'Confirmed' status is used when a user confirms the repair order.\n"
+"* The 'Ready to Repair' status is used to start to repairing, user can start repairing only after repair order is confirmed.\n"
+"* The 'To be Invoiced' status is used to generate the invoice before or after repairing done.\n"
+"* The 'Done' status is set when repairing is completed.\n"
+"* The 'Delivered' status is used when the repaired product is delivered back to source location from repair location.\n"
+"* The 'Cancelled' status is used when user cancel repair order."
+msgstr ""
+"* Trạng thái 'Nháp' để dành cho các lệnh sửa chữa mới và chưa được xác nhận.\n"
+"* Trạng thái 'Đã xác nhận' được dùng khi người dùng xác nhận lệnh sửa chữa.\n"
+"* Trạng thái 'Sẵn sàng sửa chữa' dùng để chuẩn bị sửa chữa, nhân viên có thể bắt đầu sửa chữa chỉ sau khi lệnh sửa chữa đã được xác nhận .\n"
+"* Trạng thái 'Xuất hóa đơn' dùng để sinh hóa đơn trước hoặc sau khi hoàn thành sửa chữa.\n"
+"* Trạng thái 'Hoàn thành' dùng khi lệnh sửa chữa hoàn thành.\n"
+"* Trạng thái 'Đã giao' dùng khi sản phẩm được sửa chữa xong và đã được giao từ địa điểm sửa chữa về địa điểm ban đầu.\n"
+"* Trạng thái 'Đã hủy' dùng khi người dùng hủy lệnh sửa chữa"
+
+#. module: to_repair_supply
+#: code:addons/to_repair_supply/tests/test_repair.py:0
+#, python-format
+msgid ": Insufficient Quantity To Repair"
+msgstr ": Không đủ số lượng để sửa chữa"
+
+#. module: to_repair_supply
+#: model_terms:ir.ui.view,arch_db:to_repair_supply.stock_warn_insufficient_qty_repair_form_view
+msgid "<strong>Select Current Location: </strong>"
+msgstr "<strong>Chọn địa điểm hiện tại: </strong>"
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_line_consumption__can_update
+msgid "Can Update"
+msgstr "Có thể cập nhật"
+
+#. module: to_repair_supply
+#: model_terms:ir.ui.view,arch_db:to_repair_supply.wizard_repair_order_confirm_consumption_view_form
+#: model_terms:ir.ui.view,arch_db:to_repair_supply.wizard_repair_order_consumption_view_form
+#: model_terms:ir.ui.view,arch_db:to_repair_supply.wizard_repair_request_supply_view_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_request_supply_line__product_uom_category_id
+msgid "Category"
+msgstr "Nhóm đơn vị"
+
+#. module: to_repair_supply
+#: code:addons/to_repair_supply/models/repair_order.py:0
+#, python-format
+msgid "Confirm Create Consumption"
+msgstr "Xác nhận tạo tiêu thụ"
+
+#. module: to_repair_supply
+#: model_terms:ir.ui.view,arch_db:to_repair_supply.wizard_repair_order_consumption_view_form
+msgid "Consume"
+msgstr "Tiêu thụ"
+
+#. module: to_repair_supply
+#: model_terms:ir.ui.view,arch_db:to_repair_supply.view_repair_order_form
+msgid "Consume Parts"
+msgstr "Tiêu thụ Thành phần"
+
+#. module: to_repair_supply
+#: model:ir.actions.act_window,name:to_repair_supply.action_consume_repair_order
+msgid "Consume Repair Order"
+msgstr "Tiêu thụ Đơn sửa chữa"
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_repair_line__consumed_qty
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_line_consumption__consumed_qty
+msgid "Consumed Quantity"
+msgstr "Số lượng đã tiêu thụ"
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_repair_line__consumed_stock_move_ids
+msgid "Consumed Stock Moves"
+msgstr "Dịch chuyển tiêu thụ"
+
+#. module: to_repair_supply
+#: model:ir.model.fields,help:to_repair_supply.field_wizard_repair_request_supply_line__product_uom_category_id
+msgid ""
+"Conversion between Units of Measure can only occur if they belong to the "
+"same category. The conversion will be made based on the ratios."
+msgstr ""
+"Chuyển đổi giữa các Đơn vị đo lường chỉ có thể xảy ra nếu chúng thuộc cùng một loại. "
+"Việc chuyển đổi sẽ được thực hiện dựa trên tỷ lệ."
+
+#. module: to_repair_supply
+#: model_terms:ir.ui.view,arch_db:to_repair_supply.wizard_repair_order_confirm_consumption_view_form
+msgid "Create Consumption"
+msgstr "Tạo tiêu thụ"
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_repair_line__create_picking
+msgid "Create Picking?"
+msgstr "Tạo dịch chuyển?"
+
+#. module: to_repair_supply
+#: model_terms:ir.ui.view,arch_db:to_repair_supply.wizard_repair_order_confirm_consumption_view_form
+msgid ""
+"Create consumption if you expect to consume the remaining\n"
+"                        parts. Do not create consumption if you expect will not\n"
+"                        consume the remaining parts."
+msgstr ""
+"Tạo tiêu thụ nếu bạn muốn tiêu thụ thành phần còn lại\n"
+"                        Không tạo tiêu thụ nếu bạn không muốn tiêu thụ\n"
+"                        thành phần còn lại."
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_line_consumption__create_uid
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_order_confirm_consumption__create_uid
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_order_consumption__create_uid
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_request_supply__create_uid
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_request_supply_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_line_consumption__create_date
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_order_confirm_consumption__create_date
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_order_consumption__create_date
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_request_supply__create_date
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_request_supply_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_repair_line__src_location_id
+#: model:ir.model.fields,field_description:to_repair_supply.field_stock_warn_insufficient_qty_repair__src_location_id
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_request_supply_line__src_location_id
+msgid "Current Location"
+msgstr "Địa điểm hiện tại"
+
+#. module: to_repair_supply
+#: model:ir.model.fields.selection,name:to_repair_supply.selection__repair_order__state__delivered
+msgid "Delivered"
+msgstr "Đã trả hàng"
+
+#. module: to_repair_supply
+#: model_terms:ir.ui.view,arch_db:to_repair_supply.view_repair_order_form
+msgid "Delivery Comfirm"
+msgstr "Xác nhận trả hàng"
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_repair_order__delivery_count
+msgid "Delivery Orders"
+msgstr "Phiếu giao hàng"
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_line_consumption__name
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_request_supply_line__name
+msgid "Description"
+msgstr "Miêu tả"
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_request_supply_line__location_dest_id
+msgid "Dest. Location"
+msgstr "Địa điểm Đích"
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_repair_line__display_name
+#: model:ir.model.fields,field_description:to_repair_supply.field_repair_order__display_name
+#: model:ir.model.fields,field_description:to_repair_supply.field_stock_move__display_name
+#: model:ir.model.fields,field_description:to_repair_supply.field_stock_picking__display_name
+#: model:ir.model.fields,field_description:to_repair_supply.field_stock_picking_type__display_name
+#: model:ir.model.fields,field_description:to_repair_supply.field_stock_warn_insufficient_qty_repair__display_name
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_line_consumption__display_name
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_order_confirm_consumption__display_name
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_order_consumption__display_name
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_request_supply__display_name
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_request_supply_line__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_repair_line__id
+#: model:ir.model.fields,field_description:to_repair_supply.field_repair_order__id
+#: model:ir.model.fields,field_description:to_repair_supply.field_stock_move__id
+#: model:ir.model.fields,field_description:to_repair_supply.field_stock_picking__id
+#: model:ir.model.fields,field_description:to_repair_supply.field_stock_picking_type__id
+#: model:ir.model.fields,field_description:to_repair_supply.field_stock_warn_insufficient_qty_repair__id
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_line_consumption__id
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_order_confirm_consumption__id
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_order_consumption__id
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_request_supply__id
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_request_supply_line__id
+msgid "ID"
+msgstr ""
+
+#. module: to_repair_supply
+#: model_terms:ir.ui.view,arch_db:to_repair_supply.wizard_repair_request_supply_view_form
+msgid "Input request products and quantities to supply"
+msgstr "Nhập các sản phẩm và số lượng yêu cầu để cung ứng"
+
+#. module: to_repair_supply
+#: model_terms:ir.ui.view,arch_db:to_repair_supply.wizard_repair_order_consumption_view_form
+msgid "Input request quantity for your consumption need"
+msgstr "Vui lòng nhập số lượng yêu cầu cho tiêu thụ"
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_repair_line____last_update
+#: model:ir.model.fields,field_description:to_repair_supply.field_repair_order____last_update
+#: model:ir.model.fields,field_description:to_repair_supply.field_stock_move____last_update
+#: model:ir.model.fields,field_description:to_repair_supply.field_stock_picking____last_update
+#: model:ir.model.fields,field_description:to_repair_supply.field_stock_picking_type____last_update
+#: model:ir.model.fields,field_description:to_repair_supply.field_stock_warn_insufficient_qty_repair____last_update
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_line_consumption____last_update
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_order_confirm_consumption____last_update
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_order_consumption____last_update
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_request_supply____last_update
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_request_supply_line____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_line_consumption__write_uid
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_order_confirm_consumption__write_uid
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_order_consumption__write_uid
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_request_supply__write_uid
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_request_supply_line__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_line_consumption__write_date
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_order_confirm_consumption__write_date
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_order_consumption__write_date
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_request_supply__write_date
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_request_supply_line__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối"
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_repair_line__supply_stock_move_id
+#: model:ir.model.fields,field_description:to_repair_supply.field_repair_order__supply_stock_move_id
+msgid "Latest Supply Stock Move"
+msgstr "Dịch chuyển cung ứng cuối cùng"
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_request_supply__location_id
+msgid "Location"
+msgstr "Địa điểm"
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_line_consumption__lot_id
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_request_supply_line__lot_id
+msgid "Lot/Serial"
+msgstr "Lô/Sê-ri"
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_repair_line__stock_move_ids
+msgid "Moves"
+msgstr "Dịch chuyển"
+
+#. module: to_repair_supply
+#: model_terms:ir.ui.view,arch_db:to_repair_supply.wizard_repair_order_confirm_consumption_view_form
+msgid "No Consumption"
+msgstr "Không tạo tiêu thụ"
+
+#. module: to_repair_supply
+#: model:ir.model,name:to_repair_supply.model_stock_picking_type
+msgid "Picking Type"
+msgstr "Kiểu giao nhận"
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_repair_order__group_id
+msgid "Procurement Group"
+msgstr "Nhóm cung ứng"
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_line_consumption__product_id
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_request_supply_line__product_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: to_repair_supply
+#: model_terms:ir.ui.view,arch_db:to_repair_supply.view_repair_order_form
+msgid "Product Moves"
+msgstr "Truy vết"
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_repair_order__move_count
+msgid "Product Moves Count"
+msgstr "Số dịch chuyển"
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_repair_order__move_ids
+msgid "Product Stock Moves"
+msgstr "Dịch chuyển"
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_line_consumption__product_uom_qty
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: to_repair_supply
+#: code:addons/to_repair_supply/models/repair_line.py:0
+#, python-format
+msgid "Quantity must be greater or equals to consumed quantity."
+msgstr "Số lượng phải lớn hơn hoặc bằng số lượng đã tiêu thụ."
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_stock_move__repair_id
+#: model:ir.model.fields,field_description:to_repair_supply.field_stock_picking__repair_id
+#: model:ir.model.fields,field_description:to_repair_supply.field_stock_warn_insufficient_qty_repair__repair_id
+msgid "Repair"
+msgstr "Sửa chữa"
+
+#. module: to_repair_supply
+#: code:addons/to_repair_supply/models/repair_order.py:0
+#, python-format
+msgid "Repair Delivery for %s"
+msgstr "Giao hàng cho lệnh sửa chữa %s"
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_stock_move__repair_line_id
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_line_consumption__repair_line_id
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_request_supply_line__repair_line_id
+msgid "Repair Line"
+msgstr "Dòng sửa chữa"
+
+#. module: to_repair_supply
+#: model:ir.model,name:to_repair_supply.model_repair_line
+msgid "Repair Line (parts)"
+msgstr "Hạng mục sửa chữa (bộ phận)"
+
+#. module: to_repair_supply
+#: model:ir.model,name:to_repair_supply.model_wizard_repair_line_consumption
+msgid "Repair Line Consumption Wizard"
+msgstr "Wizard Tiêu thụ dây chuyền sửa chữa"
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_order_consumption__line_ids
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_request_supply__line_ids
+msgid "Repair Lines"
+msgstr "Dòng Sửa chữa"
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_repair_line__location_id
+msgid "Repair Location"
+msgstr "Địa điểm Sửa chữa"
+
+#. module: to_repair_supply
+#: model:ir.model,name:to_repair_supply.model_repair_order
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_order_confirm_consumption__repair_id
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_order_consumption__order_id
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_request_supply__order_id
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_request_supply_line__order_id
+#: model_terms:ir.ui.view,arch_db:to_repair_supply.view_picking_internal_search
+msgid "Repair Order"
+msgstr "Lệnh sữa chữa"
+
+#. module: to_repair_supply
+#: model:ir.model,name:to_repair_supply.model_wizard_repair_order_confirm_consumption
+msgid "Repair Order Confirm Consumption Wizard"
+msgstr "Wizard Đơn hàng sửa chữa Xác nhận mức tiêu thụ"
+
+#. module: to_repair_supply
+#: model:ir.model,name:to_repair_supply.model_wizard_repair_order_consumption
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_line_consumption__wizard_id
+msgid "Repair Order Consumption Wizard"
+msgstr "Wizard Đơn hàng sửa chữa Tiêu thụ"
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_order_consumption__name
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_request_supply__name
+msgid "Repair Order Reference"
+msgstr "Đơn sửa chữa liên quan"
+
+#. module: to_repair_supply
+#: model:ir.model,name:to_repair_supply.model_wizard_repair_request_supply_line
+msgid "Repair Request Supply Line Wizard"
+msgstr "Wizard Đường dây cung cấp yêu cầu sửa chữa"
+
+#. module: to_repair_supply
+#: model:ir.model,name:to_repair_supply.model_wizard_repair_request_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_request_supply_line__wizard_id
+msgid "Repair Request Supply Wizard"
+msgstr "Wizard Yêu cầu sửa chữa Cung cấp"
+
+#. module: to_repair_supply
+#: model:stock.picking.type,name:to_repair_supply.picking_type_repair_supply
+msgid "Repair Supply"
+msgstr "Cung ứng sửa chữa"
+
+#. module: to_repair_supply
+#: model:ir.model.fields.selection,name:to_repair_supply.selection__stock_picking_type__code__repair_supply
+msgid "Repair Supply Operation"
+msgstr "Hoạt động Cung ứng Sửa chữa"
+
+#. module: to_repair_supply
+#: code:addons/to_repair_supply/models/repair_line.py:0
+#: code:addons/to_repair_supply/models/repair_order.py:0
+#, python-format
+msgid "Repair Supply for %s"
+msgstr "Cung ứng cho lệnh sửa chữa %s"
+
+#. module: to_repair_supply
+#: code:addons/to_repair_supply/models/repair_order.py:0
+#, python-format
+msgid "Repair must be done before delivery confirm."
+msgstr "Lệnh sửa chữa chưa thể xác nhận giao khi chưa hoàn thành"
+
+#. module: to_repair_supply
+#: code:addons/to_repair_supply/models/repair_order.py:0
+#, python-format
+msgid "Repair must be repaired in order to make the product moves."
+msgstr ""
+"Lệnh Sửa chữa phải ở trạng thái đã sửa chữa trước khi có thể tạo các dịch "
+"chuyển kho"
+
+#. module: to_repair_supply
+#: model_terms:ir.ui.view,arch_db:to_repair_supply.wizard_repair_request_supply_view_form
+msgid "Request"
+msgstr "Yêu cầu"
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_request_supply_line__product_uom_qty
+msgid "Request Qty"
+msgstr "SL Yêu cầu"
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_line_consumption__request_qty
+msgid "Request Quantity"
+msgstr "Số lượng yêu cầu"
+
+#. module: to_repair_supply
+#: model:ir.actions.act_window,name:to_repair_supply.wizard_repair_request_supply_action
+#: model_terms:ir.ui.view,arch_db:to_repair_supply.view_repair_order_form
+msgid "Request Supply"
+msgstr "Yêu cầu Cung ứng"
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_repair_line__reserved_completion_stock_move_id
+#: model:ir.model.fields,field_description:to_repair_supply.field_repair_order__reserved_completion_stock_move_id
+msgid "Reserved Completion Stock Move"
+msgstr "Hoàn thành Dịch chuyển kho"
+
+#. module: to_repair_supply
+#: code:addons/to_repair_supply/models/repair_line.py:0
+#: code:addons/to_repair_supply/models/repair_order.py:0
+#, python-format
+msgid "Return for repair order %s"
+msgstr "Trả hàng cho lệnh sửa chữa %s"
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_order_consumption__show_warning_update_quantity
+msgid "Show Warning Update Quantity"
+msgstr "Hiển thị cảnh báo số lượng cập nhật"
+
+#. module: to_repair_supply
+#: code:addons/to_repair_supply/models/repair_order.py:0
+#, python-format
+msgid ""
+"Some stock pickings related to this repair order were not validated. Please "
+"validate them before you can start this order."
+msgstr ""
+"Một vài dịch chuyển liên quan đến lệnh sửa chữa này chưa được xác nhận. Vui "
+"lòng xác nhận chúng trước khi bắt đầu sửa chữa"
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_request_supply_line__location_id
+msgid "Source Location"
+msgstr "Địa điểm Nguồn"
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_repair_order__state
+msgid "Status"
+msgstr "Tình trạng"
+
+#. module: to_repair_supply
+#: model:ir.model,name:to_repair_supply.model_stock_move
+msgid "Stock Move"
+msgstr "Dịch chuyển kho"
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_repair_line__supply_stock_move_ids
+msgid "Supply Stock Moves"
+msgstr "Dịch chuyển Cung ứng"
+
+#. module: to_repair_supply
+#: code:addons/to_repair_supply/wizard/wizard_repair_order_consumption.py:0
+#: code:addons/to_repair_supply/wizard/wizard_repair_order_consumption.py:0
+#, python-format
+msgid ""
+"The product %s does not have enough available quantity in %s. You must "
+"supply enough product quantity for this location."
+msgstr ""
+"Sản phẩm %s không có đủ số lượng khả dụng tại %s. Bạn phải cung cấp đủ số "
+"lượng sản phẩm cho địa điểm này."
+
+#. module: to_repair_supply
+#: code:addons/to_repair_supply/models/repair_order.py:0
+#, python-format
+msgid ""
+"The product %s does not have enough available quantity in %s. You should "
+"select another location or provide enough available quantity for this "
+"location."
+msgstr ""
+"Sản phẩm %s không có đủ số lượng khả dụng tại %s. Bạn nên chọn một địa điểm "
+"khác hoặc cung cấp đủ số lượng sản phẩm cho địa điểm này"
+
+#. module: to_repair_supply
+#: code:addons/to_repair_supply/models/repair_order.py:0
+#, python-format
+msgid ""
+"The product %s has not been reserved enough quantity in %s. You must supply "
+"enough product quantity to start the process."
+msgstr ""
+"Sản phẩm %s chưa được giữ đủ số lượng tại địa điểm %s. Bạn phải cung ứng đủ "
+"số lượng để có thể bắt đầu sửa chữa."
+
+#. module: to_repair_supply
+#: code:addons/to_repair_supply/models/repair_order.py:0
+#, python-format
+msgid ""
+"The product %s has repair location in %s. So you could not select current "
+"location same with this location."
+msgstr ""
+"Sản phẩm %s có địa điểm sửa chữa tại %s. Nên bạn không thể chọn địa điểm "
+"hiện tại giống với địa điểm này."
+
+#. module: to_repair_supply
+#: code:addons/to_repair_supply/models/repair_order.py:0
+#, python-format
+msgid "The product %s in %s is not consistent with location of repair order."
+msgstr "Sản phẩm %s tại %s không đồng nhất với địa điểm của Đơn sửa chữa"
+
+#. module: to_repair_supply
+#: code:addons/to_repair_supply/models/repair_order.py:0
+#, python-format
+msgid ""
+"The product %s is not available in sufficient quantity in %s. You should "
+"select current location of this product in operation line."
+msgstr ""
+"%s không có đủ số lượng tại '%s'. Bạn nên chọn địa điểm hiện tại cho sản "
+"phẩm này ở dòng thành phần tương ứng"
+
+#. module: to_repair_supply
+#: code:addons/to_repair_supply/wizard/wizard_repair_request_supply.py:0
+#, python-format
+msgid ""
+"The requesting quantity for product %s is greater than the available "
+"quantity in %s. Please specify a source location to request supply."
+msgstr ""
+"Số lượng yêu cầu cho sản phẩm %s đang lớn hơn số lượng khả dụng tại %s. Vui "
+"lòng chọn một địa điểm nguồn để yêu cầu cung ứng."
+
+#. module: to_repair_supply
+#: model_terms:ir.ui.view,arch_db:to_repair_supply.wizard_repair_order_confirm_consumption_view_form
+msgid "There are some parts, which not consumed."
+msgstr "Có một số thành phần chưa được tiêu thụ."
+
+#. module: to_repair_supply
+#: model:ir.model.fields,help:to_repair_supply.field_wizard_repair_request_supply__location_id
+msgid "This is the location where the product to repair is located."
+msgstr "Đây là vị trí đặt sản phẩm cần sửa chữa."
+
+#. module: to_repair_supply
+#: model:ir.model.fields,help:to_repair_supply.field_repair_order__group_id
+msgid ""
+"This procurement group is used for auto-reserving between stock moves, eg: "
+"When a supplying stock move for a part is validated, the next reserving "
+"stock move for that part at repair location should be reserved "
+"automatically."
+msgstr ""
+"Nhóm cung ứng này được dùng để tự động giữ chỗ giữa các dịch chuyển kho, ví "
+"dụ: Khi một dịch chuyển cung ứng cho một thành phần được hoàn thành, dịch "
+"chuyển giữ chỗ tiếp theo của thành phần đó tại địa điểm sửa chữa sẽ được tự "
+"động giữ chỗ."
+
+#. module: to_repair_supply
+#: model:ir.model,name:to_repair_supply.model_stock_picking
+msgid "Transfer"
+msgstr "Dịch chuyển"
+
+#. module: to_repair_supply
+#: model_terms:ir.ui.view,arch_db:to_repair_supply.view_repair_order_form
+msgid "Transfers"
+msgstr "Dịch chuyển"
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_stock_picking_type__code
+msgid "Type of Operation"
+msgstr "Kiểu hoạt động"
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_request_supply_line__product_uom
+msgid "UoM"
+msgstr "Đơn vị"
+
+#. module: to_repair_supply
+#: model:ir.model.fields,field_description:to_repair_supply.field_wizard_repair_line_consumption__should_update_quantity
+msgid "Update Quantity on RO"
+msgstr "Cập nhật số lượng trên Đơn sửa chữa"
+
+#. module: to_repair_supply
+#: model:ir.model,name:to_repair_supply.model_stock_warn_insufficient_qty_repair
+msgid "Warn Insufficient Repair Quantity"
+msgstr "Cảnh báo thiếu hàng"
+
+#. module: to_repair_supply
+#: code:addons/to_repair_supply/models/repair_line.py:0
+#, python-format
+msgid ""
+"You can not change type/product/lot/location/destination location of part, "
+"which already been supplying or had consumed quantity."
+msgstr ""
+"Bạn không thể thay đổi kiểu/sản phẩm/lô-sê-ri/địa điểm sửa chữa/địa điểm "
+"đích của thành phần, mà đã có yêu cầu cung ứng hoặc đã có số lượng tiêu thụ."
+
+#. module: to_repair_supply
+#: code:addons/to_repair_supply/models/repair_line.py:0
+#, python-format
+msgid ""
+"You can not delete an operation line, which already been supplying or had "
+"consumed quantity. You should set the quantity to 0 instead."
+msgstr ""
+"Bạn không thể xoá một hạng mục sửa chữa, mà đã có yêu cầu cung ứng hoặc đã "
+"có số lượng tiêu thụ. Bạn nên đặt số lượng của hạng mục đó về 0."
+
+#. module: to_repair_supply
+#: model_terms:ir.ui.view,arch_db:to_repair_supply.wizard_repair_order_consumption_view_form
+msgid ""
+"You consume more than original quantity. You can choose update quantity "
+"based on consumed quantity."
+msgstr ""
+"Bạn tiêu thụ nhiều hơn số lượng ban đầu. Bạn có thể chọn cập nhật số lượng "
+"dựa trên số lượng tiêu thụ."
+
+#. module: to_repair_supply
+#: code:addons/to_repair_supply/wizard/wizard_repair_order_consumption.py:0
+#, python-format
+msgid "You didn't request any consumption."
+msgstr "Bạn không yêu cầu tiêu thụ nào."
+
+#. module: to_repair_supply
+#: code:addons/to_repair_supply/wizard/wizard_repair_request_supply.py:0
+#, python-format
+msgid "You have to add some products to request supply."
+msgstr "Bạn phải thêm một vài sản phẩm để yêu cầu cung ứng."

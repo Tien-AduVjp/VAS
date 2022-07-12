@@ -1,0 +1,67 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_project_kanban_state_notification
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-17 07:45+0000\n"
+"PO-Revision-Date: 2022-01-17 07:45+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_project_kanban_state_notification
+#: model:ir.model.fields,field_description:viin_project_kanban_state_notification.field_project_project__display_name
+#: model:ir.model.fields,field_description:viin_project_kanban_state_notification.field_project_task__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: viin_project_kanban_state_notification
+#: model:ir.model.fields,field_description:viin_project_kanban_state_notification.field_project_project__id
+#: model:ir.model.fields,field_description:viin_project_kanban_state_notification.field_project_task__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_project_kanban_state_notification
+#: model:ir.model.fields,field_description:viin_project_kanban_state_notification.field_project_project__kanban_state_notification
+msgid "Kanban State Notification"
+msgstr "Thông báo trạng thái Kanban"
+
+#. module: viin_project_kanban_state_notification
+#: model:ir.model.fields,field_description:viin_project_kanban_state_notification.field_project_project____last_update
+#: model:ir.model.fields,field_description:viin_project_kanban_state_notification.field_project_task____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: viin_project_kanban_state_notification
+#: model:ir.model,name:viin_project_kanban_state_notification.model_project_project
+msgid "Project"
+msgstr "Dự án"
+
+#. module: viin_project_kanban_state_notification
+#: model:ir.model,name:viin_project_kanban_state_notification.model_project_task
+msgid "Task"
+msgstr "Nhiệm vụ"
+
+#. module: viin_project_kanban_state_notification
+#: model:mail.message.subtype,name:viin_project_kanban_state_notification.mt_project_task_return
+msgid "Task Return"
+msgstr ""
+
+#. module: viin_project_kanban_state_notification
+#: model:mail.message.subtype,description:viin_project_kanban_state_notification.mt_task_return
+#: model:mail.message.subtype,name:viin_project_kanban_state_notification.mt_task_return
+msgid "Task in progress"
+msgstr "Nhiệm vụ đang thực hiện"
+
+#. module: viin_project_kanban_state_notification
+#: model:ir.model.fields,help:viin_project_kanban_state_notification.field_project_project__kanban_state_notification
+msgid ""
+"Uncheck this field to turn off notifications to the project manager when "
+"kanban state of some tasks were changed"
+msgstr "Bỏ chọn trường này để tắt thông báo cho người quản lý dự án khi trạng thái kanban của một số nhiệm vụ được thay đổi"

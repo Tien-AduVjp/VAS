@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record model="ir.ui.view" id="asset_fill_missing_values_wizard_view_form">
+		<field name="name">asset.fill.missing.values.wizard.form</field>
+		<field name="model">asset.fill.missing.values.wizard</field>
+		<field name="inherit_id" ref="to_account_asset.asset_fill_missing_values_wizard_view_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//form/group/group" position="after">
+				<group>
+					<field name="production_lot_id"
+                           options="{'no_create': True, 'no_edit': True}"
+                           groups='stock.group_stock_user'/>
+				</group>
+			</xpath>
+		</field>
+	</record>
+</odoo>

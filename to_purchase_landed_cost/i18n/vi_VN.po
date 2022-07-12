@@ -1,0 +1,494 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_purchase_landed_cost
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-07 02:22+0000\n"
+"PO-Revision-Date: 2022-03-07 02:22+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_purchase_landed_cost
+#: model_terms:ir.ui.view,arch_db:to_purchase_landed_cost.view_stock_landed_cost_form
+msgid ""
+"<strong>Wait!</strong> There could be a corresponding landed cost purchase\n"
+"\t\t\t\t\t\torder that might not have been billed yet. You may want to get\n"
+"\t\t\t\t\t\tthem billed first so that Odoo could help track your landed costs\n"
+"\t\t\t\t\t\tagainst the bills..."
+msgstr ""
+"<strong>Chờ đã!</strong> Có vẻ như có đơn mua mà phát sinh ra Phí về kho này chưa\n"
+"\t\t\t\t\t\tđược lên hoá đơn. Bạn nên chờ hoá đơn được lập và xác nhận trước khi\n"
+"\t\t\t\t\t\ttạo Phí về kho này để Odoo có thể giúp bạn theo vết và truy xuất nguồn\n"
+"\t\t\t\t\t\tgốc Phí về kho với hoá đơn và đơn mua tương ứng..."
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,help:to_purchase_landed_cost.field_product_landed_cost__product_id
+msgid ""
+"A product that presents a landed cost that may affect to this Product "
+"Template. For example, transportation fee, stowage fee, etc"
+msgstr ""
+"Một sản phẩm đại diện cho một Landed Cost là có thể ảnh hưởng đến Sản phẩm "
+"này. Ví dụ, Phí vận chuyển, phí bốc xếp, v.v."
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_product_landed_cost__auto_purchase
+msgid "Auto-Purchase"
+msgstr "Tự động Đề xuất Mua"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_purchase_landed_cost__product_uom_category_id
+msgid "Category"
+msgstr "Nhóm"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,help:to_purchase_landed_cost.field_product_landed_cost__auto_purchase
+msgid ""
+"Check this to get another draft Purchase Order generated for this landed "
+"cost item when validating a Purchase Order"
+msgstr ""
+"Đánh dấu trường này để tự sinh một nhu cầu cung ứng landed cost này khi xác "
+"nhận một đơn hàng mua mà có thể phát sinh landed cost này"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,help:to_purchase_landed_cost.field_purchase_landed_cost__product_uom_category_id
+msgid ""
+"Conversion between Units of Measure can only occur if they belong to the "
+"same category. The conversion will be made based on the ratios."
+msgstr ""
+"Việc chuyển đổi qua lại giữa các đơn vị đo lường chỉ có thể xảy ra nếu chúng"
+" thuộc cùng một nhóm. Việc chuyển đổi sẽ dựa trên tỉ lệ."
+
+#. module: to_purchase_landed_cost
+#: code:addons/to_purchase_landed_cost/models/purchase_order.py:0
+#, python-format
+msgid ""
+"Could not find vendor for the product '%s'. Please consider to specify one. "
+"Otherwise, you should remove it from the Purchase Landed Cost lines"
+msgstr ""
+"Không tìm thấy nhà cung cấp cho sản phẩm '%s'. Vui lòng thiết lập một nhà "
+"cung cấp cho sản phẩm. Nếu không, hãy gỡ bỏ nó ra khỏi danh mục Phí về kho"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_product_landed_cost__create_uid
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_purchase_landed_cost__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_product_landed_cost__create_date
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_purchase_landed_cost__create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_purchase_landed_cost__picking_type_id
+msgid "Deliver To"
+msgstr "Giao tới"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_product_landed_cost__description
+msgid "Description"
+msgstr "Miêu tả"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_account_move__display_name
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_product_landed_cost__display_name
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_product_product__display_name
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_product_template__display_name
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_purchase_landed_cost__display_name
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_purchase_order__display_name
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_purchase_order_line__display_name
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_stock_landed_cost__display_name
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_stock_landed_cost_lines__display_name
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_stock_move__display_name
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_stock_valuation_adjustment_lines__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_account_move__id
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_account_move_line__id
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_product_landed_cost__id
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_product_product__id
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_product_template__id
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_purchase_landed_cost__id
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_purchase_order__id
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_purchase_order_line__id
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_stock_landed_cost__id
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_stock_landed_cost_lines__id
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_stock_move__id
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_stock_valuation_adjustment_lines__id
+msgid "ID"
+msgstr ""
+
+#. module: to_purchase_landed_cost
+#: code:addons/to_purchase_landed_cost/models/purchase_order.py:0
+#, python-format
+msgid ""
+"In the request for quotation %s, landed cost product '%s' has no scheduled "
+"order date. So, it is not possible to create a purchase order for the landed"
+" cost products. Please update this scheduled order date."
+msgstr ""
+"Trong yêu cầu báo giá %s, sản phẩm phí về kho '%s' chưa có ngày mua "
+"kế hoạch. Vì vậy, không thể tạo được đơn mua cho các sản phẩm phí về kho. "
+"Vui lòng cập nhật ngày mua kế hoạch đó."
+
+#. module: to_purchase_landed_cost
+#: model:ir.model,name:to_purchase_landed_cost.model_account_move
+msgid "Journal Entry"
+msgstr "Bút toán sổ nhật ký"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model,name:to_purchase_landed_cost.model_account_move_line
+msgid "Journal Item"
+msgstr "Phát sinh Kế toán"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_purchase_order_line__landed_cost_adjustment_line_ids
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_stock_move__landed_cost_adjustment_line_ids
+msgid "Landed Cost Adjustment Lines"
+msgstr "Chi tiết Điều chỉnh Phí về kho"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_purchase_order__stock_valuation_adjustment_lines_ids
+#: model_terms:ir.ui.view,arch_db:to_purchase_landed_cost.purchase_order_form
+msgid "Landed Cost Adjustments"
+msgstr "Điều chỉnh Phí về kho"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_stock_valuation_adjustment_lines__invoice_id
+msgid "Landed Cost Invoice"
+msgstr "Hoá đơn Phí về kho"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_stock_valuation_adjustment_lines__invoice_line_id
+msgid "Landed Cost Invoice Line"
+msgstr "Dòng Hoá đơn Phí về kho"
+
+#. module: to_purchase_landed_cost
+#: model_terms:ir.ui.view,arch_db:to_purchase_landed_cost.view_purchase_order_filter
+msgid "Landed Cost Orders"
+msgstr "Đơn mua Phí về kho"
+
+#. module: to_purchase_landed_cost
+#: model_terms:ir.ui.view,arch_db:to_purchase_landed_cost.purchase_order_form
+msgid "Landed Cost PO"
+msgstr "Đơn mua Phí về kho"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_product_landed_cost__product_id
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_purchase_landed_cost__product_id
+msgid "Landed Cost Product"
+msgstr "Sản phẩm Phí về kho"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_purchase_order__landed_cost_po_count
+msgid "Landed Cost Purchases"
+msgstr "Mua Phí về kho"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_account_move_line__landed_cost_for_stock_done_picking_ids
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_stock_landed_cost_lines__for_stock_done_picking_ids
+msgid "Landed Cost for Done Pickings"
+msgstr "Phí về kho cho Phiếu Nhập kho Hoàn thành"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_account_move_line__landed_cost_for_po_ids
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_purchase_order_line__landed_cost_for_po_ids
+msgid "Landed Cost for POs"
+msgstr "Phí về kho cho Đơn mua"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_account_move_line__landed_cost_for_stock_picking_ids
+msgid "Landed Cost for Pickings"
+msgstr "Phí về kho cho Phiếu kho"
+
+#. module: to_purchase_landed_cost
+#: model:ir.actions.act_window,name:to_purchase_landed_cost.po_landed_cost_action
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_product_product__product_landed_cost_ids
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_product_template__product_landed_cost_ids
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_purchase_order__stock_landed_cost_ids
+#: model_terms:ir.ui.view,arch_db:to_purchase_landed_cost.account_view_move_form_inherited
+#: model_terms:ir.ui.view,arch_db:to_purchase_landed_cost.purchase_order_form
+msgid "Landed Costs"
+msgstr "Phí về kho"
+
+#. module: to_purchase_landed_cost
+#: model_terms:ir.ui.view,arch_db:to_purchase_landed_cost.purchase_order_form
+msgid "Landed Costs Adjustment"
+msgstr "Điều chỉnh Phí về kho"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_account_bank_statement_line__landed_costs_count
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_account_move__landed_costs_count
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_account_payment__landed_costs_count
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_purchase_order__landed_costs_count
+msgid "Landed Costs Count"
+msgstr "SL Phí về kho"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_purchase_order__landed_cost_po_ids
+msgid "Landed Costs Orders"
+msgstr "Đơn mua Phí về kho"
+
+#. module: to_purchase_landed_cost
+#: model:ir.actions.act_window,name:to_purchase_landed_cost.landed_cost_purchase_order_action
+msgid "Landed Costs Purchase Orders"
+msgstr "Đơn mua Phí về kho"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_purchase_order__landed_costs_for_po_ids
+msgid "Landed Costs for"
+msgstr "Phí về kho cho"
+
+#. module: to_purchase_landed_cost
+#: code:addons/to_purchase_landed_cost/models/purchase_landed_cost.py:0
+#, python-format
+msgid "Landed cost for %s"
+msgstr "Phí về kho cho %s"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_account_move____last_update
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_account_move_line____last_update
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_product_landed_cost____last_update
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_product_product____last_update
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_product_template____last_update
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_purchase_landed_cost____last_update
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_purchase_order____last_update
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_purchase_order_line____last_update
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_stock_landed_cost____last_update
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_stock_landed_cost_lines____last_update
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_stock_move____last_update
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_stock_valuation_adjustment_lines____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_product_landed_cost__write_uid
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_purchase_landed_cost__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_product_landed_cost__write_date
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_purchase_landed_cost__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_stock_landed_cost_lines__invoice_line_id
+msgid "Move Line"
+msgstr "Phát sinh"
+
+#. module: to_purchase_landed_cost
+#: code:addons/to_purchase_landed_cost/models/account_move_line.py:0
+#: code:addons/to_purchase_landed_cost/models/stock_landed_cost.py:0
+#, python-format
+msgid ""
+"Only Vendor Bills and Vendor Bill Credit Notes (refunds) are supported for "
+"landed costs"
+msgstr ""
+"Chỉ các Hóa đơn Nhà cung cấp và Giấy báo có Hóa đơn Nhà cung cấp (hoàn tiền)"
+" được hỗ trợ cho chi phí về kho"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,help:to_purchase_landed_cost.field_product_product__product_landed_cost_ids
+#: model:ir.model.fields,help:to_purchase_landed_cost.field_product_template__product_landed_cost_ids
+msgid ""
+"Predefined Landed Costs that can be added automatically during purchase of "
+"this product."
+msgstr ""
+"Phí về kho định mức mà có thể được thêm (đề xuất) tự động khi mua sản phẩm "
+"này."
+
+#. module: to_purchase_landed_cost
+#: model:ir.model,name:to_purchase_landed_cost.model_product_product
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_product_landed_cost__product_template_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model,name:to_purchase_landed_cost.model_product_landed_cost
+msgid "Product Landed Cost"
+msgstr "Phí về kho cho Sản phẩm"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model,name:to_purchase_landed_cost.model_product_template
+msgid "Product Template"
+msgstr "Mẫu Sản phẩm"
+
+#. module: to_purchase_landed_cost
+#: model_terms:ir.ui.view,arch_db:to_purchase_landed_cost.account_move_line_view_form
+msgid "Purchase Documents"
+msgstr "Tài liệu mua hàng"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_purchase_order__purchase_landed_cost_ids
+#: model_terms:ir.ui.view,arch_db:to_purchase_landed_cost.product_template_form_view
+#: model_terms:ir.ui.view,arch_db:to_purchase_landed_cost.purchase_order_form
+msgid "Purchase Landed Costs"
+msgstr "Mua Phí về kho"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model,name:to_purchase_landed_cost.model_purchase_order
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_account_move_line__purchase_order_id
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_purchase_landed_cost__order_id
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_stock_valuation_adjustment_lines__purchase_order_id
+msgid "Purchase Order"
+msgstr "Đơn Mua"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model,name:to_purchase_landed_cost.model_purchase_order_line
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_stock_valuation_adjustment_lines__purchase_line_id
+msgid "Purchase Order Line"
+msgstr "Dòng hàng Đơn Mua"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model,name:to_purchase_landed_cost.model_purchase_landed_cost
+msgid "Purchasse Landed Cost"
+msgstr "Mua Phí về kho"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_purchase_landed_cost__product_uom_qty
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_purchase_landed_cost__date_order
+msgid "Scheduled Order Date"
+msgstr "Ngày Mua Kế hoạch"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_product_landed_cost__sequence
+msgid "Sequence"
+msgstr "Trình tự"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_stock_landed_cost__should_wait_for_lc_invoice
+msgid "Should Wait for Landed Cost Invoices"
+msgstr "Nên đợi Hoá đơn Phí về kho"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_purchase_order_line__purchase_landed_cost_ids
+msgid "Source Purchase Landed Costs"
+msgstr "Đơn mua gốc"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_stock_valuation_adjustment_lines__state
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model,name:to_purchase_landed_cost.model_stock_landed_cost
+msgid "Stock Landed Cost"
+msgstr "Phí nhập kho"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model,name:to_purchase_landed_cost.model_stock_landed_cost_lines
+msgid "Stock Landed Cost Line"
+msgstr "Chi tiết Phí về kho"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model,name:to_purchase_landed_cost.model_stock_move
+msgid "Stock Move"
+msgstr "Dịch chuyển kho"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,help:to_purchase_landed_cost.field_purchase_order__landed_costs_for_po_ids
+msgid ""
+"Store Purchase Orders from which this order was generated as landed cost "
+"purchase order"
+msgstr ""
+"Lưu trữ các Đơn hàng mua mà từ đó đơn hàng này được sinh ra làm landed cost."
+
+#. module: to_purchase_landed_cost
+#: model_terms:ir.ui.view,arch_db:to_purchase_landed_cost.purchase_order_form
+msgid ""
+"The Purchase orders that have been generated as landed costs for this "
+"purchase order"
+msgstr ""
+"Các đơn hàng mua mà được sinh ra như là các đơn hàng landed cost cho đơn "
+"hàng này"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,help:to_purchase_landed_cost.field_purchase_landed_cost__date_order
+msgid "The date on which you will order this landed cost"
+msgstr "Ngày mà bạn sẽ đặt mua landed cost"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,help:to_purchase_landed_cost.field_stock_valuation_adjustment_lines__invoice_id
+msgid "The move of this entry line."
+msgstr "Bút toán của phát sinh này."
+
+#. module: to_purchase_landed_cost
+#: model_terms:ir.ui.view,arch_db:to_purchase_landed_cost.purchase_order_form
+msgid "The posted landed costs for this purchase order"
+msgstr "Các Phí về kho đã vào sổ của đơn mua này"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,help:to_purchase_landed_cost.field_product_landed_cost__product_template_id
+msgid "The product on which this landed cost would be applied during purchase"
+msgstr "Sản phẩm mà Phí về kho này sẽ được áp dụng khi mua"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,help:to_purchase_landed_cost.field_purchase_landed_cost__product_id
+msgid ""
+"The product that present this landed cost. For example, transportation fee, "
+"stowage fee, etc"
+msgstr ""
+"Sản phẩm mà đại diện cho landed cost này. Ví dụ, Dịch vụ Vận chuyển, Dịch vụ"
+" Bốc dỡ, v.v."
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,help:to_purchase_landed_cost.field_purchase_order_line__landed_cost_for_po_ids
+msgid ""
+"The source Purchase Orders that generated this order line on a separeated "
+"purchase order as a landed cost"
+msgstr ""
+"Đơn mua gốc mà tạo dòng đơn mua này trên một đơn mua riêng biệt dưới dạng "
+"chi phí về kho"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,help:to_purchase_landed_cost.field_purchase_order_line__purchase_landed_cost_ids
+msgid ""
+"The source purchase landed cost from which this order line was generated."
+msgstr "Chi phí về kho của đơn mua gốc mà dòng đơn mua này được tạo."
+
+#. module: to_purchase_landed_cost
+#: model_terms:ir.ui.view,arch_db:to_purchase_landed_cost.purchase_order_form
+msgid ""
+"This order contains an item which is a landed cost for another order.\n"
+"\t\t\t\t\tYou may want to create a vendor bill for that and generate landed\n"
+"\t\t\t\t\tcosts from the bill."
+msgstr ""
+"Đơn này có chứa hạng mục mà là Phí về kho cho một đơn khác.\n"
+"\t\t\t\t\tBạn có thể lên hoá đơn nhà cung cấp cho đơn đó và từ hoá đơn đó bạn có thể\n"
+"\t\t\t\t\ttạo Phí về kho để có các thông tin liên kết và dễ truy vết."
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,help:to_purchase_landed_cost.field_purchase_landed_cost__picking_type_id
+msgid "This will determine operation type of incoming shipment"
+msgstr "Điều này sẽ xác định loại hoạt động của lô hàng đến"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_purchase_landed_cost__product_uom_id
+msgid "Unit of Measure"
+msgstr "Đơn vị tính"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model,name:to_purchase_landed_cost.model_stock_valuation_adjustment_lines
+msgid "Valuation Adjustment Lines"
+msgstr "Chi tiết Điều chỉnh Giá trị Kho"
+
+#. module: to_purchase_landed_cost
+#: model:ir.model.fields,field_description:to_purchase_landed_cost.field_stock_landed_cost__invoice_ids
+msgid "Vendor Bills"
+msgstr "Hoá đơn Nhà cung cấp"

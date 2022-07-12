@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<!-- Custom Clearance Request -->
+		<record id="custom_declaration_export_tree" model="ir.ui.view">
+			<field name="name">custom.declaration.export.tree</field>
+			<field name="model">custom.declaration.export</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Export Custom Clearance Request">
+					<field name="name" />
+					<field name="number" />
+					<field name="partner_id" />
+					<field name="sale_order_ids" widget="many2many_tags"/>
+					<field name="stock_picking_ids" widget="many2many_tags"/>
+					<field name="request_date" />
+					<field name="clearance_date" />
+					<field name="currency_amount_tax" />
+					<field name="state" widget="badge"
+						decoration-info="state=='draft'"
+						decoration-warning="state=='open'"
+						decoration-bf="message_unread == True"
+						decoration-success="state=='confirm' or state == 'done'"
+						decoration-muted="state=='cancel'"/>
+					<field name="message_unread" invisible="1" />
+					<field name="company_id" groups="base.group_multi_company" />
+				</tree>
+			</field>
+		</record>
+		<record id="act_export_custom_declaration_2_account_move"
+			model="ir.actions.act_window">
+			<field name="name">Journal Entries</field>
+			<field name="res_model">account.move</field>
+			<field name="view_mode">tree,form</field>
+			<field name="view_id" ref="account.view_move_tree" />
+			<field name="search_view_id"
+				ref="account.view_account_move_filter" />
+			<field name="context">{'search_default_custom_declaration_export_id':
+				active_id,'default_custom_declaration_export_id': active_id}
+			</field>
+		</record>
+
+		<record id="custom_declaration_export_form" model="ir.ui.view">
+			<field name="name">custom.declaration.export.form</field>
+			<field name="model">custom.declaration.export</field>
+			<field name="arch" type="xml">
+				<form string="Export Custom Clearance Request">
+					<header>
+						<button name="action_open" states="draft" string="Open"
+							type="object" class="oe_highlight"
+							groups="viin_foreign_trade.group_foreign_trade_user" />
+						<button name="action_confirm" states="open"
+							string="Confirmed by Custom" type="object" class="oe_highlight"
+							groups="viin_foreign_trade.group_foreign_trade_user" />
+						<button name="%(action_custom_dec_payment)d"
+							string="Taxes Payment" type="action"
+							attrs="{'invisible': ['|',('is_paid', '=', True),('state','!=','confirm')]}"
+							class="oe_highlight"
+							groups="viin_foreign_trade.group_foreign_trade_user" />
+						<button name="action_cancel" states="open,confirm,done"
+							string="Cancel" type="object"
+							groups="viin_foreign_trade.group_foreign_trade_user" />
+						<button name="action_draft" states="cancel"
+							string="Reset to Draft" type="object" class="oe_highlight"
+							groups="viin_foreign_trade.group_foreign_trade_user" />
+						<field name="state" widget="statusbar"
+							statusbar_visible="draft,open,confirm,done" />
+						<field name="is_paid" invisible="1" />
+					</header>
+					<sheet>
+						<div class="oe_button_box">
+							<button class="oe_stat_button" type="action"
+								name="%(act_export_custom_declaration_2_account_move)d"
+								attrs="{'invisible': [('account_moves_count', '&lt;', 1)]}"
+								icon="fa-bars">
+								<field string="Journal Entries" name="account_moves_count"
+									widget="statinfo" />
+							</button>
+							<button class="oe_stat_button" type="action"
+								name="%(act_export_custom_declaration_2_landed_cost)d" attrs="{'invisible': [('landed_cost_count', '&lt;', 1)]}"
+								icon="fa-th-list">
+								<field string="Landed Cost" name="landed_cost_count"
+							widget="statinfo" />
+					</button>
+						</div>
+						<div class="oe_title">
+							<label class="oe_edit_only" for="name"
+								string="Internal Reference" />
+							<h1>
+								<field name="name" />
+							</h1>
+						</div>
+						<group>
+							<group>
+								<field name="sale_order_ids" required="1" widget="many2many_tags"/>
+								<field name="available_picking_ids" invisible="1"></field>
+								<field name="available_invoice_ids" invisible="1"></field>
+								<field name="stock_picking_ids"
+									options="{'no_create': 1, 'no_create_edit': 1}" widget="many2many_tags"/>
+								<field name="picking_type_id" invisible="1" />
+								<field name="invoice_id" />
+								<field name="compute_tax_lines_onfly" />
+							</group>
+							<group>
+								<field name="number" />
+								<field name="request_date" />
+								<field name="clearance_date" />
+								<field name="journal_id" />
+								<field name="partner_id" />
+								<field name="currency_id"
+									groups="base.group_multi_currency" />
+								<field name="company_currency_id" invisible="1" />
+								<field name="currency_rate"
+									attrs="{'invisible':[('show_currency_rate','=',False)]}" />
+								<field name="company_id" groups="base.group_multi_company" />
+								<field name="show_currency_rate" invisible="1" />
+							</group>
+						</group>
+						<separator string="Operations" />
+						<div name="operations" string="Operations">
+							<field name="custom_declaration_line_ids">
+								<tree string="Request Lines" editable="bottom" delete="0"
+									create="0">
+									<field name="sale_order_line_id" invisible="1" />
+									<field name="stock_move_id" invisible="1" />
+									<field name="product_id" force_save="1" />
+									<field name="qty" force_save="1" />
+									<field name="product_uom" />
+									<field name="currency_id" invisible="1" />
+									<field name="company_currency_id" invisible="1"
+										force_save="1" />
+									<field name="company_id" invisible="1" />
+									<field name="tax_ids" widget="many2many_tags" />
+									<field name="account_analytic_id"
+										groups="analytic.group_analytic_accounting"
+										domain="[('company_id', '=', parent.company_id)]" />
+									<field name="analytic_tag_ids"
+										groups="analytic.group_analytic_accounting"
+										widget="many2many_tags" />
+									<field name="currency_rate" invisible="1" />
+									<field name="total_cost_currency" />
+									<field name="total_cost" />
+								</tree>
+							</field>
+							<group class="oe_subtotal_footer oe_right" colspan="2"
+								name="request_total">
+								<field name="total_cost_currency" />
+								<field name="total_cost" />
+								<button colspan="2" name="button_compute_tax_lines"
+									string="Compute Tax Lines" type="object"
+									class="oe_right oe_highlight" states="draft,open" />
+							</group>
+						</div>
+
+						<notebook>
+							<page name="tax_lines" string="Taxes Computation">
+								<field name="tax_line_ids">
+									<tree editable="bottom" string="Taxes" delete="0"
+										create="0">
+										<field name="product_id" force_save="1" />
+										<field name="name" />
+										<!--Need invisible fields for on_change to create all necessary
+											info -->
+										<field name="tax_id" invisible="1" />
+										<field name="tax_repartition_line_id" invisible="1" force_save="1" />
+										<field name="custom_declaration_line_id" invisible="1" force_save="1" />
+										<field name="stock_move_id" invisible="1" force_save="1"/>
+										<field name="is_vat" invisible="0" />
+										<field name="sequence" invisible="1" />
+										<field name="manual" invisible="1" />
+										<field name="account_id"
+											groups="account.group_account_invoice" />
+										<field name="payment_term_id" />
+										<field name="qty" invisible="1" />
+										<field name="currency_amount_tax" invisible="1" />
+										<field name="amount" />
+										<field name="currency_id" invisible="1" />
+										<field name="company_currency_id" invisible="1" />
+										<field name="company_id" invisible="1" />
+									</tree>
+								</field>
+								<group class="oe_subtotal_footer oe_right" colspan="2"
+									name="request_total">
+									<field name="currency_amount_tax" invisible="1" />
+									<field name="amount_tax" />
+								</group>
+							</page>
+							<page name="tax_lines_groups" string="Tax Groups">
+								<field name="custom_dec_tax_group_ids">
+									<tree delete="0" create="0">
+										<field name="tax_group_id" />
+										<field name="is_vat" />
+										<field name="company_currency_id" invisible="1" />
+										<field name="amount" />
+									</tree>
+								</field>
+								<group class="oe_subtotal_footer oe_right" colspan="2"
+									name="request_total">
+									<field name="amount_tax" />
+								</group>
+							</page>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids"/>
+						<field name="activity_ids"/>
+						<field name="message_ids"/>
+					</div>
+				</form>
+			</field>
+		</record>
+		<record id="custom_declaration_export_filter"
+			model="ir.ui.view">
+			<field name="name">custom.declaration.export.filter</field>
+			<field name="model">custom.declaration.export</field>
+			<field name="arch" type="xml">
+				<search string="Custom Clearance Request">
+					<field name="name" string="Internal Reference" />
+					<field name="number" />
+					<field name="stock_picking_ids" />
+					<field name="sale_order_ids" />
+					<field name="partner_id" />
+					<separator />
+					<filter name="draft" domain="[('state', '=', 'draft')]"
+						string="New" help="New" />
+					<filter name="open" domain="[('state', '=', 'open')]"
+						string="Waiting for Confirmation" />
+					<filter name="confirm" domain="[('state', '=', 'confirm')]"
+						string="Confirmed" />
+					<separator />
+					<filter name="done" domain="[('state', '=', 'done')]"
+						string="Done" />
+					<separator />
+					<filter name="cancel" domain="[('state', '=', 'cancel')]"
+						string="Cancelled" />
+					<separator />
+					<group expand="0" string="Group By">
+						<filter name="grp_request_date" string="Open Date"
+							domain="[]" context="{'group_by': 'request_date'}" />
+						<filter name="grp_clearance_date" string="Clearance Date"
+							domain="[]" context="{'group_by': 'clearance_date'}" />
+						<separator />
+						<filter name="grp_state" string="Status" domain="[]"
+							context="{'group_by': 'state'}" />
+					</group>
+				</search>
+			</field>
+		</record>
+		<record id="custom_declaration_export_action"
+			model="ir.actions.act_window">
+			<field name="name">Export Custom Clearance Request</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">custom.declaration.export</field>
+			<field name="view_mode">tree,form</field>
+			<field name="view_id" eval="custom_declaration_export_tree" />
+			<field name="search_view_id"
+				ref="custom_declaration_export_filter" />
+		</record>
+		<menuitem id="custom_declaration_export_menu"
+			action="custom_declaration_export_action"
+			parent="menu_custom_declaration_main"
+			groups="viin_foreign_trade.group_foreign_trade_user" sequence="2" />
+	</data>
+</odoo>

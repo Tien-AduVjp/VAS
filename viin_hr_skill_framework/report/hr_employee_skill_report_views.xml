@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="view_hr_employee_skill_report_form"
+		model="ir.ui.view">
+		<field name="name">hr.employee.skill.report.form</field>
+		<field name="model">hr.employee.skill.report</field>
+		<field name="arch" type="xml">
+			<form string="Employee Skill Report">
+				<sheet>
+	                <group>
+					    <group colspan="2" string="Current Reach">
+                            <field name="current_skill_level_id"/>
+					    </group>
+					    <group string="Current Rank Infomation">
+					        <field name="reach_progress" widget="progressbar"/>
+					        <field name="rank_id"/>                           
+					        <field name="skill_type_id"/>
+					        <field name="skill_id"/>
+					        <field name="current_rank_skill_level_id"/>
+					        <field name="current_rank_skill_description"/>
+					    </group>
+					    <group string="Next Rank Infomation">
+							<field name="next_rank_reach_progress" widget="progressbar"/>
+							<field name="next_rank_id"/>                                
+							<field name="skill_type_id"/>
+							<field name="skill_id"/>                                                        
+							<field name="next_rank_skill_level_id"/>
+							<field name="next_rank_skill_description"/>					       
+					    </group>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<record id="view_hr_employee_skill_report_tree"
+		model="ir.ui.view">
+		<field name="name">hr.employee.skill.report.tree</field>
+		<field name="model">hr.employee.skill.report</field>
+		<field name="arch" type="xml">
+			<tree string="Employee Skill Report"
+				decoration-success="reach_progress &gt;= 100.0"
+				decoration-danger="reach_progress &lt; 100.0 and current_rank_skill_level_id != False">
+				<field name="employee_id" widget="many2one_avatar_employee"/>
+                <field name="company_id" groups="base.group_multi_company" />
+                <field name="skill_type_id"/>
+                <field name="skill_id"/>
+                <field name="current_skill_level_id" string="Employee Skill Level"/>
+                <field name="current_rank_skill_level_id" />
+                <field name="reach_progress" widget="progressbar" />
+                <field name="next_rank_skill_level_id" />
+                <field name="next_rank_reach_progress" widget="progressbar"/>
+			</tree>
+		</field>
+	</record>
+
+	<record id="view_hr_employee_skill_report_pivot"
+		model="ir.ui.view">
+		<field name="name">hr.employee.skill.report.pivot</field>
+		<field name="model">hr.employee.skill.report</field>
+		<field name="arch" type="xml">
+			<pivot string="Employee Skill Report"
+				disable_linking="True">
+				<field name="employee_id" type="col" />
+				<field name="skill_id" type="row" />
+				<field name="reach_progress" type="measure" />
+			</pivot>
+		</field>
+	</record>
+
+	<record id="view_hr_employee_skill_report_graph"
+		model="ir.ui.view">
+		<field name="name">hr.employee.skill.report.graph</field>
+		<field name="model">hr.employee.skill.report</field>
+		<field name="arch" type="xml">
+			<graph string="Employee Skill Report">
+				<field name="employee_id" />
+				<field name="reach_progress" type="measure" />
+			</graph>
+		</field>
+	</record>
+
+	<record id="view_hr_employee_skill_report_search"
+		model="ir.ui.view">
+		<field name="name">hr.employee.skill.report.search</field>
+		<field name="model">hr.employee.skill.report</field>
+		<field name="arch" type="xml">
+			<search string="Employee Skill Report">
+				<field name="employee_id" string="Employee" />
+				<field name="job_id" string="Job Position" />
+				<field name="department_id" string="Department" />
+				<separator />
+				<field name="skill_type_id" string="Skill Type" />
+				<field name="skill_id" string="Employee" />
+				<separator />
+				<field name="company_id" string="Employee"
+					groups="base.group_multi_company" />
+				<separator />
+				<filter name="ftr_required" string="Required Skills"
+					domain="[('expectation','=', 'required')]" />
+				<filter name="ftr_preferred" string="Preferred Skills"
+					domain="[('expectation','=', 'preferred')]" />
+				<separator />
+				<filter name="ftr_unmet" string="Unmet Skills"
+					domain="[('reach_progress','&lt;', 100.0)]" />
+				<filter name="ftr_unmet" string="Unmet Required Skills"
+					domain="[('reach_progress','&lt;', 100.0),('expectation','=', 'required')]" />
+				<filter name="ftr_unmet" string="Unmet Preferred Skills"
+					domain="[('reach_progress','&lt;', 100.0),('expectation','=', 'preferred')]" />
+				<separator />
+				<group expand="0" string="Extended Filters">
+					<field name="company_id" groups="base.group_multi_company" />
+				</group>
+				<group expand="1" string="Group By">
+					<filter string="Employee" name="grp_employee"
+						context="{'group_by':'employee_id'}" />
+					<filter string="Skill Type" name="grp_skill_type"
+						context="{'group_by':'skill_type_id'}" />
+					<filter string="Skill" name="grp_skill"
+						context="{'group_by':'skill_id'}" />
+					<filter string="Job Position" name="grp_job"
+						context="{'group_by':'job_id'}" />
+					<filter string="Department" name="grp_department"
+						context="{'group_by':'department_id'}" />
+					<filter string="Company" name="company"
+						groups="base.group_multi_company"
+						context="{'group_by':'company_id'}" />
+					<filter string="Expectation" name="grp_expectation"
+						context="{'group_by':'expectation'}" />
+				</group>
+				<searchpanel>
+					<field name="company_id" groups="base.group_multi_company"
+						icon="fa-building" />
+					<field name="employee_id" icon="fa-users" />
+				</searchpanel>
+			</search>
+		</field>
+	</record>
+
+	<record id="action_hr_employee_skill_report_report"
+		model="ir.actions.act_window">
+		<field name="name">Employee Skill Report</field>
+		<field name="res_model">hr.employee.skill.report</field>
+		<field name="view_mode">list,form,graph,pivot</field>
+		<field name="view_id"></field>  <!-- force empty -->
+		<field name="search_view_id"
+			ref="view_hr_employee_skill_report_search" />
+		<field name="context">{}</field>
+	</record>
+
+	<menuitem name="Passed and Failed"
+		id="menu_hr_employee_skill_report" parent="menu_reporting"
+		sequence="7" action="action_hr_employee_skill_report_report" />
+</odoo>

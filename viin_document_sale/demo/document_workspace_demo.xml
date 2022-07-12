@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+
+    <record id="document_workspace_sale_team_europe_demo" model="document.workspace">
+        <field name="name">Europe</field>
+        <field name="parent_id" ref="document_workspace_sale"/>
+        <field name="read_group_ids" eval="[(4, ref('base.group_user'))]"/>
+        <field name="tag_ids" eval="[
+            (4, ref('document_tag_sale_quotation')),
+            (4, ref('document_tag_sale_order')),
+            (4, ref('document_tag_sale_specs')),
+            (4, ref('viin_document.document_tag_to_review')),
+            (4, ref('viin_document.document_tag_approve')),
+            (4, ref('viin_document.document_tag_deprecate'))]"/>
+        <field name="read_team_ids" eval="[(4, ref('document_team_sale'))]"/>
+        <field name="write_group_ids" eval="[(4, ref('sales_team.group_sale_manager'))]"/>
+        <field name="read_group_ids" eval="[(4, ref('sales_team.group_sale_salesman_all_leads'))]"/>
+        <field name="specific_group_ids" eval="[(4, ref('sales_team.group_sale_salesman'))]"/>
+        <field name="action_ids" eval="[
+            (4, ref('viin_document.document_action_ask_to_review')),
+            (4, ref('viin_document.document_action_approve')),
+            (4, ref('document_action_sale_quotation_expired'))]"/>
+    </record>
+
+    <record id="document_workspace_sale_team_america_demo" model="document.workspace">
+        <field name="name">America</field>
+        <field name="parent_id" ref="document_workspace_sale"/>
+        <field name="read_group_ids" eval="[(4, ref('base.group_user'))]"/>
+        <field name="tag_ids" eval="[
+            (4, ref('document_tag_sale_quotation')),
+            (4, ref('document_tag_sale_order')),
+            (4, ref('document_tag_sale_specs')),
+            (4, ref('viin_document.document_tag_to_review')),
+            (4, ref('viin_document.document_tag_approve')),
+            (4, ref('viin_document.document_tag_deprecate'))]"/>
+        <field name="read_team_ids" eval="[(4, ref('document_team_sale'))]"/>
+        <field name="write_group_ids" eval="[(4, ref('sales_team.group_sale_manager'))]"/>
+        <field name="read_group_ids" eval="[(4, ref('sales_team.group_sale_salesman_all_leads'))]"/>
+        <field name="specific_group_ids" eval="[(4, ref('sales_team.group_sale_salesman'))]"/>
+        <field name="action_ids" eval="[
+            (4, ref('viin_document.document_action_ask_to_review')),
+            (4, ref('viin_document.document_action_approve')),
+            (4, ref('document_action_sale_quotation_expired'))]"/>
+    </record>
+
+</odoo>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <menuitem id="document_menu_root" name="Documents" web_icon="viin_document,static/description/icon.png"/>
+    <menuitem id="document_master_data_menu_root" parent="document_menu_root" name="Master Data" sequence="40"/>
+    <menuitem id="document_config_menu_root" parent="document_menu_root" name="Configuration" groups="document_group_manager" sequence="90"/>
+
+</odoo>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="action_check_vninvoices_signed"
+			model="ir.actions.server">
+			<field name="name">Check VN-invoice Signed</field>
+			<field name="type">ir.actions.server</field>
+			<field name="model_id" ref="model_account_move" />
+			<field name="binding_model_id" ref="model_account_move" />
+			<field name="state">code</field>
+			<field name="code">records._action_check_vninvoices_signed()</field>
+		</record>
+	</data>
+</odoo>

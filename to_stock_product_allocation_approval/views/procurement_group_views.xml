@@ -1,0 +1,23 @@
+<odoo>
+	<data>
+		<record id="procurement_group_tree_view" model="ir.ui.view">
+			<field name="name">procurement.group.tree</field>
+			<field name="model">procurement.group</field>
+			<field name="arch" type="xml">
+				<tree string="Procurement group">
+					<field name="name" />
+					<field name="move_type" />
+					<field name="partner_id" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window"
+			id="action_procurement_group_view">
+			<field name="name">Procurement Group</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">procurement.group</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="document_tag_category_view_tree" model="ir.ui.view">
+        <field name="name">document.tag.category.view.tree</field>
+        <field name="model">document.tag.category</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="tag_ids" widget="many2many_tags"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="document_tag_category_view_form" model="ir.ui.view">
+        <field name="name">document.tag.category.view.form</field>
+        <field name="model">document.tag.category</field>
+        <field name="arch" type="xml">
+            <form>
+            	<field name="active" invisible="1"/>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="tag" string="Tags">
+                            <field name="tag_ids"/>
+                        </page>
+                        <page name="description" string="Description">
+                            <field name="description"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="document_tag_category_view_search" model="ir.ui.view">
+        <field name="name">document.tag.category.view.search</field>
+        <field name="model">document.tag.category</field>
+        <field name="arch" type="xml">
+            <search string="Document Tag Category">
+                <field name="name" />
+                <filter name="ftr_archived" string="Archived" domain="[('active', '=', False)]"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="document_tag_category_action" model="ir.actions.act_window">
+        <field name="name">Tag Categories</field>
+        <field name="res_model">document.tag.category</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="document_tag_category_menu" parent="document_master_data_menu_root" action="document_tag_category_action" sequence="30"
+        groups="document_group_user"/>
+
+</odoo>

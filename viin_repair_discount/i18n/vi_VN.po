@@ -1,0 +1,63 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_repair_discount
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-30 08:33+0000\n"
+"PO-Revision-Date: 2021-11-30 08:33+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_repair_discount
+#: model_terms:ir.ui.view,arch_db:viin_repair_discount.report_repairorder
+msgid "Disc.%"
+msgstr "CK. (%)"
+
+#. module: viin_repair_discount
+#: model:ir.model.fields,field_description:viin_repair_discount.field_repair_fee__discount
+#: model:ir.model.fields,field_description:viin_repair_discount.field_repair_line__discount
+msgid "Discount (%)"
+msgstr "Chiết khấu (%)"
+
+#. module: viin_repair_discount
+#: model:ir.model.fields,field_description:viin_repair_discount.field_repair_fee__display_name
+#: model:ir.model.fields,field_description:viin_repair_discount.field_repair_line__display_name
+#: model:ir.model.fields,field_description:viin_repair_discount.field_repair_order__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: viin_repair_discount
+#: model:ir.model.fields,field_description:viin_repair_discount.field_repair_fee__id
+#: model:ir.model.fields,field_description:viin_repair_discount.field_repair_line__id
+#: model:ir.model.fields,field_description:viin_repair_discount.field_repair_order__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_repair_discount
+#: model:ir.model.fields,field_description:viin_repair_discount.field_repair_fee____last_update
+#: model:ir.model.fields,field_description:viin_repair_discount.field_repair_line____last_update
+#: model:ir.model.fields,field_description:viin_repair_discount.field_repair_order____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: viin_repair_discount
+#: model:ir.model,name:viin_repair_discount.model_repair_fee
+msgid "Repair Fees"
+msgstr "Phí sửa chữa"
+
+#. module: viin_repair_discount
+#: model:ir.model,name:viin_repair_discount.model_repair_line
+msgid "Repair Line (parts)"
+msgstr "Hạng mục sửa chữa (bộ phận)"
+
+#. module: viin_repair_discount
+#: model:ir.model,name:viin_repair_discount.model_repair_order
+msgid "Repair Order"
+msgstr "Lệnh sữa chữa"

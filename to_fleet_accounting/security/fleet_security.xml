@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+        <record id="account.group_account_readonly" model="res.groups">
+            <field name="implied_ids" eval="[(4, ref('viin_fleet.group_fleet_vehicle_log_services_read'))]" />
+        </record>
+
+        <record id="account.group_account_invoice" model="res.groups">
+            <field name="implied_ids" eval="[(4, ref('viin_fleet.group_fleet_vehicle_log_services_read'))]" />
+        </record>
+
+        <record id="fleet.fleet_group_manager" model="res.groups">
+            <field name="implied_ids" eval="[(4, ref('viin_fleet.group_fleet_vehicle_log_services_read'))]" />
+        </record>
+
+		<record id="fleet_vehicle_log_services_group_account_invoice_unlink" model="ir.rule">
+			<field name="name">Billing Users: Delete own vehicle services only</field>
+			<field name="model_id" ref="model_fleet_vehicle_log_services" />
+			<field name="groups" eval="[(4, ref('account.group_account_invoice'))]" />
+			<field name="perm_read" eval="True" />
+			<field name="perm_write" eval="True" />
+			<field name="perm_create" eval="True" />
+			<field name="perm_unlink" eval="True" />
+			<field name="domain_force">[('create_uid','=',user.id)]</field>
+		</record>
+
+        <record id="fleet_vehicle_log_services_group_account_invoice" model="ir.rule">
+            <field name="name">Billing Users: User can create and edit his/her vehicle's services</field>
+            <field name="model_id" ref="model_fleet_vehicle_log_services"/>
+            <field name="groups" eval="[(4, ref('account.group_account_invoice'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="False"/>
+            <field name="domain_force">[('vehicle_id.driver_id','=',user.partner_id.id)]</field>
+        </record>
+		
+	</data>
+</odoo>

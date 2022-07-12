@@ -1,0 +1,396 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_social_facebook
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-04 04:01+0000\n"
+"PO-Revision-Date: 2021-12-04 04:01+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_social_facebook
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_page__facebook_page_about
+msgid " About Facebook Page"
+msgstr "Về trang Facebook"
+
+#. module: viin_social_facebook
+#: model:ir.model.fields,help:viin_social_facebook.field_social_page__views_rate
+msgid "(%) - The rate of views between two time intervals"
+msgstr "(%) - Tỷ lệ lượt xem giữa hai khoảng thời gian"
+
+#. module: viin_social_facebook
+#: model:ir.model.fields,help:viin_social_facebook.field_social_page__engaged_rate
+msgid "(%) The rate of engagements between two time intervals"
+msgstr "(%) Tỷ lệ tương tác giữa hai khoảng thời gian"
+
+#. module: viin_social_facebook
+#: model_terms:ir.ui.view,arch_db:viin_social_facebook.facebook_preview
+msgid "<b class=\"d-block mb-2\">Facebook Page</b>"
+msgstr "<b class=\"d-block mb-2\">Trang Facebook</b>"
+
+#. module: viin_social_facebook
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_page__facebook_page_access_token
+msgid "Access Token"
+msgstr "Mã truy cập"
+
+#. module: viin_social_facebook
+#: model:ir.model.fields,help:viin_social_facebook.field_social_page__facebook_page_access_token
+msgid "Access Token of Facebook Page"
+msgstr "Mã truy cập của trang Facebook"
+
+#. module: viin_social_facebook
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_page__review_ids
+msgid "All Reviews"
+msgstr "Toàn bộ đánh giá"
+
+#. module: viin_social_facebook
+#: model_terms:ir.ui.view,arch_db:viin_social_facebook.res_config_settings_view_form
+msgid "App ID"
+msgstr ""
+
+#. module: viin_social_facebook
+#: model_terms:ir.ui.view,arch_db:viin_social_facebook.res_config_settings_view_form
+msgid "App Secret"
+msgstr ""
+
+#. module: viin_social_facebook
+#: model_terms:ir.ui.view,arch_db:viin_social_facebook.social_page_view_form
+msgid "Cancel Webhooks"
+msgstr "Hủy Webhooks"
+
+#. module: viin_social_facebook
+#: code:addons/viin_social_facebook/models/social_media.py:0
+#, python-format
+msgid ""
+"Cannot sync because 'facebook_user_id' or 'facebook_access_token' has no "
+"value."
+msgstr ""
+"Không thể đồng bộ vì 'facebook_user_id' hoặc 'facebook_access_token' không có giá trị"
+
+
+#. module: viin_social_facebook
+#: code:addons/viin_social_facebook/models/social_media.py:0
+#, python-format
+msgid ""
+"Cannot sync because Facebook User Id or Facebook Access Token has no value."
+msgstr "Không thể đồng bộ vì Facebook User Id hoặc Facebook Access Token không có giá trị."
+
+#. module: viin_social_facebook
+#: model:ir.model,name:viin_social_facebook.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: viin_social_facebook
+#: model:ir.model,name:viin_social_facebook.model_res_config_settings
+msgid "Config Settings"
+msgstr "Thiết lập Cấu hình"
+
+#. module: viin_social_facebook
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_review__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: viin_social_facebook
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_review__create_date
+msgid "Created on"
+msgstr "Được tạo lúc"
+
+#. module: viin_social_facebook
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_article__display_facebook_preview
+msgid "Display Facebook Preview"
+msgstr "Hiển thị xem trước Facebook"
+
+#. module: viin_social_facebook
+#: model:ir.model.fields,field_description:viin_social_facebook.field_mail_message__display_name
+#: model:ir.model.fields,field_description:viin_social_facebook.field_res_company__display_name
+#: model:ir.model.fields,field_description:viin_social_facebook.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_article__display_name
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_facebook_api__display_name
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_media__display_name
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_notice__display_name
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_page__display_name
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_post__display_name
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_post_action_edit_post__display_name
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_review__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: viin_social_facebook
+#: model:ir.model,name:viin_social_facebook.model_social_post_action_edit_post
+msgid "Edit Post"
+msgstr "Sửa bài đăng"
+
+#. module: viin_social_facebook
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_page__engaged_rate
+msgid "Engaged Rate"
+msgstr "Tỷ lệ tương tác"
+
+#. module: viin_social_facebook
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_page__engaged_pre
+msgid "Engagements - between 30 and 60 days ago"
+msgstr "Tương tác - giữa 30 đến 60 ngày trước"
+
+#. module: viin_social_facebook
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_page__engaged_current
+msgid "Engagements - in 30 days"
+msgstr "Tương tác - trong 30 ngày"
+
+#. module: viin_social_facebook
+#: model:ir.model.fields.selection,name:viin_social_facebook.selection__social_media__social_provider__facebook
+#: model_terms:ir.ui.view,arch_db:viin_social_facebook.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:viin_social_facebook.social_article_view_search
+#: model_terms:ir.ui.view,arch_db:viin_social_facebook.social_post_view_search
+msgid "Facebook"
+msgstr ""
+
+#. module: viin_social_facebook
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_media__facebook_access_token
+msgid "Facebook Access Token"
+msgstr ""
+
+#. module: viin_social_facebook
+#: model:ir.model.fields,field_description:viin_social_facebook.field_res_company__facebook_app_id
+#: model:ir.model.fields,field_description:viin_social_facebook.field_res_config_settings__facebook_app_id
+msgid "Facebook App ID"
+msgstr ""
+
+#. module: viin_social_facebook
+#: model:ir.model.fields,field_description:viin_social_facebook.field_res_company__facebook_client_secret
+#: model:ir.model.fields,field_description:viin_social_facebook.field_res_config_settings__facebook_client_secret
+msgid "Facebook Client Secret"
+msgstr ""
+
+#. module: viin_social_facebook
+#: code:addons/viin_social_facebook/models/social_article.py:0
+#, python-format
+msgid ""
+"Facebook Page: Please select a supported image format (<4Mb): *png, *jpeg. "
+"Video is not supported at this time"
+msgstr ""
+"Trang Facebook: vui lòng chọn 1 ảnh được hỗ trợ (<4Mb): *pgn, *jpeg. Video "
+"hông được hỗ trợ trong thời gian này"
+
+#. module: viin_social_facebook
+#: code:addons/viin_social_facebook/models/social_article.py:0
+#, python-format
+msgid "Facebook Page: You cannot post image > 4Mb"
+msgstr "Trang Facebook: Bạn không thể đăng ảnh > 4Mb"
+
+#. module: viin_social_facebook
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_article__facebook_preview
+msgid "Facebook Preview"
+msgstr "Xem trước Facebook"
+
+#. module: viin_social_facebook
+#: model:ir.model.fields,field_description:viin_social_facebook.field_mail_message__id
+#: model:ir.model.fields,field_description:viin_social_facebook.field_res_company__id
+#: model:ir.model.fields,field_description:viin_social_facebook.field_res_config_settings__id
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_article__id
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_facebook_api__id
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_media__id
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_notice__id
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_page__id
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_post__id
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_post_action_edit_post__id
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_review__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_social_facebook
+#: model:ir.model.fields,field_description:viin_social_facebook.field_mail_message____last_update
+#: model:ir.model.fields,field_description:viin_social_facebook.field_res_company____last_update
+#: model:ir.model.fields,field_description:viin_social_facebook.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_article____last_update
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_facebook_api____last_update
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_media____last_update
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_notice____last_update
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_page____last_update
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_post____last_update
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_post_action_edit_post____last_update
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_review____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: viin_social_facebook
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_review__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: viin_social_facebook
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_review__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối lúc"
+
+#. module: viin_social_facebook
+#: model:ir.model,name:viin_social_facebook.model_mail_message
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_review__message
+msgid "Message"
+msgstr "Thông báo"
+
+#. module: viin_social_facebook
+#: model:ir.model,name:viin_social_facebook.model_social_notice
+msgid "Notice from Users on the Page"
+msgstr "Thông báo từ người dùng trên Trang"
+
+#. module: viin_social_facebook
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_review__page_id
+msgid "Page"
+msgstr "Trang"
+
+#. module: viin_social_facebook
+#: model_terms:ir.ui.view,arch_db:viin_social_facebook.facebook_preview
+msgid "Post Image"
+msgstr "Đăng ảnh"
+
+#. module: viin_social_facebook
+#: model_terms:ir.ui.view,arch_db:viin_social_facebook.facebook_preview
+msgid "Published by Facebook Page •"
+msgstr "Xuất bản bởi Trang Facebook"
+
+#. module: viin_social_facebook
+#: model_terms:ir.ui.view,arch_db:viin_social_facebook.social_page_view_form
+msgid "Refesh"
+msgstr "Làm mới"
+
+#. module: viin_social_facebook
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_review__review_date
+msgid "Review Date"
+msgstr "Ngày đánh giá"
+
+#. module: viin_social_facebook
+#: model_terms:ir.ui.view,arch_db:viin_social_facebook.social_page_view_form
+msgid "Reviews"
+msgstr "Đánh giá"
+
+#. module: viin_social_facebook
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_post__schedule_date
+msgid "Schedule Date"
+msgstr "Lên Lịch Ngày"
+
+#. module: viin_social_facebook
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_post__schedule_later
+msgid "Schedule later"
+msgstr "Lên lịch sau"
+
+#. module: viin_social_facebook
+#: code:addons/viin_social_facebook/models/social_media.py:0
+#, python-format
+msgid "Short-lived Token is missing, please enter this field"
+msgstr "Mã ngắn hạn bị thiếu, vui lòng nhập trường này"
+
+#. module: viin_social_facebook
+#: model:ir.model,name:viin_social_facebook.model_social_article
+msgid "Social Article"
+msgstr "Bài viết"
+
+#. module: viin_social_facebook
+#: model:ir.model,name:viin_social_facebook.model_social_media
+msgid "Social Media"
+msgstr "Truyền thông Xã hội"
+
+#. module: viin_social_facebook
+#: model:ir.model,name:viin_social_facebook.model_social_page
+msgid "Social Page"
+msgstr "Trang xã hội"
+
+#. module: viin_social_facebook
+#: model:ir.model,name:viin_social_facebook.model_social_post
+msgid "Social Post"
+msgstr "Bài đăng trên mạng xã hội"
+
+#. module: viin_social_facebook
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_media__social_provider
+msgid "Social Provider"
+msgstr "Nhà cung cấp mạng xã hội"
+
+#. module: viin_social_facebook
+#: model:ir.model,name:viin_social_facebook.model_social_review
+msgid "Social Review"
+msgstr "Đánh giá"
+
+#. module: viin_social_facebook
+#: model_terms:ir.ui.view,arch_db:viin_social_facebook.social_article_view_search
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: viin_social_facebook
+#: model:ir.model.fields,help:viin_social_facebook.field_social_page__engaged_pre
+msgid "The number of engagements  from 30 to 60 days ago"
+msgstr "Số lần tương tác từ 30 đến 60 ngày trước"
+
+#. module: viin_social_facebook
+#: model:ir.model.fields,help:viin_social_facebook.field_social_page__engaged_current
+msgid "The number of engagements within 30 days"
+msgstr "Số lần tương tác trong 30 ngày"
+
+#. module: viin_social_facebook
+#: model:ir.model.fields,help:viin_social_facebook.field_social_page__views_pre
+msgid "The number of views from 30 to 60 days ago"
+msgstr "Số lượt xem từ 30 đến 60 ngày trước"
+
+#. module: viin_social_facebook
+#: model:ir.model.fields,help:viin_social_facebook.field_social_page__views_current
+msgid "The number of views within 30 days"
+msgstr "Số lượt xem trong 30 ngày"
+
+#. module: viin_social_facebook
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_media__facebook_user_id
+msgid "User Id of Facebook"
+msgstr "ID người dùng trên Facebook"
+
+#. module: viin_social_facebook
+#: model_terms:ir.ui.view,arch_db:viin_social_facebook.social_page_view_form
+msgid "View on Page"
+msgstr "Lượt xem của trang"
+
+#. module: viin_social_facebook
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_page__views_pre
+msgid "Views - between 30 and 60 days ago"
+msgstr "Lượt xem - giữa khoảng 30 vào 60 ngày trước"
+
+#. module: viin_social_facebook
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_page__views_current
+msgid "Views - in 30 days"
+msgstr "Lượt xem - trong 30 ngày qua"
+
+#. module: viin_social_facebook
+#: model:ir.model.fields,field_description:viin_social_facebook.field_social_page__views_rate
+msgid "Views Rate"
+msgstr "Tỷ lệ lượt xem"
+
+#. module: viin_social_facebook
+#: code:addons/viin_social_facebook/models/social_post.py:0
+#, python-format
+msgid "You cannot post immediately by unchecking the Schedule later field"
+msgstr "Bạn không thể đăng ngay lập tức bằng cách bỏ chọn trường Lên lịch sau"
+
+#. module: viin_social_facebook
+#: code:addons/viin_social_facebook/models/social_review.py:0
+#, python-format
+msgid "You do not have permission to sync reviews."
+msgstr "Bạn không có quyền để đồng bộ các đánh giá."
+
+#. module: viin_social_facebook
+#: code:addons/viin_social_facebook/models/social_article.py:0
+#, python-format
+msgid "You need to schedule the post within the next 30 minutes to 70 days"
+msgstr "Bạn cần lên lịch đăng bài trong vòng 30 phút đến 70 ngày tới"
+
+#. module: viin_social_facebook
+#: code:addons/viin_social_facebook/models/social_post.py:0
+#, python-format
+msgid ""
+"You need to schedule the post within the next 30 minutes to 70 days (%s)"
+msgstr "Bạn cần lên lịch đăng bài trong vòng 30 phút đến 70 ngày tới (%s)"
+
+#. module: viin_social_facebook
+#: model_terms:ir.ui.view,arch_db:viin_social_facebook.facebook_preview
+msgid "image"
+msgstr "ảnh"

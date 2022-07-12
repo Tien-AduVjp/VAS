@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="product_category_form_view" model="ir.ui.view">
+		<field name="name">product.category.form</field>
+		<field name="model">product.category</field>
+		<field name="inherit_id" ref="product.product_category_form_view" />
+		<field name="arch" type="xml">
+			<xpath expr="//group[@name='first']" position="after">
+				<group name="equipments" string="Equipments">
+					<group>
+						<field name="property_default_equipment_category_id" />
+						<field name="property_maintenance_team_id" />
+						<field name="technician_user_id" />
+					</group>
+					<group>
+						<field name="equipment_assign_to" />
+					</group>
+				</group>
+			</xpath>
+		</field>
+	</record>
+</odoo>

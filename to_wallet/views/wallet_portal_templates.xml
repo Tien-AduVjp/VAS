@@ -1,0 +1,102 @@
+<odoo>
+	<template id="portal_breadcrumbs_wallet" inherit_id="portal.portal_breadcrumbs">
+		<xpath expr="//ol[hasclass('o_portal_submenu')]" position="inside">
+			<li t-if="page_name == 'wallets' or wallet" t-attf-class="breadcrumb-item {{ 'active' if not wallet else '' }}">
+				<t t-set="query" t-value="keep_query('debug')" />
+				<a t-if="wallet" t-attf-href="/my/wallets{{ '?' + query if query else '' }}">Wallets</a>
+				<t t-else="">Wallets</t>
+			</li>
+			<li t-if="wallet" class="breadcrumb-item active">
+				<span t-field="wallet.display_name" />
+			</li>
+		</xpath>
+	</template>
+
+	<template id="portal_my_home_wallet" inherit_id="portal.portal_my_home" priority="100" customize_show="True">
+		<xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
+			<t t-call="portal.portal_docs_entry">
+				<t t-set="title">Wallets</t>
+				<t t-set="url" t-value="'/my/wallets'" />
+				<t t-set="placeholder_count" t-value="'wallet_count'" />
+			</t>
+		</xpath>
+	</template>
+
+	<template id="portal_wallets_page" name="My Wallets">
+		<t t-call="portal.portal_layout">
+			<t t-if="not wallets">
+				<div class="alert alert-info mt-3 mb-0">
+					You have no wallets.
+				</div>
+			</t>
+
+			<div t-if="wallets" class="mt-3">
+				<t t-call="portal.portal_table">
+					<thead>
+						<tr class="active">
+							<th id="name-col-header">Currency</th>
+							<th id="version-col-header">Amount</th>
+							<th></th>
+						</tr>
+					</thead>
+					<t t-foreach="wallets" t-as="wallet">
+						<tr>
+							<td id="name-col"><span t-field="wallet.currency_id" /></td>
+							<td id="version-col"><span t-field="wallet.amount" /></td>
+							<td>
+								<a class="float-right"
+									t-attf-href="/my/wallet/{{wallet.id}}/payment">
+									Deposit
+								</a>
+							</td>
+						</tr>
+					</t>
+				</t>
+			</div>
+		</t>
+	</template>
+
+	<template id="portal_wallet_payment_page" name="Wallet Payment">
+		<t t-call="portal.portal_layout">
+			<div class="row justify-content-center">
+				<div class="col-lg-6">
+					<t t-call="to_wallet.wallet_payment_tokens_list">
+						<t t-set="mode" t-value="'payment'" />
+						<t t-set="submit_txt">Pay Now</t>
+						<t t-set="submit_class" t-value="'btn btn-primary'" />
+						<t t-set="prepare_tx_url" t-value="'/my/wallet/{}/transaction'.format(wallet.id)" />
+					</t>
+				</div>
+			</div>
+		</t>
+	</template>
+
+	<template id="wallet_payment_tokens_list" inherit_id="payment.payment_tokens_list" primary="True">
+		<xpath expr="//form/div[hasclass('card')]" position="before">
+			<div class="form-group">
+				<label for="payment-amount">
+					Payment amount (<span t-field="wallet.currency_id" />)
+				</label>
+				<input type="text" class="form-control" required="" data-twts="payment-amount" />
+				<input type="text" class="form-control" id="payment-amount" hidden="" />
+			</div>
+			<label>Payment methods</label>
+		</xpath>
+	</template>
+
+	<template id="portal_wallet_transaction_status_page">
+		<t t-call="portal.portal_layout">
+			<div class="mt-3">
+				<div t-if="transaction.state in ['done', 'authorized']" class="alert alert-success">
+					Thank you. Your payment has been processed.
+				</div>
+				<div t-elif="transaction.state == 'pending'" class="alert alert-warning">
+					<i>Pending...</i>. Your wallet will be updated as soon as we receive your payment.
+				</div>
+				<div t-else="" class="alert alert-danger">
+					An error occurred during the payment transaction.
+				</div>
+			</div>
+		</t>
+	</template>
+</odoo>

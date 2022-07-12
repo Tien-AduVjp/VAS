@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record id="crm_opportunity_view_search" model="ir.ui.view">
+			<field name="name">crm.opportunity.search</field>
+			<field name="model">crm.lead</field>
+			<field name="priority">50</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="user_id" string="Salesperson" />
+					<field name="team_id" context="{'invisible_team': False}" />
+					<field name="city" />
+					<field name="lost_reason" />
+					<filter string="My Pipeline" name="ftr_my"
+						domain="[('user_id', '=', uid)]" />
+					<separator />
+					<filter name="ftr_lead" string="Leads"
+						domain="[('type','=', 'lead')]"
+						groups="crm.group_use_lead" />
+					<filter name="ftr_opportunity" string="Opportunities"
+						domain="[('type','=','opportunity')]"
+						groups="crm.group_use_lead" />
+					<separator />
+					<filter name="ftr_won" string="Won"
+						domain="[('probability', '=', 100)]" />
+					<filter name="ftr_lost" string="Lost"
+						domain="[('probability', '=', 0), ('active', '=', False)]" />
+					<separator />
+					<filter name="ftr_inactive" string="Archived"
+						domain="[('active', '=', False)]" />
+					<separator />
+					<group expand="0" string="Extended Filters">
+						<field name="partner_id"
+							filter_domain="[('partner_id','child_of',self)]" />
+						<field name="stage_id" widget="selection"
+							domain="['|', ('team_id', '=', False), ('team_id', '=', 'team_id')]" />
+						<field name="campaign_id" widget="selection" />
+						<field name="medium_id" widget="selection" />
+						<field name="source_id" widget="selection" />
+						<field name="company_id" options="{'no_create': True}"
+							groups="base.group_multi_company" />
+					</group>
+					<group expand="1" string="Group By">
+						<filter name="grp_salesperson" string="Salesperson"
+							context="{'group_by':'user_id'}" />
+						<filter name="grp_saleschannel" string="Sales Team"
+							context="{'group_by':'team_id'}" />
+						<filter name="grp_stage" string="Stage"
+							context="{'group_by':'stage_id'}" />
+						<filter name="grp_city" string="City"
+							context="{'group_by': 'city'}" />
+						<filter name="grp_country" string="Country"
+							context="{'group_by':'country_id'}" />
+						<filter name="grp_compaign" string="Campaign" domain="[]"
+							context="{'group_by':'campaign_id'}" />
+						<filter name="grp_medium" string="Medium" domain="[]"
+							context="{'group_by':'medium_id'}" />
+						<filter name="grp_source" string="Source" domain="[]"
+							context="{'group_by':'source_id'}" />
+						<filter name="grp_lostreason" string="Lost Reason"
+							context="{'group_by':'lost_reason'}" />
+						<filter name="grp_company" string="Company"
+							context="{'group_by':'company_id'}"
+							groups="base.group_multi_company" />
+						<separator orientation="vertical" />
+						<filter name="grp_month" string="Creation Date"
+							context="{'group_by':'create_date:month'}" />
+						<filter name="grp_date_conversion" string="Conversion Date"
+							context="{'group_by': 'date_conversion'}"
+							groups="crm.group_use_lead" />
+						<filter name="grp_date_deadline" string="Expected Closing Date"
+							context="{'group_by':'date_deadline'}" />
+						<filter name="grp_date_closed" string="Closed Date"
+							context="{'group_by':'date_closed'}" />
+					</group>
+				</search>
+			</field>
+		</record>
+
+		<record id="crm_opportunity_view_graph" model="ir.ui.view">
+			<field name="name">crm.opportunity.graph</field>
+			<field name="model">crm.lead</field>
+			<field name="arch" type="xml">
+				<graph>
+					<field name="stage_id" type="row" />
+					<field name="date_deadline" interval="month" type="row" />
+				</graph>
+			</field>
+		</record>
+
+		<record id="crm_lead_view_pivot" model="ir.ui.view">
+			<field name="name">crm.lead.pivot</field>
+			<field name="model">crm.lead</field>
+			<field name="arch" type="xml">
+				<pivot display_quantity="true">
+					<field name="user_id" type="row" />
+					<field name="expected_revenue" type="measure" />
+					<field name="prorated_revenue" type="measure" />
+					<field name="day_close" type="measure" />
+				</pivot>
+			</field>
+		</record>
+
+		<record id="crm_lead_view_graph" model="ir.ui.view">
+			<field name="name">crm.lead.graph</field>
+			<field name="model">crm.lead</field>
+			<field name="arch" type="xml">
+				<graph type="line">
+					<field name="create_date" interval="week" type="row" />
+				</graph>
+			</field>
+		</record>
+
+		<record id="crm_lead_view_map" model="ir.ui.view">
+			<field name="name">crm.lead.map</field>
+			<field name="model">crm.lead</field>
+			<field name="arch" type="xml">
+				<viin_map res_partner="partner_id">
+					<marker-popup>
+						<field name="name" string="Title " />
+						<field name="partner_id" string="Customer " />
+					</marker-popup>
+				</viin_map>
+			</field>
+		</record>
+
+		<record id="crm_opportunity_view_dashboard" model="ir.ui.view">
+			<field name="name">crm.opportunity.dashboard</field>
+			<field name="model">crm.lead</field>
+			<field name="mode">primary</field>
+			<field name="arch" type="xml">
+				<viin_dashboard>
+					<view type="graph" ref="viin_crm.crm_opportunity_view_graph" />
+					<group>
+						<group>
+							<widget name="pie_chart" title="Win/Loss Ratio"
+								attrs="{'groupby': 'won_status', 'domain': '[\'|\', (\'active\', \'=\', False), (\'active\', \'=\', True), (\'won_status\', \'!=\', \'pending\')]'}" />
+							<widget name="pie_chart" title="Medium"
+								attrs="{'groupby': 'medium_id'}" />
+						</group>
+						<group>
+							<widget name="pie_chart" title="Source"
+								attrs="{'groupby': 'source_id'}" />
+							<widget name="pie_chart" title="Campaign"
+								attrs="{'groupby': 'campaign_id'}" />
+						</group>
+						<group>
+							<aggregate name="opportunities" string="Opportunities"
+								group_operator="count" field="id" measure="__count__" />
+							<aggregate name="expected_revenue_aggregate"
+                                field="expected_revenue" string="Expected Revenue" />
+							<aggregate name="prorated_revenue_aggregate"
+								field="prorated_revenue" invisible="1" />
+							<formula name="prorated_revenue"
+								string="Prorated Revenue"
+								value="record.prorated_revenue_aggregate" widget="monetary" />
+							<formula name="deal_size" string="Average Deal Size"
+								value="record.expected_revenue_aggregate / record.opportunities"
+								widget="monetary" />
+						</group>
+						<group>
+							<aggregate name="days_to_assign"
+								string="Days to Assign" field="day_open" group_operator="avg"
+								value_label="days" />
+							<aggregate name="days_to_close" string="Days to Close"
+								field="day_close" group_operator="avg" value_label="days" />
+							<aggregate name="days_exceeding_closing"
+								string="Exceeding Close Days" field="days_exceeding_closing"
+								group_operator="avg" />
+						</group>
+					</group>
+					<view type="pivot" ref="crm.crm_lead_view_pivot" />
+					<view type="viin_cohort" ref="viin_crm.crm_lead_view_viin_cohort" />
+				</viin_dashboard>
+			</field>
+		</record>
+
+		<record id="crm_lead_view_dashboard" model="ir.ui.view">
+			<field name="name">crm.lead.dashboard</field>
+			<field name="model">crm.lead</field>
+			<field name="mode">primary</field>
+			<field name="arch" type="xml">
+				<viin_dashboard>
+					<view type="graph" ref="viin_crm.crm_lead_view_graph" />
+					<group>
+						<group>
+							<widget name="pie_chart" title="Sales Teams"
+								attrs="{'groupby': 'team_id'}" />
+							<widget name="pie_chart" title="Medium"
+								attrs="{'groupby': 'medium_id'}" />
+						</group>
+						<group>
+							<widget name="pie_chart" title="Source"
+								attrs="{'groupby': 'source_id'}" />
+							<widget name="pie_chart" title="Campaign"
+								attrs="{'groupby': 'campaign_id'}" />
+						</group>
+						<group>
+							<aggregate name="leads" string="Leads"
+								group_operator="count_distinct" field="id" measure="__count__" />
+							<aggregate name="days_to_convert"
+								string="Days To Opportunity" group_operator="avg"
+								field="days_to_convert" />
+							<aggregate name="days_to_assign"
+								string="Days to Assign" field="day_open" group_operator="avg"
+								value_label="days" />
+							<formula name="opportunity_percent"
+								string="% Opportunities"
+								value="record.opportunities / record.leads" widget="percentage" />
+						</group>
+						<group>
+							<aggregate name="expected_revenue"
+								string="Expected Revenue" field="expected_revenue"
+								group_operator="sum" widget="monetary" />
+							<aggregate name="prorated_revenue"
+								string="Prorated Revenue" field="prorated_revenue"
+								group_operator="sum" widget="monetary" />
+							<aggregate name="day_close" string="Days to Close"
+								field="day_close" group_operator="avg" value_label="days" />
+							<aggregate name="opportunities" string="Opportunities"
+								field="id" domain="[('type','=','opportunity')]"
+								group_operator="count" invisible="1" />
+						</group>
+					</group>
+					<view type="pivot" ref="viin_crm.crm_lead_view_pivot" />
+				</viin_dashboard>
+			</field>
+		</record>
+
+		<record id="crm_lead_view_viin_cohort" model="ir.ui.view">
+			<field name="name">crm.lead.viin_cohort</field>
+			<field name="model">crm.lead</field>
+			<field name="arch" type="xml">
+				<viin_cohort string="Opportunities"
+					start_date="create_date" stop_date="date_closed" interval="week"
+					mode="churn" />
+			</field>
+		</record>
+
+		<record id="crm.action_report_crm_lead_salesteam"
+			model="ir.actions.act_window">
+			<field name="view_mode">viin_dashboard,pivot,graph,tree,form,viin_cohort</field>
+			<field name="view_id" ref="crm_lead_view_dashboard" />
+			<field name="search_view_id"
+				ref="crm.view_crm_case_leads_filter" />
+		</record>
+
+		<record id="crm.action_report_crm_opportunity_salesteam"
+			model="ir.actions.act_window">
+			<field name="view_mode">viin_dashboard,pivot,graph,tree,form,viin_cohort</field>
+			<field name="view_id" ref="crm_opportunity_view_dashboard" />
+			<field name="search_view_id"
+				ref="viin_crm.crm_opportunity_view_search" />
+		</record>
+
+		<!-- dashboard action -->
+		<record id="crm_opportunity_action_dashboard"
+			model="ir.actions.act_window">
+			<field name="name">Pipeline Analysis</field>
+			<field name="res_model">crm.lead</field>
+			<field name="view_mode">viin_dashboard,pivot,graph,tree,form,viin_cohort</field>
+			<field name="context" eval="{
+				'tree_view_ref': 'crm.crm_case_tree_view_oppor',
+				'default_type': 'opportunity',
+				'search_default_ftr_opportunity': True,
+				'time_ranges': {'field':'create_date', 'range':'last_365_days'}}" />
+			<field name="search_view_id"
+				ref="viin_crm.crm_opportunity_view_search" />
+		</record>
+
+		<record id="crm_opportunity_action_dashboard_dashboard"
+			model="ir.actions.act_window.view">
+			<field name="sequence" eval="1" />
+			<field name="view_mode">viin_dashboard</field>
+			<field name="view_id" ref="crm_opportunity_view_dashboard" />
+			<field name="act_window_id"
+				ref="viin_crm.crm_opportunity_action_dashboard" />
+		</record>
+
+		<record id="crm_opportunity_action_dashboard_pivot"
+			model="ir.actions.act_window.view">
+			<field name="sequence" eval="2" />
+			<field name="view_mode">pivot</field>
+			<field name="view_id" ref="crm.crm_lead_view_pivot" />
+			<field name="act_window_id"
+				ref="viin_crm.crm_opportunity_action_dashboard" />
+		</record>
+
+		<record id="crm_opportunity_action_dashboard_graph"
+			model="ir.actions.act_window.view">
+			<field name="sequence" eval="3" />
+			<field name="view_mode">graph</field>
+			<field name="view_id" ref="viin_crm.crm_opportunity_view_graph" />
+			<field name="act_window_id"
+				ref="viin_crm.crm_opportunity_action_dashboard" />
+		</record>
+
+		<record id="crm_opportunity_action_dashboard_cohort"
+			model="ir.actions.act_window.view">
+			<field name="sequence" eval="4" />
+			<field name="view_mode">viin_cohort</field>
+			<field name="view_id" ref="viin_crm.crm_lead_view_viin_cohort" />
+			<field name="act_window_id"
+				ref="viin_crm.crm_opportunity_action_dashboard" />
+		</record>
+
+		<record id="crm_opportunity_action_dashboard_tree"
+			model="ir.actions.act_window.view">
+			<field name="sequence" eval="5" />
+			<field name="view_mode">tree</field>
+			<field name="view_id" ref="crm.crm_case_tree_view_oppor" />
+			<field name="act_window_id"
+				ref="viin_crm.crm_opportunity_action_dashboard" />
+		</record>
+
+		<record id="crm_lead_action_dashboard"
+			model="ir.actions.act_window">
+			<field name="name">Leads Analysis</field>
+			<field name="res_model">crm.lead</field>
+			<field name="view_mode">viin_dashboard,pivot,graph,tree</field>
+			<field name="domain">['|',('active','=',True),('active','=',False)]</field>
+			<field name="search_view_id"
+				ref="crm.view_crm_case_leads_filter" />
+		</record>
+
+		<record id="crm_lead_action_dashboard_dashboard"
+			model="ir.actions.act_window.view">
+			<field name="sequence" eval="1" />
+			<field name="view_mode">viin_dashboard</field>
+			<field name="view_id" ref="crm_lead_view_dashboard" />
+			<field name="act_window_id"
+				ref="viin_crm.crm_lead_action_dashboard" />
+		</record>
+
+		<record id="crm_lead_action_dashboard_pivot"
+			model="ir.actions.act_window.view">
+			<field name="sequence" eval="2" />
+			<field name="view_mode">pivot</field>
+			<field name="view_id" ref="viin_crm.crm_lead_view_pivot" />
+			<field name="act_window_id"
+				ref="viin_crm.crm_lead_action_dashboard" />
+		</record>
+
+		<record id="crm_lead_action_dashboard_graph"
+			model="ir.actions.act_window.view">
+			<field name="sequence" eval="3" />
+			<field name="view_mode">graph</field>
+			<field name="view_id" ref="viin_crm.crm_lead_view_graph" />
+			<field name="act_window_id"
+				ref="viin_crm.crm_lead_action_dashboard" />
+		</record>
+
+		<!-- add dashboard to pipeline action -->
+		<record id="crm_lead_action_pipeline_view_dashboard"
+			model="ir.actions.act_window.view">
+			<field name="sequence" eval="7" />
+			<field name="view_mode">viin_dashboard</field>
+			<field name="view_id"
+				ref="viin_crm.crm_opportunity_view_dashboard" />
+			<field name="act_window_id" ref="crm.crm_lead_action_pipeline" />
+		</record>
+
+		<!-- add cohort to pipeline action -->
+		<record id="crm_lead_action_pipeline_view_cohort"
+			model="ir.actions.act_window.view">
+			<field name="sequence" eval="6" />
+			<field name="view_mode">viin_cohort</field>
+			<field name="view_id" ref="viin_crm.crm_lead_view_viin_cohort" />
+			<field name="act_window_id" ref="crm.crm_lead_action_pipeline" />
+		</record>
+
+		<!-- add map to pipeline action -->
+		<record id="crm_lead_action_pipeline_view_map"
+			model="ir.actions.act_window.view">
+			<field name="sequence" eval="7" />
+			<field name="view_mode">viin_map</field>
+			<field name="view_id" ref="viin_crm.crm_lead_view_map" />
+			<field name="act_window_id" ref="crm.crm_lead_action_pipeline" />
+		</record>
+
+		<!-- add dashboard to res partner action -->
+		<record id="crm_lead_action_partner_view_dashboard"
+			model="ir.actions.act_window.view">
+			<field name="sequence" eval="6" />
+			<field name="view_mode">viin_dashboard</field>
+			<field name="act_window_id" ref="crm.crm_lead_opportunities" />
+		</record>
+
+		<!-- add viin_cohort to res partner action -->
+		<record id="crm_opportunity_partner_add_cohort"
+			model="ir.actions.act_window.view">
+			<field name="sequence" eval="7" />
+			<field name="view_mode">viin_cohort</field>
+			<field name="act_window_id" ref="crm.crm_lead_opportunities" />
+		</record>
+
+		<!-- menuitem -->
+		<record id="crm.crm_opportunity_report_menu" model="ir.ui.menu">
+			<field name="action"
+				ref="viin_crm.crm_opportunity_action_dashboard" />
+		</record>
+
+		<record id="crm.crm_opportunity_report_menu_lead"
+			model="ir.ui.menu">
+			<field name="action" ref="viin_crm.crm_lead_action_dashboard" />
+		</record>
+
+	</data>
+</odoo>

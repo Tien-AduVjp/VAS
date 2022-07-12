@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="ReturnOrderScreen" owl="1">
+        <div class='return-screen screen'>
+            <div class="screen-content">
+                <div class="top-content">
+                    <div class="button back" t-on-click="trigger('close-screen')">
+                        <i class="fa fa-angle-double-left fa-fw"></i>
+                        <span class="back_text">Back</span>
+                    </div>
+                    <div class="top-content-center">
+                        <h1>
+                            Return
+                            <t t-esc='name' />
+                        </h1>
+                    </div>
+                    <div class="button next" t-on-click="refreshData()" name="button-refresh">
+                        <i class='fa fa-undo' />
+                    </div>
+
+                    <div class="button next" t-on-click="returnOrder()" name="button-save">
+                        <i class='fa fa-floppy-o' />
+                    </div>
+                </div>
+                <div class='order-details-box clearfix'>
+                    <div class='order-details-box-left'>
+                        <div class='order-details-item'>
+                            <span class='order-details-item-label'>Customer</span>
+                            <span class='order-details-item-content'>
+                                <t t-esc='customerName' />
+                            </span>
+                        </div>
+                        <div class='order-details-item'>
+                            <span class='order-details-item-label'>Salesman</span>
+                            <span class='order-details-item-content'>
+                                <t t-esc='saleName' />
+                            </span>
+                        </div>
+                    </div>
+                    <div class='order-details-box-right'>
+                        <div class='order-details-item'>
+                            <span class='order-details-item-label'>Date Order</span>
+                            <span class='order-details-item-content'>
+                                <t t-esc='date' />
+                            </span>
+                        </div>
+                        <div class='order-details-item'>
+                            <span class='order-details-item-label'>Status</span>
+                            <span class='order-details-item-content'>
+                                <t t-esc='status' />
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class='order-lines'>
+                    <div class="order-line header">
+                        <div class="cell line-product">Product</div>
+                        <div class="cell">Quantity</div>
+                        <div class="cell">Unit Price</div>
+                        <div class="cell">Discount(%)</div>
+                        <div class="cell">Taxes</div>
+                        <div class="cell">Subtotal w/o Tax</div>
+                        <div class="cell">Subtotal</div>
+                        <div class="cell button-delete"></div>
+                    </div>
+                    <t t-set="index" t-value="0" />
+                    <t t-foreach="orderlines" t-as="line" t-key="line.cid">
+                        <ReturnOrderLine line="line" highlightedOrderLine="highlightedOrderLine" index="index" />
+                        <t t-set="index" t-value="index+1" />
+                    </t>
+                </div>
+            </div>
+        </div>
+    </t>
+
+</templates>

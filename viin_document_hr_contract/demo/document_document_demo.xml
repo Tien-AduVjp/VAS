@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="document_document_hr_contract1_demo" model="document.document">
+        <field name="name">Employee Contract</field>
+        <field name="datas" type="base64" file="viin_document_hr_contract/demo/documents/Contract1.pdf"/>
+        <field name="workspace_id" ref="document_workspace_hr_contract_administration_demo"/>
+        <field name="owner_id" ref="base.user_admin"/>
+        <field name="tag_ids" eval="[
+            (4, ref('document_tag_hr_contract_contract')),
+            (4, ref('document_tag_hr_contract_running')),
+            (4, ref('viin_document.document_tag_approve'))]"/>
+    </record>
+
+    <record id="document_document_hr_contract2_demo" model="document.document">
+        <field name="name">Contract of Employment</field>
+        <field name="datas" type="base64" file="viin_document_hr_contract/demo/documents/Contract2.pdf"/>
+        <field name="workspace_id" ref="document_workspace_hr_contract_administration_demo"/>
+        <field name="owner_id" ref="base.user_admin"/>
+        <field name="tag_ids" eval="[
+            (4, ref('document_tag_hr_contract_contract')),
+            (4, ref('document_tag_hr_contract_expired')),
+            (4, ref('viin_document.document_tag_approve'))]"/>
+    </record>
+
+</odoo>

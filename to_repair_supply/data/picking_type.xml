@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="1">
+	    <record id="sequence_picking_type_repair_supply" model="ir.sequence">
+	        <field name="name">Picking Type Repair Supply</field>
+	        <field name="code">picking.type.repair.supply</field>
+	        <field name="prefix">PRS</field>
+	        <field name="padding">5</field>
+	        <field name="number_next">1</field>
+	        <field name="number_increment">1</field>
+	    </record>
+
+		<record id="picking_type_repair_supply" model="stock.picking.type">
+			<field name="name">Repair Supply</field>
+			<field name="sequence_id" ref="sequence_picking_type_repair_supply" />
+			<field name="sequence_code">OUT</field>
+			<field name="warehouse_id" eval="False" />
+			<field name="code">repair_supply</field>
+			<field name="use_existing_lots" eval="True"/>
+		</record>
+	</data>
+
+</odoo>

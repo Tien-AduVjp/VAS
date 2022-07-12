@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_product_categ_accountant,product.category.accountant,product.model_product_category,account.group_account_user,1,1,1,0
+access_product_categ_account_admin,product.category.account_admin,product.model_product_category,account.group_account_manager,1,1,1,1
+access_account_change_lock_date_accountant,product.category.accountant,model_account_change_lock_date,account.group_account_user,1,1,1,0
+access_account_change_lock_date_account_admin,product.category.account_admin,model_account_change_lock_date,account.group_account_manager,1,1,1,1
+access_account_fiscal_year_user,account.fiscal.year.user,model_account_fiscal_year,account.group_account_user,1,0,0,0
+access_account_fiscal_year_manager,account.fiscal.year.manager,model_account_fiscal_year,account.group_account_manager,1,1,1,1

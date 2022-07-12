@@ -1,0 +1,16 @@
+<odoo>
+
+	<record id="hr_meal_order_line_view_tree" model="ir.ui.view">
+		<field name="name">hr.meal.order.line.tree</field>
+		<field name="model">hr.meal.order.line</field>
+		<field name="inherit_id" ref="to_hr_meal.hr_meal_order_line_view_tree" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='total_price']" position="after">
+				<field name="employee_price" />
+				<field name="employee_amount" />
+				<field name="company_amount" />
+			</xpath>
+		</field>
+	</record>
+
+</odoo>

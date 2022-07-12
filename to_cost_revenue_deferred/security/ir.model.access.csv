@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_cost_revenue_deferral_category_employee,cost.revenue.deferral.category.employee,model_cost_revenue_deferral_category,base.group_user,1,0,0,0
+access_cost_revenue_deferral_line_billing_user,cost.revenue.deferral.line.billing_user,model_cost_revenue_deferral_line,account.group_account_invoice,1,0,0,0
+access_cost_revenue_deferral_billing_user,cost.revenue.deferral.billing_user,model_cost_revenue_deferral,account.group_account_invoice,1,0,0,0
+access_cost_revenue_deferral_line_user,cost.revenue.deferral.line.user,model_cost_revenue_deferral_line,account.group_account_user,1,1,1,1
+access_cost_revenue_deferral_user,cost.revenue.deferral.user,model_cost_revenue_deferral,account.group_account_user,1,1,1,1
+access_cost_revenue_deferral_category_manager,cost.revenue.deferral.category.manager,model_cost_revenue_deferral_category,account.group_account_manager,1,1,1,1
+access_deferral_confirm_user,deferral.confirm.user,model_deferral_confirm,account.group_account_user,1,1,1,0
+access_deferral_disposal_user,deferral.disposal.user,model_deferral_disposal,account.group_account_user,1,1,1,0

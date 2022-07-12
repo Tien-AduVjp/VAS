@@ -1,0 +1,80 @@
+<odoo>
+	<data>
+		<record id="fleet_vehicle_view_form" model="ir.ui.view">
+			<field name="name">fleet.vehicle.form</field>
+			<field name="model">fleet.vehicle</field>
+			<field name="inherit_id" ref="fleet.fleet_vehicle_view_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='driver_id']" position="before">
+					<field name="class_id" />
+					<field name="type_id"
+						attrs="{'invisible':[('class_id','=',False)]}" force_save="1" />
+					<field name="type" invisible="1" />
+				</xpath>
+				<xpath expr="//field[@name='vin_sn']" position="after">
+					<field name="engine_sn" />
+					<label for="self_weight" />
+					<div class="o_row" name="self_weight">
+						<field name="self_weight" />
+						<span>kg</span>
+					</div>
+				</xpath>
+				<xpath expr="//field[@name='acquisition_date']"
+					position="before">
+					<field name="year_made" />
+				</xpath>
+				<xpath expr="//field[@name='color']" position="after">
+					<label for="trailer_inner_height"
+						attrs="{'invisible':[('type','!=','truck')]}" />
+					<div class="o_row" name="trailer_inner_height"
+						attrs="{'invisible':[('type','!=','truck')]}">
+						<field name="trailer_inner_height" />
+						<span>m</span>
+					</div>
+
+					<label for="trailer_inner_width"
+						attrs="{'invisible':[('type','!=','truck')]}" />
+					<div class="o_row" name="trailer_inner_width"
+						attrs="{'invisible':[('type','!=','truck')]}">
+						<field name="trailer_inner_width" />
+						<span>m</span>
+					</div>
+
+					<label for="trailer_inner_length"
+						attrs="{'invisible':[('type','!=','truck')]}" />
+					<div class="o_row" name="trailer_inner_length"
+						attrs="{'invisible':[('type','!=','truck')]}">
+						<field name="trailer_inner_length" />
+						<span>m</span>
+					</div>
+				</xpath>
+			</field>
+		</record>
+
+		<record id="fleet_vehicle_view_search" model="ir.ui.view">
+			<field name="name">fleet.vehicle.search</field>
+			<field name="model">fleet.vehicle</field>
+			<field name="inherit_id" ref="fleet.fleet_vehicle_view_search" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='state_id']" position="after">
+					<separator />
+					<field name="class_id" />
+					<field name="type_id" />
+				</xpath>
+				<xpath expr="//filter[@name='inactive']" position="before">
+					<filter name="ftr_type_car" string="Cars"
+						domain="[('type','=','car')]" />
+					<filter name="ftr_type_truck" string="Trucks"
+						domain="[('type','=','truck')]" />
+					<filter name="ftr_type_bus" string="Buses"
+						domain="[('type','=','bus')]" />
+					<separator />
+				</xpath>
+				<xpath expr="//filter[@name='groupby_model']" position="after">
+					<filter name="grp_class_id" string="Type"
+						context="{'group_by' : 'class_id'}" />
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,1990 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_fleet_operation_planning
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-29 10:47+0000\n"
+"PO-Revision-Date: 2022-06-29 10:47+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_fleet_operation_planning
+#: model:mail.template,body_html:to_fleet_operation_planning.email_template_trip_schedule
+msgid ""
+"\n"
+"                \n"
+"                    <p>Dear ${object.driver_id.name},</p>\n"
+"                    <p>The trip <strong>${object.name}</strong> has been confirmed assigning you as the driver.</p>\n"
+"                    <p>Please find attached the printed report on the trip's details</p>\n"
+"                    <p>You can reply to this email if you have any questions.</p>\n"
+"                    <p>Thank you,</p>\n"
+"\n"
+"                    <p style=\"color:#eeeeee;\">\n"
+"                    % if object.operator_id and object.operator_id.signature:\n"
+"                        ${object.operator_id.signature | safe}\n"
+"                    % endif\n"
+"                    </p>\n"
+"                \n"
+"            "
+msgstr ""
+"\n"
+"<p>Xin chào ${object.driver_id.name},</p>\n"
+"<p>Chuyến đi số <strong>${object.name}</strong> đã được ấn định và phân công bạn làm lái xe.</p>\n"
+"<p>Vui lòng xem đính kèm để biết chi tiết về chuyến đi.</p>\n"
+"<p>Nếu có bất kỳ câu hỏi nào, đừng ngần ngại trả lời email này.</p>\n"
+"<p>Cám ơn,</p>\n"
+"\n"
+"<p style=\"color:#eeeeee;\">\n"
+"% if object.operator_id and object.operator_id.signature:\n"
+"    ${object.operator_id.signature | safe}\n"
+"% endif\n"
+"</p>\n"
+
+#. module: to_fleet_operation_planning
+#: model:mail.template,report_name:to_fleet_operation_planning.email_template_trip_schedule
+msgid ""
+"${(object.name or '').replace('/','_')}${object.state == 'draft' and "
+"'_draft' or ''}"
+msgstr ""
+"${(object.name or '').replace('/','_')}_${object.state == 'draft' and '_dự "
+"thảo' or ''}"
+
+#. module: to_fleet_operation_planning
+#: model:ir.actions.report,print_report_name:to_fleet_operation_planning.report_vehicle_trip
+msgid "'Trip - %s' % (object.name)"
+msgstr "'Chuyến đi - %s' % (object.name)"
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/models/fleet_vehicle_trip.py:0
+#, python-format
+msgid "- Route Name: %s; Route ID: %s\n"
+msgstr "- Tên Tuyến: %s; ID Tuyến: %s\n"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.route_waypoint_form_view
+msgid "<span>hours</span>"
+msgstr "<span>giờ</span>"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model,name:to_fleet_operation_planning.model_abstract_vehicle_trip_wizard
+msgid "Abstract model to share business logics between vehicle trip wizards"
+msgstr ""
+"Abstract model để chia sẻ logic về nghiệp vụ giữa các đồ thuật liên quan đến"
+" vehicle trip"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle__access_partner_ids
+msgid "Access Partner"
+msgstr "Đối tác Truy cập"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__message_needaction
+msgid "Action Needed"
+msgstr "Cần có Hành động"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__activity_ids
+msgid "Activities"
+msgstr "Các hoạt động"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__activity_state
+msgid "Activity State"
+msgstr "Trạng thái Hoạt động"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Biểu tượng kiểu hoạt động"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_form
+msgid "Actual"
+msgstr "Thực tế"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis__actual_distance
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__actual_distance
+msgid "Actual Distance"
+msgstr "Khoảng cách thực tế"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis__operation_duration
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__operation_duration
+msgid "Actual Duration"
+msgstr "Thời lượng Thực tế"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_waypoint__address_id
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.report_vehicle_trip_view_document
+msgid "Address"
+msgstr "Địa chỉ"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_log_services__address_id
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_vehicle_log_services_view_search
+msgid "Address/Location"
+msgstr "Địa điểm gốc"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields.selection,name:to_fleet_operation_planning.selection__wizard_generate_routes__type__all_trips
+msgid "All Trips"
+msgstr "Tất cả các chuyến"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__amount
+msgid "Amount"
+msgstr "Tổng tiền"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.report_vehicle_trip_view_document
+msgid "Assigned Driver"
+msgstr "Lái xe"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_res_partner__assistant_done_trip_ids
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_res_users__assistant_done_trip_ids
+msgid "Assistant Trips"
+msgstr "Chuyến Lái Phụ"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_res_partner__assistant_done_trip_count
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_res_users__assistant_done_trip_count
+msgid "Assistant Trips Count"
+msgstr "SL Chuyến Lái phụ"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__assistant_ids
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_start_wizard__assistant_ids
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.report_vehicle_trip_view_document
+msgid "Assistants"
+msgstr "Phụ xe/Trợ lý"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__message_attachment_count
+msgid "Attachment Count"
+msgstr "Số lượng đính kèm"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__average_fuel_consumption_per_hundred
+msgid "Ave. Fuel Consumption per Hundred"
+msgstr "Tiêu thụ Nhiên liệu Mỗi 100 km/dặm"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_section__ave_speed
+msgid "Ave. Speed"
+msgstr "Tốc độ TB"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.report_vehicle_trip_view_document
+msgid "Ave. Speed (km/h)"
+msgstr "Tốc độ Trung bình (km/h)"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_res_partner__ave_stop_duration
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_res_users__ave_stop_duration
+msgid "Average Stop Duration"
+msgstr "Thời lượng Dừng Trung Bình"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.generate_routes_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.vehicle_strip_end_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.vehicle_strip_start_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.vehicle_trip_register_cost_wizard_view
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_form
+msgid "Cancel Trip"
+msgstr "Huỷ chuyến"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields.selection,name:to_fleet_operation_planning.selection__fleet_vehicle_trip__state__cancelled
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_search
+msgid "Cancelled"
+msgstr "Bị Huỷ"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_wizard_generate_routes__raise_error_if_dupplication_routes_found
+msgid ""
+"Check this if you want to be warned when routes duplication found. In such "
+"the case, Odoo just tries to warn you if it find duplication. Routes will be"
+" generated only if no such the duplication found."
+msgstr ""
+"Đánh dấu trường này nếu bạn muốn được cảnh báo về các tuyến trùng nhau. "
+"Trong trường hợp này, Odoo sẽ hiển thị cảnh báo nếu nó tìm thấy tuyến trùng "
+"lặp. Các tuyến sẽ chỉ được sinh ra nếu không có tuyến trùng lặp."
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_waypoint__city
+msgid "City"
+msgstr "Thành phố"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_form
+msgid "Confirm Trip"
+msgstr "Xác nhận"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields.selection,name:to_fleet_operation_planning.selection__fleet_vehicle_trip__state__confirmed
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_search
+msgid "Confirmed"
+msgstr "Đã xác nhận"
+
+#. module: to_fleet_operation_planning
+#: model:ir.actions.act_window,name:to_fleet_operation_planning.fleet_confirmed_trip_action
+msgid "Confirmed/Planned Trips"
+msgstr "Chuyến đã Xác nhận/Hoạch định"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model,name:to_fleet_operation_planning.model_res_partner
+msgid "Contact"
+msgstr "Liên hệ"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis__sum_cost
+msgid "Cost"
+msgstr "Chi phí"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_waypoint__country_id
+msgid "Country"
+msgstr "Quốc gia"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.vehicle_trip_register_cost_wizard_view
+msgid "Create"
+msgstr "Tạo"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__create_uid
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_section__create_uid
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_waypoint__create_uid
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_end_wizard__create_uid
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__create_uid
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_start_wizard__create_uid
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_wizard_generate_routes__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__create_date
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_section__create_date
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_waypoint__create_date
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_end_wizard__create_date
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__create_date
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_start_wizard__create_date
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_wizard_generate_routes__create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.constraint,message:to_fleet_operation_planning.constraint_vehicle_trip_register_cost_wizard_zero_amount_check
+msgid "Creating cost of zero amount does not make sense!"
+msgstr "Chi phí bằng 0 không có ý nghĩa"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__currency_id
+msgid "Currency"
+msgstr "Tiền tệ"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.report_vehicle_trip_view_document
+msgid "Current Odometer:"
+msgstr "Chỉ số Công-tơ-mét hiện hành:"
+
+#. module: to_fleet_operation_planning
+#: model:ir.ui.menu,name:to_fleet_operation_planning.fleet_trip_dashboard_menu
+msgid "Dashboard"
+msgstr "Bảng thông tin"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__date
+msgid "Date"
+msgstr "Ngày"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_search
+msgid "Date End"
+msgstr "Ngày giờ Kết thúc"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_search
+msgid "Date Start"
+msgstr "Ngày giờ Bắt đầu"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle__address_id
+msgid "Default Address"
+msgstr "Địa chỉ Mặc định"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_res_partner__default_stop_duration
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_res_users__default_stop_duration
+msgid "Default Stop Duration"
+msgstr "Thời lượng Dừng Mặc định"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__description
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_form
+msgid "Description"
+msgstr "Miêu tả"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_abstract_vehicle_trip_wizard__display_name
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis__display_name
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle__display_name
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_log_services__display_name
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_odometer__display_name
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__display_name
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_section__display_name
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_waypoint__display_name
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_res_partner__display_name
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_route_route__display_name
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_route_section__display_name
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_route_waypoint__display_name
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_end_wizard__display_name
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__display_name
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_start_wizard__display_name
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_wizard_generate_routes__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_section__distance
+msgid "Distance"
+msgstr "Khoảng cách"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis__distance_deviation
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__distance_deviation
+msgid "Distance Deviation"
+msgstr "Độ lệch Quãng đường"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__distance_unit
+msgid "Distance Unit"
+msgstr "Đơn vị khoảng cách"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields.selection,name:to_fleet_operation_planning.selection__fleet_trips_analysis__state__done
+#: model:ir.model.fields.selection,name:to_fleet_operation_planning.selection__fleet_vehicle_trip__state__done
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_analysis_search
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_form
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_search
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.vehicle_strip_end_wizard_form_view
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: to_fleet_operation_planning
+#: model:ir.actions.act_window,name:to_fleet_operation_planning.employee_fleet_done_trip_action
+#: model:ir.actions.act_window,name:to_fleet_operation_planning.fleet_done_trip_action
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_driver_view_form
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.view_employee_form
+msgid "Done Trips"
+msgstr "Chuyến đã Hoàn thành"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields.selection,name:to_fleet_operation_planning.selection__fleet_vehicle_trip__state__draft
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_search
+msgid "Draft"
+msgstr "Dự thảo"
+
+#. module: to_fleet_operation_planning
+#: model:ir.ui.menu,name:to_fleet_operation_planning.fleet_trip_menu
+msgid "Draft Trips"
+msgstr "Chuyến Dự thảo"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis__driver_id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__driver_id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_start_wizard__driver_id
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_analysis_search
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_search
+msgid "Driver"
+msgstr "Lái xe"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_res_partner__driver_done_trip_ids
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_res_users__driver_done_trip_ids
+msgid "Driver Trips"
+msgstr "Chuyến với vai trò Lái chính"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_res_partner__driver_done_trip_count
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_res_users__driver_done_trip_count
+msgid "Driver Trips Count"
+msgstr "SL Chuyến với vai trò Lái chính"
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/models/fleet_vehicle_trip.py:0
+#, python-format
+msgid ""
+"Driver and Assistant must not be the same person. Please either change the "
+"driver or remove him from assistant tag box."
+msgstr ""
+"Lái xe và Phụ xe/Trợ lý không được phép là cùng một người. Vui lòng đổi Lái "
+"xe hoặc gỡ lái xe khỏi trường Phụ xe/Trợ lý."
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.mail_template_data_notification_email_fleet_vehicle_trip
+msgid "ERPOnline"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model,name:to_fleet_operation_planning.model_hr_employee
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis__employee_id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__employee_id
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_analysis_search
+msgid "Employee"
+msgstr "Nhân viên"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis__end_date
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__end_date
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_end_wizard__operation_end
+msgid "End Date"
+msgstr "Ngày kết thúc"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_analysis_search
+msgid "Ending Month"
+msgstr "Tháng Kết thúc"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis__est_distance
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__est_distance
+msgid "Est. Distance"
+msgstr "Tổng chiều Dài"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.report_vehicle_trip_view_document
+msgid "Est. Distance (km)"
+msgstr "Quãng đường Dự kiến (km)"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis__est_trip_time
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__est_trip_time
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_section__est_trip_time
+msgid "Est. Duration"
+msgstr "Thời lượng Dự kiến"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.report_vehicle_trip_view_document
+msgid "Est. Duration (hr)"
+msgstr "Thời lượng Dự kiến (giờ)"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.report_vehicle_trip_view_document
+msgid "Estimated Distance"
+msgstr "Quảng đường Dự kiến"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.report_vehicle_trip_view_document
+msgid "Estimated Duration"
+msgstr "Thời lượng Dự kiến"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.report_vehicle_trip_view_document
+msgid "Expected End"
+msgstr "Kết thúc Dự kiến"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.report_vehicle_trip_view_document
+msgid "Expected Start"
+msgstr "Bắt đầu Dự kiến"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_analysis_search
+msgid "Extended Filters..."
+msgstr "Các bộ lọc Mở rộng..."
+
+#. module: to_fleet_operation_planning
+#: model:ir.ui.menu,name:to_fleet_operation_planning.fleet_planning_menu
+msgid "Fleet Operations"
+msgstr "Khai thác Phương tiện"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model,name:to_fleet_operation_planning.model_fleet_vehicle_trip
+msgid "Fleet Trip"
+msgstr "Chuyến"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_calendar
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_confirmed_calendar
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_planning_calendar
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.view_partner_form
+msgid "Fleet Trips"
+msgstr "Các Chuyến"
+
+#. module: to_fleet_operation_planning
+#: model:ir.actions.act_window,name:to_fleet_operation_planning.fleet_trip_analysis_action_window
+#: model:ir.model,name:to_fleet_operation_planning.model_fleet_trips_analysis
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_analysis_graph
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_analysis_pivot_view
+msgid "Fleet Trips Analysis"
+msgstr "Phân tích các Chuyến"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__message_follower_ids
+msgid "Followers"
+msgstr "Theo dõi"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Người theo dõi (Các kênh)"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Người theo dõi (Các đối tác)"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Font biểu tượng ví dụ: fa-tasks"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_section__address_from_id
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.report_vehicle_trip_view_document
+msgid "From"
+msgstr "Từ"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.actions.act_window,help:to_fleet_operation_planning.fleet_trip_analysis_action_window
+msgid ""
+"From this view, have an analysis of your different\n"
+"\t\t\t\ttrips against different vehicles over the time."
+msgstr ""
+"Từ giao diện này, bạn có một bản phân tích các chuyến với\n"
+"               các phương tiện khác nhau qua thời gian."
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis__fuel_consumption
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__fuel_consumption
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_end_wizard__fuel_consumption
+msgid "Fuel Consumption"
+msgstr "Tiêu thụ Nhiên liệu"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__fuel_consumption
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_vehicle_trip_end_wizard__fuel_consumption
+msgid ""
+"Fuel consumption (in liters) during the whole trip. This information is just"
+" another figure beside fleet vehicle fuel logs"
+msgstr ""
+"Tiêu thụ Nhiên liệu (tính bằng lít) trong cả chuyến. Thông tin này làm một "
+"chỉ số bổ sung bên cạnh nhật ký nhiên liệu"
+
+#. module: to_fleet_operation_planning
+#: model:ir.ui.menu,name:to_fleet_operation_planning.route_generator_menu
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.generate_routes_wizard_form_view
+msgid "Generate Routes"
+msgstr "Sinh Tuyến từ Chuyến"
+
+#. module: to_fleet_operation_planning
+#: model:ir.actions.act_window,name:to_fleet_operation_planning.launch_generate_routes_wizard
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.generate_routes_wizard_form_view
+msgid "Generate Routes from Trips"
+msgstr "Sinh Tuyến từ Chuyến"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_analysis_search
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_search
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_abstract_vehicle_trip_wizard__id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis__id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle__id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_log_services__id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_odometer__id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_section__id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_waypoint__id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_hr_employee__id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_res_partner__id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_route_route__id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_route_section__id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_route_waypoint__id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_end_wizard__id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_start_wizard__id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_wizard_generate_routes__id
+msgid "ID"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_vehicle_view_search
+msgid "Idle Today"
+msgstr "Rảnh Hôm nay"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_vehicle_view_search
+msgid "Idle in Seven Days"
+msgstr "Rảnh trong 7 Ngày tiếp"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_vehicle_view_search
+msgid "Idle in Three Days"
+msgstr "Rảnh trong 3 Ngày tiếp"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_vehicle_view_search
+msgid "Idle in Two Days"
+msgstr "Rảnh trong 2 Ngày tiếp"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__message_needaction
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Nếu đánh dấu chọn, các thông điệp mới yêu cầu sự có mặt của bạn."
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__message_has_error
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Nếu được đánh dấu, thông điệp có lỗi về gửi tin."
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_wizard_generate_routes__update_trip
+msgid "If checked, the routes selected below will be updated with new route."
+msgstr ""
+"Nếu đánh dấu, tuyến được chọn dưới đây sẽ được cập nhật bằng tuyến mới."
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_search
+msgid "In Next 7 Days"
+msgstr "Trong 7 Ngày tiếp"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields.selection,name:to_fleet_operation_planning.selection__fleet_trips_analysis__state__progress
+#: model:ir.model.fields.selection,name:to_fleet_operation_planning.selection__fleet_vehicle_trip__state__progress
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_search
+msgid "In Operation"
+msgstr "Đang Khai thác"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_analysis_search
+msgid "In progress"
+msgstr "Đang Xử lý"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_res_partner__default_stop_duration
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_res_users__default_stop_duration
+msgid ""
+"In vehicle trip planning, this is the duration of stop time (in hours) that "
+"the vehicle usually takes when staying at this address"
+msgstr ""
+"Trong việc lập kế hoạch chuyến, đây là khoảng thời gian dừng (tính bằng giờ)"
+" mà phương tiện cần khi dừng ở điểm này"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__message_is_follower
+msgid "Is Follower"
+msgstr "Là người theo dõi"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields.selection,name:to_fleet_operation_planning.selection__fleet_trips_analysis__odometer_unit__kilometers
+msgid "Kilometers"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_abstract_vehicle_trip_wizard____last_update
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis____last_update
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle____last_update
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_log_services____last_update
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_odometer____last_update
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip____last_update
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_section____last_update
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_waypoint____last_update
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_res_partner____last_update
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_route_route____last_update
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_route_section____last_update
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_route_waypoint____last_update
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_end_wizard____last_update
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard____last_update
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_start_wizard____last_update
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_wizard_generate_routes____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__write_uid
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_section__write_uid
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_waypoint__write_uid
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_end_wizard__write_uid
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__write_uid
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_start_wizard__write_uid
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_wizard_generate_routes__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__write_date
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_section__write_date
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_waypoint__write_date
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_end_wizard__write_date
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__write_date
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_start_wizard__write_date
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_wizard_generate_routes__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_analysis_search
+msgid "Last Year"
+msgstr "Năm ngoái"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_form
+msgid "Log Service"
+msgstr "Ghi nhận dịch vụ"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Đính kèm chính"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__message_has_error
+msgid "Message Delivery error"
+msgstr "Có Lỗi Gửi Thông điệp"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__message_ids
+msgid "Messages"
+msgstr "Thông điệp"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields.selection,name:to_fleet_operation_planning.selection__fleet_trips_analysis__odometer_unit__miles
+msgid "Miles"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Hạn chót hoạt động"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Hạn chót lần hành động kế tiếp"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__activity_summary
+msgid "Next Activity Summary"
+msgstr "Tóm tắt hoạt động tiếp theo"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__activity_type_id
+msgid "Next Activity Type"
+msgstr "Kiểu hành động kế tiếp"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle__next_scheduled_trip_id
+msgid "Next Scheduled Trip"
+msgstr "Chuyến được ấn định tiếp theo"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle__next_scheduled_trip_date
+msgid "Next Trip Date"
+msgstr "Ngày của Chuyến kế tiếp"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Số lượng Hành động"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Số thông điệp cần có hành động"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Số lượng các thông điệp có lỗi về gửi tin"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Số thông điệp chưa đọc"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__odometer_ids
+msgid "Odometer"
+msgstr "Chỉ số Công tơ mét"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis__odometer_unit
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__odometer_unit
+msgid "Odometer Unit"
+msgstr "Đơn vị Công tơ mét"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_abstract_vehicle_trip_wizard__odometer
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis__odometer_value
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_end_wizard__odometer
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__odometer
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_start_wizard__odometer
+msgid "Odometer Value"
+msgstr "Chỉ số Công tơ mét"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model,name:to_fleet_operation_planning.model_fleet_vehicle_odometer
+msgid "Odometer log for a vehicle"
+msgstr "Nhật ký Công tơ mét cho từng phương tiện"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_abstract_vehicle_trip_wizard__odometer
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_vehicle_trip_end_wizard__odometer
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__odometer
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_vehicle_trip_start_wizard__odometer
+msgid "Odometer measure of the vehicle at the moment of this log"
+msgstr "Chỉ số củacông tơ mét của phương tiện tại thời điểm ghi nhật ký này"
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/models/route_route.py:0
+#, python-format
+msgid ""
+"Only Fleet Managers can cancel routes those are have existing trips linked!"
+msgstr ""
+"Chỉ người Quản lý Đội phương tiện mới có thể huỷ các tuyến mà có các chuyến "
+"liên kết đến!"
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/wizard/vehicle_trip_register_cost_wizard.py:0
+#, python-format
+msgid ""
+"Only Fleet Managers can create negative costs (amount < 0). If you really "
+"want to create a nagative cost (to correct your previous mistake), please "
+"ask the managers for help"
+msgstr ""
+"Chỉ có người được phân quyền Quản lý ở Đội phương tiện mới có thể tạo chi "
+"phí âm. Nếu bạn muốn tạo chi phí âm (vd: để bù vào một chi phí lỗi do nhập "
+"liệu), vui lòng liên hệ với người Quản lý Đội phương tiện để được trợ giúp."
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/models/fleet_vehicle_trip.py:0
+#, python-format
+msgid ""
+"Only users with Operator access rights can cancel a trip that is in either "
+"In Operation or Done state!"
+msgstr ""
+"Chỉ người được phân quyền Khai thác mới có thể huỷ một chuyến mà ở trạng "
+"thái Đang thực hiện hoặc Hoàn thành!"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle__operation_distance
+msgid "Operation Distance"
+msgstr "Khoảng cách Khai thác"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__operation_end
+msgid "Operation End Date"
+msgstr "Ngày giờ Kết thúc"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle__operation_hours
+msgid "Operation Hours"
+msgstr "Giờ Khai thác"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__operation_start
+msgid "Operation Start Date"
+msgstr "Ngày giờ Bắt đầu"
+
+#. module: to_fleet_operation_planning
+#: model:ir.ui.menu,name:to_fleet_operation_planning.fleet_operations_menu
+msgid "Operations"
+msgstr "Hoạt động"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__operator_id
+#: model:res.groups,name:to_fleet_operation_planning.fleet_group_operator
+msgid "Operator"
+msgstr "Người Khai thác"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_form
+msgid "Other information"
+msgstr "Thông tin khác"
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/models/fleet_vehicle_trip.py:0
+#, python-format
+msgid ""
+"Overlapping! You cannot confirm this trip for driver \"%s\" since there is\n"
+" another trip \"%s\" has been confirmed and scheduled for this driver at the time frame which is %s and %s."
+msgstr ""
+"Chồng chéo! Bạn không thể xác nhận chuyến đi này đối với lái xe \"%s\" khi mà người\n"
+" này đã đảm trách một chuyến khác \"%s\" vào cùng thời gian này, [Từ %s đến %s]."
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/models/fleet_vehicle_trip.py:0
+#, python-format
+msgid ""
+"Overlapping! You cannot confirm this trip for vehicle \"%s\" since there is\n"
+" another trip \"%s\" has been confirmed and scheduled for this vehicle at the time frame which is %s and %s."
+msgstr ""
+"Chồng chéo! Bạn không thể xác nhận chuyến cho phương tiện \"%s\" khi mà có một\n"
+"  chuyến khác \"%s\" đã được xác nhận và ấn định cho phương tiện này vào cùng khung thời gian (%s đến %s)."
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.mail_template_data_notification_email_fleet_vehicle_trip
+msgid "Powered by"
+msgstr "Nền tảng"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__quantity
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.constraint,message:to_fleet_operation_planning.constraint_vehicle_trip_register_cost_wizard_check_quantity
+msgid "Quantity of a service must be positive!"
+msgstr "Số lượng của một dịch vụ phải là số dương!"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_wizard_generate_routes__raise_error_if_dupplication_routes_found
+msgid "Raise Error if Routes Duplication found"
+msgstr "Hiển thị Lỗi nếu thấy Tuyến trùng lặp"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__name
+msgid "Reference"
+msgstr "Tham chiếu"
+
+#. module: to_fleet_operation_planning
+#: model:ir.ui.menu,name:to_fleet_operation_planning.menu_fleet_trip_reporting
+msgid "Reports"
+msgstr "Báo cáo"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__activity_user_id
+msgid "Responsible User"
+msgstr "Người chịu trách nhiệm"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model,name:to_fleet_operation_planning.model_route_route
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis__route_id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_log_services__route_id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__route_id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_waypoint__route_id
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_analysis_search
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_search
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_vehicle_log_services_view_search
+msgid "Route"
+msgstr "Tuyến đường"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model,name:to_fleet_operation_planning.model_wizard_generate_routes
+msgid "Route Generator Wizard"
+msgstr "Đồ thuật sinh tuyến"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model,name:to_fleet_operation_planning.model_route_section
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_vehicle_log_services_view_search
+msgid "Route Section"
+msgstr "Chặng đường"
+
+#. module: to_fleet_operation_planning
+#: model:ir.ui.menu,name:to_fleet_operation_planning.geo_route_section_line_menu
+msgid "Route Section Lines"
+msgstr "Các Chặng trong Tuyến"
+
+#. module: to_fleet_operation_planning
+#: model:ir.ui.menu,name:to_fleet_operation_planning.geo_route_section_menu
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_form
+msgid "Route Sections"
+msgstr "Các Chặng"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model,name:to_fleet_operation_planning.model_route_waypoint
+msgid "Route Waypoint"
+msgstr "Waypoint"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.report_vehicle_trip_view_document
+msgid "Route:"
+msgstr "Tuyến đường:"
+
+#. module: to_fleet_operation_planning
+#: model:ir.ui.menu,name:to_fleet_operation_planning.geo_route_menu
+msgid "Routes"
+msgstr "Tuyến đường"
+
+#. module: to_fleet_operation_planning
+#: model:ir.ui.menu,name:to_fleet_operation_planning.fleet_trip_config_menu
+msgid "Routes & Waypoints"
+msgstr "Tuyến & Điểm"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle__scheduled_trips_count
+msgid "Schedule Trips Count"
+msgstr "SL Chuyến đã Hoạch định"
+
+#. module: to_fleet_operation_planning
+#: model:mail.template,subject:to_fleet_operation_planning.email_template_trip_schedule
+msgid "Schedule for Trip ${object.name or 'n/a' } has been confirmed"
+msgstr "Lịch cho chuyến ${object.name or 'n/a' } đã được ấn định"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_form
+msgid "Scheduled"
+msgstr "Đã ấn định"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__expected_end_date
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_start_wizard__expected_end_date
+msgid "Scheduled End Date"
+msgstr "Ngày Kết thúc (Kế hoạch)"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__expected_start_date
+msgid "Scheduled Start Date"
+msgstr "Ngày Bắt đầu (Kế hoạch)"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_vehicle_view_form
+msgid "Scheduled Trips"
+msgstr "Chuyến đã Hoạch định"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_search
+msgid "Search Trips"
+msgstr "Tìm Chuyến"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_analysis_search
+msgid "Search Trips Analysis"
+msgstr "Tìm kiếm Phân tích Chuyến"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_log_services__route_section_id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_section__route_section_id
+msgid "Section"
+msgstr "Chặng gốc"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.report_vehicle_trip_view_document
+msgid "Sections"
+msgstr "Các Chặng"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields.selection,name:to_fleet_operation_planning.selection__wizard_generate_routes__type__selected
+msgid "Selected Trips"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_form
+msgid "Send by Email"
+msgstr "Gửi qua Email"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_section__sequence
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_waypoint__sequence
+msgid "Sequence"
+msgstr "Trình tự"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_form
+msgid "Services"
+msgstr "Dịch vụ"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__log_services_ids
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_section__log_services_ids
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_waypoint__log_services_ids
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_route_section__log_services_ids
+msgid "Services Logs"
+msgstr "Dịch vụ"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__log_services_count
+msgid "Services Logs Count"
+msgstr "Tổng số dịch vụ"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_route_section__log_services_ids
+msgid "Services for vehicle"
+msgstr "Các dịch vụ cho phương tiện"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model,name:to_fleet_operation_planning.model_fleet_vehicle_log_services
+msgid "Services for vehicles"
+msgstr "Các dịch vụ cho phương tiện"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_form
+msgid "Set to Draft"
+msgstr "Đặt về dự thảo"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_form
+msgid "Show all the services for this trip"
+msgstr "Hiển thị toàn bộ dịch vụ của chuyến đi"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.vehicle_strip_start_wizard_form_view
+msgid "Start"
+msgstr "Khởi động"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis__start_date
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__start_date
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_start_wizard__operation_start
+msgid "Start Date"
+msgstr "Ngày bắt đầu"
+
+#. module: to_fleet_operation_planning
+#: model:ir.actions.act_window,name:to_fleet_operation_planning.launch_vehicle_strip_start_wizard
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_form
+msgid "Start Trip"
+msgstr "Khởi động"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_analysis_search
+msgid "Starting Month"
+msgstr "Tháng Bắt đầu"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_waypoint__state_id
+msgid "State"
+msgstr "Bang / Tỉnh"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis__state
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__state
+msgid "Status"
+msgstr "Tình trạng"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Trạng thái dựa trên hoạt động\n"
+"Quá hạn: Ngày đến hạn đã trôi qua\n"
+"Hôm nay: Hôm nay là ngày phải thực hiện\n"
+"Đã hoạch định: Các hoạt động trong tương lai."
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_waypoint__stop_duration
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_route_waypoint__stop_duration
+msgid "Stop Duration"
+msgstr "Thời lượng Dừng"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.report_vehicle_trip_view_document
+msgid "Stop Duration (Hr)"
+msgstr "Thời lượng Dừng (giờ)"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_waypoint__street
+msgid "Street"
+msgstr "Địa chỉ"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_waypoint__street2
+msgid "Street 2"
+msgstr "Địa chỉ dòng 2"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.constraint,message:to_fleet_operation_planning.constraint_res_partner_stop_duration_positive_check
+msgid "The Default Stop Duration must not be negative!"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/models/fleet_vehicle_trip.py:0
+#, python-format
+msgid "The Operation End Date must be greater than the Operation Start Date."
+msgstr "Ngày giờ Kết thúc phải lớn hơn Ngày giờ Bắt đầu."
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip_waypoint__route_id
+msgid "The Route to which the waypoint belongs"
+msgstr "Tuyến mà Điểm thuộc về"
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/models/fleet_vehicle_trip.py:0
+#, python-format
+msgid "The Start Date must be prior to the End Date"
+msgstr "Ngày bắt đầu phải trước ngày kết thúc"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.constraint,message:to_fleet_operation_planning.constraint_fleet_vehicle_trip_waypoint_stop_duration_positive_check
+#: model:ir.model.constraint,message:to_fleet_operation_planning.constraint_route_waypoint_stop_duration_positive_check
+msgid "The Stop Duration must not be negative!"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/wizard/vehicle_trip_register_cost_wizard.py:0
+#, python-format
+msgid ""
+"The Trip Section '%s' you've selected does not belong to this trip '%s'"
+msgstr "Chặng '%s' bạn chọn không thuộc về chuyến '%s'"
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/wizard/vehicle_trip_register_cost_wizard.py:0
+#, python-format
+msgid ""
+"The Trip Waypoint '%s' you've selected does not belong to this trip '%s'"
+msgstr "Waypoint '%s' bạn chọn không thuộc về chuyến '%s'"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_res_partner__driver_done_trip_ids
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_res_users__driver_done_trip_ids
+msgid ""
+"The Trips that have been done by this partner as the role of the driver"
+msgstr "Các chuyến đã hoàn thành bởi đối tác này trên vai trò lái xe (tài xế)"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle__trip_ids
+msgid "The Trips that refer to this vehicle"
+msgstr "Các chuyến mà dẫn chiếu đến phương tiện này"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__actual_distance
+msgid ""
+"The actual Distance of the trip which is computed by the start odometer and "
+"end odometer"
+msgstr ""
+"Quãng đường thực tế của chuyến, được tính toán tự động từ chỉ số Công-tơ-mét"
+" khởi động chuyến và kết thúc chuyến"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__operation_end
+msgid ""
+"The actual end date of the trip which is automatically recorded when Done "
+"button is pressed."
+msgstr ""
+"Ngày kết thúc thực tế của chuyến, được ghi nhận khi nút Hoàn thành được bấm."
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__operation_duration
+msgid ""
+"The actual operation duration (in hours) which is computed from the "
+"Operation Start Date and the Operation End Date"
+msgstr ""
+"Thời lượng khai thác thực tế (tính bằng giờ) mà được tính toán tự động từ "
+"Ngày giờ Bắt đầu và Ngày giờ Kết thúc"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__operation_start
+msgid ""
+"The actual start date of the trip which is automatically recorded when Start"
+" Trip button is pressed."
+msgstr ""
+"Ngày bắt đầu thực tế của chuyến, được ghi nhận khi nút Khởi động được bấm."
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_res_partner__ave_stop_duration
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_res_users__ave_stop_duration
+msgid ""
+"The average duration is computed using average method from the past trips' "
+"stop time. In case no past trips, the Default Stop Duration will be used. In"
+" case the computed average duration is 30% less than the Default Stop "
+"Duration or 30% greater than the Default Stop Duration, the Default Stop "
+"Duration will be used instead of average method"
+msgstr ""
+"Thời lượng dừng trung bình là đại lượng được tính toán tự động bằng phương "
+"pháp trung bình dựa theo dữ liệu dừng thiết lập trên các chuyến trong quá "
+"khứ. Trong trường hợp kết quả tính toán lớn hoặc hoặc nhỏ hơn 30% thời lượng"
+" dừng mặc định thì giá trị thời lượng dừng mặc định sẽ được sử dụng thay cho"
+" phương pháp tính bình quân theo dữ liệu quá khứ"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip_section__ave_speed
+msgid "The average speed in kilometer/hour that you can reach on this section"
+msgstr "Tốc độ trung bình (tính bằng km/h) mà bạn có thể đạt được ở chặng này"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_vehicle_log_services_view_search
+msgid "The costs that concern addresses during the trips"
+msgstr "Các chi phí liên quan đến các địa điểm (waypoint) trong các chuyến."
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_vehicle_log_services_view_search
+msgid "The costs that concern route sections during the trips"
+msgstr "Các chi phí liên quan đến các chặng trong các chuyến."
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_vehicle_log_services_view_search
+msgid "The costs that concern routes during the trips."
+msgstr "Các chi phí liên quan đến các tuyến đường của các chuyến."
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_vehicle_log_services_view_search
+msgid "The costs that have been registered for trips."
+msgstr "Các chi phí đã được ghi nhận cho các chuyến."
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle__address_id
+msgid "The default address of the vechile (e.g. garage, station, etc)"
+msgstr "Địa chỉ mặc định cho phương tiến (vd: ga-ra, trạm, v.v.)"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__distance_deviation
+msgid ""
+"The distance deviation between the actual operation distance and the planned"
+" distance"
+msgstr ""
+"Độ lệch Quãng đường giữa quãng đường thực tế và quãng đường kế hoạch (định "
+"mức)"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip_section__distance
+msgid "The distance in kilometers between the From and To"
+msgstr ""
+"Khoảng cách tính bằng kilomet giữa điểm bắt đầu và điểm kết thúc của chặng"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__driver_id
+msgid "The driver, that can be changed upon starting the trip"
+msgstr "Lái xe/Tài xế, có thể thay đổi được khi khởi động chuyến."
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip_waypoint__stop_duration
+msgid "The duration of stop time (in hours) that the vehicle usually takes"
+msgstr "Khoảng thời gian dừng (tính bằng giờ) mà phương tiện cần"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__employee_id
+msgid "The employee who acts as the driver for the trip"
+msgstr "Nhân viên mà đóng vai trò làm lái xe chính (tài xế) cho chuyến."
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_route_waypoint__stop_duration
+msgid ""
+"The estimated duration of stop time (in hours) that the vehicle usually "
+"takes"
+msgstr ""
+"Thời lượng dừng dự kiến (tính theo giờ) mà phương tiện cần ở địa điểm này"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__est_trip_time
+msgid ""
+"The estimated time in hours spent to go through the route (including stop "
+"duration)"
+msgstr ""
+"Thời gian dự kiến tính bằng giờ để đi hết tuyến (bao gồm cả thời gian ở các "
+"điểm dừng)"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip_section__est_trip_time
+msgid "The estimated time in hours spent to go through the section"
+msgstr "Thời gian dự kiến (tính theo giờ) để đi hết chặng"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__expected_start_date
+msgid "The expected / planned start date of the trip"
+msgstr "Ngày bắt đầu theo dự kiến / kế hoạch của chuyến"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__expected_end_date
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_vehicle_trip_start_wizard__expected_end_date
+msgid ""
+"The expected end date of the trip which is automatically computed based on the total estimated time going through the selected route and on either the Operation Start date (actual start date)\n"
+" or the Scheduled Start Date in case the trip is not started yet."
+msgstr ""
+"Ngày Kết thúc (Kế hoạch) của một chuyến được tính toán tự động dựa trên tổng thời gian dự kiến để đi hết tuyến được chọn, được tính theo Ngày giờ Bắt đầu thực tế (nếu đã bắt đầu) hoặc Ngày Bắt\n"
+"  đầu (Kế hoạch, nếu chuyến chưa được khởi động)"
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/wizard/vehicle_trip_end_wizard.py:0
+#, python-format
+msgid ""
+"The number of odometer at the end of a trip must not be less than the number"
+" of odometer when starting"
+msgstr ""
+"Số công tơ mét kết thúc chuyến đi phải lớn hơn số công tơ mét lúc khởi hành"
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/wizard/vehicle_trip_end_wizard.py:0
+#: code:addons/to_fleet_operation_planning/wizard/vehicle_trip_start_wizard.py:0
+#, python-format
+msgid "The odometer number cannot be negative"
+msgstr "Số công tơ mét không thể âm"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__operator_id
+msgid "The operation user who takes the responsibility for this trip"
+msgstr "Người khai thác mà chịu trách nhiệm về chuyến này."
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle__access_partner_ids
+msgid ""
+"The partners who has access to this vehicle which is computed how the "
+"partners are set as the driver for the trips of this vehicle. For example. "
+"assume Mr. A is set as the driver for a trip of this vehicle. He will have "
+"access to the vehicle information as long as the trip is either in Confirmed"
+" or in In-Operation state"
+msgstr ""
+"Đối tác mà có quyền truy cập đến phương tiện này, được xác định tự động dựa "
+"trên các chuyến được phân công cho đối tác này làm lái chính. Ví dụ, giả sử "
+"Mr. A được thiết lập làm lái chính cho một chuyến sử dụng phương tiện này "
+"thì Mr. A sẽ có quyền truy cập đến phương tiện này, miễn là chuyến vẫn đang "
+"ở trạng thái 'Đã xác nhận' hoặc 'Đang khai thác'"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_log_services__route_id
+msgid ""
+"The route on which the service was logged, computed based on the route of "
+"the corresponding trip."
+msgstr ""
+"Tuyến đường mà dịch vụ ghi nhận tới, được tính tự động dựa trên tuyến của "
+"chuyến tương ứng."
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__route_id
+msgid ""
+"The route through which the vehicle of this trip will go. Leave this empty "
+"and specify waypoints in the section below will automatically select a "
+"matched route (if exists) or create a new route containing the waypoints you"
+" specify"
+msgstr ""
+"Tuyến đường mà phương tiện của chuyến này sẽ đi. Để trống trường này và chỉ "
+"định các điểm ở dưới đây thì Odoo sẽ tự động chọn tuyến khớp với các điểm đó"
+" (nếu có) hoặc tạo một tuyến mới đi qua các điểm mà bạn đã chỉ định."
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__trip_section_id
+msgid "The section of the trip for which the cost is registered"
+msgstr "Chặng được trong chuyến mà chi phí đã được ghi nhận"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_log_services__trip_section_id
+msgid "The section of the trip's route for which the service was logged."
+msgstr "Chặng đường mà dịch vụ dịch vụ ghi nhận tới."
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__time_deviation
+msgid ""
+"The time deviation (in hours) between actual operation duration planned "
+"duration which is computed by Actual Duration minus Est. Duration."
+msgstr ""
+"Độ chênh lệch thời gian (tính bằng giờ) giữa thời gian vận hành thực tế so "
+"với thời gian kế hoạch, được tính bằng Thời lượng Thực tế - Thời lượng Dự "
+"kiến"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle__operation_distance
+msgid ""
+"The total operation distance of the vehicle which is computed by summary of "
+"the total actual distance of the done trips with the vehicle"
+msgstr ""
+"Tổng quãng đường khai thác của phương tiện, được tính toán tự động bằng tổng"
+" quãng đường thực tế của các chuyến được hoàn thành với phương tiện này."
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle__operation_hours
+msgid ""
+"The total operation hours of the vehicle which is computed by summary of the"
+" total hours of the done trips with the vehicle"
+msgstr ""
+"Tổng thời gian khai thác của phương tiện, được tính toán tự động bằng tổng "
+"thời gian khai thác thực tế của các chuyến được hoàn thành với phương tiện "
+"này."
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_log_services__trip_id
+msgid ""
+"The trip on which the service was logged. This field is automatically "
+"computed base on the Trip Section and the Trip Waypoint"
+msgstr ""
+"Chuyến đi mà dịch vụ được ghi nhận tới. Trường này được tính toán tự động "
+"dựa trên chặng đường và điểm của chuyến."
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_res_partner__assistant_done_trip_ids
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_res_users__assistant_done_trip_ids
+msgid "The trips on which this one take the assistant role"
+msgstr "Các chuyến mà người này tham gia với vai trò phụ xe/trợ lý"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__vehicle_id
+msgid "The vehicle, which can be changed upon starting the trip"
+msgstr "Phương tiện, có thể thay đổi được khi khởi động chuyến"
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/models/fleet_vehicle_trip.py:0
+#, python-format
+msgid ""
+"The waypoint %s seems to be as the same as the preceding one. You cannot "
+"have same waypoints those are adjacent to each other. I.e. A->B->B->C must "
+"be either A->B->C or A->B->C->B."
+msgstr ""
+"Waypoint %s dường như trùng với Waypoint liền trước nó. Bạn không thể có các"
+" waypoint giống nhau mà liền kề nhau. Cụ thể, tuyến A->B->B->C phải thiết "
+"lập lại thành A->B->C hoặc A->B->C->B, v.v."
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__trip_waypoint_id
+msgid "The waypoint of the trip for where the cost is registered"
+msgstr "Waypoint trong chuyến mà chi phí được ghi nhận tại đó"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_log_services__trip_waypoint_id
+msgid "The waypoint of the trip's route for which the service was logged."
+msgstr "Điểm của chuyến mà dịch vụ ghi nhận tới."
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/models/fleet_vehicle_log_services.py:0
+#, python-format
+msgid ""
+"There is discrepancy between the selected trip and the trip section! The "
+"trip section %s belong to the trip %s"
+msgstr ""
+"Có sự bất đồng giữa chuyến và chặng được chọn. Chặng %s thuộc về chuyến %s"
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/models/fleet_vehicle_log_services.py:0
+#, python-format
+msgid ""
+"There is discrepancy between the selected trip and the trip waypoint! The "
+"trip waypoint %s belong to the trip %s"
+msgstr ""
+"Có sự bất đồng giữa chuyến và waypoint được chọn. Waypoint %s thuộc về "
+"chuyến %s"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_analysis_search
+msgid "This Year"
+msgstr "Năm nay"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__end_date
+msgid ""
+"This is the Scheduled End Date when the operation is not been done. "
+"Otherwise, it will be Operation End Date"
+msgstr ""
+"Đây là Ngày kết thúc theo Kế hoạch khi chuyến chưa hoàn thành. Hoặc sẽ là "
+"Ngày kết thúc thực tế nếu chuyến đã hoàn thành"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__start_date
+msgid ""
+"This is the Scheduled Start Date when the operation is not been started. "
+"Otherwise, it will be Operation Start Date"
+msgstr ""
+"Đây là Ngày bắt đầu theo Kế hoạch khi chuyến chưa Bắt đầu. Hoặc sẽ là Ngày "
+"bắt đầu thực tế nếu chuyến đã được bắt đầu"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis__time_deviation
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__time_deviation
+msgid "Time Deviation"
+msgstr "Độ lệch Thời gian"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_section__address_to_id
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.report_vehicle_trip_view_document
+msgid "To"
+msgstr "Đến"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_search
+msgid "Today"
+msgstr "Hôm nay"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_hr_employee__assitant_done_trip_ids
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_hr_employee__driver_done_trip_ids
+msgid "Total trips that employee takes as the role of driver"
+msgstr "Tổng số chuyến mà nhân viên này đã thực hiện ở vai trò lái xe"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_abstract_vehicle_trip_wizard__trip_id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis__trip_id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_log_services__trip_id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_section__trip_id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip_waypoint__trip_id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_end_wizard__trip_id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__trip_id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_start_wizard__trip_id
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_form
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_vehicle_log_services_view_search
+msgid "Trip"
+msgstr "Chuyến"
+
+#. module: to_fleet_operation_planning
+#: model:ir.actions.act_window,name:to_fleet_operation_planning.launch_vehicle_strip_end_wizard
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.vehicle_strip_end_wizard_form_view
+msgid "Trip Ending Wizard"
+msgstr "Đồ thuật Kết thúc Chuyến"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.report_vehicle_trip_view_document
+msgid "Trip Number:"
+msgstr "Số Chuyến:"
+
+#. module: to_fleet_operation_planning
+#: model:ir.actions.report,name:to_fleet_operation_planning.report_vehicle_trip
+msgid "Trip Report"
+msgstr "Báo cáo Chuyến"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_log_services__trip_section_id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__trip_section_id
+msgid "Trip Section"
+msgstr "Chặng"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__trip_section_ids
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_route_section__trip_section_ids
+msgid "Trip Sections"
+msgstr "Chặng"
+
+#. module: to_fleet_operation_planning
+#: model:ir.actions.act_window,name:to_fleet_operation_planning.launch_vehicle_trip_register_cost_wizard
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.vehicle_trip_register_cost_wizard_view
+msgid "Trip Service Logging Wizard"
+msgstr "Ghi nhận dịch vụ chuyến đi"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.vehicle_strip_start_wizard_form_view
+msgid "Trip Start Wizard"
+msgstr "Đồ thuật Khởi động Chuyến"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model,name:to_fleet_operation_planning.model_fleet_vehicle_trip_waypoint
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_log_services__trip_waypoint_id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__trip_waypoint_id
+msgid "Trip Waypoint"
+msgstr "Địa điểm"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_res_partner__trip_waypoint_ids
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_res_users__trip_waypoint_ids
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_form
+msgid "Trip Waypoints"
+msgstr "Các Điểm"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle__trip_ids
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_hr_employee__driver_done_trip_ids
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_route_route__trip_ids
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_wizard_generate_routes__trip_ids
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_tree
+msgid "Trips"
+msgstr "Chuyến"
+
+#. module: to_fleet_operation_planning
+#: model:ir.ui.menu,name:to_fleet_operation_planning.fleet_trip_analysis_menu
+msgid "Trips Analysis"
+msgstr "Phân tích Chuyến"
+
+#. module: to_fleet_operation_planning
+#: model:ir.ui.menu,name:to_fleet_operation_planning.fleet_operations_trips_confirmed_menu
+msgid "Trips Confirmed"
+msgstr "Chuyến đã Hoạch định"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_hr_employee__driver_done_trips_count
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_route_route__trips_count
+msgid "Trips Count"
+msgstr "Số chuyến"
+
+#. module: to_fleet_operation_planning
+#: model:ir.actions.act_window,name:to_fleet_operation_planning.fleet_done_trips_action
+#: model:ir.ui.menu,name:to_fleet_operation_planning.fleet_operations_trips_done_menu
+msgid "Trips Done"
+msgstr "Chuyến Hoàn thành"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_hr_employee__assitant_done_trip_ids
+msgid "Trips Done (as Assistant)"
+msgstr "Chuyến hoàn thành (với vai trò phụ xe)"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_hr_employee__assitant_done_trips_count
+msgid "Trips Done (as Assistant) Count"
+msgstr "SL Chuyến hoàn thành (với vai trò phụ xe)"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_analysis_search
+msgid "Trips End Date by Month"
+msgstr "Ngày Kết thúc chuyến theo Tháng"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_analysis_search
+msgid "Trips Start Date by Month"
+msgstr "Ngày Bắt đầu chuyến theo Tháng"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.generate_routes_wizard_form_view
+msgid "Trips for Routes Generation"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.ui.menu,name:to_fleet_operation_planning.fleet_operations_trips_in_operation_menu
+msgid "Trips in Operation"
+msgstr "Chuyến đang Thực hiện"
+
+#. module: to_fleet_operation_planning
+#: model:ir.actions.act_window,name:to_fleet_operation_planning.fleet_in_operation_trip_action
+msgid "Trips in Progress"
+msgstr "Chuyến đang thực hiện"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_analysis_search
+msgid "Trips started and ended last year"
+msgstr "Chuyến khởi động và kết thúc trong năm ngoái"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_search
+msgid "Trips started today"
+msgstr "Các chuyến Bắt đầu Hôm nay"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_analysis_search
+msgid "Trips started within this year"
+msgstr "Các chuyến Bắt đầu trong năm nay"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__service_type_id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_wizard_generate_routes__type
+msgid "Type"
+msgstr "Kiểu"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__price_unit
+msgid "Unit Price"
+msgstr "Đơn giá"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__distance_unit
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__odometer_unit
+msgid "Unit of the odometer "
+msgstr "Đơn vị đồng hồ công tơ mét "
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__message_unread
+msgid "Unread Messages"
+msgstr "Thông điệp chưa đọc"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Bộ đếm Thông điệp chưa đọc"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_wizard_generate_routes__update_trip
+msgid "Update Trips"
+msgstr "Cập nhật Chuyến"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model,name:to_fleet_operation_planning.model_fleet_vehicle
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_trips_analysis__vehicle_id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__vehicle_id
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_start_wizard__vehicle_id
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_analysis_search
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_search
+msgid "Vehicle"
+msgstr "Phương tiện"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_odometer__trip_id
+msgid "Vehicle Trip"
+msgstr "Chuyến"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model,name:to_fleet_operation_planning.model_vehicle_trip_end_wizard
+msgid "Vehicle Trip End Wizard"
+msgstr "Hoàn thành chuyến đi"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model,name:to_fleet_operation_planning.model_vehicle_trip_register_cost_wizard
+msgid "Vehicle Trip Register Cost Wizard"
+msgstr "Ghi nhận chi phí chuyến đi"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model,name:to_fleet_operation_planning.model_fleet_vehicle_trip_section
+msgid "Vehicle Trip Section"
+msgstr "Chặng trong Chuyến"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model,name:to_fleet_operation_planning.model_vehicle_trip_start_wizard
+msgid "Vehicle Trip Start Wizard"
+msgstr "Đồ thuật Khởi động Chuyến"
+
+#. module: to_fleet_operation_planning
+#: model:ir.actions.act_window,name:to_fleet_operation_planning.fleet_trip_action
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_pivot_view
+msgid "Vehicle Trips"
+msgstr "Các Chuyến"
+
+#. module: to_fleet_operation_planning
+#: model:ir.actions.act_window,name:to_fleet_operation_planning.fleet_trip_dashboard_action
+msgid "Vehicle Trips Dashboard"
+msgstr "Bảng Thông tin Chuyến"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.report_vehicle_trip_view_document
+msgid "Vehicle:"
+msgstr "Phương tiện:"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_vehicle_trip_register_cost_wizard__vendor_id
+msgid "Vendor"
+msgstr "Nhà cung cấp"
+
+#. module: to_fleet_operation_planning
+#: model:ir.ui.menu,name:to_fleet_operation_planning.waypoint_area_menu
+msgid "Waypoint Areas"
+msgstr "Khu vực"
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__trip_waypoint_ids
+#: model:ir.ui.menu,name:to_fleet_operation_planning.route_waypoint_menu
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.report_vehicle_trip_view_document
+msgid "Waypoints"
+msgstr "Các Điểm"
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/models/fleet_vehicle_trip.py:0
+#, python-format
+msgid ""
+"We found same routes in your data. Here is the information for your debugging:\n"
+"%s\n"
+"You must delete %s of those routes before you can proceeding further"
+msgstr ""
+"Chúng tôi tìm thấy các tuyến giống nhau trong dữ liệu của bạn. Đây là một số thông tin gỡ lỗi:\n"
+"%s\n"
+"Bạn phải Xoá %s trong số các chuyến này để có thể tiếp tục."
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,field_description:to_fleet_operation_planning.field_fleet_vehicle_trip__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: model:ir.model.fields,help:to_fleet_operation_planning.field_fleet_vehicle_trip__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/models/fleet_vehicle_trip.py:0
+#, python-format
+msgid ""
+"You cannot confirm a trip which has no waypoint. Please add one before you "
+"can confirm the trip."
+msgstr ""
+"Bạn không thể xác nhận một chuyến mà không có địa điểm (waypoint) nào. Vui "
+"lòng thêm ít nhất một điểm vào chuyến."
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/models/fleet_vehicle_trip.py:0
+#, python-format
+msgid ""
+"You cannot set-to-draft a trip that is in either In Operation or Done state!"
+msgstr ""
+"Bạn không thể đặt về dự thảo một chuyến mà đang ở trạng thái Đang hoạt động "
+"hoặc Hoàn thành!"
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/models/fleet_vehicle_log_services.py:0
+#, python-format
+msgid ""
+"You may register a service log for either a Trip Section or a Trip Waypoint."
+" Not for both!"
+msgstr ""
+" Bạn chỉ có thể ghi nhận dịch vụ cho chặng hoặc điểm của chuyến đi. Không "
+"cho phép nhập cả hai."
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/wizard/vehicle_trip_register_cost_wizard.py:0
+#, python-format
+msgid ""
+"You must assign the cost either for a trip section or trip waypoint. You "
+"cannot leave both empty!"
+msgstr ""
+"Bạn phải ghi chú chi phí hoặc cho chặng, hoặc cho điểm (waypoint). Bạn không"
+" thể để trống cả hai!"
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/wizard/vehicle_trip_register_cost_wizard.py:0
+#, python-format
+msgid "You must select a trip to register a cost for it."
+msgstr "Bạn phải chọn một chuyến để ghi nhận một chi phí cho nó."
+
+#. module: to_fleet_operation_planning
+#: code:addons/to_fleet_operation_planning/wizard/wizard_generate_routes.py:0
+#, python-format
+msgid "You must select at least one trip to proceed..."
+msgstr "Bạn phải chọn ít nhất một chuyến để tiếp tục..."
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_form
+msgid "hours"
+msgstr "giờ"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_trip_form
+msgid "liters"
+msgstr "lít"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.generate_routes_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.vehicle_strip_end_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.vehicle_strip_start_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.vehicle_trip_register_cost_wizard_view
+msgid "or"
+msgstr "hoặc"
+
+#. module: to_fleet_operation_planning
+#: model_terms:ir.ui.view,arch_db:to_fleet_operation_planning.fleet_vehicle_view_form
+msgid "show the trips that have been scheduled for this vehicle"
+msgstr "hiển thị các chuyến mà được được ấn định cho phương tiện này"

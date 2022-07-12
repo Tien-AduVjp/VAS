@@ -1,0 +1,348 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* payment_nganluong
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-16 07:39+0000\n"
+"PO-Revision-Date: 2021-11-16 14:44+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: payment_nganluong
+#: model:ir.model.fields,field_description:payment_nganluong.field_payment_acquirer__nganluong_accept_detained_payment
+msgid "Accept Detained Payments"
+msgstr "Chấp nhận Thanh toán Tạm giữ"
+
+#. module: payment_nganluong
+#: code:addons/payment_nganluong/controllers/main.py:0
+#, python-format
+msgid "Could not find payment transaction matching reference %s NganLuong"
+msgstr "Không tìm thấy giao dịch thanh toán khớp với dẫn chiếu %s NganLuong"
+
+#. module: payment_nganluong
+#: model:ir.model.fields.selection,name:payment_nganluong.selection__payment_transaction__nganluong_txn_type__2
+msgid "Detained 02 days"
+msgstr "Tạm giữ 02 ngày"
+
+#. module: payment_nganluong
+#: model:ir.model.fields.selection,name:payment_nganluong.selection__payment_transaction__nganluong_txn_type__3
+msgid "Detained 03 days"
+msgstr "Tạm giữ 03 ngày"
+
+#. module: payment_nganluong
+#: model:ir.model.fields.selection,name:payment_nganluong.selection__payment_transaction__nganluong_txn_type__4
+msgid "Detained 04 days"
+msgstr "Tạm giữ 04 ngày"
+
+#. module: payment_nganluong
+#: model:ir.model.fields.selection,name:payment_nganluong.selection__payment_transaction__nganluong_txn_type__5
+msgid "Detained 05 days"
+msgstr "Tạm giữ 05 ngày"
+
+#. module: payment_nganluong
+#: model:ir.model.fields.selection,name:payment_nganluong.selection__payment_transaction__nganluong_txn_type__6
+msgid "Detained 06 days"
+msgstr "Tạm giữ 06 ngày"
+
+#. module: payment_nganluong
+#: model:ir.model.fields.selection,name:payment_nganluong.selection__payment_transaction__nganluong_txn_type__7
+msgid "Detained 07 days"
+msgstr "Tạm giữ 07 ngày"
+
+#. module: payment_nganluong
+#: model:ir.model.fields.selection,name:payment_nganluong.selection__payment_transaction__nganluong_txn_type__8
+msgid "Detained 08 days"
+msgstr "Tạm giữ 08 ngày"
+
+#. module: payment_nganluong
+#: model:ir.model.fields.selection,name:payment_nganluong.selection__payment_transaction__nganluong_txn_type__9
+msgid "Detained 09 days"
+msgstr "Tạm giữ 09 ngày"
+
+#. module: payment_nganluong
+#: model:ir.model.fields.selection,name:payment_nganluong.selection__payment_transaction__nganluong_txn_type__10
+msgid "Detained 10 days"
+msgstr "Tạm giữ 10 ngày"
+
+#. module: payment_nganluong
+#: model:ir.model.fields.selection,name:payment_nganluong.selection__payment_transaction__nganluong_txn_type__1
+msgid "Direct Transfer"
+msgstr "Chuyển trực tiếp"
+
+#. module: payment_nganluong
+#: model:ir.model.fields,field_description:payment_nganluong.field_payment_acquirer__display_name
+#: model:ir.model.fields,field_description:payment_nganluong.field_payment_transaction__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: payment_nganluong
+#: model_terms:ir.ui.view,arch_db:payment_nganluong.payment_tokens_list
+msgid "Extra charge as transaction fee might be added to the payment."
+msgstr "Phí giao dịch bổ sung có thể được áp dụng."
+
+#. module: payment_nganluong
+#: model:ir.model.fields,field_description:payment_nganluong.field_payment_acquirer__fees_dom_fixed
+msgid "Fixed domestic fees"
+msgstr "Cố định phí trong nước"
+
+#. module: payment_nganluong
+#: model:ir.model.fields,field_description:payment_nganluong.field_payment_acquirer__fees_int_fixed
+msgid "Fixed international fees"
+msgstr "Cố định phí quốc tế"
+
+#. module: payment_nganluong
+#: model:ir.model.fields,field_description:payment_nganluong.field_payment_acquirer__id
+#: model:ir.model.fields,field_description:payment_nganluong.field_payment_transaction__id
+msgid "ID"
+msgstr ""
+
+#. module: payment_nganluong
+#: model:ir.model.fields,help:payment_nganluong.field_payment_acquirer__nganluong_accept_detained_payment
+msgid ""
+"If checked, the payment transactions detained by NganLuong will always be "
+"accepted as valid. Otherwise, Odoo will mark the transaction as pending. In "
+"such case, a scheduled action will regularly query NganLuong and turn the "
+"transaction into done when it found the transaction is released by NganLuong"
+msgstr ""
+"Nếu đánh dấu, các giao dịch thanh toán tạm giữ bởi NganLuong sẽ luôn được "
+"chấp thuận là hợp lệ. Ngược lại, Odoo sẽ đánh dấu giao dịch là đang treo. "
+"Trong trường hợp như vậy, một hành động định kỳ sẽ kiểm tra phía Ngân Lượng "
+"và đánh dấu giao dịch hoàn thành khi tìm thấy thông tin hoàn thành ở phía "
+"Ngân Lượng"
+
+#. module: payment_nganluong
+#: model:ir.model.fields,field_description:payment_nganluong.field_payment_acquirer____last_update
+#: model:ir.model.fields,field_description:payment_nganluong.field_payment_transaction____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: payment_nganluong
+#: code:addons/payment_nganluong/models/payment_transaction.py:0
+#, python-format
+msgid "Merchant does not exist or not active."
+msgstr "Người bán không tồn tại hoặc chưa kích hoạt."
+
+#. module: payment_nganluong
+#: model:ir.model.fields.selection,name:payment_nganluong.selection__payment_acquirer__provider__nganluong
+#: model:payment.acquirer,name:payment_nganluong.payment_acquirer_nganluong
+msgid "NganLuong"
+msgstr "Ngân Lượng"
+
+#. module: payment_nganluong
+#: model:ir.model.fields,field_description:payment_nganluong.field_payment_acquirer__nganluong_merchant_site_code
+msgid "NganLuong Merchant ID"
+msgstr "ID Người bán Ngân Lượng"
+
+#. module: payment_nganluong
+#: model:ir.model.fields,field_description:payment_nganluong.field_payment_acquirer__nganluong_merchant_password
+msgid "NganLuong Merchant Password"
+msgstr "Mật khẩu Người bán Ngân Lượng"
+
+#. module: payment_nganluong
+#: model:ir.model.fields,field_description:payment_nganluong.field_payment_transaction__nganluong_payment_id
+msgid "NganLuong Payment ID"
+msgstr "ID Thanh toán Ngân Lượng"
+
+#. module: payment_nganluong
+#: model:ir.model.fields,field_description:payment_nganluong.field_payment_transaction__nganluong_txn_type
+msgid "NganLuong Payment Type"
+msgstr "Kiểu Thanh toán Ngân Lượng"
+
+#. module: payment_nganluong
+#: code:addons/payment_nganluong/models/payment_transaction.py:0
+#, python-format
+msgid "NganLuong Payment has been made successful but detained by NganLuong!"
+msgstr ""
+"Thanh toán Ngân Lượng đã thực hiện thành công nhưng đang bị tạm giữ bởi Ngân"
+" Lượng!"
+
+#. module: payment_nganluong
+#: model:ir.model.fields,field_description:payment_nganluong.field_payment_acquirer__nganluong_receiver_email
+msgid "NganLuong Receiver Email"
+msgstr "Email người nhận Ngân Lượng"
+
+#. module: payment_nganluong
+#: model:ir.model.fields,field_description:payment_nganluong.field_payment_transaction__nganluong_token
+msgid "NganLuong Token"
+msgstr "Mã thông báo của Ngân Lượng"
+
+#. module: payment_nganluong
+#: code:addons/payment_nganluong/models/payment_transaction.py:0
+#, python-format
+msgid "NganLuong merchant does not match!"
+msgstr "Ngân Lượng: người bán không khớp!"
+
+#. module: payment_nganluong
+#: code:addons/payment_nganluong/models/payment_transaction.py:0
+#, python-format
+msgid "NganLuong order code does not match!"
+msgstr "Ngân Lượng: mã đơn hàng không khớp!"
+
+#. module: payment_nganluong
+#: code:addons/payment_nganluong/models/payment_transaction.py:0
+#, python-format
+msgid "NganLuong total amount data does not match!"
+msgstr "Ngân Lượng: tổng giá trị không khớp!"
+
+#. module: payment_nganluong
+#: code:addons/payment_nganluong/controllers/main.py:0
+#, python-format
+msgid "NganLuong: invalid data"
+msgstr "Ngân Lượng: dữ liệu không hợp lệ"
+
+#. module: payment_nganluong
+#: code:addons/payment_nganluong/models/payment_transaction.py:0
+#, python-format
+msgid "NganLuong: received data for reference %s"
+msgstr "NganLuong: nhận được dữ liệu cho tham chiếu %s"
+
+#. module: payment_nganluong
+#: code:addons/payment_nganluong/models/payment_transaction.py:0
+#, python-format
+msgid "NganLuong: received data with missing reference (%s)"
+msgstr "Ngân Lượng: dữ liệu nhận được bị thiếu tham chiếu (%s)"
+
+#. module: payment_nganluong
+#: model:ir.model,name:payment_nganluong.model_payment_acquirer
+msgid "Payment Acquirer"
+msgstr "Nhà cung cấp dịch vụ Thanh toán"
+
+#. module: payment_nganluong
+#: model:ir.model,name:payment_nganluong.model_payment_transaction
+msgid "Payment Transaction"
+msgstr "Giao dịch Thanh toán"
+
+#. module: payment_nganluong
+#: model:ir.actions.server,name:payment_nganluong.ir_cron_scheduler_poll_nganluong_detained_payments_ir_actions_server
+#: model:ir.cron,cron_name:payment_nganluong.ir_cron_scheduler_poll_nganluong_detained_payments
+#: model:ir.cron,name:payment_nganluong.ir_cron_scheduler_poll_nganluong_detained_payments
+msgid "Poll NganLuong Detained Payments"
+msgstr "Thăm dò thanh toán tạm giữ bởi Ngân Lượng"
+
+#. module: payment_nganluong
+#: model:ir.model.fields,help:payment_nganluong.field_payment_acquirer__nganluong_merchant_password
+msgid "Provided by Ngan Luong"
+msgstr "Được cung cấp bởi Ngân Lượng"
+
+#. module: payment_nganluong
+#: model:ir.model.fields,field_description:payment_nganluong.field_payment_acquirer__provider
+msgid "Provider"
+msgstr "Nhà cung cấp"
+
+#. module: payment_nganluong
+#: code:addons/payment_nganluong/models/payment_transaction.py:0
+#, python-format
+msgid ""
+"Received unrecognized status for NganLuong payment %s: %s, set as error"
+msgstr ""
+"Trạng thái thanh toán không xác định %s: %s, đặt thành lỗi"
+
+#. module: payment_nganluong
+#: code:addons/payment_nganluong/models/payment_transaction.py:0
+#, python-format
+msgid "Successful"
+msgstr "Thành công"
+
+#. module: payment_nganluong
+#: model:ir.model.fields,help:payment_nganluong.field_payment_acquirer__nganluong_merchant_site_code
+msgid "The Merchant Site Code provided by NganLuong"
+msgstr "Mã trang web của Người bán được cung cấp bởi Ngân Lượng"
+
+#. module: payment_nganluong
+#: code:addons/payment_nganluong/models/payment_transaction.py:0
+#, python-format
+msgid "The order has not been paid"
+msgstr "Đơn hàng chưa được thanh toán"
+
+#. module: payment_nganluong
+#: code:addons/payment_nganluong/models/payment_transaction.py:0
+#, python-format
+msgid "The payment has not been made at NganLuong"
+msgstr "Thanh toán vẫn chưa được thực hiện ở phía Ngân Lượng"
+
+#. module: payment_nganluong
+#: code:addons/payment_nganluong/models/payment_transaction.py:0
+#, python-format
+msgid "The transaction %s with %s for %s is pending and detained."
+msgstr "Giao dịch %s với %s cho %s hiện đang treo và bị tạm giữ."
+
+#. module: payment_nganluong
+#: model:ir.model.fields.selection,name:payment_nganluong.selection__payment_transaction__nganluong_txn_type__0
+msgid "Unknown Payment Type"
+msgstr "Không biết kiểu thanh toán"
+
+#. module: payment_nganluong
+#: code:addons/payment_nganluong/models/payment_transaction.py:0
+#, python-format
+msgid "Unknown error"
+msgstr "Lỗi không xác định"
+
+#. module: payment_nganluong
+#: code:addons/payment_nganluong/controllers/main.py:0
+#, python-format
+msgid "Validation error occured. Please contact your administrator."
+msgstr ""
+"MoMo: Xảy ra lỗi trong quá trình xác thực. Vui lòng liên hệ quản trị viên"
+
+#. module: payment_nganluong
+#: model:ir.model.fields,field_description:payment_nganluong.field_payment_acquirer__fees_dom_var
+msgid "Variable domestic fees (in percents)"
+msgstr "Phí nội địa thay đổi (tính bằng phần trăm)"
+
+#. module: payment_nganluong
+#: model:ir.model.fields,field_description:payment_nganluong.field_payment_acquirer__fees_int_var
+msgid "Variable international fees (in percents)"
+msgstr "Phí quốc tế (tính theo phần trăm)"
+
+#. module: payment_nganluong
+#: code:addons/payment_nganluong/models/payment_transaction.py:0
+#, python-format
+msgid "Wrong order code submitted to NganLuong"
+msgstr "Lỗi mã đơn đơn gửi đến Ngân Lượng"
+
+#. module: payment_nganluong
+#: code:addons/payment_nganluong/models/payment_transaction.py:0
+#, python-format
+msgid "Wrong query data (either key or value) submitted to NganLuong."
+msgstr "Lỗi dữ liệu truy vấn (khóa hoặc giá trị) gửi đến Ngân Lượng."
+
+#. module: payment_nganluong
+#: code:addons/payment_nganluong/models/payment_transaction.py:0
+#, python-format
+msgid "Wrong query method. NganLuong requires a valid POST method."
+msgstr "Lỗi phương thức truy vấn. Ngân Lượng yêu cầu phương thức POST hợp lệ."
+
+#. module: payment_nganluong
+#: code:addons/payment_nganluong/models/payment_transaction.py:0
+#, python-format
+msgid "Wrong token submitted to NganLuong"
+msgstr "Lỗi mã thông báo gửi đến Ngân Lượng"
+
+#. module: payment_nganluong
+#: model_terms:payment.acquirer,auth_msg:payment_nganluong.payment_acquirer_nganluong
+msgid "Your payment has been authorized."
+msgstr "Thanh toán của bạn đã được ủy quyền."
+
+#. module: payment_nganluong
+#: model_terms:payment.acquirer,cancel_msg:payment_nganluong.payment_acquirer_nganluong
+msgid "Your payment has been cancelled."
+msgstr "Thanh toán của bạn đã bị hủy."
+
+#. module: payment_nganluong
+#: model_terms:payment.acquirer,pending_msg:payment_nganluong.payment_acquirer_nganluong
+msgid ""
+"Your payment has been successfully processed but is waiting for approval."
+msgstr ""
+"Thanh toán của bạn đã được xử lý thành công nhưng đang chờ được phê duyệt."
+
+#. module: payment_nganluong
+#: model_terms:payment.acquirer,done_msg:payment_nganluong.payment_acquirer_nganluong
+msgid "Your payment has been successfully processed. Thank you!"
+msgstr "Thanh toán của bạn đã được xử lý thành công. Cảm ơn bạn!"

@@ -1,0 +1,218 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_token_expiration
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-28 07:34+0000\n"
+"PO-Revision-Date: 2021-10-28 07:34+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_token_expiration
+#: model_terms:ir.ui.view,arch_db:to_token_expiration.res_config_settings_view_form
+msgid "<span>days</span>"
+msgstr "<span>ngày</span>"
+
+#. module: to_token_expiration
+#: model:ir.model,name:to_token_expiration.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: to_token_expiration
+#: model:ir.model,name:to_token_expiration.model_res_config_settings
+msgid "Config Settings"
+msgstr "Thiết lập Cấu hình"
+
+#. module: to_token_expiration
+#: model:ir.model.fields,field_description:to_token_expiration.field_rotating_token__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: to_token_expiration
+#: model:ir.model.fields,field_description:to_token_expiration.field_rotating_token__create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: to_token_expiration
+#: code:addons/to_token_expiration/models/res_company.py:0
+#, python-format
+msgid "Default Token Life must be greater than or equal to zero"
+msgstr "Vòng đời Token Mặc định phải lớn hơn hoặc bằng không (0)"
+
+#. module: to_token_expiration
+#: model:ir.model.fields,field_description:to_token_expiration.field_res_company__rotating_token_life
+#: model:ir.model.fields,field_description:to_token_expiration.field_res_config_settings__rotating_token_life
+msgid "Default Token Lifetime"
+msgstr "Vòng đời Token Mặc định"
+
+#. module: to_token_expiration
+#: model:ir.model.fields,field_description:to_token_expiration.field_res_company__display_name
+#: model:ir.model.fields,field_description:to_token_expiration.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:to_token_expiration.field_rotating_token__display_name
+#: model:ir.model.fields,field_description:to_token_expiration.field_rotating_token_mixin__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_token_expiration
+#: model:ir.model.fields,field_description:to_token_expiration.field_rotating_token__expiration
+msgid "Expiry Date"
+msgstr "Ngày hết hạn"
+
+#. module: to_token_expiration
+#: model:ir.model.fields,field_description:to_token_expiration.field_res_company__id
+#: model:ir.model.fields,field_description:to_token_expiration.field_res_config_settings__id
+#: model:ir.model.fields,field_description:to_token_expiration.field_rotating_token__id
+#: model:ir.model.fields,field_description:to_token_expiration.field_rotating_token_mixin__id
+msgid "ID"
+msgstr ""
+
+#. module: to_token_expiration
+#: model_terms:ir.ui.view,arch_db:to_token_expiration.res_config_settings_view_form
+msgid ""
+"If a positive value is set, tokens will live for\n"
+"\t\t\t\t\t\t\t\tthat given days. Otherwise, they will never get expired."
+msgstr ""
+"Nếu một giá trị dương được thiết lập, token sẽ có vòng đời\n"
+"\t\t\t\t\t\t\t\tlà giá trị đó (tính theo ngày). Ngược lại, token sẽ không bao giờ hết hạn."
+
+#. module: to_token_expiration
+#: model:ir.model.fields,field_description:to_token_expiration.field_res_company____last_update
+#: model:ir.model.fields,field_description:to_token_expiration.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:to_token_expiration.field_rotating_token____last_update
+#: model:ir.model.fields,field_description:to_token_expiration.field_rotating_token_mixin____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_token_expiration
+#: model:ir.model.fields,field_description:to_token_expiration.field_rotating_token__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: to_token_expiration
+#: model:ir.model.fields,field_description:to_token_expiration.field_rotating_token__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối"
+
+#. module: to_token_expiration
+#: model:ir.model.fields,field_description:to_token_expiration.field_rotating_token__model
+msgid "Model Name"
+msgstr "Tên mô hình"
+
+#. module: to_token_expiration
+#: code:addons/to_token_expiration/models/rotating_token.py:0
+#, python-format
+msgid "Model `%s` not found. It may not installed."
+msgstr "Không tìm thấy model `%s`. Model có thể chưa được cài đặt."
+
+#. module: to_token_expiration
+#: code:addons/to_token_expiration/models/rotating_token.py:0
+#, python-format
+msgid "Modifying either Model Name or Record ID is not allowed."
+msgstr "Không được phép sửa Tên model và ID Bản ghi."
+
+#. module: to_token_expiration
+#: code:addons/to_token_expiration/models/rotating_token.py:0
+#, python-format
+msgid ""
+"No record found for unique ID %s of the model `%s`. It may have been "
+"deleted."
+msgstr ""
+"Không tìm thấy bản ghi với ID %s đối với model `%s`. Có thể bản ghi đã bị "
+"xoá."
+
+#. module: to_token_expiration
+#: model_terms:ir.ui.view,arch_db:to_token_expiration.rotating_token_view_form
+msgid "Record"
+msgstr "Bản ghi"
+
+#. module: to_token_expiration
+#: model:ir.model.fields,field_description:to_token_expiration.field_rotating_token__res_id
+msgid "Record ID"
+msgstr "ID Bản ghi"
+
+#. module: to_token_expiration
+#: model:ir.model.fields,field_description:to_token_expiration.field_rotating_token__reference
+msgid "Reference"
+msgstr "Tham chiếu"
+
+#. module: to_token_expiration
+#: model:ir.actions.act_window,name:to_token_expiration.action_rotating_token
+#: model:ir.model,name:to_token_expiration.model_rotating_token
+#: model:ir.model.fields,field_description:to_token_expiration.field_rotating_token_mixin__rotating_token_id
+msgid "Rotating Token"
+msgstr "Token luân chuyển"
+
+#. module: to_token_expiration
+#: model:ir.model,name:to_token_expiration.model_rotating_token_mixin
+msgid "Rotating Token Mixin"
+msgstr ""
+
+#. module: to_token_expiration
+#: model:ir.ui.menu,name:to_token_expiration.menu_rotating_token
+#: model_terms:ir.ui.view,arch_db:to_token_expiration.rotating_token_view_form
+#: model_terms:ir.ui.view,arch_db:to_token_expiration.rotating_token_view_tree
+msgid "Rotating Tokens"
+msgstr "Token luân chuyển"
+
+#. module: to_token_expiration
+#: model:res.groups,name:to_token_expiration.group_rotating_token_manager
+msgid "Rotating Tokens Manager"
+msgstr "Quản lý Token luân chuyển"
+
+#. module: to_token_expiration
+#: code:addons/to_token_expiration/models/rotating_token.py:0
+#, python-format
+msgid "Rotating Tokens are not allowed to copy!"
+msgstr "Token luân chuyển cho thể copy được!"
+
+#. module: to_token_expiration
+#: model:ir.actions.server,name:to_token_expiration.cron_rotate_tokens_ir_actions_server
+#: model:ir.cron,cron_name:to_token_expiration.cron_rotate_tokens
+#: model:ir.cron,name:to_token_expiration.cron_rotate_tokens
+msgid "Rotating tokens"
+msgstr "Token luân chuyển"
+
+#. module: to_token_expiration
+#: model:ir.model.fields,field_description:to_token_expiration.field_rotating_token__name
+#: model:ir.model.fields,field_description:to_token_expiration.field_rotating_token_mixin__access_token
+msgid "Security Token"
+msgstr "Token an ninh"
+
+#. module: to_token_expiration
+#: model:ir.model.fields,help:to_token_expiration.field_rotating_token_mixin__rotating_token_id
+msgid ""
+"Technical field to store a rotating token record for access token "
+"computation"
+msgstr ""
+"Trường kỹ thuật để lưu trữ bản ghi Token luân chuyển phục vụ cho việc tính "
+"Token An ninh"
+
+#. module: to_token_expiration
+#: model:ir.model.fields,help:to_token_expiration.field_rotating_token__expiration
+msgid "The date and time at which this token will become expired."
+msgstr "Ngày giờ mà tại đó token hết hạn."
+
+#. module: to_token_expiration
+#: model:ir.model.fields,help:to_token_expiration.field_res_company__rotating_token_life
+#: model:ir.model.fields,help:to_token_expiration.field_res_config_settings__rotating_token_life
+msgid ""
+"The life time (in days) of a rotating token. Leave it empty or zero if you "
+"want a forever life for rotating tokens"
+msgstr ""
+"Vòng đời (tính theo ngày) của một token luân chuyển. Để trống hoặc đặt không"
+" (0) nếu bạn muốn token có hạn vĩnh viễn."
+
+#. module: to_token_expiration
+#: model:res.groups,comment:to_token_expiration.group_rotating_token_manager
+msgid ""
+"The user will have full access rights to rotating\n"
+"\t\t\t\ttoken application.\n"
+"\t\t\t"
+msgstr "Người dùng sẽ có toàn quyền truy cập đến ứng dụng Hết hạn Token."

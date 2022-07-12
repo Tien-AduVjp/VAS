@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_applicant_base_user,hr.applicant.base.user,model_hr_applicant,base.group_user,1,0,0,0
+access_hr_applicant_skill_base_user,hr.applicant.skill.base_user,to_hr_skills_recruitment.model_hr_applicant_skill,base.group_user,1,0,0,0
+access_hr_applicant_resume_line_base_user,hr.applicant.resume.line.base_user,to_hr_skills_recruitment.model_hr_applicant_resume_line,base.group_user,1,0,0,0
+access_hr_recruitment_stage_base_user,hr.recruitment.stage.base_user,hr_recruitment.model_hr_recruitment_stage,base.group_user,1,0,0,0

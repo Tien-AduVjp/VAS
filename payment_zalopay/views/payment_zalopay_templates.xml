@@ -1,0 +1,18 @@
+<odoo>
+	<data noupdate="1">
+		<template id="zalopay_form">
+			<div>
+				<input type="hidden" name="data_set" t-att-data-action-url="tx_url" data-remove-me="" />
+                <input type="hidden" name="appid" t-att-value="appid" />
+                <input type="hidden" name="appuser" t-att-value="appuser" />
+                <input type="hidden" name="apptime" t-att-value="apptime" />
+                <input type="hidden" name="amount" t-att-value="amount" />
+                <input type="hidden" name="apptransid" t-att-value="apptransid" />
+                <input type="hidden" name="embeddata" t-att-value="embeddata" />
+                <input type="hidden" name="item" t-att-value="item" />
+                <input type="hidden" name="description" t-att-value="description" />
+                <input type="hidden" name="mac" t-att-value="mac" />
+			</div>
+		</template>
+	</data>
+</odoo>

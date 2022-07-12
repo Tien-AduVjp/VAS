@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="shift_rotation_rule_tree_view" model="ir.ui.view">
+            <field name="name">shift.rotation.rule.tree</field>
+            <field name="model">shift.rotation.rule</field>
+            <field name="arch" type="xml">
+                <tree string="Shift Rotation Rule">
+                    <field name="name" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="shift_rotation_rule_form_view" model="ir.ui.view">
+            <field name="name">shift.rotation.rule.form</field>
+            <field name="model">shift.rotation.rule</field>
+            <field name="arch" type="xml">
+                <form string="Shift Rotation Rule">
+                    <sheet>
+                    	<div class="oe_button_box" name="button_box">
+	                    </div>
+                        <group>
+                        	<group>
+                        		<field name="name"/>
+                       		</group>
+                       		<br/>
+                       		<separator string="Shift Rotation Rule Lines" />
+                            <field name="line_ids" nolabel="1">
+                            	<tree editable="bottom">
+                        			<field name="sequence" widget="handle"/>
+	                                <field name="resource_calendar_id"/>
+	                                <field name="rate"/>
+                                 </tree>
+                             </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="shift_rotation_rule_action">
+            <field name="name">Shift Rotation Rule</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">shift.rotation.rule</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create the first record
+				</p>
+			</field>
+        </record>
+
+        <menuitem id="shift_rotation_rule_menu" name="Shift Rotation Rule" sequence="100"
+            parent="resource.menu_resource_config" action="shift_rotation_rule_action" />
+
+        <menuitem id="shift_rotation_rule_hr_menu" name="Shift Rotation Rules"
+			sequence="100" action="shift_rotation_rule_action" parent="hr.menu_human_resources_configuration" />
+
+    </data>
+</odoo>

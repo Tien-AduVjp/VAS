@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="1">
+		<!-- SUBJECTS DATA -->
+		<record id="subject_user" model="website.doc.category">
+			<field name="name">Odoo User Documentation</field>
+			<field name="sequence" eval="5" />
+			<field name="description">An introduction guides for Odoo end-user. Easily locate functional tutorials, helpful tips, and reference information for a wide array of apps and processes.</field>
+			<field name="image">/to_website_docs/static/src/img/user.jpg</field>
+			<field name="type">subject</field>
+			<field name="document_type">link</field>
+		</record>
+
+		<record id="subject_developer" model="website.doc.category">
+			<field name="name">Odoo Developer Documentation</field>
+			<field name="sequence" eval="10" />
+			<field name="description">The Advanced Developer guide will assist with technical details for modules, workflows, actions, security, and other operational/developmental functions.</field>
+			<field name="image">/to_website_docs/static/src/img/user.jpg</field>
+			<field name="type">subject</field>
+			<field name="document_type">link</field>
+		</record>
+
+		<!-- SECTIONS DATA -->
+		<record id="section_applications" model="website.doc.category">
+			<field name="name">Applications</field>
+			<field name="parent_id" ref="subject_user" />
+			<field name="sequence" eval="10" />
+			<field name="image">/to_website_docs/static/src/img/user.jpg</field>
+			<field name="type">section</field>
+			<field name="document_type">link</field>
+			<field name="css_section_item">col-md-3</field>
+		</record>
+
+		<record id="section_practical_info" model="website.doc.category">
+			<field name="name">Practical Information</field>
+			<field name="parent_id" ref="subject_user" />
+			<field name="sequence" eval="50" />
+			<field name="image">/to_website_docs/static/src/img/user.jpg</field>
+			<field name="type">section</field>
+			<field name="document_type">link</field>
+		</record>
+
+		<record id="section_biz_mementoes" model="website.doc.category">
+			<field name="name">Business Mementoes</field>
+			<field name="parent_id" ref="subject_user" />
+			<field name="sequence" eval="90" />
+			<field name="image">/to_website_docs/static/src/img/user.jpg</field>
+			<field name="type">section</field>
+			<field name="document_type">link</field>
+		</record>
+
+		<!-- CATEGORIES DATA -->
+
+		<!-- Applications Data-->
+		<record id="categ_general" model="website.doc.category">
+			<field name="name">General</field>
+			<field name="parent_id" ref="section_applications" />
+			<field name="sequence" eval="4" />
+			<field name="image">/to_website_docs/static/src/img/user.jpg</field>
+			<field name="type">category</field>
+			<field name="document_type">link</field>
+		</record>
+
+		<record id="categ_accounting" model="website.doc.category">
+			<field name="name">Accounting &amp; Finance</field>
+			<field name="parent_id" ref="section_applications" />
+			<field name="sequence" eval="5" />
+			<field name="image">/to_website_docs/static/src/img/user.jpg</field>
+			<field name="type">category</field>
+			<field name="document_type">link</field>
+		</record>
+
+		<record id="categ_crm" model="website.doc.category">
+			<field name="name">CRM</field>
+			<field name="parent_id" ref="section_applications" />
+			<field name="sequence" eval="10" />
+			<field name="image">/to_website_docs/static/src/img/user.jpg</field>
+			<field name="type">category</field>
+			<field name="document_type">link</field>
+		</record>
+
+		<record id="categ_sales" model="website.doc.category">
+			<field name="name">Sales</field>
+			<field name="parent_id" ref="section_applications" />
+			<field name="sequence" eval="15" />
+			<field name="image">/to_website_docs/static/src/img/user.jpg</field>
+			<field name="type">category</field>
+			<field name="document_type">link</field>
+		</record>
+
+		<record id="categ_discuss" model="website.doc.category">
+			<field name="name">Discuss</field>
+			<field name="parent_id" ref="section_applications" />
+			<field name="sequence" eval="20" />
+			<field name="image">/to_website_docs/static/src/img/user.jpg</field>
+			<field name="type">category</field>
+			<field name="document_type">link</field>
+		</record>
+
+		<record id="categ_website" model="website.doc.category">
+			<field name="name">Website</field>
+			<field name="parent_id" ref="section_applications" />
+			<field name="sequence" eval="25" />
+			<field name="image">/to_website_docs/static/src/img/user.jpg</field>
+			<field name="type">category</field>
+			<field name="document_type">link</field>
+		</record>
+
+		<record id="categ_ecommerce" model="website.doc.category">
+			<field name="name">eCommerce</field>
+			<field name="parent_id" ref="section_applications" />
+			<field name="sequence" eval="30" />
+			<field name="image">/to_website_docs/static/src/img/user.jpg</field>
+			<field name="type">category</field>
+			<field name="document_type">link</field>
+		</record>
+
+		<record id="categ_purchase" model="website.doc.category">
+			<field name="name">Purchase</field>
+			<field name="parent_id" ref="section_applications" />
+			<field name="sequence" eval="35" />
+			<field name="image">/to_website_docs/static/src/img/user.jpg</field>
+			<field name="type">category</field>
+			<field name="document_type">link</field>
+		</record>
+
+		<record id="categ_inventory" model="website.doc.category">
+			<field name="name">Inventory</field>
+			<field name="parent_id" ref="section_applications" />
+			<field name="sequence" eval="40" />
+			<field name="image">/to_website_docs/static/src/img/user.jpg</field>
+			<field name="type">category</field>
+			<field name="document_type">link</field>
+		</record>
+
+		<record id="categ_mrp" model="website.doc.category">
+			<field name="name">Manufacturing</field>
+			<field name="parent_id" ref="section_applications" />
+			<field name="sequence" eval="45" />
+			<field name="image">/to_website_docs/static/src/img/user.jpg</field>
+			<field name="type">category</field>
+			<field name="document_type">link</field>
+		</record>
+
+		<record id="categ_pos" model="website.doc.category">
+			<field name="name">Point of Sale</field>
+			<field name="parent_id" ref="section_applications" />
+			<field name="sequence" eval="50" />
+			<field name="image">/to_website_docs/static/src/img/user.jpg</field>
+			<field name="type">category</field>
+			<field name="document_type">link</field>
+		</record>
+
+		<record id="categ_project" model="website.doc.category">
+			<field name="name">Project</field>
+			<field name="parent_id" ref="section_applications" />
+			<field name="sequence" eval="55" />
+			<field name="image">/to_website_docs/static/src/img/user.jpg</field>
+			<field name="type">category</field>
+			<field name="document_type">link</field>
+		</record>
+
+		<record id="categ_events" model="website.doc.category">
+			<field name="name">Events</field>
+			<field name="parent_id" ref="section_applications" />
+			<field name="sequence" eval="57" />
+			<field name="image">/to_website_docs/static/src/img/user.jpg</field>
+			<field name="type">category</field>
+			<field name="document_type">link</field>
+		</record>
+
+		<record id="categ_helpdesk" model="website.doc.category">
+			<field name="name">Helpdesk</field>
+			<field name="parent_id" ref="section_applications" />
+			<field name="sequence" eval="60" />
+			<field name="image">/to_website_docs/static/src/img/user.jpg</field>
+			<field name="type">category</field>
+			<field name="document_type">link</field>
+		</record>
+
+		<record id="categ_live_chat" model="website.doc.category">
+			<field name="name">Live Chat</field>
+			<field name="parent_id" ref="section_applications" />
+			<field name="sequence" eval="65" />
+			<field name="image">/to_website_docs/static/src/img/user.jpg</field>
+			<field name="type">category</field>
+			<field name="document_type">link</field>
+		</record>
+
+		<record id="categ_hr" model="website.doc.category">
+			<field name="name">Human Resource</field>
+			<field name="parent_id" ref="section_applications" />
+			<field name="sequence" eval="70" />
+			<field name="image">/to_website_docs/static/src/img/user.jpg</field>
+			<field name="type">category</field>
+			<field name="document_type">link</field>
+		</record>
+
+		<record id="categ_expenses" model="website.doc.category">
+			<field name="name">Expenses</field>
+			<field name="parent_id" ref="section_applications" />
+			<field name="sequence" eval="75" />
+			<field name="image">/to_website_docs/static/src/img/user.jpg</field>
+			<field name="type">category</field>
+			<field name="document_type">link</field>
+		</record>
+
+		<record id="categ_fleet" model="website.doc.category">
+			<field name="name">Fleet</field>
+			<field name="parent_id" ref="section_applications" />
+			<field name="sequence" eval="80" />
+			<field name="image">/to_website_docs/static/src/img/user.jpg</field>
+			<field name="type">category</field>
+			<field name="document_type">link</field>
+		</record>
+
+		<record id="categ_network_organization" model="website.doc.category">
+			<field name="name">Network Organization</field>
+			<field name="parent_id" ref="section_applications" />
+			<field name="sequence" eval="85" />
+			<field name="image">/to_website_docs/static/src/img/user.jpg</field>
+			<field name="type">category</field>
+			<field name="document_type">link</field>
+		</record>
+
+		<record id="categ_sms_marketing" model="website.doc.category">
+			<field name="name">SMS Marketing</field>
+			<field name="parent_id" ref="section_applications" />
+			<field name="sequence" eval="88" />
+			<field name="image">/to_website_docs/static/src/img/user.jpg</field>
+			<field name="type">category</field>
+			<field name="document_type">link</field>
+		</record>
+
+		<record id="categ_email_marketing" model="website.doc.category">
+			<field name="name">Email Marketing</field>
+			<field name="parent_id" ref="section_applications" />
+			<field name="sequence" eval="89" />
+			<field name="image">/to_website_docs/static/src/img/user.jpg</field>
+			<field name="type">category</field>
+			<field name="document_type">link</field>
+		</record>
+
+		<record id="categ_social_marketing" model="website.doc.category">
+			<field name="name">Social Marketing</field>
+			<field name="parent_id" ref="section_applications" />
+			<field name="sequence" eval="89" />
+			<field name="image">/to_website_docs/static/src/img/user.jpg</field>
+			<field name="type">category</field>
+			<field name="document_type">link</field>
+		</record>
+
+		<record id="categ_marketing" model="website.doc.category">
+			<field name="name">Digital Marketing</field>
+			<field name="parent_id" ref="section_applications" />
+			<field name="sequence" eval="90" />
+			<field name="image">/to_website_docs/static/src/img/user.jpg</field>
+			<field name="type">category</field>
+			<field name="document_type">link</field>
+		</record>
+
+		<record id="categ_subscriptions" model="website.doc.category">
+			<field name="name">Subscriptions</field>
+			<field name="parent_id" ref="section_applications" />
+			<field name="sequence" eval="94" />
+			<field name="image">/to_website_docs/static/src/img/user.jpg</field>
+			<field name="type">category</field>
+			<field name="document_type">link</field>
+		</record>
+
+		<record id="categ_survey" model="website.doc.category">
+			<field name="name">Survey</field>
+			<field name="parent_id" ref="section_applications" />
+			<field name="sequence" eval="96" />
+			<field name="image">/to_website_docs/static/src/img/user.jpg</field>
+			<field name="type">category</field>
+			<field name="document_type">link</field>
+		</record>
+
+		<record id="categ_timesheets" model="website.doc.category">
+			<field name="name">Timesheets</field>
+			<field name="parent_id" ref="section_applications" />
+			<field name="sequence" eval="98" />
+			<field name="image">/to_website_docs/static/src/img/user.jpg</field>
+			<field name="type">category</field>
+			<field name="document_type">link</field>
+		</record>
+
+		<record id="categ_document_management" model="website.doc.category">
+			<field name="name">Document Management</field>
+			<field name="parent_id" ref="section_applications" />
+			<field name="sequence" eval="100" />
+			<field name="image">/to_website_docs/static/src/img/user.jpg</field>
+			<field name="type">category</field>
+			<field name="document_type">link</field>
+		</record>
+
+		<record id="categ_localization" model="website.doc.category">
+			<field name="name">Localization</field>
+			<field name="parent_id" ref="section_applications" />
+			<field name="sequence" eval="200" />
+			<field name="image">/to_website_docs/static/src/img/user.jpg</field>
+			<field name="type">category</field>
+			<field name="document_type">link</field>
+		</record>
+
+		<!-- Practical Information Data -->
+		<record id="categ_getting_started" model="website.doc.category">
+			<field name="name">Getting Started</field>
+			<field name="parent_id" ref="section_practical_info" />
+			<field name="sequence" eval="5" />
+			<field name="image">/to_website_docs/static/src/img/user.jpg</field>
+			<field name="type">category</field>
+			<field name="document_type">link</field>
+		</record>
+
+		<record id="categ_erponline" model="website.doc.category">
+			<field name="name">Odoo ERPOnline</field>
+			<field name="parent_id" ref="section_practical_info" />
+			<field name="sequence" eval="10" />
+			<field name="image">/to_website_docs/static/src/img/user.jpg</field>
+			<field name="type">category</field>
+			<field name="document_type">link</field>
+		</record>
+
+		<record id="categ_use_cases" model="website.doc.category">
+			<field name="name">Use Cases</field>
+			<field name="parent_id" ref="section_practical_info" />
+			<field name="sequence" eval="15" />
+			<field name="image">/to_website_docs/static/src/img/user.jpg</field>
+			<field name="type">category</field>
+			<field name="document_type">link</field>
+		</record>
+		<record id="categ_process_management" model="website.doc.category">
+			<field name="name">Process Management</field>
+			<field name="parent_id" ref="section_practical_info" />
+			<field name="sequence" eval="20" />
+			<field name="image">/to_website_docs/static/src/img/user.jpg</field>
+			<field name="type">category</field>
+			<field name="document_type">link</field>
+		</record>
+
+		<record id="categ_odoo_admin" model="website.doc.category">
+			<field name="name">Odoo Administration</field>
+			<field name="parent_id" ref="section_practical_info" />
+			<field name="sequence" eval="25" />
+			<field name="image">/to_website_docs/static/src/img/user.jpg</field>
+			<field name="type">category</field>
+			<field name="document_type">link</field>
+		</record>
+
+		<record id="categ_legal" model="website.doc.category">
+			<field name="name">Legal</field>
+			<field name="parent_id" ref="section_practical_info" />
+			<field name="sequence" eval="100" />
+			<field name="image">/to_website_docs/static/src/img/user.jpg</field>
+			<field name="type">category</field>
+			<field name="document_type">link</field>
+		</record>
+
+		<record id="categ_contributing" model="website.doc.category">
+			<field name="name">Contributing</field>
+			<field name="parent_id" ref="section_practical_info" />
+			<field name="sequence" eval="200" />
+			<field name="image">/to_website_docs/static/src/img/user.jpg</field>
+			<field name="type">category</field>
+			<field name="document_type">link</field>
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="document_document_inv_0001_demo" model="document.document">
+        <field name="name">INV/2022/02/0001</field>
+        <field name="datas" type="base64" file="viin_document_account/demo/documents/INV_2022_02_0001.pdf"/>
+        <field name="workspace_id" ref="document_workspace_customer_invoice_demo"/>
+        <field name="owner_id" ref="base.user_admin"/>
+        <field name="tag_ids" eval="[
+            (4, ref('document_tag_account_customer_invoice')),
+            (4, ref('document_tag_fiscal_year_2022'))]"/>
+    </record>
+
+    <record id="document_document_bill_0001_demo" model="document.document">
+        <field name="name">BILL/2022/02/0001</field>
+        <field name="datas" type="base64" file="viin_document_account/demo/documents/BILL_2022_02_0001.pdf"/>
+        <field name="workspace_id" ref="document_workspace_vendor_bill"/>
+        <field name="owner_id" ref="base.user_admin"/>
+        <field name="tag_ids" eval="[
+            (4, ref('document_tag_account_vendor_bill')),
+            (4, ref('document_tag_fiscal_year_2022'))]"/>
+    </record>
+
+    <record id="document_document_journal_entry_demo" model="document.document">
+        <field name="name">Journal Entry</field>
+        <field name="datas" type="base64" file="viin_document_account/demo/documents/JournalEntry.pdf"/>
+        <field name="workspace_id" ref="document_workspace_accounting"/>
+        <field name="owner_id" ref="base.user_admin"/>
+        <field name="tag_ids" eval="[
+            (4, ref('document_tag_account_financial')),
+            (4, ref('document_tag_fiscal_year_2022'))]"/>
+    </record>
+
+</odoo>

@@ -1,0 +1,191 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_hr_timesheet_timer
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-03 04:27+0000\n"
+"PO-Revision-Date: 2022-01-03 04:27+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_hr_timesheet_timer
+#: model_terms:ir.ui.view,arch_db:viin_hr_timesheet_timer.view_task_search_form
+msgid "All WIP Timesheet"
+msgstr ""
+
+#. module: viin_hr_timesheet_timer
+#: model:ir.model,name:viin_hr_timesheet_timer.model_account_analytic_line
+msgid "Analytic Line"
+msgstr ""
+
+#. module: viin_hr_timesheet_timer
+#: model:ir.model.fields,field_description:viin_hr_timesheet_timer.field_account_analytic_line__display_name
+#: model:ir.model.fields,field_description:viin_hr_timesheet_timer.field_project_task__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: viin_hr_timesheet_timer
+#: model:ir.model.fields,help:viin_hr_timesheet_timer.field_account_analytic_line__time_start
+msgid "Employee's local time at which the work was started."
+msgstr ""
+
+#. module: viin_hr_timesheet_timer
+#: model:ir.model.fields,field_description:viin_hr_timesheet_timer.field_account_analytic_line__date_end
+msgid "End Date"
+msgstr ""
+
+#. module: viin_hr_timesheet_timer
+#: model:ir.model.fields,field_description:viin_hr_timesheet_timer.field_account_analytic_line__id
+#: model:ir.model.fields,field_description:viin_hr_timesheet_timer.field_project_task__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_hr_timesheet_timer
+#: model:ir.model.fields,field_description:viin_hr_timesheet_timer.field_project_task__is_login_user_doing
+msgid "Is login user doing"
+msgstr ""
+
+#. module: viin_hr_timesheet_timer
+#: code:addons/viin_hr_timesheet_timer/models/project_task.py:0
+#, python-format
+msgid ""
+"It is not allowed to log timesheet on an archived task. Please have the task"
+" unarchived first."
+msgstr ""
+
+#. module: viin_hr_timesheet_timer
+#: code:addons/viin_hr_timesheet_timer/models/project_task.py:0
+#, python-format
+msgid ""
+"It is not allowed to log timesheet on task in an archived project. Please "
+"have the project unarchived first."
+msgstr ""
+
+#. module: viin_hr_timesheet_timer
+#: model:ir.model.fields,field_description:viin_hr_timesheet_timer.field_account_analytic_line____last_update
+#: model:ir.model.fields,field_description:viin_hr_timesheet_timer.field_project_task____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: viin_hr_timesheet_timer
+#: model_terms:ir.ui.view,arch_db:viin_hr_timesheet_timer.view_task_form2_inherited
+msgid "Log Timesheet"
+msgstr ""
+
+#. module: viin_hr_timesheet_timer
+#: model_terms:ir.ui.view,arch_db:viin_hr_timesheet_timer.view_task_search_form
+msgid "My WIP Timesheet"
+msgstr ""
+
+#. module: viin_hr_timesheet_timer
+#: model:ir.model.fields,field_description:viin_hr_timesheet_timer.field_project_task__duration
+msgid "Real duration"
+msgstr ""
+
+#. module: viin_hr_timesheet_timer
+#: model:ir.model,name:viin_hr_timesheet_timer.model_project_project
+msgid "Project"
+msgstr ""
+
+#. module: viin_hr_timesheet_timer
+#: model_terms:ir.ui.view,arch_db:viin_hr_timesheet_timer.view_task_search_form
+msgid "Show all tasks that have a work in progress timesheet entry"
+msgstr ""
+
+#. module: viin_hr_timesheet_timer
+#: model_terms:ir.ui.view,arch_db:viin_hr_timesheet_timer.view_task_search_form
+msgid "Show tasks that have my work in progress timesheet entry"
+msgstr ""
+
+#. module: viin_hr_timesheet_timer
+#: model:ir.model.fields,field_description:viin_hr_timesheet_timer.field_account_analytic_line__date_start
+msgid "Start Date"
+msgstr ""
+
+#. module: viin_hr_timesheet_timer
+#: model:ir.model.fields,field_description:viin_hr_timesheet_timer.field_account_analytic_line__time_start
+msgid "Start Time"
+msgstr ""
+
+#. module: viin_hr_timesheet_timer
+#: model:ir.model.fields,field_description:viin_hr_timesheet_timer.field_project_task__start_moment
+msgid "Start moment"
+msgstr ""
+
+#. module: viin_hr_timesheet_timer
+#: model_terms:ir.ui.view,arch_db:viin_hr_timesheet_timer.view_task_form2_inherited
+msgid "Stop Timesheet Log"
+msgstr ""
+
+#. module: viin_hr_timesheet_timer
+#: model:ir.model,name:viin_hr_timesheet_timer.model_project_task
+msgid "Task"
+msgstr ""
+
+#. module: viin_hr_timesheet_timer
+#: model:ir.model.fields,help:viin_hr_timesheet_timer.field_project_task__timesheet_wip
+msgid ""
+"Technical field to indicate this task has a work in progress timesheet entry"
+msgstr ""
+
+#. module: viin_hr_timesheet_timer
+#: code:addons/viin_hr_timesheet_timer/models/project.py:0
+#, python-format
+msgid ""
+"The project '%s' can only be archived without having any working-in-progress (WIP) timesheet. \n"
+"Please end all the WIP timesheets first."
+msgstr ""
+
+#. module: viin_hr_timesheet_timer
+#: code:addons/viin_hr_timesheet_timer/models/project_task.py:0
+#, python-format
+msgid ""
+"The start date and end date of the timesheet log must be on the same day for the timesheet recording to be stopped. You cannot stop the process now due to this reason.\n"
+"\n"
+"Please input manually the missing timesheet (start / end) on each corresponding day in order to stop it."
+msgstr ""
+
+#. module: viin_hr_timesheet_timer
+#: code:addons/viin_hr_timesheet_timer/models/project_task.py:0
+#, python-format
+msgid ""
+"The task '%s' can only be archived without having any working-in-progress (WIP) timesheet. \n"
+"Please end all the WIP timesheets first."
+msgstr ""
+
+#. module: viin_hr_timesheet_timer
+#: model:ir.model.fields,field_description:viin_hr_timesheet_timer.field_project_task__timesheet_wip
+msgid "Timesheet Log In Progress"
+msgstr ""
+
+#. module: viin_hr_timesheet_timer
+#: code:addons/viin_hr_timesheet_timer/models/project_task.py:0
+#, python-format
+msgid ""
+"You cannot log another timesheet while you are currently logging on task "
+"'%s' of the project '%s'. Please end the current timesheet logging first."
+msgstr ""
+
+#. module: viin_hr_timesheet_timer
+#: code:addons/viin_hr_timesheet_timer/models/project_task.py:0
+#, python-format
+msgid ""
+"You cannot log another timesheet while you are currently logging on the "
+"project '%s'. Please end the current timesheet logging first."
+msgstr ""
+
+#. module: viin_hr_timesheet_timer
+#: code:addons/viin_hr_timesheet_timer/models/project_task.py:0
+#, python-format
+msgid ""
+"You cannot log timesheet on task %s because project %s is configured to not "
+"allow to do it. Please edit the project and tick on the 'timesheets' option "
+"in order to do timesheet log."
+msgstr ""

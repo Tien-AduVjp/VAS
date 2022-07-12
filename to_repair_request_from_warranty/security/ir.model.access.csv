@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_repair_fee_warranty_user,repair.fee.warranty.user,repair.model_repair_fee,to_warranty_management.group_warranty_user,1,1,1,1
+access_repair_warranty_user,repair.warranty.user,repair.model_repair_order,to_warranty_management.group_warranty_user,1,1,1,1
+access_repair_warranty_line_user,repair.warranty.line.user,repair.model_repair_line,to_warranty_management.group_warranty_user,1,1,1,1
+access_repair_tag_warranty_user,repair.tag.warranty.user,repair.model_repair_tags,to_warranty_management.group_warranty_user,1,0,0,0
+access_account_tax_warranty_user,account.tax.warranty.user,account.model_account_tax,to_warranty_management.group_warranty_user,1,0,0,0
+access_stock_move_warranty_user,stock.move.warranty.user,stock.model_stock_move,to_warranty_management.group_warranty_user,1,0,0,0
+access_picking_warranty_user,picking.warranty.user,stock.model_stock_picking,to_warranty_management.group_warranty_user,1,0,0,0

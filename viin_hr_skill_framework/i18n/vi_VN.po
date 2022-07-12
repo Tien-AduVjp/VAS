@@ -1,0 +1,1281 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* viin_hr_skill_framework
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-29 04:16+0000\n"
+"PO-Revision-Date: 2022-06-29 04:16+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: viin_hr_skill_framework
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.viin_hr_job_view_kanban_dashboard
+msgid "&amp;nbsp;"
+msgstr ""
+
+#. module: viin_hr_skill_framework
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.viin_hr_job_view_kanban_dashboard
+msgid "<b>Department: </b>"
+msgstr "<b>Phòng ban: </b>"
+
+#. module: viin_hr_skill_framework
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.viin_hr_job_view_kanban_dashboard
+msgid "<b>Minimum Ranks:</b>"
+msgstr "<b>Chức danh tối thiểu:</b>"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_skill__description
+msgid "A short description of the skill"
+msgstr "Mô tả ngắn gọn cho kỹ năng"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank_skill_description__message_needaction
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description__message_needaction
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description_abstract__message_needaction
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_type__message_needaction
+msgid "Action Needed"
+msgstr "Cần có hành động"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill__active
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_type__active
+msgid "Active"
+msgstr "Hiệu Lực"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank_skill_description__activity_ids
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description__activity_ids
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description_abstract__activity_ids
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_type__activity_ids
+msgid "Activities"
+msgstr "Hoạt động"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank_skill_description__activity_exception_decoration
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description__activity_exception_decoration
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description_abstract__activity_exception_decoration
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_type__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Trang trí cho Hoạt động ngoại lệ"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank_skill_description__activity_state
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description__activity_state
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description_abstract__activity_state
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_type__activity_state
+msgid "Activity State"
+msgstr "Trạng thái Hoạt động"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank_skill_description__activity_type_icon
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description__activity_type_icon
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description_abstract__activity_type_icon
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_type__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: viin_hr_skill_framework
+#: model:res.groups,name:viin_hr_skill_framework.group_skill_admin
+msgid "Administrator"
+msgstr "Quản trị viên"
+
+#. module: viin_hr_skill_framework
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.hr_employee_skill_type_view_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.hr_role_view_search
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.hr_skill_type_view_search
+msgid "Archived"
+msgstr "Đã lưu trữ"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_type__archived_skill_count
+msgid "Archived Skill Count"
+msgstr "SL Kỹ Năng Đã Lưu Trữ"
+
+#. module: viin_hr_skill_framework
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.hr_employee_skill_type_view_form
+msgid "Archived Skills"
+msgstr "Kỹ Năng Đã Lưu Trữ"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank_skill_description__message_attachment_count
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description__message_attachment_count
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description_abstract__message_attachment_count
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_type__message_attachment_count
+msgid "Attachment Count"
+msgstr "SL Đính kèm"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model,name:viin_hr_skill_framework.model_hr_employee_base
+msgid "Basic Employee"
+msgstr "Nhân viên cơ bản"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank__child_rank_skill_description_ids
+msgid "Child Rank Skill Descriptions"
+msgstr "Kỹ năng của chức danh thấp hơn"
+
+#. module: viin_hr_skill_framework
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.view_hr_rank_form
+msgid "Child Skills Requirements"
+msgstr "Kỹ năng yêu cầu của chức danh thấp hơn"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill__code
+msgid "Code"
+msgstr "Mã"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_skill__code
+msgid "Code of the skill. You may look up SFIA for reference / examples."
+msgstr "Mã của kỹ năng. Bạn có thể tra cứu SFIA để lấy ví dụ tham khảo."
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank__color
+msgid "Color Index"
+msgstr ""
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_skill_report__company_id
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.view_hr_employee_skill_report_search
+msgid "Company"
+msgstr "Công ty"
+
+#. module: viin_hr_skill_framework
+#: model:ir.ui.menu,name:viin_hr_skill_framework.menu_configuration
+msgid "Configuration"
+msgstr "Cấu hình"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank__consolidated_rank_skill_description_ids
+msgid "Consolidated Rank Skill Descriptions"
+msgstr "Yêu cầu Kỹ năng Hợp nhất"
+
+#. module: viin_hr_skill_framework
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.view_hr_rank_form
+msgid "Consolidated Skills Requirements"
+msgstr "Yêu cầu Kỹ năng Hợp nhất"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank_skill_description__create_uid
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank_skill_description__create_date
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description__create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_skill_report__current_level
+msgid "Current Level"
+msgstr "Cấp độ hiện hành"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_skill_report__rank_id
+msgid "Current Rank"
+msgstr "Chức Danh Hiện Hành"
+
+#. module: viin_hr_skill_framework
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.view_hr_employee_skill_report_form
+msgid "Current Rank Infomation"
+msgstr "Thông tin chức danh hiện hành"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_skill_report__reach_progress
+msgid "Current Rank Progress Reach"
+msgstr "Mức độ đạt được của chức danh hiện hành"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_skill_report__current_rank_skill_description
+msgid "Current Rank Skill Description"
+msgstr "Mô tả kỹ năng của chức danh hiện hành"
+
+#. module: viin_hr_skill_framework
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.view_hr_employee_skill_report_form
+msgid "Current Reach"
+msgstr "Mức độ đạt được của nhân viên"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_skill_report__current_skill_level_id
+msgid "Current Skill Level"
+msgstr "Cấp độ kỹ năng hiện hành"
+
+#. module: viin_hr_skill_framework
+#: model:ir.ui.menu,name:viin_hr_skill_framework.menu_dashboard
+msgid "Dashboard"
+msgstr "Tổng quan"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_skill_report__department_id
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.view_hr_employee_skill_report_search
+msgid "Department"
+msgstr "Phòng ban"
+
+#. module: viin_hr_skill_framework
+#: model:ir.ui.menu,name:viin_hr_skill_framework.menu_hr_department
+msgid "Departments"
+msgstr "Phòng ban"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill__description
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.view_hr_skill_description_abstract_form
+msgid "Description"
+msgstr "Mô tả"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_type__hr_skill_description_ids
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.hr_employee_skill_type_view_form
+msgid "Description Entries"
+msgstr "Bản ghi mô tả"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_type__hr_skill_descriptions_count
+msgid "Description Entries Count"
+msgstr "SL Bản ghi mô tả"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank_skill_description__description
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description__description
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description_abstract__description
+msgid "Descriptions"
+msgstr "Mô Tả"
+
+#. module: viin_hr_skill_framework
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.view_hr_rank_form
+msgid "Direct Skills Requirements"
+msgstr "Yêu cầu kỹ năng trực tiếp"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_base__display_name
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_skill__display_name
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_skill_report__display_name
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_job__display_name
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_job_rank_line__display_name
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank__display_name
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank_skill_description__display_name
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_role__display_name
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill__display_name
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description__display_name
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description_abstract__display_name
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_type__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model,name:viin_hr_skill_framework.model_hr_employee
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_skill_report__employee_id
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.view_hr_employee_skill_report_search
+msgid "Employee"
+msgstr "Nhân viên"
+
+#. module: viin_hr_skill_framework
+#: model:ir.ui.menu,name:viin_hr_skill_framework.menu_hr_employee_public
+msgid "Employee Directory"
+msgstr "Danh bạ"
+
+#. module: viin_hr_skill_framework
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.view_hr_employee_skill_report_tree
+msgid "Employee Skill Level"
+msgstr "Cấp độ kỹ năng của nhân viên"
+
+#. module: viin_hr_skill_framework
+#: model:ir.actions.act_window,name:viin_hr_skill_framework.action_hr_employee_skill_report_report
+#: model:ir.model,name:viin_hr_skill_framework.model_hr_employee_skill_report
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.view_hr_employee_skill_report_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.view_hr_employee_skill_report_graph
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.view_hr_employee_skill_report_pivot
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.view_hr_employee_skill_report_search
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.view_hr_employee_skill_report_tree
+msgid "Employee Skill Report"
+msgstr "Báo cáo Kỹ năng Nhân viên"
+
+#. module: viin_hr_skill_framework
+#: model:ir.ui.menu,name:viin_hr_skill_framework.menu_hr_employee
+#: model:ir.ui.menu,name:viin_hr_skill_framework.menu_hr_employee_user
+msgid "Employees"
+msgstr "Nhân viên"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_employee_skill_report__current_skill_level_id
+msgid ""
+"Existing skills level of the corresponding employee.\n"
+"  If none, the employee is assumed to not have this skill currently."
+msgstr ""
+"Cấp độ kỹ năng hiện có của nhân viên.\n"
+"  Nếu không có giá trị, nhân viên được cho là không có kỹ năng này."
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_employee_skill_report__current_level
+msgid ""
+"Existing skills level progress of the corresponding employee.\n"
+" If none, the employee is assumed to not have this skill currently."
+msgstr ""
+"Tiến độ kỹ năng hiện có của nhân viên.\n"
+"  Nếu không có giá trị, nhân viên được cho là không có kỹ năng này."
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_skill_report__expectation
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank_skill_description__expectation
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.view_hr_employee_skill_report_search
+msgid "Expectation"
+msgstr "Mong đợi"
+
+#. module: viin_hr_skill_framework
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.view_hr_employee_skill_report_search
+msgid "Extended Filters"
+msgstr "Bộ lọc Mở rộng"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank_skill_description__message_follower_ids
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description__message_follower_ids
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description_abstract__message_follower_ids
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_type__message_follower_ids
+msgid "Followers"
+msgstr "Theo dõi"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank_skill_description__message_channel_ids
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description__message_channel_ids
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description_abstract__message_channel_ids
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_type__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Người theo dõi (Các kênh)"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank_skill_description__message_partner_ids
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description__message_partner_ids
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description_abstract__message_partner_ids
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_type__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Người theo dõi (Các đối tác)"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_rank_skill_description__activity_type_icon
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_skill_description__activity_type_icon
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_skill_description_abstract__activity_type_icon
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_skill_type__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_skill_report__grade_id
+msgid "Grade"
+msgstr "Cấp bậc"
+
+#. module: viin_hr_skill_framework
+#: model:ir.ui.menu,name:viin_hr_skill_framework.menu_view_hr_employee_grade
+msgid "Grades"
+msgstr "Cấp bậc"
+
+#. module: viin_hr_skill_framework
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.view_hr_employee_skill_report_search
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model,name:viin_hr_skill_framework.model_hr_rank
+msgid "HR Rank"
+msgstr "Chức danh NS"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model,name:viin_hr_skill_framework.model_hr_role
+msgid "HR Role"
+msgstr "Vai trò NS"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model,name:viin_hr_skill_framework.model_hr_job_rank_line
+msgid "Hr Job Rank Line"
+msgstr ""
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee__id
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_base__id
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_skill__id
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_skill_report__id
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_job__id
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_job_rank_line__id
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank__id
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank_skill_description__id
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_role__id
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill__id
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description__id
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description_abstract__id
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_type__id
+msgid "ID"
+msgstr ""
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank_skill_description__activity_exception_icon
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description__activity_exception_icon
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description_abstract__activity_exception_icon
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_type__activity_exception_icon
+msgid "Icon"
+msgstr "Biểu tượng"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_rank_skill_description__activity_exception_icon
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_skill_description__activity_exception_icon
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_skill_description_abstract__activity_exception_icon
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_skill_type__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Biểu tượng để chỉ ra một hoạt động ngoại lệ."
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_rank_skill_description__message_needaction
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_rank_skill_description__message_unread
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_skill_description__message_needaction
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_skill_description__message_unread
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_skill_description_abstract__message_needaction
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_skill_description_abstract__message_unread
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_skill_type__message_needaction
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_skill_type__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Nếu đánh dấu chọn, các thông điệp mới yêu cầu sự có mặt của bạn."
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_rank_skill_description__message_has_error
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_rank_skill_description__message_has_sms_error
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_skill_description__message_has_error
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_skill_description__message_has_sms_error
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_skill_description_abstract__message_has_error
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_skill_description_abstract__message_has_sms_error
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_skill_type__message_has_error
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_skill_type__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Nếu được đánh dấu, thông điệp có lỗi về gửi tin."
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_employee__job_position_skills_required
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_employee_base__job_position_skills_required
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_employee_public__job_position_skills_required
+msgid ""
+"If enabled, all the skills required by the corresponding job position will "
+"also be applied to the employee. Otherwise, only the skills required by the "
+"matched rank (if any) will be applied."
+msgstr ""
+"Nếu được chọn, tất cả các kỹ năng yêu cầu bởi chức vụ tương ứng sẽ đồng thời"
+" được áp dụng cho nhân viên. Ngược lại, chỉ các kỹ năng được yêu cầu bởi "
+"chức danh liên quan (nếu có) sẽ được áp dụng."
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank_skill_description__message_is_follower
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description__message_is_follower
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description_abstract__message_is_follower
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_type__message_is_follower
+msgid "Is Follower"
+msgstr "Là người theo dõi"
+
+#. module: viin_hr_skill_framework
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.viin_hr_job_view_form_dashboard
+msgid "Job Dashboard"
+msgstr "Tổng quan chức vụ"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model,name:viin_hr_skill_framework.model_hr_job
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_skill_report__job_id
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.view_hr_employee_skill_report_search
+msgid "Job Position"
+msgstr "Chức vụ"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee__job_position_skills_required
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_base__job_position_skills_required
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_public__job_position_skills_required
+msgid "Job Position's Skills Required"
+msgstr "Kỹ năng Bắt buộc theo Chức vụ"
+
+#. module: viin_hr_skill_framework
+#: model:ir.ui.menu,name:viin_hr_skill_framework.menu_hr_job
+#: model:ir.ui.menu,name:viin_hr_skill_framework.menu_hr_job_dashboard
+msgid "Job Positions"
+msgstr "Chức vụ"
+
+#. module: viin_hr_skill_framework
+#: model:ir.actions.act_window,name:viin_hr_skill_framework.action_hr_job_dashboard
+msgid "Job Positions Dashboard"
+msgstr "Tổng quan chức vụ"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_base____last_update
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_skill____last_update
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_skill_report____last_update
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_job____last_update
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_job_rank_line____last_update
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank____last_update
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank_skill_description____last_update
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_role____last_update
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill____last_update
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description____last_update
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description_abstract____last_update
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_type____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank_skill_description__write_uid
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description__write_uid
+msgid "Last Updated by"
+msgstr "Sửa lần cuối bởi"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank_skill_description__write_date
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description__write_date
+msgid "Last Updated on"
+msgstr "Sửa lần cuối"
+
+#. module: viin_hr_skill_framework
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.hr_skill_view_form
+msgid "Levels"
+msgstr "Cấp độ"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank_skill_description__message_main_attachment_id
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description__message_main_attachment_id
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description_abstract__message_main_attachment_id
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_type__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Đính kèm chính"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank_skill_description__message_has_error
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description__message_has_error
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description_abstract__message_has_error
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_type__message_has_error
+msgid "Message Delivery error"
+msgstr "Có Lỗi Gửi Thông điệp"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank_skill_description__message_ids
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description__message_ids
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description_abstract__message_ids
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_type__message_ids
+msgid "Messages"
+msgstr "Thông điệp"
+
+#. module: viin_hr_skill_framework
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.viin_hr_job_view_form_dashboard
+msgid "Minimum Ranks:"
+msgstr "Chức Danh Tối Thiểu:"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_role__skill_description_ids
+msgid "Minimum skills that the employees of this role are required to have."
+msgstr "Các kỹ năng tối thiểu mà nhân viên ở vai trò này bắt buộc phải có."
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank_skill_description__my_activity_date_deadline
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description__my_activity_date_deadline
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description_abstract__my_activity_date_deadline
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_type__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank_skill_description__name
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill__name
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_type__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank_skill_description__activity_date_deadline
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description__activity_date_deadline
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description_abstract__activity_date_deadline
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_type__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Hạn chót lần hành động kế tiếp"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank_skill_description__activity_summary
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description__activity_summary
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description_abstract__activity_summary
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_type__activity_summary
+msgid "Next Activity Summary"
+msgstr "Tóm tắt hoạt động tiếp theo"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank_skill_description__activity_type_id
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description__activity_type_id
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description_abstract__activity_type_id
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_type__activity_type_id
+msgid "Next Activity Type"
+msgstr "Kiểu hành động kế tiếp"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_skill_report__next_rank_id
+msgid "Next Rank"
+msgstr "Chức danh kế tiếp"
+
+#. module: viin_hr_skill_framework
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.view_hr_employee_skill_report_form
+msgid "Next Rank Infomation"
+msgstr "Thông tin chức danh kế tiếp"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_skill_report__next_rank_level_required
+msgid "Next Rank Level"
+msgstr "Cấp độ kỹ năng của chức danh kế tiếp"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_skill_report__next_rank_reach_progress
+msgid "Next Rank Progress Reach"
+msgstr "Mức độ hoàn thành so với chức danh kế tiếp"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_skill_report__next_rank_skill_description
+msgid "Next Rank Skill Description"
+msgstr "Mô tả kỹ năng của chức danh kế tiếp"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_skill_report__next_rank_skill_level_id
+msgid "Next Rank Skill Level"
+msgstr "Cấp độ kỹ năng của chức danh kế tiếp"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank_skill_description__message_needaction_counter
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description__message_needaction_counter
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description_abstract__message_needaction_counter
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_type__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Số lượng Hành động"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank_skill_description__message_has_error_counter
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description__message_has_error_counter
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description_abstract__message_has_error_counter
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_type__message_has_error_counter
+msgid "Number of errors"
+msgstr "Số lỗi"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_rank_skill_description__message_needaction_counter
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_skill_description__message_needaction_counter
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_skill_description_abstract__message_needaction_counter
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_skill_type__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Số thông điệp cần có hành động"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_rank_skill_description__message_has_error_counter
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_skill_description__message_has_error_counter
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_skill_description_abstract__message_has_error_counter
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_skill_type__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Số lượng các thông điệp có lỗi về gửi tin"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_rank_skill_description__message_unread_counter
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_skill_description__message_unread_counter
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_skill_description_abstract__message_unread_counter
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_skill_type__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Số thông điệp chưa đọc"
+
+#. module: viin_hr_skill_framework
+#: model:res.groups,name:viin_hr_skill_framework.group_skill_officer
+msgid "Officer"
+msgstr "Cán bộ"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.constraint,message:viin_hr_skill_framework.constraint_hr_rank_skill_description_combination_expectation_unique
+msgid "Overlapped skills of the same expectation is not allowed!"
+msgstr "Trùng lặp các kỹ năng với cùng mức mong đợi thì không được phép!"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.constraint,message:viin_hr_skill_framework.constraint_hr_rank_skill_description_combination_unique
+msgid "Overlapped skills of the same level is not allowed!"
+msgstr "Trùng lặp các kỹ năng với cùng cấp độ thì không được phép!"
+
+#. module: viin_hr_skill_framework
+#: model:ir.ui.menu,name:viin_hr_skill_framework.menu_hr_employee_skill_report
+msgid "Passed and Failed"
+msgstr "Đạt và Không đạt"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields.selection,name:viin_hr_skill_framework.selection__hr_employee_skill_report__expectation__preferred
+#: model:ir.model.fields.selection,name:viin_hr_skill_framework.selection__hr_rank_skill_description__expectation__preferred
+msgid "Preferred"
+msgstr "Có thì tốt hơn"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee__preferred_skill_description_ids
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_base__preferred_skill_description_ids
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_public__preferred_skill_description_ids
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_job__preferred_skill_description_ids
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_job_rank_line__preferred_skill_description_ids
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank__preferred_skill_description_ids
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.hr_employee_public_view_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.view_hr_employee_skill_report_search
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.view_hr_rank_form
+msgid "Preferred Skills"
+msgstr "Kỹ năng có thì tốt hơn"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee__preferred_skill_descriptions_count
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_base__preferred_skill_descriptions_count
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_public__preferred_skill_descriptions_count
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank__preferred_skill_descriptions_count
+msgid "Preferred Skills Count"
+msgstr "SL Kỹ năng có thì tốt hơn"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description__preferred_by_rank_ids
+msgid "Preferred by Ranks"
+msgstr "Có thì tốt hơn theo Chức danh"
+
+#. module: viin_hr_skill_framework
+#: code:addons/viin_hr_skill_framework/models/hr_rank_skill_description.py:0
+#, python-format
+msgid "Preferred skills should be at higher skill level than required skills"
+msgstr ""
+"Các kỹ năng có thì tốt hơn nên ở cấp độ cao hơn so với các kỹ năng bắt buộc"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank_skill_description__level_progress
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description__level_progress
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description_abstract__level_progress
+msgid "Progress"
+msgstr "Cấp độ"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_rank_skill_description__level_progress
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_skill_description__level_progress
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_skill_description_abstract__level_progress
+msgid "Progress from zero knowledge (0%) to fully mastered (100%)."
+msgstr "Cấp độ từ hiểu biết bằng 0 (0%) đế hoàn toàn làm chủ (100%)."
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee__qualifying_skill_report_ids
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_base__qualifying_skill_report_ids
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_public__qualifying_skill_report_ids
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.view_employee_form
+msgid "Qualified Skills"
+msgstr "Kỹ năng đã đạt"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee__qualifying_skills_report_entries_count
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_base__qualifying_skills_report_entries_count
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_public__qualifying_skills_report_entries_count
+msgid "Qualified Skills Count"
+msgstr "SL Kỹ năng đã đạt"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank_skill_description__rank_id
+msgid "Rank"
+msgstr "Chức danh"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model,name:viin_hr_skill_framework.model_hr_rank_skill_description
+msgid "Rank Skill Description Line"
+msgstr "Dòng mô tả kỹ năng của chức danh"
+
+#. module: viin_hr_skill_framework
+#: model:ir.ui.menu,name:viin_hr_skill_framework.menu_rank
+msgid "Ranks"
+msgstr "Chức danh"
+
+#. module: viin_hr_skill_framework
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.viin_hr_job_view_form_dashboard
+msgid "Recruitment State:"
+msgstr "Trạng Thái Tuyển Dụng:"
+
+#. module: viin_hr_skill_framework
+#: model:ir.ui.menu,name:viin_hr_skill_framework.menu_reporting
+msgid "Reporting"
+msgstr "Báo cáo"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields.selection,name:viin_hr_skill_framework.selection__hr_employee_skill_report__expectation__required
+#: model:ir.model.fields.selection,name:viin_hr_skill_framework.selection__hr_rank_skill_description__expectation__required
+msgid "Required"
+msgstr "Bắt buộc"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_skill_report__required_level
+msgid "Required Level"
+msgstr "Cấp độ Bắt buộc"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_skill_report__current_rank_skill_level_id
+msgid "Required Skill Level"
+msgstr "Cấp độ kỹ năng bắt buộc của chức danh hiện hành"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee__skill_description_ids
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_base__skill_description_ids
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_public__skill_description_ids
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_job__skill_description_ids
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_job_rank_line__skill_description_ids
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank__skill_description_ids
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_role__skill_description_ids
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.hr_employee_public_view_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.view_hr_employee_skill_report_search
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.view_hr_rank_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.view_hr_role_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.view_hr_role_kanban
+msgid "Required Skills"
+msgstr "Kỹ năng Bắt buộc"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee__skill_descriptions_count
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_base__skill_descriptions_count
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_public__skill_descriptions_count
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank__skill_descriptions_count
+msgid "Required Skills Count"
+msgstr "SL Kỹ năng Bắt buộc"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description__required_by_rank_ids
+msgid "Required by Ranks"
+msgstr "Bắt buộc theo Chức danh"
+
+#. module: viin_hr_skill_framework
+#: code:addons/viin_hr_skill_framework/models/hr_rank_skill_description.py:0
+#, python-format
+msgid "Required skills should be at lower skill level than preferred skills"
+msgstr ""
+"Các kỹ năng bắt buộc nên có cấp độ kỹ năng thấp hơn các kỹ năng có thì tốt"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank_skill_description__activity_user_id
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description__activity_user_id
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description_abstract__activity_user_id
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_type__activity_user_id
+msgid "Responsible User"
+msgstr "Người chịu trách nhiệm"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_skill_report__role_id
+msgid "Role"
+msgstr "Vai trò"
+
+#. module: viin_hr_skill_framework
+#: model:ir.ui.menu,name:viin_hr_skill_framework.menu_role
+msgid "Roles"
+msgstr "Vai trò"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank_skill_description__message_has_sms_error
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description__message_has_sms_error
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description_abstract__message_has_sms_error
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_type__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Có lỗi gửi SMS"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_employee__unmet_skill_report_ids
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_employee_base__unmet_skill_report_ids
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_employee_public__unmet_skill_report_ids
+msgid "Show required skills that the employee is currently failed to meet."
+msgstr "Hiển thị các kỹ năng bắt buộc mà nhận viên hiện không đạt."
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_employee__qualifying_skill_report_ids
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_employee_base__qualifying_skill_report_ids
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_employee_public__qualifying_skill_report_ids
+msgid "Show required skills that the employee is currently qualify."
+msgstr "Hiển thị những kỹ năng bắt buộc mà nhân viên đạt tiểu chuẩn."
+
+#. module: viin_hr_skill_framework
+#: model:ir.model,name:viin_hr_skill_framework.model_hr_skill
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_skill_report__skill_id
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank_skill_description__skill_id
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description__skill_id
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description_abstract__skill_id
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.view_hr_employee_skill_report_search
+msgid "Skill"
+msgstr "Kỹ năng"
+
+#. module: viin_hr_skill_framework
+#: model:ir.actions.act_window,name:viin_hr_skill_framework.action_skill_description
+#: model:ir.model,name:viin_hr_skill_framework.model_hr_skill_description
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_skill__skill_description
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank_skill_description__skill_description_id
+#: model:ir.ui.menu,name:viin_hr_skill_framework.menu_skill_desc
+msgid "Skill Description"
+msgstr "Mô tả Kỹ năng"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model,name:viin_hr_skill_framework.model_hr_skill_description_abstract
+msgid "Skill Description Abstract"
+msgstr ""
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_role__skill_descriptions_count
+msgid "Skill Descriptions Count"
+msgstr "SL Mô tả Kỹ năng"
+
+#. module: viin_hr_skill_framework
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.view_hr_role_kanban
+msgid ""
+"Skill Failure\n"
+"\t\t\t\t\t\t\t\tRecords"
+msgstr ""
+"Kỹ năng thất\n"
+"\t\t\t\t\t\t\t\tbại"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_role__skill_failure_report_count
+msgid "Skill Failure Report Count"
+msgstr "SL Kỹ năng thất bại"
+
+#. module: viin_hr_skill_framework
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.view_hr_rank_form
+msgid "Skill Framework"
+msgstr "Khung Kỹ năng"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank_skill_description__skill_level_id
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description__skill_level_id
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description_abstract__skill_level_id
+msgid "Skill Level"
+msgstr "Cấp độ Kỹ năng"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill__skill_level_ids
+msgid "Skill Levels"
+msgstr "Cấp độ Kỹ năng"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_role__hr_employee_skill_report_ids
+msgid "Skill Report Entries"
+msgstr "Bản ghi báo cáo kỹ năng"
+
+#. module: viin_hr_skill_framework
+#: model:ir.actions.act_window,name:viin_hr_skill_framework.action_skill_requirement
+msgid "Skill Requirement"
+msgstr "Yêu cầu Kỹ năng"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank__rank_skill_description_ids
+#: model:ir.ui.menu,name:viin_hr_skill_framework.menu_skill_requirement
+msgid "Skill Requirements"
+msgstr "Yêu cầu Kỹ năng"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model,name:viin_hr_skill_framework.model_hr_skill_type
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_skill_report__skill_type_id
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank_skill_description__skill_type_id
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description__skill_type_id
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description_abstract__skill_type_id
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.view_hr_employee_skill_report_search
+msgid "Skill Type"
+msgstr "Loại Kỹ năng"
+
+#. module: viin_hr_skill_framework
+#: model:ir.ui.menu,name:viin_hr_skill_framework.menu_skill_types
+msgid "Skill Types"
+msgstr "Loại Kỹ năng"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_rank__consolidated_rank_skill_description_ids
+msgid ""
+"Skill description records that are consolidated from the child records and "
+"current records"
+msgstr ""
+"Các bản ghi mô tả kỹ năng mà được hợp nhất từ các bản ghi của chức danh con "
+"và chức danh hiện tại."
+
+#. module: viin_hr_skill_framework
+#: model:ir.model,name:viin_hr_skill_framework.model_hr_employee_skill
+msgid "Skill level for an employee"
+msgstr "Cấp độ kỹ năng cho một nhân viên"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_employee_skill_report__current_rank_skill_level_id
+msgid ""
+"Skill level for current rank.\n"
+" If none, this skill is assumed to not available for current rank."
+msgstr ""
+"Cấp độ kỹ năng của chức danh hiện hành.\n"
+" Nếu không có giá trị, kỹ năng này được cho rằng không có ở chức danh hiện hành."
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_employee_skill_report__required_level
+msgid ""
+"Skill level progress for current rank.\n"
+" If none, this skill is assumed to not available for current rank."
+msgstr ""
+"Tiến độ kỹ năng của chức danh hiện hành.\n"
+" Nếu không có giá trị, kỹ năng này được cho rằng không có ở chức danh hiện hành."
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_skill__skill_level_ids
+msgid "Skill levels related to this skill."
+msgstr "Cấp độ kỹ năng liên quan đến kỹ năng này."
+
+#. module: viin_hr_skill_framework
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.viin_hr_job_view_form_dashboard
+msgid "Skill preferred for this job position:"
+msgstr "Kỹ năng ưu tiên cho vị trí công việc này:"
+
+#. module: viin_hr_skill_framework
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.viin_hr_job_view_form_dashboard
+msgid "Skill required for this job position:"
+msgstr "Kỹ năng bắt buộc cho chức vụ này:"
+
+#. module: viin_hr_skill_framework
+#: model:ir.actions.act_window,name:viin_hr_skill_framework.action_hr_skills
+#: model:ir.ui.menu,name:viin_hr_skill_framework.menu_skills
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.view_hr_job_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.view_hr_role_kanban
+msgid "Skills"
+msgstr "Kỹ năng"
+
+#. module: viin_hr_skill_framework
+#: model:ir.ui.menu,name:viin_hr_skill_framework.menu_root
+msgid "Skills Framework"
+msgstr "Khung Kỹ năng"
+
+#. module: viin_hr_skill_framework
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.view_employee_form
+msgid "Skills Report"
+msgstr "Báo cáo kỹ năng"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee__skill_report_ids
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_base__skill_report_ids
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_public__skill_report_ids
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_role__skill_report_ids
+msgid "Skills Report Entries"
+msgstr "Bản ghi báo cáo kỹ năng"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee__skills_report_entries_count
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_base__skills_report_entries_count
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_public__skills_report_entries_count
+msgid "Skills Requirement Count"
+msgstr "SL Yêu cầu Kỹ năng"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_rank_skill_description__activity_state
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_skill_description__activity_state
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_skill_description_abstract__activity_state
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_skill_type__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Trạng thái dựa trên hoạt động\n"
+"Quá hạn: Ngày đến hạn đã trôi qua\n"
+"Hôm nay: Hôm nay là ngày phải thực hiện\n"
+"Đã hoạch định: Các hoạt động trong tương lai."
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_employee__skill_report_ids
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_employee_base__skill_report_ids
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_employee_public__skill_report_ids
+msgid ""
+"Status report of all the required and preferred skills of the current "
+"employee."
+msgstr ""
+"Báo cáo tình trạng của tất cả các kỹ năng bắt buộc cũng như các kỹ năng có "
+"thì tốt của nhân viên hiện hành."
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_employee__preferred_skill_description_ids
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_employee_base__preferred_skill_description_ids
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_employee_public__preferred_skill_description_ids
+msgid ""
+"Technical field that stores the skills that the employee is preferred to "
+"have."
+msgstr "Trường kỹ thuật để lưu thông tin các kỹ năng mà nhân viên có thì tốt."
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_employee__skill_description_ids
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_employee_base__skill_description_ids
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_employee_public__skill_description_ids
+msgid ""
+"Technical field that stores the skills that the employee is required to "
+"have."
+msgstr ""
+"Trường kỹ thuật để lưu thông tin các kỹ năng mà nhân viên bắt buộc phải có."
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_employee_skill_report__department_id
+msgid "The current department of the corresponding employee."
+msgstr "Phòng ban hiện hành của nhân viên tương ứng."
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_employee_skill_report__grade_id
+msgid "The current grade of the corresponding employee."
+msgstr "Cấp bậc hiện hành của nhân viên tương ứng."
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_employee_skill_report__job_id
+msgid "The current job position of the corresponding employee."
+msgstr "Chức vụ hiện hành của nhân viên tương ứng."
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_employee_skill_report__rank_id
+msgid "The current rank of the corresponding employee."
+msgstr "Chức danh hiện hành của nhân viên tương ứng."
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_employee_skill_report__role_id
+msgid "The current role of the corresponding employee."
+msgstr "Vai trò hiện hành của nhân viên tương ứng."
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_rank__to_qualify_employee_ids
+msgid ""
+"The employees are currently set at this rank but have some unmet skills"
+msgstr ""
+"Các nhân viện hiện được thiết đặt ở chức danh này nhưng có một số các kỹ "
+"năng chưa đáp ứng."
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_employee_skill_report__next_rank_id
+msgid "The next rank of the corresponding employee."
+msgstr "Chức danh kế tiếp dành cho nhân viên tương ứng."
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_employee_skill_report__next_rank_skill_level_id
+msgid "The next rank skill level of the corresponding employee."
+msgstr "Cấp độ kỹ năng của chức danh kế tiếp dành cho nhân viên tương ứng."
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_skill_description__preferred_by_rank_ids
+msgid "The ranks that require this skill as optional (not mandatory)."
+msgstr ""
+"Các chức danh mà yêu cầu kỹ năng này như là một tùy chọn (có thì tốt, không "
+"bắt buộc)"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_skill_description__required_by_rank_ids
+msgid "The ranks that require this skill."
+msgstr "Các chức danh mà yêu cầu bắt buộc có kỹ năng."
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_job__preferred_skill_description_ids
+msgid ""
+"The skills that the employees of this job position are preferred to have."
+msgstr "Các kỹ năng mà nhân viên ở chức vụ này có thì tốt."
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_job__skill_description_ids
+msgid ""
+"The skills that the employees of this job position are required to have."
+msgstr "Các kỹ năng mà nhân viên ở chức vụ này bắt buộc phải có."
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_rank__preferred_skill_description_ids
+msgid "The skills that the employees of this rank are preferred to have."
+msgstr "Các kỹ năng mà nhân viên ở chức danh này có thì tốt."
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.constraint,message:viin_hr_skill_framework.constraint_hr_skill_description_combination_unique
+msgid ""
+"There must not be more than one skill description record of the same Skill "
+"Type and Skill and Skill Level!"
+msgstr ""
+"Không được phép có nhiều hơn một bản ghi mô tả kỹ năng cho cùng Loại kỹ "
+"năng, Kỹ năng và Cấp độ kỹ năng!"
+
+#. module: viin_hr_skill_framework
+#: code:addons/viin_hr_skill_framework/models/hr_employee_skill.py:0
+#, python-format
+msgid ""
+"This skill does not have any description. Please update the description for "
+"this skill."
+msgstr "Kỹ năng này chưa có mô tả. Vui lòng hãy thêm mô tả cho kỹ năng này."
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description__name
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description_abstract__name
+msgid "Title"
+msgstr "Tiêu đề"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank__to_qualify_employee_ids
+msgid "To-Qualify Employees"
+msgstr "Nhân viên chờ thẩm định"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank__to_qualify_employees_count
+msgid "To-Qualify Employees Count"
+msgstr "SL Nhân viên chờ thẩm định"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_rank_skill_description__activity_exception_decoration
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_skill_description__activity_exception_decoration
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_skill_description_abstract__activity_exception_decoration
+#: model:ir.model.fields,help:viin_hr_skill_framework.field_hr_skill_type__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Kiểu hoạt động ngoại lệ trên hồ sơ."
+
+#. module: viin_hr_skill_framework
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.view_hr_employee_skill_report_search
+msgid "Unmet Preferred Skills"
+msgstr "Kỹ năng có thì tốt hơn không đạt"
+
+#. module: viin_hr_skill_framework
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.view_hr_employee_skill_report_search
+msgid "Unmet Required Skills"
+msgstr "Kỹ năng bắt buộc không đạt"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee__unmet_skill_report_ids
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_base__unmet_skill_report_ids
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_public__unmet_skill_report_ids
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.view_employee_form
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.view_hr_employee_skill_report_search
+msgid "Unmet Skills"
+msgstr "Kỹ năng không đạt"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee__unmet_skills_report_entries_count
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_base__unmet_skills_report_entries_count
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_employee_public__unmet_skills_report_entries_count
+msgid "Unmet Skills Count"
+msgstr "SL Kỹ năng không đạt"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank_skill_description__message_unread
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description__message_unread
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description_abstract__message_unread
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_type__message_unread
+msgid "Unread Messages"
+msgstr "Thông điệp chưa đọc"
+
+#. module: viin_hr_skill_framework
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_rank_skill_description__message_unread_counter
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description__message_unread_counter
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_description_abstract__message_unread_counter
+#: model:ir.model.fields,field_description:viin_hr_skill_framework.field_hr_skill_type__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Bộ đếm Thông điệp chưa đọc"
+
+#. module: viin_hr_skill_framework
+#: model:res.groups,comment:viin_hr_skill_framework.group_skill_officer
+msgid ""
+"Users belong to this group can build and manage\n"
+"\t\t\t\tskill framework for his subordinates and department employees where\n"
+"\t\t\t\tshe or he is the manager"
+msgstr ""
+"Người dùng thuộc nhóm này có thể xây dựng và quản lý\n"
+"\t\t\t\tkhung kỹ năng cho cấp dưới và các nhân viên trong phòng ban mà\n"
+"\t\t\t\tngười đó là quản lý"
+
+#. module: viin_hr_skill_framework
+#: model:res.groups,comment:viin_hr_skill_framework.group_skill_admin
+msgid "Users belong to this group have total control on this application"
+msgstr "Người dùng thuộc nhóm này có toàn quyền với ứng dụng này"
+
+#. module: viin_hr_skill_framework
+#: model_terms:ir.ui.view,arch_db:viin_hr_skill_framework.viin_hr_job_view_form_dashboard
+msgid "e.g. Sales Manager"
+msgstr ""

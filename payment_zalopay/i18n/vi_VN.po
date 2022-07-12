@@ -1,0 +1,185 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* payment_zalopay
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-12 08:00+0000\n"
+"PO-Revision-Date: 2021-11-12 08:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: payment_zalopay
+#: model:ir.model.fields,help:payment_zalopay.field_payment_acquirer__zalopay_appid
+msgid ""
+"A positive integer, the identifier for the application during checkout with "
+"the ZaloPay system."
+msgstr ""
+"Một số nguyên dương, mã định danh cho ứng dụng trong quá trình thanh toán "
+"với hệ thống ZaloPay."
+
+#. module: payment_zalopay
+#: model:ir.actions.server,name:payment_zalopay.ir_cron_scheduler_zalopay_check_transactions_if_not_callback_ir_actions_server
+#: model:ir.cron,cron_name:payment_zalopay.ir_cron_scheduler_zalopay_check_transactions_if_not_callback
+#: model:ir.cron,name:payment_zalopay.ir_cron_scheduler_zalopay_check_transactions_if_not_callback
+msgid "Check ZaloPay Transactions If Callback Not Called"
+msgstr "ZaloPay: Kiểm tra giao dịch nếu máy chủ gặp lỗi"
+
+#. module: payment_zalopay
+#: model:ir.model.fields,field_description:payment_zalopay.field_payment_acquirer__display_name
+#: model:ir.model.fields,field_description:payment_zalopay.field_payment_transaction__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: payment_zalopay
+#: model:ir.model.fields,field_description:payment_zalopay.field_payment_acquirer__fees_dom_fixed
+msgid "Fixed domestic fees"
+msgstr "Cố định phí trong nước"
+
+#. module: payment_zalopay
+#: model:ir.model.fields,field_description:payment_zalopay.field_payment_acquirer__fees_int_fixed
+msgid "Fixed international fees"
+msgstr "Cố định phí quốc tế"
+
+#. module: payment_zalopay
+#: model_terms:ir.ui.view,arch_db:payment_zalopay.acquirer_form
+msgid "How to configure your ZaloPay account?"
+msgstr "Làm thế nào để cấu hình tài khoản ZaloPay của bạn?"
+
+#. module: payment_zalopay
+#: model:ir.model.fields,field_description:payment_zalopay.field_payment_acquirer__id
+#: model:ir.model.fields,field_description:payment_zalopay.field_payment_transaction__id
+msgid "ID"
+msgstr ""
+
+#. module: payment_zalopay
+#: model:ir.model.fields,field_description:payment_zalopay.field_payment_acquirer____last_update
+#: model:ir.model.fields,field_description:payment_zalopay.field_payment_transaction____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: payment_zalopay
+#: model:ir.model,name:payment_zalopay.model_payment_acquirer
+msgid "Payment Acquirer"
+msgstr "Nhà cung cấp dịch vụ Thanh toán"
+
+#. module: payment_zalopay
+#: model:ir.model,name:payment_zalopay.model_payment_transaction
+msgid "Payment Transaction"
+msgstr "Giao dịch Thanh toán"
+
+#. module: payment_zalopay
+#: model:ir.model.fields,field_description:payment_zalopay.field_payment_acquirer__provider
+msgid "Provider"
+msgstr "Nhà cung cấp"
+
+#. module: payment_zalopay
+#: model:ir.model.fields,field_description:payment_zalopay.field_payment_acquirer__zalopay_key1
+msgid "Secret Key 1"
+msgstr "Khóa bí mật 1"
+
+#. module: payment_zalopay
+#: model:ir.model.fields,field_description:payment_zalopay.field_payment_acquirer__zalopay_key2
+msgid "Secret Key 2"
+msgstr "Khóa bí mật 2"
+
+#. module: payment_zalopay
+#: model:ir.model.fields,help:payment_zalopay.field_payment_acquirer__zalopay_key2
+msgid ""
+"The secret key used to authenticate data sent by ZaloPayServer via AppServer"
+" at callback."
+msgstr ""
+"Khóa bí mật được sử dụng để xác thực dữ liệu được gửi bởi ZaloPayServer "
+"thông qua callback."
+
+#. module: payment_zalopay
+#: model:ir.model.fields,help:payment_zalopay.field_payment_acquirer__zalopay_key1
+msgid "The secret key used to generate authentication data for the order."
+msgstr "Khóa bí mật được sử dụng để tạo dữ liệu xác thực cho đơn đặt hàng."
+
+#. module: payment_zalopay
+#: model:ir.model.fields,field_description:payment_zalopay.field_payment_acquirer__fees_dom_var
+msgid "Variable domestic fees (in percents)"
+msgstr "Phí nội địa thay đổi (tính bằng phần trăm)"
+
+#. module: payment_zalopay
+#: model:ir.model.fields,field_description:payment_zalopay.field_payment_acquirer__fees_int_var
+msgid "Variable international fees (in percents)"
+msgstr "Phí quốc tế (tính theo phần trăm)"
+
+#. module: payment_zalopay
+#: model_terms:payment.acquirer,auth_msg:payment_zalopay.payment_acquirer_zalopay
+msgid "Your payment has been authorized."
+msgstr "Thanh toán của bạn đã được ủy quyền."
+
+#. module: payment_zalopay
+#: model_terms:payment.acquirer,cancel_msg:payment_zalopay.payment_acquirer_zalopay
+msgid "Your payment has been cancelled."
+msgstr "Thanh toán của bạn đã bị hủy."
+
+#. module: payment_zalopay
+#: model_terms:payment.acquirer,pending_msg:payment_zalopay.payment_acquirer_zalopay
+msgid ""
+"Your payment has been successfully processed but is waiting for approval."
+"Thanh toán của bạn đã được xử lý thành công nhưng đang chờ được phê duyệt."
+
+#. module: payment_zalopay
+#: model_terms:payment.acquirer,done_msg:payment_zalopay.payment_acquirer_zalopay
+msgid "Your payment has been successfully processed. Thank you!"
+msgstr "Thanh toán của bạn đã được xử lý thanh công. Cảm ơn bạn!"
+
+#. module: payment_zalopay
+#: model:ir.model.fields.selection,name:payment_zalopay.selection__payment_acquirer__provider__zalopay
+#: model:payment.acquirer,name:payment_zalopay.payment_acquirer_zalopay
+msgid "ZaloPay"
+msgstr ""
+
+#. module: payment_zalopay
+#: model:ir.model.fields,field_description:payment_zalopay.field_payment_acquirer__zalopay_appid
+msgid "ZaloPay App ID"
+msgstr ""
+
+#. module: payment_zalopay
+#: model:ir.model.fields,field_description:payment_zalopay.field_payment_transaction__zalopay_apptransid
+msgid "ZaloPay apptransid"
+msgstr ""
+
+#. module: payment_zalopay
+#: code:addons/payment_zalopay/controllers/main.py:0
+#, python-format
+msgid "ZaloPay: Could not find payment transaction matching reference #%s"
+msgstr "ZaloPay: Không thể tìm thấy giao dịch phù hợp với tham chiếu số #%s"
+
+#. module: payment_zalopay
+#: code:addons/payment_zalopay/controllers/main.py:0
+#: code:addons/payment_zalopay/controllers/main.py:0
+#, python-format
+msgid ""
+"ZaloPay: Error when payment validated. Please contact your administrator."
+msgstr "ZaloPay: Lỗi khi xác thực đơn hàng. Vui lòng liên hệ quản trị viên"
+
+#. module: payment_zalopay
+#: code:addons/payment_zalopay/controllers/main.py:0
+#, python-format
+msgid ""
+"ZaloPay: Received unrecognized status for payment #%s: %s, set as cancel"
+msgstr "ZaloPay: Trạng thái thanh toán không xác định %s: %s, đặt thành hủy"
+
+#. module: payment_zalopay
+#: code:addons/payment_zalopay/controllers/main.py:0
+#, python-format
+msgid "ZaloPay: Validation error occured. Please contact your administrator."
+msgstr ""
+"ZaloPay: Xảy ra lỗi trong quá trình xác thực. Vui lòng liên hệ quản trị viên"
+
+#. module: payment_zalopay
+#: code:addons/payment_zalopay/models/payment_transaction.py:0
+#, python-format
+msgid "ZaloPay: received data with missing reference %s%s"
+msgstr "ZaloPay: dữ liệu nhận được bị thiếu tham chiếu số %s%s"

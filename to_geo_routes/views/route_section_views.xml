@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="route_section_form" model="ir.ui.view">
+			<field name="name">route.section.form</field>
+			<field name="model">route.section</field>
+			<field name="arch" type="xml">
+				<form string="Section Form">
+					<sheet>
+						<div class="oe_title">
+							<label for="name" class="oe_edit_only" />
+							<h1>
+								<field name="name" />
+							</h1>
+						</div>
+						<group>
+							<group>
+								<field name="address_from_id" context="{'show_address': 1}"
+									options='{"always_reload": True, "highlight_first_line": True}' />
+								<field name="distance" />
+								<field name="distance_in_miles" />
+							</group>
+							<group>
+								<field name="address_to_id" context="{'show_address': 1}"
+									options='{"always_reload": True, "highlight_first_line": True}' />
+								<field name="ave_speed" />
+								<field name="est_trip_time" />
+							</group>
+						</group>
+						<notebook>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids"/>
+						<field name="message_ids"/>
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record id="route_section_tree" model="ir.ui.view">
+			<field name="name">route.section.tree</field>
+			<field name="model">route.section</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Routes">
+					<field name="name" />
+					<field name="address_from_id" />
+					<field name="address_to_id" />
+					<field name="distance" />
+					<field name="ave_speed" />
+					<field name="est_trip_time" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="geo_route_section_action" model="ir.actions.act_window">
+			<field name="name">Route Sections</field>
+			<field name="res_model">route.section</field>
+			<field name="view_mode">tree,form</field>
+			<field name="context">{}</field>
+		</record>
+
+		<menuitem id="geo_route_section_menu" parent="geo_route_root_menu"
+			name="Route Sections" action="geo_route_section_action" sequence="5" />
+
+	</data>
+</odoo>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="view_task_form2">
+			<field name="name">project.task.form</field>
+			<field name="model">project.task</field>
+			<field name="inherit_id" ref="project.view_task_form2" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='user_id']" position="after">
+					<field name="git_repository_id" />
+					<field name="git_branch_id" attrs="{'invisible':[('git_repository_id','=',False)]}"
+						options="{'no_create': True}" />
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

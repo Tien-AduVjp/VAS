@@ -1,0 +1,166 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_product_dimensions
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-23 01:41+0000\n"
+"PO-Revision-Date: 2022-06-23 01:41+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_product_dimensions
+#: model_terms:ir.ui.view,arch_db:to_product_dimensions.product_normal_form_view
+#: model_terms:ir.ui.view,arch_db:to_product_dimensions.product_template_only_form_view
+#: model_terms:ir.ui.view,arch_db:to_product_dimensions.product_variant_easy_edit_view
+msgid "<span>mm</span>"
+msgstr ""
+
+#. module: to_product_dimensions
+#: model_terms:ir.ui.view,arch_db:to_product_dimensions.product_normal_form_view
+#: model_terms:ir.ui.view,arch_db:to_product_dimensions.product_template_only_form_view
+#: model_terms:ir.ui.view,arch_db:to_product_dimensions.product_variant_easy_edit_view
+msgid "<span>m³</span>"
+msgstr ""
+
+#. module: to_product_dimensions
+#: model_terms:ir.ui.view,arch_db:to_product_dimensions.product_variant_easy_edit_view
+msgid "Dimensions"
+msgstr "Kích thước"
+
+#. module: to_product_dimensions
+#: model:ir.model.fields,field_description:to_product_dimensions.field_product_product__concat_dimension_in_name
+#: model:ir.model.fields,field_description:to_product_dimensions.field_product_template__concat_dimension_in_name
+msgid "Dimensions in Name"
+msgstr "Nối Kích thước vào Tên"
+
+#. module: to_product_dimensions
+#: model:ir.model.fields,field_description:to_product_dimensions.field_product_product__display_name
+#: model:ir.model.fields,field_description:to_product_dimensions.field_product_template__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_product_dimensions
+#: model:ir.model.fields,help:to_product_dimensions.field_product_product__concat_dimension_in_name
+#: model:ir.model.fields,help:to_product_dimensions.field_product_template__concat_dimension_in_name
+msgid "Enable to concatenate dimensions in the product name"
+msgstr "Kích hoạt để nối các kích thước vào tên hiển thị của sản phẩm"
+
+#. module: to_product_dimensions
+#: model:ir.model.fields,field_description:to_product_dimensions.field_product_product__height
+#: model:ir.model.fields,field_description:to_product_dimensions.field_product_template__height
+msgid "Height"
+msgstr "Cao"
+
+#. module: to_product_dimensions
+#: model:ir.model.fields,field_description:to_product_dimensions.field_product_product__id
+#: model:ir.model.fields,field_description:to_product_dimensions.field_product_template__id
+msgid "ID"
+msgstr ""
+
+#. module: to_product_dimensions
+#: model:ir.model.fields,field_description:to_product_dimensions.field_product_product____last_update
+#: model:ir.model.fields,field_description:to_product_dimensions.field_product_template____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_product_dimensions
+#: model:ir.model.fields,field_description:to_product_dimensions.field_product_product__length
+#: model:ir.model.fields,field_description:to_product_dimensions.field_product_template__length
+msgid "Length"
+msgstr "Dài"
+
+#. module: to_product_dimensions
+#: model:ir.model,name:to_product_dimensions.model_product_product
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: to_product_dimensions
+#: model:ir.model,name:to_product_dimensions.model_product_template
+msgid "Product Template"
+msgstr "Mẫu sản phẩm"
+
+#. module: to_product_dimensions
+#: model:ir.model.fields,field_description:to_product_dimensions.field_product_product__stowage_factor
+#: model:ir.model.fields,field_description:to_product_dimensions.field_product_template__stowage_factor
+msgid "SF"
+msgstr ""
+
+#. module: to_product_dimensions
+#: model:ir.model.fields,help:to_product_dimensions.field_product_product__stowage_factor
+#: model:ir.model.fields,help:to_product_dimensions.field_product_template__stowage_factor
+msgid ""
+"Stowage Factor, the factor that will be used in stowage volume calculation. "
+"I.e. Stowage Vol. = L * W * H * SF"
+msgstr ""
+"Hệ số Chất xếp, hệ số mà sẽ được sử dụng trong việc tính toán thể tích chất "
+"xếp. Cụ thể, Thể tích chất xếp = D * R * C * SF"
+
+#. module: to_product_dimensions
+#: model:ir.model.fields,field_description:to_product_dimensions.field_product_product__stowage_volume
+#: model:ir.model.fields,field_description:to_product_dimensions.field_product_template__stowage_volume
+msgid "Stowage Volume"
+msgstr "Thể tích chất xếp"
+
+#. module: to_product_dimensions
+#: model:ir.model.fields,help:to_product_dimensions.field_product_template__stowage_volume
+msgid "Stowage Volume of the product in cubic meters"
+msgstr "Thể tích chất xếp của sản phẩm tính bằng mét khối"
+
+#. module: to_product_dimensions
+#: model:ir.model.constraint,message:to_product_dimensions.constraint_product_product_check_possitive_height
+#: model:ir.model.constraint,message:to_product_dimensions.constraint_product_template_check_possitive_height
+msgid "The Height must be greater than or equal to 0."
+msgstr "Chiều cao phải lớn hơn hoặc bằng 0."
+
+#. module: to_product_dimensions
+#: model:ir.model.constraint,message:to_product_dimensions.constraint_product_product_check_possitive_length
+#: model:ir.model.constraint,message:to_product_dimensions.constraint_product_template_check_possitive_length
+msgid "The Length must be greater than or equal to 0."
+msgstr "Chiều dài phải lớn hơn hoặc bằng 0."
+
+#. module: to_product_dimensions
+#: model:ir.model.constraint,message:to_product_dimensions.constraint_product_product_width
+#: model:ir.model.constraint,message:to_product_dimensions.constraint_product_template_width
+msgid "The Width must be greater than or equal to 0."
+msgstr "Chiều rộng phải lớn hơn hoặc bằng 0."
+
+#. module: to_product_dimensions
+#: model:ir.model.fields,help:to_product_dimensions.field_product_product__height
+#: model:ir.model.fields,help:to_product_dimensions.field_product_template__height
+msgid "The height of the product in millimeter"
+msgstr "Chiều cao của sản phẩm theo mi-li-mét"
+
+#. module: to_product_dimensions
+#: model:ir.model.fields,help:to_product_dimensions.field_product_product__length
+#: model:ir.model.fields,help:to_product_dimensions.field_product_template__length
+msgid "The length of the product in millimeter"
+msgstr "Chiều dài của sản phẩm theo mi-li-mét"
+
+#. module: to_product_dimensions
+#: model:ir.model.fields,help:to_product_dimensions.field_product_product__stowage_volume
+msgid "The stowage volume of the product in cubic meters"
+msgstr "Thể tích chất xếp của sản phẩm tính bằng mét khối"
+
+#. module: to_product_dimensions
+#: model:ir.model.fields,help:to_product_dimensions.field_product_product__width
+#: model:ir.model.fields,help:to_product_dimensions.field_product_template__width
+msgid "The width of the product in millimeter"
+msgstr "Chiều rộng của sản phẩm theo mi-li-mét"
+
+#. module: to_product_dimensions
+#: model:ir.model.fields,field_description:to_product_dimensions.field_product_product__volume
+msgid "Volume"
+msgstr "Thể tích"
+
+#. module: to_product_dimensions
+#: model:ir.model.fields,field_description:to_product_dimensions.field_product_product__width
+#: model:ir.model.fields,field_description:to_product_dimensions.field_product_template__width
+msgid "Width"
+msgstr "Rộng"

@@ -1,0 +1,44 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_paypal_unsupported_currencies
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-29 07:31+0000\n"
+"PO-Revision-Date: 2021-10-29 07:31+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_paypal_unsupported_currencies
+#: model:ir.model.fields,field_description:to_paypal_unsupported_currencies.field_payment_acquirer__display_name
+#: model:ir.model.fields,field_description:to_paypal_unsupported_currencies.field_payment_transaction__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_paypal_unsupported_currencies
+#: model:ir.model.fields,field_description:to_paypal_unsupported_currencies.field_payment_acquirer__id
+#: model:ir.model.fields,field_description:to_paypal_unsupported_currencies.field_payment_transaction__id
+msgid "ID"
+msgstr ""
+
+#. module: to_paypal_unsupported_currencies
+#: model:ir.model.fields,field_description:to_paypal_unsupported_currencies.field_payment_acquirer____last_update
+#: model:ir.model.fields,field_description:to_paypal_unsupported_currencies.field_payment_transaction____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_paypal_unsupported_currencies
+#: model:ir.model,name:to_paypal_unsupported_currencies.model_payment_acquirer
+msgid "Payment Acquirer"
+msgstr "Nhà cung cấp dịch vụ Thanh toán"
+
+#. module: to_paypal_unsupported_currencies
+#: model:ir.model,name:to_paypal_unsupported_currencies.model_payment_transaction
+msgid "Payment Transaction"
+msgstr "Giao dịch Thanh toán"

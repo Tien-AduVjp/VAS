@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="git_branch_form_view" model="ir.ui.view">
+			<field name="name">git.branch.form</field>
+			<field name="model">git.branch</field>
+			<field name="inherit_id" ref="to_git.git_branch_form_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//header" position="inside">
+					<field name="documents_discovered_once" invisible="1" />
+					<field name="website_doc_category_id" invisible="1" />
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,9 @@
+<odoo>
+   <data>
+        <template id="assets_backend_inherit" name="Mail Assets" inherit_id="partner_autocomplete.assets_backend">
+            <xpath expr="//script[@src='/partner_autocomplete/static/src/js/partner_autocomplete_fieldchar.js']" position="after">
+            	<script type="text/javascript" src="/to_partner_multilang_partner_autocomplete/static/src/js/partner_autocomplete_fieldchar_inherit.js"></script>
+            </xpath>
+        </template>
+    </data>
+</odoo>

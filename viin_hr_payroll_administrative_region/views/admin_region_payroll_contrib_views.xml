@@ -1,0 +1,76 @@
+<odoo>
+	<record id="admin_region_payroll_contrib_view_form" model="ir.ui.view">
+		<field name="name">admin.region.payroll.contrib.form</field>
+		<field name="model">admin.region.payroll.contrib</field>
+		<field name="arch" type="xml">
+			<form string="Administrative Region Payroll Contribution">
+				<sheet>
+					<group>
+						<group>
+							<field name="administrative_region_id"/>
+							<field name="payroll_contribution_type_id"/>
+							<field name="company_id" groups="base.group_multi_company"/>
+							<field name="currency_id" groups="base.group_multi_currency"/>
+						</group>
+						<group>
+							<field name="min_contribution_base"/>
+							<field name="max_contribution_base"/>
+						</group>
+						<group>
+							<label for="max_contribution_employee"/>
+                            <div class="o_row" name="max_contribution_employee">
+                                <field name="max_contribution_employee" nolabel="1"/>
+                                <span>/ month</span>
+                            </div>
+                            <label for="max_contribution_company"/>
+                            <div class="o_row" name="max_contribution_company">
+                                <field name="max_contribution_company" nolabel="1"/>
+                                <span>/ month</span>
+                            </div>
+						</group>
+					</group>
+				</sheet>
+				<div class="oe_chatter">
+	                <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+	                <field name="message_ids" widget="mail_thread"/>
+                </div>
+			</form>
+		</field>
+	</record>
+
+	<record id="admin_region_payroll_contrib_view_tree" model="ir.ui.view">
+		<field name="name">admin.region.payroll.contrib.tree</field>
+		<field name="model">admin.region.payroll.contrib</field>
+		<field name="arch" type="xml">
+			<tree string="Administrative Region Payroll Contribution">
+				<field name="administrative_region_id"/>
+				<field name="payroll_contribution_type_id"/>
+				<field name="currency_id" groups="base.group_multi_currency"/>
+				<field name="min_contribution_base"/>
+				<field name="max_contribution_base"/>
+				<field name="company_id" groups="base.group_multi_company"/>
+			</tree>
+		</field>
+	</record>
+
+	<record id="admin_region_payroll_contrib_view_search" model="ir.ui.view">
+		<field name="name">admin.region.payroll.contrib.search</field>
+		<field name="model">admin.region.payroll.contrib</field>
+		<field name="arch" type="xml">
+			<search string="Administrative Region Payroll Contribution">
+				<field name="administrative_region_id"/>
+				<field name="payroll_contribution_type_id"/>
+				<group expand="0" string="Group By">
+					<filter name="grp_administrative_region_id" string="Administrative Region" domain="[]" context="{'group_by':'administrative_region_id'}"/>
+					<filter name="grp_payroll_contribution_type_id" string="Contribution Type" domain="[]" context="{'group_by':'payroll_contribution_type_id'}"/>
+				</group>
+			</search>
+		</field>
+	</record>
+
+	<record id="admin_region_payroll_contrib_action" model="ir.actions.act_window">
+		<field name="name">Administrative Region Payroll Contribution</field>
+		<field name="res_model">admin.region.payroll.contrib</field>
+		<field name="view_mode">tree,form,search</field>
+	</record>
+</odoo>

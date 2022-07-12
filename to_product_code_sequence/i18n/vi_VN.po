@@ -1,0 +1,123 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_product_code_sequence
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-24 08:19+0000\n"
+"PO-Revision-Date: 2021-11-24 08:19+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_product_code_sequence
+#: model_terms:ir.ui.view,arch_db:to_product_code_sequence.res_config_settings_view_form
+msgid "Allows generating default product codes by product category"
+msgstr "Cho phép tạo mã sản phẩm mặc định theo danh mục sản phẩm"
+
+#. module: to_product_code_sequence
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_res_company__auto_product_default_code_generation
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_res_config_settings__auto_product_default_code_generation
+msgid "Auto Product Code Generation"
+msgstr "Tự động tạo mã sản phẩm"
+
+#. module: to_product_code_sequence
+#: model_terms:ir.ui.view,arch_db:to_product_code_sequence.res_config_settings_view_form
+msgid ""
+"Automatically generate and update product codes based on product name or \n"
+"the defined product code prefix and product sequence in the product category."
+msgstr ""
+"Tự động tạo và cập nhật mã sản phẩm dựa trên tên sản phẩm hoặc \n"
+"tiền tố mã sản phẩm đã xác định và trình tự sản phẩm trong danh mục sản phẩm."
+
+#. module: to_product_code_sequence
+#: model:ir.model.fields,help:to_product_code_sequence.field_res_company__auto_product_default_code_generation
+#: model:ir.model.fields,help:to_product_code_sequence.field_res_config_settings__auto_product_default_code_generation
+msgid ""
+"Automatically generate and update product codes based on product name or the"
+" defined product code prefix and product sequence in the product category."
+msgstr ""
+"Tự động tạo và cập nhật mã sản phẩm dựa trên tên sản phẩm hoặc"
+" tiền tố mã sản phẩm đã xác định và trình tự sản phẩm trong danh mục sản phẩm."
+
+#. module: to_product_code_sequence
+#: model:ir.model,name:to_product_code_sequence.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: to_product_code_sequence
+#: model:ir.model,name:to_product_code_sequence.model_res_config_settings
+msgid "Config Settings"
+msgstr "Thiết lập Cấu hình"
+
+#. module: to_product_code_sequence
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_product_category__display_name
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_product_product__display_name
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_product_template__display_name
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_res_company__display_name
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: to_product_code_sequence
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_product_category__id
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_product_product__id
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_product_template__id
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_res_company__id
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_res_config_settings__id
+msgid "ID"
+msgstr ""
+
+#. module: to_product_code_sequence
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_product_category____last_update
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_product_product____last_update
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_product_template____last_update
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_res_company____last_update
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_res_config_settings____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: to_product_code_sequence
+#: model:ir.model,name:to_product_code_sequence.model_product_product
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: to_product_code_sequence
+#: model:ir.model,name:to_product_code_sequence.model_product_category
+msgid "Product Category"
+msgstr "Nhóm Sản phẩm"
+
+#. module: to_product_code_sequence
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_product_category__product_code_prefix
+msgid "Product Code Prefix"
+msgstr "Tiền tố Mã Sản phẩm"
+
+#. module: to_product_code_sequence
+#: model:ir.model.fields,field_description:to_product_code_sequence.field_product_category__ir_sequence_id
+msgid "Product Sequence"
+msgstr "Mã trình tự"
+
+#. module: to_product_code_sequence
+#: model:ir.model,name:to_product_code_sequence.model_product_template
+msgid "Product Template"
+msgstr "Mẫu sản phẩm"
+
+#. module: to_product_code_sequence
+#: model:ir.model.fields,help:to_product_code_sequence.field_product_category__product_code_prefix
+msgid ""
+"The text string to be used as the prefix of the auto-generated default codes"
+" of the category's products."
+msgstr ""
+"Chuỗi ký tự được sử dụng làm tiền tố cho Mã Mặc định tự sinh cho sản phẩm "
+"thuộc nhóm."
+
+#. module: to_product_code_sequence
+#: model:ir.actions.server,name:to_product_code_sequence.action_server_update_prod_code
+#: model:ir.actions.server,name:to_product_code_sequence.action_server_update_prod_tmpl_code
+msgid "Update Product Code"
+msgstr "Cập nhật Mã Sản phẩm"
